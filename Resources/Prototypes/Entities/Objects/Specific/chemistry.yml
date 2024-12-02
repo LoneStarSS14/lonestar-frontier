@@ -363,7 +363,7 @@
     size: Tiny
   - type: Appearance
   - type: SolutionContainerVisuals
-    maxFillLevels: 1
+    maxFillLevels: 5
     fillBaseName: dropper
     inHandsMaxFillLevels: 1
     inHandsFillBaseName: -fill-
