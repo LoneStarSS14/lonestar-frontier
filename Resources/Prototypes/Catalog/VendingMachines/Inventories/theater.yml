@@ -21,6 +21,8 @@
     ClothingHeadHatSkub: 2
     ClothingOuterSkub: 2
     ClothingHeadHatBeretFrench: 2
+    ClothingUniformMrSpaceWide: 2 #imp
+    ClothingUniformMrSpaceWideSkirt: 2 #imp
     ClothingOuterSuitChicken: 2
     ClothingHeadHatChickenhead: 2
     ClothingOuterSuitMonkey: 2
@@ -329,13 +331,21 @@
     ClothingShoesAngelSandals: 1 #imp
     ClothingNeckAngelWings: 1 #imp
     HandheldHarpInstrument: 1 #imp
-  contrabandInventory:
+    ClothingUniformHitmanSuit: 1 #imp
+    ClothingUniformHitmanSuitSkirt: 1 #imp
+    ClothingUniformBrosBlazer: 1 #imp
+    ClothingUniformBrosBlazerSkirt: 1 #imp
+  contrabandInventory:    
     ClothingHeadHatRichard: 1
     ToyFigurineBoxer: 1
     ToyFigurineMusician: 1
     ClothingHeadHatMimesoftFlipped: 1 # Frontier
     BarberScissors: 1 # Frontier
     ClothingOuterArmorGrenzelCuriass: 1 # Lonestar
+    ClothingUniformHitmanSuit: 1 #imp
+    ClothingUniformHitmanSuitSkirt: 1 #imp
+    ClothingUniformBrosBlazer: 1 #imp
+    ClothingUniformBrosBlazerSkirt: 1 #imp
   emaggedInventory:
     ClothingShoesBling: 1
     ClothingShoesBootsCowboyFancy: 1

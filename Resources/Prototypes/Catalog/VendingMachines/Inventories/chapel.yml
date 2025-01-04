@@ -5,6 +5,8 @@
     ClothingBackpackMessengerChaplain: 2 # Frontier
     ClothingUniformJumpsuitChaplain: 3
     ClothingUniformJumpskirtChaplain: 3
+    ClothingUniformFuneralSuit: 4 #imp
+    ClothingUniformFuneralSuitSkirt: 4 #imp
     ClothingUniformJumpsuitMonasticRobeDark: 3
     ClothingUniformJumpsuitMonasticRobeLight: 3
     ClothingOuterHoodieChaplain: 3
