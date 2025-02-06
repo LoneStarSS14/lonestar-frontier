@@ -532,6 +532,8 @@
       collection: Salutes
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp addition
+      collection: Blinks
 
 - type: emoteSounds
   id: LewdSounds
@@ -569,6 +571,8 @@
        volume: -5
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp addition
+      collection: Blinks
 
 - type: emoteSounds
   id: ReptilianBodyEmotes
@@ -589,6 +593,8 @@
       collection: Salutes
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp addition
+      collection: Blinks
 
 # mobs
 - type: emoteSounds
