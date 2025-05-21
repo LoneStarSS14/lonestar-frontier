@@ -316,6 +316,19 @@
     ClothingShoesFootProtectors: 9000
     ClothingHeadHatGrenzel: 9000
     ClothingUniformJumpsuitGrenzel: 9000
+    # IMP
+    ClothingHeadJesterEvilHat: 1 #imp
+    ClothingUniformJesterEvil: 1 #imp
+    ClothingShoesJesterEvilJanglers: 1 #imp
+    ClothingNeckDevilWings: 1 #imp
+    ClothingHeadDevilHorns: 1 #imp
+    DevilPitchfork: 1 #imp
+    ClothingHeadHalo: 1 #imp
+    ClothingUniformJumpskirtAngelDress: 1 #imp
+    ClothingHandsAngelGloves: 1 #imp
+    ClothingShoesAngelSandals: 1 #imp
+    ClothingNeckAngelWings: 1 #imp
+    HandheldHarpInstrument: 1 #imp
   contrabandInventory:
     ClothingHeadHatRichard: 1
     ToyFigurineBoxer: 1
