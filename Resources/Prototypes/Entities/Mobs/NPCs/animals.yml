@@ -1427,6 +1427,7 @@
     - map: [ "ears" ]
     - map: [ "id" ]
     - map: [ "outerClothing" ]
+    - map: [ "maskalt" ]
     - map: [ "mask" ]
     - map: [ "head" ]
     - map: [ "clownedon" ]
@@ -1442,6 +1443,7 @@
         clownedon:
           True: {visible: true}
           False: {visible: false}
+
   - type: Body
     prototype: Primate
     requiredLegs: 1 # TODO: More than 1 leg

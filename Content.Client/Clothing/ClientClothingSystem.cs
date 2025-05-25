@@ -4,6 +4,7 @@ using System.Numerics;
 using Content.Client.DisplacementMap;
 using Content.Client.Humanoid;
 using Content.Client.Inventory;
+using Content.Goobstation.Common.Clothing;
 using Content.Shared.Clothing;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;
@@ -300,9 +301,22 @@ public sealed class ClientClothingSystem : ClothingSystem
             return;
         }
 
+        // Goob edit start
+        var slotLayerExists = false;
+        var index = 0;
+        var mapLayerEv = new GetActualMapLayerEvent(slot);
+        RaiseLocalEvent(equipment, ref mapLayerEv);
+        if (mapLayerEv.MapLayer != slot)
+            slotLayerExists = sprite.LayerMapTryGet(mapLayerEv.MapLayer, out index);
+
         // temporary, until layer draw depths get added. Basically: a layer with the key "slot" is being used as a
         // bookmark to determine where in the list of layers we should insert the clothing layers.
-        var slotLayerExists = _sprite.LayerMapTryGet((equipee, sprite), slot, out var index, false);
+        if (!slotLayerExists)
+            slotLayerExists = sprite.LayerMapTryGet(slot, out index);
+
+        var hiddenEv = new CheckClothingSlotHiddenEvent(slot);
+        RaiseLocalEvent(equipee, ref hiddenEv);
+        // Goob edit end
 
         // Select displacement maps
         var displacementData = inventory.Displacements.GetValueOrDefault(slot); //Default unsexed map
@@ -377,7 +391,9 @@ public sealed class ClientClothingSystem : ClothingSystem
                 if (layerData.Color != null)
                     _sprite.LayerSetColor((equipee, sprite), key, layerData.Color.Value);
                 if (layerData.Scale != null)
-                    _sprite.LayerSetScale((equipee, sprite), key, layerData.Scale.Value);
+                    sprite.LayerSetScale(key, layerData.Scale.Value);
+                if (!hiddenEv.Visible) // Goobstation
+                    sprite.LayerSetVisible(key, false);
             }
             else
                 index = _sprite.LayerMapReserve((equipee, sprite), key);
@@ -394,20 +410,10 @@ public sealed class ClientClothingSystem : ClothingSystem
                 _sprite.LayerSetRsi(layer, clothingSprite.BaseRSI);
             }
 
-            _sprite.LayerSetData((equipee, sprite), index, layerData);
-            _sprite.LayerSetOffset(layer, layer.Offset + slotDef.Offset);
-
-            // Frontier: species-specific layering
-            if (layer.RSI != null
-                && inventory.SpeciesId != null
-                && layerData.State != null
-                && !layerData.State.EndsWith(inventory.SpeciesId))
-            {
-                var speciesLayer = $"{layerData.State}-{inventory.SpeciesId}";
-                if (layer.RSI.TryGetState(speciesLayer, out _))
-                    layer.State = speciesLayer;
-            }
-            // End Frontier: species-specific layering
+            sprite.LayerSetData(index, layerData);
+            layer.Offset += slotDef.Offset;
+            if (!hiddenEv.Visible) // Goobstation
+                layer.Visible = false;
 
             if (displacementData is not null)
             {

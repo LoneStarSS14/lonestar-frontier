@@ -15,10 +15,16 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - GasMask # goob edit
+    - GasMaskFullDefault # goob edit
   - type: HideLayerClothing
     layers:
       Snout: Mask
     hideOnToggle: true
+  - type: Construction # Goobstation
+    graph: GasMaskHalf
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   parent: [ClothingMaskGas, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband
@@ -79,7 +85,13 @@
   - type: Armor
     modifiers:
       coefficients:
-        Heat: 0.90 # Frontier 0.80<0.90
+        Heat: 0.5
+  - type: Tag # Goobstation
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+    - GasMask
+    - Mask
 
 - type: entity
   parent: ClothingMaskGasAtmos # Frontier: removed BaseC4Contraband
@@ -124,6 +136,11 @@
         Slash: 0.95 # Frontier 0.90<0.95
         Piercing: 0.95
         Heat: 0.95
+  - type: Tag # Goobstation
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+    - GasMask
 
 - type: entity
   parent: ClothingMaskPullableBase
@@ -419,6 +436,11 @@
         Heat: 0.95
   - type: PirateBountyItem # Frontier
     id: ClothingMaskGasMercenary # Frontier
+  - type: Tag # Goobstation
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+    - GasMask
 
 - type: entity
   parent: [ ClothingMaskGas, BaseC4Contraband ]

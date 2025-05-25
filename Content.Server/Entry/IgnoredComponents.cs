@@ -23,6 +23,7 @@ namespace Content.Server.Entry
             "AnomalyScannerScreen",
             "MultipartMachineGhost",
             "BlueprintLatheClientState" // Frontier
+            "HideClothingLayerClothing", // Goobstation
         };
     }
 }
