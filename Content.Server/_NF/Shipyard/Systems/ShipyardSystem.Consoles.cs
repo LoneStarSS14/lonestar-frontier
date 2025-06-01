@@ -219,7 +219,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttleUid);
         AssignShuttleDeedProperties((shuttleUid, deedShuttle), shuttleUid, name, shuttleOwner, voucherUsed);
 
-        // if (!voucherUsed && component.NewJobTitle != null)
+        // if (!voucherUsed && component.NewJobTitle != null &&
+        //     !HasComp<PreventShipyardTitleOverwriteComponent>(args.Actor))
         // {
         //     _idSystem.TryChangeJobTitle(targetId, Loc.GetString(component.NewJobTitle), idCard, player);
         // }
@@ -689,7 +690,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     ///   Returns all shuttle prototype IDs the given shipyard console can offer.
     /// </summary>
     public (List<string> available, List<string> unavailable) GetAvailableShuttles(EntityUid uid, ShipyardConsoleUiKey? key = null,
-        ShipyardListingComponent? listing = null, EntityUid? targetId = null)
+	ShipyardListingComponent? listing = null, EntityUid? targetId = null)
     {
         var available = new List<string>();
         var unavailable = new List<string>();
@@ -902,4 +903,86 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         return 0;
     }
     #endregion Ship Pricing
+
+    // LoneStar start, added
+    public void OnRenameMessage(EntityUid uid, ShipyardConsoleComponent component, ShipyardConsoleRenameMessage args)
+    {
+        if (args.Actor is not { Valid: true } player)
+            return;
+
+        if (component.TargetIdSlot.ContainerSlot?.ContainedEntity is not { Valid: true } targetId)
+        {
+            ConsolePopup(player, Loc.GetString("shipyard-console-no-idcard"));
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        if (!TryComp<ShuttleDeedComponent>(targetId, out var deed) || deed.ShuttleUid == null)
+        {
+            ConsolePopup(player, Loc.GetString("shipyard-console-no-deed"));
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        // Validate the new name
+        var newName = args.NewName.Trim();
+        if (string.IsNullOrEmpty(newName))
+        {
+            ConsolePopup(player, "Ship name cannot be empty.");
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        if (newName.Length > ShuttleDeedComponent.MaxNameLength)
+        {
+            ConsolePopup(player, $"Ship name cannot exceed {ShuttleDeedComponent.MaxNameLength} characters.");
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        // Get the old name for logging
+        var oldName = GetFullName(deed);
+
+        // Preserve the original sell value from the current UI state
+        int originalSellValue = 0;
+        if (_ui.TryGetUiState<ShipyardConsoleInterfaceState>(uid,
+                (ShipyardConsoleUiKey)args.UiKey,
+                out var currentState))
+        {
+            originalSellValue = currentState.ShipSellValue;
+        }
+
+        // Rename the ship using the existing method
+        if (TryRenameShuttle(targetId, deed, newName, deed.ShuttleNameSuffix))
+        {
+            ConsolePopup(player, $"Ship renamed to '{GetFullName(deed)}'");
+            PlayConfirmSound(player, uid, component);
+
+            // Get the player's balance or use 0 if they don't have a bank account
+            int balance = 0;
+            if (TryComp<BankAccountComponent>(player, out var bank))
+                balance = bank.Balance;
+
+            // Update the UI with the new ship name, preserving the original sell value
+            var fullName = GetFullName(deed);
+            RefreshState(uid,
+                balance,
+                true,
+                fullName,
+                originalSellValue,
+                targetId,
+                (ShipyardConsoleUiKey)args.UiKey,
+                false);
+
+            _adminLogger.Add(LogType.ShipYardUsage,
+                LogImpact.Low,
+                $"{ToPrettyString(player):actor} renamed ship from '{oldName}' to '{GetFullName(deed)}' via {ToPrettyString(uid)}");
+        }
+        else
+        {
+            ConsolePopup(player, "Failed to rename ship.");
+            PlayDenySound(player, uid, component);
+        }
+    }
+    // LoneStar end
 }
