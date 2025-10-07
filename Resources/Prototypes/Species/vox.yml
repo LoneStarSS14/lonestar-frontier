@@ -53,6 +53,9 @@
       points: 999 # Coyote: Allow unlimited markings
       required: true
       defaultMarkings: [ VoxBeak ]
+    SnoutCover:
+      points: 1
+      required: false
     Arms:
       points: 999 # Coyote: Allow unlimited markings
       required: true
