@@ -29,6 +29,7 @@
   - ShipyardCrescent
   - ShipyardCrossroads
   - ShipyardDragonfly
+  - ShipyardDragoon
   - ShipyardDruid
   - ShipyardEagle
   - ShipyardGarden
@@ -198,6 +199,11 @@
   id: ShipyardDragonfly
   name: guide-entry-shipyard-dragonfly
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Dragonfly.xml"
+
+- type: guideEntry
+  id: ShipyardDragoon
+  name: guide-entry-shipyard-dragoon
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Dragoon.xml"
 
 - type: guideEntry
   id: ShipyardDruid
