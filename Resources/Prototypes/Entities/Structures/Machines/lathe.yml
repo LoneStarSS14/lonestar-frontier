@@ -627,6 +627,7 @@
     - ClothingCollars # Floof
     - ClothingBags # Coyote
     - ClothingTowels # Coyote
+    - NFUniformChaplainStatic # Frontier
     dynamicPacks: # Frontier
     - NFPouches # Frontier
   - type: EmagLatheRecipes

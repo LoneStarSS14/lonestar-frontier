@@ -104,6 +104,8 @@
     - CSPlumbingStatic # Coyote: showers, sinks, drains
     - LSFancyLightPack #LS Adds Special bulbs for mood lighting
     - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
+    - NFPietyStatic
+    - NFCandlesStatic
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFServiceTechfabEmagStatic
