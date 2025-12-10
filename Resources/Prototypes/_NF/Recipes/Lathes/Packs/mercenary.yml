@@ -27,6 +27,8 @@
   - ClothingMaskBreathMedicalSecurity
   - ClothingMaskGasSecurity
   - ClothingBeltBandolier
+  - NFBaseClothingNeckHolsterThigh
+  - NFBaseClothingNeckSheathThigh
 
 - type: latheRecipePack
   id: NFMercenaryStorageStatic
