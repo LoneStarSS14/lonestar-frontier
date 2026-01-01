@@ -1,0 +1,9 @@
+- type: entity
+  parent: SeedBase
+  name: packet of pompom bush seeds
+  id: PompomBushSeeds
+  components:
+    - type: Seed
+      seedId: pompombush
+    - type: Sprite
+      sprite: _Impstation/Objects/Specific/Hydroponics/pompombush.rsi
