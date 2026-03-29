@@ -481,6 +481,7 @@
   id: JobChemist
   groups:
   - GroupTankHarness
+  - ChemistHead # DeltaV
   - MedicalMask
   - ChemistJumpsuit
   - MedicalGloves

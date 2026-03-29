@@ -1362,7 +1362,6 @@
   loadouts:
   - PsychologistJumpsuit
   - PsychologistJumpskirt
-
 - type: loadoutGroup
   id: BoxerJumpsuit
   name: loadout-group-boxer-jumpsuit
