@@ -602,6 +602,8 @@
   recipeUnlocks:
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
+  - ElectrolysisUnitMachineCircuitboard
+  - CentrifugeMachineCircuitboard
   - DefibrillatorCompact
   - JetInjector # Coyote: - Port in Jet Injectors from Den
   technologyPrerequisites:
