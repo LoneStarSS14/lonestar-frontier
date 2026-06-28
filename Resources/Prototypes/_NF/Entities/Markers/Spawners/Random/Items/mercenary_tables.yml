@@ -401,6 +401,9 @@
       - id: CrateAmmoBoxBigLethal20
       #- id: CrateAmmoBoxBigLethal25 # Coyote: Remove .25 from tables
       - id: CrateAmmoBoxBigLethal30
+      - id: CrateAmmoBoxBigLethal35
+      - id: CrateAmmoBoxBigLethal45
+      - id: CrateAmmoBoxBigLethalShotgun
       - id: CrateAmmoBoxBigRubber20
       #- id: CrateAmmoBoxBigRubber25 # Coyote: Remove .25 from tables
       - id: CrateAmmoBoxFlareShotgun

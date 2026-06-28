@@ -418,6 +418,7 @@
   table: !type:GroupSelector
     children:
     - id: WeaponCaseShortAmmoBoxLethal45
+    - id: WeaponCaseShortAmmoBoxBigLethal45
     - !type:GroupSelector
       children:
       - id: WeaponCaseShortAmmoBoxLethal20
@@ -434,6 +435,7 @@
     - !type:GroupSelector
       children:
       - id: WeaponCaseShortAmmoBoxLethal35
+      - id: WeaponCaseShortAmmoBoxBigLethal35
     # Coyote: .40 ammo
     - !type:GroupSelector
       children:
@@ -443,6 +445,7 @@
       children:
       - id: WeaponCaseShortAmmoBoxLethalShotgun
       - id: WeaponCaseShortAmmoBoxSlugShotgun
+      - id: WeaponCaseShortAmmoBoxBigLethalShotgun
 
 # region ammo rubber
 - type: entityTable
