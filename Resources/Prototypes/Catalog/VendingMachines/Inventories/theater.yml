@@ -347,6 +347,12 @@
     ClothingUniformHitmanSuitSkirt: 4294967295
     ClothingUniformBrosBlazer: 4294967295
     ClothingUniformBrosBlazerSkirt: 4294967295
+    # Euphoria
+    ClothingShoesHeelsBallet: 2
+    ClothingShoesHeelsKitten: 2
+    ClothingShoesHeelsKittenBlack: 2
+    ClothingShoesHeelsKittenCrimson: 2
+    ClothingShoesHeelsKittenRose: 2
   contrabandInventory:
     ClothingHeadHatRichard: 4294967295
     ToyFigurineBoxer: 4294967295
