@@ -1,0 +1,388 @@
+- type: entity
+  abstract: true
+  parent: [ ClothingUniformBase ]
+  id: ClothingUniformOvershoesBase
+  components:
+  - type: AltClothingLayer
+    defaultLayer: jumpsuit
+    altLayer: jumpsuitalt
+    changeToAltMessage: alt-clothing-component-mask-alt
+    changeToDefaultMessage: alt-clothing-component-mask-default
+
+## Butler
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitVanderlinFormalShirt
+  name: formal shirt
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/formalshirt.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/formalshirt.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterVestVanderlinFormalBlazer
+  name: formal blazer
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/formalblazer.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/formalblazer.rsi
+
+## Prince Suit
+- type: entity
+  parent: [ ClothingUniformBase, BaseCommandContraband ]
+  id: ClothingUniformJumpsuitPrince
+  name: captains prince suit
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/prince.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/prince.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitPrince
+  id: ClothingUniformJumpsuitPrinceBlue
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#5882c6"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#5882c6"
+
+- type: entity
+  parent: ClothingUniformJumpsuitPrince
+  id: ClothingUniformJumpsuitPrinceRed
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#911515"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#911515"
+
+## Formal Gown
+- type: entity
+  parent: [ ClothingUniformOvershoesBase, BaseCommandContraband ]
+  id: ClothingUniformJumpsuitCaptainFormalGown
+  name: captains formal gown
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/captainformalgown.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/captainformalgown.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      jumpsuit-vulpkanin:
+      - state: equipped-INNERCLOTHING-vulpkanin
+  - type: HideClothingLayerClothing
+    hiddenSlots:
+    - shoes
+
+- type: entity
+  parent: ClothingUniformJumpsuitCaptainFormalGown
+  id: ClothingUniformJumpsuitCaptainFormalGownRed
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#911515"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#911515"
+      jumpsuit-vulpkanin:
+      - state: equipped-INNERCLOTHING-vulpkanin
+      - state: equipped-INNERCLOTHING-detail-vulpkanin
+        color: "#911515"
+
+- type: entity
+  parent: ClothingUniformJumpsuitCaptainFormalGown
+  id: ClothingUniformJumpsuitCaptainFormalGownGreen
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#00651d"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#00651d"
+      jumpsuit-vulpkanin:
+      - state: equipped-INNERCLOTHING-vulpkanin
+      - state: equipped-INNERCLOTHING-detail-vulpkanin
+        color: "#00651d"
+
+- type: entity
+  parent: ClothingUniformJumpsuitCaptainFormalGown
+  id: ClothingUniformJumpsuitCaptainFormalGownBlack
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#28282b"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#28282b"
+      jumpsuit-vulpkanin:
+      - state: equipped-INNERCLOTHING-vulpkanin
+      - state: equipped-INNERCLOTHING-detail-vulpkanin
+        color: "#28282b"
+      jumpsuit-feroxi:
+      - state: equipped-INNERCLOTHIN-feroxi
+      - state: equipped-INNERCLOTHING-detail-feroxi
+        color: "#28282b"
+
+- type: entity
+  parent: [ ClothingHandsButcherable, BaseCommandContraband ]
+  id: ClothingHandsGlovesCaptainsFormalSleeves
+  name: captains formal sleeves
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/captainsformalgownsleeves.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/captainsformalgownsleeves.rsi
+
+- type: entity
+  parent: ClothingHandsGlovesCaptainsFormalSleeves
+  id: ClothingHandsGlovesCaptainsFormalSleevesRed
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#911515"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+      - state: equipped-HAND-detail
+        color: "#911515"
+
+- type: entity
+  parent: ClothingHandsGlovesCaptainsFormalSleeves
+  id: ClothingHandsGlovesCaptainsFormalSleevesGreen
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#00651d"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+      - state: equipped-HAND-detail
+        color: "#00651d"
+
+- type: entity
+  parent: ClothingHandsGlovesCaptainsFormalSleeves
+  id: ClothingHandsGlovesCaptainsFormalSleevesBlack
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#28282b"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+      - state: equipped-HAND-detail
+        color: "#28282b"
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCaptainsFormalCrown
+  name: captains formal crown
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/captainsformalcrown.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/captainsformalcrown.rsi
+
+## Maid
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatVanderlinMaidHeadband
+  name: maid headband
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/maid-headband.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/maid-headband.rsi
+
+- type: entity
+  parent: [ ClothingUniformOvershoesBase, BaseCommandContraband ]
+  id: ClothingUniformJumpsuitVanderlinMaidDress
+  name: maid dress
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/maid-dress.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/maid-dress.rsi
+  - type: AltClothingLayer
+    defaultLayer: jumpsuit
+    altLayer: jumpsuitalt
+    changeToAltMessage: alt-clothing-component-mask-alt
+    changeToDefaultMessage: alt-clothing-component-mask-default
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterVestVanderlinMaidApron
+  name: apron
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/maid-apron.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/maid-apron.rsi
+
+## Winterdress
+- type: entity
+  parent: [ ClothingOuterStorageBase, BaseCommandContraband ]
+  id: ClothingOuterCoatVanderlinWinterDress
+  name: coat-dress
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/winter-dress.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/winter-dress.rsi
+
+- type: entity
+  parent: ClothingOuterCoatVanderlinWinterDress
+  id: ClothingOuterCoatVanderlinWinterDressWhite
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#ffffff"
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-detail
+        color: "#ffffff"
+
+## Grenzel
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatVanderlinGrenzel
+  name: grenzel hat
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/grenzelhat.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/grenzelhat.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitVanderlinGrenzel
+  name: grenzel suit
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/grenzelsuit.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/grenzelsuit.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingHeadHatBeretBlueshield
+  id: ClothingHeadHatVanderlinGrenzelBSO
+  name: blueshield's armored grenzel hat
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/grenzelhat.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#3878f1"
+    - state: icon-detailalt
+      color: "#3878f1"
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/grenzelhat.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-detail
+        color: "#1a5bd4"
+      - state: equipped-HELMET-detailalt
+        color: "#1a5bd4"
+
+- type: entity
+  parent: ClothingUniformJumpsuitVanderlinGrenzel
+  id: ClothingUniformJumpsuitVanderlinBSOGrenzel
+  name: blueshield's grenzel suit
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#1a5bd4"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#1a5bd4"
+
+- type: entity
+  parent: ClothingBlueshieldArmourVest
+  id: ClothingBlueshieldArmourCuriass
+  name: blueshield's curiass
+  description: Placeholder!!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/Vanderlin/grenzelcuriass.rsi
+    state: icon-bso
+  - type: Clothing
+    sprite: _Omu/Clothing/Vanderlin/grenzelcuriass.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING-bso
