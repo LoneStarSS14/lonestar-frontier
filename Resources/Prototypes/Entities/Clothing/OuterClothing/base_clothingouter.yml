@@ -187,6 +187,10 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
+#  - type: PhysicalComposition # Frontier
+#    materialComposition: # Frontier
+#      Durathread: 100 # Frontier
+#      Cloth: 50 # Frontier
   - type: HideClothingLayerClothing # Goobstation
     hiddenSlots:
     - jumpsuit
