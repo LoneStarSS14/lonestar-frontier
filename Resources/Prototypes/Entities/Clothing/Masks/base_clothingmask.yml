@@ -11,7 +11,7 @@
     slots: [mask]
   - type: StaticPrice
     price: 25
-  - type: AltClothingLayer # Goobstation
+  - type: AltClothingLayer # Goob
     defaultLayer: mask
     altLayer: maskalt
     changeToAltMessage: alt-clothing-component-mask-alt

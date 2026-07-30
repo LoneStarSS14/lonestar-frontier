@@ -12,7 +12,7 @@
         - to: end
           conditions:
           - !type:HasTag
-            tag: GasMaskFullDefault
+            tag: ClothingMaskGas
           steps:
             - tool: Slicing
               doAfter: 2

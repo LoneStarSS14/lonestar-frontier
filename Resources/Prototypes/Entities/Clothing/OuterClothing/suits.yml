@@ -27,7 +27,7 @@
     - WhitelistChameleon
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -73,7 +73,7 @@
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -108,7 +108,7 @@
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -136,7 +136,7 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -203,7 +203,7 @@
         whitelist:
           tags:
             - PowerCell
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -219,7 +219,7 @@
     sprite: Clothing/OuterClothing/Suits/chicken.rsi
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -260,7 +260,7 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -286,7 +286,7 @@
     node: suit
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -309,7 +309,7 @@
     containers:
       toggleable-clothing: !type:ContainerSlot {}
   - type: CatWearable # Frontier
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -327,6 +327,6 @@
     coolingCoefficient: 0.01
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCarp
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit

@@ -21,7 +21,7 @@
     sprintModifier: 0.95
   - type: StaticPrice # Frontier
     vendPrice: 400 # Frontier
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 

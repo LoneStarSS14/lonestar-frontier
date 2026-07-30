@@ -93,7 +93,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-  - type: HideClothingLayerClothing
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -133,7 +133,7 @@
     sprite: Clothing/OuterClothing/Misc/cultrobes.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/cultrobes.rsi
-  - type: HideClothingLayerClothing
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -147,7 +147,7 @@
     sprite: Clothing/OuterClothing/Misc/judge.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/judge.rsi
-  - type: HideClothingLayerClothing
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
@@ -174,7 +174,7 @@
     sprite: Clothing/OuterClothing/Misc/santa.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/santa.rsi
-  - type: HideClothingLayerClothing
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 

@@ -1,9 +1,3 @@
 
 - type: Tag
-  id: GasMaskFullDefault
-
-- type: Tag
-  id: GasMask
-
-- type: Tag
-  id: Mask
+  id: ClothingMaskGas

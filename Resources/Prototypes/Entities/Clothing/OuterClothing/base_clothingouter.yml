@@ -155,7 +155,7 @@
   - type: StaticPrice # Frontier
     price: 20 # Frontier
     vendPrice: 1500 # Frontier
-  - type: HideClothingLayerClothing # Goobstation
+  - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
 
