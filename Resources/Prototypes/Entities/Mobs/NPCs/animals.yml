@@ -1665,6 +1665,7 @@
       visible: false
     - map: [ "ears" ]
     - map: [ "id" ]
+    - map: [ "maskalt" ]
     - map: [ "mask" ]
     - map: [ "head" ]
     - map: [ "clownedon" ]
