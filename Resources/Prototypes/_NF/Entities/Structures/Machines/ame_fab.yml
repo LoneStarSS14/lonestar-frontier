@@ -117,9 +117,9 @@
     key: enum.AdjustablePowerDrawUiKey.Key
   - type: EntitySpawnPowerConsumer
     spawn: AmeJarBig
-    energyPerSpawn: 6000000000 # 1.2 GJ (75% base eff.) multiplied by 5 to compensate for AmeJarBig buff
+    energyPerSpawn: 1000000000 # 1.2 GJ (75% base eff.) multiplied by 5 to compensate for AmeJarBig buff
     material: Plasteel
-    materialAmount: 500
+    materialAmount: 60
   - type: ItemSlots
     slots:
       output:
