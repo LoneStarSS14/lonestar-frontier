@@ -10,27 +10,6 @@
 #     changeToAltMessage: alt-clothing-component-mask-alt
 #     changeToDefaultMessage: alt-clothing-component-mask-default
 
-## Butler
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitVanderlinFormalShirt
-  name: formal shirt
-  components:
-  - type: Sprite
-    sprite: _Lonestar/Clothing/Vanderlin/formalshirt.rsi
-  - type: Clothing
-    sprite: _Lonestar/Clothing/Vanderlin/formalshirt.rsi
-
-- type: entity
-  parent: ClothingOuterStorageBase
-  id: ClothingOuterVestVanderlinFormalBlazer
-  name: formal blazer
-  components:
-  - type: Sprite
-    sprite: _Lonestar/Clothing/Vanderlin/formalblazer.rsi
-  - type: Clothing
-    sprite: _Lonestar/Clothing/Vanderlin/formalblazer.rsi
-
 ## Prince Suit
 - type: entity
   parent: ClothingUniformBase
@@ -229,6 +208,27 @@
     sprite: _Lonestar/Clothing/Vanderlin/regalcrown.rsi
   - type: Clothing
     sprite: _Lonestar/Clothing/Vanderlin/regalcrown.rsi
+
+## Butler
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitVanderlinFormalShirt
+  name: formal shirt
+  components:
+  - type: Sprite
+    sprite: _Lonestar/Clothing/Vanderlin/formalshirt.rsi
+  - type: Clothing
+    sprite: _Lonestar/Clothing/Vanderlin/formalshirt.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterVestVanderlinFormalBlazer
+  name: formal blazer
+  components:
+  - type: Sprite
+    sprite: _Lonestar/Clothing/Vanderlin/formalblazer.rsi
+  - type: Clothing
+    sprite: _Lonestar/Clothing/Vanderlin/formalblazer.rsi
 
 ## Maid
 - type: entity

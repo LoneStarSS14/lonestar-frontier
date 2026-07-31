@@ -203,6 +203,28 @@
     VintageUniformSuit: 4
     CargoOverallsUniformSuit: 4
     RedRegaliaSuit: 4
+    # Vanderlin Ported
+    ClothingUniformJumpsuitRegalSuitPrince: 2
+    ClothingUniformJumpsuitRegalSuitBlue: 2
+    ClothingUniformJumpsuitRegalSuitGreen: 2
+    ClothingUniformJumpsuitRegalSuitBlack: 2
+    ClothingUniformJumpsuitRegalGown: 2
+    ClothingUniformJumpsuitRegalGownRed: 2
+    ClothingUniformJumpsuitRegalGownGreen: 2
+    ClothingUniformJumpsuitRegalGownBlack: 2
+    ClothingHandsGlovesRegalSleeves: 2
+    ClothingHandsGlovesRegalSleevesRed: 2
+    ClothingHandsGlovesRegalSleevesGreen: 2
+    ClothingHandsGlovesRegalSleevesBlack: 2
+    ClothingHeadHatRegalCrown: 4
+    ClothingUniformJumpsuitVanderlinFormalShirt: 2
+    ClothingOuterVestVanderlinFormalBlazer: 2
+    ClothingHeadHatVanderlinMaidHeadband: 3
+    ClothingUniformJumpsuitVanderlinMaidDress: 3
+    ClothingOuterVestVanderlinMaidApron: 3
+    ClothingOuterCoatVanderlinPelisse: 3
+    ClothingHeadHatVanderlinGrenzel: 2
+    ClothingUniformJumpsuitVanderlinGrenzel: 2
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1
