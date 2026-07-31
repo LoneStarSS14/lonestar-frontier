@@ -15,15 +15,10 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-    - ClothingMaskGas # Goob
   - type: HideLayerClothing
     layers:
       Snout: Mask
     hideOnToggle: true
-  - type: Construction # Goob
-    graph: GasMaskHalf
-    node: start
-    deconstructionTarget: null
 
 - type: entity
   parent: [ClothingMaskGas, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband
