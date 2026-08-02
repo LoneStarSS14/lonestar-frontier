@@ -148,6 +148,10 @@
     ClothingUniformJumpskirtSchoolGreen: 4
     ClothingUniformJumpskirtSchoolWhite: 4
     ClothingUniformJumpskirtSchoolBlack: 4
+    ClothingHandsGlovesColorSatinWhite: 4
+    ClothingHandsGlovesColorSatinWhiteLong: 4
+    ClothingHeadHatMaidHeadband: 4
+    ClothingUniformJumpskirtMaidDressLong: 4
     ClothingUniformJumpskirtCapTurtleneck: 4
     ClothingUniformJumpskirtHoPTurtleneck: 4
     ClothingUniformJumpskirtHoSBlack: 4
@@ -224,14 +228,10 @@
     ClothingHandsGlovesRegalSleevesGreen: 2
     ClothingHandsGlovesRegalSleevesBlack: 2
     ClothingHeadHatRegalCrown: 4
-    ClothingUniformJumpsuitVanderlinFormalShirt: 2
-    ClothingOuterVestVanderlinFormalBlazer: 2
-    ClothingHeadHatVanderlinMaidHeadband: 3
-    ClothingUniformJumpsuitVanderlinMaidDress: 3
-    ClothingOuterVestVanderlinMaidApron: 3
-    ClothingOuterCoatVanderlinPelisse: 3
-    ClothingHeadHatVanderlinGrenzel: 2
-    ClothingUniformJumpsuitVanderlinGrenzel: 2
+    ClothingUniformJumpsuitRegalShirt: 2
+    ClothingOuterVestMedievalLongcoat: 2
+    ClothingHeadHatGrenzel: 2
+    ClothingUniformJumpsuitGrenzel: 2
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1

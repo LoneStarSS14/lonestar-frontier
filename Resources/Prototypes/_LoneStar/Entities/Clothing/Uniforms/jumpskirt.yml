@@ -1,3 +1,4 @@
+# region School skirts
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolOrange
@@ -263,3 +264,79 @@
         - state: inhand-right
         - state: inhand-right-detail
           color: "#fffb00"
+
+# region Regal Gown
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitRegalGown
+  name: blue regal gown
+  components:
+  - type: Sprite
+    sprite: _Lonestar/Clothing/Uniforms/Jumpskirts/regal-gown.rsi
+  - type: Clothing
+    sprite: _Lonestar/Clothing/Uniforms/Jumpskirts/regal-gown.rsi
+  # - type: HideClothingLayerClothing # TODO: Get this component in game.
+  #   hiddenSlots:
+  #   - shoes
+
+- type: entity
+  parent: ClothingUniformJumpsuitRegalGown
+  id: ClothingUniformJumpsuitRegalGownRed
+  name: red regal gown
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#96526f"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#96526f"
+
+- type: entity
+  parent: ClothingUniformJumpsuitRegalGown
+  id: ClothingUniformJumpsuitRegalGownGreen
+  name: green regal gown
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#56a452"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#56a452"
+
+- type: entity
+  parent: ClothingUniformJumpsuitRegalGown
+  id: ClothingUniformJumpsuitRegalGownBlack
+  name: black regal gown
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#5c5c60"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#5c5c60"
+
+# region Misc
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtMaidDressLong
+  name: long maid dress
+  components:
+  - type: Sprite
+    sprite: _Lonestar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
+  - type: Clothing
+    sprite: _Lonestar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi

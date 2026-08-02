@@ -11,14 +11,7 @@
             "name": "icon"
         },
         {
-            "name": "icon-bso"
-        },
-        {
             "name": "equipped-OUTERCLOTHING",
-            "directions": 4
-        },
-        {
-            "name": "equipped-OUTERCLOTHING-bso",
             "directions": 4
         }
     ]
