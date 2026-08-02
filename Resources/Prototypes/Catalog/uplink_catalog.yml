@@ -1762,11 +1762,11 @@
     Telecrystal: 2
   categories:
     - UplinkWearables
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - NukeOpsUplink
+#  conditions:  #Lone Star
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - NukeOpsUplink
 
 - type: listing
   id: UplinkClothingConductingGloves
