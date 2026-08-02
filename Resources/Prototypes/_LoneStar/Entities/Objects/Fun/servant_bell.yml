@@ -12,7 +12,7 @@
     size: Small
     quickEquip: false
   - type: UseDelay
-    delay: 0.5
+    delay: 0.75
   - type: EmitSoundOnUse
     sound:
       path: /Audio/_LoneStar/Items/servant_bell.ogg
