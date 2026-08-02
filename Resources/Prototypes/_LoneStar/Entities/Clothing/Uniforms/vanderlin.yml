@@ -261,6 +261,17 @@
   - type: Clothing
     sprite: _Lonestar/Clothing/Vanderlin/maid-apron.rsi
 
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterVestVanderlinMaidApronSatin
+  name: victorian apron
+  description: this one feels particularly cheap
+  components:
+  - type: Sprite
+    sprite: _Lonestar/Clothing/Vanderlin/maid-apron-satin.rsi
+  - type: Clothing
+    sprite: _Lonestar/Clothing/Vanderlin/maid-apron-satin.rsi
+
 ## Winterdress
 - type: entity
   parent: ClothingOuterStorageBase
