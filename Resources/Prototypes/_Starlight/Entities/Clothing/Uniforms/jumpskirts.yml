@@ -259,8 +259,32 @@
   components:
   - type: Sprite
     sprite: _Starlight/Clothing/Uniforms/Jumpskirt/schoolskirt.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#9fd7ff"
+    - state: icon-accent
+      color: "#ff0062"
   - type: Clothing
     sprite: _Starlight/Clothing/Uniforms/Jumpskirt/schoolskirt.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#9fd7ff"
+      - state: equipped-INNERCLOTHING-accent
+        color: "#ff0062"
+  - type: Item
+    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/schoolskirt.rsi
+    inhandVisuals:
+      left:
+        - state: inhand-left
+        - state: inhand-left-detail
+          color: "#9fd7ff"
+      right:
+        - state: inhand-right
+        - state: inhand-right-detail
+          color: "#9fd7ff"
 
 - type: entity
   parent: ClothingUniformBase
