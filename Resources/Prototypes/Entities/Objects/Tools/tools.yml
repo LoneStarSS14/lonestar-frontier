@@ -101,12 +101,12 @@
     tags:
     - Wrench
   - type: Sprite
-    sprite: _NF/Objects/Tools/wrench.rsi # Frontier: separate sprites (add _NF folder)
+    sprite: Objects/Tools/wrench.rsi
     state: icon
   - type: Item
-    sprite: _NF/Objects/Tools/wrench.rsi # Frontier: separate sprites (add _NF folder)
+    sprite: Objects/Tools/wrench.rsi
     storedSprite:
-      sprite: _NF/Objects/Tools/wrench.rsi # Frontier: separate sprites (add _NF folder)
+      sprite: Objects/Tools/wrench.rsi
       state: storage
   - type: MeleeWeapon
     wideAnimationRotation: 135
@@ -140,7 +140,7 @@
     sound:
       path: /Audio/Items/multitool_drop.ogg
   - type: Sprite
-    sprite: _NF/Objects/Tools/multitool.rsi # Frontier: separate sprites (add _NF folder)
+    sprite: Objects/Tools/multitool.rsi
     layers:
     - state: icon
     - state: green-unlit
@@ -148,7 +148,7 @@
   - type: Item
     size: Small
   - type: Clothing
-    sprite: _NF/Objects/Tools/multitool.rsi # Frontier: separate sprites (add _NF folder)
+    sprite: Objects/Tools/multitool.rsi
     quickEquip: false
     slots:
     - Belt
@@ -321,12 +321,12 @@
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite
-    sprite: _CS/Objects/Tools/rcd.rsi # Coyote
+    sprite: Objects/Tools/rcd.rsi
     state: icon
   - type: Item
     size: Normal
   - type: Clothing
-    sprite: _CS/Objects/Tools/rcd.rsi # Coyote
+    sprite: Objects/Tools/rcd.rsi
     quickEquip: false
     slots:
     - Belt
@@ -383,10 +383,10 @@
   components:
   - type: RCDAmmo
   - type: Sprite
-    sprite: _CS/Objects/Tools/rcd.rsi # Coyote
+    sprite: Objects/Tools/rcd.rsi
     state: ammo
   - type: Item
-    sprite: _CS/Objects/Tools/rcd.rsi # Coyote
+    sprite: Objects/Tools/rcd.rsi
     heldPrefix: ammo
   - type: PhysicalComposition
     materialComposition:
