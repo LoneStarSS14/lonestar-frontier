@@ -272,9 +272,9 @@
   name: blue regal gown
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Uniforms/Jumpskirts/regal-gown.rsi
+    sprite: _Lonestar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Uniforms/Jumpskirts/regal-gown.rsi
+    sprite: _Lonestar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
   # - type: HideClothingLayerClothing # TODO: Get this component in game.
   #   hiddenSlots:
   #   - shoes

@@ -5,9 +5,9 @@
   description: For when regular white gloves are too bland.
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Hands/Gloves/whitesatin.rsi
+    sprite: _LoneStar/Clothing/Hands/Gloves/white-satin.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Hands/Gloves/whitesatin.rsi
+    sprite: _LoneStar/Clothing/Hands/Gloves/white-satin.rsi
   - type: Fiber
     fiberColor: fibers-white
 
@@ -18,8 +18,8 @@
   description: For when regular white gloves are too bland, now with elbow coverage.
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Hands/Gloves/whitesatinlong.rsi
+    sprite: _LoneStar/Clothing/Hands/Gloves/white-satin-long.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Hands/Gloves/whitesatinlong.rsi
+    sprite: _LoneStar/Clothing/Hands/Gloves/white-satin-long.rsi
   - type: Fiber
     fiberColor: fibers-white

@@ -5,9 +5,9 @@
   name: red regal suit
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Uniforms/Jumpsuits/regal-suit.rsi
+    sprite: _Lonestar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Uniforms/Jumpsuits/regal-suit.rsi
+    sprite: _Lonestar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
 
 - type: entity
   parent: ClothingUniformJumpsuitRegalSuitPrince

@@ -2,13 +2,13 @@
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterVestPinafore
-  name: apron-pinafore
+  name: pinafore
   description: what do you mean no pockets!?
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/OuterClothing/Vests/pinafore.rsi
+    sprite: _Lonestar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/OuterClothing/Vests/pinafore.rsi
+    sprite: _Lonestar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
 
 - type: entity
   parent: ClothingOuterStorageBase
