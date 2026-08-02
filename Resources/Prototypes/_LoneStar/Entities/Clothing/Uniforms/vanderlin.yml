@@ -22,7 +22,7 @@
     sprite: _Lonestar/Clothing/Vanderlin/prince.rsi
 
 - type: entity
-  parent: ClothingUniformRegalSuitPrince
+  parent: ClothingUniformJumpsuitRegalSuitPrince
   id: ClothingUniformJumpsuitRegalSuitBlue
   name: blue regal suit
   components:
@@ -39,7 +39,7 @@
         color: "#5882c6"
 
 - type: entity
-  parent: ClothingUniformRegalSuitPrince
+  parent: ClothingUniformJumpsuitRegalSuitPrince
   id: ClothingUniformJumpsuitRegalSuitGreen
   name: green regal suit
   components:
@@ -56,7 +56,7 @@
         color: "#56a452"
 
 - type: entity
-  parent: ClothingUniformRegalSuitPrince
+  parent: ClothingUniformJumpsuitRegalSuitPrince
   id: ClothingUniformJumpsuitRegalSuitBlack
   name: black regal suit
   components:
