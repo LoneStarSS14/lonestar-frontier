@@ -5,9 +5,9 @@
   name: blue regal sleeves
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Hands/Sleeves/regal-gown.rsi
+    sprite: _LoneStar/Clothing/Hands/Sleeves/regal-gown.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Hands/Sleeves/regal-gown.rsi
+    sprite: _LoneStar/Clothing/Hands/Sleeves/regal-gown.rsi
 
 - type: entity
   parent: ClothingHandsGlovesRegalSleeves

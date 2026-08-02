@@ -272,9 +272,9 @@
   name: blue regal gown
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
   # - type: HideClothingLayerClothing # TODO: Get this component in game.
   #   hiddenSlots:
   #   - shoes
@@ -337,6 +337,6 @@
   name: long maid dress
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi

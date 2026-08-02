@@ -5,9 +5,9 @@
   name: red regal suit
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
 
 - type: entity
   parent: ClothingUniformJumpsuitRegalSuitPrince
@@ -67,11 +67,11 @@
   name: grenzel suit
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Uniforms/Jumpsuit/grenzel.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/grenzel.rsi
     layers:
     - state: icon
   - type: Clothing
-    sprite: _Lonestar/Clothing/Uniforms/Jumpsuit/grenzel.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/grenzel.rsi
     clothingVisuals:
       jumpsuit:
       - state: equipped-INNERCLOTHING
@@ -82,6 +82,6 @@
   name: regal shirt
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Uniforms/Jumpsuit/regal-shirt.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-shirt.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Uniforms/Jumpsuit/regal-shirt.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-shirt.rsi

@@ -6,9 +6,9 @@
   description: what do you mean no pockets!?
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -16,6 +16,6 @@
   name: medieval longcoat
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/OuterClothing/Vest/medieval-longcoat.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Vest/medieval-longcoat.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/OuterClothing/Vest/medieval-longcoat.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Vest/medieval-longcoat.rsi
