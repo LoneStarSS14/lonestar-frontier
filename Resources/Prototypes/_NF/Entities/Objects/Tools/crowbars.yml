@@ -2,7 +2,7 @@
   parent: BaseCrowbar
   id: CrowbarPocket
   name: pocket crowbar
-  description: 
+  description:
   components:
   - type: EmitSoundOnLand
     sound:
@@ -33,7 +33,7 @@
   - type: Item
     storedSprite:
       state: pocket-icon # Not properly rotated.
-      sprite: _NF/Objects/Tools/crowbar.rsi
+      sprite: Objects/Tools/crowbar.rsi # LoneStar
     inhandVisuals:
       left:
       - state: inhand-left # Should be brighter, smaller
