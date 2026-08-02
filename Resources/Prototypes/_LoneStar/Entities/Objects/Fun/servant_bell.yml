@@ -10,7 +10,6 @@
   - type: Item
     sprite: _LoneStar/Objects/Fun/servant_bell.rsi
     size: Small
-    quickEquip: false
   - type: UseDelay
     delay: 0.75
   - type: EmitSoundOnUse
