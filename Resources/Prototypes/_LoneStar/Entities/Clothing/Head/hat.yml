@@ -6,9 +6,9 @@
   description: while its real gold, the gems appear to be plastic
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Head/Hat/regal-crown.rsi
+    sprite: _LoneStar/Clothing/Head/Hat/regal-crown.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Head/Hat/regal-crown.rsi
+    sprite: _LoneStar/Clothing/Head/Hat/regal-crown.rsi
   - type: StaticPrice
     price: 1250
     vendPrice: 2000
@@ -19,11 +19,11 @@
   name: grenzel hat
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Head/Hat/grenzel.rsi
+    sprite: _LoneStar/Clothing/Head/Hat/grenzel.rsi
     layers:
     - state: icon
   - type: Clothing
-    sprite: _Lonestar/Clothing/Head/Hat/grenzel.rsi
+    sprite: _LoneStar/Clothing/Head/Hat/grenzel.rsi
     clothingVisuals:
       head:
       - state: equipped-HELMET
@@ -34,6 +34,6 @@
   name: maid headband
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Head/Hat/maid-headband.rsi
+    sprite: _LoneStar/Clothing/Head/Hat/maid-headband.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Head/Hat/maid-headband.rsi
+    sprite: _LoneStar/Clothing/Head/Hat/maid-headband.rsi
