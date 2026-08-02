@@ -166,3 +166,9 @@ uplink-pirate-40ammo-fire-desc = A box of .40 Incendiary Ammo
 
 uplink-pirate-60ammo-rubber-name = .60 Rubber Ammo Box
 uplink-pirate-60ammo-rubber-desc = A box of .60 Rubber Ammo
+
+uplink-pistol-magazine-40-name = Pistol Magazine (.40 pistol)
+uplink-pistol-magazine-40-desc = A pistol magazine with 16 bullets. Compatible with the Viper Pistol.
+
+uplink-pistol-magazine-c20r-40-name = SMG Magazine (.40 pistol)
+uplink-pistol-magazine-c20r-40-desc = An SMG magazine with 30 bullets. Compatible with the C-20r Submachine Gun.
