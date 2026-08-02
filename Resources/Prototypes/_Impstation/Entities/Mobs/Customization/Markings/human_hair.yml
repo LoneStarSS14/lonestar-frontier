@@ -3,6 +3,7 @@
   id: BurqaSolid
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: burqasolid
@@ -11,6 +12,7 @@
   id: HairFloralLong
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: florallong1
@@ -21,6 +23,7 @@
   id: HairFloralMid
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: floralmid1
@@ -31,6 +34,7 @@
   id: HijabFashionable
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: hijabchic
@@ -39,6 +43,7 @@
   id: HijabSimple
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: hijabsimple
@@ -47,6 +52,7 @@
   id: HumanHairFrenchBraid
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: frenchbraid
@@ -55,6 +61,7 @@
   id: HumanHairGatheredlow
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: gatheredlow
@@ -63,6 +70,7 @@
   id: HumanHairHalfUpShort
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: halfupshort
@@ -71,6 +79,7 @@
   id: HumanHairHalfUpLong
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: halfuplong
@@ -79,6 +88,7 @@
   id: HumanHairHalfUpUndercut
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: halfupundercut
@@ -87,6 +97,7 @@
   id: HumanHairLowpigtails
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: lowpigtails
@@ -95,6 +106,7 @@
   id: HumanHairMidPartLong
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: midpartlong
@@ -103,6 +115,7 @@
   id: HumanHairMidPartLonger
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: midpartlonger
@@ -111,6 +124,7 @@
   id: HumanHairMulletSideshave
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: mulletsideshave
@@ -119,6 +133,7 @@
   id: HumanHairSideshaveCurly
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: sideshavecurly
@@ -127,6 +142,7 @@
   id: HumanHairSpikyPonytailLong
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   speciesRestriction: [ Human, Dwarf, SlimePerson ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
@@ -136,6 +152,7 @@
   id: HumanHairUndercutCurly
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: undercutcurly
@@ -144,6 +161,7 @@
   id: MessyPonytail
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   speciesRestriction: [ Human, Dwarf, SlimePerson ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
@@ -153,6 +171,7 @@
   id: Niqab
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   speciesRestriction: [ Human, Dwarf, SlimePerson ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
@@ -162,6 +181,7 @@
   id: TichelFashionable
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: tichelfashionable
@@ -170,6 +190,7 @@
   id: TichelSimple
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: tichelsimple
@@ -178,6 +199,7 @@
   id: HumanHairShaggy
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: shaggy
@@ -186,6 +208,7 @@
   id: HumanHairShaggyLonger
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: shaggylonger
@@ -194,6 +217,7 @@
   id: HumanHairShaggyMessy
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: shaggymessy
@@ -202,6 +226,7 @@
   id: HumanHairSusie
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: susie
@@ -210,6 +235,7 @@
   id: HumanHairSusieNoBangs
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: susienobangs
@@ -218,6 +244,7 @@
   id: HumanHairEyeBangLong
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: eyebanglong
@@ -226,6 +253,7 @@
   id: HumanHairEyeBangSideTail
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: eyebangsidetail
@@ -234,6 +262,7 @@
   id: HumanHairOverEyes
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: overeyes
@@ -242,6 +271,7 @@
   id: HumanHairOverEyesTail
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: overeyestail
@@ -250,6 +280,7 @@
   id: HumanHairFringeTail
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: fringetail
@@ -258,6 +289,7 @@
   id: HumanHairFringeRat
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: fringerat
@@ -266,6 +298,7 @@
   id: HumanHairFringeBraid
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: fringebraid
@@ -274,6 +307,7 @@
   id: HumanHairAsymBun
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: asymbun
@@ -282,6 +316,7 @@
   id: HumanHairIntakeShort
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: intakeshort
@@ -290,6 +325,7 @@
   id: HumanHairIntakeLong
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: intakelong
@@ -298,6 +334,7 @@
   id: HumanHairLiberatorTied
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: liberatortied
@@ -306,6 +343,7 @@
   id: HumanHairLiberatorShort
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: liberatorshort
@@ -314,6 +352,7 @@
   id: HumanHairLiberatorLong
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: liberatorlong
@@ -322,6 +361,7 @@
   id: HumanHairDrillTail
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: drilltail
@@ -330,6 +370,7 @@
   id: HumanHairBraidMed
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: braidmed
@@ -338,6 +379,7 @@
   id: HumanHairLocsTied
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: locstied
@@ -346,6 +388,7 @@
   id: HumanHairCurlyPerm
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: curlyperm
@@ -354,6 +397,7 @@
   id: HumanHairPosterPerson
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: posterperson
@@ -362,6 +406,7 @@
   id: HumanHairSmiler
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: smiler
@@ -370,6 +415,7 @@
   id: HumanHairWavyLong
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: wavylong
@@ -378,6 +424,7 @@
   id: HumanHairMiddlePartShort
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: middlepartshort
@@ -386,6 +433,7 @@
   id: HumanHairFadeHighlight
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: fadehighlight
@@ -394,6 +442,7 @@
   id: HumanHairChonmage
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: chonmage
@@ -402,6 +451,7 @@
   id: HumanHairBaldingLong
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: baldinglong
@@ -410,6 +460,7 @@
   id: HumanHairBaldingCurls
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: baldingcurls
@@ -418,6 +469,7 @@
   id: HumanHairFriar
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: friar
@@ -426,6 +478,7 @@
   id: HumanHairAdoringFan
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: adoringfan
@@ -434,6 +487,7 @@
   id: HumanHairBabyHair
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: babyhair
@@ -442,6 +496,7 @@
   id: HumanHairGuyMullet
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: guymullet
@@ -450,6 +505,7 @@
   id: HumanHairGuyTied
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: guytied
@@ -458,6 +514,7 @@
   id: HumanHairMidPartPonytail
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: midpartponytail
@@ -466,6 +523,7 @@
   id: HumanHairMidBangs
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: midbangs
@@ -474,6 +532,7 @@
   id: HumanHairMidBangsCovered
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: midbangscovered
@@ -482,6 +541,7 @@
   id: HumanHairSideshaveBun
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: sideshavebun
@@ -490,6 +550,7 @@
   id: HumanHairJed
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: jed
@@ -498,6 +559,7 @@
   id: HumanHairJedPonytail
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: jedponytail
