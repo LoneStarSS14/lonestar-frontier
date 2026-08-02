@@ -13,7 +13,7 @@
 ## Prince Suit
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformRegalSuitPrince
+  id: ClothingUniformJumpsuitRegalSuitPrince
   name: red regal suit
   components:
   - type: Sprite
@@ -57,7 +57,7 @@
 
 - type: entity
   parent: ClothingUniformRegalSuitPrince
-  id: ClothingUniformJumpsuitRegalSuiteBlack
+  id: ClothingUniformJumpsuitRegalSuitBlack
   name: black regal suit
   components:
   - type: Sprite
@@ -139,7 +139,7 @@
 
 - type: entity
   parent: ClothingHandsButcherable
-  id: ClothingHandsGlovesCaptainsFormalSleeves
+  id: ClothingHandsGlovesRegalSleeves
   name: blue regal sleeves
   components:
   - type: Sprite
@@ -148,8 +148,8 @@
     sprite: _Lonestar/Clothing/Vanderlin/regalgownsleeves.rsi
 
 - type: entity
-  parent: ClothingHandsGlovesCaptainsFormalSleeves
-  id: ClothingHandsGlovesCaptainsFormalSleevesRed
+  parent: ClothingHandsGlovesRegalSleeves
+  id: ClothingHandsGlovesRegalSleevesRed
   name: red regal sleeves
   components:
   - type: Sprite
@@ -165,8 +165,8 @@
         color: "#96526f"
 
 - type: entity
-  parent: ClothingHandsGlovesCaptainsFormalSleeves
-  id: ClothingHandsGlovesCaptainsFormalSleevesGreen
+  parent: ClothingHandsGlovesRegalSleeves
+  id: ClothingHandsGlovesRegalSleevesGreen
   name: green regal sleeves
   components:
   - type: Sprite
@@ -182,8 +182,8 @@
         color: "#56a452"
 
 - type: entity
-  parent: ClothingHandsGlovesCaptainsFormalSleeves
-  id: ClothingHandsGlovesCaptainsFormalSleevesBlack
+  parent: ClothingHandsGlovesRegalSleeves
+  id: ClothingHandsGlovesRegalSleevesBlack
   name: black regal sleeves
   components:
   - type: Sprite
@@ -200,7 +200,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatCaptainsFormalCrown
+  id: ClothingHeadHatRegalCrown
   name: regal crown
   description: while its real gold, the gems seem plastic
   components:
