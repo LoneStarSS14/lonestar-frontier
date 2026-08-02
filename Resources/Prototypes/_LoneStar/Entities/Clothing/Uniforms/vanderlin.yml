@@ -244,33 +244,22 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitVanderlinMaidDress
-  name: victorian maid dress
+  name: long maid dress
   components:
   - type: Sprite
     sprite: _Lonestar/Clothing/Vanderlin/maid-dress.rsi
   - type: Clothing
     sprite: _Lonestar/Clothing/Vanderlin/maid-dress.rsi
-
-- type: entity
-  parent: ClothingOuterStorageBase
-  id: ClothingOuterVestVanderlinMaidApron
-  name: victorian apron
-  components:
-  - type: Sprite
-    sprite: _Lonestar/Clothing/Vanderlin/maid-apron.rsi
-  - type: Clothing
-    sprite: _Lonestar/Clothing/Vanderlin/maid-apron.rsi
 
 - type: entity
   parent: ClothingOuterBase
-  id: ClothingOuterVestVanderlinMaidApronSatin
-  name: victorian apron
-  description: this one feels particularly cheap
+  id: ClothingOuterVestVanderlinMaidApron
+  name: tidy pinafore
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Vanderlin/maid-apron-satin.rsi
+    sprite: _Lonestar/Clothing/Vanderlin/maid-apron.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Vanderlin/maid-apron-satin.rsi
+    sprite: _Lonestar/Clothing/Vanderlin/maid-apron.rsi
 
 ## Winterdress
 - type: entity
