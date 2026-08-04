@@ -1,7 +1,7 @@
 #region base
 - type: entity
   id: NFBaseWeaponFrameLightMachineGun
-  parent: [ NFBaseWeaponEncumbranceSniper, NFBaseItemWeaponGunMagazineFed ]
+  parent: [ NFBaseWeaponEncumbranceLMG, NFBaseItemWeaponGunMagazineFed ] # Lonestar
   suffix: Frontier
   abstract: true
   components:
@@ -18,7 +18,7 @@
     # Lonestar changes start
     angleIncrease: 2
     angleDecay: 10
-    fireRate: 8
+    fireRate: 6
     #burstFireRate: 5
     #shotsPerBurst: 5
     #burstCooldown: 1
@@ -37,10 +37,12 @@
   abstract: true
   components:
   - type: Gun
+    # Lonestar changes start
     minAngle: 4.2
     maxAngle: 18.5
+    # Lonestar changes end
     angleIncrease: 1.5
-    angleDecay: 7.5
+    angleDecay: 5.4
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
 
