@@ -3,7 +3,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatRegalCrown
   name: regal crown
-  description: while its real gold, the gems appear to be plastic
+  description: While its real gold, the gems appear to be plastic.
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Head/Hat/regal-crown.rsi

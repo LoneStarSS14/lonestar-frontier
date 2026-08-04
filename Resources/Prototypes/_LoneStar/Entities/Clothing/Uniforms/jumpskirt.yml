@@ -2,8 +2,7 @@
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolOrange
-  name: school skirt
-  description: Stylish and comfortable school skirt.
+  name: school skirt (nectarine)
   components:
   - type: Sprite
     layers:
@@ -40,8 +39,7 @@
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolRed
-  name: school skirt
-  description: Stylish and comfortable school skirt.
+  name: school skirt (strawberry)
   components:
   - type: Sprite
     layers:
@@ -78,8 +76,7 @@
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolWhite
-  name: school skirt
-  description: Stylish and comfortable school skirt.
+  name: school skirt (ghost white)
   components:
   - type: Sprite
     layers:
@@ -116,8 +113,7 @@
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolBlack
-  name: school skirt
-  description: Stylish and comfortable school skirt.
+  name: school skirt (licorice)
   components:
   - type: Sprite
     layers:
@@ -154,8 +150,7 @@
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolPink
-  name: school skirt
-  description: Stylish and comfortable school skirt.
+  name: school skirt (lavender)
   components:
   - type: Sprite
     layers:
@@ -192,8 +187,7 @@
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolGreen
-  name: school skirt
-  description: Stylish and comfortable school skirt.
+  name: school skirt (jade)
   components:
   - type: Sprite
     layers:
@@ -230,8 +224,7 @@
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolYellow
-  name: school skirt
-  description: Stylish and comfortable school skirt.
+  name: school skirt (lemon)
   components:
   - type: Sprite
     layers:

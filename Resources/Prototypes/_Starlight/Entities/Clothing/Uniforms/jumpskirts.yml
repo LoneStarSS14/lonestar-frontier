@@ -254,9 +254,10 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtSchool
-  name: school skirt
+  name: school skirt (blue) # LoneStar
   description: Stylish and comfortable school skirt.
   components:
+  # LoneStar changes start
   - type: Sprite
     sprite: _Starlight/Clothing/Uniforms/Jumpskirt/schoolskirt.rsi
     layers:
@@ -285,6 +286,7 @@
         - state: inhand-right
         - state: inhand-right-detail
           color: "#9fd7ff"
+  # LoneStar changes end
 
 - type: entity
   parent: ClothingUniformBase

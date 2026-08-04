@@ -3,7 +3,7 @@
   parent: ClothingOuterBase
   id: ClothingOuterVestPinafore
   name: pinafore
-  description: what do you mean no pockets!?
+  description: What do you mean no pockets!?
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
