@@ -3,7 +3,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Audio;
 
-namespace Content.Goobstation.Shared.SlotMachine;
+namespace Content.Shared._Goobstation.SlotMachine;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class SlotMachineComponent : Component

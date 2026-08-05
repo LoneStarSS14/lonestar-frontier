@@ -1,7 +1,7 @@
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 
-namespace Content.Goobstation.Shared.SlotMachine.CoinFlipper;
+namespace Content.Shared._Goobstation.SlotMachine.CoinFlipper;
 
 /// <summary>
 /// This is used for the coinflipper machine.

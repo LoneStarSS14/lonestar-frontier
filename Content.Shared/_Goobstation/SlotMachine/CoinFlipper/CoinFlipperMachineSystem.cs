@@ -10,7 +10,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Goobstation.Shared.SlotMachine.CoinFlipper;
+namespace Content.Shared._Goobstation.SlotMachine.CoinFlipper;
 
 /// <summary>
 /// This handles the coinflipper machine logic
@@ -52,7 +52,6 @@ public sealed class CoinFlipperMachineSystem : EntitySystem
          {
              BreakOnMove = false,
              BreakOnDamage = false,
-             MultiplyDelay = false,
          };
         comp.PrizeAmount = _stackSystem.GetCount(stack.Owner);
         _stackSystem.SetCount(stack.Owner, 0, stack);
@@ -85,7 +84,7 @@ public sealed class CoinFlipperMachineSystem : EntitySystem
         if (slot.Item != null)
             TryComp<StackComponent>(slot.Item.Value, out stack);
 
-        if (_random.Prob(.5f))
+        if (_random.Prob(.38f)) // 50 Flips = 5.6% chance to break even
         {
             _audio.PlayPredicted(comp.WinSound, uid, args.User);
             if (stack == null)
@@ -94,16 +93,31 @@ public sealed class CoinFlipperMachineSystem : EntitySystem
                 var newStack = EntityManager.SpawnEntity("SpaceCash", coordinates);
                 if (TryComp<StackComponent>(newStack, out var newStackComp))
                 {
-                    comp.PrizeAmount *= 2;
+                    comp.PrizeAmount = Math.Min(comp.PrizeAmount * 2, comp.PrizeAmount + 100000);
                     _stackSystem.SetCount(newStack, comp.PrizeAmount, newStackComp);
                     Dirty(newStack, newStackComp);
                 }
 
-                _chatSystem.TrySendInGameICMessage(uid, Loc.GetString("coinflipper-win", ("amount", comp.PrizeAmount)), InGameICChatType.Speak, hideChat: false, hideLog: true, checkRadioPrefix: false);
+                //_chat.TrySendInGameICMessage(uid, Loc.GetString("coinflipper-win", ("amount", comp.PrizeAmount)), InGameICChatType.Speak, hideChat: false, hideLog: true, checkRadioPrefix: false); // TODO: Figure out how to reimplement this
                 return;
             }
         }
-
+        else // Return money beyond the 100k limit
+        {
+            if (comp.PrizeAmount - 100000 > 0)
+                _audio.PlayPredicted(comp.LoseSound, uid, args.User);
+            {
+                var coordinates = Transform(uid).Coordinates;
+                var newStack = EntityManager.SpawnEntity("SpaceCash", coordinates);
+                if (TryComp<StackComponent>(newStack, out var newStackComp))
+                {
+                    comp.PrizeAmount = Math.Max(1, comp.PrizeAmount - 100000);
+                    _stackSystem.SetCount(newStack, comp.PrizeAmount, newStackComp);
+                    Dirty(newStack, newStackComp);
+                }
+                return;
+            }
+        }
         _audio.PlayPredicted(comp.LoseSound, uid, args.User); // If nothing then lose
     }
 }

@@ -12,7 +12,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Goobstation.Shared.SlotMachine.ClawGame;
+namespace Content.Shared._Goobstation.SlotMachine.ClawGame;
 
 /// <summary>
 /// This handles the coinflipper machine logic
@@ -37,7 +37,7 @@ public sealed class ClawMachineSystem : EntitySystem
 
     private void OnEmagged(EntityUid uid, ClawMachineComponent comp, ref GotEmaggedEvent args)
     {
-        if(comp.Emagged)
+        if (comp.Emagged)
             return;
 
         args.Handled = true;
@@ -55,7 +55,6 @@ public sealed class ClawMachineSystem : EntitySystem
          {
              BreakOnMove = true,
              BreakOnDamage = true,
-             MultiplyDelay = false,
          };
         comp.IsSpinning = true;
 
@@ -100,7 +99,7 @@ public sealed class ClawMachineSystem : EntitySystem
         }
         comp.IsSpinning = false;
         Dirty(uid, comp);
-        if(!_net.IsServer)
+        if (!_net.IsServer)
             return;
 
         if (_random.Prob(comp.WinChance) && comp.Rewards != null)

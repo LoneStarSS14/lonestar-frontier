@@ -11,6 +11,16 @@
       - id: SlotMachineFlatpack
 
 - type: entity
+  id: CrateSlotMachineHighRoller
+  parent: CrateGenericSteel
+  name: high-roller slot machine crate
+  description: A crate with a high-roller slot machine inside, Everything you need to start your own gambling addiction!
+  components:
+  - type: StorageFill
+    contents:
+      - id: SlotMachineHighRollerFlatpack
+
+- type: entity
   id: CrateCoinFlipper
   parent: CrateGenericSteel
   name: coin flipper crate

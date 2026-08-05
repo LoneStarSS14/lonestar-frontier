@@ -3,7 +3,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Goobstation.Shared.SlotMachine.ClawGame;
+namespace Content.Shared._Goobstation.SlotMachine.ClawGame;
 
 /// <summary>
 /// This is used for the claw game machine.
@@ -15,16 +15,16 @@ public sealed partial class ClawMachineComponent : Component
     public float DoAfterTime = 3.9f;
 
     [DataField]
-    public SoundSpecifier PlaySound = new SoundPathSpecifier("/Audio/Machines/Keyboard/keyboard1.ogg");
+    public SoundSpecifier PlaySound = new SoundCollectionSpecifier("Keyboard");
 
     [DataField]
-    public SoundSpecifier LoseSound = new SoundPathSpecifier("/Audio/Machines/buzz-two.ogg");
+    public SoundSpecifier LoseSound = new SoundPathSpecifier("/Audio/Machines/custom_deny.ogg");
 
     [DataField]
     public SoundSpecifier WinSound = new SoundPathSpecifier("/Audio/Effects/Arcade/win.ogg");
 
     [DataField, AutoNetworkedField]
-    public float WinChance = .10f;
+    public float WinChance = .10f; // LoneStar, cant set limit like arcade machines.
 
     [DataField, AutoNetworkedField]
     public bool IsSpinning;

@@ -10,7 +10,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Network;
 
 
-namespace Content.Goobstation.Shared.SlotMachine
+namespace Content.Shared._Goobstation.SlotMachine
 {
     public sealed class SlotMachineSystem : EntitySystem
     {
@@ -55,7 +55,6 @@ namespace Content.Goobstation.Shared.SlotMachine
              {
                  BreakOnMove = false,
                  BreakOnDamage = false,
-                 MultiplyDelay = false,
              };
 
             _stackSystem.SetCount(stack.Owner, stack.Count - comp.SpinCost, stack);
@@ -125,7 +124,7 @@ namespace Content.Goobstation.Shared.SlotMachine
                     _audio.PlayPredicted(comp.GodPotWinSound, uid, args.User);
                     var coordinates = Transform(uid).Coordinates;
                     EntityManager.SpawnEntity(comp.GodPotPrize, coordinates);
-                    _chatSystem.TrySendInGameICMessage(uid, Loc.GetString("slotmachine-win-godpot"), InGameICChatType.Speak, hideChat: false, hideLog: true, checkRadioPrefix: false);
+                    //_chatSystem.TrySendInGameICMessage(uid, Loc.GetString("slotmachine-win-godpot"), InGameICChatType.Speak, hideChat: false, hideLog: true, checkRadioPrefix: false);
                     return;
                 }
             }
@@ -137,7 +136,7 @@ namespace Content.Goobstation.Shared.SlotMachine
             // Add money to the stack and play a message
             _stackSystem.SetCount(stack.Owner, stack.Count + prize, stack);
             Dirty(stack.Owner, stack);
-            _chatSystem.TrySendInGameICMessage(uid, msg, InGameICChatType.Speak, hideChat: false, hideLog: true, checkRadioPrefix: false);
+            //_chatSystem.TrySendInGameICMessage(uid, msg, InGameICChatType.Speak, hideChat: false, hideLog: true, checkRadioPrefix: false);
         }
     }
 }

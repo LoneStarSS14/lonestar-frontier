@@ -6,7 +6,17 @@
     sprite: _Goobstation/Structures/Machines/slotmachines/slotmachine.rsi
     state: slotmachine
   product: CrateSlotMachine
-  cost: 1000
+  cost: 4000
+  category: cargoproduct-category-name-service
+  group: market
+
+- type: cargoProduct
+  id: SlotMachineHighRollerCargo
+  icon:
+    sprite: _Goobstation/Structures/Machines/slotmachines/slotmachinehighroller.rsi
+    state: slotmachine
+  product: CrateSlotMachineHighRoller
+  cost: 4000
   category: cargoproduct-category-name-service
   group: market
 
@@ -16,7 +26,7 @@
     sprite: _Goobstation/Structures/Machines/slotmachines/coinflipper.rsi
     state: Coinflipper
   product: CrateCoinFlipper
-  cost: 5000
+  cost: 4000
   category: cargoproduct-category-name-service
   group: market
 
@@ -26,6 +36,6 @@
     sprite: _Goobstation/Structures/Machines/slotmachines/claw_machine.rsi
     state: clawmachine
   product: CrateClawMachine
-  cost: 1000
+  cost: 20000
   category: cargoproduct-category-name-service
   group: market

@@ -1,0 +1,10 @@
+- type: entity
+  parent: SpaceCash
+  id: SpaceCash150000
+  suffix: 150000
+  components:
+  - type: Icon
+    sprite: Objects/Economy/cash.rsi
+    state: cash_100000
+  - type: Stack
+    count: 150000
