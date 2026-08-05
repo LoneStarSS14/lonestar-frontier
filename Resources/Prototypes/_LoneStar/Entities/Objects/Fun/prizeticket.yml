@@ -1,4 +1,4 @@
-
+# Ticket counts
 - type: entity
   parent: PrizeTicket
   id: PrizeTicket3
@@ -23,6 +23,7 @@
     stackType: PrizeTicket
     count: 5
 
+# Balls
 - type: entity
   parent: PrizeBall
   id: PrizeBallSmall
@@ -62,6 +63,7 @@
       - id: PrizeBallSyndicateTrash
       - id: SpawnRewardPrizeBallSyndicate
 
+# Trash
 - type: entity
   parent: BaseItem
   id: PrizeBallTrash

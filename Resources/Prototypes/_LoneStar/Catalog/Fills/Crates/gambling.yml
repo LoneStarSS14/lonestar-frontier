@@ -1,28 +1,36 @@
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
+  parent: CrateGenericSteel
   id: CrateSlotMachine
-  parent: CrateGenericSteel
-  name: slot machine crate
-  description: A crate with a slot machine inside, Everything you need to start your own gambling addiction!
+  name: wheel-house slot machine crate
+  description: A crate with a wheel-house slot machine inside.
   components:
   - type: StorageFill
     contents:
-      - id: SlotMachineFlatpack
+      - id: SlotMachineWheelHouseFlatpack
 
 - type: entity
-  id: CrateSlotMachineHighRoller
   parent: CrateGenericSteel
-  name: high-roller slot machine crate
-  description: A crate with a high-roller slot machine inside, Everything you need to start your own gambling addiction!
+  id: CrateSlotMachinePayRaiser
+  name: pay-raiser slot machine crate
+  description: A crate with a pay-raiser slot machine inside.
   components:
   - type: StorageFill
     contents:
-      - id: SlotMachineHighRollerFlatpack
+      - id: SlotMachinePayRaiserFlatpack
 
 - type: entity
+  parent: CrateGenericSteel
+  id: CrateSlotMachineMarketCrash
+  name: market-crash slot machine crate
+  description: A crate with a market-crash slot machine inside.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SlotMachineMarketCrashFlatpack
+
+- type: entity
+  parent: CrateGenericSteel
   id: CrateCoinFlipper
-  parent: CrateGenericSteel
   name: coin flipper crate
   description: A crate with a coin flipper inside, 50/50 odds are good!
   components:
@@ -31,8 +39,8 @@
     - id: CoinFlipperFlatPack
 
 - type: entity
-  id: CrateClawMachine
   parent: CrateGenericSteel
+  id: CrateClawMachine
   name: slot machine crate
   description: A crate with a claw machine inside, plushies included with every purchase!
   components:
