@@ -45,3 +45,12 @@
   components:
   - type: Flatpack
     entity: ClawMachine
+
+- type: entity
+  parent: BaseFlatpack
+  id: PrizeCounterFlatPack
+  name: prize counter flat pack
+  description: A flatpack used for constructing a prize counter
+  components:
+  - type: Flatpack
+    entity: PrizeCounter

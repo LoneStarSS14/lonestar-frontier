@@ -1,8 +1,8 @@
 - type: entity
   parent: CrateGenericSteel
-  id: CrateSlotMachine
-  name: wheel-house slot machine crate
-  description: A crate with a wheel-house slot machine inside.
+  id: CrateSlotMachineWheelHouse
+  name: slot machine crate (wheel-house)
+  description: A crate with a wheel-house slot machine inside, profitable to play over long periods of time.
   components:
   - type: StorageFill
     contents:
@@ -11,8 +11,8 @@
 - type: entity
   parent: CrateGenericSteel
   id: CrateSlotMachinePayRaiser
-  name: pay-raiser slot machine crate
-  description: A crate with a pay-raiser slot machine inside.
+  name:  slot machine crate (pay-raiser)
+  description: A crate with a premium pay-raiser slot machine inside, great for light risk takers.
   components:
   - type: StorageFill
     contents:
@@ -21,8 +21,8 @@
 - type: entity
   parent: CrateGenericSteel
   id: CrateSlotMachineMarketCrash
-  name: market-crash slot machine crate
-  description: A crate with a market-crash slot machine inside.
+  name: slot machine crate (market-crash)
+  description: A crate with a luxury market-crash slot machine inside, with payouts that are sure to turn heads.
   components:
   - type: StorageFill
     contents:
@@ -32,7 +32,7 @@
   parent: CrateGenericSteel
   id: CrateCoinFlipper
   name: coin flipper crate
-  description: A crate with a coin flipper inside, 50/50 odds are good!
+  description: A crate with a coin flipper inside, double or nothing on the flip of a coin... the coin may be weighted.
   components:
   - type: StorageFill
     contents:
@@ -42,8 +42,18 @@
   parent: CrateGenericSteel
   id: CrateClawMachine
   name: slot machine crate
-  description: A crate with a claw machine inside, plushies included with every purchase!
+  description: A crate with a claw machine inside, prize balls prize balls prize balls!
   components:
   - type: StorageFill
     contents:
     - id: ClawMachineFlatPack
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CratePrizeCounter
+  name: prize counter crate
+  description: A crate with a prize counter vending machine inside, to spend all those hard earned tickets on plushies.
+  components:
+  - type: StorageFill
+    contents:
+    - id: PrizeCounterFlatPack

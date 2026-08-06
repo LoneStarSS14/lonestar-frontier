@@ -93,7 +93,7 @@ public sealed class CoinFlipperMachineSystem : EntitySystem
                 var newStack = EntityManager.SpawnEntity("SpaceCash", coordinates);
                 if (TryComp<StackComponent>(newStack, out var newStackComp))
                 {
-                    comp.PrizeAmount = Math.Min(comp.PrizeAmount * 2, comp.PrizeAmount + 100000);
+                    comp.PrizeAmount = Math.Min(comp.PrizeAmount * 2, comp.PrizeAmount + 10000);
                     _stackSystem.SetCount(newStack, comp.PrizeAmount, newStackComp);
                     Dirty(newStack, newStackComp);
                 }
@@ -102,22 +102,19 @@ public sealed class CoinFlipperMachineSystem : EntitySystem
                 return;
             }
         }
-        else // Return money beyond the 100k limit
-        {
-            if (comp.PrizeAmount - 100000 > 0)
-                _audio.PlayPredicted(comp.LoseSound, uid, args.User);
-            {
-                var coordinates = Transform(uid).Coordinates;
-                var newStack = EntityManager.SpawnEntity("SpaceCash", coordinates);
-                if (TryComp<StackComponent>(newStack, out var newStackComp))
-                {
-                    comp.PrizeAmount = Math.Max(1, comp.PrizeAmount - 100000);
-                    _stackSystem.SetCount(newStack, comp.PrizeAmount, newStackComp);
-                    Dirty(newStack, newStackComp);
-                }
-                return;
-            }
-        }
+
         _audio.PlayPredicted(comp.LoseSound, uid, args.User); // If nothing then lose
+        if (comp.PrizeAmount - 10000 >= 1)
+        {
+            var coordinates = Transform(uid).Coordinates;
+            var newStack = EntityManager.SpawnEntity("SpaceCash", coordinates);
+            if (TryComp<StackComponent>(newStack, out var newStackComp))
+            {
+                comp.PrizeAmount = Math.Max(1, comp.PrizeAmount - 10000);
+                _stackSystem.SetCount(newStack, comp.PrizeAmount, newStackComp);
+                Dirty(newStack, newStackComp);
+            }
+            return;
+        }
     }
 }

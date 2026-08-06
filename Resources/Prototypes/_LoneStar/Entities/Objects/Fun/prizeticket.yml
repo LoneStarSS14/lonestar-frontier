@@ -62,6 +62,9 @@
     items:
       - id: PrizeBallSyndicateTrash
       - id: SpawnRewardPrizeBallSyndicate
+  - type: StaticPrice
+    price: 250
+    vendPrice: 5500
 
 # Trash
 - type: entity

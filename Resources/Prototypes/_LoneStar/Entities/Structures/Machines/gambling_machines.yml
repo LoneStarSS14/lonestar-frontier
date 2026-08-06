@@ -1,6 +1,6 @@
 - type: entity
-  id: BaseSlotMachine
   parent: BaseMachinePowered
+  id: BaseSlotMachine
   name: slot machine
   abstract: true
   description: Gambling for the antisocial.
@@ -84,13 +84,13 @@
         type: WiresBoundUserInterface
 
 - type: entity
-  id: SlotMachineWheelHouse
   parent: BaseSlotMachine
+  id: SlotMachineWheelHouse
   name: wheel-house slot machine
   description: A basic slot machine, takes 250 credits per spin.
   components:
   - type: Sprite
-    sprite: _Goobstation/Structures/Machines/slotmachines/slotmachine.rsi
+    sprite: _LoneStar/Structures/Machines/Gambling/Slots/wheelhouse.rsi
     layers:
       - state: slotmachine
       - state: slotmachine_spin
@@ -118,13 +118,13 @@
     godPotWinChance: .0001
 
 - type: entity
-  id: SlotMachinePayRaiser
   parent: BaseSlotMachine
+  id: SlotMachinePayRaiser
   name: pay-raiser slot machine
   description: A premium slot machine, takes 1,400 credits per spin.
   components:
   - type: Sprite
-    sprite: _Goobstation/Structures/Machines/slotmachines/slotmachinehighroller.rsi
+    sprite: _LoneStar/Structures/Machines/Gambling/Slots/payraiser.rsi
     layers:
       - state: slotmachine
       - state: slotmachine_spin
@@ -152,13 +152,13 @@
     godPotWinChance: .001
 
 - type: entity
-  id: SlotMachineMarketCrash
   parent: BaseSlotMachine
+  id: SlotMachineMarketCrash
   name: market-crash slot machine
   description: A luxury slot machine, takes 14,000 credits per spin.
   components:
   - type: Sprite
-    sprite: _Goobstation/Structures/Machines/slotmachines/slotmachinehighroller.rsi
+    sprite: _LoneStar/Structures/Machines/Gambling/Slots/marketcrash.rsi
     layers:
       - state: slotmachine
       - state: slotmachine_spin
@@ -186,13 +186,13 @@
     godPotWinChance: 0.01
 
 - type: entity
-  id: CoinFlipper
   parent: BaseMachinePowered
+  id: CoinFlipper
   name: coin flipper
   description: Coinflipping for the antisocial.
   components:
   - type: Sprite
-    sprite: _Goobstation/Structures/Machines/slotmachines/coinflipper.rsi
+    sprite: _LoneStar/Structures/Machines/Gambling/coinflipper.rsi
     layers:
     - state: Coinflipper
     - state: panel
@@ -276,13 +276,13 @@
     rotateWhilePulling: true
 
 - type: entity
-  id: ClawMachine
   parent: BaseMachinePowered
+  id: ClawMachine
   name: claw machine
   description: Sure we got our health insurance benefits cut, and yeah we don't get any overtime on holidays, but hey - free to play claw machines!
   components:
   - type: Sprite
-    sprite: _Goobstation/Structures/Machines/slotmachines/claw_machine.rsi
+    sprite: _LoneStar/Structures/Machines/Gambling/claw_machine.rsi
     layers:
     - state: clawmachine
       map: [ "clawmachine" ]
