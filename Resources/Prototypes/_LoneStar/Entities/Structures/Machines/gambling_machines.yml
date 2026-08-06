@@ -172,7 +172,7 @@
         slotmachine_spin:
           True: { visible: true }
           False: { visible: false }
-  - type: SlotMachine # Average payout of -1213$
+  - type: SlotMachine # Average payout of -3335$
     spinCost: 14000
     smallPrizeAmount: 7000
     mediumPrizeAmount: 15000
@@ -181,9 +181,9 @@
     godPotPrize: SpaceCash1000000
     smallWinChance: 0.1
     mediumWinChance: 0.35
-    bigWinChance: 0.0035
-    jackPotWinChance: 0.02
-    godPotWinChance: 0.01
+    bigWinChance: 0.075
+    jackPotWinChance: 0.015
+    godPotWinChance: 0.0025
 
 - type: entity
   parent: BaseMachinePowered
