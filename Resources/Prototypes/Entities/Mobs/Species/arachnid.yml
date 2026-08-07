@@ -90,18 +90,22 @@
       - map: [ "enum.HumanoidVisualLayers.Genital" ]
       - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
       - map: [ "enum.HumanoidVisualLayers.UndershirtUnderclothes" ]
-      - map: ["jumpsuit"]
       - map: ["enum.HumanoidVisualLayers.LFootBehind"]
       - map: ["enum.HumanoidVisualLayers.RFootBehind"]
       - map: ["enum.HumanoidVisualLayers.LFoot"]
       - map: ["enum.HumanoidVisualLayers.RFoot"]
       - map: ["enum.HumanoidVisualLayers.LHand"]
       - map: ["enum.HumanoidVisualLayers.RHand"]
+      - map: [ "glovesalt" ] # LoneStar
+      - map: [ "shoesalt" ] # LoneStar
+      - map: [ "jumpsuit" ] #LS
       - map: [ "gloves" ]
       - map: [ "shoes" ]
+      - map: [ "ears" ]
+      - map: [ "eyes" ]
+      - map: [ "belt" ]
       - map: [ "id" ]
       - map: [ "outerClothing" ]
-      - map: [ "belt" ]
       - map: [ "enum.HumanoidVisualLayers.Tail" ] # Mentioned in moth code: This needs renaming lol.
       - map: [ "back" ]
       - map: [ "enum.HumanoidVisualLayers.UndershirtOverclothes" ]
@@ -109,12 +113,10 @@
       - map: [ "neck" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
       - map: [ "enum.HumanoidVisualLayers.NeckFluff" ]
+      - map: [ "maskalt" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ] # Do these need to be here? (arachnid hair arachnid hair)
       - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
-      - map: [ "ears" ]
-      - map: [ "eyes" ]
       - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
-      - map: [ "maskalt" ]
       - map: [ "mask" ]
       - map: [ "head" ]
       - map: [ "pocket1" ]
