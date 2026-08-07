@@ -110,23 +110,25 @@
     - map: [ "enum.HumanoidVisualLayers.LArm" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    # LoneStar changes start
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.Genital" ] # Coyote
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
     - shader: StencilClear
       sprite: Mobs/Species/Human/parts.rsi
       state: l_leg
-    - map: [ "glovesalt" ] # LoneStar
-    - map: [ "shoesalt" ] # LoneStar
-    - map: [ "jumpsuit" ] # LS
-    - map: [ "gloves" ]
+    - map: [ "glovesalt" ]
     - map: [ "shoes" ]
+    - map: [ "jumpsuit" ]
+    - map: [ "gloves" ]
+    - map: [ "shoesalt" ]
+    # LoneStar changes end
     - map: [ "ears" ]
     - map: [ "eyes" ]
     - map: [ "belt" ]
-    - map: [ "id" ]
-    - map: [ "outerClothing" ]
-    - map: [ "back" ]
+    - map: [ "id" ] # LoneStar
+    - map: [ "outerClothing" ] # LoneStar
+    - map: [ "back" ] # LoneStar
     - map: [ "neck" ]
     - map: [ "enum.HumanoidVisualLayers.TailExtras" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
@@ -139,7 +141,7 @@
     - map: [ "head" ]
     - map: [ "pocket1" ]
     - map: [ "pocket2" ]
-    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ] # Doesn't work atm, but who knows in the future.
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ] # LoneStar
       color: "#ffffff"
       sprite: _Starlight/Objects/Misc/handcuffs.rsi
       state: body-overlay-resomi

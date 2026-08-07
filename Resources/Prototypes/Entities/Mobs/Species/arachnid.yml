@@ -86,24 +86,25 @@
       - map: [ "enum.HumanoidVisualLayers.LLegBehind" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
-      - map: [ "enum.HumanoidVisualLayers.Genital" ]
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-      - map: [ "enum.HumanoidVisualLayers.UndershirtUnderclothes" ]
       - map: ["enum.HumanoidVisualLayers.LFootBehind"]
       - map: ["enum.HumanoidVisualLayers.RFootBehind"]
       - map: ["enum.HumanoidVisualLayers.LFoot"]
       - map: ["enum.HumanoidVisualLayers.RFoot"]
       - map: ["enum.HumanoidVisualLayers.LHand"]
       - map: ["enum.HumanoidVisualLayers.RHand"]
-      - map: [ "glovesalt" ] # LoneStar
-      - map: [ "shoesalt" ] # LoneStar
-      - map: [ "jumpsuit" ] #LS
-      - map: [ "gloves" ]
+      # LoneStar changes start
+      - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+      - map: [ "enum.HumanoidVisualLayers.Genital" ]
+      - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+      - map: [ "glovesalt" ]
       - map: [ "shoes" ]
-      - map: [ "ears" ]
-      - map: [ "eyes" ]
-      - map: [ "belt" ]
+      - map: [ "jumpsuit" ]
+      - map: [ "gloves" ]
+      - map: [ "shoesalt" ]
+      # LoneStar changes end
+      - map: [ "ears" ] # LoneStar
+      - map: [ "eyes" ] # LoneStar
+      - map: [ "belt" ] # LoneStar
       - map: [ "id" ]
       - map: [ "outerClothing" ]
       - map: [ "enum.HumanoidVisualLayers.Tail" ] # Mentioned in moth code: This needs renaming lol.
@@ -113,7 +114,7 @@
       - map: [ "neck" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
       - map: [ "enum.HumanoidVisualLayers.NeckFluff" ]
-      - map: [ "maskalt" ]
+      - map: [ "maskalt" ] # LoneStar
       - map: [ "enum.HumanoidVisualLayers.Hair" ] # Do these need to be here? (arachnid hair arachnid hair)
       - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
       - map: [ "enum.HumanoidVisualLayers.HeadTop" ]

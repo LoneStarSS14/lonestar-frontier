@@ -27,6 +27,11 @@
     damageProtection:
       flatReductions:
         Heat: 5 # the average lightbulb only does around four damage!
+  - type: AltClothingLayer # LoneStar
+    defaultLayer: gloves
+    altLayer: glovesalt
+    changeToAltMessage: alt-clothing-component-gloves-alt
+    changeToDefaultMessage: alt-clothing-component-gloves-default
 
 - type: entity
   abstract: true

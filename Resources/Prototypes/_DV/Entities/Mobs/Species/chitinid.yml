@@ -130,19 +130,21 @@
       - map: [ "enum.HumanoidVisualLayers.RHand" ]
       - map: [ "enum.HumanoidVisualLayers.LFoot" ]
       - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+      # LoneStar changes start
       - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
       - map: [ "enum.HumanoidVisualLayers.Genital" ]
       - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-      - map: [ "glovesalt" ] # LoneStar
-      - map: [ "shoesalt" ] # LoneStar
-      - map: [ "jumpsuit" ] #LS
-      - map: [ "gloves" ]
+      - map: [ "glovesalt" ]
       - map: [ "shoes" ]
+      - map: [ "jumpsuit" ]
+      - map: [ "gloves" ]
+      - map: [ "shoesalt" ]
+      # LoneStar changes end
       - map: [ "ears" ]
       - map: [ "eyes" ]
       - map: [ "belt" ]
       - map: [ "id" ]
-      - map: [ "outerClothing" ]
+      - map: [ "outerClothing" ] # LoneStar
       - map: [ "back" ]
       - map: [ "neck" ]
       - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
@@ -156,7 +158,7 @@
       - map: [ "head" ]
       - map: [ "pocket1" ]
       - map: [ "pocket2" ]
-      - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      - map: [ "enum.HumanoidVisualLayers.Handcuffs" ] # LoneStar
         color: "#ffffff"
         sprite: Objects/Misc/handcuffs.rsi
         state: body-overlay-2
