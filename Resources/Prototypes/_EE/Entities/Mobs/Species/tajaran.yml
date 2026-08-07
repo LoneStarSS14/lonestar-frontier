@@ -36,16 +36,16 @@
     - map: [ "enum.HumanoidVisualLayers.RFootBehind" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
-      # LoneStar changes start
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
-      - map: [ "enum.HumanoidVisualLayers.Genital" ]
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-      - map: [ "glovesalt" ]
-      - map: [ "shoes" ]
-      - map: [ "jumpsuit" ]
-      - map: [ "gloves" ]
-      - map: [ "shoesalt" ]
-      # LoneStar changes end
+    # LoneStar changes start
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.Genital" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: [ "glovesalt" ]
+    - map: [ "shoes" ]
+    - map: [ "jumpsuit" ]
+    - map: [ "gloves" ]
+    - map: [ "shoesalt" ]
+    # LoneStar changes end
     - map: [ "ears" ]
     - map: [ "eyes" ]
     - map: [ "belt" ]
