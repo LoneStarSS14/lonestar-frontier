@@ -1,3 +1,6 @@
+# Clothes in here are being refactored into _LoneStar/Entities/Clothing/Uniforms/*/coyote
+# If you do so, please leave the old `#  id: [Name]`
+
 - type: entity
   parent: ClothingUniformSkirtBase
   id: CoolCoyoteClothes
