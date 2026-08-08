@@ -1,0 +1,59 @@
+- type: cargoProduct
+  id: SlotMachineWheelHouse
+  icon:
+    sprite: _LoneStar/Structures/Machines/Gambling/Slots/wheelhouse.rsi
+    state: slotmachine
+  product: CrateSlotMachineWheelHouse
+  cost: 5000
+  category: cargoproduct-category-name-service
+  group: market
+
+- type: cargoProduct
+  id: SlotMachinePayRaiser
+  icon:
+    sprite: _LoneStar/Structures/Machines/Gambling/Slots/payraiser.rsi
+    state: slotmachine
+  product: CrateSlotMachinePayRaiser
+  cost: 5000
+  category: cargoproduct-category-name-service
+  group: market
+
+- type: cargoProduct
+  id: SlotMachineMarketCrash
+  icon:
+    sprite: _LoneStar/Structures/Machines/Gambling/Slots/marketcrash.rsi
+    state: slotmachine
+  product: CrateSlotMachineMarketCrash
+  cost: 5000
+  category: cargoproduct-category-name-service
+  group: market
+
+- type: cargoProduct
+  id: CoinFlipper
+  icon:
+    sprite: _LoneStar/Structures/Machines/Gambling/coinflipper.rsi
+    state: Coinflipper
+  product: CrateCoinFlipper
+  cost: 4000
+  category: cargoproduct-category-name-service
+  group: market
+
+- type: cargoProduct
+  id: ClawMachine
+  icon:
+    sprite: _LoneStar/Structures/Machines/Gambling/claw_machine.rsi
+    state: clawmachine
+  product: CrateClawMachine
+  cost: 20000
+  category: cargoproduct-category-name-service
+  group: market
+
+- type: cargoProduct
+  id: PrizeCounter
+  icon:
+    sprite: _NF/Structures/Machines/prizecounter.rsi
+    state: icon
+  product: CratePrizeCounter
+  cost: 10000
+  category: cargoproduct-category-name-service
+  group: market

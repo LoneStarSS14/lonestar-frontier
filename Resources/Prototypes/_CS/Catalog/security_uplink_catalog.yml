@@ -3,7 +3,7 @@
   name:  uplink-nfsd-rcd-name
   description: uplink-nfsd-rcd-desc
   productEntity: NfsdRCD
-  icon: { sprite: _NF/Objects/Tools/rcd.rsi, state: icon }
+  icon: { sprite: _CS/Objects/Tools/rcd_nfsd.rsi, state: icon } #LoneStar
   cost:
     FrontierUplinkCoin: 10
   categories:

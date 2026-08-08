@@ -32,14 +32,14 @@
   - type: UseDelay # Goobstation - For insta prying
     delay: 1
   - type: Sprite
-    sprite: _NF/Objects/Tools/crowbar.rsi # Frontier: _NF prefix
+    sprite: Objects/Tools/crowbar.rsi
   - type: Clothing
-    sprite: _NF/Objects/Tools/crowbar.rsi # Frontier: _NF prefix
+    sprite: Objects/Tools/crowbar.rsi
     quickEquip: false
     slots:
     - Belt
   - type: Item
-    sprite: _NF/Objects/Tools/crowbar.rsi # Frontier: _NF prefix
+    sprite: Objects/Tools/crowbar.rsi
     size: Normal
     shape:
     - 0,0,0,1
@@ -54,7 +54,7 @@
     state: icon
   - type: Item
     storedSprite:
-      sprite: _NF/Objects/Tools/crowbar.rsi # Frontier: _NF prefix
+      sprite: Objects/Tools/crowbar.rsi
       state: storage
 
 # Emergency (red) Crowbar
@@ -76,7 +76,7 @@
   - type: Item
     storedSprite:
       state: red-storage
-      sprite: _NF/Objects/Tools/crowbar.rsi # Frontier: _NF prefix
+      sprite: Objects/Tools/crowbar.rsi
     inhandVisuals:
       left:
       - state: inhand-left
@@ -107,7 +107,7 @@
   - type: Item
     storedSprite:
       state: green-storage
-      sprite: _NF/Objects/Tools/crowbar.rsi # Frontier: _NF prefix
+      sprite: Objects/Tools/crowbar.rsi
     inhandVisuals:
       left:
       - state: inhand-left
@@ -138,7 +138,7 @@
   - type: Item
     storedSprite:
       state: orange-storage
-      sprite: _NF/Objects/Tools/crowbar.rsi # Frontier: _NF prefix
+      sprite: Objects/Tools/crowbar.rsi
     inhandVisuals:
       left:
       - state: inhand-left
@@ -169,7 +169,7 @@
   - type: Item
     storedSprite:
       state: yellow-storage
-      sprite: _NF/Objects/Tools/crowbar.rsi # Frontier: _NF prefix
+      sprite: Objects/Tools/crowbar.rsi
     inhandVisuals:
       left:
       - state: inhand-left

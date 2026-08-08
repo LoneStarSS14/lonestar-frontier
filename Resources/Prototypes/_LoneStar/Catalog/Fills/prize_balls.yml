@@ -1,0 +1,65 @@
+- type: entityTable
+  id: TablePrizeBallSyndicate
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector # Common
+      weight: 14
+      children:
+      - id: SyndicateWhistle
+      - id: SyndicateFlippo
+      - id: BalloonSyn
+      - id: TowelColorSyndicate
+      - id: ToyFigurineNukie
+      - id: ToyFigurineNukieCommander
+      - id: ToyFigurineFootsoldier
+      - id: ToyFigurineNukieElite
+      - id: PlushieNuke
+      - id: ClothingUniformJumpsuitRecruitSyndieNF
+      - id: SyndicateBusinessCard
+      - id: BedsheetSyndie
+    - !type:GroupSelector # Uncommon
+      weight: 5
+      children:
+      - id: SyndicateLollypopBundle
+      - id: EncryptionKeySyndie
+      - id: ClothingShoesBootsMagSyndie
+      - id: SyndicateMicrowaveFlatpack
+      - id: ClothingEyesGlassesOutlawGlasses
+      - id: CardBoxSyndicate
+      - id: ClothingBeltSyndieHolster
+      - id: RubberStampSyndicate
+      - id: CameraBug
+    - !type:GroupSelector # Rare
+      weight: 1
+      children:
+      - id: CigPackSyndicate
+      - id: CyberPen
+      - id: ClothingHandsKnuckleDustersSyndicate
+      - id: EnergyDaggerBox
+      - id: ClothingHeadHatCatEars
+      - id: SmokeGrenade
+      - id: ClothingMaskGasSyndicate
+      - id: ClothingOuterCoatSyndieCapArmored
+      - id: SyndicateJawsOfLife
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: SpawnRewardPrizeBallSyndicate
+  name: random prize ball loot
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+        scale: 0.7, 0.7
+      - sprite: _NF/Objects/Fun/prizeticket.rsi
+        state: prizeball-syndicate
+      - sprite: _NF/Markers/general.rsi
+        state: questionmark
+        color: green
+        scale: 0.7, 0.7
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: TablePrizeBallSyndicate
+      prob: 1.00

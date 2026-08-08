@@ -8,8 +8,16 @@
       - state: red
       - sprite: Structures/Machines/arcade.rsi
         state: icon
-  - type: RandomSpawner
+  - type: RandomSpawner # LoneStar
     prototypes:
       - BlockGameArcade
+      - BlockGameArcade
+      - BlockGameArcade
       - SpaceVillainArcadeFilled
+      - SpaceVillainArcadeFilled
+      - SpaceVillainArcadeFilled
+      - ClawMachine
+      - SlotMachineWheelHouse
+      - SlotMachinePayRaiser
+      - SlotMachineMarketCrash
     chance: 1
