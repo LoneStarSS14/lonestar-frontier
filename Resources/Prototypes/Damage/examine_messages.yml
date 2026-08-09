@@ -1,17 +1,24 @@
 ﻿- type: examinableDamage
   id: WindowMessages
-  values:
-    prefix: comp-window-damaged-
-    count: 6
+  messages:
+    - comp-window-damaged-1
+    - comp-window-damaged-2
+    - comp-window-damaged-3
 
-- type: localizedDataset
+- type: examinableDamage
   id: ShieldMessages
-  values:
-    prefix: comp-shield-damaged-
-    count: 6
+  messages:
+    - comp-shield-damaged-1
+    - comp-shield-damaged-2
+    - comp-shield-damaged-3
+    - comp-shield-damaged-4
+    - comp-shield-damaged-5
+    - comp-shield-damaged-6
 
-- type: localizedDataset
+- type: examinableDamage
   id: EnergyShieldMessages
-  values:
-    prefix: comp-eshield-damaged-
-    count: 4
+  messages:
+    - comp-eshield-damaged-1
+    - comp-eshield-damaged-2
+    - comp-eshield-damaged-3
+    - comp-eshield-damaged-4
