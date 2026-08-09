@@ -51391,8 +51391,6 @@ entities:
       pos: 40.5,-1.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14828
 - proto: FirelockEdge
@@ -56378,8 +56376,6 @@ entities:
       pos: 39.5,-1.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14828
   - uid: 14822
@@ -56389,8 +56385,6 @@ entities:
       pos: 41.5,-1.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14828
   - uid: 14823
@@ -56400,8 +56394,6 @@ entities:
       pos: 38.5,-12.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14828
   - uid: 14824
@@ -56411,8 +56403,6 @@ entities:
       pos: 39.5,-12.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14828
   - uid: 14825
@@ -56422,8 +56412,6 @@ entities:
       pos: 41.5,-12.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14828
   - uid: 14826
@@ -56433,8 +56421,6 @@ entities:
       pos: 42.5,-12.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14828
 - proto: Fireplace
@@ -75746,8 +75732,6 @@ entities:
       pos: 40.5,-3.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14828
     - type: AtmosPipeColor
@@ -76644,8 +76628,6 @@ entities:
       pos: 0.5,21.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 1685
       - 1691
@@ -76658,8 +76640,6 @@ entities:
       pos: 0.5,38.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14708
       - 14709
@@ -77234,8 +77214,6 @@ entities:
       pos: -10.5,-23.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 1514
 - proto: GasVentScrubber
@@ -78089,8 +78067,6 @@ entities:
       pos: 0.5,20.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 1685
       - 1691
@@ -78127,8 +78103,6 @@ entities:
       pos: 40.5,-2.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14828
     - type: AtmosPipeColor
@@ -78755,8 +78729,6 @@ entities:
       pos: -11.5,-23.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 1514
 - proto: GeneratorBasic15kW
