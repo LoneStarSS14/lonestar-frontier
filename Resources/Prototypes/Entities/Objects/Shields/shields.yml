@@ -483,8 +483,25 @@
                 BrokenEnergyShield:
                   min: 1
                   max: 1
+        - trigger:
+            !type:DamageTrigger
+            damage: 70
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/_CS/GasWarnings/airwarning_low.ogg
+                params:
+                  pitch: 0.8
     - type: StaticPrice
       price: 350
+    # LoneStar
+    - type: PassiveDamage
+      damage:
+        types:
+          Heat: -0.5
+          Cold: -0.5
+        groups:
+          Brute: -3
 
 - type: entity
   name: broken energy shield
