@@ -1043,9 +1043,11 @@
       - id: CrateChemistryVials
       - id: CrateChemistrySecureKitChemist
       - id: CrateEvaKitCmo
-      - id: MedicalTechFabFlatpack # Coyote
-      - id: VendingMachineMedicalFlatpack # Coyote
-      - id: VendingMachineChemicalsFlatpack # Coyote
+      - id: MedicalTechFabFlatpack # LoneStar
+        weight: 0.2
+      - id: VendingMachineMedicalFlatpack # LoneStar
+        weight: 0.4
+      - id: VendingMachineChemicalsFlatpack # LoneStar
         weight: 0.01
     # Unique
     - !type:GroupSelector
@@ -1105,8 +1107,8 @@
       children:
       - id: Autolathe
         weight: 20
-      - id: MedicalTechFab
-        weight: 40
+      - id: MedicalTechFab # LoneStar
+        weight: 10
       - id: ExosuitFabricator
         weight: 15
       - id: ServiceTechFab
@@ -1171,7 +1173,8 @@
     - !type:GroupSelector
       weight: 0.8
       children:
-      - id: MedicalTechFabFlatpack
+      - id: MedicalTechFabFlatpack # LoneStar
+        weight: 0.35
       - id: StasisBedFlatpack
       - id: ChemMasterFlatpack
       - id: MachineElectrolysisUnitFlatpack
@@ -1201,7 +1204,8 @@
       # Computers
       - id: MedicalRecordsComputerCircuitboard
       # Lathes
-      - id: MedicalTechFabCircuitboard
+      - id: MedicalTechFabCircuitboard # LoneStar
+        weight: 0.35
       # Machines
       - id: ChemMasterMachineCircuitboard
       - id: CentrifugeMachineCircuitboard
