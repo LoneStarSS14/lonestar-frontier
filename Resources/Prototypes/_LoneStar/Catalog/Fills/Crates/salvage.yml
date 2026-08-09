@@ -1,0 +1,45 @@
+- type: entity
+  id: CrateMedicalSuppliesSalvage
+  parent: CrateMedical
+  name: medical supplies crate
+  suffix: salvage
+  description: Basic medical supplies.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Medkit
+        prob: 0.20
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitBrute
+        prob: 0.10
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitBurn
+        prob: 0.10
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitFilled
+        prob: 0.30
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitBruteFilled
+        prob: 0.15
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitBurnFilled
+        prob: 0.15
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: Gauze
+        amount: 2
+        prob: 0.4
+      - id: Bloodpack
+        amount: 2
+        prob: 0.4
+      - id: BoxLatexGloves
+        prob: 0.6
+      - id: BoxSterileMask
+        prob: 0.6
+      - id: BoxMouthSwab
+        prob: 0.6

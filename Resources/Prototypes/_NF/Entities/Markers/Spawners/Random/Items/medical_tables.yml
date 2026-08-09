@@ -134,6 +134,7 @@
   id: TableDungeonLootMedicalFirstAidKits
   table: !type:GroupSelector
     children:
+    # LoneStar changes start
     # Common
     - !type:GroupSelector
       weight: 0.6
@@ -141,21 +142,21 @@
       - !type:GroupSelector
         children:
         - id: Medkit
-          weight: 0.4
+          weight: 0.7
         - id: MedkitFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitBrute
-          weight: 0.4
+          weight: 0.7
         - id: MedkitBruteFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitBurn
-          weight: 0.4
+          weight: 0.7
         - id: MedkitBurnFilled
-          weight: 0.6
+          weight: 0.3
     # Uncommon
     - !type:GroupSelector
       weight: 0.3
@@ -163,15 +164,15 @@
       - !type:GroupSelector
         children:
         - id: MedkitToxin
-          weight: 0.4
+          weight: 0.7
         - id: MedkitToxinFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitRadiation
-          weight: 0.4
+          weight: 0.7
         - id: MedkitRadiationFilled
-          weight: 0.6
+          weight: 0.3
     # Rare (either good or undesirable)
     - !type:GroupSelector
       weight: 0.05
@@ -179,21 +180,22 @@
       - !type:GroupSelector
         children:
         - id: MedkitAdvanced
-          weight: 0.4
+          weight: 0.7
         - id: MedkitAdvancedFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitCombat
-          weight: 0.4
+          weight: 0.7
         - id: MedkitCombatFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitO2
-          weight: 0.4
+          weight: 0.7
         - id: MedkitOxygenFilled
-          weight: 0.6
+          weight: 0.3
+    # LoneStar changes end
 
 # region Surgery tools
 - type: entityTable
@@ -1024,7 +1026,7 @@
     - !type:GroupSelector
       weight: 0.3
       children:
-      - id: CrateMedicalSupplies
+      - id: CrateMedicalSuppliesSalvage # LoneStar
       - id: CrateMedicalSecureMedicine
       - id: CrateMedicalSecureMedicinePierce
       - id: CrateMedicalSecureDoctor

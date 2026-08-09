@@ -105,18 +105,19 @@
       - id: ClothingUniformJumpskirtOfLife
         prob: 0.1
       - id: MedkitFilled
+        prob: 0.5
       - id: MedkitCombatFilled
-        prob: 0.6
+        prob: 0.3
       - id: MedkitAdvancedFilled
-        prob: 0.4
+        prob: 0.2
       - id: MedkitOxygenFilled
-        prob: 0.3
+        prob: 0.15
       - id: MedkitBruteFilled
-        prob: 0.3
+        prob: 0.15
       - id: MedkitToxinFilled
-        prob: 0.3
+        prob: 0.15
       - id: MedkitBurnFilled
-        prob: 0.7
+        prob: 0.35
       - id: ClothingNeckCloakMoth #bzzz Moth-pocalypse
         prob: 0.15
 
