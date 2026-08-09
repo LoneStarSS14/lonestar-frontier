@@ -52,38 +52,42 @@
       prob: 0.7
     - id: ChemistryBottleEpinephrine
       prob: 0.7
-      maxAmount: 2
+      rolls: !type:RangeNumberSelector
+        range: 1, 2
     - id: Bloodpack
       prob: 0.7
-      maxAmount: 2
+      rolls: !type:RangeNumberSelector
+        range: 1, 2
     - !type:GroupSelector
       children:
       - id: Brutepack
         prob: 0.9
-        maxAmount: 2
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
       - id: MedicatedSuture
         prob: 0.1
     - !type:GroupSelector
       children:
       - id: Ointment
         prob: 0.7
-        maxAmount: 2
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
       - id: AloeCream
         prob: 0.1
-        maxAmount: 2
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
       - id: RegenerativeMesh
         prob: 0.1
     - !type:GroupSelector
       children:
       - id: Gauze
         prob: 0.7
-        maxAmount: 1
       - id: MedicatedSuture
         prob: 0.05
-        maxAmount: 1
       - id: Tourniquet
         prob: 0.25
-        maxAmount: 2
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
 
 - type: entity
   parent: LockerMedicine
@@ -110,12 +114,12 @@
   table: !type:AllSelector
     children:
     - id: ClothingBeltMedicalEMTFilledSalvage
-    - id: Medkit
-      prob: 0.7
-      orGroup: Medkit
-    - id: MedkitFilled
-      prob: 0.3
-      orGroup: Medkit
+    - !type:GroupSelector
+      children:
+      - id: Medkit
+        prob: 0.7
+      - id: MedkitFilled
+        prob: 0.3
     - id: ClothingEyesHudMedical
       prob: 0.9
 
