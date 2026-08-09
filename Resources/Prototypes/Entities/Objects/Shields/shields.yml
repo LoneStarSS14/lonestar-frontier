@@ -51,14 +51,14 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalBreak
-            - !type:SpawnEntitiesBehavior
-              spawn:
-                SheetSteel:
-                  min: 2
-                  max: 2
-                SheetGlass:
-                  min: 2
-                  max: 2
+            # - !type:SpawnEntitiesBehavior
+            #   spawn:
+            #     SheetSteel:
+            #       min: 2
+            #       max: 2
+            #     SheetGlass:
+            #       min: 2
+            #       max: 2
     - type: StaticPrice
       price: 50 # Frontier: 100<50 - TODO: material value rework
 
