@@ -2,7 +2,7 @@
   id: CrateMedicalSuppliesSalvage
   parent: CrateMedical
   name: medical supplies crate
-  suffix: salvage
+  suffix: Salvage
   description: Basic medical supplies.
   components:
   - type: StorageFill
@@ -43,3 +43,115 @@
         prob: 0.6
       - id: BoxMouthSwab
         prob: 0.6
+
+- type: entityTable
+  id: LockerFillMedicineSalvage
+  table: !type:AllSelector
+    children:
+    - id: BoxSyringe
+      prob: 0.7
+    - id: ChemistryBottleEpinephrine
+      prob: 0.7
+      maxAmount: 2
+    - id: Bloodpack
+      prob: 0.7
+      maxAmount: 2
+    - !type:GroupSelector
+      children:
+      - id: Brutepack
+        prob: 0.9
+        maxAmount: 2
+      - id: MedicatedSuture
+        prob: 0.1
+    - !type:GroupSelector
+      children:
+      - id: Ointment
+        prob: 0.7
+        maxAmount: 2
+      - id: AloeCream
+        prob: 0.1
+        maxAmount: 2
+      - id: RegenerativeMesh
+        prob: 0.1
+    - !type:GroupSelector
+      - id: Gauze
+        prob: 0.7
+        maxAmount: 1
+      - id: MedicatedSuture
+        prob: 0.05
+        maxAmount: 1
+      - id: Tourniquet
+        prob: 0.25
+        maxAmount: 2
+
+- type: entity
+  parent: LockerMedicine
+  id: LockerMedicineFilledSalvage
+  suffix: Salvage
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillMedicine
+
+- type: entity
+  parent: LockerParamedic
+  id: LockerParamedicFilledSalvage
+  suffix: Salvage
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: NFStorageFillGearParamedicSalvage
+
+- type: entityTable
+  id: NFStorageFillGearParamedicSalvage
+  table: !type:AllSelector
+    children:
+    - id: ClothingBeltMedicalEMTFilledSalvage
+    - id: Medkit
+      prob: 0.7
+      orGroup: Medkit
+    - id: MedkitFilled
+      prob: 0.3
+      orGroup: Medkit
+    - id: ClothingEyesHudMedical
+      prob: 0.9
+
+- type: entity
+  id: ClothingBeltMedicalEMTFilledSalvage
+  parent: ClothingBeltMedicalEMT
+  suffix: Paramedic, Salvage
+  components:
+  - type: StorageFill
+    contents:
+      - id: Brutepack
+        prob: 0.8
+      - id: Ointment
+        prob: 0.8
+      - id: Bloodpack
+        prob: 0.8
+      - id: Gauze
+        prob: 0.8
+      - id: EmergencyMedipen
+        maxAmount: 3
+
+- type: entity
+  id: ClothingBeltMedicalFilledSalvage
+  parent: ClothingBeltMedical
+  suffix: Salvage
+  components:
+  - type: StorageFill
+    contents:
+      - id: Brutepack
+        maxAmount: 2
+        prob: 0.8
+      - id: Ointment
+        amount: 1
+        prob: 0.8
+      - id: Bloodpack
+        amount: 1
+        prob: 0.8
+      - id: Gauze
+        prob: 0.8
+      - id: EmergencyMedipen #You never know what people are going to latejoin into

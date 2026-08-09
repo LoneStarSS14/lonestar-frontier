@@ -274,7 +274,7 @@
     - id: ClothingHandsGlovesLatex
     - id: ClothingEyesHudMedical
     - id: ClothingMaskSterile
-    - id: ClothingBeltMedicalFilled
+    - id: ClothingBeltMedicalFilledSalvage # LoneStar
 
 - type: entity
   parent: CrateSurgery

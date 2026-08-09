@@ -640,10 +640,10 @@
     - ClosetMaintenanceFilledRandom
     chance: 0.95
     rarePrototypes:
-#    - LockerMedicineFilled # Medical gameplay anyone?
-#    - LockerMedicalFilled # Medical gameplay anyone?
-#    - LockerChemistryFilled # Medical gameplay anyone?
-#    - LockerParamedicFilled # Medical gameplay anyone?
+    - LockerMedicineFilledSalvage # LoneStar
+    - LockerMedicalFilled # LoneStar
+    - LockerChemistryFilled # LoneStar
+    - LockerParamedicFilledSalvage # LoneStar
     - LockerAtmosphericsFilledHardsuit
     - LockerAtmosphericsFilled
     - LockerSalvageSpecialistFilledHardsuit

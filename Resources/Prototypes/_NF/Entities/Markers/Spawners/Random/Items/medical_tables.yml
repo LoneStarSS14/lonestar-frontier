@@ -736,14 +736,14 @@
       children:
       - id: ClothingBeltMedical
         weight: 0.7
-      - id: ClothingBeltMedicalFilled
+      - id: ClothingBeltMedicalFilledSalvage # LoneStar
         weight: 0.3
     - !type:GroupSelector
       weight: 0.3
       children:
       - id: ClothingBeltMedicalEMT
         weight: 0.7
-      - id: ClothingBeltMedicalEMTFilled
+      - id: ClothingBeltMedicalEMTFilledSalvage # LoneStar
         weight: 0.3
     - !type:GroupSelector
       weight: 0.1
@@ -887,14 +887,14 @@
       children:
       - id: LockerParamedic
         weight: 0.7
-      - id: LockerParamedicFilled
+      - id: LockerParamedicFilledSalvage # LoneStar
         weight: 0.3
     - !type:GroupSelector
       weight: 0.35
       children:
       - id: LockerMedicine
         weight: 0.7
-      - id: LockerMedicineFilled
+      - id: LockerMedicineFilledSalvage # LoneStar
         weight: 0.3
     - !type:GroupSelector
       weight: 0.05
