@@ -1144,14 +1144,19 @@
       - id: VendingMachineGeneDrobe
       - id: VendingMachineViroDrobe
     # Meds
-    - !type:GroupSelector
+    - !type:GroupSelector # LoneStar
       weight: 0.6
       children:
       - id: VendingMachineVendomat
+        weight: 2
       - id: VendingMachineRobotics
-      - id: VendingMachineMedical
+        weight: 2
+      - id: VendingMachineMedicalSalvage
+        weight: 4
       - id: VendingMachineCiviMedPlus
-      - id: VendingMachineChemicals # Coyote
+        weight: 1
+      - id: VendingMachineChemicals
+        weight: 0.5
     # Frame
     - !type:NestedSelector
       tableId: TableDungeonLootGeneralFrameMachine
@@ -1180,8 +1185,9 @@
       weight: 0.2
       children:
       - id: VendingMachineMedicalFlatpack
-      - id: VendingMachineWallMedicalFlatpack
+        weight: 9
       - id: VendingMachineChemicalsFlatpack
+        weight: 1
 
 #region Circuit Boards
 - type: entityTable

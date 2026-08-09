@@ -155,4 +155,9 @@
         prob: 0.8
       - id: Gauze
         prob: 0.8
-      - id: EmergencyMedipen #You never know what people are going to latejoin into
+      - id: EmergencyMedipen
+
+- type: entity
+  id: VendingMachineMedicalSalvage
+  parent: [ VendingMachineMedical, BaseStructureDisableAnchoring ]
+  suffix: Unanchorable
