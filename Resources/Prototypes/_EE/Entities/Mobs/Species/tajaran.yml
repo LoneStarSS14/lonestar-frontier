@@ -43,8 +43,8 @@
     - map: [ "glovesalt" ]
     - map: [ "shoes" ]
     - map: [ "jumpsuit" ]
-    - map: [ "gloves" ]
     - map: [ "shoesalt" ]
+    - map: [ "gloves" ]
     # LoneStar changes end
     - map: [ "ears" ]
     - map: [ "eyes" ]

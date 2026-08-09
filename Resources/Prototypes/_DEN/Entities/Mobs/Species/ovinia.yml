@@ -25,8 +25,6 @@
         # its fine, but its still very stupid that it has to be done like this instead of allowing sprites to just directly insert a stencil clear.
         # sprite refactor when
         state: l_leg
-      - map: [ "enum.HumanoidVisualLayers.LHand" ]
-      - map: [ "enum.HumanoidVisualLayers.RHand" ]
       - map: ["enum.HumanoidVisualLayers.LFootBehind"]
       - map: ["enum.HumanoidVisualLayers.RFootBehind"]
       - map: [ "enum.HumanoidVisualLayers.LFoot" ]
@@ -35,11 +33,12 @@
       - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
       - map: [ "enum.HumanoidVisualLayers.Genital" ]
       - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-      - map: [ "glovesalt" ]
       - map: [ "shoes" ]
       - map: [ "jumpsuit" ]
-      - map: [ "gloves" ]
+      - map: [ "enum.HumanoidVisualLayers.LHand" ]
+      - map: [ "enum.HumanoidVisualLayers.RHand" ]
       - map: [ "shoesalt" ]
+      - map: [ "gloves" ]
       # LoneStar changes end
       - map: [ "ears" ]
       - map: [ "eyes" ]

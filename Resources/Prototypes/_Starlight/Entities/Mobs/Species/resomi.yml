@@ -117,11 +117,10 @@
     - shader: StencilClear
       sprite: Mobs/Species/Human/parts.rsi
       state: l_leg
-    - map: [ "glovesalt" ]
     - map: [ "shoes" ]
     - map: [ "jumpsuit" ]
-    - map: [ "gloves" ]
     - map: [ "shoesalt" ]
+    - map: [ "gloves" ]
     # LoneStar changes end
     - map: [ "ears" ]
     - map: [ "eyes" ]
