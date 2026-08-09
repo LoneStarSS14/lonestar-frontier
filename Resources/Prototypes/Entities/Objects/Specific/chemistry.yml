@@ -674,7 +674,7 @@
       - PillCanister
   - type: Storage
     grid:
-    - 0,0,4,1
+    - 0,0,4,2 # LoneStar
     quickInsert: true
     areaInsert: true
     areaInsertRadius: 1
