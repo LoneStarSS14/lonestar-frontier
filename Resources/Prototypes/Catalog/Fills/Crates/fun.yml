@@ -143,7 +143,6 @@
       - id: CelloInstrument
       - id: ViolaInstrument
       - id: HarpInstrument
-      - id: HandheldHarpInstrument #imp
 
 - type: entity
   id: CrateFunInstrumentsWoodwind

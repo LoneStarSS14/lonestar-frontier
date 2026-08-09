@@ -10,16 +10,10 @@
 
 - type: loadout
   id: ClothingUniformSeniorBartender
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorBartender
   equipment:
     id: ClothingUniformSeniorBartender #imp
 
 - type: loadout
   id: ClothingUniformSeniorBartenderSkirt
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorBartender
   equipment:
     id: ClothingUniformSeniorBartenderSkirt #imp

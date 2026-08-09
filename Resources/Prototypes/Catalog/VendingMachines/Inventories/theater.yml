@@ -21,8 +21,6 @@
     ClothingHeadHatSkub: 2
     ClothingOuterSkub: 2
     ClothingHeadHatBeretFrench: 2
-    ClothingUniformMrSpaceWide: 2 #imp
-    ClothingUniformMrSpaceWideSkirt: 2 #imp
     ClothingOuterSuitChicken: 2
     ClothingHeadHatChickenhead: 2
     ClothingOuterSuitMonkey: 2
@@ -319,33 +317,36 @@
     ClothingHeadHatGrenzel: 9000
     ClothingUniformJumpsuitGrenzel: 9000
     # IMP
-    ClothingHeadJesterEvilHat: 1 #imp
-    ClothingUniformJesterEvil: 1 #imp
-    ClothingShoesJesterEvilJanglers: 1 #imp
-    ClothingNeckDevilWings: 1 #imp
-    ClothingHeadDevilHorns: 1 #imp
-    DevilPitchfork: 1 #imp
-    ClothingHeadHalo: 1 #imp
-    ClothingUniformJumpskirtAngelDress: 1 #imp
-    ClothingHandsAngelGloves: 1 #imp
-    ClothingShoesAngelSandals: 1 #imp
-    ClothingNeckAngelWings: 1 #imp
-    HandheldHarpInstrument: 1 #imp
-    ClothingUniformHitmanSuit: 1 #imp
-    ClothingUniformHitmanSuitSkirt: 1 #imp
-    ClothingUniformBrosBlazer: 1 #imp
-    ClothingUniformBrosBlazerSkirt: 1 #imp
-  contrabandInventory:    
+    ClothingUniformMrSpaceWide: 9000
+    ClothingUniformMrSpaceWideSkirt: 9000
+    ClothingHeadJesterEvilHat: 9000
+    ClothingUniformJesterEvil: 9000
+    ClothingShoesJesterEvilJanglers: 9000
+    ClothingNeckDevilWings: 9000
+    ClothingHeadDevilHorns: 9000
+    DevilPitchfork: 9000
+    ClothingHeadHalo: 9000
+    ClothingUniformJumpskirtAngelDress: 9000
+    ClothingHandsAngelGloves: 9000
+    ClothingShoesAngelSandals: 9000
+    ClothingNeckAngelWings: 9000
+    HandheldHarpInstrument: 9000
+    ClothingUniformHitmanSuit: 9000
+    ClothingUniformHitmanSuitSkirt: 9000
+    ClothingUniformBrosBlazer: 9000
+    ClothingUniformBrosBlazerSkirt: 9000
+  contrabandInventory:
     ClothingHeadHatRichard: 1
     ToyFigurineBoxer: 1
     ToyFigurineMusician: 1
     ClothingHeadHatMimesoftFlipped: 1 # Frontier
     BarberScissors: 1 # Frontier
     ClothingOuterArmorGrenzelCuriass: 1 # Lonestar
-    ClothingUniformHitmanSuit: 1 #imp
-    ClothingUniformHitmanSuitSkirt: 1 #imp
-    ClothingUniformBrosBlazer: 1 #imp
-    ClothingUniformBrosBlazerSkirt: 1 #imp
+    # IMP
+    ClothingUniformHitmanSuit: 1
+    ClothingUniformHitmanSuitSkirt: 1
+    ClothingUniformBrosBlazer: 1
+    ClothingUniformBrosBlazerSkirt: 1
   emaggedInventory:
     ClothingShoesBling: 1
     ClothingShoesBootsCowboyFancy: 1
