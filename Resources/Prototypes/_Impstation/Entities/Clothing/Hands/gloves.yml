@@ -9,6 +9,5 @@
   - type: Clothing
     sprite: _Impstation/Clothing/Hands/Gloves/angelgloves.rsi
   - type: Fiber
-    fiberMaterial: fibers-web
     fiberColor: fibers-white
   - type: FingerprintMask
