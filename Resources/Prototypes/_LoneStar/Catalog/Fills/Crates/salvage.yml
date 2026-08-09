@@ -74,6 +74,7 @@
       - id: RegenerativeMesh
         prob: 0.1
     - !type:GroupSelector
+      children:
       - id: Gauze
         prob: 0.7
         maxAmount: 1
@@ -92,7 +93,7 @@
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
-        tableId: LockerFillMedicine
+        tableId: LockerFillMedicineSalvage
 
 - type: entity
   parent: LockerParamedic
