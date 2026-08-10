@@ -411,6 +411,6 @@
     sprite: Objects/Fun/Instruments/structureinstruments.rsi
     state: drum
   product: BigDrumsInstrument
-  cost: 1500
+  cost: 7500 # LoneStar
   category: cargoproduct-category-name-fun
   group: market
