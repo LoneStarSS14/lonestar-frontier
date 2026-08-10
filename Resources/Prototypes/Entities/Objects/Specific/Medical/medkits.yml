@@ -32,6 +32,8 @@
         - Pill
         - HandLabeler
         - Implanter
+        - BreathMask
+        - GasTank
   - type: Item
     size: Normal # LoneStar
     shape: # LoneStar
