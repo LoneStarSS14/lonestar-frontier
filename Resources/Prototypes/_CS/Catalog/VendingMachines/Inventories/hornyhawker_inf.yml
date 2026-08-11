@@ -87,8 +87,6 @@
     CandleBlackSmall: 4294967295
     # Lubricants
     DrinkSpaceLube: 4294967295
-    # Snacks
-    FoodTinPeachesMaint: 8
     # Weapons
     WeaponSizeManipulator: 15
     RemoteSignaller: 4294967295
