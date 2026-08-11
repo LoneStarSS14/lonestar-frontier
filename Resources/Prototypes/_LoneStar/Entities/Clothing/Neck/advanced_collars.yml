@@ -13,7 +13,7 @@
       state: servo
     - type: AdvancedCollarModule
       componentToAdd: ClothingLock
-      moduleDescription: Locks all worn slots aside pockets, neck, internals, and wallet from tampering by anyone
+      moduleDescription: Prevents tampering with almost all of the wearers clothes
     - type: ClothingLock
       lockedSlots:
         - head
@@ -39,7 +39,7 @@
       state: radio_mini
     - type: AdvancedCollarModule
       componentToAdd: ClothingLock
-      moduleDescription: Locks all worn slots aside pockets, neck, internals, and wallet from tampering by the wearer
+      moduleDescription: Prevents wearer tampering with almost all of their clothing
     - type: ClothingLock
       lockedSlots:
         - head
@@ -65,7 +65,7 @@
       state: cpu
     - type: AdvancedCollarModule
       componentToAdd: WaddleWhenWorn
-      moduleDescription: Waddle when moving
+      moduleDescription: Waddles when moving
     # Store the component configuration that will be added to the collar
     - type: WaddleWhenWorn
       tumbleIntensity: 10
@@ -80,7 +80,7 @@
       sprite: Objects/Misc/module.rsi
       state: cpu
     - type: AdvancedCollarModule
-      componentToAdd: HideClothingLayerClothing
+      componentToAdd: HideClothingLayerClothing # TODO: Fix this not initializing on insertion while collars already worn
       moduleDescription: Invisible collar
     # Store the component configuration that will be added to the collar
     - type: HideClothingLayerClothing # Goob
@@ -114,7 +114,7 @@
       state: radio_mini
     - type: AdvancedCollarModule
       componentToAdd: ClothingSpeedModifier
-      moduleDescription: Psychic walking
+      moduleDescription: Forced walking
     # Store the component configuration that will be added to the collar
     - type: ClothingSpeedModifier
       walkModifier: 1.0

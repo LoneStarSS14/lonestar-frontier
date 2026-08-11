@@ -180,7 +180,7 @@
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModuleBondage
-  name: Collar bondage module
+  name: collar module (bondage) # LoneStar
   description: A module that prevents the wearer from removing the collar themselves.
   components:
     - type: Sprite
@@ -188,13 +188,13 @@
       state: ssd
     - type: AdvancedCollarModule
       componentToAdd: SelfUnremovableClothing
-      moduleDescription: Prevents self-removal
+      moduleDescription: Prevents collar's self-removal # LoneStar
 
 # Shock Module - electrocutes wearer when remotely triggered
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModuleShock
-  name: Collar shock module
+  name: collar module (shock) # LoneStar
   description: A module that can remotely shock the wearer via wireless signal trigger.
   components:
     - type: Sprite
@@ -226,7 +226,7 @@
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModuleClothingLock
-  name: Collar clothing lock module
+  name: collar module (clothing lock) # LoneStar
   description: An advanced module that locks specific clothing slots (head, feet, jumpsuit, gloves, eyes, mask, ears), preventing removal by anyone while the collar with this module is worn. # LoneStar
   components:
     - type: Sprite
@@ -234,7 +234,7 @@
       state: servo
     - type: AdvancedCollarModule
       componentToAdd: ClothingLock
-      moduleDescription: Locks head, feet, jumpsuit, and gloves
+      moduleDescription: Prevents tampering with wearers clothes # LoneStar
     # Store the component configuration that will be added to the collar
     - type: ClothingLock
       lockedSlots:
@@ -252,7 +252,7 @@
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModulePsychicClothingLock
-  name: Collar psychic clothing lock module
+  name: collar module (psychic clothing lock) # LoneStar
   description: An advanced module that locks specific clothing slots (head, feet, jumpsuit, gloves, eyes, mask, ears), preventing removal by the wearer only. # LoneStar
   components:
     - type: Sprite
@@ -260,7 +260,7 @@
       state: radio_mini
     - type: AdvancedCollarModule
       componentToAdd: ClothingLock
-      moduleDescription: Locks head, feet, jumpsuit, and gloves
+      moduleDescription: Prevents wearer tampering with their clothes # LoneStar
     # Store the component configuration that will be added to the collar
     - type: ClothingLock
       lockedSlots:
@@ -278,7 +278,7 @@
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModuleSpeechModifier
-  name: Collar speech modifier module
+  name: collar module (speech modifier) # LoneStar
   description: An advanced module that forces the user to speak in certain ways, or not at all.
   components:
     - type: Sprite
@@ -296,7 +296,7 @@
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModuleJingling
-  name: Collar bell module
+  name: collar module (bell) # LoneStar
   description: A module that makes the collar jingle when moving, just like a bell collar.
   components:
     - type: Sprite
