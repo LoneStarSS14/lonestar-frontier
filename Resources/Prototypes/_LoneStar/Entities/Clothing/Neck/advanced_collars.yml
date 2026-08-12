@@ -62,11 +62,10 @@
   components:
     - type: Sprite
       sprite: Objects/Misc/module.rsi
-      state: cpu
+      state: cpu_adv
     - type: AdvancedCollarModule
       componentToAdd: WaddleWhenWorn
       moduleDescription: Waddles when moving
-    # Store the component configuration that will be added to the collar
     - type: WaddleWhenWorn
       tumbleIntensity: 10
 
@@ -78,11 +77,10 @@
   components:
     - type: Sprite
       sprite: Objects/Misc/module.rsi
-      state: cpu
+      state: card_mini
     - type: AdvancedCollarModule
       componentToAdd: HideClothingLayerClothing # TODO: Fix this not initializing on insertion while collars already worn
       moduleDescription: Invisible collar
-    # Store the component configuration that will be added to the collar
     - type: HideClothingLayerClothing # Goob
       hiddenSlots:
       - neck
@@ -95,27 +93,29 @@
   components:
     - type: Sprite
       sprite: Objects/Misc/module.rsi
-      state: radio_mini
+      state: secmodschematic
     - type: AdvancedCollarModule
-      componentToAdd: StaminaResistance
+      componentsToAdd:
+        - StaminaResistance
+        - GroupExamine
       moduleDescription: Stamina vulnerability
-    # Store the component configuration that will be added to the collar
     - type: StaminaResistance
       damageCoefficient: 4
 
 - type: entity
   parent: BaseAdvCollarModule
-  id: AdvCollarModuleShackled
+  id: AdvCollarModulePsychicShackle
   name: collar module (psychic walking)
   description: A module that inhibits its wearer to walk.
   components:
     - type: Sprite
       sprite: Objects/Misc/module.rsi
-      state: radio_mini
+      state: beaker-hold
     - type: AdvancedCollarModule
-      componentToAdd: ClothingSpeedModifier
+      componentsToAdd:
+        - ClothingSpeedModifier
+        - GroupExamine
       moduleDescription: Forced walking
-    # Store the component configuration that will be added to the collar
-    - type: ClothingSpeedModifier
+    - type: ClothingSpeedModifier # TODO: implement this in a better way.
       walkModifier: 1.0
       sprintModifier: 0.7
