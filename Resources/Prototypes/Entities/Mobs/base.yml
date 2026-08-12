@@ -47,7 +47,6 @@
   - type: OwnInteractionVerbs # EE interaction system
     allowedVerbs: [] # TODO: define something here, or don't.
   - type: AnimatedEmotes # goob edit - animated emotes
-  - type: MobDice
 
 - type: entity
   save: false

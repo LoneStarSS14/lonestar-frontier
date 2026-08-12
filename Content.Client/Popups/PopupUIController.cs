@@ -61,26 +61,21 @@ public sealed class PopupUIController : UIController, IOnStateEntered<GameplaySt
         switch (popup.Type)
         {
             case PopupType.SmallCaution:
-            case PopupType.SmallCautionLingering:
                 color = Color.Red;
                 break;
             case PopupType.Medium:
-            case PopupType.MediumLingering:
                 font = _mediumFont;
                 color = Color.LightGray;
                 break;
             case PopupType.MediumCaution:
-            case PopupType.MediumCautionLingering:
                 font = _mediumFont;
                 color = Color.Red;
                 break;
             case PopupType.Large:
-            case PopupType.LargeLingering:
                 font = _largeFont;
                 color = Color.LightGray;
                 break;
             case PopupType.LargeCaution:
-            case PopupType.LargeCautionLingering:
                 font = _largeFont;
                 color = Color.Red;
                 break;
