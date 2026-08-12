@@ -46,12 +46,8 @@
     RingGag: 4294967295
     BallGag: 4294967295
     BlindfoldBDSM: 4294967295
-    # Handcuffs: 4294967295
-    Zipties: 4294967295
-    TwistTies: 4294967295
     LeashBasic: 4294967295
     LeashAdvanced: 4294967295
-    ClothingOuterStraightjacketBodysuit: 4294967295
     # Whips & Paddles
     WhipPink: 4294967295
     WhipTeal: 4294967295
@@ -99,7 +95,7 @@
     AdvCollarModulePsychicClothingLockPlus: 4294967295
     AdvCollarModuleClothingLockPlus: 4294967295
     AdvCollarModuleVulnerability: 4294967295
-    AdvCollarModulePsychichShackle: 4294967295
+    AdvCollarModulePsychicShackle: 4294967295
     # Snacks
     FoodTinPeachesMaint: 5
   emaggedInventory:

@@ -110,7 +110,7 @@
   components:
     - type: Sprite
       sprite: Objects/Misc/module.rsi
-      state: beaker-hold
+      state: beaker_holder
     - type: AdvancedCollarModule
       componentsToAdd:
         - ClothingSpeedModifier
