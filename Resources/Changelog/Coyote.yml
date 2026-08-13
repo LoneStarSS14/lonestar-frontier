@@ -2870,3 +2870,111 @@ Entries:
   id: 328
   time: '2026-07-28T08:43:54.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/7
+- author: archee1
+  changes:
+    - type: Tweak
+      message: the GSW LMG-6 is buffed to be more in line with other rare guns.
+  id: 329
+  time: '2026-08-04T20:16:24.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/11
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Now tiles, firelocks and unpowered doors are pried instantly using a
+        tool.
+  id: 330
+  time: '2026-08-04T20:17:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/10
+- author: archee1
+  changes:
+    - type: Add
+      message: 5 New outfits with a medieval theme
+    - type: Add
+      message: 7 New recolours of the school skirt
+    - type: Add
+      message: 2 New Gloves that match 'cold' white clothes
+    - type: Add
+      message: Golden bell, buyable at the hawker.
+  id: 331
+  time: '2026-08-06T07:09:44.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/8
+- author: JFerrix
+  changes:
+    - type: Add
+      message: Added naga tail markings
+  id: 332
+  time: '2026-08-09T10:51:53.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/12
+- author: archee1
+  changes:
+    - type: Fix
+      message: Player sprites in some situations no longer display the character naked
+  id: 333
+  time: '2026-08-09T20:18:19.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/16
+- author: archee1
+  changes:
+    - type: Add
+      message: Drumkits can now be ordered at cargo for 7.5k
+    - type: Tweak
+      message: >-
+        Updated soundfont to match wizdens more modern one, complex midi should
+        sound better on DAW/S-Synths.
+    - type: Tweak
+      message: You can now play all instruments handsfree like harmonicas can be.
+  id: 334
+  time: '2026-08-10T09:37:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/21
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Pill canisters use paradise's sprites and now have an open/close sound
+        and texture
+    - type: Tweak
+      message: >-
+        Almost all loot sources of medical supplies have been reduced or made
+        more variable.
+    - type: Tweak
+      message: >-
+        Higher tier topicals now apply faster to yourself and others, all
+        topicals also heal twice as much.
+    - type: Tweak
+      message: All pill canisters are now 5x3 storage and start with 10 pills.
+    - type: Tweak
+      message: >-
+        Medkits are now 2x3 in your bag but are whitelisted to only medical
+        supplies.
+  id: 335
+  time: '2026-08-10T09:48:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/20
+- author: Jakumba
+  changes:
+    - type: Remove
+      message: 'Removed job time requirements for Nash Guard & Nash Secretary '
+  id: 336
+  time: '2026-08-10T18:34:12.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/23
+- author: archee1
+  changes:
+    - type: Add
+      message: Ports advanced collars from wayfarer
+    - type: Add
+      message: >-
+        Adds 2 new modules to the hacked hawker inventory related to the new
+        advanced collars
+    - type: Remove
+      message: Removes a few things from the hawkers vend inventory that were unneeded
+  id: 337
+  time: '2026-08-10T18:38:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/22
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        4 new avanced collar modules, waddle, psychic walking, vulnerability,
+        stealth.
+  id: 338
+  time: '2026-08-13T08:19:14.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/24

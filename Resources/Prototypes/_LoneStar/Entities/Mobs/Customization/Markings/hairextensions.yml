@@ -1,0 +1,30 @@
+
+- type: marking
+  id: Hairbangs
+  bodyPart: Eyes
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
+  sprites:
+  - sprite: _LoneStar/Entities/Mobs/Markings/hairextensions.rsi
+    state: hairbangs
+
+- type: marking
+  id: DrillsBigFront
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
+  sprites:
+  - sprite: _LoneStar/Entities/Mobs/Markings/hairextensions.rsi
+    state: drills-big-front
+
+- type: marking
+  id: DrillsFront
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Oni, Kitsune]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike]
+  sprites:
+  - sprite: _LoneStar/Entities/Mobs/Markings/hairextensions.rsi
+    state: drills-front

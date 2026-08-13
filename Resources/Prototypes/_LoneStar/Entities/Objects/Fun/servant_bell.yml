@@ -1,0 +1,55 @@
+- type: entity
+  parent: BaseItem
+  id: ServantBell
+  name: golden bell
+  description: An antique looking gold bell, ringing it should turn some heads.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Fun/servant_bell.rsi
+    state: icon
+  - type: Item
+    sprite: _LoneStar/Objects/Fun/servant_bell.rsi
+    size: Small
+  - type: UseDelay
+    delay: 0.75
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_LoneStar/Items/servant_bell.ogg
+      params:
+        variation: 0.125
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_LoneStar/Items/servant_bell.ogg
+      params:
+        variation: 0.125
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_LoneStar/Items/servant_bell.ogg
+      params:
+        variation: 0.125
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_LoneStar/Items/servant_bell.ogg
+      params:
+        variation: 0.125
+  - type: EmitSoundOnCollide
+    sound:
+      collection: DeskBell
+      params:
+        variation: 0.03
+        volume: 3
+  - type: Tag
+    tags:
+    - Payload
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    soundHit:
+      collection: DeskBell
+      params:
+        variation: 0.03
+        volume: 3
+    damage:
+      types:
+        Blunt: 2
+  - type: StaticPrice
+    price: 550

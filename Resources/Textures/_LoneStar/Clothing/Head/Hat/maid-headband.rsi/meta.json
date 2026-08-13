@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "taken from Vanderlin at https://github.com/Monkestation/Vanderlin/commit/3d222670f29dd2632067f3f61e3b1eaf897d67c9, arranged and paletted for ss14 by Archee",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "equipped-HELMET",
+            "directions": 4
+        }
+    ]
+}

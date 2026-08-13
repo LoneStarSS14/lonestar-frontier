@@ -1,0 +1,314 @@
+# Advanced Collar and Modules
+
+- type: entity
+  parent: ClothingNeckCollarBase
+  id: ClothingNeckAdvancedCollarBase
+  name: advanced collar
+  description: A modular collar that can have various functional modules installed.
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_black.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_black.rsi
+    - type: AdvancedCollar
+      maxModules: 5 # WF 3 > 5
+    - type: ContainerContainer
+      containers:
+        collar_module_container: !type:Container
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarBlack
+  name: advanced black collar
+  description: A modular black collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_black.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_black.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarBlue
+  name: advanced blue collar
+  description: A modular blue collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_blue.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_blue.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarPink
+  name: advanced pink collar
+  description: A modular pink collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_pink.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_pink.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarShock
+  name: advanced shock collar
+  description: A modular shock collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Nyanotrasen/Clothing/Neck/Misc/shock.rsi
+    - type: Clothing
+      sprite: Nyanotrasen/Clothing/Neck/Misc/shock.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarBell
+  name: advanced bell collar
+  description: A modular bell collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: _NF/Clothing/Neck/bellcollar.rsi
+    - type: Clothing
+      sprite: _NF/Clothing/Neck/bellcollar.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarEpi
+  name: advanced epistemics collar
+  description: A modular epistemics collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_epi.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_epi.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarEngi
+  name: advanced engineering collar
+  description: A modular engineering collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_engi.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_engi.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarLogi
+  name: advanced logistics collar
+  description: A modular logistics collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_logi.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_logi.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarMed
+  name: advanced medical collar
+  description: A modular medical collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_med.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_med.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarSec
+  name: advanced security collar
+  description: A modular security collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_sec.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_sec.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarCmd
+  name: advanced captains collar
+  description: A modular captains collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_cmd.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_cmd.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarCC
+  name: advanced CentCom collar
+  description: A modular CentCom collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_cc.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_cc.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarSyndi
+  name: advanced blood-red collar
+  description: A modular blood-red collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_syndi.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_syndi.rsi
+
+
+# Collar Modules
+
+- type: entity
+  parent: BaseItem
+  id: BaseAdvCollarModule
+  name: collar module
+  description: A module that can be installed into an advanced collar.
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: ssd
+    - type: Item
+      size: Tiny
+    - type: AdvancedCollarModule
+
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModuleBondage
+  name: collar module (bondage) # LoneStar
+  description: A module that prevents the wearer from removing the collar themselves.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: ssd
+    - type: AdvancedCollarModule
+      componentToAdd: SelfUnremovableClothing
+      moduleDescription: Prevents collar's self-removal # LoneStar
+
+# Shock Module - electrocutes wearer when remotely triggered
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModuleShock
+  name: collar module (shock) # LoneStar
+  description: A module that can remotely shock the wearer via wireless signal trigger.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: card_mini
+    - type: AdvancedCollarModule
+      componentsToAdd:
+        - ShockOnTrigger
+        - TriggerOnSignal
+        - DeviceNetwork
+        - WirelessNetworkConnection
+        - DeviceLinkSink
+      moduleDescription: Shocks wearer on wireless signal
+    # Store the component configurations that will be added to the collar
+    - type: ShockOnTrigger
+      damage: 1
+      duration: 2.5
+      cooldown: 3.5
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: BasicDevice
+    - type: WirelessNetworkConnection
+      range: 200
+    - type: DeviceLinkSink
+      ports:
+        - Trigger
+
+# Clothing Lock Module - prevents specific clothing slots from removal while worn
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModuleClothingLock
+  name: collar module (clothing lock) # LoneStar
+  description: An advanced module that locks specific clothing slots (head, feet, jumpsuit, gloves, eyes, mask, ears), preventing removal by anyone while the collar with this module is worn. # LoneStar
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: servo
+    - type: AdvancedCollarModule
+      componentToAdd: ClothingLock
+      moduleDescription: Prevents tampering with wearers clothes # LoneStar
+    # Store the component configuration that will be added to the collar
+    - type: ClothingLock
+      lockedSlots:
+        - head
+        - shoes
+        - jumpsuit
+        - gloves
+        # LoneStar v
+        - eyes
+        - mask
+        - ears
+      blockOthers: true # WF
+# WF Begin
+# Clothing Lock Module - prevents specific clothing slots from removal while worn
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModulePsychicClothingLock
+  name: collar module (psychic clothing lock) # LoneStar
+  description: An advanced module that locks specific clothing slots (head, feet, jumpsuit, gloves, eyes, mask, ears), preventing removal by the wearer only. # LoneStar
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: radio_mini
+    - type: AdvancedCollarModule
+      componentToAdd: ClothingLock
+      moduleDescription: Prevents wearer tampering with their clothes # LoneStar
+    # Store the component configuration that will be added to the collar
+    - type: ClothingLock
+      lockedSlots:
+        - head
+        - shoes
+        - jumpsuit
+        - gloves
+        # LoneStar v
+        - eyes
+        - mask
+        - ears
+      blockOthers: false
+
+# Speech Modifier Module - forces the wearer to speak a certain way
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModuleSpeechModifier
+  name: collar module (speech modifier) # LoneStar
+  description: An advanced module that forces the user to speak in certain ways, or not at all.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: harddisk_micro
+    - type: AdvancedCollarModule
+      componentToAdd: CollarSpeechModifier
+      moduleDescription: Modifies the wearer's speech
+    # Store the component configuration that will be added to the collar
+    - type: CollarSpeechModifier
+      selectedType: Off
+# WF end
+
+# Jingling Module - makes jingle sounds when the wearer moves
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModuleJingling
+  name: collar module (bell) # LoneStar
+  description: A module that makes the collar jingle when moving, just like a bell collar.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: cpu
+      # layers:
+      #   - state: ssd
+      #     color: "#FFA500"
+    - type: AdvancedCollarModule
+      componentToAdd: EmitsSoundOnMove
+      moduleDescription: Jingles when moving
+    # Store the component configuration that will be added to the collar
+    - type: EmitsSoundOnMove
+      soundCollection:
+        collection: FootstepJester

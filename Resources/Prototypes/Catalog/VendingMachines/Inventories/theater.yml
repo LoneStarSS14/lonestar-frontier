@@ -314,12 +314,39 @@
     CoolCoyoteClothesYellowwshort: 9000
     CoolCoyoteClothesGearHarness: 9000
     ClothingShoesFootProtectors: 9000
+    ClothingHeadHatGrenzel: 9000
+    ClothingUniformJumpsuitGrenzel: 9000
+    # IMP
+    ClothingUniformMrSpaceWide: 9000
+    ClothingUniformMrSpaceWideSkirt: 9000
+    ClothingHeadJesterEvilHat: 9000
+    ClothingUniformJesterEvil: 9000
+    ClothingShoesJesterEvilJanglers: 9000
+    ClothingNeckDevilWings: 9000
+    ClothingHeadDevilHorns: 9000
+    DevilPitchfork: 9000
+    ClothingHeadHalo: 9000
+    ClothingUniformJumpskirtAngelDress: 9000
+    ClothingHandsAngelGloves: 9000
+    ClothingShoesAngelSandals: 9000
+    ClothingNeckAngelWings: 9000
+    HandheldHarpInstrument: 9000
+    ClothingUniformHitmanSuit: 9000
+    ClothingUniformHitmanSuitSkirt: 9000
+    ClothingUniformBrosBlazer: 9000
+    ClothingUniformBrosBlazerSkirt: 9000
   contrabandInventory:
     ClothingHeadHatRichard: 1
     ToyFigurineBoxer: 1
     ToyFigurineMusician: 1
     ClothingHeadHatMimesoftFlipped: 1 # Frontier
     BarberScissors: 1 # Frontier
+    ClothingOuterArmorGrenzelCuriass: 1 # Lonestar
+    # IMP
+    ClothingUniformHitmanSuit: 1
+    ClothingUniformHitmanSuitSkirt: 1
+    ClothingUniformBrosBlazer: 1
+    ClothingUniformBrosBlazerSkirt: 1
   emaggedInventory:
     ClothingShoesBling: 1
     ClothingShoesBootsCowboyFancy: 1

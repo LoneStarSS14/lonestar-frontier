@@ -1,0 +1,56 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# region Gambling
+- type: entity
+  parent: BaseFlatpack
+  id: SlotMachineWheelHouseFlatpack
+  name: wheel-house slot machine flatpack
+  description: A flatpack used for constructing a wheel-house slot machine
+  components:
+  - type: Flatpack
+    entity: SlotMachineWheelHouse
+
+- type: entity
+  parent: BaseFlatpack
+  id: SlotMachinePayRaiserFlatpack
+  name: pay-raiser slot machine flatpack
+  description: A flatpack used for constructing a pay-raiser slot machine
+  components:
+  - type: Flatpack
+    entity: SlotMachinePayRaiser
+
+- type: entity
+  parent: BaseFlatpack
+  id: SlotMachineMarketCrashFlatpack
+  name: market-crash slot machine flatpack
+  description: A flatpack used for constructing a market-crash slot machine
+  components:
+  - type: Flatpack
+    entity: SlotMachineMarketCrash
+
+- type: entity
+  parent: BaseFlatpack
+  id: CoinFlipperFlatPack
+  name: coin flipper flatpack
+  description: A flatpack used for constructing a coin flipper
+  components:
+  - type: Flatpack
+    entity: CoinFlipper
+
+- type: entity
+  parent: BaseFlatpack
+  id: ClawMachineFlatPack
+  name: claw machine flat pack
+  description: A flatpack used for constructing a claw machine
+  components:
+  - type: Flatpack
+    entity: ClawMachine
+
+- type: entity
+  parent: BaseFlatpack
+  id: PrizeCounterFlatPack
+  name: prize counter flat pack
+  description: A flatpack used for constructing a prize counter
+  components:
+  - type: Flatpack
+    entity: PrizeCounter

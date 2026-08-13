@@ -1427,6 +1427,7 @@
     - map: [ "ears" ]
     - map: [ "id" ]
     - map: [ "outerClothing" ]
+    - map: [ "maskalt" ]
     - map: [ "mask" ]
     - map: [ "head" ]
     - map: [ "clownedon" ]
@@ -1442,6 +1443,7 @@
         clownedon:
           True: {visible: true}
           False: {visible: false}
+
   - type: Body
     prototype: Primate
     requiredLegs: 1 # TODO: More than 1 leg
@@ -1663,6 +1665,7 @@
       visible: false
     - map: [ "ears" ]
     - map: [ "id" ]
+    - map: [ "maskalt" ]
     - map: [ "mask" ]
     - map: [ "head" ]
     - map: [ "clownedon" ]
@@ -2580,6 +2583,8 @@
     speedModifier: 1.5
     useSound:
       path: /Audio/Items/crowbar.ogg
+  - type: UseDelay # Goobstation - For insta prying
+    delay: 1
   - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute from base.yml.
     allowedStates:
     - Alive

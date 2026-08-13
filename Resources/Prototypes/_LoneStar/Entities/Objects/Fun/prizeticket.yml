@@ -1,0 +1,105 @@
+# Ticket counts
+- type: entity
+  parent: PrizeTicket
+  id: PrizeTicket3
+  name: prize ticket
+  suffix: 3
+  components:
+  - type: Sprite
+    state: ticket
+  - type: Stack
+    stackType: PrizeTicket
+    count: 3
+
+- type: entity
+  parent: PrizeTicket
+  id: PrizeTicket5
+  name: prize ticket
+  suffix: 5
+  components:
+  - type: Sprite
+    state: ticket
+  - type: Stack
+    stackType: PrizeTicket
+    count: 5
+
+# Balls
+- type: entity
+  parent: PrizeBall
+  id: PrizeBallSmall
+  suffix: Small
+  name: prize ball
+  description: I wounder whats inside!
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Fun/prizeticket.rsi
+    layers:
+      - state: prizeball-small
+  - type: SpawnItemsOnUse
+    items:
+      - id: PrizeBallSmallTrash
+      - id: PrizeTicket1
+        orGroup: Prize
+      - id: PrizeTicket3
+        orGroup: Prize
+        prob: 0.70
+      - id: PrizeTicket5
+        orGroup: Prize
+        prob: 0.30
+
+- type: entity
+  parent: PrizeBall
+  id: PrizeBallSyndicate
+  suffix: Syndicate
+  name: prize ball
+  description: I wounder whats inside!
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Fun/prizeticket.rsi
+    layers:
+      - state: prizeball-syndicate
+  - type: SpawnItemsOnUse
+    items:
+      - id: PrizeBallSyndicateTrash
+      - id: SpawnRewardPrizeBallSyndicate
+  - type: StaticPrice
+    price: 250
+    vendPrice: 5500
+
+# Trash
+- type: entity
+  parent: BaseItem
+  id: PrizeBallTrash
+  name: opened prize ball
+  description: Two halves of a plastic ball. It must have had something cool inside.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Fun/prizeticket.rsi
+    layers:
+      - state: prizeball-trash
+  - type: Tag
+    tags:
+    - Trash
+  - type: SpaceGarbage
+
+- type: entity
+  parent: PrizeBallTrash
+  id: PrizeBallSmallTrash
+  name: opened prize ball
+  description: Two halves of a plastic ball. It must have had something cool inside.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Fun/prizeticket.rsi
+    layers:
+      - state: prizeball-small-trash
+
+- type: entity
+  parent: PrizeBallTrash
+  id: PrizeBallSyndicateTrash
+  name: opened prize ball
+  description: Two halves of a plastic ball. It must have had something sinister inside.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Fun/prizeticket.rsi
+    layers:
+      - state: prizeball-syndicate-trash

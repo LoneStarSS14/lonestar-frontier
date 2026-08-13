@@ -1,0 +1,19 @@
+- type: loadout
+  id: ClothingUniformNightclubSuit
+  equipment:
+    jumpsuit: ClothingUniformNightclubSuit #imp
+
+- type: loadout
+  id: ClothingUniformNightclubSuitSkirt
+  equipment:
+    jumpsuit: ClothingUniformNightclubSuitSkirt #imp
+
+- type: loadout
+  id: ClothingUniformSeniorBartender
+  equipment:
+    id: ClothingUniformSeniorBartender #imp
+
+- type: loadout
+  id: ClothingUniformSeniorBartenderSkirt
+  equipment:
+    id: ClothingUniformSeniorBartenderSkirt #imp

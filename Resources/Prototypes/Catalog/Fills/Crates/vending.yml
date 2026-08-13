@@ -106,7 +106,7 @@
   - type: StorageFill
     contents:
       - id: VendingMachineRestockMedical
-        amount: 2 # Frontier
+        amount: 1 # LoneStar
 
 - type: entity
   id: CrateVendingMachineRestockChemVendFilled
@@ -117,7 +117,7 @@
   - type: StorageFill
     contents:
       - id: VendingMachineRestockChemVend
-        amount: 2 # Frontier
+        amount: 1 # LoneStar
 
 - type: entity
   id: CrateVendingMachineRestockNutriMaxFilled

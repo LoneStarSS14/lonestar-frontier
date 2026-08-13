@@ -1,15 +1,1 @@
-- type: entity
-  parent: BaseMentalAction
-  id: ActionRollDice
-  name: Roll Dice
-  description: Roll a metaphysical D20 to determine... something! Makes a popup message showing the result!
-  components:
-  - type: Action
-    icon:
-      sprite: Objects/Fun/dice.rsi
-      state: d20_20
-    checkCanInteract: false
-    startDelay: true
-    useDelay: 5
-  - type: InstantAction
-    event: !type:MobDiceRollSelfEvent
+

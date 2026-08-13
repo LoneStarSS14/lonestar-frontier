@@ -155,6 +155,9 @@
   - type: StaticPrice # Frontier
     price: 20 # Frontier
     vendPrice: 1500 # Frontier
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   abstract: true
@@ -188,6 +191,9 @@
 #    materialComposition: # Frontier
 #      Durathread: 100 # Frontier
 #      Cloth: 50 # Frontier
+  - type: HideClothingLayerClothing # Goobstation
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterBase

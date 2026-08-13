@@ -134,6 +134,7 @@
   id: TableDungeonLootMedicalFirstAidKits
   table: !type:GroupSelector
     children:
+    # LoneStar changes start
     # Common
     - !type:GroupSelector
       weight: 0.6
@@ -141,21 +142,21 @@
       - !type:GroupSelector
         children:
         - id: Medkit
-          weight: 0.4
+          weight: 0.7
         - id: MedkitFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitBrute
-          weight: 0.4
+          weight: 0.7
         - id: MedkitBruteFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitBurn
-          weight: 0.4
+          weight: 0.7
         - id: MedkitBurnFilled
-          weight: 0.6
+          weight: 0.3
     # Uncommon
     - !type:GroupSelector
       weight: 0.3
@@ -163,15 +164,15 @@
       - !type:GroupSelector
         children:
         - id: MedkitToxin
-          weight: 0.4
+          weight: 0.7
         - id: MedkitToxinFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitRadiation
-          weight: 0.4
+          weight: 0.7
         - id: MedkitRadiationFilled
-          weight: 0.6
+          weight: 0.3
     # Rare (either good or undesirable)
     - !type:GroupSelector
       weight: 0.05
@@ -179,21 +180,22 @@
       - !type:GroupSelector
         children:
         - id: MedkitAdvanced
-          weight: 0.4
+          weight: 0.7
         - id: MedkitAdvancedFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitCombat
-          weight: 0.4
+          weight: 0.7
         - id: MedkitCombatFilled
-          weight: 0.6
+          weight: 0.3
       - !type:GroupSelector
         children:
         - id: MedkitO2
-          weight: 0.4
+          weight: 0.7
         - id: MedkitOxygenFilled
-          weight: 0.6
+          weight: 0.3
+    # LoneStar changes end
 
 # region Surgery tools
 - type: entityTable
@@ -734,14 +736,14 @@
       children:
       - id: ClothingBeltMedical
         weight: 0.7
-      - id: ClothingBeltMedicalFilled
+      - id: ClothingBeltMedicalFilledSalvage # LoneStar
         weight: 0.3
     - !type:GroupSelector
       weight: 0.3
       children:
       - id: ClothingBeltMedicalEMT
         weight: 0.7
-      - id: ClothingBeltMedicalEMTFilled
+      - id: ClothingBeltMedicalEMTFilledSalvage # LoneStar
         weight: 0.3
     - !type:GroupSelector
       weight: 0.1
@@ -885,14 +887,14 @@
       children:
       - id: LockerParamedic
         weight: 0.7
-      - id: LockerParamedicFilled
+      - id: LockerParamedicFilledSalvage # LoneStar
         weight: 0.3
     - !type:GroupSelector
       weight: 0.35
       children:
       - id: LockerMedicine
         weight: 0.7
-      - id: LockerMedicineFilled
+      - id: LockerMedicineFilledSalvage # LoneStar
         weight: 0.3
     - !type:GroupSelector
       weight: 0.05
@@ -1024,7 +1026,7 @@
     - !type:GroupSelector
       weight: 0.3
       children:
-      - id: CrateMedicalSupplies
+      - id: CrateMedicalSuppliesSalvage # LoneStar
       - id: CrateMedicalSecureMedicine
       - id: CrateMedicalSecureMedicinePierce
       - id: CrateMedicalSecureDoctor
@@ -1041,9 +1043,11 @@
       - id: CrateChemistryVials
       - id: CrateChemistrySecureKitChemist
       - id: CrateEvaKitCmo
-      - id: MedicalTechFabFlatpack # Coyote
-      - id: VendingMachineMedicalFlatpack # Coyote
-      - id: VendingMachineChemicalsFlatpack # Coyote
+      - id: MedicalTechFabFlatpack # LoneStar
+        weight: 0.2
+      - id: VendingMachineMedicalFlatpack # LoneStar
+        weight: 0.4
+      - id: VendingMachineChemicalsFlatpack # LoneStar
         weight: 0.01
     # Unique
     - !type:GroupSelector
@@ -1103,8 +1107,8 @@
       children:
       - id: Autolathe
         weight: 20
-      - id: MedicalTechFab
-        weight: 40
+      - id: MedicalTechFab # LoneStar
+        weight: 10
       - id: ExosuitFabricator
         weight: 15
       - id: ServiceTechFab
@@ -1142,14 +1146,19 @@
       - id: VendingMachineGeneDrobe
       - id: VendingMachineViroDrobe
     # Meds
-    - !type:GroupSelector
+    - !type:GroupSelector # LoneStar
       weight: 0.6
       children:
       - id: VendingMachineVendomat
+        weight: 2
       - id: VendingMachineRobotics
-      - id: VendingMachineMedical
+        weight: 2
+      - id: VendingMachineMedicalSalvage
+        weight: 4
       - id: VendingMachineCiviMedPlus
-      - id: VendingMachineChemicals # Coyote
+        weight: 1
+      - id: VendingMachineChemicals
+        weight: 0.5
     # Frame
     - !type:NestedSelector
       tableId: TableDungeonLootGeneralFrameMachine
@@ -1164,7 +1173,8 @@
     - !type:GroupSelector
       weight: 0.8
       children:
-      - id: MedicalTechFabFlatpack
+      - id: MedicalTechFabFlatpack # LoneStar
+        weight: 0.35
       - id: StasisBedFlatpack
       - id: ChemMasterFlatpack
       - id: MachineElectrolysisUnitFlatpack
@@ -1178,8 +1188,9 @@
       weight: 0.2
       children:
       - id: VendingMachineMedicalFlatpack
-      - id: VendingMachineWallMedicalFlatpack
+        weight: 9
       - id: VendingMachineChemicalsFlatpack
+        weight: 1
 
 #region Circuit Boards
 - type: entityTable
@@ -1193,7 +1204,8 @@
       # Computers
       - id: MedicalRecordsComputerCircuitboard
       # Lathes
-      - id: MedicalTechFabCircuitboard
+      - id: MedicalTechFabCircuitboard # LoneStar
+        weight: 0.35
       # Machines
       - id: ChemMasterMachineCircuitboard
       - id: CentrifugeMachineCircuitboard

@@ -1,0 +1,61 @@
+# region Regal Gown
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesRegalSleeves
+  name: blue regal sleeves
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Hands/Sleeves/regal-gown.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Hands/Sleeves/regal-gown.rsi
+
+- type: entity
+  parent: ClothingHandsGlovesRegalSleeves
+  id: ClothingHandsGlovesRegalSleevesRed
+  name: red regal sleeves
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#96526f"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+      - state: equipped-HAND-detail
+        color: "#96526f"
+
+- type: entity
+  parent: ClothingHandsGlovesRegalSleeves
+  id: ClothingHandsGlovesRegalSleevesGreen
+  name: green regal sleeves
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#56a452"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+      - state: equipped-HAND-detail
+        color: "#56a452"
+
+- type: entity
+  parent: ClothingHandsGlovesRegalSleeves
+  id: ClothingHandsGlovesRegalSleevesBlack
+  name: black regal sleeves
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#5c5c60"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+      - state: equipped-HAND-detail
+        color: "#5c5c60"

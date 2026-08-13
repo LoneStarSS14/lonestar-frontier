@@ -1,0 +1,87 @@
+#region Regal Suit
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitRegalSuitPrince
+  name: red regal suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitRegalSuitPrince
+  id: ClothingUniformJumpsuitRegalSuitBlue
+  name: blue regal suit
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#5882c6"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#5882c6"
+
+- type: entity
+  parent: ClothingUniformJumpsuitRegalSuitPrince
+  id: ClothingUniformJumpsuitRegalSuitGreen
+  name: green regal suit
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#56a452"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#56a452"
+
+- type: entity
+  parent: ClothingUniformJumpsuitRegalSuitPrince
+  id: ClothingUniformJumpsuitRegalSuitBlack
+  name: black regal suit
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#5c5c60"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#5c5c60"
+
+# region Misc
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitGrenzel
+  name: grenzel suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/grenzel.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/grenzel.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitRegalShirt
+  name: regal shirt
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-shirt.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-shirt.rsi

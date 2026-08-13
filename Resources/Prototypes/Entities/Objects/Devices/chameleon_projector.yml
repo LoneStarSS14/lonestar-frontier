@@ -58,7 +58,7 @@
   components:
   - type: Action
     icon:
-      sprite: _NF/Objects/Tools/wrench.rsi # Frontier: separate sprites (add _NF folder)
+      sprite: Objects/Tools/wrench.rsi
       state: icon
     itemIconStyle: BigAction
   - type: InstantAction

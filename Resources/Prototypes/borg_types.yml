@@ -22,6 +22,7 @@
 
   radioChannels:
   - Science
+  - Medical # Lonestar
 
   # Visual
   inventoryTemplateId: borgShort
@@ -61,6 +62,7 @@
   radioChannels:
   - Engineering
   - Science
+  - Medical # Lonestar
 
   # Visual
   inventoryTemplateId: borgShort
@@ -100,6 +102,7 @@
   radioChannels:
   - Supply
   - Science
+  - Medical # Lonestar
 
   # Visual
   inventoryTemplateId: borgTall
@@ -139,6 +142,7 @@
   radioChannels:
   - Science
   - Service
+  - Medical # Lonestar
 
   # Visual
   inventoryTemplateId: borgShort
@@ -241,6 +245,7 @@
   radioChannels:
   - Science
   - Service
+  - Medical # Lonestar
 
   # Visual
   inventoryTemplateId: borgTall
@@ -278,6 +283,7 @@
 
   radioChannels:
   - Science
+  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
@@ -324,6 +330,7 @@
   radioChannels:
   - Engineering
   - Science
+  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
@@ -371,6 +378,7 @@
   radioChannels:
   - Supply
   - Science
+  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
@@ -417,6 +425,7 @@
   radioChannels:
   - Science
   - Service
+  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
@@ -530,6 +539,7 @@
   radioChannels:
   - Science
   - Service
+  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
@@ -577,6 +587,7 @@
   radioChannels:
   - Supply
   - Science
+  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
@@ -624,6 +635,7 @@
   radioChannels:
   - Supply
   - Science
+  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi

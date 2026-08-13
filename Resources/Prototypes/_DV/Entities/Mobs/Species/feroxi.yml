@@ -83,6 +83,7 @@
       - map: [ "back" ]
       - map: [ "enum.HumanoidVisualLayers.UndershirtOverclothes" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+      - map: [ "maskalt" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]
       - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
       - map: [ "enum.HumanoidVisualLayers.NeckFluff" ]

@@ -32,6 +32,8 @@
           Heat: 1
     - type: Damageable
       damageContainer: Shield
+    - type: ExaminableDamage
+      messages: ShieldMessages
     - type: Destructible
       thresholds:
         - trigger:
@@ -49,22 +51,39 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalBreak
-            - !type:SpawnEntitiesBehavior
-              spawn:
-                SheetSteel:
-                  min: 2
-                  max: 2
-                SheetGlass:
-                  min: 2
-                  max: 2
+            # - !type:SpawnEntitiesBehavior
+            #   spawn:
+            #     SheetSteel:
+            #       min: 2
+            #       max: 2
+            #     SheetGlass:
+            #       min: 2
+            #       max: 2
     - type: StaticPrice
       price: 50 # Frontier: 100<50 - TODO: material value rework
+
+- type: entity
+  name: base repairable shield
+  parent: BaseShield
+  id: BaseRepairableShield
+  description: A repairable shield!
+  abstract: true
+  components:
+  - type: Repairable # Negative values represent healing
+    damage:
+      groups:
+        Brute: -60 # 20 of each Brute Type - 20% of a basic shield HP
+      types:
+        Heat: -20
+    fuelCost: 10 # 1/2 of a Welder for a full repair
+    doAfterDelay: 5
+    allowSelfRepair: false
 
 #Security Shields
 
 - type: entity
   name: riot shield
-  parent: [ BaseShield, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: [ BaseRepairableShield, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   id: RiotShield
   description: A large tower shield. Good for controlling crowds.
   components:
@@ -85,7 +104,7 @@
 
 - type: entity
   name: laser shield
-  parent: [ BaseShield, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ BaseRepairableShield, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: RiotLaserShield
   description: A shield built for withstanding lasers, but not much else.
   components:
@@ -105,7 +124,7 @@
 
 - type: entity
   name: ballistic shield
-  parent: [ BaseShield, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ BaseRepairableShield, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: RiotBulletShield
   description: A shield built for protecting against ballistics, but not much else.
   components:
@@ -182,7 +201,7 @@
 
 - type: entity
   name: makeshift shield
-  parent: BaseShield
+  parent: BaseRepairableShield
   id: MakeshiftShield
   description: A rundown looking shield, not good for much.
   components:
@@ -291,7 +310,7 @@
 
 - type: entity
   name: clockwork shield
-  parent: BaseShield
+  parent: BaseRepairableShield
   id: ClockworkShield
   description: Ratvar oyrffrf lbh jvgu uvf cebgrpgvba.
   components:
@@ -440,6 +459,8 @@
     - type: Appearance
     - type: Damageable
       damageContainer: Shield
+    - type: ExaminableDamage
+      messages: EnergyShieldMessages
     - type: Destructible
       thresholds:
         - trigger:
@@ -462,8 +483,25 @@
                 BrokenEnergyShield:
                   min: 1
                   max: 1
+        - trigger:
+            !type:DamageTrigger
+            damage: 70
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/_CS/GasWarnings/airwarning_low.ogg
+                params:
+                  pitch: 0.8
     - type: StaticPrice
       price: 350
+    # LoneStar
+    - type: PassiveDamage
+      damage:
+        types:
+          Heat: -0.5
+          Cold: -0.5
+        groups:
+          Brute: -3
 
 - type: entity
   name: broken energy shield
@@ -483,7 +521,7 @@
 
 - type: entity
   name: telescopic shield
-  parent: [BaseShield, BaseC2ContrabandUnredeemable] # Frontier: BaseC2ContrabandUnredeemable
+  parent: [BaseRepairableShield, BaseC2ContrabandUnredeemable] # Frontier: BaseC2ContrabandUnredeemable
   id: TelescopicShield
   description: An advanced riot shield made of lightweight materials that collapses for easy storage.
   components:

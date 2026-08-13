@@ -22,7 +22,7 @@
       Frontier:
         !type:SectorBankAccountInfo
         balance: 8000
-        increasePerSecond: 1 # TODO: move to ~65K per hour (~18/s), about enough for minimum wage for Frontier employees
+        increasePerSecond: 10 # Lonestar 1 > 10
       Nfsd:
         !type:SectorBankAccountInfo
         balance: 8000
@@ -30,7 +30,7 @@
       Medical:
         !type:SectorBankAccountInfo
         balance: 8000
-        increasePerSecond: 6 # 21.6K per hour, a bit over for the DOC MOM's wage.
+        increasePerSecond: 10 # Lonestar 6 > 10
       Edison:
         !type:SectorBankAccountInfo
         balance: 8000

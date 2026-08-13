@@ -114,6 +114,7 @@
       - map: [ "ears" ]
       - map: [ "eyes" ]
       - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+      - map: [ "maskalt" ]
       - map: [ "mask" ]
       - map: [ "head" ]
       - map: [ "pocket1" ]

@@ -141,6 +141,18 @@
     ClothingUniformJumpskirtElegantMaid: 4
     ClothingUniformColorJumpskirtRainbow: 4
     ClothingUniformJumpskirtSchool: 4
+    ClothingUniformJumpskirtSchoolPink: 4
+    ClothingUniformJumpskirtSchoolRed: 4
+    ClothingUniformJumpskirtSchoolOrange: 4
+    ClothingUniformJumpskirtSchoolYellow: 4
+    ClothingUniformJumpskirtSchoolGreen: 4
+    ClothingUniformJumpskirtSchoolWhite: 4
+    ClothingUniformJumpskirtSchoolBlack: 4
+    ClothingHandsGlovesColorSatinWhite: 4
+    ClothingHandsGlovesColorSatinWhiteLong: 4
+    ClothingHeadHatMaidHeadband: 4
+    ClothingUniformJumpskirtMaidDressLong: 4
+    ClothingOuterVestPinafore: 4
     ClothingUniformJumpskirtCapTurtleneck: 4
     ClothingUniformJumpskirtHoPTurtleneck: 4
     ClothingUniformJumpskirtHoSBlack: 4
@@ -203,6 +215,21 @@
     VintageUniformSuit: 4
     CargoOverallsUniformSuit: 4
     RedRegaliaSuit: 4
+    ClothingUniformJumpsuitRegalSuitPrince: 2
+    ClothingUniformJumpsuitRegalSuitBlue: 2
+    ClothingUniformJumpsuitRegalSuitGreen: 2
+    ClothingUniformJumpsuitRegalSuitBlack: 2
+    ClothingUniformJumpsuitRegalGown: 2
+    ClothingUniformJumpsuitRegalGownRed: 2
+    ClothingUniformJumpsuitRegalGownGreen: 2
+    ClothingUniformJumpsuitRegalGownBlack: 2
+    ClothingHandsGlovesRegalSleeves: 2
+    ClothingHandsGlovesRegalSleevesRed: 2
+    ClothingHandsGlovesRegalSleevesGreen: 2
+    ClothingHandsGlovesRegalSleevesBlack: 2
+    ClothingHeadHatRegalCrown: 4
+    ClothingUniformJumpsuitRegalShirt: 2
+    ClothingOuterVestMedievalLongcoat: 2
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1

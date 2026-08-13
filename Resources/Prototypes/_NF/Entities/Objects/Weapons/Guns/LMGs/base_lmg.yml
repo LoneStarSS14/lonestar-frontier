@@ -1,7 +1,7 @@
 #region base
 - type: entity
   id: NFBaseWeaponFrameLightMachineGun
-  parent: [ NFBaseWeaponEncumbranceSniper, NFBaseItemWeaponGunMagazineFed ]
+  parent: [ NFBaseWeaponEncumbranceLMG, NFBaseItemWeaponGunMagazineFed ] # Lonestar
   suffix: Frontier
   abstract: true
   components:
@@ -15,16 +15,18 @@
     projectileSpeed: 35
     minAngle: 3.1
     maxAngle: 15.5
-    angleIncrease: 0.8
-    angleDecay: 4
-    fireRate: 4
-    burstFireRate: 5
-    shotsPerBurst: 5
-    burstCooldown: 1
+    # Lonestar changes start
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 6
+    #burstFireRate: 5
+    #shotsPerBurst: 5
+    #burstCooldown: 1
+    # Lonetart changes end
     selectedMode: FullAuto
     availableModes:
     - FullAuto
-    - Burst
+    #- Burst #Lonestar
   - type: NFWeaponDetails
     class: weapon-details-class-light-machine-gun
 
@@ -35,8 +37,10 @@
   abstract: true
   components:
   - type: Gun
-    minAngle: 3.4
-    maxAngle: 17
+    # Lonestar changes start
+    minAngle: 4.2
+    maxAngle: 18.5
+    # Lonestar changes end
     angleIncrease: 1.5
     angleDecay: 5.4
   - type: NFWeaponDetails

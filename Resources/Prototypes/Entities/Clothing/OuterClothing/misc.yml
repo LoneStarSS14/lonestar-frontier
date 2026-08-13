@@ -93,6 +93,9 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterBaseToggleable
@@ -130,6 +133,9 @@
     sprite: Clothing/OuterClothing/Misc/cultrobes.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/cultrobes.rsi
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterBase
@@ -141,6 +147,9 @@
     sprite: Clothing/OuterClothing/Misc/judge.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/judge.rsi
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingNeckBase # Frontier - Change to neck
@@ -165,6 +174,9 @@
     sprite: Clothing/OuterClothing/Misc/santa.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/santa.rsi
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   abstract: true

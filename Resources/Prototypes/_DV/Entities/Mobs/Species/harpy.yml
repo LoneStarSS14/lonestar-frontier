@@ -84,6 +84,7 @@
         state: "creampie_human"
         visible: false
       - map: [ "enum.HumanoidVisualLayers.RArmExtension" ] # Frontier
+      - map: [ "maskalt" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]
       - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
       - map: [ "mask" ]
@@ -216,6 +217,7 @@
         state: "creampie_human"
         visible: false
       - map: [ "enum.HumanoidVisualLayers.RArmExtension" ] # Frontier
+      - map: [ "maskalt" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]
       - map: [ "mask" ]
       - map: [ "head" ]

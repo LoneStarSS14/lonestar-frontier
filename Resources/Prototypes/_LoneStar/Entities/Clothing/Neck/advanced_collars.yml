@@ -1,0 +1,121 @@
+#region collars
+
+
+# region Modules
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModuleClothingLockPlus
+  name: collar module (clothing lock+)
+  description: An advanced module that locks almost all clothing slots, preventing removal by anyone while the collar with this module is worn.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: servo
+    - type: AdvancedCollarModule
+      componentToAdd: ClothingLock
+      moduleDescription: Prevents tampering with almost all of the wearers clothes
+    - type: ClothingLock
+      lockedSlots:
+        - head
+        - shoes
+        - jumpsuit
+        - gloves
+        - eyes
+        - mask
+        - ears
+        - outerClothing
+        - back
+        - belt
+      blockOthers: true
+
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModulePsychicClothingLockPlus
+  name: collar module (psychic clothing lock+)
+  description: An advanced module that locks specific clothing slots, preventing removal by the wearer only.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: radio_mini
+    - type: AdvancedCollarModule
+      componentToAdd: ClothingLock
+      moduleDescription: Prevents wearer tampering with almost all of their clothing
+    - type: ClothingLock
+      lockedSlots:
+        - head
+        - shoes
+        - jumpsuit
+        - gloves
+        - eyes
+        - mask
+        - ears
+        - outerClothing
+        - back
+        - belt
+      blockOthers: false
+
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModuleWaddle
+  name: collar module (waddle)
+  description: A module that makes the wearer waddle.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: cpu_adv
+    - type: AdvancedCollarModule
+      componentToAdd: WaddleWhenWorn
+      moduleDescription: Waddles when moving
+    - type: WaddleWhenWorn
+      tumbleIntensity: 10
+
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModuleStealth
+  name: collar module (stealth)
+  description: A module that makes the collar invisible when worn.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: card_mini
+    - type: AdvancedCollarModule
+      componentToAdd: HideClothingLayerClothing # TODO: Fix this not initializing on insertion while collars already worn
+      moduleDescription: Invisible collar
+    - type: HideClothingLayerClothing # Goob
+      hiddenSlots:
+      - neck
+
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModuleVulnerability
+  name: collar module (vulnerability)
+  description: A module that makes the wearer keel over to any stamina loss.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: secmodschematic
+    - type: AdvancedCollarModule
+      componentsToAdd:
+        - StaminaResistance
+        - GroupExamine
+      moduleDescription: Stamina vulnerability
+    - type: StaminaResistance
+      damageCoefficient: 4
+
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModulePsychicShackle
+  name: collar module (psychic walking)
+  description: A module that inhibits its wearer to walk.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: beaker_holder
+    - type: AdvancedCollarModule
+      componentsToAdd:
+        - ClothingSpeedModifier
+        - GroupExamine
+      moduleDescription: Forced walking
+    - type: ClothingSpeedModifier # TODO: implement this in a better way.
+      walkModifier: 1.0
+      sprintModifier: 0.7

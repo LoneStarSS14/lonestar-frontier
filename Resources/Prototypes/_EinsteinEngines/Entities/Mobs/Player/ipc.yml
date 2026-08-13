@@ -58,6 +58,7 @@
     - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
     - map: [ "neck" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "maskalt" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.NeckFluff" ]

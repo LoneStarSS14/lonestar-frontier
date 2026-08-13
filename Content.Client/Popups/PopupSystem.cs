@@ -48,13 +48,9 @@ namespace Content.Client.Popups
         private static readonly Dictionary<PopupType, string> FontSizeDict = new()
         {
             { PopupType.Medium, "12" },
-            { PopupType.MediumLingering, "12" },
             { PopupType.MediumCaution, "12" },
-            { PopupType.MediumCautionLingering, "12" },
             { PopupType.Large, "15" },
-            { PopupType.LargeLingering, "15" },
-            { PopupType.LargeCaution, "15" },
-            { PopupType.LargeCautionLingering, "15" }
+            { PopupType.LargeCaution, "15" }
         };
 
         private bool _shouldLogInChat;
