@@ -13,7 +13,7 @@ shuttle-console-service-flags = Advertise Features
 shuttle-console-service-flag-Services-label = Services
 shuttle-console-service-flag-Trade-label = Shopping
 shuttle-console-service-flag-Social-label = Social
-shuttle-console-service-flag-interdictions-title = Interdictions
+shuttle-console-service-flag-interdictions-title = PVP
 shuttle-console-service-flag-InterdictionsEnabled-label = Enable
 shuttle-console-service-flag-InterdictionsDisabled-label = Disable
 
