@@ -110,22 +110,6 @@
       - tool: Welding
         doAfter: 1
 
-  - node: tinygayfan
-    entity: AtmosDeviceFanDirectional
-    edges:
-    - to: start
-      conditions:
-      - !type:EntityAnchored
-        anchored: false
-      completed:
-      - !type:SpawnPrototype
-        prototype: SheetSteel1
-        amount: 25
-      - !type:DeleteEntity
-      steps:
-      - tool: Welding
-        doAfter: 1
-
 #  - node: asslock
 #    entity: Gaslock
 #    edges:
