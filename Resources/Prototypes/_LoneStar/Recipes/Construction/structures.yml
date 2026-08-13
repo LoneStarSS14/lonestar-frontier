@@ -38,7 +38,7 @@
 
 - type: construction
   id: ShuttleWallInterior
-  name: shuttle wall (interior)
+  name: construction-ghost-shuttle-wall-interior
   graph: Girder
   startNode: start
   targetNode: shuttleInteriorWall

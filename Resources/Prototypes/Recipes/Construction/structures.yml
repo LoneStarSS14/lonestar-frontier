@@ -169,7 +169,7 @@
 
 - type: construction
   id: DiagonalShuttleWall
-  name: shuttle wall (diagonal) # LoneStar
+  name: construction-ghost-shuttle-wall-diagonal # LoneStar
   graph: Girder
   startNode: start
   targetNode: diagonalshuttleWall
@@ -235,7 +235,7 @@
 
 - type: construction
   id: GrilleDiagonal
-  name: grille (diagonal) # LoneStar
+  name: construction-ghost-grille-diagonal # LoneStar
   graph: GrilleDiagonal
   startNode: start
   targetNode: grilleDiagonal
@@ -248,7 +248,7 @@
 
 - type: construction
   id: ClockworkGrilleDiagonal
-  name: clockwork grille (diagonal) # LoneStar
+  name: construction-ghost-clockwork-grille-diagonal # LoneStar
   graph: GrilleDiagonal
   startNode: start
   targetNode: clockworkGrilleDiagonal
@@ -275,7 +275,7 @@
 
 - type: construction
   id: WindowDiagonal
-  name: window (diagonal) # LoneStar
+  name: construction-ghost-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: windowDiagonal
@@ -303,7 +303,7 @@
 
 - type: construction
   id: ReinforcedWindowDiagonal
-  name: reinforced window (diagonal) # LoneStar
+  name: construction-ghost-reinforced-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedWindowDiagonal
@@ -345,7 +345,7 @@
 
 - type: construction
   id: ClockworkWindowDiagonal
-  name: clockwork window (diagonal) # LoneStar
+  name: construction-ghost-clockwork-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: clockworkWindowDiagonal
@@ -401,7 +401,7 @@
 
 - type: construction
   id: PlasmaWindowDiagonal
-  name: plasma window (diagonal) # LoneStar
+  name: construction-ghost-plasma-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: plasmaWindowDiagonal
@@ -415,7 +415,7 @@
 
 - type: construction
   id: ReinforcedPlasmaWindowDiagonal
-  name: reinforced plasma window (diagonal) # LoneStar
+  name: construction-ghost-reinforced-plasma-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedPlasmaWindowDiagonal
@@ -522,7 +522,7 @@
 
 - type: construction
   id: UraniumWindowDiagonal
-  name: uranium window (diagonal) # LoneStar
+  name: construction-ghost-uranium-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: uraniumWindowDiagonal
@@ -536,7 +536,7 @@
 
 - type: construction
   id: ReinforcedUraniumWindowDiagonal
-  name: reinforced uranium window (diagonal)
+  name: construction-ghost-reinforced-uranium-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedUraniumWindowDiagonal
