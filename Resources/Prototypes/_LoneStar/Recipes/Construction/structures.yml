@@ -35,3 +35,17 @@
     - !type:NoWindowsInTile
   objectType: Structure
   placementMode: SnapgridCenter
+
+- type: construction
+  id: ShuttleWallInterior
+  name: shuttle wall (interior)
+  graph: Girder
+  startNode: start
+  targetNode: shuttleInteriorWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
