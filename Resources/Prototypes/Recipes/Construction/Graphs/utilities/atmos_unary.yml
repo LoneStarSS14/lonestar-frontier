@@ -28,12 +28,6 @@
         amount: 2
         doAfter: 1
 
-    - to: tinygayfan
-      steps:
-      - material: Steel
-        amount: 25
-        doAfter: 1
-
 #    - to: asslock
 #      steps:
 #      - material: Steel
