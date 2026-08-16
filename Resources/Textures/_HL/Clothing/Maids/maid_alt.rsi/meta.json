@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from S.P.L.U.R.T-tg at https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/db5aa35b593866f4dfb8bf4360280d237f69e6e7/icons/map_icons/clothing/under/costume.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/29ba371cefa332ad1ad1994331450a3fcbfbf62e/modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_inhands/lewd_inhand_left.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/ae9183c32c40eaffa4f4a8751338778564a5e84a/icons/mob/clothing/under/costume.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/c58ad4fb34624d032effc6f4ba923f6ec3876820/icons/mob/inhands/clothing/suits_lefthand.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/c58ad4fb34624d032effc6f4ba923f6ec3876820/icons/mob/inhands/clothing/suits_righthand.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped_INNERCLOTHING-frill",
+      "directions": 4
+    },
+    {
+      "name": "equipped-INNERCLOTHING-base",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left-base",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left-frill",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right-base",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right-frill",
+      "directions": 4
+    },
+    {
+      "name": "equipped-INNERCLOTHING",
+      "directions": 4
+    }
+  ]
+}

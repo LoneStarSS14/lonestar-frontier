@@ -28,12 +28,6 @@
         amount: 2
         doAfter: 1
 
-    - to: tinygayfan
-      steps:
-      - material: Steel
-        amount: 25
-        doAfter: 1
-
 #    - to: asslock
 #      steps:
 #      - material: Steel
@@ -105,22 +99,6 @@
       - !type:SpawnPrototype
         prototype: SheetSteel1
         amount: 2
-      - !type:DeleteEntity
-      steps:
-      - tool: Welding
-        doAfter: 1
-
-  - node: tinygayfan
-    entity: AtmosDeviceFanDirectional
-    edges:
-    - to: start
-      conditions:
-      - !type:EntityAnchored
-        anchored: false
-      completed:
-      - !type:SpawnPrototype
-        prototype: SheetSteel1
-        amount: 25
       - !type:DeleteEntity
       steps:
       - tool: Welding

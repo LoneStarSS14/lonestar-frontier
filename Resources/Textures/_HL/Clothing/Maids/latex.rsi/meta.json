@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from S.P.L.U.R.T-tg at https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/ca5c12baaecfa67b35afe0f640c2098d44b43dc0/modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_clothing/lewd_uniform.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/29ba371cefa332ad1ad1994331450a3fcbfbf62e/modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_inhands/lewd_inhand_left.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/29ba371cefa332ad1ad1994331450a3fcbfbf62e/modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_inhands/lewd_inhand_right.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/ca5c12baaecfa67b35afe0f640c2098d44b43dc0/modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_uniform/lewd_uniform.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "equipped-INNERCLOTHING",
+      "directions": 4
+    }
+  ]
+}

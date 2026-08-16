@@ -1,0 +1,30 @@
+- type: entity
+  parent: VendingMachineClothing
+  id: VendingMachineBnuuy
+  name: BnuuyDrobe
+  description: A vending machine for bunnies and bunny accessories.
+  components:
+  - type: VendingMachine
+    pack: BnuuyInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+  - type: Advertise
+    pack: ClothesMateAds
+  - type: SpeakOnUIClosed
+    pack: GenericVendGoodbyes
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/Vending/bnuuy.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.8
+    energy: 3.0
+    color: "#3db83b"

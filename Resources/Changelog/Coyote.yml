@@ -2978,3 +2978,40 @@ Entries:
   id: 338
   time: '2026-08-13T08:19:14.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/24
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Added over 40 new types of bunnysuits!
+    - type: Add
+      message: Added a variety of maid & lewd clothings!
+  id: 339
+  time: '2026-08-16T08:14:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/34
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        The build menu now correctly shows you the recipe to build interior
+        shuttle wall variants.
+    - type: Add
+      message: Uranium directional windows can now be built by players.
+    - type: Tweak
+      message: >-
+        The construction method for directional fans now takes a few more steps,
+        they are also now able to be deconstructed.
+    - type: Fix
+      message: Reinforced wooden tables can now be built and deconstructed properly.
+  id: 340
+  time: '2026-08-16T08:25:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/26
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Casey's Casino has been given a remodelling to sport a host of recently
+        added content
+    - type: Tweak
+      message: Autodrobes and Clothesmates now have infinite stock
+  id: 341
+  time: '2026-08-16T15:22:37.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/38
