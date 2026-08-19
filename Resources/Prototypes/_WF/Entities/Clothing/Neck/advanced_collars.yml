@@ -11,6 +11,8 @@
       sprite: Floof/Clothing/Neck/collar_black.rsi
     - type: Clothing
       sprite: Floof/Clothing/Neck/collar_black.rsi
+      equipDelay: 1 # LoneStar
+      unequipDelay: 5 # LoneStar
     - type: AdvancedCollar
       maxModules: 7 # LoneStar
     - type: ContainerContainer

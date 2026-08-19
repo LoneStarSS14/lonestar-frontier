@@ -8,8 +8,10 @@
     - Bunnysuit
     - ClothMade
     - WhitelistChameleon
+    - WhitelistChameleonAdvancedCollar # LoneStar, Chameleon Collar
   - type: Appearance
   - type: Foldable
+    folded: true # LoneStar, default tied, for chameleon.
     canFoldInsideContainer: true
     unfoldVerbText: bowtie-untie
     foldVerbText: bowtie-tie
