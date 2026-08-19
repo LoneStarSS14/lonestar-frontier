@@ -1,0 +1,16 @@
+- type: entity
+  parent: IDCardStandard
+  id: GuildLeaderIDCard
+  name: guild leader ID card
+  components:
+  - type: PresetIdCard
+    job: GuildLeader
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: idguildleader
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: silver
