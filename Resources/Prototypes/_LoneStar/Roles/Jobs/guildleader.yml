@@ -42,7 +42,7 @@
 - type: startingGear
   id: GuildLeaderGear
   equipment:
-    pocket1: WeaponEnergyRevolver
+    pocket1: WeaponEnergyRevolverAntique
     pocket2: AppraisalTool
   storage:
     back:
