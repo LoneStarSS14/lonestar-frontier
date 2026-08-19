@@ -1,0 +1,8 @@
+- type: entity
+  parent: DefaultStationBeaconFrontierSROffice
+  id: DefaultStationBeaconFrontierGuildLeaderOffice
+  suffix: Guild Leader's Office
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-guildleader-office
+    color: "#bce6ad"

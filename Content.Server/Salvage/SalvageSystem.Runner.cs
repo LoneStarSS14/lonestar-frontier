@@ -40,6 +40,9 @@ using Robust.Server.Player;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Enums; // _CS
+using Content.Server._NF.Bank; // LoneStar
+using Content.Shared._NF.Bank.BUI; // LoneStar
+using Content.Shared._NF.Bank.Components; // LoneStar
 
 namespace Content.Server.Salvage;
 
@@ -55,6 +58,7 @@ public sealed partial class SalvageSystem
     [Dependency] private readonly IPlayerManager _players = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly TemperatureSystem _temperature = default!;
+    [Dependency] private readonly BankSystem _bank = default!; // LoneStar
 
     private static readonly TimeSpan StandardShipExpeditionDuration = TimeSpan.FromMinutes(15);
     // _CS Start: extended shared expedition duration
@@ -584,6 +588,7 @@ public sealed partial class SalvageSystem
             if (structure.Structures.Count == 0)
             {
                 comp.Completed = true;
+                _bank.TrySectorDeposit(SectorBankAccount.Guild, GetExpeditionCompletionReward(comp), LedgerEntryType.ExpeditionCompletion); // LoneStar
                 Announce(uid, Loc.GetString("salvage-expedition-completed"));
             }
         }
@@ -614,6 +619,7 @@ public sealed partial class SalvageSystem
             if (elimination.Megafauna.Count == 0)
             {
                 comp.Completed = true;
+                _bank.TrySectorDeposit(SectorBankAccount.Guild, GetExpeditionCompletionReward(comp), LedgerEntryType.ExpeditionCompletion); // LoneStar
                 Announce(uid, Loc.GetString("salvage-expedition-completed"));
             }
         }
@@ -625,6 +631,24 @@ public sealed partial class SalvageSystem
         return expedition.MissionParams.OpenContract
             ? SharedShipExpeditionDuration
             : StandardShipExpeditionDuration;
+    }
+
+    /// <summary>
+    /// Calculates how much money to award the guild for this missions completion.
+    /// Rewards based upon mission difficulty and remaining time once objective is completed.
+    /// </summary>
+    private int GetExpeditionCompletionReward(SalvageExpeditionComponent expedition) // Magic numbers galore, some of these can be CVars or datafielded, but thats above me.
+    {
+        var baseReward = expedition.MissionParams.Difficulty switch
+        {
+            "NFHazardous" => 17_500,
+            "NFExtreme" => 25_000,
+            _ => 10_000,
+        };
+
+        var remainingMinutes = Math.Max(0, (int)(expedition.EndTime - _timing.CurTime).TotalMinutes);
+        var bonusMinutes = Math.Clamp(remainingMinutes - 3, 0, 24);
+        return baseReward * (32 + bonusMinutes) / 32;
     }
 
     private bool IsShuttleAnchorExtending(EntityUid expeditionMap, EntityUid shuttleUid)

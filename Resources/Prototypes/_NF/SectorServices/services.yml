@@ -35,6 +35,10 @@
         !type:SectorBankAccountInfo
         balance: 8000
         increasePerSecond: 1 # A trickle - generate your own power to sell for stuff.
+      Guild: # LoneStar
+        !type:SectorBankAccountInfo
+        balance: 8000
+        increasePerSecond: 1
 
 # A global source of character records (DNA, fingerprints, criminal records, etc.)
 - type: sectorService
