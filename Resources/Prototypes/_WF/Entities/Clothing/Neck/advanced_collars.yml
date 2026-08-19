@@ -12,7 +12,7 @@
     - type: Clothing
       sprite: Floof/Clothing/Neck/collar_black.rsi
     - type: AdvancedCollar
-      maxModules: 5 # WF 3 > 5
+      maxModules: 7 # LoneStar
     - type: ContainerContainer
       containers:
         collar_module_container: !type:Container
