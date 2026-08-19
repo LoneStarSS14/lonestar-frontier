@@ -5,9 +5,9 @@
   description: An antique relic of a gun, has an inbuilt recharger that kicks in after not being shot for a brief while.
   components:
   - type: Sprite
-    sprite: _LoneStar/Objects/Weapons/Guns/Battery/erevolver.rsi
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/antique-erevolver.rsi
   - type: Clothing
-    sprite: _LoneStar/Objects/Weapons/Guns/Battery/erevolver.rsi
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/antique-erevolver.rsi
   - type: Gun
     fireRate: 2.4
     soundGunshot:
