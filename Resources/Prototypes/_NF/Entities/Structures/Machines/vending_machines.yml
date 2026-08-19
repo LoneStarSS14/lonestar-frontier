@@ -298,7 +298,7 @@
       taxAccounts: # LoneStar
         Frontier: 0.2
         Nfsd: 0.2
-      Guild: 0.1
+        Guild: 0.1
     - type: Advertise
       pack: LessLethalVendAds
     - type: Sprite
