@@ -25,6 +25,15 @@
     - state: icon-tied
       map: ["foldedLayer"]
       visible: false
+  - type: GenericVisualizer # LoneStar, fixes tied/untied sprites
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: {visible: true}
+          False: {visible: false}
+        unfoldedLayer:
+          True: {visible: false}
+          False: {visible: true}
 
 - type: entity
   parent: BowtieBase
