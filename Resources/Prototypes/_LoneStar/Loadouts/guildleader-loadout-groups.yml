@@ -12,6 +12,10 @@
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenary
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryCaptain
+  subgroups:
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
   fallbacks:
   - MercenaryClothingUniformJumpsuitMercenary
   - MercenaryClothingUniformJumpskirtMercenary
@@ -44,6 +48,9 @@
   - MercenaryClothingOuterArmorPunkRed # Punkish (Static visuals)
   - MercenaryClothingOuterArmorPunkRandomized # Punkish (Randomized visuals)
   - MercenaryClothingOuterArmorCaptainCarapace
+  subgroups:
+  - PilotOuterClothing
+  - ContractorOuterClothing
 
 - type: loadoutGroup
   id: GuildLeaderHead
@@ -59,6 +66,9 @@
   - SecurityGuardSecurityHat
   - SecurityGuardSecurityBeret
   - SecurityGuardTrooperHat
+  subgroups:
+  - PilotHead
+  - ContractorHead
 
 - type: loadoutGroup
   id: GuildLeaderEars
@@ -95,5 +105,9 @@
   - MercenaryClothingShoesBootsCombat
   - MercenaryClothingShoesMagMercenary
   - MercenaryClothingShoesMagSecurity
+  subgroups:
+  - PilotShoes
+  - ContractorShoes
+  - CoyoteShoes
   fallbacks:
   - MercenaryClothingShoesBootsMercenary
