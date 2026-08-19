@@ -211,6 +211,18 @@
     price: 300 # Frontier - 2000<300
   - type: PirateBountyItem # Frontier
     id: Gyroscope # Frontier
+  ## LoneStar start, Toggleable Gryoscopes
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - On
+      - Off
+      - Toggle
+  ## LoneStar end Toggleable Gryoscopes
 
 - type: entity
   id: GyroscopeUnanchored
