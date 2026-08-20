@@ -1120,7 +1120,7 @@
   categories: [ HideSpawnMenu ]
   parent: BaseMail
   id: MailSecurityNFHudNfsdMed
-  suffix: nfsd med hud
+  suffix: lsrd med hud # Lonestar changes NFSD -> LSRD
   components:
   - type: Mail
     contents:

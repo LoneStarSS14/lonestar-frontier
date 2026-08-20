@@ -61,7 +61,7 @@
 - type: entity
   parent: IDCardStandard
   id: CadetIDCard
-  name: NFSD cadet ID card
+  name: LSRD Junior Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Cadet
@@ -78,7 +78,7 @@
 - type: entity
   parent: CadetIDCard
   id: DeputyIDCard
-  name: NFSD deputy ID card
+  name: LSRD Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Deputy
@@ -91,7 +91,7 @@
 - type: entity
   parent: CadetIDCard
   id: BrigmedicNFIDCard
-  name: NFSD brigmedic ID card
+  name: LSRD Corpsman ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Brigmedic
@@ -104,7 +104,7 @@
 - type: entity
   parent: CadetIDCard
   id: SergeantIDCard
-  name: NFSD sergeant ID card
+  name: LSRD Senior Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: SeniorOfficer
@@ -117,7 +117,7 @@
 - type: entity
   parent: CadetIDCard
   id: BailiffIDCard
-  name: NFSD bailiff ID card
+  name: LSRD Armorer ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Bailiff
@@ -130,7 +130,7 @@
 - type: entity
   parent: [CadetIDCard, BaseC4Contraband]
   id: ShriffIDCard
-  name: NFSD sheriff ID card
+  name: LSRD Chief Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Sheriff
@@ -145,7 +145,7 @@
 - type: entity
   parent: CadetIDCard
   id: NFDetectiveIDCard
-  name: NFSD detective ID card
+  name: LSRD detective ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: NFDetective

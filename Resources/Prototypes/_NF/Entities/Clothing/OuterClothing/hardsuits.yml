@@ -148,8 +148,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdBronze
-  name: NFSD bronze patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This bronze variant has cadet rank markings.
+  name: LSRD bronze patrol suit
+  description: The standard-issue NFSD space proof suit for patrol duty. This bronze variant has junior rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_bronze.rsi
@@ -175,8 +175,8 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdSilver
-  name: NFSD silver patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This silver variant has officer rank markings.
+  name: LSRD silver patrol suit # Lonestar changes NFSD -> LSRD
+  description: The standard-issue LSRD space proof suit for patrol duty. This silver variant has ranger rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_silver.rsi
@@ -188,8 +188,8 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdGold
-  name: NFSD gold patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This gold variant has supervisor rank markings.
+  name: LSRD gold patrol suit
+  description: The standard-issue LSRD space proof suit for patrol duty. This gold variant has superior rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_gold.rsi
@@ -201,8 +201,8 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdSheriff
-  name: NFSD sheriff patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This gold variant has sheriff rank markings.
+  name: LSRD chief ranger patrol suit
+  description: The standard-issue LSRD space proof suit for patrol duty. This gold variant has chief rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_sheriff.rsi
@@ -214,21 +214,21 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdBrigmedic
-  name: NFSD brigmedic patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This brighter variant has brigmedic rank markings.
+  name: LSRD corpsman patrol suit
+  description: The standard-issue LSRD space proof suit for patrol duty. This brighter variant has corpsman rank markings.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_brigmed.rsi
+    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_corps.rsi
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_brigmed.rsi
+    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_corps.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdBrigmedic
 
 - type: entity
   parent: [BaseC4ContrabandUnredeemable, ClothingOuterHardsuitJuggernaut] # Jugger Suit
   id: ClothingOuterHardsuitNfsdExperimental
-  name: NFSD experimental combat suit
-  description: A very heavily armored NFSD suit. This space proof marvel of engineering uses state of the art alloys to provide immense protection while sacrificing little mobility.
+  name: LSRD experimental combat suit
+  description: A very heavily armored LSRD suit. This space proof marvel of engineering uses state of the art alloys to provide immense protection while sacrificing little mobility.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi
@@ -260,13 +260,13 @@
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdCombat
-  name: NFSD combat suit
-  description: A heavily armored NFSD suit. Space proof, with thick armor plating at the expense of mobility.
+  name: LSRD combat suit # Lonestar changes NFSD -> LSRD
+  description: A heavily armored LSRD suit. Space proof, with thick armor plating at the expense of mobility.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi
+    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_combat.rsi
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi
+    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_combat.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdCombat
   - type: ExplosionResistance
@@ -288,13 +288,13 @@
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdCommand
-  name: NFSD command combat suit
-  description: A heavily armored NFSD suit. Space proof, with thick armor plating at the expense of mobility. This variant has supervisor rank markings.
+  name: LSRD command combat suit # Lonestar changes NFSD -> LSRD
+  description: A heavily armored LSRD suit. Space proof, with thick armor plating at the expense of mobility. This variant has superior rank markings.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi
+    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_command.rsi
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi
+    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_command.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdCommand
   - type: ExplosionResistance

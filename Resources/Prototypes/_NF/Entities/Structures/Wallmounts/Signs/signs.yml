@@ -55,8 +55,8 @@
 - type: entity
   parent: BaseSignDirectionalNF
   id: SignDirectionalNfsd
-  name: NFSD outpost sign
-  description: A direction sign, pointing out which way an NFSD outpost is.
+  name: LSRD outpost sign # Lonestar changes NFSD -> LSRD
+  description: A direction sign, pointing out which way an LSRD outpost is.
   components:
   - type: Sprite
     state: direction_nfsd
@@ -91,17 +91,18 @@
 - type: entity
   parent: NFBaseSign
   id: SignNfsd
-  name: NFSD sign
-  description: A sign that marks the area beyond as an NFSD area.
+  name: LSRD sign # Lonestar changes NFSD -> LSRD
+  description: A sign that marks the area beyond as an LSRD area.
   components:
   - type: Sprite
-    state: nfsd
+    sprite: _LoneStar/Structures/Wallmounts/signs.rsi
+    state: lsrd_sign
 
 - type: entity
   parent: NFBaseSign
   id: SignNfsdArmoury
   name: armory sign
-  description: A sign that marks the area beyond as an NFSD armory.
+  description: A sign that marks the area beyond as an LSRD armory. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     state: armoury
@@ -110,7 +111,7 @@
   parent: NFBaseSign
   id: SignNfsdBrief
   name: briefing sign
-  description: A sign that marks the area beyond as an NFSD briefing room.
+  description: A sign that marks the area beyond as an LSRD briefing room. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     state: brief
@@ -119,7 +120,7 @@
   parent: NFBaseSign
   id: SignNfsdBrig
   name: brig sign
-  description: A sign that marks the area beyond as an NFSD brig.
+  description: A sign that marks the area beyond as an LSRD brig. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     state: brig
@@ -128,7 +129,7 @@
   parent: NFBaseSign
   id: SignNfsdBrigmed
   name: medbay sign
-  description: A sign that marks the area beyond as an NFSD medbay.
+  description: A sign that marks the area beyond as an LSRD medbay. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     state: brigmed
@@ -137,7 +138,7 @@
   parent: NFBaseSign
   id: SignNfsdDetective
   name: detective sign
-  description: A sign that marks the area beyond as an NFSD detective's office.
+  description: A sign that marks the area beyond as an LSRD detective's office. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     state: detective
@@ -146,7 +147,7 @@
   parent: NFBaseSign
   id: SignNfsdLaw
   name: lawyer sign
-  description: A sign that marks the area beyond as an NFSD lawyer's office.
+  description: A sign that marks the area beyond as an LSRD lawyer's office. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     state: law
@@ -155,7 +156,7 @@
   parent: NFBaseSign
   id: SignNfsdRange
   name: shooting range sign
-  description: A sign that marks the area beyond as an NFSD shooting range.
+  description: A sign that marks the area beyond as an LSRD shooting range. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     state: range
@@ -164,7 +165,7 @@
   parent: NFBaseSign
   id: SignNfsdEvidence
   name: evidence sign
-  description: A sign that marks the area beyond as an NFSD evidence room.
+  description: A sign that marks the area beyond as an LSRD evidence room. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     state: evidence

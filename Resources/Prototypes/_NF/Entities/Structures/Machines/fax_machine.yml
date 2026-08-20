@@ -151,7 +151,7 @@
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFTradeMallNFSD
-  suffix: POI, Trade NFSD
+  suffix: POI, Trade LSRD # Lonestar changes NFSD -> LSRD
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
@@ -205,16 +205,16 @@
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFNfsd
-  suffix: POI, NFSD
+  suffix: POI, LSRD # Lonestar changes NFSD -> LSRD
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "NFSD Outpost Sheriff"
+    name: "LSRD Outpost Chief Ranger"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFNfsdLawyer
-  suffix: POI, NFSD Lawyer
+  suffix: POI, LSRD Lawyer # Lonestar changes NFSD -> LSRD
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine

@@ -1036,7 +1036,7 @@
 - type: entity
   id: NFPouchNfsd
   parent: NFPouchUtility
-  name: NFSD pouch
+  name: LSRD pouch # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:

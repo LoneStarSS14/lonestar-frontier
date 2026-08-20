@@ -1,10 +1,10 @@
 # Frontier
-job-name-bailiff = Bailiff
-job-name-brigmedic = Brigmedic
-job-name-cadet-nf = Cadet
+job-name-bailiff = Armorer
+job-name-brigmedic = Corpsman
+job-name-cadet-nf = Junior Ranger
 job-name-contractor = Resident
 job-name-contractor-interview = Resident Applicant
-job-name-deputy = Deputy
+job-name-deputy = Ranger
 job-name-nf-detective = Detective
 job-name-doc = Director of Care
 job-name-ertmailcarrier = ERT Mail Carrier
@@ -21,7 +21,7 @@ job-name-nf-pirate-first-mate = Pirate First Mate
 job-name-plant-manager = Plant Manager
 job-name-plant-technician = Plant Technician
 job-name-security-guard = Security Guard
-job-name-sheriff = Sheriff
+job-name-sheriff = Chief Ranger
 job-name-stc = Station Traffic Controller
 job-name-sr = Station Representative
 job-name-valet = Valet

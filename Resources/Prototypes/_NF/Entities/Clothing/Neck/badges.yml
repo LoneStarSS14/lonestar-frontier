@@ -1,7 +1,7 @@
 - type: entity # Base Badge
   parent: ClothingNeckBase
   id: ClothingNeckNfsdBadge
-  name: NFSD badge
+  name: LSRD badge # Lonestar changes NFSD -> LSRD
   description: Respect my authority!
   abstract: true
   components:
@@ -16,14 +16,14 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurityCadet
-  name: NFSD cadet badge
-  suffix: Bronze - Cadet
+  name: LSRD junior badge # Lonestar changes NFSD -> LSRD
+  suffix: Bronze - Junior
 
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurity
   suffix: Silver - Deputy
-  name: NFSD deputy badge
+  name: LSRD ranger badge # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
@@ -34,7 +34,7 @@
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurityBrigmedic
   suffix: Silver - Brigmedic
-  name: NFSD brigmedic badge
+  name: LSRD corpsman badge # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silvercross_badge.rsi
@@ -45,7 +45,7 @@
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeDetective
   suffix: Silver - Detective
-  name: NFSD detective badge
+  name: LSRD detective badge # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
@@ -55,8 +55,8 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSeniorOfficer
-  suffix: Gold - Sergeant
-  name: NFSD sergeant badge
+  suffix: Gold - Senior
+  name: LSRD senior badge # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_gold_badge.rsi
@@ -66,8 +66,8 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeWarden
-  suffix: Gold - Bailiff
-  name: NFSD bailiff badge
+  suffix: Gold - Armorer
+  name: LSRD armorer badge # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_gold_badge.rsi
@@ -77,8 +77,8 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSheriff
-  suffix: Star - Sheriff
-  name: NFSD sheriff badge
+  suffix: Star - Chief
+  name: LSRD chief ranger badge # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_star_badge.rsi
@@ -90,7 +90,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckPublicAffairsLiaisonBadge
   name: public affairs liaison badge
-  description: A badge for grade 4 paperwork wizards affiliated with the NFSD.
+  description: A badge for grade 4 paperwork wizards affiliated with the LSRD. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Misc/palbadge.rsi

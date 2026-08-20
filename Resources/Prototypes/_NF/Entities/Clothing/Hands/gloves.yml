@@ -27,8 +27,8 @@
 - type: entity
   parent: ClothingHandsGlovesCombat
   id: ClothingHandsGlovesCombatNfsdBrown
-  name: NFSD combat gloves
-  description: Insulated gloves for a deputy sheriff.
+  name: LSRD combat gloves # Lonestar changes NFSD -> LSRD
+  description: Insulated gloves for a chief ranger.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Hands/Gloves/nfsd_brown.rsi
@@ -40,8 +40,8 @@
 - type: entity
   parent: ClothingHandsGlovesCombatNfsdBrown
   id: ClothingHandsGlovesCombatNfsdCream
-  name: NFSD combat gloves
-  description: Insulated gloves for a deputy sheriff.
+  name: LSRD combat gloves # Lonestar changes NFSD -> LSRD
+  description: Insulated gloves for a chief ranger.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Hands/Gloves/nfsd_cream.rsi

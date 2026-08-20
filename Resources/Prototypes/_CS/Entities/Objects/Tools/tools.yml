@@ -50,7 +50,7 @@
   - type: GridAccess
 
 - type: entity
-  name: NFSD RCD
+  name: LSRD RCD # Lonestar changes NFSD -> LSRD
   parent: [BaseC4ContrabandUnredeemable, RCD] # BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: NfsdRCD
   description: A security construction device which can place/remove walls, floors, and airlocks quickly. It has a slot to swipe ID cards.

@@ -26,7 +26,7 @@
     state: stamp-stc
 
 - type: entity
-  name: sheriff's rubber stamp
+  name: chief ranger's rubber stamp # Lone Star changes NFSD -> LSRD
   parent: [RubberStampBase, BaseC4Contraband]
   id: RubberStampSheriff
   categories: [ DoNotMap ]

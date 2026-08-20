@@ -1,7 +1,7 @@
 - type: entity
   parent: [DoorRemoteDefault, BaseC4Contraband]
   id: DoorRemoteNfsd
-  name: NFSD door remote
+  name: LSRD door remote # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:
