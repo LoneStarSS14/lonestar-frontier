@@ -49,3 +49,15 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+- type: construction
+  id: IceBoxEmpty
+  graph: IceBox
+  startNode: start
+  targetNode: done
+  category: construction-category-furniture
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
