@@ -20,9 +20,9 @@
   description: An LSRD issued helmet to protect your head.
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Head/Helmets/lsrd_helmet.rsi
+    sprite: _LoneStar/Clothing/Head/Helmets/lsrd_helmet.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Head/Helmets/lsrd_helmet.rsi
+    sprite: _LoneStar/Clothing/Head/Helmets/lsrd_helmet.rsi
 
 #Mercenary Helmet
 - type: entity
