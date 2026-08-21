@@ -15,7 +15,7 @@
   suffix: LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
-    sprite: _Lonestar/Structures/Doors/Airlocks/Standard/lsrd.rsi
+    sprite: _LoneStar/Structures/Doors/Airlocks/Standard/lsrd.rsi
 # endregion
 
 # region Glass
@@ -35,7 +35,7 @@
   suffix: LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
-    sprite: _Lonestar/Structures/Doors/Airlocks/Glass/lsrd.rsi
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/lsrd.rsi
     group: Glass
   - type: Wires
     layoutId: AirlockSecurity

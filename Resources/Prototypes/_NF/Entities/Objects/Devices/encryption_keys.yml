@@ -28,9 +28,9 @@
     - Nfsd
     defaultChannel: Nfsd
   - type: Item
-    sprite: _Lonestar/Objects/Devices/encryption_keys.rsi
+    sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
   - type: Sprite
-    sprite: _Lonestar/Objects/Devices/encryption_keys.rsi
+    sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
     layers:
     - state: lsrd_key
     - state: lsrd_label

@@ -143,9 +143,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Head/Hardsuits/lsrd_corps.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_corps.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Head/Hardsuits/lsrd_corps.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_corps.rsi
 
 - type: entity
   parent: ClothingHeadHelmetHardsuitNfsdBronze
@@ -191,9 +191,9 @@
   description: Medium armored hardsuit helmet for LSRD raids.
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Head/Hardsuits/lsrd_combat.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_combat.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Head/Hardsuits/lsrd_combat.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_combat.rsi
   - type: PointLight
     color: "#79bb66"
   - type: PressureProtection
@@ -216,9 +216,9 @@
   description: Medium armored hardsuit helmet for LSRD raids.
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Head/Hardsuits/lsrd_command.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_command.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Head/Hardsuits/lsrd_command.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_command.rsi
   - type: PointLight
     color: "#ffed7f"
   - type: PressureProtection

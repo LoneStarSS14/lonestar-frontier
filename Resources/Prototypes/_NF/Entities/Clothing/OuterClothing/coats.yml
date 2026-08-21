@@ -106,9 +106,9 @@
   description: Big iron on his hip...
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/OuterClothing/Misc/lsrd_long.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrd_long.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/OuterClothing/Misc/lsrd_long.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrd_long.rsi
 
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ]

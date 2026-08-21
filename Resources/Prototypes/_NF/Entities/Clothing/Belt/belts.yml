@@ -93,9 +93,9 @@
   description: A tactical assault webbing.
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/Belt/lsrd_webbing.rsi
+    sprite: _LoneStar/Clothing/Belt/lsrd_webbing.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/Belt/lsrd_webbing.rsi
+    sprite: _LoneStar/Clothing/Belt/lsrd_webbing.rsi
   - type: CatWearable
   - type: ExplosionResistance # Coyote: Add content explosion resistance to NFSD belts and webbings
     damageCoefficient: 0.1 # Coyote: Add content explosion resistance to NFSD belts and webbings

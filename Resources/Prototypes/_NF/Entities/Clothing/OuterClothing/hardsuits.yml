@@ -218,9 +218,9 @@
   description: The standard-issue LSRD space proof suit for patrol duty. This brighter variant has corpsman rank markings.
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_corps.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Hardsuits/lsrd_corps.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_corps.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Hardsuits/lsrd_corps.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdBrigmedic
 
@@ -264,9 +264,9 @@
   description: A heavily armored LSRD suit. Space proof, with thick armor plating at the expense of mobility.
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_combat.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Hardsuits/lsrd_combat.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_combat.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Hardsuits/lsrd_combat.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdCombat
   - type: ExplosionResistance
@@ -292,9 +292,9 @@
   description: A heavily armored LSRD suit. Space proof, with thick armor plating at the expense of mobility. This variant has superior rank markings.
   components:
   - type: Sprite
-    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_command.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Hardsuits/lsrd_command.rsi
   - type: Clothing
-    sprite: _Lonestar/Clothing/OuterClothing/Hardsuits/lsrd_command.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Hardsuits/lsrd_command.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdCommand
   - type: ExplosionResistance
