@@ -1,26 +1,26 @@
 - type: cargoProduct
   id: BorgArmorCrate
-  # abstract: true # Frontier
   icon:
     sprite: Objects/Storage/boxes.rsi
     state: box_security
   product: CrateBorgArmor
-  cost: 15000 #These contain up to Medium armor.
+  cost: 15000 
   category: cargoproduct-category-name-security
   group: market
 
 - type: cargoProduct
   id: BorgLightCrate
-  # abstract: true # Frontier
   icon:
     sprite: Objects/Storage/boxes.rsi
     state: box_security
   product: CrateBorgLight
-  cost: 5000 #Only light armor.
+  cost: 5000
   category: cargoproduct-category-name-security
   group: market
 
-#region Crate Fills
+
+# CRATE FILLING
+
 - type: entity
   id: CrateBorgArmor
   parent: CrateSecgear
