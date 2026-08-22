@@ -37,7 +37,7 @@
   - type: Fiber
     fiberColor: fibers-brown
 
-#- type: entity
+#- type: entity # Lonestar changes, cream versions removed
 #  parent: ClothingHandsGlovesCombatNfsdBrown
 #  id: ClothingHandsGlovesCombatNfsdCream
 #  name: LSRD combat gloves # Lonestar changes NFSD -> LSRD
@@ -48,7 +48,7 @@
 #  - type: Clothing
 #    sprite: _NF/Clothing/Hands/Gloves/nfsd_cream.rsi 
 #  - type: Fiber
-#    fiberColor: fibers-cream # Lonestar changes, cream versions removed
+#    fiberColor: fibers-cream
 
 - type: entity
   parent: ClothingHandsGlovesHop

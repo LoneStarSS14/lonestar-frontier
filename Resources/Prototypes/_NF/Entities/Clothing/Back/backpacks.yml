@@ -45,12 +45,12 @@
   - type: Sprite
     sprite: _LoneStar/Clothing/Back/Backpacks/lsrd_pack.rsi
 
-#- type: entityCollapse commentComment on line L48
+#- type: entity # Lonestar changes, cream versions removed
 #  parent: ClothingBackpackNfsdBrown
 #  id: ClothingBackpackNfsdCream
 #  components:
 #  - type: Sprite
-#    sprite: _NF/Clothing/Back/Backpacks/nfsd_cream.rsi # Lonestar changes, cream versions removed
+#    sprite: _NF/Clothing/Back/Backpacks/nfsd_cream.rsi
 
 - type: entity
   parent: [ RecyclableItemPlasticSmall, NFClothingBackpack ]

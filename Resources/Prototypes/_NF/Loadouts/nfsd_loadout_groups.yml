@@ -7,15 +7,15 @@
   - NfsdClothingBackpackSatchelNfsdBrown
   - NfsdClothingBackpackDuffelNfsdBrown
   - NfsdClothingBackpackMessengerNfsdBrown
-  # - NfsdClothingBackpackNfsdCream
+  # - NfsdClothingBackpackNfsdCream # Lonestar changes, cream versions removed
   # - NfsdClothingBackpackSatchelNfsdCream # Lonestar changes, cream versions removed
-  # - NfsdClothingBackpackDuffelNfsdCream
+  # - NfsdClothingBackpackDuffelNfsdCream # Lonestar changes, cream versions removed
   - NfsdClothingBackpackMessengerNfsdCream
   - ContractorClothingBackpackSatchelLeather # Lonestar
   fallbacks:
   - NfsdClothingBackpackNfsdBrown
 
-# - type: loadoutGroup
+# - type: loadoutGroup # Lonestar changes, cream versions removed
 #  id: NfsdBackpackCream
 #  name: loadout-group-contractor-backpack
 #  minLimit: 0
@@ -23,8 +23,8 @@
 #  - NfsdClothingBackpackNfsdCream
 #  - NfsdClothingBackpackSatchelNfsdCream
 #  - NfsdClothingBackpackDuffelNfsdCream
-#  - NfsdClothingBackpackMessengerNfsdCream # Lonestar changes, cream versions removed
-#  - NfsdClothingBackpackNfsdBrown
+#  - NfsdClothingBackpackMessengerNfsdCream
+#  - NfsdClothingBackpackNfsdBrown 
 #  - NfsdClothingBackpackSatchelNfsdBrown
 #  - NfsdClothingBackpackDuffelNfsdBrown
 #  - NfsdClothingBackpackMessengerNfsdBrown
@@ -41,12 +41,12 @@
   fallbacks:
   - NfsdClothingShoesBootsBrown
 
-# - type: loadoutGroup
+# - type: loadoutGroup # Lonestar changes, cream versions removed
 #  id: NfsdShoesCream
 #  name: loadout-group-contractor-shoes
 #  minLimit: 0
 #  loadouts:
-#  - NfsdClothingShoesBootsCream # Lonestar changes, cream versions removed
+#  - NfsdClothingShoesBootsCream
 #  - NfsdClothingShoesBootsBrown
 #  fallbacks:
 #  - NfsdClothingShoesBootsCream
@@ -57,11 +57,11 @@
   minLimit: 0
   loadouts:
   - NfsdClothingHandsGlovesCombatNfsdBrown
-  # - NfsdClothingHandsGlovesCombatNfsdCream
+  # - NfsdClothingHandsGlovesCombatNfsdCream # Lonestar changes, cream versions removed
   fallbacks:
   - NfsdClothingHandsGlovesCombatNfsdBrown
 
-# - type: loadoutGroup
+# - type: loadoutGroup # Lonestar changes, cream versions removed
 #  id: NfsdGlovesCream
 #  name: loadout-group-contractor-gloves
 #  minLimit: 0

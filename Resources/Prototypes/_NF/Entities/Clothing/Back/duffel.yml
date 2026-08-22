@@ -15,12 +15,12 @@
   - type: Sprite
     sprite: _LoneStar/Clothing/Back/Duffels/lsrd_duffel.rsi
 
-#- type: entityCollapse commentComment on line L18
+#- type: entity # Lonestar changes, cream versions removed
 #  parent: ClothingBackpackDuffelNfsdBrown
 #  id: ClothingBackpackDuffelNfsdCream
 #  components:
 #  - type: Sprite
-#    sprite: _NF/Clothing/Back/Duffels/nfsd_cream.rsi # Lonestar changes, cream versions removed
+#    sprite: _NF/Clothing/Back/Duffels/nfsd_cream.rsi
 
 - type: entity
   parent: [ RecyclableItemPlasticSmall, NFClothingDuffel ]

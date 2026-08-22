@@ -358,7 +358,7 @@
   - BrigmedicGloves
   - BrigmedicOuterClothing
   - NfsdForcedOuterClothing
- # - NfsdShoesCream
+ # - NfsdShoesCream # Lonestar changes, cream versions removed
   - NfsdShoesBrown
   - BrigmedicFace
   - BrigmedicGlasses
@@ -462,7 +462,7 @@
   - NfsdBackpackBrown
   - BailiffOuterClothing
   - NfsdForcedOuterClothing
-  # - NfsdShoesCream
+  # - NfsdShoesCream # Lonestar changes, cream versions removed
   - NfsdShoesBrown
   - NfsdFace
   - NfsdGlasses

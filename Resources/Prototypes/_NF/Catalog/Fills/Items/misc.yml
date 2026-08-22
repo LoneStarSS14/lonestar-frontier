@@ -18,9 +18,9 @@
   id: ClothingShoesBootsNfsdBrownFilled
   parent: [ClothingShoesBootsNfsdBrown, ClothingShoesBootsCombatFilled]
 
-# type: entity
+# type: entity # Lonestar changes, cream versions removed
 # id: ClothingShoesBootsNfsdCreamFilled
-# parent: [ClothingShoesBootsNfsdCream, ClothingShoesBootsCombatFilled] # Lonestar changes, cream versions removed
+# parent: [ClothingShoesBootsNfsdCream, ClothingShoesBootsCombatFilled]
 
 - type: entity
   parent: DrinkFlaskBar
