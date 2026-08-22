@@ -1,0 +1,4 @@
+- type: guideEntry
+  id: PlantManager
+  name: guide-entry-sectorcommand-plantmanager
+  text: "/ServerInfo/_LoneStar/Guidebook/SectorCommand/PlantManager.xml"
