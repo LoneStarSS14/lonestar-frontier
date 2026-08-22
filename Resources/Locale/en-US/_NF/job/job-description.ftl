@@ -1,5 +1,5 @@
 job-description-bailiff = Handle the internal affairs of LSRD, manage prisoners, maintain the station, and ensure that peace is kept at home, too.
-job-description-brigmedic-nf = Fight in the rear of the chief ranger's service, for the lives of your comrades! You are the first and last hope of your squad. Hippocrates bless you.
+job-description-brigmedic-nf = Fight in the rear of the rangers division, for the lives of your comrades! You are the first and last hope of your squad. Hippocrates bless you.
 job-description-cadet-nf = Learn the basics of arresting criminals and managing the brig. Listen to your supervisors and feel free to ask them for any help.
 job-description-contractor = Fulfill any profitable contracts out on the frontier of NT space.
 job-description-deputy = Catch criminals and enemies of the corporation, enforce the law, and ensure that the sector does not fall into disarray.

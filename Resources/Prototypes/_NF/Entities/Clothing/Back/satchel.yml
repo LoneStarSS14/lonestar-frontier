@@ -31,11 +31,4 @@
   name: LSRD satchel # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Back/Satchels/nfsd_brown.rsi
-
-- type: entity
-  parent: ClothingBackpackSatchelNfsdBrown
-  id: ClothingBackpackSatchelNfsdCream
-  components:
-  - type: Sprite
-    sprite: _NF/Clothing/Back/Satchels/nfsd_cream.rsi
+    sprite: _LoneStar/Clothing/Back/Satchels/lsrd_satchel.rsi

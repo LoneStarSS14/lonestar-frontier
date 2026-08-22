@@ -7,7 +7,6 @@
   - ColorBlackGloves
   - FingerlessGloves
   - NfsdClothingHandsGlovesCombatNfsdBrown
-  - NfsdClothingHandsGlovesCombatNfsdCream
   fallbacks:
   - CombatGloves
 
@@ -52,9 +51,6 @@
   - NfsdClothingBackpackSatchelNfsdBrown
   - NfsdClothingBackpackDuffelNfsdBrown
   - NfsdClothingBackpackMessengerNfsdBrown
-  - NfsdClothingBackpackNfsdCream
-  - NfsdClothingBackpackSatchelNfsdCream
-  - NfsdClothingBackpackDuffelNfsdCream
   - NfsdClothingBackpackMessengerNfsdCream
   fallbacks:
   - SecurityGuardBackpack

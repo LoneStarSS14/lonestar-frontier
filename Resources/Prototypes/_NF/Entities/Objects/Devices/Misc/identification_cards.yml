@@ -66,14 +66,14 @@
   - type: PresetIdCard
     job: Cadet
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsdcadet
+    - state: lsrd
+    - state: idlsrdjunior
   - type: Clothing
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
   - type: Item
-    heldPrefix: nfsd
+    heldPrefix: lsrd
 
 - type: entity
   parent: CadetIDCard
@@ -83,10 +83,10 @@
   - type: PresetIdCard
     job: Deputy
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsddeputy
+    - state: lsrd
+    - state: idlsrdranger
 
 - type: entity
   parent: CadetIDCard
@@ -96,10 +96,10 @@
   - type: PresetIdCard
     job: Brigmedic
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsdbrigmed
+    - state: lsrd
+    - state: idlsrdcorpsman
 
 - type: entity
   parent: CadetIDCard
@@ -109,10 +109,10 @@
   - type: PresetIdCard
     job: SeniorOfficer
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsdsergeant
+    - state: lsrd
+    - state: idlsrdsenior
 
 - type: entity
   parent: CadetIDCard
@@ -122,10 +122,10 @@
   - type: PresetIdCard
     job: Bailiff
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsdbailiff
+    - state: lsrd
+    - state: idlsrdarmorer
 
 - type: entity
   parent: [CadetIDCard, BaseC4Contraband]
@@ -135,12 +135,10 @@
   - type: PresetIdCard
     job: Sheriff
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: silver
-    - state: idnfsdsheriff
-  - type: Item
-    heldPrefix: silver
+    - state: lsrd
+    - state: idlsrdchief
 
 - type: entity
   parent: CadetIDCard
@@ -150,10 +148,10 @@
   - type: PresetIdCard
     job: NFDetective
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsddetective
+    - state: lsrd
+    - state: idlsrddetective
 
 - type: entity
   parent: SecurityIDCard

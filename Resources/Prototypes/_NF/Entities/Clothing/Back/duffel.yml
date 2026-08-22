@@ -13,14 +13,7 @@
   name: LSRD duffel # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Back/Duffels/nfsd_brown.rsi
-
-- type: entity
-  parent: ClothingBackpackDuffelNfsdBrown
-  id: ClothingBackpackDuffelNfsdCream
-  components:
-  - type: Sprite
-    sprite: _NF/Clothing/Back/Duffels/nfsd_cream.rsi
+    sprite: _LoneStar/Clothing/Back/Duffels/lsrd_duffel.rsi
 
 - type: entity
   parent: [ RecyclableItemPlasticSmall, NFClothingDuffel ]

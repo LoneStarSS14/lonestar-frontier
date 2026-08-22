@@ -393,7 +393,7 @@
   - type: Advertise
     pack: NfsdDrobeAds
   - type: Sprite
-    sprite: _NF/Structures/Machines/VendingMachines/nfsddrobe.rsi
+    sprite: _LoneStar/Structures/Machines/VendingMachines/lsrddrobe.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -443,7 +443,7 @@
   - type: Advertise
     pack: NfsdDrobeAds
   - type: Sprite
-    sprite: _NF/Structures/Machines/VendingMachines/nfsdtech.rsi
+    sprite: _LoneStar/Structures/Machines/VendingMachines/lsrdtech.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]

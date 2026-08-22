@@ -2,7 +2,7 @@
   id: BannerNfsd
   parent: BannerBase
   name: LSRD banner # Lonestar changes NFSD -> LSRD
-  description: A banner displaying the colors of the Lone Star Ranger's Department.
+  description: A banner displaying the colors of the Lone Star Rangers Division.
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Decoration/banner.rsi
@@ -15,7 +15,7 @@
   id: FlagNfsd
   parent: BannerBase
   name: LSRD flag # Lonestar changes NFSD -> LSRD
-  description: A flag displaying the colors of the Lone Star Ranger's Department.
+  description: A flag displaying the colors of the Lone Star Rangers Division.
   components:
   - type: Sprite
     sprite: _NF/Structures/Decoration/banner.rsi
