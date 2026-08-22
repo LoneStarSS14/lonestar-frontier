@@ -1,7 +1,3 @@
-#Handles LoneStar-Unique Exosuit Fabricator recipes
-#Not Mandatory. But please put new additions here for better keeping track and preventing merge conflicts in the future~!
-#Borg Armor (Physical)
-
 - type: latheRecipe
   id: BorgArmorMk1
   result: SyntheticBorgArmorLight
@@ -9,7 +5,7 @@
   materials:
     Steel: 1000
     Plastic: 750
-    Gold: 250 #Has a 15% speedboost, Sorry, can't be too cheap
+    Gold: 250
 
 - type: latheRecipe
   id: BorgArmorMk2
@@ -17,9 +13,9 @@
   completetime: 30
   materials:
     Steel: 1750
-    Plastic: 950 #Kevlar Fibers
-    Uranium: 500 #Dense Alloys
-    Silver: 500 #Dense Alloys
+    Plastic: 950
+    Uranium: 500 
+    Silver: 500
 
 - type: latheRecipe
   id: BorgArmorMk3
@@ -27,13 +23,13 @@
   completetime: 30
   materials:
     Steel: 2500
-    Plastic: 1000 #Kevlar Fibers
-    Uranium: 750 #Dense Alloys
-    Silver: 1500 #Dense Alloys
-    Gold: 750 #Extremely dense alloys
+    Plastic: 1000
+    Uranium: 750
+    Silver: 1500
+    Gold: 750
 
 
-#Holding this here for compression sake
+#Controls above Lathe Recipes.
 
 - type: latheRecipePack
   id: BorgArmorPhys
