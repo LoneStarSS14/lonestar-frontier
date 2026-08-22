@@ -18,7 +18,6 @@
   minLimit: 0
   loadouts:
   - NfsdClothingShoesBootsBrown
-  - NfsdClothingShoesBootsCream
   - LoadoutHighHeels # Lonestar
   fallbacks:
   - NfsdClothingShoesBootsBrown
