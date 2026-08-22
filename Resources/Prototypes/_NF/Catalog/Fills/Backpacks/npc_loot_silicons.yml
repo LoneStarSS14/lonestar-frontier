@@ -193,6 +193,10 @@
       prob: 0.2
     - id: BorgModuleRCD # Coyote: more silicon loot
       prob: 0.2
+    - id: SyntheticBorgArmorMedium
+      prob: 0.10 # LoneStar: sillycone loot
+    - id: SyntheticBorgArmorLight
+      prob: 0.15 # LoneStar: Ditto
     - id: BorgModuleSyndicateWeapon # Coyote: more silicon loot
       prob: 0.05
     sound:
@@ -245,6 +249,8 @@
       prob: 0.05
     - id: BorgModuleEsword # Coyote: more silicon loot
       prob: 0.05
+    - id: SyntheticBorgArmorHeavy
+      prob: 0.1 # LS: Sillycone Loot
     # Syndicate Assault Cyborg Chassis
     - id: BorgChassisSyndicateAssault # Coyote: more silicon loot
       prob: 0.05
