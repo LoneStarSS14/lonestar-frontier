@@ -50,7 +50,7 @@
 - type: entity
   id: StructurePistolRackLockSheriff
   parent: StructurePistolRackLock
-  suffix: Chief Ranger, Empty
+  suffix: Chief Ranger, Empty # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:
@@ -73,7 +73,7 @@
 - type: entity
   id: StructurePistolRackLockSheriffWallmounted
   parent: StructurePistolRackLockWallmounted
-  suffix: Sheriff, Empty, Wallmount
+  suffix: Chief Ranger, Empty, Wallmount # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:

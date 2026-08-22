@@ -119,7 +119,7 @@
 - type: entity
   id: LockerNfsdCopper
   parent: [NFLockerBaseSecure, LockerSecurity]
-  name: LSRD locker
+  name: LSRD locker # Lonestar changes NFSD -> LSRD
   suffix: Copper
   components:
   - type: EntityStorageVisuals

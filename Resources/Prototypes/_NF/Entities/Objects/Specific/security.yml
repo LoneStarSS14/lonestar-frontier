@@ -84,7 +84,7 @@
 - type: entity
   parent: BaseSecurityUplinkRadio
   id: BaseSecurityUplinkRadioSheriff
-  suffix: Sheriff 20
+  suffix: Chief Ranger, 20 # Lonestar changes NFSD -> LSRD
   components:
   - type: Store
     balance:
@@ -93,7 +93,7 @@
 - type: entity
   parent: BaseSecurityUplinkRadio
   id: BaseSecurityUplinkRadioOfficer
-  suffix: Officer 15
+  suffix: Ranger, 15 # Lonestar changes NFSD -> LSRD
   components:
   - type: Store
     balance:
