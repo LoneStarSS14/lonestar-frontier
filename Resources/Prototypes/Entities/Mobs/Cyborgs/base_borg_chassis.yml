@@ -242,7 +242,7 @@
     - FootstepSound
     - CanPilot
     - SiliconEmotes
-    - Unimplantable
+    # LoneStar Edit. Borgs can now hold implants.
   - type: Emoting
   - type: GuideHelp
     guides:

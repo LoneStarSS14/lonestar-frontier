@@ -4,6 +4,9 @@
   components:
   - type: Inventory
     templateId: borgUnified #LoneStar edit. Moves all selectable borg chassies to a unified loadout.
+  - type: AutoImplant #LoneStar Edit. Gives Borgs medical tracking implants.
+    implants:
+    - MedicalTrackingImplant
   - type: Sprite
     layers:
     - state: robot
