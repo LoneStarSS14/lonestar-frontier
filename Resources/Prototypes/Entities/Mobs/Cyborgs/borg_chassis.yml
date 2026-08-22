@@ -24,7 +24,7 @@
     - trigger:
         !type:DamageTypeTrigger
         damageType: Blunt
-        damage: 1600 #We don't want this happening easily, due to gib behaviour being weird with borgs.
+        damage: 1600 #Lonestar Edit. We don't want this happening easily, due to gib behaviour being weird with borgs.
       behaviors:
       - !type:GibBehavior { }
   - type: BorgChassis
@@ -44,6 +44,11 @@
     inherentRadioChannels:
     - Binary
     # Lonestar Edit. Removed all default channels except binary from synthetics due to giving them headset support.
+   # - Common
+   # Coyote: Ring ring! We want our borgs to be able to talk in shortband too!
+   # - Traffic
+  #End Coyote
+  #End LoneStar
   - type: BankAccount # Coyote: Borgs can now interact with bank accounts
     # Coyote: Borg PDA's are good for borgs, even ones made midround
   - type: Loadout
