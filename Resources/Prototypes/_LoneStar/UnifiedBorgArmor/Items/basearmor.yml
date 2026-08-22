@@ -2,8 +2,7 @@
 - type: entity
   parent: ClothingOuterVestWebMercenary #Inherit all changes from this. Hopefully will prevent compatability issues in the future. Also has an extra bit of capacity for magazines/spare cells.
   id: SyntheticBorgArmorBase # Base Armor Type for borgs
-  name: Experimental Synthetic Plating
-  description: This is a test item. How did you get ahold of it?!
+  abstract: true
   components:
   - type: Sprite
     sprite: _LoneStar/Objects/BorgArmor/physarmor/borglightarmor.rsi
@@ -16,20 +15,16 @@
     quickEquip: false # Cannot be hot-swapped from bluespace bags. No, you cannot hot-swap from speed armor to heavy armor.
     slots:
     - BORGARMOR # No free NFSD tier armor for anyone who prints it.
-  - type: ExplosionResistance
-    damageCoefficient: 0.4
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
-        Slash: 0.5
-        Piercing: 0.5
-        Heat: 0.50
-        Radiation: 0.4
-        Caustic: 0.6
+        Blunt: 0.8
+        Slash: 0.7
+        Piercing: 0.85
+        Heat: 0.85
   - type: ClothingSpeedModifier  # Stacks with other slowdowns. Be careful!
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 1
+    sprintModifier: 1
   - type: Tag
     tags:
     - BorgWearable # Required for all variants, as this is what controls wearability!
