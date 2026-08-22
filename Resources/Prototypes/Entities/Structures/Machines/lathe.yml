@@ -365,11 +365,12 @@
     - BorgModulesStatic
     - BorgLimbsStatic
     - CSIPCTopicalsStatic # Coyote: - IPC Topicals
+    - BorgArmorBase # Lonestar - Base Borg Armor.
     dynamicPacks:
     - Robotics
     - BorgModules
     - MechParts
-    - BorgArmorPhys
+    - BorgArmorPhysADV # LoneStar - Researchable Heavy Borg Armor
     - MechEquipment
   - type: MaterialStorage
     whitelist:
