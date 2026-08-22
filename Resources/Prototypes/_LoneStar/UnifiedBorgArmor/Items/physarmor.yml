@@ -19,8 +19,8 @@
         Piercing: 0.85
         Heat: 0.85
   - type: ClothingSpeedModifier  # Stacks with other slowdowns. Be careful!
-    walkModifier: 1
-    sprintModifier: 1.25 # So there's a bonus to wearing this over the medium armor
+    walkModifier: 0.98
+    sprintModifier: 0.98
 
 - type: entity
   parent: SyntheticBorgArmorBase #Inherit all changes from this. Hopefully will prevent compatability issues in the future
