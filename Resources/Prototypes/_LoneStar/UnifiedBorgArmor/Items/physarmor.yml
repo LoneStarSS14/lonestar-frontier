@@ -74,6 +74,7 @@
   parent: SyntheticBorgArmorBase #Inherit all changes from this. Hopefully will prevent compatability issues in the future
   id: SyntheticBorgArmorTerminator # Event/Traitor/Adminbus Armor.
   name: TVOK-Terminator Plating
+  suffix: Admeme
   description: Salvaged, Acquired, or otherwise procured; this set of armor is clearly designed for the heaviest duties, and most extreme environments. Lifting it is nearly impossible, with the near foot-thick plates of solid alloys and plates meant to deflect projectiles creaking with each motion.
   components:
   - type: Sprite
