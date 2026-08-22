@@ -30,10 +30,13 @@
 
 
 #Controls above Lathe Recipes.
-
 - type: latheRecipePack
-  id: BorgArmorPhys
+  id: BorgArmorBase
   recipes:
   - BorgArmorMk1
   - BorgArmorMk2
+
+- type: latheRecipePack
+  id: BorgArmorPhysADV
+  recipes:
   - BorgArmorMk3
