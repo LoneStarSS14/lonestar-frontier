@@ -1,0 +1,19 @@
+#Borgo Research
+#Also for some reason we didn't have one of these files.
+- type: technology
+  id: Advancedrobotics
+  name: research-technology-advanced-robotics
+  entityIcon: ExosuitFabricator
+  discipline: NFEngineering
+  tier: 3
+  cost: 25000
+  recipeUnlocks:
+  - BorgArmorMk1
+  - BorgArmorMk2
+  - BorgArmorMk3
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBasicRobotics
+  position: 3, 16
+
+  

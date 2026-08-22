@@ -369,6 +369,7 @@
     - Robotics
     - BorgModules
     - MechParts
+    - BorgArmorPhys
     - MechEquipment
   - type: MaterialStorage
     whitelist:

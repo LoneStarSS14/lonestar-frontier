@@ -2,6 +2,8 @@
   id: BorgChassisSelectable
   parent: BaseBorgChassisNT
   components:
+  - type: Inventory
+    templateId: borgUnified #LoneStar edit. Moves all selectable borg chassies to a unified loadout.
   - type: Sprite
     layers:
     - state: robot
@@ -14,6 +16,14 @@
       shader: unshaded
       map: ["light","enum.BorgVisualLayers.LightStatus"]
       visible: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 1600 #We don't want this happening easily, due to gib behaviour being weird with borgs.
+      behaviors:
+      - !type:GibBehavior { }
   - type: BorgChassis
     # Default borg can take no modules until selected type.
     maxModules: 0
@@ -29,11 +39,8 @@
     interactFailureString: petting-failure-generic-cyborg
   - type: BorgSwitchableType
     inherentRadioChannels:
-    - Common
     - Binary
- # Coyote: Ring ring! We want our borgs to be able to talk in shortband too!
-    - Traffic
-  #End Coyote
+    # Lonestar Edit. Removed all default channels except binary from synthetics due to giving them headset support.
   - type: BankAccount # Coyote: Borgs can now interact with bank accounts
     # Coyote: Borg PDA's are good for borgs, even ones made midround
   - type: Loadout

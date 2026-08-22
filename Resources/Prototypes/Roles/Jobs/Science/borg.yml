@@ -36,10 +36,12 @@
   applyTraits: false
 
 # Coyote: Gives borgs an ID to use
+# LoneStar: Gives borgs headsets rather than inbuilt encryption keys. Sloppy, but mitigates comms-listening concerns.
 - type: startingGear
   id: BorgGear
   equipment:
     id: ContractorPDA
+    ears: ClothingHeadsetMedicalScience
 
 - type: chameleonOutfit
   id: BorgChameleonOutfit

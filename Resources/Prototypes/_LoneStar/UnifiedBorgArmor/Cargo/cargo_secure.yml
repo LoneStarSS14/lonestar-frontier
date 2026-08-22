@@ -1,0 +1,46 @@
+- type: cargoProduct
+  id: BorgArmorCrate
+  # abstract: true # Frontier
+  icon:
+    sprite: Objects/Storage/boxes.rsi
+    state: box_security
+  product: CrateBorgArmor
+  cost: 15000 #These contain up to Medium armor.
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: BorgLightCrate
+  # abstract: true # Frontier
+  icon:
+    sprite: Objects/Storage/boxes.rsi
+    state: box_security
+  product: CrateBorgLight
+  cost: 5000 #Only light armor.
+  category: cargoproduct-category-name-security
+  group: market
+
+#Handle this here.
+- type: entity
+  id: CrateBorgArmor
+  parent: CrateSecgear
+  name: synthetic armor crate
+  description: Contains a variety pack of synthetic armor. For your aspiring silicon comrades.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SyntheticBorgArmorLight
+        amount: 2
+      - id: SyntheticBorgArmorMedium
+        amount: 2
+
+- type: entity
+  id: CrateBorgLight
+  parent: CrateSecgear
+  name: light synthetic armor crate
+  description: Contains two seperate sets of armor to be bolted onto synthetics.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SyntheticBorgArmorLight
+        amount: 2

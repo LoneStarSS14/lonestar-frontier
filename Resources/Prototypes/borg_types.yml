@@ -20,10 +20,6 @@
   - BorgModuleAnomaly
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Science
-  - Medical # Lonestar
-
   # Visual
   inventoryTemplateId: borgShort
   spriteBodyState: robot
@@ -58,11 +54,6 @@
   - BorgModuleRCDShipyard # Frontier: RCD<RCDShipyard
   - BorgModuleCable
   - BorgModuleJetpack # Frontier
-
-  radioChannels:
-  - Engineering
-  - Science
-  - Medical # Lonestar
 
   # Visual
   inventoryTemplateId: borgShort
@@ -99,11 +90,6 @@
   - BorgModuleAppraisal
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Supply
-  - Science
-  - Medical # Lonestar
-
   # Visual
   inventoryTemplateId: borgTall
   spriteBodyState: miner
@@ -138,11 +124,6 @@
   - BorgModuleCleaning
   - BorgModuleCustodial
   - BorgModuleJetpack # Frontier
-
-  radioChannels:
-  - Science
-  - Service
-  - Medical # Lonestar
 
   # Visual
   inventoryTemplateId: borgShort
@@ -182,10 +163,6 @@
   # - BorgModuleDefibrillator # Frontier
   - BorgModuleJetpack # Frontier
   - BorgModuleLollypopMedical # Goobstation.
-
-  radioChannels:
-  - Science
-  - Medical
 
   addComponents:
   - type: SolutionScanner
@@ -242,11 +219,6 @@
   - BorgModuleChef # Frontier
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Science
-  - Service
-  - Medical # Lonestar
-
   # Visual
   inventoryTemplateId: borgTall
   spriteBodyState: service
@@ -280,10 +252,6 @@
   - BorgModuleArtifact
   - BorgModuleAnomaly
   - BorgModuleJetpack # Frontier
-
-  radioChannels:
-  - Science
-  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
@@ -375,11 +343,6 @@
   - BorgModuleAppraisal
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Supply
-  - Science
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
   inventoryTemplateId: borgTall
@@ -421,11 +384,6 @@
   - BorgModuleCleaning
   - BorgModuleCustodial
   - BorgModuleJetpack # Frontier
-
-  radioChannels:
-  - Science
-  - Service
-  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
@@ -470,10 +428,6 @@
   - BorgModuleRescue
   - BorgModuleJetpack # Frontier
   - BorgModuleLollypopMedical # Goobstation.
-
-  radioChannels:
-  - Science
-  - Medical
 
   addComponents:
   - type: SolutionScanner
@@ -536,11 +490,6 @@
   - BorgModuleChef # Frontier
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Science
-  - Service
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
   inventoryTemplateId: borgTall
@@ -584,11 +533,6 @@
   - BorgModuleAppraisal
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Supply
-  - Science
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
   inventoryTemplateId: borgTall
@@ -631,11 +575,6 @@
   - BorgModuleTraversal
   - BorgModuleAppraisal
   - BorgModuleJetpack # Frontier
-
-  radioChannels:
-  - Supply
-  - Science
-  - Medical # Lonestar
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
