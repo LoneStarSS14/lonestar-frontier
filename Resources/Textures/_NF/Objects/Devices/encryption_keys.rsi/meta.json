@@ -4,7 +4,8 @@
     "copyright": "nfsd_label created by data_redacted@394589156048633866 and GhostPrince for New Frontier 14.",
     "extra_copyright": [
         "crypt states modified by Flareguy for Space Station 14, common/stc_label by whatston3",
-        "cmo_label created by DSC@300074782328750080 for Space Station 14"
+        "cmo_label created by DSC@300074782328750080 for Space Station 14",
+        "guildleader_label by Archee"
     ],
     "size": {
         "x": 32,
@@ -31,6 +32,9 @@
         },
         {
             "name": "nfsd_label"
+        },
+        {
+            "name": "guildleader_label"
         }
     ]
 }

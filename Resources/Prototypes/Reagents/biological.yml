@@ -19,14 +19,25 @@
       - !type:SatiateThirst
         factor: 1.0
         conditions:
-          - !type:OrganType
-            type: Human
-            shouldHave: false
+        - !type:OrganType
+          type: Human
+          shouldHave: false
     Food:
       effects:
-        - !type:AdjustReagent
-          reagent: UncookedAnimalProteins
-          amount: 0.01 # Frontier - 0.1<0.01
+      - !type:AdjustReagent
+        reagent: UncookedAnimalProteins
+        amount: 0.01 # Frontier - 0.1<0.01
+        conditions:
+        - !type:HasComponent
+          component: Bloodsucker
+          invert: true
+
+      - !type:AdjustReagent
+        reagent: Protein
+        amount: 0.05
+        conditions:
+        - !type:HasComponent
+          component: Bloodsucker
     Medicine:
       effects:
       - !type:HealthChange

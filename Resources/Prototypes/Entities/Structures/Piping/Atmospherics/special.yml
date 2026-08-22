@@ -55,8 +55,8 @@
     tags:
       - SpreaderIgnore
   - type: Construction
-    graph: GasUnary
-    node: tinygayfan
+    graph: DirectionalFan
+    node: directionalfan
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic
@@ -72,7 +72,10 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel:
-            min: 20
-            max: 25
+            min: 3
+            max: 6
+          SheetPlasteel:
+            min: 2
+            max: 4
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

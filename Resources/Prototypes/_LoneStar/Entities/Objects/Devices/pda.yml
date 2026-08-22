@@ -1,0 +1,39 @@
+- type: entity
+  parent: [MercenaryPDA, BaseC4Contraband]
+  id: GuildLeaderPDA
+  name: guild leader PDA
+  description: It has more scratches and marks than you can count.
+  components:
+  - type: Pda
+    id: GuildLeaderIDCard
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#717059"
+    accentVColor: "#A32D26"
+    accentHColor: "#447987"
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-guildleader
+  - type: Icon
+    sprite: _NF/Objects/Devices/pda.rsi
+    state: pda-guildleader
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - LedgerCartridge
+    - MedTekCartridge
+    - NanoChatCartridge # DeltaV
+  - type: BlipCartridge
+    defaultPreset: BlipPresetCommand

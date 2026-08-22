@@ -137,6 +137,7 @@
     - map: [ "enum.HumanoidVisualLayers.TailExtras" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "maskalt" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]

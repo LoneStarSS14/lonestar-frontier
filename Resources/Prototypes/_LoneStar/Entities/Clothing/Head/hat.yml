@@ -1,0 +1,39 @@
+# region Misc
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatRegalCrown
+  name: regal crown
+  description: While its real gold, the gems appear to be plastic.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Head/Hat/regal-crown.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Head/Hat/regal-crown.rsi
+  - type: StaticPrice
+    price: 1250
+    vendPrice: 2000
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatGrenzel
+  name: grenzel hat
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Head/Hat/grenzel.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Head/Hat/grenzel.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatMaidHeadband
+  name: maid headband
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Head/Hat/maid-headband.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Head/Hat/maid-headband.rsi

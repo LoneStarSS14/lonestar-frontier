@@ -156,7 +156,7 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
     earliestStart: 80
-    minimumPlayers: 15
+    #minimumPlayers: 15 # LoneStar: Maybe until more average players
     weight: 1
     duration: 1800
     maxDuration: 2400
@@ -198,7 +198,7 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
     earliestStart: 100
-    minimumPlayers: 15
+    #minimumPlayers: 15 # LoneStar: Maybe until more average players
     weight: 1
     duration: 900
     maxDuration: 1200
@@ -240,7 +240,7 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
     earliestStart: 80
-    minimumPlayers: 15
+    #minimumPlayers: 15 # LoneStar: Maybe until more average players
     weight: 1
     duration: 1800
     maxDuration: 2400

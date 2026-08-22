@@ -8,6 +8,7 @@
   - NfsdClothingBackpackDuffelNfsdBrown
   - NfsdClothingBackpackMessengerNfsdBrown
   - NfsdClothingBackpackMessengerNfsdCream
+  - ContractorClothingBackpackSatchelLeather # Lonestar
   fallbacks:
   - NfsdClothingBackpackNfsdBrown
 
@@ -18,8 +19,20 @@
   loadouts:
   - NfsdClothingShoesBootsBrown
   - NfsdClothingShoesBootsCream
+  - LoadoutHighHeels # Lonestar
   fallbacks:
   - NfsdClothingShoesBootsBrown
+
+- type: loadoutGroup
+  id: NfsdShoesCream
+  name: loadout-group-contractor-shoes
+  minLimit: 0
+  loadouts:
+  - NfsdClothingShoesBootsCream
+  - NfsdClothingShoesBootsBrown
+  - LoadoutHighHeels # Lonestar
+  fallbacks:
+  - NfsdClothingShoesBootsCream
 
 - type: loadoutGroup
   id: NfsdGlovesBrown
@@ -71,6 +84,8 @@
   hidden: false # No point in showing this, it gets auto-selected.
   loadouts:
   - NfsdClothingEyesGlasses
+  - LoadoutLSRDHud # Lonestar
+  - LoadoutLSRDHudEyepatch # Lonestar
   fallbacks:
   - NfsdClothingEyesGlasses
 

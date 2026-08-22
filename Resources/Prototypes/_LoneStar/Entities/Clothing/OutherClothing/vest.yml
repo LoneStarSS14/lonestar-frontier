@@ -1,0 +1,21 @@
+#region Misc
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterVestPinafore
+  name: pinafore
+  description: What do you mean no pockets!?
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterVestMedievalLongcoat
+  name: medieval longcoat
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OuterClothing/Vest/medieval-longcoat.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OuterClothing/Vest/medieval-longcoat.rsi

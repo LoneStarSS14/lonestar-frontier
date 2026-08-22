@@ -38,6 +38,7 @@ public enum LedgerEntryType : byte
     StationDepositDonation,
     StationDepositAssetsSold,
     StationDepositOther,
+    ExpeditionCompletion, // LoneStar
     // Expense entries
     MailPenalty,
     ShuttleRecordFees,

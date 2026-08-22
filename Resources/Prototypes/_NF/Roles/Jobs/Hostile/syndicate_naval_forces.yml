@@ -701,7 +701,7 @@
     head: ClothingHeadHelmetHardsuitSyndieMedicUnremoveable
     jumpsuit: ClothingUniformJumpsuitParamedicSyndieNF
     shoes: ClothingShoesBootsMagSyndie
-    belt: ClothingBeltMedicalFilled
+    belt: ClothingBeltMedicalFilledSalvage # LoneStar
     neck: ClothingNeckStethoscope
 #    mask: ClothingMaskGasSyndicate
     outerClothing: ClothingOuterHardsuitSyndieMedic

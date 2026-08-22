@@ -1,0 +1,13 @@
+- type: entity
+  name: guild leader's rubber stamp
+  parent: RubberStampBase
+  id: RubberStampGuildLeader
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-guildleader
+    stampedColor: "#5e7c16"
+    stampState: "paper_stamp-lonestar-guildleader"
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/stamps.rsi
+    state: stamp-guildleader

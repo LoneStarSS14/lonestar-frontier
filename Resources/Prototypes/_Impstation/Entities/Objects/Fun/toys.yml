@@ -1,0 +1,36 @@
+- type: entity
+  parent: FoamCutlass
+  id: DevilPitchfork
+  name: devil's pitchfork
+  description: Perfect for prodding and poking sinners!
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/devilpitchfork.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    angle: 0 # LoneStar
+    animation: WeaponArcThrust # LoneStar
+    attackRate: 1.5
+    range: 2.0
+    damage:
+      types:
+        Blunt: 0
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+  - type: Item
+    # LoneStar changes start
+    sprite: _Impstation/Objects/Fun/devilpitchfork.rsi
+    storedSprite:
+      state: icon_storage
+      sprite: _Impstation/Objects/Fun/devilpitchfork.rsi
+    # LoneStar changes end
+    inhandVisuals:
+      left:
+        - state: inhand-left
+      right:
+        - state: inhand-right
+  # LoneStar
+  - type: ThrowingAngle
+    angle: 225
+  - type: LandAtCursor

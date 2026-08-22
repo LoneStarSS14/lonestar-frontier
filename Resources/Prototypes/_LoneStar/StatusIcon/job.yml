@@ -1,0 +1,8 @@
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconGuildLeader
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: guildleader
+  jobName: job-name-guildleader
+  allowSelection: false # Prevents impersonation with agent IDs etc.

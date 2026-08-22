@@ -667,13 +667,20 @@
   - type: Sprite
     sprite: Clothing/Back/Duffels/syndicate.rsi
     state: icon-med
-  - type: SpawnItemsOnUse
+  - type: SpawnItemsOnUse # LoneStar
     items:
       - id: HypoMiniLimitedEdition
+        prob: 0.4
       - id: BruteAutoInjector
+        prob: 0.4
       - id: AntiPoisonMedipen
+        prob: 0.4
       - id: MedicatedSuture
+        prob: 0.4
+      - id: RegenerativeMesh
+        prob: 0.2
       - id: Stimpack
+        prob: 0.4
       - id: SpaceCash1000
       # Bonus Loot T1
       - id: SpaceCash500
@@ -690,12 +697,18 @@
   id: ClothingBackpackSyndicateMedicLootB
   categories: [ HideSpawnMenu ]
   components:
-  - type: SpawnItemsOnUse
+  - type: SpawnItemsOnUse # LoneStar
     items:
       - id: HypoMini
+        prob: 0.4
       - id: BruteAutoInjector
+        prob: 0.4
       - id: AntiPoisonMedipen
+        prob: 0.4
       - id: MedicatedSuture
+        prob: 0.4
+      - id: RegenerativeMesh
+        prob: 0.2
       - id: SpaceCash1000
       # Bonus Loot T1
       - id: SpaceCash500
@@ -712,11 +725,16 @@
   id: ClothingBackpackSyndicateMedicLootC
   categories: [ HideSpawnMenu ]
   components:
-  - type: SpawnItemsOnUse
+  - type: SpawnItemsOnUse # LoneStar
     items:
       - id: HypoMini
+        prob: 0.4
       - id: AntiPoisonMedipen
+        prob: 0.4
       - id: MedicatedSuture
+        prob: 0.4
+      - id: RegenerativeMesh
+        prob: 0.2
       - id: SpaceCash1000
       # Bonus Loot T1
       - id: SpaceCash500
@@ -733,10 +751,14 @@
   id: ClothingBackpackSyndicateMedicLootD
   categories: [ HideSpawnMenu ]
   components:
-  - type: SpawnItemsOnUse
+  - type: SpawnItemsOnUse # LoneStar
     items:
       - id: AntiPoisonMedipen
+        prob: 0.4
       - id: MedicatedSuture
+        prob: 0.4
+      - id: RegenerativeMesh
+        prob: 0.2
       - id: SpaceCash1000
       # Bonus Loot T1
       - id: SpaceCash500

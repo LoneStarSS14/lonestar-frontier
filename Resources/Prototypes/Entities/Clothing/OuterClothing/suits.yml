@@ -27,6 +27,9 @@
     - WhitelistChameleon
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterSuitBomb
@@ -70,6 +73,9 @@
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
@@ -102,6 +108,9 @@
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: [ClothingOuterBaseLarge, GeigerCounterClothing, AllowSuitStorageClothing]
@@ -127,6 +136,9 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseToggleClothing, BaseC4Contraband, ContrabandClothing] # Frontier: BaseMajorContraband<BaseC3Contraband, added ContrabandClothing as parent
@@ -191,6 +203,9 @@
         whitelist:
           tags:
             - PowerCell
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterBase
@@ -204,6 +219,9 @@
     sprite: Clothing/OuterClothing/Suits/chicken.rsi
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterBase
@@ -242,6 +260,9 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterBase
@@ -265,6 +286,9 @@
     node: suit
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterBase
@@ -285,6 +309,9 @@
     containers:
       toggleable-clothing: !type:ContainerSlot {}
   - type: CatWearable # Frontier
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit
 
 - type: entity
   parent: ClothingOuterSuitCarp
@@ -300,3 +327,6 @@
     coolingCoefficient: 0.01
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCarp
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit

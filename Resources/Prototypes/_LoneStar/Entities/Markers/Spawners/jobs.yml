@@ -1,0 +1,12 @@
+- type: entity
+  id: SpawnPointGuildLeader
+  parent: SpawnPointJobBase
+  name: guild leader
+  components:
+  - type: SpawnPoint
+    job_id: GuildLeader
+  - type: Sprite
+    sprite: _LoneStar/Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: guildleader

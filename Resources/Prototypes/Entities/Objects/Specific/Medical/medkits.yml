@@ -7,14 +7,39 @@
   - type: Sprite
     sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi # Frontier: _NF prefix
     state: firstaid
+  # LoneStar changes start
   - type: Storage
     maxItemSize: Small
     grid:
     - 0,0,3,1
+    whitelist:
+      tags:
+        - Bottle
+        - Vial
+        - Spray
+        - Brutepack
+        - Bloodpack
+        - Gauze
+        - Ointment
+        - PillCanister
+        - Radio
+        - DiscreteHealthAnalyzer
+        - SurgeryTool
+        - Dropper
+      components:
+        - Hypospray
+        - Injector
+        - Pill
+        - HandLabeler
+        - Implanter
+        - BreathMask
+        - GasTank
   - type: Item
-    size: Normal # Frontier: Large<Normal
-    shape: # Frontier
-    - 0,0,3,1 # Frontier
+    size: Normal # LoneStar
+    shape: # LoneStar
+    - 0,0,2,1 # LoneStar
+    storedOffset: 0,3
+  # LoneStar changes end
     sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi # Frontier: _NF prefix
     heldPrefix: firstaid
   - type: PhysicalComposition

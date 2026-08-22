@@ -1,0 +1,158 @@
+- type: constructionGraph
+  id: LSStairs
+  start: start
+  graph:
+    - node: start
+      edges:
+
+        - to: wood
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 1
+
+        - to: woodStage
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 1
+
+        - to: steel
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+
+        - to: steelStage
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+
+        - to: white
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+
+        - to: whiteStage
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+
+        - to: dark
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+
+        - to: darkStage
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+
+    - node: wood
+      entity: StairWood
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: MaterialWoodPlank1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: woodStage
+      entity: StairStageWood
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: MaterialWoodPlank1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: steel
+      entity: Stairs
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: steelStage
+      entity: StairStage
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: white
+      entity: StairWhite
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: whiteStage
+      entity: StairStageWhite
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: dark
+      entity: StairDark
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: darkStage
+      entity: StairStageDark
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 1

@@ -1,0 +1,9 @@
+- type: entity
+  parent: ClothingHeadsetAltMercenary
+  id: ClothingHeadsetGuildLeader
+  name: guild leader's headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyGuildLeader

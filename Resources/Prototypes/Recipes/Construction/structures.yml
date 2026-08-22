@@ -169,6 +169,7 @@
 
 - type: construction
   id: DiagonalShuttleWall
+  name: construction-ghost-shuttle-wall-diagonal # LoneStar
   graph: Girder
   startNode: start
   targetNode: diagonalshuttleWall
@@ -234,6 +235,7 @@
 
 - type: construction
   id: GrilleDiagonal
+  name: construction-ghost-grille-diagonal # LoneStar
   graph: GrilleDiagonal
   startNode: start
   targetNode: grilleDiagonal
@@ -246,6 +248,7 @@
 
 - type: construction
   id: ClockworkGrilleDiagonal
+  name: construction-ghost-clockwork-grille-diagonal # LoneStar
   graph: GrilleDiagonal
   startNode: start
   targetNode: clockworkGrilleDiagonal
@@ -272,6 +275,7 @@
 
 - type: construction
   id: WindowDiagonal
+  name: construction-ghost-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: windowDiagonal
@@ -299,6 +303,7 @@
 
 - type: construction
   id: ReinforcedWindowDiagonal
+  name: construction-ghost-reinforced-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedWindowDiagonal
@@ -340,6 +345,7 @@
 
 - type: construction
   id: ClockworkWindowDiagonal
+  name: construction-ghost-clockwork-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: clockworkWindowDiagonal
@@ -395,6 +401,7 @@
 
 - type: construction
   id: PlasmaWindowDiagonal
+  name: construction-ghost-plasma-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: plasmaWindowDiagonal
@@ -408,6 +415,7 @@
 
 - type: construction
   id: ReinforcedPlasmaWindowDiagonal
+  name: construction-ghost-reinforced-plasma-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedPlasmaWindowDiagonal
@@ -514,6 +522,7 @@
 
 - type: construction
   id: UraniumWindowDiagonal
+  name: construction-ghost-uranium-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: uraniumWindowDiagonal
@@ -527,6 +536,7 @@
 
 - type: construction
   id: ReinforcedUraniumWindowDiagonal
+  name: construction-ghost-reinforced-uranium-window-diagonal # LoneStar
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedUraniumWindowDiagonal

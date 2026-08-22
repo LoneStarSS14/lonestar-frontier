@@ -1,0 +1,113 @@
+- type: loadoutGroup
+  id: GuildLeaderJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - MercenaryClothingUniformJumpsuitMercenary
+  - MercenaryClothingUniformJumpskirtMercenary
+  - MercenaryClothingUniformJumpsuitPrivateSec
+  - MercenaryClothingUniformJumpskirtPrivateSec
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenary
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenaryMedic
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenaryCaptain
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenary
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryCaptain
+  subgroups:
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
+  fallbacks:
+  - MercenaryClothingUniformJumpsuitMercenary
+  - MercenaryClothingUniformJumpskirtMercenary
+
+- type: loadoutGroup
+  id: GuildLeaderBackpack
+  name: loadout-group-contractor-backpack
+  loadouts:
+  - MercenaryClothingBackpackMercenary
+  - MercenaryClothingBackpackDuffelMercenary
+  - MercenaryClothingBackpackSatchelMercenary
+  - MercenaryClothingBackpackMessengerMercenary
+  - MercenaryClothingBackpackDuffelPrivateSecurity
+  - MercenaryClothingBackpackMessengerPrivateSecurity
+  - SecurityBackpack
+  - SecuritySatchel
+  - SecurityDuffel
+  fallbacks:
+  - MercenaryClothingBackpackMercenary
+
+- type: loadoutGroup
+  id: GuildLeaderOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - MercenaryClothingOuterVestWebMercenary
+  - MercenaryClothingOuterVestWebMercenaryBlack
+  - MercenaryClothingOuterArmorPunkGreen # Punkish (Static visuals)
+  - MercenaryClothingOuterArmorPunkOrange # Punkish (Static visuals)
+  - MercenaryClothingOuterArmorPunkRed # Punkish (Static visuals)
+  - MercenaryClothingOuterArmorPunkRandomized # Punkish (Randomized visuals)
+  - MercenaryClothingOuterArmorCaptainCarapace
+  subgroups:
+  - PilotOuterClothing
+  - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: GuildLeaderHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts:
+  - MercenaryClothingHeadHelmetMercenary
+  - MercenaryClothingHeadHelmetMercenaryBlack
+  - MercenaryClothingHeadBandMercenary
+  - MercenaryClothingHeadHatBeretMercenary
+  - MercenaryClothingHeadHatBeretCommander
+  - SecurityGuardSecurityHelmet
+  - SecurityGuardSecurityHat
+  - SecurityGuardSecurityBeret
+  - SecurityGuardTrooperHat
+  subgroups:
+  - PilotHead
+  - ContractorHead
+
+- type: loadoutGroup
+  id: GuildLeaderEars
+  name: loadout-group-contractor-ears
+  hidden: true
+  loadouts:
+  - ClothingHeadsetGuildLeader
+  fallbacks:
+  - ClothingHeadsetGuildLeader
+
+- type: loadoutGroup
+  id: GuildLeaderGloves
+  name: loadout-group-contractor-gloves
+  loadouts:
+  - MercenaryClothingHandsGlovesMercFingerless
+  - MercenaryClothingHandsMercenaryGlovesCombat
+  - MercenaryClothingHandsGlovesCombat
+
+- type: loadoutGroup
+  id: GuildLeaderPDA
+  name: loadout-group-contractor-pda
+  hidden: true
+  loadouts:
+  - GuildLeaderPDA
+  fallbacks:
+  - GuildLeaderPDA
+
+- type: loadoutGroup
+  id: GuildLeaderShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - MercenaryClothingShoesBootsMercenary
+  - MercenaryClothingShoesBootsJack
+  - MercenaryClothingShoesBootsCombat
+  - MercenaryClothingShoesMagMercenary
+  - MercenaryClothingShoesMagSecurity
+  subgroups:
+  - PilotShoes
+  - ContractorShoes
+  - CoyoteShoes
+  fallbacks:
+  - MercenaryClothingShoesBootsMercenary

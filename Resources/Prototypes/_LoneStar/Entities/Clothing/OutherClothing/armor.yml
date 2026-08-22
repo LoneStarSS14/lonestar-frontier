@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterArmorGrenzelCuriass
+  name: grenzel curiass
+  description: A decently thick metal armor vest that provides decent protection against most types of damage.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OuterClothing/Armor/grenzel-curiass.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OuterClothing/Armor/grenzel-curiass.rsi

@@ -479,4 +479,6 @@
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-
+  - type: HideClothingLayerClothing # Goob
+    hiddenSlots:
+    - jumpsuit

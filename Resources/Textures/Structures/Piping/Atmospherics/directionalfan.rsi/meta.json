@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-NC-SA-3.0",
-    "copyright": "Made by SlamBamActionman",
+    "copyright": "Made by SlamBamActionman, icon-frame by Archee",
     "size": {
         "x": 32,
         "y": 32
@@ -24,6 +24,10 @@
                     0.05,0.05,0.05,0.05
                 ]
             ]
+        },
+        {
+            "name": "icon-frame",
+            "directions": 4
         }
     ]
 }
