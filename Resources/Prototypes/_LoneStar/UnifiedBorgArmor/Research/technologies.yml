@@ -7,8 +7,6 @@
   tier: 3
   cost: 25000
   recipeUnlocks:
-  - BorgArmorMk1
-  - BorgArmorMk2
   - BorgArmorMk3
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
