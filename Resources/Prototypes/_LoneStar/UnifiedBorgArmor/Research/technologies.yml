@@ -1,5 +1,4 @@
-#Borgo Research
-#Also for some reason we didn't have one of these files.
+#Controls Research Nodes for the UBA module. Comment out to prevent research & Exofabbing of Armor.
 - type: technology
   id: Advancedrobotics
   name: research-technology-advanced-robotics
