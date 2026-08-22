@@ -7,7 +7,7 @@
   - ColorBlackGloves
   - FingerlessGloves
   - NfsdClothingHandsGlovesCombatNfsdBrown
-  - NfsdClothingHandsGlovesCombatNfsdCream # Lonestar changes, cream versions removed
+ # - NfsdClothingHandsGlovesCombatNfsdCream # Lonestar changes, cream versions removed
   fallbacks:
   - CombatGloves
 
