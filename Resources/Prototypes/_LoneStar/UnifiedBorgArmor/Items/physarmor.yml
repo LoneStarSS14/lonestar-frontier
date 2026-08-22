@@ -18,8 +18,6 @@
         Slash: 0.8
         Piercing: 0.85
         Heat: 0.85
-        Radiation: 0 # Ditto to below
-        Caustic: 0 # Synths shouldnt be taking caustic damage. Untreatable
   - type: ClothingSpeedModifier  # Stacks with other slowdowns. Be careful!
     walkModifier: 1
     sprintModifier: 1.25 # So there's a bonus to wearing this over the medium armor
@@ -41,8 +39,6 @@
         Slash: 0.7
         Piercing: 0.75
         Heat: 0.75
-        Radiation: 0 # Ditto to below
-        Caustic: 0 # Synths shouldnt be taking caustic damage. Untreatable
   - type: ClothingSpeedModifier  # Stacks with other slowdowns. Be careful!
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -64,8 +60,6 @@
         Slash: 0.5
         Piercing: 0.6
         Heat: 0.6
-        Radiation: 0 # Ditto to below
-        Caustic: 0 # Synths shouldnt be taking caustic damage. Untreatable
   - type: ClothingSpeedModifier  # Stacks with other slowdowns. Be careful!
     walkModifier: 0.85 # You are the Persuer.
     sprintModifier: 0.75 # Ditto
@@ -88,8 +82,6 @@
         Slash: 0.05
         Piercing: 0.1
         Heat: 0.1
-        Radiation: 0 # Ditto to below
-        Caustic: 0 # Synths shouldnt be taking caustic damage. Untreatable
   - type: ClothingSpeedModifier  # Stacks with other slowdowns. Be careful!
-    walkModifier: 0.85 # You are the Persuer.
-    sprintModifier: 0.75 # Ditto
+    walkModifier: 1
+    sprintModifier: 1
