@@ -74,7 +74,7 @@ public sealed class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeSystem
         // Configure inventory template (used for hat spacing)
         if (TryComp(ent, out InventoryComponent? inventory))
         {
-            _inventorySystem.SetTemplateId((ent.Owner, inventory), prototype.InventoryTemplateId);
+        //  _inventorySystem.SetTemplateId((ent.Owner, inventory), prototype.InventoryTemplateId); - Lonestar Comment. Fixes crash due to new unified inventory templates.
         }
 
         base.SelectBorgModule(ent, borgType);
