@@ -1,0 +1,376 @@
+- type: entity
+  parent: BaseMachinePowered
+  id: BaseSlotMachine
+  name: slot machine
+  abstract: true
+  description: Gambling for the antisocial.
+  components:
+  - type: StationAiWhitelist
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 3
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
+  - type: Transform
+    noRot: false
+  - type: Rotatable
+    rotateWhileAnchored: false
+    rotateWhilePulling: true
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: PointLight
+    enabled: false
+    castShadows: false
+    radius: 2
+    energy: 1.5
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: Repairable
+    doAfterDelay: 8
+  - type: Anchorable
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Vending
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-mechanical
+    weight: 0.125
+  - type: StaticPrice
+    price: 100
+  - type: Advertise
+    pack: SlotMachineAds
+  - type: ContainerContainer
+    containers:
+      money: !type:ContainerSlot
+        showEnts: false
+        occludes: true
+        ent: null
+  - type: ItemSlots
+    slots:
+      money:
+        name: spesos
+        whitelist:
+          components:
+          - Cash
+  - type: SlotMachine
+  - type: DoAfter
+  - type: WiresPanel
+  - type: WiresVisuals
+  - type: Wires
+    layoutId: SlotMachine
+    boardName: wires-board-name-slot-machine
+  - type: Appearance
+  - type: UserInterface
+    interfaces:
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+
+- type: entity
+  parent: BaseSlotMachine
+  id: SlotMachineWheelHouse
+  name: wheel-house slot machine
+  description: A basic slot machine, takes 250 credits per spin.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/Gambling/Slots/wheelhouse.rsi
+    layers:
+      - state: slotmachine
+      - state: slotmachine_spin
+        visible: false
+        map: ["slotmachine_spin"]
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: GenericVisualizer
+    visuals:
+      enum.SlotMachineVisuals.Spinning:
+        slotmachine_spin:
+          True: { visible: true }
+          False: { visible: false }
+  - type: SlotMachine # Average payout of 1.27$
+    spinCost: 250
+    smallPrizeAmount: 250
+    mediumPrizeAmount: 750
+    bigPrizeAmount: 2750
+    jackPotPrizeAmount: 12500
+    godPotPrize: SpaceCash100000
+    smallWinChance: 0.2
+    mediumWinChance: 0.1
+    bigWinChance: 0.05
+    jackPotWinChance: 0.01
+    godPotWinChance: .0001
+
+- type: entity
+  parent: BaseSlotMachine
+  id: SlotMachinePayRaiser
+  name: pay-raiser slot machine
+  description: A premium slot machine, takes 1,400 credits per spin.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/Gambling/Slots/payraiser.rsi
+    layers:
+      - state: slotmachine
+      - state: slotmachine_spin
+        visible: false
+        map: ["slotmachine_spin"]
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: GenericVisualizer # I have NO idea how this works
+    visuals:
+      enum.SlotMachineVisuals.Spinning:
+        slotmachine_spin:
+          True: { visible: true }
+          False: { visible: false }
+  - type: SlotMachine # Average payout of -101.8$
+    spinCost: 1400
+    smallPrizeAmount: 250
+    mediumPrizeAmount: 750
+    bigPrizeAmount: 15000
+    jackPotPrizeAmount: 150000
+    godPotPrize: SpaceCash150000
+    smallWinChance: 0.4
+    mediumWinChance: 0.2
+    bigWinChance: 0.1
+    jackPotWinChance: 0.01
+    godPotWinChance: .001
+
+- type: entity
+  parent: BaseSlotMachine
+  id: SlotMachineMarketCrash
+  name: market-crash slot machine
+  description: A luxury slot machine, takes 14,000 credits per spin.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/Gambling/Slots/marketcrash.rsi
+    layers:
+      - state: slotmachine
+      - state: slotmachine_spin
+        visible: false
+        map: ["slotmachine_spin"]
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: GenericVisualizer
+    visuals:
+      enum.SlotMachineVisuals.Spinning:
+        slotmachine_spin:
+          True: { visible: true }
+          False: { visible: false }
+  - type: SlotMachine # Average payout of -3335$
+    spinCost: 14000
+    smallPrizeAmount: 7000
+    mediumPrizeAmount: 15000
+    bigPrizeAmount: 65000
+    jackPotPrizeAmount: 130000
+    godPotPrize: SpaceCash1000000
+    smallWinChance: 0.1
+    mediumWinChance: 0.35
+    bigWinChance: 0.075
+    jackPotWinChance: 0.015
+    godPotWinChance: 0.0025
+
+- type: entity
+  parent: BaseMachinePowered
+  id: CoinFlipper
+  name: coin flipper
+  description: Coinflipping for the antisocial.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/Gambling/coinflipper.rsi
+    layers:
+    - state: Coinflipper
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: WiresPanel
+  - type: WiresVisuals
+  - type: Wires
+    layoutId: SlotMachine
+    boardName: wires-board-name-slot-machine
+  - type: Appearance
+  - type: UserInterface
+    interfaces:
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: StationAiWhitelist
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 3
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: PointLight
+    enabled: false
+    castShadows: false
+    radius: 2
+    energy: 1.5
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: Repairable
+    doAfterDelay: 8
+  - type: Anchorable
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Vending
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-mechanical
+    weight: 0.125
+  - type: StaticPrice
+    price: 100
+  - type: Advertise
+    pack: SlotMachineAds
+  - type: ContainerContainer
+    containers:
+      money: !type:ContainerSlot
+        showEnts: false
+        occludes: true
+        ent: null
+  - type: ItemSlots
+    slots:
+      money:
+        name: spesos
+        whitelist:
+          components:
+          - Cash
+  - type: CoinFliper # 38% chance to double, limited at doubling 100k.
+  - type: DoAfter
+  - type: Transform
+    noRot: false
+  - type: Rotatable
+    rotateWhileAnchored: false
+    rotateWhilePulling: true
+
+- type: entity
+  parent: BaseMachinePowered
+  id: ClawMachine
+  name: claw machine
+  description: Sure we got our health insurance benefits cut, and yeah we don't get any overtime on holidays, but hey - free to play claw machines!
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/Gambling/claw_machine.rsi
+    layers:
+    - state: clawmachine
+      map: [ "clawmachine" ]
+    - state: clawmachine_playing
+      visible: false
+      map: [ "clawmachine_playing" ]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: GenericVisualizer # I have NO idea how this works
+    visuals:
+      enum.ClawMachineVisuals.Spinning:
+        clawmachine_playing:
+          True: { visible: true }
+          False: { visible: false }
+      enum.ClawMachineVisuals.NormalSprite:
+        clawmachine:
+          True: { visible: true }
+          False: { visible: false }
+  - type: WiresPanel
+  - type: WiresVisuals
+  - type: Wires
+    layoutId: SlotMachine
+    boardName: wires-board-name-slot-machine
+  - type: Appearance
+  - type: UserInterface
+    interfaces:
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: StationAiWhitelist
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 3
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: PointLight
+    enabled: false
+    castShadows: false
+    radius: 2
+    energy: 1.5
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: Repairable
+    doAfterDelay: 8
+  - type: Anchorable
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Vending
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-mechanical
+    weight: 0.125
+  - type: StaticPrice
+    price: 100
+  - type: Advertise
+    pack: SlotMachineAds
+  - type: ClawMachine
+    winChance: 0.15
+    rewards:
+    - PrizeBallSmall
+    - PrizeBallSmall
+    - PrizeBallSmall
+    - PrizeBall
+    evilRewards: # ~4% chance to get a syndie ball each attempt at the machine
+    - PrizeBallSmall
+    - PrizeBallSmall
+    - PrizeBallSmall
+    - PrizeBallSmall
+    - PrizeBall
+    - PrizeBallSyndicate
+    - PrizeBallSyndicate
+  - type: DoAfter

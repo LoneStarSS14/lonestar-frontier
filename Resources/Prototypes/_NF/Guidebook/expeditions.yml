@@ -4,6 +4,7 @@
   text: "/ServerInfo/_NF/Guidebook/Expeditions.xml"
   priority: 5
   children:
+  - GuildLeader # LoneStar
   - MobsExpeditionGuideAberrantFlesh
   - MobsExpeditionGuideArgocytes
   - MobsExpeditionGuideBloodCult

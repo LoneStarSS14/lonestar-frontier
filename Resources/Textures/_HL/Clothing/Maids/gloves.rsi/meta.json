@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from S.P.L.U.R.T-tg at https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/29ba371cefa332ad1ad1994331450a3fcbfbf62e/modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_clothing/lewd_gloves.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/e8f9767a11817d55642596b47c95ba9530b319e9/modular_skyrat/master_files/icons/mob/clothing/hands.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/29ba371cefa332ad1ad1994331450a3fcbfbf62e/modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_clothing/lewd_gloves.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/1dc3490a3510aed4764858b64f28d20de5bcc37c/modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_gloves.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/ebb01f82f2894f7671c2e2066b481699ce0a556e/icons/mob/inhands/clothing/gloves_lefthand.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/ebb01f82f2894f7671c2e2066b481699ce0a556e/icons/mob/inhands/clothing/gloves_righthand.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/29ba371cefa332ad1ad1994331450a3fcbfbf62e/modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_clothing/lewd_gloves.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/1dc3490a3510aed4764858b64f28d20de5bcc37c/modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_gloves.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/ebb01f82f2894f7671c2e2066b481699ce0a556e/icons/mob/inhands/clothing/gloves_lefthand.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/ebb01f82f2894f7671c2e2066b481699ce0a556e/icons/mob/inhands/clothing/gloves_righthand.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped-HAND",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    }
+  ]
+}

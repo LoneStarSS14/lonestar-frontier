@@ -2,81 +2,105 @@
   id: HornyHawkerInventory
   startingInventory:
     # Collars
-    ClothingNeckCollarBlack: 6
-    ClothingNeckCollarBlue: 5
-    ClothingNeckCollarPink: 6
-    ClothingNeckBellCollar: 5
-    ClothingNeckShockCollar: 4
+    ClothingNeckCollarBlack: 4294967295
+    ClothingNeckCollarBlue: 4294967295
+    ClothingNeckCollarPink: 4294967295
+    ClothingNeckBellCollar: 4294967295
+    ClothingNeckShockCollar: 4294967295
+    # Adv Collars
+    ClothingNeckAdvancedCollarBlack: 4294967295
+    ClothingNeckAdvancedCollarBlue: 4294967295
+    ClothingNeckAdvancedCollarPink: 4294967295
+    ClothingNeckAdvancedCollarShock: 4294967295
+    ClothingNeckAdvancedCollarBell: 4294967295
+    ClothingNeckAdvancedCollarEpi: 4294967295
+    ClothingNeckAdvancedCollarEngi: 4294967295
+    ClothingNeckAdvancedCollarLogi: 4294967295
+    ClothingNeckAdvancedCollarMed: 4294967295
+    ClothingNeckAdvancedCollarSec: 4294967295
+    ClothingNeckAdvancedCollarCmd: 4294967295
+    AdvCollarModuleBondage: 4294967295
+    AdvCollarModuleShock: 4294967295
+    AdvCollarModuleJingling: 4294967295
+    AdvCollarModuleSpeechModifier: 4294967295
+    AdvCollarModulePsychicClothingLock: 4294967295
+    AdvCollarModuleClothingLock: 4294967295
+    AdvCollarModuleWaddle: 4294967295
+    AdvCollarModuleStealth: 4294967295
     # Restraints
-    FuzzycuffsBlack: 5
-    FuzzycuffsBlue: 5
-    FuzzycuffsPink: 5
-    FuzzycuffsPurple: 5
-    FuzzycuffsRed: 5
-    Handcuffs: 6
-    Zipties: 8
-    TwistTies: 6
-    ClothingOuterStraightjacketBodysuit: 4
+    FuzzycuffsBlack: 4294967295
+    FuzzycuffsBlue: 4294967295
+    FuzzycuffsPink: 4294967295
+    FuzzycuffsPurple: 4294967295
+    FuzzycuffsRed: 4294967295
+    Zipties: 4294967295
+    TwistTies: 4294967295
+    ClothingOuterStraightjacketBodysuit: 4294967295
+    # Bondage
+    BondageHarness: 4294967295
+    BondageLegSleeve: 4294967295
+    BondageArmSleeve: 4294967295
+    BondageMitts: 4294967295
+    AnkleCuffs: 4294967295
+    WristCuffs: 4294967295
+    RingGag: 4294967295
+    BallGag: 4294967295
+    BlindfoldBDSM: 4294967295
+    LeashBasic: 4294967295
+    LeashAdvanced: 4294967295
     # Whips & Paddles
-    WhipPink: 5
-    WhipTeal: 5
-    SpankPinkPaddle: 5
-    SpankTealPaddle: 5
-    # Sexy Outfits
-    CoolCoyoteClothesSexyMaid: 5
-    CoolCoyoteClothesSexyclown: 4
-    CoolCoyoteClothesSexymime: 4
-    CoolCoyoteClothesSexynursesuit: 5
-    CoolCoyoteClothesSecstripper: 4
-    CoolCoyoteClothesSecslutskirt: 4
-    CoolCoyoteClothesSecslutskirtpink: 4
-    # Loincloths & Thongs
-    CoolCoyoteClothesLoincloth: 5
-    CoolCoyoteClothesMayanLoincloth: 4
-    ClothingUniformloincloth: 5
-    ClothingUniformloinclothWhite: 5
-    ClothingUniformBeeThong: 6
-    ClothingUniformCoderThong: 6
-    ClothingUniformPlainThong: 6
+    WhipPink: 4294967295
+    WhipTeal: 4294967295
+    WhipPinkCrotch: 4294967295
+    WhipTealCrotch: 4294967295
+    SpankPinkPaddle: 4294967295
+    SpankTealPaddle: 4294967295
     # Accessories
-    ClothingHandsBeeWarmers: 6
-    ClothingHandsCoderWarmers: 6
+    Clicker: 4294967295
+    ServantBell: 4294967295
+    ClothingEyesNeuralyzer: 4294967295
     # Toys - Vibrators
-    LewdVibeGreen: 6
-    LewdVibePink: 7
-    LewdVibeRed: 6
-    LewdVibeTeal: 6
-    LewdVibeYellow: 6
-    LewdWand: 5
+    LewdVibeGreen: 4294967295
+    LewdVibePink: 4294967295
+    LewdVibeRed: 4294967295
+    LewdVibeTeal: 4294967295
+    LewdVibeYellow: 4294967295
+    LewdWand: 4294967295
     # Toys - Fleshlights
-    LewdFleshlightGreen: 5
-    LewdFleshlightPink: 6
-    LewdFleshlightRed: 5
-    LewdFleshlightTeal: 5
-    LewdFleshlightYellow: 5
+    LewdFleshlightGreen: 4294967295
+    LewdFleshlightPink: 4294967295
+    LewdFleshlightRed: 4294967295
+    LewdFleshlightTeal: 4294967295
+    LewdFleshlightYellow: 4294967295
     # Toys - Dildos
-    AvianDildo: 4
-    CanineDildo: 6
-    DoubleDildo: 5
-    DragonDildo: 5
-    HorseDildo: 5
-    NormalDildo: 7
-    TentacleDildo: 5
+    AvianDildo: 4294967295
+    CanineDildo: 4294967295
+    DoubleDildo: 4294967295
+    DragonDildo: 4294967295
+    HorseDildo: 4294967295
+    NormalDildo: 4294967295
+    TentacleDildo: 4294967295
     # Candles
-    CandleRed: 6
-    CandleBlack: 5
-    CandleRedSmall: 7
-    CandleBlackSmall: 6
+    CandleRed: 4294967295
+    CandleBlack: 4294967295
+    CandleRedSmall: 4294967295
+    CandleBlackSmall: 4294967295
     # Lubricants
-    DrinkSpaceLube: 8
-    # Snacks
-    FoodTinPeachesMaint: 8
+    DrinkSpaceLube: 4294967295
     # Weapons
-    WeaponSizeManipulator: 5
+    WeaponSizeManipulator: 4294967295
+    RemoteSignaller: 4294967295
   contrabandInventory:
+    # Adv Collars
+    ClothingNeckAdvancedCollarCC: 4294967295
+    ClothingNeckAdvancedCollarChameleon: 4294967295
+    AdvCollarModulePsychicClothingLockPlus: 4294967295
+    AdvCollarModuleClothingLockPlus: 4294967295
+    AdvCollarModuleVulnerability: 4294967295
+    AdvCollarModulePsychicShackle: 4294967295
     # Snacks
-    FoodTinPeachesMaint: 10
+    FoodTinPeachesMaint: 5
   emaggedInventory:
-    ClothingNeckShockCollar: 3
-    ClothingUniformCoderValidThong: 2
-    CanineDildoRed: 2
+    ClothingNeckCollarSyndi: 4294967295
+    ClothingNeckAdvancedCollarSyndi: 4294967295
+    CanineDildoRed: 4294967295

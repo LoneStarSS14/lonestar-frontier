@@ -1,0 +1,25 @@
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsGlovesColorSatinWhite
+  name: white satin gloves
+  description: For when regular white gloves are too bland.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Hands/Gloves/white-satin.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Hands/Gloves/white-satin.rsi
+  - type: Fiber
+    fiberColor: fibers-white
+
+- type: entity
+  parent: ClothingHandsGlovesColorSatinWhite
+  id: ClothingHandsGlovesColorSatinWhiteLong
+  name: long white satin gloves
+  description: For when regular white gloves are too bland, now with elbow coverage.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Hands/Gloves/white-satin-long.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Hands/Gloves/white-satin-long.rsi
+  - type: Fiber
+    fiberColor: fibers-white

@@ -1,0 +1,10 @@
+- type: marking
+  id: WingsRoboticMerciful
+  bodyPart: Tail
+  markingCategory: Tail
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/IPCwings.rsi
+      state: merciful_base
+    - sprite: _Goobstation/Mobs/Customization/IPCwings.rsi
+      state: merciful_light
+

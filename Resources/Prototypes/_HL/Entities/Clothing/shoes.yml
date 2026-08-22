@@ -1,0 +1,50 @@
+- type: entity
+  parent: ClothingShoesHighheelShoes
+  id: DominantHeels
+  name: dominant heels
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Shoes/dominant_heels.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Shoes/dominant_heels.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: KneeBoots
+  name: knee boots
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Shoes/knee_boots.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Shoes/knee_boots.rsi
+
+- type: entity
+  parent: ClothingShoesHighheelShoes
+  id: LatexHeels
+  name: latex heels
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Shoes/latex_heels.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Shoes/latex_heels.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: LatexSocks
+  name: latex socks
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Shoes/latex_socks.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Shoes/latex_socks.rsi
+
+- type: entity
+  parent: ClothingShoesBootsJack
+  id: ToelessJackboots
+  name: toeless jackboots
+  description: Not Space-OSHA compliant.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Shoes/toeless_jackboots.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Shoes/toeless_jackboots.rsi

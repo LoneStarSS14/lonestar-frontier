@@ -1,0 +1,167 @@
+- type: entity
+  id: CrateMedicalSuppliesSalvage
+  parent: CrateMedical
+  name: medical supplies crate
+  suffix: Salvage
+  description: Basic medical supplies.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Medkit
+        prob: 0.20
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitBrute
+        prob: 0.10
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitBurn
+        prob: 0.10
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitFilled
+        prob: 0.30
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitBruteFilled
+        prob: 0.15
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: MedkitBurnFilled
+        prob: 0.15
+        maxAmount: 2
+        orGroup: RandomMedkit
+      - id: Gauze
+        amount: 2
+        prob: 0.4
+      - id: Bloodpack
+        amount: 2
+        prob: 0.4
+      - id: BoxLatexGloves
+        prob: 0.6
+      - id: BoxSterileMask
+        prob: 0.6
+      - id: BoxMouthSwab
+        prob: 0.6
+
+- type: entityTable
+  id: LockerFillMedicineSalvage
+  table: !type:AllSelector
+    children:
+    - id: BoxSyringe
+      prob: 0.7
+    - id: ChemistryBottleEpinephrine
+      prob: 0.7
+      rolls: !type:RangeNumberSelector
+        range: 1, 2
+    - id: Bloodpack
+      prob: 0.7
+      rolls: !type:RangeNumberSelector
+        range: 1, 2
+    - !type:GroupSelector
+      children:
+      - id: Brutepack
+        prob: 0.9
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
+      - id: MedicatedSuture
+        prob: 0.1
+    - !type:GroupSelector
+      children:
+      - id: Ointment
+        prob: 0.7
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
+      - id: AloeCream
+        prob: 0.1
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
+      - id: RegenerativeMesh
+        prob: 0.1
+    - !type:GroupSelector
+      children:
+      - id: Gauze
+        prob: 0.7
+      - id: MedicatedSuture
+        prob: 0.05
+      - id: Tourniquet
+        prob: 0.25
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
+
+- type: entity
+  parent: LockerMedicine
+  id: LockerMedicineFilledSalvage
+  suffix: Salvage
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillMedicineSalvage
+
+- type: entity
+  parent: LockerParamedic
+  id: LockerParamedicFilledSalvage
+  suffix: Salvage
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: NFStorageFillGearParamedicSalvage
+
+- type: entityTable
+  id: NFStorageFillGearParamedicSalvage
+  table: !type:AllSelector
+    children:
+    - id: ClothingBeltMedicalEMTFilledSalvage
+    - !type:GroupSelector
+      children:
+      - id: Medkit
+        prob: 0.7
+      - id: MedkitFilled
+        prob: 0.3
+    - id: ClothingEyesHudMedical
+      prob: 0.9
+
+- type: entity
+  id: ClothingBeltMedicalEMTFilledSalvage
+  parent: ClothingBeltMedicalEMT
+  suffix: Paramedic, Salvage
+  components:
+  - type: StorageFill
+    contents:
+      - id: Brutepack
+        prob: 0.8
+      - id: Ointment
+        prob: 0.8
+      - id: Bloodpack
+        prob: 0.8
+      - id: Gauze
+        prob: 0.8
+      - id: EmergencyMedipen
+        maxAmount: 3
+
+- type: entity
+  id: ClothingBeltMedicalFilledSalvage
+  parent: ClothingBeltMedical
+  suffix: Salvage
+  components:
+  - type: StorageFill
+    contents:
+      - id: Brutepack
+        maxAmount: 2
+        prob: 0.8
+      - id: Ointment
+        amount: 1
+        prob: 0.8
+      - id: Bloodpack
+        amount: 1
+        prob: 0.8
+      - id: Gauze
+        prob: 0.8
+      - id: EmergencyMedipen
+
+- type: entity
+  id: VendingMachineMedicalSalvage
+  parent: [ VendingMachineMedical, BaseStructureDisableAnchoring ]
+  suffix: Unanchorable

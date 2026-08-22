@@ -1,0 +1,69 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: MaidUniformLatex
+  name: latex maid uniform
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Maids/latex.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Maids/latex.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingUniformBase
+  id: MaidUniformAlt
+  name: fancy maid uniform
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Maids/maid_alt.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Maids/maid_alt.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingUniformBase
+  id: MaidUniform
+  name: maid uniform
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Maids/maid.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Maids/maid.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MaidGloves
+  name: maid gloves
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Maids/gloves.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Maids/gloves.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MaidGlovesLatex
+  name: latex maid gloves
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Maids/gloves_latex.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Maids/gloves_latex.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon

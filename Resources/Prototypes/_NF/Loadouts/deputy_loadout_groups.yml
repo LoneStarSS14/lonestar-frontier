@@ -17,6 +17,9 @@
   minLimit: 0
   loadouts:
   - NfsdOuterClothing
+  - SeniorOfficerOuterClothing # Lonestar: It's a coat, man.
+  - BailiffOuterClothing # Lonestar: Ditto.
+  - LoadoutLSRDBomber # Lonestar
 
 - type: loadoutGroup
   id: DeputyHead

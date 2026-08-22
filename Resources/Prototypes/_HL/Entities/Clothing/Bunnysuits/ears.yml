@@ -1,0 +1,455 @@
+## Lonestar note:
+## every prototype edited to remove states and use new specific .rsi
+## Hardlight if you see this, feel free to cherrypick it.
+
+- type: entity
+  parent: ClothingHeadBase
+  id: BunnyEarsBase
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+    - Bunnysuit
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsCentcomm
+  name: central command bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/centcomm.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/centcomm.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsRed
+  name: curator's red bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/red.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/red.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsLawRed
+  name: lawyer's red bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/law_red.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/law_red.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsLawBlue
+  name: lawyer's blue bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/law_blue.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/law_blue.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsGreen
+  name: curator's green bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/green.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/green.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsNetrunner
+  name: netrunner's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/netrunner.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/netrunner.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsSyndie
+  name: blood-red bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/syndicate.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/syndicate.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsMime
+  name: mime's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/mime.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/mime.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsBartender
+  name: bartender's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/bar.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/bar.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsSecurity
+  name: security bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/security.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/security.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsUnionJack
+  name: union jack bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/union_jack.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/union_jack.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsLawBlack
+  name: lawyer's black bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/law_black.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/law_black.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsWarden
+  name: warden's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/warden.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/warden.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsHoS
+  name: head of security's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/hos.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/hos.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsCargo
+  name: cargo bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/cargo.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/cargo.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsRobotics
+  name: robotics bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/robotics.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/robotics.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsPsychologist
+  name: psychology bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/psychologist.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/psychologist.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsAtmos
+  name: atmospherics bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/atmos.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/atmos.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsBotany
+  name: botany bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/botany.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/botany.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsMiner
+  name: mining bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/miner.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/miner.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsTeal
+  name: curator's teal bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/teal.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/teal.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsQuartermaster
+  name: quartermaster's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/qm.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/qm.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsScience
+  name: science bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/science.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/science.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsChiefMedicalOfficer
+  name: chief medical officer's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/cmo.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/cmo.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsChef
+  name: chef's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/chef.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/chef.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsChiefEngineer
+  name: chief engineer's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/ce.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/ce.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsChaplain
+  name: chaplain's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/chaplain.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/chaplain.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsParamedic
+  name: paramedic bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/paramedic.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/paramedic.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsCaptain
+  name: captain's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/captain.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/captain.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsResearchDirector
+  name: research director's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/rd.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/rd.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsVirology
+  name: virology bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/virology.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/virology.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsMail
+  name: mailman's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/mail.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/mail.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsLiberty
+  name: lady liberty's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/liberty.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/liberty.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsJanitor
+  name: janitorial bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/janitor.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/janitor.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsCoroner
+  name: coroner's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/coroner.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/coroner.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsChemist
+  name: chemistry bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/chemist.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/chemist.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsEngineer
+  name: engineering bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/engineer.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/engineer.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsClown
+  name: clown's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/clown.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/clown.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsLawTeal
+  name: lawyer's teal bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/law_teal.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/law_teal.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsGenetics
+  name: genetics bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/genetics.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/genetics.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsDoctor
+  name: medical bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/doctor.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/doctor.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsPrisoner
+  name: prisoner's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/prisoner.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/prisoner.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsHero
+  name: hero's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/hero.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/hero.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsHeadOfPersonnel
+  name: head of personnel's bunny ears
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Ears/hop.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Ears/hop.rsi
+

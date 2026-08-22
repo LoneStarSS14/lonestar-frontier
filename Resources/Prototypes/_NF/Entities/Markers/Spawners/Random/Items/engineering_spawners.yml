@@ -32,9 +32,9 @@
     layers:
     - state: green
       scale: 0.7, 0.7
-    - sprite: _NF/Objects/Tools/wrench.rsi
+    - sprite: Objects/Tools/wrench.rsi # LoneStar
       state: icon
-    - sprite: _NF/Objects/Tools/crowbar.rsi
+    - sprite: Objects/Tools/crowbar.rsi # LoneStar
       state: icon
     - sprite: _NF/Markers/general.rsi
       state: questionmark

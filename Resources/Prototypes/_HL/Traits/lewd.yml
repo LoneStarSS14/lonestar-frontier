@@ -1,0 +1,8 @@
+- type: trait
+  id: Brainwasher
+  name: trait-brainwasher-name
+  description: trait-brainwasher-desc
+  category: Quirks
+  cost: 0
+  components:
+  - type: Brainwasher

@@ -10,6 +10,10 @@
         "barge, eagle, hauler, phoenix, placebo, skipper, sparrow by Mygnol (discord/github)",
         "izakaya by AF-Buyrcsp2 (discord/github)",
         "nook by Chervjakys (discord/github)",
+        "anchor, comet, crossroads, firefighter, hound, mccargo, stronghold by bartholomew_dingleberry/Bartholemew-Dingleberry (discord/github)",
+        "baroness, bodkin, bookworm, ceres, hammer, lyrae, tyne by Arimah (discord/github)",
+        "balena, jackrabbit by boolean_9386/booleandata (discord/github)",
+        "backpacker, voltage by high_kickz/highkickz (discord/github)",
         "albatross, petrel by UBlueberry (discord/github)"
     ],
     "metaAtlas": false,
@@ -22,10 +26,10 @@
             "name": "adder"
         },
         {
-            "name": "ambition"
+            "name": "albatross"
         },
         {
-            "name": "albatross"
+            "name": "ambition"
         },
         {
             "name": "apothecary"
@@ -118,6 +122,9 @@
             "name": "nightlight"
         },
         {
+            "name": "nook"
+        },
+        {
             "name": "pathfinder"
         },
         {
@@ -163,7 +170,7 @@
             "name": "vagabond"
         },
         {
-            "name": "nook"
+            "name": "voltage"
         }
     ]
 }

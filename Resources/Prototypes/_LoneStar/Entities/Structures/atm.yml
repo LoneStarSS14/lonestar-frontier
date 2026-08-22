@@ -1,0 +1,8 @@
+- type: entity
+  parent: BaseStationAdminBankATM
+  id: StationAdminBankATMGuildHouse
+  description: Used to transfer funds to and from the guild house bank account.
+  suffix: Guild House
+  components:
+  - type: StationBankATM
+    account: Guild

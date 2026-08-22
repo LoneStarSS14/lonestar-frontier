@@ -31,10 +31,13 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel1:
-            min: 2
-            max: 4
+            min: 1 # LoneStar 2-4 -> 1-2
+            max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Construction # LoneStar
+    graph: LSStairs
+    node: steel
 
 - type: entity
   id: StairStage
@@ -45,6 +48,9 @@
     sprite: Structures/stairs.rsi
     state: stairs_stage_steel
     drawdepth: FloorTiles
+  - type: Construction # LoneStar
+    graph: LSStairs
+    node: steelStage
 
 - type: entity
   id: StairWhite
@@ -55,6 +61,9 @@
     sprite: Structures/stairs.rsi
     state: stairs_white
     drawdepth: FloorTiles
+  - type: Construction # LoneStar
+    graph: LSStairs
+    node: white
 
 - type: entity
   id: StairStageWhite
@@ -65,6 +74,9 @@
     sprite: Structures/stairs.rsi
     state: stairs_stage_white
     drawdepth: FloorTiles
+  - type: Construction # LoneStar
+    graph: LSStairs
+    node: whiteStage
 
 - type: entity
   id: StairDark
@@ -75,6 +87,9 @@
     sprite: Structures/stairs.rsi
     state: stairs_dark
     drawdepth: FloorTiles
+  - type: Construction # LoneStar
+    graph: LSStairs
+    node: dark
 
 - type: entity
   id: StairStageDark
@@ -85,6 +100,9 @@
     sprite: Structures/stairs.rsi
     state: stairs_stage_dark
     drawdepth: FloorTiles
+  - type: Construction # LoneStar
+    graph: LSStairs
+    node: darkStage
 
 - type: entity
   id: StairWood
@@ -95,13 +113,45 @@
     sprite: Structures/stairs.rsi
     state: stairs_wood
     drawdepth: FloorTiles
+  ## LoneStar: Start
+  - type: Construction 
+    graph: LSStairs
+    node: wood
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank1:
+            min: 1 # LoneStar 2-4 -> 1-2
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  ## LoneStar: End
+    
 
 - type: entity
   id: StairStageWood
-  parent: Stairs
+  parent: StairWood # LoneStar
   suffix: Wood, stage
   components:
   - type: Sprite
     sprite: Structures/stairs.rsi
     state: stairs_stage_wood
     drawdepth: FloorTiles
+  - type: Construction # LoneStar
+    graph: LSStairs
+    node: white
+

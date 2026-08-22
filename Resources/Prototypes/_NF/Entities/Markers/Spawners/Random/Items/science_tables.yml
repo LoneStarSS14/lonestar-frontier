@@ -313,7 +313,7 @@
     - !type:GroupSelector # TODO: move to medical
       weight: 0.1
       children:
-      - id: CrateMedicalSupplies
+      - id: CrateMedicalSuppliesSalvage
       - id: CrateMedicalSurgery
       - id: CrateChemistryVials
       - id: CrateChemistrySupplies

@@ -1,0 +1,19 @@
+- type: marking
+  id: ElysianLarge
+  bodyPart: Tail
+  markingCategory: Tail
+  sprites:
+  - sprite: _LoneStar/Entities/Mobs/Markings/Wings/elysian.rsi
+    state: large_bottom
+  - sprite: _LoneStar/Entities/Mobs/Markings/Wings/elysian.rsi
+    state: large_top
+
+- type: marking
+  id: ElysianSmall
+  bodyPart: Tail
+  markingCategory: Tail
+  sprites:
+  - sprite: _LoneStar/Entities/Mobs/Markings/Wings/elysian.rsi
+    state: small_bottom
+  - sprite: _LoneStar/Entities/Mobs/Markings/Wings/elysian.rsi
+    state: small_top

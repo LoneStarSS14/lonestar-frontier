@@ -46,10 +46,10 @@
 # Ammo
 - type: listing
   id: UplinkNFPistol9mmMagazine
-  name: uplink-pistol-magazine-40-name # Coyote: uplink-pistol-magazine-name < uplink-pistol-magazine-40-name
-  description: uplink-pistol-magazine-40-desc # Coyote: uplink-pistol-magazine-desc < uplink-pistol-magazine-40-desc
-  icon: { sprite: /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/pistol_mag.rsi, state: icon } # Coyote: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon  < /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/pistol_mag.rsi, state: icon
-  productEntity: CSMagazinePistol40 # Coyote: .40 conversion
+  name: uplink-syndicate-40-pistol-magazine-name # LoneStar
+  description: uplink-syndicate-40-pistol-magazine-desc # LoneStar
+  icon: { sprite: /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/pistol_mag.rsi, state: icon } # Coyote
+  productEntity: CSMagazinePistol40 # Coyote
   cost:
     Telecrystal: 1
   categories:
@@ -57,12 +57,12 @@
 
 - type: listing
   id: UplinkNFMagazinePistolSubMachineGun
-  name: uplink-pistol-magazine-c20r-40-name # Coyote: uplink-pistol-magazine-c20r-name > uplink-pistol-magazine-c20r-40-name
-  description: uplink-pistol-magazine-c20r-40-desc # Coyote: uplink-pistol-magazine-c20r-desc > uplink-pistol-magazine-c20r-40-desc
-  icon: { sprite: /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/smg_mag.rsi, state: icon } # Coyote: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon  < /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/smg_mag.rsi, state: icon
-  productEntity: CSMagazineSubMachineGun40 # Coyote: .40 conversion
+  name: uplink-syndicate-40-rifle-magazine-name # LoneStar
+  description: uplink-syndicate-40-rifle-magazine-desc # LoneStar
+  icon: { sprite: /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/smg_mag.rsi, state: icon } # Coyote
+  productEntity: CSMagazineSubMachineGun40 # Coyote
   cost:
-    Telecrystal: 2
+    Telecrystal: 1 # LoneStar
   categories:
   - UplinkAmmo
 

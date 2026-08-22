@@ -1,0 +1,55 @@
+- type: constructionGraph
+  id: DirectionalFan
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: directionalfanframe
+      completed:
+      - !type:SnapToGrid
+      steps:
+        - material: Steel
+          amount: 15
+          doAfter: 4
+
+  - node: directionalfanframe
+    entity: AtmosDeviceFanDirectionalFrame
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 15
+      - !type:DeleteEntity
+      steps:
+      - tool: Screwing
+        doAfter: 2
+    - to: directionalfan
+      steps:
+        - tool: Anchoring
+          doAfter: 1
+        - material: Plasteel
+          amount: 10
+          doAfter: 2
+        - tool: Welding
+          doAfter: 5
+        - tool: Screwing
+          doAfter: 1
+
+  - node: directionalfan
+    entity: AtmosDeviceFanDirectional
+    edges:
+    - to: directionalfanframe
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlasteel1
+        amount: 10
+      steps:
+      - tool: Welding
+        doAfter: 5
+      - tool: Cutting
+        doAfter: 2
+      - tool: Prying
+        doAfter: 2
+      - tool: Screwing
+        doAfter: 2

@@ -5,7 +5,7 @@
   description: A vending machine stocked with various adult-themed items for those with... unique tastes.
   components:
   - type: VendingMachine
-    pack: HornyHawkerInventoryInfinite
+    pack: HornyHawkerInventory
     dispenseOnHitChance: 0.25
     dispenseOnHitThreshold: 2
     offState: kink-off

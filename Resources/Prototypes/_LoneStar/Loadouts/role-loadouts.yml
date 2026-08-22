@@ -1,0 +1,23 @@
+- type: roleLoadout
+  id: JobGuildLeader
+  groups:
+  - GuildLeaderHead
+  - ContractorNeck
+  - GuildLeaderJumpsuit
+  - GuildLeaderGloves
+  - GuildLeaderBackpack
+  - GuildLeaderOuterClothing
+  - GuildLeaderShoes
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorBelt
+  - GuildLeaderEars
+  - ContractorBoxSurvival
+  - GuildLeaderPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific

@@ -260,7 +260,7 @@
     - id: ChemBag
     - id: ClothingHandsGlovesLatex
     - id: ClothingMaskSterile
-    - id: ClothingEyesGlassesChemical  
+    - id: ClothingEyesGlassesChemical
 
 - type: entity
   parent: CrateMedicalSecure
@@ -274,7 +274,7 @@
     - id: ClothingHandsGlovesLatex
     - id: ClothingEyesHudMedical
     - id: ClothingMaskSterile
-    - id: ClothingBeltMedicalFilled
+    - id: ClothingBeltMedicalFilledSalvage # LoneStar
 
 - type: entity
   parent: CrateSurgery
@@ -282,35 +282,61 @@
   name: medicine chest
   description: Contains essential medical supplies.
   components:
-  - type: StorageFill
+  - type: StorageFill # LoneStar
     contents:
     - id: BoxSyringe
     - id: ChemistryBottleEpinephrine
       amount: 1
     - id: Brutepack
-      amount: 2
+      prob: 0.9
+      maxAmount: 2
+      orGroup: BruteTopical
+    - id: MedicatedSuture
+      prob: 0.1
+      maxAmount: 1
+      orGroup: BruteTopical
     - id: Ointment
-      amount: 2
+      prob: 0.7
+      maxAmount: 2
+      orGroup: BurnTopical
+    - id: RegenerativeMesh
+      prob: 0.1
+      maxAmount: 1
+      orGroup: BurnTopical
+    - id: AloeCream
+      prob: 0.2
+      maxAmount: 2
+      orGroup: BurnTopical
     - id: Bloodpack
       amount: 2
     - id: Gauze
-  
+
 - type: entity
   parent: CrateSurgery
   id: CrateMedicalSecureMedicinePierce
   name: medicine chest
   description: Contains essential medical supplies.
   components:
-  - type: StorageFill
+  - type: StorageFill # LoneStar
     contents:
     - id: BoxSyringe
     - id: ChemistryBottleEpinephrine
       amount: 1
     - id: Bloodpack
-      amount: 3
+      maxAmount: 2
     - id: Gauze
-      amount: 3
-  
+      prob: 0.6
+      maxAmount: 3
+      orGroup: TraumaTopical
+    - id: MedicatedSuture
+      prob: 0.2
+      maxAmount: 2
+      orGroup: TraumaTopical
+    - id: Tourniquet
+      prob: 0.2
+      maxAmount: 3
+      orGroup: TraumaTopical
+
 - type: entity
   parent: CrateMedical
   id: CrateMedicalRollerBeds
@@ -321,7 +347,7 @@
     contents:
     - id: RollerBedSpawnFolded
       amount: 4
-  
+
 - type: entity
   parent: CrateEvaKit
   id: CrateEvaKitParamedic
