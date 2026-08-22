@@ -32,3 +32,11 @@
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Back/Satchels/lsrd_satchel.rsi
+
+
+#- type: entity
+#  parent: ClothingBackpackSatchelNfsdBrown
+#  id: ClothingBackpackSatchelNfsdCream
+#  components:
+#  - type: Sprite
+#    sprite: _NF/Clothing/Back/Satchels/nfsd_cream.rsi # Lonestar changes, cream versions removed

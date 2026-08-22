@@ -148,7 +148,7 @@
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdBronze
-  name: LSRD bronze patrol suit
+  name: LSRD bronze patrol suit # Lonestar changes NFSD -> LSRD
   description: The standard-issue NFSD space proof suit for patrol duty. This bronze variant has junior rank markings.
   components:
   - type: Sprite
@@ -188,7 +188,7 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdGold
-  name: LSRD gold patrol suit
+  name: LSRD gold patrol suit # Lonestar changes NFSD -> LSRD
   description: The standard-issue LSRD space proof suit for patrol duty. This gold variant has superior rank markings.
   components:
   - type: Sprite
@@ -201,7 +201,7 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdSheriff
-  name: LSRD chief ranger patrol suit
+  name: LSRD chief ranger patrol suit # Lonestar changes NFSD -> LSRD
   description: The standard-issue LSRD space proof suit for patrol duty. This gold variant has chief rank markings.
   components:
   - type: Sprite
@@ -214,7 +214,7 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdBrigmedic
-  name: LSRD corpsman patrol suit
+  name: LSRD corpsman patrol suit # Lonestar changes NFSD -> LSRD
   description: The standard-issue LSRD space proof suit for patrol duty. This brighter variant has corpsman rank markings.
   components:
   - type: Sprite
@@ -227,7 +227,7 @@
 - type: entity
   parent: [BaseC4ContrabandUnredeemable, ClothingOuterHardsuitJuggernaut] # Jugger Suit
   id: ClothingOuterHardsuitNfsdExperimental
-  name: LSRD experimental combat suit
+  name: LSRD experimental combat suit # Lonestar changes NFSD -> LSRD
   description: A very heavily armored LSRD suit. This space proof marvel of engineering uses state of the art alloys to provide immense protection while sacrificing little mobility.
   components:
   - type: Sprite

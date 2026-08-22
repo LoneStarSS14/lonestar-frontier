@@ -7,6 +7,7 @@
   - ColorBlackGloves
   - FingerlessGloves
   - NfsdClothingHandsGlovesCombatNfsdBrown
+  - NfsdClothingHandsGlovesCombatNfsdCream # Lonestar changes, cream versions removed
   fallbacks:
   - CombatGloves
 
@@ -51,6 +52,9 @@
   - NfsdClothingBackpackSatchelNfsdBrown
   - NfsdClothingBackpackDuffelNfsdBrown
   - NfsdClothingBackpackMessengerNfsdBrown
+ # - NfsdClothingBackpackNfsdCream
+ # - NfsdClothingBackpackSatchelNfsdCream # Lonestar changes, cream versions removed
+ # - NfsdClothingBackpackDuffelNfsdCream
   - NfsdClothingBackpackMessengerNfsdCream
   fallbacks:
   - SecurityGuardBackpack

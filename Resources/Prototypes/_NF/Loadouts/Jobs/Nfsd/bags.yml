@@ -20,6 +20,22 @@
     back: ClothingBackpackMessengerNfsdBrown
 
 # Cream
+
+#- type: loadout
+#  id: NfsdClothingBackpackNfsdCream
+#  equipment:
+#    back: ClothingBackpackNfsdCream
+
+#- type: loadout
+#  id: NfsdClothingBackpackSatchelNfsdCream
+#  equipment:
+#    back: ClothingBackpackSatchelNfsdCream
+
+#- type: loadout
+#  id: NfsdClothingBackpackDuffelNfsdCream
+#  equipment:
+#    back: ClothingBackpackDuffelNfsdCream # Lonestar changes, cream versions removed
+
 - type: loadout
   id: NfsdClothingBackpackMessengerNfsdCream
   equipment:

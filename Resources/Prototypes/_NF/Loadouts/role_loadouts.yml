@@ -358,6 +358,7 @@
   - BrigmedicGloves
   - BrigmedicOuterClothing
   - NfsdForcedOuterClothing
+ # - NfsdShoesCream
   - NfsdShoesBrown
   - BrigmedicFace
   - BrigmedicGlasses
@@ -461,6 +462,7 @@
   - NfsdBackpackBrown
   - BailiffOuterClothing
   - NfsdForcedOuterClothing
+  # - NfsdShoesCream
   - NfsdShoesBrown
   - NfsdFace
   - NfsdGlasses

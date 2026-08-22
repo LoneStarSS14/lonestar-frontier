@@ -1192,6 +1192,11 @@
   parent: NFBaseBootRecipe
   result: ClothingHandsGlovesCombatNfsdBrown
 
+# - type: latheRecipe
+#  id: ClothingHandsGlovesCombatNfsdCream
+#  parent: NFBaseBootRecipe
+#  result: ClothingHandsGlovesCombatNfsdCream # Lonestar changes, cream versions removed
+
 # region Boots
 - type: latheRecipe
   id: ClothingShoesBootsMercenary
@@ -1217,6 +1222,11 @@
   id: ClothingShoesBootsNfsdBrown
   parent: NFBaseBootRecipe
   result: ClothingShoesBootsNfsdBrown
+
+# - type: latheRecipe
+#  id: ClothingShoesBootsNfsdCream
+#  parent: NFBaseBootRecipe
+#  result: ClothingShoesBootsNfsdCream # Lonestar changes, cream versions removed
 
 - type: latheRecipe
   id: ClothingShoesBootsLaceup

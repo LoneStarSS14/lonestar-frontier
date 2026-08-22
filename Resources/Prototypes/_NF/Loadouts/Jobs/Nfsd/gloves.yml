@@ -3,3 +3,8 @@
   id: NfsdClothingHandsGlovesCombatNfsdBrown
   equipment:
     gloves: ClothingHandsGlovesCombatNfsdBrown
+
+# - type: loadout
+#  id: NfsdClothingHandsGlovesCombatNfsdCream
+#  equipment:
+#    gloves: ClothingHandsGlovesCombatNfsdCream # Lonestar changes, cream versions removed

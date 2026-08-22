@@ -188,7 +188,9 @@
   - ClothingNeckMantleSheriff
   - ClothingNeckCloakSheriff
   - ClothingHandsGlovesCombatNfsdBrown
+  # - ClothingHandsGlovesCombatNfsdCream # Lonestar changes, cream versions removed
   - ClothingShoesBootsNfsdBrown
+  # - ClothingShoesBootsNfsdCream
   - NFPouchNfsd
   # Other
   - ClothingWalletLeatherMail

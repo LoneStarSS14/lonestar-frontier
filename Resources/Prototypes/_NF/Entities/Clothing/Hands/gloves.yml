@@ -37,6 +37,19 @@
   - type: Fiber
     fiberColor: fibers-brown
 
+#- type: entity
+#  parent: ClothingHandsGlovesCombatNfsdBrown
+#  id: ClothingHandsGlovesCombatNfsdCream
+#  name: LSRD combat gloves # Lonestar changes NFSD -> LSRD
+#  description: Insulated gloves for a chief ranger.
+#  components:
+#  - type: Sprite
+#    sprite: _NF/Clothing/Hands/Gloves/nfsd_cream.rsi
+#  - type: Clothing
+#    sprite: _NF/Clothing/Hands/Gloves/nfsd_cream.rsi 
+#  - type: Fiber
+#    fiberColor: fibers-cream # Lonestar changes, cream versions removed
+
 - type: entity
   parent: ClothingHandsGlovesHop
   id: ClothingHandsGlovesSr
