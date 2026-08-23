@@ -35,6 +35,7 @@
     BunnysuitRobotics: 4294967295
     BunnysuitQuartermaster: 4294967295
     BunnysuitCaptain: 4294967295
+    BunnysuitPink: 4294967295
     BunnysuitRed: 4294967295
     BunnysuitChiefMedicalOfficer: 4294967295
     BunnysuitHero: 4294967295
@@ -47,6 +48,7 @@
     BunnysuitMime: 4294967295
     BunnysuitSecurity: 4294967295
     ClothingHeadHatBunny: 4294967295
+    BunnyEarsPink: 4294967295
     BunnyEarsRed: 4294967295
     BunnyEarsLawRed: 4294967295
     BunnyEarsLawBlue: 4294967295
@@ -98,6 +100,7 @@
     BowtieClown: 4294967295
     BowtieSecurity: 4294967295
     BowtieCaptain: 4294967295
+    BowtiePink: 4294967295
     BowtieEngineer: 4294967295
     BowtieMiner: 4294967295
     BowtieNetrunner: 4294967295
@@ -162,6 +165,7 @@
     BunnyJacketCoroner: 4294967295
     BunnyJacketCaptain: 4294967295
     BunnyJacketChaplain: 4294967295
+    BunnyJacketPink: 4294967295
     BunnyJacketRed: 4294967295
     BunnyJacketUnionJack: 4294967295
     BunnyJacketChef: 4294967295
