@@ -377,6 +377,9 @@
   cost: 5000
   recipeUnlocks:
   - ClothingOuterHardsuitSalvage
+  # LoneStar, merged Field&Engineering
+  - ClothingOuterHardsuitAtmos
+  - ClothingOuterHardsuitEngineering
   technologyPrerequisites:
   - NFHardsuitsBasic
   position: 1, 8
@@ -397,6 +400,7 @@
   position: 1, 9
 
 - type: technology
+  abstract: true # LoneStar, merged Field&Engineering
   id: NFHardsuitsEngineering
   name: nf-research-technology-hardsuits-engineering
   entityIcon: ClothingOuterHardsuitEngineering
@@ -421,10 +425,25 @@
   - ClothingOuterHardsuitCap
   - ClothingOuterHardsuitEngineeringWhite # CE
   - ClothingOuterHardsuitLuxury
-
   technologyPrerequisites:
-  - NFHardsuitsEngineering
-  position: 3, 8
+  - NFHardsuitsField # LoneStar, merged Field&Engineering
+  position: 3, 8 # LoneStar, merged Field&Engineering
+
+- type: technology # LoneStar
+  id: NFHardsuitsAdvancedMedical
+  name: lonestar-research-technology-hardsuits-advanced-medical
+  entityIcon: ClothingOuterHardsuitResponseRed
+  discipline: NFMedical
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - ClothingOuterHardsuitResponseRed
+  - ClothingOuterHardsuitResponseBlue
+  prerequisiteLineType: Tree
+  technologyPrerequisites:
+  - NFHardsuitsMedical
+  - NFHardsuitsAdvanced
+  position: 3, 9
 
 - type: technology
   id: NFHardsuitsExperimentalProtection
