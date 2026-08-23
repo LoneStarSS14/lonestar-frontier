@@ -1,0 +1,56 @@
+#region clothes
+
+- type: entity
+  parent: BunnysuitBase
+  id: Bunnysuitpink
+  name: pink bunny suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/pink.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/pink.rsi
+
+- type: entity
+  parent: BunnyJacketBase
+  id: BunnyJacketpink
+  name: pink bunnysuit jacket
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Jackets/pink.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Jackets/pink.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarspink
+  name: pink bunny ears
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/pink.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/pink.rsi
+
+- type: entity
+  parent: BowtieBase
+  id: Bowtiepink
+  name: pink bowtie
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/pink.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/pink.rsi
+
+#region box
+- type: entity
+  parent: BunnysuitBox
+  id: BunnysuitBoxpink
+  name: pink bunnysuit box
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Bunnysuitpink
+        - id: BunnyJacketpink
+        - id: Bowtiepink
+        - id: BunnyEarspink
