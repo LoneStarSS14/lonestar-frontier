@@ -47,11 +47,11 @@ JobSTC = Station Traffic Controller
 
 # Upstream Removed
 job-name-senior-engineer = Senior Engineer
-job-name-senior-officer = Sergeant
+job-name-senior-officer = Senior Ranger
 job-name-senior-physician = Senior Physician
 job-name-senior-researcher = Senior Researcher
 
 JobSeniorEngineer = Senior Engineer
-JobSeniorOfficer = Sergeant
+JobSeniorOfficer = Senior Ranger
 JobSeniorPhysician = Senior Physician
 JobSeniorResearcher = Senior Researcher
