@@ -344,8 +344,8 @@
     - NFMercenaryAmmoBoxesStatic
     - NfsdPracticeStatic
     - NFMercenaryMagazineStatic
-    - NFTopicalsStatic
-    - CSIPCTopicalsStatic # Coyote: IPC topicals
+    #- NFTopicalsStatic # LoneStar, find a doctor right for you.
+    #- CSIPCTopicalsStatic # LoneStar, find a mechanic right for you.
     - CSMagazineStatic
     - NFMercenaryArchetypeStatic
     - NFMercenaryArchetypeMeleeStatic
