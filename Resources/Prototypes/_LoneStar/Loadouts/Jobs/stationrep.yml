@@ -1,0 +1,32 @@
+- type: loadout
+  id: StationRepClothingBunnyEarsSR
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 0
+  equipment:
+    head: BunnyEarsSR
+
+- type: loadout
+  id: StationRepClothingBunnysuitSR
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 0
+  equipment:
+    jumpsuit: BunnysuitSR
+
+- type: loadout
+  id: StationRepClothingBowtieSR
+  price: 0
+  equipment:
+    neck: BowtieSR
+
+- type: loadout
+  id: StationRepClothingBunnyJacketSR
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: BunnyJacketSR

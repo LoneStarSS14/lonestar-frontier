@@ -733,7 +733,7 @@
   cost:
     FrontierUplinkCoin: 1
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -749,7 +749,7 @@
   cost:
     FrontierUplinkCoin: 2
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -765,7 +765,7 @@
   cost:
     FrontierUplinkCoin: 5 # Coyote changed 5>8
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -781,7 +781,7 @@
   cost:
     FrontierUplinkCoin: 8
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -797,7 +797,7 @@
   cost:
     FrontierUplinkCoin: 4
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:

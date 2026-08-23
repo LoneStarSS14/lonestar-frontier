@@ -6,10 +6,10 @@
   equipment:
     shoes: ClothingShoesBootsNfsdBrownFilled
 
-- type: loadout
-  id: NfsdClothingShoesBootsCream
-  hideEffects:
-  - !type:GroupLoadoutEffect
-    proto: ShoesCapableNF
-  equipment:
-    shoes: ClothingShoesBootsNfsdCreamFilled
+# - type: loadout # Lonestar changes, cream versions removed
+#  id: NfsdClothingShoesBootsCream
+#  hideEffects:
+#  - !type:GroupLoadoutEffect
+#    proto: ShoesCapableNF
+#  equipment:
+#    shoes: ClothingShoesBootsNfsdCreamFilled

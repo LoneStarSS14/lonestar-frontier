@@ -1,7 +1,7 @@
 - type: entity
   id: BedsheetNfsd
   parent: BedsheetBase
-  name: NFSD bedsheet
+  name: LSRD bedsheet # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/bedsheets.rsi
@@ -12,7 +12,7 @@
 - type: entity
   id: BedsheetNfsdBrigmedic
   parent: BedsheetBase
-  name: brigmedic bedsheet
+  name: corpsman bedsheet # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/bedsheets.rsi
@@ -23,7 +23,7 @@
 - type: entity
   id: BedsheetNfsdSheriff
   parent: BedsheetBase
-  name: sheriff bedsheet
+  name: chief ranger bedsheet # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/bedsheets.rsi

@@ -3124,3 +3124,107 @@ Entries:
   id: 351
   time: '2026-08-20T04:10:05.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/48
+- author: DoubleHypercube
+  changes:
+    - type: Tweak
+      message: Tier III LSRD role timers lowered to eight hours (from 48).
+  id: 352
+  time: '2026-08-22T11:26:41.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/51
+- author: MidnightFoxx
+  changes:
+    - type: Tweak
+      message: completely rebrands the NFSD to the LSRD
+  id: 353
+  time: '2026-08-23T14:46:38.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/50
+- author: archee1
+  changes:
+    - type: Remove
+      message: Removes the 3 biscuit variants buyable at barista vends.
+  id: 354
+  time: '2026-08-23T14:48:26.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/44
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        Readds viewing viewing artifact effects before you trigger them. Now
+        it's completely your fault that your ship exploded!
+  id: 355
+  time: '2026-08-23T20:24:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/61
+- author: DoubleHypercube
+  changes:
+    - type: Tweak
+      message: Hug & Pet are now SFW.
+  id: 356
+  time: '2026-08-23T20:47:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/60
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        The plant manager now has an SOP to help guide them in how to play when
+        unsure.
+    - type: Remove
+      message: You can no longer buy radiation collectors at nash.
+    - type: Tweak
+      message: B-RTGs are now back to their original price of 90k.
+    - type: Remove
+      message: Bulk fuel orderables from cargo have been removed.
+  id: 357
+  time: '2026-08-23T21:03:54.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/56
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        3 new bunnysuits, pink/pirate/SR, with pirate and SR being printable by
+        their faction specific lathes, or selected as loadouts.
+    - type: Tweak
+      message: All freelancer roles can now select pirate related loadout options
+  id: 358
+  time: '2026-08-23T21:04:37.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/58
+- author: Waterwithoutanyice
+  changes:
+    - type: Add
+      message: >-
+        pirates can now buy the Brute at the blackmarket shipyard, a retrofit of
+        the bulker.
+  id: 359
+  time: '2026-08-23T21:12:54.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/55
+- author: Synthestra
+  changes:
+    - type: Add
+      message: Ice Boxes are now constructable, and are similar to sinks
+  id: 360
+  time: '2026-08-23T21:29:42.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/49
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Added eight new melee weapons!
+  id: 361
+  time: '2026-08-23T21:32:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/31
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Many, many new drinks hit the sector!
+    - type: Add
+      message: Added a recipe for the Singulo drink.
+  id: 362
+  time: '2026-08-23T21:54:17.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/52
+- author: DoubleHypercube
+  changes:
+    - type: Fix
+      message: >-
+        Random things will no longer display job icons if they shouldn't be able
+        to.
+  id: 363
+  time: '2026-08-23T21:58:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/59

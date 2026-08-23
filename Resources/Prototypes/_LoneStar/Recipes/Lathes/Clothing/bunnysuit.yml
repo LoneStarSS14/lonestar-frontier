@@ -1,0 +1,49 @@
+# SR
+- type: latheRecipe
+  id: ClothingBunnysuitSR
+  parent: NFBaseJumpsuitRecipe
+  result: BunnysuitSR
+- type: latheRecipe
+  id: ClothingBunnyJacketSR
+  parent: NFBaseCoatRecipe
+  result: BunnyJacketSR
+- type: latheRecipe
+  id: ClothingBowtieSR
+  parent: NFBaseJumpsuitRecipe
+  result: BowtieSR
+- type: latheRecipe
+  id: ClothingBunnyEarsSR
+  parent: NFBaseJumpsuitRecipe
+  result: BunnyEarsSR
+
+# Pirate
+- type: latheRecipe
+  id: ClothingBunnysuitPirate
+  parent: NFBaseJumpsuitRecipe
+  result: BunnysuitPirate
+- type: latheRecipe
+  id: ClothingBunnyJacketPirate
+  parent: NFBaseCoatRecipe
+  result: BunnyJacketPirate
+- type: latheRecipe
+  id: ClothingBowtiePirate
+  parent: NFBaseJumpsuitRecipe
+  result: BowtiePirate
+- type: latheRecipe
+  id: ClothingBunnyEarsPirate
+  parent: NFBaseJumpsuitRecipe
+  result: BunnyEarsPirate
+
+# Prisoner
+- type: latheRecipe
+  id: ClothingBunnysuitPrisoner
+  parent: NFBaseJumpsuitRecipe
+  result: BunnysuitPrisoner
+- type: latheRecipe
+  id: ClothingBowtiePrisoner
+  parent: NFBaseJumpsuitRecipe
+  result: BowtiePrisoner
+- type: latheRecipe
+  id: ClothingBunnyEarsPrisoner
+  parent: NFBaseJumpsuitRecipe
+  result: BunnyEarsPrisoner

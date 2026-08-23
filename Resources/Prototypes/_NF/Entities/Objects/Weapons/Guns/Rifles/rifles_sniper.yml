@@ -13,7 +13,7 @@
 - type: entity # Coyote: added NFSD version of the Hristov.
   id: NFWeaponRifleSniperHristovNFSD
   parent: [ BaseC4Contraband, NFBaseWeaponRifleChamber60, NFBaseWeaponFrameRifleSniperNFSD ]
-  name: NFSD Anti-Materiel Rifle
+  name: LSRD Anti-Materiel Rifle # Lonestar changes NFSD -> LSRD
   description: A portable anti-materiel rifle. On the handle is a label that says 'for authorized use only.'.
   components:
   - type: Sprite

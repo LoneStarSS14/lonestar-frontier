@@ -1,0 +1,14 @@
+- type: reaction 
+  id: Singulo
+  reactants:
+    Vodka:
+      amount: 5
+    Wine:
+      amount: 5
+    Uranium:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    Singulo: 10

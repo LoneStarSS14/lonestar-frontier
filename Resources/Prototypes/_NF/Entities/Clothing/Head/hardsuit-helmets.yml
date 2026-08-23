@@ -98,7 +98,7 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdBronze
   categories: [ HideSpawnMenu ]
-  name: NFSD patrol suit helmet
+  name: LSRD patrol suit helmet # Lonestar changes NFSD -> LSRD
   description: Lightly armored softsuit helmet for beat-cop needs.
   components:
   - type: Sprite
@@ -143,9 +143,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Head/Hardsuits/nfsd.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_corps.rsi
   - type: Clothing
-    sprite: _NF/Clothing/Head/Hardsuits/nfsd.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_corps.rsi
 
 - type: entity
   parent: ClothingHeadHelmetHardsuitNfsdBronze
@@ -161,8 +161,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdExperimental
   categories: [ HideSpawnMenu ]
-  name: NFSD experimental combat suit helmet
-  description: Heavily armored hardsuit helmet for NFSD raids.
+  name: LSRD experimental combat suit helmet # Lonestar changes NFSD -> LSRD
+  description: Heavily armored hardsuit helmet for LSRD raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_experimental.rsi
@@ -187,13 +187,13 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCombat
   categories: [ HideSpawnMenu ]
-  name: NFSD combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  name: LSRD combat suit helmet # Lonestar changes NFSD -> LSRD
+  description: Medium armored hardsuit helmet for LSRD raids.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Head/Hardsuits/nfsd_combat.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_combat.rsi
   - type: Clothing
-    sprite: _NF/Clothing/Head/Hardsuits/nfsd_combat.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_combat.rsi
   - type: PointLight
     color: "#79bb66"
   - type: PressureProtection
@@ -212,13 +212,13 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCommand
   categories: [ HideSpawnMenu ]
-  name: NFSD command combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  name: LSRD command combat suit helmet # Lonestar changes NFSD -> LSRD
+  description: Medium armored hardsuit helmet for LSRD raids.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Head/Hardsuits/nfsd_command.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_command.rsi
   - type: Clothing
-    sprite: _NF/Clothing/Head/Hardsuits/nfsd_command.rsi
+    sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_command.rsi
   - type: PointLight
     color: "#ffed7f"
   - type: PressureProtection

@@ -3,7 +3,7 @@
   parent: [BaseItem, NotContraband] # Coyote: + BaseC4ContrabandUnredeemable
   id: FrontierUplinkCoin
   suffix: 20 TC
-  description: A token awarded to the NFSD for turning in contraband. It can be exchanged in an NFSD uplink device for a variety of law enforcement tools.
+  description: A token awarded to the LSRD for turning in contraband. It can be exchanged in an LSRD uplink device for a variety of law enforcement tools.# Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Objects/Specific/Security/frontieruplinkcoin.rsi
@@ -50,7 +50,7 @@
 - type: entity
   parent: [ BaseItem, StorePresetSecurityUplink, BaseC4ContrabandUnredeemable] # Coyote: + BaseC4ContrabandUnredeemable
   id: BaseSecurityUplinkRadio
-  name: NFSD uplink
+  name: LSRD uplink # Lonestar changes NFSD -> LSRD
   description: Retro looking old radio...
   suffix: Empty
   categories: [ HideSpawnMenu ]
@@ -84,7 +84,7 @@
 - type: entity
   parent: BaseSecurityUplinkRadio
   id: BaseSecurityUplinkRadioSheriff
-  suffix: Sheriff 20
+  suffix: Chief Ranger, 20 # Lonestar changes NFSD -> LSRD
   components:
   - type: Store
     balance:
@@ -93,14 +93,14 @@
 - type: entity
   parent: BaseSecurityUplinkRadio
   id: BaseSecurityUplinkRadioOfficer
-  suffix: Officer 15
+  suffix: Ranger, 15 # Lonestar changes NFSD -> LSRD
   components:
   - type: Store
     balance:
       FrontierUplinkCoin: 15
 
 - type: entity
-  name: NFSD deployable barrier
+  name: LSRD deployable barrier # Lonestar changes NFSD -> LSRD
   id: NfsdDeployableBarrier
   description: A deployable barrier. Swipe your ID card to lock/unlock it.
   parent: DeployableBarrier

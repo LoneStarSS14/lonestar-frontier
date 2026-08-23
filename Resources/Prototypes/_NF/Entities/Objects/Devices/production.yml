@@ -156,8 +156,8 @@
 - type: entity
   id: NfsdTechFabCircuitboard
   parent: SecurityTechFabCircuitboard
-  name: NFSD techfab machine board
-  description: A machine printed circuit board for an NFSD techfab.
+  name: LSRD techfab machine board # Lonestar changes NFSD -> LSRD
+  description: A machine printed circuit board for an LSRD techfab.
   components:
     - type: Sprite
       sprite: _NF/Objects/Misc/module.rsi
@@ -202,7 +202,7 @@
 - type: entity
   id: ThrusterNfsdMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: NFSD thruster machine board
+  name: LSRD thruster machine board # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/module.rsi
@@ -269,7 +269,7 @@
 - type: entity
   id: GyroscopeNfsdMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: NFSD gyroscope machine board
+  name: LSRD gyroscope machine board # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/module.rsi
@@ -285,7 +285,7 @@
 - type: entity
   id: SmallGyroscopeNfsdMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: small NFSD gyroscope machine board
+  name: small LSRD gyroscope machine board # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/module.rsi

@@ -380,7 +380,11 @@
       orGroup: Sword
     - id: Kanabou # ah yes, swords
       orGroup: Sword
-    - id: PlasteelArmingSword
+    - id: KatanaHF # Lonestar: Changed from a dupe of arming sword
+      orGroup: Sword
+    - id: KatanaMurasama # Lonestar
+      orGroup: Sword
+    - id: KatanaPhaseblade # Lonestar
       orGroup: Sword
     - id: ClothingBeltSheathFilled # Little dangerous between the reflect and the damage
       orGroup: Sword
@@ -1120,7 +1124,7 @@
   categories: [ HideSpawnMenu ]
   parent: BaseMail
   id: MailSecurityNFHudNfsdMed
-  suffix: nfsd med hud
+  suffix: lsrd med hud # Lonestar changes NFSD -> LSRD
   components:
   - type: Mail
     contents:

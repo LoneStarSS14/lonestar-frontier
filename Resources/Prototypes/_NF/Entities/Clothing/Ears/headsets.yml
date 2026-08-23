@@ -13,7 +13,7 @@
 - type: entity
   parent: [ClothingHeadset, BaseC4ContrabandUnredeemable] # Coyote: Added BaseC4ContrabandUnredeemable
   id: ClothingHeadsetNfsdBrown
-  name: NFSD headset
+  name: LSRD headset # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Clothing/Ears/Headsets/nfsd_e_brown.rsi

@@ -8,7 +8,7 @@
     time: 108000
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 172800 # 48 hours
+    time: 28800 # 8 hours
   startingGear: BailiffGear
   icon: JobIconBailiff
   supervisors: job-supervisors-sheriff
@@ -68,5 +68,5 @@
     outerClothing: ClothingOuterCoatNfsdFormal
     neck: ClothingNeckNfsdBadgeWarden
     belt: ClothingBeltNfsdFilled
-    gloves: ClothingHandsGlovesCombatNfsdCream
-    shoes: ClothingShoesBootsNfsdCreamFilled
+    gloves: ClothingHandsGlovesCombatNfsdBrown
+    shoes: ClothingShoesBootsNfsdBrownFilled

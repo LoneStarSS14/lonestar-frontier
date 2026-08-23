@@ -7,29 +7,29 @@
   - NfsdClothingBackpackSatchelNfsdBrown
   - NfsdClothingBackpackDuffelNfsdBrown
   - NfsdClothingBackpackMessengerNfsdBrown
-  - NfsdClothingBackpackNfsdCream
-  - NfsdClothingBackpackSatchelNfsdCream
-  - NfsdClothingBackpackDuffelNfsdCream
+  # - NfsdClothingBackpackNfsdCream # Lonestar changes, cream versions removed
+  # - NfsdClothingBackpackSatchelNfsdCream # Lonestar changes, cream versions removed
+  # - NfsdClothingBackpackDuffelNfsdCream # Lonestar changes, cream versions removed
   - NfsdClothingBackpackMessengerNfsdCream
   - ContractorClothingBackpackSatchelLeather # Lonestar
   fallbacks:
   - NfsdClothingBackpackNfsdBrown
 
-- type: loadoutGroup
-  id: NfsdBackpackCream
-  name: loadout-group-contractor-backpack
-  minLimit: 0
-  loadouts:
-  - NfsdClothingBackpackNfsdCream
-  - NfsdClothingBackpackSatchelNfsdCream
-  - NfsdClothingBackpackDuffelNfsdCream
-  - NfsdClothingBackpackMessengerNfsdCream
-  - NfsdClothingBackpackNfsdBrown
-  - NfsdClothingBackpackSatchelNfsdBrown
-  - NfsdClothingBackpackDuffelNfsdBrown
-  - NfsdClothingBackpackMessengerNfsdBrown
-  fallbacks:
-  - NfsdClothingBackpackNfsdCream
+# - type: loadoutGroup # Lonestar changes, cream versions removed
+#  id: NfsdBackpackCream
+#  name: loadout-group-contractor-backpack
+#  minLimit: 0
+#  loadouts:
+#  - NfsdClothingBackpackNfsdCream
+#  - NfsdClothingBackpackSatchelNfsdCream
+#  - NfsdClothingBackpackDuffelNfsdCream
+#  - NfsdClothingBackpackMessengerNfsdCream
+#  - NfsdClothingBackpackNfsdBrown 
+#  - NfsdClothingBackpackSatchelNfsdBrown
+#  - NfsdClothingBackpackDuffelNfsdBrown
+#  - NfsdClothingBackpackMessengerNfsdBrown
+#  fallbacks:
+#  - NfsdClothingBackpackNfsdCream
 
 - type: loadoutGroup
   id: NfsdShoesBrown
@@ -37,21 +37,19 @@
   minLimit: 0
   loadouts:
   - NfsdClothingShoesBootsBrown
-  - NfsdClothingShoesBootsCream
   - LoadoutHighHeels # Lonestar
   fallbacks:
   - NfsdClothingShoesBootsBrown
 
-- type: loadoutGroup
-  id: NfsdShoesCream
-  name: loadout-group-contractor-shoes
-  minLimit: 0
-  loadouts:
-  - NfsdClothingShoesBootsCream
-  - NfsdClothingShoesBootsBrown
-  - LoadoutHighHeels # Lonestar
-  fallbacks:
-  - NfsdClothingShoesBootsCream
+# - type: loadoutGroup # Lonestar changes, cream versions removed
+#  id: NfsdShoesCream
+#  name: loadout-group-contractor-shoes
+#  minLimit: 0
+#  loadouts:
+#  - NfsdClothingShoesBootsCream
+#  - NfsdClothingShoesBootsBrown
+#  fallbacks:
+#  - NfsdClothingShoesBootsCream
 
 - type: loadoutGroup
   id: NfsdGlovesBrown
@@ -59,19 +57,19 @@
   minLimit: 0
   loadouts:
   - NfsdClothingHandsGlovesCombatNfsdBrown
-  - NfsdClothingHandsGlovesCombatNfsdCream
+  # - NfsdClothingHandsGlovesCombatNfsdCream # Lonestar changes, cream versions removed
   fallbacks:
   - NfsdClothingHandsGlovesCombatNfsdBrown
 
-- type: loadoutGroup
-  id: NfsdGlovesCream
-  name: loadout-group-contractor-gloves
-  minLimit: 0
-  loadouts:
-  - NfsdClothingHandsGlovesCombatNfsdCream
-  - NfsdClothingHandsGlovesCombatNfsdBrown
-  fallbacks:
-  - NfsdClothingHandsGlovesCombatNfsdCream
+# - type: loadoutGroup # Lonestar changes, cream versions removed
+#  id: NfsdGlovesCream
+#  name: loadout-group-contractor-gloves
+#  minLimit: 0
+#  loadouts:
+#  - NfsdClothingHandsGlovesCombatNfsdCream
+#  - NfsdClothingHandsGlovesCombatNfsdBrown
+#  fallbacks:
+#  - NfsdClothingHandsGlovesCombatNfsdCream
 
 - type: loadoutGroup
   id: NfsdBelt

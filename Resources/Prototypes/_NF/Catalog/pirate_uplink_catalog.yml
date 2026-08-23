@@ -254,7 +254,7 @@
   cost:
     Doubloon: 2
   categories:
-    - UplinkPirateWeapons
+    - UplinkPirateMelee
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -275,7 +275,7 @@
   cost:
     Doubloon: 4
   categories:
-    - UplinkPirateWeapons
+    - UplinkPirateMelee
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:

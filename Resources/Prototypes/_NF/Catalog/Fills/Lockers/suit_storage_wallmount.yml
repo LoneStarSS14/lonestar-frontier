@@ -186,7 +186,7 @@
 - type: entity
   parent: [ SuitStorageWallmount, StorageFillEVASuitNfsd ]
   id: SuitStorageWallmountEVANfsd
-  suffix: EVA, NFSD
+  suffix: EVA, LSRD # Lonestar change NFSD -> LSRD
   components:
   - type: AccessReader
     access: [["Security"]]

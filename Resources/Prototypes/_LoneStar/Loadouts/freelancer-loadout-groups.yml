@@ -1,0 +1,57 @@
+- type: loadoutGroup
+  id: FreelancerFactionJumpsuit
+  name: loadout-group-jumpsuit
+  minLimit: 0
+  loadouts:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+  - NFPirateClothingUniformJumpsuitPirateSlops
+  - NFPirateClothingUniformJumpsuitPirateLuffy
+  - FreelancerClothingBunnysuitPirate
+  subgroups:
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
+  fallbacks:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+
+- type: loadoutGroup
+  id: FreelancerFactionOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 0
+  loadouts:
+  - FreelancerClothingBunnyJacketPirate
+  subgroups:
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: FreelancerFactionHead
+  name: loadout-group-head
+  minLimit: 0
+  loadouts:
+  - NFPirateClothingHeadBandBlack
+  - NFPirateClothingHeadBandBrown
+  - NFPirateClothingHeadBandGrey
+  - NFPirateClothingHeadBandRed
+  - NFPirateClothingHeadHatPirateTricord
+  - NFPirateClothingHeadHatPirateLuffy
+  - FreelancerClothingBunnyEarsPirate
+  subgroups:
+  - MercenaryHead
+  - PilotHead
+  - ContractorHead
+  fallbacks:
+  - NFPirateClothingHeadBandBlack
+
+- type: loadoutGroup
+  id: FreelancerFactionNeck
+  name: loadout-group-neck
+  minLimit: 0
+  loadouts:
+  - FreelancerClothingBowtiePirate
+  subgroups:
+  - ContractorNeck

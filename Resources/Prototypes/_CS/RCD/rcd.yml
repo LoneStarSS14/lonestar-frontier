@@ -128,7 +128,7 @@
 - type: rcd
   id: AirlockNfsdLocked
   category: Airlocks
-  sprite: { sprite: _NF/Structures/Doors/Airlocks/Standard/nfsd.rsi, state: closed }
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Standard/lsrd.rsi, state: closed }
   mode: ConstructObject
   prototype: AirlockNfsdLocked
   cost: 4
@@ -140,7 +140,7 @@
 - type: rcd
   id: AirlockNfsdGlassLocked
   category: Airlocks
-  sprite: { sprite: _NF/Structures/Doors/Airlocks/Standard/nfsd.rsi, state: closed }
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Glass/lsrd.rsi, state: closed }
   mode: ConstructObject
   prototype: AirlockNfsdGlassLocked
   cost: 4

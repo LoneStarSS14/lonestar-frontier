@@ -1,0 +1,26 @@
+- type: reagent
+  id: NebulaDream
+  name: reagent-name-nebula-dream
+  parent: BaseAlcohol
+  desc: reagent-desc-nebula-dream
+  physicalDesc: reagent-physical-desc-nebula
+  flavor: nebuladream
+  color: "#750494"
+  metamorphicSprite:
+    sprite: _HL/Objects/Consumable/Drinks/nebuladream.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  fizziness: 0.34
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.0465
+      - !type:AdjustReagent
+        reagent: Pomelustine
+        amount: 0.5

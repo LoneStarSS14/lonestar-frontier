@@ -2,7 +2,7 @@
   name: public affairs pen
   parent: PenEmbeddable
   id: PublicAffairsPen
-  description: A weighty fountain pen for NFSD paperwork wizards. Writes in a thin blue line.
+  description: A weighty fountain pen for LSRD paperwork wizards. Writes in a thin blue line. # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/pens.rsi

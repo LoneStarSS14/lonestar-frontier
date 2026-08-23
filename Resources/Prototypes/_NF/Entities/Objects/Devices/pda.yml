@@ -127,7 +127,7 @@
 - type: entity
   parent: [BaseSecurityPDA, BaseC4Contraband]
   id: SheriffPDA
-  name: sheriff PDA
+  name: chief ranger PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA is the law.
   components:
   - type: Pda
@@ -170,7 +170,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: CadetPDA
-  name: cadet PDA
+  name: junior ranger PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA could be the law.
   components:
   - type: Pda
@@ -196,7 +196,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: DeputyPDA
-  name: deputy PDA
+  name: ranger PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA is close to being the law.
   components:
   - type: Pda
@@ -222,7 +222,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: BrigmedicNFPDA
-  name: brigmedic PDA
+  name: corpsman PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA heals the law.
   components:
   - type: Pda
@@ -248,7 +248,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: SergeantPDA
-  name: sergeant PDA
+  name: senior ranger PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA puts the law on their back.
   components:
   - type: Pda
@@ -274,7 +274,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: BailiffPDA
-  name: bailiff PDA
+  name: armorer PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA puts the law on their back.
   components:
   - type: Pda
