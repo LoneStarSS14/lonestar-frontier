@@ -40,9 +40,6 @@
     entity: IceBoxUnfinished
     edges:
     - to: body
-      conditions:
-      - !type:EntityAnchored
-        anchored: false
       completed:
       - !type:SpawnPrototype
         prototype: PlumbingAssembly
@@ -58,9 +55,6 @@
     entity: IceBoxUnfinished
     edges:
     - to: body
-      conditions:
-      - !type:EntityAnchored
-        anchored: false
       completed:
       - !type:SpawnPrototype
         prototype: PlumbingAssembly
@@ -85,9 +79,6 @@
         completed:
         - !type:SpawnPrototype
           prototype: FreezerElectronics
-        conditions:
-        - !type:EntityAnchored
-          anchored: false
         steps:
         - tool: Prying
           doAfter: 1
