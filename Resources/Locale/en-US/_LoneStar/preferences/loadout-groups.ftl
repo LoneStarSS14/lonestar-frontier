@@ -8,8 +8,9 @@ loadout-group-belt = Belt
 loadout-group-shoes = Shoes
 loadout-group-neck = Neck
 loadout-group-pda = PDA
-loadout-group-backpack = Backpack
-loadout-group-glasses = Glasses
+## Wizden already had these 2
+#loadout-group-backpack = Backpack
+#loadout-group-glasses = Glasses
 loadout-group-face = Mask
 loadout-group-backpack-items = Backpack Items
 loadout-group-hand-items = In-hand Items
