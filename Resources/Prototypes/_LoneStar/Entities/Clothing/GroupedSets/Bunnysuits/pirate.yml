@@ -2,7 +2,7 @@
 
 - type: entity
   parent: BunnysuitBase
-  id: Bunnysuitpirate
+  id: BunnysuitPirate
   name: pirate bunny suit
   components:
   - type: Sprite
@@ -12,7 +12,7 @@
 
 - type: entity
   parent: BunnyJacketBase
-  id: BunnyJacketpirate
+  id: BunnyJacketPirate
   name: pirate bunnysuit jacket
   components:
   - type: Sprite
@@ -22,7 +22,7 @@
 
 - type: entity
   parent: BunnyEarsBase
-  id: BunnyEarspirate
+  id: BunnyEarsPirate
   name: pirate bunny ears
   components:
   - type: Sprite
@@ -32,7 +32,7 @@
 
 - type: entity
   parent: BowtieBase
-  id: Bowtiepirate
+  id: BowtiePirate
   name: pirate bowtie
   components:
   - type: Sprite
@@ -50,7 +50,7 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: Bunnysuitpirate
-        - id: BunnyJacketpirate
-        - id: Bowtiepirate
-        - id: BunnyEarspirate
+        - id: BunnysuitPirate
+        - id: BunnyJacketPirate
+        - id: BowtiePirate
+        - id: BunnyEarsPirate
