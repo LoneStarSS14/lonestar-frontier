@@ -1,6 +1,6 @@
 # Note: THIS SHOULD NEVER SPAWN OR BE SPAWNED. It is a BASETYPE. Stats are irrelevant.
 - type: entity
-  parent: ClothingOuterVestWebMercenary #Inherit all changes from this. Hopefully will prevent compatability issues in the future. Also has an extra bit of capacity for magazines/spare cells.
+  parent: ClothingOuterArmorBase #Inherit all changes from this. Hopefully will prevent compatability issues in the future.
   id: SyntheticBorgArmorBase # Base Armor Type for borgs
   abstract: true
   components:
