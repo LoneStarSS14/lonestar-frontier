@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ]
+  id: ClothingOuterCoatLsrdArmorLongCoat
+  name: LSRD armored long coat
+  description: Big iron on his hip... but armored...
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrdarmor_long.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrdarmor_long.rsi
