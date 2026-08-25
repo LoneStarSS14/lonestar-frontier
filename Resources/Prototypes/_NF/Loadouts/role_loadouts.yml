@@ -356,11 +356,11 @@
   - BrigmedicNeck
   - BrigmedicJumpsuit
   - BrigmedicGloves
- # - NfsdBackpackCream # Lonestar changes, cream versions removed
+  # - NfsdBackpackCream # Lonestar changes, cream versions removed
   - NfsdBackpackBrown
   - BrigmedicOuterClothing
   - NfsdForcedOuterClothing
- # - NfsdShoesCream # Lonestar changes, cream versions removed
+  # - NfsdShoesCream # Lonestar changes, cream versions removed
   - NfsdShoesBrown
   - BrigmedicFace
   - BrigmedicGlasses
