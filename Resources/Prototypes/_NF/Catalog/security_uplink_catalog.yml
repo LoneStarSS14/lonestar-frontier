@@ -1253,7 +1253,7 @@
         - Bailiff
         - SeniorOfficer
         - Cadet
-        - Officer
+        - Deputy
         - NFDetective
 
 - type: listing
@@ -1277,14 +1277,14 @@
         - Bailiff
         - SeniorOfficer
         - Brigmedic
-        - Officer
+        - Deputy
         - NFDetective
 
 - type: listing
   id: UplinkSecurityContrabandPulseCarbine
   name:  uplink-pulsecarbine-name
   description: uplink-pulsecarbine-desc
-  productEntity: WeaponPulseRifleLSRD
+  productEntity: WeaponPulseCarbineLSRD
   icon: { sprite: _LoneStar/Objects/Weapons/Guns/Battery/lsrdpulse_carbine.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 24
@@ -1305,7 +1305,7 @@
   id: UplinkSecurityContrabandPulseRifle
   name:  uplink-pulseheavy-name
   description: uplink-pulseheavy-desc
-  productEntity: WeaponPulseHeavyLSRD
+  productEntity: WeaponPulseRifleLSRD
   icon: { sprite: _LoneStar/Objects/Weapons/Guns/Battery/lsrdpulse_heavy.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 45
@@ -1342,7 +1342,7 @@
         - Bailiff
         - SeniorOfficer
         - Brigmedic
-        - Officer
+        - Deputy
         - NFDetective
 
 - type: listing
@@ -1369,7 +1369,7 @@
   name:  uplink-forensicpadbox-name
   description: uplink-forensicpadbox-desc
   productEntity: BoxForensicPad
-  icon: { sprite: Textures/Misc/bureucracy.rsi, state: paper, color: yellow }
+  icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FrontierUplinkCoin: 2
   categories:
@@ -1388,7 +1388,7 @@
   name:  uplink-evidencemarkerbox-name
   description: uplink-evidencemarkerbox-desc
   productEntity: BoxEvidenceMarkers
-  icon: { sprite: Textures/Specific/Detective/evidence_marker.rsi, state: one }
+  icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FrontierUplinkCoin: 1
   categories:
@@ -1423,7 +1423,7 @@
         - Bailiff
         - SeniorOfficer
         - Brigmedic
-        - Officer
+        - Deputy
         - NFDetective
 
 - type: listing
