@@ -356,9 +356,11 @@
   - BrigmedicNeck
   - BrigmedicJumpsuit
   - BrigmedicGloves
+  # - NfsdBackpackCream # Lonestar changes, cream versions removed
+  - NfsdBackpackBrown
   - BrigmedicOuterClothing
   - NfsdForcedOuterClothing
- # - NfsdShoesCream # Lonestar changes, cream versions removed
+  # - NfsdShoesCream # Lonestar changes, cream versions removed
   - NfsdShoesBrown
   - BrigmedicFace
   - BrigmedicGlasses
@@ -459,6 +461,8 @@
   - BailiffHead
   - BailiffNeck
   - BailiffJumpsuit
+  # - NfsdGlovesCream # Lonestar changes, cream versions removed
+  - NfsdGlovesBrown
   - NfsdBackpackBrown
   - BailiffOuterClothing
   - NfsdForcedOuterClothing
@@ -485,6 +489,8 @@
   - SeniorOfficerHead
   - SeniorOfficerNeck
   - SeniorOfficerJumpsuit
+  # - NfsdGlovesCream # Lonestar changes, cream versions removed
+  - NfsdGlovesBrown
   - NfsdBackpackBrown
   - SeniorOfficerOuterClothing
   - NfsdForcedOuterClothing
@@ -510,6 +516,8 @@
   - SheriffHead
   - SheriffNeck
   - SheriffJumpsuit
+  # - NfsdGlovesCream # Lonestar changes, cream versions removed
+  - NfsdGlovesBrown
   - NfsdBackpackBrown
   - SheriffOuterClothing
   - NfsdForcedOuterClothing

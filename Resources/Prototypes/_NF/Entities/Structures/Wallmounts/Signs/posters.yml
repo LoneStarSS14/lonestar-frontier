@@ -299,8 +299,8 @@
 - type: entity
   parent: PosterBase
   id: NFPosterContrabandFscLogo
-  name: "Far Star Corporation Logo"
-  description: "The Far Star Corporation: Together we will seek the rising light of the farthest stars."
+  name: "Far Star Commerce Logo"
+  description: "Far Star Commerce: You can't spell adventure without venture capital.'"
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
