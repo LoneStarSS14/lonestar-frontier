@@ -2,7 +2,7 @@
   parent: [ BaseC4ContrabandUnredeemable, ClothingHeadHelmetBase ]
   id: ClothingHeadHelmetLsrdRaid
   name: LSRD special operations helmet
-  description: An armored helmet for use with the syndicate raid suit. Very stylish.
+  description: An armored helmet for use with the LSRD special operations suit.
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Head/Helmets/lsrd-raid.rsi

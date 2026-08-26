@@ -8,3 +8,10 @@
     sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrdarmor_long.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrdarmor_long.rsi
+  - type: Armor # same as bounty hunter flak trenchoat
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.4
+        Heat: 0.9
