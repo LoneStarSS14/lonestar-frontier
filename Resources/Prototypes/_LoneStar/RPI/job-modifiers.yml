@@ -1,0 +1,4 @@
+
+- type: rpiJobModifier
+  id: rpiJobModifierGuildLeader
+  multiplier: 2.0

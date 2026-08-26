@@ -110,6 +110,7 @@
       Frontier: 0.25
       Nfsd: 0.05
       Medical: 0.15 # Coyote adding medical passive income
+      Guild: 0.05 # LoneStar
     cashSlot:
       whitelist:
         components:
@@ -171,6 +172,9 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    taxAccounts: # LoneStar
+      Frontier: 0.15
+      Guild: 0.35
   - type: Advertise
     pack: AmmoVendAds
   - type: SpeakOnUIClosed
@@ -874,7 +878,8 @@
   - type: VendingMachine
     pack: NanoMedPlusInventory
     taxAccounts: # Frontier
-      Medical: 0.4 # Frontier
+      Medical: 0.35 # Frontier
+      Guild: 0.15
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -1413,6 +1418,10 @@
     brokenState: broken
     normalState: normal-unshaded
     denyState: deny-unshaded
+    taxAccounts: # LoneStar
+      Frontier: 0.25
+      Nfsd: 0.05
+      Guild: 0.2
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/mining.rsi
     layers:
@@ -1501,6 +1510,7 @@
     pack: NanoMedInventory
     taxAccounts: # Frontier
       Medical: 0.4 # Frontier
+      Guild: 0.1 # LoneStar
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -1598,6 +1608,11 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    taxAccounts: # LoneStar
+      Frontier: 0.25
+      Nfsd: 0.05
+      Medical: 0.05
+      Guild: 0.15
   - type: Advertise
     pack: SecDrobeAds
   - type: SpeakOnUIClosed

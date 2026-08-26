@@ -5,9 +5,9 @@
   description: Cute bunny ears.
   components:
   - type: Sprite
-    sprite: Clothing/Head/Misc/bunny.rsi
+    sprite: _HL/Clothing/Bunnysuit/Ears/white.rsi # LoneStar, changed to use HL's sprite
   - type: Clothing
-    sprite: Clothing/Head/Misc/bunny.rsi
+    sprite: _HL/Clothing/Bunnysuit/Ears/white.rsi # LoneStar
 
 - type: entity
   parent: ClothingHeadBase

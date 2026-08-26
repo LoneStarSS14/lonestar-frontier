@@ -58,6 +58,7 @@
     # Accessories
     Clicker: 4294967295
     ServantBell: 4294967295
+    ClothingEyesNeuralyzer: 4294967295
     # Toys - Vibrators
     LewdVibeGreen: 4294967295
     LewdVibePink: 4294967295
@@ -92,6 +93,7 @@
   contrabandInventory:
     # Adv Collars
     ClothingNeckAdvancedCollarCC: 4294967295
+    ClothingNeckAdvancedCollarChameleon: 4294967295
     AdvCollarModulePsychicClothingLockPlus: 4294967295
     AdvCollarModuleClothingLockPlus: 4294967295
     AdvCollarModuleVulnerability: 4294967295

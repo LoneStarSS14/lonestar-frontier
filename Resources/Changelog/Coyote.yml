@@ -3024,3 +3024,103 @@ Entries:
   id: 342
   time: '2026-08-17T20:26:50.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/28
+- author: Synthestra
+  changes:
+    - type: Add
+      message: >-
+        Steel and wood stair tiles are now constructable, with 2 steel or 2
+        planks respectively.
+    - type: Fix
+      message: Wooden stair tiles now drop planks instead of steel when broken.
+  id: 343
+  time: '2026-08-19T07:35:56.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/40
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Added over twenty new wings!
+  id: 344
+  time: '2026-08-19T10:38:59.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/33
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Added brainwashing!
+  id: 345
+  time: '2026-08-19T11:52:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/32
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: >-
+        LSRD High Command has relented to union lobbying and now allows its
+        officers to wear coats.
+    - type: Add
+      message: >-
+        LSRD are now allowed to bring fancy leather satchels & high heels as
+        part of their uniform.
+    - type: Add
+      message: LSRD may bring HUDs & eyepatches instead of glasses.
+    - type: Tweak
+      message: Removed the pricing cost on high heels & leather satchels.
+  id: 346
+  time: '2026-08-19T17:34:42.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/41
+- author: archee1
+  changes:
+    - type: Tweak
+      message: The L6 now comes with 2 extra box magazines instead of 4
+    - type: Fix
+      message: Muskets now come with .30 ammo boxes instead of .60 ammo
+    - type: Fix
+      message: .40 magazines in the contravend are now named properly
+  id: 347
+  time: '2026-08-19T20:53:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/45
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Added a Vampirism trait!
+  id: 348
+  time: '2026-08-19T21:51:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/30
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Gyroscopes, like thrusters, can be linked to the signal network to be
+        turned on/off/ toggled.
+  id: 349
+  time: '2026-08-19T21:54:24.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/46
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        You can now buy a chameleon advanced collar at the hawker through its
+        hidden inventory, it can only disguise as bowties and other collar
+        variants.
+    - type: Tweak
+      message: Collars of all kinds now take a brief moment to equip/unequip
+    - type: Fix
+      message: Foldable clothes are now foldable while worn
+    - type: Tweak
+      message: >-
+        The white bunnysuit from coyote has been updated, along with the default
+        'bunny ears'.
+    - type: Tweak
+      message: Advanced collars now support 7 modules instead of 5
+    - type: Fix
+      message: >-
+        Bunnysuit bowties now display if they are tied or untied as items, the
+        ears also no longer appear when in pockets.
+  id: 350
+  time: '2026-08-20T01:36:06.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/47
+- author: DoubleHypercube
+  changes:
+    - type: Fix
+      message: You can now only brainwash players.
+  id: 351
+  time: '2026-08-20T04:10:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/48

@@ -1,0 +1,9 @@
+- type: loadout
+  id: ClothingHeadsetGuildLeader
+  equipment:
+    ears: ClothingHeadsetGuildLeader
+
+- type: loadout
+  id: GuildLeaderPDA
+  equipment:
+    id: GuildLeaderPDA

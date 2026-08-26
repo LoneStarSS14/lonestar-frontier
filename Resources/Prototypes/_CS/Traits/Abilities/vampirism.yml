@@ -1,0 +1,30 @@
+- type: entity
+  id: ActionSuckBlood
+  name: Suck Blood
+  parent: BaseAction
+  description: Drain someone's blood for your own.
+  components:
+  - type: Action
+    useDelay: 2
+    itemIconStyle: BigAction
+    icon:
+      sprite: _LoneStar/Interface/Actions/traits.rsi
+      state: fangs
+  - type: TargetAction
+    checkCanAccess: true
+    range: 2
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - Actor
+    canTargetSelf: false
+    event: !type:SuckBloodEvent
+
+- type: trait
+  id: Bloodsucker
+  name: trait-bloodsucker-name
+  description: trait-bloodsucker-desc
+  category: Quirks
+  cost: 0
+  components:
+  - type: Bloodsucker

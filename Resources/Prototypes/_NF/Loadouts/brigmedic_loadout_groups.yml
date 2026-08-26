@@ -17,6 +17,9 @@
   minLimit: 0
   loadouts:
   - BrigmedicOuterClothing
+  - SeniorOfficerOuterClothing # Lonestar: It's a coat, man.
+  - BailiffOuterClothing # Lonestar: Ditto.
+  - LoadoutLSRDBomber # Lonestar
 
 - type: loadoutGroup
   id: BrigmedicHead

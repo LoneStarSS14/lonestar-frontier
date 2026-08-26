@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Statebased",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "fangs",
+      "copyright": "Taken from Paradise Station 13; modified by DoubleHypercube"
+    }
+  ]
+}

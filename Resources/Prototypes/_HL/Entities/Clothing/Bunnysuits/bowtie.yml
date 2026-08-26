@@ -8,8 +8,10 @@
     - Bunnysuit
     - ClothMade
     - WhitelistChameleon
+    - WhitelistChameleonAdvancedCollar # LoneStar, Chameleon Collar
   - type: Appearance
   - type: Foldable
+    folded: true # LoneStar, default tied, for chameleon.
     canFoldInsideContainer: true
     unfoldVerbText: bowtie-untie
     foldVerbText: bowtie-tie
@@ -23,6 +25,15 @@
     - state: icon-tied
       map: ["foldedLayer"]
       visible: false
+  - type: GenericVisualizer # LoneStar, fixes tied/untied sprites
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: {visible: true}
+          False: {visible: false}
+        unfoldedLayer:
+          True: {visible: false}
+          False: {visible: true}
 
 - type: entity
   parent: BowtieBase

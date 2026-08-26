@@ -4,9 +4,17 @@
   abstract: true
   components:
   - type: Clothing
+    equipDelay: 1 # LoneStar
+    unequipDelay: 3 # LoneStar
   - type: LeashAnchor
     offset: 0, 0.22
   - type: Engraveable
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+    - WhitelistChameleonAdvancedCollar
 
 - type: entity
   parent: ClothingNeckCollarBase

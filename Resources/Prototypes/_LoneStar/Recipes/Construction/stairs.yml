@@ -1,0 +1,103 @@
+- type: construction
+  id: LSWoodStairs
+  name: construction-ghost-stairs-wood
+  graph: LSStairs
+  startNode: start
+  targetNode: wood
+  category: construction-category-furniture
+  canBuildInImpassable: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: LSWoodStageStairs
+  name: construction-ghost-stairs-wood-stage
+  graph: LSStairs
+  startNode: start
+  targetNode: woodStage
+  category: construction-category-furniture
+  canBuildInImpassable: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+  
+- type: construction
+  id: LSSteelStairs
+  name: construction-ghost-stairs-steel
+  graph: LSStairs
+  startNode: start
+  targetNode: steel
+  category: construction-category-furniture
+  canBuildInImpassable: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: LSSteelStageStairs
+  name: construction-ghost-stairs-steel-stage
+  graph: LSStairs
+  startNode: start
+  targetNode: steelStage
+  category: construction-category-furniture
+  canBuildInImpassable: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: LSWhiteStairs
+  name: construction-ghost-stairs-white
+  graph: LSStairs
+  startNode: start
+  targetNode: white
+  category: construction-category-furniture
+  canBuildInImpassable: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: LSWhiteStageStairs
+  name: construction-ghost-stairs-white-stage
+  graph: LSStairs
+  startNode: start
+  targetNode: whiteStage
+  category: construction-category-furniture
+  canBuildInImpassable: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: LSDarkStairs
+  name: construction-ghost-stairs-dark
+  graph: LSStairs
+  startNode: start
+  targetNode: dark
+  category: construction-category-furniture
+  canBuildInImpassable: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: LSDarkStageStairs
+  name: construction-ghost-stairs-dark-stage
+  graph: LSStairs
+  startNode: start
+  targetNode: darkStage
+  category: construction-category-furniture
+  canBuildInImpassable: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked

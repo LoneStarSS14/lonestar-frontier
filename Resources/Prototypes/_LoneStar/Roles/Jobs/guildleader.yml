@@ -1,0 +1,67 @@
+- type: job
+  id: GuildLeader
+  name: job-name-guild-leader
+  description: job-description-guild-leader
+  playTimeTracker: JobGuildLeader
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 72000 # 20 hrs
+    - !type:RoleTimeRequirement
+      role: JobMercenary
+      time: 28800 # 8 hrs
+  overrideRequirement:
+  - !type:RoleTimeRequirement
+    role: JobGuildLeader
+    time: 600 # 10 minutes to requalify
+  startingGear: GuildLeaderGear
+  alwaysUseSpawner: true
+  icon: "JobIconGuildLeader"
+  requireAdminNotify: true
+  supervisors: job-supervisors-centcom
+  weight: 170
+  displayWeight: 56 # 1 Higher than DOC
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  - !type:AddRpiAuraSpecial
+    aurasToAdd:
+    - rpiAuraGuildLeader
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierGuildLeader
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: GuildLeaderGear
+  equipment:
+    pocket1: WeaponEnergyRevolverAntique
+    pocket2: AppraisalTool
+  storage:
+    back:
+    - StationAdministrationConsoleGuidHouseFlatpack
+    - MobileComputerTabletopCommsFlatpack
+    - BoxFolderGreen
+    - RubberStampGuildLeader
+
+- type: chameleonOutfit
+  id: GuildLeaderChameleonOutfit
+  job: GuildLeader
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretSecurity
+    ears: ClothingHeadsetGuildLeader
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskGasExplorer
+    neck: ClothingNeckScarfStripedBrown
+    jumpsuit: ClothingUniformJumpsuitPrivateSec
+    outerClothing: ClothingOuterVestWebMercenaryBlack
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsJack

@@ -1,0 +1,7 @@
+- type: rpiAura
+  id: rpiAuraGuildLeader
+  multiplier: 3.0
+  maxDistance: 35.0
+  minutesTillFullEffect: 25
+  minutesUntilDecayDelay: 15
+  minutesUntilDecayToZero: 10

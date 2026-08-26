@@ -1,0 +1,21 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyGuildLeader
+  name: guild leader encryption key
+  suffix: DO NOT MAP
+  description: An encryption key for the sectors guild leader.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Medical
+    - Supply
+    - Command
+    defaultChannel: Common
+  - type: Item
+    sprite: _NF/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _NF/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: guildleader_label

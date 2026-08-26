@@ -559,7 +559,7 @@
     contents:
     - id: NFWeaponRifleMusketExpedition
       amount: 1
-    - id: NFAmmunitionBoxRifle60
+    - id: NFAmmunitionBoxRifle30 # LoneStar
       amount: 2
 
 - type: entity
@@ -614,7 +614,7 @@
     - id: NFWeaponLightMachineGunL6Expedition
       amount: 1
     - id: NFMagazineBoxRifle20
-      amount: 4
+      amount: 2 # LoneStar
 
 #region Melee
 - type: entity

@@ -66,6 +66,7 @@
   - ShipyardSurveyor
   - ShipyardTide
   - ShipyardVagabond
+  - ShipyardVoltage
   - ShipyardVitalis
   # Coyote
   - ShipyardGlizzy
@@ -377,6 +378,12 @@
   id: ShipyardVagabond
   name: guide-entry-shipyard-vagabond
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Vagabond.xml"
+
+- type: guideEntry
+  id: ShipyardVoltage
+  name: guide-entry-shipyard-voltage
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Voltage.xml"
+
 
 - type: guideEntry
   id: ShipyardTide

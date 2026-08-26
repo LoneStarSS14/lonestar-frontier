@@ -54,3 +54,22 @@
   components:
   - type: Flatpack
     entity: PrizeCounter
+
+# region Guild Leader
+- type: entity
+  parent: BaseNFFlatpack
+  id: StationAdministrationConsoleGuidHouseFlatpack
+  name: guild house administration console flatpack
+  description: A flatpack used for constructing an administration console for the guild house.
+  components:
+  - type: Flatpack
+    entity: ComputerTabletopStationAdminBankATMGuildHouse
+  - type: Sprite
+    layers:
+    - state: medical_console # TODO: might need unique, though medical doesnt look wrong.
+  - type: StaticPrice
+    price: 0
+  - type: CargoSellBlacklist
+  - type: Item
+    shape:
+    - 0,0,1,1

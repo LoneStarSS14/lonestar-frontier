@@ -1,5 +1,27 @@
 #region collars
-
+- type: entity
+  parent: ClothingNeckAdvancedCollarBase
+  id: ClothingNeckAdvancedCollarChameleon
+  name: advanced chameleon collar
+  description: A modular black collar that can have various functional modules installed.
+  components:
+    - type: Sprite
+      sprite: Floof/Clothing/Neck/collar_black.rsi
+    - type: Clothing
+      sprite: Floof/Clothing/Neck/collar_black.rsi
+      equipDelay: 5 # Longer to 'hint' that its not a regular whatever its looking like
+    - type: Tag
+      tags: [] # ignore "WhitelistChameleon" tag
+    - type: ChameleonClothing
+      requireTag: WhitelistChameleonAdvancedCollar
+      slot: [NECK]
+      default: ClothingNeckAdvancedCollarBlack
+    - type: UserInterface
+      interfaces:
+        enum.ChameleonUiKey.Key:
+          type: ChameleonBoundUserInterface
+    - type: StaticPrice # Luxury item, gives reason to all the others existing.
+      vendPrice: 5000
 
 # region Modules
 - type: entity

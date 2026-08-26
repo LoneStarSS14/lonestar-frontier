@@ -2,19 +2,29 @@ using Content.Shared.Gravity;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
-using Content.Shared.Physics;
-using Robust.Shared.Utility;
+using Robust.Shared.Exceptions;
+using Robust.Shared.Network;
 
 namespace Content.Shared.DoAfter;
 
 public abstract partial class SharedDoAfterSystem : EntitySystem
 {
     [Dependency] private readonly IDynamicTypeFactory _factory = default!;
+    [Dependency] private readonly INetManager _netManager = default!;
+    [Dependency] private readonly IRuntimeLog _runtimeLog = default!;
     [Dependency] private readonly SharedGravitySystem _gravity = default!;
     [Dependency] private readonly SharedInteractionSystem _interaction = default!;
     [Dependency] private readonly SharedHandsSystem _hands = default!;
 
     private DoAfter[] _doAfters = Array.Empty<DoAfter>();
+
+    // HardLight: snapshot buffer reused across ticks to avoid per-tick allocation when iterating
+    // active do-afters. We snapshot before iterating because per-uid Update can raise events that
+    // add or remove DoAfterComponent/ActiveDoAfterComponent on *other* entities (e.g. completing
+    // a doafter that ends another doafter via interaction), which invalidates the live
+    // EntityQueryEnumerator and throws "Collection was modified" from the outer MoveNext call,
+    // tearing down the entire DoAfter tick.
+    private readonly List<(EntityUid Uid, ActiveDoAfterComponent Active, DoAfterComponent Comp)> _updateSnapshot = new();
 
     public override void Update(float frameTime)
     {
@@ -24,10 +34,65 @@ public abstract partial class SharedDoAfterSystem : EntitySystem
         var xformQuery = GetEntityQuery<TransformComponent>();
         var handsQuery = GetEntityQuery<HandsComponent>();
 
+        _updateSnapshot.Clear();
         var enumerator = EntityQueryEnumerator<ActiveDoAfterComponent, DoAfterComponent>();
         while (enumerator.MoveNext(out var uid, out var active, out var comp))
         {
-            Update(uid, active, comp, time, xformQuery, handsQuery);
+            _updateSnapshot.Add((uid, active, comp));
+        }
+
+        for (var snapIndex = 0; snapIndex < _updateSnapshot.Count; snapIndex++)
+        {
+            var (uid, active, comp) = _updateSnapshot[snapIndex];
+
+            // Skip entries whose components were removed by a previous iteration this tick.
+            if (active.Deleted || comp.Deleted)
+                continue;
+
+            try
+            {
+                Update(uid, active, comp, time, xformQuery, handsQuery);
+            }
+            // ReSharper disable once RedundantCatchClause
+            catch (Exception e)
+            {
+#if EXCEPTION_TOLERANCE
+                // Doafter in question failed to complete..
+                // Doafters are kind of a critical game mechanic, so we specially handle failure.
+                _runtimeLog.LogException(e, $"{nameof(SharedDoAfterSystem)} on {ToPrettyString(uid)}");
+
+                if (_netManager.IsClient)
+                    continue; // Move along, we can't cancel these ourselves and just need to not completely die.
+
+                // Cancel all the doafters for this entity to avoid repeats.
+                // We don't try to remove them ourselves to keep the logic reasonable.
+                foreach (var (key, doAfter) in comp.DoAfters)
+                {
+                    try
+                    {
+                        InternalCancel(doAfter, comp);
+                    }
+                    catch (Exception e2)
+                    {
+                        _runtimeLog.LogException(e2, $"{nameof(SharedDoAfterSystem)} failed to cleanup {doAfter} @ {key} while handling a failure.");
+                        // REMARK: As written, InternalCancel will always do the necessary side effect of
+                        //         configuring the cancellation time. We need this side effect, so dear reader
+                        //         if you ever make it so InternalCancel can throw an exception before that
+                        //         happens, update this to set cancel time itself in a finally block.
+                        //
+                        //         If the doafter is one using async, this CAN result in that task leaking forever.
+                        //         So we check that here, too.
+                        if (comp.AwaitedDoAfters.Remove(doAfter.Index, out var tcs))
+                        {
+                            tcs.TrySetCanceled();
+                        }
+                    }
+                }
+#else
+                throw; // No tolerance, just rethrow.
+#endif
+            }
+
         }
     }
 

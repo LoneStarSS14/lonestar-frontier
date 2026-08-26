@@ -11,6 +11,7 @@
   - NfsdClothingBackpackSatchelNfsdCream
   - NfsdClothingBackpackDuffelNfsdCream
   - NfsdClothingBackpackMessengerNfsdCream
+  - ContractorClothingBackpackSatchelLeather # Lonestar
   fallbacks:
   - NfsdClothingBackpackNfsdBrown
 
@@ -37,6 +38,7 @@
   loadouts:
   - NfsdClothingShoesBootsBrown
   - NfsdClothingShoesBootsCream
+  - LoadoutHighHeels # Lonestar
   fallbacks:
   - NfsdClothingShoesBootsBrown
 
@@ -47,6 +49,7 @@
   loadouts:
   - NfsdClothingShoesBootsCream
   - NfsdClothingShoesBootsBrown
+  - LoadoutHighHeels # Lonestar
   fallbacks:
   - NfsdClothingShoesBootsCream
 
@@ -111,6 +114,8 @@
   hidden: false # No point in showing this, it gets auto-selected.
   loadouts:
   - NfsdClothingEyesGlasses
+  - LoadoutLSRDHud # Lonestar
+  - LoadoutLSRDHudEyepatch # Lonestar
   fallbacks:
   - NfsdClothingEyesGlasses
 

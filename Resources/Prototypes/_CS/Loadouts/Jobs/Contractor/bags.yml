@@ -1,5 +1,5 @@
 - type: loadout
   id: ContractorClothingBackpackSatchelLeather
-  price: 100
+  price: 0 # Lonestar
   equipment:
     back: ClothingBackpackSatchelLeather
