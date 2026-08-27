@@ -18,8 +18,7 @@
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
+    - !type:NoBlockingOrSameFacingWindowDirectional
   objectType: Structure
   placementMode: SnapgridCenter
 
@@ -31,8 +30,7 @@
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
+    - !type:NoBlockingOrSameFacingWindowDirectional
   objectType: Structure
   placementMode: SnapgridCenter
 
