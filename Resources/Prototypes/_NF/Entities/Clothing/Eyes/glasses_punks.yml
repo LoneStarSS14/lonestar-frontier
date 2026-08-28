@@ -36,6 +36,13 @@
     mappedColors:
       Base: CyberpunkDark
       Decor: CyberpunkDark
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+    - Biological
+    - IPC # Coyote: Add IPC damage container
+
 
 # HUDs
 - type: entity
