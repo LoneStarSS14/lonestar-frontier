@@ -1,0 +1,220 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredDressExquisiteCyan
+  name: exquisite cyan dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Exquisite/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Exquisite/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredDressFancyCyan
+  name: fancy cyan dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Fancy/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Fancy/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredDressFlowyCyan
+  name: flowy cyan dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Flowy/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Flowy/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredDressFormalCyan
+  name: formal cyan dress
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Formal/cyan.rsi
+    - type: Clothing
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Formal/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredDressFrillyCyan
+  name: frilly cyan dress
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Frilly/cyan.rsi
+    - type: Clothing
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Frilly/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredDressProfessionalCyan
+  name: professional cyan dress
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Professional/cyan.rsi
+    - type: Clothing
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Professional/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredDressSleekCyan
+  name: sleek cyan dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Sleek/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Sleek/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredDressStylishCyan
+  name: stylish cyan dress
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Stylish/cyan.rsi
+    - type: Clothing
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Stylish/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredDressSuaveCyan
+  name: suave cyan dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Suave/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Dress/Suave/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformColouredSuitExquisiteCyan
+  name: exquisite cyan suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Exquisite/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Exquisite/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformColouredSuitFancyCyan
+  name: fancy cyan suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Fancy/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Fancy/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformColouredSuitFlowyCyan
+  name: flowy cyan suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Flowy/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Flowy/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformColouredSuitFormalCyan
+  name: formal cyan suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Formal/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Formal/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformColouredSuitStylishCyan
+  name: stylish cyan suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Stylish/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Stylish/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformColouredSuitSuaveCyan
+  name: suave cyan suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Suave/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Suit/Suave/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredTurtleneckSkirtFancyCyan
+  name: fancy cyan turtleneck skirt
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Skirt/Fancy/cyan.rsi
+    - type: Clothing
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Skirt/Fancy/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredTurtleneckSkirtPlainCyan
+  name: plain cyan turtleneck skirt
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Skirt/Plain/cyan.rsi
+    - type: Clothing
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Skirt/Plain/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredTurtleneckSkirtStylishCyan
+  name: stylish cyan turtleneck skirt
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Skirt/Stylish/cyan.rsi
+    - type: Clothing
+      sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Skirt/Stylish/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColouredTurtleneckSkirtClassicalCyan
+  name: classical cyan turtleneck skirt
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Skirt/Classical/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Skirt/Classical/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformColouredTurtleneckSuitFancyCyan
+  name: fancy cyan turtleneck suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Suit/Fancy/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Suit/Fancy/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformColouredTurtleneckSuitStylishCyan
+  name: stylish cyan turtleneck suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Suit/Stylish/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Suit/Stylish/cyan.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformColouredTurtleneckSuitClassicalCyan
+  name: classical cyan turtleneck suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Suit/Classical/cyan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Colours/Turtleneck/Suit/Classical/cyan.rsi
+

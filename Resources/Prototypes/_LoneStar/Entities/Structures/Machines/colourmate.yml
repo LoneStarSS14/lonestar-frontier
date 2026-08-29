@@ -1,0 +1,90 @@
+- type: entity
+  parent: VendingMachineClothing
+  id: VendingMachineClothingBlue
+  name: ColourMate Blue
+  description: A vending machine for clothing. Now in Xenoborg Blue!
+  components:
+  - type: VendingMachine
+    pack: CMIBlue
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/VendingMachines/ColourMate/blue.rsi
+  - type: PointLight
+    color: "#3db83b"
+
+- type: entity
+  parent: VendingMachineClothing
+  id: VendingMachineClothingCyan
+  name: ColourMate Cyan
+  description: A vending machine for clothing. Now in Security Cyan!
+  components:
+  - type: VendingMachine
+    pack: CMICyan
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/VendingMachines/ColourMate/cyan.rsi
+  - type: PointLight
+    color: "#3db83b"
+
+- type: entity
+  parent: VendingMachineClothing
+  id: VendingMachineClothingGreen
+  name: ColourMate Green
+  description: A vending machine for clothing. Now in Retro Green!
+  components:
+  - type: VendingMachine
+    pack: CMIGreen
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/VendingMachines/ColourMate/green.rsi
+  - type: PointLight
+    color: "#3db83b"
+
+- type: entity
+  parent: VendingMachineClothing
+  id: VendingMachineClothingOrange
+  name: ColourMate Orange
+  description: A vending machine for clothing. Now in Soviet Orange!
+  components:
+  - type: VendingMachine
+    pack: CMIOrange
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/VendingMachines/ColourMate/orange.rsi
+  - type: PointLight
+    color: "#3db83b"
+
+- type: entity
+  parent: VendingMachineClothing
+  id: VendingMachineClothingPurple
+  name: ColourMate Purple
+  description: A vending machine for clothing. Now in Regal Purple!
+  components:
+  - type: VendingMachine
+    pack: CMIPurple
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/VendingMachines/ColourMate/purple.rsi
+  - type: PointLight
+    color: "#3db83b"
+
+- type: entity
+  parent: VendingMachineClothing
+  id: VendingMachineClothingRed
+  name: ColourMate Red
+  description: A vending machine for clothing. Now in Syndicate Red!
+  components:
+  - type: VendingMachine
+    pack: CMIRed
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/VendingMachines/ColourMate/red.rsi
+  - type: PointLight
+    color: "#3db83b"
+
+- type: entity
+  parent: VendingMachineClothing
+  id: VendingMachineClothingYellow
+  name: ColourMate Yellow
+  description: A vending machine for clothing. Now in Dishsponge Yellow!
+  components:
+  - type: VendingMachine
+    pack: CMIYellow
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/VendingMachines/ColourMate/yellow.rsi
+  - type: PointLight
+    color: "#3db83b"

@@ -6,16 +6,24 @@
   components:
   - type: VendingMachine
     pack: BnuuyInventory
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/VendingMachines/bnuuy.rsi
+
+- type: entity
+  parent: VendingMachineClothing
+  id: VendingMachineCoyote
+  name: CoyoteVend
+  description: A vending machine made for coyotes, by coyotes, of coyotes.
+  components:
+  - type: VendingMachine
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    ejectState: eject-unshaded
     denyState: deny-unshaded
-  - type: Advertise
-    pack: ClothesMateAds
-  - type: SpeakOnUIClosed
-    pack: GenericVendGoodbyes
+    pack: CoyoteInventory
   - type: Sprite
-    sprite: _LoneStar/Structures/Machines/Vending/bnuuy.rsi
+    sprite: _LoneStar/Structures/Machines/VendingMachines/coyote.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -24,7 +32,4 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: PointLight
-    radius: 1.8
-    energy: 3.0
-    color: "#3db83b"
+

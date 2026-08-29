@@ -7,7 +7,7 @@
   sprites: MobHumanSprites
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobHumanDummy
-  skinColoration: Hues # In the future, humans can be any color!
+  skinColoration: HumanToned # In the future, humans can be any color!
   kind:
   - BasicHumanlike
 

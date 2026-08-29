@@ -26,7 +26,23 @@
     AdvCollarModulePsychicClothingLock: 4294967295
     AdvCollarModuleClothingLock: 4294967295
     AdvCollarModuleWaddle: 4294967295
-    AdvCollarModuleStealth: 4294967295
+    AdvCollarModuleStealth: 429496729
+    # Outfits
+    ClothingUniformJumpskirtMaid: 4294967295
+    ClothingUniformJumpskirtElegantMaid: 4294967295
+    ClothingHeadHatMaidHeadband: 4294967295
+    ClothingUniformJumpskirtMaidDressLong: 4294967295
+    ClothingOuterVestPinafore: 4294967295
+    MaidUniformLatex: 4294967295
+    MaidUniformAlt: 4294967295
+    MaidUniform: 4294967295
+    MaidGloves: 4294967295
+    MaidGlovesLatex: 4294967295
+    DominantHeels: 4294967295
+    KneeBoots: 4294967295
+    LatexSocks: 4294967295
+    LatexHeels: 4294967295
+    ToelessJackboots: 4294967295
     # Restraints
     FuzzycuffsBlack: 4294967295
     FuzzycuffsBlue: 4294967295
