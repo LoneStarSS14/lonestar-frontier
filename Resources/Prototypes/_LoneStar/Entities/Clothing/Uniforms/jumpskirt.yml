@@ -353,17 +353,17 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpskirtKimonoRed
-  name: blue pressed kimono
+  id: ClothingUniformJumpskirtKimonoGreen
+  name: green pressed kimono
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-blue.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-green.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-blue.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-green.rsi
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpskirtKimonoRed
+  id: ClothingUniformJumpskirtKimonoWhite
   name: white pressed kimono
   components:
   - type: Sprite
