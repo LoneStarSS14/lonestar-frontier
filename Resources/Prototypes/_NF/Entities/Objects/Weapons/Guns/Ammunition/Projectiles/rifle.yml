@@ -116,7 +116,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 38
+        Piercing: 33 # LoneStar
 
 - type: entity
   id: NFBulletRifle25Overpressure
@@ -127,7 +127,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 43
+        Piercing: 35 # LoneStar
 
 - type: entity
   id: NFBulletRifle25Incendiary
@@ -138,8 +138,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 23 # 0.6 * base total dmg
-        Heat: 15 # 0.4 * base total dmg
+        Piercing: 26.4 # LoneStar
+        Heat: 6.6 # LoneStar
 
 - type: entity
   id: NFBulletRifle25Uranium
@@ -150,8 +150,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 23 # 0.6 * (1.4 * base total dmg)
-        Radiation: 15 # 0.4 * (1.4 * base total dmg)
+        Piercing: 26.4 # LoneStar
+        Radiation: 13.2 # LoneStar
 
 - type: entity
   id: NFBulletRifle25Practice
@@ -173,7 +173,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 0
+        Piercing: 0.33 # LoneStar
   - type: StaminaDamageOnCollide
     damage: 38 # ~3 hits to stun
 
@@ -187,7 +187,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 41
+        Piercing: 36 # LoneStar
 
 - type: entity
   id: NFBulletRifle30Overpressure
@@ -198,7 +198,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 46
+        Piercing: 38 # LoneStar
 
 - type: entity
   id: NFBulletRifle30Incendiary
@@ -209,8 +209,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
-        Heat: 16
+        Piercing: 28.8 # LoneStar
+        Heat: 7.2 # LoneStar
 
 - type: entity
   id: NFBulletRifle30Uranium
@@ -221,8 +221,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 34 # 0.6 * (1.4 * base total dmg) # Coyote: apply rad ammo damage characteristics to 30 rifle
-        Radiation: 23 # 0.4 * (1.4 * base total dmg) # Coyote: apply rad ammo damage characteristics to 30 rifle
+        Piercing: 28.8 # LoneStar
+        Radiation: 14.4 # LoneStar
 
 - type: entity
   id: NFBulletRifle30Practice
@@ -244,9 +244,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 0
+        Piercing: 0.36 # LoneStar
   - type: StaminaDamageOnCollide
-    damage: 41 # ~3 hits to stun
+    damage: 36 # LoneStar
 
 #region .60 rifle
 - type: entity
