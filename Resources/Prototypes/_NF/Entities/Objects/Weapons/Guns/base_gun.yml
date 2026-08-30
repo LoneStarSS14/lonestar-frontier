@@ -166,8 +166,8 @@
     - Back
     - suitStorage
   - type: SpeedModifiedOnWield
-    walkModifier: 0.77
-    sprintModifier: 0.66
+    walkModifier: 0.9
+    sprintModifier: 0.83
 
 #region Crossbows
 - type: entity
