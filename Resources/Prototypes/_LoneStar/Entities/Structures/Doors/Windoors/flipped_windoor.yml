@@ -42,6 +42,7 @@
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Windoors/Flipped/windoor.rsi
     layers:
+    - state: secure_underlay
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
     - state: closed_unlit
@@ -114,6 +115,7 @@
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Windoors/Flipped/plasma.rsi
     layers:
+    - state: secure_underlay
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
     - state: closed_unlit
@@ -187,6 +189,7 @@
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Windoors/Flipped/uranium.rsi
     layers:
+    - state: secure_underlay
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
     - state: closed_unlit
