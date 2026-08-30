@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation and modified by Swept at https://github.com/tgstation/tgstation/commit/40d75cc340c63582fb66ce15bf75a36115f6bdaa, Spicy Rock Pizza modified from margherita pizza by mkanke, cotton made by mlexf (discord 1143460554963427380), world peazza modified from margherita by MisterImp (GitHub), Pepperoni modified from margherita by Chokovit, Cheese modified from margherita by Chokovit",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "cheese-slice"
+    },
+    {
+      "name": "cotton-slice"
+    },
+    {
+      "name": "donkpocket-slice"
+    },
+    {
+      "name": "firecracker-slice"
+    },
+    {
+      "name": "fivecheese-slice"
+    },
+    {
+      "name": "margherita-slice"
+    },
+    {
+      "name": "meat-slice"
+    },
+    {
+      "name": "moldy-slice"
+    },
+    {
+      "name": "mushroom-slice"
+    },
+    {
+      "name": "pepperoni-slice"
+    },
+    {
+      "name": "pesto-slice"
+    },
+    {
+      "name": "pineapple-slice"
+    },
+    {
+      "name": "pizza-cheese"
+    },
+    {
+      "name": "pizza-cotton"
+    },
+    {
+      "name": "pizza-dank"
+    },
+    {
+      "name": "pizza-donkpocket"
+    },
+    {
+      "name": "pizza-firecracker"
+    },
+    {
+      "name": "pizza-fivecheese"
+    },
+    {
+      "name": "pizza-margherita"
+    },
+    {
+      "name": "pizza-meat"
+    },
+    {
+      "name": "pizza-mushroom"
+    },
+    {
+      "name": "pizza-pepperoni"
+    },
+    {
+      "name": "pizza-pesto"
+    },
+    {
+      "name": "pizza-pineapple"
+    },
+    {
+      "name": "pizza-sassysage"
+    },
+    {
+      "name": "pizza-uranium"
+    },
+    {
+      "name": "pizza-vegetable"
+    },
+    {
+      "name": "pizza-worldpeas"
+    },
+    {
+      "name": "sassysage-slice"
+    },
+    {
+      "name": "uranium-slice"
+    },
+    {
+      "name": "vegetable-slice"
+    },
+    {
+      "name": "worldpeas-slice"
+    }
+  ]
+}

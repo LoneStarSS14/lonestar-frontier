@@ -1,11 +1,11 @@
-# Curd Cheese
+# Curd Cheese #Lone Star Recipe
 - type: reaction
   id: CurdlingCurdCheese
   impact: Low
   quantized: true
   reactants:
     Milk:
-      amount: 15
+      amount: 10
     Vinegar:
       amount: 5
     Cream:
@@ -14,15 +14,15 @@
     - !type:CreateEntityReactionEffect
       entity: FoodCurdCheese
       number: 2
-      
-# Mozzarella
+
+# Mozzarella #Lone Star Recipe
 - type: reaction
   id: CurdlingMozzarella
   impact: Low
   quantized: true
   reactants:
     Milk:
-      amount: 15
+      amount: 10
     Cream:
       amount: 10
     Enzyme:
@@ -42,4 +42,3 @@
       amount: 1
   products:
     OilGhee: 1
-    

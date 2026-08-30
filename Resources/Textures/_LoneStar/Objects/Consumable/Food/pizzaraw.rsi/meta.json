@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation and modified by Swept at https://github.com/tgstation/tgstation/commit/40d75cc340c63582fb66ce15bf75a36115f6bdaa, Spicy Rock Pizza modified from margherita pizza by mkanke, cotton made by mlexf (discord 1143460554963427380), world peazza modified from margherita by MisterImp (GitHub)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "dough-pizza"
+    },
+    {
+      "name": "pizza-cheese-raw"
+    },
+    {
+      "name": "pizza-cotton-raw"
+    },
+    {
+      "name": "pizza-donkpocket-raw"
+    },
+    {
+      "name": "pizza-firecracker-raw"
+    },
+    {
+      "name": "pizza-fourcheese-raw"
+    },
+    {
+      "name": "pizza-margherita-raw"
+    },
+    {
+      "name": "pizza-meat-raw"
+    },
+    {
+      "name": "pizza-mushroom-raw"
+    },
+    {
+      "name": "pizza-pepperoni-raw"
+    },
+    {
+      "name": "pizza-pesto-raw"
+    },
+    {
+      "name": "pizza-pineapple-raw"
+    },
+    {
+      "name": "pizza-sassysage-raw"
+    },
+    {
+      "name": "pizza-uranium-raw"
+    },
+    {
+      "name": "pizza-vegetable-raw"
+    }
+  ]
+}

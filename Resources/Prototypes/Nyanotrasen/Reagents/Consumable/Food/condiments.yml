@@ -1,4 +1,4 @@
-- type: reagent
+- type: reagent #Lone Star Recipe
   id: TomatoSauce
   name: reagent-name-tomatosauce
   group: Foods
@@ -11,11 +11,14 @@
     Food:
       effects:
       - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.15
+        reagent: OilOlive
+        amount: 0.10
       - !type:AdjustReagent
         reagent: JuiceTomato
-        amount: 0.60
+        amount: 0.10
+      - !type:AdjustReagent
+        reagent: TableSalt
+        amount: 0.10
 
 - type: reagent
   id: Pesto
