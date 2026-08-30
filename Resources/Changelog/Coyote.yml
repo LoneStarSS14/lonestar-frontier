@@ -3313,3 +3313,10 @@ Entries:
   id: 372
   time: '2026-08-30T06:11:22.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/86
+- author: Synthestra
+  changes:
+    - type: Add
+      message: Mirrors are now constructable, with steel and silver
+  id: 373
+  time: '2026-08-30T17:05:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/88
