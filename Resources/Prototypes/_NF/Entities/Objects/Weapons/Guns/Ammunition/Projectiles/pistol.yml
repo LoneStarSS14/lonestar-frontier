@@ -9,7 +9,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 22
+        Piercing: 20 # LoneStar
 
 - type: entity
   id: NFBulletPistol35Overpressure
@@ -20,7 +20,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 22 # LoneStar
 
 - type: entity
   id: NFBulletPistol35Incendiary
@@ -31,8 +31,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 13 # 0.6 * base total dmg
-        Heat: 9 # 0.4 * base total dmg
+        Blunt: 16 # LoneStar
+        Heat: 4 # LoneStar
 
 - type: entity
   id: NFBulletPistol35Uranium
@@ -43,8 +43,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 18 # 0.6 * (1.4 * base total dmg)
-        Radiation: 12 # 0.4 * (1.4 * base total dmg)
+        Blunt: 16 # LoneStar
+        Radiation: 8 # LoneStar
 
 - type: entity
   id: NFBulletPistol35Practice
@@ -68,8 +68,8 @@
   - type: Projectile
     damage:
       types:
-        Shock: 11
-        Blunt: 11
+        Shock: 8 # LoneStar
+        Blunt: 16 # LoneStar
 
 - type: entity
   id: NFBulletPistol35Rubber
@@ -80,9 +80,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 0
+        Blunt: 0.2 # LoneStar
   - type: StaminaDamageOnCollide
-    damage: 22
+    damage: 20 # LoneStar
 
 #region .45 pistol
 - type: entity
