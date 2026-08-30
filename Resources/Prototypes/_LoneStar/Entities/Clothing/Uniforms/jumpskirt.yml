@@ -350,3 +350,13 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtPerformerAlt
+  name: red performers jumpskirt
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/performer-alt.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/performer-alt.rsi
