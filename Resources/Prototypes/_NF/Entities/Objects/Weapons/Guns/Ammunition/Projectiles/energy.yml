@@ -83,7 +83,7 @@
       collection: WeakHit
     forceSound: true
   - type: StaminaDamageOnCollide
-    damage: 22 # ~5 shots to stun, ~3 to slow
+    damage: 24 # LoneStar
 
 - type: entity
   id: NFBulletDisablerLow
@@ -100,7 +100,7 @@
       collection: WeakHit
     forceSound: true
   - type: StaminaDamageOnCollide
-    damage: 18 # ~6 shots to stun, ~3 to slow
+    damage: 20 # LoneStar
 
 #region Kinetic bolts
 - type: entity
