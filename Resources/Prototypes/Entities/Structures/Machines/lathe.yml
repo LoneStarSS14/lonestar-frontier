@@ -133,6 +133,7 @@
     #- PowerCellsStatic # Frontier
     #- ElectronicsStatic # Frontier
     #- ServiceStatic # Frontier
+    - LSAccessibilityPack #LoneStar accessibility Pack recipes
     - NFLightsStatic # Frontier
     - NFBasicToolsStatic # Frontier
     - NFBasicStorageStatic # Frontier

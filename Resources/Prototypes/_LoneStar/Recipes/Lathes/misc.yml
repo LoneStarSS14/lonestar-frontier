@@ -1,0 +1,69 @@
+- type: latheRecipe #LoneStar Blue flare dispenser recipe
+  id: BoxDispenserFlareBlue
+  result: BoxDispenserFlareBlue
+  parent: NFBaseLightTubeRecipe
+  materials:
+    Steel: 1800
+
+- type: latheRecipe  #LoneStar Magenta flare dispenser recipe
+  id: BoxDispenserFlareMagenta
+  result: BoxDispenserFlareMagenta
+  parent: NFBaseLightTubeRecipe
+  materials:
+    Steel: 1800
+
+- type: latheRecipe #LoneStar Magenta lantern recipe
+  id: LanternMagenta
+  result: LanternMagenta
+  parent: NFBaseLightTubeRecipe
+  materials:
+    Steel: 100
+    Glass: 100
+    Plastic: 100
+
+- type: latheRecipe #LoneStar Blue lantern recipe
+  id: LanternBlue
+  result: LanternBlue
+  parent: NFBaseLightTubeRecipe
+  materials:
+    Steel: 100
+    Glass: 100
+    Plastic: 100
+
+- type: latheRecipe #LoneStar Blue floodlight recipe
+  id: FloodlightBlue
+  result: FloodlightBlue
+  parent: NFBaseLightTubeRecipe
+  materials:
+    Glass: 1000
+    Plastic: 1000
+    Steel: 1500
+
+- type: latheRecipe #LoneStar Magenta floodlight recipe
+  id: FloodlightMagenta
+  result: FloodlightMagenta
+  parent: NFBaseLightTubeRecipe
+  materials:
+    Glass: 1000
+    Plastic: 1000
+    Steel: 1500
+
+- type: latheRecipe #Lonestar Blue Exterior light tube recipe
+  id: ExteriorLightTubeBlue
+  result: ExteriorLightTubeBlue
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe #LoneStar Magenta Exterior light recipe
+  id: ExteriorLightTubeMagenta
+  result: ExteriorLightTubeMagenta
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe #LoneStar Blue Exterior light bulb recipe
+  id: ExteriorLightBulbBlue
+  result: ExteriorLightBulbBlue
+  parent: NFColoredLightRecipe
+
+- type: latheRecipe #LoneStar Magenta Exterior light bulb recipe
+  id: ExteriorLightBulbMagenta
+  result: ExteriorLightBulbMagenta
+  parent: NFColoredLightRecipe
