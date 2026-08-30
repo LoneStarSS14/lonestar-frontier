@@ -1,6 +1,6 @@
-- type: entity  #LoneStar Adds Green flare dispenser box for colorblind accessiblity
+- type: entity
   id: BoxDispenserFlareGreen
-  parent: BaseAmmoProvider # this is for cycling flares out and not spawning 9 entities
+  parent: BoxDispenserFlare
   name: Green flare dispenser
   description: Dispenses green emergency flares.
   components:
@@ -10,17 +10,11 @@
       color: "#73FF73"
     - state: flare
   - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-      - Flare
     proto: FlareGreen
-    capacity: 12
-  - type: StaticPrice
-    price: 10
 
-- type: entity #LoneStar Adds magenta flare dispenser for colorblind accessibility
+- type: entity
   id: BoxDispenserFlareMagenta
-  parent: BaseAmmoProvider # this is for cycling flares out and not spawning 9 entities
+  parent: BoxDispenserFlare
   name: magenta flare dispenser
   description: Dispenses magenta emergency flares.
   components:
@@ -30,41 +24,14 @@
       color: "#FF73FF"
     - state: flare
   - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-      - Flare
     proto: FlareMagenta
-    capacity: 12
-  - type: StaticPrice
-    price: 10
 
-- type: entity #LoneStar Adds green flares for dispenser
+- type: entity
   name: green flare
-  parent: [BaseItem, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny
+  parent: Flare
   id: FlareGreen
   description: A flare that produces a very bright green light for a short while. Point the flame away from yourself.
   components:
-  - type: GoblinPreciousTrash # Frontier
-  - type: Tag
-    tags:
-    - Flare
-    - Trash
-  - type: SpaceGarbage
-  - type: ExpendableLight
-    glowDuration: 225
-    fadeOutDuration: 15
-    iconStateOn: flare_unlit
-    iconStateSpent: flare_spent
-    turnOnBehaviourID: turn_on
-    fadeOutBehaviourID: fade_out
-    litSound:
-      path: /Audio/Items/Flare/flare_on.ogg
-    loopedSound:
-      path: /Audio/Items/Flare/flare_burn.ogg
-      params:
-        loop: true
-        volume: -10
-        maxDistance: 5
   - type: Sprite
     sprite: Objects/Misc/flare.rsi
     layers:
@@ -78,94 +45,16 @@
     - map: [ enum.ExpendableLightVisualLayers.Overlay ]
       state: flare_unlit
       color: "#00FF00"
-  - type: Icon
-    sprite: Objects/Misc/flare.rsi
-    state: icon
-  - type: Item
-    sprite: Objects/Misc/flare.rsi
-    heldPrefix: unlit
-    size: Tiny
-  - type: Appearance
   - type: PointLight
     enabled: false
     color: "#00FF00"
-    radius: 1.0
-    energy: 9.0
-    netsync: false
-  - type: IgnitionSource
-    temperature: 1000
-  - type: LightBehaviour
-    behaviours:
-    - !type:FadeBehaviour # have the radius start small and get larger as it starts to burn
-      id: turn_on
-      maxDuration: 45.0
-      startValue: 2.5
-      endValue: 10.0
-    - !type:RandomizeBehaviour # weaker flicker as it fades out
-      id: fade_out
-      interpolate: Nearest
-      minDuration: 0.001
-      maxDuration: 0.001
-      startValue: 4.0
-      endValue: 8.0
-      property: Energy
-      isLooped: true
-    - !type:FadeBehaviour # fade out radius as it burns out
-      id: fade_out
-      maxDuration: 15.0
-      startValue: 10.0
-      endValue: 1.0
-  - type: Extractable
-    grindableSolutionName: flare
-  - type: SolutionContainerManager
-    solutions:
-      flare:
-        maxVol: 20
-        reagents:
-        # flare casing
-        - ReagentId: Iron
-          Quantity: 10
-        # red phosphorus = red flare trust
-        - ReagentId: Phosphorus
-          Quantity: 3
-        - ReagentId: Carbon
-          Quantity: 1
-        - ReagentId: Oxygen
-          Quantity: 2
-        # fuel or something
-        - ReagentId: Charcoal
-          Quantity: 2
-        - ReagentId: Sulfur
-          Quantity: 2
 
-
-- type: entity #LoneStar Adds Magenta flares for dispenser
+- type: entity
   name: magenta flare
-  parent: [BaseItem, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny
+  parent: Flare
   id: FlareMagenta
   description: A flare that produces a very bright magenta light for a short while. Point the flame away from yourself.
   components:
-  - type: GoblinPreciousTrash # Frontier
-  - type: Tag
-    tags:
-    - Flare
-    - Trash
-  - type: SpaceGarbage
-  - type: ExpendableLight
-    glowDuration: 225
-    fadeOutDuration: 15
-    iconStateOn: flare_unlit
-    iconStateSpent: flare_spent
-    turnOnBehaviourID: turn_on
-    fadeOutBehaviourID: fade_out
-    litSound:
-      path: /Audio/Items/Flare/flare_on.ogg
-    loopedSound:
-      path: /Audio/Items/Flare/flare_burn.ogg
-      params:
-        loop: true
-        volume: -10
-        maxDistance: 5
   - type: Sprite
     sprite: Objects/Misc/flare.rsi
     layers:
@@ -179,62 +68,6 @@
     - map: [ enum.ExpendableLightVisualLayers.Overlay ]
       state: flare_unlit
       color: "#FF00FF"
-  - type: Icon
-    sprite: Objects/Misc/flare.rsi
-    state: icon
-  - type: Item
-    sprite: Objects/Misc/flare.rsi
-    heldPrefix: unlit
-    size: Tiny
-  - type: Appearance
   - type: PointLight
     enabled: false
     color: "#FF00FF"
-    radius: 1.0
-    energy: 9.0
-    netsync: false
-  - type: IgnitionSource
-    temperature: 1000
-  - type: LightBehaviour
-    behaviours:
-    - !type:FadeBehaviour # have the radius start small and get larger as it starts to burn
-      id: turn_on
-      maxDuration: 45.0
-      startValue: 2.5
-      endValue: 10.0
-    - !type:RandomizeBehaviour # weaker flicker as it fades out
-      id: fade_out
-      interpolate: Nearest
-      minDuration: 0.001
-      maxDuration: 0.001
-      startValue: 4.0
-      endValue: 8.0
-      property: Energy
-      isLooped: true
-    - !type:FadeBehaviour # fade out radius as it burns out
-      id: fade_out
-      maxDuration: 15.0
-      startValue: 10.0
-      endValue: 1.0
-  - type: Extractable
-    grindableSolutionName: flare
-  - type: SolutionContainerManager
-    solutions:
-      flare:
-        maxVol: 20
-        reagents:
-        # flare casing
-        - ReagentId: Iron
-          Quantity: 10
-        # red phosphorus = red flare trust
-        - ReagentId: Phosphorus
-          Quantity: 3
-        - ReagentId: Carbon
-          Quantity: 1
-        - ReagentId: Oxygen
-          Quantity: 2
-        # fuel or something
-        - ReagentId: Charcoal
-          Quantity: 2
-        - ReagentId: Sulfur
-          Quantity: 2

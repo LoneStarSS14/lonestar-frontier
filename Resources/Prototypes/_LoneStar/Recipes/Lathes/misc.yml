@@ -1,69 +1,49 @@
-- type: latheRecipe #LoneStar Green flare dispenser recipe
+- type: latheRecipe
   id: BoxDispenserFlareGreen
   result: BoxDispenserFlareGreen
-  parent: NFBaseLightTubeRecipe
-  materials:
-    Steel: 1800
+  parent: BoxDispenserFlare
 
-- type: latheRecipe  #LoneStar Magenta flare dispenser recipe
+- type: latheRecipe
   id: BoxDispenserFlareMagenta
   result: BoxDispenserFlareMagenta
-  parent: NFBaseLightTubeRecipe
-  materials:
-    Steel: 1800
+  parent: BoxDispenserFlare
 
-- type: latheRecipe #LoneStar Magenta lantern recipe
+- type: latheRecipe
   id: LanternMagenta
   result: LanternMagenta
-  parent: NFBaseLightTubeRecipe
-  materials:
-    Steel: 100
-    Glass: 100
-    Plastic: 100
+  parent: LanternNF
 
-- type: latheRecipe #LoneStar Green lantern recipe
+- type: latheRecipe
   id: LanternGreen
   result: LanternGreen
-  parent: NFBaseLightTubeRecipe
-  materials:
-    Steel: 100
-    Glass: 100
-    Plastic: 100
+  parent: LanternNF
 
-- type: latheRecipe #LoneStar Green floodlight recipe
+- type: latheRecipe
   id: FloodlightGreen
   result: FloodlightGreen
-  parent: NFBaseLightTubeRecipe
-  materials:
-    Glass: 1000
-    Plastic: 1000
-    Steel: 1500
+  parent: Floodlight
 
-- type: latheRecipe #LoneStar Magenta floodlight recipe
+- type: latheRecipe
   id: FloodlightMagenta
   result: FloodlightMagenta
-  parent: NFBaseLightTubeRecipe
-  materials:
-    Glass: 1000
-    Plastic: 1000
-    Steel: 1500
+  parent: Floodlight
 
-- type: latheRecipe #Lonestar Green Exterior light tube recipe
+- type: latheRecipe
   id: ExteriorLightTubeGreen
   result: ExteriorLightTubeGreen
   parent: NFBaseLightTubeRecipe
 
-- type: latheRecipe #LoneStar Magenta Exterior light recipe
+- type: latheRecipe
   id: ExteriorLightTubeMagenta
   result: ExteriorLightTubeMagenta
   parent: NFBaseLightTubeRecipe
 
-- type: latheRecipe #LoneStar Green Exterior light bulb recipe
+- type: latheRecipe
   id: ExteriorLightBulbGreen
   result: ExteriorLightBulbGreen
   parent: NFColoredLightRecipe
 
-- type: latheRecipe #LoneStar Magenta Exterior light bulb recipe
+- type: latheRecipe
   id: ExteriorLightBulbMagenta
   result: ExteriorLightBulbMagenta
   parent: NFColoredLightRecipe

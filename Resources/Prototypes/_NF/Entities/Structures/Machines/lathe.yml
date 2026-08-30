@@ -83,7 +83,6 @@
     idleState: icon
     runningState: icon
     staticPacks:
-    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
     - NFLightsStatic
     - NFBasicToolsStatic
     - NFBasicStorageStatic
@@ -103,6 +102,7 @@
     - NFLightsColoredStatic
     - NFServiceArchetypeStatic
     - CSPlumbingStatic # Coyote: showers, sinks, drains
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFServiceTechfabEmagStatic
@@ -135,7 +135,6 @@
     board: McServiceTechFabCircuitboard
   - type: Lathe
     staticPacks:
-    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
     - NFLightsStatic
     - NFBasicToolsStatic
     - NFBasicStorageStatic
@@ -155,6 +154,7 @@
     - NFLightsColoredStatic
     - NFServiceArchetypeStatic
     - NFMcServiceTechfabStatic
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
 
 - type: entity
   parent: [ NFBlueprintReceiverBase, BaseLatheLube ]

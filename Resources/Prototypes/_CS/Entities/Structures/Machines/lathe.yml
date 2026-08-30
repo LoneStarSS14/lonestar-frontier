@@ -24,7 +24,6 @@
     idleState: icon
     runningState: icon
     staticPacks:
-    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
     - NFLightsStatic
     - NFBasicToolsStatic
     - NFBasicStorageStatic
@@ -45,6 +44,7 @@
     - NFServiceArchetypeStatic
     - CSPlumbingStatic # Coyote: showers, sinks, drains
     - CSDonkcoServiceTechfabStatic
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFServiceTechfabEmagStatic
