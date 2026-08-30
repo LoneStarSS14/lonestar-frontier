@@ -60,6 +60,23 @@
       - state: equipped-INNERCLOTHING-detail
         color: "#5c5c60"
 
+- type: entity
+  parent: ClothingUniformJumpsuitRegalSuitPrince
+  id: ClothingUniformJumpsuitRegalSuitPink
+  name: pink regal suit
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#ffaae1"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#ffaae1"
+
 # region Misc
 - type: entity
   parent: ClothingUniformBase
