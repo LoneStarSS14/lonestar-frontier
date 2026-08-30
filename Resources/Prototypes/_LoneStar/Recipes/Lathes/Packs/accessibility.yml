@@ -1,0 +1,13 @@
+- type: latheRecipePack #LoneStar lathe recipe pack for colorblind accessiblity
+  id: LSAccessibilityPack
+  recipes:
+  - BoxDispenserFlareGreen
+  - BoxDispenserFlareMagenta
+  - ExteriorLightBulbGreen
+  - ExteriorLightBulbMagenta
+  - ExteriorLightTubeGreen
+  - ExteriorLightTubeMagenta
+  - FloodlightGreen
+  - FloodlightMagenta
+  - LanternGreen
+  - LanternMagenta

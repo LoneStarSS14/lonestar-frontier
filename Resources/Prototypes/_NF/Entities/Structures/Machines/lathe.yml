@@ -83,6 +83,7 @@
     idleState: icon
     runningState: icon
     staticPacks:
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
     - NFLightsStatic
     - NFBasicToolsStatic
     - NFBasicStorageStatic
@@ -134,6 +135,7 @@
     board: McServiceTechFabCircuitboard
   - type: Lathe
     staticPacks:
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
     - NFLightsStatic
     - NFBasicToolsStatic
     - NFBasicStorageStatic

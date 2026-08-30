@@ -24,6 +24,7 @@
     idleState: icon
     runningState: icon
     staticPacks:
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
     - NFLightsStatic
     - NFBasicToolsStatic
     - NFBasicStorageStatic

@@ -1,0 +1,319 @@
+- type: entity #LoneStar adds green exterior light bulb for colorblind accessiblity
+  parent: LightBulb
+  name: green exterior light bulb
+  id: ExteriorLightBulbGreen
+  description: A colorful light bulb with a small colored crystal inside.
+  components:
+  - type: LightBulb
+    color: "#00FF00"
+    lightEnergy: 4.5
+    lightRadius: 8
+    lightSoftness: 0.7
+
+- type: entity #LoneStar adds magenta exterior light bulb for colorblind accessibilty
+  parent: LightBulb
+  name: magenta exterior light bulb
+  id: ExteriorLightBulbMagenta
+  description: A colorful light bulb with a small colored crystal inside.
+  components:
+  - type: LightBulb
+    color: "#FF00FF"
+    lightEnergy: 4.5
+    lightRadius: 8
+    lightSoftness: 0.7
+
+- type: entity #LoneStar adds green exterior light tube for colorblind accessiblity
+  parent: BaseLightTube
+  name: green exterior light tube
+  description: A high power high energy green bulb for the depths of space. May contain mercury.
+  id: ExteriorLightTubeGreen
+  components:
+  - type: LightBulb
+    color: "#00FF00"
+    lightEnergy: 4.5
+    lightRadius: 12
+    lightSoftness: 0.5
+    BurningTemperature: 350
+    PowerUse: 100
+
+- type: entity #LoneStar adds magenta exterior light tube for colorblind accessiblity
+  parent: BaseLightTube
+  name: magenta exterior light tube
+  description: A high power high energy magenta bulb for the depths of space. May contain mercury.
+  id: ExteriorLightTubeMagenta
+  components:
+  - type: LightBulb
+    color: "#FF00FF"
+    lightEnergy: 4.5
+    lightRadius: 12
+    lightSoftness: 0.5
+    BurningTemperature: 350
+    PowerUse: 100
+
+- type: entity #LoneStar adds green floodlight for colorblind accessibility
+  name: green floodlight
+  id: FloodlightGreen
+  parent: [BaseLamp, MixedPowerMachine] # Frontier: Add MixedPowerMachine
+  description: A pole with powerful green lights on it.
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: Objects/Misc/Lights/lights.rsi
+    color: "#73FF73"
+    layers:
+    - state: floodlight
+      map: [ "base" ]
+    - state: floodlight-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Physics
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2, -0.5, 0.2, 0.5"
+        density: 50
+        mask:
+        - HighImpassable
+  - type: PointLight
+    enabled: false
+    color: "#00FF00"
+    radius: 8
+    energy: 5
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: Anchorable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FloodlightBroken:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 500
+      Steel: 200
+
+- type: entity #LoneStar adds magenta floodlight for colorblind accessiblity
+  name: magenta floodlight
+  id: FloodlightMagenta
+  parent: [BaseLamp, MixedPowerMachine] # Frontier: Add MixedPowerMachine
+  description: A pole with powerful magenta lights on it.
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: Objects/Misc/Lights/lights.rsi
+    color: "#ff73ff"
+    layers:
+    - state: floodlight
+      map: [ "base" ]
+    - state: floodlight-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Physics
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2, -0.5, 0.2, 0.5"
+        density: 50
+        mask:
+        - HighImpassable
+  - type: PointLight
+    enabled: false
+    color: "#FF00FF"
+    radius: 8
+    energy: 5
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: Anchorable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FloodlightBroken:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 500
+      Steel: 200
+
+- type: entity #LoneStar adds green lantern for colorblind accessiblity
+  name: green lantern
+  parent: [BaseItem, RecyclableItemDeviceSmall] # Frontier: added RecyclableItemDeviceSmall
+  id: LanternGreen
+  description: The holy green light guides the way.
+  components:
+  - type: HandheldLight
+    addPrefix: true
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      startValue: 0.1 # Wizden#37444
+      endValue: 2.0 # Wizden#37444
+      isLooped: true
+  - type: Sprite
+    sprite: Objects/Tools/lantern.rsi
+    color: "#73FF73"
+    layers:
+    - state: lantern
+    - state: lantern-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Item
+    sprite: Objects/Tools/lantern.rsi
+    heldPrefix: off
+  - type: PointLight
+    enabled: false
+    radius: 4
+    energy: 3
+    color: "#00FF00"
+    netsync: false
+  - type: Appearance
+  - type: ToggleableVisuals
+    spriteLayer: light
+  - type: ItemTogglePointLight
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot {}
+  - type: StealTarget
+    stealGroup: LAMP
+  - type: Clothing
+    sprite: Objects/Tools/lantern.rsi
+    equippedPrefix: off
+    quickEquip: false
+    slots:
+    - Belt
+  - type: Tag
+    tags:
+    - Flashlight
+
+- type: entity #LoneStar adds magenta lantern for colorblind accessiblity
+  name: magenta lantern
+  parent: [BaseItem, RecyclableItemDeviceSmall] # Frontier: added RecyclableItemDeviceSmall
+  id: LanternMagenta
+  description: The holy magenta light guides the way.
+  components:
+  - type: HandheldLight
+    addPrefix: true
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      startValue: 0.1 # Wizden#37444
+      endValue: 2.0 # Wizden#37444
+      isLooped: true
+  - type: Sprite
+    sprite: Objects/Tools/lantern.rsi
+    color: "#FF73FF"
+    layers:
+    - state: lantern
+    - state: lantern-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Item
+    sprite: Objects/Tools/lantern.rsi
+    heldPrefix: off
+  - type: PointLight
+    enabled: false
+    radius: 4
+    energy: 3
+    color: "#FF00FF"
+    netsync: false
+  - type: Appearance
+  - type: ToggleableVisuals
+    spriteLayer: light
+  - type: ItemTogglePointLight
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot {}
+  - type: StealTarget
+    stealGroup: LAMP
+  - type: Clothing
+    sprite: Objects/Tools/lantern.rsi
+    equippedPrefix: off
+    quickEquip: false
+    slots:
+    - Belt
+  - type: Tag
+    tags:
+    - Flashlight
