@@ -340,6 +340,37 @@
       - state: equipped-INNERCLOTHING-detail
         color: "#ffaae1"
 
+# region Kimonos
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtKimonoRed
+  name: red pressed kimono
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-red.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-red.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtKimonoRed
+  name: blue pressed kimono
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-blue.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-blue.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtKimonoRed
+  name: white pressed kimono
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-white.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-white.rsi
+
 # region Misc
 - type: entity
   parent: ClothingUniformBase
