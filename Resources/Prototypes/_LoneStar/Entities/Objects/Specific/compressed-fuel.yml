@@ -11,7 +11,7 @@
     materialComposition:
       FuelGradePlasma: 60000
   - type: Sprite
-    sprite: _NF/Objects/Specific/Fuel/fuelgrade_material.rsi
+    sprite: _LoneStar/Objects/Specific/Fuel/compressed_fuel.rsi
     layers:
     - state: plasma
       map: ["base"]
@@ -33,7 +33,7 @@
     materialComposition:
       FuelGradeUranium: 60000
   - type: Sprite
-    sprite: _NF/Objects/Specific/Fuel/fuelgrade_material.rsi
+    sprite: _LoneStar/Objects/Specific/Fuel/compressed_fuel.rsi
     layers:
     - state: uranium
       map: ["base"]
@@ -55,7 +55,7 @@
     materialComposition:
       FuelGradeBananium: 60000
   - type: Sprite
-    sprite: _NF/Objects/Specific/Fuel/fuelgrade_material.rsi
+    sprite: _LoneStar/Objects/Specific/Fuel/compressed_fuel.rsi
     layers:
     - state: bananium
       map: ["base"]
