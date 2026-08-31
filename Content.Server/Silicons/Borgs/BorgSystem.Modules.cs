@@ -5,7 +5,7 @@ using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Content.Shared._NF.Silicons.Borgs; // Frontier
-using Content.Shared.Cuffs.Components;
+using Content.Shared.Cuffs.Components; //LS Edit.
 
 namespace Content.Server.Silicons.Borgs;
 
