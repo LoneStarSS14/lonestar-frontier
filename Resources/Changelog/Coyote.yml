@@ -3228,3 +3228,55 @@ Entries:
   id: 363
   time: '2026-08-23T21:58:47.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/59
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Edison is no longer lost in hyperspace, and will spawn on round start
+        again.
+  id: 364
+  time: '2026-08-25T15:31:45.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/67
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Bulk fuel crates at cargo have been replaced with 'compressed' fuel
+        rods, which can be bought for for the same effect at any fuel vend.
+  id: 365
+  time: '2026-08-26T11:12:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/69
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Previously setup freelancer loadouts should no longer be missing their
+        jumpsuits.
+  id: 366
+  time: '2026-08-26T11:18:12.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/68
+- author: Waterwithoutanyice
+  changes:
+    - type: Tweak
+      message: Re-enabled choral hydrate, pax, and nocturine
+  id: 367
+  time: '2026-08-26T17:03:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/65
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        you can now purchase 2 new shuttles, Aegis from the expedition shipyard,
+        And Dragoon from the regular shipyard.
+  id: 368
+  time: '2026-08-26T22:44:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/72
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        The Plant Analyzer now displays localized names. no more "JuiceTomato".
+        you'll see "tomato juice" instead
+  id: 369
+  time: '2026-08-26T23:04:32.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/76
