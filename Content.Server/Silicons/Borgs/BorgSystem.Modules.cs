@@ -5,6 +5,7 @@ using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Content.Shared._NF.Silicons.Borgs; // Frontier
+using Content.Shared.Cuffs.Components;
 
 namespace Content.Server.Silicons.Borgs;
 
@@ -114,7 +115,12 @@ public sealed partial class BorgSystem
     {
         if (LifeStage(chassis) >= EntityLifeStage.Terminating)
             return;
-
+        //LS EDIT BEGIN. CUFFABLE BORG RESTRAINTS.
+        if (TryComp<CuffableComponent>(chassis, out var cuffed) && cuffed.CuffedHandCount > 0)
+        {
+            return;
+        }
+        //LS EDIT END
         if (!Resolve(chassis, ref chassisComp))
             return;
 
@@ -157,7 +163,12 @@ public sealed partial class BorgSystem
     {
         if (LifeStage(chassis) >= EntityLifeStage.Terminating)
             return;
-
+        //LS EDIT BEGIN. CUFFABLE BORG RESTRAINTS.
+        if (TryComp<CuffableComponent>(chassis, out var cuffed) && cuffed.CuffedHandCount > 0)
+        {
+            return;
+        }
+        //LS EDIT END
         if (!Resolve(chassis, ref chassisComp))
             return;
 

@@ -50,6 +50,14 @@
       "directions": 4
     },
     {
+      "name": "body-overlay-6",
+      "directions": 4
+    },
+    {
+      "name": "body-overlay-8",
+      "directions": 4
+    },
+    {
       "name": "inhand-left",
       "directions": 4
     },

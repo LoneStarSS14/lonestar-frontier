@@ -2,6 +2,7 @@
   id: BorgChassisSelectable
   parent: BaseBorgChassisNT
   components:
+  - type: Cuffable #LS Edit. Adds the ability to cuff cyborgs.
   - type: Inventory
     templateId: borgUnified #LoneStar edit. Moves all selectable borg chassies to a unified loadout.
   - type: AutoImplant #LoneStar Edit. Gives Borgs medical tracking implants.
@@ -15,6 +16,13 @@
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: robot_l
       shader: unshaded
       map: ["light","enum.BorgVisualLayers.LightStatus"]
@@ -108,6 +116,13 @@
   - type: Sprite
     sprite: _CS/Mob/Silicons/dog_vale.rsi
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: engineeringd
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: engineeringd_e_r
@@ -129,6 +144,13 @@
   - type: Sprite
     sprite: _CS/Mob/Silicons/dog_vale.rsi
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: standardd
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: standardd_e_r
@@ -150,6 +172,13 @@
   - type: Sprite
     sprite: _CS/Mob/Silicons/dog_vale.rsi
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: miningd
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: miningd_e_r
@@ -171,6 +200,13 @@
   - type: Sprite
     sprite: _CS/Mob/Silicons/dog_vale.rsi
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: janitord
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: janitord_e_r
@@ -192,6 +228,13 @@
   - type: Sprite
     sprite: _CS/Mob/Silicons/dog_vale.rsi
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: medicald
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: medicald_e_r
@@ -213,6 +256,13 @@
   - type: Sprite
     sprite: _CS/Mob/Silicons/dog_vale.rsi
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: serviced
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: serviced_e_r
@@ -234,6 +284,13 @@
   - type: Sprite
     sprite: _CS/Mob/Silicons/dog_vale.rsi
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: strayd
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: strayd_e_r
@@ -255,6 +312,13 @@
   - type: Sprite
     sprite: _CS/Mob/Silicons/dog_vale.rsi
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: syndicated
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: syndicated_e_r
