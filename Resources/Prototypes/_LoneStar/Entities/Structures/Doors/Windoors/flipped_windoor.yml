@@ -5,34 +5,9 @@
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Windoors/Flipped/windoor.rsi
-    layers:
-    - state: closed
-      map: ["enum.DoorVisualLayers.Base"]
-    - state: closed_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseUnlit"]
-      visible: false
-    - state: welded
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: bolted_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseBolted"]
-    - state: emergency_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
-    - state: panel_open
-      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      visible: false
-    - state: electrified_ai
-      sprite: Interface/Misc/ai_hud.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.HUD" ]
-    - state: electrified
-      sprite: Effects/electricity.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.Sparks" ]
+  - type: Construction
+    graph: WindoorF
+    node: windoor
 
 - type: entity
   id: WindoorSecureF
@@ -41,35 +16,9 @@
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Windoors/Flipped/windoor.rsi
-    layers:
-    - state: secure_underlay
-    - state: closed
-      map: ["enum.DoorVisualLayers.Base"]
-    - state: closed_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseUnlit"]
-      visible: false
-    - state: welded
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: bolted_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseBolted"]
-    - state: emergency_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
-    - state: panel_open
-      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      visible: false
-    - state: electrified_ai
-      sprite: Interface/Misc/ai_hud.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.HUD" ]
-    - state: electrified
-      sprite: Effects/electricity.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.Sparks" ]
+  - type: Construction
+    graph: WindoorF
+    node: windoorSecure
 
 - type: entity
   id: WindoorPlasmaF
@@ -78,34 +27,9 @@
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Windoors/Flipped/plasma.rsi
-    layers:
-    - state: closed
-      map: ["enum.DoorVisualLayers.Base"]
-    - state: closed_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseUnlit"]
-      visible: false
-    - state: welded
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: bolted_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseBolted"]
-    - state: emergency_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
-    - state: panel_open
-      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      visible: false
-    - state: electrified_ai
-      sprite: Interface/Misc/ai_hud.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.HUD" ]
-    - state: electrified
-      sprite: Effects/electricity.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.Sparks" ]
+  - type: Construction
+    graph: WindoorF
+    node: pwindoor
 
 - type: entity
   id: WindoorSecurePlasmaF
@@ -114,35 +38,9 @@
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Windoors/Flipped/plasma.rsi
-    layers:
-    - state: secure_underlay
-    - state: closed
-      map: ["enum.DoorVisualLayers.Base"]
-    - state: closed_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseUnlit"]
-      visible: false
-    - state: welded
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: bolted_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseBolted"]
-    - state: emergency_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
-    - state: panel_open
-      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      visible: false
-    - state: electrified_ai
-      sprite: Interface/Misc/ai_hud.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.HUD" ]
-    - state: electrified
-      sprite: Effects/electricity.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.Sparks" ]
+  - type: Construction
+    graph: WindoorF
+    node: pwindoorSecure
 
 - type: entity
   id: WindoorUraniumF
@@ -151,72 +49,20 @@
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Windoors/Flipped/uranium.rsi
-    layers:
-    - state: closed
-      map: ["enum.DoorVisualLayers.Base"]
-    - state: closed_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseUnlit"]
-      visible: false
-    - state: welded
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: bolted_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseBolted"]
-    - state: emergency_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
-    - state: panel_open
-      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      visible: false
-    - state: electrified_ai
-      sprite: Interface/Misc/ai_hud.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.HUD" ]
-    - state: electrified
-      sprite: Effects/electricity.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.Sparks" ]
+  - type: Construction
+    graph: WindoorF
+    node: uwindoor
 
 - type: entity
   id: WindoorSecureUraniumF
   parent: WindoorSecureUranium
   suffix: Flipped
-  description: It's a sturdy window and a sliding door. It's so neon green, it might even taste like limes!
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Windoors/Flipped/uranium.rsi
-    layers:
-    - state: secure_underlay
-    - state: closed
-      map: ["enum.DoorVisualLayers.Base"]
-    - state: closed_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseUnlit"]
-      visible: false
-    - state: welded
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: bolted_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseBolted"]
-    - state: emergency_unlit
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
-    - state: panel_open
-      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      visible: false
-    - state: electrified_ai
-      sprite: Interface/Misc/ai_hud.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.HUD" ]
-    - state: electrified
-      sprite: Effects/electricity.rsi
-      shader: unshaded
-      visible: false
-      map: [ "enum.ElectrifiedLayers.Sparks" ]
+  - type: Construction
+    graph: Windoor
+    node: uwindoorSecure
       
 # Locked Variants
 - type: entity

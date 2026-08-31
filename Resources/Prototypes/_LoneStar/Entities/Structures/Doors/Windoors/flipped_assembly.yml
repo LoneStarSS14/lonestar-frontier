@@ -50,7 +50,7 @@
     - state: secure_underlay
     - state: assembly
   - type: Construction
-    graph: Windoor
+    graph: WindoorF
     node: pglassSecure
 
 #uranium windoor assemblies
