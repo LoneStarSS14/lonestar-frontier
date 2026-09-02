@@ -1,0 +1,19 @@
+# Handles LS Specific Borg Modules
+- type: entity
+  id: BorgModuleOperativeExpedition
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseC4Contraband ] # Frontier: BaseSyndicateContraband<BaseC4Contraband
+  name: operative cyborg module
+  description: A module that comes with a crowbar, a large-capacity non-rechargeable Emag, an Access Breaker and a syndicate pinpointer.
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      moduleId: OperativeExpedition # Frontier
+      items:
+      - Crowbar
+      - EmagBorgExped
+      - AccessBreaker
+    - type: BorgModuleIcon
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }

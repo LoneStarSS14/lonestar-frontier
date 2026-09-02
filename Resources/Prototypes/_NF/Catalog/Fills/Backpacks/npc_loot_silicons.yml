@@ -252,11 +252,15 @@
     - id: SyntheticBorgArmorHeavy
       prob: 0.1 # LS: Sillycone Loot
     # Syndicate Assault Cyborg Chassis
-    - id: BorgChassisSyndicateAssault # Coyote: more silicon loot
-      prob: 0.05
+    #LS Removal - This spawns with nothing in it, and giving a guaranteed L6/ESword if you get this would be too good.
+    #- id: BorgChassisSyndicateAssault # Coyote: more silicon loot
+    #  prob: 0.05
+    - id: BorgModuleOperativeExpedition # Lonestar: Replacement for TC and SyndicateAssault Modules. No free syndicate access!
+      prob: 0.05 
+    # LS Removal. Sily telecrystals from rogue sillycons.
     # Telecrystal
-    - id: Telecrystal1 # Coyote: more silicon loot
-      prob: 0.02
-      amount: 2
+   # - id: Telecrystal1 # Coyote: more silicon loot
+    #  prob: 0.02
+     # amount: 2
     sound:
       path: /Audio/Machines/windoor_open.ogg

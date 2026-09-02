@@ -331,8 +331,9 @@ public sealed partial class BorgSystem
         Entity<BorgModuleComponent> module,
         EntityUid? user = null)
     {
-        if (module.Comp.DefaultModule)
-            return false;
+        //LS Removal - Can remove default modules.
+        //        if (module.Comp.DefaultModule)
+        //          return false;
 
         return true;
     }

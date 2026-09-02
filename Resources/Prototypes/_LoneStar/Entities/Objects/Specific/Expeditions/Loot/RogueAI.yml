@@ -1,0 +1,10 @@
+# Handles RogueAI Exped Objects.
+
+- type: entity
+  parent: EmagUnlimited
+  id: EmagBorgExped #Borg Module Unique
+  suffix: Limited
+  components:
+  - type: LimitedCharges
+    maxCharges: 9 #3x More. Adjust as needed
+  - type: AutoRecharge
