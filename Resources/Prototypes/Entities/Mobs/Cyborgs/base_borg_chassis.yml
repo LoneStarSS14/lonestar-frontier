@@ -94,20 +94,10 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
-    - Common
-    - Science
-# Coyote: Ring ring! We want our borgs to be able to talk in shortband too!
-    - Traffic
-#End Coyote
+    - Binary #LS Edit. Kills all-non binary channels from borgs by default.
   - type: ActiveRadio
     channels:
-    - Binary
-    - Common
-    - Science
-# Coyote: Ring ring! We want our borgs to be able to talk in shortband too!
-    - Traffic
-#End Coyote
+    - Binary #LS Edit. Kills all-non binary channels from borgs by default.
   - type: ZombieImmune
   - type: Repairable
     doAfterDelay: 10
@@ -252,7 +242,7 @@
     - FootstepSound
     - CanPilot
     - SiliconEmotes
-    - Unimplantable
+    # LoneStar Edit. Borgs can now hold implants.
   - type: Emoting
   - type: GuideHelp
     guides:
