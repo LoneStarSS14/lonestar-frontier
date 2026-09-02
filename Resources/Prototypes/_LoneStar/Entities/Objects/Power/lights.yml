@@ -49,9 +49,27 @@
       shader: unshaded
       visible: false
       map: [ "light" ]
+  - type: Item
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-green.rsi
+    size: Normal
+    heldPrefix: off
   - type: PointLight
     enabled: false
     color: "#00FF00"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FloodlightBrokenGreen:
+            min: 1
+            max: 1
 
 - type: entity
   name: magenta floodlight
@@ -68,9 +86,58 @@
       shader: unshaded
       visible: false
       map: [ "light" ]
+  - type: Item
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-magenta.rsi
+    size: Normal
+    heldPrefix: off
   - type: PointLight
     enabled: false
     color: "#FF00FF"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FloodlightBrokenMagenta:
+            min: 1
+            max: 1
+
+- type: entity
+  name: broken green floodlight
+  id: FloodlightBrokenGreen
+  parent: FloodlightBroken
+  description: A pole with powerful green lights on it. It's broken.
+  components:
+  - type: GoblinPreciousTrash # Frontier
+  - type: Item
+    size: Normal
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-green.rsi
+    heldPrefix: broken
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-green.rsi
+    state: icon-broken
+
+- type: entity
+  name: broken magenta floodlight
+  id: FloodlightBrokenMagenta
+  parent: FloodlightBroken
+  description: A pole with powerful magenta lights on it. It's broken.
+  components:
+  - type: GoblinPreciousTrash # Frontier
+  - type: Item
+    size: Normal
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-magenta.rsi
+    heldPrefix: broken
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-magenta.rsi
+    state: icon-broken
+
 
 - type: entity
   name: green lantern
@@ -89,16 +156,10 @@
       shader: unshaded
       visible: false
       map: [ "light" ]
-  - type: ToggleableVisuals
+  - type: Item
     sprite: _LoneStar/Objects/Tools/lantern-green.rsi
-    spriteLayer: light
-    inhandVisuals:
-      left:
-      - state: on-inhand-left
-        shader: unshaded
-      right:
-      - state: on-inhand-right
-        shader: unshaded
+  - type: Clothing
+    sprite: _LoneStar/Objects/Tools/lantern-green.rsi
   - type: PointLight
     radius: 4
     energy: 3
@@ -118,16 +179,10 @@
       shader: unshaded
       visible: false
       map: [ "light" ]
-  - type: ToggleableVisuals
+  - type: Item
     sprite: _LoneStar/Objects/Tools/lantern-magenta.rsi
-    spriteLayer: light
-    inhandVisuals:
-      left:
-      - state: on-inhand-left
-        shader: unshaded
-      right:
-      - state: on-inhand-right
-        shader: unshaded
+  - type: Clothing
+    sprite: _LoneStar/Objects/Tools/lantern-magenta.rsi
   - type: PointLight
     radius: 4
     energy: 3
