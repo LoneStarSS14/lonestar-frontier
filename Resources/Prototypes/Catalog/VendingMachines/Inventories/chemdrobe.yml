@@ -15,11 +15,13 @@
     ClothingHandsGlovesLatex: 2
     ClothingHeadsetMedical: 2
     ClothingOuterWinterChem: 2
-    # DeltaV
-    ClothingShoesBootsWinterChem: 2
-    ClothingOuterCoatLabLong: 2
+    ClothingShoesBootsWinterChem: 2 # DeltaV v
+    ClothingUniformChemistSenior: 2
+    ClothingUniformJumpskirtChemistSenior: 2
     ClothingOuterCoatLabLongChemist: 2
-    # Floof
+    ClothingOuterCoatLabSeniorChemist: 2
+    ClothingHeadHatBeretSeniorChemistry: 2
+    #Socks and things
     ClothingHandsChemistsWarmers: 3
     ClothingUnderSocksChemists: 3
     ClothingUniformChemistsThong: 3

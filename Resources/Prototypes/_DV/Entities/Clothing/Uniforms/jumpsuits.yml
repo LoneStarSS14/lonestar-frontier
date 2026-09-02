@@ -91,7 +91,7 @@
     sprite: _DV/Clothing/Uniforms/Jumpsuit/medical_vest.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, ClothingUniformFoldableBaseImpstation]
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
   id: ClothingUniformParamedicJumper
   name: paramedic suit jumper
   description: A dark blue jumper with reflective strips for high high-visibility and strapes everywhere.

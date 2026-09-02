@@ -61,9 +61,9 @@
   description: A Nanotrasen standard labcoat for medical personnel but long.
   components:
   - type: Sprite
-    sprite: _DV/Clothing/OuterClothing/Coats/long_lab.rsi
+    sprite: _Omu/Clothing/OuterClothing/Coats/longlabcoat.rsi
   - type: Clothing
-    sprite: _DV/Clothing/OuterClothing/Coats/long_lab.rsi
+    sprite: _Omu/Clothing/OuterClothing/Coats/longlabcoat.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -101,9 +101,9 @@
   description: A Nanotrasen standard labcoat for medical personnel but long with bright orange accents.
   components:
   - type: Sprite
-    sprite: _DV/Clothing/OuterClothing/Coats/chemistry_long_lab.rsi
+    sprite:  _Omu/Clothing/OuterClothing/Coats/labcoatchemist.rsi
   - type: Clothing
-    sprite: _DV/Clothing/OuterClothing/Coats/chemistry_long_lab.rsi
+    sprite:  _Omu/Clothing/OuterClothing/Coats/labcoatchemist.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -117,8 +117,8 @@
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatLabLongCMO
-  name: chief medical officer's long lab coat
-  description: A Nanotrasen blue long lab coat with green accents, designed for chief medical officers.
+  name: nitrile long lab coat
+  description: A Nanotrasen blue long lab coat with green accents.
   components:
   - type: Sprite
     sprite: _DV/Clothing/OuterClothing/Coats/cmo_long_lab.rsi
@@ -132,23 +132,20 @@
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabLongCMO]
   id: ClothingOuterCoatLabLongCMOOpened
-  name: chief medical officer's long lab coat
+  name: nitrile long lab coat
 
 ## Paramedic
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatParamedicJacket
-  name: paramedics jacket
+  name: paramedic's jacket
   description: A stylish dark blue jacket decorated with white stripes and cross. Nine out of ten paramedic recommend "Do Not Revive."
   components:
   - type: Sprite
     sprite: _DV/Clothing/OuterClothing/Coats/paramedic.rsi
   - type: Clothing
     sprite: _DV/Clothing/OuterClothing/Coats/paramedic.rsi
-  - type: TemperatureProtection
-    coolingCoefficient: 0.1
-    heatingCoefficient: 1.1
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatParamedicJacket]
