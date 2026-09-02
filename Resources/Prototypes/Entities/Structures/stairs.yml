@@ -153,5 +153,5 @@
     drawdepth: FloorTiles
   - type: Construction # LoneStar
     graph: LSStairs
-    node: white
+    node: woodStage
 

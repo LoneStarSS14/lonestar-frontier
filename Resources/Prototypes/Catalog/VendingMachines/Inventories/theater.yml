@@ -68,6 +68,7 @@
     # Begin Frontier Additions
     ClothingUniformJumpskirtPerformer: 4294967295
     ClothingShoesBootsPerformer: 4294967295
+    ClothingUniformJumpskirtPerformerAlt: 4294967295 # LoneStar
     ClothingNeckCloakMoth: 4294967295
     ClothingUniformJumpskirtJanimaid: 4294967295
     ClothingNeckCloakVoid: 4294967295
@@ -136,7 +137,7 @@
     CoolCoyoteClothesBeggar: 4294967295
     CoolCoyoteClothesBlackTango: 4294967295
     CoolCoyoteClothesBlackDress: 4294967295
-    CoolCoyoteClothesBlackNGold: 4294967295
+    ClothingUniformJumpsuitBlackNGold: 4294967295
     CoolCoyoteClothesBloodshot: 4294967295
     CoolCoyoteClothesBlueKimono: 4294967295
     CoolCoyoteClothesBlueSari: 4294967295
@@ -214,6 +215,11 @@
     CoolCoyoteClothesKimonoRed: 4294967295
     CoolCoyoteClothesKimonoViolet: 4294967295
     CoolCoyoteClothesKimonoYellow: 4294967295
+    # LoneStar start Kiminos
+    ClothingUniformJumpskirtKimonoRed: 4294967295
+    ClothingUniformJumpskirtKimonoGreen: 4294967295
+    ClothingUniformJumpskirtKimonoWhite: 4294967295
+    # LoneStar end
     CoolCoyoteClothesLandschneckt: 4294967295
     CoolCoyoteClothesLatexHalf: 4294967295
     CoolCoyoteClothesLeavesSkirt: 4294967295

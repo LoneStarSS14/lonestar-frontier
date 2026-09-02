@@ -1,0 +1,10 @@
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitResponseRed
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitResponseRed
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitResponseBlue
+  parent: NFBaseHardSuitArmoredRecipe
+  result: ClothingOuterHardsuitResponseBlue

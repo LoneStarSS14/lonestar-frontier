@@ -40,17 +40,17 @@
 - type: entity
   parent: ClothingBackpackSecurity
   id: ClothingBackpackNfsdBrown
-  name: NFSD backpack
+  name: LSRD backpack # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Back/Backpacks/nfsd_brown.rsi
+    sprite: _LoneStar/Clothing/Back/Backpacks/lsrd_pack.rsi
 
-- type: entity
-  parent: ClothingBackpackNfsdBrown
-  id: ClothingBackpackNfsdCream
-  components:
-  - type: Sprite
-    sprite: _NF/Clothing/Back/Backpacks/nfsd_cream.rsi
+#- type: entity # Lonestar changes, cream versions removed
+#  parent: ClothingBackpackNfsdBrown
+#  id: ClothingBackpackNfsdCream
+#  components:
+#  - type: Sprite
+#    sprite: _NF/Clothing/Back/Backpacks/nfsd_cream.rsi
 
 - type: entity
   parent: [ RecyclableItemPlasticSmall, NFClothingBackpack ]

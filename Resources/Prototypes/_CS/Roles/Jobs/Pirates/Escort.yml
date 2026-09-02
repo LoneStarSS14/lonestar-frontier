@@ -95,19 +95,16 @@
 - type: roleLoadout
   id: JobEscort
   groups:
-  - PilotHead
-  #  - NFPirateNeck
-  - PilotNeck # Coyote: Pirate Loadout Expansion
-  - PilotJumpsuit
-  #  - NFPirateGloves
-  - MercenaryGloves # Coyote: Pirate Loadout Expansion
+  - FreelancerFactionHead # LoneStar
+  - FreelancerFactionNeck # LoneStar
+  - FreelancerFactionJumpsuit # LoneStar
+  - MercenaryGloves
   - PilotBackpack
-  - PilotForcedOuterClothing
-  - MercenaryOuterClothing # Coyote: Pirate Loadout Expansion
+  - FreelancerFactionOuterClothing # LoneStar
   - MercenaryShoes
   - PilotFace
-  - MercenaryGlasses # Coyote: Pirate Loadout Expansion
-  - MercenaryBelt # Coyote: Pirate Loadout Expansion
+  - MercenaryGlasses
+  - MercenaryBelt
   - PilotEars
   - ContractorEncryptionKey
   - ContractorBoxSurvival

@@ -130,7 +130,7 @@
 #      - state: wet_floor_sign
 
 - type: entity
-  name: NFSD encryption key box
+  name: LSRD encryption key box # Lonestar change NFSD -> LSRD
   parent: BoxEncryptionKeySecurity
   id: BoxEncryptionKeyNfsd
   components:

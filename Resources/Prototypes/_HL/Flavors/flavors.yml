@@ -1,0 +1,4 @@
+- type: flavor
+  id: nebuladream
+  flavorType: Complex
+  description: flavor-complex-nebula-dream

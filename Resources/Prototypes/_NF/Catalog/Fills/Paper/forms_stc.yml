@@ -79,7 +79,7 @@
         [color=#AAAAAA]This citation is only valid when approved and signed by an agent representing the traffic control division of the corporation or by the authorized station representative. Additional fines may be issued for each 10 minutes over the maximum.  This citation is a result of a violation of Space Law Section Nine, Article Five, governing the docking rules in and around Frontier Station and the Trade Outpost.
 
 
-        Failure to pay outstanding citations in a timely fashion will result in unpaid citations being forwarded to the New Frontier Sheriff's Department for processing as a criminal offense.[/color]
+        Failure to pay outstanding citations in a timely fashion will result in unpaid citations being forwarded to the Lone Star Rangers Division for processing as a criminal offense.[/color]
 
 - type: entity # Based on form made by DmitriTheDemon (Dustin)
   id: PaperWrittenStcFormCitationTraffic
@@ -89,7 +89,7 @@
   components:
     - type: Paper
       content: >+
-        [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Traffic Department Department[/bold][/color]
+        [color=#4f6e40]◥[bold]N[/bold]◣ [bold]Lone Star Rangers Department[/bold][/color]
 
         [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
 
@@ -120,7 +120,7 @@
         [color=#AAAAAA]This citation is only valid when approved and signed by an agent representing the traffic control division of the corporation or by the authorized station representative. This citation is a result of a violation of Space Law Section Nine, Article Five, governing the docking rules in and around Frontier Station and the Trade Outpost.
 
 
-        Failure to pay outstanding citations in a timely fashion will result in unpaid citations being forwarded to the New Frontier Sheriff's Department for processing as a criminal offense.[/color]
+        Failure to pay outstanding citations in a timely fashion will result in unpaid citations being forwarded to the Lone Star Rangers Division for processing as a criminal offense.[/color]
 
 - type: entity # Based on form made by DmitriTheDemon (Dustin)
   id: PaperWrittenStcFormProsecutionRequest
@@ -130,7 +130,7 @@
   components:
     - type: Paper
       content: >-
-        [color=#4f6e40]◥[bold]N[/bold]◣ [bold]New Frontier Traffic Department Department[/bold][/color]
+        [color=#4f6e40]◥[bold]N[/bold]◣ [bold]Lone Star Rangers Department[/bold][/color]
 
         [color=#4f6e40]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
 

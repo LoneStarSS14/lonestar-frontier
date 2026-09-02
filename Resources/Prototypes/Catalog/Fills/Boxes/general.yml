@@ -392,7 +392,7 @@
         amount: 4
 
 - type: entity
-  name: NFSD encryption key box
+  name: LSRD encryption key box
   parent: BoxEncryptionKeyPassenger
   id: BoxEncryptionKeySecurity
   components:

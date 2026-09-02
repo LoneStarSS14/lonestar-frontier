@@ -50,7 +50,7 @@
 - type: entity
   id: StructurePistolRackLockSheriff
   parent: StructurePistolRackLock
-  suffix: Sheriff, Empty
+  suffix: Chief Ranger, Empty # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:
@@ -73,7 +73,7 @@
 - type: entity
   id: StructurePistolRackLockSheriffWallmounted
   parent: StructurePistolRackLockWallmounted
-  suffix: Sheriff, Empty, Wallmount
+  suffix: Chief Ranger, Empty, Wallmount # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:
@@ -250,7 +250,7 @@
 - type: entity
   id: StructureGunRackNfsd
   parent: StructureGunRack
-  suffix: NFSD, Empty
+  suffix: LSRD, Empty # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:
@@ -279,7 +279,7 @@
 - type: entity
   id: StructureGunRackWallmountedNfsd
   parent: StructureGunRackWallmounted
-  suffix: NFSD, Empty, Wallmount
+  suffix: LSRD, Empty, Wallmount # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:
@@ -309,7 +309,7 @@
 - type: entity
   id: StructureMeleeWeaponRackNfsd
   parent: StructureMeleeWeaponRack
-  suffix: NFSD, Empty
+  suffix: LSRD, Empty # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:
@@ -338,7 +338,7 @@
 - type: entity
   id: StructureMeleeWeaponRackWallmountedNfsd
   parent: StructureMeleeWeaponRackWallmounted
-  suffix: NFSD, Empty, Wallmount
+  suffix: LSRD, Empty, Wallmount # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:
@@ -368,7 +368,7 @@
 - type: entity
   id: StructurePistolRackNfsd
   parent: StructurePistolRack
-  suffix: NFSD, Empty
+  suffix: LSRD, Empty # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:
@@ -396,7 +396,7 @@
 - type: entity
   id: StructurePistolRackWallmountedNfsd
   parent: StructurePistolRackWallmounted
-  suffix: NFSD, Empty, Wallmount
+  suffix: LSRD, Empty, Wallmount # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     layers:

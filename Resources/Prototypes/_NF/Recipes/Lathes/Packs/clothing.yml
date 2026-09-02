@@ -188,14 +188,20 @@
   - ClothingNeckMantleSheriff
   - ClothingNeckCloakSheriff
   - ClothingHandsGlovesCombatNfsdBrown
-  - ClothingHandsGlovesCombatNfsdCream
+  # - ClothingHandsGlovesCombatNfsdCream # Lonestar changes, cream versions removed
   - ClothingShoesBootsNfsdBrown
-  - ClothingShoesBootsNfsdCream
+  # - ClothingShoesBootsNfsdCream # Lonestar
   - NFPouchNfsd
   # Other
   - ClothingWalletLeatherMail
   - ClothingHeadHatStcCap
   - ClothingHeadHatSecretaryCap
+  ## LoneStar
+  # SR
+  - ClothingBunnyEarsSR
+  - ClothingBunnyJacketSR
+  - ClothingBunnysuitSR
+  - ClothingBowtieSR
 
 - type: latheRecipePack
   id: NFPirateClothing
@@ -234,3 +240,11 @@
   - FoamCutlass
   - ClothingWalletLeatherPirate
   - ClothingBackpackSatchelLeather
+  # LoneStar
+  - ClothingBunnyEarsPirate
+  - ClothingBunnyJacketPirate
+  - ClothingBunnysuitPirate
+  - ClothingBowtiePirate
+  - ClothingBunnyEarsPrisoner
+  - ClothingBunnysuitPrisoner
+  - ClothingBowtiePrisoner

@@ -7,9 +7,9 @@
   components:
   - type: Flatpack
     entity: GeneratorCoolRTG
-  - type: StaticPrice
-    price: 100000
-    vendPrice: 200000 # about the cost of running a pacman for 3 days. cost of convenience.
+  - type: StaticPrice # LoneStar, Reset to intended original values.
+    price: 30000
+    vendPrice: 90000
 
 - type: entity
   parent: [ BaseFlatpack, BaseC3Contraband ]

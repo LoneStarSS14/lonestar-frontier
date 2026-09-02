@@ -31,7 +31,7 @@
   - ClothingEyesGlassesSecurity
   - BaseC4Contraband
   id: ClothingEyesGlassesNfsd
-  name: NFSD glasses
+  name: LSRD glasses # Lonestar changes NFSD -> LSRD
   description: Upgraded sunglasses that provide flash immunity and a security HUD.
   components:
   - type: Sprite

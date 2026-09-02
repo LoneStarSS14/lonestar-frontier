@@ -1,7 +1,7 @@
 - type: entity
   parent: [ HoloprojectorSecurity, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: HoloprojectorNfsd
-  name: NFSD holobarrier projector
+  name: LSRD holobarrier projector # Lonestar changes NFSD -> LSRD
   description: Creates a solid but fragile holographic barrier.
   components:
   - type: Sprite

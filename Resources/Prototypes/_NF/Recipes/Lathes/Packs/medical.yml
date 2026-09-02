@@ -101,6 +101,9 @@
   - JugBluespace
   - VialBluespace
   - ClothingOuterHardsuitMedical
+  # LoneStar
+  - ClothingOuterHardsuitResponseRed
+  - ClothingOuterHardsuitResponseBlue
 
 - type: latheRecipePack
   id: NFMedicalBoards

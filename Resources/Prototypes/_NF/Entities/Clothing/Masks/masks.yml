@@ -45,8 +45,8 @@
 - type: entity
   parent: [ BaseC4ContrabandUnredeemable, ClothingMaskGasSecurity ]
   id: ClothingMaskGasNfsd
-  name: NFSD gas mask
-  description: A standard issue NFSD gas mask.
+  name: LSRD gas mask # Lonestar changes NFSD -> LSRD
+  description: A standard issue LSRD gas mask.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Mask/nfsd.rsi
@@ -57,8 +57,8 @@
 - type: entity
   parent: [ BaseC4ContrabandUnredeemable, ClothingMaskGasSwat ]
   id: ClothingMaskGasSheriff
-  name: NFSD sheriff gas mask
-  description: A gas mask worthy of a sheriff.
+  name: LSRD chief ranger gas mask # Lonestar changes NFSD -> LSRD
+  description: A gas mask worthy of a chief ranger.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Mask/nfsd_sheriff.rsi

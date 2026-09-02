@@ -1,0 +1,63 @@
+- type: listing
+  id: UplinkSecurityKatanaHF
+  name: uplink-security-hfblade-name
+  description: uplink-security-hfblade-desc
+  productEntity: KatanaHF
+  icon: { sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 3 # slightly more hurting than the arming sword
+  categories:
+    - UplinkSecurityMelee
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityKatanaMurasama
+  name: uplink-security-murasama-name
+  description: uplink-security-murasama-desc
+  productEntity: KatanaMurasama
+  icon: { sprite: _Mono/Objects/Weapons/Melee/murasama.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 3
+  categories:
+    - UplinkSecurityMelee
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityKatanaPhaseblade
+  name: uplink-security-phaseblade-name
+  description: uplink-security-phaseblade-desc
+  productEntity: KatanaPhaseblade
+  icon: { sprite: _Mono/Objects/Weapons/Melee/phaseblade.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 3
+  categories:
+    - UplinkSecurityMelee
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityRatvarianSpear
+  name: uplink-security-ratvarian-spear-name
+  description: uplink-security-ratvarian-spear-desc
+  productEntity: RatvarianSpear
+  icon: { sprite: _LoneStar/Objects/Weapons/Melee/ratvarian_spear.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 3 # sure, 30 damage on throw, but now THEY have it
+  categories:
+    - UplinkSecurityMelee
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink

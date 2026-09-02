@@ -67,7 +67,7 @@
 - type: entity
   id: IntercomNfsd
   parent: IntercomSecurity
-  suffix: NFSD
+  suffix: LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: ContainerFill
     containers:

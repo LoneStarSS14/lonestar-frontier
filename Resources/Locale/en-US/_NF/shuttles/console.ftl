@@ -25,8 +25,8 @@ shuttle-console-service-flag-Social-shortform = ☺
 shuttle-console-service-flag-Services-description = Services (e.g. medical, dining, engineering) offered onboard.
 shuttle-console-service-flag-Trade-description = Goods sold onboard.
 shuttle-console-service-flag-Social-description = A social space to gather and hang out.
-shuttle-console-service-flag-InterdictionsEnabled-description = Marks this ship as actively looking for conflict, this doesn't mean you can ignore escalation.
-shuttle-console-service-flag-InterdictionsDisabled-description = Marks this ship as actively avoiding conflict, you still can be stopped and can escalate.
+shuttle-console-service-flag-InterdictionsEnabled-description = Marks this ship as actively looking for conflict, this does not mean you can ignore escalation.
+shuttle-console-service-flag-InterdictionsDisabled-description = Marks this ship as actively avoiding all conflict, you are to be in compliance with Space Law and not escalate against other people/shuttles.
 # lonestar change - made both tooltips for old interdicting button clearer.
 shuttle-console-target = Radar Target
 shuttle-console-set-target = Set

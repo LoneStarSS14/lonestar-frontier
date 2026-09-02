@@ -56,15 +56,12 @@
 - type: roleLoadout
   id: JobNFPirate
   groups:
-  - NFPirateHead
-#  - NFPirateNeck
-  - ContractorNeck # Coyote: Pirate Loadout Expansion
-  - NFPirateJumpsuit
-#  - NFPirateGloves
+  - FreelancerFactionHead # LoneStar
+  - FreelancerFactionNeck # LoneStar
+  - FreelancerFactionJumpsuit # LoneStar
   - MercenaryGloves # Coyote: Pirate Loadout Expansion
   - ContractorBackpack
-  - NFPirateForcedOuterClothing
-  - MercenaryOuterClothing # Coyote: Pirate Loadout Expansion
+  - FreelancerFactionOuterClothing # LoneStar
   - NFPirateShoes
   - NFPirateFace
   - MercenaryGlasses # Coyote: Pirate Loadout Expansion

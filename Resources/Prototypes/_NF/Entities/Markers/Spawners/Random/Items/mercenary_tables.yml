@@ -352,12 +352,12 @@
 
 # region Crates (Ammo)
 - type: entityTable
-  id: TableDungeonLootMercenaryCratesAmmo
+  id: TableDungeonLootMercenaryCratesAmmo # LoneStar, Modified moderately.
   table: !type:GroupSelector
     children:
     # T1 - Common
     - !type:GroupSelector
-      weight: 0.15
+      weight: 0.3
       children:
       - id: CrateAmmoBoxRubber20
       #- id: CrateAmmoBoxRubber25 # Coyote: Remove .25 from tables
@@ -375,7 +375,7 @@
       - id: CrateAmmoBoxSlugShotgun
     # T2 - Unommon
     - !type:GroupSelector
-      weight: 0.3
+      weight: 0.25
       children:
       - id: CrateAmmoBoxIncendiary20
       - id: CrateAmmoBoxIncendiary30
@@ -385,12 +385,12 @@
       - id: CrateAmmoBoxIncendiaryShotgun
     # T3 - Rare
     - !type:GroupSelector
-      weight: 0.35
+      weight: 0.2
       children:
       - id: CrateAmmoBoxUranium20
       - id: CrateAmmoBoxUranium30
       - id: CrateAmmoBoxUranium35
-      - id: CrateAmmoBoxEmp35
+      # - id: CrateAmmoBoxEmp35 # LoneStar, Na.
       - id: CrateAmmoBoxUranium40 # Coyote
       - id: CrateAmmoBoxUranium45
       - id: CrateAmmoBoxUraniumShotgun

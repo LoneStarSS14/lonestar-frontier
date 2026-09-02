@@ -794,7 +794,7 @@
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetNfsd
-  name: NFSD EVA helmet
+  name: LSRD EVA helmet # Lonestar changes NFSD -> LSRD
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite

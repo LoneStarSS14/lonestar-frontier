@@ -227,8 +227,8 @@
 - type: entity
   parent: BaseStationAdminBankATM
   id: StationAdminBankATMNfsd
-  description: Used to transfer funds to and from NFSD's bank account.
-  suffix: NFSD
+  description: Used to transfer funds to and from LSRD's bank account. # Lonestar changes NFSD -> LSRD
+  suffix: LSRD
   components:
   - type: StationBankATM
     account: Nfsd

@@ -1,0 +1,64 @@
+# region plasma
+- type: entity
+  parent: BaseItem
+  id: FuelPlasmaBulk
+  name: compressed fuel-grade plasma core
+  description: A hyper-compressed rod made of desaturated plasma, suitable for fuel.
+  suffix: 600
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FuelGradePlasma: 60000
+  - type: Sprite
+    sprite: _LoneStar/Objects/Specific/Fuel/compressed_fuel.rsi
+    layers:
+    - state: plasma
+  - type: StaticPrice
+    price: 0
+    vendPrice: 40000
+  - type: NFFuel
+
+# region Uranium
+- type: entity
+  parent: BaseItem
+  id: FuelUraniumBulk
+  name: compressed fuel-grade uranium core
+  description: A hyper-compressed rod made of semi-processed uranium, suitable for fuel.
+  suffix: 600
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FuelGradeUranium: 60000
+  - type: Sprite
+    sprite: _LoneStar/Objects/Specific/Fuel/compressed_fuel.rsi
+    layers:
+    - state: uranium
+  - type: StaticPrice
+    price: 0
+    vendPrice: 80000
+  - type: NFFuel
+
+# region Bananium
+- type: entity
+  parent: BaseItem
+  id: FuelBananiumBulk
+  name: compressed fuel-grade bananium core
+  description: An unholy hyper-compressed rod made from pressed bananium peels, suitable for fuel, a big warning label reads "DROP AND RUN".
+  suffix: 600
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FuelGradeBananium: 60000
+  - type: Sprite
+    sprite: _LoneStar/Objects/Specific/Fuel/compressed_fuel.rsi
+    layers:
+    - state: bananium
+  - type: StaticPrice
+    price: 0
+    vendPrice: 160000
+  - type: NFFuel
+  - type: RadiationSource
+    intensity: 0.1

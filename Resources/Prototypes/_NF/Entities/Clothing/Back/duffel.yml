@@ -10,17 +10,17 @@
 - type: entity
   parent: ClothingBackpackDuffelSecurity
   id: ClothingBackpackDuffelNfsdBrown
-  name: NFSD duffel
+  name: LSRD duffel # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Back/Duffels/nfsd_brown.rsi
+    sprite: _LoneStar/Clothing/Back/Duffels/lsrd_duffel.rsi
 
-- type: entity
-  parent: ClothingBackpackDuffelNfsdBrown
-  id: ClothingBackpackDuffelNfsdCream
-  components:
-  - type: Sprite
-    sprite: _NF/Clothing/Back/Duffels/nfsd_cream.rsi
+#- type: entity # Lonestar changes, cream versions removed
+#  parent: ClothingBackpackDuffelNfsdBrown
+#  id: ClothingBackpackDuffelNfsdCream
+#  components:
+#  - type: Sprite
+#    sprite: _NF/Clothing/Back/Duffels/nfsd_cream.rsi
 
 - type: entity
   parent: [ RecyclableItemPlasticSmall, NFClothingDuffel ]

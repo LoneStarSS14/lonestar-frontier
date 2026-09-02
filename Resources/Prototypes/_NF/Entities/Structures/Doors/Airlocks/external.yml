@@ -1,7 +1,7 @@
 - type: entity
   parent: AirlockExternalGlass
   id: AirlockExternalGlassNfsd
-  suffix: NFSD, Glass 
+  suffix: LSRD, Glass # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Structures/Doors/Airlocks/Glass/externalnfsd.rsi

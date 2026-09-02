@@ -2,7 +2,7 @@
   parent: NFBaseBlueprintExpeditionArmory
   id: FloofBlueprintWeaponLaserPrototypePulseRifle
   name: prototype pulse rifle blueprint
-  description: A blueprint with a schematic for a prototype pulse rifle. It can be inserted into a mercenary or NFSD techfab.
+  description: A blueprint with a schematic for a prototype pulse rifle. It can be inserted into a mercenary or LSRD techfab. # Lonestar change NFSD -> LSRD
   components:
   - type: Blueprint
     providedRecipes:

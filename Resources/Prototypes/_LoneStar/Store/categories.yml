@@ -1,0 +1,7 @@
+- type: storeCategory
+  id: UplinkSecurityMelee
+  name: store-category-melee
+
+- type: storeCategory
+  id: UplinkPirateMelee
+  name: store-category-melee

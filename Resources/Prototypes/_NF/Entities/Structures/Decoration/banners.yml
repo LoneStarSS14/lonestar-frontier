@@ -1,12 +1,12 @@
 - type: entity
   id: BannerNfsd
   parent: BannerBase
-  name: NFSD banner
-  description: A banner displaying the colors of the New Frontier Sheriff's Department.
+  name: LSRD banner # Lonestar changes NFSD -> LSRD
+  description: A banner displaying the colors of the Lone Star Rangers Division.
   components:
   - type: Sprite
-    sprite: _NF/Structures/Decoration/banner.rsi
-    state: nfsd-banner
+    sprite: _LoneStar/Structures/Decoration/banner.rsi
+    state: lsrd-banner
   - type: Construction
     graph: BannersGraph
     node: BannerSecurityNode
@@ -14,8 +14,8 @@
 - type: entity
   id: FlagNfsd
   parent: BannerBase
-  name: NFSD flag
-  description: A flag displaying the colors of the New Frontier Sheriff's Department.
+  name: LSRD flag # Lonestar changes NFSD -> LSRD
+  description: A flag displaying the colors of the Lone Star Rangers Division.
   components:
   - type: Sprite
     sprite: _NF/Structures/Decoration/banner.rsi
