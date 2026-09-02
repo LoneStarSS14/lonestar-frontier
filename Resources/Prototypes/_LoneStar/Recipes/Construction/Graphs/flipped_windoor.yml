@@ -385,7 +385,7 @@
         doAfter: 3
 
   - node: electronicsSecure
-    entity: WindoorAssemblyFSecure
+    entity: WindoorAssemblySecureF
     edges:
     - to: windoorSecure
       conditions:
