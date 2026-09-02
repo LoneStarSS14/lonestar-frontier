@@ -1,0 +1,9 @@
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckGoonHoS
+  name: cloak thing
+  description: It feels like its from an alternate dimension
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Neck/goon-hoscloak.rsi
