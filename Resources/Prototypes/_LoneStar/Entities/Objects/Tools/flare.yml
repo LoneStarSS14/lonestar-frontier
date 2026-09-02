@@ -7,8 +7,8 @@
   - type: Sprite
     layers:
     - state: boxwide
-      color: "#73FF73"
     - state: flare
+      color: "#00FF00"
   - type: BallisticAmmoProvider
     proto: FlareGreen
 
@@ -21,8 +21,8 @@
   - type: Sprite
     layers:
     - state: boxwide
-      color: "#FF73FF"
     - state: flare
+      color: "#FF00FF"
   - type: BallisticAmmoProvider
     proto: FlareMagenta
 

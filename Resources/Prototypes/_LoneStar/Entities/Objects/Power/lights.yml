@@ -41,8 +41,14 @@
   description: A pole with powerful green lights on it.
   components:
   - type: Sprite
-    sprite: Objects/Misc/Lights/lights.rsi
-    color: "#73FF73"
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-green.rsi
+    layers:
+    - state: icon
+      map: [ "base" ]
+    - state: icon-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
   - type: PointLight
     enabled: false
     color: "#00FF00"
@@ -54,8 +60,14 @@
   description: A pole with powerful magenta lights on it.
   components:
   - type: Sprite
-    sprite: Objects/Misc/Lights/lights.rsi
-    color: "#ff73ff"
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-magenta.rsi
+    layers:
+    - state: icon
+      map: [ "base" ]
+    - state: icon-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
   - type: PointLight
     enabled: false
     color: "#FF00FF"
@@ -66,9 +78,27 @@
   id: LanternGreen
   description: The holy green light guides the way.
   components:
+#  - type: Sprite
+#    sprite: Objects/Tools/lantern.rsi
+#    color: "#73FF73"
   - type: Sprite
-    sprite: Objects/Tools/lantern.rsi
-    color: "#73FF73"
+    sprite: _LoneStar/Objects/Tools/lantern-green.rsi
+    layers:
+    - state: icon
+    - state: icon-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: ToggleableVisuals
+    sprite: _LoneStar/Objects/Tools/lantern-green.rsi
+    spriteLayer: light
+    inhandVisuals:
+      left:
+      - state: on-inhand-left
+        shader: unshaded
+      right:
+      - state: on-inhand-right
+        shader: unshaded
   - type: PointLight
     radius: 4
     energy: 3
@@ -81,8 +111,23 @@
   description: The holy magenta light guides the way.
   components:
   - type: Sprite
-    sprite: Objects/Tools/lantern.rsi
-    color: "#FF73FF"
+    sprite: _LoneStar/Objects/Tools/lantern-magenta.rsi
+    layers:
+    - state: icon
+    - state: icon-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: ToggleableVisuals
+    sprite: _LoneStar/Objects/Tools/lantern-magenta.rsi
+    spriteLayer: light
+    inhandVisuals:
+      left:
+      - state: on-inhand-left
+        shader: unshaded
+      right:
+      - state: on-inhand-right
+        shader: unshaded
   - type: PointLight
     radius: 4
     energy: 3
