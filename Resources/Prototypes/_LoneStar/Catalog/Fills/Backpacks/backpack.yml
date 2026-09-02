@@ -1,0 +1,22 @@
+- type: entity
+  parent: ClothingBackpackNfsdBrown
+  id: ClothingBackpackLsrdBundle
+  abstract: true
+  components:
+  - type: Tag
+    tags: []
+
+- type: entity
+  parent:
+  - ClothingBackpackLsrdBundle
+  - BaseC4ContrabandUnredeemable
+  id: ClothingBackpackLSRDRaidBundle
+  name: LSRD raid suit bundle
+  description: "Contains the LSRD raid armor suit."
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterArmorLsrdRaid
+    - id: ClothingHeadHelmetLsrdRaid
+    - id: ClothingMaskGasNfsd
+    - id: ClothingHandsGlovesCombatNfsdBrown

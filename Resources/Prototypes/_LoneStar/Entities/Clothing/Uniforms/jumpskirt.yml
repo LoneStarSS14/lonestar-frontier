@@ -323,6 +323,54 @@
       - state: equipped-INNERCLOTHING-detail
         color: "#5c5c60"
 
+- type: entity
+  parent: ClothingUniformJumpsuitRegalGown
+  id: ClothingUniformJumpsuitRegalGownPink
+  name: pink regal gown
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#ffaae1"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+        color: "#ffaae1"
+
+# region Kimonos
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtKimonoRed
+  name: red pressed kimono
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-red.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-red.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtKimonoGreen
+  name: green pressed kimono
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-green.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-green.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtKimonoWhite
+  name: white pressed kimono
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-white.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-white.rsi
+
 # region Misc
 - type: entity
   parent: ClothingUniformBase
@@ -333,3 +381,13 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtPerformerAlt
+  name: red performers jumpskirt
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/performer-alt.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/performer-alt.rsi

@@ -5,4 +5,8 @@
   id: WhitelistChameleonAdvancedCollar
 
 - type: Tag
-  id: BorgWearable #Controls if an item should only be wearable in borg-specific slots.
+  id: BorgWearable #Controls if an item should only be wearable in borg-specific slots
+  
+- type: Tag
+  id: WindowDirectional
+

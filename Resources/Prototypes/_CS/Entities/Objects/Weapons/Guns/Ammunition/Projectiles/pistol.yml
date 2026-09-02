@@ -8,7 +8,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 29
+        Piercing: 24 # LoneStar
 
 - type: entity
   id: CSBulletPistol40Overpressure
@@ -19,7 +19,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 32
+        Piercing: 26 # LoneStar
 
 - type: entity
   id: CSBulletPistol40Incendiary
@@ -30,8 +30,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 18 # 0.6 * base total dmg
-        Heat: 11 # 0.4 * base total dmg
+        Blunt: 19.2 # LoneStar
+        Heat: 4.8 # LoneStar
 
 - type: entity
   id: CSBulletPistol40Uranium
@@ -42,8 +42,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 24 # 0.6 * (1.4 * base total dmg)
-        Radiation: 16 # 0.4 * (1.4 * base total dmg)
+        Blunt: 19.2 # LoneStar
+        Radiation: 9.6 # LoneStar
 
 - type: entity
   id: CSBulletPistol40Practice
@@ -65,8 +65,8 @@
   - type: Projectile
     damage:
       types:
-        Shock: 14.5
-        Blunt: 14.5
+        Shock: 9.6 # LoneStar
+        Blunt: 19.2 # LoneStar
 
 - type: entity
   id: CSBulletPistol40Rubber
@@ -77,6 +77,6 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 0
+        Blunt: 0.24 # LoneStar
   - type: StaminaDamageOnCollide
     damage: 24

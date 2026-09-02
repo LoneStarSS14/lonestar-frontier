@@ -1,0 +1,40 @@
+# Chambers
+
+- type: entity
+  id: LsBaseWeaponRevolverChamber
+  abstract: true
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: RevolverAmmoProvider
+    mayTransfer: true
+    capacity: 6
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
+
+- type: entity
+  id: LsBaseWeaponRevolverChamber60
+  parent: LsBaseWeaponRevolverChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-60
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+        - NFCartridgeRifle60
+        - NFCartridgeRifle60
+    capacity: 4
+    proto: NFCartridgeRifle60
+    chambers: [ True, True, True, True ]
+    ammoSlots: [ null, null, null, null ]

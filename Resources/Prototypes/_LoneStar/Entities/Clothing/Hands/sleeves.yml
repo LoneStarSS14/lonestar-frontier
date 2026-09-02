@@ -59,3 +59,20 @@
       - state: equipped-HAND
       - state: equipped-HAND-detail
         color: "#5c5c60"
+
+- type: entity
+  parent: ClothingHandsGlovesRegalSleeves
+  id: ClothingHandsGlovesRegalSleevesPink
+  name: pink regal sleeves
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-detail
+      color: "#ffaae1"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+      - state: equipped-HAND-detail
+        color: "#ffaae1"
