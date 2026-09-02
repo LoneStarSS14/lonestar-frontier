@@ -1,0 +1,21 @@
+- type: entity
+  parent: LightTube
+  name: warm light tube
+  id: WarmLightTube
+  description: A warm light tube for a more cozy atmosphere.
+  components:
+  - type: LightBulb
+    color: "#ff9833" # 2200k color temp
+    lightEnergy: 1 #match energy of warm light bulb
+    lightSoftness: 3 #match softness of warm light bulb
+
+- type: entity
+  parent: LightTube
+  name: dim light tube
+  id: DimightTube
+  description: A warm light tube for a more cozy atmosphere.
+  components:
+  - type: LightBulb
+    color: "#ba473f"
+    lightEnergy: 0.5 #match energy of dim light bulb
+    lightSoftness: 3 #match softness of dim light bulb
