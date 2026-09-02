@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 08/26/2026 01:04:38
-  entityCount: 634
+  time: 09/02/2026 22:26:35
+  entityCount: 633
 maps: []
 grids:
 - 1
@@ -883,12 +883,6 @@ entities:
 - proto: BenchSofaCorpRight
   entities:
   - uid: 566
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,-4.5
-      parent: 1
-  - uid: 567
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
