@@ -190,7 +190,7 @@
             volume: 5
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1600 #LS Edit. Prevent gibbing below 1600 damage due to bugs.
       behaviors:
       - !type:PlaySoundBehavior
         sound:
