@@ -3441,3 +3441,10 @@ Entries:
   id: 386
   time: '2026-09-03T03:04:41.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/104
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Added the Aphrodesiac Bite trait~!
+  id: 387
+  time: '2026-09-03T04:17:14.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/29
