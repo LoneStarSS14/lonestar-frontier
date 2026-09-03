@@ -3448,3 +3448,10 @@ Entries:
   id: 387
   time: '2026-09-03T04:17:14.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/29
+- author: Synthestra
+  changes:
+    - type: Add
+      message: Gulps...
+  id: 388
+  time: '2026-09-03T04:33:22.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/105
