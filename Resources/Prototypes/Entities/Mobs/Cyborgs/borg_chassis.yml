@@ -9,6 +9,13 @@
     - MedicalTrackingImplant
   - type: Sprite
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: robot
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: robot_e_r
@@ -289,6 +296,13 @@
   components:
     - type: Sprite
       layers:
+          #LS EDIT START - Cuffable Layer to prevent game crash
+        - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+          color: "#ffffff"
+          sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+          state: body-overlay-2
+          visible: false
+          # LS EDIT END
         - state: synd_sec
         - state: synd_sec_e
           map: ["enum.BorgVisualLayers.Light"]
@@ -355,6 +369,13 @@
   components:
     - type: Sprite
       layers:
+          #LS EDIT START - Cuffable Layer to prevent game crash
+        - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+          color: "#ffffff"
+          sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+          state: body-overlay-2
+          visible: false
+          # LS EDIT END
         - state: synd_medical
         - state: synd_medical_e
           map: ["enum.BorgVisualLayers.Light"]
@@ -394,6 +415,13 @@
   components:
     - type: Sprite
       layers:
+          #LS EDIT START - Cuffable Layer to prevent game crash
+        - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+          color: "#ffffff"
+          sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+          state: body-overlay-2
+          visible: false
+          # LS EDIT END
         - state: synd_engi
         - state: synd_engi_e
           map: ["enum.BorgVisualLayers.Light"]
@@ -431,6 +459,13 @@
   components:
   - type: Sprite
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: derelict
     - state: derelict_e_r
       map: ["enum.BorgVisualLayers.Light"]
