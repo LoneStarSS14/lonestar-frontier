@@ -88,6 +88,8 @@
       collection: FeroxiGnashes # Flooftier
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: MaleVulpkanin
@@ -144,6 +146,8 @@
       collection: VulpkaninYaps
     Gekker: # Floof
       collection: VulpkaninGekkers
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: FemaleVulpkanin
@@ -200,7 +204,8 @@
       collection: VulpkaninYaps
     Gekker: # Floof
       collection: VulpkaninGekkers
-
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 
 - type: emoteSounds
@@ -258,6 +263,8 @@
       collection: MaleDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: FemaleRodentia
@@ -294,6 +301,8 @@
       collection: FemaleDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg 
 
 - type: emoteSounds
   id: MaleFeroxi
@@ -324,6 +333,8 @@
       collection: MaleYawn
     Gnash:
       collection: FeroxiGnashes
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: FemaleFeroxi
@@ -354,6 +365,8 @@
       collection: Weh
     Gnash:
       collection: FeroxiGnashes
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: UnisexChitinid
@@ -390,3 +403,5 @@
       collection: MothDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
