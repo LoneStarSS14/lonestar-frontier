@@ -100,13 +100,9 @@
     - Binary #LS Edit. Kills all-non binary channels from borgs by default.
   - type: ZombieImmune
   - type: Cuffable # LS Edit. Cuffable Synths.
-  #LS Edit Start. Borgs repair faster, but at less amounts with a welder.
   - type: Repairable
-    damageValue: -10 # 10 seconds to repair from crit
-    doAfterDelay: 1
-    fuelCost: 0.5
+    doAfterDelay: 10
     allowSelfRepair: true # Coyote CHANGE: Was false, but we don't want to torture our cyborg players
-  #LS Edit End.
   - type: BorgChassis
   - type: LockingWhitelist
     blacklist:
