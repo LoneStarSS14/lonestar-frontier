@@ -35,6 +35,7 @@ public sealed class MaterialArbitrageTest
         "LedLightBulb", "ExteriorLightTube", "LightTube", "DrinkGlass", "DimLightBulb", "LightBulb", "LedLightTube",
         "SheetRGlass1", "ChemistryEmptyBottle01", "WarmLightBulb",
         "ExteriorLightBulb", "SodiumLightBulb", "LightTubeUltraviolet", "Pole", // Frontier
+        "ExteriorLightBulbGreen", "ExteriorLightBulbMagenta", "ExteriorLightTubeGreen", "ExteriorLightTubeMagenta", // LoneStar
     ];
 
     private readonly HashSet<string> _compositionArbitrageIgnore =
@@ -97,7 +98,7 @@ public sealed class MaterialArbitrageTest
             if (!proto.Components.TryGetValue(constructionName, out var destructible))
                 continue;
 
-            var comp = (ConstructionComponent) destructible.Component;
+            var comp = (ConstructionComponent)destructible.Component;
             constructionRecipes.Add(proto.ID, comp);
         }
 
@@ -134,7 +135,7 @@ public sealed class MaterialArbitrageTest
                         !spawnProto.Components.TryGetValue(compositionName, out var compositionReg))
                         continue;
 
-                    var mat = (PhysicalCompositionComponent) compositionReg.Component;
+                    var mat = (PhysicalCompositionComponent)compositionReg.Component;
                     foreach (var (matId, amount) in mat.MaterialComposition)
                     {
                         materials[matId] = materialStep.Amount * amount + materials.GetValueOrDefault(matId);
@@ -216,7 +217,7 @@ public sealed class MaterialArbitrageTest
             if (!proto.Components.TryGetValue(destructibleName, out var destructible))
                 continue;
 
-            var comp = (DestructibleComponent) destructible.Component;
+            var comp = (DestructibleComponent)destructible.Component;
 
             var spawnedEnts = new Dictionary<string, int>();
             var spawnedMats = new Dictionary<string, int>();
@@ -332,7 +333,7 @@ public sealed class MaterialArbitrageTest
                         !spawnProto.Components.TryGetValue(compositionName, out var compositionReg))
                         continue;
 
-                    var mat = (PhysicalCompositionComponent) compositionReg.Component;
+                    var mat = (PhysicalCompositionComponent)compositionReg.Component;
                     foreach (var (matId, amount) in mat.MaterialComposition)
                     {
                         materials[matId] = spawnCompletion.Amount * amount + materials.GetValueOrDefault(matId);
@@ -397,7 +398,7 @@ public sealed class MaterialArbitrageTest
             if (!proto.Components.TryGetValue(compositionName, out var composition))
                 continue;
 
-            var comp = (PhysicalCompositionComponent) composition.Component;
+            var comp = (PhysicalCompositionComponent)composition.Component;
             physicalCompositions.Add(proto.ID, comp);
         }
 
