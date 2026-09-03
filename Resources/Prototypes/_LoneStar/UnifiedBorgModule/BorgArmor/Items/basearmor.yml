@@ -4,6 +4,26 @@
   id: SyntheticBorgArmorBase # Base Armor Type for borgs
   abstract: true
   components:
+  - type: ArmorPlateItem
+    maxDurability: 75
+    walkSpeedModifier: 0.99
+    sprintSpeedModifier: 0.99
+    staminaDamageMultiplier: 0
+    absorptionRatios:
+      Piercing: 0.1
+      Blunt: 0.1
+      Slash: 0.1
+      Heat: 0.1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
   - type: Sprite
     sprite: _LoneStar/Objects/BorgArmor/physarmor/borglightarmor.rsi
   - type: Clothing

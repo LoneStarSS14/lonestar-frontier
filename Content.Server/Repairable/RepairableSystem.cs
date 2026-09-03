@@ -1,4 +1,5 @@
 using Content.Server.Administration.Logs;
+using Content.Server.Atmos.Monitor.Components;
 using Content.Shared.Damage;
 using Content.Shared.Database;
 using Content.Shared.Interaction;
@@ -31,10 +32,24 @@ namespace Content.Server.Repairable
 
             if (component.Damage != null)
             {
-                var damageChanged = _damageableSystem.TryChangeDamage(uid, component.Damage, true, false, origin: args.User);
-                _adminLogger.Add(LogType.Healed, $"{ToPrettyString(args.User):user} repaired {ToPrettyString(uid):target} by {damageChanged?.GetTotal()}");
+                if (component.AutoDoAfter)
+                {
+                    for (int i = 0; i < 15; i++)
+                    {
+                        {
+                            if (damageable.TotalDamage > 0)
+                            {
+                                var damageChanged = _damageableSystem.TryChangeDamage(uid, component.Damage, true, false, origin: args.User);
+                                _adminLogger.Add(LogType.Healed, $"{ToPrettyString(args.User):user} repaired {ToPrettyString(uid):target} by {damageChanged?.GetTotal()}");
+                            }
+                            else
+                            {
+                                return;
+                            }
+                        }
+                    }
+                }
             }
-
             else
             {
                 // Repair all damage

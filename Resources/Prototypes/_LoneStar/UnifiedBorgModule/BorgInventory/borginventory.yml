@@ -32,3 +32,12 @@
     uiWindowPos: 3,0
     strippingWindowPos: 0,5
     displayName: Back
+  - name: armor # Controls them being able to wear additional armor. Disable if you do not want to use this module. (And remove the cargo/research entries ofc)
+    slotTexture: suit_storage
+    slotFlags: BORGARMOR
+    uiWindowPos: 1,2
+    strippingWindowPos: 0,0
+    displayName: Suit # I am not adding a .ftl just for this.
+    whitelist:
+      tags:
+        - BorgWearable
