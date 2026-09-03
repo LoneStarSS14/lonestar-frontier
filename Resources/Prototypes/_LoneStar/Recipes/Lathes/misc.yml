@@ -57,6 +57,8 @@
   id: HeliumLightBulb
   result: HeliumLightBulb
   parent: BaseLightRecipe
+
+- type: latheRecipe
   id: BoxDispenserFlareGreen
   result: BoxDispenserFlareGreen
   parent: BoxDispenserFlare

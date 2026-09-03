@@ -121,6 +121,8 @@
   - type: LightBulb
     bulb: Bulb
     color: "#FFB8C2" #pink - 225, 184, 194 (Helium)
+
+- type: entity
   parent: ExteriorLightBulb
   name: green exterior light bulb
   id: ExteriorLightBulbGreen
