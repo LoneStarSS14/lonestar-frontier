@@ -1,3 +1,6 @@
+# Clothes in here are being refactored into _LoneStar/Entities/Clothing/Uniforms/*/coyote
+# If you do so, please leave the old `#  id: [Name]`
+
 - type: entity
   parent: ClothingUniformSkirtBase
   id: CoolCoyoteClothes
@@ -181,23 +184,7 @@
       jumpsuit:
       - state: blackdress
 
-- type: entity
-  parent: CoolCoyoteClothes
-  id: CoolCoyoteClothesBlackNGold
-  name: black and gold dressrobe
-  description: |
-  components:
-  - type: Sprite
-    overrideDir: South
-    enableOverrideDir: true
-    sprite: _CS/Clothes/cbuniforms.rsi
-    layers:
-    - state: blackngold
-  - type: Clothing
-    sprite: _CS/Clothes/cbuniforms.rsi
-    clothingVisuals:
-      jumpsuit:
-      - state: blackngold
+#  id: CoolCoyoteClothesBlackNGold
 
 - type: entity
   parent: CoolCoyoteClothes

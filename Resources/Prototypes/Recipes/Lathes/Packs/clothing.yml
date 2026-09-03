@@ -89,32 +89,32 @@
   recipes:
   - ClothingUniformJumpsuitDetective
   - ClothingUniformJumpskirtDetective
-  # - ClothingHeadHatBeretHoS # Frontier
-  # - ClothingHeadHatHoshat # Frontier
-  # - ClothingUniformJumpsuitHoS # Frontier
-  # - ClothingUniformJumpskirtHoS # Frontier
-  # - ClothingUniformJumpsuitHosFormal # Frontier
-  # - ClothingUniformJumpskirtHosFormal # Frontier
-  # - ClothingUniformJumpsuitHoSAlt # Frontier
-  # - ClothingUniformJumpskirtHoSAlt # Frontier
-  # - ClothingUniformJumpsuitHoSBlue # Frontier
-  # - ClothingUniformJumpsuitHoSGrey # Frontier
-  # - ClothingUniformJumpsuitHoSParadeMale # Frontier
-  # - ClothingUniformJumpskirtHoSParadeMale # Frontier
+  - ClothingHeadHatBeretHoS # Lonestar: Reenabled
+  - ClothingHeadHatHoshat # Lonestar: Reenabled
+  - ClothingUniformJumpsuitHoS # Lonestar: Reenabled
+  - ClothingUniformJumpskirtHoS # Lonestar: Reenabled
+  - ClothingUniformJumpsuitHosFormal # Lonestar: Reenabled
+  - ClothingUniformJumpskirtHosFormal # Lonestar: Reenabled
+  - ClothingUniformJumpsuitHoSAlt # Lonestar: Reenabled
+  - ClothingUniformJumpskirtHoSAlt # Lonestar: Reenabled
+  - ClothingUniformJumpsuitHoSBlue # Lonestar: Reenabled
+  - ClothingUniformJumpsuitHoSGrey # Lonestar: Reenabled
+  - ClothingUniformJumpsuitHoSParadeMale # Lonestar: Reenabled
+  - ClothingUniformJumpskirtHoSParadeMale # Lonestar: Reenabled
   - ClothingUniformJumpsuitSeniorOfficer
   - ClothingUniformJumpskirtSeniorOfficer
   - ClothingUniformJumpsuitPrisoner
   - ClothingUniformJumpskirtPrisoner
-  # - ClothingHeadHatBeretSecurity # Frontier
-  # - ClothingUniformJumpsuitSec # Frontier
-  # - ClothingUniformJumpskirtSec # Frontier
-  # - ClothingHeadHatBeretBrigmedic # Frontier
-  # - ClothingUniformJumpsuitBrigmedic # Frontier
-  # - ClothingUniformJumpskirtBrigmedic # Frontier
-  # - ClothingHeadHatBeretWarden # Frontier
-  # - ClothingHeadHatWarden # Frontier
-  # - ClothingUniformJumpsuitWarden # Frontier
-  # - ClothingUniformJumpskirtWarden # Frontier
+  - ClothingHeadHatBeretSecurity # Lonestar: Reenabled
+  - ClothingUniformJumpsuitSec # Lonestar: Reenabled
+  - ClothingUniformJumpskirtSec # Lonestar: Reenabled
+  - ClothingHeadHatBeretBrigmedic # Lonestar: Reenabled
+  - ClothingUniformJumpsuitBrigmedic # Lonestar: Reenabled
+  - ClothingUniformJumpskirtBrigmedic # Lonestar: Reenabled
+  - ClothingHeadHatBeretWarden # Lonestar: Reenabled
+  - ClothingHeadHatWarden # Lonestar: Reenabled
+  - ClothingUniformJumpsuitWarden # Lonestar: Reenabled
+  - ClothingUniformJumpskirtWarden # Lonestar: Reenabled
   - ClothingUniformJumpsuitPrivateSec # Frontier
   - ClothingUniformJumpskirtPrivateSec # Frontier
 
@@ -154,8 +154,8 @@
   - ClothingOuterWinterCE
   - ClothingOuterWinterCMO
   - ClothingOuterWinterHoP
-  # - ClothingOuterWinterHoSUnarmored # Frontier
-  # - ClothingOuterWinterWardenUnarmored # Frontier
+  - ClothingOuterWinterHoSUnarmored # Lonestar: Reenabled
+  - ClothingOuterWinterWardenUnarmored # Lonestar: Reenabled
   - ClothingOuterWinterQM
   - ClothingOuterWinterRD
   - ClothingOuterWinterMusician
@@ -177,7 +177,7 @@
   - ClothingOuterWinterViro
   - ClothingOuterWinterSci
   - ClothingOuterWinterRobo
-  # - ClothingOuterWinterSec # Frontier
+  - ClothingOuterWinterSec # Lonestar: Reenabled
   - ClothingOuterWinterCoatMail # Frontier
 
 - type: latheRecipePack
@@ -239,7 +239,7 @@
   - ClothingUniformJumpsuitPyjamaSyndicatePink
   - ClothingHeadPyjamaSyndicateRed
   - ClothingUniformJumpsuitPyjamaSyndicateRed
-  # - ClothingOuterWinterCentcom # Frontier
+  - ClothingOuterWinterCentcom # Lonestar: Reenabled
   - ClothingOuterWinterSyndie
   - ClothingOuterWinterSyndieCap
   - BedsheetSyndie

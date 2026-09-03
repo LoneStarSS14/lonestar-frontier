@@ -1,0 +1,83 @@
+- type: entity
+  parent: WindoorAssembly
+  id: WindoorAssemblyF
+  suffix: Flipped
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Windoors/Flipped/windoor.rsi
+    layers:
+    - state: assembly
+  - type: Construction
+    graph: WindoorF
+    node: assembly
+
+- type: entity
+  parent: WindoorAssemblySecure
+  id: WindoorAssemblySecureF
+  suffix: Flipped
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Windoors/Flipped/windoor.rsi
+    layers:
+    - state: secure_underlay
+    - state: assembly
+  - type: Construction
+    graph: WindoorF
+    node: assemblySecure
+
+#plasma windoor assemblies
+- type: entity
+  parent: WindoorAssemblyPlasma
+  id: WindoorAssemblyPlasmaF
+  suffix: Flipped
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Windoors/Flipped/plasma.rsi
+    layers:
+    - state: assembly
+  - type: Construction
+    graph: WindoorF
+    node: pglass
+
+- type: entity
+  parent: WindoorAssemblySecurePlasma
+  id: WindoorAssemblySecurePlasmaF
+  suffix: Flipped
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Windoors/Flipped/plasma.rsi
+    layers:
+    - state: secure_underlay
+    - state: assembly
+  - type: Construction
+    graph: WindoorF
+    node: pglassSecure
+
+#uranium windoor assemblies
+- type: entity
+  parent: WindoorAssemblyUranium
+  id: WindoorAssemblyUraniumF
+  suffix: Flipped
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Windoors/Flipped/uranium.rsi
+    layers:
+    - state: assembly
+  - type: Construction
+    graph: WindoorF
+    node: uglass
+
+- type: entity
+  parent: WindoorAssemblySecureUranium
+  id: WindoorAssemblySecureUraniumF
+  suffix: Flipped
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Windoors/Flipped/uranium.rsi
+    layers:
+    - state: secure_underlay
+    - state: assembly
+  - type: Construction
+    graph: WindoorF
+    node: uglassSecure
+

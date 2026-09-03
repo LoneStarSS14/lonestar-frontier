@@ -2,7 +2,7 @@
 - type: rcd
   id: FloorWood
   name: rcd-component-floor-wood
-  category: WallsAndFlooring
+  category: Floors # Lonestar
   sprite: /Textures/Tiles/wood_tile.png
   mode: ConstructTile
   prototype: FloorWood
@@ -15,8 +15,32 @@
 
 #region Walls
 - type: rcd
+  id: WallReinforced
+  category: Walls
+  sprite: /Textures/Interface/Radial/RCD/reinforced_wall.png
+  mode: ConstructObject
+  prototype: WallReinforced
+  cost: 6
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: WallShuttle
+  category: Walls
+  sprite: /Textures/Interface/Radial/RCD/shuttle_wall.png
+  mode: ConstructObject
+  prototype: WallShuttle
+  cost: 6
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
   id: WallMining
-  category: WallsAndFlooring
+  category: Walls # Lonestar
   sprite: { sprite: Structures/Walls/mining.rsi, state: full }
   mode: ConstructObject
   prototype: WallMining
@@ -28,11 +52,11 @@
 
 - type: rcd
   id: WallMiningDiagonal
-  category: WallsAndFlooring
+  category: Walls # Lonestar
   sprite: { sprite: Structures/Walls/mining_diagonal.rsi, state: state0 }
   mode: ConstructObject
   prototype: WallMiningDiagonal
-  cost: 4
+  cost: 6
   delay: 2
   collisionMask: FullTileMask
   collisionBounds: "-0.23,-0.49,0.23,-0.36"
@@ -41,7 +65,7 @@
 
 - type: rcd
   id: WallPlastitanium
-  category: WallsAndFlooring
+  category: Walls # Lonestar
   sprite: { sprite: Structures/Walls/plastitanium.rsi, state: full }
   mode: ConstructObject
   prototype: WallPlastitanium
@@ -53,11 +77,11 @@
 
 - type: rcd
   id: WallPlastitaniumDiagonal
-  category: WallsAndFlooring
+  category: Walls # Lonestar
   sprite: { sprite: Structures/Walls/plastitanium_diagonal.rsi, state: state0 }
   mode: ConstructObject
   prototype: WallPlastitaniumDiagonal
-  cost: 6
+  cost: 8
   delay: 2
   collisionMask: FullTileMask
   collisionBounds: "-0.23,-0.49,0.23,-0.36"
@@ -85,7 +109,7 @@
   sprite: { sprite: Structures/Windows/mining_diagonal.rsi, state: state0 }
   mode: ConstructObject
   prototype: MiningWindowDiagonal
-  cost: 2
+  cost: 4
   delay: 2
   collisionMask: Impassable
   collisionBounds: "-0.23,-0.49,0.23,-0.36"
@@ -114,7 +138,7 @@
   sprite: { sprite: Structures/Windows/plastitanium_window_diagonal.rsi, state: state0 }
   mode: ConstructObject
   prototype: PlastitaniumWindowDiagonal
-  cost: 3
+  cost: 6
   delay: 2
   collisionMask: Impassable
   collisionBounds: "-0.23,-0.49,0.23,-0.36"
