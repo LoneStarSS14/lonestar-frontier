@@ -44,6 +44,7 @@
     - NFServiceArchetypeStatic
     - CSPlumbingStatic # Coyote: showers, sinks, drains
     - CSDonkcoServiceTechfabStatic
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFServiceTechfabEmagStatic

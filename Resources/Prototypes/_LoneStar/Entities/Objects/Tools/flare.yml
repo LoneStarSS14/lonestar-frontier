@@ -1,0 +1,73 @@
+- type: entity
+  id: BoxDispenserFlareGreen
+  parent: BoxDispenserFlare
+  name: Green flare dispenser
+  description: Dispenses green emergency flares.
+  components:
+  - type: Sprite
+    layers:
+    - state: boxwide
+    - state: flare
+      color: "#00FF00"
+  - type: BallisticAmmoProvider
+    proto: FlareGreen
+
+- type: entity
+  id: BoxDispenserFlareMagenta
+  parent: BoxDispenserFlare
+  name: magenta flare dispenser
+  description: Dispenses magenta emergency flares.
+  components:
+  - type: Sprite
+    layers:
+    - state: boxwide
+    - state: flare
+      color: "#FF00FF"
+  - type: BallisticAmmoProvider
+    proto: FlareMagenta
+
+- type: entity
+  name: green flare
+  parent: Flare
+  id: FlareGreen
+  description: A flare that produces a very bright green light for a short while. Point the flame away from yourself.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/flare.rsi
+    layers:
+    - map: [ enum.ExpendableLightVisualLayers.Base ]
+      state: flare_base
+    - map: [ enum.ExpendableLightVisualLayers.Glow ]
+      state: flare_burn
+      color: "#40FF40"
+      visible: false
+      shader: unshaded
+    - map: [ enum.ExpendableLightVisualLayers.Overlay ]
+      state: flare_unlit
+      color: "#00FF00"
+  - type: PointLight
+    enabled: false
+    color: "#00FF00"
+
+- type: entity
+  name: magenta flare
+  parent: Flare
+  id: FlareMagenta
+  description: A flare that produces a very bright magenta light for a short while. Point the flame away from yourself.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/flare.rsi
+    layers:
+    - map: [ enum.ExpendableLightVisualLayers.Base ]
+      state: flare_base
+    - map: [ enum.ExpendableLightVisualLayers.Glow ]
+      state: flare_burn
+      color: "#FF40FF"
+      visible: false
+      shader: unshaded
+    - map: [ enum.ExpendableLightVisualLayers.Overlay ]
+      state: flare_unlit
+      color: "#FF00FF"
+  - type: PointLight
+    enabled: false
+    color: "#FF00FF"

@@ -102,6 +102,7 @@
     - NFLightsColoredStatic
     - NFServiceArchetypeStatic
     - CSPlumbingStatic # Coyote: showers, sinks, drains
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFServiceTechfabEmagStatic
@@ -153,6 +154,7 @@
     - NFLightsColoredStatic
     - NFServiceArchetypeStatic
     - NFMcServiceTechfabStatic
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
 
 - type: entity
   parent: [ NFBlueprintReceiverBase, BaseLatheLube ]

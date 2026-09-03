@@ -1,0 +1,19 @@
+- type: latheRecipePack
+  id: LSAccessibilityPack
+  recipes:
+  - BoxDispenserFlareGreen
+  - BoxDispenserFlareMagenta
+  - ExteriorLightBulbGreen
+  - ExteriorLightBulbMagenta
+  - ExteriorLightTubeGreen
+  - ExteriorLightTubeMagenta
+  - FloodlightGreen
+  - FloodlightMagenta
+  - LanternGreen
+  - LanternMagenta
+
+- type: latheRecipePack
+  id: LSAccessibilityFlarePack
+  recipes:
+  - BoxDispenserFlareGreen
+  - BoxDispenserFlareMagenta

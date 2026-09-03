@@ -3418,3 +3418,33 @@ Entries:
   id: 383
   time: '2026-09-02T21:05:58.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/96
+- author: archee1
+  changes:
+    - type: Add
+      message: Adds a new 'hero's cloak' to the theatre drobe.
+  id: 384
+  time: '2026-09-02T23:59:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/100
+- author: Synthestra
+  changes:
+    - type: Fix
+      message: >-
+        Solution containers (beakers, glasses, etc) no longer rapidly flicker
+        through different fill level visuals when transferring their contents
+  id: 385
+  time: '2026-09-03T00:50:51.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/101
+- author: Synthestra
+  changes:
+    - type: Add
+      message: 'Wet your eyelids with the Blink emote '
+  id: 386
+  time: '2026-09-03T03:04:41.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/104
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Added the Aphrodesiac Bite trait~!
+  id: 387
+  time: '2026-09-03T04:17:14.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/29

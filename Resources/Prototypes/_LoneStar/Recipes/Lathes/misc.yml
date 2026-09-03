@@ -1,0 +1,49 @@
+- type: latheRecipe
+  id: BoxDispenserFlareGreen
+  result: BoxDispenserFlareGreen
+  parent: BoxDispenserFlare
+
+- type: latheRecipe
+  id: BoxDispenserFlareMagenta
+  result: BoxDispenserFlareMagenta
+  parent: BoxDispenserFlare
+
+- type: latheRecipe
+  id: LanternMagenta
+  result: LanternMagenta
+  parent: LanternNF
+
+- type: latheRecipe
+  id: LanternGreen
+  result: LanternGreen
+  parent: LanternNF
+
+- type: latheRecipe
+  id: FloodlightGreen
+  result: FloodlightGreen
+  parent: Floodlight
+
+- type: latheRecipe
+  id: FloodlightMagenta
+  result: FloodlightMagenta
+  parent: Floodlight
+
+- type: latheRecipe
+  id: ExteriorLightTubeGreen
+  result: ExteriorLightTubeGreen
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: ExteriorLightTubeMagenta
+  result: ExteriorLightTubeMagenta
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: ExteriorLightBulbGreen
+  result: ExteriorLightBulbGreen
+  parent: NFColoredLightRecipe
+
+- type: latheRecipe
+  id: ExteriorLightBulbMagenta
+  result: ExteriorLightBulbMagenta
+  parent: NFColoredLightRecipe

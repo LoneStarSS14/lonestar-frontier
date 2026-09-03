@@ -1,0 +1,193 @@
+- type: entity
+  parent: ExteriorLightBulb
+  name: green exterior light bulb
+  id: ExteriorLightBulbGreen
+  description: A colorful light bulb with a small colored crystal inside.
+  components:
+  - type: LightBulb
+    color: "#00FF00"
+
+- type: entity
+  parent: ExteriorLightBulb
+  name: magenta exterior light bulb
+  id: ExteriorLightBulbMagenta
+  description: A colorful light bulb with a small colored crystal inside.
+  components:
+  - type: LightBulb
+    color: "#FF00FF"
+
+- type: entity
+  parent: ExteriorLightTube
+  name: green exterior light tube
+  description: A high power high energy green bulb for the depths of space. May contain mercury.
+  id: ExteriorLightTubeGreen
+  components:
+  - type: LightBulb
+    color: "#00FF00"
+
+- type: entity
+  parent: ExteriorLightTube
+  name: magenta exterior light tube
+  description: A high power high energy magenta bulb for the depths of space. May contain mercury.
+  id: ExteriorLightTubeMagenta
+  components:
+  - type: LightBulb
+    color: "#FF00FF"
+
+- type: entity
+  name: green floodlight
+  id: FloodlightGreen
+  parent: Floodlight
+  description: A pole with powerful green lights on it.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-green.rsi
+    layers:
+    - state: icon
+      map: [ "base" ]
+    - state: icon-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Item
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-green.rsi
+    size: Normal
+    heldPrefix: off
+  - type: PointLight
+    enabled: false
+    color: "#00FF00"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FloodlightBrokenGreen:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  name: magenta floodlight
+  id: FloodlightMagenta
+  parent: Floodlight
+  description: A pole with powerful magenta lights on it.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-magenta.rsi
+    layers:
+    - state: icon
+      map: [ "base" ]
+    - state: icon-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Item
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-magenta.rsi
+    size: Normal
+    heldPrefix: off
+  - type: PointLight
+    enabled: false
+    color: "#FF00FF"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FloodlightBrokenMagenta:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  name: broken green floodlight
+  id: FloodlightBrokenGreen
+  parent: FloodlightBroken
+  description: A pole with powerful green lights on it. It's broken.
+  components:
+  - type: GoblinPreciousTrash # Frontier
+  - type: Item
+    size: Normal
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-green.rsi
+    heldPrefix: broken
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-green.rsi
+    state: icon-broken
+
+- type: entity
+  name: broken magenta floodlight
+  id: FloodlightBrokenMagenta
+  parent: FloodlightBroken
+  description: A pole with powerful magenta lights on it. It's broken.
+  components:
+  - type: GoblinPreciousTrash # Frontier
+  - type: Item
+    size: Normal
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-magenta.rsi
+    heldPrefix: broken
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/Lights/floodlight-magenta.rsi
+    state: icon-broken
+
+
+- type: entity
+  name: green lantern
+  parent: Lantern
+  id: LanternGreen
+  description: The holy green light guides the way.
+  components:
+#  - type: Sprite
+#    sprite: Objects/Tools/lantern.rsi
+#    color: "#73FF73"
+  - type: Sprite
+    sprite: _LoneStar/Objects/Tools/lantern-green.rsi
+    layers:
+    - state: icon
+    - state: icon-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Item
+    sprite: _LoneStar/Objects/Tools/lantern-green.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Tools/lantern-green.rsi
+  - type: PointLight
+    radius: 4
+    energy: 3
+    color: "#00FF00"
+
+- type: entity
+  name: magenta lantern
+  parent: Lantern
+  id: LanternMagenta
+  description: The holy magenta light guides the way.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Tools/lantern-magenta.rsi
+    layers:
+    - state: icon
+    - state: icon-on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Item
+    sprite: _LoneStar/Objects/Tools/lantern-magenta.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Tools/lantern-magenta.rsi
+  - type: PointLight
+    radius: 4
+    energy: 3
+    color: "#FF00FF"
