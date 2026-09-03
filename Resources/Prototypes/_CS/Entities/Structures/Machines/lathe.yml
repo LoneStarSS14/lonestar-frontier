@@ -44,6 +44,7 @@
     - NFServiceArchetypeStatic
     - CSPlumbingStatic # Coyote: showers, sinks, drains
     - CSDonkcoServiceTechfabStatic
+    - LSFancyLightPack #LS Adds Special bulbs for mood lighting
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFServiceTechfabEmagStatic

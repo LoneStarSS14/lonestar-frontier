@@ -1,0 +1,63 @@
+- type: entity
+  name: elemental lighttube box
+  parent: BoxCardboard
+  id: BoxElementalLighttube
+  description: This box is shaped on the inside so that only light tubes and bulbs fit.
+  components:
+  - type: StorageFill
+    contents:
+    - id: XenonLightTube
+      amount: 3
+    - id: KryptonLightTube
+      amount: 3
+    - id: ArgonLightTube
+      amount: 3
+    - id: NeonLightTube
+      amount: 3
+    - id: HeliumLightTube
+      amount: 3
+
+  - type: Sprite
+    layers:
+    - state: box
+    - state: lighttube
+      color: "#ADD8E6" #Light Blue - 173, 216, 230 (Xenon)
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,7,3
+    whitelist:
+      components:
+      - LightBulb
+
+- type: entity
+  name: elemental bulbs box
+  parent: BoxLightbulb
+  id: BoxElementalLightbulb
+  description: This box is shaped on the inside so that only light tubes and bulbs fit. It's full of neat colored light bulbs!
+  components:
+  - type: StorageFill
+    contents:
+    - id: XenonLightBulb
+      amount: 3
+    - id: KryptonLightBulb
+      amount: 3
+    - id: ArgonLightBulb
+      amount: 3
+    - id: NeonLightBulb
+      amount: 3
+    - id: HeliumLightBulb
+      amount: 3
+
+  - type: Sprite
+    layers:
+    - state: box
+    - state: light
+      color: "#ADD8E6" #Light Blue - 173, 216, 230 (Xenon)
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,7,3
+    whitelist:
+      components:
+      - LightBulb

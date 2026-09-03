@@ -1,0 +1,59 @@
+- type: latheRecipe
+  id: WarmLightTube
+  result: WarmLightTube
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: DimLightTube
+  result: DimLightTube
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: XenonLightTube
+  result: XenonLightTube
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: KryptonLightTube
+  result: KryptonLightTube
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: ArgonLightTube
+  result: ArgonLightTube
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: NeonLightTube
+  result: NeonLightTube
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: HeliumLightTube
+  result: HeliumLightTube
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: XenonLightBulb
+  result: XenonLightBulb
+  parent: BaseLightRecipe
+
+- type: latheRecipe
+  id: KryptonLightBulb
+  result: KryptonLightBulb
+  parent: BaseLightRecipe
+
+- type: latheRecipe
+  id: ArgonLightBulb
+  result: ArgonLightBulb
+  parent: BaseLightRecipe
+
+- type: latheRecipe
+  id: NeonLightBulb
+  result: NeonLightBulb
+  parent: BaseLightRecipe
+
+- type: latheRecipe
+  id: HeliumLightBulb
+  result: HeliumLightBulb
+  parent: BaseLightRecipe
