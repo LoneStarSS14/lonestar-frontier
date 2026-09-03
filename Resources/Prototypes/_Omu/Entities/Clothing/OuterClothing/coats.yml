@@ -1,0 +1,71 @@
+
+- type: entity
+  parent: ClothingOuterCoatParamedicWB
+  id: ClothingJacketBrigmed
+  name: red paramedic's jacket
+  description: A stylish red jacket decorated with white stripes and cross. Nine out of ten corpsmen recommend "Do Not Revive."
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/OuterClothing/Coats/brigmedjacketred.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/OuterClothing/Coats/brigmedjacketred.rsi
+
+- type: entity
+  parent: ClothingOuterCoatLab
+  id: ClothingOuterCoatSciencecoatLong
+  name: science long lab coat
+  description: A Nanotrasen standard labcoat for science personnel.
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/OuterClothing/Coats/sciencelonglabcoat.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/OuterClothing/Coats/sciencelonglabcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatSciencecoatLong]
+  id: ClothingOuterCoatSciencecoatLongOpened
+  name: science long lab coat
+
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ClothingOuterCMOLabCoat
+  name: chief medical officer's long lab coat
+  description: A heavy, splash resistant labcoat made out of a fabric inner layer and plastic outer layer. Practical and cozy!
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/OuterClothing/Coats/CMOlabcoat.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/OuterClothing/Coats/CMOlabcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCMOLabCoat]
+  id: ClothingOuterCMOLabCoatOpened
+  name: chief medical officer's long lab coat
+
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id:  ClothingOuterCentcomLabcoat
+  name: central commander's long lab coat
+  description: Style, Performance, elegance. Accept no compromise. Fur lined for maximum cozy, bluespace rubber exterior for maximum performance.
+  components:
+  - type: Sprite
+    sprite: _Omu/Clothing/OuterClothing/Coats/centcomlabcoat.rsi
+  - type: Clothing
+    sprite: _Omu/Clothing/OuterClothing/Coats/centcomlabcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCentcomLabcoat]
+  id: ClothingOuterCentcomLabcoatOpened
+  name: central commander's long lab coat

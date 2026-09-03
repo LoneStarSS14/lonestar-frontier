@@ -42,6 +42,8 @@
       collection: MaleDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/Human/gulp.ogg
 
 - type: emoteSounds
   id: FemaleHuman
@@ -86,6 +88,8 @@
       collection: FemaleDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/Human/gulp.ogg
 
 - type: emoteSounds
   id: MaleReptilian
@@ -122,6 +126,8 @@
       collection: DeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: FemaleReptilian
@@ -158,6 +164,8 @@
       collection: FemaleDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: MaleSlime
@@ -206,6 +214,8 @@
       collection: MaleDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
   params:
     variation: 0.125
 
@@ -256,6 +266,8 @@
       collection: FemaleDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
   params:
     variation: 0.125
 
@@ -276,6 +288,8 @@
       collection: Hew
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
   params:
     variation: 0.125
     # We need vox sounds for the other emotes
@@ -303,6 +317,8 @@
       collection: DeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
   params:
     variation: 0.125
 
@@ -333,6 +349,8 @@
       collection: DeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: UnisexDwarf
@@ -375,6 +393,8 @@
       collection: MaleDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/Human/gulp.ogg
   params:
     variation: 0.125
     pitch: 0.75
@@ -420,6 +440,8 @@
       collection: FemaleDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/Human/gulp.ogg
   params:
     variation: 0.125
     pitch: 0.75
@@ -453,6 +475,8 @@
       collection: MothDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: UnisexSilicon
@@ -532,6 +556,8 @@
       collection: Salutes
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp addition
+      collection: Blinks
 
 - type: emoteSounds
   id: LewdSounds
@@ -569,6 +595,8 @@
        volume: -5
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp addition
+      collection: Blinks
 
 - type: emoteSounds
   id: ReptilianBodyEmotes
@@ -589,6 +617,8 @@
       collection: Salutes
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp addition
+      collection: Blinks
 
 # mobs
 - type: emoteSounds

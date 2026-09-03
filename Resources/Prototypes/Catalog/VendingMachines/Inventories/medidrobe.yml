@@ -31,6 +31,16 @@
     ClothingHeadHatSurgcapBlue: 4
     ClothingHeadHatSurgcapPurple: 4
     ClothingNeckCollarMed: 2 # Floofstation - Collar addition
+    ClothingUniformMedicalApron: 4 # DeltaV v
+    ClothingUniformJumpskirtMedicalApron: 4
+    ClothingUniformMedicalOffset: 4
+    ClothingUniformJumpskirtMedicalOffset: 4
+    ClothingUniformMedicalVest: 4
+    ClothingUniformJumpskirtMedicalVest: 4
+    ClothingOuterCoatLabMedical: 4
+    ClothingOuterCoatLabLong: 4
+    ClothingOuterCoatLabLongMedical: 4
+    ClothingHeadHatBeretMedical: 4
 # Paramed:
     ClothingUniformJumpsuitParamedic: 4
     ClothingUniformJumpskirtParamedic: 4
@@ -40,6 +50,11 @@
     ClothingHeadHatParamedicsoft: 2
     ClothingBeltMedicalEMT: 4 # Frontier, empty
     ClothingOuterHardsuitVoidParamed: 1
+    ClothingUniformParamedicJumper: 4 # DeltaV v
+    ClothingUniformJumpskirtParamedicJumper: 4
+    ClothingOuterCoatParamedicJacket: 4
+    ClothingJacketBrigmed: 4
+    ClothingHeadHatBeretParamedic: 4
 # Virology:
     ClothingBackpackVirology: 2
     ClothingBackpackSatchelVirology: 2
@@ -52,7 +67,7 @@
     ClothingMaskSterile: 4
     ClothingHeadHatHoodBioVirology: 2
     ClothingOuterBioVirology: 2
-    ClothingShoesBootsWinterViro: 2 #Delta V: Add departmental winter boots
+    ClothingShoesBootsWinterViro: 2 # DeltaV v
 # Chem:
     ClothingBackpackChemistry: 2
     ClothingBackpackSatchelChemistry: 2
@@ -64,7 +79,12 @@
     ClothingUniformJumpskirtChemistry: 2
     ClothingOuterWinterChem: 2
     ClothingOuterCoatLabChem: 2
-    ClothingShoesBootsWinterChem: 2 #Delta V: Add departmental winter boots
+    ClothingShoesBootsWinterChem: 2 # DeltaV v
+    ClothingUniformChemistSenior: 4
+    ClothingUniformJumpskirtChemistSenior: 4
+    ClothingOuterCoatLabLongChemist: 4
+    ClothingOuterCoatLabSeniorChemist: 4
+    ClothingHeadHatBeretSeniorChemistry: 4
 # Genetics:
     ClothingUniformJumpsuitGenetics: 2
     ClothingUniformJumpskirtGenetics: 2
@@ -73,7 +93,7 @@
     ClothingBackpackGenetics: 2
     ClothingBackpackSatchelGenetics: 2
     ClothingBackpackDuffelGenetics: 2
-    ClothingShoesBootsWinterGenetics: 2 #Delta V: Add departmental winter boots
+    ClothingShoesBootsWinterGenetics: 2 # DeltaV
 # Physician:
     ClothingUniformJumpsuitSeniorPhysician: 1
     ClothingUniformJumpskirtSeniorPhysician: 1
@@ -99,7 +119,16 @@
     ClothingUnderSocksCMO: 3
     ClothingUniformCMOThong: 3
 # CMO:
+    ClothingUniformCMOVest: 4 # DeltaV v
+    ClothingUniformJumpskirtCMOVest: 4
+    ClothingUniformCMOSummer: 4
+    ClothingUniformCMOFormal: 4
+    ClothingOuterCMOLabCoat: 4 # Omu*
+    ClothingOuterCoatLabLongCMO: 4
+    ClothingNeckCMOOverShoulder: 4
+    ClothingNeckCMOShawl: 4
   contrabandInventory: # Frontier - Hidden inventory
+    ClothingOuterCoatLabCybersun: 1 # DeltaV
     ClothingUniformJumpskirtOfLife: 1
     ToyFigurineMedicalDoctor: 1
     ToyFigurineParamedic: 1

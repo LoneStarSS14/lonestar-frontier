@@ -318,6 +318,28 @@
     - HVCable
     - CableTerminal
     - Deconstruct
+    # Hardlight/Mono start
+    - PlatingNE
+    - PlatingNW
+    - PlatingSE
+    - PlatingSW
+    - PlatingHalfV
+    - PlatingHalfH
+    - WindowDirectionalShuttle
+    - WindowShuttle
+    - WallSolidDiagonal
+    - WallShuttleDiagonal
+    - WallReinforcedDiagonal
+    - Lattice
+    - LatticeCornerNE
+    - LatticeCornerNW
+    - LatticeCornerSE
+    - LatticeCornerSW
+    - LatticeHalfV
+    - LatticeHalfH
+    - WallReinforced
+    - WallShuttle
+    # Hardlight/Mono end
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite

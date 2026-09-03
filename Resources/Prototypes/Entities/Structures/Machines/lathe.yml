@@ -153,6 +153,7 @@
     - AACTableStatic # DeltaV - AAC Tablets
     - CSPlumbingStatic # Coyote: showers, sinks, drains
     - CSFolderStatic # Coyote: - folders and clipboard
+    - LSAccessibilityFlarePack #LoneStar accessibility flares
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic

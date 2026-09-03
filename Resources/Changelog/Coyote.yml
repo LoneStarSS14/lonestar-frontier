@@ -3320,3 +3320,138 @@ Entries:
   id: 373
   time: '2026-08-30T17:05:35.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/88
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        You can now quick equip from the internals slot and pockets.](add: Adds
+        smart equip function to pocket 1, pocket 2, and suit storage slots.
+        Default binds are Shift+F and Shift+G for first and second pocket,
+        Shift+H for suit storage.)
+  id: 374
+  time: '2026-08-30T22:41:11.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/90
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: The ClothesMate now has access to some more (existing) clothes.
+    - type: Remove
+      message: Removed CentComm bunnysuits.
+  id: 375
+  time: '2026-08-30T22:43:19.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/78
+- author: archee1
+  changes:
+    - type: Fix
+      message: Bulk fuels now properly look bulky.
+  id: 376
+  time: '2026-08-31T03:01:24.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/92
+- author: archee1
+  changes:
+    - type: Add
+      message: DeltaV's medical wardrobe is now available at the medi-drobe.
+    - type: Add
+      message: Omu's long lab coats can now be found at sci/med/cent drobes.
+  id: 377
+  time: '2026-09-02T17:52:11.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/95
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Added many new options to the RCDs!
+    - type: Add
+      message: >-
+        Different lattice shapes will now actually affect the mass scanner
+        outline.
+    - type: Tweak
+      message: Split RCD "Walls & Flooring" into "Walls" & "Floors".
+  id: 378
+  time: '2026-09-02T17:55:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/36
+- author: Synthestra
+  changes:
+    - type: Add
+      message: Added flipped variants of windoors.
+    - type: Tweak
+      message: >-
+        Normal and secure variants of plasma, and uranium windoors can now be
+        viewable in the construction menu.
+  id: 379
+  time: '2026-09-02T18:10:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/93
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Punk Goggles now have silicon/organic health overlays.
+  id: 380
+  time: '2026-09-02T18:13:41.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/81
+- author: archee1
+  changes:
+    - type: Remove
+      message: EMP .35 ammo can no longer be sourced from dungeons.
+    - type: Tweak
+      message: Specialized ammo found in dungeon crates has been made less common.
+    - type: Tweak
+      message: All projectile weapon damages have been lowered slightly.
+    - type: Tweak
+      message: The GSW LMG has been buffed slightly in wield speed and firerate.
+    - type: Tweak
+      message: Stunbatons are now a 3hit stun instead of 2.
+  id: 381
+  time: '2026-09-02T18:39:26.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/87
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        Directional Windows can now be stacked, as long as it's not in the same
+        orientation.
+  id: 382
+  time: '2026-09-02T18:57:38.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/80
+- author: FlickFops
+  changes:
+    - type: Tweak
+      message: Nash has had a 2nd pass of tweaks.
+  id: 383
+  time: '2026-09-02T21:05:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/96
+- author: archee1
+  changes:
+    - type: Add
+      message: Adds a new 'hero's cloak' to the theatre drobe.
+  id: 384
+  time: '2026-09-02T23:59:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/100
+- author: Synthestra
+  changes:
+    - type: Fix
+      message: >-
+        Solution containers (beakers, glasses, etc) no longer rapidly flicker
+        through different fill level visuals when transferring their contents
+  id: 385
+  time: '2026-09-03T00:50:51.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/101
+- author: Synthestra
+  changes:
+    - type: Add
+      message: 'Wet your eyelids with the Blink emote '
+  id: 386
+  time: '2026-09-03T03:04:41.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/104
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Added the Aphrodesiac Bite trait~!
+  id: 387
+  time: '2026-09-03T04:17:14.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/29
+- author: Synthestra
+  changes:
+    - type: Add
+      message: Gulps...
+  id: 388
+  time: '2026-09-03T04:33:22.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/105

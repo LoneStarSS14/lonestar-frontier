@@ -39,6 +39,26 @@
     - HVCable
     - CableTerminal
     - Deconstruct
+    - PlatingNE
+    - PlatingNW
+    - PlatingSE
+    - PlatingSW
+    - PlatingHalfV
+    - PlatingHalfH
+    - WindowDirectionalShuttle
+    - WindowShuttle
+    - WallSolidDiagonal
+    - WallShuttleDiagonal
+    - WallReinforcedDiagonal
+    - Lattice
+    - LatticeCornerNE
+    - LatticeCornerNW
+    - LatticeCornerSE
+    - LatticeCornerSW
+    - LatticeHalfV
+    - LatticeHalfH
+    - WallReinforced
+    - WallShuttle
   - type: Sprite
     sprite: _CS/Objects/Tools/rcd_pirate.rsi
     state: icon
@@ -85,6 +105,26 @@
     - HVCable
     - CableTerminal
     - Deconstruct
+    - PlatingNE
+    - PlatingNW
+    - PlatingSE
+    - PlatingSW
+    - PlatingHalfV
+    - PlatingHalfH
+    - WindowDirectionalShuttle
+    - WindowShuttle
+    - WallSolidDiagonal
+    - WallShuttleDiagonal
+    - WallReinforcedDiagonal
+    - Lattice
+    - LatticeCornerNE
+    - LatticeCornerNW
+    - LatticeCornerSE
+    - LatticeCornerSW
+    - LatticeHalfV
+    - LatticeHalfH
+    - WallReinforced
+    - WallShuttle
   - type: Sprite
     sprite: _CS/Objects/Tools/rcd_nfsd.rsi
     state: icon

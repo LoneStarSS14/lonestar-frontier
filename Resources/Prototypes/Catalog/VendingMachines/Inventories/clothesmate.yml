@@ -116,7 +116,7 @@
     ClothingUniformloinclothWhite: 4294967295
     ClothingOuterBeltedWear: 4294967295
     ClothingOuterTransparentOuterwear: 4294967295
-    ClothingShoesHighheelShoes: 4294967295 # Coyote
+    ClothingShoesHighheelShoes: 4294967295 # Starlight start
     ClothingUniformJumpskirtGothic: 4294967295
     ClothingUniformJumpskirtMaid: 4294967295
     ClothingUniformJumpskirtDressRed: 4294967295
@@ -214,8 +214,17 @@
     TogaUniformSuit: 4294967295
     VintageUniformSuit: 4294967295
     CargoOverallsUniformSuit: 4294967295
-    RedRegaliaSuit: 4294967295
-    ClothingUniformJumpsuitRegalSuitPrince: 4294967295
+    RedRegaliaSuit: 4294967295 # Starlight end
+    MaidUniformLatex: 4294967295 # Hardlight start
+    MaidUniformAlt: 4294967295
+    MaidUniform: 4294967295
+    MaidGloves: 4294967295
+    MaidGlovesLatex: 4294967295
+    DominantHeels: 4294967295
+    KneeBoots: 4294967295
+    LatexSocks: 4294967295
+    LatexHeels: 4294967295 # Hardlight end
+    ClothingUniformJumpsuitRegalSuitPrince: 4294967295 # Lonestar start
     ClothingUniformJumpsuitRegalSuitBlue: 4294967295
     ClothingUniformJumpsuitRegalSuitGreen: 4294967295
     ClothingUniformJumpsuitRegalSuitBlack: 4294967295
@@ -233,15 +242,10 @@
     ClothingHeadHatRegalCrown: 4294967295
     ClothingUniformJumpsuitRegalShirt: 4294967295
     ClothingOuterVestMedievalLongcoat: 4294967295
-    MaidUniformLatex: 4294967295
-    MaidUniformAlt: 4294967295
-    MaidUniform: 4294967295
-    MaidGloves: 4294967295
-    MaidGlovesLatex: 4294967295
-    DominantHeels: 4294967295
-    KneeBoots: 4294967295
-    LatexSocks: 4294967295
-    LatexHeels: 4294967295
+    ClothingUniformJumpskirtCapFormalDress: 4294967295
+    ClothingUniformJumpsuitCapFormal: 4294967295
+    ClothingUniformJumpskirtHosFormal: 4294967295
+    ClothingUniformJumpsuitHosFormal: 4294967295 # Lonestar end
   contrabandInventory:
     ClothingMaskNeckGaiter: 4294967295
     ClothingUniformJumpsuitTacticool: 4294967295
