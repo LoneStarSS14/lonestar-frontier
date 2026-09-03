@@ -34,52 +34,40 @@
     lightSoftness: 3
 
 - type: entity
-  parent: LightTube
+  parent: XenonLightTube
   name: krypton light tube
   id: KryptonLightTube
   description: Krypton gas discharge light tube.
   components:
   - type: LightBulb
     color: "#CCCCCC" #Light White - 204, 204, 204 (Krypton)
-    lightEnergy: 0.6
-    lightRadius: 8
-    lightSoftness: 3
 
 - type: entity
-  parent: LightTube
+  parent: XenonLightTube
   name: argon light tube
   id: ArgonLightTube
   description: Argon gas discharge light tube.
   components:
   - type: LightBulb
     color: "#9999FF" #Purple - 153, 153, 255 (Argon)
-    lightEnergy: 0.6
-    lightRadius: 8
-    lightSoftness: 3
 
 - type: entity
-  parent: LightTube
+  parent: XenonLightTube
   name: neon light tube
   id: NeonLightTube
   description: Neon gas discharge light tube.
   components:
   - type: LightBulb
     color: "#FF4000"   #Orange - 255,64,0 (Neon)
-    lightEnergy: 0.6
-    lightRadius: 8
-    lightSoftness: 3
 
 - type: entity
-  parent: LightTube
+  parent: XenonLightTube
   name: helium light tube
   id: HeliumLightTube
   description: Helium gas discharge light tube.
   components:
   - type: LightBulb
     color: "#FFB8C2" #pink - 225, 184, 194 (Helium)
-    lightEnergy: 0.6
-    lightRadius: 8
-    lightSoftness: 3
 
 - type: entity
   parent: LightBulb
@@ -95,7 +83,7 @@
     lightSoftness: 3
 
 - type: entity
-  parent: LightBulb
+  parent: XenonLightBulb
   name: krypton light bulb
   id: KryptonLightBulb
   description: Krypton gas discharge lamp.
@@ -103,12 +91,9 @@
   - type: LightBulb
     bulb: Bulb
     color: "#CCCCCC" #Light White - 204, 204, 204 (Krypton)
-    lightEnergy: 0.6
-    lightRadius: 5
-    lightSoftness: 3
 
 - type: entity
-  parent: LightBulb
+  parent: XenonLightBulb
   name: argon light bulb
   id: ArgonLightBulb
   description: Argon gas discharge lamp.
@@ -116,12 +101,9 @@
   - type: LightBulb
     bulb: Bulb
     color: "#9999FF" #Purple - 153, 153, 255 (Argon)
-    lightEnergy: 0.6
-    lightRadius: 5
-    lightSoftness: 3
 
 - type: entity
-  parent: LightBulb
+  parent: XenonLightBulb
   name: neon light bulb
   id: NeonLightBulb
   description: Neon gas discharge lamp.
@@ -129,12 +111,9 @@
   - type: LightBulb
     bulb: Bulb
     color: "#FF4000"   #Orange - 255,64,0 (Neon)
-    lightEnergy: 0.6
-    lightRadius: 5
-    lightSoftness: 3
 
 - type: entity
-  parent: LightBulb
+  parent: XenonLightBulb
   name: helium light bulb
   id: HeliumLightBulb
   description: Helium gas discharge lamp.
@@ -142,6 +121,3 @@
   - type: LightBulb
     bulb: Bulb
     color: "#FFB8C2" #pink - 225, 184, 194 (Helium)
-    lightEnergy: 0.6
-    lightRadius: 5
-    lightSoftness: 3
