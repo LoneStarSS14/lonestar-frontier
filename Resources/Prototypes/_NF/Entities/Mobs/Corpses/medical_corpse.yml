@@ -83,8 +83,8 @@
       amount: 5
   - type: TriggerOnBeingGibbed
   - type: GibOnTrigger
-    deleteItems: true
-    deleteOrgans: true
+    deleteItems: false # LoneStar: true -> false
+    deleteOrgans: false # LoneStar: true -> false
     gib: false
     useArgumentEntity: true
     # Medical bounty-specific fields
