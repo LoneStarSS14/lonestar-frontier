@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: RandomMedicalPod
+  icon:
+    sprite: _NF/Structures/Storage/emergency_pod.rsi
+    state: icon
+  product: MedicalPodFilled
+  cost: 20000 # Average profit of 12k/body
+  category: cargoproduct-category-name-medical
+  group: hospital
