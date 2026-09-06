@@ -3473,3 +3473,10 @@ Entries:
   id: 390
   time: '2026-09-06T14:48:08.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/84
+- author: Waterwithoutanyice
+  changes:
+    - type: Tweak
+      message: overhauled the french accent
+  id: 391
+  time: '2026-09-06T14:51:14.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/102
