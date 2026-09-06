@@ -3505,3 +3505,10 @@ Entries:
   id: 394
   time: '2026-09-06T15:31:48.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/113
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: Rodentia and IPC body parts no longer drop in item form when gibbed
+  id: 395
+  time: '2026-09-06T15:36:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/115
