@@ -1,0 +1,13 @@
+- type: constructionGraph
+  id: WrappedDrugPackage
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: empty
+      steps:
+      - tag: EmptyPacket
+        name: construction-graph-tag-empty-packet
+        doAfter: 1
+  - node: empty
+    entity: EmptyPacket

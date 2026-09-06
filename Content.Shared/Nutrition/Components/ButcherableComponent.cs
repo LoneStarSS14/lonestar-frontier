@@ -1,4 +1,5 @@
 using Content.Shared.Storage;
+using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization; // EE
 
@@ -18,6 +19,9 @@ namespace Content.Shared.Nutrition.Components
 
         [ViewVariables(VVAccess.ReadWrite), DataField("butcheringType")]
         public ButcheringType Type = ButcheringType.Knife;
+
+        [ViewVariables(VVAccess.ReadWrite), DataField("butcherSound")]
+        public SoundSpecifier? Sound;
 
         /// <summary>
         /// Prevents butchering same entity on two and more spikes simultaneously and multiple doAfters on the same Spike

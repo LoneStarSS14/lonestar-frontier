@@ -1,0 +1,14 @@
+- type: reaction
+  id: Efflumetonial
+  impact: Medium
+  reactants:
+    Razorium:
+      amount: 1
+    Mannitol:
+      amount: 2
+    Haloperidol:
+      amount: 2
+    Ethyloxyephedrine:
+      amount: 2
+  products:
+    Efflumetonial: 1
