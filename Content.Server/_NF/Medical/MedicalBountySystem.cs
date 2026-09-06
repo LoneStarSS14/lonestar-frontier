@@ -112,7 +112,7 @@ public sealed partial class MedicalBountySystem : EntitySystem
             bountyValueAccum += randomDamage * damageValue.ValuePerPoint;
             damageToApply += new DamageSpecifier(damageProto, randomDamage);
         }
-        _damageable.TryChangeDamage(entity, damageToApply, true, damageable: damageable);
+        _damageable.SetDamage(entity, damageable: damageable, damageToApply); // LoneStar, stops bought pods bleeding out on spawn-in TODO: Make pods have missing blood based on inflicted brute/bloodloss values.
 
         // Inject reagents into chemical solution, if any
         foreach (var (reagentType, reagentValue) in component.Bounty.Reagents)
@@ -165,18 +165,7 @@ public sealed partial class MedicalBountySystem : EntitySystem
         }
 
         // Calculate amount of reward to pay out.
-        var bountyPayout = medicalBounty.MaxBountyValue;
-        foreach (var (damageType, damageVal) in damageable.Damage.DamageDict)
-        {
-            if (bounty.DamageSets.ContainsKey(damageType))
-            {
-                bountyPayout -= (int)(bounty.DamageSets[damageType].PenaltyPerPoint * damageVal);
-            }
-            else
-            {
-                bountyPayout -= (int)(bounty.PenaltyPerOtherPoint * damageVal);
-            }
-        }
+        var bountyPayout = GetBountyValue(medicalBounty, bounty, damageable); // LoneStar, Added general method
 
         string successString = "medical-bounty-redemption-success";
         if (TryComp<MedicalBountyBankPaymentComponent>(ev.Actor, out var bankPayment))
@@ -290,6 +279,15 @@ public sealed partial class MedicalBountySystem : EntitySystem
         }
 
         // Bounty is redeemable, calculate amount of reward to pay out.
+        var bountyPayout = GetBountyValue(medicalBounty, bounty, damageable); // LoneStar, Added general method
+
+        return new MedicalBountyRedemptionUIState(MedicalBountyRedemptionStatus.Valid, int.Max(bountyPayout, 0), paidToStation);
+    }
+
+    // LoneStar, added method
+    // Calculates the reward value to pay out for the current state of the entity.
+    private int GetBountyValue(MedicalBountyComponent medicalBounty, MedicalBountyPrototype bounty, DamageableComponent damageable)
+    {
         var bountyPayout = medicalBounty.MaxBountyValue;
         foreach (var (damageType, damageVal) in damageable.Damage.DamageDict)
         {
@@ -302,7 +300,6 @@ public sealed partial class MedicalBountySystem : EntitySystem
                 bountyPayout -= (int)(bounty.PenaltyPerOtherPoint * damageVal);
             }
         }
-
-        return new MedicalBountyRedemptionUIState(MedicalBountyRedemptionStatus.Valid, int.Max(bountyPayout, 0), paidToStation);
+        return bountyPayout;
     }
 }

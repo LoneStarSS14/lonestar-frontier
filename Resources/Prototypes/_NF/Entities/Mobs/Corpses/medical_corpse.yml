@@ -73,6 +73,9 @@
 
 - type: randomHumanoidSettings
   id: MedicalBounty
+  speciesBlacklist: # LoneStar
+  - IPC # No free bounties that have uncompatible damage types.
+  - Anthromorph # Effectively duplicate of human, adds to pool of rainbow corpses.
   components:
   - type: StinkyTrait
   - type: Carriable # Carrying system from nyanotrasen.
