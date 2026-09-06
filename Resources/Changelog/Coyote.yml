@@ -3480,3 +3480,12 @@ Entries:
   id: 391
   time: '2026-09-06T14:51:14.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/102
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        Medical Pod bodies now drop their items and organs, therefore making
+        eyeball soup and brain cake obtainable
+  id: 392
+  time: '2026-09-06T15:21:31.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/109
