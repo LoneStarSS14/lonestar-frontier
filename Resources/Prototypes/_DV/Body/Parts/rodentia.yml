@@ -11,6 +11,7 @@
   - type: Damageable
     damageContainer: Biological
   - type: BodyPart
+  - type: Gibbable # LoneStar: Consistency with other races
   - type: ContainerContainer
     containers:
       bodypart: !type:Container
