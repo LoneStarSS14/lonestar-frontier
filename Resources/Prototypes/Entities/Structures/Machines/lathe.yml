@@ -750,6 +750,8 @@
     - type: PlaceableSurface # DeltaV: Allow ore bags to dump into it directly
       isPlaceable: false # but not place on it if you just click it with a random item
     - type: OreSiloClient # Frontier
+    - type: MaterialStorageMagnetPickup # Lonestar
+      range: 2
 
 - type: entity
   parent: OreProcessor
