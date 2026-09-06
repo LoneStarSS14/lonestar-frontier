@@ -40,7 +40,7 @@ public sealed partial class MedicalBountyPrototype : IPrototype
     /// Penalty for other damage types not in DamageSets on redemption.
     /// </summary>
     [DataField("otherPenalty")]
-    public int PenaltyPerOtherPoint = 25;
+    public int PenaltyPerOtherPoint = 75; // LoneStar, tripled due to high base rewards.
 
     /// <summary>
     /// Maximum damage before bounty can be claimed.
