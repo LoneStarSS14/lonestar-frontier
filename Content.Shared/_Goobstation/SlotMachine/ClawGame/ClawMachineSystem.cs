@@ -51,10 +51,12 @@ public sealed class ClawMachineSystem : EntitySystem
             return;
 
         var doAfter =
-         new DoAfterArgs(EntityManager, args.User, comp.DoAfterTime, new ClawGameDoAfterEvent(), uid)
+         new DoAfterArgs(EntityManager, args.User, comp.DoAfterTime, new ClawGameDoAfterEvent(), uid, target: uid) // LoneStar: Add target
          {
              BreakOnMove = true,
              BreakOnDamage = true,
+             DuplicateCondition = DuplicateConditions.None, // LoneStar
+             BlockDuplicate = false, // LoneStar
          };
         comp.IsSpinning = true;
 
