@@ -29,8 +29,7 @@ public sealed class CrewManifestEui : BaseEui
 
     public override CrewManifestEuiState GetNewState() // Coyote: Remove name
     {
-        var entries = _crewManifest.GetCrewManifest();
-        return new(entries);
+        return new CrewManifestEuiState(_crewManifest.BuildCrewManifest()); // Lonestar: Directly call the builder
     }
 
     public override void Closed()

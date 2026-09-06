@@ -1,5 +1,4 @@
 using Content.Server.CrewManifest;
-using Content.Server.Station.Systems;
 using Content.Shared.CartridgeLoader;
 using Content.Shared.CartridgeLoader.Cartridges;
 using Content.Shared.CCVar;
@@ -14,7 +13,6 @@ public sealed class CrewManifestCartridgeSystem : EntitySystem
     [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!;
     [Dependency] private readonly IConfigurationManager _configManager = default!;
     [Dependency] private readonly CrewManifestSystem _crewManifest = default!;
-    [Dependency] private readonly StationSystem _stationSystem = default!;
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string CartridgePrototypeName = "CrewManifestCartridge";
@@ -58,14 +56,7 @@ public sealed class CrewManifestCartridgeSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return;
 
-        var owningStation = _stationSystem.GetOwningStation(uid);
-
-        if (owningStation is null)
-            return;
-
-        var entries = _crewManifest.GetCrewManifest(); // Coyote: remove name
-
-        var state = new CrewManifestUiState(entries); // Coyote: remove name
+        var state = new CrewManifestUiState(_crewManifest.BuildCrewManifest()); // Coyote: remove name
         _cartridgeLoader.UpdateCartridgeUiState(loaderUid, state);
     }
 
