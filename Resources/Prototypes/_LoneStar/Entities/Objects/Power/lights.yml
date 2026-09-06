@@ -1,4 +1,128 @@
 - type: entity
+  parent: LightTube
+  name: warm light tube
+  id: WarmLightTube
+  description: A warm light tube for a more cozy atmosphere.
+  components:
+  - type: LightBulb
+    color: "#ff9833" # 2200k color temp
+    lightEnergy: 1 #match energy of warm light bulb
+    lightSoftness: 3 #match softness of warm light bulb
+
+- type: entity
+  parent: LightTube
+  name: dim light tube
+  id: DimLightTube
+  description: A dim light tube for populating the darkness of maintenance.
+  components:
+  - type: LightBulb
+    color: "#ba473f"
+    lightEnergy: 0.5 #match energy of dim light bulb
+    lightRadius: 8
+    lightSoftness: 3 #match softness of dim light bulb
+
+- type: entity
+  parent: LightTube
+  name: xenon light tube
+  id: XenonLightTube
+  description: Xenon gas discharge light tube.
+  components:
+  - type: LightBulb
+    color: "#ADD8E6" #Light Blue - 173, 216, 230 (Xenon)
+    lightEnergy: 0.6
+    lightRadius: 8
+    lightSoftness: 3
+
+- type: entity
+  parent: XenonLightTube
+  name: krypton light tube
+  id: KryptonLightTube
+  description: Krypton gas discharge light tube.
+  components:
+  - type: LightBulb
+    color: "#CCCCCC" #Light White - 204, 204, 204 (Krypton)
+
+- type: entity
+  parent: XenonLightTube
+  name: argon light tube
+  id: ArgonLightTube
+  description: Argon gas discharge light tube.
+  components:
+  - type: LightBulb
+    color: "#9999FF" #Purple - 153, 153, 255 (Argon)
+
+- type: entity
+  parent: XenonLightTube
+  name: neon light tube
+  id: NeonLightTube
+  description: Neon gas discharge light tube.
+  components:
+  - type: LightBulb
+    color: "#FF4000"   #Orange - 255,64,0 (Neon)
+
+- type: entity
+  parent: XenonLightTube
+  name: helium light tube
+  id: HeliumLightTube
+  description: Helium gas discharge light tube.
+  components:
+  - type: LightBulb
+    color: "#FFB8C2" #pink - 225, 184, 194 (Helium)
+
+- type: entity
+  parent: LightBulb
+  name: xenon light bulb
+  id: XenonLightBulb
+  description: Xenon gas discharge lamp.
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#ADD8E6" #Light Blue - 173, 216, 230 (Xenon)
+    lightEnergy: 0.6
+    lightRadius: 5
+    lightSoftness: 3
+
+- type: entity
+  parent: XenonLightBulb
+  name: krypton light bulb
+  id: KryptonLightBulb
+  description: Krypton gas discharge lamp.
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#CCCCCC" #Light White - 204, 204, 204 (Krypton)
+
+- type: entity
+  parent: XenonLightBulb
+  name: argon light bulb
+  id: ArgonLightBulb
+  description: Argon gas discharge lamp.
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#9999FF" #Purple - 153, 153, 255 (Argon)
+
+- type: entity
+  parent: XenonLightBulb
+  name: neon light bulb
+  id: NeonLightBulb
+  description: Neon gas discharge lamp.
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#FF4000"   #Orange - 255,64,0 (Neon)
+
+- type: entity
+  parent: XenonLightBulb
+  name: helium light bulb
+  id: HeliumLightBulb
+  description: Helium gas discharge lamp.
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#FFB8C2" #pink - 225, 184, 194 (Helium)
+
+- type: entity
   parent: ExteriorLightBulb
   name: green exterior light bulb
   id: ExteriorLightBulbGreen
