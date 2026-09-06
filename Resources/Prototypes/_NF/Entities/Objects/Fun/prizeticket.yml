@@ -97,7 +97,7 @@
   id: PrizeBall
   suffix: Normal # LoneStar
   name: prize ball
-  description: I wounder whats inside!
+  description: I wonder what's inside! # LoneStar
   components:
   - type: Sprite
     sprite: _NF/Objects/Fun/prizeticket.rsi
@@ -278,3 +278,5 @@
   - type: StaticPrice
     price: 20
     vendPrice: 500
+  - type: TileFrictionModifier # LoneStar
+    modifier: 0.15
