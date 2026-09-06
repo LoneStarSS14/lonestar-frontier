@@ -3512,3 +3512,10 @@ Entries:
   id: 395
   time: '2026-09-06T15:36:55.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/115
+- author: Synthestra
+  changes:
+    - type: Fix
+      message: Claw Machines will no longer break when you try to use a second machine
+  id: 396
+  time: '2026-09-06T15:39:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/116
