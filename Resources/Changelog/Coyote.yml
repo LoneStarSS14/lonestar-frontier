@@ -3455,3 +3455,14 @@ Entries:
   id: 388
   time: '2026-09-03T04:33:22.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/105
+- author: Waterwithoutanyice
+  changes:
+    - type: Fix
+      message: fixed access to cargo windoor and vault high security door
+    - type: Add
+      message: added a defibrillator to the main hall
+    - type: Add
+      message: added locked pirate variant of high security door to mapping tools
+  id: 389
+  time: '2026-09-06T13:14:18.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/73
