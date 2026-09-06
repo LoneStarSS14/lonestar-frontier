@@ -16,7 +16,6 @@
       amount: 3
     - id: HeliumLightTube
       amount: 3
-
   - type: Sprite
     layers:
     - state: box
@@ -48,7 +47,6 @@
       amount: 3
     - id: HeliumLightBulb
       amount: 3
-
   - type: Sprite
     layers:
     - state: box

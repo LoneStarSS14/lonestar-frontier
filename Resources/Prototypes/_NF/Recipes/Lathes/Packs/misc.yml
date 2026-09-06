@@ -18,8 +18,8 @@
   - LedLightTube
   - DimLightBulb # Coyote
   - WarmLightBulb # Coyote
-  - DimLightTube #LS
-  - WarmLightTube #LS
+  - DimLightTube # LoneStar
+  - WarmLightTube # LoneStar
 
 - type: latheRecipePack
   id: NFBasicToolsStatic
