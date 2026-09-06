@@ -1,28 +1,17 @@
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Generic;
+
 namespace Content.Server.Speech.Components
 {
     [RegisterComponent]
     public sealed partial class StutteringAccentComponent : Component
     {
-        /// <summary>
-        /// Percentage chance that a stutter will occur if it matches.
-        /// </summary>
-        [DataField("matchRandomProb")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float MatchRandomProb = 0.8f;
-
-        /// <summary>
-        /// Percentage chance that a stutter occurs f-f-f-f-four times.
-        /// </summary>
-        [DataField("fourRandomProb")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float FourRandomProb = 0.1f;
-
-        /// <summary>
-        /// Percentage chance that a stutter occurs t-t-t-three times.
-        /// </summary>
-        [DataField("threeRandomProb")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float ThreeRandomProb = 0.2f;
+        [DataField(customTypeSerializer: typeof(DictionarySerializer<int, float>))] // Lonestar: This replaces the old match/three/four bloat.
+        public Dictionary<int, float> Probabilities = new()
+        {
+            [1] = 0.8f,
+            [2] = 0.2f,
+            [3] = 0.1f,
+        };
 
         /// <summary>
         /// Percentage chance that a stutter cut off.
