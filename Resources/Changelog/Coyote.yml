@@ -3496,3 +3496,12 @@ Entries:
   id: 393
   time: '2026-09-06T15:30:02.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/110
+- author: Synthestra
+  changes:
+    - type: Fix
+      message: >-
+        Fixed sound spam when a chemical reaction happens upon transferring
+        liquids in beakers
+  id: 394
+  time: '2026-09-06T15:31:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/113
