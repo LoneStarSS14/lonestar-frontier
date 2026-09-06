@@ -45,3 +45,6 @@ marking-SlimeBonelegleft = Floating Bones (Left Leg)
 
 marking-SlimeBonelegright-bonelegright = Floating Bones (Right Leg)
 marking-SlimeBonelegright = Floating Bones (Right Leg)
+
+marking-SlimeEyesCyclops-cyclops = Cyclops Eye
+marking-SlimeEyesCyclops = Cyclops Eye
