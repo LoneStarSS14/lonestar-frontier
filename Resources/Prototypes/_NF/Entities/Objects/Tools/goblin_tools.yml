@@ -323,6 +323,7 @@
   - type: Clothing
     sprite: _NF/Objects/Tools/goblin_tools/crowbar.rsi
   - type: Item
+    size: Small # it's 2x1
     sprite: _NF/Objects/Tools/goblin_tools/crowbar.rsi
     inhandVisuals:
       left:

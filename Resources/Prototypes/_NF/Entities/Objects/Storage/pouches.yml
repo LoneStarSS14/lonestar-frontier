@@ -289,7 +289,20 @@
   id: NFPouchEngineering
   parent: NFPouchUtility
   name: engineer's pouch
+  description: Specially designed to fit tools easily. # Lonestar: Specific description
   components:
+  - type: Storage # Lonestar start
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,1
+    whitelist:
+      components:
+        - Tool
+        - GasAnalyzer
+        - SprayPainter
+        - Flashlight
+        - TrayScanner
+        - Signaller # Lonestar end
   - type: Sprite
     layers:
     - state: base
@@ -464,6 +477,7 @@
   id: NFPouchFirstAid
   parent: NFPouchBase
   name: first aid pouch
+  description: Contains several subcompartments for a first responder's topicals. # Lonestar: Unique description
   components:
   - type: Sprite
     layers:
@@ -621,7 +635,23 @@
   id: NFPouchJanitor
   parent: NFPouchUtility
   name: janitor's pouch
+  description: Somehow bigger on the inside. Stores soap, buckets, and other janitorial tools. # Lonestar: Unique description
   components:
+  - type: Storage # Lonestar start
+    maxItemSize: Normal
+    grid:
+    - 0,0,2,2
+    whitelist:
+      components:
+        - LightReplacer
+        - Bucket
+      tags:
+        - Mop
+        - WetFloorSign
+        - Plunger
+        - Soap
+        - Spray
+        - Cleanade # Lonestar end
   - type: Sprite
     layers:
     - state: base
@@ -671,7 +701,18 @@
   id: NFPouchHydroponics
   parent: NFPouchUtility
   name: botanist's pouch
+  description: Made of all-natural materials for holding your seeds. # Lonestar: Unique description
   components:
+  - type: Storage # LS: 3x3, fits seeds and bottles/vials
+    maxItemSize: Tiny
+    grid:
+    - 0,0,2,2
+    whitelist:
+      tags: # intended for robust, dieth, etc
+        - CentrifugeCompatible
+        - Bottle
+      components:
+        - Seed
   - type: Sprite
     layers:
     - state: base
@@ -984,6 +1025,7 @@
   id: NFPouchPrivateSecurity
   parent: NFPouchUtility
   name: private security pouch
+  description: Holds your magazines securely. # Lonestar: Unique description
   components:
   - type: Sprite
     layers:
@@ -1346,6 +1388,7 @@
   id: NFGoblinMadeTrashPouch
   parent: [ RecyclableItemPlasticSmall, NFPouchBase ]
   name: trashuch
+  description: For holding all your mechanisms and thingybobs. # Lonestar: Unique description
   components:
   - type: Sprite
     sprite: _NF/Objects/Storage/Pouches/trash_pouch.rsi
@@ -1368,12 +1411,15 @@
       map: [ "pouchFill4" ]
       visible: false
   - type: Item
+    size: Small # Lonestar
     sprite: _NF/Objects/Storage/Pouches/trash_pouch.rsi
   - type: Clothing
     sprite: _NF/Objects/Storage/Pouches/trash_pouch.rsi
   - type: GoblinMade
   - type: Dumpable
   - type: Storage
+    grid:
+    - 0,0,1,3 # Lonestar: Bigger on the inside
     maxItemSize: Small
     areaInsert: true
     storageOpenSound:

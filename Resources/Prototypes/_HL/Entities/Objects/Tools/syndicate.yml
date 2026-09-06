@@ -1,0 +1,150 @@
+- type: entity
+  name: gorlex maraudrill
+  parent: [PowerDrill, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: SyndicatePowerDrill
+  description: An advanced powered hand drill.
+  components:
+  - type: Sprite
+    sprite: _HL/Objects/Tools/syndie_drill.rsi
+    state: drill_screw
+  - type: Item
+    sprite: _HL/Objects/Tools/syndie_drill.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+    size: Small
+  - type: Tool
+    qualities:
+    - Screwing
+    speedModifier: 3.0
+  - type: MultipleTool
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: _HL/Objects/Tools/syndie_drill.rsi
+          state: drill_screw
+        useSound: /Audio/Items/drill_use.ogg
+        changeSound: /Audio/Items/change_drill.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: _HL/Objects/Tools/syndie_drill.rsi
+          state: drill_bolt
+        useSound: /Audio/Items/drill_use.ogg
+        changeSound: /Audio/Items/change_drill.ogg
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 14
+  - type: Tag
+    tags:
+    - Syndie_Powerdrill
+
+- type: entity
+  name: multitaser
+  parent: [BaseItem, BaseC3SyndicateContraband]
+  id: SyndicateMultitool
+  description: An illegal tool to copy, store, and send electrical pulses and signals through wires, machines, and people.
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/multitool_drop.ogg
+  - type: Sprite
+    sprite: _HL/Objects/Tools/multitaser.rsi
+    layers:
+    - state: icon
+    - state: green-unlit
+      shader: unshaded
+  - type: Item
+    size: Small
+  - type: Clothing
+    sprite: _HL/Objects/Tools/multitaser.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: Tool
+    qualities:
+    - Pulsing
+  - type: NetworkConfigurator
+  - type: ActivatableUI
+    key: enum.NetworkConfiguratorUiKey.List
+    inHandsOnly: true
+  - type: UserInterface
+    interfaces:
+      enum.NetworkConfiguratorUiKey.List:
+        type: NetworkConfiguratorBoundUserInterface
+      enum.NetworkConfiguratorUiKey.Configure:
+        type: NetworkConfiguratorBoundUserInterface
+      enum.NetworkConfiguratorUiKey.Link:
+        type: NetworkConfiguratorBoundUserInterface
+  - type: Tag
+    tags:
+    - Syndie_Multitool
+    - DoorElectronicsConfigurator
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Plastic: 100
+  - type: GuideHelp
+    guides:
+    - Networking
+    - WirePanels
+    - Airlocks
+    - InspectingPower
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    attackRate: 2
+    damage:
+      types:
+        Shock: 8
+    soundHit:
+      path: /Audio/Items/Defib/defib_zap.ogg
+
+- type: entity
+  name: cybersun experimental tritwelder
+  parent: [Welder, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: SyndicateWelderExperimental
+  description: An illegal welder capable of self-fuel generation, less harmful to the eyes, and more harmful to your enemies.
+  components:
+  - type: Sprite
+    sprite: _HL/Objects/Tools/welder_syndicate.rsi
+  - type: Item
+    sprite: _HL/Objects/Tools/welder_syndicate.rsi
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 1000
+        maxVol: 1000
+  - type: PointLight
+    enabled: false
+    radius: 1
+    color: lightgreen
+  - type: SolutionRegeneration
+    solution: Welder
+    generated:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 2
+  - type: RequiresEyeProtection
+    statusEffectTime: 5 # less harmful; sunglasses can block it
+  - type: Tool
+    speedModifier: 2
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -12
+    deactivatedSoundOnHitNoDamage:
+      collection: MetalThud
+    activatedDamage:
+      types:
+        Heat: 15

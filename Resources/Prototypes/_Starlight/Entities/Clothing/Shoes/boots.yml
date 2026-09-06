@@ -1,0 +1,35 @@
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsSpaceCourier
+  name: space courier boots
+  description: Pristine courier boots themed after a legendary courier who completed all of their deliveries within 9 days, 9 hours, and 9 minutes.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Shoes/Boots/space_courier_boots.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Shoes/Boots/space_courier_boots.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 1.025
+    coolingCoefficient: 0.5
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingUniformBootsVampir
+  name: bloodstained aristocrat boots
+  description: Old boots with a gray sole, faint bloodstains are visible.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Shoes/Boots/ari.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Shoes/Boots/ari.rsi
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesBootsSalvage1208134
+  name: tall black fur boots
+  description: Tall black thigh-high boots with fur, golden accents, and straps.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Shoes/Boots/belpero.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Shoes/Boots/belpero.rsi

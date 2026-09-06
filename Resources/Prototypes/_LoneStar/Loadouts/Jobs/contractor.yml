@@ -1,0 +1,5 @@
+- type: loadout
+  id: ClothingBackpackTrunk
+  price: 0
+  equipment:
+    back: ClothingBackpackTrunk

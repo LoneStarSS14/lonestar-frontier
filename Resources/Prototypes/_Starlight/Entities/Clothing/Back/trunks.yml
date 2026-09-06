@@ -1,0 +1,86 @@
+- type: entity
+  parent: BaseItem
+  id: ClothingBackpackTrunk
+  name: storage trunk
+  description: A huge storage trunk for vehicles. Too heavy to wear on your back, unfortunately.
+  components:
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,10,5
+  - type: Sprite
+    sprite: _Starlight/Clothing/Back/Trunks/mailtrunk.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 9
+    soundHit:
+      collection: MetalThud
+  - type: ContainerContainer # we really need a BaseStorageItem
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+
+- type: entity
+  parent: ClothingBackpackTrunk
+  id: ClothingBackpackTrunkMail
+  name: mail trunk
+  description: A large trunk designed for heavy duty mail transport.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Back/Trunks/mailseniortrunk.rsi
+
+- type: entity
+  parent: [ClothingBackpackTrunk, BaseC1Contraband]
+  id: ClothingBackpackTrunkSyndicate
+  name: syndicate storage trunk
+  description: Huge, metal, reflective, and stylish. All the other syndicates will want to get their hands on this trunk.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Back/Trunks/syndicate.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,13,5
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 15
+    soundHit:
+      collection: MetalThud
+  - type: Reflect # It's a metal trunk
+    reflectProb: 0.45 # Lonestar: Increased due to not being wearable
+    reflects:
+      - Energy
+
+- type: entity
+  parent: ClothingBackpackTrunk
+  id: ClothingBackpackTrunkSpaceCourier
+  name: space courier trunk
+  description: A huge trunk themed after a legendary space courier.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Back/Trunks/space_courier_trunk.rsi
+
+- type: entity
+  parent: ClothingBackpackTrunkSpaceCourier
+  id: BoxCourier
+  name: space courier set
+  suffix: Bundle
+  description: A stylish green costume bundle themed after a legendary space courier. Ranked 9/13 on popular review websites!
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingEyesSpaceCourierGoggles
+        - id: ClothingUniformJumpsuitSpaceCourier
+        - id: ClothingHandsGlovesColorBlack
+        - id: ClothingOuterCoatSpaceCourier
+        - id: ClothingShoesBootsSpaceCourier

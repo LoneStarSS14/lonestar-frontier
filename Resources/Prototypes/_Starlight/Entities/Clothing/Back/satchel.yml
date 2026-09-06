@@ -1,0 +1,17 @@
+- type: entity
+  parent: [ClothingBackpackSatchel, BaseC1Contraband]
+  id: ClothingBackpackSatchelSyndicate
+  name: syndicate satchel
+  description: Ask not what the syndicate satchel can do for you, but rather, what can't it do.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Back/Satchels/syndicate.rsi
+  - type: Storage
+    grid:
+    - 0,0,1,3
+    - 3,0,7,3
+    - 9,0,10,3
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: StaticPrice
+    price: 1000

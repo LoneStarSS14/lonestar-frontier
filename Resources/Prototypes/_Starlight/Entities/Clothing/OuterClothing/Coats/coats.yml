@@ -1,0 +1,24 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatSpaceCourier
+  name: space courier heavy coat
+  description: A luxurious coat, made to honor a legendary space courier. Fly, space courier!
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/OuterClothing/Coats/space_courier_coat.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/OuterClothing/Coats/space_courier_coat.rsi
+  - type: TemperatureProtection # Technically winter coat-type outfit
+    heatingCoefficient: 1.15
+    coolingCoefficient: 0.05
+  # - type: Pierceable # Lonestar
+  #   level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.90
+        Heat: 0.85
+        Cold: 0.8 # Space is in the name
+    priceMultiplier: 0
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.50

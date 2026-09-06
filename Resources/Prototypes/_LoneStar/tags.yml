@@ -1,4 +1,10 @@
 - type: Tag
+  id: Cleanade
+
+- type: Tag
+  id: TRayScanner
+
+- type: Tag
   id: Vial
 
 - type: Tag
