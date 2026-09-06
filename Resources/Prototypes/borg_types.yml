@@ -1,3 +1,4 @@
+#LONESTAR NOTE: All Default channels (barring Binary) are disabled due to PR #97 and beyond. If you want to give borgs specific chassis-based comms in the future, please do so via their headset.
 # Generic borg
 - type: borgType
   id: generic
@@ -20,12 +21,8 @@
   - BorgModuleAnomaly
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Science
-  - Medical # Lonestar
-
   # Visual
-  inventoryTemplateId: borgShort
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: robot
   spriteHasMindState: robot_e
   spriteNoMindState: robot_e_r
@@ -59,13 +56,8 @@
   - BorgModuleCable
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Engineering
-  - Science
-  - Medical # Lonestar
-
   # Visual
-  inventoryTemplateId: borgShort
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: engineer
   spriteHasMindState: engineer_e
   spriteNoMindState: engineer_e_r
@@ -99,13 +91,8 @@
   - BorgModuleAppraisal
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Supply
-  - Science
-  - Medical # Lonestar
-
   # Visual
-  inventoryTemplateId: borgTall
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: miner
   spriteBodyMovementState: miner_moving
   spriteHasMindState: miner_e
@@ -139,13 +126,8 @@
   - BorgModuleCustodial
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Science
-  - Service
-  - Medical # Lonestar
-
   # Visual
-  inventoryTemplateId: borgShort
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: janitor
   spriteBodyMovementState: janitor_moving
   spriteHasMindState: janitor_e
@@ -183,10 +165,6 @@
   - BorgModuleJetpack # Frontier
   - BorgModuleLollypopMedical # Goobstation.
 
-  radioChannels:
-  - Science
-  - Medical
-
   addComponents:
   - type: SolutionScanner
   - type: ShowHealthBars
@@ -197,7 +175,7 @@
     - Biological
 
   # Visual
-  inventoryTemplateId: borgDutch
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: medical
   spriteBodyMovementState: medical_moving
   spriteHasMindState: medical_e
@@ -242,13 +220,8 @@
   - BorgModuleChef # Frontier
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Science
-  - Service
-  - Medical # Lonestar
-
   # Visual
-  inventoryTemplateId: borgTall
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: service
   spriteHasMindState: service_e
   spriteNoMindState: service_e_r
@@ -281,13 +254,9 @@
   - BorgModuleAnomaly
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Science
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgShort
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: standardd-sit
   spriteBodyMovementState: standardd_moving
   spriteBodyRestState: standardd-rest
@@ -327,14 +296,9 @@
   - BorgModuleCable
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Engineering
-  - Science
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgShort
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: engineeringd-sit
   spriteBodyMovementState: engineeringd_moving
   spriteBodyRestState: engineeringd-rest
@@ -375,14 +339,9 @@
   - BorgModuleAppraisal
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Supply
-  - Science
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgTall
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: miningd-sit
   spriteBodyMovementState: miningd_moving
   spriteBodyRestState: miningd-rest
@@ -422,14 +381,9 @@
   - BorgModuleCustodial
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Science
-  - Service
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgShort
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: janitord-sit
   spriteBodyMovementState: janitord_moving
   spriteBodyRestState: janitord-rest
@@ -471,10 +425,6 @@
   - BorgModuleJetpack # Frontier
   - BorgModuleLollypopMedical # Goobstation.
 
-  radioChannels:
-  - Science
-  - Medical
-
   addComponents:
   - type: SolutionScanner
   - type: ShowHealthBars
@@ -486,7 +436,7 @@
 
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgDutch
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: medicald-sit
   spriteBodyMovementState: medicald_moving
   spriteBodyRestState: medicald-rest
@@ -536,14 +486,9 @@
   - BorgModuleChef # Frontier
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Science
-  - Service
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgTall
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: serviced-sit
   spriteBodyMovementState: serviced_moving
   spriteBodyRestState: serviced-rest
@@ -584,14 +529,9 @@
   - BorgModuleAppraisal
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Supply
-  - Science
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgTall
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: strayd-sit
   spriteBodyMovementState: strayd_moving
   spriteBodyRestState: strayd-rest
@@ -632,14 +572,9 @@
   - BorgModuleAppraisal
   - BorgModuleJetpack # Frontier
 
-  radioChannels:
-  - Supply
-  - Science
-  - Medical # Lonestar
-
   # Visual
   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgTall
+  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
   spriteBodyState: syndicated-sit
   spriteBodyMovementState: syndicated_moving
   spriteBodyRestState: syndicated-rest

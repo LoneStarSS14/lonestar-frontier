@@ -340,6 +340,7 @@
     - NFMaterialElectronicsStatic
     - NFBasicEvaLightsStatic
     - NFMercenaryStatic
+    - BorgArmorBase # LoneStar: Adds Borg Armor to techfabs.
     - NFMercenaryClothesStatic
     - NFMercenaryStorageStatic
     - NFMercenaryWeaponsStatic

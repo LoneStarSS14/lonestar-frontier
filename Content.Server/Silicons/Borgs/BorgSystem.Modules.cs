@@ -5,6 +5,7 @@ using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Content.Shared._NF.Silicons.Borgs; // Frontier
+using Content.Shared.Cuffs.Components; //LS Edit.
 
 namespace Content.Server.Silicons.Borgs;
 
@@ -118,6 +119,13 @@ public sealed partial class BorgSystem
         if (!Resolve(chassis, ref chassisComp))
             return;
 
+        //LS EDIT BEGIN. CUFFABLE BORG RESTRAINTS.
+        if (TryComp<CuffableComponent>(chassis, out var cuffed) && cuffed.CuffedHandCount > 0)
+        {
+            return;
+        }
+        //LS EDIT END
+
         if (!Resolve(moduleUid, ref moduleComp) || !moduleComp.Installed || moduleComp.InstalledEntity != chassis)
         {
             Log.Error($"{ToPrettyString(chassis)} attempted to select uninstalled module {ToPrettyString(moduleUid)}");
@@ -160,7 +168,12 @@ public sealed partial class BorgSystem
 
         if (!Resolve(chassis, ref chassisComp))
             return;
-
+        //LS EDIT BEGIN. CUFFABLE BORG RESTRAINTS.
+        if (TryComp<CuffableComponent>(chassis, out var cuffed) && cuffed.CuffedHandCount > 0)
+        {
+            return;
+        }
+        //LS EDIT END
         if (chassisComp.SelectedModule == null)
             return;
 
@@ -320,8 +333,8 @@ public sealed partial class BorgSystem
         Entity<BorgModuleComponent> module,
         EntityUid? user = null)
     {
-        if (module.Comp.DefaultModule)
-            return false;
+     //   if (module.Comp.DefaultModule) //LS Removal - Can now remove default modules.
+     //       return false;
 
         return true;
     }
