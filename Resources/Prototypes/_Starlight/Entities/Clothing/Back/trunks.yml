@@ -4,6 +4,9 @@
   name: storage trunk
   description: A huge storage trunk for vehicles. Too heavy to wear on your back, unfortunately.
   components:
+  - type: HeldSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: Storage
     maxItemSize: Huge
     grid:
