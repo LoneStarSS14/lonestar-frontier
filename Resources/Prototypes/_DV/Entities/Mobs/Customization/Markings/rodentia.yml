@@ -631,3 +631,17 @@
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
       state: r_foot
+
+- type: marking
+  id: RodentiaHeadTopEarBunnyLarge
+  markingCategory: HeadTop
+  bodyPart: HeadTop
+  speciesRestriction: [Rodentia]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
+  sprites:
+    - sprite: _DV/Mobs/Customization/Rodentia/tall_ear_markings.rsi
+      state: ears_bunny_large_primary
+    - sprite: _DV/Mobs/Customization/Rodentia/tall_ear_markings.rsi
+      state: ears_bunny_large_secondary
+    - sprite: _DV/Mobs/Customization/Rodentia/tall_ear_markings.rsi
+      state: ears_bunny_large_tertiary
