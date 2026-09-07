@@ -60,7 +60,6 @@
           - Card
           - NFEmagPass
           - IdCard
-          - ConcealableWeapon
       closed-cash:
         whitelist:
           components:
