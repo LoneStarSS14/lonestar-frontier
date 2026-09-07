@@ -555,7 +555,7 @@
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
   - type: BasicEntityAmmoProvider
-    proto: FoodPieBananaCream
+    proto: FoodZombieClownPieBananaCream # LoneStar, no falvorol farming
     capacity: 1
     count: 1
   - type: Gun
@@ -572,6 +572,19 @@
       collection: ZombieClownScreams
       params:
         variation: 0.125
+
+# LoneStar, rotten pie
+- type: entity
+  name: rotten banana cream pie
+  parent: [ FoodSpoiledRotten, FoodPieBananaCream ]
+  id: FoodZombieClownPieBananaCream
+  #categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Baked/pie.rsi
+    layers:
+    - state: tin
+    - state: plain
 
 # region fast
 - type: entity
