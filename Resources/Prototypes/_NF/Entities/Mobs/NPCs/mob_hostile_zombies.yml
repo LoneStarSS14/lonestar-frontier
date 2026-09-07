@@ -4,11 +4,9 @@
   abstract: true
   components:
   - type: PassiveDamage
-    allowedStates:
+    allowedStates: # LoneStar, dont heal if dead...
     - Alive
     - Critical
-    - Dead
-    damageCap: 9999
     damage:
       groups:
         Brute: -0.4
