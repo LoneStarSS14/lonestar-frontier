@@ -477,7 +477,6 @@
   id: NFPouchFirstAid
   parent: NFPouchBase
   name: first aid pouch
-  description: Contains several subcompartments for a first responder's topicals. # Lonestar: Unique description
   components:
   - type: Sprite
     layers:
@@ -1025,7 +1024,6 @@
   id: NFPouchPrivateSecurity
   parent: NFPouchUtility
   name: private security pouch
-  description: Holds your magazines securely. # Lonestar: Unique description
   components:
   - type: Sprite
     layers:
