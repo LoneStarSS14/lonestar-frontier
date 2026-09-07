@@ -3528,3 +3528,22 @@ Entries:
   id: 397
   time: '2026-09-07T01:35:50.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/114
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        the Director of Care now has a list of standard operating procedures to
+        play by.
+    - type: Tweak
+      message: the Director of Care now receives money for submitting pod bounties.
+    - type: Add
+      message: Medical Pods can now be purchased at st.micheals for 20k
+    - type: Remove
+      message: Medical Pods can no longer be IPC or anthromorphs
+    - type: Tweak
+      message: >-
+        All 'Cases' of medical damage on Pods have been tweaked along with the
+        values earned from completion.
+  id: 398
+  time: '2026-09-07T02:14:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/117
