@@ -65,6 +65,7 @@
     transferAmount: 1
     solution: melee
   - type: Butcherable
+    butcherDelay: 4 # LoneStar, halved from default of 8
     spawned:
     - id: NFSpawnZombieLoot
       amount: 1
