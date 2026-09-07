@@ -35,7 +35,7 @@ public sealed class MaterialArbitrageTest
         "LedLightBulb", "ExteriorLightTube", "LightTube", "DrinkGlass", "DimLightBulb", "LightBulb", "LedLightTube",
         "SheetRGlass1", "ChemistryEmptyBottle01", "WarmLightBulb",
         "ExteriorLightBulb", "SodiumLightBulb", "LightTubeUltraviolet", "Pole", // Frontier
-        "ExteriorLightBulbGreen", "ExteriorLightBulbMagenta", "ExteriorLightTubeGreen", "ExteriorLightTubeMagenta", // LoneStar
+        "ExteriorLightBulbGreen", "ExteriorLightBulbMagenta", "ExteriorLightTubeGreen", "ExteriorLightTubeMagenta", "WarmLightTube", "DimLightTube", "XenonLightTube", "KryptonLightTube", "ArgonLightTube", "NeonLightTube", "HeliumLightTube", "XenonLightBulb", "KryptonLightBulb", "ArgonLightBulb", "NeonLightBulb", "HeliumLightBulb", // LoneStar
     ];
 
     private readonly HashSet<string> _compositionArbitrageIgnore =
