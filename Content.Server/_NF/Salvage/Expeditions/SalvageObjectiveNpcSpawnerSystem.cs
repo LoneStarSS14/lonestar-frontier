@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Numerics;
 using Content.Shared.Mind.Components;
 using Content.Shared.NPC.Components;
@@ -66,7 +67,12 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
 
     private bool HasNearbyActivePlayer(MapCoordinates mapCoords, float range)
     {
-        foreach (var nearby in _lookup.GetEntitiesInRange<ActorComponent>(mapCoords, range))
+        var nearbyActors = new HashSet<Entity<ActorComponent>>();
+        var rangeVector = new Vector2(range);
+        var bounds = new Box2(mapCoords.Position - rangeVector, mapCoords.Position + rangeVector);
+        _lookup.GetEntitiesIntersecting(mapCoords.MapId, bounds, nearbyActors);
+
+        foreach (var nearby in nearbyActors)
         {
             if (!HasComp<GhostComponent>(nearby)
                 && TryComp<MindContainerComponent>(nearby, out var mind)
@@ -140,7 +146,7 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
                 if (tileDef.Weather)
                     continue;
             }
-
+            // Tile must not be too close to a player
             var candidateCoords = _map.GridTileToLocal(gridUid, grid, tile);
             if (HasNearbyActivePlayer(_xforms.ToMapCoordinates(candidateCoords), comp.NearbyActorRange))
                 continue;
