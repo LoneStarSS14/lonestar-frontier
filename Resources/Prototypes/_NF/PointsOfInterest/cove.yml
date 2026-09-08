@@ -12,8 +12,8 @@
   id: Cove
   parent: BasePOI
   name: 'The Den'
-  minimumDistance: 10000
-  maximumDistance: 11000
+  minimumDistance: 7500 # LoneStar
+  maximumDistance: 9000 # LoneStar
   spawnGamePreset: [ NFPirate ]
   spawnGroup: Required
   gridPath: /Maps/_LoneStar/POI/cove.yml
