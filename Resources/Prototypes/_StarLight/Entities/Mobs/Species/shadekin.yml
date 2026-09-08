@@ -23,8 +23,10 @@
         10: High
         15: Extreme
     # - type: Absorbable # Wayfarer
-    - type: Hunger
-    - type: Thirst
+    - type: Needs
+      needs:
+      - NeedHungerDefault
+      - NeedThirstDefault
     - type: HumanoidAppearance
       species: Shadekin
     - type: Icon
