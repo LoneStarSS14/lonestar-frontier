@@ -3547,3 +3547,18 @@ Entries:
   id: 398
   time: '2026-09-07T02:14:47.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/117
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Zombies now butcher in half as much time (8s->4s)
+    - type: Fix
+      message: >-
+        Zombie clowns now fire 'rotten' banana cream pies that do not contain
+        flavorol
+    - type: Fix
+      message: >-
+        Zombie bodybag piles now despawn an hour after spawning to prevent
+        farming them on a shuttle.
+  id: 399
+  time: '2026-09-08T11:08:51.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/118
