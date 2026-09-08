@@ -53,8 +53,8 @@
     - ExplorersExpeditionNF
     spawnPrototypes:
     - SpawnMobExplorerT1
-    - SpawnMobAberSpawnMobExplorerT2
-    - SpawnMobAberSpawnMobExplorerT2
-    - SpawnMobAberSpawnMobExplorerT2
+    - SpawnMobExplorerT2
+    - SpawnMobExplorerT2
+    - SpawnMobExplorerT2
     - SpawnMobExplorerT3
     - SpawnMobExplorerT3
