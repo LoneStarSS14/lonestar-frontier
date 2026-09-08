@@ -4,11 +4,9 @@
   abstract: true
   components:
   - type: PassiveDamage
-    allowedStates:
+    allowedStates: # LoneStar, dont heal if dead...
     - Alive
     - Critical
-    - Dead
-    damageCap: 9999
     damage:
       groups:
         Brute: -0.4
@@ -67,6 +65,7 @@
     transferAmount: 1
     solution: melee
   - type: Butcherable
+    butcherDelay: 4 # LoneStar, halved from default of 8
     spawned:
     - id: NFSpawnZombieLoot
       amount: 1
@@ -556,7 +555,7 @@
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
   - type: BasicEntityAmmoProvider
-    proto: FoodPieBananaCream
+    proto: FoodZombieClownPieBananaCream # LoneStar, no falvorol farming
     capacity: 1
     count: 1
   - type: Gun
@@ -573,6 +572,19 @@
       collection: ZombieClownScreams
       params:
         variation: 0.125
+
+# LoneStar, rotten pie
+- type: entity
+  name: rotten banana cream pie
+  parent: [ FoodSpoiledRotten, FoodPieBananaCream ]
+  id: FoodZombieClownPieBananaCream
+  #categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Baked/pie.rsi
+    layers:
+    - state: tin
+    - state: plain
 
 # region fast
 - type: entity
@@ -791,6 +803,8 @@
           FoodMeatRotten:
             min: 1
             max: 3
+  - type: TimedDespawn # LoneStar, TODO: ideally a 'TimedDestroy', but we work with what we got.
+    lifetime: 3600 # 1 hour
 
 # timedspawners making timedspawners makes the iterator sad, so we use a loophole
 - type: entity
