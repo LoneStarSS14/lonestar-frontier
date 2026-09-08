@@ -36,7 +36,7 @@
       cost: 2
       prob: 0.1
   configs:
-    DefenseStructure: XenoWardingTower
+    DefenseStructure: XenoWardingTowerExpedition
     Megafauna: NFMobXenoQueen
     Difficulties: NFModerate
 
@@ -73,7 +73,7 @@
       cost: 4
       prob: 0.05
   configs:
-    DefenseStructure: CarpStatue
+    DefenseStructure: CarpStatueExpedition
     Megafauna: NFMobDragonDungeon
     Difficulties: NFModerate
 
@@ -185,7 +185,7 @@
       cost: 6
       prob: 0.05
   configs:
-    DefenseStructure: DinosaurEgg
+    DefenseStructure: DinosaurEggExpedition
     Megafauna: MobDinosaurTrexExpeditions
     Difficulties: NFHazardous
 
@@ -344,6 +344,6 @@
       cost: 6
       prob: 0.05
   configs:
-    DefenseStructure: BloodCollector
+    DefenseStructure: BloodCollectorExpedition
     Megafauna: MobBloodCultistAscended
     Difficulties: NFExtreme
