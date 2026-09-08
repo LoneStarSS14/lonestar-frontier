@@ -50,6 +50,11 @@
         - ReagentId: FerrochromicAcid
           Quantity: 150
   - type: SalvageObjectiveNpcSpawner # LoneStar
+    spawnIntervalSeconds: 55
+    spawnIntervalVariance: 5
+    nearbyRange: 12
+    maxNearby: 8
+    spawnRange: 3
     nearbyFactions:
     - Xeno
     spawnPrototypes:

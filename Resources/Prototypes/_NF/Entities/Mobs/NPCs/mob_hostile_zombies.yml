@@ -797,7 +797,9 @@
     lifetime: 3600 # 1 hour
   - type: SalvageObjectiveNpcSpawner # LoneStar
     spawnIntervalSeconds: 32
+    spawnIntervalVariance: 4
     nearbyRange: 10
+    spawnRange: 3
     maxNearby: 12
     nearbyFactions:
     - Zombie
