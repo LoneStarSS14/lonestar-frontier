@@ -39,7 +39,7 @@ public sealed partial class SalvageObjectiveNpcSpawnerComponent : Component
 
     /// <summary>
     /// The distance to search for nearby faction members when attempting to spawn more.
-    /// Distance is a square radius.
+    /// Distance is a circle radius.
     /// </summary>
     [DataField]
     public float NearbyRange = 8f;
