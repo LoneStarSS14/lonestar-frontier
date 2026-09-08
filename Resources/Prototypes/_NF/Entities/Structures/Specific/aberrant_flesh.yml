@@ -4,24 +4,14 @@
   name: assimilation sack
   description: Huh, an assimilation sack? How do I even know this?
   components:
-  - type: Timer
-  - type: TimedSpawner
-    prototypes:
-    - SpawnMobAberrantFleshNewbornExpeditions
-    chance: 0.85
-    intervalSeconds: 240
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 3
-  - type: SalvageObjectiveNpcSpawner
-    spawnIntervalSeconds: 76
-    nearbyRange: 15
-    maxNearby: 5
-    nearbyFactions:
-    - AberrantFleshExpeditionNF
-    spawnPrototypes:
-    - SpawnMobAberrantFleshExpeditions
-    - SpawnMobAberrantFleshNewbornExpeditions
-    - MobHorrorExpeditions
+  # LoneStar changes start: removing double spawner.
+  # - type: Timer
+  # - type: TimedSpawner
+  #   prototypes:
+  #   - SpawnMobAberrantFleshNewbornExpeditions
+  #   chance: 0.85
+  #   intervalSeconds: 240
+  # LoneStar changes end
   - type: Fixtures
     fixtures:
       fix1:
@@ -82,3 +72,9 @@
           FoodMeat:
             min: 1
             max: 2
+  - type: SalvageObjectiveNpcSpawner # LoneStar
+    nearbyFactions:
+    - AberrantFleshExpeditionNF
+    spawnPrototypes:
+    - SpawnMobAberrantFleshExpeditions
+    - SpawnMobAberrantFleshNewbornExpeditions

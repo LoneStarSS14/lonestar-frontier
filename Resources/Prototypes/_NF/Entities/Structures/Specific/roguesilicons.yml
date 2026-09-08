@@ -4,22 +4,6 @@
   name: rogue AI node
   description: "Contains a portion of a rogue AI database."
   components:
-  - type: SalvageObjectiveNpcSpawner
-    spawnIntervalSeconds: 76
-    nearbyRange: 15
-    maxNearby: 5
-    nearbyFactions:
-    - SiliconsExpeditionNF
-    spawnPrototypes:
-    - MobRogueSiliconScrap
-    - SpawnMobRogueDronesT1
-    - MobRogueSiliconHerder
-    - MobRogueSiliconHunter
-    - MobRogueSiliconCatcher
-    - MobRogueSiliconTesla
-    - MobRogueSiliconScrapFlayer
-    - MobRogueSiliconBoss
-    - MobRogueSiliconGuardian
   - type: Sprite
     sprite: _NF/Structures/Specific/RogueSilicons/ai_node.rsi
     layers:
@@ -116,3 +100,13 @@
   - type: Explosive
     explosionType: Default
     totalIntensity: 25
+  - type: SalvageObjectiveNpcSpawner # LoneStar
+    nearbyFactions:
+    - SiliconsExpeditionNF
+    spawnPrototypes:
+    - SpawnMobRogueScapT1
+    - SpawnMobRogueSiliconsT2
+    - SpawnMobRogueSiliconsT2
+    - SpawnMobRogueSiliconsT2
+    - SpawnMobRogueSiliconsT3
+    - SpawnMobRogueSiliconsT3

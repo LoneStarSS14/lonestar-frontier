@@ -1,9 +1,8 @@
-# _CS Start
 - type: entity
   parent: XenoWardingTower
   id: MercenaryCounterfeitCache
   name: counterfeit cache
-  description: "Cache with counterfeit credits, bootleg movie posters."
+  description: "Cache with counterfeit credits, bootleg movie posters." # _CS, credits
   components:
   - type: Sprite
     sprite: _NF/Structures/Specific/Mercenaries/counterfeitcache.rsi
@@ -42,4 +41,13 @@
           SpaceCashCounterfeit:
             min: 100
             max: 2500
-# _CS End
+  - type: SalvageObjectiveNpcSpawner # LoneStar
+    nearbyFactions:
+    - MercenariesExpeditionNF
+    spawnPrototypes:
+    - SpawnMobMercenaryT1
+    - SpawnMobMercenaryT2
+    - SpawnMobMercenaryT2
+    - SpawnMobMercenaryT2
+    - SpawnMobMercenaryT3
+    - SpawnMobMercenaryT3
