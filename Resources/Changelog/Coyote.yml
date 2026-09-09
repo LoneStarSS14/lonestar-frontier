@@ -3562,3 +3562,28 @@ Entries:
   id: 399
   time: '2026-09-08T11:08:51.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/118
+- author: archee1
+  changes:
+    - type: Add
+      message: All expedition destruction targets now spawn enemies.
+    - type: Fix
+      message: >-
+        Expedition destruction targets will now aim to not spawn entities nearby
+        players.
+    - type: Fix
+      message: >-
+        Expedition destruction targets should no longer spawn boss tier mobs of
+        their factions.
+    - type: Fix
+      message: Dinosaurs should stomp on their own eggs less often.
+    - type: Tweak
+      message: Expedition spawning should no longer spawn mobs outside of the dungeon.
+    - type: Tweak
+      message: >-
+        Zombies Flesh and Argocytes should now spawn more frequently from their
+        destruction targets.
+    - type: Tweak
+      message: Expedition weather should now be more easy to see in.
+  id: 400
+  time: '2026-09-09T16:05:02.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/119
