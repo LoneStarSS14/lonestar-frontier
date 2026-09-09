@@ -5,20 +5,6 @@
   name: party supply stash
   description: The only thing that can hold a gang together.
   components:
-  - type: SalvageObjectiveNpcSpawner
-    spawnIntervalSeconds: 76
-    nearbyRange: 15
-    maxNearby: 5
-    nearbyFactions:
-    - StreetGangNF
-    spawnPrototypes:
-    - MobPunkGangerMeleeT1
-    - MobPunkGangerMeleeT2
-    - MobPunkGangerMeleeT3
-    - MobPunkGangerPistol
-    - MobPunkGangerSmg
-    - MobPunkGangerShotgun
-    - MobPunkGangerLeader
   - type: Sprite
     layers:
     - sprite: _NF/Structures/Specific/Punks/partysupplies.rsi
@@ -112,3 +98,13 @@
         holograffiti20: CyberpunkNeon
         holograffiti21: CyberpunkNeon
         holograffiti22: CyberpunkNeon
+  - type: SalvageObjectiveNpcSpawner # LoneStar
+    nearbyFactions:
+    - StreetGangNF
+    spawnPrototypes:
+    - MobPunkGangerMeleeT1
+    - MobPunkGangerMeleeT2
+    - MobPunkGangerMeleeT2
+    - MobPunkGangerMeleeT2
+    - MobPunkGangerMeleeT3
+    - MobPunkGangerMeleeT3

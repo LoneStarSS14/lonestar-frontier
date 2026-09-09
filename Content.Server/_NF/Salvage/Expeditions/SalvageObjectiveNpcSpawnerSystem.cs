@@ -1,14 +1,18 @@
-// _CS Start: salvage objective nearby NPC spawn placement
+using System.Collections.Generic;
 using System.Numerics;
+using Content.Shared.Mind.Components;
 using Content.Shared.NPC.Components;
 using Content.Shared.Construction.EntitySystems;
+using Content.Shared.Ghost;
 using Content.Shared.Physics;
+using Content.Shared.Maps;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-// _CS End: salvage objective nearby NPC spawn placement
+using Content.Server.Spawners.Components;
 
 namespace Content.Server._NF.Salvage.Expeditions;
 
@@ -20,10 +24,9 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedTransformSystem _xforms = default!;
-    // _CS Start: salvage objective nearby NPC spawn placement
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly AnchorableSystem _anchorable = default!;
-    // _CS End: salvage objective nearby NPC spawn placement
+    [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
 
     public override void Initialize()
@@ -41,25 +44,42 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
             if (Paused(uid) || comp.SpawnPrototypes.Count == 0 || comp.NextSpawn > now)
                 continue;
 
-            comp.NextSpawn += TimeSpan.FromSeconds(comp.SpawnIntervalSeconds);
+            comp.NextSpawn += TimeSpan.FromSeconds(comp.SpawnIntervalSeconds + (2 * comp.SpawnIntervalVariance * (_random.NextFloat() - 0.5)));
 
-            if (CountNearbyFactionMobs(uid, comp) >= comp.MaxNearby)
+            if (CountNearbyFactionMobs(uid, comp) >= comp.MaxNearby) // Try again soon if too many nearby already
+            {
+                comp.NextSpawn = TimeSpan.FromSeconds(Math.Min(10, comp.SpawnIntervalSeconds));
                 continue;
-
+            }
             var spawn = _random.Pick(comp.SpawnPrototypes);
 
-            // _CS Start: salvage objective nearby NPC spawn placement
             if (TryGetNearbySpawnCoordinates(uid, comp, out var coords))
                 SpawnAtPosition(spawn, coords);
             else
                 SpawnAtPosition(spawn, Transform(uid).Coordinates);
-            // _CS End: salvage objective nearby NPC spawn placement
         }
     }
 
     private void OnMapInit(Entity<SalvageObjectiveNpcSpawnerComponent> ent, ref MapInitEvent args)
     {
         ent.Comp.NextSpawn = _timing.CurTime + TimeSpan.FromSeconds(ent.Comp.SpawnIntervalSeconds);
+    }
+
+    private bool HasNearbyActivePlayer(MapCoordinates mapCoords, float range)
+    {
+        var nearbyActors = new HashSet<Entity<ActorComponent>>();
+        var rangeVector = new Vector2(range);
+        var bounds = new Box2(mapCoords.Position - rangeVector, mapCoords.Position + rangeVector);
+        _lookup.GetEntitiesIntersecting(mapCoords.MapId, bounds, nearbyActors);
+
+        foreach (var nearby in nearbyActors)
+        {
+            if (!HasComp<GhostComponent>(nearby)
+                && TryComp<MindContainerComponent>(nearby, out var mind)
+                && mind.HasMind)
+                return true;
+        }
+        return false;
     }
 
     private int CountNearbyFactionMobs(EntityUid uid, SalvageObjectiveNpcSpawnerComponent comp)
@@ -82,7 +102,6 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
         return count;
     }
 
-    // _CS Start: salvage objective nearby NPC spawn placement
     private bool TryGetNearbySpawnCoordinates(EntityUid uid, SalvageObjectiveNpcSpawnerComponent comp, out EntityCoordinates coords)
     {
         var xform = Transform(uid);
@@ -93,7 +112,7 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
         }
 
         var centerTile = _map.CoordinatesToTile(gridUid, grid, _xforms.GetMapCoordinates((uid, xform)));
-        var tileRange = Math.Max(1, (int)MathF.Ceiling(comp.NearbyRange));
+        var tileRange = Math.Max(1, (int)MathF.Ceiling(comp.SpawnRange));
         var candidates = new List<Vector2i>();
 
         for (var x = -tileRange; x <= tileRange; x++)
@@ -104,26 +123,39 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
                     continue;
 
                 var offset = new Vector2(x, y);
-                if (offset.Length() > comp.NearbyRange)
+                if (offset.Length() > comp.SpawnRange)
                     continue;
 
                 candidates.Add(centerTile + new Vector2i(x, y));
             }
         }
-
+        // Iterates through candidate tiles for limitations
         while (candidates.Count > 0)
         {
             var index = _random.Next(candidates.Count);
             var tile = candidates[index];
             candidates.RemoveAt(index);
-
+            // Tile cannot be in reserved landing zones
             if (IsReservedLandingZoneTile(gridUid, grid, tile))
                 continue;
+            // Tile must be inside (weather flag)
+            var tileRef = _map.GetTileRef(gridUid, grid, tile);
+            if (!tileRef.Tile.IsEmpty)
+            {
+                var tileDef = (ContentTileDefinition)_tileDefManager[tileRef.Tile.TypeId];
+                if (tileDef.Weather)
+                    continue;
+            }
+            // Tile must not be too close to a player
+            var candidateCoords = _map.GridTileToLocal(gridUid, grid, tile);
+            if (HasNearbyActivePlayer(_xforms.ToMapCoordinates(candidateCoords), comp.NearbyActorRange))
+                continue;
 
+            // Tile must not have an anchored object
             if (!_anchorable.TileFree((gridUid, grid), tile, (int)CollisionGroup.MachineLayer, (int)CollisionGroup.MachineLayer))
                 continue;
 
-            coords = _map.GridTileToLocal(gridUid, grid, tile);
+            coords = candidateCoords;
             return true;
         }
 

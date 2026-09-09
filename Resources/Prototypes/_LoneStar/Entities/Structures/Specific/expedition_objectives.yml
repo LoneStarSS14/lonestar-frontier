@@ -1,0 +1,66 @@
+#region Carp
+- type: entity
+  parent: XenoWardingTower
+  id: XenoWardingTowerExpedition
+  suffix: Expedition spawner
+  components:
+  - type: SalvageObjectiveNpcSpawner
+    nearbyFactions:
+    - Xeno
+    spawnPrototypes:
+    - NFMobXeno
+    - NFMobXenoDrone
+    - NFMobXenoPraetorian
+    - NFMobXenoRavager
+    - NFMobXenoRunner
+    - NFMobXenoSpitter
+
+#region Carp
+- type: entity
+  parent: CarpStatue
+  id: CarpStatueExpedition
+  suffix: Expedition spawner
+  components:
+  - type: SalvageObjectiveNpcSpawner
+    nearbyFactions:
+    - Dragon
+    spawnPrototypes:
+    - NFMobPurpleSnake
+    - LSSpawnMobCarp
+    - LSSpawnMobCarp
+    - LSSpawnMobCarp
+    - NFSpawnMobWyvern
+    - NFSpawnMobWyvern
+
+#region Dinosaurs
+- type: entity
+  parent: DinosaurEgg
+  id: DinosaurEggExpedition
+  suffix: Expedition spawner
+  components:
+  - type: SalvageObjectiveNpcSpawner # TODO: make this proto be used by exped generation.
+    nearbyFactions:
+    - DinosaursNF
+    spawnPrototypes:
+    - SpawnMobDinosaurSmall
+    - SpawnMobDinosaurMedium
+    - SpawnMobDinosaurBig
+
+#region Cult
+- type: entity
+  parent: BloodCollector
+  id: BloodCollectorExpedition
+  suffix: Expedition spawner
+  components:
+  - type: SalvageObjectiveNpcSpawner
+    nearbyFactions:
+    - BloodCultNF
+    spawnPrototypes:
+    - SpawnMobBloodCultistZealotMelee
+    - SpawnMobBloodCultLeech
+    - SpawnMobBloodCultistZealotRanged
+    - SpawnMobBloodCultistCaster
+    - SpawnMobBloodCultistAcolyte
+    - SpawnMobBloodCultistPriest
+    - SpawnMobBloodCultistJanitor
+    - MobBloodCultistAscended

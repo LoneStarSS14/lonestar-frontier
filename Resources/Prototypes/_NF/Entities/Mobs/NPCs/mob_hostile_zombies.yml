@@ -752,25 +752,15 @@
   name: body bags pile
   description: A stacked pile of reinforced body bags. Some of them are moving!
   components:
-  # _CS Start: salvage objective zombie pile spawner
-  - type: SalvageObjectiveNpcSpawner
-    spawnIntervalSeconds: 76
-    nearbyRange: 15
-    maxNearby: 5
-    nearbyFactions:
-    - Zombie
-    spawnPrototypes:
-    - NFSpawnMobZombie
-    - NFSpawnMobZombieSpecial
-    - NFSpawnMobZombieRandom
-  # _CS End: salvage objective zombie pile spawner
-  - type: TimedSpawner
-    prototypes:
-    - NFSpawnMobZombieRandom
-    chance: 1
-    intervalSeconds: 300 # 5 min
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 3
+  # LoneStar changes start: removing double spawner.
+  # - type: TimedSpawner
+  #   prototypes:
+  #   - NFSpawnMobZombieRandom
+  #   chance: 1
+  #   intervalSeconds: 300 # 5 min
+  #   minimumEntitiesSpawned: 1
+  #   maximumEntitiesSpawned: 3
+  # LoneStar changes end
   - type: Sprite
     sprite: _NF/Mobs/Zombies/zombie_human.rsi
     layers:
@@ -805,6 +795,16 @@
             max: 3
   - type: TimedDespawn # LoneStar, TODO: ideally a 'TimedDestroy', but we work with what we got.
     lifetime: 3600 # 1 hour
+  - type: SalvageObjectiveNpcSpawner # LoneStar
+    spawnIntervalSeconds: 32
+    spawnIntervalVariance: 4
+    nearbyRange: 10
+    spawnRange: 3
+    maxNearby: 12
+    nearbyFactions:
+    - Zombie
+    spawnPrototypes:
+    - NFSpawnMobZombieRandom
 
 # timedspawners making timedspawners makes the iterator sad, so we use a loophole
 - type: entity
