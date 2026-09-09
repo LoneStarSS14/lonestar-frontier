@@ -112,7 +112,9 @@ public sealed partial class MedicalBountySystem : EntitySystem
             bountyValueAccum += randomDamage * damageValue.ValuePerPoint;
             damageToApply += new DamageSpecifier(damageProto, randomDamage);
         }
-        _damageable.SetDamage(entity, damageable: damageable, damageToApply); // LoneStar, stops bought pods bleeding out on spawn-in TODO: Make pods have missing blood based on inflicted brute/bloodloss values.
+        // LoneStar change; use SetDamage to avoid wounds bleeding on the floor when bought.
+        var updatedDamage = new DamageSpecifier(damageable.Damage) + damageToApply;
+        _damageable.SetDamage(entity, damageable, updatedDamage);
 
         // Inject reagents into chemical solution, if any
         foreach (var (reagentType, reagentValue) in component.Bounty.Reagents)
