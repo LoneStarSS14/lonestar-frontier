@@ -63,6 +63,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -77,7 +78,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
-  kindAllowance: [VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -94,7 +95,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
-  kindAllowance: [VoxLike]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -110,6 +111,7 @@
   bodyPart: Tail
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -124,6 +126,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -138,6 +141,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -157,6 +161,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
@@ -167,6 +172,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
@@ -177,6 +183,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
@@ -187,6 +194,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: eyeliner
@@ -201,6 +209,7 @@
         !type:TattooColoring
       fallbackColor: "#666666"
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: beakcover_stripe
@@ -215,6 +224,7 @@
         !type:TattooColoring
       fallbackColor: "#666666"
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: beakcover_tip
@@ -224,6 +234,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -238,6 +249,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -252,6 +264,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -266,6 +279,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -280,6 +294,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -294,6 +309,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
