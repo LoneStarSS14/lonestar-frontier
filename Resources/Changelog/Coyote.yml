@@ -3616,3 +3616,19 @@ Entries:
   id: 403
   time: '2026-09-10T10:18:38.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/125
+- author: archee1
+  changes:
+    - type: Remove
+      message: The north pole no longer spawns every shift.
+    - type: Tweak
+      message: The den has been replaced with a newly built version.
+    - type: Tweak
+      message: The den now spawns 8-9km away from nash instead of 10-11km.
+    - type: Tweak
+      message: >-
+        the amount of freelancer slots open at the den have been altered
+        slightly to allow less 'pirate' freelancers and more smugglers escorts
+        and ripper docs.
+  id: 404
+  time: '2026-09-10T20:53:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/120
