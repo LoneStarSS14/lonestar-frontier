@@ -1,5 +1,6 @@
 - type: marking
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   id: IPCsnoutysmile
   bodyPart: Snout
   markingCategory: Snout
@@ -10,6 +11,7 @@
 
 - type: marking
   speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   id: IPCsnouty
   bodyPart: Snout
   markingCategory: Snout
