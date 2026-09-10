@@ -15,3 +15,24 @@
         Slash: 0.9
         Piercing: 0.4
         Heat: 0.9
+
+# Gorlex long lab coat
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ClothingOuterCoatLabLongGorlex
+  name: gorlex long lab coat
+  description: A Gorlex long lab coat with high-vis accents, it's red to hide the bloodstains.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OuterClothing/Coats/gorlex_long_lab.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OuterClothing/Coats/gorlex_long_lab.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.5
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabLongGorlex]
+  id: ClothingOuterCoatLabLongGorlexOpened
+  name: gorlex long lab coat
