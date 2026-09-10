@@ -3587,3 +3587,12 @@ Entries:
   id: 400
   time: '2026-09-09T16:05:02.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/119
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        All freelancer faction roles are now whitelisted and no longer need 1h
+        of freelancer.
+  id: 401
+  time: '2026-09-10T03:44:08.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/122
