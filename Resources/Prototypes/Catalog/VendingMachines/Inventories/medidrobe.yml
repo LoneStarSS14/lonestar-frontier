@@ -131,6 +131,7 @@
   contrabandInventory: # Frontier - Hidden inventory
     ClothingOuterCoatLabCybersun: 1 # DeltaV
     ClothingUniformJumpskirtOfLife: 1
+    ClothingOuterCoatLabLongPink: 1 # LoneStar
     ToyFigurineMedicalDoctor: 1
     ToyFigurineParamedic: 1
     ToyFigurineChiefMedicalOfficer: 1
