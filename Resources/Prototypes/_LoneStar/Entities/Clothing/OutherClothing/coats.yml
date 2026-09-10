@@ -36,3 +36,24 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabLongGorlex]
   id: ClothingOuterCoatLabLongGorlexOpened
   name: gorlex long lab coat
+
+# Pink long lab coat
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ClothingOuterCoatLabLongPink
+  name: pink long lab coat
+  description: A pink long lab coat, mew..
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OuterClothing/Coats/pink_long_lab.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OuterClothing/Coats/pink_long_lab.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabLongPink]
+  id: ClothingOuterCoatLabLongPinkOpened
+  name: pink long lab coat
