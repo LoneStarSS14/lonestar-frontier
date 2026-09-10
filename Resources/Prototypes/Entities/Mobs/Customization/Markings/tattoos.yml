@@ -189,6 +189,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot] # LoneStar: Allow all markings, not vox (has own unique variant).
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
@@ -199,6 +200,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot] # LoneStar: Allow all markings, not vox (has own unique variant).
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi

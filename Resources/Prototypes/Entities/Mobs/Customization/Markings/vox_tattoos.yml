@@ -77,6 +77,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
+  kindAllowance: [VoxLike]
   coloring:
     default:
       type:
@@ -93,6 +94,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
+  kindAllowance: [VoxLike]
   coloring:
     default:
       type:
@@ -178,7 +180,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: eyeshadow_large
-    
+
 - type: marking
   id: VoxTattooEyeliner
   bodyPart: Eyes
@@ -191,7 +193,7 @@
 - type: marking
   id: VoxBeakCoverStripe
   bodyPart: Snout
-  markingCategory: SnoutCover
+  markingCategory: Snout
   coloring:
     default:
       type:
@@ -205,7 +207,7 @@
 - type: marking
   id: VoxBeakCoverTip
   bodyPart: Snout
-  markingCategory: SnoutCover
+  markingCategory: Snout
   coloring:
     default:
       type:
