@@ -3605,3 +3605,14 @@ Entries:
   id: 402
   time: '2026-09-10T04:04:22.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/124
+- author: archee1
+  changes:
+    - type: Add
+      message: the Gorlex long lab coat can now be purchased from the syndie drobe.
+    - type: Add
+      message: >-
+        the pink long labcoat can now be found in the manager wire of the
+        medidrobe.
+  id: 403
+  time: '2026-09-10T10:18:38.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/125
