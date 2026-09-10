@@ -11226,7 +11226,7 @@ entities:
     - type: Transform
       pos: -30.50176,25.945305
       parent: 1
-- proto: FaxMachineBase
+- proto: FaxMachineNFCove
   entities:
   - uid: 494
     components:
