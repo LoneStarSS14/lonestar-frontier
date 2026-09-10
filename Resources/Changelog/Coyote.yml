@@ -3596,3 +3596,12 @@ Entries:
   id: 401
   time: '2026-09-10T03:44:08.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/122
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        5 markings from wayfarer, Snout (screen), Snout Smile (screen), Bangs
+        Short/Medium/Long
+  id: 402
+  time: '2026-09-10T04:04:22.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/124
