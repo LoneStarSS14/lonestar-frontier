@@ -3632,3 +3632,10 @@ Entries:
   id: 404
   time: '2026-09-10T20:53:09.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/120
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Pinpointer scanners are back on the menu, as with the bluespace dust!
+  id: 405
+  time: '2026-09-11T04:50:25.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/126
