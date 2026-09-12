@@ -2,8 +2,20 @@
   id: BorgChassisSelectable
   parent: BaseBorgChassisNT
   components:
+  - type: Inventory
+    templateId: borgUnified #LoneStar edit. Moves all selectable borg chassies to a unified loadout.
+  - type: AutoImplant #LoneStar Edit. Gives Borgs medical tracking implants.
+    implants:
+    - MedicalTrackingImplant
   - type: Sprite
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: robot
       map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: robot_e_r
@@ -29,10 +41,11 @@
     interactFailureString: petting-failure-generic-cyborg
   - type: BorgSwitchableType
     inherentRadioChannels:
-    - Common
-    - Binary
+ #   - Common #LS Disable Start
  # Coyote: Ring ring! We want our borgs to be able to talk in shortband too!
-    - Traffic
+    #- Traffic
+  #LS Disable End
+    - Binary
   #End Coyote
   - type: BankAccount # Coyote: Borgs can now interact with bank accounts
     # Coyote: Borg PDA's are good for borgs, even ones made midround
@@ -283,6 +296,13 @@
   components:
     - type: Sprite
       layers:
+          #LS EDIT START - Cuffable Layer to prevent game crash
+        - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+          color: "#ffffff"
+          sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+          state: body-overlay-2
+          visible: false
+          # LS EDIT END
         - state: synd_sec
         - state: synd_sec_e
           map: ["enum.BorgVisualLayers.Light"]
@@ -349,6 +369,13 @@
   components:
     - type: Sprite
       layers:
+          #LS EDIT START - Cuffable Layer to prevent game crash
+        - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+          color: "#ffffff"
+          sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+          state: body-overlay-2
+          visible: false
+          # LS EDIT END
         - state: synd_medical
         - state: synd_medical_e
           map: ["enum.BorgVisualLayers.Light"]
@@ -388,6 +415,13 @@
   components:
     - type: Sprite
       layers:
+          #LS EDIT START - Cuffable Layer to prevent game crash
+        - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+          color: "#ffffff"
+          sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+          state: body-overlay-2
+          visible: false
+          # LS EDIT END
         - state: synd_engi
         - state: synd_engi_e
           map: ["enum.BorgVisualLayers.Light"]
@@ -425,6 +459,13 @@
   components:
   - type: Sprite
     layers:
+      #LS EDIT START - Cuffable Layer to prevent game crash
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi # Would use custom sprite, but we'd need to make variants for all chassies
+      state: body-overlay-2
+      visible: false
+      # LS EDIT END
     - state: derelict
     - state: derelict_e_r
       map: ["enum.BorgVisualLayers.Light"]

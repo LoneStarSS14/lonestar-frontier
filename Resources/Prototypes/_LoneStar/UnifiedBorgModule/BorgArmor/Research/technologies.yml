@@ -1,0 +1,16 @@
+#Controls Research Nodes for the UBA module. Comment out to prevent research & Exofabbing of Armor.
+- type: technology
+  id: Advancedrobotics
+  name: research-technology-advanced-robotics
+  entityIcon: ExosuitFabricator
+  discipline: NFEngineering
+  tier: 3
+  cost: 25000
+  recipeUnlocks:
+  - BorgArmorMk3
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBasicRobotics
+  position: 3, 16
+
+  

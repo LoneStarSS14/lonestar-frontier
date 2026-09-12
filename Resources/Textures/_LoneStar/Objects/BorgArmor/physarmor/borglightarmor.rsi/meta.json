@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0 (Provided by https://github.com/Baystation12/Baystation12)",
+    "copyright": "Made by the Baystation Project (SS13). Original Contributor unfindable due to Github and Codebase migration. (Git blame... WHY!!)",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        }
+    ]
+}

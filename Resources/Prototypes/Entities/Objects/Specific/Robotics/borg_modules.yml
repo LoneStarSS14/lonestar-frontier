@@ -1324,7 +1324,7 @@
       - Crowbar
       - Emag
       - AccessBreaker
-      - PinpointerSyndicateNuclear
+      #  - PinpointerSyndicateNuclear #Lonestar Removal: Pinpointer Debloat + Balancing
     - type: BorgModuleIcon
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
 
@@ -1342,7 +1342,7 @@
       moduleId: EnergySword # Frontier
       items:
       - CyborgEnergySwordDouble
-      - PinpointerSyndicateNuclear
+      #  - PinpointerSyndicateNuclear #Lonestar Removal: Pinpointer Debloat + Balancing
     - type: BorgModuleIcon
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-esword-module }
 
@@ -1360,7 +1360,7 @@
       moduleId: L6CROW # Frontier
       items:
         - NFWeaponLightMachineGunL6C # Frontier: WeaponLightMachineGunL6C<NFWeaponLightMachineGunL6C
-        - PinpointerSyndicateNuclear
+        #  - PinpointerSyndicateNuclear #Lonestar Removal: Pinpointer Debloat + Balancing
     - type: BorgModuleIcon
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
 
