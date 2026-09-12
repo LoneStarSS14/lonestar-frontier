@@ -1673,3 +1673,24 @@
     - !type:BuyerJobCondition
       whitelist:
       - Escort
+
+#Lone Star
+
+- type: listing
+  id: UplinkFreelancerPistolMackerel
+  name: uplink-pistol-mackerel-name
+  description: uplink-pistol-mackerel-desc
+  productEntity: NFWeaponPistolMackerel
+  cost:
+    Doubloon: 4
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+  - !type:BuyerJobCondition
+    whitelist:
+    - Escort
+    - Smuggler
