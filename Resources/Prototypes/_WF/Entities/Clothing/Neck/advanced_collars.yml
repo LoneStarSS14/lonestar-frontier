@@ -7,14 +7,14 @@
   description: A modular collar that can have various functional modules installed.
   abstract: true
   components:
-    - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_black.rsi
-    - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_black.rsi
-      equipDelay: 1 # LoneStar
-      unequipDelay: 5 # LoneStar
-    - type: AdvancedCollar
-      maxModules: 7 # LoneStar
+  - type: Sprite
+    sprite: Floof/Clothing/Neck/collar_black.rsi
+  - type: Clothing
+    sprite: Floof/Clothing/Neck/collar_black.rsi
+    equipDelay: 1 # LoneStar
+    unequipDelay: 5 # LoneStar
+  - type: AdvancedCollar
+    maxModules: 7 # LoneStar
   - type: ContainerContainer
     containers:
       collar_module_container: !type:Container
