@@ -7,9 +7,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterHardsuitEVA
         - id: ClothingHeadHelmetEVA
         - id: ClothingMaskBreath
@@ -23,9 +23,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterHardsuitEVA
         - id: ClothingHeadHelmetEVALarge
         - id: ClothingMaskBreath
@@ -39,9 +39,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterSuitEmergency
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled # Frontier
@@ -54,8 +54,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: OxygenTankFilled # Frontier
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: OxygenTankFilled # Lonestar: Brought this back # Frontier
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterEVASuitPrisoner # Frontier ClothingOuterHardsuitEVAPrisoner<ClothingOuterEVASuitPrisoner
         - id: ClothingHeadHelmetEVALarge
         - id: ClothingMaskBreath
@@ -69,7 +69,7 @@
   - type: StorageFill
     contents:
         # - id: OxygenTankFilled # Frontier
-        - id: NFTankO2N2EqualFilled # Frontier
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterEVASuitSyndicate
         - id: ClothingHeadHelmetSyndicate
         - id: ClothingMaskGasSyndicate
@@ -83,9 +83,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterEVASuitPirate # Frontier ClothingOuterHardsuitPirateEVA<ClothingOuterEVASuitPirate
         - id: ClothingMaskGas
         - id: JetpackPirateFilled # Frontier
@@ -99,9 +99,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
 #        - id: JetpackVoidFilled # Frontier
         - id: ClothingOuterHardsuitAncientEVA
         - id: ClothingHeadHelmetAncient
@@ -143,9 +143,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterHardsuitSecurity
         - id: ClothingMaskBreath
         - id: JetpackSecurityFilled # Frontier
@@ -213,9 +213,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterHardsuitWarden
         - id: ClothingMaskBreath
         - id: JetpackSecurityFilled # Frontier
@@ -257,9 +257,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterHardsuitSyndie
         - id: ClothingShoesBootsMagSyndie
         - id: ClothingMaskGasSyndicate
@@ -273,9 +273,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterHardsuitPirateCap
         - id: ClothingMaskGas
         - id: ClothingNeckCloakPirateCap # Frontier
@@ -290,8 +290,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         # TODO: Gone until reworked to have no space protection
         #- id: ClothingOuterHardsuitWizard
         - id: ClothingMaskBreath

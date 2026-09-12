@@ -77,7 +77,7 @@
     - id: ClothingMaskGasCaptain
 #    - id: JetpackCaptainFilled # Frontier
 #    - id: OxygenTankFilled # Frontier
-    - id: NFTankO2N2EqualFilled # Frontier
+    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No laser locker, used when the antique laser is placed in the special display crate
@@ -190,7 +190,7 @@
     - id: ClothingShoesBootsMag # Frontier
 #    - id: JetpackVoidFilled # Frontier
 #    - id: OxygenTankFilled # Frontier
-    - id: NFTankO2N2EqualFilled # Frontier
+    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -252,7 +252,7 @@
     - id: ClothingMaskBreathMedical
     - id: ClothingOuterHardsuitMedical
 #    - id: OxygenTankFilled # Frontier
-    - id: NFTankO2N2EqualFilled # Frontier
+    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -306,7 +306,7 @@
     - id: ClothingMaskBreath
     - id: ClothingOuterHardsuitRd
     # - id: OxygenTankFilled # Frontier
-    - id: NFTankO2N2EqualFilled # Frontier
+    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
