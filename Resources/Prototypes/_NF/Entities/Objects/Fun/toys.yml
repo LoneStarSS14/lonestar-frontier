@@ -521,18 +521,40 @@
     entries:
       CottonBurger: PlushieMailVulp
 
-- type: entity
+- type: entity # lone star: Changes the yarr plushie to the evil moth plushie sprite and adds more sounds to it
   parent: PlushieMoth
   id: PlushieYarrMoth
-  name: yarr moth plushie
-  description: It's dastardly and has a dashing cloak. It chitters when you squeeze it!
+  name: evil moth plushie
+  description: You loot at the cute moth plushie with your eyes, and it stares back at you with its evil eyes. It is a plushie, but it is also very evil.
   components:
   - type: Sprite
-    sprite: _NF/Objects/Fun/Plushies/yarrmoth.rsi
-    state: plushie_yarrmoth
+    sprite: _LoneStar/Objects/Fun/evilmoffplushie.rsi 
+    state: evilmoffplushie
+  - type: EmitSoundOnUse 
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Moth/moth_scream.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg 
   - type: FoodSequenceElement
     entries:
-      CottonBurger: PlushieYarrMoth
+      CottonBurger: PlushieEvilMoth 
 
 - type: entity
   parent: BasePlushieVulp
