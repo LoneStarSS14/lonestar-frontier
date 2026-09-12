@@ -101,6 +101,11 @@
     explosionType: Default
     totalIntensity: 25
   - type: SalvageObjectiveNpcSpawner # LoneStar
+    spawnIntervalSeconds: 70
+    spawnIntervalVariance: 10
+    nearbyRange: 15
+    spawnRange: 8
+    maxNearby: 4
     nearbyFactions:
     - SiliconsExpeditionNF
     spawnPrototypes:

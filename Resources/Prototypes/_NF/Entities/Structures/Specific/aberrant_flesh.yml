@@ -75,11 +75,10 @@
   - type: SalvageObjectiveNpcSpawner # LoneStar
     spawnIntervalSeconds: 55
     spawnIntervalVariance: 5
-    nearbyRange: 12
-    spawnRange: 3
-    maxNearby: 8
+    nearbyRange: 15
+    spawnRange: 6
+    maxNearby: 7
     nearbyFactions:
     - AberrantFleshExpeditionNF
     spawnPrototypes:
-    - SpawnMobAberrantFleshExpeditions
     - SpawnMobAberrantFleshNewbornExpeditions

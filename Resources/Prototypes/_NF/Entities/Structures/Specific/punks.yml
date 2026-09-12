@@ -99,6 +99,11 @@
         holograffiti21: CyberpunkNeon
         holograffiti22: CyberpunkNeon
   - type: SalvageObjectiveNpcSpawner # LoneStar
+    spawnIntervalSeconds: 60
+    spawnIntervalVariance: 10
+    nearbyRange: 15
+    spawnRange: 8
+    maxNearby: 4
     nearbyFactions:
     - StreetGangNF
     spawnPrototypes:
