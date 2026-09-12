@@ -230,8 +230,9 @@
   - ContractorClothingBackpack
   - ContractorClothingBackpackDuffel
   - ContractorClothingBackpackSatchel
-  - ContractorClothingBackpackSatchelLeather # Coyote
   - ContractorClothingBackpackMessenger
+  - ContractorClothingBackpackSatchelLeather # Coyote
+  - ClothingBackpackTrunk # Lonestar
   - ContractorClothingBackpackCaptain
   - ContractorClothingBackpackDuffelCaptain
   - ContractorClothingBackpackSatchelCaptain

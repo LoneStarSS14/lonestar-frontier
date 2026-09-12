@@ -219,3 +219,14 @@
       sprite: _Starlight/Clothing/Uniforms/Jumpsuit/belpero.rsi
     - type: Clothing
       sprite: _Starlight/Clothing/Uniforms/Jumpsuit/belpero.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSpaceCourier
+  name: space courier underclothes
+  description: Luxurious underclothes, styled after a legendary space courier. Fly, my space courier!
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Uniforms/Jumpsuit/space_courier.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Uniforms/Jumpsuit/space_courier.rsi

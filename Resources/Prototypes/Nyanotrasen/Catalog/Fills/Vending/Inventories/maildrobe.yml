@@ -20,3 +20,12 @@
     RubberStampDenied: 3 # Frontier 1<3
     BoxFolderClipboard: 3 # Frontier
     BoxEnvelope: 4 # Frontier
+    ClothingBackpackTrunkMail: 4 # Lonestar start
+  emaggedInventory:
+    ClothingBackpackTrunkSyndicate: 1
+  contrabandInventory:
+    ClothingBackpackTrunkSpaceCourier: 4
+    ClothingEyesSpaceCourierGoggles: 4
+    ClothingUniformJumpsuitSpaceCourier: 4
+    ClothingOuterCoatSpaceCourier: 4
+    ClothingShoesBootsSpaceCourier: 4 # Lonestar end

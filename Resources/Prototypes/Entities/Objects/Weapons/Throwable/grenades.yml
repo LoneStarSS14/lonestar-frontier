@@ -432,6 +432,10 @@
       - ReagentId: SpaceCleaner
         Quantity: 30
   - type: NFCleanade # Frontier
+  - type: Tag # Lonestar start
+    tags:
+      - HandGrenade
+      - Cleanade # Lonestar end
 
 - type: entity
   parent:

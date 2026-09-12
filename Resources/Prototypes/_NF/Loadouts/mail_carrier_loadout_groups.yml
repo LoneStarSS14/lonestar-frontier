@@ -28,6 +28,7 @@
   - MailCarrierNFClothingBackpackDuffelMailCarrier
   - MailCarrierClothingBackpackMessengerMailCarrier
   - MailCarrierClothingBackpackClippy
+  - ClothingBackpackTrunkMail # Lonestar
   subgroups:
   - ContractorBackpack
   fallbacks:

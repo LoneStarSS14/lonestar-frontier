@@ -1,0 +1,44 @@
+- type: entity
+  name : flamethrower fireball
+  id: BulletFlamethrower
+  parent: BaseBulletIncendiary
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 0.44
+  - type: Sprite
+    sprite: _HL/Objects/Weapons/Guns/Projectiles/fireball.rsi
+    layers:
+    - state: fireball
+      shader: unshaded
+  - type: Ammo
+    muzzleFlash: null
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        mask:
+        - Opaque
+        - HitscanImpassable
+      fly-by:
+        shape: !type:PhysShapeCircle
+          radius: 1.5
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+        hard: False
+  - type: Projectile
+    impactEffect: BulletImpactEffectFlamer
+    damage:
+      types:
+        Shock: 0
+  - type: EmpOnTrigger
+    range: 2
+    energyConsumption: 2700000
+    disableDuration: 30

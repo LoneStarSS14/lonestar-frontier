@@ -1,0 +1,47 @@
+- type: listing
+  id: UplinkMarriage
+  name: uplink-marriage-axe-name
+  description: uplink-marriage-axe-desc
+  icon:
+    {
+      sprite: /Textures/_Starlight/Objects/Weapons/Melee/marriage_axe.rsi,
+      state: icon,
+    }
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 16 # HL: 2 -> 4 discount, 2 isn't much.
+  productEntity: MarriageAxe
+  cost:
+    Telecrystal: 20
+  categories:
+    - UplinkWeaponry
+
+- type: listing
+  id: UplinkSatchelSyndicate
+  name: uplink-satchel-syndicate-name
+  description: uplink-satchel-syndicate-desc
+  productEntity: ClothingBackpackSatchelSyndicate
+  cost:
+    Telecrystal: 3
+  categories:
+    - UplinkWearables
+
+- type: listing
+  id: UplinkDuffelSyndicate
+  name: uplink-duffel-syndicate-name
+  description: uplink-duffel-syndicate-desc
+  productEntity: ClothingBackpackDuffelSyndicate
+  cost:
+    Telecrystal: 4
+  categories:
+    - UplinkWearables
+
+- type: listing
+  id: UplinkTrunkSyndicate
+  name: uplink-trunk-syndicate-name
+  description: uplink-trunk-syndicate-desc
+  productEntity: ClothingBackpackTrunkSyndicate
+  cost:
+    Telecrystal: 5
+  categories:
+    - UplinkWearables

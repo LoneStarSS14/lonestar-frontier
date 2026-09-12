@@ -1,0 +1,25 @@
+- type: listing
+  id: uplinkFlamethrower
+  name: uplink-flamethrower-name
+  description: uplink-flamethrower-desc
+  productEntity: WeaponFlamethrowerFG
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 14
+  cost:
+    Telecrystal: 16
+  categories:
+    - UplinkWeaponry
+
+- type: listing
+  id: UplinkToolbelt
+  name: uplink-toolbelt-name
+  description: uplink-toolbelt-desc
+  productEntity: ClothingBeltUtilitySyndicateFilled
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkDisruption
