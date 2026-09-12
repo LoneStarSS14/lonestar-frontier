@@ -579,4 +579,13 @@
   storage:
     back:
     - Clicker
-    
+  
+- type: loadout # Lone Star: Adds evil moth plushie to loadout
+  id: ContractorEvilMoffPlushie
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  storage:
+    back:
+    - PlushieYarrMoth
