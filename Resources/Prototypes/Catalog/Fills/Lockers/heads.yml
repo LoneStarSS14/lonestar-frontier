@@ -76,8 +76,9 @@
     - id: ClothingOuterHardsuitCap
     - id: ClothingMaskGasCaptain
 #    - id: JetpackCaptainFilled # Frontier
-#    - id: OxygenTankFilled # Frontier
-    - id: NFTankO2N2EqualFilled # Frontier
+    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: NitrogenTankFilled # Lonestar
+    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No laser locker, used when the antique laser is placed in the special display crate
@@ -189,8 +190,9 @@
 #    - id: ClothingShoesBootsMagAdv # Frontier
     - id: ClothingShoesBootsMag # Frontier
 #    - id: JetpackVoidFilled # Frontier
-#    - id: OxygenTankFilled # Frontier
-    - id: NFTankO2N2EqualFilled # Frontier
+    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: NitrogenTankFilled # Lonestar
+    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -251,8 +253,9 @@
     children:
     - id: ClothingMaskBreathMedical
     - id: ClothingOuterHardsuitMedical
-#    - id: OxygenTankFilled # Frontier
-    - id: NFTankO2N2EqualFilled # Frontier
+    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: NitrogenTankFilled # Lonestar
+    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -305,8 +308,9 @@
     children:
     - id: ClothingMaskBreath
     - id: ClothingOuterHardsuitRd
-    # - id: OxygenTankFilled # Frontier
-    - id: NFTankO2N2EqualFilled # Frontier
+    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: NitrogenTankFilled # Lonestar
+    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -379,6 +383,7 @@
     - id: ClothingOuterHardsuitSecurityRed
     - id: JetpackSecurityFilled
     - id: OxygenTankFilled
+    - id: NitrogenTankFilled # Lonestar
 
 # No hardsuit locker
 - type: entity
