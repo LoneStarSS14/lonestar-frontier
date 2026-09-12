@@ -149,6 +149,7 @@
       - map: [ "id" ]
       - map: [ "back" ]
       - map: [ "neck" ]
+      - map: [ "misc" ] # Lonestar
       - map: [ "enum.HumanoidVisualLayers.UndershirtOverclothes" ]
       - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
       - map: [ "enum.HumanoidVisualLayers.Tail" ] #in the utopian future we should probably have a wings enum inserted here so everyhting doesn't break

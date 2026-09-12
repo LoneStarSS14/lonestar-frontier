@@ -75,6 +75,7 @@
       - map: [ "eyes" ]
       - map: [ "belt" ]
       - map: [ "neck" ]
+      - map: [ "misc" ] # Lonestar
       - map: [ "enum.HumanoidVisualLayers.UndershirtOverclothes" ]
       - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
       - map: [ "back" ]

@@ -133,6 +133,7 @@
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "neck" ]
+    - map: [ "misc" ] # Lonestar
     - map: [ "back" ]
     - map: [ "enum.HumanoidVisualLayers.TailExtras" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
