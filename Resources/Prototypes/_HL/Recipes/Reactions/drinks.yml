@@ -1,0 +1,13 @@
+- type: reaction
+  id: NebulaDream
+  reactants:
+    BlueCuracao:
+      amount: 2
+    SpaceUp:
+      amount: 2
+    Pomelustine:
+      amount: 1
+    Grenadine:
+      amount: 1
+  products:
+    NebulaDream: 6

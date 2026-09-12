@@ -1,0 +1,10 @@
+- type: microwaveMealRecipe
+  id: RecipeDriedMindleafLeaves
+  name: dried mindleaf leaves recipe
+  result: LeavesMindleafDried
+  time: 10
+  solids:
+    LeavesMindleaf: 1
+  recipeType: # Frontier
+  - Oven # Frontier
+  - Microwave # Frontier

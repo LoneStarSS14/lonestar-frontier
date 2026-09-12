@@ -1,0 +1,87 @@
+- type: reagent
+  id: AbyssalBlood
+  name: reagent-name-abyssal-blood
+  group: Biological
+  desc: reagent-desc-abyssal-blood
+  flavor: chaos
+  color: "#000000"
+  recognizable: false
+  physicalDesc: reagent-physical-desc-inky
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Cold: 1
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          min: 160.15
+        amount: -30000
+    Extinguish:
+      methods: [ Touch ]
+      effects:
+      - !type:ExtinguishReaction
+  metabolisms:
+    Poison:
+      metabolismRate : 0.45
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+             Cold: 3
+             Heat: -3
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: AbyssalBlood
+          max: 35
+        type: Local
+        visualType: LargeCaution
+        messages: [ "fresium-effect-freeze-insides"]
+        probability: 0.05
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: AbyssalBlood
+          max: 35
+        type: Local
+        visualType: LargeCaution
+        messages: [ "fresium-effect-slow"]
+        probability: 0.2
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          min: 160.15
+        amount: -10000
+      - !type:MovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: AbyssalBlood
+          max: 40
+        walkSpeedModifier: 0.6
+        sprintSpeedModifier: 0.6
+      - !type:MovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: AbyssalBlood
+          min: 40
+        walkSpeedModifier: 0.00
+        sprintSpeedModifier: 0.00
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: AbyssalBlood
+          min: 40
+        type: Local
+        visualType: LargeCaution
+        messages: [ "fresium-effect-frozen"]
+        probability: 0.4
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6

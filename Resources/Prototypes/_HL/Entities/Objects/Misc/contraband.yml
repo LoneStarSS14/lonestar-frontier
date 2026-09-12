@@ -1,0 +1,171 @@
+- type: entity
+  parent: BaseWrappedPacket
+  id: WrappedRustPackage
+  name: sealed narcotic packet
+  description: Worth a pretty penny, the liquid inside the vials looks oily.
+  suffix: Rust
+  components:
+  - type: StaticPrice
+    price: 5000
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#D4A574"
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: OpenedRustPacket
+      amount: 1
+
+- type: entity
+  parent: BaseWrappedPacket
+  id: WrappedBreakoutPackage
+  name: sealed narcotic packet
+  description: Worth a pretty penny, the powder inside looks coarse.
+  suffix: Breakout
+  components:
+  - type: StaticPrice
+    price: 1500
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#B8C8D4"
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: OpenedBreakoutPacket
+      amount: 1
+
+- type: entity
+  parent: BaseWrappedPacket
+  id: WrappedGritPackage
+  name: sealed narcotic packet
+  description: Worth a pretty penny, the liquid inside the vials looks volatile.
+  suffix: Grit
+  components:
+  - type: StaticPrice
+    price: 35000
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#C8D474"
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: OpenedGritPacket
+      amount: 1
+
+- type: entity
+  parent: BaseOpenedPacket
+  id: OpenedBakePacket
+  name: opened narcotic packet
+  description: Chalky powder spills from this torn packet. Handle with care.
+  suffix: Bake
+  components:
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#D4C0A0"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Bake
+          Quantity: 30
+
+- type: entity
+  parent: BaseOpenedPacket
+  id: OpenedRustPacket
+  name: opened narcotic packet
+  description: Oily liquid seeps from broken vials in this torn packet.
+  suffix: Rust
+  components:
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#C49568"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Rust
+          Quantity: 30
+
+- type: entity
+  parent: BaseOpenedPacket
+  id: OpenedBreakoutPacket
+  name: opened narcotic packet
+  description: Coarse powder scatters from this damaged packet.
+  suffix: Breakout
+  components:
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#A8B0BC"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Breakout
+          Quantity: 30
+
+- type: entity
+  parent: BaseOpenedPacket
+  id: OpenedGritPacket
+  name: opened narcotic packet
+  description: Volatile liquid bubbles from cracked vials in this ripped packet. Extremely dangerous.
+  suffix: Grit
+  components:
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#B8C068"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Grit
+          Quantity: 30
+
+- type: entity
+  parent: BaseWrappedPacket
+  id: WrappedWidowPackage
+  name: sealed narcotic packet
+  description: Worth a fortune, bears a bleeding infinity sigil and contains an inky black substance.
+  suffix: Widow
+  components:
+  - type: StaticPrice
+    price: 250000
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#8A7A8A"
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: OpenedWidowPacket
+      amount: 1
+    butcherDelay: 0.5
+
+- type: entity
+  parent: BaseOpenedPacket
+  id: OpenedWidowPacket
+  name: opened narcotic packet
+  description: An inky black substance seeps from this torn packet. The infinity sigil still bleeds faintly.
+  suffix: Widow
+  components:
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#7A6A7A" # Subtle dark purple + damage tint combined
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Widow
+          Quantity: 30

@@ -1,0 +1,10 @@
+- type: reagent
+  parent: Blood
+  id: BloodBlack
+  name: reagent-name-black-blood
+  group: Biological
+  desc: reagent-desc-black-blood
+  flavor: metallic
+  color: "#000000"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-dark

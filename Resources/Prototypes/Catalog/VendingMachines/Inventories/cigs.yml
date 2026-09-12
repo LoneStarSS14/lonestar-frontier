@@ -20,6 +20,8 @@
     TobaccoPouchBrownFilled: 2 # Frontier
     TobaccoPouchBlueFilled: 2 # Frontier
     TobaccoPouchPurpleFilled: 2 # Frontier
+    CigPackDarkGreen: 2 # _CD
+    CigPackUnmarked: 4 # _CD
   contrabandInventory:
     TobaccoPouchRedFilled: 2 # Frontier
     CigarBluespace: 2 # Coyote: added

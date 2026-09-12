@@ -1,0 +1,544 @@
+
+- type: reagent
+  id: Bite
+  name: reagent-name-bite
+  group: Narcotics
+  desc: reagent-desc-bite
+  physicalDesc: reagent-physical-desc-viscous
+  flavor: bitter
+  color: "#4a0e4e"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.3
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.2
+        sprintSpeedModifier: 1.2
+      - !type:GenericStatusEffect
+        key: Jitter
+        time: 8.0
+        type: Remove
+      - !type:GenericStatusEffect
+        key: StaminaModifier
+        component: StaminaModifier
+        time: 15
+        type: Add
+      - !type:GenericStatusEffect
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        time: 10
+        type: Add
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "bite-effect-calm"
+          - "bite-effect-focused"
+          - "bite-effect-alert"
+          - "bite-effect-energy"
+          - "bite-effect-hunger"
+        probability: 0.2
+
+- type: reagent
+  id: Venom
+  name: reagent-name-venom
+  group: Narcotics
+  desc: reagent-desc-venom
+  physicalDesc: reagent-physical-desc-volatile
+  flavor: metallic
+  color: "#1a3d1a"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.2
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.4
+        sprintSpeedModifier: 1.4
+      - !type:GenericStatusEffect
+        key: StaminaModifier
+        component: StaminaModifier
+        time: 25
+      - !type:GenericStatusEffect
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        time: 30
+        type: Add
+      - !type:GenericStatusEffect
+        key: Stun
+        time: 5
+        type: Remove
+      - !type:GenericStatusEffect
+        key: KnockedDown
+        time: 5
+        type: Remove
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages:
+          - "venom-effect-power"
+          - "venom-effect-invincible"
+          - "venom-effect-enhanced"
+          - "venom-effect-bloodlust"
+          - "venom-effect-rage"
+          - "venom-effect-lethal"
+        probability: 0.25
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Addictine
+          max: 15
+        - !type:ReagentThreshold
+          min: 4
+        reagent: Addictine
+        amount: 1.5
+    Poison:
+      metabolismRate: 0.1
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 4
+        damage:
+          types:
+            Poison: 2
+            Asphyxiation: 1
+
+- type: reagent
+  id: Widow
+  name: reagent-name-widow
+  group: Narcotics
+  desc: reagent-desc-widow
+  physicalDesc: reagent-physical-desc-inky
+  flavor: chaos
+  color: "#000000"
+  recognizable: false
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.1
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.5
+        sprintSpeedModifier: 1.5
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages:
+          - "widow-effect-predator"
+          - "widow-effect-coldblood"
+          - "widow-effect-hunter"
+          - "widow-effect-abyssal"
+          - "widow-effect-void"
+          - "widow-effect-darkness"
+          - "widow-effect-apex"
+          - "widow-effect-wraith"
+          - "widow-effect-demon"
+        probability: 0.2
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:GenericStatusEffect
+        key: Stun
+        time: 15
+        type: Remove
+      - !type:GenericStatusEffect
+        key: KnockedDown
+        time: 15
+        type: Remove
+      - !type:GenericStatusEffect
+        key: StaminaModifier
+        component: StaminaModifier
+        time: 20
+        type: Add
+      - !type:GenericStatusEffect
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        time: 25
+      - !type:AdjustReagent
+        reagent: Charcoal
+        amount: -8.0
+      - !type:AdjustReagent
+        reagent: Ipecac
+        amount: -8.0
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: ChloralHydrate
+          min: 1
+        reagent: ChloralHydrate
+        amount: -10
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nocturine
+          min: 1
+        reagent: Nocturine
+        amount: -10
+      - !type:GenericStatusEffect
+        key: ForcedSleep
+        time: 5
+        type: Remove
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        damage:
+          types:
+            Poison: 0.5
+            Asphyxiation: 0.3
+            Cold: 0.3
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentThreshold
+          min: 9
+        amount: -9000
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          min: 9
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        damage:
+          types:
+            Poison: 1.5
+            Asphyxiation: 1
+            Cold: 2
+      - !type:Paralyze
+        conditions:
+        - !type:ReagentThreshold
+          min: 14
+        probability: 0.08
+        paralyzeTime: 5
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          min: 14
+        type: Local
+        visualType: LargeCaution
+        messages:
+          - "widow-overdose-psychosis-1"
+          - "widow-overdose-psychosis-2"
+          - "widow-overdose-psychosis-3"
+          - "widow-overdose-hallucination-1"
+          - "widow-overdose-hallucination-2"
+          - "widow-overdose-hallucination-3"
+          - "widow-overdose-abyssal-1"
+          - "widow-overdose-abyssal-2"
+        probability: 0.25
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        probability: 0.05
+        damage:
+          types:
+            Asphyxiation: 25
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        amount: -26250
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: WidowsCurse
+          max: 50
+        reagent: WidowsCurse
+        amount: 0.3
+      - !type:PopupMessage
+        type: Local
+        visualType: Small
+        messages:
+          - "widow-whisper-1"
+          - "widow-whisper-2"
+          - "widow-whisper-3"
+        probability: 0.02
+
+- type: reagent
+  id: Ruin
+  name: reagent-name-ruin
+  group: Toxins
+  desc: reagent-desc-ruin
+  physicalDesc: reagent-physical-desc-putrid
+  flavor: horrible
+  color: "#1a0d1a"
+  recognizable: true
+  metabolisms:
+    Poison:
+      metabolismRate: 0.5
+      effects:
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Widow
+          min: 0.1
+        reagent: Widow
+        amount: -0.5
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Widow
+          min: 0.1
+        reagent: Ruin
+        amount: 0.5
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        messages:
+          - "ruin-effect-burning"
+          - "ruin-effect-agony"
+          - "ruin-effect-regret"
+          - "ruin-effect-freezing"
+          - "ruin-effect-confusion"
+          - "ruin-effect-nausea"
+          - "ruin-effect-corruption"
+          - "ruin-effect-madness"
+          - "ruin-effect-void"
+          - "ruin-effect-twisted"
+        probability: 0.3
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1.5
+            Caustic: 1
+            Asphyxiation: 1
+            Cold: 1.5
+      - !type:AdjustTemperature
+        amount: -5000
+      - !type:GenericStatusEffect
+        key: Drunk
+        component: Drunk
+        time: 10
+        type: Add
+        probability: 0.4
+      - !type:Jitter
+        time: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 4
+        damage:
+          types:
+            Poison: 2
+            Caustic: 1.5
+            Cold: 2.5
+            Cellular: 1
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentThreshold
+          min: 4
+        amount: -7500
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          min: 4
+        key: Drunk
+        component: Drunk
+        time: 15
+        type: Add
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 9
+        damage:
+          types:
+            Poison: 3
+            Caustic: 2
+            Asphyxiation: 1.5
+            Cold: 3.5
+      - !type:Paralyze
+        conditions:
+        - !type:ReagentThreshold
+          min: 9
+        probability: 0.25
+        paralyzeTime: 8
+
+- type: reagent
+  id: WidowsCurse
+  name: reagent-name-widows-curse
+  group: Biological
+  desc: reagent-desc-widows-curse
+  physicalDesc: reagent-physical-desc-viscous
+  flavor: bitter
+  color: "#2d0a2d"
+  recognizable: false
+  metabolisms:
+    Poison:
+      metabolismRate: 0.015
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        messages:
+          - "curse-withdrawal-1"
+          - "curse-withdrawal-2"
+          - "curse-withdrawal-3"
+          - "curse-withdrawal-4"
+          - "curse-withdrawal-5"
+        probability: 0.22
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Widow
+          max: 0.01
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        conditions:
+        - !type:ReagentThreshold
+          min: 9
+        - !type:ReagentThreshold
+          reagent: Widow
+          max: 0.01
+        time: 12
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Widow
+          min: 1.0
+        time: 1
+        type: Remove
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.85
+        sprintSpeedModifier: 0.5
+        conditions:
+        - !type:ReagentThreshold
+          min: 4
+        - !type:ReagentThreshold
+          reagent: Widow
+          max: 0.01
+      - !type:AdjustReagent
+        reagent: Charcoal
+        amount: -12.0
+      - !type:AdjustReagent
+        reagent: Ipecac
+        amount: -12.0
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 19
+        - !type:ReagentThreshold
+          reagent: Widow
+          max: 0.01
+        damage:
+          types:
+            Asphyxiation: 0.2
+            Cold: 0.3
+
+- type: reagent
+  id: AbyssalCleansingSerum
+  name: reagent-name-abyssal-cleansing-serum
+  group: Medicine
+  desc: reagent-desc-abyssal-cleansing-serum
+  physicalDesc: reagent-physical-desc-glowing
+  flavor: medicine
+  color: "#2d0a2d"
+  recognizable: true
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.05
+      effects:
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Widow
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: WidowsCurse
+          max: 0.01
+        reagent: AbyssalCleansingSerum
+        amount: -10.0
+      - !type:AdjustReagent
+        reagent: WidowsCurse
+        amount: -0.5
+      - !type:AdjustReagent
+        reagent: Widow
+        amount: -0.5
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        time: 1
+        type: Remove
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.2
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Widow
+          min: 1
+        reagent: WidowsCurse
+        amount: -0.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+        damage:
+          types:
+            Heat: 2.25
+            Poison: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Widow
+          min: 0.1
+        - !type:ReagentThreshold
+          min: 1
+        damage:
+          types:
+            Heat: 7.5
+            Poison: 4.0
+            Caustic: 2.5
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Widow
+          min: 0.1
+        - !type:ReagentThreshold
+          min: 1
+        amount: 7000
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+        amount: 3500
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Widow
+          min: 0.1
+        - !type:ReagentThreshold
+          min: 1
+        type: Local
+        visualType: LargeCaution
+        messages:
+          - "abyssal-cleansing-widow-burning"
+          - "abyssal-cleansing-widow-agony"
+          - "abyssal-cleansing-widow-searing"
+          - "abyssal-cleansing-widow-purging"
+        probability: 0.8
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "abyssal-cleansing-effect-purifying"
+          - "abyssal-cleansing-effect-clearing"
+          - "abyssal-cleansing-effect-stabilizing"
+        probability: 0.15
+      - !type:Paralyze
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+        probability: 1.0
+        paralyzeTime: 2
+

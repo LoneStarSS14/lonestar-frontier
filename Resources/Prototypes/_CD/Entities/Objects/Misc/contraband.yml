@@ -1,0 +1,97 @@
+# Base packet entities
+- type: entity
+  parent: [BaseItem, BaseC3Contraband]
+  id: BaseWrappedPacket
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+
+- type: entity
+  parent: [BaseItem, BaseC3Contraband]  
+  id: BaseOpenedPacket
+  abstract: true
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+  - type: MixableSolution
+    solution: drink
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: Drink
+  - type: Spillable
+    solution: drink
+  - type: DrawableSolution
+    solution: drink
+  - type: RefillableSolution
+    solution: drink
+  - type: DrainableSolution
+    solution: drink
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#D4B4A3"
+
+- type: entity
+  parent: [BaseItem, BaseC3Contraband]
+  id: EmptyPacket
+  name: empty packet
+  description: Worth a pretty penny? Fill with drugs and right-click to seal.
+  suffix: Cardboard
+  components:
+  - type: StaticPrice
+    price: 0
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+  - type: Spillable
+    solution: drink
+  - type: DrawableSolution
+    solution: drink
+  - type: RefillableSolution
+    solution: drink
+  - type: DrainableSolution
+    solution: drink
+  - type: Tag
+    tags:
+    - EmptyPacket
+  - type: PacketSealing
+  - type: Construction
+    graph: WrappedDrugPackage
+    node: empty
+
+- type: entity
+  parent: BaseWrappedPacket
+  id: WrappedBakePackage
+  name: sealed narcotic packet
+  description: Worth a pretty penny, the powder inside looks chalky.
+  suffix: Bake
+  components:
+  - type: StaticPrice
+    price: 20000 # worth the risk? #HL
+  - type: Sprite
+    sprite: _CD/Objects/Misc/Contraband/drug_packets.rsi
+    state: brown_icon
+    color: "#E8D8B8" # Chalky white tint
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: OpenedBakePacket
+      amount: 1
+    butcherDelay: 0.5
+    butcherSound:
+     path: /Audio/Effects/packetrip.ogg
+
+## START HL
+

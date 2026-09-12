@@ -1,0 +1,83 @@
+# Addictine curing chem
+- type: reagent
+  id: Efflumetonial
+  name: reagent-name-efflumetonial
+  group: Medicine
+  desc: reagent-desc-efflumetonial
+  physicalDesc: reagent-physical-desc-clear
+  flavor: bitter
+  color: "#a0c8ff"
+  recognizable: false
+  metabolisms:
+    Medicine:
+      metabolismRate: 1
+      effects:
+      - !type:AdjustReagent
+        reagent: Addictine
+        amount: -0.5
+      - !type:Jitter
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "efflumetonial-effects-low-1"
+          - "efflumetonial-effects-low-2"
+          - "efflumetonial-effects-low-3"
+          - "efflumetonial-effects-low-4"
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          max: 9
+        - !type:ReagentThreshold
+          reagent: Addictine
+          min: 0.1
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "efflumetonial-effects-high-1"
+          - "efflumetonial-effects-high-2"
+          - "efflumetonial-effects-high-3"
+          - "efflumetonial-effects-high-4"
+          - "efflumetonial-effects-high-5"
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+          max: 15
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: StutteringAccent
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        - !type:ReagentThreshold
+          reagent: Addictine
+          min: 0.1
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        messages:
+          - "efflumetonial-effects-overdose-1"
+          - "efflumetonial-effects-overdose-2"
+          - "efflumetonial-effects-overdose-3"
+          - "efflumetonial-effects-overdose-4"
+          - "efflumetonial-effects-overdose-5"
+          - "efflumetonial-effects-overdose-6"
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        probability: 0.33
+        damage:
+          types:
+            Asphyxiation: 25
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        amount: -26250

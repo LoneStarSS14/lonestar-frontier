@@ -1,0 +1,81 @@
+- type: reaction
+  id: Bite
+  minTemp: 350
+  impact: Medium
+  reactants:
+    Dynamoxine:
+      amount: 1
+    Diphenhydramine:
+      amount: 1
+    Epinephrine:
+      amount: 1
+  products:
+    Bite: 2
+
+- type: reaction
+  id: Venom
+  minTemp: 370
+  impact: Medium
+  reactants:
+    Bite:
+      amount: 2
+    Grit:
+      amount: 2
+    Kaiser:
+      amount: 2
+    Phenol:
+      amount: 1
+  products:
+    Venom: 4
+
+- type: reaction
+  id: Widow
+  maxTemp: 250
+  impact: High
+  reactants:
+    Venom:
+      amount: 2
+    AbyssalBlood:
+      amount: 1
+    Artifexium:
+      amount: 1
+    Phalanximine:
+      amount: 1
+    Leporazine:
+      amount: 1
+  products:
+    Widow: 3
+
+- type: reaction
+  id: Ruin
+  minTemp: 250
+  impact: High
+  reactants:
+    Venom:
+      amount: 2
+    AbyssalBlood:
+      amount: 1
+    Artifexium:
+      amount: 1
+    Phalanximine:
+      amount: 1
+    Leporazine:
+      amount: 1
+  products:
+    Ruin: 3
+
+- type: reaction
+  id: AbyssalCleansingSerum
+  minTemp: 350
+  impact: High
+  reactants:
+    BloodBlack:
+      amount: 5
+    Ethylredoxrazine:
+      amount: 3
+    Stellibinin:
+      amount: 3
+    Phalanximine:
+      amount: 2
+  products:
+    AbyssalCleansingSerum: 2

@@ -47,6 +47,7 @@
     WheatSeeds: 5
     WatermelonSeeds: 5
   contrabandInventory:
+    MindleafSeeds: 1 # _CD
     TobaccoSeeds: 2
     HumpShroomSeeds: 1 # Floof - Botany  Additions
     # FoodSnackSemki: 2 # Frontier

@@ -18,6 +18,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
+using Robust.Shared.Audio.Systems; // Lonestar
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
@@ -34,6 +35,7 @@ public sealed class SharpSystem : EntitySystem
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly IRobustRandom _robustRandom = default!;
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!; // Lonestar
 
     public override void Initialize()
     {
@@ -132,6 +134,11 @@ public sealed class SharpSystem : EntitySystem
             _bodySystem.GibBody(args.Args.Target.Value, body: body);
 
         _destructibleSystem.DestroyEntity(args.Args.Target.Value);
+
+        if (butcher.Sound != null) // Lonestar
+        {
+            _audio.PlayPredicted(butcher.Sound, uid, uid);
+        }
 
         args.Handled = true;
 

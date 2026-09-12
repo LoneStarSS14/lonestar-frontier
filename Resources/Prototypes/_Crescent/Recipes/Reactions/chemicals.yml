@@ -1,0 +1,58 @@
+- type: reaction
+  id: Kaiser
+  minTemp: 400
+  requiredMixerCategories:
+  - Electrolysis
+  reactants:
+    Crash:
+      amount: 2
+    Exile:
+      amount: 2
+    Bloodeye:
+      amount: 2
+    Blood:
+      amount: 4
+    Tritium:
+      amount: 1
+      catalyst: true
+  products:
+    Kaiser: 5
+
+- type: reaction
+  id: Bloodeye
+  minTemp: 350
+  reactants:
+    Blood:
+      amount: 2
+    DexalinPlus:
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+    Bicaridine:
+      amount: 2
+  products:
+    Bloodeye: 4
+
+- type: reaction
+  id: Crash
+  reactants:
+    Desoxyephedrine:
+      amount: 2
+    Inaprovaline:
+      amount: 2
+    CarpoToxin:
+      amount: 1
+  products:
+    Crash: 2
+
+- type: reaction
+  id: Exile
+  minTemp: 540
+  priority: 1
+  reactants:
+    Ephedrine:
+      amount: 2
+    Phenol:
+      amount: 4
+  products:
+    Exile: 4
