@@ -3685,3 +3685,12 @@ Entries:
   id: 409
   time: '2026-09-12T13:15:32.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/134
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Wall substations now start with capacitors inside instead of
+        manipulators.
+  id: 410
+  time: '2026-09-12T13:41:06.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/132
