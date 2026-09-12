@@ -1,0 +1,38 @@
+- type: trait
+  id: StutterMedium
+  name: trait-social-anxiety-medium-name
+  description: trait-social-anxiety-desc
+  category: SpeechTraits
+  cost: 2
+  components:
+  - type: StutteringAccent
+    cutRandomProb: 0
+    probabilities:
+      1: 0.25
+
+- type: trait
+  id: StutterHigh
+  name: trait-social-anxiety-high-name
+  description: trait-social-anxiety-desc
+  category: SpeechTraits
+  cost: 2
+  components:
+  - type: StutteringAccent
+    cutRandomProb: 0
+    probabilities:
+      1: 0.7
+      2: 0.1
+
+- type: trait
+  id: StutterVeryHigh
+  name: trait-social-anxiety-veryhigh-name
+  description: trait-social-anxiety-desc
+  category: SpeechTraits
+  cost: 2
+  components:
+  - type: StutteringAccent
+    cutRandomProb: 0
+    probabilities:
+      1: 0.9
+      2: 0.25
+      3: 0.075

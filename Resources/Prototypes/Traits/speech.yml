@@ -105,10 +105,9 @@
   cost: 2
   components:
   - type: StutteringAccent
-    matchRandomProb: 0.1
-    fourRandomProb: 0
-    threeRandomProb: 0
-    cutRandomProb: 0
+    cutRandomProb: 0 # Lonestar: Probabilities map
+    probabilities:
+      1: 0.1
 
 - type: trait
   id: FrontalLisp

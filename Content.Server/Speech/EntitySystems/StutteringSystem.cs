@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
@@ -7,14 +8,13 @@ using Robust.Shared.Random;
 
 namespace Content.Server.Speech.EntitySystems
 {
-    public sealed class StutteringSystem : SharedStutteringSystem
+    public sealed partial class StutteringSystem : SharedStutteringSystem
     {
         [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
 
         // Regex of characters to stutter.
-        private static readonly Regex Stutter = new(@"[b-df-hj-np-tv-wxyz]",
-            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static readonly Regex Stutter = StutterRegex();
 
         public override void Initialize()
         {
@@ -40,35 +40,25 @@ namespace Content.Server.Speech.EntitySystems
 
             var finalMessage = new StringBuilder();
 
-            string newLetter;
-
             for (var i = 0; i < length; i++)
             {
-                newLetter = message[i].ToString();
-                if (Stutter.IsMatch(newLetter) && _random.Prob(component.MatchRandomProb))
+                var newLetter = message[i].ToString();
+                if (Stutter.IsMatch(newLetter))
                 {
-                    if (_random.Prob(component.FourRandomProb))
+                    foreach (var prob in component.Probabilities.Where(prob => _random.Prob(prob.Value)))
                     {
-                        newLetter = $"{newLetter}-{newLetter}-{newLetter}-{newLetter}";
-                    }
-                    else if (_random.Prob(component.ThreeRandomProb))
-                    {
-                        newLetter = $"{newLetter}-{newLetter}-{newLetter}";
-                    }
-                    else if (_random.Prob(component.CutRandomProb))
-                    {
-                        newLetter = "";
-                    }
-                    else
-                    {
-                        newLetter = $"{newLetter}-{newLetter}";
+                        newLetter = string.Concat(Enumerable.Repeat($"{newLetter}-", prob.Key + 1));
+                        break;
                     }
                 }
 
-                finalMessage.Append(newLetter);
+                finalMessage.Append(newLetter.TrimEnd('-'));
             }
 
             return finalMessage.ToString();
         }
+
+        [GeneratedRegex("[b-df-hj-np-tv-wxyz]", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
+        private static partial Regex StutterRegex();
     }
 }
