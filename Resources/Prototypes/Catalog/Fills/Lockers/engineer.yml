@@ -170,7 +170,7 @@
   table: !type:AllSelector
     children:
     - id: ClothingOuterHardsuitAtmos
-    # - id: OxygenTankFilled # Frontier
+      - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
     # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: ClothingMaskBreath
 
@@ -215,7 +215,7 @@
   table: !type:AllSelector
     children:
     - id: ClothingOuterHardsuitEngineering
-    # - id: OxygenTankFilled # Frontier
+      - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
     # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: ClothingShoesBootsMag
     - id: ClothingMaskBreath
