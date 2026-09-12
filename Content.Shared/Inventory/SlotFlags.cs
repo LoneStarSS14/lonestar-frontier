@@ -27,6 +27,7 @@ public enum SlotFlags
     FEET = 1 << 14,
     SUITSTORAGE = 1 << 15,
     WALLET = 1 << 13, // Frontier: using an unused slot, redefine to a new bit if/when it's used (goodbye ushort)
+    MISC = 1 << 16, // Lonestar: Misc slot
     All = ~NONE,
 
     WITHOUT_POCKET = All & ~POCKET

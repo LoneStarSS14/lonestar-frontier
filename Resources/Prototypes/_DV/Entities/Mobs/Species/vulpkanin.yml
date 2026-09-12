@@ -80,6 +80,7 @@
       - map: [ "enum.HumanoidVisualLayers.UndershirtOverclothes" ]
       - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
       - map: [ "neck" ]
+      - map: [ "misc" ] # Lonestar
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
       - map: [ "maskalt" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]

@@ -131,3 +131,9 @@
       dependsOn: jumpsuit
       displayName: Wallet
     # End Frontier: wallet slot
+    - name: misc # Lonestar: Misc slot
+      slotTexture: misc
+      slotFlags: MISC
+      uiWindowPos: 2,3
+      strippingWindowPos: 2,1
+      displayName: Misc

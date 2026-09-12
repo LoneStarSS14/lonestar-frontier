@@ -80,7 +80,7 @@
   - type: NFTreasure # Frontier
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingMiscBase # Lonestar: Neck -> Misc
   id: ClothingNeckLawyerbadge
   name: lawyer badge
   description: A badge to show that the owner is a 'legitimate' lawyer who passed the NT bar exam required to practice law.
@@ -93,7 +93,7 @@
     proto: lawyer
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingMiscBase # Lonestar: Neck -> Misc
   id: Dinkystar
   name: star sticker
   description: A dinky lil star for only the hardest working security officers! It's not even sticky anymore.
