@@ -4,7 +4,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Client.CrewManifest;
 
-public sealed class CrewManifestSystem : EntitySystem
+public sealed class CrewManifestSystem : SharedCrewManifestSystem
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
