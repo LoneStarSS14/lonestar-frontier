@@ -15,9 +15,13 @@
       unequipDelay: 5 # LoneStar
     - type: AdvancedCollar
       maxModules: 7 # LoneStar
-    - type: ContainerContainer
-      containers:
-        collar_module_container: !type:Container
+  - type: ContainerContainer
+    containers:
+      collar_module_container: !type:Container
+  - type: Tag # LoneStar, hide in chameleon menu
+    tags:
+    - ClothMade
+    - Recyclable
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
