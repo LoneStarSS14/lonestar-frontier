@@ -68,7 +68,8 @@
   components:
   - type: StorageFill
     contents:
-          - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
         # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
         - id: ClothingOuterEVASuitSyndicate
         - id: ClothingHeadHelmetSyndicate
