@@ -73,6 +73,9 @@
       sprite: _NF/Clothing/Neck/bellcollar.rsi
     - type: Clothing
       sprite: _NF/Clothing/Neck/bellcollar.rsi
+    - type: EmitsSoundOnMove # Lonestar
+      soundCollection:
+        collection: FootstepJester
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
