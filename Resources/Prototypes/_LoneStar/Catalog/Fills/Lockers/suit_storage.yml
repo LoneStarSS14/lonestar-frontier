@@ -1,0 +1,13 @@
+- type: entity
+  id: SuitStorageSyndieMedic
+  parent: SuitStorageBase
+  suffix: Syndicate Medic Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled
+        - id: OxygenTankFilled
+        - id: ClothingOuterHardsuitSyndieMedic
+        - id: ClothingShoesBootsMagSyndie
+        - id: ClothingMaskGasSyndicate
+        - id: JetpackBlackFilled
