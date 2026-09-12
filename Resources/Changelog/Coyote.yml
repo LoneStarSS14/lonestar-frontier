@@ -3653,3 +3653,20 @@ Entries:
   id: 407
   time: '2026-09-12T12:08:32.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/130
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Flesh expeditions will now only spawn additional newborn flesh monsters.
+    - type: Remove
+      message: 10,000 zombies will no longer plague your vroids.
+    - type: Tweak
+      message: >-
+        Expedition objectives now have even more checks to keep the mobs spawned
+        in active locations.
+    - type: Fix
+      message: Expedition objectives can now be shot again
+    - type: Fix
+      message: The cultist UIV is no longer being counterassaulted by the syndicate.
+  id: 408
+  time: '2026-09-12T12:11:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/133
