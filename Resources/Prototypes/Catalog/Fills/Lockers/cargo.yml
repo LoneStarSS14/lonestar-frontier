@@ -2,7 +2,8 @@
   id: FillSalvageSpecialistHardsuitSpatio
   table: !type:AllSelector
     children:
-      - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: NitrogenTankFilled # Lonestar
+    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
     # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: ClothingShoesBootsMag
     - id: ClothingOuterHardsuitSpatio

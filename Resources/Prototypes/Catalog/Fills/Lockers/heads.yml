@@ -76,7 +76,8 @@
     - id: ClothingOuterHardsuitCap
     - id: ClothingMaskGasCaptain
 #    - id: JetpackCaptainFilled # Frontier
-     - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: NitrogenTankFilled # Lonestar
     # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
@@ -189,7 +190,8 @@
 #    - id: ClothingShoesBootsMagAdv # Frontier
     - id: ClothingShoesBootsMag # Frontier
 #    - id: JetpackVoidFilled # Frontier
-     - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: NitrogenTankFilled # Lonestar
     # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
@@ -251,7 +253,8 @@
     children:
     - id: ClothingMaskBreathMedical
     - id: ClothingOuterHardsuitMedical
-     - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: NitrogenTankFilled # Lonestar
     # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
@@ -305,7 +308,8 @@
     children:
     - id: ClothingMaskBreath
     - id: ClothingOuterHardsuitRd
-      - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: NitrogenTankFilled # Lonestar
     # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
@@ -379,6 +383,7 @@
     - id: ClothingOuterHardsuitSecurityRed
     - id: JetpackSecurityFilled
     - id: OxygenTankFilled
+    - id: NitrogenTankFilled # Lonestar
 
 # No hardsuit locker
 - type: entity
