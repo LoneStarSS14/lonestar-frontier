@@ -115,3 +115,17 @@
     - type: ClothingSpeedModifier # TODO: implement this in a better way.
       walkModifier: 1.0
       sprintModifier: 0.7
+
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModulePacifism
+  name: collar module (pacifism)
+  description: A module that inhibits violence.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: cart_connector
+    - type: AdvancedCollarModule
+      componentToAdd: WornPacifism
+      moduleDescription: Inhibits violence
+    - type: WornPacifism
