@@ -3646,3 +3646,10 @@ Entries:
   id: 406
   time: '2026-09-12T08:56:29.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/128
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Poppies in the theatre drobe have been replaced with hair flowers.
+  id: 407
+  time: '2026-09-12T12:08:32.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/130
