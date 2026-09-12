@@ -24,7 +24,6 @@
     AdvCollarModuleJingling: 4294967295
     AdvCollarModuleSpeechModifier: 4294967295
     AdvCollarModulePsychicClothingLock: 4294967295
-    AdvCollarModuleClothingLock: 4294967295
     AdvCollarModuleWaddle: 4294967295
     AdvCollarModuleStealth: 4294967295
     # Restraints
@@ -95,7 +94,6 @@
     ClothingNeckAdvancedCollarCC: 4294967295
     ClothingNeckAdvancedCollarChameleon: 4294967295
     AdvCollarModulePsychicClothingLockPlus: 4294967295
-    AdvCollarModuleClothingLockPlus: 4294967295
     AdvCollarModuleVulnerability: 4294967295
     AdvCollarModulePsychicShackle: 4294967295
     # Snacks

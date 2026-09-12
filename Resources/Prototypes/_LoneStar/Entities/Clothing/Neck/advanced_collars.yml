@@ -26,32 +26,6 @@
 # region Modules
 - type: entity
   parent: BaseAdvCollarModule
-  id: AdvCollarModuleClothingLockPlus
-  name: collar module (clothing lock+)
-  description: An advanced module that locks almost all clothing slots, preventing removal by anyone while the collar with this module is worn.
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/module.rsi
-      state: servo
-    - type: AdvancedCollarModule
-      componentToAdd: ClothingLock
-      moduleDescription: Prevents tampering with almost all of the wearers clothes
-    - type: ClothingLock
-      lockedSlots:
-        - head
-        - shoes
-        - jumpsuit
-        - gloves
-        - eyes
-        - mask
-        - ears
-        - outerClothing
-        - back
-        - belt
-      blockOthers: true
-
-- type: entity
-  parent: BaseAdvCollarModule
   id: AdvCollarModulePsychicClothingLockPlus
   name: collar module (psychic clothing lock+)
   description: An advanced module that locks specific clothing slots, preventing removal by the wearer only.
