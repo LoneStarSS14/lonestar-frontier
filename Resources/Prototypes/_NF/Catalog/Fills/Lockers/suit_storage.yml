@@ -207,6 +207,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingShoesBootsMag
@@ -223,6 +224,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingShoesBootsMag
@@ -239,6 +241,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitMercenary
@@ -255,6 +258,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitPrivateSecurity
@@ -272,6 +276,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitScaf
@@ -289,6 +294,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitSurplus
@@ -306,6 +312,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitNoble
@@ -323,6 +330,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitPilot
@@ -338,6 +346,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitClown
@@ -353,6 +362,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitNfsdBronze
@@ -370,6 +380,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitNfsdSilver
@@ -387,6 +398,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitNfsdBrigmedic
@@ -404,6 +416,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitNfsdGold
@@ -421,6 +434,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitNfsdGold
@@ -438,6 +452,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitNfsdSheriff
@@ -455,6 +470,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitNfsdCombat
@@ -472,6 +488,7 @@
   components:
   - type: StorageFill
     contents:
+        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
         - id: NitrogenTankFilled # Lonestar: Brought this back
         - id: OxygenTankFilled # Lonestar: Brought this back
         - id: ClothingOuterHardsuitNfsdCommand
