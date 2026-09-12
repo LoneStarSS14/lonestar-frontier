@@ -251,7 +251,7 @@
       cost: 5
       prob: 0.01
   configs:
-    DefenseStructure: CybersunDataMiner
+    DefenseStructure: CybersunDataMinerExpedition
     Megafauna: MobSyndicateNavalCommanderA
     Difficulties: NFExtreme
 

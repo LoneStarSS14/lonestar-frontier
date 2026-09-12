@@ -42,6 +42,11 @@
             min: 100
             max: 2500
   - type: SalvageObjectiveNpcSpawner # LoneStar
+    spawnIntervalSeconds: 65
+    spawnIntervalVariance: 10
+    nearbyRange: 15
+    spawnRange: 10
+    maxNearby: 4
     nearbyFactions:
     - MercenariesExpeditionNF
     spawnPrototypes:

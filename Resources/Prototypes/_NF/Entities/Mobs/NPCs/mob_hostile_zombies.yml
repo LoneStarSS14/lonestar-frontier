@@ -796,11 +796,11 @@
   - type: TimedDespawn # LoneStar, TODO: ideally a 'TimedDestroy', but we work with what we got.
     lifetime: 3600 # 1 hour
   - type: SalvageObjectiveNpcSpawner # LoneStar
-    spawnIntervalSeconds: 32
-    spawnIntervalVariance: 4
-    nearbyRange: 10
+    spawnIntervalSeconds: 40
+    spawnIntervalVariance: 5
+    nearbyRange: 15
     spawnRange: 3
-    maxNearby: 12
+    maxNearby: 9
     nearbyFactions:
     - Zombie
     spawnPrototypes:

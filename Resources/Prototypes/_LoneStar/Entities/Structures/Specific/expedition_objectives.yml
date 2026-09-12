@@ -1,10 +1,13 @@
-#region Carp
+#region Xeno
 - type: entity
   parent: XenoWardingTower
   id: XenoWardingTowerExpedition
   suffix: Expedition spawner
   components:
   - type: SalvageObjectiveNpcSpawner
+    spawnIntervalSeconds: 50
+    spawnIntervalVariance: 5
+    maxNearby: 7
     nearbyFactions:
     - Xeno
     spawnPrototypes:
@@ -22,10 +25,15 @@
   suffix: Expedition spawner
   components:
   - type: SalvageObjectiveNpcSpawner
+    spawnIntervalSeconds: 50
+    spawnIntervalVariance: 5
+    maxNearby: 7
     nearbyFactions:
     - Dragon
     spawnPrototypes:
     - NFMobPurpleSnake
+    - LSSpawnMobCarp
+    - LSSpawnMobCarp
     - LSSpawnMobCarp
     - LSSpawnMobCarp
     - LSSpawnMobCarp
@@ -38,12 +46,18 @@
   id: DinosaurEggExpedition
   suffix: Expedition spawner
   components:
-  - type: SalvageObjectiveNpcSpawner # TODO: make this proto be used by exped generation.
+  - type: SalvageObjectiveNpcSpawner
+    spawnIntervalSeconds: 90
+    spawnIntervalVariance: 10
+    maxNearby: 4
     nearbyFactions:
     - DinosaursNF
     spawnPrototypes:
     - SpawnMobDinosaurSmall
     - SpawnMobDinosaurMedium
+    - SpawnMobDinosaurMedium
+    - SpawnMobDinosaurMedium
+    - SpawnMobDinosaurBig
     - SpawnMobDinosaurBig
 
 #region Cult
@@ -53,14 +67,30 @@
   suffix: Expedition spawner
   components:
   - type: SalvageObjectiveNpcSpawner
+    spawnIntervalSeconds: 75
+    spawnIntervalVariance: 10
+    maxNearby: 4
     nearbyFactions:
     - BloodCultNF
     spawnPrototypes:
-    - SpawnMobBloodCultistZealotMelee
-    - SpawnMobBloodCultLeech
-    - SpawnMobBloodCultistZealotRanged
-    - SpawnMobBloodCultistCaster
-    - SpawnMobBloodCultistAcolyte
-    - SpawnMobBloodCultistPriest
-    - SpawnMobBloodCultistJanitor
-    - MobBloodCultistAscended
+    - LSSpawnMobBloodcult
+
+#region Syndicate
+- type: entity
+  parent: CybersunDataMiner
+  id: CybersunDataMinerExpedition
+  suffix: Expedition spawner
+  components:
+  - type: SalvageObjectiveNpcSpawner
+    spawnIntervalSeconds: 70
+    spawnIntervalVariance: 10
+    nearbyRange: 15
+    spawnRange: 8
+    maxNearby: 3
+    nearbyFactions:
+    - NFSyndicate
+    spawnPrototypes:
+    - SpawnMobSyndicateNavalDeckhand
+    - SpawnMobSyndicateNavalEngineer
+    - SpawnMobSyndicateNavalMedic
+    - SpawnMobSyndicateNavalOperator

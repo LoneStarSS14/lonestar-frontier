@@ -50,11 +50,11 @@
         - ReagentId: FerrochromicAcid
           Quantity: 150
   - type: SalvageObjectiveNpcSpawner # LoneStar
-    spawnIntervalSeconds: 55
+    spawnIntervalSeconds: 65
     spawnIntervalVariance: 5
-    nearbyRange: 12
-    maxNearby: 8
-    spawnRange: 3
+    nearbyRange: 15
+    maxNearby: 6
+    spawnRange: 7
     nearbyFactions:
     - Xeno
     spawnPrototypes:
@@ -62,6 +62,8 @@
     - SpawnMobArgocyteSmall
     - SpawnMobArgocyteSmall
     - SpawnMobArgocyteSmall
+    - SpawnMobArgocyteSmall
+    - SpawnMobArgocyteMedium
     - SpawnMobArgocyteMedium
     - SpawnMobArgocyteMedium
     - SpawnMobArgocyteMedium
