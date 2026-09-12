@@ -3670,3 +3670,18 @@ Entries:
   id: 408
   time: '2026-09-12T12:11:47.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/133
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        A new collar module "pacifism" can now be found in the manager inventory
+        of the hawker.
+    - type: Add
+      message: 2 new Speech modes for the speech collar module, 'mew' and 'confused'
+    - type: Remove
+      message: (non-psychic) Clothing Lock modules have been removed.
+    - type: Tweak
+      message: Collar Speech modules now prevent the wearer changing their own mode.
+  id: 409
+  time: '2026-09-12T13:15:32.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/134
