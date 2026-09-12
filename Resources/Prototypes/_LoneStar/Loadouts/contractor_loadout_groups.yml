@@ -1,0 +1,73 @@
+- type: loadoutGroup
+  id: ContractorBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6 # Caveat emptor - enjoy picking stuff up off the ground
+  loadouts:
+  - ContractorMonkeyCubeWrapped
+  - ContractorKoboldCubeWrapped
+  - ContractorCigPackBlue
+  - ContractorCigPackRed
+  - ContractorCigPackBlack
+  - ContractorCigPackGreen
+  - ContractorCigarCase
+  - ContractorNFAshtray
+  - ContractorTapeRecorder
+  - ContractorSmokingPipeFilledTobacco
+  - ContractorTobaccoPouchBrownFilled
+  - ContractorTobaccoPouchBlueFilled
+  - ContractorTobaccoPouchRedFilled
+  - ContractorTobaccoPouchPurpleFilled
+  - ContractorVape
+  - ContractorCigarGoldCase
+  - ContractorMatchbox
+  - ContractorLighter
+  - ContractorFlippoLighter
+  - ContractorFlippoEngravedLighter
+  - ContractorDrinkFlaskOld
+  - ContractorDrinkShinyFlask
+  - ContractorDrinkFlask
+  - ContractorDrinkMREFlask # Coyote.
+  - ContractorDrinkFlaskBar # Coyote.
+  - ContractorDrinkVacuumFlask
+  - ContractorFlashlightLantern
+  - ContractorCardBoxBlack
+  - ContractorWristwatch
+  - ContractorWristwatchGold
+  - ContractorSilverRing
+  - ContractorGoldRing
+  - ContractorAACTablet
+  - ContractorBasketball
+  - ContractorTennisball # Coyote. Woof.
+  - ContractorFootball
+  - ContractorBeachBall
+  - ContractorCrayonBox
+  - ContractorClicker
+  - ContractorSoapNT
+  - PlushieLizard
+  - PlushieExperiment # Coyote: Add Expie plushie to loadout
+  - ContractorPlushieSharkGrey
+  - ContractorPlushieSharkBlue
+  - ContractorPlushieSharkPink
+  - ContractorEvilMoffPlushie # Lone Star: Adds evil moth plushie to loadout 
+  - ContractorPonderingOrb
+  - ContractorPlushieRGBee
+  - ContractorMysterySpaceBladeBox
+  - ContractorHoloGraffitiProjector # Punkish (might be annoying)
+  - ContractorCrayonMagic
+  - ContractorSprayPainterMagic
+  - ContractorAccessConfigurator # Coyote: Add Civilian Access Configurator
+    # Bureaucracy
+  - ContractorBoxFolderMedicalDoctor
+  - ContractorBrbSign
+  - ContractorHandLabeler
+  - ContractorStampsApprovedDenied
+  - ContractorRubberStampCaptain
+  - ContractorRubberStampChaplain
+  - ContractorRubberStampDoctor
+  - ContractorRubberStampEngineer
+  - ContractorRubberStampLawyer
+  - ContractorRubberStampPsychologist
+  - ContractorRubberStampTrader
+  - ContractorRubberStampClown
+  - ContractorRubberStampMime

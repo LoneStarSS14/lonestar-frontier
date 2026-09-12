@@ -2069,38 +2069,3 @@
       params:
         volume: -9
         maxDistance: 3
-
-- type: entity
-  parent: BasePlushie
-  id: evilmoffplushie
-  name: Evil Moth Plushie
-  description: You loot at the cute moth plushie with your eyes, and it stares back at you with its evil eyes. It is a plushie, but it is also very evil.
-  components:
-  - type: Sprite
-    sprite: Objects/Fun/evilmoffplushie.rsi
-    state: evilmoffplushie
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Voice/Moth/moth_scream.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-  - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-  - type: EmitSoundOnCollide
-    sound:
-      path: /Audio/Voice/Moth/moth_scream.ogg
-  - type: MeleeWeapon
-    soundHit:
-      path: /Audio/Voice/Moth/moth_scream.ogg
-  - type: Food
-    requiresSpecialDigestion: true
-    useSound:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-  - type: FoodSequenceElement
-    entries:
-      CottonBurger: MothPlushie

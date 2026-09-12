@@ -580,12 +580,3 @@
     back:
     - Clicker
     
-- type: loadout
-  id: ContractorEvilMoffPlushie
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
-  price: 500
-  storage:
-    back:
-    - evilmoffplushie
