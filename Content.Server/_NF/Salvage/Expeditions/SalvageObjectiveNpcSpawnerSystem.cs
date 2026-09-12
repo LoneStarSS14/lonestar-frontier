@@ -8,6 +8,7 @@ using Content.Shared.Physics;
 using Content.Shared.Maps;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -102,6 +103,13 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
         return count;
     }
 
+    /// <summary>
+    /// Finds a valid nearby coordinate for spawning an entity.
+    /// </summary>
+    /// <param name="uid">The spawner entity.</param>
+    /// <param name="comp">The spawner component.</param>
+    /// <param name="coords">The selected spawn coordinates, if available.</param>
+    /// <returns><see langword="true"/> if a valid coordinate was found.</returns>
     private bool TryGetNearbySpawnCoordinates(EntityUid uid, SalvageObjectiveNpcSpawnerComponent comp, out EntityCoordinates coords)
     {
         var xform = Transform(uid);
@@ -136,24 +144,19 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
             var tile = candidates[index];
             candidates.RemoveAt(index);
             // Tile cannot be in reserved landing zones
-            if (IsReservedLandingZoneTile(gridUid, grid, tile))
-                continue;
+            if (IsReservedLandingZoneTile(gridUid, grid, tile)) continue;
+            // Tile must be part of the grid and not void
+            if (!_map.TryGetTileRef(gridUid, grid, tile, out var tileRef) || tileRef.Tile.IsEmpty) continue;
             // Tile must be inside (weather flag)
-            var tileRef = _map.GetTileRef(gridUid, grid, tile);
-            if (!tileRef.Tile.IsEmpty)
-            {
-                var tileDef = (ContentTileDefinition)_tileDefManager[tileRef.Tile.TypeId];
-                if (tileDef.Weather)
-                    continue;
-            }
+            var tileDef = (ContentTileDefinition)_tileDefManager[tileRef.Tile.TypeId];
+            if (tileDef.Weather) continue;
             // Tile must not be too close to a player
             var candidateCoords = _map.GridTileToLocal(gridUid, grid, tile);
-            if (HasNearbyActivePlayer(_xforms.ToMapCoordinates(candidateCoords), comp.NearbyActorRange))
-                continue;
-
+            if (HasNearbyActivePlayer(_xforms.ToMapCoordinates(candidateCoords), comp.NearbyActorRange)) continue;
             // Tile must not have an anchored object
-            if (!_anchorable.TileFree((gridUid, grid), tile, (int)CollisionGroup.MachineLayer, (int)CollisionGroup.MachineLayer))
-                continue;
+            if (!_anchorable.TileFree((gridUid, grid), tile, (int)CollisionGroup.MachineLayer, (int)CollisionGroup.MachineLayer)) continue;
+            // Tile must not contain a solid structure/entity
+            if (HasSolidEntityOnTile(gridUid, grid, tile)) continue;
 
             coords = candidateCoords;
             return true;
@@ -163,6 +166,36 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
         return false;
     }
 
+    /// <summary>
+    /// Checks whether a tile contains a solid entity that blocks spawning.
+    /// </summary>
+    /// <param name="gridUid">The grid containing the tile.</param>
+    /// <param name="grid">The grid component.</param>
+    /// <param name="tile">The tile to check.</param>
+    /// <returns><see langword="true"/> if a solid entity occupies the tile.</returns>
+    private bool HasSolidEntityOnTile(EntityUid gridUid, MapGridComponent grid, Vector2i tile)
+    {
+        var tileBox = new Box2(tile * grid.TileSize, (tile + Vector2i.One) * grid.TileSize).Enlarged(-0.1f);
+        var entities = _lookup.GetEntitiesIntersecting(gridUid, tileBox,
+            LookupFlags.Dynamic | LookupFlags.Static | LookupFlags.Sundries);
+
+        foreach (var entity in entities)
+        {
+            if (entity != gridUid && TryComp<PhysicsComponent>(entity, out var physics) &&
+                (physics.CollisionLayer & (int)CollisionGroup.MidImpassable) != 0)
+                return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Checks whether a tile intersects an expedition landing-zone exclusion.
+    /// </summary>
+    /// <param name="gridUid">The grid containing the tile.</param>
+    /// <param name="grid">The grid component.</param>
+    /// <param name="tile">The tile to check.</param>
+    /// <returns><see langword="true"/> if the tile is in a reserved landing zone.</returns>
     private bool IsReservedLandingZoneTile(EntityUid gridUid, MapGridComponent grid, Vector2i tile)
     {
         var mapUid = Transform(gridUid).MapUid;
@@ -182,5 +215,4 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
 
         return false;
     }
-    // _CS End: salvage objective nearby NPC spawn placement
 }
