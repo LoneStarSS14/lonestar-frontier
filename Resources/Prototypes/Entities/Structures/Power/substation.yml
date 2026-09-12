@@ -254,7 +254,7 @@
   - type: ContainerContainer
     containers:
       board: !type:Container
-      manipulator: !type:Container
+      capacitor: !type:Container # LoneStar; fix
       powercell: !type:Container
 
       # Construction Frame
