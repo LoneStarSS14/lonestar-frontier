@@ -22,7 +22,7 @@ public sealed partial class SalvageObjectiveNpcSpawnerComponent : Component
     /// Time in seconds between each attempted spawning.
     /// </summary>
     [DataField]
-    public float SpawnIntervalSeconds = 76f;
+    public float SpawnIntervalSeconds = 75;
 
     /// <summary>
     /// A value added or subtracted with a random scale from 0-1 to SpawnIntervalSeconds.
@@ -42,14 +42,14 @@ public sealed partial class SalvageObjectiveNpcSpawnerComponent : Component
     /// Distance is a circle radius.
     /// </summary>
     [DataField]
-    public float NearbyRange = 8f;
+    public float NearbyRange = 20;
 
     /// <summary>
     /// The distance to look for candidate tiles to spawn on.
     /// Distance is a square radius.
     /// </summary>
     [DataField]
-    public float SpawnRange = 8;
+    public float SpawnRange = 20;
 
     /// <summary>
     /// The maximum amount of faction members allowed nearby when attempting to spawn more.

@@ -44,7 +44,7 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
             if (Paused(uid) || comp.SpawnPrototypes.Count == 0 || comp.NextSpawn > now)
                 continue;
 
-            comp.NextSpawn += TimeSpan.FromSeconds(comp.SpawnIntervalSeconds + (2 * comp.SpawnIntervalVariance * (_random.NextFloat() - 0.5)));
+            comp.NextSpawn += TimeSpan.FromSeconds(comp.SpawnIntervalSeconds + 2 * comp.SpawnIntervalVariance * (_random.NextFloat() - 0.5));
 
             if (CountNearbyFactionMobs(uid, comp) >= comp.MaxNearby) // Try again soon if too many nearby already
             {
@@ -62,7 +62,7 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
 
     private void OnMapInit(Entity<SalvageObjectiveNpcSpawnerComponent> ent, ref MapInitEvent args)
     {
-        ent.Comp.NextSpawn = _timing.CurTime + TimeSpan.FromSeconds(ent.Comp.SpawnIntervalSeconds);
+        ent.Comp.NextSpawn = _timing.CurTime + TimeSpan.FromSeconds(ent.Comp.SpawnIntervalSeconds * _random.NextFloat() + 30);
     }
 
     private bool HasNearbyActivePlayer(MapCoordinates mapCoords, float range)
