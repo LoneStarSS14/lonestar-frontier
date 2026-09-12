@@ -3639,3 +3639,10 @@ Entries:
   id: 405
   time: '2026-09-11T04:50:25.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/126
+- author: DoubleHypercube
+  changes:
+    - type: Fix
+      message: Smart equip now works how you'd expect
+  id: 406
+  time: '2026-09-12T08:56:29.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/128
