@@ -521,7 +521,7 @@
     entries:
       CottonBurger: PlushieMailVulp
 
-- type: entity # lone star: Changes the yarr plushie to the evil moth plushie sprite and adds more sounds to it
+- type: entity # lone star: Start
   parent: PlushieMoth
   id: PlushieYarrMoth
   name: evil moth plushie
@@ -554,7 +554,7 @@
       path: /Audio/Voice/Moth/moth_chitter.ogg 
   - type: FoodSequenceElement
     entries:
-      CottonBurger: PlushieEvilMoth 
+      CottonBurger: PlushieEvilMoth # lone star: End
 
 - type: entity
   parent: BasePlushieVulp
