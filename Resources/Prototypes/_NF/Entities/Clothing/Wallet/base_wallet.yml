@@ -36,9 +36,9 @@
       - Card # single cards
       - NFEmagPass
       - IdCard
-      - ConcealableWeapon
       tags:
       - Ring
+      - ConcealableWeapon
     blacklist:
       tags:
       - Book
