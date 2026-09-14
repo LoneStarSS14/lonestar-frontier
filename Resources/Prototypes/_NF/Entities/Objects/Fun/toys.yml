@@ -525,7 +525,7 @@
   parent: PlushieMoth
   id: PlushieYarrMoth
   name: evil moth plushie
-  description: You loot at the cute moth plushie with your eyes, and it stares back at you with its evil eyes. It is a plushie, but it is also very evil.
+  description: You look at the cute moth plushie with your eyes, and it stares back at you with its evil eyes. It is a plushie, but it is also very evil.
   components:
   - type: Sprite
     sprite: _LoneStar/Objects/Fun/evilmoffplushie.rsi 
