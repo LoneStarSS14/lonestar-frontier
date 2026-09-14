@@ -123,6 +123,7 @@
     ClothingUniformJumpskirtCMOVest: 4
     ClothingUniformCMOSummer: 4
     ClothingUniformCMOFormal: 4
+    ClothingUniformJumpskirtCMOFormal: 4
     ClothingOuterCMOLabCoat: 4 # Omu*
     ClothingOuterCoatLabLongCMO: 4
     ClothingNeckCMOOverShoulder: 4
@@ -130,6 +131,7 @@
   contrabandInventory: # Frontier - Hidden inventory
     ClothingOuterCoatLabCybersun: 1 # DeltaV
     ClothingUniformJumpskirtOfLife: 1
+    ClothingOuterCoatLabLongPink: 1 # LoneStar
     ToyFigurineMedicalDoctor: 1
     ToyFigurineParamedic: 1
     ToyFigurineChiefMedicalOfficer: 1

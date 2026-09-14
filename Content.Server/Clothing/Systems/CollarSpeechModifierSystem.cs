@@ -37,43 +37,44 @@ public sealed class CollarSpeechModifierSystem : EntitySystem
             {
                 return;
             }
-
-            if (collar.SelectedType == "Mute")
+            // LoneStar start: switch case instead, also rewords vars.
+            switch (collar.SelectedType)
             {
-                var match = _endingPunctRegex.Match(args.Message);
-                // Mute should just display ellipsis. This could cancel the speech event altogether, but this way allows some limited control over punctuation.
-                args.Message = "...";
-                var punct = _endingPunctRegex.Match(args.Message);
+                case "Confused":
+                    args.Message = PickRandom(collar.SpeechTypes[collar.SelectedType]);
+                    break;
+                case "Mute":
+                    var match = _endingPunctRegex.Match(args.Message);
+                    // Mute should just display ellipsis. This could cancel the speech event altogether, but this way allows some limited control over punctuation.
+                    args.Message = "...";
 
-                if (match.Success)
-                {
-                    args.Message += match.Value;
-                }
+                    if (match.Success)
+                    {
+                        args.Message += match.Value;
+                    }
+                    break;
+                default:
+                    var messageLength = args.Message.Split(' ').Length / 2;
+                    var message = PickRandom(collar.SpeechTypes[collar.SelectedType]);
+
+                    while (messageLength > 1)
+                    {
+                        message += $" {PickRandom(collar.SpeechTypes[collar.SelectedType]).ToLower()}";
+                        messageLength--;
+                    }
+
+                    // Preserve ending punctuation
+                    var messageMatch = _endingPunctRegex.Match(args.Message);
+                    if (string.IsNullOrEmpty(messageMatch.Value))
+                        message += ".";
+
+                    if (messageMatch.Success)
+                        message += messageMatch.Value;
+
+                    args.Message = message;
+                    break;
             }
-            else
-            {
-                var messageLength = args.Message.Split(' ').Length / 2;
-                var message = PickRandom(collar.SpeechTypes[collar.SelectedType]);
-
-                while (messageLength > 1)
-                {
-                    message += $" {PickRandom(collar.SpeechTypes[collar.SelectedType]).ToLower()}";
-                    messageLength--;
-                }
-
-                // Preserve ending punctionation
-                var match = _endingPunctRegex.Match(args.Message);
-                if (string.IsNullOrEmpty(match.Value))
-                {
-                    message += ".";
-                }
-
-                if (match.Success)
-                {
-                    message += match.Value;
-                }
-                args.Message = message;
-            }
+            // LoneStar end
         }
     }
 

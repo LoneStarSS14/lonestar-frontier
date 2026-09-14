@@ -3,9 +3,7 @@
   name: job-name-nf-pirate
   description: job-description-nf-pirate
   playTimeTracker: JobPirate
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 43200 # frontier: 24 hrs / 4 shifts | CS: 12 hours / 2 shifts
+  whitelisted: true
   startingGear: NFPirateGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true

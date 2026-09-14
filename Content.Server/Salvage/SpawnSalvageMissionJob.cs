@@ -750,104 +750,6 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         return bounds;
     }
 
-    private void ConfigureObjectiveNpcSpawner(EntityUid objective, ProtoId<SalvageFactionPrototype> factionId)
-    {
-        if (!_prototypeManager.TryIndex(factionId, out var faction))
-            return;
-
-        if (!faction.Configs.TryGetValue("DefenseStructure", out var structureId))
-            return;
-
-        var spawner = _entManager.EnsureComponent<SalvageObjectiveNpcSpawnerComponent>(objective);
-
-        switch (structureId)
-        {
-            case "AberrantFleshDigestiveSack":
-                spawner.NearbyFactions = new() { "AberrantFleshExpeditionNF" };
-                spawner.SpawnPrototypes = new()
-                {
-                    "SpawnMobAberrantFleshExpeditions",
-                    "SpawnMobAberrantFleshNewbornExpeditions",
-                    "MobHorrorExpeditions",
-                };
-                break;
-            case "RogueAiNode":
-                spawner.NearbyFactions = new() { "SiliconsExpeditionNF" };
-                spawner.SpawnPrototypes = new()
-                {
-                    "MobRogueSiliconScrap",
-                    "SpawnMobRogueDronesT1",
-                    "MobRogueSiliconHerder",
-                    "MobRogueSiliconHunter",
-                    "MobRogueSiliconCatcher",
-                    "MobRogueSiliconTesla",
-                    "MobRogueSiliconScrapFlayer",
-                    "MobRogueSiliconBoss",
-                    "MobRogueSiliconGuardian",
-                };
-                break;
-            case "NFZombiePile":
-                spawner.NearbyFactions = new() { "Zombie" };
-                spawner.SpawnPrototypes = new()
-                {
-                    "NFSpawnMobZombie",
-                    "NFSpawnMobZombieSpecial",
-                    "NFSpawnMobZombieRandom",
-                };
-                break;
-            case "CybersunDataMiner":
-                spawner.NearbyFactions = new() { "NFSyndicate" };
-                spawner.SpawnPrototypes = new()
-                {
-                    "SpawnMobSyndicateNavalDeckhand",
-                    "SpawnMobSyndicateNavalEngineer",
-                    "SpawnMobSyndicateNavalMedic",
-                    "SpawnMobSyndicateNavalOperator",
-                    "SpawnMobSyndicateNavalCaptain",
-                };
-                break;
-            case "XenoWardingTower":
-                spawner.NearbyFactions = new() { "Xeno" };
-                spawner.SpawnPrototypes = new()
-                {
-                    "NFMobXeno",
-                    "NFMobXenoDrone",
-                    "NFMobXenoPraetorian",
-                    "NFMobXenoRavager",
-                    "NFMobXenoRunner",
-                    "NFMobXenoSpitter",
-                };
-                break;
-            case "MercenaryCounterfeitCache":
-                spawner.NearbyFactions = new() { "MercenariesExpeditionNF" };
-                spawner.SpawnPrototypes = new()
-                {
-                    "MobMercenarySoldierKnife",
-                    "MobMercenarySoldierPistol",
-                    "MobMercenarySoldierNovalite",
-                    "MobMercenaryBreacherMachete",
-                    "MobMercenaryBreacherShotgun",
-                };
-                break;
-            // _CS Start
-            case "BloodCollector":
-                spawner.NearbyFactions = new() { "BloodCultNF" };
-                spawner.SpawnPrototypes = new()
-                {
-                    "SpawnMobBloodCultistZealotMelee",
-                    "SpawnMobBloodCultLeech",
-                    "SpawnMobBloodCultistZealotRanged",
-                    "SpawnMobBloodCultistCaster",
-                    "SpawnMobBloodCultistAcolyte",
-                    "SpawnMobBloodCultistPriest",
-                    "SpawnMobBloodCultistJanitor",
-                    "MobBloodCultistAscended",
-                };
-                break;
-            // _CS End
-        }
-    }
-
     private static Dungeon MergeDungeons(IReadOnlyList<Dungeon> dungeons)
     {
         if (dungeons.Count == 0)
@@ -1117,7 +1019,6 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
                 }
 
                 var uid = _entManager.SpawnEntity(shaggy, _map.GridTileToLocal(mapUid, grid, tile));
-                ConfigureObjectiveNpcSpawner(uid, mission.Faction);
                 _entManager.AddComponent<SalvageStructureComponent>(uid);
 
                 // _CS Start: shared objective radar blips

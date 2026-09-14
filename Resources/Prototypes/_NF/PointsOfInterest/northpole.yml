@@ -12,11 +12,10 @@
   id: NorthPole
   parent: BasePOI
   name: "The North Pole"
-  minimumDistance: 8050
-  maximumDistance: 8050
-  spawnGroup: Required
-#  spawnGroup: Christmas
-#  spawnChance: 0
+  minimumDistance: 2150
+  maximumDistance: 4850
+  spawnGroup: Christmas
+  spawnChance: 0
   gridPath: /Maps/_NF/POI/northpole.yml
   hideWarp: true
   addComponents:

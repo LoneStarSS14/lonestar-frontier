@@ -70,6 +70,10 @@
     {
       "name": "bonelegright",
       "directions": 4
+    },
+    {
+        "name": "cyclops",
+        "directions": 4
     }
   ]
 }

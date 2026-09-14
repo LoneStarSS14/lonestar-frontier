@@ -1,0 +1,20 @@
+- type: entity
+  id: LSComputerCargoOrdersHospital
+  parent: ComputerCargoOrders
+  name: medical request computer
+  description: Used to purchase medical related equipment.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: request-med
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: NFCargoOrderConsole
+    allowedGroups: [ "hospital" ]

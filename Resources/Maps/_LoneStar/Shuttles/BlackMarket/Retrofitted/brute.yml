@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 08/23/2026 19:42:37
+  time: 09/02/2026 22:26:35
   entityCount: 633
 maps: []
 grids:
@@ -883,12 +883,6 @@ entities:
 - proto: BenchSofaCorpRight
   entities:
   - uid: 566
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,-4.5
-      parent: 1
-  - uid: 567
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1900,6 +1894,13 @@ entities:
     - type: Transform
       pos: 10.5,-4.5
       parent: 1
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 626
+    components:
+    - type: Transform
+      pos: 2.5,-2.5
+      parent: 1
 - proto: Dresser
   entities:
   - uid: 557
@@ -2072,7 +2073,6 @@ entities:
     - type: GasMixer
       inletTwoConcentration: 0.79
       inletOneConcentration: 0.21
-      enabled: True
     - type: AtmosPipeColor
       color: '#0055CCFF'
 - proto: GasPassiveVent
@@ -3131,9 +3131,9 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -10.5,-3.5
       parent: 1
-- proto: HighSecDoor
+- proto: HighSecPirateLocked
   entities:
-  - uid: 391
+  - uid: 167
     components:
     - type: Transform
       pos: 7.5,0.5
@@ -3669,7 +3669,7 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        167:
+        391:
         - - Pressed
           - Toggle
         56:
@@ -4733,18 +4733,13 @@ entities:
     - type: Transform
       pos: 0.5,0.5
       parent: 1
-- proto: WindoorSecure
+- proto: WindoorSecurePirateLocked
   entities:
-  - uid: 167
+  - uid: 391
     components:
     - type: Transform
       pos: 3.5,3.5
       parent: 1
-    - type: AccessReader
-      access:
-      - - Pirate
-- proto: WindoorSecurePirateLocked
-  entities:
   - uid: 521
     components:
     - type: Transform

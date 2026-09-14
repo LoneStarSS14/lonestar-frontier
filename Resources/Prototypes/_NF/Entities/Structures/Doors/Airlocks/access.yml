@@ -334,3 +334,12 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsPirate ]
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecPirateLocked
+  suffix: Pirate, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPirate ]

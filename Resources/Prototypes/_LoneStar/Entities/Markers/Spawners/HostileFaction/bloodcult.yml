@@ -1,0 +1,44 @@
+# Spawners
+- type: entity
+  name: blood cultist spawner
+  id: LSSpawnMobBloodcult
+  parent: MarkerBase
+  suffix: AI, Hostile, Random
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+        scale: 0.7, 0.7
+      - sprite: _NF/Mobs/Aliens/Carps/holo.rsi
+        scale: 0.5, 0.5
+        state: icon
+      - sprite: _NF/Markers/general.rsi
+        state: questionmark
+        color: red
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: LSTableRandomBloodcult
+      prob: 1.00
+
+# Tables
+- type: entityTable
+  id: LSTableRandomBloodcult
+  table: !type:AllSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: SpawnMobBloodCultistZealotMelee
+        weight: 10
+      - id: SpawnMobBloodCultLeech
+        weight: 12
+      - id: SpawnMobBloodCultistZealotRanged
+        weight: 8
+      - id: SpawnMobBloodCultistCaster
+        weight: 4
+      - id: SpawnMobBloodCultistAcolyte
+        weight: 8
+      - id: SpawnMobBloodCultistPriest
+        weight: 4
+      - id: SpawnMobBloodCultistJanitor
+        weight: 1

@@ -47,7 +47,7 @@
     ClothingOuterDameDane: 4294967295
     ClothingUniformJumpsuitKimono: 4294967295
     ClothingHeadHatCasa: 4294967295
-    FoodPoppy: 4294967295
+    ClothingHeadHatHairflower: 4294967295 # LoneStar: Clothing version, not food.
     ClothingHeadHatGladiator: 4294967295
     ClothingUniformJumpsuitGladiator: 4294967295
     ClothingHeadHatCowboyBrown: 4294967295

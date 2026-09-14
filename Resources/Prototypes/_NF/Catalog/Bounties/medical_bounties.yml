@@ -1,148 +1,164 @@
 # Medical bounty prototypes, unidentified corpses may spawn with one of these damage prototypes.
+# Lonestar changes start
 - type: medicalBounty
   id: MurderedBlunt
   damageSets:
     Blunt:
       min: 150
-      max: 400
+      max: 350
       value: 10
-      penalty: 10
+      penalty: 40
     Asphyxiation:
       min: 50
-      max: 200
-      value: 10
-      penalty: 10
-  baseReward: 27000 # 4K-8K # Coyote: multiplied by 3
+      max: 100
+      value: 5
+      penalty: 5
+  baseReward: 22000 # LoneStar, 23,750 - 26,000 credits
 
 - type: medicalBounty
   id: MurderedPierce
   damageSets:
     Piercing:
       min: 150
-      max: 400
+      max: 350
       value: 10
-      penalty: 10
+      penalty: 40
+    Asphyxiation:
+      min: 50
+      max: 100
+      value: 0
+      penalty: 5
     Bloodloss:
       min: 50
       max: 200
       value: 10
-      penalty: 10
-  baseReward: 27000 # 4K-8K # Coyote: multiplied by 3
+      penalty: 40
+  baseReward: 22000 # LoneStar, 24,000 - 27,500 credits
 
 - type: medicalBounty
   id: MurderedSlash
   damageSets:
     Slash:
       min: 150
-      max: 400
-      value: 10
-      penalty: 10
+      max: 350
+      value: 15
+      penalty: 60
+    Asphyxiation:
+      min: 50
+      max: 100
+      value: 0
+      penalty: 5
     Bloodloss:
       min: 50
-      max: 200
+      max: 150
       value: 10
-      penalty: 10
-  baseReward: 27000 # 4K-8K # Coyote: multiplied by 3
+      penalty: 40
+  baseReward: 22000 # LoneStar, 24,750 - 28,750 credits
 
 - type: medicalBounty
   id: MildBruteMix
   damageSets:
     Blunt:
-      min: 75
-      max: 150
-      value: 10
-      penalty: 10
+      min: 80
+      max: 300
+      value: 5
+      penalty: 40
     Piercing:
-      min: 75
-      max: 150
+      min: 80
+      max: 300
       value: 10
-      penalty: 10
+      penalty: 40
     Slash:
-      min: 75
-      max: 150
-      value: 10
-      penalty: 10
+      min: 80
+      max: 300
+      value: 15
+      penalty: 40
+    Asphyxiation:
+      min: 50
+      max: 100
+      value: 0
+      penalty: 5
     Bloodloss:
-      min: 75
+      min: 50
       max: 150
       value: 10
-      penalty: 10
-  baseReward: 27000 # 5K-8K # Coyote: multiplied by 3
+      penalty: 40
+  baseReward: 20000 # LoneStar, 22,900 - 30,500 credits
 
 - type: medicalBounty
   id: Suffocated
   damageSets:
     Asphyxiation:
-      min: 150
-      max: 400
+      min: 200
+      max: 500
       value: 10
-      penalty: 10
+      penalty: 5
     Bloodloss:
       min: 50
       max: 200
       value: 10
-      penalty: 10
-  baseReward: 27000 # 4K-8K # Coyote: multiplied by 3
+      penalty: 60
+  baseReward: 20000 # LoneStar, 22,500 - 27,000 credits
 
 - type: medicalBounty
   id: PlasmaFire
   damageSets:
+    Blunt:
+      min: 25
+      max: 350
+      value: 5
+      penalty: 40
     Heat:
       min: 1000
-      max: 3000
-      value: 10
-      penalty: 10
-  baseReward: 27000 # 10K-32K # Coyote: multiplied by 3
+      max: 2500
+      value: 8
+      penalty: 40
+  baseReward: 25000 # LoneStar, 33,125 - 46,750 credits
 
 - type: medicalBounty
   id: Spaced
   damageSets:
     Blunt:
-      min: 50
-      max: 100
+      min: 150
+      max: 200
       value: 10
-      penalty: 10
-    Piercing:
-      min: 50
+      penalty: 40
+    Heat:
+      min: 25
       max: 100
-      value: 10
-      penalty: 10
-    Slash:
-      min: 50
-      max: 100
-      value: 10
-      penalty: 10
+      value: 8
+      penalty: 40
     Cold:
-      min: 600
-      max: 2000
+      min: 300
+      max: 3000
       value: 10
-      penalty: 10
-  baseReward: 13500 # 8500-24K # Coyote: multiplied by 3
+      penalty: 40
+  baseReward: 20000 # LoneStar, 24,700 - 52,800 credits
 
 - type: medicalBounty
   id: MildBurnMix
   damageSets:
     Heat:
-      min: 50
-      max: 150
+      min: 75
+      max: 250
       value: 10
-      penalty: 10
+      penalty: 40
     Cold:
-      min: 50
-      max: 150
-      value: 10
-      penalty: 10
+      min: 75
+      max: 250
+      value: 5
+      penalty: 40
     Shock:
-      min: 50
-      max: 150
+      min: 75
+      max: 250
       value: 10
-      penalty: 10
+      penalty: 40
     Caustic:
       min: 50
-      max: 150
-      value: 10
-      penalty: 10
-  baseReward: 27000 # 4K-8K # Coyote: multiplied by 3
+      max: 250
+      value: 20
+      penalty: 100
+  baseReward: 25000 # LoneStar, 27,875 - 36,250 credits
 
 - type: medicalBounty
   id: Insuls
@@ -151,78 +167,83 @@
       min: 200
       max: 400
       value: 10
-      penalty: 10
+      penalty: 40
     Shock:
-      min: 400
+      min: 300
       max: 600
       value: 10
-      penalty: 10
-  baseReward: 20250 # 7500-11500 # Coyote: multiplied by 3
+      penalty: 40
+  baseReward: 22000 # LoneStar, 27,000 - 32,000 credits
 
 - type: medicalBounty
   id: AcidSlimes
   damageSets:
+    Blunt:
+      min: 40
+      max: 160
+      value: 5
+      penalty: 40
     Caustic:
       min: 300
       max: 500
-      value: 20
-      penalty: 20
-  baseReward: 27000 # 8K-12K # Coyote: multiplied by 3
+      value: 30
+      penalty: 140
+  baseReward: 25000 # LoneStar, 34,200 - 40,800 credits
 
 - type: medicalBounty
   id: SpiderAttackMild
   damageSets:
     Poison:
-      min: 100
-      max: 200
-      value: 15
-      penalty: 15
+      min: 80
+      max: 180
+      value: 20
+      penalty: 100
     Asphyxiation:
       min: 100
       max: 200
+      value: 0
+      penalty: 5
+    Bloodloss:
+      min: 40
+      max: 160
       value: 10
-      penalty: 10
-  reagents:
-    Mechanotoxin:
-      min: 30
-      max: 50
-      value: 20
-  baseReward: 38250 # 6600-10500 # Coyote: multiplied by 3
+      penalty: 40
+  baseReward: 20000 # LoneStar, 22,000 - 25,200 credits
 
 - type: medicalBounty
   id: SpiderAttack
   damageSets:
     Poison:
-      min: 200
-      max: 400
-      value: 15
-      penalty: 15
-  reagents:
-    Mechanotoxin:
-      min: 30
-      max: 50
+      min: 150
+      max: 480
       value: 20
-  baseReward: 38250 # 7100-10500 # Coyote: multiplied by 3
+      penalty: 100
+    Asphyxiation:
+      min: 100
+      max: 150
+      value: 0
+      penalty: 5
+    Bloodloss:
+      min: 60
+      max: 160
+      value: 10
+      penalty: 40
+  baseReward: 25000 # LoneStar, 28,600 - 36,200 credits
 
 - type: medicalBounty
   id: DeliciousMushroom
   damageSets:
     Poison:
-      min: 100
-      max: 200
-      value: 15
-      penalty: 15
+      min: 200
+      max: 240
+      value: 20
+      penalty: 100
     Asphyxiation:
       min: 100
       max: 200
-      value: 10
-      penalty: 10
-  reagents:
-    Amatoxin:
-      min: 30
-      max: 50
-      value: 30
-  baseReward: 40500 # 6400-10500 # Coyote: multiplied by 3
+      value: 0
+      penalty: 5
+  baseReward: 25000 # LoneStar, 29,000 - 29,800 credits
 
 - type: medicalBounty
   id: HyperpacmanGoneWrong
@@ -230,60 +251,52 @@
     Radiation:
       min: 150
       max: 800
-      value: 15
-      penalty: 15
+      value: 20
+      penalty: 100
     Cellular:
-      min: 60
+      min: 40
       max: 140
-      value: 25
-      penalty: 25
+      value: 30
+      penalty: 100
     Asphyxiation:
       min: 100
       max: 200
-      value: 10
-      penalty: 10
-  baseReward: 20250 # ~6250-19K # Coyote: multiplied by 3
+      value: 0
+      penalty: 5
+  baseReward: 30000 # LoneStar, 34,200 - 50,200 credits
 
 - type: medicalBounty
   id: AsphyxAndCellular
   damageSets:
     Asphyxiation:
-      min: 200
-      max: 400
-      value: 10
-      penalty: 10
+      min: 150
+      max: 200
+      value: 5
+      penalty: 5
     Cellular:
       min: 60
-      max: 140
-      value: 25
-      penalty: 25
-  baseReward: 27000 # 5500-9500 # Coyote: multiplied by 3
+      max: 240
+      value: 30
+      penalty: 140
+  baseReward: 20000 # LoneStar, 22,550 - 28,200 credits
 
 - type: medicalBounty
   id: DeliciousUranium
   damageSets:
     Radiation:
       min: 50
-      max: 300
-      value: 15
-      penalty: 15
+      max: 400
+      value: 25
+      penalty: 120
     Cellular:
       min: 60
-      max: 100
-      value: 25
-      penalty: 25
-    Asphyxiation: # Value padding
+      max: 200
+      value: 30
+      penalty: 140
+    Asphyxiation:
       min: 100
       max: 200
-      value: 10
-      penalty: 10
-  reagents:
-    Uranium:
-      min: 30
-      max: 50
-      value: 25
-    Radium:
-      min: 30
-      max: 50
-      value: 25
-  baseReward: 20250 # 5300-13500 # Coyote: multiplied by 3
+      value: 0
+      penalty: 5
+  baseReward: 25000 # LoneStar, 28,050 - 41,000 credits
+# LoneStar changes end

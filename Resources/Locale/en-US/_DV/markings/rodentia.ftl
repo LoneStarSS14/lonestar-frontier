@@ -198,3 +198,8 @@ marking-RodentiaFootLeftBasic-l_foot = Foot
 
 marking-RodentiaFootRightBasic = Right Foot - Basic
 marking-RodentiaFootRightBasic-r_foot = Foot
+
+marking-RodentiaHeadTopEarBunnyLarge = Rodentia Ears - Bunny (Large)
+marking-RodentiaHeadTopEarBunnyLarge-ears_bunny_large_primary = Primary
+marking-RodentiaHeadTopEarBunnyLarge-ears_bunny_large_secondary = Secondary
+marking-RodentiaHeadTopEarBunnyLarge-ears_bunny_large_tertiary = Tertiary

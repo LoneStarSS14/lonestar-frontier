@@ -102,6 +102,7 @@
     - NFLightsColoredStatic
     - NFServiceArchetypeStatic
     - CSPlumbingStatic # Coyote: showers, sinks, drains
+    - LSFancyLightPack #LS Adds Special bulbs for mood lighting
     - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
   - type: EmagLatheRecipes
     emagStaticPacks:
@@ -154,6 +155,7 @@
     - NFLightsColoredStatic
     - NFServiceArchetypeStatic
     - NFMcServiceTechfabStatic
+    - LSFancyLightPack #LS Adds Special bulbs for mood lighting
     - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
 
 - type: entity

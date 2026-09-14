@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: ServiceElementalLightsReplacement
+  icon:
+    sprite: Objects/Power/light_bulb.rsi
+    state: normal
+  product: CrateServiceReplacementElementalLights
+  cost: 1000
+  category: Service
+  group: market

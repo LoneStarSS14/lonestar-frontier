@@ -12,11 +12,11 @@
   id: Cove
   parent: BasePOI
   name: 'The Den'
-  minimumDistance: 10000
-  maximumDistance: 11000
+  minimumDistance: 7500 # LoneStar
+  maximumDistance: 9000 # LoneStar
   spawnGamePreset: [ NFPirate ]
   spawnGroup: Required
-  gridPath: /Maps/_NF/POI/cove.yml
+  gridPath: /Maps/_LoneStar/POI/cove.yml
   hideWarp: true
   addComponents:
   - type: IFF
@@ -25,7 +25,7 @@
 - type: gameMap
   id: Cove
   mapName: 'The Den'
-  mapPath: /Maps/_NF/POI/cove.yml
+  mapPath: /Maps/_LoneStar/POI/cove.yml
   minPlayers: 0
   stations:
     Cove:
@@ -40,10 +40,10 @@
           lobbySortOrder: 6
         - type: StationJobs
           availableJobs:
-            NFPirate: [ 8, 8 ]
-            Smuggler: [ 3, 3 ] # Coyote
-            Escort: [ 3, 3 ]
-            RipperDoc: [ 3, 3 ]
+            NFPirate: [ 5, 5 ]
+            Smuggler: [ 5, 5 ] # Coyote
+            Escort: [ 4, 4 ]
+            RipperDoc: [ 4, 4 ]
         - type: StationDeadDropReporting
           messageSet: Pirate
         - type: StationDeadDropHintExempt

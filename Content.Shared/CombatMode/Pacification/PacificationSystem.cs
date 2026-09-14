@@ -125,6 +125,7 @@ public sealed class PacificationSystem : EntitySystem
 
         _actionsSystem.SetEnabled(combatMode.CombatToggleActionEntity, true);
         _alertsSystem.ClearAlert(uid, component.PacifiedAlert);
+        QueueLocalEvent(new PacifismEndedEvent(uid)); // LoneStar: WornPacifismComponent
     }
 
     private void OnBeforeThrow(Entity<PacifiedComponent> ent, ref BeforeThrowEvent args)
@@ -152,6 +153,21 @@ public sealed class PacificationSystem : EntitySystem
         args.Reason = "pacified-cannot-harm-indirect";
     }
 }
+
+// LoneStar start: WornPacifismComponent
+/// <summary>
+/// Raised after pacifism ends on an entity.
+/// </summary>
+public sealed class PacifismEndedEvent : EntityEventArgs
+{
+    public readonly EntityUid Entity;
+
+    public PacifismEndedEvent(EntityUid entity)
+    {
+        Entity = entity;
+    }
+}
+// LoneStar end
 
 
 /// <summary>
