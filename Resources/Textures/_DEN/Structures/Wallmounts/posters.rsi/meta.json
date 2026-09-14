@@ -1,0 +1,12 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "gorlex_girlfriend0 by Gawdayumeet",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        { "name": "gorlex_girlfriend0" }
+    ]
+}

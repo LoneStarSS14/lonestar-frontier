@@ -1,0 +1,11 @@
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandGorlexGirlfriends
+  name: "Gorlex Girlfriends Cover Art"
+  description: "A skimpy magazine cover with a vulpkanin in Gorlex colors. 'Peace was never an option with girls like these. Kill corpos and get paid.'"
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: _DEN/Structures/Wallmounts/posters.rsi
+    state: gorlex_girlfriend0
+    snapCardinals: true
