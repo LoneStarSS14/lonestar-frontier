@@ -554,7 +554,7 @@
       path: /Audio/Voice/Moth/moth_chitter.ogg 
   - type: FoodSequenceElement
     entries:
-      CottonBurger: PlushieEvilMoth # lone star: End
+      CottonBurger: PlushieYarrMoth # lone star: End
 
 - type: entity
   parent: BasePlushieVulp
