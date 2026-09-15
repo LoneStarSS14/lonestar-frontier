@@ -63,12 +63,12 @@
       - !type:MovespeedModifier
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
-#      - !type:GenericStatusEffect   # Coyote edit: this chem has been castrated until it is no longer a hard shutdown
-#        key: Drowsiness
-#        component: Drowsiness
-#        time: 4
-#        type: Add
-#        refresh: false
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        component: Drowsiness
+        time: 4
+        type: Add
+        refresh: false
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
@@ -559,7 +559,7 @@
             Poison: 0.06
 
 - type: reagent
-  id: Pax # Coyote edit: castrated to prevent instant knockouts. needs a slower buildup of 20-30 seconds or more
+  id: Pax
   name: reagent-name-pax
   group: Narcotics
   desc: reagent-desc-pax
@@ -576,11 +576,11 @@
         - "generic-reagent-effect-harmless"
         - "generic-reagent-effect-harmony"
         probability: 0.2
-#      - !type:GenericStatusEffect
-#        key: Pacified
-#        component: Pacified
-#        type: Add
-#        time: 4
+      - !type:GenericStatusEffect
+        key: Pacified
+        component: Pacified
+        type: Add
+        time: 4
 
 - type: reagent
   id: Honk

@@ -183,6 +183,8 @@
       path: /Audio/_Starlight/Voice/Resomi/resomi_whistle.ogg
     Chirp:
       collection: ResomiChirp
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: FemaleAvali
@@ -233,6 +235,8 @@
       path: /Audio/_Starlight/Voice/Resomi/resomi_whistle.ogg
     Chirp:
       collection: ResomiChirp
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: UnisexResomi
@@ -279,3 +283,5 @@
       collection: ResomiCalls
     Squawk:
       collection: ResomiSquawk
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg

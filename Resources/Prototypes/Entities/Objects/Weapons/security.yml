@@ -41,10 +41,10 @@
     angle: 60
     animation: WeaponArcThrust
   - type: StaminaDamageOnHit
-    damage: 55 # Coyote, 35<55 buffed most melee's damage by ~1.5x
+    damage: 35 # LoneStar, Undid Coyote
     sound: /Audio/Weapons/egloves.ogg
   - type: StaminaDamageOnCollide
-    damage: 55 # Coyote, 35<55 buffed most melee's damage by ~1.5x
+    damage: 35 # LoneStar, Undid Coyote
     sound: /Audio/Weapons/egloves.ogg
   - type: LandAtCursor # it deals stamina damage when thrown
   - type: Battery

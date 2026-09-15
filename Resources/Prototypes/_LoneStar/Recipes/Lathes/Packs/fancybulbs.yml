@@ -1,0 +1,14 @@
+#lathe pack for fancy bulbs printable in service fab
+- type: latheRecipePack
+  id: LSFancyLightPack
+  recipes:
+  - XenonLightTube
+  - KryptonLightTube
+  - ArgonLightTube
+  - NeonLightTube
+  - HeliumLightTube
+  - XenonLightBulb
+  - KryptonLightBulb
+  - ArgonLightBulb
+  - NeonLightBulb
+  - HeliumLightBulb

@@ -1,0 +1,20 @@
+- type: marking
+  speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
+  id: IPCsnoutysmile
+  bodyPart: Snout
+  markingCategory: Snout
+  sprites:
+    - sprite: _WF/Mobs/Customization/wayfarer_ipc_screen.rsi
+      state: ipc_screen_snoutysmile
+
+
+- type: marking
+  speciesRestriction: [IPC]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
+  id: IPCsnouty
+  bodyPart: Snout
+  markingCategory: Snout
+  sprites:
+    - sprite: _WF/Mobs/Customization/wayfarer_ipc_screen.rsi
+      state: ipc_screen_snouty

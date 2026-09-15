@@ -112,6 +112,9 @@
       - id: Shinai
       - id: WeaponBaguette
       - id: PlasteelArmingSword
+      - id: KatanaHF # Lonestar
+      - id: KatanaMurasama # Lonestar
+      - id: KatanaPhaseblade # Lonestar
       # - id: SpearReinforced # Coyote: move: moved to tier 3
       - id: Sledgehammer
       - id: Claymore

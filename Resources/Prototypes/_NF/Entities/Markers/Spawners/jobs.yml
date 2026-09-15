@@ -157,7 +157,7 @@
 - type: entity
   id: SpawnPointSheriff
   parent: SpawnPointHeadOfSecurity
-  name: sheriff
+  name: chief ranger # Lone Star changes NFSD -> LSRD
   components:
   - type: SpawnPoint
     job_id: Sheriff
@@ -165,7 +165,7 @@
 - type: entity
   id: SpawnPointBailiff
   parent: SpawnPointWarden
-  name: bailiff
+  name: armorer # Lone Star changes NFSD -> LSRD
   components:
   - type: SpawnPoint
     job_id: Bailiff
@@ -173,7 +173,7 @@
 - type: entity
   id: NFSpawnPointSeniorOfficer
   parent: SpawnPointWarden
-  name: sergeant
+  name: senior ranger # Lone Star changes NFSD -> LSRD
   components:
   - type: SpawnPoint
     job_id: SeniorOfficer
@@ -181,7 +181,7 @@
 - type: entity
   id: SpawnPointDeputy
   parent: SpawnPointSecurityOfficer
-  name: deputy
+  name: ranger # Lone Star changes NFSD -> LSRD
   components:
   - type: SpawnPoint
     job_id: Deputy
@@ -189,7 +189,7 @@
 - type: entity
   id: SpawnPointCadet
   parent: SpawnPointSecurityCadet
-  name: cadet
+  name: junior ranger # Lone Star changes NFSD -> LSRD
   components:
   - type: SpawnPoint
     job_id: Cadet

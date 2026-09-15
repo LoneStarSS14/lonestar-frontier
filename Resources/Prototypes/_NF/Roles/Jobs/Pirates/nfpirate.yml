@@ -3,9 +3,7 @@
   name: job-name-nf-pirate
   description: job-description-nf-pirate
   playTimeTracker: JobPirate
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 43200 # frontier: 24 hrs / 4 shifts | CS: 12 hours / 2 shifts
+  whitelisted: true
   startingGear: NFPirateGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
@@ -56,15 +54,12 @@
 - type: roleLoadout
   id: JobNFPirate
   groups:
-  - NFPirateHead
-#  - NFPirateNeck
-  - ContractorNeck # Coyote: Pirate Loadout Expansion
-  - NFPirateJumpsuit
-#  - NFPirateGloves
+  - FreelancerFactionHead # LoneStar
+  - FreelancerFactionNeck # LoneStar
+  - FreelancerFactionJumpsuit # LoneStar
   - MercenaryGloves # Coyote: Pirate Loadout Expansion
   - ContractorBackpack
-  - NFPirateForcedOuterClothing
-  - MercenaryOuterClothing # Coyote: Pirate Loadout Expansion
+  - FreelancerFactionOuterClothing # LoneStar
   - NFPirateShoes
   - NFPirateFace
   - MercenaryGlasses # Coyote: Pirate Loadout Expansion

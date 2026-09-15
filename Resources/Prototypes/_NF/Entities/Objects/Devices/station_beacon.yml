@@ -164,7 +164,7 @@
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierNfsd
-  suffix: NFSD
+  suffix: LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-nfsd
@@ -173,7 +173,7 @@
 - type: entity
   parent: DefaultStationBeaconFrontierNfsd
   id: DefaultStationBeaconFrontierNfsdBrig
-  suffix: NFSD Brig
+  suffix: LSRD Brig # Lonestar changes NFSD -> LSRD
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-nfsd-brig

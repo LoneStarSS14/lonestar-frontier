@@ -195,6 +195,9 @@
   # GravityResistantTech
   - HoverBedHoloSpawnFolded # Coyote
   - JetInjector # Coyote
+  # AdvancedMedicalHardsuits
+  - ClothingOuterHardsuitResponseRed
+  - ClothingOuterHardsuitResponseBlue
 
 # region Mercenary
 - type: latheRecipePack

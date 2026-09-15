@@ -5,51 +5,25 @@
   name: advanced chameleon collar
   description: A modular black collar that can have various functional modules installed.
   components:
-    - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_black.rsi
-    - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_black.rsi
-      equipDelay: 5 # Longer to 'hint' that its not a regular whatever its looking like
-    - type: Tag
-      tags: [] # ignore "WhitelistChameleon" tag
-    - type: ChameleonClothing
-      requireTag: WhitelistChameleonAdvancedCollar
-      slot: [NECK]
-      default: ClothingNeckAdvancedCollarBlack
-    - type: UserInterface
-      interfaces:
-        enum.ChameleonUiKey.Key:
-          type: ChameleonBoundUserInterface
-    - type: StaticPrice # Luxury item, gives reason to all the others existing.
-      vendPrice: 5000
+  - type: Sprite
+    sprite: Floof/Clothing/Neck/collar_black.rsi
+  - type: Clothing
+    sprite: Floof/Clothing/Neck/collar_black.rsi
+    equipDelay: 5 # Longer to 'hint' that its not a regular whatever its looking like
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: ChameleonClothing
+    requireTag: WhitelistChameleonAdvancedCollar
+    slot: [NECK]
+    default: ClothingNeckCollarBlack
+  - type: UserInterface
+    interfaces:
+      enum.ChameleonUiKey.Key:
+        type: ChameleonBoundUserInterface
+  - type: StaticPrice # Luxury item, gives reason to all the others existing.
+    vendPrice: 5000
 
 # region Modules
-- type: entity
-  parent: BaseAdvCollarModule
-  id: AdvCollarModuleClothingLockPlus
-  name: collar module (clothing lock+)
-  description: An advanced module that locks almost all clothing slots, preventing removal by anyone while the collar with this module is worn.
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/module.rsi
-      state: servo
-    - type: AdvancedCollarModule
-      componentToAdd: ClothingLock
-      moduleDescription: Prevents tampering with almost all of the wearers clothes
-    - type: ClothingLock
-      lockedSlots:
-        - head
-        - shoes
-        - jumpsuit
-        - gloves
-        - eyes
-        - mask
-        - ears
-        - outerClothing
-        - back
-        - belt
-      blockOthers: true
-
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModulePsychicClothingLockPlus
@@ -141,3 +115,17 @@
     - type: ClothingSpeedModifier # TODO: implement this in a better way.
       walkModifier: 1.0
       sprintModifier: 0.7
+
+- type: entity
+  parent: BaseAdvCollarModule
+  id: AdvCollarModulePacifism
+  name: collar module (pacifism)
+  description: A module that inhibits violence.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: cart_connector
+    - type: AdvancedCollarModule
+      componentToAdd: WornPacifism
+      moduleDescription: Inhibits violence
+    - type: WornPacifism

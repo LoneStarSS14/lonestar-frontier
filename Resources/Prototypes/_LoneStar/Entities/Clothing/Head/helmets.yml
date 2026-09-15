@@ -1,0 +1,20 @@
+- type: entity
+  parent: [ BaseC4ContrabandUnredeemable, ClothingHeadHelmetBase ]
+  id: ClothingHeadHelmetLsrdRaid
+  name: LSRD special operations helmet
+  description: An armored helmet for use with the LSRD special operations suit.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Head/Helmets/lsrd-raid.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Head/Helmets/lsrd-raid.rsi
+  - type: Armor
+    modifiers: #There's gotta be SOME reason to use this over other helmets.
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD

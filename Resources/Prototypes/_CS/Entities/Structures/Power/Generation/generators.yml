@@ -50,7 +50,7 @@
   id: GeneratorCoolRTGDamaged
   name: damaged B-RTG
   description: A Bluespace Radioisotope Thermoelectric Generator for long term power. This one has damaged shielding.
-  suffix: 12kW
+  suffix: 10kW # LoneStar, correction
   components:
   - type: PowerSupplier
     supplyRate: 10000

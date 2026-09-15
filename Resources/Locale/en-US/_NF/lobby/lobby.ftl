@@ -32,9 +32,9 @@ frontier-lobby-medical-description = Frontier's medical dispatch hub. Here you c
    - Drop off medical bounties
  {"["}color=gray]Some of the roles on this station are [color=lightblue]whitelist-only[/color] and require an application in the Discord to be accepted.[/color]
 
-frontier-lobby-nfsd-subtext = The center of operations for the Sheriff's department.
-frontier-lobby-nfsd-description = The New Frontier Sheriff's Department is the center of operations for the Sheriff's department. Here you can:
-   - Join the Sheriff's department
+frontier-lobby-nfsd-subtext = The center of operations for District 14's Ranger Division.
+frontier-lobby-nfsd-description = The Lone Star Rangers Station is the center of operations for the Rangers Division which houses the Peacekeeping force for this area. Here you can:
+   - Join the Rangers Division
    - Apply for a bounty hunting license
    - Report crimes
 

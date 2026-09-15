@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   parent: [ClothingHeadsetCommon, ClothingHeadsetAlt]
   id: ClothingHeadsetAltMercenary
   name: mercenary over-ear headset
@@ -21,7 +21,7 @@
 - type: entity
   parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltNfsdBrown
-  name: NFSD over-ear headset
+  name: LSRD over-ear headset # Lonestar changes NFSD -> LSRD
   components:
   - type: ContainerFill
     containers:

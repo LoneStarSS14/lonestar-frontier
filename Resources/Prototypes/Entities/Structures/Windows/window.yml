@@ -134,6 +134,7 @@
   - type: Tag
     tags:
       - Window
+      - WindowDirectional # LoneStar
   - type: MeleeSound
     soundGroups:
       Brute:

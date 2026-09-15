@@ -1,0 +1,32 @@
+- type: loadout
+  id: FreelancerClothingBunnyEarsPirate
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 0
+  equipment:
+    head: BunnyEarsPirate
+
+- type: loadout
+  id: FreelancerClothingBunnysuitPirate
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 0
+  equipment:
+    jumpsuit: BunnysuitPirate
+
+- type: loadout
+  id: FreelancerClothingBowtiePirate
+  price: 0
+  equipment:
+    neck: BowtiePirate
+
+- type: loadout
+  id: FreelancerClothingBunnyJacketPirate
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: BunnyJacketPirate

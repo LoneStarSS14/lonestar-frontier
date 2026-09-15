@@ -108,7 +108,7 @@
 - type: entity
   id: LockerNfsdEvidence
   parent: [NFLockerBaseSecure, LockerSecurity]
-  name: NFSD evidence locker
+  name: LSRD evidence locker # Lonestar changes NFSD -> LSRD
   components:
   - type: EntityStorageVisuals
     stateBaseClosed: nfsd
@@ -119,7 +119,7 @@
 - type: entity
   id: LockerNfsdCopper
   parent: [NFLockerBaseSecure, LockerSecurity]
-  name: NFSD locker
+  name: LSRD locker # Lonestar changes NFSD -> LSRD
   suffix: Copper
   components:
   - type: EntityStorageVisuals
@@ -131,7 +131,7 @@
 - type: entity
   id: LockerNfsdSilver
   parent: [NFLockerBaseSecure, LockerSecurity]
-  name: NFSD locker
+  name: LSRD locker # Lonestar changes NFSD -> LSRD
   suffix: Silver
   components:
   - type: EntityStorageVisuals
@@ -143,8 +143,8 @@
 - type: entity
   id: LockerNfsdBrigmedic
   parent: NFLockerBaseSecure
-  name: NFSD locker
-  suffix: Brigmedic
+  name: LSRD locker # Lonestar changes NFSD -> LSRD
+  suffix: Corpsman
   components:
   - type: EntityStorageVisuals
     stateBaseClosed: nfsd_brigmed
@@ -157,8 +157,8 @@
 - type: entity
   id: LockerNfsdSergeant
   parent: NFLockerBaseSecure
-  name: NFSD locker
-  suffix: Sergeant
+  name: LSRD locker # Lonestar changes NFSD -> LSRD
+  suffix: Senior
   components:
   - type: EntityStorageVisuals
     stateBaseClosed: nfsd_gold
@@ -171,8 +171,8 @@
 - type: entity
   id: LockerNfsdBailiff
   parent: LockerNfsdSergeant
-  name: NFSD locker
-  suffix: Bailiff
+  name: LSRD locker # Lonestar changes NFSD -> LSRD
+  suffix: Armorer
   components:
   - type: AccessReader
     access: [["Bailiff"]]
@@ -181,8 +181,8 @@
 - type: entity
   id: LockerNfsdSheriff
   parent: [NFLockerBaseSecure, LockerHeadOfSecurity]
-  name: NFSD locker
-  suffix: Sheriff
+  name: LSRD locker # Lonestar changes NFSD -> LSRD
+  suffix: Chief Ranger
   components:
   - type: EntityStorageVisuals
     stateBaseClosed: nfsd_sheriff

@@ -1,8 +1,8 @@
-﻿- type: entity
+- type: entity
   name: tac-lite
   parent: FlashlightLantern
   id: FlashlightNfsdLite
-  description: A tactical flashlight used by the NFSD.
+  description: A tactical flashlight used by the LSRD. # Lonestar changes NFSD -> LSRD
   components:
   - type: Tag
     tags:

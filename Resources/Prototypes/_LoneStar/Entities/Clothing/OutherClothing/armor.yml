@@ -8,3 +8,84 @@
     sprite: _LoneStar/Clothing/OuterClothing/Armor/grenzel-curiass.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/OuterClothing/Armor/grenzel-curiass.rsi
+
+- type: entity
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseC4ContrabandUnredeemable, ContrabandClothing ]
+  id: ClothingOuterArmorLsrdRaid
+  name: LSRD special operations suit
+  description: A co-opted Cybersun Raid Suit, this Raid Suit was purchased initially for the TSF-N until newer better variants hit the scene. Thus this version was added to Surplus stocks and provided to the LSRD at a discount over buying newer armor sets.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OuterClothing/Armor/lsrd-raid.rsi
+    layers:
+    - state: icon
+    - state: light-overlay
+      visible: false
+      shader: unshaded
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OuterClothing/Armor/lsrd-raid.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.35
+        Radiation: 0.35
+        Caustic: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.35
+  #- type: StaminaResistance
+  #  damageCoefficient: 0.45
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  #Shoulder mounted flashlight
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING-light
+        shader: unshaded
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-light-vox
+        shader: unshaded
+  - type: ItemTogglePointLight
+  - type: Appearance
+  - type: HandheldLight
+    addPrefix: false
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: PointLight
+    enabled: false
+    color: "#80ff80"
+    radius: 5
+    energy: 2
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+  - type: LightBehaviour
+    behaviours:
+      - !type:FadeBehaviour
+        id: radiating
+        interpolate: Linear
+        maxDuration: 2.0
+        startValue: 3.0
+        endValue: 2.0
+        isLooped: true
+        reverseWhenFinished: true
+      - !type:PulseBehaviour
+        id: blinking
+        interpolate: Nearest
+        maxDuration: 1.0
+        startValue: 0.1 # Wizden#37444
+        endValue: 2.0 # Wizden#37444
+        isLooped: true
+  - type: Battery
+    maxCharge: 600
+    startingCharge: 600
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2
+  - type: Item
+    size: Normal

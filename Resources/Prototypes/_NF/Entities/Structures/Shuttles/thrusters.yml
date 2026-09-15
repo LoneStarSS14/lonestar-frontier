@@ -220,7 +220,7 @@
 - type: entity
   id: ThrusterNfsd
   parent: [BaseStructureDisableAnchoring, BaseStructureDisableToolUse, ThrusterSecurity]
-  suffix: NFSD
+  suffix: LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: Thruster #upgraded NFSD thrusters
     baseThrust: 100
@@ -249,7 +249,7 @@
 - type: entity
   id: DebugThrusterNfsd
   parent: DebugThrusterSecurity
-  suffix: DEBUG, NFSD
+  suffix: DEBUG, LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Structures/Shuttles/thruster.rsi
@@ -260,7 +260,7 @@
 - type: entity
   id: GyroscopeNfsd
   parent: GyroscopeSecurity
-  suffix: NFSD
+  suffix: LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Structures/Shuttles/gyroscope.rsi
@@ -284,7 +284,7 @@
 - type: entity
   id: DebugGyroscopeNfsd
   parent: DebugGyroscopeSecurity
-  suffix: DEBUG, NFSD
+  suffix: DEBUG, LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Structures/Shuttles/gyroscope.rsi
@@ -297,7 +297,7 @@
   id: SmallGyroscopeNfsd
   parent: SmallGyroscopeSecurity
   name: small gyroscope
-  suffix: NFSD
+  suffix: LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
     sprite: _NF/Structures/Shuttles/gyroscope.rsi

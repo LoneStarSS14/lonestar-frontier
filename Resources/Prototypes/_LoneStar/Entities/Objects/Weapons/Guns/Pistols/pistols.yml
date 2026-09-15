@@ -1,0 +1,11 @@
+- type: entity
+  id: WeaponPistolLSRDmk22
+  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ]
+  name: Mk22 "Colt"
+  description: |-
+    A Noble and Trusty Handgun seen in service with the Solarian Marines for over two hundred years. This weapon was adopted by the LSRD recently after a surplus of Mk22s were provided to Civilian Enforcement Agencies.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Guns/Pistols/lsrdmk22.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Guns/Pistols/lsrdmk22.rsi

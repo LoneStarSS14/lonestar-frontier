@@ -18,8 +18,7 @@
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
+    - !type:NoBlockingOrSameFacingWindowDirectional
   objectType: Structure
   placementMode: SnapgridCenter
 
@@ -31,8 +30,7 @@
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
+    - !type:NoBlockingOrSameFacingWindowDirectional
   objectType: Structure
   placementMode: SnapgridCenter
 
@@ -46,6 +44,170 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: IceBoxEmpty
+  graph: IceBox
+  startNode: start
+  targetNode: done
+  category: construction-category-furniture
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: Mirror
+  graph: Mirror
+  startNode: start
+  targetNode: done
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: MirrorModern
+  graph: MirrorModern
+  startNode: start
+  targetNode: done
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+# Missing Construction Protos for plasma and uranium
+- type: construction
+  id: WindoorPlasma
+  graph: Windoor
+  startNode: start
+  targetNode: pwindoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WindoorSecurePlasma
+  graph: Windoor
+  startNode: start
+  targetNode: pwindoorSecure
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WindoorUranium
+  graph: Windoor
+  startNode: start
+  targetNode: uwindoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WindoorSecureUranium
+  graph: Windoor
+  startNode: start
+  targetNode: uwindoorSecure
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+# Flipped Windoors
+- type: construction
+  id: WindoorF
+  name: construction-ghost-windoor-flipped
+  graph: WindoorF
+  startNode: start
+  targetNode: windoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: SecureWindoorF
+  name: construction-ghost-windoor-secure-flipped
+  graph: WindoorF
+  startNode: start
+  targetNode: windoorSecure
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WindoorPlasmaF
+  name: construction-ghost-windoor-plasma-flipped
+  graph: WindoorF
+  startNode: start
+  targetNode: pwindoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WindoorSecurePlasmaF
+  name: construction-ghost-windoor-plasma-secure-flipped
+  graph: WindoorF
+  startNode: start
+  targetNode: pwindoorSecure
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WindoorUraniumF
+  name: construction-ghost-windoor-uranium-flipped
+  graph: WindoorF
+  startNode: start
+  targetNode: uwindoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WindoorSecureUraniumF
+  name: construction-ghost-windoor-uranium-secure-flipped
+  graph: WindoorF
+  startNode: start
+  targetNode: uwindoorSecure
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked

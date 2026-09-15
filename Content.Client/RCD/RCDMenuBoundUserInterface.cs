@@ -19,11 +19,14 @@ public sealed class RCDMenuBoundUserInterface : BoundUserInterface
     private static readonly Dictionary<string, (string Tooltip, SpriteSpecifier Sprite)> PrototypesGroupingInfo
         = new Dictionary<string, (string Tooltip, SpriteSpecifier Sprite)>
         {
-            ["WallsAndFlooring"] = ("rcd-component-walls-and-flooring", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/walls_and_flooring.png"))),
+            ["Floors"] = ("rcd-component-flooring", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/metal_tile.png"))), // Hardlight: Unique names
+            ["Walls"] = ("rcd-component-walls", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/solid_wall.png"))), // Hardlight: Unique names
             ["WindowsAndGrilles"] = ("rcd-component-windows-and-grilles", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/windows_and_grilles.png"))),
             ["Airlocks"] = ("rcd-component-airlocks", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/airlocks.png"))),
             ["Electrical"] = ("rcd-component-electrical", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/multicoil.png"))),
             ["Lighting"] = ("rcd-component-lighting", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/lighting.png"))),
+            ["LatticeTiles"] = ("rcd-component-latticetiles", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/lattice.png"))), // Mono - #3919
+            ["PlatingTiles"] = ("rcd-component-platingtiles", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/plating.png"))), // Mono - #3919
         };
 
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;

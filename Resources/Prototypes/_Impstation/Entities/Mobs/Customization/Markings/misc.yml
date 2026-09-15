@@ -708,8 +708,8 @@
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: voxtailballed
 
-- type: marking
-  id: VoxTailSplit
+- type: marking # LoneStar, Upstreamed had identical ID from wizden
+  id: ImpVoxTailSplit
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [ Vox ]
@@ -1071,17 +1071,17 @@
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: voxsunandmoon
 
-- type: marking
-  id: VoxCheeks
-  bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Vox ]
-  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
-  forcedColoring: false
-  followSkinColor: false
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxcheeks
+# - type: marking # LoneStar, duplicate. upstreamed from wizden.
+#   id: VoxCheeks
+#   bodyPart: Head
+#   markingCategory: Head
+#   speciesRestriction: [ Vox ]
+#   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
+#   forcedColoring: false
+#   followSkinColor: false
+#   sprites:
+#   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+#     state: voxcheeks
 
 - type: marking
   id: VoxBelly

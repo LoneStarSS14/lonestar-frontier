@@ -31,7 +31,7 @@
 - type: entity
   parent: WindoorSecure
   id: WindoorSecureHeadOfSecurityLocked
-  suffix: Sheriff, Locked
+  suffix: Chief Ranger, Locked # Lonestar changes NFSD -> LSRD
   components:
   - type: ContainerFill
     containers:
@@ -40,7 +40,7 @@
 - type: entity
   parent: WindoorSecure
   id: WindoorSecureBrigmedicLocked
-  suffix: Brigmedic, Locked
+  suffix: Corpsman, Locked # Lonestar changes NFSD -> LSRD
   components:
   - type: ContainerFill
     containers:

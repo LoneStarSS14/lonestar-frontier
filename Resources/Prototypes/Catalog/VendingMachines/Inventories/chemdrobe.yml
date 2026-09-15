@@ -15,9 +15,16 @@
     ClothingHandsGlovesLatex: 2
     ClothingHeadsetMedical: 2
     ClothingOuterWinterChem: 2
-    ClothingShoesBootsWinterChem: 2 #Delta V: Add departmental winter boots
+    ClothingShoesBootsWinterChem: 2 # DeltaV v
+    ClothingUniformChemistSenior: 2
+    ClothingUniformJumpskirtChemistSenior: 2
+    ClothingOuterCoatLabLongChemist: 2
+    ClothingOuterCoatLabSeniorChemist: 2
+    ClothingHeadHatBeretSeniorChemistry: 2
+    #Socks and things
     ClothingHandsChemistsWarmers: 3
     ClothingUnderSocksChemists: 3
     ClothingUniformChemistsThong: 3
   contrabandInventory:
     ToyFigurineChemist: 1
+    ClothingOuterCoatLabCybersun: 1 # DeltaV

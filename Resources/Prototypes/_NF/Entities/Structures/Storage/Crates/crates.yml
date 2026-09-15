@@ -32,7 +32,7 @@
 - type: entity
   parent: CrateSecgear
   id: CrateNfsdBrigmedic
-  name: brigmedic crate
+  name: corpsman crate # Lone Star Changes NFSD - LSRD
   components:
   - type: Icon
     sprite: _NF/Structures/Storage/Crates/nfsd_brigmed.rsi
@@ -44,7 +44,7 @@
 - type: entity
   parent: CrateSecgear
   id: CrateNfsdSecure1
-  name: NFSD crate
+  name: LSRD crate # Lonestar changes NFSD -> LSRD
   components:
   - type: Icon
     sprite: _NF/Structures/Storage/Crates/nfsd_secure1.rsi
@@ -56,7 +56,7 @@
 - type: entity
   parent: CrateSecgear
   id: CrateNfsdSecure2
-  name: NFSD crate
+  name: LSRD crate # Lonestar changes NFSD -> LSRD
   components:
   - type: Icon
     sprite: _NF/Structures/Storage/Crates/nfsd_secure2.rsi

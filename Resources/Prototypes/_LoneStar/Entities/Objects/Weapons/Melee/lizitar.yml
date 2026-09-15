@@ -1,0 +1,70 @@
+- type: entity
+  name: emerald lizitar
+  parent: [Claymore, BaseC1Contraband]
+  id: LizitarEmerald
+  description: Caledscratch && Emerald Contraband. Why is it so expensive? What the hell is 'grist'? This weapon leaves you with so many questions.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Melee/Lizitar/Emerald.rsi
+  - type: Item
+    storedSprite:
+      state: emerald
+      sprite: _LoneStar/Objects/Weapons/Melee/storage.rsi
+  - type: MeleeWeapon
+    attackRate: 0.75
+    damage:
+      types:
+        Slash: 30 # hurts, but you better not miss
+    soundHit:
+        path: /Audio/Items/Toys/weh.ogg
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Melee/Lizitar/Emerald.rsi
+    slots:
+    - back
+    - suitStorage
+  - type: DisarmMalus
+
+- type: entity
+  name: sapphire lizitar
+  parent: LizitarEmerald
+  id: LizitarSapphire
+  description: Emerald Lizitar || Sapphire Contraband. You still have no idea what grist is.
+  components:
+  - type: Item
+    storedSprite:
+      state: sapphire
+      sprite: _LoneStar/Objects/Weapons/Melee/storage.rsi
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Melee/Lizitar/Sapphire.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Melee/Lizitar/Sapphire.rsi
+
+- type: entity
+  name: amethyst lizitar
+  parent: LizitarEmerald
+  id: LizitarAmethyst
+  description: Emerald Lizitar || Charged Amethyst. Not for casting hexes.
+  components:
+  - type: Item
+    storedSprite:
+      state: amethyst
+      sprite: _LoneStar/Objects/Weapons/Melee/storage.rsi
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Melee/Lizitar/Amethyst.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Melee/Lizitar/Amethyst.rsi
+
+- type: entity
+  name: ruby lizitar
+  parent: LizitarEmerald
+  id: LizitarRuby
+  description: Emerald Lizitar || Ruby Contrab- Hey, wait. Isn't this supposed to be a frog?
+  components:
+  - type: Item
+    storedSprite:
+      state: ruby
+      sprite: _LoneStar/Objects/Weapons/Melee/storage.rsi
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Melee/Lizitar/Ruby.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Melee/Lizitar/Ruby.rsi

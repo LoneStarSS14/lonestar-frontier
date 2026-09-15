@@ -33,7 +33,7 @@ Basic script for people wishing to re-record the Announcements.
 - files: ["outbreak7.ogg"]
   sound: "---"
   script: "Confirmed outbreak of level 7 biohazard aboard the station. All personel must contain the outbreak."
-  NF style: "There is a confirmed outbreak of level 7 biohazard within the Sector. NFSD is en route to handle the situation."
+  NF style: "There is a confirmed outbreak of level 7 biohazard within the Sector. LSRD is en route to handle the situation."
 
 - files: ["power_off.ogg"]
   sound: "---"
@@ -106,7 +106,7 @@ Text: Based on { $data }, we believe a small colony of unknown organisms have ta
 
 __-Bluespace syndie crate__
 Text: We received a report that a crate containing syndicate items has shown up in some area, please notify the security team if you found said crate.
-> Script: "Frontiersmen! The NFSD have just sent out an alert that a Syndicate Beacon signal has been detected. Please notify Sec if you encounter anything suspicious. "
+> Script: "Frontiersmen! The LSRD have just sent out an alert that a Syndicate Beacon signal has been detected. Please notify Sec if you encounter anything suspicious. "
 
 __-Bluespace normal crate__
 Text: An error in bluespace telemetry has caused a random crate to teleport to an unknown location.

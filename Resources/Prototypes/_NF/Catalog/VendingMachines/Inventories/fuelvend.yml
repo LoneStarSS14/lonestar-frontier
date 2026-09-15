@@ -10,3 +10,7 @@
     AmeJar: 4294967295 # Infinite
     AmeJarBig: 4294967295 # Infinite
     JerryCanWeldingFuel: 4294967295 # Infinite
+    # LoneStar
+    FuelPlasmaBulk: 4294967295 # Infinite
+    FuelUraniumBulk: 4294967295 # Infinite
+    FuelBananiumBulk: 4294967295 # Infinite

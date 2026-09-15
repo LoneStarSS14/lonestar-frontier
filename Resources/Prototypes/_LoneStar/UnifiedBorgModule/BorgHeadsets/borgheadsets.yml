@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetBorgs
+  name: Radio Transciever
+  description: A dual-purpose transmitter and reciever bundle. Meant for synthetics, though an organic could probably get away taping it to their ears.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMedicalScience
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: _LoneStar/Objects/Clothing/Headsets/borgheadset.rsi

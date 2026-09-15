@@ -63,5 +63,7 @@
         variation: 0.125
     Whirr:
       collection: IPCWhirrs
+    Gulp: # Goob
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
       params:
         variation: 0

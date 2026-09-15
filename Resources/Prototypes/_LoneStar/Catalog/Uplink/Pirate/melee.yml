@@ -1,0 +1,83 @@
+- type: listing
+  id: UplinkPirateKatanaHF
+  name: uplink-security-hfblade-name
+  description: uplink-security-hfblade-desc
+  productEntity: KatanaHF
+  icon: { sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi, state: icon }
+  cost:
+    Doubloon: 3 # slightly more hurting than the arming sword
+  categories:
+    - UplinkPirateMelee
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+      - NFPirate
+      - NFPirateFirstMate
+      - NFPirateCaptain
+
+- type: listing
+  id: UplinkPirateKatanaMurasama
+  name: uplink-security-murasama-name
+  description: uplink-security-murasama-desc
+  productEntity: KatanaMurasama
+  icon: { sprite: _Mono/Objects/Weapons/Melee/murasama.rsi, state: icon }
+  cost:
+    Doubloon: 3
+  categories:
+    - UplinkPirateMelee
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+      - NFPirate
+      - NFPirateFirstMate
+      - NFPirateCaptain
+
+- type: listing
+  id: UplinkPirateKatanaPhaseblade
+  name: uplink-security-phaseblade-name
+  description: uplink-security-phaseblade-desc
+  productEntity: KatanaPhaseblade
+  icon: { sprite: _Mono/Objects/Weapons/Melee/phaseblade.rsi, state: icon }
+  cost:
+    Doubloon: 3
+  categories:
+    - UplinkPirateMelee
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+      - NFPirate
+      - NFPirateFirstMate
+      - NFPirateCaptain
+
+- type: listing
+  id: UplinkPirateRatvarianSpear
+  name: uplink-security-ratvarian-spear-name
+  description: uplink-security-ratvarian-spear-desc
+  productEntity: RatvarianSpear
+  icon: { sprite: _LoneStar/Objects/Weapons/Melee/ratvarian_spear.rsi, state: icon }
+  cost:
+    Doubloon: 3 # sure, 30 damage on throw, but now THEY have it
+  categories:
+    - UplinkPirateMelee
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+    - !type:BuyerJobCondition
+      whitelist:
+      - NFPirate
+      - NFPirateFirstMate
+      - NFPirateCaptain

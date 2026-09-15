@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: CharcoalShipyard (https://github.com/CharcoalShipyard)
+# Overhauled by WaterWithoutAnyIce(github)
+
+# Shuttle Notes:
+# retrofit of the expeditionary's pathfinder.
+
+- type: vessel
+  id: Brute
+  parent: BaseVesselAntag
+  name: Brute
+  description: A Bulker retrofitted into a proper tank. Ready to dish out some real damage
+  price: 41000 #31600, LL2 x1.3 = 41,000
+  category: Medium
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_LoneStar/Shuttles/BlackMarket/Retrofitted/brute.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  - Salvage
+  engine:
+  - AME
+
+- type: gameMap
+  id: Brute
+  mapName: 'Brute'
+  mapPath: /Maps/_CS/Shuttles/BlackMarket/Retrofitted/findsman.yml
+  minPlayers: 0
+  stations:
+    Brute:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Brute {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+#        - type: StationJobs
+#          availableJobs:
+#            NFPirate: [ 0, 0 ]
+#            Escort: [ 0, 0 ]

@@ -1,0 +1,37 @@
+- type: entity
+  id: IceBoxUnfinished
+  parent: BaseStructureDynamic
+  name: unfinished ice box
+  description: An ice box under construction
+  components:
+  - type: Physics
+    bodyType: Dynamic
+    canCollide: false
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _NF/Structures/Furniture/icebox.rsi
+    layers:
+      - state: icebox
+      - map: [ "enum.SolutionContainerLayers.Fill" ]
+        state: icebox_fill-1
+        visible: false
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 80
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 40
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+  - type: Construction
+    graph: IceBox
+    node: body

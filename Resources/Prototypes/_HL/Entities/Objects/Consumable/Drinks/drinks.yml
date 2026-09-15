@@ -1,0 +1,15 @@
+- type: entity
+  parent: DrinkGlass
+  id: DrinkNebulaDreamGlass
+  suffix: nebula dream
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: NebulaDream
+          Quantity: 30
+  - type: Icon
+    sprite: _HL/Objects/Consumable/Drinks/nebuladream.rsi
+    state: icon

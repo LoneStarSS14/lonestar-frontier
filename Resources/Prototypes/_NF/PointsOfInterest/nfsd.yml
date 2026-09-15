@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Nfsd
   parent: BasePOI
-  name: 'NFSD Outpost'
+  name: 'LSRD Outpost' # Lonestar changes NFSD -> LSRD
   minimumDistance: 750
   maximumDistance: 1000
   spawnGroup: Required

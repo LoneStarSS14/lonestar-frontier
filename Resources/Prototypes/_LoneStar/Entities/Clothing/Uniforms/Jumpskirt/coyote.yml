@@ -1,0 +1,9 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlackNGold
+  name: black and gold dressrobe
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/CoyoteOld/dressrobe-blackgold.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/CoyoteOld/dressrobe-blackgold.rsi

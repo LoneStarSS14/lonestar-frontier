@@ -1,0 +1,14 @@
+- type: entity
+  name: Devotion
+  parent: [NFBaseWeaponFrameRevolverFrontierGunsmith, LsBaseWeaponRevolverChamber60, BaseC2ContrabandUnredeemable]
+  id: WeaponRevolverDevotion
+  description: Lo and Behold, there stood the Ranger. A big iron on their hip.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Guns/Revolvers/devotion.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Guns/Revolvers/devotion.rsi
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg

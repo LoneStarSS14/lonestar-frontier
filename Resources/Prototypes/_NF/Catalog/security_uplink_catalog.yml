@@ -78,7 +78,7 @@
   productEntity: ClothingOuterHardsuitNfsdCombat
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 15 # Coyote: Just a little cheaper and better than the pirates' to outfit NFSD better.
+    FrontierUplinkCoin: 20 # Lonestar
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -733,7 +733,7 @@
   cost:
     FrontierUplinkCoin: 1
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -749,7 +749,7 @@
   cost:
     FrontierUplinkCoin: 2
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -765,7 +765,7 @@
   cost:
     FrontierUplinkCoin: 5 # Coyote changed 5>8
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -781,7 +781,7 @@
   cost:
     FrontierUplinkCoin: 8
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -797,7 +797,7 @@
   cost:
     FrontierUplinkCoin: 4
   categories:
-    - UplinkSecurityWeapons
+    - UplinkSecurityMelee # Lonestar
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -1214,7 +1214,7 @@
         tags:
           - SecurityUplink
 
-- type: listing # Coyote: added Bailiff and Senior Officer jobs to this gear
+- type: listing # Coyote: added Bailiff and Senior Officer jobs to this gear # Lonestar removed role whitelist
   id: UplinkSecurityContrabandForensicsModule
   name:  uplink-security-contraband-forensics-module-name
   description: uplink-security-contraband-forensics-module-desc
@@ -1229,8 +1229,3 @@
       whitelist:
         tags:
           - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
-        - Bailiff
-        - SeniorOfficer

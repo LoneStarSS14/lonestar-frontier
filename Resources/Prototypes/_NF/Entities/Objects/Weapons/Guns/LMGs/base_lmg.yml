@@ -18,7 +18,7 @@
     # Lonestar changes start
     angleIncrease: 2
     angleDecay: 10
-    fireRate: 6
+    fireRate: 8
     #burstFireRate: 5
     #shotsPerBurst: 5
     #burstCooldown: 1

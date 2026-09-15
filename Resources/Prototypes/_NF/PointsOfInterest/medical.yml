@@ -30,7 +30,7 @@
   minPlayers: 0
   stations:
     Medical:
-      stationProto: RecordsFrontierOutpost
+      stationProto: StandardFrontierDepot
       components:
         - type: StationNameSetup
           mapNameTemplate: 'St. Micheals Hospital'

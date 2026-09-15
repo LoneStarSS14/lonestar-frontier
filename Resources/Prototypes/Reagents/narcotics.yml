@@ -283,7 +283,7 @@
         time: 5
         refresh: false
 
-# Probably replace this one with sleeping chem when putting someone in a comatose state is easier
+
 - type: reagent
   id: Nocturine
   name: reagent-name-nocturine
@@ -303,15 +303,15 @@
       - !type:MovespeedModifier
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
-#      - !type:GenericStatusEffect   # Coyote edit: this chem has been castrated until it is no longer a hard shutdown
-#        conditions:
-#        - !type:ReagentThreshold
-#          reagent: Nocturine
-#          min: 8
-#        key: ForcedSleep
-#        component: ForcedSleeping
-#        refresh: false
-#        type: Add
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nocturine
+          min: 8
+        key: ForcedSleep
+        component: ForcedSleeping
+        refresh: false
+        type: Add
 
 - type: reagent
   id: MuteToxin

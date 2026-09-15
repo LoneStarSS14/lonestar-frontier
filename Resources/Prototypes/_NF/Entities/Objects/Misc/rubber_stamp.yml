@@ -26,7 +26,7 @@
     state: stamp-stc
 
 - type: entity
-  name: sheriff's rubber stamp
+  name: chief ranger's rubber stamp # Lone Star changes NFSD -> LSRD
   parent: [RubberStampBase, BaseC4Contraband]
   id: RubberStampSheriff
   categories: [ DoNotMap ]
@@ -95,7 +95,7 @@
     state: stamp-doc
 
 - type: entity
-  name: bailiff's rubber stamp
+  name: armorer's rubber stamp # Lonestar changes NFSD -> LSRD
   parent: RubberStampBase
   id: RubberStampBailiff
   categories: [ DoNotMap ]
@@ -109,7 +109,7 @@
     state: stamp-bailiff
 
 - type: entity
-  name: sergeant's rubber stamp
+  name: senior ranger's rubber stamp # Lonestar changes NFSD -> LSRD
   parent: RubberStampBase
   id: RubberStampSergeant
   categories: [ DoNotMap ]

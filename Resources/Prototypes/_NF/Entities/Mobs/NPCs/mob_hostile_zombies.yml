@@ -4,11 +4,9 @@
   abstract: true
   components:
   - type: PassiveDamage
-    allowedStates:
+    allowedStates: # LoneStar, dont heal if dead...
     - Alive
     - Critical
-    - Dead
-    damageCap: 9999
     damage:
       groups:
         Brute: -0.4
@@ -67,6 +65,7 @@
     transferAmount: 1
     solution: melee
   - type: Butcherable
+    butcherDelay: 4 # LoneStar, halved from default of 8
     spawned:
     - id: NFSpawnZombieLoot
       amount: 1
@@ -556,7 +555,7 @@
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
   - type: BasicEntityAmmoProvider
-    proto: FoodPieBananaCream
+    proto: FoodZombieClownPieBananaCream # LoneStar, no falvorol farming
     capacity: 1
     count: 1
   - type: Gun
@@ -573,6 +572,19 @@
       collection: ZombieClownScreams
       params:
         variation: 0.125
+
+# LoneStar, rotten pie
+- type: entity
+  name: rotten banana cream pie
+  parent: [ FoodSpoiledRotten, FoodPieBananaCream ]
+  id: FoodZombieClownPieBananaCream
+  #categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Baked/pie.rsi
+    layers:
+    - state: tin
+    - state: plain
 
 # region fast
 - type: entity
@@ -740,25 +752,15 @@
   name: body bags pile
   description: A stacked pile of reinforced body bags. Some of them are moving!
   components:
-  # _CS Start: salvage objective zombie pile spawner
-  - type: SalvageObjectiveNpcSpawner
-    spawnIntervalSeconds: 76
-    nearbyRange: 15
-    maxNearby: 5
-    nearbyFactions:
-    - Zombie
-    spawnPrototypes:
-    - NFSpawnMobZombie
-    - NFSpawnMobZombieSpecial
-    - NFSpawnMobZombieRandom
-  # _CS End: salvage objective zombie pile spawner
-  - type: TimedSpawner
-    prototypes:
-    - NFSpawnMobZombieRandom
-    chance: 1
-    intervalSeconds: 300 # 5 min
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 3
+  # LoneStar changes start: removing double spawner.
+  # - type: TimedSpawner
+  #   prototypes:
+  #   - NFSpawnMobZombieRandom
+  #   chance: 1
+  #   intervalSeconds: 300 # 5 min
+  #   minimumEntitiesSpawned: 1
+  #   maximumEntitiesSpawned: 3
+  # LoneStar changes end
   - type: Sprite
     sprite: _NF/Mobs/Zombies/zombie_human.rsi
     layers:
@@ -791,6 +793,18 @@
           FoodMeatRotten:
             min: 1
             max: 3
+  - type: TimedDespawn # LoneStar, TODO: ideally a 'TimedDestroy', but we work with what we got.
+    lifetime: 3600 # 1 hour
+  - type: SalvageObjectiveNpcSpawner # LoneStar
+    spawnIntervalSeconds: 40
+    spawnIntervalVariance: 5
+    nearbyRange: 15
+    spawnRange: 3
+    maxNearby: 9
+    nearbyFactions:
+    - Zombie
+    spawnPrototypes:
+    - NFSpawnMobZombieRandom
 
 # timedspawners making timedspawners makes the iterator sad, so we use a loophole
 - type: entity

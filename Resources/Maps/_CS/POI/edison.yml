@@ -35206,13 +35206,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 19.520067,4.559423
       parent: 1
-- proto: ChemicalBarrelExplosiveMarket
-  entities:
-  - uid: 5840
-    components:
-    - type: Transform
-      pos: 28.5,-13.5
-      parent: 1
 - proto: ChemistryBottleSugar
   entities:
   - uid: 5841

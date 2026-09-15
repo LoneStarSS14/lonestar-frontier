@@ -58,7 +58,7 @@
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdBomber
-  name: NFSD bomber
+  name: LSRD bomber # Lonestar changes NFSD -> LSRD
   description: Lookin' slick Tom.
   components:
   - type: Sprite
@@ -69,7 +69,7 @@
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdBomberBrigmed
-  name: NFSD brigmedic bomber
+  name: LSRD corpsman bomber # Lonestar changes NFSD -> LSRD
   description: Blood may stain.
   components:
   - type: Sprite
@@ -80,7 +80,7 @@
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdFormal
-  name: NFSD formal coat
+  name: LSRD formal coat # Lonestar changes NFSD -> LSRD
   description: Snazzy.
   components:
   - type: Sprite
@@ -91,7 +91,7 @@
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdFormalSheriff
-  name: NFSD sheriff's formal coat
+  name: LSRD chief ranger's formal coat # Lonestar changes NFSD -> LSRD
   description: Very snazzy.
   components:
   - type: Sprite
@@ -102,13 +102,13 @@
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdLongCoat
-  name: NFSD long coat
+  name: LSRD long coat # Lonestar changes NFSD -> LSRD
   description: Big iron on his hip...
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Misc/nfsd_long.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrd_long.rsi
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Misc/nfsd_long.rsi
+    sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrd_long.rsi
 
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ]

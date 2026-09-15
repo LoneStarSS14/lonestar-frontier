@@ -61,99 +61,97 @@
 - type: entity
   parent: IDCardStandard
   id: CadetIDCard
-  name: NFSD cadet ID card
+  name: LSRD Junior Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Cadet
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsdcadet
+    - state: lsrd
+    - state: idlsrdjunior
   - type: Clothing
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
   - type: Item
-    heldPrefix: nfsd
+    heldPrefix: lsrd
 
 - type: entity
   parent: CadetIDCard
   id: DeputyIDCard
-  name: NFSD deputy ID card
+  name: LSRD Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Deputy
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsddeputy
+    - state: lsrd
+    - state: idlsrdranger
 
 - type: entity
   parent: CadetIDCard
   id: BrigmedicNFIDCard
-  name: NFSD brigmedic ID card
+  name: LSRD Corpsman ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Brigmedic
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsdbrigmed
+    - state: lsrd
+    - state: idlsrdcorpsman
 
 - type: entity
   parent: CadetIDCard
   id: SergeantIDCard
-  name: NFSD sergeant ID card
+  name: LSRD Senior Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: SeniorOfficer
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsdsergeant
+    - state: lsrd
+    - state: idlsrdsenior
 
 - type: entity
   parent: CadetIDCard
   id: BailiffIDCard
-  name: NFSD bailiff ID card
+  name: LSRD Armorer ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Bailiff
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsdbailiff
+    - state: lsrd
+    - state: idlsrdarmorer
 
 - type: entity
   parent: [CadetIDCard, BaseC4Contraband]
   id: ShriffIDCard
-  name: NFSD sheriff ID card
+  name: LSRD Chief Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: Sheriff
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: silver
-    - state: idnfsdsheriff
-  - type: Item
-    heldPrefix: silver
+    - state: lsrd
+    - state: idlsrdchief
 
 - type: entity
   parent: CadetIDCard
   id: NFDetectiveIDCard
-  name: NFSD detective ID card
+  name: LSRD detective ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
     job: NFDetective
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsddetective
+    - state: lsrd
+    - state: idlsrddetective
 
 - type: entity
   parent: SecurityIDCard

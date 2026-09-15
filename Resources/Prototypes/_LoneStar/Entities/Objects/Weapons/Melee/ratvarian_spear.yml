@@ -1,0 +1,77 @@
+- type: entity
+  parent: [ BaseItem, BaseC1Contraband ]
+  id: RatvarianSpear
+  name: ratvarian spear
+  description: Made from fine quality brass, it bears the insignia of the Clockwork Cult on it.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Melee/ratvarian_spear.rsi
+    state: icon
+  - type: Tag
+    tags:
+    - Spear
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Melee/ratvarian_spear.rsi
+    slots:
+    - suitStorage
+    - belt
+    - back
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Piercing: 15
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    angle: 0
+    animation: WeaponArcThrust
+    damage:
+      types:
+        Piercing: 20
+    soundHit:
+      path: /Audio/_LoneStar/Items/Weapons/cosmicsword_hit.ogg
+      params:
+        variation: 0.2
+        volume: 1
+    soundSwing:
+      path: /Audio/_LoneStar/Items/Weapons/cosmicweapon_swing.ogg
+      params:
+        variation: 0.125
+        volume: -4
+    soundNoDamage:
+      path: /Audio/_LoneStar/Items/Weapons/cosmicsword_glance.ogg
+      params:
+        variation: 0.2
+        volume: -11
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 30
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+            - -0.40,-0.30
+            - -0.30,-0.40
+            - 0.40,0.30
+            - 0.30,0.40
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: EmbeddableProjectile
+    offset: -0.15,0.0
+    sound: /Audio/_LoneStar/Items/Weapons/cosmiclance_impact.ogg
+  - type: EmitSoundOnThrow
+    sound: /Audio/_LoneStar/Items/Weapons/cosmicweapon_swing.ogg
+  - type: ThrowingAngle
+    angle: 225
+  - type: LandAtCursor
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,0,3
+  - type: Sharp
+  - type: DisarmMalus

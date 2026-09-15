@@ -9,7 +9,7 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 22
+        Heat: 18 # LoneStar
 
 # Assault Rifles / Carbines
 - type: entity
@@ -27,7 +27,7 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 0
+        Heat: 0.1 # LoneStar
 
 - type: entity
   id: NFBulletLaserMedium
@@ -38,7 +38,7 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 32
+        Heat: 24 # LoneStar
 
 # Rifles
 - type: entity
@@ -50,7 +50,7 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 38
+        Heat: 30 # LoneStar
 
 #region Disabler bolts
 - type: entity
@@ -83,7 +83,7 @@
       collection: WeakHit
     forceSound: true
   - type: StaminaDamageOnCollide
-    damage: 22 # ~5 shots to stun, ~3 to slow
+    damage: 24 # LoneStar
 
 - type: entity
   id: NFBulletDisablerLow
@@ -100,7 +100,7 @@
       collection: WeakHit
     forceSound: true
   - type: StaminaDamageOnCollide
-    damage: 18 # ~6 shots to stun, ~3 to slow
+    damage: 20 # LoneStar
 
 #region Kinetic bolts
 - type: entity

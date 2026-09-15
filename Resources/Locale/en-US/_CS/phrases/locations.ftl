@@ -15,7 +15,7 @@ phrase-location-nautical-docking-to = docking to
 
 # Station names
 phrase-location-nash = Nash
-phrase-location-nfsd-outpost = NFSD Outpost
+phrase-location-nfsd-outpost = LSRD Outpost
 phrase-location-frontier-outpost = Frontier outpost
 phrase-location-power-plant = Power Plant
 phrase-location-barrier = Barrier Station

@@ -1,5 +1,5 @@
 - type: entity
-  name: NFSD energy shield
+  name: LSRD energy shield # Lonestar changes NFSD -> LSRD
   parent: [BaseC4ContrabandUnredeemable, EnergyShield] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: EnergyShieldNfsd
   components:

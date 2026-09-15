@@ -1,9 +1,11 @@
 ##Grenade fills
+
+# Lonestar change NFSD -> LSRD
 - type: entity
-  name: box of NFSD items
+  name: box of LSRD items
   parent: BoxCardboard
   id: BoxBundleNfsd
-  description: A box full of NFSD items.
+  description: A box full of LSRD items.
   components:
   - type: Sprite
     layers:

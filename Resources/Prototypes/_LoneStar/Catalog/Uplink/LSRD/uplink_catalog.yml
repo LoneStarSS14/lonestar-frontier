@@ -1,0 +1,285 @@
+- type: listing
+  id: UplinkSecurityContrabandAdvancedFirstAid
+  name:  uplink-advanced-medkit-name
+  description: uplink-advanced-medkit-desc
+  productEntity: MedkitAdvancedFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: advkit }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Bailiff
+        - SeniorOfficer
+        - Cadet
+        - Deputy
+        - NFDetective
+
+- type: listing
+  id: UplinkSecurityContrabandPulsePistol
+  name:  uplink-pulsepistol-name
+  description: uplink-pulsepistol-desc
+  productEntity: WeaponEnergyPistolPulseLSRD
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Battery/lsrdpulse_pistol.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 12
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Bailiff
+        - SeniorOfficer
+        - Brigmedic
+        - Deputy
+        - NFDetective
+
+- type: listing
+  id: UplinkSecurityContrabandPulseCarbine
+  name:  uplink-pulsecarbine-name
+  description: uplink-pulsecarbine-desc
+  productEntity: WeaponPulseCarbineLSRD
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Battery/lsrdpulse_carbine.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 24
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Bailiff
+        - SeniorOfficer
+
+- type: listing
+  id: UplinkSecurityContrabandPulseRifle
+  name:  uplink-pulseheavy-name
+  description: uplink-pulseheavy-desc
+  productEntity: WeaponPulseRifleLSRD
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Battery/lsrdpulse_heavy.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 45
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Bailiff
+
+- type: listing
+  id: UplinkSecurityContrabandLSRDRaidSuit
+  name:  uplink-lsrdraid-name
+  description: uplink-lsrdraid-desc
+  productEntity: ClothingBackpackLSRDRaidBundle
+  icon: { sprite: _LoneStar/Clothing/OuterClothing/Armor/lsrd-raid.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 25
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Bailiff
+        - SeniorOfficer
+        - Brigmedic
+        - Deputy
+        - NFDetective
+
+- type: listing
+  id: UplinkSecurityContrabandHyposprayReal
+  name:  uplink-hypospraylsrd-name
+  description: uplink-hypospraylsrd-desc
+  productEntity: Hypospray
+  icon: { sprite: Objects/Specific/Medical/hypospray.rsi, state: hypo }
+  cost:
+    FrontierUplinkCoin: 15
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Brigmedic
+
+- type: listing
+  id: UplinkSecurityContrabandForensicPadBox
+  name:  uplink-forensicpadbox-name
+  description: uplink-forensicpadbox-desc
+  productEntity: BoxForensicPad
+  icon: { sprite: Objects/Storage/boxes.rsi, state: box }
+  cost:
+    FrontierUplinkCoin: 2
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFDetective
+
+- type: listing
+  id: UplinkSecurityContrabandEvidenceMarkerBox
+  name:  uplink-evidencemarkerbox-name
+  description: uplink-evidencemarkerbox-desc
+  productEntity: BoxEvidenceMarkers
+  icon: { sprite: Objects/Storage/boxes.rsi, state: box }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFDetective
+
+- type: listing
+  id: UplinkSecurityContrabandStingerBox
+  name:  uplink-stingerlsrd-name
+  description: uplink-stingerlsrd-desc
+  productEntity: BoxStinger
+  icon: { sprite: Objects/Weapons/Grenades/stingergrenade.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 4
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Sheriff
+        - Bailiff
+        - SeniorOfficer
+        - Brigmedic
+        - Deputy
+        - NFDetective
+
+- type: listing
+  id: UplinkSecurityContrabandSlippers
+  name:  uplink-dimeslippers-name
+  description: uplink-dimeslippers-desc
+  productEntity: ClothingShoesSlippers
+  icon: { sprite: Clothing/Shoes/Misc/slippers.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - NFDetective
+
+- type: listing
+  id: UplinkSecurityContrabandMk22
+  name:  uplink-mk22-name
+  description: uplink-mk22-desc
+  productEntity: WeaponPistolLSRDmk22
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Pistols/lsrdmk22.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 2
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityContrabandChemicalCrateP
+  name:  uplink-chemicalcratep-name
+  description: uplink-chemicalcratep-desc
+  productEntity: CrateChemistryP
+  icon: { sprite: Structures/Storage/Crates/chemcrate_secure.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 8
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Brigmedic
+
+- type: listing
+  id: UplinkSecurityContrabandChemicalCrateS
+  name:  uplink-chemicalcrates-name
+  description: uplink-chemicalcrates-desc
+  productEntity: CrateChemistryS
+  icon: { sprite: Structures/Storage/Crates/chemcrate_secure.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 8
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Brigmedic
+
+- type: listing
+  id: UplinkSecurityContrabandChemicalCrateD
+  name:  uplink-chemicalcrated-name
+  description: uplink-chemicalcrated-desc
+  productEntity: CrateChemistryD
+  icon: { sprite: Structures/Storage/Crates/chemcrate_secure.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 8
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Brigmedic

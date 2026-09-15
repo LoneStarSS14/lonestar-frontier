@@ -320,7 +320,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintArsenalMercenary
   name: combat blueprint
-  description: A blueprint with combat schematics on it. It can be inserted into an NFSD or mercenary techfab or sent via fax.
+  description: A blueprint with combat schematics on it. It can be inserted into an LSRD or mercenary techfab or sent via fax. # Lonestar changes NFSD -> LSRD
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -357,7 +357,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintArsenalNfsd
   name: restricted combat blueprint
-  description: A blueprint with combat schematics on it. It can be inserted into an NFSD techfab or sent via fax.
+  description: A blueprint with combat schematics on it. It can be inserted into an LSRD techfab or sent via fax. # Lonestar changes NFSD -> LSRD
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite

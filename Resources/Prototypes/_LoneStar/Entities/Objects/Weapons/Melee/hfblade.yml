@@ -1,0 +1,46 @@
+- type: entity
+  parent: PlasteelArmingSword
+  id: KatanaHF
+  name: high-frequency blade
+  description: A tool of justice... or something like that.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -60
+    damage:
+      types:
+        Slash: 25
+  - type: Item
+    sprite: _Mono/Objects/Weapons/Melee/hfblade.rsi
+    storedSprite:
+      state: highfrequency
+      sprite: _LoneStar/Objects/Weapons/Melee/storage.rsi
+
+- type: entity
+  parent: KatanaHF
+  id: KatanaMurasama
+  name: murasama
+  description: You are pretty sure this is someone else's sword.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+  - type: Item
+    sprite: _Mono/Objects/Weapons/Melee/murasama.rsi
+    storedSprite:
+      state: murasama
+      sprite: _LoneStar/Objects/Weapons/Melee/storage.rsi
+
+- type: entity
+  parent: KatanaMurasama
+  id: KatanaPhaseblade
+  name: phaseblade katana
+  description: A modified, cut-down version of the LR-59 γ-Type Phaseblade Katana.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Melee/phaseblade.rsi
+  - type: Item
+    sprite: _Mono/Objects/Weapons/Melee/phaseblade.rsi
+    storedSprite:
+      state: phaseblade
+      sprite: _LoneStar/Objects/Weapons/Melee/storage.rsi

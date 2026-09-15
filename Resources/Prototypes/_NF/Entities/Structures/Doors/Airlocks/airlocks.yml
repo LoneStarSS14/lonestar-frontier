@@ -12,10 +12,10 @@
 - type: entity
   parent: Airlock
   id: AirlockNfsd
-  suffix: NFSD
+  suffix: LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
-    sprite: _NF/Structures/Doors/Airlocks/Standard/nfsd.rsi
+    sprite: _LoneStar/Structures/Doors/Airlocks/Standard/lsrd.rsi
 # endregion
 
 # region Glass
@@ -32,10 +32,10 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockNfsdGlass
-  suffix: NFSD
+  suffix: LSRD # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
-    sprite: _NF/Structures/Doors/Airlocks/Glass/nfsd.rsi
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/lsrd.rsi
     group: Glass
   - type: Wires
     layoutId: AirlockSecurity
@@ -54,7 +54,7 @@
 - type: entity
   parent: AirlockMedicalGlassLockedSecurity
   id: AirlockBrigmedicGlassLocked
-  suffix: Locked, Brigmedic
+  suffix: Locked, Corpsman # Lone Star Changes NFSD - LSRD
   components:
   - type: ContainerFill
     containers:
@@ -73,7 +73,7 @@
 - type: entity
   parent: AirlockGlassShuttle
   id: AirlockExternalGlassShuttleTransitTradeExpress
-  suffix: Ext, Bus (R2), NFSD, Glass, Docking
+  suffix: Ext, Bus (R2), LSRD, Glass, Docking # Lonestar changes NFSD -> LSRD
   components:
   - type: PriorityDock
     tag: DockTransitTradeExpress
@@ -89,7 +89,7 @@
 - type: entity
   parent: AirlockGlassShuttleNfsd
   id: AirlockExternalGlassShuttleNfsdTransitMinorPOI
-  suffix: Ext, Route (R3), NFSD, Glass, Docking
+  suffix: Ext, Route (R3), LSRD, Glass, Docking # Lonestar changes NFSD -> LSRD
   components:
   - type: PriorityDock
     tag: DockTransitMinorPOIs

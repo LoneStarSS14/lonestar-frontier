@@ -3,7 +3,7 @@
   id: NFRedLightLaser
   damage:
     types:
-      Heat: 21
+      Heat: 17 # LoneStar
   muzzleFlash: &lightMuzzleFlash
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_laser
@@ -20,7 +20,7 @@
   id: NFRedMediumLaser
   damage:
     types:
-      Heat: 32
+      Heat: 23 # LoneStar
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_beam_heavy
@@ -37,7 +37,7 @@
   id: NFRedHeavyLaser
   damage:
     types:
-      Heat: 37
+      Heat: 29 # LoneStar
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_beam_heavy
@@ -54,7 +54,7 @@
   id: NFRedSpecialLaser
   damage:
     types:
-      Heat: 50
+      Heat: 36 # LoneStar
   muzzleFlash: &specialMuzzleFlash
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_beam_heavy2
@@ -71,8 +71,8 @@
   id: NFXrayLaser
   damage:
     types:
-      Heat: 15
-      Radiation: 25
+      Heat: 16 # LoneStar
+      Radiation: 20 # LoneStar
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_xray
@@ -89,7 +89,7 @@
   id: NFPulse
   damage:
     types:
-      Heat: 45
+      Heat: 36 # LoneStar
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_blue
@@ -120,8 +120,8 @@
   maxLength: 60
   damage:
     types:
-      Heat: 80
-      Structural: 25
+      Heat: 50 # LoneStar
+      Structural: 60 # LoneStar
   muzzleFlash: *specialMuzzleFlash
   travelFlash: *specialTravelFlash
   impactFlash: *specialImpactFlash

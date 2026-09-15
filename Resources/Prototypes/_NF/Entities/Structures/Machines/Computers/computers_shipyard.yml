@@ -81,8 +81,8 @@
 - type: entity
   id: ComputerShipyardNfsd
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
-  name: NFSD shipyard console
-  description: Used to buy NFSD patrol vessels.
+  name: LSRD shipyard console # Lonestar changes NFSD -> LSRD
+  description: Used to buy LSRD patrol vessels.
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/computers.rsi

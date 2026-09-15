@@ -26,6 +26,40 @@
     interfaces:
       enum.MagicMirrorUiKey.Key:
         type: MagicMirrorBoundUserInterface
+  - type: Construction # LoneStar Start
+    graph: Mirror
+    node: done
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -4
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+          IngotSilver1:
+            min: 1
+            max: 1
+  # LoneStar End
 
 - type: entity
   parent: Mirror
@@ -36,3 +70,6 @@
   - type: Sprite
     sprite: Structures/Wallmounts/mirror.rsi
     state: rectangle-mirror
+  - type: Construction # LoneStar
+    graph: MirrorModern
+    node: done

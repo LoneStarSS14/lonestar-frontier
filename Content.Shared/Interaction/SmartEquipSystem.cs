@@ -36,6 +36,9 @@ public sealed class SmartEquipSystem : EntitySystem
             .Bind(ContentKeyFunctions.SmartEquipBackpack, InputCmdHandler.FromDelegate(HandleSmartEquipBackpack, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipBelt, InputCmdHandler.FromDelegate(HandleSmartEquipBelt, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipWallet, InputCmdHandler.FromDelegate(HandleSmartEquipWallet, handle: false, outsidePrediction: false)) // Frontier
+            .Bind(ContentKeyFunctions.SmartEquipPocket1, InputCmdHandler.FromDelegate(HandleSmartEquipPocket1, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.SmartEquipPocket2, InputCmdHandler.FromDelegate(HandleSmartEquipPocket2, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.SmartEquipSuitStorage, InputCmdHandler.FromDelegate(HandleSmartEquipSuitStorage, handle: false, outsidePrediction: false))
             .Register<SmartEquipSystem>();
     }
 
@@ -61,6 +64,21 @@ public sealed class SmartEquipSystem : EntitySystem
         HandleSmartEquip(session, "wallet");
     }
     // End Frontier: smart-equip to wallet
+    private void HandleSmartEquipPocket1(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "pocket1");
+    }
+
+    private void HandleSmartEquipPocket2(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "pocket2");
+    }
+
+    private void HandleSmartEquipSuitStorage(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "suitstorage");
+    }
+
     private void HandleSmartEquip(ICommonSession? session, string equipmentSlot)
     {
         if (session is not { } playerSession)
@@ -132,7 +150,7 @@ public sealed class SmartEquipSystem : EntitySystem
             return;
         }
 
-        // case 2 (storage item):
+        // case 2 (storage item): // Lonestar: Just take the item itself out...
         if (TryComp<StorageComponent>(slotItem, out var storage))
         {
             switch (handItem)
@@ -170,49 +188,49 @@ public sealed class SmartEquipSystem : EntitySystem
         }
 
         // case 3 (itemslot item):
-        if (TryComp<ItemSlotsComponent>(slotItem, out var slots))
-        {
-            if (handItem == null)
-            {
-                ItemSlot? toEjectFrom = null;
-
-                foreach (var slot in slots.Slots.Values)
-                {
-                    if (slot.HasItem && slot.Priority > (toEjectFrom?.Priority ?? int.MinValue))
-                        toEjectFrom = slot;
-                }
-
-                if (toEjectFrom == null)
-                {
-                    _popup.PopupClient(emptyEquipmentSlotString, uid, uid);
-                    return;
-                }
-
-                _slots.TryEjectToHands(slotItem, toEjectFrom, uid, excludeUserAudio: true);
-                return;
-            }
-
-            ItemSlot? toInsertTo = null;
-
-            foreach (var slot in slots.Slots.Values)
-            {
-                if (!slot.HasItem
-                    && _whitelistSystem.IsWhitelistPassOrNull(slot.Whitelist, handItem.Value)
-                    && slot.Priority > (toInsertTo?.Priority ?? int.MinValue))
-                {
-                    toInsertTo = slot;
-                }
-            }
-
-            if (toInsertTo == null)
-            {
-                _popup.PopupClient(Loc.GetString("smart-equip-no-valid-item-slot-insert", ("item", handItem.Value)), uid, uid);
-                return;
-            }
-
-            _slots.TryInsertFromHand(slotItem, toInsertTo, uid, hands, excludeUserAudio: true);
-            return;
-        }
+        // if (TryComp<ItemSlotsComponent>(slotItem, out var slots))
+        // {
+        //     if (handItem == null)
+        //     {
+        //         ItemSlot? toEjectFrom = null;
+        //
+        //         foreach (var slot in slots.Slots.Values)
+        //         {
+        //             if (slot.HasItem && slot.Priority > (toEjectFrom?.Priority ?? int.MinValue))
+        //                 toEjectFrom = slot;
+        //         }
+        //
+        //         if (toEjectFrom == null)
+        //         {
+        //             _popup.PopupClient(emptyEquipmentSlotString, uid, uid);
+        //             return;
+        //         }
+        //
+        //         _slots.TryEjectToHands(slotItem, toEjectFrom, uid, excludeUserAudio: true);
+        //         return;
+        //     }
+        //
+        //     ItemSlot? toInsertTo = null;
+        //
+        //     foreach (var slot in slots.Slots.Values)
+        //     {
+        //         if (!slot.HasItem
+        //             && _whitelistSystem.IsWhitelistPassOrNull(slot.Whitelist, handItem.Value)
+        //             && slot.Priority > (toInsertTo?.Priority ?? int.MinValue))
+        //         {
+        //             toInsertTo = slot;
+        //         }
+        //     }
+        //
+        //     if (toInsertTo == null)
+        //     {
+        //         _popup.PopupClient(Loc.GetString("smart-equip-no-valid-item-slot-insert", ("item", handItem.Value)), uid, uid);
+        //         return;
+        //     }
+        //
+        //     _slots.TryInsertFromHand(slotItem, toInsertTo, uid, hands, excludeUserAudio: true);
+        //     return;
+        // }
 
         // case 4 (just an item):
         if (handItem != null)

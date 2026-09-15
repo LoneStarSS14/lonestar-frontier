@@ -236,6 +236,7 @@
         Slash: 0.35
         Piercing: 0.35
         Heat: 0.35
+        Radiation: 0.35 # Lonestar
         Caustic: 0.5
   - type: ExplosionResistance
     damageCoefficient: 0.35

@@ -5,6 +5,8 @@
   id: BaseMobAnthromorph
   abstract: true
   components:
+  - type: Body # Lonestar
+    prototype: Anthromorph
   # misc stuff (mostly copy-pasted from humans)
   - type: Needs
     needs:

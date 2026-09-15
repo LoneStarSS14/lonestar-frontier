@@ -34,6 +34,7 @@
     - UplinkSecurityUtility
     - UplinkSecurityExplosives
     - UplinkSecurityBundles
+    - UplinkSecurityMelee # Lonestar
     currencyWhitelist:
     - FrontierUplinkCoin
     balance:
@@ -56,6 +57,7 @@
     - UplinkPirateLoot # Coyote
     - UplinkPirateWearables # Coyote
     - UplinkPirateMachines # Coyote
+    - UplinkPirateMelee # Lonestar
     currencyWhitelist:
     - Doubloon
     balance:

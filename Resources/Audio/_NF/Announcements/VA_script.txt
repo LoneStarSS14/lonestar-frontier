@@ -33,7 +33,7 @@ Basic script for people wishing to re-record the Announcements.
 - files: ["outbreak7.ogg"]
   sound: "---"
   script: "Confirmed outbreak of level 7 biohazard aboard the station. All personel must contain the outbreak."
-  NF style: "There is a confirmed outbreak of level 7 biohazard within the Sector. NFSD is en route to handle the situation."
+  NF style: "There is a confirmed outbreak of level 7 biohazard within the Sector. LSRD is en route to handle the situation."
 
 - files: ["power_off.ogg"]
   sound: "---"

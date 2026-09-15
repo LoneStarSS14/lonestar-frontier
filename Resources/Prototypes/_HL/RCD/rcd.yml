@@ -1,0 +1,439 @@
+- type: rcd
+  id: PlatingNE
+  name: NE plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/ne.png
+  mode: ConstructTile
+  prototype: PlatingCornerNE
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingNW
+  name: NW plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/nw.png
+  mode: ConstructTile
+  prototype: PlatingCornerNW
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingSE
+  name: SE plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/se.png
+  mode: ConstructTile
+  prototype: PlatingCornerSE
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingSW
+  name: SW plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/sw.png
+  mode: ConstructTile
+  prototype: PlatingCornerSW
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: WindowDirectionalShuttle
+  name: Diagonal shuttle window
+  category: WindowsAndGrilles
+  sprite: /Textures/_HL/RCD/shuttlewindowdiagonal.png
+  mode: ConstructObject
+  prototype: ShuttleWindowDiagonal
+  cost: 2
+  delay: 1
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct1
+  allowMultiDirection: true
+
+- type: rcd
+  id: WindowShuttle
+  category: WindowsAndGrilles
+  sprite: /Textures/_HL/RCD/shuttlewindow.png
+  mode: ConstructObject
+  prototype: ShuttleWindow
+  cost: 3
+  delay: 2
+  collisionMask: Impassable
+  rules:
+    - IsWindow
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: WallShuttleDiagonal
+  name: Diagonal shuttle wall
+  category: Walls
+  sprite: /Textures/_HL/RCD/shuttlewalldiag.png
+  mode: ConstructObject
+  prototype: WallShuttleDiagonal
+  cost: 4
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct2
+  allowMultiDirection: true
+
+- type: rcd
+  id: WallReinforcedDiagonal
+  name: Diagonal reinforced wall
+  category: Walls
+  sprite: /Textures/_HL/RCD/reinfwalldiag.png
+  mode: ConstructObject
+  prototype: WallReinforcedDiagonal
+  cost: 4
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct2
+  allowMultiDirection: true
+
+- type: rcd
+  id: WallSolidDiagonal
+  name: Diagonal solid wall
+  category: Walls
+  sprite: /Textures/_HL/RCD/solidwalldiag.png
+  mode: ConstructObject
+  prototype: WallSolidDiagonal
+  cost: 4
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct2
+  allowMultiDirection: true
+
+- type: rcd
+  id: PlatingHalfV
+  name: V half-plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/half_v.png
+  mode: ConstructTile
+  prototype: PlatingHalfV
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfH
+  name: H half-plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/half_h.png
+  mode: ConstructTile
+  prototype: PlatingHalfH
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingWedgeN
+  name: north wedge plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/wedge_n.png
+  mode: ConstructTile
+  prototype: PlatingWedgeN
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingWedgeE
+  name: east wedge plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/wedge_e.png
+  mode: ConstructTile
+  prototype: PlatingWedgeE
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingWedgeS
+  name: south wedge plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/wedge_s.png
+  mode: ConstructTile
+  prototype: PlatingWedgeS
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingWedgeW
+  name: west wedge plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/wedge_w.png
+  mode: ConstructTile
+  prototype: PlatingWedgeW
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltNESLower
+  name: NE-S lower half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_ne_s_l.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltNESLower
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltSEWLower
+  name: SE-W lower half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_se_w_l.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltSEWLower
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltSWNLower
+  name: SW-N lower half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_sw_n_l.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltSWNLower
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltNWELower
+  name: NW-E lower half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_nw_e_l.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltNWELower
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltNESUpper
+  name: NE-S upper half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_ne_s_u.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltNESUpper
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltSEWUpper
+  name: SE-W upper half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_se_w_u.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltSEWUpper
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltSWNUpper
+  name: SW-N upper half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_sw_n_u.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltSWNUpper
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltNWEUpper
+  name: NW-E upper half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_nw_e_u.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltNWEUpper
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltNEWLower
+  name: NE-W lower half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_ne_w_l.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltNEWLower
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltSENLower
+  name: SE-N lower half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_se_n_l.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltSENLower
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltSWELower
+  name: SW-E lower half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_sw_e_l.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltSWELower
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltNWSLower
+  name: NW-S lower half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_nw_s_l.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltNWSLower
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltNEWUpper
+  name: NE-W upper half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_ne_w_u.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltNEWUpper
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltSENUpper
+  name: SE-N upper half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_se_n_u.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltSENUpper
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltSWEUpper
+  name: SW-E upper half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_sw_e_u.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltSWEUpper
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingHalfTiltNWSUpper
+  name: NW-S upper half-tilt plating
+  category: PlatingTiles
+  sprite: /Textures/_Mono/Tiles/plating/script/halftilt_nw_s_u.png
+  mode: ConstructTile
+  prototype: PlatingHalfTiltNWSUpper
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1

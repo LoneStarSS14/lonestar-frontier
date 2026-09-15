@@ -6,6 +6,7 @@
   - StationRepClothingUniformJumpsuitSr
   - StationRepClothingUniformJumpskirtSr
   - StationRepClothingUniformJumpsuitMilitarySr
+  - StationRepClothingBunnysuitSR # LoneStar
   fallbacks:
   - StationRepClothingUniformJumpsuitSr
   - StationRepClothingUniformJumpskirtSr
@@ -21,6 +22,7 @@
   - StationRepClothingOuterJacketSr
   - ContractorClothingOuterCoatExpensive #We let them drip out a little if they want
   - ContractorClothingOuterCoatSpaceAsshole
+  - StationRepClothingBunnyJacketSR # LoneStar
 
 - type: loadoutGroup
   id: StationRepBackpack
@@ -42,6 +44,7 @@
   loadouts:
   - StationRepClothingHeadHatSrCap
   - StationRepClothingHeadHatSrBeret
+  - StationRepClothingBunnyEarsSR #LoneStar
   subgroups:
   - ContractorHead
 
@@ -73,6 +76,7 @@
   loadouts:
   - StationRepClothingNeckCloakSr
   - StationRepClothingNeckMantleSr
+  - StationRepClothingBowtieSR # LoneStar
 
 - type: loadoutGroup
   id: StationRepPDA

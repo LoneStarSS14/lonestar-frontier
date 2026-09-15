@@ -1,0 +1,63 @@
+- type: constructionGraph
+  id: Mirror
+  start: start
+  graph:
+    - node: start
+      actions:
+      - !type:GivePrototype
+        prototype: SheetSteel1
+        amount: 2
+      - !type:GivePrototype
+        prototype: IngotSilver1
+        amount: 2
+      - !type:DeleteEntity {}
+
+      edges:
+        - to: done
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+            - material: Silver
+              amount: 2
+              doAfter: 2
+
+    - node: done
+      entity: Mirror
+      edges:
+        - to: start
+          steps:
+            - tool: Prying
+              doAfter: 3
+
+- type: constructionGraph
+  id: MirrorModern
+  start: start
+  graph:
+    - node: start
+      actions:
+      - !type:GivePrototype
+        prototype: SheetSteel1
+        amount: 2
+      - !type:GivePrototype
+        prototype: IngotSilver1
+        amount: 2
+      - !type:DeleteEntity {}
+
+      edges:
+        - to: done
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+            - material: Silver
+              amount: 2
+              doAfter: 2
+
+    - node: done
+      entity: MirrorModern
+      edges:
+        - to: start
+          steps:
+            - tool: Prying
+              doAfter: 3

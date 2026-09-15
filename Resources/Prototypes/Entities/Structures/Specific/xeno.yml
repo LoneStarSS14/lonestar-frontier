@@ -40,7 +40,7 @@
           - FullTileMask
         layer:
           - WallLayer
-        density: 1000
+        density: 60 # LoneStar: 1000->60
   - type: Destructible
     thresholds:
       - trigger:

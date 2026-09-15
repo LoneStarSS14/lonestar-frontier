@@ -80,13 +80,13 @@
     jumpsuit: CoolCoyoteClothesBlackDress
 
 - type: loadout
-  id: LoadoutCoolCoyoteClothesBlackNGold
+  id: LoadoutClothingUniformJumpsuitBlackNGold
   price: 0
 #  effects:
 #  - !type:GroupLoadoutEffect
 #    proto: ContractorT1
   equipment:
-    jumpsuit: CoolCoyoteClothesBlackNGold
+    jumpsuit: ClothingUniformJumpsuitBlackNGold
 
 - type: loadout
   id: LoadoutCoolCoyoteClothesBloodshot

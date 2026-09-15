@@ -1,0 +1,56 @@
+#region clothes
+
+- type: entity
+  parent: BunnysuitBase
+  id: BunnysuitSR
+  name: station representative bunny suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/sr.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/sr.rsi
+
+- type: entity
+  parent: BunnyJacketBase
+  id: BunnyJacketSR
+  name: station representative's bunnysuit jacket
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Jackets/sr.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Jackets/sr.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsSR
+  name: station representative's bunny ears
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/sr.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/sr.rsi
+
+- type: entity
+  parent: BowtieBase
+  id: BowtieSR
+  name: station representative's bowtie
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/sr.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/sr.rsi
+
+#region box
+- type: entity
+  parent: BunnysuitBox
+  id: BunnysuitBoxSR
+  name: station representative's bunnysuit box
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BunnysuitSR
+        - id: BunnyJacketSR
+        - id: BowtieSR
+        - id: BunnyEarsSR

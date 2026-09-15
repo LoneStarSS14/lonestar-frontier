@@ -24,3 +24,12 @@ construction-ghost-stairs-white = white stairs
 construction-ghost-stairs-white-stage = white stairs (stage)
 construction-ghost-stairs-dark = dark stairs
 construction-ghost-stairs-dark-stage = dark stairs (stage)
+
+## Flipped Windoors
+
+construction-ghost-windoor-flipped = windoor (flipped)
+construction-ghost-windoor-secure-flipped = secure windoor (flipped)
+construction-ghost-windoor-plasma-flipped = plasma windoor (flipped)
+construction-ghost-windoor-plasma-secure-flipped = secure plasma windoor (flipped)
+construction-ghost-windoor-uranium-flipped = uranium windoor (flipped)
+construction-ghost-windoor-uranium-secure-flipped = secure uranium windoor (flipped)

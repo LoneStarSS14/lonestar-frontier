@@ -8,7 +8,7 @@
     time: 108000
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 172800 # 48 hours
+    time: 28800 # 8 hours
   startingGear: PublicAffairGear
   icon: "JobIconPublicAffairsLiaison"
   supervisors: job-supervisors-cadet

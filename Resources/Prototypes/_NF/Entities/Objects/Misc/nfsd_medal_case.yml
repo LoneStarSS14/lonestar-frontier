@@ -3,7 +3,7 @@
   - MedalCase
   - BaseC4Contraband
   id: MedalCaseNfsd
-  name: NFSD medal case
+  name: LSRD medal case # Lonestar changes NFSD -> LSRD
   description: This polished oak case hides medals to be given for distinguished service.
   components:
   - type: Sprite

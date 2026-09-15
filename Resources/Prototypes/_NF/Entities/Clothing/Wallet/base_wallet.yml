@@ -38,6 +38,7 @@
       - IdCard
       tags:
       - Ring
+      - ConcealableWeapon
     blacklist:
       tags:
       - Book

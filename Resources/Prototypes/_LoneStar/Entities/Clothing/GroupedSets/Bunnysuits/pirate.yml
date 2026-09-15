@@ -1,0 +1,56 @@
+#region clothes
+
+- type: entity
+  parent: BunnysuitBase
+  id: BunnysuitPirate
+  name: pirate bunny suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/pirate.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/pirate.rsi
+
+- type: entity
+  parent: BunnyJacketBase
+  id: BunnyJacketPirate
+  name: pirate bunnysuit jacket
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Jackets/pirate.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Jackets/pirate.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsPirate
+  name: pirate bunny ears
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/pirate.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/pirate.rsi
+
+- type: entity
+  parent: BowtieBase
+  id: BowtiePirate
+  name: pirate bowtie
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/pirate.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/pirate.rsi
+
+#region box
+- type: entity
+  parent: BunnysuitBox
+  id: BunnysuitBoxpirate
+  name: pirate bunnysuit box
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BunnysuitPirate
+        - id: BunnyJacketPirate
+        - id: BowtiePirate
+        - id: BunnyEarsPirate

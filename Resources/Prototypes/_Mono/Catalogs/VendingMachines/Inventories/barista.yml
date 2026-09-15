@@ -21,9 +21,9 @@
     DrinkTeapotEmpty: 4
     DrinkTeaGlassEmpty: 8
     ChemistryHotplateFlatpack: 5
-    FoodBoxBiscuitSimple: 2
-    FoodBoxBiscuitOatmeal: 2
-    FoodBoxBiscuitSugar: 2
+    # FoodBoxBiscuitSimple: 2 # LoneStar, Cheap free food, really common to find.
+    # FoodBoxBiscuitOatmeal: 2
+    # FoodBoxBiscuitSugar: 2
 # removed the paper tea written guide because i cant find it.
   contrabandInventory:
     DrinkMugRainbow: 1

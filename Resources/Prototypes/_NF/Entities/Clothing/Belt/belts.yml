@@ -76,26 +76,26 @@
 - type: entity
   parent: [ BaseC4ContrabandUnredeemable, ClothingBeltAssault, ContentsExplosionResistanceBase ] # Coyote: ContentsExplosionResistanceBase added
   id: ClothingBeltNfsd
-  name: NFSD belt
+  name: LSRD belt # Lonestar changes NFSD -> LSRD
   description: A tactical assault belt.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Belt/nfsd_belt.rsi
+    sprite: _LoneStar/Clothing/Belt/lsrd_belt.rsi
   - type: Clothing
-    sprite: _NF/Clothing/Belt/nfsd_belt.rsi
+    sprite: _LoneStar/Clothing/Belt/lsrd_belt.rsi
   - type: ExplosionResistance # Coyote: Add content explosion resistance to NFSD belts and webbings
     damageCoefficient: 0.1 # Coyote: Add content explosion resistance to NFSD belts and webbings
 
 - type: entity
   parent: [ BaseC4ContrabandUnredeemable, ClothingBeltSecurityWebbing, ContentsExplosionResistanceBase ] # Coyote: ContentsExplosionResistanceBase added
   id: ClothingBeltNfsdWebbing
-  name: NFSD webbing
+  name: LSRD webbing # Lonestar changes NFSD -> LSRD
   description: A tactical assault webbing.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Belt/nfsd_webbing.rsi
+    sprite: _LoneStar/Clothing/Belt/lsrd_webbing.rsi
   - type: Clothing
-    sprite: _NF/Clothing/Belt/nfsd_webbing.rsi
+    sprite: _LoneStar/Clothing/Belt/lsrd_webbing.rsi
   - type: CatWearable
   - type: ExplosionResistance # Coyote: Add content explosion resistance to NFSD belts and webbings
     damageCoefficient: 0.1 # Coyote: Add content explosion resistance to NFSD belts and webbings
