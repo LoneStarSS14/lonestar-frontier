@@ -40,7 +40,7 @@
   id: BorgGear
   equipment:
     id: ContractorPDA
-    ears: ClothingHeadsetMedicalScience #LS Edit. Move cyborgs to using headsets.
+    ears: ClothingHeadsetBorgs #LS Edit. Move cyborgs to using unique headsets.
 
 - type: chameleonOutfit
   id: BorgChameleonOutfit
