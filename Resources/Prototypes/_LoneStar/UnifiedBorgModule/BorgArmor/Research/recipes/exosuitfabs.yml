@@ -1,0 +1,42 @@
+- type: latheRecipe
+  id: BorgArmorMk1
+  result: SyntheticBorgArmorLight
+  completetime: 15
+  materials:
+    Steel: 1000
+    Plastic: 750
+    Gold: 250
+
+- type: latheRecipe
+  id: BorgArmorMk2
+  result: SyntheticBorgArmorMedium
+  completetime: 30
+  materials:
+    Steel: 1750
+    Plastic: 950
+    Uranium: 500 
+    Silver: 500
+
+- type: latheRecipe
+  id: BorgArmorMk3
+  result: SyntheticBorgArmorHeavy
+  completetime: 30
+  materials:
+    Steel: 2500
+    Plastic: 1000
+    Uranium: 750
+    Silver: 1500
+    Gold: 750
+
+
+#Controls above Lathe Recipes.
+- type: latheRecipePack
+  id: BorgArmorBase
+  recipes:
+  - BorgArmorMk1
+  - BorgArmorMk2
+
+- type: latheRecipePack
+  id: BorgArmorPhysADV
+  recipes:
+  - BorgArmorMk3
