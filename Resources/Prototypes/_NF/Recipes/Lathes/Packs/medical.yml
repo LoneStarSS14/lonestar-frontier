@@ -20,6 +20,11 @@
   - Ointment
   - Gauze
   - Tourniquet
+  
+- type: latheRecipePack
+  id: NFMercenaryTopicalsStatic
+  recipes:
+  - GauzeMerc
 
 - type: latheRecipePack
   id: NFMedicalClothingStatic
