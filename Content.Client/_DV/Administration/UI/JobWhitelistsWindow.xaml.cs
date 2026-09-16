@@ -25,7 +25,6 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
 
     public Action<ProtoId<JobPrototype>, bool>? OnSetJob;
     public Action<ProtoId<GhostRolePrototype>, bool>? OnSetGhostRole; // Frontier
-    public Action<bool>? OnSetGlobal; // Frontier
 
     public JobWhitelistsWindow()
     {
@@ -35,11 +34,6 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
         PlayerName.Text = "???";
         InitializeTierButtons();
 
-        // Frontier: global whitelist button
-        Global.Text = Loc.GetString("player-panel-global-whitelist");
-        Global.OnPressed += _ => OnSetGlobal?.Invoke(Global.Pressed);
-        Global.Modulate = Color.FromHex("#f0c65d");
-        // End Frontier
     }
 
     private void InitializeTierButtons()
@@ -76,10 +70,6 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
     {
         PlayerName.Text = state.PlayerName;
 
-        // Frontier: global whitelist
-        Global.Pressed = state.GlobalWhitelist;
-        // End Frontier
-
         Departments.RemoveAllChildren();
         foreach (var proto in _proto.EnumeratePrototypes<DepartmentPrototype>())
         {
@@ -88,7 +78,7 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
                 continue;
             // End Frontier
 
-            var panel = new DepartmentWhitelistPanel(proto, _proto, state.Whitelists, state.GlobalWhitelist);
+            var panel = new DepartmentWhitelistPanel(proto, _proto, state.Whitelists);
             panel.OnSetJob += (id, whitelisting) => OnSetJob?.Invoke(id, whitelisting);
             Departments.AddChild(panel);
         }
@@ -100,7 +90,7 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
             if (proto.Whitelisted)
                 ghostRoles.Add(proto.ID);
         }
-        var ghostRolePanel = new GhostRoleSetWhitelistPanel(ghostRoles, Loc.GetString("player-panel-ghost-role-whitelists"), Color.FromHex("#71f0ca"), _proto, state.GhostRoleWhitelists, state.GlobalWhitelist);
+        var ghostRolePanel = new GhostRoleSetWhitelistPanel(ghostRoles, Loc.GetString("player-panel-ghost-role-whitelists"), Color.FromHex("#71f0ca"), _proto, state.GhostRoleWhitelists);
         ghostRolePanel.OnSetGhostRole += (id, whitelisting) => OnSetGhostRole?.Invoke(id, whitelisting);
         GhostRoles.AddChild(ghostRolePanel);
         // End Frontier

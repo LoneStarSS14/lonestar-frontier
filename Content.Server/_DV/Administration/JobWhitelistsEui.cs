@@ -29,7 +29,6 @@ public sealed class JobWhitelistsEui : BaseEui
 
     public HashSet<ProtoId<JobPrototype>> Whitelists = new();
     public HashSet<ProtoId<GhostRolePrototype>> GhostRoleWhitelists = new(); // Frontier
-    public bool GlobalWhitelist = false;
 
     public JobWhitelistsEui(NetUserId playerId, string playerName)
     {
@@ -52,14 +51,12 @@ public sealed class JobWhitelistsEui : BaseEui
                 GhostRoleWhitelists.Add(id); // Frontier
         }
 
-        GlobalWhitelist = await _db.GetWhitelistStatusAsync(PlayerId); // Frontier: get global whitelist
-
         StateDirty();
     }
 
     public override EuiStateBase GetNewState()
     {
-        return new JobWhitelistsEuiState(PlayerName, Whitelists, GhostRoleWhitelists, GlobalWhitelist);
+        return new JobWhitelistsEuiState(PlayerName, Whitelists, GhostRoleWhitelists);
     }
 
     public override void HandleMessage(EuiMessageBase msg)
@@ -111,22 +108,6 @@ public sealed class JobWhitelistsEui : BaseEui
                 {
                     _jobWhitelist.RemoveWhitelist(PlayerId, ghostRoleArgs.Role);
                     GhostRoleWhitelists.Remove(ghostRoleArgs.Role);
-                }
-                break;
-            case SetGlobalWhitelistMessage:
-                var globalArgs = (SetGlobalWhitelistMessage)msg;
-
-                added = globalArgs.Whitelisting;
-                role = "all roles";
-                if (added)
-                {
-                    _jobWhitelist.AddGlobalWhitelist(PlayerId);
-                    GlobalWhitelist = true;
-                }
-                else
-                {
-                    _jobWhitelist.RemoveGlobalWhitelist(PlayerId);
-                    GlobalWhitelist = false;
                 }
                 break;
             default:
