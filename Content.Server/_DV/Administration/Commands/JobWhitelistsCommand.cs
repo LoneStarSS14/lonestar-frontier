@@ -40,6 +40,6 @@ public sealed class JobWhitelistsCommand : LocalizedCommands
 
         var ui = new JobWhitelistsEui(located.UserId, located.Username);
         _eui.OpenEui(ui, player);
-        await ui.LoadWhitelists();
+        await ui.LoadWhitelists(); // LoneStar, await.
     }
 }

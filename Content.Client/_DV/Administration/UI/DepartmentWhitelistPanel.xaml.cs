@@ -13,7 +13,7 @@ public sealed partial class DepartmentWhitelistPanel : PanelContainer
 {
     public Action<ProtoId<JobPrototype>, bool>? OnSetJob;
 
-    public DepartmentWhitelistPanel(DepartmentPrototype department, IPrototypeManager proto, HashSet<ProtoId<JobPrototype>> whitelists)
+    public DepartmentWhitelistPanel(DepartmentPrototype department, IPrototypeManager proto, HashSet<ProtoId<JobPrototype>> whitelists) // LoneStar, removed
     {
         RobustXamlLoader.Load(this);
 
@@ -37,7 +37,7 @@ public sealed partial class DepartmentWhitelistPanel : PanelContainer
             if (!jobProto.Whitelisted)
                 button.Modulate = grey; // Let admins know whitelisting this job is only for futureproofing.
             button.Pressed = whitelists.Contains(id);
-            button.OnPressed += _ => OnSetJob?.Invoke(thisJob, button.Pressed);
+            button.OnPressed += _ => OnSetJob?.Invoke(thisJob, button.Pressed); // LoneStar, removed
             JobsContainer.AddChild(button);
 
             allWhitelisted &= button.Pressed;
@@ -49,11 +49,28 @@ public sealed partial class DepartmentWhitelistPanel : PanelContainer
         Department.Text = Loc.GetString(department.Name);
         Department.Modulate = department.Color;
         Department.Pressed = allWhitelisted;
-        Department.OnPressed += args => OnDepartmentPressed(department, proto, whitelists);
+        Department.OnPressed += args => OnDepartmentPressed(department, proto, whitelists); // LoneStar removed
     }
+
+    // // Frontier: global whitelist handling // LoneStar, removed
+    // private void OnButtonPressed(ProtoId<JobPrototype> thisJob, CheckBox button, bool globalWhitelist)
+    // {
+    //     if (globalWhitelist)
+    //         button.Pressed = true; // Force the button on.
+    //     else
+    //         OnSetJob?.Invoke(thisJob, button.Pressed);
+    // }
 
     private void OnDepartmentPressed(DepartmentPrototype department, IPrototypeManager proto, HashSet<ProtoId<JobPrototype>> whitelists)
     {
+        // // Frontier: global override // LoneStar, removed
+        // if (globalWhitelist)
+        // {
+        //     Department.Pressed = true;
+        //     return;
+        // }
+        // // End Frontier: global override
+
         foreach (var id in department.Roles)
         {
             // only request to whitelist roles that aren't already whitelisted, and vice versa - Frontier: roles must be whitelisted
@@ -61,4 +78,5 @@ public sealed partial class DepartmentWhitelistPanel : PanelContainer
                 OnSetJob?.Invoke(id, Department.Pressed);
         }
     }
+    // End Frontier
 }

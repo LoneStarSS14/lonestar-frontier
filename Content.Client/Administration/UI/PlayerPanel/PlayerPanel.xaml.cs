@@ -19,6 +19,7 @@ public sealed partial class PlayerPanel : FancyWindow
     public event Action<NetUserId?>? OnAhelp;
     public event Action<string?>? OnKick;
     public event Action<NetUserId?>? OnOpenBanPanel;
+    // public event Action<NetUserId?, bool>? OnWhitelistToggle; // LoneStar, removed
     public event Action? OnFollow;
     public event Action? OnFreezeAndMuteToggle;
     public event Action? OnFreeze;
@@ -29,6 +30,8 @@ public sealed partial class PlayerPanel : FancyWindow
 
     public NetUserId? TargetPlayer;
     public string? TargetUsername;
+    // private bool _isWhitelisted; // LoneStar, removed
+
     public PlayerPanel(IClientAdminManager adminManager)
     {
         RobustXamlLoader.Load(this);
@@ -40,6 +43,12 @@ public sealed partial class PlayerPanel : FancyWindow
         NotesButton.OnPressed += _ => OnOpenNotes?.Invoke(TargetPlayer);
         ShowBansButton.OnPressed += _ => OnOpenBans?.Invoke(TargetPlayer);
         AhelpButton.OnPressed += _ => OnAhelp?.Invoke(TargetPlayer);
+        // LoneStar, removed
+        // WhitelistToggle.OnPressed += _ =>
+        // {
+        //     OnWhitelistToggle?.Invoke(TargetPlayer, _isWhitelisted);
+        //     SetWhitelisted(!_isWhitelisted);
+        // };
         FollowButton.OnPressed += _ => OnFollow?.Invoke();
         FreezeButton.OnPressed += _ => OnFreeze?.Invoke();
         FreezeAndMuteToggleButton.OnPressed += _ => OnFreezeAndMuteToggle?.Invoke();
@@ -55,6 +64,23 @@ public sealed partial class PlayerPanel : FancyWindow
         Title = Loc.GetString("player-panel-title", ("player", player));
         PlayerName.Text = Loc.GetString("player-panel-username", ("player", player));
     }
+
+    // LoneStar, removed
+    // public void SetWhitelisted(bool? whitelisted)
+    // {
+    //     if (whitelisted == null)
+    //     {
+    //         Whitelisted.Text = null;
+    //         WhitelistToggle.Visible = false;
+    //     }
+    //     else
+    //     {
+    //         Whitelisted.Text = Loc.GetString("player-panel-whitelisted");
+    //         WhitelistToggle.Text = whitelisted.Value ? Loc.GetString("player-panel-true") : Loc.GetString("player-panel-false");
+    //         WhitelistToggle.Visible = true;
+    //         _isWhitelisted = whitelisted.Value;
+    //     }
+    // }
 
     public void SetBans(int? totalBans, int? totalRoleBans)
     {
@@ -103,6 +129,8 @@ public sealed partial class PlayerPanel : FancyWindow
         KickButton.Disabled = !_adminManager.CanCommand("kick");
         NotesButton.Disabled = !_adminManager.CanCommand("adminnotes");
         ShowBansButton.Disabled = !_adminManager.CanCommand("banlist");
+        // WhitelistToggle.Disabled = // LoneStar, removed
+        //     !(_adminManager.CanCommand("whitelistadd") && _adminManager.CanCommand("whitelistremove"));
         LogsButton.Disabled = !_adminManager.CanCommand("adminlogs");
         RejuvenateButton.Disabled = !_adminManager.HasFlag(AdminFlags.Debug);
         DeleteButton.Disabled = !_adminManager.HasFlag(AdminFlags.Debug);

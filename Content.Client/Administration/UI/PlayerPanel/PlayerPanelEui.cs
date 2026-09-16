@@ -28,6 +28,12 @@ public sealed class PlayerPanelEui : BaseEui
         PlayerPanel.OnOpenBanPanel += id => _console.ExecuteCommand($"banpanel \"{id}\"");
         PlayerPanel.OnOpenBans += id => _console.ExecuteCommand($"banlist \"{id}\"");
         PlayerPanel.OnAhelp += id => _console.ExecuteCommand($"openahelp \"{id}\"");
+        // LoneStar
+        // PlayerPanel.OnWhitelistToggle += (id, whitelisted) =>
+        // {
+        //     _console.ExecuteCommand(whitelisted ? $"whitelistremove \"{id}\"" : $"whitelistadd \"{id}\"");
+        // };
+
         PlayerPanel.OnFreezeAndMuteToggle += () => SendMessage(new PlayerPanelFreezeMessage(true));
         PlayerPanel.OnFreeze += () => SendMessage(new PlayerPanelFreezeMessage());
         PlayerPanel.OnLogs += () => SendMessage(new PlayerPanelLogsMessage());
@@ -60,6 +66,7 @@ public sealed class PlayerPanelEui : BaseEui
         PlayerPanel.SetPlaytime(s.Playtime);
         PlayerPanel.SetBans(s.TotalBans, s.TotalRoleBans);
         PlayerPanel.SetNotes(s.TotalNotes);
+        // PlayerPanel.SetWhitelisted(s.Whitelisted); // LoneStar, removed
         PlayerPanel.SetSharedConnections(s.SharedConnections);
         PlayerPanel.SetFrozen(s.CanFreeze, s.Frozen);
         PlayerPanel.SetAhelp(s.CanAhelp);

@@ -12,13 +12,17 @@ public sealed class JobWhitelistsEuiState : EuiStateBase
     public string PlayerName;
     public HashSet<ProtoId<JobPrototype>> Whitelists;
     public HashSet<ProtoId<GhostRolePrototype>> GhostRoleWhitelists;
-    public JobWhitelistsEuiState(string playerName, HashSet<ProtoId<JobPrototype>> whitelists, HashSet<ProtoId<GhostRolePrototype>> ghostRoleWhitelists)
+    // public bool GlobalWhitelist; // LoneStar
+
+    public JobWhitelistsEuiState(string playerName, HashSet<ProtoId<JobPrototype>> whitelists, HashSet<ProtoId<GhostRolePrototype>> ghostRoleWhitelists) // LoneStar, removed global bool
     {
         PlayerName = playerName;
         Whitelists = whitelists;
         GhostRoleWhitelists = ghostRoleWhitelists;
+        // GlobalWhitelist = globalWhitelist; // LoneStar
     }
 }
+
 /// <summary>
 /// Tries to add or remove a whitelist of a job for a player.
 /// </summary>
@@ -51,3 +55,17 @@ public sealed class SetGhostRoleWhitelistedMessage : EuiMessageBase
     }
 }
 
+// LoneStar: removed
+// /// <summary>
+// /// Frontier: tries to add or remove a global whitelist for a player.
+// /// </summary>
+// [Serializable, NetSerializable]
+// public sealed class SetGlobalWhitelistMessage : EuiMessageBase
+// {
+//     public bool Whitelisting;
+//
+//     public SetGlobalWhitelistMessage(bool whitelisting)
+//     {
+//         Whitelisting = whitelisting;
+//     }
+// }

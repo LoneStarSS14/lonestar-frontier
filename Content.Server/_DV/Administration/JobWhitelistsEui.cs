@@ -29,6 +29,7 @@ public sealed class JobWhitelistsEui : BaseEui
 
     public HashSet<ProtoId<JobPrototype>> Whitelists = new();
     public HashSet<ProtoId<GhostRolePrototype>> GhostRoleWhitelists = new(); // Frontier
+    // public bool GlobalWhitelist = false; // LoneStar
 
     public JobWhitelistsEui(NetUserId playerId, string playerName)
     {
@@ -40,7 +41,7 @@ public sealed class JobWhitelistsEui : BaseEui
         PlayerName = playerName;
     }
 
-    public async Task LoadWhitelists()
+    public async Task LoadWhitelists() // LoneStar
     {
         var jobs = await _db.GetJobWhitelists(PlayerId.UserId);
         foreach (var id in jobs)
@@ -51,12 +52,14 @@ public sealed class JobWhitelistsEui : BaseEui
                 GhostRoleWhitelists.Add(id); // Frontier
         }
 
+        // GlobalWhitelist = await _db.GetWhitelistStatusAsync(PlayerId); // Frontier: get global whitelist // LoneStar
+
         StateDirty();
     }
 
     public override EuiStateBase GetNewState()
     {
-        return new JobWhitelistsEuiState(PlayerName, Whitelists, GhostRoleWhitelists);
+        return new JobWhitelistsEuiState(PlayerName, Whitelists, GhostRoleWhitelists); // LoneStar
     }
 
     public override void HandleMessage(EuiMessageBase msg)
@@ -110,6 +113,23 @@ public sealed class JobWhitelistsEui : BaseEui
                     GhostRoleWhitelists.Remove(ghostRoleArgs.Role);
                 }
                 break;
+            // LoneStar, removed
+            // case SetGlobalWhitelistMessage:
+            //     var globalArgs = (SetGlobalWhitelistMessage)msg;
+
+            //     added = globalArgs.Whitelisting;
+            //     role = "all roles";
+            //     if (added)
+            //     {
+            //         _jobWhitelist.AddGlobalWhitelist(PlayerId);
+            //         GlobalWhitelist = true;
+            //     }
+            //     else
+            //     {
+            //         _jobWhitelist.RemoveGlobalWhitelist(PlayerId);
+            //         GlobalWhitelist = false;
+            //     }
+            //     break;
             default:
                 return;
         }
