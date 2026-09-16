@@ -14,7 +14,7 @@
 
 - type: entity
   abstract: true
-  parent: [ ClothingNeckFoldableBase, BaseBowtie ]
+  parent: [ BaseBowtie, ClothingNeckFoldableBase]
   id: BaseBowtieFoldable
   components:
   - type: Sprite
