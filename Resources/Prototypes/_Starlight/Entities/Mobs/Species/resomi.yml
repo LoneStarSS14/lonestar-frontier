@@ -126,6 +126,7 @@
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ] # LoneStar
+    - map: [ "beltalt" ] # LoneStar
     - map: [ "outerClothing" ] # LoneStar
     - map: [ "back" ] # LoneStar
     - map: [ "neck" ]

@@ -107,6 +107,7 @@
       - map: [ "belt" ] # LoneStar
       - map: [ "id" ]
       - map: [ "outerClothing" ]
+      - map: [ "beltalt" ] # LoneStar
       - map: [ "enum.HumanoidVisualLayers.Tail" ] # Mentioned in moth code: This needs renaming lol.
       - map: [ "back" ]
       - map: [ "enum.HumanoidVisualLayers.UndershirtOverclothes" ]

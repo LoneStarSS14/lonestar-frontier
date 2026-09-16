@@ -93,6 +93,7 @@
     - map: [ "belt" ] # LoneStar
     - map: [ "id" ]
     - map: [ "outerClothing" ]
+    - map: [ "beltalt" ] # LoneStar
     - map: [ "enum.HumanoidVisualLayers.TailOversuit" ] # LoneStar
     - map: [ "back" ]
     - map: [ "neck" ]

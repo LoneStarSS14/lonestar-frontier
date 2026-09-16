@@ -111,6 +111,7 @@
       - map: [ "belt" ] # LoneStar
       - map: [ "id" ]
       - map: [ "outerClothing" ]
+      - map: [ "beltalt" ] # LoneStar
       - map: [ "enum.HumanoidVisualLayers.Tail" ] #in the utopian future we should probably have a wings enum inserted here so everyhting doesn't break
       - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
       - map: [ "back" ]
