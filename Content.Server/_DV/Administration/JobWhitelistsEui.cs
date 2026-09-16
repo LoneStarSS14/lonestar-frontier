@@ -40,7 +40,7 @@ public sealed class JobWhitelistsEui : BaseEui
         PlayerName = playerName;
     }
 
-    public async void LoadWhitelists()
+    public async Task LoadWhitelists()
     {
         var jobs = await _db.GetJobWhitelists(PlayerId.UserId);
         foreach (var id in jobs)
