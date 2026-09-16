@@ -334,9 +334,6 @@
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: ["enum.HumanoidVisualLayers.LFoot"]
     - map: ["enum.HumanoidVisualLayers.RFoot"]
-    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
-    - map: [ "enum.HumanoidVisualLayers.Genital" ]
-    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
     # LoneStar changes start
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.Genital" ]
