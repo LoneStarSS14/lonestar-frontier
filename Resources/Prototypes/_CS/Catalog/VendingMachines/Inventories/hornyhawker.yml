@@ -1,6 +1,9 @@
 - type: vendingMachineInventory
   id: HornyHawkerInventory
   startingInventory:
+    # Keys
+    EncryptionKeyHorny: 4294967295
+    EncryptionKeyExtremeKink: 4294967295
     # Collars
     ClothingNeckCollarBlack: 4294967295
     ClothingNeckCollarBlue: 4294967295

@@ -1,4 +1,3 @@
-#T0
 - type: loadout
   id: ContractorEncryptionKeyTraffic
   encryptionKeys:
@@ -40,3 +39,14 @@
   encryptionKeys:
   - EncryptionKeyCommon
 
+- type: loadout
+  id: ContractorEncryptionKeyExtremeKink
+  price: 20
+  encryptionKeys:
+  - EncryptionKeyExtremeKink
+
+- type: loadout
+  id: ContractorEncryptionKeyHorny
+  price: 20
+  encryptionKeys:
+  - EncryptionKeyHorny
