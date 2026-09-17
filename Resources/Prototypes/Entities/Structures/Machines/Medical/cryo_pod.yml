@@ -116,10 +116,6 @@
   - type: GuideHelp
     guides:
     - Cryogenics
-  # # Coyote: Lets cryo pods fuckin. print slips. why not
-  # - type: HealthAnalyzerPrinter
-  #   printTemplate: PaperWrittenMedicalMedtekPatientRecord
-  # # End Coyote
 
 - type: entity
   parent: BaseMachine
