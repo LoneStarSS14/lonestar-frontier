@@ -416,6 +416,7 @@
     - NfsdPracticeStatic
     - NFHackedMercenaryClothingStatic
     - NFMercenaryMagazineStatic
+    - CSMagazineStatic
     - NFMercenaryArchetypeStatic
     - NFMercenaryArchetypeMeleeStatic
   - type: BlueprintReceiver
