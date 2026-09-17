@@ -551,7 +551,7 @@
 
 - type: entity
   id: ScrapProcessor
-  parent: BaseLatheLube
+  parent: [ BaseLatheLube, BaseLatheMagnet ]
   name: scrap processor
   description: This machine reclaims scrap into usable materials.
   components:
