@@ -78,6 +78,7 @@
   completetime: 1
   materials:
     Cloth: 200
+  applyMaterialDiscount: false
 
 - type: latheRecipe
   id: HandheldHealthAnalyzer
