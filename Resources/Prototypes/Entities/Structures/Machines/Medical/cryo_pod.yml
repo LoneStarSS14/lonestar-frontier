@@ -82,9 +82,9 @@
   - type: AtmosMonitoringConsoleDevice
     navMapBlip: Thermoregulator
   - type: ItemSlots
-    priority: 2 # LoneStar, Eject beaker first.
     slots:
       beakerSlot:
+        priority: 2 # LoneStar, Eject beaker first.
         whitelist:
           components:
             - FitsInDispenser
