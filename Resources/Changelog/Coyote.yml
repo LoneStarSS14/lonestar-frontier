@@ -3804,3 +3804,10 @@ Entries:
   id: 420
   time: '2026-09-17T14:30:48.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/156
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: hacked Merc lathe can print .40 mags now
+  id: 421
+  time: '2026-09-18T05:37:32.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/159
