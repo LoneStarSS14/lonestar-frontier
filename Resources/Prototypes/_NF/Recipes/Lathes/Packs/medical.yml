@@ -22,11 +22,6 @@
   - Tourniquet
   
 - type: latheRecipePack
-  id: NFMercenaryTopicalsStatic
-  recipes:
-  - GauzeMerc
-
-- type: latheRecipePack
   id: NFMedicalClothingStatic
   recipes:
   - UniformScrubsColorBlue
