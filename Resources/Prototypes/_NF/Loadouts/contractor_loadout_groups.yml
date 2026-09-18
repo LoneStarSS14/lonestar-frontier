@@ -945,15 +945,15 @@
   id: ContractorEncryptionKey
   name: loadout-group-contractor-encryption-key
   minLimit: 0
-  maxLimit: 7
+  maxLimit: 7 # Lonestar
   loadouts:
   - ContractorEncryptionKeyTraffic
   - ContractorEncryptionKeyMedical
   - ContractorEncryptionKeyCargo
   - ContractorEncryptionKeyEngineering
   - ContractorEncryptionKeyScience
-  - ContractorEncryptionKeyHorny
-  - ContractorEncryptionKeyExtremeKink
+  - ContractorEncryptionKeyHorny # Wayfarer
+  - ContractorEncryptionKeyExtremeKink # Wayfarer
   fallbacks:
   - ContractorEncryptionKeyTraffic
 
