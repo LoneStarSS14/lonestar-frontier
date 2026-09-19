@@ -32,7 +32,7 @@
         - Bloodpack
         - Gauze
         - Bottle
-        - RepairPatch # Coyote: add
+        - IpcTopcial # LoneStar
   - type: Dumpable
   - type: MagnetPickup
     magnetEnabled: false

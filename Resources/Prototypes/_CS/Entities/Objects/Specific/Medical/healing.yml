@@ -7,7 +7,7 @@
   components:
   - type: Tag
     tags:
-    - RepairPatch
+    - IpcTopcial # LoneStar
   - type: Sprite
     sprite: _CS/Objects/Specific/Medical/robotopicals.rsi
     state: synth_patch
@@ -70,7 +70,7 @@
   components:
   - type: Tag
     tags:
-    - Ointment
+    - IpcTopcial # LoneStar
   - type: Sprite
     sprite: _CS/Objects/Specific/Medical/robotopicals.rsi
     state: robofoam
@@ -116,7 +116,7 @@
   - type: MultiHandedItem
   - type: Tag
     tags:
-    - Brutepack
+    - IpcTopcial # LoneStar
   - type: Sprite
     sprite: _CS/Objects/Specific/Medical/robotopicals.rsi
     state: robofoam_super
