@@ -14,7 +14,7 @@ public sealed class JobWhitelistsEui : BaseEui
         _window.OnClose += () => SendMessage(new CloseEuiMessage());
         _window.OnSetJob += (id, whitelisted) => SendMessage(new SetJobWhitelistedMessage(id, whitelisted));
         _window.OnSetGhostRole += (id, whitelisted) => SendMessage(new SetGhostRoleWhitelistedMessage(id, whitelisted)); // Frontier
-        _window.OnSetGlobal += (whitelisted) => SendMessage(new SetGlobalWhitelistMessage(whitelisted)); // Frontier
+        // _window.OnSetGlobal += (whitelisted) => SendMessage(new SetGlobalWhitelistMessage(whitelisted)); // Frontier // LoneStar, removed
     }
 
     public override void HandleState(EuiStateBase state)

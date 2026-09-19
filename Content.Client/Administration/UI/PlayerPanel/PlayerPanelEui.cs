@@ -15,7 +15,7 @@ public sealed class PlayerPanelEui : BaseEui
     [Dependency] private readonly IClientAdminManager _admin = default!;
     [Dependency] private readonly IClipboardManager _clipboard = default!;
 
-    private PlayerPanel PlayerPanel { get;  }
+    private PlayerPanel PlayerPanel { get; }
 
     public PlayerPanelEui()
     {
@@ -28,16 +28,17 @@ public sealed class PlayerPanelEui : BaseEui
         PlayerPanel.OnOpenBanPanel += id => _console.ExecuteCommand($"banpanel \"{id}\"");
         PlayerPanel.OnOpenBans += id => _console.ExecuteCommand($"banlist \"{id}\"");
         PlayerPanel.OnAhelp += id => _console.ExecuteCommand($"openahelp \"{id}\"");
-        PlayerPanel.OnWhitelistToggle += (id, whitelisted) =>
-        {
-            _console.ExecuteCommand(whitelisted ? $"whitelistremove \"{id}\"" : $"whitelistadd \"{id}\"");
-        };
+        // LoneStar
+        // PlayerPanel.OnWhitelistToggle += (id, whitelisted) =>
+        // {
+        //     _console.ExecuteCommand(whitelisted ? $"whitelistremove \"{id}\"" : $"whitelistadd \"{id}\"");
+        // };
 
         PlayerPanel.OnFreezeAndMuteToggle += () => SendMessage(new PlayerPanelFreezeMessage(true));
         PlayerPanel.OnFreeze += () => SendMessage(new PlayerPanelFreezeMessage());
         PlayerPanel.OnLogs += () => SendMessage(new PlayerPanelLogsMessage());
         PlayerPanel.OnRejuvenate += () => SendMessage(new PlayerPanelRejuvenationMessage());
-        PlayerPanel.OnDelete+= () => SendMessage(new PlayerPanelDeleteMessage());
+        PlayerPanel.OnDelete += () => SendMessage(new PlayerPanelDeleteMessage());
         PlayerPanel.OnFollow += () => SendMessage(new PlayerPanelFollowMessage());
         PlayerPanel.OnOpenJobWhitelists += id => _console.ExecuteCommand($"jobwhitelists \"{id}\""); // DeltaV
 
@@ -65,7 +66,7 @@ public sealed class PlayerPanelEui : BaseEui
         PlayerPanel.SetPlaytime(s.Playtime);
         PlayerPanel.SetBans(s.TotalBans, s.TotalRoleBans);
         PlayerPanel.SetNotes(s.TotalNotes);
-        PlayerPanel.SetWhitelisted(s.Whitelisted);
+        // PlayerPanel.SetWhitelisted(s.Whitelisted); // LoneStar, removed
         PlayerPanel.SetSharedConnections(s.SharedConnections);
         PlayerPanel.SetFrozen(s.CanFreeze, s.Frozen);
         PlayerPanel.SetAhelp(s.CanAhelp);
