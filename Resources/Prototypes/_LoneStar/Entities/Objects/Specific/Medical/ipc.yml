@@ -1,0 +1,123 @@
+- type: entity
+  name: repair patch
+  description: A sealed, single-use adhesive patch to patch up damaged areas. For synthetic use only.
+  parent: BaseHealingItem
+  id: RepairPatch
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - IpcTopical
+  - type: Sprite
+    sprite: _CS/Objects/Specific/Medical/robotopicals.rsi
+    state: synth_patch
+  - type: Construction
+    graph: RepairPatch
+    node: repairpatch
+  - type: StaticPrice
+    vendPrice: 3000
+  - type: Healing
+    delay: 2
+    damageContainers:
+    - Silicon
+    - IPC
+    damage:
+      types:
+        Piercing: -20
+        Slash: -20
+        Blunt: -20
+    bloodlossModifier: -8
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: RepairPatch
+    count: 5
+  - type: StackPrice
+    price: 5
+
+- type: entity
+  id: RepairPatch1
+  parent: RepairPatch
+  suffix: Single
+  components:
+  - type: Stack
+    count: 1
+
+- type: entity
+  name: repair spray
+  description: A single-use spray gun used to patch leaks and mend melted or fried areas via an expanding foam. A label reads; "For synthetic use only".
+  parent: BaseHealingItem
+  id: RepairSpray
+  components:
+  - type: Tag
+    tags:
+    - IpcTopical
+  - type: Sprite
+    sprite: _CS/Objects/Specific/Medical/robotopicals.rsi
+    state: robofoam
+  - type: Item
+    shape:
+    - 0,0,1,0
+  - type: StaticPrice
+    vendPrice: 1500
+  - type: Healing
+    delay: 3
+    damageContainers:
+    - Silicon
+    - IPC
+    damage:
+      types:
+        Cold: -45
+        Heat: -45
+        Shock: -45
+        Bloodloss: -30
+    bloodlossModifier: -8
+    modifyBloodLevel: 50
+    healingBeginSound:
+      path: "/Audio/Items/canopen.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/hiss.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+
+- type: entity
+  name: arcadian repair spray
+  description: An unwieldy and large version of the single-use spray gun. A label reads; "For synthetic use only", albeit with a lot more warning symbols, treats all injuries majorly.
+  parent: [ BaseHealingItem, RepairSpray ]
+  id: RepairSprayPlus
+  components:
+  - type: MultiHandedItem
+  - type: Tag
+    tags:
+    - IpcTopical
+  - type: Sprite
+    sprite: _CS/Objects/Specific/Medical/robotopicals.rsi
+    state: robofoam_super
+  - type: Item
+    size: Ginormous
+  - type: Healing
+    delay: 25
+    damageContainers:
+    - Silicon
+    - IPC
+    damage:
+      groups:
+        Brute: -600
+        Burn: -800
+      types:
+        Radiation: -200
+        Bloodloss: -200
+    bloodlossModifier: -25
+    modifyBloodLevel: 100

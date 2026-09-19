@@ -32,7 +32,7 @@
         - Bloodpack
         - Gauze
         - Bottle
-        - IpcTopcial # LoneStar
+        - IpcTopical # LoneStar
   - type: Dumpable
   - type: MagnetPickup
     magnetEnabled: false
