@@ -75,7 +75,7 @@
 - type: latheRecipe
   id: GauzeMerc
   result: Gauze1
-  completetime: 1
+  completetime: 2
   materials:
     Cloth: 200
   applyMaterialDiscount: false
