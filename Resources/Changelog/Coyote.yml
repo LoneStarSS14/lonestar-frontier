@@ -3842,3 +3842,10 @@ Entries:
   id: 423
   time: '2026-09-19T20:11:48.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/161
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Gambling has been made slightly less rigged.
+  id: 424
+  time: '2026-09-19T22:41:40.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/163
