@@ -3,9 +3,12 @@
 
 - type: Tag
   id: ConcealableWeapon
-  
-- type: Tag  
+
+- type: Tag
   id: WhitelistChameleonAdvancedCollar
 
 - type: Tag
   id: WindowDirectional
+
+- type: Tag
+  id: IpcTopical
