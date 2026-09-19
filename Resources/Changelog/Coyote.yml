@@ -3835,3 +3835,10 @@ Entries:
   id: 422
   time: '2026-09-19T20:10:56.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/162
+- author: tenmillimaster
+  changes:
+    - type: Add
+      message: Added gauze back to merc fabs.
+  id: 423
+  time: '2026-09-19T20:11:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/161
