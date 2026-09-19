@@ -36,6 +36,5 @@
     SheetSteel1: 1
   reagents:
     AutoSolder: 10
-    Oxidant: 10
-    Sylexalin: 10
+    Oxidant: 20
   recipeType: MedicalAssembler
