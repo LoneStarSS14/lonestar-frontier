@@ -1,4 +1,3 @@
-#T0
 - type: loadout
   id: ContractorEncryptionKeyTraffic
   encryptionKeys:
@@ -39,4 +38,3 @@
   price: 20
   encryptionKeys:
   - EncryptionKeyCommon
-
