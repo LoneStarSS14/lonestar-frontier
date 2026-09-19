@@ -3811,3 +3811,27 @@ Entries:
   id: 421
   time: '2026-09-18T05:37:32.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/159
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        You can now mix a new IPC chem, auto-nanite, which is found in the
+        synthetic medipen, which has debilitating side effects, but acts like
+        omnizine.
+    - type: Remove
+      message: >-
+        Arcadian repair spray can no longer be crafted, but is a full heal
+        should you happen to get one.
+    - type: Tweak
+      message: All IPC chemical recipes have been changed.
+    - type: Tweak
+      message: >-
+        IPC repair patches now stack to 5, but are also able to fit into
+        medkits/medibags.
+    - type: Fix
+      message: IPC chemicals no longer heal non IPC.
+    - type: Tweak
+      message: All IPC chemicals have had their healing ODs and values changed.
+  id: 422
+  time: '2026-09-19T20:10:56.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/162
