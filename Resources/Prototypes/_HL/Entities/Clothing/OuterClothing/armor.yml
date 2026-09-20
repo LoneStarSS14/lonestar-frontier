@@ -34,7 +34,7 @@
 - type: entity
   parent: ClothingOuterArmoredJacketPMCBlue
   id: ClothingOuterArmoredJacketPMCPunkRandomized
-  name: Punk PMC armored jacket
+  name: punk PMC armored jacket
   suffix: Random visuals
   components:
   - type: Sprite

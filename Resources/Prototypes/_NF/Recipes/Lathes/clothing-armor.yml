@@ -62,26 +62,6 @@
   result: ClothingOuterVestWebMercenaryBlack
 
 - type: latheRecipe
-  id: ClothingOuterArmoredJacketPMCBlue
-  parent: NFBaseArmorRecipe
-  result: ClothingOuterArmoredJacketPMCBlue
-
-- type: latheRecipe
-  id: ClothingOuterArmoredJacketPMCGreen
-  parent: NFBaseArmorRecipe
-  result: ClothingOuterArmoredJacketPMCGreen
-
-- type: latheRecipe
-  id: ClothingOuterArmoredJacketPMCOlive
-  parent: NFBaseArmorRecipe
-  result: ClothingOuterArmoredJacketPMCOlive
-
-- type: latheRecipe
-  id: ClothingOuterArmoredJacketPMCPunkRandomized
-  parent: NFBaseArmorRecipe
-  result: ClothingOuterArmoredJacketPMCPunkRandomized
-
-- type: latheRecipe
   id: ClothingOuterArmorBulletproofNF
   parent: NFBaseArmorRecipe
   result: ClothingOuterArmorBulletproof

@@ -25,42 +25,6 @@
   equipment:
     outerClothing: ClothingOuterVestWebMercenaryBlack
 
-- type: loadout
-  id: MercenaryClothingOuterArmoredJacketPMCBlue
-  hideEffects:
-  - !type:GroupLoadoutEffect
-    proto: NFCoatCapable
-  price: 0
-  equipment:
-    outerClothing: ClothingOuterArmoredJacketPMCBlue
-
-- type: loadout
-  id: MercenaryClothingOuterArmoredJacketPMCGreen
-  hideEffects:
-  - !type:GroupLoadoutEffect
-    proto: NFCoatCapable
-  price: 0
-  equipment:
-    outerClothing: ClothingOuterArmoredJacketPMCGreen
-
-- type: loadout
-  id: MercenaryClothingOuterArmoredJacketPMCOlive
-  hideEffects:
-  - !type:GroupLoadoutEffect
-    proto: NFCoatCapable
-  price: 0
-  equipment:
-    outerClothing: ClothingOuterArmoredJacketPMCOlive
-
-- type: loadout
-  id: MercenaryClothingOuterArmoredJacketPMCPunkRandomized
-  hideEffects:
-  - !type:GroupLoadoutEffect
-    proto: NFCoatCapable
-  price: 0
-  equipment:
-    outerClothing: ClothingOuterArmoredJacketPMCPunkRandomized
-
 - type: loadout # Punkish (Static visuals)
   id: MercenaryClothingOuterArmorPunkGreen
   hideEffects:
