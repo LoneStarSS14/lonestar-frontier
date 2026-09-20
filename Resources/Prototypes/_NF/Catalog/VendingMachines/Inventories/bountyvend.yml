@@ -43,6 +43,9 @@
     ClothingUniformJumpsuitPrivateSec: 3
     ClothingUniformJumpskirtPrivateSec: 3
     ClothingOuterVestWebMercenaryBlack: 3
+    ClothingOuterArmoredJacketPMCBlue: 3
+    ClothingOuterArmoredJacketPMCGreen: 3
+    ClothingOuterArmoredJacketPMCOlive: 3
     ClothingOuterEVASuitPrivateSec: 4
     ClothingBeltSecurity: 3
     ClothingBeltMilitaryWebbing: 3
@@ -123,6 +126,9 @@
     ClothingUniformJumpsuitPrivateSec: 4294967295
     ClothingUniformJumpskirtPrivateSec: 4294967295
     ClothingOuterVestWebMercenaryBlack: 3
+    ClothingOuterArmoredJacketPMCBlue: 3
+    ClothingOuterArmoredJacketPMCGreen: 3
+    ClothingOuterArmoredJacketPMCOlive: 3
     ClothingOuterEVASuitPrivateSec: 4294967295
     ClothingBeltSecurity: 4294967295
     ClothingBeltMilitaryWebbing: 4294967295

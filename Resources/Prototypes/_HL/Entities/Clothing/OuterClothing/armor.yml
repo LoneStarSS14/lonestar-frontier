@@ -30,3 +30,31 @@
     sprite: _HL/Clothing/OuterClothing/pmc_armored_jacket_olive.rsi
   - type: Clothing
     sprite: _HL/Clothing/OuterClothing/pmc_armored_jacket_olive.rsi
+
+- type: entity
+  parent: ClothingOuterArmoredJacketPMCBlue
+  id: ClothingOuterArmoredJacketPMCPunkRandomized
+  name: Punk PMC armored jacket
+  suffix: Random visuals
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/OuterClothing/pmc_armored_jacket_punk.rsi
+    layers:
+    - state: equipped-OUTERCLOTHING
+      map: [ "armor_main" ]
+    - state: equipped-OUTERCLOTHING-detail
+      map: [ "armor_detail" ]
+  - type: Clothing
+    sprite: _HL/Clothing/OuterClothing/pmc_armored_jacket_punk.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+        map: [ "armor_main" ]
+      - state: equipped-OUTERCLOTHING-detail
+        map: [ "armor_detail" ]
+  - type: RandomSprite
+    available:
+    - armor_main:
+        equipped-OUTERCLOTHING: CyberpunkDark
+      armor_detail:
+        equipped-OUTERCLOTHING-detail: ""

@@ -52,6 +52,15 @@
   equipment:
     outerClothing: ClothingOuterArmoredJacketPMCOlive
 
+- type: loadout
+  id: MercenaryClothingOuterArmoredJacketPMCPunkRandomized
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterArmoredJacketPMCPunkRandomized
+
 - type: loadout # Punkish (Static visuals)
   id: MercenaryClothingOuterArmorPunkGreen
   hideEffects:
