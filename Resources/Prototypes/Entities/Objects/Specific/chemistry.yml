@@ -323,7 +323,7 @@
   - type: SolutionContainerManager
     solutions:
       beaker:
-        maxVol: 1000
+        maxVol: 600 # LoneStar
 
 - type: entity
   name: dropper
@@ -545,7 +545,7 @@
   - type: SolutionContainerManager
     solutions:
       injector:
-        maxVol: 100
+        maxVol: 60 # LoneStar
   - type: Injector
     delay: 2.5
     injectOnly: false

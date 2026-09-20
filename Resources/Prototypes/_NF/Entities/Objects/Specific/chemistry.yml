@@ -56,9 +56,9 @@
   - type: SolutionContainerManager
     solutions:
       beaker:
-        maxVol: 300
+        maxVol: 120 # LoneStar
   - type: SolutionTransfer
-    maxTransferAmount: 300
+    maxTransferAmount: 120 # LoneStar
   - type: Item
     size: Tiny
     sprite: _LoneStar/Objects/Specific/Chemistry/vial_bluespace.rsi # LoneStar
