@@ -3849,3 +3849,18 @@ Entries:
   id: 424
   time: '2026-09-19T22:41:40.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/163
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        new reinforced bottles can now be crafted at autolathes medical techfabs
+        and protolathes, they cannot break and hold 45u of fluid.
+    - type: Tweak
+      message: Bluespace-Vials can now break, and use a new sprite.
+    - type: Tweak
+      message: >-
+        Bluespace fluid containers have had their values changed, beaker
+        [1000u->600u] vial [300u->120u] syringe[100u->60u] jug[1000u->1200u]
+  id: 425
+  time: '2026-09-20T17:05:56.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/165
