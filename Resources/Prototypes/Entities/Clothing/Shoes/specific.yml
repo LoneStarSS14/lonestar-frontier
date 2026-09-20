@@ -110,12 +110,12 @@
     netsync: false
 
 - type: entity
-  parent: [ClothingShoesGaloshes, BaseC1Contraband, ContrabandClothing ] # Frontier: added BaseC3Contraband, ContrabandClothing, Lone Star: added galoshes
+  parent: [ClothingShoesGaloshes, BaseC1Contraband, ContrabandClothing ] # Frontier: added BaseC3Contraband, ContrabandClothing, Lonestar: parented galoshes
   id: ClothingShoesCult
-  name: cult boots #Lone Star
+  name: cult boots #Lonestar
   description: A pair of boots worn by the followers of Nar'Sie, ready to wade in blood.
   components:
-  - type: ItemSlots #Lone Star: added a slot for knives
+  - type: ItemSlots #Lonestar
     slots:
       item:
         name: clothing-boots-sidearm
