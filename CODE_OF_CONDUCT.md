@@ -1,3 +1,5 @@
+The following is the code of conduct of frontier station, which we, LoneStar, unless stated elsewhere, abide by.
+
 # Frontier Station Code of Conduct
 
 Frontier Station's staff and community is made up volunteers from all over the world, working on every aspect of the project - including development, teaching, and hosting integral tools.

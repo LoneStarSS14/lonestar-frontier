@@ -2356,7 +2356,7 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatWholePenguin #Frontier: Penguin<WholePenguin
-      amount: 20 # 3<1 Frontier
+      amount: 1 # LoneStar 1. it makes 1 penguin.
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-bird

@@ -106,34 +106,30 @@
     - map: [ "enum.HumanoidVisualLayers.RHand" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
-    - map: ["socks"] # Coyote
-    - map: ["underpants"] # Coyote
-    - map: ["undershirt"] # Coyote
     - map: [ "enum.HumanoidVisualLayers.RArm" ]
     - map: [ "enum.HumanoidVisualLayers.LArm" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    # LoneStar changes start
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.Genital" ] # Coyote
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
     - shader: StencilClear
       sprite: Mobs/Species/Human/parts.rsi
       state: l_leg
-    - map: [ "jumpsuit" ]
-    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ] # Doesn't work atm, but who knows in the future.
-      color: "#ffffff"
-      sprite: _Starlight/Objects/Misc/handcuffs.rsi
-      state: body-overlay-resomi
-      visible: false
-    - map: [ "id" ]
-    - map: [ "gloves" ]
     - map: [ "shoes" ]
+    - map: [ "jumpsuit" ]
+    - map: [ "shoesalt" ]
+    - map: [ "gloves" ]
+    # LoneStar changes end
     - map: [ "ears" ]
-    - map: [ "outerClothing" ]
     - map: [ "eyes" ]
     - map: [ "belt" ]
+    - map: [ "id" ] # LoneStar
+    - map: [ "beltalt" ] # LoneStar
+    - map: [ "outerClothing" ] # LoneStar
+    - map: [ "back" ] # LoneStar
     - map: [ "neck" ]
-    - map: [ "back" ]
     - map: [ "enum.HumanoidVisualLayers.TailExtras" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
@@ -145,6 +141,11 @@
     - map: [ "head" ]
     - map: [ "pocket1" ]
     - map: [ "pocket2" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ] # LoneStar
+      color: "#ffffff"
+      sprite: _Starlight/Objects/Misc/handcuffs.rsi
+      state: body-overlay-resomi
+      visible: false
     - map: [ "clownedon" ]
       sprite: "_Starlight/Effects/creampie.rsi"
       state: "creampie_resomi"

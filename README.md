@@ -1,20 +1,18 @@
 <div class="header" align="center">
-<img alt="Coyote Sector" height="308" src="Resources/Textures/_CS/Logo/logo.png?raw=true" />
+<img alt="LoneStar Sector" height="308" src="Resources/Textures/_LoneStar/Logo/logo.png?raw=true" />
 </div>
 
-Coyote Sector is a fork of [Frontier Station](https://github.com/new-frontiers-14/frontier-station-14), which itself is a fork of [Space Station 14](https://github.com/space-wizards/space-station-14) that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) engine written in C#.
+LoneStar Sector is a continuation of the now defunct [Coyote Sector](https://github.com/ARF-SS13/coyote-frontier) forking off of [Frontier Station](https://github.com/new-frontiers-14/frontier-station-14), which itself is a fork of [Space Station 14](https://github.com/space-wizards/space-station-14) which runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) engine written in C#.
 
 
-This is the primary repo for Coyote Sector.
-
-If you want to host or create content for Coyote Sector, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
+This is the primary repo for the LoneStar Sector.
 
 ## Links
 
-#### Coyote Sector
+#### LoneStar Sector
 <div class="header" align="center">
 
-[Discord](https://discord.com/invite/m7aJ3aKcnZ)
+[Discord](https://discord.gg/5FVsBUW8zw)
 
 </div>
 
@@ -35,39 +33,37 @@ If you want to host or create content for Coyote Sector, this is the repo you ne
 
 ## Contributing
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of ideas](TBA) that can be done and anybody can pick them up. Don't be afraid to ask for help either!
+We are happy to accept contributions from anybody. The best place to discuss and help with issues is via Discord, Don't be afraid to ask for help!
+Do note our discord is whitelisted largely falls under age restriction.
 
 We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language, consider creating a fork or contributing to a fork.
 
-If you make any contributions, note that any changes made to files belonging to our upstream should be properly marked with comments (see the "Changes to upstream files" section in [CONTRIBUTING.md](CONTRIBUTING.md)).
+If you make any contributions, note that any changes made to files belonging to our upstreams should be properly marked with comments (see the "Changes to upstream files" section in [CONTRIBUTING.md](CONTRIBUTING.md) for examples of such).
 
 ## Building
 
 1. Clone this repo:
 ```shell
-git clone https://github.com/ARF-SS13/coyote-frontier.git
+git clone https://github.com/LoneStarSS14/lonestar-frontier.git
 ```
 2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
-```shell
-cd coyote-frontier
-python RUN_THIS.py
-```
+
 3. Compile the solution:
 
 Build the server using `dotnet build`.
 
 [More detailed instructions on building the project.](https://docs.spacestation14.com/en/general-development/setup.html)
 
+It is best recommended to refer to the above, or to ask for help via discord, especially if it is your first time setting up a repository, there are some youtube guides on doing so also.
+
 ## License
 
 Read [LEGAL.md](LEGAL.md) for legal information regarding code licensing, including a table of attributions for each namespace within the codebase.
 
-Most assets are licensed under CC-BY-SA 3.0 unless stated otherwise. Assets have their license and the copyright in the metadata file. Example.
-
-Code taken from Emberfall was specifically relicensed under MIT terms with [permission from MilonPL](https://github.com/new-frontiers-14/frontier-station-14/pull/3607)
+Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/ARF-SS13/coyote-frontier/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
 [2fca06eaba205ae6fe3aceb8ae2a0594f0effee0](https://github.com/new-frontiers-14/frontier-station-14/commit/2fca06eaba205ae6fe3aceb8ae2a0594f0effee0) was pushed on July 1, 2024 at 16:04 UTC
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/ARF-SS13/coyote-frontier/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
+Code taken from Emberfall was specifically relicensed under MIT terms with [permission from MilonPL](https://github.com/new-frontiers-14/frontier-station-14/pull/3607)
 
 Note that some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.

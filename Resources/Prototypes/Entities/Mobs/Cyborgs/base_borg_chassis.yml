@@ -94,9 +94,11 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
+    - Traffic #LS Edit. Gives them traffic perms without headsets. Will be removed if misused.
     - Binary #LS Edit. Kills all-non binary channels from borgs by default.
   - type: ActiveRadio
     channels:
+    - Traffic #LS Edit. Gives them traffic perms without headsets. Will be removed if misused.
     - Binary #LS Edit. Kills all-non binary channels from borgs by default.
   - type: ZombieImmune
   - type: Cuffable # LS Edit. Cuffable Synths.

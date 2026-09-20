@@ -41,10 +41,8 @@
     interactFailureString: petting-failure-generic-cyborg
   - type: BorgSwitchableType
     inherentRadioChannels:
- #   - Common #LS Disable Start
  # Coyote: Ring ring! We want our borgs to be able to talk in shortband too!
-    #- Traffic
-  #LS Disable End
+    - Traffic
     - Binary
   #End Coyote
   - type: BankAccount # Coyote: Borgs can now interact with bank accounts

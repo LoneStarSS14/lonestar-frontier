@@ -491,3 +491,6 @@ uplink-contraband-lighter-desc = A mystery box guaranteed to contain a syndicate
 
 uplink-smuggler-satchel-name = Smuggler's Satchel
 uplink-smuggler-satchel-desc = A handy, suspicious looking satchel. Just flat enough to fit underneath floor tiles.
+
+uplink-pistol-mackerel-name = Mackerel
+uplink-pistol-mackerel-desc = A highly concealable machine pistol. Fits nicely in your bra!

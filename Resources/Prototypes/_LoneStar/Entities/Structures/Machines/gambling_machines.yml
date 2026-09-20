@@ -104,16 +104,16 @@
         slotmachine_spin:
           True: { visible: true }
           False: { visible: false }
-  - type: SlotMachine # Average payout of 1.27$
+  - type: SlotMachine # Average payout of 2.4$
     spinCost: 250
     smallPrizeAmount: 250
     mediumPrizeAmount: 750
     bigPrizeAmount: 2750
     jackPotPrizeAmount: 12500
     godPotPrize: SpaceCash100000
-    smallWinChance: 0.2
-    mediumWinChance: 0.1
-    bigWinChance: 0.05
+    smallWinChance: 0.5
+    mediumWinChance: 0.125
+    bigWinChance: 0.0625
     jackPotWinChance: 0.01
     godPotWinChance: .0001
 
@@ -138,14 +138,14 @@
         slotmachine_spin:
           True: { visible: true }
           False: { visible: false }
-  - type: SlotMachine # Average payout of -101.8$
+  - type: SlotMachine # Average payout of -31.9$
     spinCost: 1400
     smallPrizeAmount: 250
     mediumPrizeAmount: 750
     bigPrizeAmount: 15000
     jackPotPrizeAmount: 150000
     godPotPrize: SpaceCash150000
-    smallWinChance: 0.4
+    smallWinChance: 0.36
     mediumWinChance: 0.2
     bigWinChance: 0.1
     jackPotWinChance: 0.01
@@ -172,16 +172,16 @@
         slotmachine_spin:
           True: { visible: true }
           False: { visible: false }
-  - type: SlotMachine # Average payout of -3335$
+  - type: SlotMachine # Average payout of -543.2$
     spinCost: 14000
     smallPrizeAmount: 7000
     mediumPrizeAmount: 15000
     bigPrizeAmount: 65000
     jackPotPrizeAmount: 130000
     godPotPrize: SpaceCash1000000
-    smallWinChance: 0.1
-    mediumWinChance: 0.35
-    bigWinChance: 0.075
+    smallWinChance: 0.3
+    mediumWinChance: 0.2
+    bigWinChance: 0.2
     jackPotWinChance: 0.015
     godPotWinChance: 0.0025
 
@@ -267,7 +267,7 @@
         whitelist:
           components:
           - Cash
-  - type: CoinFliper # 38% chance to double, limited at doubling 100k.
+  - type: CoinFliper # 45% chance to double, limited at doubling 10k.
   - type: DoAfter
   - type: Transform
     noRot: false

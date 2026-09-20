@@ -3,15 +3,7 @@
   name: job-name-smuggler
   description: job-description-smuggler
   playTimeTracker: JobSmuggler
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 43200 # 12 hours / 2 shifts
-    - !type:RoleTimeRequirement
-      role: JobPirate # Coyote Changed from JobSmuggler, this way all freelancer roles require the Pirate Whitelist.
-      time: 3600 # 1 hour
-    #- !type:DepartmentTimeRequirement # Coyote: swaps the playtime requirement to literally just be an hour of the role itself.
-    #  department: Security
-    #  time: 10800 # 3 hrs
+  whitelisted: true
   startingGear: SmugglerGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true

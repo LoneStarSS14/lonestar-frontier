@@ -126,7 +126,7 @@
   id: HarpyPurrs
   files:
     - /Audio/Nyanotrasen/Voice/Felinid/cat_purr1.ogg
-    - /Audio/Mecha/sound_mecha_hydraulic.ogg # Frontier
+    # - /Audio/Mecha/sound_mecha_hydraulic.ogg # LoneStar, why...
 
 - type: soundCollection
   id: HarpyRings

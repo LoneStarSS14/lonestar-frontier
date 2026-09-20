@@ -1,0 +1,243 @@
+- type: reagent
+  id: Oxidant
+  name: reagent-name-oxidant
+  group: Biological
+  desc: reagent-desc-oxidant
+  flavor: chalky
+  color: "#5c0000"
+  worksOnTheDead: true
+  recognizable: true
+  physicalDesc: reagent-physical-desc-ferrous
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 2.0
+    Synthetic:
+      effects:
+      - !type:ModifyBloodLevel #Just stick it back in...
+        amount: 0.25
+
+  plantMetabolism:
+    - !type:PlantAdjustToxins
+      amount: 5
+    - !type:PlantAdjustWeeds
+      amount: -5
+    - !type:PlantAdjustHealth
+      amount: -1.5
+
+- type: reagent
+  id: Sylexalin
+  name: reagent-name-sylexalin
+  group: Medicine
+  desc: reagent-desc-sylexalin
+  flavor: chalky
+  color: "#1c3666"
+  worksOnTheDead: true
+  physicalDesc: reagent-physical-desc-crystalline
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Slash: 1
+            Poison: 1
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "generic-reagent-effect-burning-insides" ]
+        probability: 0.33
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+    Synthetic:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Bloodloss: -2
+            Slash: -1
+      - !type:ModifyBloodLevel
+        amount: 1
+
+- type: reagent
+  id: Sylashizine
+  name: reagent-name-sylashizine
+  group: Medicine
+  desc: reagent-desc-sylashizine
+  flavor: chalky
+  color: "#72519c"
+  worksOnTheDead: true
+  physicalDesc: reagent-physical-desc-bubbling
+  metabolisms:
+    Poison:
+      metabolismRate: 0.5
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1.5
+            Radiation: 1.25
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "generic-reagent-effect-burning-insides" ]
+        probability: 0.33
+      - !type:ChemVomit
+        probability: 0.05
+    Synthetic:
+      metabolismRate: 0.1
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Piercing: -0.8
+            Slash: -0.2
+            Radiation: 0.05
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: 0.8
+        conditions:
+        - !type:ReagentThreshold
+          min: 11
+
+- type: reagent
+  id: AutoSolder
+  name: reagent-name-autosolder
+  group: Medicine
+  desc: reagent-desc-autosolder
+  flavor: chalky
+  color: "#294d37"
+  worksOnTheDead: true
+  physicalDesc: reagent-physical-desc-metallic
+  metabolisms:
+    Poison: # Acts like an acid
+      metabolismRate: 3
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1.5
+            Caustic: 6
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "generic-reagent-effect-burning-insides" ]
+        probability: 0.33
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+    Synthetic:
+      metabolismRate: 1.5
+      effects:
+      - !type:ChemHealEyeDamage
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: -1.5
+            Burn: -2
+          types:
+            Radiation: -1.5
+        conditions:
+        - !type:ReagentThreshold
+          max: 3
+      - !type:Emote
+        emote: Boop
+        probability: 0.8
+      # - Overdose
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 4
+        conditions:
+        - !type:ReagentThreshold
+          min: 3.1
+      - !type:Emote
+        emote: Whirr
+        probability: 1
+        conditions:
+        - !type:ReagentThreshold
+          min: 3.1
+      - !type:AdjustReagent
+        reagent: AutoSolder
+        amount: -1
+        conditions:
+        - !type:ReagentThreshold
+          min: 3.1
+
+- type: reagent
+  id: AutoNanite
+  name: reagent-name-autonanite
+  group: Medicine
+  desc: reagent-desc-autonanite
+  flavor: metallic
+  color: "#7e878c"
+  worksOnTheDead: true
+  physicalDesc: reagent-physical-desc-grainy
+  metabolisms:
+    Poison:
+      metabolismRate: 0.5
+      effects:
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+      - !type:AdjustReagent
+        reagent: AutoNanite
+        amount: -1
+        conditions:
+        - !type:ReagentThreshold
+          min: 11
+      - !type:HealthChange
+        damage:
+          types:
+            Blunt: 0.75
+            Piercing: 0.75
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "generic-reagent-effect-burning-insides" ]
+        probability: 0.33
+    Synthetic:
+      metabolismRate: 0.4
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "generic-reagent-effect-prickle" ]
+        probability: 0.33
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: -3
+            Burn: -2
+          types:
+            Radiation: -0.5
+            Bloodloss: -0.5
+        conditions:
+        - !type:ReagentThreshold
+          max: 3
+      - !type:ModifyBloodLevel
+        amount: 0.5
+      - !type:ChemHealEyeDamage
+      - !type:Emote
+        emote: Scream
+        probability: 0.1
+      - !type:Emote
+        emote: Boop
+        probability: 0.05
+      - !type:Emote
+        emote: Beep
+        probability: 0.05
+      - !type:MovespeedModifier
+        statusLifetime: 1.5
+        walkSpeedModifier: 0.4
+        sprintSpeedModifier: 0.4
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        time: 2
+        refresh: true

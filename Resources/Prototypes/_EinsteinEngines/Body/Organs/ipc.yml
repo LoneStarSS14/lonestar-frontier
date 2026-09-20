@@ -28,37 +28,6 @@
       - state: eyeball-l
       - state: eyeball-r
   - type: Organ
-  # hacky fix to let metabolize anything that isn't handled by the heart
-  - type: Metabolizer
-    maxReagents: 5
-    metabolizerTypes: [ Human ]
-    groups:
-    - id: Food
-      rateModifier: 5
-      skipEffects: true
-    - id: Drink
-      rateModifier: 5
-      skipEffects: true
-    - id: Medicine
-      rateModifier: 5
-      skipEffects: true
-    - id: Cryogenic # Frontier
-      rateModifier: 5
-      skipEffects: true
-    - id: Narcotic
-      rateModifier: 5
-      skipEffects: true
-    - id: Alcohol
-      rateModifier: 5
-      skipEffects: true
-    # REVIEW: Should IPCs get affected by aphros?
-    - id: Aphrodisiacs # Coyote: Necessary to detect aphrodisiac injected solutions.
-      rateModifier: 5
-      skipEffects: true
-    - id: AphrodisiacDrinks # Coyote: Necessary to detect aphrodisiac injected solutions.
-      rateModifier: 5
-      skipEffects: true
-    removeEmpty: true
 
 - type: entity
   id: OrganIPCTongue
@@ -90,20 +59,26 @@
     state: heart-on
   - type: Organ
   - type: Metabolizer
-    maxReagents: 2
+    maxReagents: 4 # LoneStar
     metabolizerTypes: [Human]
     groups:
+      # LoneStar start, IPC metabolism group
+      # So that they dont 'fill up' with garbage
+      - id: Medicine
+        skipEffects: true
+      - id: Narcotic
+        skipEffects: true
+      - id: Cryogenic
+        skipEffects: true
+      - id: Food
+        skipEffects: true
+      - id: Drink
+        skipEffects: true
+      - id: Alcohol
+        skipEffects: true
       - id: Poison
-    removeEmpty: true # stopgap for anything missed in the eyes
-  # The heart 'metabolizes' medicines and poisons that aren't filtered out by other organs.
-  # This is done because these chemicals need to have some effect even if they aren't being filtered out of your body.
-  # You're technically 'immune to poison' without a heart, but.. uhh, you'll have bigger problems on your hands.
-
-  # This is fine?
-  # - type: Metabolizer
-  #   maxReagents: 2
-  #   metabolizerTypes: [Human]
-  #   groups:
-  #   - id: Medicine
-  #   - id: Poison
-  #   - id: Narcotic
+        skipEffects: true
+      # What they actually metabolize
+      - id: Gas
+      - id: Synthetic
+      # LoneStar end

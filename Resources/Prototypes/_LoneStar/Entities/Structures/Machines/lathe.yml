@@ -1,0 +1,7 @@
+# Generalized magnet for lathes.
+- type: entity
+  abstract: true
+  id: BaseLatheMagnet
+  components:
+  - type: MaterialStorageMagnetPickup
+    range: 0.30

@@ -84,6 +84,7 @@
   - type: ItemSlots
     slots:
       beakerSlot:
+        priority: 2 # LoneStar, Eject beaker first.
         whitelist:
           components:
             - FitsInDispenser
@@ -116,10 +117,6 @@
   - type: GuideHelp
     guides:
     - Cryogenics
-  # # Coyote: Lets cryo pods fuckin. print slips. why not
-  # - type: HealthAnalyzerPrinter
-  #   printTemplate: PaperWrittenMedicalMedtekPatientRecord
-  # # End Coyote
 
 - type: entity
   parent: BaseMachine

@@ -55,32 +55,30 @@
         # its fine, but its still very stupid that it has to be done like this instead of allowing sprites to just directly insert a stencil clear.
         # sprite refactor when
         state: l_leg
+      - map: ["enum.HumanoidVisualLayers.LFootBehind"]
+      - map: ["enum.HumanoidVisualLayers.RFootBehind"]
+      - map: [ "enum.HumanoidVisualLayers.LFoot" ]
+      - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+      # LoneStar changes start
       - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
       - map: [ "enum.HumanoidVisualLayers.Genital" ]
       - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-      - map: [ "enum.HumanoidVisualLayers.UndershirtUnderclothes" ]
+      - map: [ "shoes" ]
       - map: [ "jumpsuit" ]
-      - map: ["enum.HumanoidVisualLayers.LFootBehind"]
-      - map: ["enum.HumanoidVisualLayers.RFootBehind"]
       - map: [ "enum.HumanoidVisualLayers.LHand" ]
       - map: [ "enum.HumanoidVisualLayers.RHand" ]
-      - map: [ "enum.HumanoidVisualLayers.LFoot" ]
-      - map: [ "enum.HumanoidVisualLayers.RFoot" ]
-      - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
-        color: "#ffffff"
-        sprite: Objects/Misc/handcuffs.rsi
-        state: body-overlay-2
-        visible: false
-      - map: [ "id" ]
+      - map: [ "shoesalt" ]
       - map: [ "gloves" ]
-      - map: [ "shoes" ]
+      # LoneStar changes end
       - map: [ "ears" ]
-      - map: [ "outerClothing" ]
       - map: [ "eyes" ]
       - map: [ "belt" ]
-      - map: [ "neck" ]
+      - map: [ "id" ] # LoneStar
+      - map: [ "outerClothing" ] # LoneStar
+      - map: [ "beltalt" ] # LoneStar
       - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
       - map: [ "back" ]
+      - map: [ "neck" ] # LoneStar
       - map: [ "enum.HumanoidVisualLayers.UndershirtOverclothes" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
       - map: [ "maskalt" ]
@@ -93,6 +91,11 @@
       - map: [ "head" ]
       - map: [ "pocket1" ]
       - map: [ "pocket2" ]
+      - map: [ "enum.HumanoidVisualLayers.Handcuffs" ] # LoneStar
+        color: "#ffffff"
+        sprite: Objects/Misc/handcuffs.rsi
+        state: body-overlay-2
+        visible: false
       - map: [ "clownedon" ] # Dynamically generated
         sprite: "_DV/Effects/creampie.rsi"
         state: "creampie_feroxi"

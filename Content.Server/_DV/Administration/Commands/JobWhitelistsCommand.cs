@@ -19,7 +19,7 @@ public sealed class JobWhitelistsCommand : LocalizedCommands
 
     public override async void Execute(IConsoleShell shell, string argStr, string[] args)
     {
-        if (shell.Player is not {} player)
+        if (shell.Player is not { } player)
         {
             shell.WriteError(Loc.GetString("shell-cannot-run-command-from-server"));
             return;
@@ -39,7 +39,7 @@ public sealed class JobWhitelistsCommand : LocalizedCommands
         }
 
         var ui = new JobWhitelistsEui(located.UserId, located.Username);
-        ui.LoadWhitelists();
         _eui.OpenEui(ui, player);
+        await ui.LoadWhitelists(); // LoneStar, await.
     }
 }

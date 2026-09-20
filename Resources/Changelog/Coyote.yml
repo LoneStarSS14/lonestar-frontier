@@ -3448,3 +3448,419 @@ Entries:
   id: 387
   time: '2026-09-03T04:17:14.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/29
+- author: Synthestra
+  changes:
+    - type: Add
+      message: Gulps...
+  id: 388
+  time: '2026-09-03T04:33:22.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/105
+- author: Waterwithoutanyice
+  changes:
+    - type: Fix
+      message: fixed access to cargo windoor and vault high security door
+    - type: Add
+      message: added a defibrillator to the main hall
+    - type: Add
+      message: added locked pirate variant of high security door to mapping tools
+  id: 389
+  time: '2026-09-06T13:14:18.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/73
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Ported Starlight's powerdocks!
+  id: 390
+  time: '2026-09-06T14:48:08.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/84
+- author: Waterwithoutanyice
+  changes:
+    - type: Tweak
+      message: overhauled the french accent
+  id: 391
+  time: '2026-09-06T14:51:14.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/102
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        Medical Pod bodies now drop their items and organs, therefore making
+        eyeball soup and brain cake obtainable
+  id: 392
+  time: '2026-09-06T15:21:31.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/109
+- author: archee1
+  changes:
+    - type: Fix
+      message: CMO's formal jumpskirt is now buyable at the medidrobe
+  id: 393
+  time: '2026-09-06T15:30:02.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/110
+- author: Synthestra
+  changes:
+    - type: Fix
+      message: >-
+        Fixed sound spam when a chemical reaction happens upon transferring
+        liquids in beakers
+  id: 394
+  time: '2026-09-06T15:31:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/113
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: Rodentia and IPC body parts no longer drop in item form when gibbed
+  id: 395
+  time: '2026-09-06T15:36:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/115
+- author: Synthestra
+  changes:
+    - type: Fix
+      message: Claw Machines will no longer break when you try to use a second machine
+  id: 396
+  time: '2026-09-06T15:39:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/116
+- author: DoubleHypercube, Voidhound
+  changes:
+    - type: Add
+      message: New marking "Rodentia Ears - Bunny (Large)"
+    - type: Add
+      message: New marking "Cyclops Eye"
+  id: 397
+  time: '2026-09-07T01:35:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/114
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        the Director of Care now has a list of standard operating procedures to
+        play by.
+    - type: Tweak
+      message: the Director of Care now receives money for submitting pod bounties.
+    - type: Add
+      message: Medical Pods can now be purchased at st.micheals for 20k
+    - type: Remove
+      message: Medical Pods can no longer be IPC or anthromorphs
+    - type: Tweak
+      message: >-
+        All 'Cases' of medical damage on Pods have been tweaked along with the
+        values earned from completion.
+  id: 398
+  time: '2026-09-07T02:14:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/117
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Zombies now butcher in half as much time (8s->4s)
+    - type: Fix
+      message: >-
+        Zombie clowns now fire 'rotten' banana cream pies that do not contain
+        flavorol
+    - type: Fix
+      message: >-
+        Zombie bodybag piles now despawn an hour after spawning to prevent
+        farming them on a shuttle.
+  id: 399
+  time: '2026-09-08T11:08:51.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/118
+- author: archee1
+  changes:
+    - type: Add
+      message: All expedition destruction targets now spawn enemies.
+    - type: Fix
+      message: >-
+        Expedition destruction targets will now aim to not spawn entities nearby
+        players.
+    - type: Fix
+      message: >-
+        Expedition destruction targets should no longer spawn boss tier mobs of
+        their factions.
+    - type: Fix
+      message: Dinosaurs should stomp on their own eggs less often.
+    - type: Tweak
+      message: Expedition spawning should no longer spawn mobs outside of the dungeon.
+    - type: Tweak
+      message: >-
+        Zombies Flesh and Argocytes should now spawn more frequently from their
+        destruction targets.
+    - type: Tweak
+      message: Expedition weather should now be more easy to see in.
+  id: 400
+  time: '2026-09-09T16:05:02.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/119
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        All freelancer faction roles are now whitelisted and no longer need 1h
+        of freelancer.
+  id: 401
+  time: '2026-09-10T03:44:08.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/122
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        5 markings from wayfarer, Snout (screen), Snout Smile (screen), Bangs
+        Short/Medium/Long
+  id: 402
+  time: '2026-09-10T04:04:22.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/124
+- author: archee1
+  changes:
+    - type: Add
+      message: the Gorlex long lab coat can now be purchased from the syndie drobe.
+    - type: Add
+      message: >-
+        the pink long labcoat can now be found in the manager wire of the
+        medidrobe.
+  id: 403
+  time: '2026-09-10T10:18:38.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/125
+- author: archee1
+  changes:
+    - type: Remove
+      message: The north pole no longer spawns every shift.
+    - type: Tweak
+      message: The den has been replaced with a newly built version.
+    - type: Tweak
+      message: The den now spawns 8-9km away from nash instead of 10-11km.
+    - type: Tweak
+      message: >-
+        the amount of freelancer slots open at the den have been altered
+        slightly to allow less 'pirate' freelancers and more smugglers escorts
+        and ripper docs.
+  id: 404
+  time: '2026-09-10T20:53:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/120
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: Pinpointer scanners are back on the menu, as with the bluespace dust!
+  id: 405
+  time: '2026-09-11T04:50:25.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/126
+- author: DoubleHypercube
+  changes:
+    - type: Fix
+      message: Smart equip now works how you'd expect
+  id: 406
+  time: '2026-09-12T08:56:29.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/128
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Poppies in the theatre drobe have been replaced with hair flowers.
+  id: 407
+  time: '2026-09-12T12:08:32.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/130
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Flesh expeditions will now only spawn additional newborn flesh monsters.
+    - type: Remove
+      message: 10,000 zombies will no longer plague your vroids.
+    - type: Tweak
+      message: >-
+        Expedition objectives now have even more checks to keep the mobs spawned
+        in active locations.
+    - type: Fix
+      message: Expedition objectives can now be shot again
+    - type: Fix
+      message: The cultist UIV is no longer being counterassaulted by the syndicate.
+  id: 408
+  time: '2026-09-12T12:11:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/133
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        A new collar module "pacifism" can now be found in the manager inventory
+        of the hawker.
+    - type: Add
+      message: 2 new Speech modes for the speech collar module, 'mew' and 'confused'
+    - type: Remove
+      message: (non-psychic) Clothing Lock modules have been removed.
+    - type: Tweak
+      message: Collar Speech modules now prevent the wearer changing their own mode.
+  id: 409
+  time: '2026-09-12T13:15:32.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/134
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Wall substations now start with capacitors inside instead of
+        manipulators.
+  id: 410
+  time: '2026-09-12T13:41:06.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/132
+- author: DoubleHypercube
+  changes:
+    - type: Fix
+      message: Re-added parts of SES's brainmatter
+  id: 411
+  time: '2026-09-14T10:46:27.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/139
+- author: archee1
+  changes:
+    - type: Fix
+      message: Advanced chameleon collars can be changed into other styles again.
+  id: 412
+  time: '2026-09-14T12:56:54.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/140
+- author: DoubleHypercube
+  changes:
+    - type: Remove
+      message: Killed O2/N2 tanks with hammers.
+    - type: Add
+      message: Suit lockers now have both a full O2 and a full N2 tank.
+    - type: Add
+      message: The Syndicate UIV now has a blood-red medic hardsuit
+  id: 413
+  time: '2026-09-15T04:03:29.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/135
+- author: Vizoplez
+  changes:
+    - type: Add
+      message: >-
+        Adds Headset slots for borgs, removes all default channels in
+        preparation for LSRD borgs.
+    - type: Add
+      message: Adds a medical tracking implant to borgs like every other player.
+    - type: Fix
+      message: Borgs can now correctly die, rather than gib.
+  id: 414
+  time: '2026-09-15T20:53:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/97
+- author: Waterwithoutanyice
+  changes:
+    - type: Tweak
+      message: Changed what words are replaced with the french accent
+  id: 415
+  time: '2026-09-16T08:41:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/146
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Bowties are now folded for chameleon collars and chameleon clothing
+        instead of unfolded
+  id: 416
+  time: '2026-09-16T08:51:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/141
+- author: archee1
+  changes:
+    - type: Fix
+      message: Penguins now correctly only contain 1 penguin.
+  id: 417
+  time: '2026-09-16T09:31:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/149
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        The recently added IPC screen snout markings now line up on the players
+        head correctly
+  id: 418
+  time: '2026-09-16T12:30:43.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/150
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Support has been added to toggle belts above/below
+        armor/coats/hardsuits.
+    - type: Add
+      message: >-
+        You can now tuck shoes under/over jumpsuit slot clothing items, such as
+        long dresses.
+    - type: Tweak
+      message: >-
+        All species' clothing layers have been amended to be consistent with
+        each other in regards to how clothing is 'stacked' onto the player.
+    - type: Fix
+      message: Feet are no longer rendered above clothing in every case.
+  id: 419
+  time: '2026-09-16T12:49:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/151
+- author: archee1
+  changes:
+    - type: Remove
+      message: Most regular lathes no longer have a magnet.
+    - type: Fix
+      message: Cryopods now eject the beaker before the patient.
+    - type: Fix
+      message: >-
+        Material Reclaimers alternative action toggles power instead of the
+        magnet.
+    - type: Fix
+      message: >-
+        Biogenerators alternative action now ejects the beaker before trying to
+        toggle the magnet.
+    - type: Fix
+      message: >-
+        Fluid containers such as water bottles, can be alt interacted to be
+        opened/closed instead of drinking from them.
+  id: 420
+  time: '2026-09-17T14:30:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/156
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: hacked Merc lathe can print .40 mags now
+  id: 421
+  time: '2026-09-18T05:37:32.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/159
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        You can now mix a new IPC chem, auto-nanite, which is found in the
+        synthetic medipen, which has debilitating side effects, but acts like
+        omnizine.
+    - type: Remove
+      message: >-
+        Arcadian repair spray can no longer be crafted, but is a full heal
+        should you happen to get one.
+    - type: Tweak
+      message: All IPC chemical recipes have been changed.
+    - type: Tweak
+      message: >-
+        IPC repair patches now stack to 5, but are also able to fit into
+        medkits/medibags.
+    - type: Fix
+      message: IPC chemicals no longer heal non IPC.
+    - type: Tweak
+      message: All IPC chemicals have had their healing ODs and values changed.
+  id: 422
+  time: '2026-09-19T20:10:56.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/162
+- author: tenmillimaster
+  changes:
+    - type: Add
+      message: Added gauze back to merc fabs.
+  id: 423
+  time: '2026-09-19T20:11:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/161
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Gambling has been made slightly less rigged.
+  id: 424
+  time: '2026-09-19T22:41:40.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/163
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        new reinforced bottles can now be crafted at autolathes medical techfabs
+        and protolathes, they cannot break and hold 45u of fluid.
+    - type: Tweak
+      message: Bluespace-Vials can now break, and use a new sprite.
+    - type: Tweak
+      message: >-
+        Bluespace fluid containers have had their values changed, beaker
+        [1000u->600u] vial [300u->120u] syringe[100u->60u] jug[1000u->1200u]
+  id: 425
+  time: '2026-09-20T17:05:56.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/165
