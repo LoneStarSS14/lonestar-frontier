@@ -154,6 +154,7 @@
     - CSPlumbingStatic # Coyote: showers, sinks, drains
     - CSFolderStatic # Coyote: - folders and clipboard
     - LSAccessibilityFlarePack #LoneStar accessibility flares
+    - LSChemistryStatic # LoneStar
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
@@ -219,6 +220,7 @@
     staticPacks:
     - NFChemistryBasicStatic # Frontier
     - NFSurgeryBasicStatic # Frontier
+    - LSChemistryStatic # LoneStar
     dynamicPacks:
     - AdvancedTools
     - ScienceEquipment
@@ -565,6 +567,7 @@
     - NFMedicalArchetypeStatic # Frontier
     - AACTableStatic # DeltaV - AAC Tablets
     - CSIPCTopicalsStatic # Coyote: - IPC Topicals
+    - LSChemistryStatic # LoneStar
     # dynamicPacks: # Frontier
     # - Chemistry # Frontier
   - type: Machine
