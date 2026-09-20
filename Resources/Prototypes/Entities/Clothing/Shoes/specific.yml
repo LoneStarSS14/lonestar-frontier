@@ -110,22 +110,22 @@
     netsync: false
 
 - type: entity
-  parent: [ClothingShoesGaloshes, BaseC1Contraband, ContrabandClothing ] # Frontier: added BaseC3Contraband, ContrabandClothing, LoneStar: parented galoshes
+  parent: [ClothingShoesGaloshes, BaseC1Contraband, ContrabandClothing ] # Frontier: added BaseC3Contraband, ContrabandClothing, # LoneStar: parented to galoshes
   id: ClothingShoesCult
-  name: cult boots #LoneStar
+  name: cult boots # LoneStar
   description: A pair of boots worn by the followers of Nar'Sie, ready to wade in blood.
   components:
-  - type: ItemSlots #LoneStar
+  - type: Sprite
+    sprite: Clothing/Shoes/Specific/cult.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Specific/cult.rsi
+  - type: ItemSlots # LoneStar
     slots:
       item:
         name: clothing-boots-sidearm
         whitelist:
           tags:
           - Knife
-  - type: Sprite
-    sprite: Clothing/Shoes/Specific/cult.rsi
-  - type: Clothing
-    sprite: Clothing/Shoes/Specific/cult.rsi
 
 - type: entity
   parent: ClothingShoesBase # Frontier: remove BaseJanitorContraband
