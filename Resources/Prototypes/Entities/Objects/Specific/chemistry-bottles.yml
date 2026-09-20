@@ -8,11 +8,11 @@
   - type: Tag
     tags:
     - Bottle
-    - Trash
+    # - Trash # LoneStar
   - type: PhysicalComposition
     materialComposition:
       Glass: 25
-  - type: SpaceGarbage
+  # - type: SpaceGarbage # LoneStar
   - type: Sprite
     sprite: Objects/Specific/Chemistry/bottle.rsi
     layers:
