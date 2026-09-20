@@ -32,6 +32,8 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    - id: MaterialGoliathHide1 # LoneStar
+      amount: 3
   - type: Bloodstream
     bloodMaxVolume: 100
   - type: MeleeWeapon
