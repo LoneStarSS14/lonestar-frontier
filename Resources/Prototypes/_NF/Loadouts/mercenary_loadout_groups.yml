@@ -48,10 +48,10 @@
   loadouts:
   - MercenaryClothingOuterVestWebMercenary
   - MercenaryClothingOuterVestWebMercenaryBlack
-  - MercenaryClothingOuterArmoredJacketPMCBlue #Lonestar - added PMC armored jacket
-  - MercenaryClothingOuterArmoredJacketPMCGreen #Lonestar - added PMC armored jacket
-  - MercenaryClothingOuterArmoredJacketPMCOlive #Lonestar - added PMC armored jacket
-  - MercenaryClothingOuterArmoredJacketPMCPunkRandomized #Lonestar - added PMC armored jacket
+  - MercenaryClothingOuterArmoredJacketPMCBlue # LoneStar - added PMC armored jacket
+  - MercenaryClothingOuterArmoredJacketPMCGreen # LoneStar - added PMC armored jacket
+  - MercenaryClothingOuterArmoredJacketPMCOlive # LoneStar - added PMC armored jacket
+  - MercenaryClothingOuterArmoredJacketPMCPunkRandomized # LoneStar - added PMC armored jacket
   - MercenaryClothingOuterArmorPunkGreen # Punkish (Static visuals)
   - MercenaryClothingOuterArmorPunkOrange # Punkish (Static visuals)
   - MercenaryClothingOuterArmorPunkRed # Punkish (Static visuals)
