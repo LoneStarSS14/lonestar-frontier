@@ -33,9 +33,9 @@
 
 - type: entity
   name: bluespace vial
-  parent: BaseBeakerMetallic
+  parent: BaseChemistryEmptyVial # LoneStar
   id: VialBluespace
-  description: A vial device created with bluespace technology.
+  description: A vial device created with bluespace technology. it doesnt feel any stronger than a regular vial.
   components:
   - type: Tag
     tags:
