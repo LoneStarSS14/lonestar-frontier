@@ -31,7 +31,7 @@
     sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/pirate.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtiePirate
   name: pirate bowtie
   components:

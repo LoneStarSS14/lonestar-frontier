@@ -53,41 +53,54 @@
 
   APC Terminal: IPCs can use APC terminals to recharge. Press [color=goldenrod]Alt + left click[/color] on a terminal as many times as needed to fully recharge.
 
-  Cyborg Recharging Station: IPCs can use borg rechargers to recharge. These can be found within a few locations throughout the sector.
+  Cyborg Recharging Station: IPCs can use borg rechargers to recharge. These can be constructed, or found within a few locations throughout the sector.
 
   Power Cell: IPCs have an internal power cell that serves as their battery. They can simply swap it out by opening the hatch and manually replacing it.
-
+<!--
   ## Integrated Radio
   <Box>
     <GuideEntityEmbed Entity="EncryptionKeyScience" Caption="Encryption key"/>
   </Box>
 
   IPCs can choose not to use external radios because they already have one built in. They only need to get an encryption key from a radio. By clicking on an IPC with a [color=yellow]wirecutter[/color], you can remove their keys.
-  You can find new keys around the sector or remove one from a radio using a [color=yellow]screwdriver[/color].
+  You can find new keys around the sector or remove one from a radio using a [color=yellow]screwdriver[/color]. -->
 
   ## Repairing
   <Box HorizontalAlignment="Stretch">
     <GuideEntityEmbed Entity="RepairSpray" Caption=""/>
-    Repair sprays are used to cure extensive [color=orange]Burn[/color] damage.
+    Repair sprays:
   </Box>
-	Repair Spray restores [color=darkred]Blood level[/color], repairs some [color=darkred]Bloodloss[/color] and helps stop [color=darkred]Bleeding[/color].
+    - Single-use topical
+    - Heals [color=orange]Burn[/color] damage.
+    - Heals [color=darkred]Bloodloss[/color] damage.
+	- Restores [color=darkred]Blood level[/color].
+    Typically printed by exosuit fabricators, or produced at medical assemblers.
   <Box HorizontalAlignment="Stretch">
     <GuideEntityEmbed Entity="RepairPatch" Caption=""/>
-    Repair Patches are used to cure moderate [color=pink]Brute[/color] damage.
+    Repair Patches:
   </Box>
-	Repair Patches innately repair some [color=darkred]Bloodloss[/color] but do not stop [color=darkred]Bleeding[/color].
+    - Single-use stackable topical
+    - Heals [color=pink]Brute[/color] damage.
+    - Stops [color=darkred]Bleeding[/color].
+    Can be crafted by hand, or produced at exosuit fabricators or medical techfabs.
+    Stacks up to 5.
   <Box HorizontalAlignment="Stretch">
     <GuideEntityEmbed Entity="RepairAutoinjector" Caption=""/>
-	Emergency Repair autoinjectors contain 20u of [color=seagreen]Autosolder[/color] and 10u of [color=steelblue]Sylexalin[/color]!
+    Emergency Repair auto-injector
   </Box>
+	- Contain [color=grey]7u Auto-nanite[/color], [color=seagreen]3u Auto-solder[/color] [color=steelblue]5u Sylexalin[/color].
+    - Cause forced knockdown
+    Can be purchased at Civimed vending machines, or produced at medical assemblers.
+
   ## IPC Chems
-	- [color=seagreen]Autosolder[/color] is used to repair [color=yellow]Blindness[/color], as well as [color=lime]Radiation[/color] and [color=orange]Burn[/color] damage.
-	- [color=steelblue]Sylexalin[/color] is used to restore [color=darkred]blood level[/color] and remove [color=darkred]bloodloss[/color].
-	- [color=violet]Sylashizine[/color] is used to restore heavy [color=pink]Piercing[/color] and [color=pink]Slash[/color] damage. [color=violet]Sylashizine[/color] also helps stop [color=darkred]Bleeding[/color] but deals minor [color=pink]Blunt[/color] damage in the process.
 	- [color=darkred]Oxidant[/color] is their [color=darkred]blood[/color].
+	- [color=steelblue]Sylexalin[/color] is used to restore [color=darkred]blood level[/color], remove [color=darkred]bloodloss[/color] and [color=pink]Slash[/color] damage.
+	- [color=violet]Sylashizine[/color], slow acting, restores heavy [color=pink]Piercing[/color] and moderate [color=pink]Slash[/color] damage, while infering minor [color=lime]Radiation[/color].
+	- [color=seagreen]Auto-solder[/color], a fast acting acid-like chemical, is used to repair [color=yellow]Blindness[/color], as well as [color=lime]Radiation[/color] and [color=orange]Burn[/color] damage.
+	- [color=grey]Auto-nanite[/color] is used to repair [color=white]Everything[/color] with the downside of [color=red]causing temporary motor-impairment[/color].
 
 
-	In the event an IPC dies, after being fully repaired, it should be restarted using the [color=goldenrod]"Restart"[/color] button (located by right-clicking).
+	In the event an IPC dies, after being fully repaired, it should be restarted using the [color=goldenrod]"Restart"[/color] button (located by right-clicking on them).
 
     [color=red]DO NOT DEFIBRILLATE OR SHOCK A DEAD IPC. They'll explode and probably kill you too![/color]
 

@@ -31,7 +31,7 @@
     sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/pink.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtiePink
   name: pink bowtie
   components:

@@ -3694,3 +3694,158 @@ Entries:
   id: 410
   time: '2026-09-12T13:41:06.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/132
+- author: DoubleHypercube
+  changes:
+    - type: Fix
+      message: Re-added parts of SES's brainmatter
+  id: 411
+  time: '2026-09-14T10:46:27.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/139
+- author: archee1
+  changes:
+    - type: Fix
+      message: Advanced chameleon collars can be changed into other styles again.
+  id: 412
+  time: '2026-09-14T12:56:54.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/140
+- author: DoubleHypercube
+  changes:
+    - type: Remove
+      message: Killed O2/N2 tanks with hammers.
+    - type: Add
+      message: Suit lockers now have both a full O2 and a full N2 tank.
+    - type: Add
+      message: The Syndicate UIV now has a blood-red medic hardsuit
+  id: 413
+  time: '2026-09-15T04:03:29.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/135
+- author: Vizoplez
+  changes:
+    - type: Add
+      message: >-
+        Adds Headset slots for borgs, removes all default channels in
+        preparation for LSRD borgs.
+    - type: Add
+      message: Adds a medical tracking implant to borgs like every other player.
+    - type: Fix
+      message: Borgs can now correctly die, rather than gib.
+  id: 414
+  time: '2026-09-15T20:53:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/97
+- author: Waterwithoutanyice
+  changes:
+    - type: Tweak
+      message: Changed what words are replaced with the french accent
+  id: 415
+  time: '2026-09-16T08:41:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/146
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Bowties are now folded for chameleon collars and chameleon clothing
+        instead of unfolded
+  id: 416
+  time: '2026-09-16T08:51:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/141
+- author: archee1
+  changes:
+    - type: Fix
+      message: Penguins now correctly only contain 1 penguin.
+  id: 417
+  time: '2026-09-16T09:31:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/149
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        The recently added IPC screen snout markings now line up on the players
+        head correctly
+  id: 418
+  time: '2026-09-16T12:30:43.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/150
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Support has been added to toggle belts above/below
+        armor/coats/hardsuits.
+    - type: Add
+      message: >-
+        You can now tuck shoes under/over jumpsuit slot clothing items, such as
+        long dresses.
+    - type: Tweak
+      message: >-
+        All species' clothing layers have been amended to be consistent with
+        each other in regards to how clothing is 'stacked' onto the player.
+    - type: Fix
+      message: Feet are no longer rendered above clothing in every case.
+  id: 419
+  time: '2026-09-16T12:49:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/151
+- author: archee1
+  changes:
+    - type: Remove
+      message: Most regular lathes no longer have a magnet.
+    - type: Fix
+      message: Cryopods now eject the beaker before the patient.
+    - type: Fix
+      message: >-
+        Material Reclaimers alternative action toggles power instead of the
+        magnet.
+    - type: Fix
+      message: >-
+        Biogenerators alternative action now ejects the beaker before trying to
+        toggle the magnet.
+    - type: Fix
+      message: >-
+        Fluid containers such as water bottles, can be alt interacted to be
+        opened/closed instead of drinking from them.
+  id: 420
+  time: '2026-09-17T14:30:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/156
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: hacked Merc lathe can print .40 mags now
+  id: 421
+  time: '2026-09-18T05:37:32.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/159
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        You can now mix a new IPC chem, auto-nanite, which is found in the
+        synthetic medipen, which has debilitating side effects, but acts like
+        omnizine.
+    - type: Remove
+      message: >-
+        Arcadian repair spray can no longer be crafted, but is a full heal
+        should you happen to get one.
+    - type: Tweak
+      message: All IPC chemical recipes have been changed.
+    - type: Tweak
+      message: >-
+        IPC repair patches now stack to 5, but are also able to fit into
+        medkits/medibags.
+    - type: Fix
+      message: IPC chemicals no longer heal non IPC.
+    - type: Tweak
+      message: All IPC chemicals have had their healing ODs and values changed.
+  id: 422
+  time: '2026-09-19T20:10:56.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/162
+- author: tenmillimaster
+  changes:
+    - type: Add
+      message: Added gauze back to merc fabs.
+  id: 423
+  time: '2026-09-19T20:11:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/161
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Gambling has been made slightly less rigged.
+  id: 424
+  time: '2026-09-19T22:41:40.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/163

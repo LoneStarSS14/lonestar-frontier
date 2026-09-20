@@ -25,6 +25,11 @@
     - Recyclable
     - WhitelistChameleon
   - type: ProtectedFromStepTriggers
+  - type: AltClothingLayer # LoneStar
+    defaultLayer: shoes
+    altLayer: shoesalt
+    changeToAltMessage: alt-clothing-component-shoes-alt
+    changeToDefaultMessage: alt-clothing-component-shoes-default
 
 - type: entity
   abstract: true

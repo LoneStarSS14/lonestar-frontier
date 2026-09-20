@@ -579,3 +579,13 @@
   storage:
     back:
     - Clicker
+  
+- type: loadout # Lone Star: start
+  id: ContractorPlushieYarrMoth
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  storage:
+    back:
+    - PlushieYarrMoth # Lone Star: end

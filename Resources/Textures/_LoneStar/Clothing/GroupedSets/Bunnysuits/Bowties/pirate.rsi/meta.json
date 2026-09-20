@@ -11,15 +11,15 @@
       "name": "icon"
     },
     {
-      "name": "tied-equipped-NECK",
-      "directions": 4
+      "name": "icon-untied"
     },
     {
       "name": "equipped-NECK",
       "directions": 4
     },
     {
-      "name": "icon-tied"
+      "name": "untied-equipped-NECK",
+      "directions": 4
     }
   ]
 }

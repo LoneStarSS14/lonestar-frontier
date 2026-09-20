@@ -2,7 +2,13 @@
   id: Vial
 
 - type: Tag
+  id: ConcealableWeapon
+
+- type: Tag
   id: WhitelistChameleonAdvancedCollar
 
 - type: Tag
   id: WindowDirectional
+
+- type: Tag
+  id: IpcTopical

@@ -1,0 +1,167 @@
+#region Auto-Injector
+- type: entity
+  name: synthetic emergency auto-injector
+  parent: ChemicalMedipen
+  id: RepairAutoinjector
+  description: A rapid injection of auto-nanites and auto-solder. Not for non silicon injection, may cause seizures.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#5d81c7"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#5d81c7"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: _CS/Objects/Specific/Medical/robotopicals.rsi
+    layers:
+    - state: robor
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: robor0
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+    onlyAffectsMobs: false
+    injectOnly: true
+  - type: StaticPrice
+    price: 300
+    vendPrice: 3000
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: AutoNanite
+          Quantity: 7
+        - ReagentId: AutoSolder
+          Quantity: 3
+        - ReagentId: Sylexalin
+          Quantity: 5
+
+- type: entity
+  name: sylashizine auto-injector
+  parent: ChemicalMedipen
+  id: SylashizineAutoinjector
+  description: A rapid injection of sylashizine, intended for combat applications.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#72519c"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#72519c"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: _CS/Objects/Specific/Medical/robotopicals.rsi
+    layers:
+    - state: sylash
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: robor0
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+    onlyAffectsMobs: false
+    injectOnly: true
+  - type: StaticPrice
+    price: 300
+    vendPrice: 3000
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Sylashizine
+          Quantity: 10
+        - ReagentId: Sylexalin
+          Quantity: 5
+
+#region Equipment
+- type: entity
+  name: director's hypospray
+  parent: [ BaseItem, BaseC4ContrabandUnredeemable ] # TODO: Rebuild off of hypospray parent.
+  description: A sterile injector for rapid administration of drugs to patients, seemingly made for a sector's regional director of care.
+  id: DoCHypospray
+  components:
+  - type: Sprite
+    sprite: _CS/Objects/Specific/Medical/dochypospray.rsi
+    layers:
+      - state: hypo
+        map: ["enum.SolutionContainerLayers.Base"]
+      - state: hypo_fill1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    sprite: _CS/Objects/Specific/Medical/dochypospray.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 30
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+    bypassBlockInjection: false #Coyote: Shelegs cannot be injected
+  - type: UseDelay
+    delay: 0.5
+  - type: StaticPrice
+    price: 750
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: hypo_fill
+    solutionName: hypospray
+
+- type: entity
+  name: NTCS-104 experimental hypospray
+  parent: [ BaseItem, BaseC1Contraband ] # TODO: Rebuild off of hypospray parent.
+  description: A commercial hypospray, presumably designed by Nanotrasen Chemical Supply, featuring a slightly bigger chemical reservoir and a modified rapid injection mechanism.
+  id: HypoExperimental
+  components:
+  - type: Sprite
+    sprite: _CS/Objects/Specific/Medical/hypomini104.rsi
+    layers:
+    - state: hypo
+      map: ["enum.SolutionContainerLayers.Base"]
+    - state: hypo_fill1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Item
+    sprite: _CS/Objects/Specific/Medical/hypomini104.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 15
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+    bypassBlockInjection: false #Coyote; Shelegs cannot be injected
+  - type: UseDelay
+    delay: 0.75
+  - type: StaticPrice
+    price: 700
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: hypo_fill
+    solutionName: hypospray

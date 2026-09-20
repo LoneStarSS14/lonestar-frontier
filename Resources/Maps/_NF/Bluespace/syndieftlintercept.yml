@@ -4832,6 +4832,8 @@ entities:
     - type: Transform
       pos: 5.5,3.5
       parent: 1
+- proto: SuitStorageSyndieMedic
+  entities:
   - uid: 103
     components:
     - type: Transform

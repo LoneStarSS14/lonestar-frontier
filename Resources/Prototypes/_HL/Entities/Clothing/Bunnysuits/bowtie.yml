@@ -1,42 +1,40 @@
+# LoneStar: file heavily modified regarding bases and sprite paths / .rsi states.
+# region Bases
 - type: entity
   abstract: true
   parent: ClothingNeckBase
-  id: BowtieBase
+  id: BaseBowtie
   components:
   - type: Tag
     tags:
     - Bunnysuit
     - ClothMade
     - WhitelistChameleon
-    - WhitelistChameleonAdvancedCollar # LoneStar, Chameleon Collar
-  - type: Appearance
-  - type: Foldable
-    folded: true # LoneStar, default tied, for chameleon.
-    canFoldInsideContainer: true
-    unfoldVerbText: bowtie-untie
-    foldVerbText: bowtie-tie
-  - type: FoldableClothing
-    foldedEquippedPrefix: tied
-    foldedHeldPrefix: tied
+    - WhitelistChameleonAdvancedCollar
+
+- type: entity
+  abstract: true
+  parent: [ BaseBowtie, ClothingNeckFoldableBase]
+  id: BaseBowtieFoldable
+  components:
   - type: Sprite
     layers:
     - state: icon
       map: [ "unfoldedLayer" ]
-    - state: icon-tied
+    - state: icon-untied
       map: ["foldedLayer"]
       visible: false
-  - type: GenericVisualizer # LoneStar, fixes tied/untied sprites
-    visuals:
-      enum.FoldedVisuals.State:
-        foldedLayer:
-          True: {visible: true}
-          False: {visible: false}
-        unfoldedLayer:
-          True: {visible: false}
-          False: {visible: true}
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: bowtie-tie
+    foldVerbText: bowtie-untie
+  - type: FoldableClothing
+    foldedEquippedPrefix: untied
+    foldedHeldPrefix: untied
 
+#region Bowties
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieLawBlue
   name: lawyer's blue bowtie
   components:
@@ -46,7 +44,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/law_blue.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieLawTeal
   name: lawyer's teal bowtie
   components:
@@ -56,7 +54,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/law_teal.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieScience
   name: science bowtie
   components:
@@ -66,7 +64,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/science.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieBlue
   name: blue bowtie
   components:
@@ -76,7 +74,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/blue.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieCargo
   name: cargo bowtie
   components:
@@ -86,7 +84,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/cargo.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieChef
   name: chef's bowtie
   components:
@@ -96,7 +94,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/chef.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieClown
   name: clown's bowtie
   components:
@@ -106,7 +104,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/clown.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieSecurity
   name: security bowtie
   components:
@@ -116,7 +114,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/security.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieCaptain
   name: captain's bowtie
   components:
@@ -126,7 +124,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/captain.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieSyndie
   name: blood-red bowtie
   components:
@@ -136,7 +134,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/syndicate.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieEngineer
   name: engineering bowtie
   components:
@@ -146,7 +144,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/engineer.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieMiner
   name: mining bowtie
   components:
@@ -156,7 +154,7 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/miner.rsi
 
 - type: entity
-  parent: BowtieBase
+  parent: BaseBowtieFoldable
   id: BowtieNetrunner
   name: netrunner's bowtie
   components:
@@ -166,7 +164,228 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/netrunner.rsi
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: BaseBowtieFoldable
+  id: BowtieHero
+  name: Hero bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/hero.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/hero.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieMail
+  name: mailman's bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/mail.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/mail.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieGenetics
+  name: genetics bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/genetics.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/genetics.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieChemist
+  name: chemistry bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/chemist.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/chemist.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtiePrisoner
+  name: prisoner's bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/prisoner.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/prisoner.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieCoroner
+  name: coroner's bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/coroner.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/coroner.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieJanitor
+  name: janitorial bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/janitor.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/janitor.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieBotany
+  name: botany bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/botany.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/botany.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieLawBlack
+  name: lawyer's black bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/law_black.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/law_black.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieDoctor
+  name: medical bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/doctor.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/doctor.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieChiefMedicalOfficer
+  name: chief medical officer's bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/cmo.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/cmo.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieRobotics
+  name: robotics bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/robotics.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/robotics.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieMagician
+  name: magician's bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/magician.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/magician.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieChiefEngineer
+  name: chief engineer's bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/ce.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/ce.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieParamedic
+  name: paramedic bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/paramedic.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/paramedic.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieResearchDirector
+  name: research director's bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/science.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/science.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieHoS
+  name: head of security's bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/hero.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/hero.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieLawRed
+  name: lawyer's red bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/law_red.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/law_red.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieCentcomm
+  name: central command bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/centcomm.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/centcomm.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieHeadOfPersonnel
+  name: head of personnel's bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/hop.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/hop.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieAtmos
+  name: atmospherics bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/atmos.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/atmos.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieVirology
+  name: virology bowtie
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Bunnysuit/Bowties/virology.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Bunnysuit/Bowties/virology.rsi
+
+#region non-bowties
+- type: entity
+  parent: BaseBowtie
   id: BowtieChaplain
   name: chaplain's bunny necklace
   components:
@@ -179,224 +398,3 @@
     sprite: _HL/Clothing/Bunnysuit/Bowties/chaplain.rsi
   - type: Clothing
     sprite: _HL/Clothing/Bunnysuit/Bowties/chaplain.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieHero
-  name: Hero bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/hero.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/hero.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieMail
-  name: mailman's bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/mail.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/mail.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieGenetics
-  name: genetics bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/genetics.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/genetics.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieChemist
-  name: chemistry bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/chemist.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/chemist.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtiePrisoner
-  name: prisoner's bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/prisoner.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/prisoner.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieCoroner
-  name: coroner's bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/coroner.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/coroner.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieJanitor
-  name: janitorial bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/janitor.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/janitor.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieBotany
-  name: botany bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/botany.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/botany.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieLawBlack
-  name: lawyer's black bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/law_black.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/law_black.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieDoctor
-  name: medical bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/doctor.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/doctor.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieChiefMedicalOfficer
-  name: chief medical officer's bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/cmo.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/cmo.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieRobotics
-  name: robotics bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/robotics.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/robotics.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieMagician
-  name: magician's bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/magician.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/magician.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieChiefEngineer
-  name: chief engineer's bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/ce.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/ce.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieParamedic
-  name: paramedic bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/paramedic.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/paramedic.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieResearchDirector
-  name: research director's bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/science.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/science.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieHoS
-  name: head of security's bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/hero.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/hero.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieLawRed
-  name: lawyer's red bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/law_red.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/law_red.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieCentcomm
-  name: central command bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/centcomm.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/centcomm.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieHeadOfPersonnel
-  name: head of personnel's bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/hop.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/hop.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieAtmos
-  name: atmospherics bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/atmos.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/atmos.rsi
-
-- type: entity
-  parent: BowtieBase
-  id: BowtieVirology
-  name: virology bowtie
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Bunnysuit/Bowties/virology.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Bunnysuit/Bowties/virology.rsi
-

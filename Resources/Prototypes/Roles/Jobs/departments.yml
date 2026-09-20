@@ -42,6 +42,7 @@
   - Curator # Frontier
 
 - type: department
+  abstract: true
   id: CentralCommand
   name: department-CentralCommand
   description: department-NFCentralCommand-description # Frontier
@@ -83,7 +84,7 @@
   # - ERTEngineer # Frontier
   # - DeathSquad # Frontier
   - StationRepresentative # Frontier
-  - Sheriff # Frontier
+  # - Sheriff # LoneStar
   - PlantManager # Frontier
   - StationTrafficController # Frontier
   primary: false

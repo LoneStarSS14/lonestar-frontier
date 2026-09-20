@@ -1,11 +1,11 @@
 - type: vendingMachineInventory
   id: TankDispenserEVAPOIInventory
   startingInventory:
-    NFTankO2N2EqualFilled: 4294967295 # Infinite
-    DoubleEmergencyTankO2N2EqualFilled: 4294967295 # Infinite
-    OxygenTankFilled: 4294967295 # Infinite
-    DoubleEmergencyOxygenTankFilled: 4294967295 # Infinite
-    NitrogenTankFilled: 4294967295 # Infinite
-    DoubleEmergencyNitrogenTankFilled: 4294967295 # Infinite
+    # NFTankO2N2EqualFilled: 4294967295 # Lonestar
+    # DoubleEmergencyTankO2N2EqualFilled: 4294967295 # Lonestar
+    OxygenTankFilled: 4294967295
+    DoubleEmergencyOxygenTankFilled: 4294967295
+    NitrogenTankFilled: 4294967295
+    DoubleEmergencyNitrogenTankFilled: 4294967295
     WaterVaporTankFilled: 4294967295 # Flooftier
     DoubleEmergencyWaterVaporTankFilled: 4294967295 # Flooftier

@@ -29,7 +29,7 @@ public sealed class JobWhitelistsEui : BaseEui
 
     public HashSet<ProtoId<JobPrototype>> Whitelists = new();
     public HashSet<ProtoId<GhostRolePrototype>> GhostRoleWhitelists = new(); // Frontier
-    public bool GlobalWhitelist = false;
+    // public bool GlobalWhitelist = false; // LoneStar
 
     public JobWhitelistsEui(NetUserId playerId, string playerName)
     {
@@ -41,7 +41,7 @@ public sealed class JobWhitelistsEui : BaseEui
         PlayerName = playerName;
     }
 
-    public async void LoadWhitelists()
+    public async Task LoadWhitelists() // LoneStar
     {
         var jobs = await _db.GetJobWhitelists(PlayerId.UserId);
         foreach (var id in jobs)
@@ -52,14 +52,14 @@ public sealed class JobWhitelistsEui : BaseEui
                 GhostRoleWhitelists.Add(id); // Frontier
         }
 
-        GlobalWhitelist = await _db.GetWhitelistStatusAsync(PlayerId); // Frontier: get global whitelist
+        // GlobalWhitelist = await _db.GetWhitelistStatusAsync(PlayerId); // Frontier: get global whitelist // LoneStar
 
         StateDirty();
     }
 
     public override EuiStateBase GetNewState()
     {
-        return new JobWhitelistsEuiState(PlayerName, Whitelists, GhostRoleWhitelists, GlobalWhitelist);
+        return new JobWhitelistsEuiState(PlayerName, Whitelists, GhostRoleWhitelists); // LoneStar
     }
 
     public override void HandleMessage(EuiMessageBase msg)
@@ -113,22 +113,23 @@ public sealed class JobWhitelistsEui : BaseEui
                     GhostRoleWhitelists.Remove(ghostRoleArgs.Role);
                 }
                 break;
-            case SetGlobalWhitelistMessage:
-                var globalArgs = (SetGlobalWhitelistMessage)msg;
+            // LoneStar, removed
+            // case SetGlobalWhitelistMessage:
+            //     var globalArgs = (SetGlobalWhitelistMessage)msg;
 
-                added = globalArgs.Whitelisting;
-                role = "all roles";
-                if (added)
-                {
-                    _jobWhitelist.AddGlobalWhitelist(PlayerId);
-                    GlobalWhitelist = true;
-                }
-                else
-                {
-                    _jobWhitelist.RemoveGlobalWhitelist(PlayerId);
-                    GlobalWhitelist = false;
-                }
-                break;
+            //     added = globalArgs.Whitelisting;
+            //     role = "all roles";
+            //     if (added)
+            //     {
+            //         _jobWhitelist.AddGlobalWhitelist(PlayerId);
+            //         GlobalWhitelist = true;
+            //     }
+            //     else
+            //     {
+            //         _jobWhitelist.RemoveGlobalWhitelist(PlayerId);
+            //         GlobalWhitelist = false;
+            //     }
+            //     break;
             default:
                 return;
         }

@@ -1,0 +1,40 @@
+- type: microwaveMealRecipe
+  id: RecipeRepairAutoinjector
+  name: synthetic emergency auto-injector
+  result: RepairAutoinjector
+  time: 5
+  group: Medicinal
+  solids:
+    BlankMediPen: 1
+  reagents:
+    AutoNanite: 7
+    AutoSolder: 3
+    Sylexalin: 5
+  recipeType: MedicalAssembler
+
+- type: microwaveMealRecipe
+  id: RecipeSylashizineAutoinjector
+  name: sylashizine auto-injector
+  result: SylashizineAutoinjector
+  time: 5
+  group: Medicinal
+  solids:
+    BlankMediPen: 1
+  reagents:
+    Sylashizine: 10
+    Sylexalin: 5
+  recipeType: MedicalAssembler
+
+- type: microwaveMealRecipe
+  id: RecipeRepairSpray
+  name: repair spray
+  result: RepairSpray
+  time: 5
+  group: Medicinal
+  solids:
+    MaterialCloth1: 1
+    SheetSteel1: 1
+  reagents:
+    AutoSolder: 10
+    Oxidant: 20
+  recipeType: MedicalAssembler

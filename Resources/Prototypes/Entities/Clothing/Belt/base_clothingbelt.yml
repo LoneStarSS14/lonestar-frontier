@@ -17,6 +17,12 @@
       Cloth: 50
   - type: StaticPrice
     price: 20
+  - type: AltClothingLayer # LoneStar
+    defaultLayer: belt
+    altLayer: beltalt
+    changeToAltMessage: alt-clothing-component-belt-alt
+    changeToDefaultMessage: alt-clothing-component-belt-default
+
 
 - type: entity
   abstract: true
