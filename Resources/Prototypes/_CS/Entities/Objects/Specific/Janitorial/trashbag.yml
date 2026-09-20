@@ -11,7 +11,7 @@
         map: ["enum.StorageFillLayers.Fill"]
   - type: Item
     heldPrefix: blue
-    size: Huge
+    size: Medium
   - type: Storage
     maxItemSize: Huge
     grid:
