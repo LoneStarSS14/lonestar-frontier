@@ -138,6 +138,22 @@
   color: "#434b4d"
   boilingPoint: 2962.0
   meltingPoint: 1638.0
+  # LoneStar: start
+  metabolisms:
+    Synthetic:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: -2
+            Shock: -2
+            Cold: -2
+            Casutic: -1
+            Radiation: -1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: AutoSolder
+  # LoneStar: end
 
 - type: reagent
   id: SodiumPolyacrylate
