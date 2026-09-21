@@ -38,7 +38,7 @@
   - type: Tag
     tags:
     - CigPack
-    - Trash
+#    - Trash # LoneStar
   - type: PhysicalComposition
     materialComposition:
       Steel: 50
@@ -108,7 +108,7 @@
   - type: Tag
     tags:
     - CigPack
-    - Trash
+#    - Trash # LoneStar
   - type: PhysicalComposition
     materialComposition:
       Steel: 50

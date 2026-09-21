@@ -518,7 +518,7 @@
   - type: Tag
     tags:
     - Syringe
-    - Trash
+#    - Trash # LoneStar
     - SyringeGunAmmo
 
 - type: entity

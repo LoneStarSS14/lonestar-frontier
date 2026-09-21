@@ -17,9 +17,9 @@
     contents:
       - id: CigPackGreen
         amount: 5
-  - type: Tag
-    tags:
-    - Trash
+#  - type: Tag # LoneStar
+#    tags:
+#    - Trash
   - type: PhysicalComposition
     materialComposition:
       Plastic: 50
