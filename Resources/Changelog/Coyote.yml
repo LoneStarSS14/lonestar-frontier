@@ -3864,3 +3864,10 @@ Entries:
   id: 425
   time: '2026-09-20T17:05:56.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/165
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: put missing merc lathe recipes back
+  id: 426
+  time: '2026-09-21T16:26:13.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/171
