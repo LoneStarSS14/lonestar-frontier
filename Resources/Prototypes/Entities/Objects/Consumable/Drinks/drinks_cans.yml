@@ -67,8 +67,8 @@
     - Rolling
     speedModifier: 0.25 # its small so takes longer to roll the entire dough flat
   - type: SpaceGarbage
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty  # LoneStar
+#    solution: drink
   - type: PhysicalComposition
     materialComposition:
       Steel: 50 #reduce, reuse, recycle

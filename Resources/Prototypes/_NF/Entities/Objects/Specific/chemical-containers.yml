@@ -176,8 +176,8 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Label
-  - type: TrashOnSolutionEmpty
-    solution: beaker
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: beaker
 
 - type: entity
   parent: JerryCan

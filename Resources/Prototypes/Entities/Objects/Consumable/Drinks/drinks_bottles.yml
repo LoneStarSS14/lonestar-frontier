@@ -34,8 +34,8 @@
       - !type:SpillBehavior { }
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
   - type: PhysicalComposition
     materialComposition:
       Plastic: 100
@@ -84,8 +84,8 @@
   - type: DnaSubstanceTrace
   - type: PressurizedSolution
     solution: drink
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty  # LoneStar
+#    solution: drink
   - type: Shakeable
   - type: PhysicalComposition
     materialComposition:

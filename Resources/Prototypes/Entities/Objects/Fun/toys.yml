@@ -2035,8 +2035,8 @@
         reagents:
         - ReagentId: SpaceGlue
           Quantity: 100
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
   - type: Tag
     tags:
       - DrinkSpaceGlue
@@ -2069,4 +2069,3 @@
       params:
         volume: -9
         maxDistance: 3
-        

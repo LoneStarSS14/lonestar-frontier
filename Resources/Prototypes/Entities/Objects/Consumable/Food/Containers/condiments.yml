@@ -13,8 +13,8 @@
     sprite: Objects/Consumable/Food/condiments.rsi
   - type: Icon
     sprite: Objects/Consumable/Food/condiments.rsi
-  - type: TrashOnSolutionEmpty
-    solution: food
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: food
   - type: SpaceGarbage
   - type: StaticPrice
     price: 0

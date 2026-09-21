@@ -68,8 +68,8 @@
   #   materialComposition:
   #     Plastic: 50
   - type: DnaSubstanceTrace
-  - type: TrashOnSolutionEmpty # Frontier
-    solution: bucket # Frontier
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: bucket
 
 - type: entity
   parent: Bucket

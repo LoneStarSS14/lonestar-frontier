@@ -83,8 +83,8 @@
       tags:
       - ChemDispensable
     - type: DnaSubstanceTrace
-    - type: TrashOnSolutionEmpty # Frontier
-      solution: beaker # Frontier
+#    - type: TrashOnSolutionEmpty # LoneStar
+#      solution: beaker
 
 - type: entity
   parent: Jug

@@ -93,8 +93,8 @@
   - type: StaticPrice
     price: 30
   - type: DnaSubstanceTrace
-  - type: TrashOnSolutionEmpty # Frontier
-    solution: beaker # Frontier
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: beaker
 
 - type: entity
   parent: BaseItem
@@ -215,8 +215,8 @@
   - type: StaticPrice
     price: 30
   - type: DnaSubstanceTrace
-  - type: TrashOnSolutionEmpty # Frontier
-    solution: beaker # Frontier
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: beaker
 
 - type: entity
   name: beaker
@@ -426,8 +426,8 @@
     solution: injector
   - type: Spillable
     solution: injector
-  - type: TrashOnSolutionEmpty
-    solution: injector
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: injector
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 2
@@ -437,7 +437,7 @@
   - type: Tag
     tags:
     - Syringe
-    - Trash # Coyote: Move trash to basesyringe
+#    - Trash # LoneStar
 
 - type: entity
   parent: BaseSyringe

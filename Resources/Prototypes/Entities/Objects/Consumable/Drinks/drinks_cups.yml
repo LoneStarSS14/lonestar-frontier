@@ -237,8 +237,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 4
     fillBaseName: icon-
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
 
 - type: entity
   parent: DrinkBaseCup
@@ -263,8 +263,8 @@
     maxFillLevels: 1
     fillBaseName: fill-
     changeColor: false
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
 
 - type: entity
   parent: DrinkBaseCup
@@ -291,8 +291,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 4
     fillBaseName: icon-
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
 
 - type: entity
   parent: DrinkBaseCup
@@ -319,8 +319,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 4
     fillBaseName: icon-
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
 
 - type: entity
   parent: DrinkBaseCup
@@ -339,8 +339,8 @@
     state: icon
   - type: Item
     sprite: Objects/Consumable/Drinks/lean.rsi
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
 
 - type: entity
   parent: DrinkBaseCup
@@ -363,8 +363,8 @@
     tags:
     - Trash
     - WhitelistChameleon
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
   - type: Clothing
     slots:
     - HEAD

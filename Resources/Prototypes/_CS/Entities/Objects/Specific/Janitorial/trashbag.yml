@@ -1,6 +1,6 @@
 # Coyote adding of the bluespace trashbag
 - type: entity
-  name: Bluespace Trash Bag
+  name: bluespace trash bag # LoneStar
   description: A trash bag that has been imbued with bluespace crystals, allowing it to hold an incredible amount of garbage within a small physical volume.
   id: BluespaceTrashBag
   parent: TrashBag
@@ -11,7 +11,7 @@
         map: ["enum.StorageFillLayers.Fill"]
   - type: Item
     heldPrefix: blue
-    size: Huge
+    size: Normal # LoneStar
   - type: Storage
     maxItemSize: Huge
     grid:

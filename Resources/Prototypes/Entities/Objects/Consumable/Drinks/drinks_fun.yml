@@ -38,8 +38,8 @@
   - type: Tag
     tags:
       - DrinkSpaceGlue
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
 
 - type: entity
   parent: [DrinkBase, RecyclableItemPlasticSmall] # Frontier: added RecyclableItemPlasticSmall
@@ -78,8 +78,8 @@
           True: {state: "icon_open"}
           False: {state: "icon"}
   - type: Lube
-  - type: TrashOnSolutionEmpty
-    solution: drink
+#  - type: TrashOnSolutionEmpty # LoneStar
+#    solution: drink
 
 
 # Mopwata
