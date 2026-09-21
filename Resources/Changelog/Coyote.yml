@@ -3885,3 +3885,26 @@ Entries:
   id: 428
   time: '2026-09-21T17:33:47.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/152
+- author: archee1
+  changes:
+    - type: Fix
+      message: IPC repair patches now properly stack to 5
+    - type: Fix
+      message: Auto-Solder now heals its intended amount
+    - type: Add
+      message: >-
+        Auto-Nanite has had most of its healing transferred to sylenone, a new
+        chemical which it adds when metabolized.
+    - type: Fix
+      message: IPC no longer build up unmetabolizable chemicals inside of them.
+    - type: Add
+      message: >-
+        Tazinide and Licoxide now infer a speed buff to IPC at the cost of
+        dealing shock directly over time.
+    - type: Add
+      message: >-
+        Auto-Solder can now be applied with Fersilicite and Thermite to have
+        additional healing.
+  id: 429
+  time: '2026-09-21T18:02:57.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/172
