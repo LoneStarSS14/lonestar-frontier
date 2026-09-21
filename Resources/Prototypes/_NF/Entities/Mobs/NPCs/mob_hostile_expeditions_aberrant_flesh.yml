@@ -32,8 +32,8 @@
     spawned:
     - id: FoodMeat
       amount: 1
-    - id: MaterialGoliathHide1 # LoneStar
-      amount: 3
+    - id: LSSpawnAberrantLootRoll # LoneStar
+      amount: 1
   - type: Bloodstream
     bloodMaxVolume: 100
   - type: MeleeWeapon
@@ -48,6 +48,25 @@
         Structural: 20
   - type: ReplacementAccent
     accent: genericAggressive
+
+#region loot # LoneStar
+- type: entityTable
+  id: TableAberrantLootRoll
+  table: !type:AllSelector
+    children:
+    - id: MaterialGoliathHide1
+      rolls: !type:RangeNumberSelector
+        range: 3, 4
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnAberrantLootRoll
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.15
+    table: !type:NestedSelector
+      tableId: TableAberrantLootRoll
+      prob: 1.00
 
 #region MOBS
 - type: entity
