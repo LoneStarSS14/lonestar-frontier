@@ -148,7 +148,7 @@
             Heat: -2
             Shock: -2
             Cold: -2
-            Casutic: -1
+            Caustic: -1
             Radiation: -1
         conditions:
         - !type:ReagentThreshold
