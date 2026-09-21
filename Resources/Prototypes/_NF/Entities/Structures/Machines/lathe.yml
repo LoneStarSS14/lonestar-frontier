@@ -351,6 +351,7 @@
     #- NFTopicalsStatic # LoneStar, find a doctor right for you.
     #- CSIPCTopicalsStatic # LoneStar, find a mechanic right for you.
     - CSMagazineStatic
+    - NFMercenaryArchetypeStatic
     - LSMercenaryStatic # LoneStar
     - NFMercenaryArchetypeMeleeStatic
   - type: BlueprintReceiver
