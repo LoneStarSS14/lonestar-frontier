@@ -1,0 +1,36 @@
+- type: loadout
+  id: MercenaryClothingOuterArmoredJacketPMCBlue
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterArmoredJacketPMCBlue
+
+- type: loadout
+  id: MercenaryClothingOuterArmoredJacketPMCGreen
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterArmoredJacketPMCGreen
+
+- type: loadout
+  id: MercenaryClothingOuterArmoredJacketPMCOlive
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterArmoredJacketPMCOlive
+
+- type: loadout
+  id: MercenaryClothingOuterArmoredJacketPMCPunkRandomized
+  name: punk PMC armored jacket (random)
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterArmoredJacketPMCPunkRandomized
