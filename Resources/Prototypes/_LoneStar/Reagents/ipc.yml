@@ -167,11 +167,13 @@
           min: 3.1
       - !type:AdjustReagent
         reagent: Thermite
+        amount: -3
         conditions:
         - !type:ReagentThreshold
           min: 3.1
       - !type:AdjustReagent
         reagent: Fersilicite
+        amount: -3
         conditions:
         - !type:ReagentThreshold
           min: 3.1
