@@ -3871,3 +3871,10 @@ Entries:
   id: 426
   time: '2026-09-21T16:26:13.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/171
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Granted cult shoes limited no slip, a better pocket, and a better name.
+  id: 427
+  time: '2026-09-21T16:34:04.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/166
