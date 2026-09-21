@@ -187,7 +187,6 @@
   physicalDesc: reagent-physical-desc-grainy
   metabolisms:
     Poison:
-      metabolismRate: 0.5
       effects:
       - !type:Emote
         emote: Scream
@@ -209,7 +208,6 @@
         messages: [ "generic-reagent-effect-burning-insides" ]
         probability: 0.33
     Synthetic:
-      metabolismRate: 0.4
       effects:
       - !type:PopupMessage
         type: Local
@@ -226,19 +224,10 @@
             Bloodloss: -0.5
         conditions:
         - !type:ReagentThreshold
-          max: 3
-      - !type:ModifyBloodLevel
-        amount: 0.5
-      - !type:ChemHealEyeDamage
+          max: 11
       - !type:Emote
         emote: Scream
         probability: 0.1
-      - !type:Emote
-        emote: Boop
-        probability: 0.05
-      - !type:Emote
-        emote: Beep
-        probability: 0.05
       - !type:MovespeedModifier
         statusLifetime: 1.5
         walkSpeedModifier: 0.4
@@ -248,3 +237,55 @@
         component: TemporaryBlindness
         time: 2
         refresh: true
+      - !type:AdjustReagent
+        reagent: Sylenone
+        amount: 0.25
+
+- type: reagent
+  id: Sylenone
+  name: reagent-name-sylenone
+  group: Medicine
+  desc: reagent-desc-sylenone
+  flavor: metallic
+  color: "#403c3c"
+  worksOnTheDead: true
+  physicalDesc: reagent-physical-desc-grainy
+  metabolisms:
+    Poison:
+      metabolismRate: 0.5
+      effects:
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+      - !type:AdjustReagent
+        reagent: Sylenone
+        amount: -1
+      - !type:HealthChange
+        damage:
+          types:
+            Radiation: 0.75
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "generic-reagent-effect-burning-insides" ]
+        probability: 0.33
+    Synthetic:
+      metabolismRate: 0.1
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: -0.75
+            Burn: -1
+          types:
+            Radiation: -0.25
+            Bloodloss: -0.5
+      - !type:ModifyBloodLevel
+        amount: 0.75
+      - !type:ChemHealEyeDamage
+      - !type:Emote
+        emote: Boop
+        probability: 0.05
+      - !type:Emote
+        emote: Beep
+        probability: 0.05

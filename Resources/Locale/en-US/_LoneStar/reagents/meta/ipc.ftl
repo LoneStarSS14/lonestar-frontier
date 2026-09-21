@@ -13,5 +13,8 @@ reagent-desc-autosolder = Synthetic-grade self-managing solder, designed as a fa
 reagent-name-autonanite = auto-nanite
 reagent-desc-autonanite = Synthetic-grade nanites designed to repair the internal systems of a silicon thorugh invasive means.
 
+reagent-name-sylenone = sylenone
+reagent-desc-sylenone = A composition of active nanites, slowly repairs silicon internal systems over long periods of time.
+
 ## TODO: move this
 metabolism-group-synthetic = Synthetic
