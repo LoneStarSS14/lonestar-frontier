@@ -3878,3 +3878,10 @@ Entries:
   id: 427
   time: '2026-09-21T16:34:04.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/166
+- author: amareyeen
+  changes:
+    - type: Add
+      message: PMC Armored vest reskin of Merc Web Vests
+  id: 428
+  time: '2026-09-21T17:33:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/152
