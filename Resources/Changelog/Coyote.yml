@@ -3928,3 +3928,16 @@ Entries:
   id: 431
   time: '2026-09-22T21:56:34.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/173
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        A new set of randomized clothing can now be bought at the AutoDrobe,
+        bodysuits, with 5 'general' themes and 18 variant sprites.
+    - type: Add
+      message: Punk clothes can now be re-randomized with the magic needle.
+    - type: Tweak
+      message: Colourful costumes now use a less discordant colour palette.
+  id: 432
+  time: '2026-09-22T23:05:44.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/174
