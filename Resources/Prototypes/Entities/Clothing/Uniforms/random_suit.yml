@@ -1,4 +1,5 @@
-# LoneStar, changes 'sixteen' palette to 'NTInteriorDesign'
+## LoneStar changes: All references of 'Sixteen' -> 'NTInteriorDesign'
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformRandom
@@ -54,23 +55,23 @@
     denyReroll: false # LoneStar
     available:
       - torso:
-          base_torso_armless: Sixteen
+          base_torso_armless: NTInteriorDesign
         leg:
-          base_leg_standard: Sixteen
-          base_leg_short: Sixteen
-#          base_leg_skirt: Sixteen # Frontier - Splited out for Harpy
-#          base_leg_skirt_long: Sixteen # Frontier - Splited out for Harpy
+          base_leg_standard: NTInteriorDesign
+          base_leg_short: NTInteriorDesign
+#          base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
+#          base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
         decor:
-          decor_torso_armless1: Sixteen
-          decor_torso_armless2: Sixteen
-          decor_torso_armless3: Sixteen
-          decor_torso_armless4: Sixteen
-          decor_torso_armless5: Sixteen
-          decor_torso_armless6: Sixteen
-          decor_torso_armless7: Sixteen
-          decor_torso_armless8: Sixteen
-          decor_torso_armless9: Sixteen
-          decor_torso_armless10: Sixteen
+          decor_torso_armless1: NTInteriorDesign
+          decor_torso_armless2: NTInteriorDesign
+          decor_torso_armless3: NTInteriorDesign
+          decor_torso_armless4: NTInteriorDesign
+          decor_torso_armless5: NTInteriorDesign
+          decor_torso_armless6: NTInteriorDesign
+          decor_torso_armless7: NTInteriorDesign
+          decor_torso_armless8: NTInteriorDesign
+          decor_torso_armless9: NTInteriorDesign
+          decor_torso_armless10: NTInteriorDesign
           mask_null: ""
 
 - type: entity
@@ -82,33 +83,33 @@
     denyReroll: false # LoneStar
     available:
       - torso:
-          base_torso_standard: Sixteen
-          base_torso_standard2: Sixteen
+          base_torso_standard: NTInteriorDesign
+          base_torso_standard2: NTInteriorDesign
         leg:
-          base_leg_standard: Sixteen
-          base_leg_short: Sixteen
-#          base_leg_skirt: Sixteen # Frontier - Splited out for Harpy
-#          base_leg_skirt_long: Sixteen # Frontier - Splited out for Harpy
+          base_leg_standard: NTInteriorDesign
+          base_leg_short: NTInteriorDesign
+#          base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
+#          base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
         decor:
-          decor_torso_armless1: Sixteen
-          decor_torso_armless2: Sixteen
-          decor_torso_armless3: Sixteen
-          decor_torso_armless4: Sixteen
-          decor_torso_armless5: Sixteen
-          decor_torso_armless6: Sixteen
-          decor_torso_armless7: Sixteen
-          decor_torso_armless8: Sixteen
-          decor_torso_armless9: Sixteen
-          decor_torso_armless10: Sixteen
-          decor_torso_standard1: Sixteen
-          decor_torso_standard2: Sixteen
-          decor_torso_standard3: Sixteen
-          decor_torso_standard4: Sixteen
-          decor_torso_standard5: Sixteen
-          decor_torso_standard6: Sixteen
-          decor_torso_standard7: Sixteen
-          decor_torso_standard8: Sixteen
-          decor_torso_standard9: Sixteen
+          decor_torso_armless1: NTInteriorDesign
+          decor_torso_armless2: NTInteriorDesign
+          decor_torso_armless3: NTInteriorDesign
+          decor_torso_armless4: NTInteriorDesign
+          decor_torso_armless5: NTInteriorDesign
+          decor_torso_armless6: NTInteriorDesign
+          decor_torso_armless7: NTInteriorDesign
+          decor_torso_armless8: NTInteriorDesign
+          decor_torso_armless9: NTInteriorDesign
+          decor_torso_armless10: NTInteriorDesign
+          decor_torso_standard1: NTInteriorDesign
+          decor_torso_standard2: NTInteriorDesign
+          decor_torso_standard3: NTInteriorDesign
+          decor_torso_standard4: NTInteriorDesign
+          decor_torso_standard5: NTInteriorDesign
+          decor_torso_standard6: NTInteriorDesign
+          decor_torso_standard7: NTInteriorDesign
+          decor_torso_standard8: NTInteriorDesign
+          decor_torso_standard9: NTInteriorDesign
           mask_null: ""
 
 - type: entity
@@ -120,18 +121,18 @@
     denyReroll: false # LoneStar
     available:
       - torso:
-          base_torso_bra: Sixteen
+          base_torso_bra: NTInteriorDesign
         leg:
-          base_leg_standard: Sixteen
-          base_leg_short: Sixteen
-#          base_leg_skirt: Sixteen # Frontier - Splited out for Harpy
-#          base_leg_skirt_long: Sixteen # Frontier - Splited out for Harpy
+          base_leg_standard: NTInteriorDesign
+          base_leg_short: NTInteriorDesign
+#          base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
+#          base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
         decor:
-          decor_torso_bra1: Sixteen
-          decor_torso_bra2: Sixteen
-          decor_torso_bra3: Sixteen
-          decor_torso_bra4: Sixteen
-          decor_torso_bra5: Sixteen
+          decor_torso_bra1: NTInteriorDesign
+          decor_torso_bra2: NTInteriorDesign
+          decor_torso_bra3: NTInteriorDesign
+          decor_torso_bra4: NTInteriorDesign
+          decor_torso_bra5: NTInteriorDesign
           mask_null: ""
 
 - type: entity
@@ -145,10 +146,10 @@
       - torso:
           mask_null: ""
         leg:
-          base_leg_standard: Sixteen
-          base_leg_short: Sixteen
-#          base_leg_skirt: Sixteen # Frontier - Splited out for Harpy
-#          base_leg_skirt_long: Sixteen # Frontier - Splited out for Harpy
+          base_leg_standard: NTInteriorDesign
+          base_leg_short: NTInteriorDesign
+#          base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
+#          base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
 
 - type: entity
   parent: ClothingUniformRandom
@@ -159,14 +160,14 @@
     denyReroll: false # LoneStar
     available:
       - torso:
-          base_torso_armless: Sixteen
+          base_torso_armless: NTInteriorDesign
           mask_null: ""
         leg:
-          base_leg_standard: Sixteen
-          base_leg_short: Sixteen
+          base_leg_standard: NTInteriorDesign
+          base_leg_short: NTInteriorDesign
         decor:
-          base_torso_shirt: Sixteen
+          base_torso_shirt: NTInteriorDesign
         overlay:
-          decor_torso_shirt1: Sixteen
-          decor_torso_shirt2: Sixteen
-          decor_torso_shirt3: Sixteen
+          decor_torso_shirt1: NTInteriorDesign
+          decor_torso_shirt2: NTInteriorDesign
+          decor_torso_shirt3: NTInteriorDesign
