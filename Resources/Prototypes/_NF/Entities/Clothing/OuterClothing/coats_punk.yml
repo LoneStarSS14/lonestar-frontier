@@ -206,6 +206,7 @@
         map: [ "jacket_overlay" ]
         shader: unshaded
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
     - jacket_main:
         base_OuterClothing_jacket_01: Cyberpunk
@@ -248,6 +249,7 @@
       - state: decor_base_OuterClothing_letterman
         map: [ "jacket_decor" ]
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
     - jacket_main:
         base_OuterClothing_letterman: Cyberpunk

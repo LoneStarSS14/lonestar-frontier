@@ -24,6 +24,7 @@
         map: [ "clothing_glasses_decor" ]
         shader: unshaded
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - glasses_main:
           icon_base_glasses_01: Base
@@ -74,6 +75,7 @@
         map: [ "clothing_infoshades_decor" ]
         shader: unshaded
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - infoshades_main:
           icon_base_glasses_02: Base

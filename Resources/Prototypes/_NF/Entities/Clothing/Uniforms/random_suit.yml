@@ -19,6 +19,7 @@
   suffix: Skirt
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           base_torso_armless: Sixteen
@@ -45,6 +46,7 @@
   suffix: Skirt
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           base_torso_standard: Sixteen
@@ -81,6 +83,7 @@
   suffix: Skirt
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           base_torso_bra: Sixteen
@@ -102,6 +105,7 @@
   suffix: Skirt
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           mask_null: ""
@@ -115,6 +119,7 @@
   name: colorful patterned top and skirt
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           base_torso_armless: Sixteen
