@@ -1,0 +1,91 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "WIP",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "torso_plain",
+            "directions": 4
+        },
+        {
+            "name": "legs_dark",
+            "directions": 4
+        },
+        {
+            "name": "legs_opaque",
+            "directions": 4
+        },
+        {
+            "name": "legs_plain",
+            "directions": 4
+        },
+        {
+            "name": "legs_striped",
+            "directions": 4
+        },
+        {
+            "name": "legs_pvc",
+            "directions": 4
+        },
+        {
+            "name": "decor_top",
+            "directions": 4
+        },
+        {
+            "name": "decor_fins",
+            "directions": 4
+        },
+        {
+            "name": "decor_tulle",
+            "directions": 4
+        },
+        {
+            "name": "decor_band",
+            "directions": 4
+        },
+        {
+            "name": "decor_buttoned",
+            "directions": 4
+        },
+        {
+            "name": "decor_heart",
+            "directions": 4
+        },
+        {
+            "name": "decor_roped",
+            "directions": 4
+        },
+        {
+            "name": "decor_stripes",
+            "directions": 4
+        },
+        {
+            "name": "decor_suit",
+            "directions": 4
+        },
+        {
+            "name": "decor_suspenders",
+            "directions": 4
+        },
+        {
+            "name": "cuffs_plain",
+            "directions": 4
+        },
+        {
+            "name": "cuffs_mesh",
+            "directions": 4
+        },
+        {
+            "name": "cuffs_band",
+            "directions": 4
+        },
+        {
+            "name": "mask_null",
+            "directions": 4
+        }
+    ]
+}
