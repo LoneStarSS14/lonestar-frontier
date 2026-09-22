@@ -11,6 +11,11 @@
     ClothingSkirtUniformRandomBra: 4294967295
     ClothingSkirtUniformRandomShorts: 4294967295
     ClothingSkirtUniformRandomShirt: 4294967295
+    ClothingUniformBodysuitRandom: 4294967295
+    ClothingUniformBodysuitRandomSwimsuit: 4294967295
+    ClothingUniformBodysuitRandomLeotard: 4294967295
+    ClothingUniformBodysuitRandomDealer: 4294967295
+    ClothingUniformBodysuitRandomClown: 4294967295
     MagicNeedle: 4294967295
     ClothingHeadHatJester: 4294967295
     ClothingUniformJumpsuitJester: 4294967295

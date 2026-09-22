@@ -1141,6 +1141,7 @@
         map: [ "rightDuffelZipper" ]
         shader: unshaded
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
     # icon
     - iconDuffelMain:

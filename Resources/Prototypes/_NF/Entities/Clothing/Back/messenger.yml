@@ -1424,6 +1424,7 @@
         map: [ "rightMessengerBase" ]
         shader: unshaded
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
     # icon
     - iconMessengerBase:
