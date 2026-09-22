@@ -1,4 +1,4 @@
-
+# LoneStar, changes 'sixteen' palette to 'NTInteriorDesign'
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformRandom
