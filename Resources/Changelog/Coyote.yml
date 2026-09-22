@@ -3908,3 +3908,10 @@ Entries:
   id: 429
   time: '2026-09-21T18:02:57.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/172
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Go go hat storage reduced
+  id: 430
+  time: '2026-09-22T21:11:17.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/169
