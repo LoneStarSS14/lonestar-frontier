@@ -1,6 +1,17 @@
 - type: vendingMachineInventory
   id: AutoDrobeInventory
   startingInventory:
+    ClothingUniformRandomArmless: 4294967295
+    ClothingUniformRandomStandard: 4294967295
+    ClothingUniformRandomBra: 4294967295
+    ClothingUniformRandomShorts: 4294967295
+    ClothingUniformRandomShirt: 4294967295
+    ClothingSkirtUniformRandomArmless: 4294967295
+    ClothingSkirtUniformRandomStandard: 4294967295
+    ClothingSkirtUniformRandomBra: 4294967295
+    ClothingSkirtUniformRandomShorts: 4294967295
+    ClothingSkirtUniformRandomShirt: 4294967295
+    MagicNeedle: 4294967295
     ClothingHeadHatJester: 4294967295
     ClothingUniformJumpsuitJester: 4294967295
     ClothingHeadHatJesterAlt: 4294967295
@@ -82,12 +93,6 @@
     FoamCutlass: 4294967295
     ClothingHeadSafari: 4294967295
     ClothingUniformJumpsuitSafari: 4294967295
-    ClothingUniformRandomArmlessNoSkirt: 4294967295
-    ClothingUniformRandomArmless: 4294967295
-    ClothingUniformRandomStandard: 4294967295
-    ClothingUniformRandomBra: 4294967295
-    ClothingUniformRandomShorts: 4294967295
-    ClothingUniformRandomShirt: 4294967295
     ClothingHandsGlovesBoxingRed: 4294967295
     ClothingHandsGlovesBoxingBlue: 4294967295
     ClothingHandsGlovesBoxingYellow: 4294967295

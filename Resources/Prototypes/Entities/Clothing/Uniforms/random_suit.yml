@@ -51,6 +51,7 @@
   name: colorful sleeveless top and pants # Frontier: hands-free costume<sleeveless top and pants
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           base_torso_armless: Sixteen
@@ -78,6 +79,7 @@
   name: colorful top and pants # Frontier: costume<top and pants
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           base_torso_standard: Sixteen
@@ -115,6 +117,7 @@
   name: colorful bra and pants # Frontier: and pants
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           base_torso_bra: Sixteen
@@ -137,6 +140,7 @@
   name: colorful pants
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           mask_null: ""
@@ -152,6 +156,7 @@
   name: colorful patterned top and pants # Frontier: outfit<patterned top and pants
   components:
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - torso:
           base_torso_armless: Sixteen
