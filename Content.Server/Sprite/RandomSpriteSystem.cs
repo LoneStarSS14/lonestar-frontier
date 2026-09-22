@@ -7,7 +7,7 @@ using Robust.Shared.Random;
 
 namespace Content.Server.Sprite;
 
-public sealed class RandomSpriteSystem: SharedRandomSpriteSystem
+public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -24,8 +24,15 @@ public sealed class RandomSpriteSystem: SharedRandomSpriteSystem
         if (component.Selected.Count > 0)
             return;
 
+        Reroll(uid, component); // LoneStar
+    }
+
+    public bool Reroll(EntityUid uid, RandomSpriteComponent component) // LoneStar: Breaks body of code from OnMapInit
+    {
         if (component.Available.Count == 0)
-            return;
+            return false;
+
+        component.Selected.Clear(); // LoneStar
 
         // Frontier: select mapped colours
         Dictionary<string, Color> mappedColors = new();
@@ -79,6 +86,7 @@ public sealed class RandomSpriteSystem: SharedRandomSpriteSystem
         }
 
         Dirty(uid, component);
+        return true;
     }
 
     private void OnGetState(EntityUid uid, RandomSpriteComponent component, ref ComponentGetState args)
