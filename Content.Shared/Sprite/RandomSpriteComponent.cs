@@ -37,7 +37,7 @@ public sealed partial class RandomSpriteComponent : Component
     // LoneStar: RandomSpriteRerollComponent support
     /// <summary>
     /// Should RandomSpriteReroll be able to effect this?
-    /// if false, this sprite cannot be rerolled.
+    /// if false, this sprite may be rerolled. note randomsprite is used by things such as space carp.
     /// </summary>
     [DataField]
     public bool DenyReroll = true;

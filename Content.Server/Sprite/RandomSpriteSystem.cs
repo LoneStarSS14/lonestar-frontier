@@ -30,7 +30,7 @@ public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
     public bool Reroll(EntityUid uid, RandomSpriteComponent component) // LoneStar: Breaks body of code from OnMapInit
     {
         if (component.Available.Count == 0)
-            return false;
+            return false; // LoneStar
 
         component.Selected.Clear(); // LoneStar
 
@@ -86,7 +86,7 @@ public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
         }
 
         Dirty(uid, component);
-        return true;
+        return true; // LoneStar
     }
 
     private void OnGetState(EntityUid uid, RandomSpriteComponent component, ref ComponentGetState args)
