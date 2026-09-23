@@ -1,7 +1,7 @@
 
 # Security
 - type: entity
-  parent: [ClothingShoesMilitaryBase, ClothingShoesBaseHeelsNoisy, BaseSecurityContraband] # Euphoria +ClothingShoesMilitaryBase, +ClothingShoesBaseHeelsNoisy, -ClothingShoesBootsJack, -ClothingShoesHighheelBoots
+  parent: [ClothingShoesMilitaryBase, ClothingShoesBaseHeelsNoisy, BaseC1Contraband] # Euphoria +ClothingShoesMilitaryBase, +ClothingShoesBaseHeelsNoisy, -ClothingShoesBootsJack, -ClothingShoesHighheelBoots
   id: ClothingShoesBootsJackHeels
   name: high-heeled jackboots
   description: Specialized high-heeled boots intended for use in combat scenarios, while somehow passing equipment standards. Now, you can kick ass in style!
