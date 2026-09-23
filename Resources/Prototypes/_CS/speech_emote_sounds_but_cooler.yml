@@ -4,8 +4,8 @@
     variation: 0.125
   sounds:
     ## Screams
-#    HarpyScream:
-#      collection: HarpyScreams
+    # HarpyScream:
+    #   collection: HarpyScreams
     VulpScream:
       collection: VulpkaninScreams
     RodentiaScream:
@@ -43,8 +43,8 @@
       path: /Audio/Voice/Moth/moth_laugh.ogg
     SyndieborgLaugh:
       path: /Audio/Voice/Silicon/syndieborg_laugh.ogg
-#    HarpyLaugh:
-#      collection: HarpyLaugh
+    # HarpyLaugh:
+    #   collection: HarpyLaugh
     GoblinLaugh:
       collection: GoblinCackle
     ShelegLaugh:
@@ -52,8 +52,8 @@
     ## Hisses
     FelinidHiss:
       collection: FelinidHisses
-#    HarpyHiss:
-#      collection: HarpyHisses
+    # HarpyHiss:
+    #   collection: HarpyHisses
     GoblinHiss:
       collection: GoblinHiss
     ShelegHiss:
@@ -70,8 +70,8 @@
       collection: MaleCry
     FemaleCrying:
       collection: FemaleCry
-#    HarpyCrying:
-#      collection: HarpyCry
+    # HarpyCrying:
+    #   collection: HarpyCry
     GoblinCrying:
       collection: GoblinCry
     ShelegCrying:
@@ -116,26 +116,26 @@
       path: /Audio/Nyanotrasen/Voice/Felinid/cat_growl1.ogg
     Purr:
       path: /Audio/Nyanotrasen/Voice/Felinid/cat_purr1.ogg
-#    HarpyRing:
-#      collection: HarpyRings
-#    HarpyHonk:
-#      collection: HarpyHonks
-#      params: # Frontier
-#        volume: -5 # Frontier
-#    HarpyPew:
-#      collection: HarpyPews
-#    HarpyBang:
-#      collection: HarpyBangs
-#      params: # Frontier
-#        volume: -5 # Frontier
-#    HarpyBeep:
-#      collection: HarpyBeeps
-#    HarpyRev:
-#      collection: HarpyRevs
-#      params: # Frontier
-#        volume: -5 # Frontier
-#    Click:
-#      collection: HarpyClicks
+    # HarpyRing:
+    #   collection: HarpyRings
+    # HarpyHonk:
+    #   collection: HarpyHonks
+    #   params: # Frontier
+    #     volume: -5 # Frontier
+    # HarpyPew:
+    #   collection: HarpyPews
+    # HarpyBang:
+    #   collection: HarpyBangs
+    #   params: # Frontier
+    #     volume: -5 # Frontier
+    # HarpyBeep:
+    #   collection: HarpyBeeps
+    # HarpyRev:
+    #   collection: HarpyRevs
+    #   params: # Frontier
+    #     volume: -5 # Frontier
+    # Click:
+    #   collection: HarpyClicks
     Chitter:
       path: /Audio/Voice/Moth/moth_chitter.ogg
     MothSqueak:
@@ -192,11 +192,12 @@
       collection: IPCWhirrs
       params:
         variation: 0
-
-
-
-
-
-
-
-
+    #Shadekin
+    ShadekinScreamMale:
+      collection: ShadekinMaleScreams
+    ShadekinScreamFemale:
+      collection: ShadekinFemaleScreams
+    ShadekinWurble:
+      path: /Audio/_Starlight/Voice/Shadekin/wurble.ogg
+    ShadekinMarr:
+      path: /Audio/_Starlight/Voice/Shadekin/mar.ogg

@@ -28,6 +28,7 @@ public sealed partial class EmoteCategoryWindow : DefaultWindow
         [EmoteCategory.Moth] = "emote-menu-category-moth",
         [EmoteCategory.Borg] = "emote-menu-category-borg",
         [EmoteCategory.Felinid] = "emote-menu-category-felinid",
+        [EmoteCategory.Shadekin] = "emote-menu-category-shadekin",
     };
 
     private readonly Dictionary<EmoteCategory, CheckBox> _categoryCheckboxes = new();
