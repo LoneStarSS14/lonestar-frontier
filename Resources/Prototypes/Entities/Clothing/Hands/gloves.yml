@@ -609,14 +609,14 @@
     attackRate: 1.5
     damage:
       types:
-        Blunt: 12 # Coyote
+        Blunt: 8
     bluntStaminaDamageFactor: 2.0
     animation: WeaponArcFist
   - type: StaminaDamageOnHit
-    damage: 53 # Coyote
+    damage: 30 # LoneStar
     sound: /Audio/Weapons/egloves.ogg
   - type: StaminaDamageOnCollide
-    damage: 53 # Coyote
+    damage: 30 # LoneStar
     sound: /Audio/Weapons/egloves.ogg
   - type: LandAtCursor # it deals stamina damage when thrown
   - type: Battery
