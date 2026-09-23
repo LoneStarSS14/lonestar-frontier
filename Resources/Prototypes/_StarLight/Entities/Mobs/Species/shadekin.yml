@@ -23,7 +23,7 @@
         10: High
         15: Extreme
     # - type: Absorbable # Wayfarer
-    - type: Needs
+    - type: Needs # LoneStar, we dont have hunger/thirst
       needs:
       - NeedHungerDefault
       - NeedThirstDefault
