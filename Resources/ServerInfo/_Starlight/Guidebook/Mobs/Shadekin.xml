@@ -7,20 +7,22 @@
   Shadekin are a species whom originally dwell and are from another dimension called “The Dark”.
   Most if not all Shadekin that are employed or under contract from NT are afflicted with a condition they call “Black-eye” and or as the Shadekin themselves refer to as being “Burnt”.
   This affliction and condition supposedly is the cause of them being incapable of returning to the aforementioned “The Dark”.
-  Adapted to their home dimension of which is one absent of light, their vision is highly reactive to light levels.
-  Dim lights being a source of passive annoyance or discomfort, bright lights ail them much more noticeably, being a source of pain and harm to them.
+  <!-- Adapted to their home dimension of which is one absent of light, their vision is highly reactive to light levels.
+  Dim lights being a source of passive annoyance or discomfort, bright lights ail them much more noticeably, being a source of pain and harm to them. -->
 
   ## Racial Features
 
-  - Receive [color=#ffa500]20% more heat damage[/color], [color=#1e90ff]25% less cold damage[/color], and [color=#1e90ff]75% less cellular damage[/color].
-  - Receive [color=#ffa500]170% more bloodloss damage[/color] (and [color=#ffa500]heal bloodloss damage 75% slower[/color]), [color=#ffa500]30% more radiation damage[/color], and [color=#ffa500]25% more shock damage[/color].
+  - Receive [color=#ffa500]20% more heat damage[/color], [color=#ffa500]25% more shock damage[/color], [color=#1e90ff]25% less cold damage[/color].
+  - Receive [color=#1e90ff]75% less cellular damage[/color].
+  - Receive [color=#ffa500]135% more bloodloss damage[/color] (and [color=#ffa500]heal bloodloss damage 75% slower[/color]).
+  - Receive [color=#ffa500]30% more radiation damage[/color].
   - They do not breathe and thus require no air.
-  - Flashes stun time are doubled.
+  <!-- - Flashes stun time are doubled. -->
   - Deal [color=red]5[/color] slashing damage with claws.
-
+<!-- LoneStar, we dont have languages
   ## Marish
   Shadekin have a language shared amongst them all, composed of only a singular word: “Mar”, whilst it can be altered in length and or composition, from potential additional A’s or R’s in the pronunciation. With this one and simple word however, Shadekin can convey and provide complex thought, and deep emotion alike.
-  Simplistic but endlessly deep for the Shadekin.
+  Simplistic but endlessly deep for the Shadekin. -->
 
   ## Age & Names
   Shadekin are an example of a very slow biological aging process.
@@ -30,7 +32,7 @@
   These titles are often provided and or given to them by the attributes or qualities they exhibit, however there are other cases where it can be even items, passions, or ideas they are fond of.
   There are instances as well of some Shadekin whom have become acclimated to provide their own titles, replacing previous ones.
   This is not an aspect taken lightly by them nor other Shadekin, such a decision is akin to throwing away their previous selves.
-
+<!-- LoneStar: Disbaled over lag concerns.
   ## LIGHT SENSITIVITY
   [color=yellow]Light Exposure: Dark[/color]
   - Passive Regeneration is buffed.
@@ -45,6 +47,6 @@
   - Heavy Slowdown.
 
   [color=yellow]Light Exposure:[/color] [color=red]EXTREME[/color]
-  - Get burned [color=red]1[/color] heat damage per second.
+  - Get burned [color=red]1[/color] heat damage per second. -->
 
 </Document>
