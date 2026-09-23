@@ -53,6 +53,7 @@
       - state: equipped-OUTERCLOTHING-detail
         map: [ "armor_detail" ]
   - type: RandomSprite
+    denyReroll: false
     available:
     - armor_main:
         equipped-OUTERCLOTHING: CyberpunkDark
