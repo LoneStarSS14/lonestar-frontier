@@ -16,12 +16,12 @@
     #     - Empathy
     - type: Inventory
       speciesId: shadekin
-    - type: Shadekin
-      thresholds:
-        0.8: Low
-        5: Annoying
-        10: High
-        15: Extreme
+    # - type: Shadekin
+    #   thresholds:
+    #     0.8: Low
+    #     5: Annoying
+    #     10: High
+    #     15: Extreme
     # - type: Absorbable # Wayfarer
     - type: Needs # LoneStar, we dont have hunger/thirst
       needs:
