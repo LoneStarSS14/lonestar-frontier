@@ -1,0 +1,5 @@
+#region Funky
+- type: loadout
+  id: NanotrasenRepresentativeHeelBoots
+  equipment:
+    shoes: ClothingShoesHighheelBootsNanotrasen
