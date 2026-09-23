@@ -1,9 +1,9 @@
 ## Changed by Funkystation.
 
 - type: entity
-  parent: [ ClothingShoesBaseButcherable, BaseCentcommContraband ] # Omu - plain shoe base, upstream uses the military boots base
+  parent: [ ClothingShoesBaseButcherable, BaseC1Contraband, ClothingShoesBaseHeelsNoisy ] # Omu - plain shoe base, upstream uses the military boots base. # LoneStar, added ClothingShoesBaseHeelsNoisy.
   id: ClothingShoesHighheelBootsNanotrasen
-  name: nanotrasen official's heel boots
+  name: formal heeled boots # LoneStar
   description: An EXPENSIVE pair of black suede platform ankle boots, with block heels. Arguably a deadly weapon.
   components:
   - type: MeleeWeapon
@@ -18,8 +18,3 @@
       shoes:
       - state: equipped-FEET
         offset: "0, -0.03125"
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepHighHeels
-      params:
-        variation: 0.09
