@@ -3970,3 +3970,12 @@ Entries:
   id: 435
   time: '2026-09-23T23:00:25.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/182
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Adds a new punk coat from upstream, along with a few new variant pieces
+        to the punk coats.
+  id: 436
+  time: '2026-09-23T23:01:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/181
