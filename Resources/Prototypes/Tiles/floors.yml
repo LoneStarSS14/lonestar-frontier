@@ -1576,6 +1576,7 @@
     East: /Textures/Tiles/Asteroid/asteroid_double_edge.png
     North: /Textures/Tiles/Asteroid/asteroid_double_edge.png
     West: /Textures/Tiles/Asteroid/asteroid_double_edge.png
+  weather: true # LoneStar
 
 - type: tile
   id: FloorAsteroidSandDugBorderless
@@ -1915,6 +1916,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
+  weather: true # LoneStar
 
 #Hull tiles
 - type: tile
