@@ -5,6 +5,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: shadekin
@@ -14,6 +15,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   coloring:
     default:
       type:
@@ -34,6 +36,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   coloring:
     default:
       type:
@@ -54,6 +57,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: shady
@@ -63,6 +67,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   coloring:
     default:
       type:
@@ -83,6 +88,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   coloring:
     default:
       type:
@@ -103,6 +109,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   coloring:
     default:
       type:
@@ -123,6 +130,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   coloring:
     default:
       type:
@@ -143,6 +151,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   coloring:
     default:
       type:
@@ -163,6 +172,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   coloring:
     default:
       type:
@@ -183,6 +193,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: shadekin
@@ -194,6 +205,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: shadekin
@@ -205,6 +217,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: shadekin
@@ -216,6 +229,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: fluffy_default
@@ -225,6 +239,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: fluffy_default
@@ -236,6 +251,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: fluffy_default
@@ -247,6 +263,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: fluffy_default
@@ -258,6 +275,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: fluffy_default
@@ -269,6 +287,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: fluffy_default
@@ -280,6 +299,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: fluffy_default
@@ -291,6 +311,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: fluffy_default
@@ -302,6 +323,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: fluffy_default
@@ -313,6 +335,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: saggy_default
@@ -322,6 +345,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: saggy_default
@@ -333,6 +357,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: saggy_default
@@ -344,6 +369,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: saggy_default
@@ -355,6 +381,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: saggy_default
@@ -366,6 +393,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: saggy_default
@@ -377,6 +405,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: saggy_default
@@ -388,6 +417,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: short_default
@@ -397,6 +427,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: short_default
@@ -408,6 +439,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: short_default
@@ -419,6 +451,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: short_default
@@ -430,6 +463,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: short_default
@@ -441,6 +475,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: bull_default
@@ -450,6 +485,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: bull_default
@@ -461,6 +497,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: aqua_default
@@ -470,6 +507,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/ears.rsi
       state: aqua_default
@@ -483,6 +521,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/tails64x32.rsi
       state: shadekin
@@ -492,6 +531,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/tails64x32.rsi
       state: shadekin_big
@@ -510,6 +550,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/tails32x32.rsi
       state: shadekin_shorter
@@ -519,6 +560,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/tails32x32.rsi
       state: shadekin_shorter
@@ -530,6 +572,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/tails32x32.rsi
       state: shadekin_medium
@@ -539,6 +582,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/tails32x32.rsi
       state: shadekin_medium
@@ -552,6 +596,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_arrow
@@ -561,6 +606,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_blackhole
@@ -570,6 +616,7 @@
   bodyPart: RArm
   markingCategory: Arms
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_brace
@@ -579,6 +626,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_brawly
@@ -588,6 +636,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_heart
@@ -596,7 +645,8 @@
   id: BodyShadekinInk
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ShaShadekindowkin, Protogen]
+  speciesRestriction: [Shadekin] # LoneStar
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_ink
@@ -606,6 +656,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_ink2
@@ -615,6 +666,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_ink3
@@ -624,6 +676,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_ink4
@@ -633,6 +686,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_ink5
@@ -642,6 +696,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_ink6
@@ -651,6 +706,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_ink_anim
@@ -660,6 +716,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_lines
@@ -669,6 +726,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_neck
@@ -678,6 +736,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_shield
@@ -687,6 +746,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Shadekin] #FH # Wayfarer
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar: Allow all markings
   sprites:
     - sprite: _Starlight/Mobs/Customization/shadekin/overlay.rsi
       state: body_vacuum
