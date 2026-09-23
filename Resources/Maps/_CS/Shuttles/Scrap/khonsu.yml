@@ -7340,13 +7340,6 @@ entities:
     - type: Transform
       pos: -5.5,-13.5
       parent: 1
-- proto: ExplorersLootRadar
-  entities:
-  - uid: 1550
-    components:
-    - type: Transform
-      pos: -5.5,-4.5
-      parent: 1
 - proto: AirCanisterBroken
   entities:
   - uid: 1551
