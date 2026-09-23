@@ -31,6 +31,11 @@
       "directions": 4
     },
     {
+      "name": "equipped-EYES-shadekin",
+        "directions": 4,
+        "copyright": "Modified by ShadesMars"
+    },
+    {
       "name": "inhand-left",
       "directions": 4
     },

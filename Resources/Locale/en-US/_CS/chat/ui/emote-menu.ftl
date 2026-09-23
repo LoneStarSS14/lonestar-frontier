@@ -12,4 +12,5 @@ emote-menu-category-lizard   = Lizard
 emote-menu-category-vox      = Vox
 emote-menu-category-moth     = Moth
 emote-menu-category-borg     = Borg
-emote-menu-category-felinid = Felinid
+emote-menu-category-felinid  = Felinid
+emote-menu-category-shadekin = Shadekin
