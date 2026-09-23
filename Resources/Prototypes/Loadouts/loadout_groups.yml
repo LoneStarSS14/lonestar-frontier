@@ -1090,7 +1090,6 @@
   loadouts:
   - JackBoots
   - SecurityWinterBoots
-  - JackHeels # Moffstation - High-Heeled Jackboots
 
 - type: loadoutGroup
   id: SecurityPDA
