@@ -866,7 +866,7 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
-  price: 1200
+  price: 0
   equipment:
     outerClothing: ClothingOuterCoatRandomized
 

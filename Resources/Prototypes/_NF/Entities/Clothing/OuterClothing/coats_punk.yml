@@ -299,6 +299,7 @@
         map: [ "jacket_overlay" ]
         shader: unshaded
   - type: RandomSprite
+    denyReroll: false #LoneStar
     available:
     - jacket_main:
         base_OuterClothing_jacket_03: Cyberpunk
