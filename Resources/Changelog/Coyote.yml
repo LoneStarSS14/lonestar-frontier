@@ -3941,3 +3941,12 @@ Entries:
   id: 432
   time: '2026-09-22T23:05:44.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/174
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Stun knuckles have had their stamina damage lowered to be consistent in
+        power with stun batons.
+  id: 433
+  time: '2026-09-23T12:43:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/176
