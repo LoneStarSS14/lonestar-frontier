@@ -1,29 +1,31 @@
+# LoneStar TODO: Port loadout groupBy
+
 - type: loadout
   id: ClothingShoesHeelsKitten
   equipment:
     shoes: ClothingShoesHeelsKitten
-  groupBy: "heels"
+  # groupBy: "heels"
 
 - type: loadout
   id: ClothingShoesHeelsKittenBlack
   equipment:
     shoes: ClothingShoesHeelsKittenBlack
-  groupBy: "heels"
+  # groupBy: "heels"
 
 - type: loadout
   id: ClothingShoesHeelsKittenCrimson
   equipment:
     shoes: ClothingShoesHeelsKittenCrimson
-  groupBy: "heels"
+  # groupBy: "heels"
 
 - type: loadout
   id: ClothingShoesHeelsKittenRose
   equipment:
     shoes: ClothingShoesHeelsKittenRose
-  groupBy: "heels"
+  # groupBy: "heels"
 
 - type: loadout
   id: ClothingShoesHeelsBallet
   equipment:
     shoes: ClothingShoesHeelsBallet
-  groupBy: "heels"
+  # groupBy: "heels"
