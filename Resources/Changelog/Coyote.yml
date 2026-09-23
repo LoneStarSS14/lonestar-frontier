@@ -3959,3 +3959,14 @@ Entries:
   id: 434
   time: '2026-09-23T20:16:48.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/180
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Medical belt bags can now fit defibrillators
+    - type: Tweak
+      message: >-
+        The compact defibrillator now takes the same amount of time to be used,
+        but heals 20 asphyxiation instead of 40.
+  id: 435
+  time: '2026-09-23T23:00:25.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/182
