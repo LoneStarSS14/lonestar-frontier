@@ -3950,3 +3950,12 @@ Entries:
   id: 433
   time: '2026-09-23T12:43:01.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/176
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Tajaran will no long have the surname "Hadii # These 5 surnames
+        technically should appear way more"
+  id: 434
+  time: '2026-09-23T20:16:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/180
