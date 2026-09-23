@@ -235,6 +235,14 @@
     ClothingUniformJumpsuitCapFormal: 4294967295
     ClothingUniformJumpskirtHosFormal: 4294967295
     ClothingUniformJumpsuitHosFormal: 4294967295 # Lonestar end
+    # Euphoria
+    ClothingShoesHeelsKitten: 4294967295
+    ClothingShoesHeelsKittenBlack: 4294967295
+    ClothingShoesHeelsKittenCrimson: 4294967295
+    ClothingShoesHeelsKittenRose: 4294967295
+    ClothingShoesHeelsBallet: 4294967295
+    # Funky
+    ClothingShoesHighheelBootsNanotrasen: 4294967295
   contrabandInventory:
     ClothingMaskNeckGaiter: 4294967295
     ClothingUniformJumpsuitTacticool: 4294967295
