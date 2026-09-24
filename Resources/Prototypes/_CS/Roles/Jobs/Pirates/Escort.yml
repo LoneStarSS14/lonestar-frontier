@@ -25,7 +25,7 @@
   special:
   - !type:AddComponentSpecial
     components:
-#    - type: AutoPirate
+    # - type: AutoPirate
     - type: SpecialSectorStationRecord # must be given on spawn
       recordGeneration: FalseRecord
     - type: DisableSuitSensors
@@ -65,7 +65,7 @@
   id: EscortGear
   equipment:
     pocket1: BasePirateUplinkPirateCrew
-    pocket2: NFWeaponPistolMackerel
+    pocket2: LSWeaponPistolMackerel
   storage:
     back:
     - ShipVoucherCoyoteEscort
