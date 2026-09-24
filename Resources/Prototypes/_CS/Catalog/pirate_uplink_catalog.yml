@@ -1680,7 +1680,7 @@
   id: UplinkFreelancerPistolMackerel
   name: uplink-pistol-mackerel-name
   description: uplink-pistol-mackerel-desc
-  productEntity: NFWeaponPistolMackerel
+  productEntity: LSWeaponPistolMackerel
   cost:
     Doubloon: 4
   categories:

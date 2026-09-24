@@ -64,13 +64,10 @@
 - type: startingGear
   id: RipperGear
   equipment:
-    belt: ClothingBeltMedical
     pocket1: BasePirateUplinkPirateCrew
   storage:
     back:
-    - EncryptionKeyFreelance
-    - EncryptionKeyMedical
-    - ComputerIFFFlatpack
+    - ContrabandAppraisalToolPirate
 
 - type: chameleonOutfit
   id: RipperDocChameleonOutfit
@@ -97,7 +94,7 @@
   - MercenaryGlasses
   - MercenaryBelt
   - PilotEars
-  - ContractorEncryptionKey
+  - FreelancerEncryptionKey
   - ContractorBoxSurvival
   - SmugglerPDA
   - ContractorWallet
