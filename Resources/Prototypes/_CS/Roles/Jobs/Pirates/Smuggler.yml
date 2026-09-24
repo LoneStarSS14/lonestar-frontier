@@ -59,13 +59,10 @@
 - type: startingGear
   id: SmugglerGear
   equipment:
-    belt: ClothingBeltUtility
     pocket1: BasePirateUplinkPirateCrew
   storage:
     back:
-    - EncryptionKeyFreelance
-    - AppraisalTool
-    - ComputerIFFFlatpack
+    - ContrabandAppraisalToolPirate
 
 - type: chameleonOutfit
   id: SmugglerChameleonOutfit
