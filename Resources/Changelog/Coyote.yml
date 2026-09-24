@@ -3986,3 +3986,18 @@ Entries:
   id: 437
   time: '2026-09-24T09:54:06.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/175
+- author: archee1
+  changes:
+    - type: Add
+      message: Maid borgs are now selectable as cyborg chassis.
+    - type: Tweak
+      message: You can now remove all borg modules including base modules
+    - type: Tweak
+      message: All borg chassis support 8 module slots total.
+    - type: Remove
+      message: >-
+        Service borgs have lost their bureaucracy and jetpack modules by
+        default.
+  id: 438
+  time: '2026-09-24T22:27:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/188
