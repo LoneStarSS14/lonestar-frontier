@@ -3,10 +3,10 @@
   id: MaidGeneric
   dummyPrototype: MaidBorgChassisGeneric
   spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
-  spriteBodyState: base-generic
-  spriteHasMindState: base_has-mind
-  spriteNoMindState: base_no-mind
-  spriteToggleLightState: base_light
+  spriteBodyState: robot
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
   footstepCollection:
     collection: FootstepHoverBorg
   inventoryTemplateId: borgUnified
@@ -22,10 +22,10 @@
   id: MaidEngineering
   dummyPrototype: MaidBorgChassisEngineer
   spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
-  spriteBodyState: base-engineering
-  spriteHasMindState: base_has-mind
-  spriteNoMindState: base_no-mind
-  spriteToggleLightState: base_light
+  spriteBodyState: robot-engineering
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
   footstepCollection:
     collection: FootstepHoverBorg
   inventoryTemplateId: borgUnified
@@ -42,10 +42,10 @@
   id: MaidMining
   dummyPrototype: MaidBorgChassisMining
   spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
-  spriteBodyState: base-mining
-  spriteHasMindState: base_has-mind
-  spriteNoMindState: base_no-mind
-  spriteToggleLightState: base_light
+  spriteBodyState: robot-mining
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
   footstepCollection:
     collection: FootstepHoverBorg
   inventoryTemplateId: borgUnified
@@ -62,10 +62,10 @@
   id: MaidMedical
   dummyPrototype: MaidBorgChassisMedical
   spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
-  spriteBodyState: base-medical
-  spriteHasMindState: base_has-mind
-  spriteNoMindState: base_no-mind
-  spriteToggleLightState: base_light
+  spriteBodyState: robot-medical
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
   footstepCollection:
     collection: FootstepHoverBorg
   inventoryTemplateId: borgUnified
@@ -92,10 +92,10 @@
   id: MaidJanitor
   dummyPrototype: MaidBorgChassisJanitor
   spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
-  spriteBodyState: base-janitor
-  spriteHasMindState: base_has-mind
-  spriteNoMindState: base_no-mind
-  spriteToggleLightState: base_light
+  spriteBodyState: robot-janitor
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
   footstepCollection:
     collection: FootstepHoverBorg
   inventoryTemplateId: borgUnified
@@ -111,10 +111,10 @@
   id: MaidSyndicate
   dummyPrototype: MaidBorgChassisSyndicate
   spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
-  spriteBodyState: base-syndicate
-  spriteHasMindState: base_has-mind
-  spriteNoMindState: base_no-mind
-  spriteToggleLightState: base_light
+  spriteBodyState: robot-syndicate
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
   footstepCollection:
     collection: FootstepHoverBorg
   inventoryTemplateId: borgUnified

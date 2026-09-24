@@ -1,46 +1,46 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from Paradise SS13 at commit bd91a1b, base_no-mind/has-mind/light by Archee.",
+  "copyright": "Taken from Paradise SS13 at commit bd91a1b, _e_r _e  _l by Archee.",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "base-generic",
+      "name": "robot",
       "directions": 4
     },
     {
-      "name": "base-engineering",
+      "name": "robot-engineering",
       "directions": 4
     },
     {
-      "name": "base-janitor",
+      "name": "robot-janitor",
       "directions": 4
     },
     {
-      "name": "base-medical",
+      "name": "robot-medical",
       "directions": 4
     },
     {
-      "name": "base-mining",
+      "name": "robot-mining",
       "directions": 4
     },
     {
-      "name": "base-syndicate",
+      "name": "robot-syndicate",
       "directions": 4
     },
     {
-      "name": "base_no-mind",
+      "name": "robot_e_r",
       "directions": 4
     },
     {
-      "name": "base_has-mind",
+      "name": "robot_e",
       "directions": 4
     },
     {
-      "name": "base_light",
+      "name": "robot_l",
       "directions": 4
     }
   ]

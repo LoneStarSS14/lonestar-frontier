@@ -7,7 +7,19 @@
   - type: Sprite
     sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
     layers:
-    - state: base
+    - state: robot
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: robot_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: robot_l
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+  - type: BorgChassis
+    hasMindState: robot_e
+    noMindState: robot_e_r
 
 #region Generic
 - type: entity
@@ -20,13 +32,13 @@
   - type: Sprite
     sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
     layers:
-    - state: base-generic
+    - state: robot
       map: ["enum.BorgVisualLayers.Body", "movement"]
-    - state: base_no-mind
+    - state: robot_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
-    - state: base_light
+    - state: robot_l
       shader: unshaded
       map: ["light", "enum.BorgVisualLayers.LightStatus"]
       visible: false
@@ -42,13 +54,13 @@
   - type: Sprite
     sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
     layers:
-    - state: base-engineering
+    - state: robot-engineering
       map: ["enum.BorgVisualLayers.Body", "movement"]
-    - state: base_no-mind
+    - state: robot_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
-    - state: base_light
+    - state: robot_l
       shader: unshaded
       map: ["light", "enum.BorgVisualLayers.LightStatus"]
       visible: false
@@ -64,13 +76,13 @@
   - type: Sprite
     sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
     layers:
-    - state: base-mining
+    - state: robot-mining
       map: ["enum.BorgVisualLayers.Body", "movement"]
-    - state: base_no-mind
+    - state: robot_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
-    - state: base_light
+    - state: robot_l
       shader: unshaded
       map: ["light", "enum.BorgVisualLayers.LightStatus"]
       visible: false
@@ -86,13 +98,13 @@
   - type: Sprite
     sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
     layers:
-    - state: base-medical
+    - state: robot-medical
       map: ["enum.BorgVisualLayers.Body", "movement"]
-    - state: base_no-mind
+    - state: robot_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
-    - state: base_light
+    - state: robot_l
       shader: unshaded
       map: ["light", "enum.BorgVisualLayers.LightStatus"]
       visible: false
@@ -108,13 +120,13 @@
   - type: Sprite
     sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
     layers:
-    - state: base-janitor
+    - state: robot-janitor
       map: ["enum.BorgVisualLayers.Body", "movement"]
-    - state: base_no-mind
+    - state: robot_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
-    - state: base_light
+    - state: robot_l
       shader: unshaded
       map: ["light", "enum.BorgVisualLayers.LightStatus"]
       visible: false
@@ -130,13 +142,13 @@
   - type: Sprite
     sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
     layers:
-    - state: base-syndicate
+    - state: robot-syndicate
       map: ["enum.BorgVisualLayers.Body", "movement"]
-    - state: base_no-mind
+    - state: robot_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
-    - state: base_light
+    - state: robot_l
       shader: unshaded
       map: ["light", "enum.BorgVisualLayers.LightStatus"]
       visible: false
