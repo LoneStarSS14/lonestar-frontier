@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from Paradise SS13 at commit bd91a1b, base_no-mind/has-mind/light by Archee.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base-generic",
+      "directions": 4
+    },
+    {
+      "name": "base-engineering",
+      "directions": 4
+    },
+    {
+      "name": "base-janitor",
+      "directions": 4
+    },
+    {
+      "name": "base-medical",
+      "directions": 4
+    },
+    {
+      "name": "base-mining",
+      "directions": 4
+    },
+    {
+      "name": "base-syndicate",
+      "directions": 4
+    },
+    {
+      "name": "base_no-mind",
+      "directions": 4
+    },
+    {
+      "name": "base_has-mind",
+      "directions": 4
+    },
+    {
+      "name": "base_light",
+      "directions": 4
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+#region Base
+- type: entity
+  id: BaseMaidBorgChassisSelectable
+  parent: BorgChassisSelectable
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+    layers:
+    - state: base
+
+#region Generic
+- type: entity
+  id: MaidBorgChassisGeneric
+  parent: BaseMaidBorgChassisSelectable
+  name: generic maidborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: MaidGeneric
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+    layers:
+    - state: base-generic
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: base_no-mind
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: base_light
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+#region Engineering
+- type: entity
+  id: MaidBorgChassisEngineer
+  parent: BaseMaidBorgChassisSelectable
+  name: engineer maidborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: MaidEngineering
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+    layers:
+    - state: base-engineering
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: base_no-mind
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: base_light
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+#region Mining
+- type: entity
+  id: MaidBorgChassisMining
+  parent: BaseMaidBorgChassisSelectable
+  name: salvage maidborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: MaidMining
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+    layers:
+    - state: base-mining
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: base_no-mind
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: base_light
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+#region Medical
+- type: entity
+  id: MaidBorgChassisMedical
+  parent: BaseMaidBorgChassisSelectable
+  name: medical maidborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: MaidMedical
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+    layers:
+    - state: base-medical
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: base_no-mind
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: base_light
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+#region Janitor
+- type: entity
+  id: MaidBorgChassisJanitor
+  parent: BaseMaidBorgChassisSelectable
+  name: janitor maidborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: MaidJanitor
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+    layers:
+    - state: base-janitor
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: base_no-mind
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: base_light
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+#region Syndicate
+- type: entity
+  id: MaidBorgChassisSyndicate
+  parent: BaseMaidBorgChassisSelectable
+  name: syndicate maidborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: MaidSyndicate
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+    layers:
+    - state: base-syndicate
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: base_no-mind
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: base_light
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
