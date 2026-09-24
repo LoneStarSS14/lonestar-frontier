@@ -1,0 +1,18 @@
+- type: entityTable # LoneStar
+  id: TableFleshAberrantLoot
+  table: !type:AllSelector
+    children:
+    - id: MaterialGoliathHide1
+      rolls: !type:RangeNumberSelector
+        range: 3, 4
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnAberrantLootRoll
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.15
+    table: !type:NestedSelector
+      tableId: TableFleshAberrantLoot
+      prob: 1.00
