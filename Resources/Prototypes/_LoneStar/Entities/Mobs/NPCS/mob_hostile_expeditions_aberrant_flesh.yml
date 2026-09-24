@@ -47,6 +47,25 @@
   - type: ReplacementAccent
     accent: genericAggressive
 
+#region loot # LoneStar
+- type: entityTable
+  id: TableAberrantLootRoll
+  table: !type:AllSelector
+    children:
+    - id: MaterialGoliathHide1
+      rolls: !type:RangeNumberSelector
+        range: 3, 4
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnAberrantLootRoll
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.15
+    table: !type:NestedSelector
+      tableId: TableAberrantLootRoll
+      prob: 1.00
+
 #region MOBS
 - type: entity
   parent: BaseMobFleshExpeditions
@@ -369,6 +388,10 @@
     speedModifierThresholds:
       96: 0.7
       128: 0.5
+  - type: Butcherable # LoneStar
+    spawned:
+    - id: LSSpawnAberrantLootRoll
+      amount: 1
   - type: MeleeWeapon
     autoAttack: true
     attackRate: 1.5
