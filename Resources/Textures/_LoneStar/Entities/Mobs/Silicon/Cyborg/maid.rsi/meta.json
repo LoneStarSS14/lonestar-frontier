@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from Paradise SS13 at commit bd91a1b, _e_r _e  _l by Archee.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "robot",
+      "directions": 4
+    },
+    {
+      "name": "robot-engineering",
+      "directions": 4
+    },
+    {
+      "name": "robot-janitor",
+      "directions": 4
+    },
+    {
+      "name": "robot-medical",
+      "directions": 4
+    },
+    {
+      "name": "robot-mining",
+      "directions": 4
+    },
+    {
+      "name": "robot-syndicate",
+      "directions": 4
+    },
+    {
+      "name": "robot_e_r",
+      "directions": 4
+    },
+    {
+      "name": "robot_e",
+      "directions": 4
+    },
+    {
+      "name": "robot_l",
+      "directions": 4
+    }
+  ]
+}

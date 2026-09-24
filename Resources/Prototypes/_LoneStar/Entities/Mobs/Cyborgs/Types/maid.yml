@@ -1,0 +1,127 @@
+#region Generic
+- type: borgType
+  id: MaidGeneric
+  dummyPrototype: MaidBorgChassisGeneric
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+  spriteBodyState: robot
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
+  footstepCollection:
+    collection: FootstepHoverBorg
+  inventoryTemplateId: borgUnified
+  extraModuleCount: 4
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleArtifact
+  - BorgModuleAnomaly
+  - BorgModuleJetpack
+
+#region Engineering
+- type: borgType
+  id: MaidEngineering
+  dummyPrototype: MaidBorgChassisEngineer
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+  spriteBodyState: robot-engineering
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
+  footstepCollection:
+    collection: FootstepHoverBorg
+  inventoryTemplateId: borgUnified
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleConstruction
+  - BorgModuleRCDShipyard
+  - BorgModuleCable
+  - BorgModuleJetpack
+
+#region Mining
+- type: borgType
+  id: MaidMining
+  dummyPrototype: MaidBorgChassisMining
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+  spriteBodyState: robot-mining
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
+  footstepCollection:
+    collection: FootstepHoverBorg
+  inventoryTemplateId: borgUnified
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleMining
+  - BorgModuleTraversal
+  - BorgModuleAppraisal
+  - BorgModuleJetpack
+
+#region Medical
+- type: borgType
+  id: MaidMedical
+  dummyPrototype: MaidBorgChassisMedical
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+  spriteBodyState: robot-medical
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
+  footstepCollection:
+    collection: FootstepHoverBorg
+  inventoryTemplateId: borgUnified
+  extraModuleCount: 2
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleChemical
+  - BorgModuleTopicals
+  - BorgModuleRescue
+  - BorgModuleJetpack
+  - BorgModuleLollypopMedical
+  addComponents:
+  - type: SolutionScanner
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+
+
+#region Service
+- type: borgType
+  id: MaidJanitor
+  dummyPrototype: MaidBorgChassisJanitor
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+  spriteBodyState: robot-janitor
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
+  footstepCollection:
+    collection: FootstepHoverBorg
+  inventoryTemplateId: borgUnified
+  extraModuleCount: 5
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleCleaning
+  - BorgModuleCustodial
+
+
+#region Syndicate
+- type: borgType
+  id: MaidSyndicate
+  dummyPrototype: MaidBorgChassisSyndicate
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/maid.rsi
+  spriteBodyState: robot-syndicate
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
+  footstepCollection:
+    collection: FootstepHoverBorg
+  inventoryTemplateId: borgUnified
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleMining
+  - BorgModuleTraversal
+  - BorgModuleAppraisal
+  - BorgModuleJetpack

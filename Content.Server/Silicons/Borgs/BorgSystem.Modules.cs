@@ -320,8 +320,8 @@ public sealed partial class BorgSystem
         Entity<BorgModuleComponent> module,
         EntityUid? user = null)
     {
-        if (module.Comp.DefaultModule)
-            return false;
+        // if (module.Comp.DefaultModule) // LoneStar, all modules removeable.
+        //     return false;
 
         return true;
     }
