@@ -21,6 +21,7 @@
   id: MobArachnidSprites
   sprites:
     Head: MobArachnidHead
+    Hair: MobHumanoidAnyMarking # Lone Star 
     Snout: MobHumanoidAnyMarking
     UndergarmentTop: MobHumanoidAnyMarking
     UndergarmentBottom: MobHumanoidAnyMarking
@@ -50,7 +51,6 @@
 
 - type: markingPoints
   id: MobArachnidMarkingLimits
-  onlyWhitelisted: true
   points:
     Hair:
       points: 35
