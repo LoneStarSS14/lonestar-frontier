@@ -1,0 +1,28 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtEnteraTeal
+  name: teal gown
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/entera.rsi
+    layers:
+    - state: equipped-INNERCLOTHING
+      color: "#28eb80"
+    - state: equipped-INNERCLOTHING-decor
+      color: "#11a252"
+    - state: equipped-INNERCLOTHING-accent
+      color: "#fbf9d2"
+    - state: equipped-INNERCLOTHING-highlight
+      color: "#ff0000"
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/entera.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        color: "#28eb80"
+      - state: equipped-INNERCLOTHING-decor
+        color: "#11a252"
+      - state: equipped-INNERCLOTHING-accent
+        color: "#fbf9d2"
+      - state: equipped-INNERCLOTHING-highlight
+        color: "#ff0000"

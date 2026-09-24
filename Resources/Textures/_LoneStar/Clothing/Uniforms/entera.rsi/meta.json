@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from coyote bayou at commit af94b33.",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "equipped-INNERCLOTHING",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-decor",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-accent",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-highlight",
+            "directions": 4
+        }
+    ]
+}
