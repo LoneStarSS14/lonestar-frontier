@@ -55,6 +55,7 @@
     baseSprintSpeed: 5
     baseWeightlessModifier: 1.5
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
     - enum.DamageStateVisualLayers.Base:
         alive: Rainbow
@@ -149,7 +150,7 @@
   description: A tiny burning ember from a space drake.
   components:
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 120
+    rechargeCooldown: 30 # LoneStar
   - type: BasicEntityAmmoProvider
     proto: BabyDragonSpark
     capacity: 1
@@ -170,7 +171,7 @@
     icon: { sprite : Objects/Weapons/Guns/Projectiles/magic.rsi, state: fireball }
     priority: 2
     itemIconStyle: BigAction
-    useDelay: 120
+    useDelay: 30 # LoneStar
     sound:
       path: /Audio/Animals/space_dragon_roar.ogg
   - type: TargetAction
