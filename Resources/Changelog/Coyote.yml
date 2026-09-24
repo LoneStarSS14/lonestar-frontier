@@ -4001,3 +4001,10 @@ Entries:
   id: 438
   time: '2026-09-24T22:27:55.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/188
+- author: trashqueenlily
+  changes:
+    - type: Tweak
+      message: Handheld mass scanners are now hands free!
+  id: 439
+  time: '2026-09-24T22:30:20.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/187
