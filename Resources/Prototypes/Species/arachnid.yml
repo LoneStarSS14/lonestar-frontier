@@ -51,6 +51,7 @@
 
 - type: markingPoints
   id: MobArachnidMarkingLimits
+  # Lone Star: Removed "onlyWhitelisted: true"
   points:
     Hair:
       points: 35
