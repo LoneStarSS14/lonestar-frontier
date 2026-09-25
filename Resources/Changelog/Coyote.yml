@@ -4024,3 +4024,12 @@ Entries:
   id: 441
   time: '2026-09-25T01:39:06.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/189
+- author: trashqueenlily
+  changes:
+    - type: Add
+      message: 'Made your pet dragons 100% more recolorable! '
+    - type: Tweak
+      message: Baby dragons now produce more flames!
+  id: 442
+  time: '2026-09-25T18:49:41.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/186
