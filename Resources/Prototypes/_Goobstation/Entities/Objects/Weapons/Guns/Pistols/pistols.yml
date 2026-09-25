@@ -30,5 +30,8 @@
   # LoneStar below
   - type: Item
     size: Normal
+    shape:
+    - 0,0,2,0
+    - 0,1,0,1
 
 
