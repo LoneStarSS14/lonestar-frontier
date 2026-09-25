@@ -109,29 +109,6 @@
   - type: ItemMapper
     sprite: _NF/Clothing/Neck/Misc/holster_thigh.rsi
 
-- type: entity
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseClothingNeckHolsterThigh ]
-  id: NFBaseClothingNeckHolsterThighNfsd
-  name: nfsd drop leg holster
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-      color: "#493926"
-  - type: Clothing
-    clothingVisuals:
-      neck:
-      - state: equipped-NECK
-        color: "#493926"
-  - type: Item
-    inhandVisuals:
-      left:
-      - state: inhand-left
-        color: "#493926"
-      right:
-      - state: inhand-right
-        color: "#493926"
-
 # region thigh sheath
 - type: entity
   parent: NFBaseClothingNeckSheath
@@ -160,26 +137,3 @@
         color: "#515151"
   - type: ItemMapper
     sprite: _NF/Clothing/Neck/Misc/holster_thigh_sheath.rsi
-
-- type: entity
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseClothingNeckSheathThigh ]
-  id: NFBaseClothingNeckSheathThighNfsd
-  name: nfsd drop leg sheath
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-      color: "#493926"
-  - type: Clothing
-    clothingVisuals:
-      neck:
-      - state: equipped-NECK
-        color: "#493926"
-  - type: Item
-    inhandVisuals:
-      left:
-      - state: inhand-left
-        color: "#493926"
-      right:
-      - state: inhand-right
-        color: "#493926"
