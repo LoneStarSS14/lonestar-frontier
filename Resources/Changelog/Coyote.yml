@@ -4008,3 +4008,10 @@ Entries:
   id: 439
   time: '2026-09-24T22:30:20.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/187
+- author: trashqueenlily
+  changes:
+    - type: Add
+      message: Stapled Goliath Plates to all Aberrant Horrors
+  id: 440
+  time: '2026-09-25T01:22:29.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/185
