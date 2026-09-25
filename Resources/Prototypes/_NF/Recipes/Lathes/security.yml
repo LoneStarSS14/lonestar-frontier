@@ -1,3 +1,5 @@
+## LoneStar: All material costs corrected according to noted formulas.
+
 # Base prototypes can be found in \Resources\Prototypes\Recipes\Lathes\security.yml
 #region Base
 - type: latheRecipe
@@ -87,14 +89,14 @@
   id: NFAmmunitionBoxBigPistol35
   result: NFAmmunitionBoxBigPistol35
   materials:
-    Steel: 4000 # box - free, 200 [bullets] * 20 [Steel per bullet]
+    Steel: 3900 # box - free, 260 [bullets] * 15 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigPistol35Overpressure
   result: NFAmmunitionBoxBigPistol35Overpressure
   materials:
-    Steel: 6000 # box - free, 200 [bullets] * 30 [Steel per bullet]
+    Steel: 5850 # box - free, 260 [bullets] * 22.5 [Steel per bullet]
 
 #region .40 Ammo Box (Coyote)
 - type: latheRecipe
@@ -221,14 +223,14 @@
   id: NFAmmunitionBoxBigPistol45
   result: NFAmmunitionBoxBigPistol45
   materials:
-    Steel: 4000 # box - free, 200 [bullets] * 20 [Steel per bullet]
+    Steel: 3000 # box - free, 200 [bullets] * 15 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigPistol45Overpressure
   result: NFAmmunitionBoxBigPistol45Overpressure
   materials:
-    Steel: 6000 # box - free, 200 [bullets] * 30 [Steel per bullet]
+    Steel: 4500 # box - free, 200 [bullets] * 22.5 [Steel per bullet]
 
 #region .20 Ammo Box
 - type: latheRecipe
@@ -236,88 +238,88 @@
   id: NFAmmunitionBoxRifle20
   result: NFAmmunitionBoxRifle20
   materials:
-    Steel: 1200 # box - free, 60 [bullets] * 20 [Steel per bullet]
+    Steel: 1500 # box - free, 75 [bullets] * 20 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxRifle20Overpressure
   result: NFAmmunitionBoxRifle20Overpressure
   materials:
-    Steel: 1800 # box - free, 60 [bullets] * 30 [Steel per bullet]
+    Steel: 2250 # box - free, 75 [bullets] * 30 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxRifle20Practice
   result: NFAmmunitionBoxRifle20Practice
   materials:
-    Steel: 600 # box - free, 60 [bullets] * 10 [Steel per bullet]
+    Steel: 750 # box - free, 75 [bullets] * 10 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxRifle20Incendiary
   result: NFAmmunitionBoxRifle20Incendiary
   materials:
-    Plastic: 1200 # box - free, 60 [bullets] * 20 [Plastic per bullet]
+    Plastic: 1500 # box - free, 75 [bullets] * 20 [Plastic per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxRifle20Uranium
   result: NFAmmunitionBoxRifle20Uranium
   materials:
-    Plastic: 600 # box - free, 60 [bullets] * 10 [Plastic per bullet]
-    Uranium: 600 # box - free, 60 [bullets] * 10 [Uranium per bullet]
+    Plastic: 750 # box - free, 75 [bullets] * 10 [Plastic per bullet]
+    Uranium: 750 # box - free, 75 [bullets] * 10 [Uranium per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxRifle20Rubber
   result: NFAmmunitionBoxRifle20Rubber
   materials:
-    Plastic: 600 # box - free, 60 [bullets] * 10 [Plastic per bullet]
-    Steel: 600 # box - free, 60 [bullets] * 10 [Steel per bullet]
+    Plastic: 750 # box - free, 75 [bullets] * 10 [Plastic per bullet]
+    Steel: 750 # box - free, 75 [bullets] * 10 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigRifle20
   result: NFAmmunitionBoxBigRifle20
   materials:
-    Steel: 4000 # box - free, 200 [bullets] * 20 [Steel per bullet]
+    Steel: 5000 # box - free, 250 [bullets] * 20 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigRifle20Overpressure
   result: NFAmmunitionBoxBigRifle20Overpressure
   materials:
-    Steel: 6000 # box - free, 200 [bullets] * 30 [Steel per bullet]
+    Steel: 7500 # box - free, 250 [bullets] * 30 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigRifle20Practice
   result: NFAmmunitionBoxBigRifle20Practice
   materials:
-    Steel: 2000 # box - free, 200 [bullets] * 10 [Steel per bullet]
+    Steel: 2500 # box - free, 250 [bullets] * 10 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigRifle20Incendiary
   result: NFAmmunitionBoxBigRifle20Incendiary
   materials:
-    Plastic: 4000 # box - free, 200 [bullets] * 20 [Plastic per bullet]
+    Plastic: 5000 # box - free, 250 [bullets] * 20 [Plastic per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigRifle20Uranium
   result: NFAmmunitionBoxBigRifle20Uranium
   materials:
-    Plastic: 2000 # box - free, 60 [bullets] * 10 [Plastic per bullet]
-    Uranium: 2000 # box - free, 60 [bullets] * 10 [Uranium per bullet]
+    Plastic: 2500 # box - free, 250 [bullets] * 10 [Plastic per bullet]
+    Uranium: 2500 # box - free, 250 [bullets] * 10 [Uranium per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigRifle20Rubber
   result: NFAmmunitionBoxBigRifle20Rubber
   materials:
-    Plastic: 2000 # box - free, 60 [bullets] * 10 [Plastic per bullet]
-    Steel: 2000 # box - free, 60 [bullets] * 10 [Steel per bullet]
+    Plastic: 2500 # box - free, 250 [bullets] * 10 [Plastic per bullet]
+    Steel: 2500 # box - free, 250 [bullets] * 10 [Steel per bullet]
 
 #region .30 Ammo Box
 - type: latheRecipe
@@ -397,16 +399,16 @@
   id: NFAmmunitionBoxBigRifle30Uranium
   result: NFAmmunitionBoxBigRifle30Uranium
   materials:
-    Plastic: 2000 # box - free, 60 [bullets] * 10 [Plastic per bullet]
-    Uranium: 2000 # box - free, 60 [bullets] * 10 [Uranium per bullet]
+    Plastic: 2000 # box - free, 200 [bullets] * 10 [Plastic per bullet]
+    Uranium: 2000 # box - free, 200 [bullets] * 10 [Uranium per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigRifle30Rubber
   result: NFAmmunitionBoxBigRifle30Rubber
   materials:
-    Plastic: 2000 # box - free, 60 [bullets] * 10 [Plastic per bullet]
-    Steel: 2000 # box - free, 60 [bullets] * 10 [Steel per bullet]
+    Plastic: 2000 # box - free, 200 [bullets] * 10 [Plastic per bullet]
+    Steel: 2000 # box - free, 200 [bullets] * 10 [Steel per bullet]
 
 #region .50 Ammo Box
 - type: latheRecipe
