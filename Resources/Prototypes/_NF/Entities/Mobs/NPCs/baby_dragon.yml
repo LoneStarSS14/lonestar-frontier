@@ -142,7 +142,8 @@
   - type: ActionGun
     action: ActionDragonsBreathBaby
     gunProto: BabyDragonsSparkGun
-  - type: UserInterface # LoneStar
+# LoneStar
+  - type: UserInterface
     interfaces:
       enum.RadarConsoleUiKey.Key:
         type: RadarConsoleBoundUserInterface
