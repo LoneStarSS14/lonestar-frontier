@@ -24,7 +24,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,1,1
+    - 0,0,2,1
   - type: BallisticAmmoProvider
     capacity: 200
   - type: Sprite
@@ -56,7 +56,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,1,1
+    - 0,0,2,1
   - type: BallisticAmmoProvider
     capacity: 250
   - type: Sprite
@@ -88,7 +88,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,1,1
+    - 0,0,2,1
   - type: BallisticAmmoProvider
     capacity: 200
   - type: Sprite
@@ -120,7 +120,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,1,1
+    - 0,0,2,1
   - type: BallisticAmmoProvider
     capacity: 200
   - type: Sprite
@@ -154,7 +154,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,1,1
+    - 0,0,2,1
   - type: BallisticAmmoProvider
     capacity: 120
   - type: Sprite

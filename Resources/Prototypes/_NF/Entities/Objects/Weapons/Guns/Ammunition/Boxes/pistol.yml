@@ -38,7 +38,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,1,1
+    - 0,0,2,1
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -57,7 +57,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,1,1
+    - 0,0,2,1
   - type: BallisticAmmoProvider
     whitelist:
       tags:
