@@ -2,7 +2,7 @@
   parent: CSBaseWeaponFrameHeavyPistolCybersun
   id: WeaponPistolAnaconda
   name: Anaconda
-  description: A heavy pistol capable of supplying itself with the ammo on the way using a built-in fabricator.
+  description: A heavy pistol with miniaturized ammo fabricator crammed into a shape right out of the holovids. Assembles new ammo on the fly. # LoneStar
   components:
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Pistols/anaconda.rsi
@@ -18,14 +18,17 @@
   - type: ProjectileBatteryAmmoProvider
     proto: BulletAnaconda
     fireCost: 90
-  - type: Battery # 18 starting shots
-    maxCharge: 1620
-    startingCharge: 1620
+  - type: Battery # 7 starting shots
+    maxCharge: 630 # LoneStar
+    startingCharge: 630 # LoneStar
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 30 # recharges 1 shot per 3 seconds
+    autoRechargeRate: 15 # LoneStar
   #  rechargeSound: no work with BatterySelfRecharger
   #    path: /Audio/Weapons/Guns/Cock/shotgun_close.ogg
   #- type: Multishot # Requires cherrypicking 107142b
+  # LoneStar below
+  - type: Item
+    size: Normal
 
 
