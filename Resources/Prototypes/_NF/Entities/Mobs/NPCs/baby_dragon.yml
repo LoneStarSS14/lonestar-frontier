@@ -196,8 +196,8 @@
   - type: WorldTargetAction
     event: !type:ActionGunShootEvent
 
-- type: entity
-  id: ActionObserverShowRadar
+- type: entity # LoneStar
+  id: ActionDragonShowRadar
   parent: ActionAGhostShowRadar
   components:
   - type: Action
