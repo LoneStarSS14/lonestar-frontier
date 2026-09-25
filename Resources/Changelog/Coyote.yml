@@ -4015,3 +4015,12 @@ Entries:
   id: 440
   time: '2026-09-25T01:22:29.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/185
+- author: archee1
+  changes:
+    - type: Fix
+      message: Vulpkanins hands are no longer under their jumpsuit sprites.
+    - type: Tweak
+      message: Shoes default over jumpsuits again and are toggled to be under instead.
+  id: 441
+  time: '2026-09-25T01:39:06.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/189
