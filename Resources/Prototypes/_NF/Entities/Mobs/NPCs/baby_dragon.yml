@@ -142,7 +142,7 @@
   - type: ActionGun
     action: ActionDragonsBreathBaby
     gunProto: BabyDragonsSparkGun
-# LoneStar
+  # LoneStar
   - type: UserInterface
     interfaces:
       enum.RadarConsoleUiKey.Key:
@@ -158,6 +158,7 @@
   - type: ComplexInteraction # Needed to interact with innate radar console
   - type: ShipyardSellCondition # Teleport to shipyard console on sale
     preserveOnSale: true
+  # End LoneStar
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -195,10 +196,11 @@
     range: 0
   - type: WorldTargetAction
     event: !type:ActionGunShootEvent
-
-- type: entity # LoneStar
+# LoneStar
+- type: entity
   id: ActionDragonShowRadar
   parent: ActionAGhostShowRadar
   components:
   - type: Action
     checkCanInteract: false
+# End LoneStar
