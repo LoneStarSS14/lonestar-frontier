@@ -1922,6 +1922,8 @@
   recipeUnlocks:
   - NFAmmunitionBoxBigPistol35
   - NFAmmunitionBoxBigPistol35Overpressure
+  - CSAmmunitionBoxBigPistol40
+  - CSAmmunitionBoxBigPistol40Overpressure
   - NFAmmunitionBoxBigPistol45
   - NFAmmunitionBoxBigPistol45Overpressure
   - NFAmmunitionBoxBigRifle20

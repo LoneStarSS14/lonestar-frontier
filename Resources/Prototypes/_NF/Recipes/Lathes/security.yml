@@ -149,50 +149,64 @@
     Plasma: 800 # box - free, 80 [bullets] * 10 [Plasma per bullet]
     Silver: 400 # box - free, 80 [bullets] * 5 [Silver per bullet]
 
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: CSAmmunitionBoxBigPistol40
+  result: CSAmmunitionBoxBigPistol40
+  materials:
+    Steel: 3600 # box - free, 240 [bullets] * 15 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: CSAmmunitionBoxBigPistol40Overpressure
+  result: CSAmmunitionBoxBigPistol40Overpressure
+  materials:
+    Steel: 5400 # box - free, 240 [bullets] * 22.5 [Steel per bullet]
+
 #region .45 Ammo Box
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxPistol45
   result: NFAmmunitionBoxPistol45
   materials:
-    Steel: 1200 # box - free, 80 [bullets] * 15 [Steel per bullet]
+    Steel: 900 # box - free, 60 [bullets] * 15 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxPistol45Overpressure
   result: NFAmmunitionBoxPistol45Overpressure
   materials:
-    Steel: 1800 # box - free, 80 [bullets] * 22.5 [Steel per bullet]
+    Steel: 1350 # box - free, 60 [bullets] * 22.5 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxPistol45Practice
   result: NFAmmunitionBoxPistol45Practice
   materials:
-    Steel: 640 # box - free, 80 [bullets] * 8 [Steel per bullet]
+    Steel: 480 # box - free, 60 [bullets] * 8 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxPistol45Incendiary
   result: NFAmmunitionBoxPistol45Incendiary
   materials:
-    Plastic: 1200 # box - free, 80 [bullets] * 15 [Plastic per bullet]
+    Plastic: 900 # box - free, 60 [bullets] * 15 [Plastic per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxPistol45Uranium
   result: NFAmmunitionBoxPistol45Uranium
   materials:
-    Plastic: 600 # box - free, 80 [bullets] * 7.5 [Plastic per bullet]
-    Uranium: 600 # box - free, 80 [bullets] * 7.5 [Uranium per bullet]
+    Plastic: 450 # box - free, 60 [bullets] * 7.5 [Plastic per bullet]
+    Uranium: 450 # box - free, 60 [bullets] * 7.5 [Uranium per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxPistol45Rubber
   result: NFAmmunitionBoxPistol45Rubber
   materials:
-    Plastic: 600 # box - free, 80 [bullets] * 7.5 [Plastic per bullet]
-    Steel: 600 # box - free, 80 [bullets] * 7.5 [Steel per bullet]
+    Plastic: 450 # box - free, 60 [bullets] * 7.5 [Plastic per bullet]
+    Steel: 450 # box - free, 60 [bullets] * 7.5 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe

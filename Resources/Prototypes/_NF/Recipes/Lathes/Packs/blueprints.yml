@@ -505,6 +505,8 @@
   # BulkAmmo
   - NFAmmunitionBoxBigPistol35
   - NFAmmunitionBoxBigPistol35Overpressure
+  - CSAmmunitionBoxBigPistol40
+  - CSAmmunitionBoxBigPistol40Overpressure
   - NFAmmunitionBoxBigPistol45
   - NFAmmunitionBoxBigPistol45Overpressure
   - NFAmmunitionBoxBigRifle20
@@ -534,6 +536,8 @@
   - CSAmmunitionBoxPistol40
   - CSAmmunitionBoxPistol40Rubber
   - CSAmmunitionBoxPistol40Overpressure
+  - CSAmmunitionBoxBigPistol40
+  - CSAmmunitionBoxBigPistol40Overpressure
   - CSMagazinePistol40Empty
   - CSMagazineSubMachineGun40Empty
   # Monolith

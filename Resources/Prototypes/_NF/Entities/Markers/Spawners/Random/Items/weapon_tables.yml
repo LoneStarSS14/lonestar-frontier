@@ -440,6 +440,7 @@
     - !type:GroupSelector
       children:
       - id: WeaponCaseShortAmmoBoxLethal40
+      - id: WeaponCaseShortAmmoBoxBigLethal40
     # End Coyote
     - !type:GroupSelector
       children:

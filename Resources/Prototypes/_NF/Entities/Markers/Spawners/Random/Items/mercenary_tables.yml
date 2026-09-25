@@ -402,6 +402,7 @@
       #- id: CrateAmmoBoxBigLethal25 # Coyote: Remove .25 from tables
       - id: CrateAmmoBoxBigLethal30
       - id: CrateAmmoBoxBigLethal35
+      - id: CrateAmmoBoxBigLethal40 # Coyote
       - id: CrateAmmoBoxBigLethal45
       - id: CrateAmmoBoxBigLethalShotgun
       - id: CrateAmmoBoxBigRubber20
