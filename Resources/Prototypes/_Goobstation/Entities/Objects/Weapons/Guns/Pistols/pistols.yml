@@ -23,15 +23,19 @@
     startingCharge: 630 # LoneStar
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 15 # LoneStar
   #  rechargeSound: no work with BatterySelfRecharger
   #    path: /Audio/Weapons/Guns/Cock/shotgun_close.ogg
   #- type: Multishot # Requires cherrypicking 107142b
   # LoneStar below
+    autoRechargeRate: 22
+    autoRechargePause: true
+    autoRechargePauseTime: 6
   - type: Item
     size: Normal
     shape:
     - 0,0,2,0
     - 0,1,0,1
-
-
+  - type: Tag
+    tags:
+    -Sidearm
+    -RechargerBlacklist
