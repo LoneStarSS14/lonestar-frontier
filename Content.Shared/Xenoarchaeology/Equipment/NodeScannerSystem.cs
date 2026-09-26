@@ -34,8 +34,10 @@ public sealed class NodeScannerSystem : EntitySystem
             connected.NextUpdate = _timing.CurTime + connected.LinkUpdateInterval;
 
             var attachedArtifact = connected.AttachedTo;
-            var artifactCoordinates = Transform(attachedArtifact).Coordinates;
-            if (!_transform.InRange(artifactCoordinates, transform.Coordinates, scanner.MaxLinkedRange))
+            // LoneStar: start, added case for artifact being deleted
+            if (!TryComp<TransformComponent>(attachedArtifact, out var artifactTransform)
+                || !_transform.InRange(artifactTransform.Coordinates, transform.Coordinates, scanner.MaxLinkedRange))
+            // LoneStar: end
             {
                 //scanner is too far, disconnect
                 RemCompDeferred(uid, connected);
@@ -87,8 +89,11 @@ public sealed class NodeScannerSystem : EntitySystem
             && !_useDelay.TryResetDelay((device, useDelay), true))
             return;
 
-        var connected = EnsureComp<NodeScannerConnectedComponent>(device);
         EntityUid artifact = unlockingEnt;
+        if (artifact == EntityUid.Invalid)
+            return;
+
+        var connected = EnsureComp<NodeScannerConnectedComponent>(device);
         if (connected.AttachedTo != artifact)
         {
             connected.AttachedTo = artifact;
