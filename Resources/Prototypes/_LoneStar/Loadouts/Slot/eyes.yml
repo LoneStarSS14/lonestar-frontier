@@ -1,0 +1,15 @@
+#region Med
+- type: loadout
+  id: ClothingEyesGlassesMedChemFlash
+  equipment:
+    eyes: ClothingEyesGlassesMedChemFlash
+
+- type: loadout
+  id: ClothingEyesGlassesMedChemGoggles
+  equipment:
+    eyes: ClothingEyesGlassesMedChemGoggles
+
+- type: loadout
+  id: ClothingEyesGlassesMedChemHud
+  equipment:
+    eyes: ClothingEyesGlassesMedChemHud

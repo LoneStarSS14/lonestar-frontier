@@ -1,0 +1,11 @@
+# - type: Tag # LoneStar
+#   id: WardenRapier
+
+# - type: Tag
+#   id: AdvancedEnergyMagAmmo
+
+- type: Tag
+  id: HudChemistry
+
+- type: Tag
+  id: HudMedichem
