@@ -1,0 +1,18 @@
+﻿- type: entity
+  parent: [ClothingEyesBase, ShowMedicalIcons]
+  id: ClothingEyesGlassesMedChemHud
+  name: medichem hud
+  description: Hud that can scan the chemical composition of a solution, with an integrated medical hud.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Eyes/Glasses/medichemhud.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Eyes/Glasses/medichemhud.rsi
+  - type: SolutionScanner
+  - type: Construction
+    graph: HudMedChemHUD
+    node: hudMedChem
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - HudMedichem

@@ -231,7 +231,8 @@
   - DocForcedOuterClothing
   - DocShoes
   - ContractorFace
-  - ContractorGlasses
+  - DocGlasses # LoneStar
+  # - ContractorGlasses
   - NurseBelt # Coyote: ContractorBelt < NurseBelt (Inherits ContractorBelt)
   - DocEars
   - ContractorBoxSurvival
