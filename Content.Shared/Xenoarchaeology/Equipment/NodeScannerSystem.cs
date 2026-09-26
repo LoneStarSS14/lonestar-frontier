@@ -88,12 +88,14 @@ public sealed class NodeScannerSystem : EntitySystem
         if (TryComp(device, out UseDelayComponent? useDelay)
             && !_useDelay.TryResetDelay((device, useDelay), true))
             return;
-
+        // LoneStar start: nodescanners being stuck linked to deleted artifacts
         EntityUid artifact = unlockingEnt;
         if (artifact == EntityUid.Invalid)
             return;
+        // LoneStar end
 
         var connected = EnsureComp<NodeScannerConnectedComponent>(device);
+        // EntityUid artifact = unlockingEnt; // LoneStar
         if (connected.AttachedTo != artifact)
         {
             connected.AttachedTo = artifact;
