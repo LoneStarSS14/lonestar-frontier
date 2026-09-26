@@ -66,8 +66,8 @@
     damage:
       types:
         Blunt: 0
-  - type: TrashOnSolutionEmpty
-    solution: beaker
+  # - type: TrashOnSolutionEmpty # LoneStar
+  #   solution: beaker
   - type: StaticPrice
     price: 100
   - type: DamageOnLand
