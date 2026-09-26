@@ -502,11 +502,19 @@
   - NFMagazineRifle30Empty
   - NFMagazineDrumRifle20Empty
   - MagazineAsmgtUniversalEmpty
-  # BulkRifleAmmo
+  # BulkAmmo
+  - NFAmmunitionBoxBigPistol35
+  - NFAmmunitionBoxBigPistol35Overpressure
+  - CSAmmunitionBoxBigPistol40
+  - CSAmmunitionBoxBigPistol40Overpressure
+  - NFAmmunitionBoxBigPistol45
+  - NFAmmunitionBoxBigPistol45Overpressure
   - NFAmmunitionBoxBigRifle20
   - NFAmmunitionBoxBigRifle20Overpressure
   - NFAmmunitionBoxBigRifle30
   - NFAmmunitionBoxBigRifle30Overpressure
+  - NFAmmunitionBoxBigShellShotgunBuckshot
+  - NFAmmunitionBoxBigShellShotgunOverpressure
   # NFAdvancedRiotControl
   - NFTelescopicShield
   # NFExplosiveTechnology
@@ -528,6 +536,8 @@
   - CSAmmunitionBoxPistol40
   - CSAmmunitionBoxPistol40Rubber
   - CSAmmunitionBoxPistol40Overpressure
+  - CSAmmunitionBoxBigPistol40
+  - CSAmmunitionBoxBigPistol40Overpressure
   - CSMagazinePistol40Empty
   - CSMagazineSubMachineGun40Empty
   # Monolith

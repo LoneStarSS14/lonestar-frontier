@@ -3,3 +3,9 @@
   recipes:
   - CSMagazinePistol40Empty
   - CSMagazineSubMachineGun40Empty
+
+- type: latheRecipePack
+  id: CSAmmoBoxBigStatic
+  recipes:
+  - CSAmmunitionBoxBigPistol40
+  - CSAmmunitionBoxBigPistol40Overpressure

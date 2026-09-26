@@ -80,3 +80,10 @@
   - StorageFillAmmoBoxEmp40
   id: WeaponCaseShortAmmoBoxEmp40
   categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent:
+  - WeaponCaseShortAmmo
+  - StorageFillAmmoBoxBigLethal40
+  id: WeaponCaseShortAmmoBoxBigLethal40
+  categories: [ HideSpawnMenu ]
