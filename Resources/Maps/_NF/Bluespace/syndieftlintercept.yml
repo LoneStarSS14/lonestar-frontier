@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 09/26/2026 18:33:05
-  entityCount: 890
+  time: 09/26/2026 20:39:40
+  entityCount: 895
 maps: []
 grids:
 - 1
@@ -389,12 +389,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 1.5,-5.5
       parent: 1
-  - uid: 519
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -11.5,-3.5
-      parent: 1
   - uid: 666
     components:
     - type: Transform
@@ -514,33 +508,23 @@ entities:
     - type: ItemSlots
 - proto: AirlockSyndicate
   entities:
-  - uid: 41
-    components:
-    - type: Transform
-      pos: -11.5,-2.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        35:
-        - - DoorStatus
-          - InputA
-        881:
-        - - DoorStatus
-          - InputB
-        109:
-        - - DoorStatus
-          - DoorBolt
-    - type: ItemSlots
   - uid: 109
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -11.5,-2.5
+      parent: 1
+    - type: DoorBolt
+      boltsDown: True
+    - type: DeviceLinkSink
+      invokeCounter: 1
+    - type: ItemSlots
+  - uid: 158
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
       pos: -2.5,-3.5
       parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        881:
-        - - DoorStatus
-          - InputA
     - type: ItemSlots
   - uid: 280
     components:
@@ -1080,6 +1064,22 @@ entities:
     - type: Transform
       pos: -4.5,-1.5
       parent: 1
+- proto: ButtonFrameExit
+  entities:
+  - uid: 714
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -11.5,-3.5
+      parent: 1
+- proto: ButtonFrameGrey
+  entities:
+  - uid: 715
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -11.5,-3.5
+      parent: 1
 - proto: CableApcExtension
   entities:
   - uid: 29
@@ -1588,6 +1588,11 @@ entities:
     components:
     - type: Transform
       pos: 3.5,-4.5
+      parent: 1
+  - uid: 711
+    components:
+    - type: Transform
+      pos: 5.5,-7.5
       parent: 1
 - proto: CableMV
   entities:
@@ -3558,6 +3563,24 @@ entities:
     - type: Transform
       pos: -15.5,-0.5
       parent: 1
+- proto: LandMineModular
+  entities:
+  - uid: 680
+    components:
+    - type: Transform
+      pos: -6.5,-3.5
+      parent: 1
+    - type: Construction
+      containers:
+      - payload
+      node: mine
+    - type: Anchorable
+      flags: Anchorable
+    - type: ContainerContainer
+      containers:
+        payload: !type:Container
+          ents:
+          - 712
 - proto: LockableButtonCaptain
   entities:
   - uid: 904
@@ -3647,12 +3670,6 @@ entities:
         - - Output
           - Open
         157:
-        - - Output
-          - Open
-        158:
-        - - Output
-          - Open
-        165:
         - - Output
           - Open
         155:
@@ -4131,6 +4148,21 @@ entities:
     - type: Transform
       pos: 4.5,-4.5
       parent: 1
+- proto: RemoteSignaller
+  entities:
+  - uid: 712
+    components:
+    - type: Transform
+      pos: -7.49913,-3.3455055
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        166:
+        - - Pressed
+          - Open
+        157:
+        - - Pressed
+          - Open
 - proto: SawAdvanced
   entities:
   - uid: 794
@@ -4167,20 +4199,22 @@ entities:
     - type: Transform
       pos: -5.5,-1.5
       parent: 1
-  - uid: 158
-    components:
-    - type: Transform
-      pos: -7.5,-4.5
-      parent: 1
   - uid: 165
     components:
     - type: Transform
-      pos: -5.5,-4.5
+      rot: 3.141592653589793 rad
+      pos: -7.5,-4.5
       parent: 1
   - uid: 166
     components:
     - type: Transform
       pos: -7.5,-1.5
+      parent: 1
+  - uid: 519
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -5.5,-4.5
       parent: 1
 - proto: ShuttersRadiationOpen
   entities:
@@ -4197,6 +4231,11 @@ entities:
       rot: 3.141592653589793 rad
       pos: -4.5,-4.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        519:
+        - - Pressed
+          - Toggle
   - uid: 71
     components:
     - type: Transform
@@ -4205,9 +4244,6 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        158:
-        - - Pressed
-          - Toggle
         165:
         - - Pressed
           - Toggle
@@ -4230,17 +4266,40 @@ entities:
         157:
         - - Pressed
           - Toggle
-        158:
-        - - Pressed
-          - Toggle
-        165:
-        - - Pressed
-          - Toggle
   - uid: 114
     components:
     - type: Transform
       pos: -4.5,-1.5
       parent: 1
+- proto: SignalButtonDirectional
+  entities:
+  - uid: 41
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -11.5,-3.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        109:
+        - - Pressed
+          - DoorBolt
+        155:
+        - - Pressed
+          - Open
+  - uid: 713
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -11.5,-3.5
+      parent: 1
+    - type: SignalSwitch
+      state: True
+    - type: DeviceLinkSource
+      linkedPorts:
+        109:
+        - - Pressed
+          - DoorBolt
 - proto: SignBridge
   entities:
   - uid: 91
@@ -4513,11 +4572,6 @@ entities:
     components:
     - type: Transform
       pos: -5.5,4.5
-      parent: 1
-  - uid: 896
-    components:
-    - type: Transform
-      pos: -6.5,-3.5
       parent: 1
 - proto: SpawnMobExperimentationVictim
   entities:
