@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 09/26/2026 20:39:40
+  time: 09/26/2026 21:12:28
   entityCount: 895
 maps: []
 grids:
@@ -3666,12 +3666,6 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        166:
-        - - Output
-          - Open
-        157:
-        - - Output
-          - Open
         155:
         - - Output
           - Open
@@ -4153,16 +4147,23 @@ entities:
   - uid: 712
     components:
     - type: Transform
-      pos: -7.49913,-3.3455055
-      parent: 1
+      parent: 680
     - type: DeviceLinkSource
       linkedPorts:
-        166:
+        165:
         - - Pressed
-          - Open
+          - Toggle
         157:
         - - Pressed
-          - Open
+          - Toggle
+        166:
+        - - Pressed
+          - Toggle
+        519:
+        - - Pressed
+          - Toggle
+    - type: Physics
+      canCollide: False
 - proto: SawAdvanced
   entities:
   - uid: 794
@@ -4202,19 +4203,19 @@ entities:
   - uid: 165
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -7.5,-4.5
+      pos: -7.5,-1.5
       parent: 1
   - uid: 166
     components:
     - type: Transform
-      pos: -7.5,-1.5
+      rot: 3.141592653589793 rad
+      pos: -5.5,-4.5
       parent: 1
   - uid: 519
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: -5.5,-4.5
+      pos: -7.5,-4.5
       parent: 1
 - proto: ShuttersRadiationOpen
   entities:
@@ -4233,7 +4234,7 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        519:
+        166:
         - - Pressed
           - Toggle
   - uid: 71
@@ -4244,13 +4245,7 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        165:
-        - - Pressed
-          - Toggle
-        157:
-        - - Pressed
-          - Toggle
-        166:
+        519:
         - - Pressed
           - Toggle
   - uid: 101
@@ -4260,10 +4255,7 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        166:
-        - - Pressed
-          - Toggle
-        157:
+        165:
         - - Pressed
           - Toggle
   - uid: 114
@@ -4271,6 +4263,11 @@ entities:
     - type: Transform
       pos: -4.5,-1.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        157:
+        - - Pressed
+          - Toggle
 - proto: SignalButtonDirectional
   entities:
   - uid: 41
