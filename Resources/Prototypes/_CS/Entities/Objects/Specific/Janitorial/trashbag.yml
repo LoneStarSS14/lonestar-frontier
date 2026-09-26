@@ -15,7 +15,7 @@
   - type: Storage
     maxItemSize: Huge
     grid:
-    - 0,0,19,9
+    - 0,0,14,9
     quickInsert: true
     areaInsert: true
     areaInsertRadius: 2 #nerfed 5 - 2 forgot this was listed in tile range
