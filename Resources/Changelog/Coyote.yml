@@ -4046,3 +4046,12 @@ Entries:
   id: 443
   time: '2026-09-26T14:42:57.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/195
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        It is now possible to make Shadekin go sideways, along with other things
+        that were wrong with them.
+  id: 444
+  time: '2026-09-26T14:46:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/192
