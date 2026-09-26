@@ -3446,28 +3446,28 @@ entities:
       pos: 5.5,-6.5
       parent: 1
     - type: PowerSupplier
-      supplyRate: 20000
+      supplyRate: 22500
   - uid: 90
     components:
     - type: Transform
       pos: 6.5,-7.5
       parent: 1
     - type: PowerSupplier
-      supplyRate: 20000
+      supplyRate: 22500
   - uid: 93
     components:
     - type: Transform
       pos: 5.5,-7.5
       parent: 1
     - type: PowerSupplier
-      supplyRate: 20000
+      supplyRate: 22500
   - uid: 126
     components:
     - type: Transform
       pos: 6.5,-6.5
       parent: 1
     - type: PowerSupplier
-      supplyRate: 20000
+      supplyRate: 22500
 - proto: GravityGeneratorMini
   entities:
   - uid: 657
