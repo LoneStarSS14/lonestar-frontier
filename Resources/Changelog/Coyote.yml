@@ -4033,3 +4033,16 @@ Entries:
   id: 442
   time: '2026-09-25T18:49:41.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/186
+- author: archee1
+  changes:
+    - type: Add
+      message: Bulk ammo boxes can now be printed for .35 .40 .45 and .50.
+    - type: Tweak
+      message: Bulk ammo boxes are now sized at 2x3 instead of 2x2
+    - type: Fix
+      message: >-
+        Costs to print ammo are now correctly standardized across all ammo box
+        types.
+  id: 443
+  time: '2026-09-26T14:42:57.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/195
