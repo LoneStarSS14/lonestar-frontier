@@ -22,6 +22,7 @@
         whitelist:
           tags:
           - NFMagazinePistol35
+          - CSMagazinePistol40
           - NFMagazinePistol45
           - NFMagazineHighCapacityPistol35
           - NFSpeedLoaderPistol35
@@ -38,6 +39,7 @@
         whitelist:
           tags:
           - NFMagazinePistol35
+          - CSMagazinePistol40
           - NFMagazinePistol45
           - NFMagazineHighCapacityPistol35
           - NFSpeedLoaderPistol35
