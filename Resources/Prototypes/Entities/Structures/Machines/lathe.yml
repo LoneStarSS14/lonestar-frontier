@@ -715,6 +715,7 @@
     regenAmount: 5
     regenInterval: 10
   # End Coyote
+  - type: OreSiloClient #LoneStar
 
 - type: entity
   parent: [ BaseLathe, BaseLatheMagnet ]
