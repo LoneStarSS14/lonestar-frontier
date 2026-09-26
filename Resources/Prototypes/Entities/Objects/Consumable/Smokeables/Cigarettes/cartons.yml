@@ -19,7 +19,7 @@
         amount: 5
   - type: Tag
     tags:
-    - Trash
+    # - Trash # LoneStar
   - type: PhysicalComposition
     materialComposition:
       Plastic: 50
