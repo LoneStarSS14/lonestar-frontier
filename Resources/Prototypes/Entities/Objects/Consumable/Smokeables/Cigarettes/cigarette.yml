@@ -83,6 +83,7 @@
             Quantity: 10
           - ReagentId: Omnizine
             Quantity: 30
+  # LoneStar below
   - type: Tag
     tags:
     - Cigarette

@@ -83,7 +83,7 @@
       - Brain
       tags:
       - HighRiskItem
-      - ReclaimerBlacklist
+      - ReclaimerBlacklist # LoneStar
     soundCooldown: 0
     sound:
       path: /Audio/Ambience/Objects/crushing.ogg

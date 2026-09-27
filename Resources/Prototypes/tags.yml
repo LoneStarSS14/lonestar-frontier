@@ -1552,11 +1552,3 @@
 
 - type: Tag
   id: SimpleBiscuit
-
-# LoneStar
-
-- type: Tag
-  id: RechargerBlacklist
-
-- type: Tag
-  id: ReclaimerBlacklist

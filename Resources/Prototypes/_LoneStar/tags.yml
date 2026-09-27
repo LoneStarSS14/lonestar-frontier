@@ -12,3 +12,9 @@
 
 - type: Tag
   id: IpcTopical
+  
+- type: Tag
+  id: ReclaimerBlacklist
+
+- type: Tag
+  id: RechargerBlacklist
