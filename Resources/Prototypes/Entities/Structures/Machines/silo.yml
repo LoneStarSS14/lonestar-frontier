@@ -25,6 +25,7 @@
       - RawMaterial
       - Ingot
       - Ore # Frontier
+      - ArtifactFragment # LoneStar
   - type: ActivatableUI
     key: enum.OreSiloUiKey.Key
   - type: ActivatableUIRequiresPower
