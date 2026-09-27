@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 09/26/2026 21:12:28
-  entityCount: 895
+  time: 09/27/2026 02:20:03
+  entityCount: 896
 maps: []
 grids:
 - 1
@@ -3862,6 +3862,18 @@ entities:
     - type: Transform
       pos: -1.5,-2.5
       parent: 1
+- proto: PoweredDimSmallLight
+  entities:
+  - uid: 677
+    components:
+    - type: Transform
+      pos: -10.5,-2.5
+      parent: 1
+  - uid: 716
+    components:
+    - type: Transform
+      pos: -3.5,-2.5
+      parent: 1
 - proto: PoweredlightLED
   entities:
   - uid: 8
@@ -3929,12 +3941,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,-3.5
-      parent: 1
-  - uid: 677
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -6.5,-3.5
       parent: 1
 - proto: PoweredlightUltraviolet
   entities:
