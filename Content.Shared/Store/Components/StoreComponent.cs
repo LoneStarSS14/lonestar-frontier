@@ -93,6 +93,17 @@ public sealed partial class StoreComponent : Component
     [DataField]
     public SoundSpecifier BuySuccessSound = new SoundPathSpecifier("/Audio/Effects/kaching.ogg");
     #endregion
+
+    // LoneStar start
+    /// <summary>
+    /// Currency types whose turn-in values will be stripped (set to zero) from any item purchased from this store.
+    /// Used to prevent reselling purchased goods back to a contraband turn-in console for a profit (purchasing arbitrage).
+    /// If empty, no turn-in values are stripped.
+    /// </summary>
+    [DataField]
+    public HashSet<ProtoId<CurrencyPrototype>> StripTurnInValues = new();
+    // LoneStar end
+
 }
 
 /// <summary>
