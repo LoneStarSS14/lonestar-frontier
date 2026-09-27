@@ -90,7 +90,8 @@
   - BorgModuleTopicals
   - BorgModuleRescue
   - BorgModuleJetpack
-  - BorgModuleLollypopMedical
+  # - BorgModuleLollypopMedical # LoneStar
+  - BorgModuleAdvancedParamedic
   addComponents:
   - type: SolutionScanner
   - type: ShowHealthBars
@@ -120,7 +121,7 @@
   - BorgModuleTool
   - BorgModuleMusique
   - BorgModuleClowning
-  - BorgModuleLollypopService
+  # - BorgModuleLollypopService # LoneStar
   - BorgModuleGardening
   - BorgModuleHarvesting
   - BorgModuleNFService
