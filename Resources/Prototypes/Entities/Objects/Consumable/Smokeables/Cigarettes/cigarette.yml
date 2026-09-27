@@ -83,6 +83,10 @@
             Quantity: 10
           - ReagentId: Omnizine
             Quantity: 30
+  - type: Tag
+    tags:
+    - Cigarette
+    - ReclaimerBlacklist
 
 - type: entity
   id: CigaretteOmnizine
