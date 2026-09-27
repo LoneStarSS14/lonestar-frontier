@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "license": "CC-BY-NC-SA-4.0",
-  "copyright": "Created by GentleButter for Frontier Station, icon-overlay by Whatstone (Discord)",
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Archee for LoneStar.",
   "size": {
     "x": 32,
     "y": 32
@@ -22,10 +22,7 @@
       "name": "icon-overlay",
       "delays":
       [
-        [0.1, 0.2, 0.1, 0.1,
-        0.1, 0.1, 0.1, 0.05,
-        0.1, 0.05, 0.075, 0.075,
-        0.05, 0.2, 0.1, 0.1]
+        [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3]
       ]
     }
   ]

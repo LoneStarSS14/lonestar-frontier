@@ -556,6 +556,7 @@
     - NFBasicEVAToolsStatic # Frontier
     - ReportingStatic # DeltaV
     - NFPaperAndPaperAccessories # Frontier
+    - NFMedicalBoards # Frontier
     - NFMedicalStatic # Frontier
     - NFMedicalClothingStatic # Frontier
     - NFChemistryBasicStatic # Frontier
@@ -715,6 +716,7 @@
     regenAmount: 5
     regenInterval: 10
   # End Coyote
+  - type: OreSiloClient #LoneStar
 
 - type: entity
   parent: [ BaseLathe, BaseLatheMagnet ]

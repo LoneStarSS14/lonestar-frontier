@@ -3,6 +3,7 @@ using Content.Server.Actions;
 using Content.Server.Administration.Logs;
 using Content.Server.Stack;
 using Content.Server.Store.Components;
+using Content.Server._NF.Contraband.Systems; // LoneStar
 using Content.Shared.Actions;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
@@ -30,6 +31,7 @@ public sealed partial class StoreSystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly StackSystem _stack = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
+    [Dependency] private readonly ContrabandTurnInSystem _contraband = default!; // LoneStar
 
     private void InitializeUi()
     {
@@ -180,6 +182,12 @@ public sealed partial class StoreSystem
         if (listing.ProductEntity != null)
         {
             var product = Spawn(listing.ProductEntity, Transform(buyer).Coordinates);
+
+            // LoneStar start: strip configured turn-in values so purchased goods can't be resold for a profit.
+            if (component.StripTurnInValues.Count > 0)
+                _contraband.ClearContrabandValue(product, component.StripTurnInValues);
+            // LoneStar end
+
             _hands.PickupOrDrop(buyer, product);
 
             HandleRefundComp(uid, component, product);

@@ -55,6 +55,7 @@
     baseSprintSpeed: 5
     baseWeightlessModifier: 1.5
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
     - enum.DamageStateVisualLayers.Base:
         alive: Rainbow
@@ -141,6 +142,23 @@
   - type: ActionGun
     action: ActionDragonsBreathBaby
     gunProto: BabyDragonsSparkGun
+  # LoneStar
+  - type: UserInterface
+    interfaces:
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      enum.RadarConsoleUiKey.Key:
+        toggleAction: ActionObserverShowRadar
+  - type: RadarConsole
+    followEntity: true
+    maxIffRange: 256
+    hideCoords: true
+  - type: ComplexInteraction # Needed to interact with innate radar console
+  - type: ShipyardSellCondition # Teleport to shipyard console on sale
+    preserveOnSale: true
+  # End LoneStar
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -149,7 +167,7 @@
   description: A tiny burning ember from a space drake.
   components:
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 120
+    rechargeCooldown: 15 # LoneStar
   - type: BasicEntityAmmoProvider
     proto: BabyDragonSpark
     capacity: 1
@@ -170,7 +188,7 @@
     icon: { sprite : Objects/Weapons/Guns/Projectiles/magic.rsi, state: fireball }
     priority: 2
     itemIconStyle: BigAction
-    useDelay: 120
+    useDelay: 15 # LoneStar
     sound:
       path: /Audio/Animals/space_dragon_roar.ogg
   - type: TargetAction
