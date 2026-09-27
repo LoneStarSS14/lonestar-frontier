@@ -1,0 +1,46 @@
+﻿- type: palette # Adapted from the departmental palette
+  id: NTInteriorDesign
+  name: NT Interior Design
+  colors:
+    navyLight: "#5F7FA3" # Command
+    navyDark: "#243A56"
+    aquaLight: "#7DD8F0" # Medical
+    aquaDark: "#2C7894"
+    limeLight: "#C7F58D" # Service
+    limeDark: "#5C9630"
+    goldLight: "#FFD878" # Engineering
+    goldDark: "#B47714"
+    crimsonLight: "#F06A6A" # Sec
+    crimsonDark: "#9E2020"
+    burgundyLight: "#A93A1C" # Bar
+    burgundyDark: "#4A0D00"
+    orchidLight: "#E2A6D9" # Science
+    orchidDark: "#8E477F"
+    ochreLight: "#D99A3C" # Cargo
+    ochreDark: "#6B3D05"
+    plumLight: "#B652A8" # Janitor
+    plumDark: "#551E4B"
+    orangeLight: "#FF9A42" # Chemistry
+    orangeDark: "#B84400"
+    greenLight: "#78C95C" # Virology
+    greenDark: "#245B18"
+    tealLight: "#67D6B0" # Atmospherics
+    tealDark: "#1E6A55"
+    magentaLight: "#C65ACB" # Salvage
+    magentaDark: "#5C1C5E"
+    silverLight: "#F0F0F0" # Greys
+    silverDark: "#8A8A8A"
+    grayLight: "#F2F2F2"
+    grayDark: "#777777"
+
+- type: palette
+  id: TechniColors
+  name: TechniColors
+  colors:
+    TechniRed: "#d24949"
+    TechniOrange: "#db9e53"
+    TechniGreen: "#58e07d"
+    TechniBlue: "#4978cf"
+    TechniCyan: "#59dbc6"
+    TechniPurple: "#aa5dda"
+    TechniFuchsia: "#d84699"

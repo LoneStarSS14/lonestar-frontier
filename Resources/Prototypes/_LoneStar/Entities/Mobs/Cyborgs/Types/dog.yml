@@ -1,0 +1,225 @@
+#region Generic
+- type: borgType
+  id: DogGeneric
+  dummyPrototype: DogBorgChassisGeneric
+  extraModuleCount: 4
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleArtifact
+  - BorgModuleAnomaly
+  - BorgModuleJetpack
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+  inventoryTemplateId: borgUnified
+  spriteBodyState: standardd-sit
+  spriteBodyMovementState: standardd_moving
+  spriteBodyRestState: standardd-rest
+  spriteBodyLyingState: standardd-bellyup
+  spriteBodyDeadState: standardd-dead
+  spriteHasMindState: standardd_e
+  spriteHasMindMovementState: standardd_e_moving
+  spriteNoMindState: standardd_e_r
+  spriteNoMindMovementState: standardd_e_r_moving
+  spriteToggleLightState: standardd_l
+  spriteToggleLightMovementState: standardd_l_moving
+  petSuccessString: petting-success-generic-cyborg
+  petFailureString: petting-failure-generic-cyborg
+
+#region Engineering
+- type: borgType
+  id: DogEngineering
+  dummyPrototype: DogBorgChassisEngineer
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleConstruction
+  - BorgModuleRCDShipyard
+  - BorgModuleCable
+  - BorgModuleJetpack
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+  inventoryTemplateId: borgUnified
+  spriteBodyState: engineeringd-sit
+  spriteBodyMovementState: engineeringd_moving
+  spriteBodyRestState: engineeringd-rest
+  spriteBodyLyingState: engineeringd-bellyup
+  spriteBodyDeadState: engineeringd-dead
+  spriteHasMindState: engineeringd_e
+  spriteHasMindMovementState: engineeringd_e_moving
+  spriteNoMindState: engineeringd_e_r
+  spriteNoMindMovementState: engineeringd_e_r_moving
+  spriteToggleLightState: engineeringd_l
+  spriteToggleLightMovementState: engineeringd_l_moving
+  petSuccessString: petting-success-engineer-cyborg
+  petFailureString: petting-failure-engineer-cyborg
+
+#region Salvage
+- type: borgType
+  id: DogMining
+  dummyPrototype: DogBorgChassisMining
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleMining
+  - BorgModuleTraversal
+  - BorgModuleAppraisal
+  - BorgModuleJetpack
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+  inventoryTemplateId: borgUnified
+  spriteBodyState: miningd-sit
+  spriteBodyMovementState: miningd_moving
+  spriteBodyRestState: miningd-rest
+  spriteBodyLyingState: miningd-bellyup
+  spriteBodyDeadState: miningd-dead
+  spriteHasMindState: miningd_e
+  spriteHasMindMovementState: miningd_e_moving
+  spriteNoMindState: miningd_e_r
+  spriteNoMindMovementState: miningd_e_r_moving
+  spriteToggleLightState: miningd_l
+  spriteToggleLightMovementState: miningd_l_moving
+  petSuccessString: petting-success-salvage-cyborg
+  petFailureString: petting-failure-salvage-cyborg
+
+#region Medical
+- type: borgType
+  id: DogMedical
+  dummyPrototype: DogBorgChassisMedical
+  extraModuleCount: 2
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleChemical
+  - BorgModuleTopicals
+  - BorgModuleRescue
+  - BorgModuleJetpack
+  - BorgModuleLollypopMedical
+  addComponents:
+  - type: SolutionScanner
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+  inventoryTemplateId: borgUnified
+  spriteBodyState: medicald-sit
+  spriteBodyMovementState: medicald_moving
+  spriteBodyRestState: medicald-rest
+  spriteBodyLyingState: medicald-bellyup
+  spriteBodyDeadState: medicald-dead
+  spriteHasMindState: medicald_e
+  spriteHasMindMovementState: medicald_moving_e
+  spriteNoMindState: medicald_e_r
+  spriteNoMindMovementState: medicald_e_r_moving
+  spriteToggleLightState: medicald_l
+  spriteToggleLightMovementState: medicald_l_moving
+  petSuccessString: petting-success-medical-cyborg
+  petFailureString: petting-failure-medical-cyborg
+  footstepCollection:
+    collection: FootstepHoverBorg
+
+# region Service
+- type: borgType
+  id: DogService
+  dummyPrototype: DogBorgChassisService
+  extraModuleCount: 0
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleMusique
+  - BorgModuleClowning
+  - BorgModuleLollypopService
+  - BorgModuleGardening
+  - BorgModuleHarvesting
+  - BorgModuleNFService
+  - BorgModuleChef
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+  inventoryTemplateId: borgUnified
+  spriteBodyState: serviced-sit
+  spriteBodyMovementState: serviced_moving
+  spriteBodyRestState: serviced-rest
+  spriteBodyLyingState: serviced-bellyup
+  spriteBodyDeadState: serviced-dead
+  spriteHasMindState: serviced_e
+  spriteHasMindMovementState: serviced_e_moving
+  spriteNoMindState: serviced_e_r
+  spriteNoMindMovementState: serviced_e_r_moving
+  spriteToggleLightState: serviced_l
+  spriteToggleLightMovementState: serviced_l_moving
+  petSuccessString: petting-success-service-cyborg
+  petFailureString: petting-failure-service-cyborg
+
+- type: borgType
+  id: DogJanitor
+  dummyPrototype: DogBorgChassisJanitor
+  extraModuleCount: 5
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleCleaning
+  - BorgModuleCustodial
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+  inventoryTemplateId: borgUnified
+  spriteBodyState: janitord-sit
+  spriteBodyMovementState: janitord_moving
+  spriteBodyRestState: janitord-rest
+  spriteBodyLyingState: janitord-bellyup
+  spriteBodyDeadState: janitord-dead
+  spriteHasMindState: janitord_e
+  spriteHasMindMovementState: janitord_e_moving
+  spriteNoMindState: janitord_e_r
+  spriteNoMindMovementState: janitord_e_r_moving
+  spriteToggleLightState: janitord_l
+  spriteToggleLightMovementState: janitord_l_moving
+  petSuccessString: petting-success-janitor-cyborg
+  petFailureString: petting-failure-janitor-cyborg
+
+#region Stray(?)
+- type: borgType
+  id: DogStray
+  dummyPrototype: DogBorgChassisStrayd
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleMining
+  - BorgModuleTraversal
+  - BorgModuleAppraisal
+  - BorgModuleJetpack
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+  inventoryTemplateId: borgUnified
+  spriteBodyState: strayd-sit
+  spriteBodyMovementState: strayd_moving
+  spriteBodyRestState: strayd-rest
+  spriteBodyLyingState: strayd-bellyup
+  spriteBodyDeadState: strayd-dead
+  spriteHasMindState: strayd_e
+  spriteHasMindMovementState: strayd_e_moving
+  spriteNoMindState: strayd_e_r
+  spriteNoMindMovementState: strayd_e_r_moving
+  spriteToggleLightState: strayd_l
+  spriteToggleLightMovementState: strayd_l_moving
+  petSuccessString: petting-success-salvage-cyborg
+  petFailureString: petting-failure-salvage-cyborg
+
+#region Syndicate
+- type: borgType
+  id: DogSyndicate
+  dummyPrototype: DogBorgChassisSyndicated
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleMining
+  - BorgModuleTraversal
+  - BorgModuleAppraisal
+  - BorgModuleJetpack
+  spriteRsiPath: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+  inventoryTemplateId: borgUnified
+  spriteBodyState: syndicated-sit
+  spriteBodyMovementState: syndicated_moving
+  spriteBodyRestState: syndicated-rest
+  spriteBodyLyingState: syndicated-bellyup
+  spriteBodyDeadState: syndicated-dead
+  spriteHasMindState: syndicated_e
+  spriteHasMindMovementState: syndicated_e_moving
+  spriteNoMindState: syndicated_e_r
+  spriteNoMindMovementState: syndicated_e_r_moving
+  spriteToggleLightState: syndicated_l
+  spriteToggleLightMovementState: syndicated_l_moving
+  petSuccessString: petting-success-salvage-cyborg
+  petFailureString: petting-failure-salvage-cyborg

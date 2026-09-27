@@ -34,6 +34,17 @@
           types:
             Heat: 2
             Poison: 1
+    # LoneStar: start
+    Synthetic:
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: -4.5
+        conditions:
+        - !type:ReagentThreshold
+          reagent: AutoSolder
+    # LoneStar: end
 
 - type: reagent
   id: Napalm

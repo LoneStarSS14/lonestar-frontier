@@ -83,6 +83,7 @@
       - state: inhand-right
         map: [ "inhandRightBalaclava" ]
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
     - unfoldedLayer:
         icon_mask: Base

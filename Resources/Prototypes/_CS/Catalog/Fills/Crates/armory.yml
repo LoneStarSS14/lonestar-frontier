@@ -40,3 +40,10 @@
   - StorageFillAmmoBoxEmp40
   id: CrateAmmoBoxEmp40
   categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent:
+  - CrateAmmoSecureMercenary
+  - StorageFillAmmoBoxBigLethal40
+  id: CrateAmmoBoxBigLethal40
+  categories: [ HideSpawnMenu ]

@@ -97,9 +97,9 @@
       - map: [ "enum.HumanoidVisualLayers.Genital" ]
       - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
       - map: [ "glovesalt" ]
-      - map: [ "shoes" ]
-      - map: [ "jumpsuit" ]
       - map: [ "shoesalt" ]
+      - map: [ "jumpsuit" ]
+      - map: [ "shoes" ]
       - map: [ "gloves" ]
       # LoneStar changes end
       - map: [ "ears" ] # LoneStar

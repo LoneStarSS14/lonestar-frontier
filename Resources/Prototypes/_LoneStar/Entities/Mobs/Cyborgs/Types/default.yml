@@ -1,0 +1,134 @@
+
+#region Generic
+- type: borgType
+  id: generic
+  dummyPrototype: BorgChassisGeneric
+  extraModuleCount: 4
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleArtifact
+  - BorgModuleAnomaly
+  - BorgModuleJetpack
+  inventoryTemplateId: borgUnified
+  spriteBodyState: robot
+  spriteHasMindState: robot_e
+  spriteNoMindState: robot_e_r
+  spriteToggleLightState: robot_l
+  petSuccessString: petting-success-generic-cyborg
+  petFailureString: petting-failure-generic-cyborg
+
+
+#region Engineering
+- type: borgType
+  id: engineering
+  dummyPrototype: BorgChassisEngineer
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleConstruction
+  - BorgModuleRCDShipyard
+  - BorgModuleCable
+  - BorgModuleJetpack
+  inventoryTemplateId: borgUnified
+  spriteBodyState: engineer
+  spriteHasMindState: engineer_e
+  spriteNoMindState: engineer_e_r
+  spriteToggleLightState: engineer_l
+  petSuccessString: petting-success-engineer-cyborg
+  petFailureString: petting-failure-engineer-cyborg
+
+
+#region Salvage
+- type: borgType
+  id: mining
+  dummyPrototype: BorgChassisMining
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleMining
+  - BorgModuleTraversal
+  - BorgModuleAppraisal
+  - BorgModuleJetpack
+  inventoryTemplateId: borgUnified
+  spriteBodyState: miner
+  spriteBodyMovementState: miner_moving
+  spriteHasMindState: miner_e
+  spriteNoMindState: miner_e_r
+  spriteToggleLightState: miner_l
+  petSuccessString: petting-success-salvage-cyborg
+  petFailureString: petting-failure-salvage-cyborg
+
+
+#region Janitor
+- type: borgType
+  id: janitor
+  dummyPrototype: BorgChassisJanitor
+  extraModuleCount: 3
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleCleaning
+  - BorgModuleCustodial
+  - BorgModuleJetpack
+  inventoryTemplateId: borgUnified
+  spriteBodyState: janitor
+  spriteBodyMovementState: janitor_moving
+  spriteHasMindState: janitor_e
+  spriteNoMindState: janitor_e_r
+  spriteToggleLightState: janitor_l
+  petSuccessString: petting-success-janitor-cyborg
+  petFailureString: petting-failure-janitor-cyborg
+
+
+#region Medical
+- type: borgType
+  id: medical
+  dummyPrototype: BorgChassisMedical
+  extraModuleCount: 2
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleChemical
+  - BorgModuleTopicals
+  - BorgModuleRescue
+  - BorgModuleJetpack
+  - BorgModuleLollypopMedical
+  addComponents:
+  - type: SolutionScanner
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  inventoryTemplateId: borgUnified
+  spriteBodyState: medical
+  spriteBodyMovementState: medical_moving
+  spriteHasMindState: medical_e
+  spriteNoMindState: medical_e_r
+  spriteToggleLightState: medical_l
+  petSuccessString: petting-success-medical-cyborg
+  petFailureString: petting-failure-medical-cyborg
+  footstepCollection:
+    collection: FootstepHoverBorg
+
+
+#region Service
+- type: borgType
+  id: service
+  dummyPrototype: BorgChassisService
+  extraModuleCount: 0
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleMusique
+  - BorgModuleClowning
+  - BorgModuleLollypopService
+  - BorgModuleGardening
+  - BorgModuleHarvesting
+  - BorgModuleNFService
+  - BorgModuleChef
+  inventoryTemplateId: borgUnified
+  spriteBodyState: service
+  spriteHasMindState: service_e
+  spriteNoMindState: service_e_r
+  spriteToggleLightState: service_l
+  petSuccessString: petting-success-service-cyborg
+  petFailureString: petting-failure-service-cyborg

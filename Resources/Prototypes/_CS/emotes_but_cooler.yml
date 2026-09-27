@@ -1,38 +1,41 @@
-#- type: emote
-#  id: HarpyScream
-#  name: HarpyScream
-##  showInWheel: false
-#  category: Harpy
-#  icon: Interface/Actions/scream.png
-#  whitelist:
-#    components:
-#    - Vocal
-#  blacklist:
-#    tags:
-#    - SiliconEmotes
-#  chatMessages: ["chat-emote-msg-scream"]
-#  chatTriggers:
-#  - harpyscream
-#  - harpyscreams
-#  - harpyscreaming
-#  - harpyscreamed
-#  - harpyshriek
-#  - harpyshrieks
-#  - harpyshrieking
-#  - harpyshrieked
-#  - harpyscreech
-#  - harpyscreeches
-#  - harpyscreeching
-#  - harpyscreeched
-#  - harpyyell
-#  - harpyyells
-#  - harpyyelled
-#  - harpyyelling
+#region Screams
+
+- type: emote
+  abstract: true # LoneStar, coyote had this disabled.
+  id: HarpyScream
+  name: HarpyScream
+  showInWheel: false
+  category: Harpy
+  icon: Interface/Actions/scream.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-scream"]
+  chatTriggers:
+  - harpyscream
+  - harpyscreams
+  - harpyscreaming
+  - harpyscreamed
+  - harpyshriek
+  - harpyshrieks
+  - harpyshrieking
+  - harpyshrieked
+  - harpyscreech
+  - harpyscreeches
+  - harpyscreeching
+  - harpyscreeched
+  - harpyyell
+  - harpyyells
+  - harpyyelled
+  - harpyyelling
 
 - type: emote
   id: VulpScream
   name: VulpScream
-#  showInWheel: false
+  # showInWheel: false
   category: Vulp
   icon: Interface/Actions/scream.png
   whitelist:
@@ -63,7 +66,7 @@
 - type: emote
   id: RodentiaScream
   name: RodentiaScream
-#  showInWheel: false
+  # showInWheel: false
   category: Rodentia
   icon: Interface/Actions/scream.png
   whitelist:
@@ -94,7 +97,7 @@
 - type: emote
   id: GoblinScream
   name: GoblinScream
-#  showInWheel: false
+  # showInWheel: false
   category: Goblin
   icon: Interface/Actions/scream.png
   whitelist:
@@ -125,7 +128,7 @@
 - type: emote
   id: ShelegScream
   name: ShelegScream
-#  showInWheel: false
+  # showInWheel: false
   category: Sheleg
   icon: Interface/Actions/scream.png
   whitelist:
@@ -156,7 +159,7 @@
 - type: emote
   id: MaleScream
   name: MaleScream
-#  showInWheel: false
+  # showInWheel: false
   category: Male
   icon: Interface/Actions/scream.png
   whitelist:
@@ -187,7 +190,7 @@
 - type: emote
   id: FemaleScream
   name: FemaleScream
-#  showInWheel: false
+  # showInWheel: false
   category: Female
   icon: Interface/Actions/scream.png
   whitelist:
@@ -218,7 +221,7 @@
 - type: emote
   id: FelinidScream
   name: FelinidScream
-#  showInWheel: false
+  # showInWheel: false
   category: Felinid
   icon: Interface/Actions/scream.png
   whitelist:
@@ -249,7 +252,7 @@
 - type: emote
   id: LizardScream
   name: LizardScream
-#  showInWheel: false
+  # showInWheel: false
   category: Lizard
   icon: Interface/Actions/scream.png
   whitelist:
@@ -280,7 +283,7 @@
 - type: emote
   id: VoxScream
   name: VoxScream
-#  showInWheel: false
+  # showInWheel: false
   category: Vox
   icon: Interface/Actions/scream.png
   whitelist:
@@ -311,7 +314,7 @@
 - type: emote
   id: DionaScream
   name: DionaScream
-#  showInWheel: false
+  # showInWheel: false
   category: Diona
   icon: Interface/Actions/scream.png
   whitelist:
@@ -342,7 +345,7 @@
 - type: emote
   id: MothScream
   name: MothScream
-#  showInWheel: false
+  # showInWheel: false
   category: Moth
   icon: Interface/Actions/scream.png
   whitelist:
@@ -370,16 +373,75 @@
   - mothyelled
   - mothyelling
 
-#####################################
-#####################################
-### LAUGHS ##########################
-#####################################
-#####################################
+- type: emote
+  id: ShadekinScreamMale
+  name: ShadekinScreamMale
+  # showInWheel: false
+  category: Shadekin
+  icon: Interface/Actions/scream.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-scream"]
+  chatTriggers:
+  - shademscream
+  - shademscreams
+  - shademscreaming
+  - shademscreamed
+  - shademshriek
+  - shademshrieks
+  - shademshrieking
+  - shademshrieked
+  - shademscreech
+  - shademscreeches
+  - shademscreeching
+  - shademscreeched
+  - shademyell
+  - shademyells
+  - shademyelled
+  - shademyelling
+
+- type: emote
+  id: ShadekinScreamFemale
+  name: ShadekinScreamFemale
+  # showInWheel: false
+  category: Shadekin
+  icon: Interface/Actions/scream.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-scream"]
+  chatTriggers:
+  - shadefscream
+  - shadefscreams
+  - shadefscreaming
+  - shadefscreamed
+  - shadefshriek
+  - shadefshrieks
+  - shadefshrieking
+  - shadefshrieked
+  - shadefscreech
+  - shadefscreeches
+  - shadefscreeching
+  - shadefscreeched
+  - shadefyell
+  - shadefyells
+  - shadefyelled
+  - shadefyelling
+
+
+#region Laughs
 
 - type: emote
   id: MaleLaugh
   name: MaleLaugh
-#  showInWheel: false
+  # showInWheel: false
   category: Male
   icon: Interface/Emotes/laugh.png
   whitelist:
@@ -410,7 +472,7 @@
 - type: emote
   id: FemaleLaugh
   name: FemaleLaugh
-#  showInWheel: false
+  # showInWheel: false
   category: Female
   icon: Interface/Emotes/laugh.png
   whitelist:
@@ -441,7 +503,7 @@
 - type: emote
   id: LizardLaugh
   name: LizardLaugh
-#  showInWheel: false
+  # showInWheel: false
   category: Lizard
   icon: Interface/Emotes/laugh.png
   whitelist:
@@ -472,7 +534,7 @@
 - type: emote
   id: VoxLaugh
   name: VoxLaugh
-#  showInWheel: false
+  # showInWheel: false
   category: Vox
   icon: Interface/Emotes/laugh.png
   whitelist:
@@ -503,7 +565,7 @@
 - type: emote
   id: DionaLaugh
   name: DionaLaugh
-#  showInWheel: false
+  # showInWheel: false
   category: Diona
   icon: Interface/Emotes/laugh.png
   whitelist:
@@ -534,7 +596,7 @@
 - type: emote
   id: MothLaugh
   name: MothLaugh
-#  showInWheel: false
+  # showInWheel: false
   category: Moth
   icon: Interface/Emotes/laugh.png
   whitelist:
@@ -565,7 +627,7 @@
 - type: emote
   id: SyndieborgLaugh
   name: SyndieborgLaugh
-#  showInWheel: false
+  # showInWheel: false
   category: Borg
   icon: Interface/Emotes/laugh.png
   whitelist:
@@ -593,41 +655,42 @@
   - syndieborgchortling
   - syndieborgchortled # Frontier
 
-#- type: emote
-#  id: HarpyLaugh
-#  name: HarpyLaugh
-##  showInWheel: false
-#  category: Harpy
-#  icon: Interface/Emotes/laugh.png
-#  whitelist:
-#    components:
-#    - Vocal
-#  blacklist:
-#    tags:
-#    - SiliconEmotes
-#  chatMessages: ["chat-emote-msg-laugh"]
-#  chatTriggers:
-#  - harpylaugh
-#  - harpylaughs
-#  - harpylaughing
-#  - harpylaughed
-#  - harpychuckle
-#  - harpychuckles
-#  - harpychuckled
-#  - harpychuckling
-#  - harpygiggle
-#  - harpygiggles
-#  - harpygiggling
-#  - harpygiggled
-#  - harpychortle
-#  - harpychortles
-#  - harpychortling
-#  - harpychortled # Frontier
+- type: emote
+  abstract: true # LoneStar, coyote had this disabled.
+  id: HarpyLaugh
+  name: HarpyLaugh
+  # showInWheel: false
+  category: Harpy
+  icon: Interface/Emotes/laugh.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-laugh"]
+  chatTriggers:
+  - harpylaugh
+  - harpylaughs
+  - harpylaughing
+  - harpylaughed
+  - harpychuckle
+  - harpychuckles
+  - harpychuckled
+  - harpychuckling
+  - harpygiggle
+  - harpygiggles
+  - harpygiggling
+  - harpygiggled
+  - harpychortle
+  - harpychortles
+  - harpychortling
+  - harpychortled
 
 - type: emote
   id: GoblinLaugh
   name: GoblinLaugh
-#  showInWheel: false
+  # showInWheel: false
   category: Goblin
   icon: Interface/Emotes/laugh.png
   whitelist:
@@ -658,7 +721,7 @@
 - type: emote
   id: ShelegLaugh
   name: ShelegLaugh
-#  showInWheel: false
+  # showInWheel: false
   category: Sheleg
   icon: Interface/Emotes/laugh.png
   whitelist:
@@ -686,16 +749,13 @@
   - shelegchortling
   - shelegchortled # Frontier
 
-#####################################
-#####################################
-### HISSES  #########################
-#####################################
-#####################################
+
+#region Hisses
 
 - type: emote
   id: FelinidHiss
   name: FelinidHiss
-#  showInWheel: false
+  # showInWheel: false
   category: Felinid
   icon: Interface/Actions/scream.png
   available: false
@@ -717,35 +777,36 @@
   - cathissing.
   - cathissed.
 
-#- type: emote
-#  id: HarpyHiss
-#  name: HarpyHiss
-##  showInWheel: false
-#  category: Harpy
-#  icon: Interface/Actions/scream.png
-#  available: false
-#  whitelist:
-#    components:
-#    - Vocal
-#  blacklist:
-#    components:
-#    - BorgChassis
-#  chatMessages: [hisses.]
-#  chatTriggers:
-#  - harpyhiss
-#  - harpyhisses
-#  - harpyhiss.
-#  - harpyhisses.
-#  - harpyhisses!
-#  - harpyhissing
-#  - harpyhissed
-#  - harpyhissing.
-#  - harpyhissed.
+- type: emote
+  abstract: true # LoneStar, coyote had this disabled.
+  id: HarpyHiss
+  name: HarpyHiss
+  # showInWheel: false
+  category: Harpy
+  icon: Interface/Actions/scream.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [hisses.]
+  chatTriggers:
+  - harpyhiss
+  - harpyhisses
+  - harpyhiss.
+  - harpyhisses.
+  - harpyhisses!
+  - harpyhissing
+  - harpyhissed
+  - harpyhissing.
+  - harpyhissed.
 
 - type: emote
   id: GoblinHiss
   name: GoblinHiss
-#  showInWheel: false
+  # showInWheel: false
   category: Goblin
   icon: Interface/Actions/scream.png
   available: false
@@ -770,7 +831,7 @@
 - type: emote
   id: ShelegHiss
   name: ShelegHiss
-#  showInWheel: false
+  # showInWheel: false
   category: Sheleg
   icon: Interface/Actions/scream.png
   available: false
@@ -792,16 +853,13 @@
   - sheleghissing.
   - sheleghissed.
 
-#####################################
-#####################################
-### SIGHS ###########################
-#####################################
-#####################################
+
+#region Sighs
 
 - type: emote
   id: MaleSigh
   name: MaleSigh
-#  showInWheel: false
+  # showInWheel: false
   category: Male
   icon: Interface/Emotes/sigh.png
   whitelist:
@@ -820,7 +878,7 @@
 - type: emote
   id: FemaleSigh
   name: FemaleSigh
-#  showInWheel: false
+  # showInWheel: false
   category: Female
   icon: Interface/Emotes/sigh.png
   whitelist:
@@ -839,7 +897,7 @@
 - type: emote
   id: ShelegSigh
   name: ShelegSigh
-#  showInWheel: false
+  # showInWheel: false
   category: Sheleg
   icon: Interface/Emotes/sigh.png
   whitelist:
@@ -855,16 +913,13 @@
   - shelegsighed
   - shelegsighing # Frontier
 
-######################################
-######################################
-### CRYING ###########################
-######################################
-######################################
+
+#region Crying
 
 - type: emote
   id: MaleCrying
   name: MaleCrying
-#  showInWheel: false
+  # showInWheel: false
   category: Male
   icon: Interface/Emotes/cry.png
   whitelist:
@@ -887,7 +942,7 @@
 - type: emote
   id: FemaleCrying
   name: FemaleCrying
-#  showInWheel: false
+  # showInWheel: false
   category: Female
   icon: Interface/Emotes/cry.png
   whitelist:
@@ -907,33 +962,34 @@
   - femalesobbed # Frontier
   - femalecried # Frontier
 
-#- type: emote
-#  id: HarpyCrying
-#  name: HarpyCrying
-##  showInWheel: false
-#  category: Harpy
-#  icon: Interface/Emotes/cry.png
-#  whitelist:
-#    components:
-#    - Vocal
-#  blacklist:
-#    tags:
-#    - SiliconEmotes
-#  chatMessages: ["chat-emote-msg-crying"]
-#  chatTriggers:
-#  - harpycry
-#  - harpycrying
-#  - harpycries
-#  - harpysob
-#  - harpysobs
-#  - harpysobbing
-#  - harpysobbed # Frontier
-#  - harpycried # Frontier
+- type: emote
+  abstract: true # LoneStar, coyote had this disabled.
+  id: HarpyCrying
+  name: HarpyCrying
+  # showInWheel: false
+  category: Harpy
+  icon: Interface/Emotes/cry.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-crying"]
+  chatTriggers:
+  - harpycry
+  - harpycrying
+  - harpycries
+  - harpysob
+  - harpysobs
+  - harpysobbing
+  - harpysobbed
+  - harpycried
 
 - type: emote
   id: GoblinCrying
   name: GoblinCrying
-#  showInWheel: false
+  # showInWheel: false
   category: Goblin
   icon: Interface/Emotes/cry.png
   whitelist:
@@ -950,13 +1006,13 @@
   - goblinsob
   - goblinsobs
   - goblinsobbing
-  - goblinsobbed # Frontier
-  - goblincried # Frontier
+  - goblinsobbed
+  - goblincried
 
 - type: emote
   id: ShelegCrying
   name: ShelegCrying
-#  showInWheel: false
+  # showInWheel: false
   category: Sheleg
   icon: Interface/Emotes/cry.png
   whitelist:
@@ -973,38 +1029,29 @@
   - shelegsob
   - shelegsobs
   - shelegsobbing
-  - shelegsobbed # Frontier
-  - shelegcried # Frontier
+  - shelegsobbed
+  - shelegcried
 
-######################################
-######################################
-### GASPING ##########################
-####### on my cokc ###################
-######################################
+
+#region Gasps
 
 - type: emote
   id: MaleGasp
   name: MaleGasp
-#  showInWheel: false
+  # showInWheel: false
   category: Male
-  # whitelist:
-    # components:
-    # - Respirator # broken
   chatMessages: ["chat-emote-msg-gasp"]
   chatTriggers:
   - malegasp
   - malegasps
   - malegasped
-  - malegasping # Frontier
+  - malegasping
 
 - type: emote
   id: FemaleGasp
   name: FemaleGasp
-#  showInWheel: false
+  # showInWheel: false
   category: Female
-  # whitelist:
-    # components:
-    # - Respirator # broken
   chatMessages: ["chat-emote-msg-gasp"]
   chatTriggers:
   - femalegasp
@@ -1015,23 +1062,17 @@
 - type: emote
   id: GoblinGasp
   name: GoblinGasp
-#  showInWheel: false
+  # showInWheel: false
   category: Goblin
-  # whitelist:
-    # components:
-    # - Respirator # broken
   chatMessages: ["chat-emote-msg-gasp"]
   chatTriggers:
   - goblingasp
   - goblingasps
   - goblingasped
-  - goblingasping # Frontier
+  - goblingasping
 
-######################################
-######################################
-### SQUEAKS ##########################
-####### on my cokc ###################
-######################################
+
+#region Squeaks
 
 - type: emote
   id: RodentiaSqueak
@@ -1039,46 +1080,37 @@
   # showInWheel: false
   category: Rodentia
   icon: Interface/Emotes/squeak.png
-  # whitelist:
-    # components:
-    # - Respirator # broken
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
   - rodentiasqueak
   - rodentiasqueaks
   - rodentiasqueaked
-  - rodentiasqueaking # Frontier
+  - rodentiasqueaking
 
 - type: emote
   id: MothSqueak
   name: MothSqueak
-  #  showInWheel: false
+  # showInWheel: false
   category: Moth
   icon: Interface/Emotes/squeak.png
-  # whitelist:
-    # components:
-    # - Respirator # broken
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
   - squack
   - squacks
   - squacked
-  - squacking # Frontier
+  - squacking
   - mothsqueak
   - mothsqueaks
   - mothsqueaked
   - mothsqueaking
 
-#######################################
-#######################################
-### GROWLS #############################
-#######################################
-#######################################
+
+#region Growls
 
 - type: emote
   id: VulpGrowl
   name: VulpGrowl
-#  showInWheel: false
+  # showInWheel: false
   category: Vulp
   whitelist:
     components:
@@ -1096,7 +1128,7 @@
 - type: emote
   id: FelinidGrowl
   name: FelinidGrowl
-#  showInWheel: false
+  # showInWheel: false
   category: Felinid
   whitelist:
     components:
@@ -1129,12 +1161,41 @@
   - avalicawing
   - avalicawed
 
+#region Wurbles
+- type: emote
+  id: ShadekinWurble
+  name: ShadekinWurble
+  # showInWheel: false
+  category: Shadekin
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [wurbles.]
+  chatTriggers:
+  - shadewurble
+  - shadewurbles
+  - shadewurbling
+  - shadewurbled
 
 
-
-
-
-
-
-
-
+#region Other
+- type: emote
+  id: ShadekinMarr
+  name: ShadekinMarr
+  # showInWheel: false
+  category: Shadekin
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [marrs.]
+  chatTriggers:
+  - shademarr
+  - shademarrs
+  - shademarring
+  - shademarred

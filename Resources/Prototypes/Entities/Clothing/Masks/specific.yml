@@ -86,6 +86,7 @@
     price: 5000
   # Frontier: pick random sprite on spawn
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - mask:
           icon: ""

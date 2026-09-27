@@ -1,592 +1,594 @@
-#LONESTAR NOTE: All Default channels (barring Binary) are disabled due to PR #97 and beyond. If you want to give borgs specific chassis-based comms in the future, please do so via their headset.
-# Generic borg
-- type: borgType
-  id: generic
-
-  # Description
-  dummyPrototype: BorgChassisGeneric
-
-  # Functional
-  extraModuleCount: 5
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleScience #until sciborgs are added
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleArtifact
-  - BorgModuleAnomaly
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: robot
-  spriteHasMindState: robot_e
-  spriteNoMindState: robot_e_r
-  spriteToggleLightState: robot_l
-
-  # Pet
-  petSuccessString: petting-success-generic-cyborg
-  petFailureString: petting-failure-generic-cyborg
-
-
-# Engineering borg
-- type: borgType
-  id: engineering
-
-  # Description
-  dummyPrototype: BorgChassisEngineer
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleEngineering
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleConstruction
-  - BorgModuleRCDShipyard # Frontier: RCD<RCDShipyard
-  - BorgModuleCable
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: engineer
-  spriteHasMindState: engineer_e
-  spriteNoMindState: engineer_e_r
-  spriteToggleLightState: engineer_l
-
-  # Pet
-  petSuccessString: petting-success-engineer-cyborg
-  petFailureString: petting-failure-engineer-cyborg
-
-
-# Salvage borg
-- type: borgType
-  id: mining
-
-  # Description
-  dummyPrototype: BorgChassisMining
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleCargo
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleMining
-  - BorgModuleTraversal
-  - BorgModuleAppraisal
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: miner
-  spriteBodyMovementState: miner_moving
-  spriteHasMindState: miner_e
-  spriteNoMindState: miner_e_r
-  spriteToggleLightState: miner_l
-
-  # Pet
-  petSuccessString: petting-success-salvage-cyborg
-  petFailureString: petting-failure-salvage-cyborg
-
-
-# Janitor borg
-- type: borgType
-  id: janitor
-
-  # Description
-  dummyPrototype: BorgChassisJanitor
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleJanitor
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleCleaning
-  - BorgModuleCustodial
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: janitor
-  spriteBodyMovementState: janitor_moving
-  spriteHasMindState: janitor_e
-  spriteNoMindState: janitor_e_r
-  spriteToggleLightState: janitor_l
-
-  # Pet
-  petSuccessString: petting-success-janitor-cyborg
-  petFailureString: petting-failure-janitor-cyborg
-
-
-# Medical borg
-- type: borgType
-  id: medical
-
-  # Description
-  dummyPrototype: BorgChassisMedical
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleMedical
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleChemical
-  - BorgModuleTopicals
-  - BorgModuleRescue
-  # - BorgModuleAdvancedTreatment # Frontier
-  # - BorgModuleDefibrillator # Frontier
-  - BorgModuleJetpack # Frontier
-  - BorgModuleLollypopMedical # Goobstation.
-
-  addComponents:
-  - type: SolutionScanner
-  - type: ShowHealthBars
-    damageContainers:
-    - Biological
-  - type: ShowHealthIcons
-    damageContainers:
-    - Biological
-
-  # Visual
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: medical
-  spriteBodyMovementState: medical_moving
-  spriteHasMindState: medical_e
-  spriteNoMindState: medical_e_r
-  spriteToggleLightState: medical_l
-
-  # Pet
-  petSuccessString: petting-success-medical-cyborg
-  petFailureString: petting-failure-medical-cyborg
-
-  # Sounds
-  footstepCollection:
-    collection: FootstepHoverBorg
-
-
-# Service borg
-- type: borgType
-  id: service
-
-  # Description
-  dummyPrototype: BorgChassisService
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleService
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleMusique
-  # - BorgModuleService # Frontier: deprecated, use NF variant
-  - BorgModuleClowning
-  - BorgModuleLollypopService # Goobstation
-  - BorgModuleGardening
-  - BorgModuleHarvesting
-  - BorgModuleBureaucracy # Frontier: FIXME - stacked as hell
-  - BorgModuleNFService # Frontier
-  - BorgModuleChef # Frontier
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: service
-  spriteHasMindState: service_e
-  spriteNoMindState: service_e_r
-  spriteToggleLightState: service_l
-
-  # Pet
-  petSuccessString: petting-success-service-cyborg
-  petFailureString: petting-failure-service-cyborg
-
-# Dogborgs
-# Generic borg
-- type: borgType
-  id: genericd
-
-  # Description
-  dummyPrototype: DogBorgChassisGeneric
-
-  # Functional
-  extraModuleCount: 5
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleScience #until sciborgs are added
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleArtifact
-  - BorgModuleAnomaly
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: standardd-sit
-  spriteBodyMovementState: standardd_moving
-  spriteBodyRestState: standardd-rest
-  spriteBodyLyingState: standardd-bellyup
-  spriteBodyDeadState: standardd-dead
-  spriteHasMindState: standardd_e
-  spriteHasMindMovementState: standardd_e_moving
-  spriteNoMindState: standardd_e_r
-  spriteNoMindMovementState: standardd_e_r_moving
-  spriteToggleLightState: standardd_l
-  spriteToggleLightMovementState: standardd_l_moving
-
-  # Pet
-  petSuccessString: petting-success-generic-cyborg
-  petFailureString: petting-failure-generic-cyborg
-
-# Engineering borg
-- type: borgType
-  id: engineeringd
-
-  # Description
-  dummyPrototype: DogBorgChassisEngineer
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleEngineering
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleConstruction
-  - BorgModuleRCDShipyard # Frontier: RCD<RCDShipyard
-  - BorgModuleCable
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: engineeringd-sit
-  spriteBodyMovementState: engineeringd_moving
-  spriteBodyRestState: engineeringd-rest
-  spriteBodyLyingState: engineeringd-bellyup
-  spriteBodyDeadState: engineeringd-dead
-  spriteHasMindState: engineeringd_e
-  spriteHasMindMovementState: engineeringd_e_moving
-  spriteNoMindState: engineeringd_e_r
-  spriteNoMindMovementState: engineeringd_e_r_moving
-  spriteToggleLightState: engineeringd_l
-  spriteToggleLightMovementState: engineeringd_l_moving
-
-  # Pet
-  petSuccessString: petting-success-engineer-cyborg
-  petFailureString: petting-failure-engineer-cyborg
-
-
-# Salvage borg
-- type: borgType
-  id: miningd
-
-  # Description
-  dummyPrototype: DogBorgChassisMining
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleCargo
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleMining
-  - BorgModuleTraversal
-  - BorgModuleAppraisal
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: miningd-sit
-  spriteBodyMovementState: miningd_moving
-  spriteBodyRestState: miningd-rest
-  spriteBodyLyingState: miningd-bellyup
-  spriteBodyDeadState: miningd-dead
-  spriteHasMindState: miningd_e
-  spriteHasMindMovementState: miningd_e_moving
-  spriteNoMindState: miningd_e_r
-  spriteNoMindMovementState: miningd_e_r_moving
-  spriteToggleLightState: miningd_l
-  spriteToggleLightMovementState: miningd_l_moving
-
-  # Pet
-  petSuccessString: petting-success-salvage-cyborg
-  petFailureString: petting-failure-salvage-cyborg
-
-
-# Janitor borg
-- type: borgType
-  id: janitord
-
-  # Description
-  dummyPrototype: DogBorgChassisJanitor
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleJanitor
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleCleaning
-  - BorgModuleCustodial
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: janitord-sit
-  spriteBodyMovementState: janitord_moving
-  spriteBodyRestState: janitord-rest
-  spriteBodyLyingState: janitord-bellyup
-  spriteBodyDeadState: janitord-dead
-  spriteHasMindState: janitord_e
-  spriteHasMindMovementState: janitord_e_moving
-  spriteNoMindState: janitord_e_r
-  spriteNoMindMovementState: janitord_e_r_moving
-  spriteToggleLightState: janitord_l
-  spriteToggleLightMovementState: janitord_l_moving
-
-  # Pet
-  petSuccessString: petting-success-janitor-cyborg
-  petFailureString: petting-failure-janitor-cyborg
-
-
-# Medical borg
-- type: borgType
-  id: medicald
-
-  # Description
-  dummyPrototype: DogBorgChassisMedical
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleMedical
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleChemical
-  - BorgModuleTopicals
-  - BorgModuleRescue
-  - BorgModuleJetpack # Frontier
-  - BorgModuleLollypopMedical # Goobstation.
-
-  addComponents:
-  - type: SolutionScanner
-  - type: ShowHealthBars
-    damageContainers:
-    - Biological
-  - type: ShowHealthIcons
-    damageContainers:
-    - Biological
-
-  # Visual
-  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: medicald-sit
-  spriteBodyMovementState: medicald_moving
-  spriteBodyRestState: medicald-rest
-  spriteBodyLyingState: medicald-bellyup
-  spriteBodyDeadState: medicald-dead
-  spriteHasMindState: medicald_e
-  spriteHasMindMovementState: medicald_moving_e
-  spriteNoMindState: medicald_e_r
-  spriteNoMindMovementState: medicald_e_r_moving
-  spriteToggleLightState: medicald_l
-  spriteToggleLightMovementState: medicald_l_moving
-
-  # Pet
-  petSuccessString: petting-success-medical-cyborg
-  petFailureString: petting-failure-medical-cyborg
-
-  # Sounds
-  footstepCollection:
-    collection: FootstepHoverBorg
-
-
-# Service borg
-- type: borgType
-  id: serviced
-
-  # Description
-  dummyPrototype: DogBorgChassisService
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleService
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleMusique
-  - BorgModuleClowning
-  - BorgModuleLollypopService # Goobstation
-  - BorgModuleGardening
-  - BorgModuleHarvesting
-  - BorgModuleBureaucracy # Frontier: FIXME - stacked as hell
-  - BorgModuleNFService # Frontier
-  - BorgModuleChef # Frontier
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: serviced-sit
-  spriteBodyMovementState: serviced_moving
-  spriteBodyRestState: serviced-rest
-  spriteBodyLyingState: serviced-bellyup
-  spriteBodyDeadState: serviced-dead
-  spriteHasMindState: serviced_e
-  spriteHasMindMovementState: serviced_e_moving
-  spriteNoMindState: serviced_e_r
-  spriteNoMindMovementState: serviced_e_r_moving
-  spriteToggleLightState: serviced_l
-  spriteToggleLightMovementState: serviced_l_moving
-
-  # Pet
-  petSuccessString: petting-success-service-cyborg
-  petFailureString: petting-failure-service-cyborg
-
-
-# Strayd dogborg (salvage profile)
-- type: borgType
-  id: strayd
-
-  # Description
-  dummyPrototype: DogBorgChassisStrayd
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleCargo
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleMining
-  - BorgModuleTraversal
-  - BorgModuleAppraisal
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: strayd-sit
-  spriteBodyMovementState: strayd_moving
-  spriteBodyRestState: strayd-rest
-  spriteBodyLyingState: strayd-bellyup
-  spriteBodyDeadState: strayd-dead
-  spriteHasMindState: strayd_e
-  spriteHasMindMovementState: strayd_e_moving
-  spriteNoMindState: strayd_e_r
-  spriteNoMindMovementState: strayd_e_r_moving
-  spriteToggleLightState: strayd_l
-  spriteToggleLightMovementState: strayd_l_moving
-
-  # Pet
-  petSuccessString: petting-success-salvage-cyborg
-  petFailureString: petting-failure-salvage-cyborg
-
-
-# Syndicate dogborg skin (salvage profile)
-- type: borgType
-  id: syndicated
-
-  # Description
-  dummyPrototype: DogBorgChassisSyndicated
-
-  # Functional
-  extraModuleCount: 3
-# Coyote: Remove borg module whitelist
-#  moduleWhitelist:
-#    tags:
-#    - BorgModuleGeneric
-#    - BorgModuleCargo
-# End Coyote
-
-  defaultModules:
-  - BorgModuleTool
-  - BorgModuleMining
-  - BorgModuleTraversal
-  - BorgModuleAppraisal
-  - BorgModuleJetpack # Frontier
-
-  # Visual
-  spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
-  inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
-  spriteBodyState: syndicated-sit
-  spriteBodyMovementState: syndicated_moving
-  spriteBodyRestState: syndicated-rest
-  spriteBodyLyingState: syndicated-bellyup
-  spriteBodyDeadState: syndicated-dead
-  spriteHasMindState: syndicated_e
-  spriteHasMindMovementState: syndicated_e_moving
-  spriteNoMindState: syndicated_e_r
-  spriteNoMindMovementState: syndicated_e_r_moving
-  spriteToggleLightState: syndicated_l
-  spriteToggleLightMovementState: syndicated_l_moving
-
-  # Pet
-  petSuccessString: petting-success-salvage-cyborg
-  petFailureString: petting-failure-salvage-cyborg
+# LoneStar: Prototypes moved to _LoneStar/Entities/Mobs/Silicon/Cyborgs
+
+# #LONESTAR NOTE: All Default channels (barring Binary) are disabled due to PR #97 and beyond. If you want to give borgs specific chassis-based comms in the future, please do so via their headset.
+# # Generic borg
+# - type: borgType
+#   id: generic
+
+#   # Description
+#   dummyPrototype: BorgChassisGeneric
+
+#   # Functional
+#   extraModuleCount: 5
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleScience #until sciborgs are added
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleArtifact
+#   - BorgModuleAnomaly
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: robot
+#   spriteHasMindState: robot_e
+#   spriteNoMindState: robot_e_r
+#   spriteToggleLightState: robot_l
+
+#   # Pet
+#   petSuccessString: petting-success-generic-cyborg
+#   petFailureString: petting-failure-generic-cyborg
+
+
+# # Engineering borg
+# - type: borgType
+#   id: engineering
+
+#   # Description
+#   dummyPrototype: BorgChassisEngineer
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleEngineering
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleConstruction
+#   - BorgModuleRCDShipyard # Frontier: RCD<RCDShipyard
+#   - BorgModuleCable
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: engineer
+#   spriteHasMindState: engineer_e
+#   spriteNoMindState: engineer_e_r
+#   spriteToggleLightState: engineer_l
+
+#   # Pet
+#   petSuccessString: petting-success-engineer-cyborg
+#   petFailureString: petting-failure-engineer-cyborg
+
+
+# # Salvage borg
+# - type: borgType
+#   id: mining
+
+#   # Description
+#   dummyPrototype: BorgChassisMining
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleCargo
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleMining
+#   - BorgModuleTraversal
+#   - BorgModuleAppraisal
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: miner
+#   spriteBodyMovementState: miner_moving
+#   spriteHasMindState: miner_e
+#   spriteNoMindState: miner_e_r
+#   spriteToggleLightState: miner_l
+
+#   # Pet
+#   petSuccessString: petting-success-salvage-cyborg
+#   petFailureString: petting-failure-salvage-cyborg
+
+
+# # Janitor borg
+# - type: borgType
+#   id: janitor
+
+#   # Description
+#   dummyPrototype: BorgChassisJanitor
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleJanitor
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleCleaning
+#   - BorgModuleCustodial
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: janitor
+#   spriteBodyMovementState: janitor_moving
+#   spriteHasMindState: janitor_e
+#   spriteNoMindState: janitor_e_r
+#   spriteToggleLightState: janitor_l
+
+#   # Pet
+#   petSuccessString: petting-success-janitor-cyborg
+#   petFailureString: petting-failure-janitor-cyborg
+
+
+# # Medical borg
+# - type: borgType
+#   id: medical
+
+#   # Description
+#   dummyPrototype: BorgChassisMedical
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleMedical
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleChemical
+#   - BorgModuleTopicals
+#   - BorgModuleRescue
+#   # - BorgModuleAdvancedTreatment # Frontier
+#   # - BorgModuleDefibrillator # Frontier
+#   - BorgModuleJetpack # Frontier
+#   - BorgModuleLollypopMedical # Goobstation.
+
+#   addComponents:
+#   - type: SolutionScanner
+#   - type: ShowHealthBars
+#     damageContainers:
+#     - Biological
+#   - type: ShowHealthIcons
+#     damageContainers:
+#     - Biological
+
+#   # Visual
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: medical
+#   spriteBodyMovementState: medical_moving
+#   spriteHasMindState: medical_e
+#   spriteNoMindState: medical_e_r
+#   spriteToggleLightState: medical_l
+
+#   # Pet
+#   petSuccessString: petting-success-medical-cyborg
+#   petFailureString: petting-failure-medical-cyborg
+
+#   # Sounds
+#   footstepCollection:
+#     collection: FootstepHoverBorg
+
+
+# # Service borg
+# - type: borgType
+#   id: service
+
+#   # Description
+#   dummyPrototype: BorgChassisService
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleService
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleMusique
+#   # - BorgModuleService # Frontier: deprecated, use NF variant
+#   - BorgModuleClowning
+#   - BorgModuleLollypopService # Goobstation
+#   - BorgModuleGardening
+#   - BorgModuleHarvesting
+#   - BorgModuleBureaucracy # Frontier: FIXME - stacked as hell
+#   - BorgModuleNFService # Frontier
+#   - BorgModuleChef # Frontier
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: service
+#   spriteHasMindState: service_e
+#   spriteNoMindState: service_e_r
+#   spriteToggleLightState: service_l
+
+#   # Pet
+#   petSuccessString: petting-success-service-cyborg
+#   petFailureString: petting-failure-service-cyborg
+
+# # Dogborgs
+# # Generic borg
+# - type: borgType
+#   id: genericd
+
+#   # Description
+#   dummyPrototype: DogBorgChassisGeneric
+
+#   # Functional
+#   extraModuleCount: 5
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleScience #until sciborgs are added
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleArtifact
+#   - BorgModuleAnomaly
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: standardd-sit
+#   spriteBodyMovementState: standardd_moving
+#   spriteBodyRestState: standardd-rest
+#   spriteBodyLyingState: standardd-bellyup
+#   spriteBodyDeadState: standardd-dead
+#   spriteHasMindState: standardd_e
+#   spriteHasMindMovementState: standardd_e_moving
+#   spriteNoMindState: standardd_e_r
+#   spriteNoMindMovementState: standardd_e_r_moving
+#   spriteToggleLightState: standardd_l
+#   spriteToggleLightMovementState: standardd_l_moving
+
+#   # Pet
+#   petSuccessString: petting-success-generic-cyborg
+#   petFailureString: petting-failure-generic-cyborg
+
+# # Engineering borg
+# - type: borgType
+#   id: engineeringd
+
+#   # Description
+#   dummyPrototype: DogBorgChassisEngineer
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleEngineering
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleConstruction
+#   - BorgModuleRCDShipyard # Frontier: RCD<RCDShipyard
+#   - BorgModuleCable
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: engineeringd-sit
+#   spriteBodyMovementState: engineeringd_moving
+#   spriteBodyRestState: engineeringd-rest
+#   spriteBodyLyingState: engineeringd-bellyup
+#   spriteBodyDeadState: engineeringd-dead
+#   spriteHasMindState: engineeringd_e
+#   spriteHasMindMovementState: engineeringd_e_moving
+#   spriteNoMindState: engineeringd_e_r
+#   spriteNoMindMovementState: engineeringd_e_r_moving
+#   spriteToggleLightState: engineeringd_l
+#   spriteToggleLightMovementState: engineeringd_l_moving
+
+#   # Pet
+#   petSuccessString: petting-success-engineer-cyborg
+#   petFailureString: petting-failure-engineer-cyborg
+
+
+# # Salvage borg
+# - type: borgType
+#   id: miningd
+
+#   # Description
+#   dummyPrototype: DogBorgChassisMining
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleCargo
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleMining
+#   - BorgModuleTraversal
+#   - BorgModuleAppraisal
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: miningd-sit
+#   spriteBodyMovementState: miningd_moving
+#   spriteBodyRestState: miningd-rest
+#   spriteBodyLyingState: miningd-bellyup
+#   spriteBodyDeadState: miningd-dead
+#   spriteHasMindState: miningd_e
+#   spriteHasMindMovementState: miningd_e_moving
+#   spriteNoMindState: miningd_e_r
+#   spriteNoMindMovementState: miningd_e_r_moving
+#   spriteToggleLightState: miningd_l
+#   spriteToggleLightMovementState: miningd_l_moving
+
+#   # Pet
+#   petSuccessString: petting-success-salvage-cyborg
+#   petFailureString: petting-failure-salvage-cyborg
+
+
+# # Janitor borg
+# - type: borgType
+#   id: janitord
+
+#   # Description
+#   dummyPrototype: DogBorgChassisJanitor
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleJanitor
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleCleaning
+#   - BorgModuleCustodial
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: janitord-sit
+#   spriteBodyMovementState: janitord_moving
+#   spriteBodyRestState: janitord-rest
+#   spriteBodyLyingState: janitord-bellyup
+#   spriteBodyDeadState: janitord-dead
+#   spriteHasMindState: janitord_e
+#   spriteHasMindMovementState: janitord_e_moving
+#   spriteNoMindState: janitord_e_r
+#   spriteNoMindMovementState: janitord_e_r_moving
+#   spriteToggleLightState: janitord_l
+#   spriteToggleLightMovementState: janitord_l_moving
+
+#   # Pet
+#   petSuccessString: petting-success-janitor-cyborg
+#   petFailureString: petting-failure-janitor-cyborg
+
+
+# # Medical borg
+# - type: borgType
+#   id: medicald
+
+#   # Description
+#   dummyPrototype: DogBorgChassisMedical
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleMedical
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleChemical
+#   - BorgModuleTopicals
+#   - BorgModuleRescue
+#   - BorgModuleJetpack # Frontier
+#   - BorgModuleLollypopMedical # Goobstation.
+
+#   addComponents:
+#   - type: SolutionScanner
+#   - type: ShowHealthBars
+#     damageContainers:
+#     - Biological
+#   - type: ShowHealthIcons
+#     damageContainers:
+#     - Biological
+
+#   # Visual
+#   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: medicald-sit
+#   spriteBodyMovementState: medicald_moving
+#   spriteBodyRestState: medicald-rest
+#   spriteBodyLyingState: medicald-bellyup
+#   spriteBodyDeadState: medicald-dead
+#   spriteHasMindState: medicald_e
+#   spriteHasMindMovementState: medicald_moving_e
+#   spriteNoMindState: medicald_e_r
+#   spriteNoMindMovementState: medicald_e_r_moving
+#   spriteToggleLightState: medicald_l
+#   spriteToggleLightMovementState: medicald_l_moving
+
+#   # Pet
+#   petSuccessString: petting-success-medical-cyborg
+#   petFailureString: petting-failure-medical-cyborg
+
+#   # Sounds
+#   footstepCollection:
+#     collection: FootstepHoverBorg
+
+
+# # Service borg
+# - type: borgType
+#   id: serviced
+
+#   # Description
+#   dummyPrototype: DogBorgChassisService
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleService
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleMusique
+#   - BorgModuleClowning
+#   - BorgModuleLollypopService # Goobstation
+#   - BorgModuleGardening
+#   - BorgModuleHarvesting
+#   - BorgModuleBureaucracy # Frontier: FIXME - stacked as hell
+#   - BorgModuleNFService # Frontier
+#   - BorgModuleChef # Frontier
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: serviced-sit
+#   spriteBodyMovementState: serviced_moving
+#   spriteBodyRestState: serviced-rest
+#   spriteBodyLyingState: serviced-bellyup
+#   spriteBodyDeadState: serviced-dead
+#   spriteHasMindState: serviced_e
+#   spriteHasMindMovementState: serviced_e_moving
+#   spriteNoMindState: serviced_e_r
+#   spriteNoMindMovementState: serviced_e_r_moving
+#   spriteToggleLightState: serviced_l
+#   spriteToggleLightMovementState: serviced_l_moving
+
+#   # Pet
+#   petSuccessString: petting-success-service-cyborg
+#   petFailureString: petting-failure-service-cyborg
+
+
+# # Strayd dogborg (salvage profile)
+# - type: borgType
+#   id: strayd
+
+#   # Description
+#   dummyPrototype: DogBorgChassisStrayd
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleCargo
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleMining
+#   - BorgModuleTraversal
+#   - BorgModuleAppraisal
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: strayd-sit
+#   spriteBodyMovementState: strayd_moving
+#   spriteBodyRestState: strayd-rest
+#   spriteBodyLyingState: strayd-bellyup
+#   spriteBodyDeadState: strayd-dead
+#   spriteHasMindState: strayd_e
+#   spriteHasMindMovementState: strayd_e_moving
+#   spriteNoMindState: strayd_e_r
+#   spriteNoMindMovementState: strayd_e_r_moving
+#   spriteToggleLightState: strayd_l
+#   spriteToggleLightMovementState: strayd_l_moving
+
+#   # Pet
+#   petSuccessString: petting-success-salvage-cyborg
+#   petFailureString: petting-failure-salvage-cyborg
+
+
+# # Syndicate dogborg skin (salvage profile)
+# - type: borgType
+#   id: syndicated
+
+#   # Description
+#   dummyPrototype: DogBorgChassisSyndicated
+
+#   # Functional
+#   extraModuleCount: 3
+# # Coyote: Remove borg module whitelist
+# #  moduleWhitelist:
+# #    tags:
+# #    - BorgModuleGeneric
+# #    - BorgModuleCargo
+# # End Coyote
+
+#   defaultModules:
+#   - BorgModuleTool
+#   - BorgModuleMining
+#   - BorgModuleTraversal
+#   - BorgModuleAppraisal
+#   - BorgModuleJetpack # Frontier
+
+#   # Visual
+#   spriteRsiPath: _CS/Mob/Silicons/dog_vale.rsi
+#   inventoryTemplateId: borgUnified #LS Edit. Prevent crash due to swappable chassies.
+#   spriteBodyState: syndicated-sit
+#   spriteBodyMovementState: syndicated_moving
+#   spriteBodyRestState: syndicated-rest
+#   spriteBodyLyingState: syndicated-bellyup
+#   spriteBodyDeadState: syndicated-dead
+#   spriteHasMindState: syndicated_e
+#   spriteHasMindMovementState: syndicated_e_moving
+#   spriteNoMindState: syndicated_e_r
+#   spriteNoMindMovementState: syndicated_e_r_moving
+#   spriteToggleLightState: syndicated_l
+#   spriteToggleLightMovementState: syndicated_l_moving
+
+#   # Pet
+#   petSuccessString: petting-success-salvage-cyborg
+#   petFailureString: petting-failure-salvage-cyborg

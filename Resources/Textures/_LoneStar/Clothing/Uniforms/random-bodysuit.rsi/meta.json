@@ -1,0 +1,95 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Primarily adapted from S.P.L.U.R.T-tg at https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/b75e097a73bf9872492b0010ad96e98e090f9d84/modular_zubbers/icons/mob/clothing/suits/jacket.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/7e38f1e916d345e6b394feac918718ff62aac71e/icons/map_icons/clothing/suit/_suit.dmi, https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/b75e097a73bf9872492b0010ad96e98e090f9d84/modular_zubbers/icons/obj/clothing/suits/jacket.dmi",
+    "extra_copyright": [
+        "legs_pvc and decor_top by holsindain (discord)",
+        "decor_fins, decor_tulle, cuffs_mesh, cuffs_band by Archee(discord)"
+    ],
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "torso_plain",
+            "directions": 4
+        },
+        {
+            "name": "legs_dark",
+            "directions": 4
+        },
+        {
+            "name": "legs_opaque",
+            "directions": 4
+        },
+        {
+            "name": "legs_plain",
+            "directions": 4
+        },
+        {
+            "name": "legs_striped",
+            "directions": 4
+        },
+        {
+            "name": "legs_pvc",
+            "directions": 4
+        },
+        {
+            "name": "decor_top",
+            "directions": 4
+        },
+        {
+            "name": "decor_fins",
+            "directions": 4
+        },
+        {
+            "name": "decor_tulle",
+            "directions": 4
+        },
+        {
+            "name": "decor_band",
+            "directions": 4
+        },
+        {
+            "name": "decor_buttoned",
+            "directions": 4
+        },
+        {
+            "name": "decor_heart",
+            "directions": 4
+        },
+        {
+            "name": "decor_roped",
+            "directions": 4
+        },
+        {
+            "name": "decor_stripes",
+            "directions": 4
+        },
+        {
+            "name": "decor_suit",
+            "directions": 4
+        },
+        {
+            "name": "decor_suspenders",
+            "directions": 4
+        },
+        {
+            "name": "cuffs_plain",
+            "directions": 4
+        },
+        {
+            "name": "cuffs_mesh",
+            "directions": 4
+        },
+        {
+            "name": "cuffs_band",
+            "directions": 4
+        },
+        {
+            "name": "mask_null",
+            "directions": 4
+        }
+    ]
+}

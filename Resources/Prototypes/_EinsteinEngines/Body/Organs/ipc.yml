@@ -59,10 +59,11 @@
     state: heart-on
   - type: Organ
   - type: Metabolizer
-    maxReagents: 4 # LoneStar
     metabolizerTypes: [Human]
+    # LoneStar start, IPC metabolism group
+    maxReagents: 4 # LoneStar
+    removeEmpty: true
     groups:
-      # LoneStar start, IPC metabolism group
       # So that they dont 'fill up' with garbage
       - id: Medicine
         skipEffects: true
@@ -81,4 +82,4 @@
       # What they actually metabolize
       - id: Gas
       - id: Synthetic
-      # LoneStar end
+    # LoneStar end

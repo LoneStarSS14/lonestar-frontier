@@ -40,11 +40,10 @@
 - type: startingGear
   id: NFPirateGear
   equipment:
-    belt: ClothingBeltUtility
     pocket1: BasePirateUplinkPirateCrew
   storage:
     back:
-    - AppraisalTool
+    - ContrabandAppraisalToolPirate
     - ComputerIFFFlatpack
 
 - type: chameleonOutfit
@@ -64,8 +63,8 @@
   - NFPirateFace
   - MercenaryGlasses # Coyote: Pirate Loadout Expansion
   - MercenaryBelt # Coyote: Pirate Loadout Expansion
-  - NFPirateEars
-  - PirateEncryptionKey # Coyote: Pirates get comm keys
+  - PilotEars # LoneStar
+  - FreelancerEncryptionKey # Coyote: Pirates get comm keys
   - ContractorBoxSurvival
   - SmugglerPDA
   - ContractorWallet

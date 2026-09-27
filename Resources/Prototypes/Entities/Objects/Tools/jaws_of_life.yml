@@ -88,3 +88,6 @@
     damage:
       types:
         Blunt: 14
+  - type: Tag # LoneStar, added
+    tags:
+    - JawsOfDeath

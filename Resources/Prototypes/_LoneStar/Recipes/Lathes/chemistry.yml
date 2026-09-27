@@ -1,0 +1,9 @@
+
+- type: latheRecipe
+  id: BottleReinforced
+  result: BottleReinforced
+  completetime: 2
+  materials:
+    Plasteel: 100
+    Glass: 100
+    Silver: 25

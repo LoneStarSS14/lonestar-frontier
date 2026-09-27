@@ -96,8 +96,9 @@
 	- [color=darkred]Oxidant[/color] is their [color=darkred]blood[/color].
 	- [color=steelblue]Sylexalin[/color] is used to restore [color=darkred]blood level[/color], remove [color=darkred]bloodloss[/color] and [color=pink]Slash[/color] damage.
 	- [color=violet]Sylashizine[/color], slow acting, restores heavy [color=pink]Piercing[/color] and moderate [color=pink]Slash[/color] damage, while infering minor [color=lime]Radiation[/color].
-	- [color=seagreen]Auto-solder[/color], a fast acting acid-like chemical, is used to repair [color=yellow]Blindness[/color], as well as [color=lime]Radiation[/color] and [color=orange]Burn[/color] damage.
-	- [color=grey]Auto-nanite[/color] is used to repair [color=white]Everything[/color] with the downside of [color=red]causing temporary motor-impairment[/color].
+	- [color=seagreen]Auto-solder[/color], a fast acting acid-like chemical, is used to repair [color=yellow]Blindness[/color], as well as [color=lime]Radiation[/color] and [color=orange]Burn[/color] damage, can be combined with Fersilicite or Thermite to amplify its healing properties.
+	- [color=darkgray]Auto-nanite[/color] is used to repair [color=white]Everything[/color] with the downside of [color=red]causing temporary motor-impairment[/color], adds Sylenone to the system.
+    - [color=gray]Sylenone[/color] is only added via auto-nanites, heals [color=white]Everything[/color] very slowly over extended periods of time with no downsides, repairs [color=yellow]Blindness[/color].
 
 
 	In the event an IPC dies, after being fully repaired, it should be restarted using the [color=goldenrod]"Restart"[/color] button (located by right-clicking on them).

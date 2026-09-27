@@ -1,0 +1,173 @@
+
+- type: entity
+  id: DogBorgChassisSelectable
+  parent: BorgChassisSelectable
+  abstract: true
+
+- type: entity
+  id: DogBorgChassisEngineer
+  parent: DogBorgChassisSelectable
+  name: engineer dogborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: DogEngineering
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+    layers:
+    - state: engineeringd
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: engineeringd_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: engineeringd_l
+      shader: unshaded
+      map: ["light","enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+- type: entity
+  id: DogBorgChassisGeneric
+  parent: DogBorgChassisSelectable
+  name: generic dogborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: DogGeneric
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+    layers:
+    - state: standardd
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: standardd_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: standardd_l
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+- type: entity
+  id: DogBorgChassisMining
+  parent: DogBorgChassisSelectable
+  name: salvage dogborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: DogMining
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+    layers:
+    - state: miningd
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: miningd_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: miningd_l
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+- type: entity
+  id: DogBorgChassisJanitor
+  parent: DogBorgChassisSelectable
+  name: janitor dogborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: DogJanitor
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+    layers:
+    - state: janitord
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: janitord_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: janitord_l
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+- type: entity
+  id: DogBorgChassisMedical
+  parent: DogBorgChassisSelectable
+  name: medical dogborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: DogMedical
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+    layers:
+    - state: medicald
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: medicald_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: medicald_l
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+- type: entity
+  id: DogBorgChassisService
+  parent: DogBorgChassisSelectable
+  name: service dogborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: DogService
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+    layers:
+    - state: serviced
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: serviced_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: serviced_l
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+- type: entity
+  id: DogBorgChassisStrayd
+  parent: DogBorgChassisSelectable
+  name: strayd dogborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: DogStray
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+    layers:
+    - state: strayd
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: strayd_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: strayd_l
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false
+
+- type: entity
+  id: DogBorgChassisSyndicated
+  parent: DogBorgChassisSelectable
+  name: syndicated dogborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: DogSyndicate
+  - type: Sprite
+    sprite: _LoneStar/Entities/Mobs/Silicon/Cyborg/dog.rsi
+    layers:
+    - state: syndicated
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: syndicated_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: syndicated_l
+      shader: unshaded
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
+      visible: false

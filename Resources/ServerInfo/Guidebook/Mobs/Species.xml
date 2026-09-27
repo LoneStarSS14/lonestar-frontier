@@ -45,6 +45,7 @@
   <Box>
   <GuideEntityEmbed Entity="MobAvali" Caption="Avali"/>
   <GuideEntityEmbed Entity="MobResomi" Caption="Resomi"/>
+  <GuideEntityEmbed Entity="MobShadekin" Caption="Shadekin"/>
   </Box>
   # Coyote Sector specific species
   <Box>

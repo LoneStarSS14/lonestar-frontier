@@ -24,6 +24,7 @@
       - state: mask_null
         map: [ "clothing_belt_overlay" ]
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - belt_main:
           icon_belt_01: Base

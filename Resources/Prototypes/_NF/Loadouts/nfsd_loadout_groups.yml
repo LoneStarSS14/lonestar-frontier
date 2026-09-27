@@ -24,7 +24,7 @@
 #  - NfsdClothingBackpackSatchelNfsdCream
 #  - NfsdClothingBackpackDuffelNfsdCream
 #  - NfsdClothingBackpackMessengerNfsdCream
-#  - NfsdClothingBackpackNfsdBrown 
+#  - NfsdClothingBackpackNfsdBrown
 #  - NfsdClothingBackpackSatchelNfsdBrown
 #  - NfsdClothingBackpackDuffelNfsdBrown
 #  - NfsdClothingBackpackMessengerNfsdBrown
@@ -38,6 +38,7 @@
   loadouts:
   - NfsdClothingShoesBootsBrown
   - LoadoutHighHeels # Lonestar
+  - JackHeels # LoneStar
   fallbacks:
   - NfsdClothingShoesBootsBrown
 

@@ -60,37 +60,3 @@ borg-type-medical-transponder = medical cyborg
 borg-type-service-name = Service
 borg-type-service-desc = Help out with a wide range of crew services, ranging from serving snacks and drinks to botany to entertainment.
 borg-type-service-transponder = service cyborg
-
-borg-type-genericd-name = Generic (Dog)
-borg-type-genericd-desc = A dog-form generic chassis. Jack of all trades, master of none.
-borg-type-genericd-transponder = generic dogborg
-
-borg-type-engineeringd-name = Engineering (Dog)
-borg-type-engineeringd-desc = A dog-form engineering chassis for repairs, construction, and power/atmos work.
-borg-type-engineeringd-transponder = engineering dogborg
-
-borg-type-miningd-name = Salvage (Dog)
-borg-type-miningd-desc = A dog-form salvage chassis for mining, salvage recovery, and hostile wildlife encounters.
-borg-type-miningd-transponder = salvage dogborg
-
-borg-type-janitord-name = Janitor (Dog)
-borg-type-janitord-desc = A dog-form janitor chassis for station cleanup and waste disposal.
-borg-type-janitord-transponder = janitor dogborg
-
-borg-type-medicald-name = Medical (Dog)
-borg-type-medicald-desc = A dog-form medical chassis for treatment and rescue in hazardous environments.
-borg-type-medicald-transponder = medical dogborg
-
-borg-type-serviced-name = Service (Dog)
-borg-type-serviced-desc = A dog-form service chassis for botany, food service, and entertainment tasks.
-borg-type-serviced-transponder = service dogborg
-
-borg-type-strayd-name = Strayd (Dog)
-borg-type-strayd-desc = A dog-form salvage chassis using the Strayd appearance and salvage module set.
-borg-type-strayd-transponder = strayd dogborg
-
-borg-type-syndicated-name = Syndicate (Dog)
-borg-type-syndicated-desc = A dog-form salvage chassis using the Syndicate appearance and salvage module set.
-borg-type-syndicated-transponder = syndicated dogborg
-
-

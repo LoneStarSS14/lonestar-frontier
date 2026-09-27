@@ -39,6 +39,8 @@
     - FrontierUplinkCoin
     balance:
       FrontierUplinkCoin: 0
+    stripTurnInValues:
+    - FrontierUplinkCoin
 
 - type: entity
   id: StorePresetPirateUplink
@@ -62,3 +64,5 @@
     - Doubloon
     balance:
       Doubloon: 0
+    stripTurnInValues:
+    - Doubloon

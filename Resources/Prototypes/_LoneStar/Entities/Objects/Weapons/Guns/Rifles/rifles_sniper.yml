@@ -1,0 +1,21 @@
+#region LoneStar
+- type: entity
+  id: LSWeaponRifleMahifa
+  parent: [ BaseC1Contraband, NFBaseWeaponRifleChamber30, NFBaseWeaponFrameRifleSteelbolt ]
+  name: Mahifa
+  description: "The rifles for hunting dangerous xenofauna are impressive. The ones for hunting their poachers are not."
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Objects/Weapons/Guns/Rifles/Mahifa.rsi
+    - type: Clothing
+      sprite: _LoneStar/Objects/Weapons/Guns/Rifles/Mahifa.rsi
+    - type: BallisticAmmoProvider
+      capacity: 4
+    - type: SpeedModifiedOnWield
+      walkModifier: 0.90
+      sprintModifier: 0.90
+    - type: CursorOffsetRequiresWield
+    - type: EyeCursorOffset
+      maxOffset: 4
+      pvsIncrease: 0.2
+

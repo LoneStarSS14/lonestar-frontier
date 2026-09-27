@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: [ ClothingShoesBaseButcherable, ClothingShoesBaseHeelsNoisy ]
   id: ClothingShoesHighheelShoes
   name: high-heels
   description: Snazzy shoes for when you want to be stylish and noticed.
@@ -12,12 +12,6 @@
     sprite: _Starlight/Clothing/Shoes/Boots/highheelshoes.rsi
   - type: Clothing
     sprite: _Starlight/Clothing/Shoes/Boots/highheelshoes.rsi
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepHighHeels
-      params:
-        volume: -6
-        variation: 0.09
 
 - type: entity
   parent: ClothingShoesBaseButcherable

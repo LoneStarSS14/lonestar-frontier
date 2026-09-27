@@ -1,0 +1,35 @@
+- type: entity
+  name: reinforced bottle
+  parent: BaseBeakerMetallic
+  id: BottleReinforced
+  description: A small reinforced bottle.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Specific/Chemistry/reinforced_bottle.rsi
+    layers:
+    - state: icon
+    - state: fill-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Item
+    size: Tiny
+    sprite: _LoneStar/Objects/Specific/Chemistry/reinforced_bottle.rsi
+  - type: Tag
+    tags:
+    - Bottle
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 45
+  - type: SolutionTransfer
+    maxTransferAmount: 45
+    canChangeTransferAmount: true
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    fillBaseName: fill-
+  - type: StaticPrice
+    price: 50
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 25
+      Steel: 25

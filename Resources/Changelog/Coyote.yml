@@ -3849,3 +3849,262 @@ Entries:
   id: 424
   time: '2026-09-19T22:41:40.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/163
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        new reinforced bottles can now be crafted at autolathes medical techfabs
+        and protolathes, they cannot break and hold 45u of fluid.
+    - type: Tweak
+      message: Bluespace-Vials can now break, and use a new sprite.
+    - type: Tweak
+      message: >-
+        Bluespace fluid containers have had their values changed, beaker
+        [1000u->600u] vial [300u->120u] syringe[100u->60u] jug[1000u->1200u]
+  id: 425
+  time: '2026-09-20T17:05:56.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/165
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: put missing merc lathe recipes back
+  id: 426
+  time: '2026-09-21T16:26:13.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/171
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Granted cult shoes limited no slip, a better pocket, and a better name.
+  id: 427
+  time: '2026-09-21T16:34:04.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/166
+- author: amareyeen
+  changes:
+    - type: Add
+      message: PMC Armored vest reskin of Merc Web Vests
+  id: 428
+  time: '2026-09-21T17:33:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/152
+- author: archee1
+  changes:
+    - type: Fix
+      message: IPC repair patches now properly stack to 5
+    - type: Fix
+      message: Auto-Solder now heals its intended amount
+    - type: Add
+      message: >-
+        Auto-Nanite has had most of its healing transferred to sylenone, a new
+        chemical which it adds when metabolized.
+    - type: Fix
+      message: IPC no longer build up unmetabolizable chemicals inside of them.
+    - type: Add
+      message: >-
+        Tazinide and Licoxide now infer a speed buff to IPC at the cost of
+        dealing shock directly over time.
+    - type: Add
+      message: >-
+        Auto-Solder can now be applied with Fersilicite and Thermite to have
+        additional healing.
+  id: 429
+  time: '2026-09-21T18:02:57.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/172
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Go go hat storage reduced
+  id: 430
+  time: '2026-09-22T21:11:17.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/169
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        The magic needle can now be bought at the AutoDrobe, capable of
+        re-stitching randomized clothing.
+    - type: Tweak
+      message: >-
+        The randomized colourful costumes can now be found at the AutoDrobe
+        instead of the ClothesMate
+  id: 431
+  time: '2026-09-22T21:56:34.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/173
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        A new set of randomized clothing can now be bought at the AutoDrobe,
+        bodysuits, with 5 'general' themes and 18 variant sprites.
+    - type: Add
+      message: Punk clothes can now be re-randomized with the magic needle.
+    - type: Tweak
+      message: Colourful costumes now use a less discordant colour palette.
+  id: 432
+  time: '2026-09-22T23:05:44.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/174
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Stun knuckles have had their stamina damage lowered to be consistent in
+        power with stun batons.
+  id: 433
+  time: '2026-09-23T12:43:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/176
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Tajaran will no long have the surname "Hadii # These 5 surnames
+        technically should appear way more"
+  id: 434
+  time: '2026-09-23T20:16:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/180
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Medical belt bags can now fit defibrillators
+    - type: Tweak
+      message: >-
+        The compact defibrillator now takes the same amount of time to be used,
+        but heals 20 asphyxiation instead of 40.
+  id: 435
+  time: '2026-09-23T23:00:25.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/182
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Adds a new punk coat from upstream, along with a few new variant pieces
+        to the punk coats.
+  id: 436
+  time: '2026-09-23T23:01:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/181
+- author: tenmillimaster
+  changes:
+    - type: Add
+      message: New civilian-grade sniper, the .30 Cal Antipopo
+  id: 437
+  time: '2026-09-24T09:54:06.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/175
+- author: archee1
+  changes:
+    - type: Add
+      message: Maid borgs are now selectable as cyborg chassis.
+    - type: Tweak
+      message: You can now remove all borg modules including base modules
+    - type: Tweak
+      message: All borg chassis support 8 module slots total.
+    - type: Remove
+      message: >-
+        Service borgs have lost their bureaucracy and jetpack modules by
+        default.
+  id: 438
+  time: '2026-09-24T22:27:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/188
+- author: trashqueenlily
+  changes:
+    - type: Tweak
+      message: Handheld mass scanners are now hands free!
+  id: 439
+  time: '2026-09-24T22:30:20.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/187
+- author: trashqueenlily
+  changes:
+    - type: Add
+      message: Stapled Goliath Plates to all Aberrant Horrors
+  id: 440
+  time: '2026-09-25T01:22:29.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/185
+- author: archee1
+  changes:
+    - type: Fix
+      message: Vulpkanins hands are no longer under their jumpsuit sprites.
+    - type: Tweak
+      message: Shoes default over jumpsuits again and are toggled to be under instead.
+  id: 441
+  time: '2026-09-25T01:39:06.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/189
+- author: trashqueenlily
+  changes:
+    - type: Add
+      message: 'Made your pet dragons 100% more recolorable! '
+    - type: Tweak
+      message: Baby dragons now produce more flames!
+  id: 442
+  time: '2026-09-25T18:49:41.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/186
+- author: archee1
+  changes:
+    - type: Add
+      message: Bulk ammo boxes can now be printed for .35 .40 .45 and .50.
+    - type: Tweak
+      message: Bulk ammo boxes are now sized at 2x3 instead of 2x2
+    - type: Fix
+      message: >-
+        Costs to print ammo are now correctly standardized across all ammo box
+        types.
+  id: 443
+  time: '2026-09-26T14:42:57.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/195
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        It is now possible to make Shadekin go sideways, along with other things
+        that were wrong with them.
+  id: 444
+  time: '2026-09-26T14:46:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/192
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Lets Biogens use biomass from silos.
+  id: 445
+  time: '2026-09-27T01:12:26.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/200
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Rebalanced Anaconda
+  id: 446
+  time: '2026-09-27T01:13:54.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/191
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Items bought by uplinks no longer reward the currency they are bought
+        with when sold at faction selling pallets.
+    - type: Fix
+      message: >-
+        faction selling pallets no longer delete items that have had their value
+        updated to 0, such as those bought at a vendor.
+    - type: Tweak
+      message: >-
+        Freelancer up links are once again coconuts, and unable to be put in
+        your PDA or recycled.
+  id: 447
+  time: '2026-09-27T01:29:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/201
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Jaws of life and death have had their sprites updated to better fit the
+        companies that logically produced them.
+  id: 448
+  time: '2026-09-27T02:39:43.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/202
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        The Cave FTL event has been remapped to be larger and more spread out in
+        its loot.
+    - type: Tweak
+      message: >-
+        The Syndicate FTL Intercept (Syndie UIV) has had some slight mapping
+        tweaks to give the AI a better fighting chance.
+  id: 449
+  time: '2026-09-27T04:09:53.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/203

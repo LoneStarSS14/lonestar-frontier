@@ -205,7 +205,7 @@ public sealed class RespiratorSystem : EntitySystem
     /// </summary>
     public bool CanMetabolizeInhaledAir(Entity<RespiratorComponent?> ent)
     {
-        if (!Resolve(ent, ref ent.Comp))
+        if (!Resolve(ent, ref ent.Comp, logMissing: false)) // Wayfarer: Add logMissing: false
             return false;
 
         var ev = new InhaleLocationEvent();
@@ -224,7 +224,7 @@ public sealed class RespiratorSystem : EntitySystem
     /// </summary>
     public bool CanMetabolizeGas(Entity<RespiratorComponent?> ent, GasMixture gas)
     {
-        if (!Resolve(ent, ref ent.Comp))
+        if (!Resolve(ent, ref ent.Comp, logMissing: false)) // Wayfarer: Add logMissing: false
             return false;
 
         var organs = _bodySystem.GetBodyOrganEntityComps<LungComponent>((ent, null));

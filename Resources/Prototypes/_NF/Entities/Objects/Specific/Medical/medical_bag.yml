@@ -23,6 +23,7 @@
       components:
         - Pill
         - Hypospray
+        - Defibrillator # LoneStar
       tags:
         - PillCanister
         - CentrifugeCompatible

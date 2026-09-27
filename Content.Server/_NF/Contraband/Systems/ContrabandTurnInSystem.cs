@@ -151,14 +151,17 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
 
                 if (TryComp<ContrabandComponent>(ent, out var comp))
                 {
-                    if (!comp.TurnInValues.ContainsKey(console.RewardType))
+                    // LoneStar start: prevents selling things with striped values
+                    if (!comp.TurnInValues.TryGetValue(console.RewardType, out var value))
+                        continue;
+
+                    // Don't sell items with no turn-in value (e.g. goods stripped by a store/vend purchase or lathe).
+                    if (value <= 0)
                         continue;
 
                     toSell.Add(ent);
-                    var value = comp.TurnInValues[console.RewardType];
-                    if (value <= 0)
-                        continue;
                     amount += value;
+                    // LoneStar end
                 }
             }
         }
