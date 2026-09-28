@@ -67,6 +67,10 @@
         whitelist:
           tags:
           - JawsOfLife
+      jaws_syn: # LoneStar, added
+        whitelist:
+          tags:
+          - JawsOfDeath
       screwdriver_nuke:
         whitelist:
           tags:
@@ -148,6 +152,10 @@
         whitelist:
           tags:
           - JawsOfLife
+      jaws_syn: # LoneStar, added
+        whitelist:
+          tags:
+          - JawsOfDeath
       screwdriver_nuke:
         whitelist:
           tags:

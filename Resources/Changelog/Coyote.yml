@@ -4086,3 +4086,43 @@ Entries:
   id: 447
   time: '2026-09-27T01:29:55.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/201
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Jaws of life and death have had their sprites updated to better fit the
+        companies that logically produced them.
+  id: 448
+  time: '2026-09-27T02:39:43.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/202
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        The Cave FTL event has been remapped to be larger and more spread out in
+        its loot.
+    - type: Tweak
+      message: >-
+        The Syndicate FTL Intercept (Syndie UIV) has had some slight mapping
+        tweaks to give the AI a better fighting chance.
+  id: 449
+  time: '2026-09-27T04:09:53.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/203
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: Corrected Punk Infoshades Sprite Rotation
+  id: 450
+  time: '2026-09-27T17:29:59.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/207
+- author: archee1
+  changes:
+    - type: Tweak
+      message: The RPED now has a 4x6 storage
+    - type: Tweak
+      message: >-
+        Construction bags can now fit powercells, conveyorbelts, flatpacks, RCD
+        ammo, and machine boards.
+  id: 451
+  time: '2026-09-27T19:41:31.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/208
