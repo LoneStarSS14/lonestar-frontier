@@ -29,6 +29,11 @@ public sealed class DroppableBorgModuleSystem : EntitySystem
         SubscribeLocalEvent<DroppableBorgModuleComponent, BorgModuleUnselectedEvent>(OnModuleUnselected);
     }
 
+    public static HandLocation GetModuleHandLocation() // LoneStar
+    {
+        return HandLocation.Middle;
+    }
+
     private void OnMapInit(Entity<DroppableBorgModuleComponent> ent, ref MapInitEvent args)
     {
         var items = _container.EnsureContainer<Container>(ent, ent.Comp.ContainerId);
@@ -86,11 +91,11 @@ public sealed class DroppableBorgModuleSystem : EntitySystem
         var items = container.ContainedEntities;
         for (int i = 0; i < ent.Comp.Items.Count; i++)
         {
-            AddItemAsHand((chassis, hands), items[0], HandId(ent, i)); // the contained items will gradually go to 0
+            AddItemAsHand((chassis, hands), items[0], HandId(ent, i), GetModuleHandLocation()); // the contained items will gradually go to 0 // LoneStar
         }
         for (int i = 0; i < ent.Comp.Placeholders.Count; i++)
         {
-            AddItemAsHand((chassis, hands), items[0], PlaceholderHandId(ent, i)); // the contained items will gradually go to 0
+            AddItemAsHand((chassis, hands), items[0], PlaceholderHandId(ent, i), GetModuleHandLocation()); // the contained items will gradually go to 0 // LoneStar
         }
     }
 
@@ -148,9 +153,9 @@ public sealed class DroppableBorgModuleSystem : EntitySystem
     /// Tries to add a hand to the given cyborg entity and insert the given item into it.
     /// On failure, the hand will be deleted.
     /// </summary>
-    private void AddItemAsHand(Entity<HandsComponent> chassis, EntityUid item, string handId)
+    private void AddItemAsHand(Entity<HandsComponent> chassis, EntityUid item, string handId, HandLocation location) // LoneStar
     {
-        _hands.AddHand(chassis, handId, HandLocation.Middle, chassis.Comp);
+        _hands.AddHand(chassis, handId, location, chassis.Comp, isModule: true); // LoneStar
         var hand = chassis.Comp.Hands[handId];
         _hands.DoPickup(chassis, hand, item, chassis.Comp);
         if (hand.HeldEntity != item)

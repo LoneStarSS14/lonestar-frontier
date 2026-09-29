@@ -33,7 +33,7 @@ namespace Content.Client.Hands.Systems
         [Dependency] private readonly ExamineSystem _examine = default!;
         [Dependency] private readonly DisplacementMapSystem _displacement = default!;
 
-        public event Action<string, HandLocation>? OnPlayerAddHand;
+        public event Action<string, HandLocation, bool>? OnPlayerAddHand; // LoneStar
         public event Action<string>? OnPlayerRemoveHand;
         public event Action<string?>? OnPlayerSetActiveHand;
         public event Action<HandsComponent>? OnPlayerHandsAdded;
@@ -87,7 +87,7 @@ namespace Content.Client.Hands.Systems
                         continue;
 
                     var container = _containerSystem.EnsureContainer<ContainerSlot>(uid, hand.Name, manager);
-                    var newHand = new Hand(hand.Name, hand.Location, container);
+                    var newHand = new Hand(hand.Name, hand.Location, container, hand.IsModule); // LoneStar
                     component.Hands.Add(hand.Name, newHand);
                     addedHands.Add(newHand);
                 }
@@ -402,15 +402,15 @@ namespace Content.Client.Hands.Systems
 
         private void AddHand(EntityUid uid, Hand newHand, HandsComponent? handsComp = null)
         {
-            AddHand(uid, newHand.Name, newHand.Location, handsComp);
+            AddHand(uid, newHand.Name, newHand.Location, handsComp, newHand.IsModule); // LoneStar
         }
 
-        public override void AddHand(EntityUid uid, string handName, HandLocation handLocation, HandsComponent? handsComp = null)
+        public override void AddHand(EntityUid uid, string handName, HandLocation handLocation, HandsComponent? handsComp = null, bool isModule = false) // LoneStar
         {
-            base.AddHand(uid, handName, handLocation, handsComp);
+            base.AddHand(uid, handName, handLocation, handsComp, isModule); // LoneStar
 
             if (uid == _playerManager.LocalEntity)
-                OnPlayerAddHand?.Invoke(handName, handLocation);
+                OnPlayerAddHand?.Invoke(handName, handLocation, isModule); // LoneStar
 
             if (handsComp == null)
                 return;

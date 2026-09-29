@@ -69,9 +69,9 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
         _handsSystem.OnPlayerHandUnblocked -= HandUnblocked;
     }
 
-    private void OnAddHand(string name, HandLocation location)
+    private void OnAddHand(string name, HandLocation location, bool isModule) // LoneStar
     {
-        AddHand(name, location);
+        AddHand(name, location, isModule); // LoneStar
     }
 
     private void HandPressed(GUIBoundKeyEventArgs args, SlotControl hand)
@@ -132,7 +132,7 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
         _playerHandsComponent = handsComp;
         foreach (var (name, hand) in handsComp.Hands)
         {
-            var handButton = AddHand(name, hand.Location);
+            var handButton = AddHand(name, hand.Location, hand.IsModule); // LoneStar
 
             if (_entities.TryGetComponent(hand.HeldEntity, out VirtualItemComponent? virt))
             {
@@ -277,20 +277,17 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
             _player.LocalSession?.AttachedEntity is { } playerEntity &&
             _handsSystem.TryGetHand(playerEntity, handName, out var hand, _playerHandsComponent))
         {
-            var foldedLocation = hand.Location.GetUILocation();
-            if (foldedLocation == HandUILocation.Left)
+            if (!hand.IsModule && hand.Location == HandLocation.Left) // LoneStar
             {
                 _statusHandLeft = handControl;
-                HandsGui.UpdatePanelEntityLeft(hand.HeldEntity);
             }
-            else
+            else if (!hand.IsModule && hand.Location == HandLocation.Right) // LoneStar
             {
-                // Middle or right
                 _statusHandRight = handControl;
-                HandsGui.UpdatePanelEntityRight(hand.HeldEntity);
             }
 
-            HandsGui.SetHighlightHand(foldedLocation);
+            var uiLocation = UpdateActiveHandStatus(handControl, hand.HeldEntity); // LoneStar
+            HandsGui.SetHighlightHand(uiLocation);
         }
     }
 
@@ -300,9 +297,9 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
         return handControl;
     }
 
-    private HandButton AddHand(string handName, HandLocation location)
+    private HandButton AddHand(string handName, HandLocation location, bool isModule = false) // LoneStar
     {
-        var button = new HandButton(handName, location);
+        var button = new HandButton(handName, location, isModule); // LoneStar
         button.StoragePressed += StorageActivate;
         button.Pressed += HandPressed;
 
@@ -319,11 +316,10 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
         }
 
         // If we don't have a status for this hand type yet, set it.
-        // This means we have status filled by default in most scenarios,
-        // otherwise the user'd need to switch hands to "activate" the hands the first time.
-        if (location.GetUILocation() == HandUILocation.Left)
+        // Module-only and middle hands never claim a dedicated status panel. // LoneStar
+        if (!isModule && location == HandLocation.Left) // LoneStar
             _statusHandLeft ??= button;
-        else
+        else if (!isModule && location == HandLocation.Right) // LoneStar
             _statusHandRight ??= button;
 
         UpdateVisibleStatusPanels();
@@ -404,11 +400,14 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
 
         foreach (var hand in _handLookup.Values)
         {
-            if (hand.HandLocation.GetUILocation() == HandUILocation.Left)
+            if (hand.IsModule) // LoneStar
+                continue;
+
+            if (hand.HandLocation == HandLocation.Left) // LoneStar
             {
                 leftVisible = true;
             }
-            else
+            else if (hand.HandLocation == HandLocation.Right) // LoneStar
             {
                 rightVisible = true;
             }
@@ -491,5 +490,37 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
 
         if (hand == _statusHandRight)
             HandsGui?.UpdatePanelEntityRight(entity);
+        // LoneStar Start
+        if (hand == _activeHand)
+            UpdateActiveHandStatus(hand, entity);
+    }
+
+    private HandUILocation? UpdateActiveHandStatus(HandButton hand, EntityUid? entity)
+    {
+        if (hand.HandLocation == HandLocation.Left && _statusHandLeft != null)
+        {
+            HandsGui?.UpdatePanelEntityLeft(entity);
+            return HandUILocation.Left;
+        }
+
+        if (hand.HandLocation != HandLocation.Left && _statusHandRight != null)
+        {
+            HandsGui?.UpdatePanelEntityRight(entity);
+            return HandUILocation.Right;
+        }
+
+        if (_statusHandLeft != null)
+        {
+            HandsGui?.UpdatePanelEntityLeft(entity);
+            return HandUILocation.Left;
+        }
+        else if (_statusHandRight != null)
+        {
+            HandsGui?.UpdatePanelEntityRight(entity);
+            return HandUILocation.Right;
+        }
+
+        return null;
+        // LoneStar End
     }
 }
