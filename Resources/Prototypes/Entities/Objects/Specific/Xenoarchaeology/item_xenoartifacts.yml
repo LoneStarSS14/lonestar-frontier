@@ -120,6 +120,10 @@
   - type: Appearance
   - type: Item
     size: Normal
+  - type: Material # LoneStar
+  - type: PhysicalComposition # LoneStar
+    materialComposition:
+      ArtifactFragment: 100
   - type: Tag
     tags:
     - ArtifactFragment

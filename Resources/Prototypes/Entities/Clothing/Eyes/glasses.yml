@@ -255,6 +255,9 @@
     - type: SolutionScanner
     - type: IdentityBlocker
       coverage: EYES
+    - type: Tag # Omu
+      tags:
+      - HudChemistry
 
 - type: entity
   parent: [ClothingEyesBase, NotContraband, ContrabandClothing] # Frontier: BaseMajorContraband<BaseC3Contraband added ContrabandClothing as parent
