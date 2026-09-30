@@ -45,13 +45,13 @@ public sealed class SalvageObjectiveNpcSpawnerSystem : EntitySystem
             if (Paused(uid) || comp.SpawnPrototypes.Count == 0 || comp.NextSpawn > now)
                 continue;
 
-            comp.NextSpawn += TimeSpan.FromSeconds(comp.SpawnIntervalSeconds + 2 * comp.SpawnIntervalVariance * (_random.NextFloat() - 0.5));
-
             if (CountNearbyFactionMobs(uid, comp) >= comp.MaxNearby) // Try again soon if too many nearby already
             {
-                comp.NextSpawn = TimeSpan.FromSeconds(Math.Min(10, comp.SpawnIntervalSeconds));
+                comp.NextSpawn = now + TimeSpan.FromSeconds(Math.Min(10, comp.SpawnIntervalSeconds));
                 continue;
             }
+
+            comp.NextSpawn = now + TimeSpan.FromSeconds(comp.SpawnIntervalSeconds + 2 * comp.SpawnIntervalVariance * (_random.NextFloat() - 0.5));
             var spawn = _random.Pick(comp.SpawnPrototypes);
 
             if (TryGetNearbySpawnCoordinates(uid, comp, out var coords))
