@@ -193,16 +193,16 @@
         state: equipped-HELMET
       - sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
         state: inhand-left
+  # LoneStar: changes start
   - type: RandomSpawner
     prototypes:
+    - MobSyndicateNavalGrenadierA
     - MobSyndicateNavalGrenadierB
-    - MobSyndicateNavalGrenadierC
-    - MobSyndicateNavalGrenadierD
+    - MobSyndicateNavalGrenadierB
+    - MobSyndicateNavalGrenadierB
     chance: 1
     offset: 0.0
-    rarePrototypes:
-    - MobSyndicateNavalGrenadierA
-    rareChance: 0.1
+  # Lonestar: end
 
 - type: entity
   name: syndicate naval saboteur spawner
@@ -421,11 +421,10 @@
         state: inhand-left
       - sprite: Objects/Weapons/Melee/uranium_spear.rsi
         state: inhand-right
+  # LoneStar: changes start
   - type: RandomSpawner
     prototypes:
-    - MobSyndicateNavalGrenadierB
-    - MobSyndicateNavalGrenadierC
-    - MobSyndicateNavalGrenadierD
+    - MobSyndicateNavalChemwarriorA
     - MobSyndicateNavalChemwarriorB
     - MobSyndicateNavalChemwarriorC
     - MobSyndicateNavalChemwarriorD
@@ -433,9 +432,12 @@
     offset: 0.0
     rarePrototypes:
     - MobSyndicateNavalMime
-    - MobSyndicateNavalChemwarriorA
     - MobSyndicateNavalGrenadierA
+    - MobSyndicateNavalGrenadierB
+    - MobSyndicateNavalGrenadierB
+    - MobSyndicateNavalGrenadierB
     rareChance: 0.1
+    # LoneStar: end
 
 # Voidsmen
 - type: entity
