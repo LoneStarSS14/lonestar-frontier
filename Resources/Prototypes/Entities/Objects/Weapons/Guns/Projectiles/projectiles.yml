@@ -815,7 +815,7 @@
     explosionType: Default
     totalIntensity: 150 # a ~2 tile radius
     intensitySlope: 5
-    maxIntensity: 10
+    maxIntensity: 5 # LoneStar, 150 -> 75 Max damage
 
 - type: entity
   id: BulletGrenadeFlash
