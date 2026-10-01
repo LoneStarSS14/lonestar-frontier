@@ -1,0 +1,138 @@
+- type: reagent
+  id: Fresoxidine
+  name: reagent-name-fresoxidine
+  group: Toxins
+  desc: reagent-desc-fresoxidine
+  flavor: acid
+  color: "#94ffdf"
+  physicalDesc: reagent-physical-desc-strong-smelling
+  tileReactions:
+    - !type:CreateEntityTileReaction
+      entity: IceCrust
+      maxOnTileWhitelist:
+        tags: [ Ice ]
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:AdjustTemperature
+        amount: -30000
+        conditions:
+        - !type:Temperature
+          min: 73.5
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Caustic: 0.75
+            Cold: 0.75
+  metabolisms:
+    Poison:
+      metabolismRate : 3
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 6.0
+            Cold: 4.0
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "generic-reagent-effect-freezing-insides" ]
+        probability: 0.33
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          min: 73.5
+        amount: -10000
+      - !type:MovespeedModifier
+        conditions:
+        walkSpeedModifier: 0.7
+        sprintSpeedModifier: 0.7
+    Synthetic:
+      metabolismRate: 1.5
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 3.0
+            Cold: 2.0
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          min: 73.5
+        amount: -5000
+      - !type:MovespeedModifier
+        conditions:
+        walkSpeedModifier: 0.7
+        sprintSpeedModifier: 0.7
+
+
+- type: reagent
+  id: Umbrazane
+  name: reagent-name-umbrazane
+  group: Toxins
+  desc: reagent-desc-umbrazane
+  flavor: acid
+  color: "#2d3644"
+  physicalDesc: reagent-physical-desc-strong-smelling
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Caustic: 0.5
+            Poison: 0.25
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        time: 5
+        refresh: true
+  metabolisms:
+    Poison:
+      metabolismRate : 3
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 2
+            Poison: 2
+            Asphyxiation: 2
+      - !type:PopupMessage
+        visualType: MediumCaution
+        type: Local
+        messages:
+        - norepinephricacid-effect-eye-disconnect
+        - norepinephricacid-effect-eye-pain
+        - norepinephricacid-effect-darkness
+        - norepinephricacid-effect-blindness
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        time: 5
+        refresh: true
+    Synthetic:
+      metabolismRate: 1.5
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 3
+            Bloodloss: 2
