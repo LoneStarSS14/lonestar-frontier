@@ -124,7 +124,7 @@
   parent: SplatterChemBase
   id: SplatterChemCold
   categories: [ HideSpawnMenu ]
-  component   s:
+  components:
   - type: SolutionContainerManager
     solutions:
       vapor:
