@@ -101,7 +101,7 @@
         # LoneStar end
 
 - type: entity
-  parent: BulletWaterShot
+  parent: SplatterChemBase
   id: SplatterChemWeh
   categories: [ HideSpawnMenu ]
   components:
@@ -124,7 +124,7 @@
   parent: SplatterChemBase
   id: SplatterChemCold
   categories: [ HideSpawnMenu ]
-  components:
+  component   s:
   - type: SolutionContainerManager
     solutions:
       vapor:
