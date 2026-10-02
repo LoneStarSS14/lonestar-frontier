@@ -43,6 +43,10 @@
     {
       "name": "equipped-head-unshaded-vox",
       "directions": 4
+    },
+    {
+        "name": "equipped-head-feroxi",
+        "directions": 4
     }
   ]
 }
