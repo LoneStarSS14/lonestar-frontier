@@ -1,0 +1,7 @@
+- type: construction
+  id: HudMedChem
+  graph: HudMedChemHUD
+  startNode: start
+  targetNode: hudMedChem
+  category: construction-category-clothing
+  objectType: Item

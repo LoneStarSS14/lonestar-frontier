@@ -4108,3 +4108,60 @@ Entries:
   id: 449
   time: '2026-09-27T04:09:53.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/203
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: Corrected Punk Infoshades Sprite Rotation
+  id: 450
+  time: '2026-09-27T17:29:59.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/207
+- author: archee1
+  changes:
+    - type: Tweak
+      message: The RPED now has a 4x6 storage
+    - type: Tweak
+      message: >-
+        Construction bags can now fit powercells, conveyorbelts, flatpacks, RCD
+        ammo, and machine boards.
+  id: 451
+  time: '2026-09-27T19:41:31.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/208
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Swapped merc captain loot from n2524 to Mahifa
+  id: 452
+  time: '2026-09-29T12:41:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/213
+- author: trashqueenlily
+  changes:
+    - type: Add
+      message: >-
+        Introducing the all new line of Medi-Chem Eyewear! Courtesy of
+        Interdyne~
+  id: 453
+  time: '2026-09-29T12:43:07.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/198
+- author: trashqueenlily
+  changes:
+    - type: Tweak
+      message: 'Artifact fragments fit inside of material silos now! '
+  id: 454
+  time: '2026-09-29T13:29:49.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/204
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Made Interdyne Herbals un reclaimable.
+  id: 455
+  time: '2026-10-01T02:42:14.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/205
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Expedition spawners no longer get stuck spawning things more often than
+        intended.
+  id: 456
+  time: '2026-10-01T16:30:13.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/216

@@ -1552,8 +1552,3 @@
 
 - type: Tag
   id: SimpleBiscuit
-
-# LoneStar
-
-- type: Tag
-  id: RechargerBlacklist

@@ -15,3 +15,10 @@
 
 - type: Tag
   id: JawsOfDeath
+
+- type: Tag
+  id: ReclaimerBlacklist
+
+- type: Tag
+  id: RechargerBlacklist
+

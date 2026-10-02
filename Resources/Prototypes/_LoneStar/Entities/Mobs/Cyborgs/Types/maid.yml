@@ -76,7 +76,8 @@
   - BorgModuleTopicals
   - BorgModuleRescue
   - BorgModuleJetpack
-  - BorgModuleLollypopMedical
+  # - BorgModuleLollypopMedical # LoneStar
+  - BorgModuleAdvancedParamedic
   addComponents:
   - type: SolutionScanner
   - type: ShowHealthBars

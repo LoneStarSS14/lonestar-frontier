@@ -1,0 +1,8 @@
+- type: material
+  id: ArtifactFragment
+  stackEntity: ArtifactFragment1
+  name: materials-artifact-fragment
+  unit: materials-unit-piece
+  icon: { sprite: Objects/Specific/Xenoarchaeology/artifact_fragments.rsi, state: ancientball1 }
+  color: "#9e7a93"
+  price: 0.15
