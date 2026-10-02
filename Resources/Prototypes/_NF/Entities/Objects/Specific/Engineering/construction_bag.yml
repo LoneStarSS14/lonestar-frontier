@@ -32,8 +32,14 @@
       - RodMetal1
       - Sheet
       - CableCoil
+      - ConveyorAssembly # LoneStar
       components:
       - ConstructionMaterials
+      # LoneStar v
+      - MachinePart
+      - Flatpack
+      - MachineBoard
+      - RCDAmmo
     blacklist:
       tags:
       - PrizeTicket

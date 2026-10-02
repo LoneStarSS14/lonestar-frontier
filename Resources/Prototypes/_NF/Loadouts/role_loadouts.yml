@@ -231,7 +231,8 @@
   - DocForcedOuterClothing
   - DocShoes
   - ContractorFace
-  - ContractorGlasses
+  - DocGlasses # LoneStar
+  # - ContractorGlasses
   - NurseBelt # Coyote: ContractorBelt < NurseBelt (Inherits ContractorBelt)
   - DocEars
   - ContractorBoxSurvival
@@ -583,7 +584,7 @@
   - MercenaryGlasses # Coyote: Pirate Loadout Expansion
   - MercenaryBelt # Coyote: Pirate Loadout Expansion
   - NFPirateEars
-  - PirateEncryptionKey # Coyote: Pirates get comm keys
+  - FreelancerEncryptionKey # Coyote: Pirates get comm keys
   - ContractorBoxSurvival
   - NFPirateFirstMatePDA
   - ContractorWallet
@@ -611,7 +612,7 @@
   - MercenaryGlasses # Coyote: Pirate Loadout Expansion
   - MercenaryBelt # Coyote: Pirate Loadout Expansion
   - NFPirateCaptainEars
-  - PirateEncryptionKey # Coyote: Pirates get comm keys
+  - FreelancerEncryptionKey # Coyote: Pirates get comm keys
   - ContractorBoxSurvival
   - NFPirateCaptainPDA
   - PirateCaptainWallet

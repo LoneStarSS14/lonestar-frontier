@@ -16,13 +16,17 @@ reagent-effect-condition-guidebook-total-hunger =
                  }
     }
 
+## LoneStar: added case for no [min&max] and reworded for min not being >=
 reagent-effect-condition-guidebook-reagent-threshold =
     { $max ->
-        [2147483648] there's at least {NATURALFIXED($min, 2)}u of {$reagent}
+        [2147483648] { $min ->
+            [0] there's any amount of {$reagent}
+            *[other] there's more than {NATURALFIXED($min, 2)}u of {$reagent}
+        }
         *[other] { $min ->
-                    [0] there's at most {NATURALFIXED($max, 2)}u of {$reagent}
-                    *[other] there's between {NATURALFIXED($min, 2)}u and {NATURALFIXED($max, 2)}u of {$reagent}
-                 }
+            [0] there's at most {NATURALFIXED($max, 2)}u of {$reagent}
+            *[other] there's between {NATURALFIXED($min, 2)}u and {NATURALFIXED($max, 2)}u of {$reagent}
+        }
     }
 
 reagent-effect-condition-guidebook-mob-state-condition =

@@ -84,7 +84,7 @@ public sealed class CoinFlipperMachineSystem : EntitySystem
         if (slot.Item != null)
             TryComp<StackComponent>(slot.Item.Value, out stack);
 
-        if (_random.Prob(.38f)) // 50 Flips = 5.6% chance to break even
+        if (_random.Prob(.45f)) // 50 Flips = 24% chance to break even
         {
             _audio.PlayPredicted(comp.WinSound, uid, args.User);
             if (stack == null)

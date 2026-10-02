@@ -55,3 +55,15 @@
   - FreelancerClothingBowtiePirate
   subgroups:
   - ContractorNeck
+
+- type: loadoutGroup
+  id: FreelancerEncryptionKey
+  name: loadout-group-pirate-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  loadouts:
+  - EncryptionKeyFreelance
+  subgroups:
+  - ContractorEncryptionKey
+  fallbacks:
+  - EncryptionKeyFreelance

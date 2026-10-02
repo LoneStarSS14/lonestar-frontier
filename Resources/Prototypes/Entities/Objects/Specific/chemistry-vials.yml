@@ -8,7 +8,7 @@
   components:
   - type: Tag
     tags:
-    - Trash
+    # - Trash # LoneStar, has trash on empty...
     - CentrifugeCompatible
     - Vial # LoneStar
   - type: PhysicalComposition
@@ -16,7 +16,7 @@
       Glass: 25
   - type: FitsInDispenser
     solution: beaker
-  - type: SpaceGarbage
+  # - type: SpaceGarbage # LoneStar
   - type: Sprite
     sprite: Objects/Specific/Chemistry/vial.rsi
     layers:

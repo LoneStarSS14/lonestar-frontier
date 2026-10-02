@@ -24,6 +24,7 @@
         map: [ "clothing_glasses_decor" ]
         shader: unshaded
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - glasses_main:
           icon_base_glasses_01: Base
@@ -54,8 +55,7 @@
   - type: VisionCorrection
   - type: Item
     shape:
-    - 0,0,1,0
-    storedOffset: -20,-20
+    - 0,0,0,1
   - type: Sprite
     sprite: _NF/Clothing/Eyes/Glasses/punk_glasses.rsi
     layers:
@@ -74,6 +74,7 @@
         map: [ "clothing_infoshades_decor" ]
         shader: unshaded
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
       - infoshades_main:
           icon_base_glasses_02: Base

@@ -200,6 +200,9 @@
     },
     {
         "name": "medkit"
+    },
+    {
+        "name": "jaws_syn"
     }
   ]
 }

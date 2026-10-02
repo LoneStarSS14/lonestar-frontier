@@ -686,6 +686,21 @@
         probability: 0.4
 #      - !type:Electrocute
 #        probability: 0.8
+    # LoneStar: star
+    Synthetic:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Shock: 1.5
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.4
+        sprintSpeedModifier: 1.3
+        conditions:
+        - !type:ReagentThreshold
+          max: 20
+    # LoneStar: end
 
 - type: reagent
   id: Lipolicide

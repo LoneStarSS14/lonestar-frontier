@@ -56,7 +56,7 @@
 
 #region Lone Star
 - type: entity
-  id: NFWeaponPistolMackerel
+  id: LSWeaponPistolMackerel
   parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFrameMachinePistolNanotrasen ]
   name: mackerel
   description: A highly compact and combat pistol made to be easily concealable.
@@ -67,12 +67,14 @@
     sprite: _LoneStar/Objects/Weapons/Guns/Pistols/mackerel.rsi
   - type: Item
     size: Small
+    shape:
+    - 0,0,1,0
   - type: Tag
     tags:
       - ConcealableWeapon
       - Sidearm
 
 - type: entity
-  id: NFWeaponPistolMackerelHighCapacityMag
-  parent: [ NFBaseWeaponPistolChamber35HighCapacity, NFWeaponPistolMackerel ]
+  id: LSWeaponPistolMackerelHighCapacityMag
+  parent: [ NFBaseWeaponPistolChamber35HighCapacity, LSWeaponPistolMackerel ]
   suffix: Frontier, High capacity mag

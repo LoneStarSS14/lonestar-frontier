@@ -20,7 +20,7 @@ Where code from other authors is used, you must follow the terms of both the AGP
 
 For code taken under the MIT license, this means you must not remove the copy of the MIT license from any distribution.
 
-Code created by Coyote contributors is primarily found in _CS Namespaces.
+Code created by LoneStar contributors is primarily found in _LoneStar / _LS Namespaces.
 
 Upstream code from [Frontier Station 14](https://github.com/new-frontiers-14/frontier-station-14) was taken under [the AGPLv3 license](https://github.com/new-frontiers-14/frontier-station-14/blob/master/LICENSE-AGPLv3.txt). Any code not in a specific Namespace, excluding Nyanotrasen subdirectories, is sublicensed as MIT plus AGPLv3 from Frontier Station.
 
@@ -32,6 +32,7 @@ The table below lists Namespaces in the repository that map to a single known up
 
 | Subdirectory | Fork Name | Source Repository | Original License |
 |--------------|-----------|-------------------|------------------|
+| `_LoneStar` | LoneStar Sector | https://github.com/LoneStarSS14/lonestar-frontier | AGPL 3.0 |
 | `_CS` | Coyote Sector | https://github.com/ARF-SS13/coyote-frontier | AGPL 3.0 |
 | `_NF` | Frontier Station | https://github.com/new-frontiers-14/frontier-station-14 | AGPL 3.0 |
 | `_CD` | Cosmatic Drift | https://github.com/cosmatic-drift-14/cosmatic-drift | MIT |

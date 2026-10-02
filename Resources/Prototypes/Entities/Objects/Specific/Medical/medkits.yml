@@ -26,6 +26,7 @@
         - DiscreteHealthAnalyzer
         - SurgeryTool
         - Dropper
+        - IpcTopical
       components:
         - Hypospray
         - Injector

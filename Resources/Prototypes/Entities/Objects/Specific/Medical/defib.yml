@@ -92,8 +92,8 @@
   - type: Defibrillator
     zapHeal:
       types:
-        Asphyxiation: -40
-    doAfterDuration: 6
+        Asphyxiation: -20 # LoneStar
+    # doAfterDuration: 6 # LoneStar, na.
   - type: DoAfter
   - type: UseDelay
 

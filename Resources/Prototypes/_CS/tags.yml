@@ -9,11 +9,6 @@
   id: CSMagazineSubMachineGunPistol40
 #endregion
 
-#region IPC topicals
-- type: Tag
-  id: RepairPatch
-#endregion
-
 #region Force field generator
 - type: Tag
   id: WallmountForceFieldGeneratorElectronics

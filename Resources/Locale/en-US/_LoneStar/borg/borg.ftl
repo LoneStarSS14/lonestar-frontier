@@ -1,0 +1,45 @@
+## Dog Borgs
+borg-type-DogGeneric-name = Generic (Dog)
+borg-type-DogGeneric-desc = A dog-form generic chassis. Jack of all trades, master of none.
+borg-type-DogGeneric-transponder = generic dogborg
+borg-type-DogEngineering-name = Engineering (Dog)
+borg-type-DogEngineering-desc = A dog-form engineering chassis for repairs, construction, and power/atmos work.
+borg-type-DogEngineering-transponder = engineering dogborg
+borg-type-DogMining-name = Salvage (Dog)
+borg-type-DogMining-desc = A dog-form salvage chassis for mining, salvage recovery, and hostile wildlife encounters.
+borg-type-DogMining-transponder = salvage dogborg
+borg-type-DogJanitor-name = Janitor (Dog)
+borg-type-DogJanitor-desc = A dog-form janitor chassis for station cleanup and waste disposal.
+borg-type-DogJanitor-transponder = janitor dogborg
+borg-type-DogMedical-name = Medical (Dog)
+borg-type-DogMedical-desc = A dog-form medical chassis for treatment and rescue in hazardous environments.
+borg-type-DogMedical-transponder = medical dogborg
+borg-type-DogService-name = Service (Dog)
+borg-type-DogService-desc = A dog-form service chassis for botany, food service, and entertainment tasks.
+borg-type-DogService-transponder = service dogborg
+borg-type-DogStray-name = Stray (Dog)
+borg-type-DogStray-desc = A dog-form salvage chassis using the Stray appearance and salvage module set.
+borg-type-DogStray-transponder = stray dogborg
+borg-type-DogSyndicate-name = Syndicate (Dog)
+borg-type-DogSyndicate-desc = A dog-form salvage chassis using the Syndicate appearance and salvage module set.
+borg-type-DogSyndicate-transponder = syndicate dogborg
+
+## Maid Borgs
+borg-type-MaidGeneric-name = Generic (Maid)
+borg-type-MaidGeneric-desc = A maid-form generic chassis. Jack of all trades, master of none.
+borg-type-MaidGeneric-transponder = generic maidborg
+borg-type-MaidEngineering-name = Engineering (Maid)
+borg-type-MaidEngineering-desc = A maid-form engineering chassis for repairs, construction, and power/atmos work.
+borg-type-MaidEngineering-transponder = engineering maidborg
+borg-type-MaidMining-name = Salvage (Maid)
+borg-type-MaidMining-desc = A maid-form salvage chassis for mining, salvage recovery, and hostile wildlife encounters.
+borg-type-MaidMining-transponder = salvage maidborg
+borg-type-MaidMedical-name = Medical (Maid)
+borg-type-MaidMedical-desc = A maid-form medical chassis for treatment and rescue in hazardous environments.
+borg-type-MaidMedical-transponder = medical maidborg
+borg-type-MaidJanitor-name = Janitor (Maid)
+borg-type-MaidJanitor-desc = A maid-form janitor chassis for station cleanup and waste disposal.
+borg-type-MaidJanitor-transponder = janitor maidborg
+borg-type-MaidSyndicate-name = Syndicate (Maid)
+borg-type-MaidSyndicate-desc = A maid-form salvage chassis using the Syndicate appearance and salvage module set.
+borg-type-MaidSyndicate-transponder = syndicate maidborg

@@ -83,7 +83,7 @@ public sealed partial class EmotePrototype : IPrototype
 /// </summary>
 [Flags]
 [Serializable, NetSerializable]
-public enum EmoteCategory : ushort
+public enum EmoteCategory : uint // LoneStar, byte -> uint
 {
     Invalid = 0,
     Vocal = 1 << 0,
@@ -102,6 +102,7 @@ public enum EmoteCategory : ushort
     Moth = 1 << 13,
     Borg = 1 << 14,
     Felinid = 1 << 15,
-    General = ushort.MaxValue,
+    Shadekin = 1 << 16,
+    General = uint.MaxValue,
     Sex = 3
 }

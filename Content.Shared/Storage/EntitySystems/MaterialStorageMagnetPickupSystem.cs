@@ -60,7 +60,7 @@ public sealed class MaterialStorageMagnetPickupSystem : EntitySystem
             },
             Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/Spare/poweronoff.svg.192dpi.png")),
             Text = Loc.GetString("magnet-pickup-component-toggle-verb"),
-            Priority = 3
+            Priority = -4 // LoneStar, was 3.
         };
 
         args.Verbs.Add(verb);

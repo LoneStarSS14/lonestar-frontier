@@ -31,11 +31,11 @@
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.Genital" ]
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-    - map: [ "shoes" ]
+    - map: [ "shoesalt" ]
     - map: [ "jumpsuit" ]
     - map: ["enum.HumanoidVisualLayers.LHand"]
     - map: ["enum.HumanoidVisualLayers.RHand"]
-    - map: [ "shoesalt" ]
+    - map: [ "shoes" ]
     - map: [ "gloves" ]
     # LoneStar changes end
     - map: [ "ears" ]
@@ -285,7 +285,7 @@
     shiveringHeatRegulation: 2000
     normalBodyTemperature: 310.15
     thermalRegulationTemperatureThreshold: 2
-#  - type: Perishable
+  # - type: Perishable # Coyote
   - type: Butcherable
     butcheringType: Spike # TODO human.
     spawned:
@@ -303,6 +303,7 @@
   - type: LayingDown
   - type: ModifyUndies  # FLOOF Add
   - type: RoleplayIncentive  # Coyote: Add
+  # LoneStar Note: Keep parity with BaseMobShadekin
 
 - type: entity
   save: false
@@ -338,11 +339,11 @@
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.Genital" ]
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-    - map: [ "shoes" ]
+    - map: [ "shoesalt" ]
     - map: [ "jumpsuit" ]
     - map: ["enum.HumanoidVisualLayers.LHand"]
     - map: ["enum.HumanoidVisualLayers.RHand"]
-    - map: [ "shoesalt" ]
+    - map: [ "shoes" ]
     - map: [ "gloves" ]
     # LoneStar changes end
     - map: [ "ears" ]

@@ -3,9 +3,22 @@
 
 - type: Tag
   id: ConcealableWeapon
-  
-- type: Tag  
+
+- type: Tag
   id: WhitelistChameleonAdvancedCollar
 
 - type: Tag
   id: WindowDirectional
+
+- type: Tag
+  id: IpcTopical
+
+- type: Tag
+  id: JawsOfDeath
+
+- type: Tag
+  id: ReclaimerBlacklist
+
+- type: Tag
+  id: RechargerBlacklist
+

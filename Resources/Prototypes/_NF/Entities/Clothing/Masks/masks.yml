@@ -104,6 +104,7 @@
         map: [ "clothing_mask_decor" ]
         shader: unshaded
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
     - mask_main:
         icon-base-mask: Base

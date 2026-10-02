@@ -6,9 +6,6 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 129600 # 36 hours
-    - !type:RoleTimeRequirement
-      role: JobHeadOfSecurity
-      time: 3600 # Coyote: 1 hr of itself
   whitelisted: true
   startingGear: SheriffGear
   alwaysUseSpawner: true

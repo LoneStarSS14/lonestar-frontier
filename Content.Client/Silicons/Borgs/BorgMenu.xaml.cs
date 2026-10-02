@@ -142,7 +142,7 @@ public sealed partial class BorgMenu : FancyWindow
         foreach (var module in chassis.ModuleContainer.ContainedEntities)
         {
             var moduleComponent = _entity.GetComponent<BorgModuleComponent>(module);
-            var control = new BorgModuleControl(module, _entity, !moduleComponent.DefaultModule);
+            var control = new BorgModuleControl(module, _entity, true); // LoneStar, all modules removeable.
             control.RemoveButtonPressed += () =>
             {
                 RemoveModuleButtonPressed?.Invoke(module);

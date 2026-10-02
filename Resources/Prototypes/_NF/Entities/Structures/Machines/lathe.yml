@@ -352,6 +352,7 @@
     #- CSIPCTopicalsStatic # LoneStar, find a mechanic right for you.
     - CSMagazineStatic
     - NFMercenaryArchetypeStatic
+    - LSMercenaryStatic # LoneStar
     - NFMercenaryArchetypeMeleeStatic
   - type: BlueprintReceiver
     whitelist:
@@ -416,6 +417,7 @@
     - NfsdPracticeStatic
     - NFHackedMercenaryClothingStatic
     - NFMercenaryMagazineStatic
+    - CSMagazineStatic
     - NFMercenaryArchetypeStatic
     - NFMercenaryArchetypeMeleeStatic
   - type: BlueprintReceiver
@@ -551,7 +553,7 @@
 
 - type: entity
   id: ScrapProcessor
-  parent: BaseLatheLube
+  parent: [ BaseLatheLube, BaseLatheMagnet ]
   name: scrap processor
   description: This machine reclaims scrap into usable materials.
   components:

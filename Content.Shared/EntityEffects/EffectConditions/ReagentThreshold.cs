@@ -35,7 +35,15 @@ public sealed partial class ReagentThreshold : EntityEffectCondition
             if (reagentArgs.Source != null)
                 quant = reagentArgs.Source.GetTotalPrototypeQuantity(reagent);
 
-            return quant >= Min && quant <= Max;
+            // LoneStar start:
+            if (Min == 0)
+                if (Max == FixedPoint2.MaxValue)
+                    return quant > 0;
+                else
+                    return quant <= Max;
+
+            return Min < quant && quant <= Max;
+            // LoneStar end
         }
 
         // TODO: Someone needs to figure out how to do this for non-reagent effects.
@@ -50,7 +58,7 @@ public sealed partial class ReagentThreshold : EntityEffectCondition
 
         return Loc.GetString("reagent-effect-condition-guidebook-reagent-threshold",
             ("reagent", reagentProto?.LocalizedName ?? Loc.GetString("reagent-effect-condition-guidebook-this-reagent")),
-            ("max", Max == FixedPoint2.MaxValue ? (float) int.MaxValue : Max.Float()),
+            ("max", Max == FixedPoint2.MaxValue ? (float)int.MaxValue : Max.Float()),
             ("min", Min.Float()));
     }
 }

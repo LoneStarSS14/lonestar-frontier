@@ -24,6 +24,7 @@
       - state: mask_null
         map: [ "clothing_boots_overlay" ]
   - type: RandomSprite
+    denyReroll: false # LoneStar
     available:
     # decor present
     - boots_main: &bootsMain

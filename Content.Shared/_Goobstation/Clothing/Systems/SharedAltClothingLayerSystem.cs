@@ -63,7 +63,7 @@ public sealed class SharedAltClothingLayerSystem : EntitySystem
             },
             Text = ent.Comp.AltStyle ? Loc.GetString(ent.Comp.ChangeToDefaultMessage) : Loc.GetString(ent.Comp.ChangeToAltMessage),
             Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/flip.svg.192dpi.png")),
-            Priority = 1,
+            Priority = -1,
         };
 
         args.Verbs.Add(verb);

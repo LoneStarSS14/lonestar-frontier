@@ -14,5 +14,5 @@ public sealed class FSCVars
     /// <summary>
     /// How many characters the consent text can be.
     /// </summary>
-    public static readonly CVarDef<int> ConsentFreetextMaxLength = CVarDef.Create("consent.freetext_max_length", 2000, CVar.REPLICATED | CVar.SERVER);
+    public static readonly CVarDef<int> ConsentFreetextMaxLength = CVarDef.Create("consent.freetext_max_length", 5000, CVar.REPLICATED | CVar.SERVER);
 }

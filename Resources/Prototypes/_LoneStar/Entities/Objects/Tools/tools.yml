@@ -1,0 +1,19 @@
+- type: entity
+  parent: BaseItem
+  id: MagicNeedle
+  name: magic needle
+  description: A magic tool capable of restitching randomized clothing a-new.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Tools/magic-needle.rsi
+    state: icon
+  - type: Item
+    sprite: _LoneStar/Objects/Tools/magic-needle.rsi
+    size: Tiny
+  - type: RandomSpriteReroll
+    denyRerollMessage: randomsprite-reroll-denyreroll-restitch
+    rerollSound:
+      path: /Audio/Items/wirecutter.ogg
+      params:
+        variation: 0.175
+        volume: -4

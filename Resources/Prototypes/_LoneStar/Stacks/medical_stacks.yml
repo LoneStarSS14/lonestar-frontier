@@ -1,0 +1,6 @@
+- type: stack
+  id: RepairPatch
+  name: stack-RepairPatch
+  icon: { sprite: "_CS/Objects/Specific/Medical/robotopicals.rsi", state: synth_patch }
+  spawn: RepairPatch
+  maxCount: 5

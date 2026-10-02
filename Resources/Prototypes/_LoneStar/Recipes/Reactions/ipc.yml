@@ -1,0 +1,59 @@
+- type: reaction
+  id: Oxidant
+  reactants:
+    Fluorine:
+      amount: 1
+    Hydrogen:
+      amount: 1
+    Iodine: # Removes reaction overlap with FluorosulfuricAcid
+      amount: 1
+      catalyst: true
+  products:
+    Oxidant: 2
+
+- type: reaction
+  id: Sylexalin
+  reactants:
+    Oxidant:
+      amount: 2
+    Lithium:
+      amount: 1
+  products:
+    Sylexalin: 3
+
+- type: reaction
+  id: Sylashizine
+  reactants:
+    FoamingAgent:
+      amount: 2
+    Gold:
+      amount: 1
+  products:
+    Sylashizine: 2
+
+- type: reaction
+  id: AutoSolder
+  reactants:
+    Iron:
+      amount: 1
+    Fersilicite:
+      amount: 1
+    Silver:
+      amount: 1
+  products:
+    AutoSolder: 3
+
+- type: reaction
+  id: AutoNanite
+  reactants:
+    AutoSolder:
+      amount: 1
+    Aluminium:
+      amount: 2
+    Helium:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    AutoNanite: 2

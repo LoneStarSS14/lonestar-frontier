@@ -7,6 +7,7 @@
     NFWeaponRevolverFitz: 1
     NFWeaponRifleRepeater: 1
     NFWeaponShotgunDoubleBarreled: 1
+    LSWeaponRifleMahifa: 1 # LoneStar
     ClothingHandsKnuckleDusters: 1
     SurvivalKnife: 1
   # Magazines
@@ -17,6 +18,7 @@
     CSAmmunitionBoxPistol40: 2 # Coyote: Add .40 pistol ammobox
     NFAmmunitionBoxPistol45: 2
     NFAmmunitionBoxRifle20: 2
+    NFAmmunitionBoxRifle30: 2 # LoneStar
   emaggedInventory:
     NFWeaponPistolViper: 1
 
@@ -29,6 +31,7 @@
     NFWeaponRevolverFitz: 4294967295
     NFWeaponRifleRepeater: 4294967295
     NFWeaponShotgunDoubleBarreled: 4294967295
+    LSWeaponRifleMahifa: 4294967295 # LoneStar
     ClothingHandsKnuckleDusters: 4294967295
     SurvivalKnife: 4294967295
   # Magazines
@@ -39,6 +42,7 @@
     CSAmmunitionBoxPistol40: 4294967295 # Coyote: Add .40 pistol ammobox
     NFAmmunitionBoxPistol45: 4294967295
     NFAmmunitionBoxRifle20: 4294967295
+    NFAmmunitionBoxRifle30: 4294967295 # LoneStar
     NFAmmunitionBoxShellShotgunBuckshot: 4294967295
     NFAmmunitionBoxShellShotgunBeanbag: 4294967295
   emaggedInventory:

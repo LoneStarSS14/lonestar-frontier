@@ -369,6 +369,12 @@
     speedModifierThresholds:
       96: 0.7
       128: 0.5
+  - type: Butcherable # LoneStar
+    spawned:
+    - id: FoodMeat
+      amount: 1
+    - id: LSSpawnAberrantLootRoll
+      amount: 1
   - type: MeleeWeapon
     autoAttack: true
     attackRate: 1.5

@@ -1,10 +1,10 @@
 # region Doubloons
 - type: entity
-  name: Den Bullion
-  parent: [BaseItem, BaseC1Contraband] # + BaseC3MetaPirate
+  name: doubloon
+  parent: [BaseItem, NotContraband] # LoneStar, NotContraband
   id: Doubloon
   suffix: 20 DB
-  description: A minted gold coin used to depart from government backed currencies.
+  description: A minted gold coin used to depart from government backed currencies. # LoneStar
   components:
   - type: Sprite
     sprite: _NF/Objects/Specific/Pirate/pirate_doubloon.rsi
@@ -49,17 +49,24 @@
 
 # region Uplinks
 - type: entity
-  parent: [ BaseItem, StorePresetPirateUplink, NotContraband] # Coyote: + BaseC3MetaPirate
+  parent: [ BaseItem, StorePresetPirateUplink, NotContraband] # LoneStar, NotCotraband
   id: BasePirateUplink
-  name: freelancer uplink
-  description: A digital black market storefront inserted into a hollowed out book of law as an ironic statement.
+  name: pirate uplink
+  description: A coconut with an antenna?
   suffix: Empty
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _NF/Objects/Misc/books.rsi
+    sprite: _NF/Objects/Devices/pirate_uplink.rsi
     layers:
-    - state: law_space
+    - state: icon
+      # scale: 0.7, 0.7 # LoneStar
+    - state: icon-overlay
+      # scale: 0.7, 0.7 # LoneStar
+      shader: unshaded
+  - type: Item
+    sprite: _NF/Objects/Devices/pirate_uplink.rsi
+    heldPrefix: icon
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:
@@ -69,8 +76,6 @@
   - type: Tag
     tags:
     - PirateUplink
-    - Book
-    - BookSpaceLaw
 
 - type: entity
   parent: BasePirateUplink

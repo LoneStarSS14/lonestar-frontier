@@ -33,4 +33,13 @@ public sealed partial class RandomSpriteComponent : Component
     [DataField]
     public Dictionary<string, string> MappedColors = new();
     // End Frontier
+
+    // LoneStar: RandomSpriteRerollComponent support
+    /// <summary>
+    /// Should RandomSpriteReroll be able to effect this?
+    /// if false, this sprite may be rerolled. note randomsprite is used by things such as space carp.
+    /// </summary>
+    [DataField]
+    public bool DenyReroll = true;
+    // End LoneStar
 }

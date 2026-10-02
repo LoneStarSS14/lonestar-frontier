@@ -22,7 +22,7 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
     {
         base.Initialize();
         SubscribeLocalEvent<GetVerbsEvent<Verb>>(OnGetVerbs);
-        SubscribeLocalEvent<ActivateInWorldEvent>(OnActivateInWorld, after: [typeof(StrippableSystem)]);
+        // SubscribeLocalEvent<ActivateInWorldEvent>(OnActivateInWorld, after: [typeof(StrippableSystem)]); // LoneStar
         SubscribeLocalEvent<CustomExamineComponent, AfterAutoHandleStateEvent>(OnStateUpdate);
     }
 
@@ -42,17 +42,19 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
         });
     }
 
-    private void OnActivateInWorld(ActivateInWorldEvent ev)
-    {
-        // This one works only if user == target, because otherwise it would conflict with stripping ui
-        if (ev.User != ev.Target || _player.LocalEntity != ev.User || ev.Handled)
-            return;
+    // LoneStar start: this sucks, use the right click menu.
+    // private void OnActivateInWorld(ActivateInWorldEvent ev)
+    // {
+    //     // This one works only if user == target, because otherwise it would conflict with stripping ui
+    //     if (ev.User != ev.Target || _player.LocalEntity != ev.User || ev.Handled)
+    //         return;
 
-        if (!_timing.IsFirstTimePredicted)
-            return;
+    //     if (!_timing.IsFirstTimePredicted)
+    //         return;
 
-        OpenUi(ev.Target);
-    }
+    //     OpenUi(ev.Target);
+    // }
+    // LoneStar end
 
     private void OnStateUpdate(Entity<CustomExamineComponent> ent, ref AfterAutoHandleStateEvent args)
     {

@@ -164,15 +164,30 @@
   metabolisms:
     Poison:
       effects:
-      - !type:PopupMessage  # Coyote edit: this chem has been castrated until it is no longer a hard shutdown
+      - !type:PopupMessage # LoneStar, primary effect removed.
         type: Local
         visualType: MediumCaution
         messages:
         - "generic-reagent-effect-static"
         - "generic-reagent-effect-prickle"
         probability: 0.2
-#      - !type:Electrocute
-#        probability: 0.35
+      # - !type:Electrocute
+      # probability: 0.35
+    # LoneStar: start
+    Synthetic:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Shock: 1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.30
+        sprintSpeedModifier: 1.2
+        conditions:
+        - !type:ReagentThreshold
+          max: 12
+    # LoneStar: end
 
 - type: reagent
   id: Razorium

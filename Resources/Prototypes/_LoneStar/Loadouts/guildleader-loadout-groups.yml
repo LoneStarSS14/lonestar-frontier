@@ -43,6 +43,10 @@
   loadouts:
   - MercenaryClothingOuterVestWebMercenary
   - MercenaryClothingOuterVestWebMercenaryBlack
+  - MercenaryClothingOuterArmoredJacketPMCBlue
+  - MercenaryClothingOuterArmoredJacketPMCGreen
+  - MercenaryClothingOuterArmoredJacketPMCOlive
+  - MercenaryClothingOuterArmoredJacketPMCPunkRandomized
   - MercenaryClothingOuterArmorPunkGreen # Punkish (Static visuals)
   - MercenaryClothingOuterArmorPunkOrange # Punkish (Static visuals)
   - MercenaryClothingOuterArmorPunkRed # Punkish (Static visuals)

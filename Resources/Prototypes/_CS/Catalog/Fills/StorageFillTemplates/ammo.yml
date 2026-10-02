@@ -58,3 +58,13 @@
     contents:
     - id: CSAmmunitionBoxPistol40Emp
       amount: 4
+
+- type: entity # Lethal
+  abstract: true
+  id: StorageFillAmmoBoxBigLethal40
+  suffix: .40 pistol, Lethal, x2 big boxes
+  components:
+  - type: StorageFill
+    contents:
+    - id: CSAmmunitionBoxBigPistol40
+      amount: 2
