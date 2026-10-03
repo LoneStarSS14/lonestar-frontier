@@ -1,0 +1,5 @@
+- type: entity
+  id: BioDjinnMachineCircuitboard
+  parent: BiogeneratorMachineCircuitboard
+  name: Bio Djinn machine board
+  description: A machine printed circuit board for a Bio Djinn.

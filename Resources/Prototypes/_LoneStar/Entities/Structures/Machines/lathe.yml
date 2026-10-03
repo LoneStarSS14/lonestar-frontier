@@ -5,3 +5,32 @@
   components:
   - type: MaterialStorageMagnetPickup
     range: 0.30
+
+# Biogen for service ships
+- type: entity
+  id: BioDjinn
+  parent: Biogenerator
+  name: Bio Djinn
+  description: An advanced biogenerator that synthesizes raw biomass from... somewhere, which it can then assemble into more complex organic forms. Or soda. # LoneStar
+  components:
+  - type: Machine
+    board: BioDjinnMachineCircuitboard
+  - type: BiogeneratorBuffer
+    current: 0
+    max: 100
+    regenAmount: 5
+    regenInterval: 30 # just for bootstrapping
+
+- type: entity
+  id: BioDjinnFill
+  parent: BioDjinn
+  name: Bio Djinn
+  suffix: Biomass, 200
+  components:
+  - type: MaterialStorage
+    storage:
+      Biomass: 200
+  - type: ContainerFill
+    containers:
+      beaker_slot:
+      - LargeBeaker
