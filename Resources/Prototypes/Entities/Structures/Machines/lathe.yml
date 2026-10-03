@@ -708,14 +708,6 @@
     - beaker_slot
     spriteLayers:
     - beaker
-  # End Frontier: emag lathe recipes, item mapper
-  # Coyote: Biogenerator Buffer System
-  # - type: BiogeneratorBuffer
-  #   current: 0
-  #   max: 100
-  #   regenAmount: 5
-  #   regenInterval: 10
-  # End Coyote
   - type: OreSiloClient # LoneStar
 
 - type: entity
