@@ -112,6 +112,11 @@ public sealed class Hand //TODO: This should definitely be a struct - Jezi
     [ViewVariables]
     public HandLocation Location { get; }
 
+    [ViewVariables] // LoneStar
+    public bool IsModule { get; }
+
+    public bool IsSwappable => IsModule || Location != HandLocation.Middle;
+
     /// <summary>
     ///     The container used to hold the contents of this hand. Nullable because the client must get the containers via <see cref="ContainerManagerComponent"/>,
     ///     which may not be synced with the server when the client hands are created.
@@ -124,10 +129,11 @@ public sealed class Hand //TODO: This should definitely be a struct - Jezi
 
     public bool IsEmpty => HeldEntity == null;
 
-    public Hand(string name, HandLocation location, ContainerSlot? container = null)
+    public Hand(string name, HandLocation location, ContainerSlot? container = null, bool isModule = false) // LoneStar
     {
         Name = name;
         Location = location;
+        IsModule = isModule;
         Container = container;
     }
 }

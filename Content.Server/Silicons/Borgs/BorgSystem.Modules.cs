@@ -218,7 +218,7 @@ public sealed partial class BorgSystem
 
             var handId = $"{uid}-item{component.HandCounter}";
             component.HandCounter++;
-            _hands.AddHand(chassis, handId, HandLocation.Middle, hands);
+            _hands.AddHand(chassis, handId, DroppableBorgModuleSystem.GetModuleHandLocation(), hands, isModule: true); // LoneStar
             _hands.DoPickup(chassis, hands.Hands[handId], item, hands);
             EnsureComp<UnremoveableComponent>(item);
             component.ProvidedItems.Add(handId, item);

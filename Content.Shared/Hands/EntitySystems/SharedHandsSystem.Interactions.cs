@@ -31,7 +31,7 @@ public abstract partial class SharedHandsSystem : EntitySystem
         CommandBinds.Builder
             .Bind(ContentKeyFunctions.UseItemInHand, InputCmdHandler.FromDelegate(HandleUseItem, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.AltUseItemInHand, InputCmdHandler.FromDelegate(HandleAltUseInHand, handle: false, outsidePrediction: false))
-            .Bind(ContentKeyFunctions.SwapHandsReverse, InputCmdHandler.FromDelegate(SwapHandsPreviousPressed, handle: false, outsidePrediction: false)) // Frontier
+            // .Bind(ContentKeyFunctions.SwapHandsReverse, InputCmdHandler.FromDelegate(SwapHandsPreviousPressed, handle: false, outsidePrediction: false)) // Frontier
             .Bind(ContentKeyFunctions.SwapHands, InputCmdHandler.FromDelegate(SwapHandsPressed, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SwapHandsReverse, InputCmdHandler.FromDelegate(SwapHandsReversePressed, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.Drop, new PointerInputCmdHandler(DropPressed))
@@ -99,34 +99,30 @@ public abstract partial class SharedHandsSystem : EntitySystem
         if (!_actionBlocker.CanInteract(session.AttachedEntity.Value, null))
             return;
 
-        if (component.ActiveHand == null || component.Hands.Count < 2)
+        var swappableHands = component.SortedHands // LoneStar
+            .Select(name => component.Hands[name])
+            .Where(hand => hand.IsSwappable)
+            .ToList();
+
+        if (component.ActiveHand == null || swappableHands.Count == 0)
             return;
 
-        var currentIndex = component.SortedHands.IndexOf(component.ActiveHand.Name);
-        var newActiveIndex = (currentIndex + (reverse ? -1 : 1) + component.Hands.Count) % component.Hands.Count;
-        var nextHand = component.SortedHands[newActiveIndex];
+        var currentIndex = swappableHands.FindIndex(hand => hand.Name == component.ActiveHand.Name); // LoneStar
+        if (currentIndex < 0)
+        {
+            var fallbackIndex = reverse ? swappableHands.Count - 1 : 0;
+            TrySetActiveHand(session.AttachedEntity.Value, swappableHands[fallbackIndex].Name, component);
+            return;
+        }
+
+        if (swappableHands.Count < 2)
+            return;
+
+        var newActiveIndex = (currentIndex + (reverse ? -1 : 1) + swappableHands.Count) % swappableHands.Count;
+        var nextHand = swappableHands[newActiveIndex].Name;
 
         TrySetActiveHand(session.AttachedEntity.Value, nextHand, component);
     }
-
-    // Frontier: swap hands
-    private void SwapHandsPreviousPressed(ICommonSession? session)
-    {
-        if (!TryComp(session?.AttachedEntity, out HandsComponent? component))
-            return;
-
-        if (!_actionBlocker.CanInteract(session.AttachedEntity.Value, null))
-            return;
-
-        if (component.ActiveHand == null || component.Hands.Count < 2)
-            return;
-
-        var newActiveIndex = component.SortedHands.IndexOf(component.ActiveHand.Name) + component.Hands.Count - 1; // Ensure no negatives
-        var nextHand = component.SortedHands[newActiveIndex % component.Hands.Count];
-
-        TrySetActiveHand(session.AttachedEntity.Value, nextHand, component);
-    }
-    // End Frontier: swap hands
 
     private bool DropPressed(ICommonSession? session, EntityCoordinates coords, EntityUid netEntity)
     {
