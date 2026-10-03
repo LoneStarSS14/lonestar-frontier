@@ -193,7 +193,7 @@
         state: equipped-HELMET
       - sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
         state: inhand-left
-  # LoneStar: changes start
+  # LoneStar start
   - type: RandomSpawner
     prototypes:
     - MobSyndicateNavalGrenadierA
@@ -421,7 +421,7 @@
         state: inhand-left
       - sprite: Objects/Weapons/Melee/uranium_spear.rsi
         state: inhand-right
-  # LoneStar: changes start
+  # LoneStar start
   - type: RandomSpawner
     prototypes:
     - MobSyndicateNavalChemwarriorA
@@ -437,7 +437,7 @@
     - MobSyndicateNavalGrenadierB
     - MobSyndicateNavalGrenadierB
     rareChance: 0.1
-  # LoneStar: end
+  # LoneStar end
 
 # Voidsmen
 - type: entity
