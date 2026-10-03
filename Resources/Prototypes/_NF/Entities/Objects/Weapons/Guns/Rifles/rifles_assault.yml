@@ -50,7 +50,7 @@
 - type: entity # TODO: switch to .25 rifle (caseless)
   id: NFWeaponRifleAssaultM90GrenadeLauncher
   parent: [ NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultCybersun ]
-  name: M-90 Carbine
+  name: M-90 carbine # LoneStar
   description: "An older bullpup carbine model, long discarded by modern militaries for more conventional and cheaper rifles. An old standby often used by Syndicate agents when resupply is uncertain." # LoneStar
   components:
   - type: Clothing
