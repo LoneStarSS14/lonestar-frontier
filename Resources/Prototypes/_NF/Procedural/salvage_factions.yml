@@ -249,7 +249,7 @@
       prob: 0.1
     - proto: SpawnMobSyndicateNavalHorror
       cost: 5
-      prob: 0.01
+      prob: 0.05 # LoneStar
   configs:
     DefenseStructure: CybersunDataMinerExpedition
     Megafauna: MobSyndicateNavalCommanderA

@@ -1,0 +1,25 @@
+- type: reaction
+  id: Fresoxidine
+  impact: Medium
+  reactants:
+    Fresium:
+      amount: 1
+    FluorosulfuricAcid:
+      amount: 3
+    Vestine:
+      amount: 1
+  products:
+    Fresoxidine: 4
+
+- type: reaction
+  id: Umbrazane
+  impact: Medium
+  reactants:
+    FoamingAgent:
+      amount: 2
+    NorepinephricAcid:
+      amount: 2
+    Vestine:
+      amount: 1
+  products:
+    Umbrazane: 4
