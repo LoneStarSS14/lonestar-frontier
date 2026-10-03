@@ -17,9 +17,9 @@
     board: BioDjinnMachineCircuitboard
   - type: BiogeneratorBuffer
     current: 0
-    max: 100
+    max: 200
     regenAmount: 5
-    regenInterval: 30 # just for bootstrapping
+    regenInterval: 15 # just for bootstrapping
 
 - type: entity
   id: BioDjinnFill
