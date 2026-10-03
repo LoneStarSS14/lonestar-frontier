@@ -1,5 +1,4 @@
 #region clothes
-
 - type: entity
   parent: BunnysuitBase
   id: BunnysuitSR

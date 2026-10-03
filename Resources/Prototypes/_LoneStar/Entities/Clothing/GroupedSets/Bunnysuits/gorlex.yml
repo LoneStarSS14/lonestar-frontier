@@ -1,0 +1,34 @@
+#region clothes
+- type: entity
+  parent: BunnysuitBase
+  id: BunnysuitGorlex
+  name: gorlex bunny suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/gorlex.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/gorlex.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsGorlex
+  name: gorlex bunny ears
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/gorlex.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/gorlex.rsi
+
+#region box
+- type: entity
+  parent: BunnysuitBox
+  id: BunnysuitBoxGorlex
+  name: gorlex bunnysuit box
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BunnysuitGorlex
+        - id: BowtieSyndie
+        - id: BunnyEarsGorlex
