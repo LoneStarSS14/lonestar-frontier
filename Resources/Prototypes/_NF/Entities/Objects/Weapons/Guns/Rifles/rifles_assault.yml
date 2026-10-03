@@ -50,14 +50,13 @@
 - type: entity # TODO: switch to .25 rifle (caseless)
   id: NFWeaponRifleAssaultM90GrenadeLauncher
   parent: [ NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultCybersun ]
-  name: M-90gl
-  description: |-
-    An older bullpup carbine model, with an attached underbarrel grenade launcher. An illegal firearm often used by Syndicate agents.
+  name: M-90 Carbine
+  description: "An older bullpup carbine model, long discarded by modern militaries for more conventional and cheaper rifles. An old standby often used by Syndicate agents when resupply is uncertain." # LoneStar
   components:
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
+    sprite: _LoneStar/Objects/Weapons/Guns/Rifles/m90.rsi # LoneStar
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
+    sprite: _LoneStar/Objects/Weapons/Guns/Rifles/m90.rsi # LoneStar
 
 - type: entity
   id: NFWeaponRifleAssaultLecter
