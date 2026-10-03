@@ -33,8 +33,9 @@
       - RodMetal1
       - Sheet
       - CableCoil
-      - ConveyorAssembly # LoneStar v
-      - PlumbingAssembly  # LoneStar ^
+      # LoneStar v
+      - ConveyorAssembly
+      - PlumbingAssembly
       components:
       - ConstructionMaterials
       # LoneStar v
