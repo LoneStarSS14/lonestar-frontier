@@ -442,7 +442,7 @@ entities:
     - type: Transform
       pos: -3.5,2.5
       parent: 2
-- proto: BiogeneratorFill
+- proto: BioDjinnFill # LoneStar
   entities:
   - uid: 220
     components:
