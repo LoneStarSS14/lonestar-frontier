@@ -646,7 +646,7 @@
   id: Biogenerator
   parent: [ BaseLathe, BaseLatheMagnet ]
   name: biogenerator
-  description: Converts plants into biomass, which can be used to construct useful items.
+  description: Converts plants into biomass, which can be used to construct useful items. # LoneStar
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/biofabricator.rsi # Frontier: use NF version
@@ -710,11 +710,11 @@
     - beaker
   # End Frontier: emag lathe recipes, item mapper
   # Coyote: Biogenerator Buffer System
-  - type: BiogeneratorBuffer
-    current: 0
-    max: 100
-    regenAmount: 5
-    regenInterval: 10
+  # - type: BiogeneratorBuffer
+  #   current: 0
+  #   max: 100
+  #   regenAmount: 5
+  #   regenInterval: 10
   # End Coyote
   - type: OreSiloClient #LoneStar
 
