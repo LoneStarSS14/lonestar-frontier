@@ -11,7 +11,7 @@
   id: BioDjinn
   parent: Biogenerator
   name: Bio Djinn
-  description: An advanced biogenerator that synthesizes raw biomass from... somewhere, which it can then assemble into more complex organic forms. Or soda. # LoneStar
+  description: An advanced biogenerator that synthesizes raw biomass from... somewhere, which it can then assemble into more complex organic forms. Or soda.
   components:
   - type: Machine
     board: BioDjinnMachineCircuitboard
