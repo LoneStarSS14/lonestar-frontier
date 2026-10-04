@@ -210,7 +210,7 @@ public sealed class ItemToggleSystem : EntitySystem
     /// <summary>
     /// Used when an item is attempting to be deactivated. It returns false if the attempt fails any reason, interrupting the deactivation.
     /// </summary>
-    public bool TryDeactivate(Entity<ItemToggleComponent?> ent, EntityUid? user = null, bool predicted = true, bool useCurrentCoordinates = false)
+    public bool TryDeactivate(Entity<ItemToggleComponent?> ent, EntityUid? user = null, bool predicted = true, bool useCurrentCoordinates = false) // LoneStar
     {
         if (!_query.Resolve(ent, ref ent.Comp, false))
             return false;
@@ -245,7 +245,7 @@ public sealed class ItemToggleSystem : EntitySystem
             return false;
         }
 
-        Deactivate((uid, comp), predicted, user, useCurrentCoordinates);
+        Deactivate((uid, comp), predicted, user, useCurrentCoordinates); // LoneStar
         return true;
     }
 
@@ -269,7 +269,7 @@ public sealed class ItemToggleSystem : EntitySystem
     /// <summary>
     /// Used to make the actual changes to the item's components on deactivation.
     /// </summary>
-    private void Deactivate(Entity<ItemToggleComponent> ent, bool predicted, EntityUid? user = null, bool useCurrentCoordinates = false)
+    private void Deactivate(Entity<ItemToggleComponent> ent, bool predicted, EntityUid? user = null, bool useCurrentCoordinates = false) // LoneStar
     {
         var (uid, comp) = ent;
         var soundToPlay = comp.SoundDeactivate;
@@ -322,7 +322,7 @@ public sealed class ItemToggleSystem : EntitySystem
     /// </summary>
     private void TurnOffOnUnwielded(Entity<ItemToggleComponent> ent, ref ItemUnwieldedEvent args)
     {
-        TryDeactivate((ent, ent.Comp), args.User, useCurrentCoordinates: true);
+        TryDeactivate((ent, ent.Comp), args.User, useCurrentCoordinates: true); // LoneStar
     }
 
     /// <summary>

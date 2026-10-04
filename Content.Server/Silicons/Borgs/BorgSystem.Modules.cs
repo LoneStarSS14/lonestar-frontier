@@ -248,6 +248,11 @@ public sealed partial class BorgSystem
 
         foreach (var (handId, item) in component.ProvidedItems)
         {
+            // if (LifeStage(item) <= EntityLifeStage.MapInitialized)  // LoneStar
+            // {
+            //     RemComp<UnremoveableComponent>(item);
+            //     _container.Insert(item, component.ProvidedContainer);
+            // }
             RemComp<UnremoveableComponent>(item);
             _container.Insert(item, component.ProvidedContainer, force: true);
             _hands.RemoveHand(chassis, handId, hands);
