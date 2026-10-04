@@ -29,7 +29,7 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckVetCone
-  name: Veterinary Cone
+  name: veterinary cone
   description: Used for when a pet has an injury you dont want them to bite. Or a Felinid... Or a Canid... Or a Tajaran... Or a Vulpkanin... Or anyone really.
   components:
   - type: Sprite
@@ -38,7 +38,7 @@
     sprite: _DEN/Clothing/Neck/Misc/vet-cone.rsi
     equipDelay: 0.5
     unequipDelay: 10
-    renderLayer: mask
+    # renderLayer: mask # TODO: port this from wherever it comes from.
   - type: Butcherable
     butcheringType: Knife
     spawned:
@@ -47,15 +47,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Oil
-          Quantity: 2.5
-        - ReagentId: Phosphorus
-          Quantity: 2.5
 
 - type: entity
   parent: ClothingNeckCollarBaseFoldable
