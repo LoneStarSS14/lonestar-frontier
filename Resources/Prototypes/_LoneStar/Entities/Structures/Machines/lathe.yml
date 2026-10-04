@@ -20,6 +20,22 @@
     max: 200
     regenAmount: 5
     regenInterval: 15 # just for bootstrapping
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/Lathes/biodjinn.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: beaker
+      map: ["beaker"]
+      visible: false
 
 - type: entity
   id: BioDjinnFill
