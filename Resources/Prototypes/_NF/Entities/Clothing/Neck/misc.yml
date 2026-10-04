@@ -27,9 +27,9 @@
   description: A way to inform others about your presence, or just to annoy everyone around you!
   components:
   - type: Sprite
-    sprite: _NF/Clothing/Neck/bellcollar.rsi
+    sprite: _DEN/Clothing/Neck/Collars/collar_bell.rsi
   - type: Clothing
-    sprite: _NF/Clothing/Neck/bellcollar.rsi
+    sprite: _DEN/Clothing/Neck/Collars/collar_bell.rsi
   - type: EmitsSoundOnMove
     soundCollection:
       collection: FootstepJester
