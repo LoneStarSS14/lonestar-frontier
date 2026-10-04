@@ -1,0 +1,16 @@
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckTeddyRibbon
+  name: teddy ribbon
+  description: A big red ribbon, like you'd see on a new stuffed toy.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Misc/teddyribbon.rsi
+  - type: Engraveable
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+    - WhitelistChameleonAdvancedCollar
