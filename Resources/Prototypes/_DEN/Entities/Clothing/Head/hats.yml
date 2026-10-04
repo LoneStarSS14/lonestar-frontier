@@ -1,6 +1,6 @@
 - type: entity
-  parent: ClothingHeadHatBeret
-  id: ClothingHeadHatBeretWhite
+  parent: [ ClothingHeadHatBeret, ClothingHeadRandomSpriteMono ]
+  id: ClothingHeadHatBeretRandom
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi

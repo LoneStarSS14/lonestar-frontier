@@ -1,5 +1,5 @@
-- type: entity
-  parent: ClothingUniformBase
+- type: entity # TODO: Colorable/randomsprite
+  parent: [ ClothingUniformBase, ClothingUniformRandomSpriteMono ]
   id: ClothingUniformWhiteTurtleskirt
   name: white turtleskirt
   description: For some reason, wearing this makes you feel like working in tech support at a product store.

@@ -1,0 +1,27 @@
+- type: entity
+  id: ClothingNeckRandomSpriteMono
+  suffix: Random
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "neck-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK
+        map: [ "neck-equipped" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - neck-icon:
+          icon: Base
+        neck-equipped:
+          equipped-NECK: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable

@@ -1,31 +1,40 @@
 - type: entity
-  parent: ClothingOuterStorageFoldableBase
+  parent: [ ClothingOuterStorageBase, ClothingOuterClothingRandomSpriteMonoOpen ]
   id: ClothingOuterCoatBomberWhite
-  name: lightweight bomber jacket
+  name: bomber jacket
   description: A lightweight bomber jacket, worn with the sleeves pushed up.
   components:
   - type: Sprite
     sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
   - type: Clothing
     sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
-  - type: Foldable
-    unfoldVerbText: fold-unzip-verb
-    foldVerbText: fold-zip-verb
-  # Same stats as the winter coats
-  - type: TemperatureProtection
-    heatingCoefficient: 1.1
-    coolingCoefficient: 0.1
-  - type: Armor
-    modifiers:
-      coefficients:
-        Slash: 0.95
-        Heat: 0.90
-  - type: AllowSuitStorage
 
 - type: entity
-  parent: ClothingOuterCoatBomberWhite
+  parent: [ ClothingOuterStorageBase, ClothingOuterClothingRandomSpriteMono ]
+  id: ClothingOuterCoatBomberWhiteOpen
+  name: bomber jacket (open)
+  description: A lightweight bomber jacket, worn with the sleeves pushed up.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, ClothingOuterClothingRandomSpriteMonoOpen ]
   id: ClothingOuterCoatBomberWhiteLoose
-  name: lightweight bomber jacket (loose)
+  name: bomber jacket (loose)
+  description: A lightweight bomber jacket, worn low and loose.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi
+
+- type: entity
+  parent: [ ClothingOuterClothingRandomSpriteMono, ClothingOuterStorageBase ]
+  id: ClothingOuterCoatBomberWhiteLooseOpen
+  name: bomber jacket (loose, open)
   description: A lightweight bomber jacket, worn low and loose.
   components:
   - type: Sprite

@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, ClothingUniformRandomSpriteMono ]
   id: ClothingUniformWhiteTurtleneck
   name: white turtleneck
   description: For some reason, wearing this makes you feel like working in tech support at a product store.
