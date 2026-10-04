@@ -2,7 +2,7 @@
   parent: ClothingMaskClownBase
   id: ClothingMaskKistune
   name: kitsune mask
-  description: # TODO: description, or find the original prototype.
+  description: A painted wooden mask, it resembles a fox.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Mask/kitsune_mask.rsi
