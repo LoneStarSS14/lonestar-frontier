@@ -117,12 +117,14 @@
       - id: NFWeaponRifleAssaultM90GrenadeLauncher # Frontier: WeaponRifleM90GrenadeLauncher<NFWeaponRifleAssaultM90GrenadeLauncher
       - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
         amount: 2
-#     - id: NFGrenadeBlast # LoneStar
-#       amount: 2 # LoneStar
-#     - id: NFGrenadeFlash # LoneStar
-#       amount: 2 # LoneStar
-#     - id: NFGrenadeFrag # LoneStar
-#       amount: 2 # LoneStar
+  # LoneStar start
+  #     - id: NFGrenadeBlast
+  #       amount: 2
+  #     - id: NFGrenadeFlash
+  #       amount: 2
+  #     - id: NFGrenadeFrag
+  #       amount: 2
+  # LoneStar end
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateAmmo
