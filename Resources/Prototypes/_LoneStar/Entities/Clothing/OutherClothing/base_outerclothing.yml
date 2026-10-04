@@ -1,4 +1,5 @@
 - type: entity
+  abstract: true
   id: ClothingOuterClothingRandomSpriteMono
   suffix: Random
   components:
@@ -29,6 +30,7 @@
 # For variants that want to use icon-open and open-equipped-OUTERCLOTHING.
 # For technical reasons foldable clothing does not support RandomSprite.
 - type: entity
+  abstract: true
   id: ClothingOuterClothingRandomSpriteMonoOpen
   suffix: Random
   components:

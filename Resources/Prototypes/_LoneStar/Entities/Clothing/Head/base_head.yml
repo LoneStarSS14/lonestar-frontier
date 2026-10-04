@@ -1,4 +1,5 @@
 - type: entity
+  abstract: true
   id: ClothingHeadRandomSpriteMono
   suffix: Random
   components:
