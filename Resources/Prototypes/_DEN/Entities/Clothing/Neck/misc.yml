@@ -38,7 +38,7 @@
     sprite: _DEN/Clothing/Neck/Misc/vet-cone.rsi
     equipDelay: 0.5
     unequipDelay: 10
-    # renderLayer: mask # TODO: port this from wherever it comes from.
+    renderLayer: mask # TODO: port this from wherever it comes from.
   - type: Butcherable
     butcheringType: Knife
     spawned:

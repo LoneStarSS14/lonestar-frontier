@@ -302,6 +302,9 @@ public sealed class ClientClothingSystem : ClothingSystem
             return;
         }
 
+        if (clothingComponent.RenderLayer != null)
+            slot = clothingComponent.RenderLayer;
+
         // Goob edit start
         var slotLayerExists = false;
         var index = 0;

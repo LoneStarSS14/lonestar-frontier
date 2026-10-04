@@ -24,6 +24,13 @@ public sealed partial class ClothingComponent : Component
     [DataField]
     public string? MappedLayer;
 
+    /// <summary>
+    ///   The actual sprite layer to render this entity's equipped sprite to, overriding the layer determined by the slot.
+    /// </summary>
+    [DataField]
+    [Access(typeof(ClothingSystem))]
+    public string? RenderLayer;
+
     [DataField]
     public bool QuickEquip = true;
 
