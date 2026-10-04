@@ -43,7 +43,7 @@ public abstract partial class SharedHandsSystem
         CommandBinds.Unregister<SharedHandsSystem>();
     }
 
-    public virtual void AddHand(EntityUid uid, string handName, HandLocation handLocation, HandsComponent? handsComp = null, bool isModule = false) // LoneStar
+    public virtual void AddHand(EntityUid uid, string handName, HandLocation handLocation, HandsComponent? handsComp = null, bool isModule = false)
     {
         if (!Resolve(uid, ref handsComp, false))
             return;
@@ -54,7 +54,7 @@ public abstract partial class SharedHandsSystem
         var container = ContainerSystem.EnsureContainer<ContainerSlot>(uid, handName);
         container.OccludesLight = false;
 
-        var newHand = new Hand(handName, handLocation, container, isModule); // LoneStar
+        var newHand = new Hand(handName, handLocation, container, isModule);
         handsComp.Hands.Add(handName, newHand);
         handsComp.SortedHands.Add(handName);
 

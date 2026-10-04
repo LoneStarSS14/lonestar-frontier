@@ -210,7 +210,7 @@ public sealed class ItemToggleSystem : EntitySystem
     /// <summary>
     /// Used when an item is attempting to be deactivated. It returns false if the attempt fails any reason, interrupting the deactivation.
     /// </summary>
-    public bool TryDeactivate(Entity<ItemToggleComponent?> ent, EntityUid? user = null, bool predicted = true)
+    public bool TryDeactivate(Entity<ItemToggleComponent?> ent, EntityUid? user = null, bool predicted = true, bool useCurrentCoordinates = false)
     {
         if (!_query.Resolve(ent, ref ent.Comp, false))
             return false;
@@ -245,7 +245,7 @@ public sealed class ItemToggleSystem : EntitySystem
             return false;
         }
 
-        Deactivate((uid, comp), predicted, user);
+        Deactivate((uid, comp), predicted, user, useCurrentCoordinates);
         return true;
     }
 
@@ -269,11 +269,19 @@ public sealed class ItemToggleSystem : EntitySystem
     /// <summary>
     /// Used to make the actual changes to the item's components on deactivation.
     /// </summary>
-    private void Deactivate(Entity<ItemToggleComponent> ent, bool predicted, EntityUid? user = null)
+    private void Deactivate(Entity<ItemToggleComponent> ent, bool predicted, EntityUid? user = null, bool useCurrentCoordinates = false)
     {
         var (uid, comp) = ent;
         var soundToPlay = comp.SoundDeactivate;
-        if (predicted)
+        if (useCurrentCoordinates)
+        {
+            var coordinates = Transform(uid).Coordinates;
+            if (predicted)
+                _audio.PlayPredicted(soundToPlay, coordinates, user);
+            else
+                _audio.PlayPvs(soundToPlay, coordinates);
+        }
+        else if (predicted)
             _audio.PlayPredicted(soundToPlay, uid, user);
         else
             _audio.PlayPvs(soundToPlay, uid);
@@ -314,7 +322,7 @@ public sealed class ItemToggleSystem : EntitySystem
     /// </summary>
     private void TurnOffOnUnwielded(Entity<ItemToggleComponent> ent, ref ItemUnwieldedEvent args)
     {
-        TryDeactivate((ent, ent.Comp), args.User);
+        TryDeactivate((ent, ent.Comp), args.User, useCurrentCoordinates: true);
     }
 
     /// <summary>
