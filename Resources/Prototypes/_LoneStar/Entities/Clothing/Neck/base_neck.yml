@@ -1,4 +1,16 @@
 - type: entity
+  parent: [ClothingNeckCollarBase, BaseFoldable]
+  id: ClothingNeckCollarBaseFoldable
+  abstract: true
+  components:
+  - type: Foldable
+    canFoldInsideContainer: true
+    foldVerbText: unfold-verb
+    unfoldVerbText: fold-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: folded
+
+- type: entity
   abstract: true
   id: ClothingNeckRandomSpriteMono
   suffix: Random

@@ -1,8 +1,8 @@
 #region collars
 - type: entity
   parent: ClothingNeckCollarBaseFoldable
-  id: ClothingNeckAdvancedCowBellCollar
-  name: cowbell collar
+  id: ClothingNeckAdvancedCollarCowBell
+  name: advanced cowbell collar
   description: A way to inform others about the presence of livestock, or just to annoy everyone around you! Can be unfolded to appear thicker.
   components:
   - type: Sprite

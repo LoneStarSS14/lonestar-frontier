@@ -14,3 +14,18 @@
     - Recyclable
     - WhitelistChameleon
     - WhitelistChameleonAdvancedCollar
+
+- type: entity
+  parent: [ ClothingNeckBase, ClothingNeckRandomSpriteMono ]
+  id: ClothingNeckSailorAscotColorable
+  name: sailor's ascot
+  description: The preferred accessory for mystery solving whtieboys
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Neck/Misc/sailorascot.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Neck/Misc/sailorascot.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+

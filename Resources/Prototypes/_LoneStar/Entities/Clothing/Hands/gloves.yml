@@ -23,3 +23,18 @@
     sprite: _LoneStar/Clothing/Hands/Gloves/white-satin-long.rsi
   - type: Fiber
     fiberColor: fibers-white
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsGlovesMittens
+  name: mittens
+  description: The other kind of insulating glove. Will protect your hands from the shock of freezing cold, but not much else.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Gloves/mittens.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Hands/Gloves/mittens.rsi
+  - type: Fiber
+    fiberColor: fibers-grey
+  - type: TemperatureProtection
+    coolingCoefficient: 0.8

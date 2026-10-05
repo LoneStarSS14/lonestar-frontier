@@ -1,6 +1,6 @@
-- type: entity # TODO: Colorable/randomsprite
+- type: entity
   parent: [ ClothingOuterBase, ClothingOuterClothingRandomSpriteMono ]
-  id: ClothingOuterCoatTurtleneckHalfBlouse
+  id: ClothingOuterCoatTurtleneckHalfBlouseColorable
   name: turtleneck half blouse
   description: A cropped, ribbed half blouse with a high collar.
   components:
