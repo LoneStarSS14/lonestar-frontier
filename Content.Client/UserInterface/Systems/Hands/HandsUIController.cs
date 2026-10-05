@@ -277,17 +277,19 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
             _player.LocalSession?.AttachedEntity is { } playerEntity &&
             _handsSystem.TryGetHand(playerEntity, handName, out var hand, _playerHandsComponent))
         {
-            if (!hand.IsModule && hand.Location == HandLocation.Left) // LoneStar
+            // LoneStar Start
+            if (!hand.IsModule && hand.Location == HandLocation.Left)
             {
                 _statusHandLeft = handControl;
             }
-            else if (!hand.IsModule && hand.Location == HandLocation.Right) // LoneStar
+            else if (!hand.IsModule && hand.Location == HandLocation.Right)
             {
                 _statusHandRight = handControl;
             }
 
-            var uiLocation = UpdateActiveHandStatus(handControl, hand.HeldEntity); // LoneStar
+            var uiLocation = UpdateActiveHandStatus(handControl, hand.HeldEntity);
             HandsGui.SetHighlightHand(uiLocation);
+            // LoneStar End
         }
     }
 
