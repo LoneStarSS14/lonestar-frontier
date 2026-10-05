@@ -1,5 +1,2 @@
 - type: Tag
   id: ClothFood
-
-- type: Tag # LoneStar
-  id: ConstructionMaterial

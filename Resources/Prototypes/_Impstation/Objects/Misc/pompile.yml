@@ -44,9 +44,10 @@
     tags:
       - ClothMade
       - RawMaterial
-      - ConstructionMaterial
+      # - ConstructionMaterial # LoneStar
   - type: Item
     heldPrefix: pompom
+  - type: ConstructionMaterials
   # - type: PluralName # LoneStar we do not have the plural name system yet, so this is commented out for now
   #   oneOf: plural-name-hand-1
 

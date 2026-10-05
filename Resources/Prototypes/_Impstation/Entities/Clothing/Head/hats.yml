@@ -28,7 +28,6 @@
     tags:
     - ClothMade
     - WhitelistChameleon
-
 - type: entity
   parent: ClothingHeadHatHolyWatermelon
   id: ClothingHeadHalo
@@ -68,3 +67,5 @@
     sprite: _Impstation/Clothing/Head/Misc/pompomear.rsi
   - type: Clothing
     sprite: _Impstation/Clothing/Head/Misc/pompomear.rsi
+  - type: TemperatureProtection
+    coolingCoefficient: 0.8

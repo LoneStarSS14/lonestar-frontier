@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingScarfBase
   id: ClothingNeckCloakPompomcloak
   name: pompom cloak
   description: "A soft, warm cloak made with questionable material. But at least it looks cute!"
