@@ -6,7 +6,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _DEN/Structures/Wallmounts/posters.rsi
+    sprite: _Everdream/Structures/Wallmounts/posters.rsi
     state: gorlex_girlfriend0
     snapCardinals: true
 
