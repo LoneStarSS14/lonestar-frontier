@@ -1,0 +1,21 @@
+- type: microwaveMealRecipe
+  id: RecipePomPom
+  name: pompom recipe
+  result: MobPompom
+  time: 15
+  group: Moth
+  solids:
+    MaterialPom1: 12
+  recipeType: Assembler
+
+- type: microwaveMealRecipe
+  id: RecipeSuperPomPom
+  name: super pompom recipe
+  result: MobSuperPompom
+  time: 15
+  group: Moth
+  reagents:
+    cognizine: 5
+  solids:
+    MaterialPom1: 12
+  recipeType: Assembler
