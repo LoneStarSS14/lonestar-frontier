@@ -302,10 +302,10 @@ public sealed class ClientClothingSystem : ClothingSystem
             return;
         }
 
-        // DEN start
+        // LoneStar start
         if (clothingComponent.RenderLayer != null)
             slot = clothingComponent.RenderLayer;
-        // DEN end
+        // LoneStar end
 
         // Goob edit start
         var slotLayerExists = false;
