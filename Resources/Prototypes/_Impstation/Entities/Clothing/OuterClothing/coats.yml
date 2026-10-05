@@ -7,6 +7,4 @@
   - type: Sprite
     sprite: _Impstation/Clothing/OuterClothing/Coats/mus_furcoat.rsi
   - type: Clothing
-    slots:
-      - OUTERCLOTHING
     sprite: _Impstation/Clothing/OuterClothing/Coats/mus_furcoat.rsi
