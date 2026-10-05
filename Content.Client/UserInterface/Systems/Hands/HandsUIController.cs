@@ -402,17 +402,19 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
 
         foreach (var hand in _handLookup.Values)
         {
-            if (hand.IsModule) // LoneStar
+            // LoneStar start, edits
+            if (hand.IsModule)
                 continue;
 
-            if (hand.HandLocation == HandLocation.Left) // LoneStar
+            if (hand.HandLocation == HandLocation.Left)
             {
                 leftVisible = true;
             }
-            else if (hand.HandLocation == HandLocation.Right) // LoneStar
+            else if (hand.HandLocation == HandLocation.Right)
             {
                 rightVisible = true;
             }
+            // LoneStar end
         }
 
         HandsGui?.UpdateStatusVisibility(leftVisible, rightVisible);
