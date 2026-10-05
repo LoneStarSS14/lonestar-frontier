@@ -33,7 +33,7 @@
     sprite: _Impstation/Clothing/Neck/Misc/mus_boa.rsi
 
 - type: entity
-  parent: [ ClothingNeckBase]
+  parent: ClothingNeckBase
   id: ClothingNeckRuffle
   name: ruffle
   description: A big puffy ruffle, for either looking fancy or funny.
