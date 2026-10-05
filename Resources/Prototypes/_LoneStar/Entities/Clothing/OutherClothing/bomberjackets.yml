@@ -1,0 +1,43 @@
+- type: entity
+  parent: [ ClothingOuterStorageBase, ClothingOuterClothingRandomSpriteMonoOpen ]
+  id: ClothingOuterCoatBomberWhite
+  name: bomber jacket
+  description: A lightweight bomber jacket, worn with the sleeves pushed up.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, ClothingOuterClothingRandomSpriteMono ]
+  id: ClothingOuterCoatBomberWhiteOpen
+  name: bomber jacket (open)
+  description: A lightweight bomber jacket, worn with the sleeves pushed up.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, ClothingOuterClothingRandomSpriteMonoOpen ]
+  id: ClothingOuterCoatBomberWhiteLoose
+  name: bomber jacket (loose)
+  description: A lightweight bomber jacket, worn low and loose.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi
+
+- type: entity
+  parent: [ ClothingOuterClothingRandomSpriteMono, ClothingOuterStorageBase ]
+  id: ClothingOuterCoatBomberWhiteLooseOpen
+  name: bomber jacket (loose, open)
+  description: A lightweight bomber jacket, worn low and loose.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi

@@ -1,6 +1,6 @@
 {
     "license": "CC-BY-NC-SA-4.0",
-    "copyright": "Content created by GhostPrince for Frontier Server",
+    "copyright": "Content created by GhostPrince for Frontier Server. Feroxi edit by Peabnuts (Github).",
     "size": {
         "x": 32,
         "y": 32
@@ -25,6 +25,10 @@
             "directions": 4
         },
         {
+            "name": "off-equipped-HELMET-feroxi",
+            "directions": 4
+        },
+        {
             "name": "off-inhand-left",
             "directions": 4
         },
@@ -42,6 +46,10 @@
         },
         {
             "name": "on-equipped-HELMET-reptilian",
+            "directions": 4
+        },
+        {
+            "name": "on-equipped-HELMET-feroxi",
             "directions": 4
         },
         {

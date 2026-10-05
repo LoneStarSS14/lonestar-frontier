@@ -538,11 +538,10 @@ public sealed partial class ChatUIController : UIController
         // can always send/recieve OOC
         CanSendChannels |= ChatSelectChannel.OOC;
         CanSendChannels |= ChatSelectChannel.LOOC;
-        CanSendChannels |= ChatSelectChannel.SubtleLOOC;
         CanSendChannels |= ChatSelectChannel.ShipOOC; // Wayfarer
         FilterableChannels |= ChatChannel.OOC;
         FilterableChannels |= ChatChannel.LOOC;
-        FilterableChannels |= ChatChannel.SubtleLOOC;
+
         FilterableChannels |= ChatChannel.ShipOOC; // Wayfarer
 
         // can always hear server (nobody can actually send server messages).
@@ -552,21 +551,24 @@ public sealed partial class ChatUIController : UIController
         {
             // can always hear local / radio / emote / notifications when in the game
             FilterableChannels |= ChatChannel.Local;
-            FilterableChannels |= ChatChannel.Whisper;
             FilterableChannels |= ChatChannel.Radio;
             FilterableChannels |= ChatChannel.Emotes;
-            FilterableChannels |= ChatChannel.Subtle; // Floofstation
             FilterableChannels |= ChatChannel.Notifications;
 
             // Can only send local / radio / emote when attached to a non-ghost entity.
             // TODO: this logic is iffy (checking if controlling something that's NOT a ghost), is there a better way to check this?
             if (_ghost is not {IsGhost: true})
             {
+                FilterableChannels |= ChatChannel.Subtle; // Floofstation
+                FilterableChannels |= ChatChannel.SubtleLOOC;
+                FilterableChannels |= ChatChannel.Whisper;
+
                 CanSendChannels |= ChatSelectChannel.Local;
                 CanSendChannels |= ChatSelectChannel.Whisper;
                 CanSendChannels |= ChatSelectChannel.Radio;
                 CanSendChannels |= ChatSelectChannel.Emotes;
                 CanSendChannels |= ChatSelectChannel.Subtle; // Floofstation
+                CanSendChannels |= ChatSelectChannel.SubtleLOOC;
             }
         }
 

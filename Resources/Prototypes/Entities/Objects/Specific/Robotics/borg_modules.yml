@@ -1341,7 +1341,7 @@
     - type: ItemBorgModule
       moduleId: EnergySword # Frontier
       items:
-      - CyborgEnergySwordDouble
+      - EnergySwordDouble # LoneStar
       - PinpointerSyndicateNuclear
     - type: BorgModuleIcon
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-esword-module }

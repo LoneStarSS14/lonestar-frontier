@@ -1,16 +1,16 @@
 # Advanced Collar and Modules
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckAdvancedCollarBase
   name: advanced collar
   description: A modular collar that can have various functional modules installed.
   abstract: true
   components:
   - type: Sprite
-    sprite: Floof/Clothing/Neck/collar_black.rsi
+    sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
   - type: Clothing
-    sprite: Floof/Clothing/Neck/collar_black.rsi
+    sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
     equipDelay: 1 # LoneStar
     unequipDelay: 5 # LoneStar
   - type: AdvancedCollar
@@ -30,9 +30,9 @@
   description: A modular black collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_black.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_black.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -41,9 +41,9 @@
   description: A modular blue collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_blue.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_blue.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_blue.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_blue.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -52,9 +52,9 @@
   description: A modular pink collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_pink.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_pink.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_pink.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_pink.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -63,9 +63,9 @@
   description: A modular shock collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Nyanotrasen/Clothing/Neck/Misc/shock.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_shock.rsi
     - type: Clothing
-      sprite: Nyanotrasen/Clothing/Neck/Misc/shock.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_shock.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -74,9 +74,9 @@
   description: A modular bell collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: _NF/Clothing/Neck/bellcollar.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_bell.rsi
     - type: Clothing
-      sprite: _NF/Clothing/Neck/bellcollar.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_bell.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -85,9 +85,9 @@
   description: A modular epistemics collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_epi.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_epi.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_epi.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_epi.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -96,9 +96,9 @@
   description: A modular engineering collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_engi.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_engi.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_engi.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_engi.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -107,9 +107,9 @@
   description: A modular logistics collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_logi.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_logi.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_logi.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_logi.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -118,9 +118,9 @@
   description: A modular medical collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_med.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_med.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_med.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_med.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -129,9 +129,9 @@
   description: A modular security collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_sec.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_sec.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_sec.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_sec.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -140,9 +140,9 @@
   description: A modular captains collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_cmd.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_cmd.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_cmd.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_cmd.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -151,9 +151,9 @@
   description: A modular CentCom collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_cc.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_cc.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_cc.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_cc.rsi
 
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
@@ -162,9 +162,9 @@
   description: A modular blood-red collar that can have various functional modules installed.
   components:
     - type: Sprite
-      sprite: Floof/Clothing/Neck/collar_syndi.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_syndi.rsi
     - type: Clothing
-      sprite: Floof/Clothing/Neck/collar_syndi.rsi
+      sprite: _DEN/Clothing/Neck/Collars/collar_syndi.rsi
 
 
 # Collar Modules

@@ -692,7 +692,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             ("chatColor", chatColor ?? Color.White.ToHex()));
 
         var numHeard = 0;
-        foreach (var (session, data) in GetRecipients(source, WhisperMuffledRange))
+        foreach (var (session, data) in GetRecipients(source, WhisperMuffledRange, noGhosts: true))
         {
             EntityUid listener;
             numHeard++;
@@ -827,7 +827,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         foreach (var (session, data) in GetRecipients(
                      source,
                      SubtleRange,
-                     blockedByOcclusion: !SubtleGoesThroughWalls))
+                     blockedByOcclusion: !SubtleGoesThroughWalls, noGhosts: true))
         {
             if (session.AttachedEntity is not { Valid: true } listener)
                 continue;
@@ -971,7 +971,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             source,
             hideChat
                 ? ChatTransmitRange.HideChat
-                : ChatTransmitRange.Normal,
+                : ChatTransmitRange.NoGhosts,
             player.UserId,
             voiceRange: SubtleLOOCRange,
             blockedByOcclusion: !SubtleLOOCGoesThroughWalls,
@@ -1264,9 +1264,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
             var observer = ghostHearing.HasComponent(playerEntity);
 
-            if (noGhosts
-                && observer
-                && !playerIsAdmin)
+            if (noGhosts && observer)
                 continue; // Don't include ghosts if we don't want them.
 
             var amOcccluded = false;

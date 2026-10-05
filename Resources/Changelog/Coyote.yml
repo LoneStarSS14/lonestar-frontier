@@ -4165,3 +4165,99 @@ Entries:
   id: 456
   time: '2026-10-01T16:30:13.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/216
+- author: Jakumba
+  changes:
+    - type: Tweak
+      message: Whispers and subtle messages can no longer be seen by ghosts,
+  id: 457
+  time: '2026-10-03T20:46:59.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/220
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        Construction Bag now allows Plumbing Assemblies, any construction
+        electronic, computer board, and practially any carriable atmos
+        piping-related item
+    - type: Fix
+      message: >-
+        Increased Construction Bag's max item size to Large, which fixes not
+        allowing Flatpacks to be stored inside.
+  id: 458
+  time: '2026-10-03T21:03:46.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/217
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: >-
+        Added encryption keys to the station secretary role and shortband to
+        guild leader.
+  id: 459
+  time: '2026-10-03T21:04:53.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/212
+- author: archee1
+  changes:
+    - type: Add
+      message: Added 2 new vestine brewed chemcials, Umbrazane and Fresoxidine
+    - type: Tweak
+      message: >-
+        Chemwarrior syndie enemies now shoot dangerous mixes at you instead of
+        1u razorium/polytrinic.
+    - type: Tweak
+      message: Claker syndies no longer shoot shots that one-shot you.
+    - type: Tweak
+      message: Syndicate expedition's elite enemies now spawn slightly more often.
+  id: 460
+  time: '2026-10-04T08:11:11.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/218
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Rogue silicon Catcher's Viscerator unit summons no longer have silicon
+        loot bags.
+  id: 461
+  time: '2026-10-05T07:39:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/223
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Hydroponics trays, rollerbeds, and the janitor trolley have had their
+        textures updated.
+  id: 462
+  time: '2026-10-05T07:53:46.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/224
+- author: archee1
+  changes:
+    - type: Fix
+      message: Shadekin's emote wheel icon is not an error anymore.
+    - type: Fix
+      message: >-
+        Shadekin now passively heal asphyxiation slowly while their blood is
+        healthy.
+    - type: Fix
+      message: >-
+        Shadekin now have full access to other markings that all other species
+        have access to.
+  id: 463
+  time: '2026-10-05T09:20:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/225
+- author: lexiwitch
+  changes:
+    - type: Add
+      message: >-
+        Ship renaming! Now you can finally fly around in Spacey McSpaceFace
+        without badgering the SR!
+  id: 464
+  time: '2026-10-05T19:04:08.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/190
+- author: archee1
+  changes:
+    - type: Add
+      message: A range of new clothing ported from Den and Imp.
+    - type: Tweak
+      message: The chameleon collar can now disguise as scarfs.
+  id: 465
+  time: '2026-10-05T19:17:54.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/222

@@ -20,3 +20,23 @@
     sprite: _Impstation/Clothing/Neck/Misc/devilwings.rsi
   - type: Clothing
     sprite: _Impstation/Clothing/Neck/Misc/devilwings.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckFeatherBoa
+  name: feather boa
+  description: WACH OUT!! It's a snake with a LOOOOT of feathers!! Just kidding. It's really just fashion accessory.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Neck/Misc/mus_boa.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Neck/Misc/mus_boa.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckRuffle
+  name: ruffle
+  description: A big puffy ruffle, for either looking fancy or funny.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Neck/Misc/ruffle.rsi

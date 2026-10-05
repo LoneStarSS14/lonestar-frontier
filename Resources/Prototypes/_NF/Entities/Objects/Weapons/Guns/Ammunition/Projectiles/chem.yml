@@ -27,15 +27,19 @@
     solution: vapor
   - type: DrainableSolution
     solution: vapor
-  - type: SolutionInjectOnEmbed
-    transferAmount: 50
-    solution: melee
+  # - type: SolutionInjectOnEmbed # LoneStar, its not an embed, its a projectile.
+  #   transferAmount: 50
+  #   solution: melee
   - type: InjectableSolution
     solution: vapor
   - type: Vapor
     active: true
   - type: Appearance
   - type: VaporVisuals
+  # LoneStar v
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 50
+    solution: vapor
 
 # Syndicate Chemwarrior Projectiles
 - type: entity
@@ -69,12 +73,14 @@
         maxVol: 50
         canReact: false
         reagents:
+        # LoneStar start
         - ReagentId: THC
-          Quantity: 5
+          Quantity: 4 #
         - ReagentId: PolytrinicAcid
-          Quantity: 1
+          Quantity: 2
         - ReagentId: Razorium
-          Quantity: 1
+          Quantity: 2
+        # Lonestar end
 
 - type: entity
   parent: SplatterChemBase
@@ -87,12 +93,12 @@
         maxVol: 50
         canReact: false
         reagents:
-        - ReagentId: MuteToxin
-          Quantity: 4
-        - ReagentId: PolytrinicAcid
-          Quantity: 1
+        # LoneStar start
+        - ReagentId: Umbrazane
+          Quantity: 6
         - ReagentId: ChloralHydrate
-          Quantity: 1
+          Quantity: 2
+        # LoneStar end
 
 - type: entity
   parent: SplatterChemBase
@@ -105,10 +111,14 @@
         maxVol: 50
         canReact: false
         reagents:
+        # LoneStar start
         - ReagentId: JuiceThatMakesYouWeh
-          Quantity: 5 # 50u in bloodstream required to turn victim into a lizard
-        - ReagentId: Licoxide
-          Quantity: 1
+          Quantity: 5
+        - ReagentId: Lexorin
+          Quantity: 5
+        - ReagentId: Razorium
+          Quantity: 2
+        # LoneStar end
 
 - type: entity
   parent: SplatterChemBase
@@ -121,5 +131,7 @@
         maxVol: 50
         canReact: false
         reagents:
-        - ReagentId: Fresium
-          Quantity: 7 # needs 40u in bloodstream for special effect
+        # LoneStar start
+        - ReagentId: Fresoxidine
+          Quantity: 6
+        # LoneStar end

@@ -6,13 +6,15 @@
     ClothingNeckCollarBlue: 4294967295
     ClothingNeckCollarPink: 4294967295
     ClothingNeckBellCollar: 4294967295
+    ClothingNeckCowBellCollar: 4294967295
     ClothingNeckShockCollar: 4294967295
     # Adv Collars
     ClothingNeckAdvancedCollarBlack: 4294967295
     ClothingNeckAdvancedCollarBlue: 4294967295
     ClothingNeckAdvancedCollarPink: 4294967295
-    ClothingNeckAdvancedCollarShock: 4294967295
     ClothingNeckAdvancedCollarBell: 4294967295
+    ClothingNeckAdvancedCollarCowBell: 4294967295
+    ClothingNeckAdvancedCollarShock: 4294967295
     ClothingNeckAdvancedCollarEpi: 4294967295
     ClothingNeckAdvancedCollarEngi: 4294967295
     ClothingNeckAdvancedCollarLogi: 4294967295

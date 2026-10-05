@@ -24,6 +24,7 @@
     sprite: _NF/Objects/Specific/Engineering/construction_bag.rsi
     quickEquip: false
   - type: Storage
+    maxItemSize: Large # LoneStar
     quickInsert: true
     areaInsert: true
     whitelist:
@@ -32,10 +33,15 @@
       - RodMetal1
       - Sheet
       - CableCoil
-      - ConveyorAssembly # LoneStar
+      # LoneStar v
+      - ConveyorAssembly
+      - PlumbingAssembly
       components:
       - ConstructionMaterials
       # LoneStar v
+      - AtmosPipeLayers
+      - Electronics
+      - ComputerBoard
       - MachinePart
       - Flatpack
       - MachineBoard
