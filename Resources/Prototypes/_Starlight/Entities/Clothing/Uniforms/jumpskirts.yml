@@ -251,6 +251,8 @@
   - type: Clothing
     sprite: _Starlight/Clothing/Uniforms/Jumpskirt/rainbow.rsi
 
+#ClothingUniformJumpskirtSchool moved to _LoneStar
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpskirtCapTurtleneck
