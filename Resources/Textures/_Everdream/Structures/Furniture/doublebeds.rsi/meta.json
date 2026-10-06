@@ -8,11 +8,171 @@
   },
   "states": [
     {
-      "name": "yellow",
+      "name": "left",
       "directions": 4
     },
     {
-      "name": "base",
+      "name": "left_black",
+      "directions": 4
+    },
+    {
+      "name": "left_blue",
+      "directions": 4
+    },
+    {
+      "name": "left_brown",
+      "directions": 4
+    },
+    {
+      "name": "left_cc",
+      "directions": 4
+    },
+    {
+      "name": "left_clown",
+      "directions": 4
+    },
+    {
+      "name": "left_cult",
+      "directions": 4
+    },
+    {
+      "name": "left_green",
+      "directions": 4
+    },
+    {
+      "name": "left_ian",
+      "directions": 4
+    },
+    {
+      "name": "left_mime",
+      "directions": 4
+    },
+    {
+      "name": "left_nt",
+      "directions": 4
+    },
+    {
+      "name": "left_orange",
+      "directions": 4
+    },
+    {
+      "name": "left_purple",
+      "directions": 4
+    },
+    {
+      "name": "left_rainbow",
+      "directions": 4
+    },
+    {
+      "name": "left_red",
+      "directions": 4
+    },
+    {
+      "name": "left_red",
+      "directions": 4
+    },
+    {
+      "name": "left_syndie",
+      "directions": 4
+    },
+    {
+      "name": "left_us",
+      "directions": 4
+    },
+    {
+      "name": "left_white",
+      "directions": 4
+    },
+    {
+      "name": "left_wizard",
+      "directions": 4
+    },
+    {
+      "name": "left_yellow",
+      "directions": 4
+    },
+     {
+      "name": "right",
+      "directions": 4
+    },
+    {
+      "name": "right_black",
+      "directions": 4
+    },
+    {
+      "name": "right_blue",
+      "directions": 4
+    },
+    {
+      "name": "right_brown",
+      "directions": 4
+    },
+    {
+      "name": "right_cc",
+      "directions": 4
+    },
+    {
+      "name": "right_clown",
+      "directions": 4
+    },
+    {
+      "name": "right_cult",
+      "directions": 4
+    },
+    {
+      "name": "right_green",
+      "directions": 4
+    },
+    {
+      "name": "right_ian",
+      "directions": 4
+    },
+    {
+      "name": "right_mime",
+      "directions": 4
+    },
+    {
+      "name": "right_nt",
+      "directions": 4
+    },
+    {
+      "name": "right_orange",
+      "directions": 4
+    },
+    {
+      "name": "right_purple",
+      "directions": 4
+    },
+    {
+      "name": "right_rainbow",
+      "directions": 4
+    },
+    {
+      "name": "right_red",
+      "directions": 4
+    },
+    {
+      "name": "right_red",
+      "directions": 4
+    },
+    {
+      "name": "right_syndie",
+      "directions": 4
+    },
+    {
+      "name": "right_us",
+      "directions": 4
+    },
+    {
+      "name": "right_white",
+      "directions": 4
+    },
+    {
+      "name": "right_wizard",
+      "directions": 4
+    },
+    {
+      "name": "right_yellow",
       "directions": 4
     }
   ]
