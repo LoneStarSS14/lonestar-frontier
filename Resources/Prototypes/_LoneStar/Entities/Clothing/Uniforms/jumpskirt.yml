@@ -17,7 +17,7 @@
   suffix: Random
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/tailored-gown.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
     layers:
     - state: icon-base
       map: [ "icon-base" ]
@@ -28,7 +28,7 @@
     - state: icon-extra
       map: [ "icon-extra" ]
   - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/tailored-gown.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
     clothingVisuals:
       jumpsuit:
       - state: equipped-INNERCLOTHING-base
@@ -71,7 +71,7 @@
   suffix: Random
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/tailored-gown.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
     layers:
     - state: icon-base
       map: [ "icon-base" ]
@@ -82,7 +82,7 @@
     - state: icon-extra
       map: [ "icon-extra" ]
   - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/tailored-gown.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
     clothingVisuals:
       jumpsuit:
       - state: equipped-INNERCLOTHING-base
@@ -124,9 +124,9 @@
   description: A light flowing dress made of a breathable fabric.
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/strapless.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/strapless.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/strapless.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/strapless.rsi
 
 - type: entity
   parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
@@ -135,9 +135,9 @@
   description: #TODO
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/party-princess.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/party-princess.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
   - type: RandomSprite
     mappedColors:
       Base: Rainbow
@@ -149,9 +149,9 @@
   description: #TODO
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/checker-dress.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/checker-dress.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
   - type: RandomSprite
     mappedColors:
       Base: NTInteriorDesign
@@ -163,9 +163,9 @@
   description: #TODO
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/spotty-dress.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/spotty-dress.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
   - type: RandomSprite
     mappedColors:
       Base: NTInteriorDesign
@@ -177,9 +177,9 @@
   description: #TODO
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/western.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/western.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
   - type: RandomSprite
     mappedColors:
       Base: NTInteriorDesign
