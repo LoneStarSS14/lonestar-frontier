@@ -104,7 +104,7 @@
   parent: NFBaseJumpsuitRecipe
   result: ClothingHeadHatSecretaryCap
 
-v- type: latheRecipe
+- type: latheRecipe
   id: ClothingHeadHatPirate
   parent: NFBaseJumpsuitRecipe
   result: ClothingHeadHatPirate

@@ -59,14 +59,3 @@
   - type: PhysicalComposition
     materialComposition:
       Glass: 1
-
-- type: entity
-  parent: DrinkTeapot
-  id: DrinkTeapotEmpty
-  suffix: Empty
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents: []
-        maxVol: 100
