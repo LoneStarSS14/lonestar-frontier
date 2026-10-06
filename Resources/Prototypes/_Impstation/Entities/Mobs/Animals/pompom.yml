@@ -1,7 +1,8 @@
 - type: entity
-  name: pom pom
+  name: pom pom parent
   parent: [ SimpleSpaceMobBase, FlyingMobBase ]
-  id: MobPompom
+  id: MobPompomParent
+  abstract: true
   description: A small, dainty creature with many legs. It hovers through the air like a squid.
   components:
   - type: PointLight
@@ -80,11 +81,58 @@
   - type: ZombieImmune
   # - type: PleebnarGibbable # LoneStar
   - type: AlwaysRevolutionaryConvertible
+
+- type: entity
+  name: pom pom
+  parent: MobPompomParent
+  id: MobPompom
+  components:
   - type: PassiveDamage
     allowedStates:
     - Alive
     - Dead
-    damageCap: 50
+    damageCap: 20
     damage:
       types:
         Blunt: 0.01
+
+- type: entity
+  name: pom pom
+  parent: MobPompomParent
+  id: MobSuperPompom
+  description: A small, dainty creature with many legs. It hovers through the air like a squid. This one seems heartier than it's kin.
+  components:
+  - type: GhostRole
+    prob: 1
+    name: Pom Pom!
+    allowMovement: true
+    description: A small, dainty creature with many legs. It hovers through the air like a squid. This one seems heartier than it's kin.
+    rules: ghost-role-information-nonantagonist-rules
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+  - type: Speech
+    speechSounds: Moth
+    speechVerb: SmallMob
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 5
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - Cake
+  - type: CanEscapeInventory
+    baseResistTime: 2
+  - type: Puller
+    needsHands: true
+  - type: Examiner
+  - type: DoAfter
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Animals/cat_hiss.ogg
+    hidden: true
+    damage:
+      types:
+        Slash: 1

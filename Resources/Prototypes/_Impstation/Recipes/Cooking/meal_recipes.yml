@@ -13,21 +13,6 @@
   recipeType: Oven
 
 - type: microwaveMealRecipe
-  id: RecipeCheeseSqueaks
-  name: cheese squeaks recipe
-  result: FoodMealCheeseSqueaks
-  group: Moth
-  time: 15
-  reagents:
-     Flour: 10
-     OilOlive: 10
-     Egg: 2
-  solids:
-     MaterialPom1: 3
-     FoodStringCheeseStrand: 1
-  recipeType: Microwave
-
-- type: microwaveMealRecipe
   id: RecipePuffPuff
   name: puff-puff recipe
   result: FoodMealPuffPuff
