@@ -105,7 +105,7 @@
     name: Pom Pom!
     allowMovement: true
     description: A small, dainty creature with many legs. It hovers through the air like a squid. This one seems heartier than it's kin.
-    rules: ghost-role-information-nonantagonist-rules
+    rules: ghost-role-information-nonantagonist-rules #TODO
     raffle:
       settings: short
   - type: GhostTakeoverAvailable
@@ -119,11 +119,8 @@
     tags:
     - VimPilot
     - DoorBumpOpener
-    - Cake
   - type: CanEscapeInventory
     baseResistTime: 2
-  - type: Puller
-    needsHands: true
   - type: Examiner
   - type: DoAfter
   - type: CombatMode
