@@ -187,7 +187,7 @@ public abstract class ClothingSystem : EntitySystem
         foreach (var layer in clothing.ClothingVisuals[slot])
         {
             if (layer.MapKeys == null)
-                continue;
+                continue; // LoneStar
 
             if (!layer.MapKeys.Contains(mapKey))
                 continue;
@@ -200,7 +200,7 @@ public abstract class ClothingSystem : EntitySystem
         foreach (var layer in clothing.ClothingVisuals[slot])
         {
             if (layer.MapKeys == null)
-                continue;
+                continue; // LoneStar
 
             if (!layer.MapKeys.Contains(mapKey))
                 continue;
