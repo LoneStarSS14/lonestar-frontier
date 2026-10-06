@@ -11,7 +11,14 @@
             "name": "icon"
         },
         {
+            "name": "icon-color"
+        },
+        {
             "name": "equipped-INNERCLOTHING",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-color",
             "directions": 4
         }
     ]

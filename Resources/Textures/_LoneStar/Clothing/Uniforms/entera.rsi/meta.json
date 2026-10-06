@@ -1,14 +1,29 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from coyote bayou at commit af94b33.",
+    "copyright": "Taken from coyote bayou at commit af94b33, reprited and seperated by Archee for recolorability.",
     "size": {
         "x": 32,
         "y": 32
     },
     "states": [
         {
-            "name": "equipped-INNERCLOTHING",
+            "name": "icon"
+        },
+        {
+            "name": "icon-base"
+        },
+        {
+            "name": "icon-decor"
+        },
+        {
+            "name": "icon-accent"
+        },
+        {
+            "name": "icon-extra"
+        },
+        {
+            "name": "equipped-INNERCLOTHING-base",
             "directions": 4
         },
         {
@@ -20,7 +35,7 @@
             "directions": 4
         },
         {
-            "name": "equipped-INNERCLOTHING-highlight",
+            "name": "equipped-INNERCLOTHING-extra",
             "directions": 4
         }
     ]
