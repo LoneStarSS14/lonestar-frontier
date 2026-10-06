@@ -75,6 +75,11 @@ public sealed partial class LoadoutPrototype : IPrototype, IEquipmentLoadout
     [DataField]
     public string Name = "";
 
+/// <summary>
+    /// Frontier - optional category of the loadout as it appears in the menu
+    /// </summary>
+    [DataField]
+    public string Category = "";
     /// <summary>
     /// Frontier - optional description of the loadout as it appears in the menu
     /// </summary>

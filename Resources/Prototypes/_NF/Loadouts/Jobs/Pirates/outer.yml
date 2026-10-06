@@ -18,6 +18,7 @@
 
 - type: loadout
   id: NFPirateCaptainClothingOuterCoatPirate
+  category: piratecoat
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable

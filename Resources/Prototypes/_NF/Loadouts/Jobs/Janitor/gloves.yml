@@ -1,4 +1,5 @@
 - type: loadout
+  category: Janitor Gloves
   id: JanitorNFClothingHandsGlovesJanitor
   equipment:
     gloves: ClothingHandsGlovesJanitor
@@ -9,6 +10,7 @@
     gloves: ClothingHandsGlovesColorOrange
 
 - type: loadout
+  category: Purple Janitor Gloves
   id: JanitorNFClothingHandsGlovesColorPurple
   equipment:
     gloves: ClothingHandsGlovesColorPurple

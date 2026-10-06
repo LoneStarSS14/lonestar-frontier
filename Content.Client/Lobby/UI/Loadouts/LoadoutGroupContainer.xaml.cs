@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Client.Replay.UI.Loading;
 using Content.Shared.Clothing;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
@@ -61,8 +62,9 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                 Margin = new Thickness(5, 0, 5, 5),
             });
         }
-
+        Dictionary<string, BoxContainer> categories = new();
         LoadoutsContainer.DisposeAllChildren();
+
         // Didn't use options because this is more robust in future.
 
         var selected = loadout.SelectedLoadouts[_groupProto.ID];
@@ -93,10 +95,34 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                     OnLoadoutUnpressed?.Invoke(loadoutProto);
             };
 
-            LoadoutsContainer.AddChild(loadoutContainer);
+                var category = loadProto.Category;
+                if (string.IsNullOrEmpty(category))
+                {
+                    LoadoutsContainer.AddChild(loadoutContainer);
+                }
+                else
+                {
+                    if (!categories.TryGetValue(category, out var categoryBox))
+                    {
+                        var heading = new CollapsibleHeading(Loc.GetString(category));
+                        var body = new CollapsibleBody();
+                        categoryBox = new BoxContainer { Orientation = LayoutOrientation.Vertical };
+                        body.AddChild(categoryBox);
+
+                        var collapsible = new Collapsible(heading, body);
+                        LoadoutsContainer.AddChild(collapsible);
+
+                        categories[category] = categoryBox;
+                    }
+
+                    categoryBox.AddChild(loadoutContainer);
+                }
         }
 
         // Frontier: loadoutGroup subgroups
+
+
+
         foreach (var subgroupProto in _groupProto.Subgroups)
         {
             if (!protoMan.TryIndex(subgroupProto, out var loadoutGroupProto))
