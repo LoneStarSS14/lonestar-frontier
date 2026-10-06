@@ -1,7 +1,7 @@
 - type: entity
-  name: pom pom parent
+  name: pom pom
   parent: [ SimpleSpaceMobBase, FlyingMobBase ]
-  id: MobPompomParent
+  id: BaseMobPompom
   abstract: true
   description: A small, dainty creature with many legs. It hovers through the air like a squid.
   components:
@@ -14,7 +14,7 @@
     baseWalkSpeed : 2
     baseSprintSpeed : 4
   - type: MovementIgnoreGravity # nyoom
-    weightless: true
+    # weightless: true # LoneStar
   - type: FloatingVisuals
   - type: Sprite
     drawdepth: Mobs
@@ -83,8 +83,7 @@
   - type: AlwaysRevolutionaryConvertible
 
 - type: entity
-  name: pom pom
-  parent: MobPompomParent
+  parent: BaseMobPompom
   id: MobPompom
   components:
   - type: PassiveDamage
@@ -97,8 +96,7 @@
         Blunt: 0.01
 
 - type: entity
-  name: pom pom
-  parent: MobPompomParent
+  parent: BaseMobPompom
   id: MobSuperPompom
   description: A small, dainty creature with many legs. It hovers through the air like a squid. This one seems heartier than it's kin.
   components:

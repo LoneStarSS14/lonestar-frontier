@@ -15,7 +15,7 @@
   time: 15
   group: Moth
   reagents:
-    cognizine: 5
+    Cognizine: 5
   solids:
     MaterialPom1: 12
   recipeType: Assembler
