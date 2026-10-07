@@ -1,5 +1,9 @@
+# Implementation of Hedera's double beds.
+# The janky buckling when rotated north or south is the cost of having big beds. But it's Fine.
+
+# The Base Double Bed
 - type: entity
-  parent: BaseStructure
+  parent: BaseStructure # Can't parent from Bed or they'll try to use bedsheets, as well as be unable to rotate.
   id: BaseDoubleBed
   abstract: true
   categories: [ HideSpawnMenu ]
@@ -18,7 +22,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-1.45,-1.0,0.45,-0.2"
+          bounds: "-0.45,0.0,0.45,0.5"
         hard: false
         density: 190
         mask:
@@ -27,7 +31,7 @@
   - type: Anchorable
   - type: Pullable
 
-# Double Beds Left
+# Base Double Beds Left
 - type: entity
   parent: BaseDoubleBed
   id: DoubleBedLeft
@@ -43,7 +47,7 @@
     placeCentered: true
     positionOffset: "0, -0.25"
 
-# Double Beds Right
+# Base Double Beds Right
 - type: entity
   parent: BaseDoubleBed
   id: DoubleBedRight
@@ -54,7 +58,331 @@
   - type: Strap
     position: Down
     rotation: -90
-    buckleOffset: "0, 0.35"
+    buckleOffset: "0, 0.35" 
   - type: PlaceableSurface
     placeCentered: true
     positionOffset: "0, -0.35"
+
+# Children
+# black
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftBlack
+  suffix: Black, Left
+  components:
+  - type: Sprite
+    state: left_black
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightBlack
+  suffix: Black, Right
+  components:
+  - type: Sprite
+    state: right_black
+
+# blue
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftBlue
+  suffix: Blue, Left
+  components:
+  - type: Sprite
+    state: left_blue
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightBlue
+  suffix: Blue, Right
+  components:
+  - type: Sprite
+    state: right_blue
+    
+# brown
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftBrown
+  suffix: Brown, Left
+  components:
+  - type: Sprite
+    state: left_brown
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightBrown
+  suffix: Brown, Right
+  components:
+  - type: Sprite
+    state: right_brown
+
+# cc
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftCC
+  suffix: CC, Left
+  components:
+  - type: Sprite
+    state: left_cc
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightCC
+  suffix: CC, Right
+  components:
+  - type: Sprite
+    state: right_cc
+
+# clown
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftClown
+  suffix: Clown, Left
+  components:
+  - type: Sprite
+    state: left_clown
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightClown
+  suffix: Clown, Right
+  components:
+  - type: Sprite
+    state: right_clown
+
+# cult
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftCult
+  suffix: Cult, Left
+  components:
+  - type: Sprite
+    state: left_cult
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightCult
+  suffix: Cult, Right
+  components:
+  - type: Sprite
+    state: right_cult
+
+# green
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftGreen
+  suffix: Green, Left
+  components:
+  - type: Sprite
+    state: left_green
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightGreen
+  suffix: Green, Right
+  components:
+  - type: Sprite
+    state: right_green
+
+# ian
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftIan
+  suffix: Ian, Left
+  components:
+  - type: Sprite
+    state: left_ian
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightIan
+  suffix: Ian, Right
+  components:
+  - type: Sprite
+    state: right_ian
+
+# mime
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftMime
+  suffix: Mime, Left
+  components:
+  - type: Sprite
+    state: left_mime
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightMime
+  suffix: Mime, Right
+  components:
+  - type: Sprite
+    state: right_mime
+
+# nt
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftNT
+  suffix: NT, Left
+  components:
+  - type: Sprite
+    state: left_nt
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightNT
+  suffix: NT, Right
+  components:
+  - type: Sprite
+    state: right_nt
+
+# orange
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftOrange
+  suffix: Orange, Left
+  components:
+  - type: Sprite
+    state: left_orange
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightOrange
+  suffix: Orange, Right
+  components:
+  - type: Sprite
+    state: right_orange
+
+# purple
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftPurple
+  suffix: Purple, Left
+  components:
+  - type: Sprite
+    state: left_purple
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightPurple
+  suffix: Purple, Right
+  components:
+  - type: Sprite
+    state: right_purple
+
+# rainbow
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftRainbow
+  suffix: Rainbow, Left
+  components:
+  - type: Sprite
+    state: left_rainbow
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightRainbow
+  suffix: Rainbow, Right
+  components:
+  - type: Sprite
+    state: right_rainbow
+
+# red
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftRed
+  suffix: Red, Left
+  components:
+  - type: Sprite
+    state: left_red
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightRed
+  suffix: Red, Right
+  components:
+  - type: Sprite
+    state: right_red
+
+# syndie
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftSyndie
+  suffix: Syndie, Left
+  components:
+  - type: Sprite
+    state: left_syndie
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightSyndie
+  suffix: Syndie, Right
+  components:
+  - type: Sprite
+    state: right_syndie
+
+# us
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftUS
+  suffix: US, Left
+  components:
+  - type: Sprite
+    state: left_us
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightUS
+  suffix: US, Right
+  components:
+  - type: Sprite
+    state: right_us
+
+# white
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftWhite
+  suffix: White, Left
+  components:
+  - type: Sprite
+    state: left_white
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightWhite
+  suffix: White, Right
+  components:
+  - type: Sprite
+    state: right_white
+
+# wizard
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftWizard
+  suffix: Wizard, Left
+  components:
+  - type: Sprite
+    state: left_wizard
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightWizard
+  suffix: Wizard, Right
+  components:
+  - type: Sprite
+    state: right_wizard
+
+# yellow
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftYellow
+  suffix: Yellow, Left
+  components:
+  - type: Sprite
+    state: left_yellow
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightYellow
+  suffix: Yellow, Right
+  components:
+  - type: Sprite
+    state: right_yellow
