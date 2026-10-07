@@ -1,6 +1,7 @@
 ﻿- type: palette # Adapted from the departmental palette
   id: NTInteriorDesign
   hidden: true
+  name: NT Fabrics
   colors:
     navyLight: "#5F7FA3" # Command
     navyDark: "#243A56"
@@ -40,6 +41,7 @@
 - type: palette
   id: TechniColors
   hidden: true
+  name: TechniColor
   colors:
     TechniRed: "#d24949"
     TechniOrange: "#db9e53"
@@ -51,6 +53,7 @@
 
 - type: palette
   id: LSSilks
+  name: Silks
   hidden: true
   colors:
     SilkWhite: "#F8F6F3"
