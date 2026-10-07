@@ -1,4 +1,15 @@
-# region Misc
+#region colorable
+- type: entity
+  parent: [ ClothingHeadHatBeret, ClothingHeadRandomSpriteMono ]
+  id: ClothingHeadHatBeretColorable
+  name: colored beret
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi
+
+#region Misc
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatRegalCrown

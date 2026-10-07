@@ -106,6 +106,7 @@
     - Dead
   - type: Inventory
     templateId: diona
+    speciesId: diona #imp
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -126,6 +127,7 @@
     species: Diona
   - type: Inventory
     templateId: diona
+    speciesId: diona #imp
     femaleDisplacements:
       jumpsuit:
         sizeMaps:

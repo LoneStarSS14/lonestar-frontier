@@ -69,7 +69,7 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
             [EmoteCategory.Felinid] = ("emote-menu-category-felinid",
                 new SpriteSpecifier.Texture(new ResPath("/Textures/_CS/Emojis/cat.png"))),
             [EmoteCategory.Shadekin] = ("emote-menu-category-shadekin",
-                new SpriteSpecifier.Texture(new ResPath("/Textures/_Starlight/Objects/Fun/Plushies/shadekin_plushie.rsi/icon.png"))),
+                new SpriteSpecifier.Texture(new ResPath("/Textures/_CS/Emojis/shadekin.png"))),
         };
 
     private static readonly HashSet<EmoteCategory> AlwaysEnabledCategories = new()

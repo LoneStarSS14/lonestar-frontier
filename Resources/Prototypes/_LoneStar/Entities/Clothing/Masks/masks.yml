@@ -1,0 +1,29 @@
+- type: entity
+  parent: ClothingMaskClownBase
+  id: ClothingMaskKistune
+  name: kitsune mask
+  description: A painted wooden mask, it resembles a fox.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Mask/kitsune_mask.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Mask/kitsune_mask.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Snout
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskClownNose
+  name: clown nose
+  description: A particularly controversial fashion statement in clown culture.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Mask/clownnose.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Mask/clownnose.rsi

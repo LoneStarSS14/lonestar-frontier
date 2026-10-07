@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsWristCuffsSpiked
+  name: spiked wrist cuffs
+  description: Fashionable leather cuffs, worn on the wrists, with decorative metal spikes around the circumference.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Misc/spiked_wrist_cuff.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Hands/Misc/spiked_wrist_cuff.rsi

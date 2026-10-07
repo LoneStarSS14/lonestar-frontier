@@ -4210,3 +4210,63 @@ Entries:
   id: 460
   time: '2026-10-04T08:11:11.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/218
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Rogue silicon Catcher's Viscerator unit summons no longer have silicon
+        loot bags.
+  id: 461
+  time: '2026-10-05T07:39:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/223
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Hydroponics trays, rollerbeds, and the janitor trolley have had their
+        textures updated.
+  id: 462
+  time: '2026-10-05T07:53:46.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/224
+- author: archee1
+  changes:
+    - type: Fix
+      message: Shadekin's emote wheel icon is not an error anymore.
+    - type: Fix
+      message: >-
+        Shadekin now passively heal asphyxiation slowly while their blood is
+        healthy.
+    - type: Fix
+      message: >-
+        Shadekin now have full access to other markings that all other species
+        have access to.
+  id: 463
+  time: '2026-10-05T09:20:48.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/225
+- author: lexiwitch
+  changes:
+    - type: Add
+      message: >-
+        Ship renaming! Now you can finally fly around in Spacey McSpaceFace
+        without badgering the SR!
+  id: 464
+  time: '2026-10-05T19:04:08.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/190
+- author: archee1
+  changes:
+    - type: Add
+      message: A range of new clothing ported from Den and Imp.
+    - type: Tweak
+      message: The chameleon collar can now disguise as scarfs.
+  id: 465
+  time: '2026-10-05T19:17:54.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/222
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: >-
+        Adds the bio djinn lathe, a bio generator with a larger self filling
+        buffer of biomass
+  id: 466
+  time: '2026-10-06T10:06:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/221

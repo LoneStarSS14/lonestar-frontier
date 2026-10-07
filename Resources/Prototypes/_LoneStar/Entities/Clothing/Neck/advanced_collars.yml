@@ -1,14 +1,25 @@
 #region collars
 - type: entity
+  parent: ClothingNeckCollarBaseFoldable
+  id: ClothingNeckAdvancedCollarCowBell
+  name: advanced cowbell collar
+  description: A way to inform others about the presence of livestock, or just to annoy everyone around you! Can be unfolded to appear thicker.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_cowbell.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_cowbell.rsi
+
+- type: entity
   parent: ClothingNeckAdvancedCollarBase
   id: ClothingNeckAdvancedCollarChameleon
   name: advanced chameleon collar
   description: A modular black collar that can have various functional modules installed.
   components:
   - type: Sprite
-    sprite: Floof/Clothing/Neck/collar_black.rsi
+    sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
   - type: Clothing
-    sprite: Floof/Clothing/Neck/collar_black.rsi
+    sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
     equipDelay: 5 # Longer to 'hint' that its not a regular whatever its looking like
   - type: Tag
     tags: [] # ignore "WhitelistChameleon" tag

@@ -17,6 +17,7 @@
     slots:
     - belt
   - type: Storage
+    maxItemSize: Large # LoneStar
     quickInsert: true
     areaInsert: true
     whitelist:

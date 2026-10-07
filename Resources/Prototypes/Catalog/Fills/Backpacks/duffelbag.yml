@@ -109,20 +109,22 @@
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledCarbine
-  name: M-90gl bundle
-  description: "A versatile battle rifle with an attached grenade launcher, bundled with 3 magazines and 6 grenades of various capabilities."
+  name: M-90 bundle
+  description: "A handy carbine chambered in .20, bundled with 3 magazines." # LoneStar
   components:
   - type: StorageFill
     contents:
       - id: NFWeaponRifleAssaultM90GrenadeLauncher # Frontier: WeaponRifleM90GrenadeLauncher<NFWeaponRifleAssaultM90GrenadeLauncher
       - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
         amount: 2
-      - id: NFGrenadeBlast # Frontier: GrenadeBlast<NFGrenadeBlast
-        amount: 2
-      - id: NFGrenadeFlash # Frontier: GrenadeFlash<NFGrenadeFlash
-        amount: 2
-      - id: NFGrenadeFrag # Frontier: GrenadeFrag<NFGrenadeFrag
-        amount: 2
+  # LoneStar start
+  #     - id: NFGrenadeBlast
+  #       amount: 2
+  #     - id: NFGrenadeFlash
+  #       amount: 2
+  #     - id: NFGrenadeFrag
+  #       amount: 2
+  # LoneStar end
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateAmmo

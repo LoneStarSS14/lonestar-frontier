@@ -1,0 +1,28 @@
+- type: entity
+  abstract: true
+  id: ClothingHeadRandomSpriteMono
+  suffix: Random
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "head-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        map: [ "head-equipped" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - head-icon:
+          icon: Base
+        head-equipped:
+          equipped-HELMET: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable

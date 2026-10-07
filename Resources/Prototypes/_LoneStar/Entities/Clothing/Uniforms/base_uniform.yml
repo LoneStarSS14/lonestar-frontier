@@ -1,0 +1,28 @@
+- type: entity
+  abstract: true
+  id: ClothingUniformRandomSpriteMono
+  suffix: Random
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "uniform-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-equipped" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - uniform-icon:
+          icon: Base
+        uniform-equipped:
+          equipped-INNERCLOTHING: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable

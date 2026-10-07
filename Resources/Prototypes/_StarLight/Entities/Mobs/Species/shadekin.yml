@@ -62,6 +62,7 @@
         Bloodloss: 1
     bloodlossHealDamage:
       types:
+        Asphyxiation: -0.05
         Bloodloss: -0.25
     bloodReagent: DarkBlood # Wayfarer: Wait for upstream to use bloodReferenceSolution
     # Wayfarer
