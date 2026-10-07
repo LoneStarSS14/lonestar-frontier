@@ -68,10 +68,6 @@
       "directions": 4
     },
     {
-      "name": "left_red",
-      "directions": 4
-    },
-    {
       "name": "left_syndie",
       "directions": 4
     },
@@ -145,10 +141,6 @@
     },
     {
       "name": "right_rainbow",
-      "directions": 4
-    },
-    {
-      "name": "right_red",
       "directions": 4
     },
     {
