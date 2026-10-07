@@ -3,7 +3,7 @@
   id: BaseDoubleBed
   abstract: true
   categories: [ HideSpawnMenu ]
-  name: BaseDoubleBed
+  name: "double bed"
   description: "This is used to lie in, sleep in or strap to. Double the bed, double the fun!"
   components:
   - type: Sprite
@@ -31,7 +31,6 @@
 - type: entity
   parent: BaseDoubleBed
   id: DoubleBedLeft
-  name: "double bed"
   suffix: Left
   components:
   - type: Sprite
@@ -48,8 +47,6 @@
 - type: entity
   parent: BaseDoubleBed
   id: DoubleBedRight
-  name: "double bed"
-  description: "This is used to lie in, sleep in or strap to. Double the bed, double the fun!"
   suffix: Right
   components:
   - type: Sprite
