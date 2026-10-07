@@ -1,0 +1,38 @@
+
+# Pizza Box
+- type: entity
+  parent: BoxCardboard
+  id: FoodCheapBoxPizza
+  name: pizza box
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Consumable/Food/Containers/little_cheesers_box.rsi
+    drawdepth: SmallObjects
+    layers:
+    - state: box
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: box-open
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Storage
+    grid:
+    - 0,0,3,1
+    maxItemSize: Normal
+    whitelist:
+      components:
+      - Utensil
+      tags:
+      - Pizza
+      - CheapPizza
+      - LittleCheesers
+  - type: Item
+    sprite: _LoneStar/Objects/Consumable/Food/Containers/little_cheesers_box.rsi
+    heldPrefix: box
+    shape:
+    - 0,0,2,1
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: box-open
+    stateDoorClosed: box
+  - type: StaticPrice
+    price: 0
+  - type: NFIngredient # Frontier

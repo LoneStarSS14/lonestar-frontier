@@ -583,6 +583,7 @@
     seedId: cabbage
   - type: Tag
     tags:
+    - Cabbage
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -595,6 +596,10 @@
   id: FoodGarlic
   description: Delicious, but with a potentially overwhelming odor.
   components:
+  - type: Tag
+    tags:
+    - Garlic
+    - Vegetable
   - type: FlavorProfile
     flavors:
       - garlic
@@ -613,9 +618,6 @@
     sprite: Objects/Specific/Hydroponics/garlic.rsi
   - type: Produce
     seedId: garlic
-  - type: Tag
-    tags:
-    - Vegetable
   - type: FoodSequenceElement
     entries:
       Burger: GarlicBurger
@@ -928,6 +930,9 @@
         solution: food
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: SliceableFood
+    count: 5
+    slice: FoodTomatoSlice
   - type: Tag
     tags:
     - Fruit
@@ -1377,6 +1382,7 @@
     tags:
     - Fruit
     - Slice
+    - PineappleSlice
   - type: FoodSequenceElement
     entries:
       Burger: PineappleSliceBurger
@@ -1408,6 +1414,8 @@
     tags:
     - Vegetable
     - Slice
+    - SlicedVegetable
+    - OnionSlice
   - type: FoodSequenceElement
     entries:
       Burger: OnionSliceBurger
@@ -1439,10 +1447,42 @@
     tags:
     - Vegetable
     - Slice
+    - SlicedVegetable
   - type: FoodSequenceElement
     entries:
       Burger: OnionRedSliceBurger
       Taco: OnionRedSlice
+
+- type: entity
+  name: tomato slice
+  parent: ProduceSliceBase
+  id: FoodTomatoSlice
+  description: A slice of tomato.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - onion
+  - type: Sprite
+    sprite: Objects/Consumable/Food/meat.rsi
+    state: tomato
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 2
+        - ReagentId: Water
+          Quantity: 1
+        - ReagentId: Vitamin
+          Quantity: 1
+  - type: Tag
+    tags:
+    - Vegetable
+    - Fruit
+    - Slice
+    - SlicedVegetable
+    - TomatoSlice
 
 - type: entity
   name: chili pepper
@@ -1473,6 +1513,7 @@
   - type: Tag
     tags:
     - Vegetable
+    - Chili
   - type: FoodSequenceElement
     entries:
       Taco: ChiliPepper
@@ -2278,7 +2319,7 @@
   name: grapes
   parent: FoodProduceBase
   id: FoodGrape
-  description: The food of emperors, Space France inhabitants (usually as wine) and soccer moms. One day it could be used in wine production for the bartender if he ever runs out.
+  description: The food of emperors, French People (usually as wine) and soccer moms. One day it could be used in wine production for the bartender if he ever runs out.
   components:
   - type: FlavorProfile
     flavors:
@@ -2471,6 +2512,7 @@
   - type: Tag
     tags:
     - Vegetable
+    - WorldPeas
   - type: FoodSequenceElement
     entries:
       Taco: WorldPea

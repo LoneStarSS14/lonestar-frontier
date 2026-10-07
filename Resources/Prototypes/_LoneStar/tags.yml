@@ -22,3 +22,89 @@
 - type: Tag
   id: RechargerBlacklist
 
+- type: Tag
+  id: TomatoPuree
+
+- type: Tag
+  id: PestoPuree
+
+- type: Tag
+  id: BbqPuree
+
+- type: Tag
+  id: Mozzarella
+
+- type: Tag
+  id: CheeseSlice
+
+- type: Tag
+  id: ChevreSlice
+
+- type: Tag
+  id: CurdCheese
+
+- type: Tag
+  id: ChickenCutlet
+
+- type: Tag
+  id: SpiderCutlet
+
+- type: Tag
+  id: XenoCutlet
+
+- type: Tag
+  id: SalamiSlice
+
+- type: Tag
+  id: PepperoniSlice
+
+- type: Tag
+  id: RawBacon
+
+- type: Tag
+  id: RawSausage
+
+- type: Tag
+  id: RawFish
+
+- type: Tag
+  id: CrabMeat
+
+- type: Tag
+  id: Chili
+
+- type: Tag
+  id: FoodGarlic
+
+- type: Tag
+  id: Cabbage
+
+- type: Tag
+  id: SlicedVegetable
+
+- type: Tag
+  id: TomatoSlice
+
+- type: Tag
+  id: OnionSlice
+
+- type: Tag
+  id: PineappleSlice
+
+- type: Tag
+  id: CannabisButter
+
+- type: Tag
+  id: Cannabis
+
+- type: Tag
+  id: WorldPeas
+
+- type: Tag
+  id: CheapPizza
+
+- type: Tag
+  id: DonkCo
+
+- type: Tag
+  id: LittleCheesers

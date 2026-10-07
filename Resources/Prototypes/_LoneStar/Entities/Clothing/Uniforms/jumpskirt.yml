@@ -403,3 +403,17 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/performer-alt.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/performer-alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtLittleCheesers
+  name: Little Cheeser's Uniform
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/little-cheesers-skirt.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/little-cheesers-skirt.rsi
+  - type: Tag
+    tags:
+    - LittleCheesers
+    - Clothing

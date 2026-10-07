@@ -1,0 +1,32 @@
+# Little Cheesers cup
+- type: entity
+  parent: DrinkBase
+  id: DrinkLittleCheesersCup
+  name: Little Cheeser's cup
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      Cardboard: 25
+  - type: ExaminableSolution
+    solution: drink
+  - type: FitsInDispenser
+    solution: drink
+  - type: Tag
+    tags:
+    - DrinkGlass
+    - DonkCo
+    - LittleCheesers
+  - type: Sprite
+    sprite: _LoneStar/Objects/Consumable/Food/Containers/little_cheesers_cup.rsi
+    state: icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Appearance
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30

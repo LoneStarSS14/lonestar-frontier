@@ -690,6 +690,9 @@
   - type: Sprite
     state: butter
     color: "#82C36E"
+  - type: Tag
+    tags:
+    - CannabisButter
   - type: SolutionContainerManager
     solutions:
       food:
@@ -739,6 +742,7 @@
           Quantity: 3.75
   - type: Tag
     tags:
+    - CheeseWedge
     - Slice
   - type: FoodSequenceElement
     entries:
@@ -794,6 +798,7 @@
   - type: Tag
     tags:
     - Slice
+    - ChevreSlice
 
 - type: entity
   name: tofu

@@ -125,6 +125,9 @@
   - type: SliceableFood
     count: 3
     slice: FoodMeatCutlet
+  - type: Tag
+    tags:
+    - Meat
 
 - type: entity
   name: raw carp fillet
@@ -140,6 +143,7 @@
     tags:
     - Raw
     - Meat
+    - RawFish
   - type: Sprite
     state: fish
   - type: SolutionContainerManager
@@ -165,6 +169,7 @@
     tags:
     - Raw
     - Meat
+    - RawBacon
   - type: Sprite
     state: bacon
   - type: SolutionContainerManager
@@ -207,6 +212,9 @@
     graph: BearSteak
     node: start
     defaultTarget: filet migrawr
+  - type: Tag
+    tags:
+    - Meat
 
 - type: entity
   name: raw penguin meat
@@ -232,6 +240,9 @@
     graph: PenguinSteak
     node: start
     defaultTarget: cooked penguin
+  - type: Tag
+    tags:
+    - Meat
 
 - type: entity
   name: raw chicken meat
@@ -258,6 +269,9 @@
     graph: ChickenSteak
     node: start
     defaultTarget: cooked chicken
+  - type: Tag
+    tags:
+    - Meat
 
 - type: entity
   name: raw duck meat
@@ -283,6 +297,9 @@
     graph: DuckSteak
     node: start
     defaultTarget: cooked duck
+  - type: Tag
+    tags:
+    - Meat
 
 - type: entity
   name: prime-cut corgi meat
@@ -319,6 +336,9 @@
       - crabby
   - type: Sprite
     state: crab
+  - type: Tag
+    tags:
+    - CrabMeat
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1430,6 +1450,7 @@
     - Raw
     - Cutlet
     - Meat
+    - ChickenCutlet
   - type: Sprite
     state: cutlet
     color: white
@@ -1514,6 +1535,7 @@
     - Raw
     - Cutlet
     - Meat
+    - SpiderCutlet
   - type: Sprite
     state: spidercutlet
   - type: SolutionContainerManager
@@ -1544,6 +1566,7 @@
     - Raw
     - Cutlet
     - Meat
+    - XenoCutlet
   - type: Sprite
     state: xenocutlet
   - type: SolutionContainerManager
@@ -1584,6 +1607,7 @@
     - Raw
     - Cutlet
     - Meat
+    - SalamiSlice
   - type: Sprite
     state: salami-slice
   - type: SolutionContainerManager

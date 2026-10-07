@@ -682,7 +682,7 @@
     FoodOnionRingsBattered: 1 # Frontier FoodOnionSlice<FoodOnionRingsBattered
   recipeType: Oven # Frontier
 
-#Pizzas TODO: contruction graph based pizza
+#Pizzas # LoneStar make the raw variant via Construction Graphs
 - type: microwaveMealRecipe
   id: RecipeMargheritaPizza
   name: margherita pizza recipe
@@ -690,9 +690,7 @@
   time: 30
   group: Pizza
   solids:
-    FoodDoughFlat: 1
-    FoodCheeseSlice: 1
-    FoodTomato: 4
+    FoodMargheritaPizzaRaw: 1
   recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
@@ -702,8 +700,7 @@
   time: 30
   group: Pizza
   solids:
-    FoodDoughFlat: 1
-    FoodMushroom: 5
+    FoodMushroomPizzaRaw: 1
   recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
@@ -713,10 +710,7 @@
   time: 30
   group: Pizza
   solids:
-    FoodDoughFlat: 1
-    FoodMeat: 3
-    FoodCheeseSlice: 1
-    FoodTomato: 1
+    FoodMeatPizzaRaw: 1
   recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
@@ -726,11 +720,7 @@
   time: 30
   group: Pizza
   solids:
-    FoodDoughFlat: 1
-    FoodEggplant: 1
-    FoodCarrot: 1
-    FoodCorn: 1
-    FoodTomato: 1
+    FoodVegetablePizzaRaw: 1
   recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
@@ -740,9 +730,7 @@
   time: 30
   group: Pizza
   solids:
-    FoodDoughFlat: 1
-    FoodMeatChickenCutlet: 3
-    FoodPineappleSlice: 5
+    FoodPineapplePizzaRaw: 1
   recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
@@ -752,10 +740,7 @@
   time: 30
   group: Pizza
   solids:
-    FoodDoughFlat: 1
-    LeavesCannabis: 2
-    FoodCheeseSlice: 1
-    FoodTomato: 1
+    FoodDankPizzaRaw: 1
   recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
@@ -765,10 +750,7 @@
   time: 30
   group: Pizza
   solids:
-    FoodDoughFlat: 1
-    FoodDonkpocketWarm: 3
-    FoodCheeseSlice: 1
-    FoodTomato: 1
+    FoodDonkPocketPizzaRaw: 1
   recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
@@ -778,10 +760,7 @@
   time: 30
   group: Pizza
   solids:
-    FoodDoughFlat: 1
-    FoodChiliPepper: 2
-    FoodTomato: 2
-    SheetUranium1: 2
+    FoodUraniumPizzaRaw: 1
   recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
@@ -791,8 +770,107 @@
   time: 30
   group: Moth
   solids:
-    FoodDoughCottonFlat: 1
-    CottonBol: 4
+    FoodCottonPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheesePizza
+  name: cheese pizza recipe
+  result: FoodPizzaCheese
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheesePizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipePepperoniPizza
+  name: pepperoni pizza recipe
+  result: FoodPizzaPepperoni
+  time: 30
+  group: Pizza
+  solids:
+    FoodPepperoniPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeSausagePizza
+  name: sausage pizza recipe
+  result: FoodPizzaSausage
+  time: 30
+  group: Pizza
+  solids:
+    FoodSausagePizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeStingerPizza
+  name: stinger pizza recipe
+  result: FoodPizzaStinger
+  time: 30
+  group: Pizza
+  solids:
+    FoodStingerPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeSeafoodPizza
+  name: seafood pizza recipe
+  result: FoodPizzaSeafood
+  time: 30
+  group: Pizza
+  solids:
+    FoodSeafoodPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeFirecrackerPizza
+  name: firecracker pizza recipe
+  result: FoodMothPizzaFirecracker
+  time: 30
+  group: Pizza
+  solids:
+    FoodFirecrackerPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeFiveCheesePizza
+  name: five cheese pizza recipe
+  result: FoodMothPizzaFiveCheese
+  time: 30
+  group: Pizza
+  solids:
+    FoodFourCheesePizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeSupremePizza
+  name: supreme pizza recipe
+  result: FoodPizzaSupreme
+  time: 30
+  group: Pizza
+  solids:
+    FoodSupremePizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipePestoPizza
+  name: pesto pizza recipe
+  result: FoodMothPizzaPesto
+  time: 30
+  group: Pizza
+  solids:
+    FoodPestoPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeChickenGarlicPizza
+  name: chicken garlic pizza recipe
+  result: FoodPizzaChickenGarlic
+  time: 30
+  group: Pizza
+  solids:
+    FoodChickenGarlicPizzaRaw: 1
   recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
@@ -800,9 +878,9 @@
   name: world peazza recipe
   result: FoodPizzaWorldpeas
   time: 30
+  group: Pizza
   solids:
-    FoodDoughFlat: 1
-    FoodWorldPeas: 3
+    FoodWorldPeazzaRaw: 1
   recipeType: Oven # Frontier
 
 #Italian

@@ -10,6 +10,9 @@
     sprite: Objects/Specific/Hydroponics/cannabis.rsi
   - type: Produce
     seedId: cannabis
+  - type: Tag
+    tags:
+    - Cannabis
   - type: Food
   - type: SolutionContainerManager
     solutions:
@@ -28,6 +31,9 @@
   - type: Stack
     stackType: LeavesCannabisDried
     count: 1
+  - type: Tag
+    tags:
+    - Cannabis
   - type: SolutionContainerManager
     solutions:
       food:
@@ -63,6 +69,7 @@
   - type: Tag
     tags:
       - Smokable
+      - Cannabis
   - type: Item
     size: Tiny
 
@@ -77,6 +84,9 @@
     - sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
       state: produce
       shader: unshaded
+  - type: Tag
+    tags:
+    - Cannabis
   - type: Produce
     seedId: rainbowCannabis
   # disabled because 50 morbillion point lights still break the lighting engine
@@ -111,6 +121,9 @@
   - type: Stack
     stackType: LeavesCannabisRainbowDried
     count: 1
+  - type: Tag
+    tags:
+    - Cannabis
   - type: SolutionContainerManager
     solutions:
       food:
@@ -141,6 +154,9 @@
   - type: Stack
     stackType: GroundCannabisRainbow
     count: 1
+  - type: Tag
+    tags:
+    - Cannabis
   - type: SolutionContainerManager
     solutions:
       food:

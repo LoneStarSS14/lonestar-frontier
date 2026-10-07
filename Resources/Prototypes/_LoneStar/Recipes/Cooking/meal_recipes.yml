@@ -1,0 +1,176 @@
+# Pizza Stuff
+
+- type: microwaveMealRecipe
+  id: FoodTomatoPuree
+  name: Tomato Puree
+  result: FoodTomatoPuree
+  time: 5
+  group: Salad
+  reagents:
+    TomatoSauce: 3
+  recipeType: Assembler
+
+- type: microwaveMealRecipe
+  id: FoodPestoPuree
+  name: Pesto Puree
+  result: FoodPestoPuree
+  time: 5
+  group: Salad
+  reagents:
+    Pesto: 3
+  recipeType: Assembler
+
+- type: microwaveMealRecipe
+  id: FoodBbqPuree
+  name: BBQ Puree
+  result: FoodBbqPuree
+  time: 5
+  group: Savory
+  reagents:
+    BbqSauce: 3
+  recipeType: Assembler
+
+# Pepperoni
+- type: microwaveMealRecipe
+  id: RecipePepperoni
+  name: raw pepperoni recipe
+  result: FoodPepperoni
+  time: 10
+  group: Savory
+  solids:
+    FoodSausageCasing: 1
+  reagents:
+    UncookedAnimalProteins: 9
+    Blackpepper: 3
+  recipeType:
+  - Assembler
+
+- type: microwaveMealRecipe
+  id: RecipePepperoniRawStomachRat
+  name: raw stomach sausage recipe
+  result: RecipePepperoni
+  time: 10
+  group: Savory
+  solids:
+    OrganRatStomach: 1
+  reagents:
+    UncookedAnimalProteins: 9
+    Blackpepper: 3
+  recipeType:
+  - Assembler
+
+- type: microwaveMealRecipe
+  id: RecipePepperoniRawStomachHuman
+  name: raw stomach pepperoni recipe
+  result: RecipePepperoni
+  time: 10
+  group: Savory
+  solids:
+    OrganHumanStomach: 1
+  reagents:
+    UncookedAnimalProteins: 9
+    Blackpepper: 3
+  recipeType:
+  - Assembler
+
+#Little Cheesers 3D Printed Pizzas
+
+- type: microwaveMealRecipe
+  id: RecipeCheapCheesePizza
+  name: cheese pizza recipe
+  result: FoodCheapPizzaCheese
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheapCheesePizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheapPepperoniPizza
+  name: pepperoni pizza recipe
+  result: FoodCheapPizzaPepperoni
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheapPepperoniPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheapMeatPizza
+  name: meatzza recipe
+  result: FoodCheapPizzaMeat
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheapMeatPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheapHawaiianPizza
+  name: Hawaiian pizza recipe
+  result: FoodCheapPizzaPineapple
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheapPineapplePizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheapSupremePizza
+  name: supreme pizza recipe
+  result: FoodCheapPizzaSupreme
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheapSupremePizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheapVegetablePizza
+  name: vegetable pizza recipe
+  result: FoodCheapPizzaVegetable
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheapVegetablePizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheapSausagePizza
+  name: sausage pizza recipe
+  result: FoodCheapPizzaSausage
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheapSausagePizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheapMushroomPizza
+  name: mushroom pizza recipe
+  result: FoodCheapPizzaMushroom
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheapMushroomPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheapCottonPizza
+  name: cotton pizza recipe
+  result: FoodCheapPizzaCotton
+  time: 30
+  group: Moth
+  solids:
+    FoodCheapCottonPizzaRaw: 1
+  recipeType: Oven # Frontier
+
+- type: microwaveMealRecipe
+  id: RecipeCheapStingerPizza
+  name: stinger pizza recipe
+  result: FoodCheapPizzaStinger
+  time: 30
+  group: Pizza
+  solids:
+    FoodCheapStingerPizzaRaw: 1
+  recipeType: Oven # Frontier

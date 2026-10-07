@@ -12,7 +12,7 @@
       - bread
   - type: Food
   - type: Sprite
-    sprite: Objects/Consumable/Food/Baked/pizza.rsi
+    sprite: _LoneStar/Objects/Consumable/Food/pizza.rsi
   - type: SolutionContainerManager
     solutions:
       food:
@@ -46,7 +46,7 @@
       - bread
   - type: Food
   - type: Sprite
-    sprite: Objects/Consumable/Food/Baked/pizza.rsi
+    sprite: _LoneStar/Objects/Consumable/Food/pizza.rsi
   - type: SolutionContainerManager
     solutions:
       food:
@@ -82,7 +82,7 @@
       - bread
   - type: Sprite
     layers:
-    - state: margherita
+    - state: pizza-margherita
   - type: SliceableFood
     slice: FoodPizzaMargheritaSlice
 
@@ -115,7 +115,7 @@
       - bread
   - type: Sprite
     layers:
-    - state: meat
+    - state: pizza-meat
   - type: SliceableFood
     slice: FoodPizzaMeatSlice
   - type: Tag
@@ -143,7 +143,6 @@
     - Meat
     - Pizza
     - Slice
-# Tastes like crust, tomato, cheese, meat.
 
 - type: entity
   name: mushroom pizza
@@ -158,7 +157,7 @@
       - bread
   - type: Sprite
     layers:
-    - state: mushroom
+    - state: pizza-mushroom
   - type: SliceableFood
     slice: FoodPizzaMushroomSlice
 
@@ -176,7 +175,6 @@
   - type: Sprite
     layers:
     - state: mushroom-slice
-# Tastes like crust, tomato, cheese, mushroom.
 
 - type: entity
   name: vegetable pizza
@@ -194,7 +192,7 @@
       - bread
   - type: Sprite
     layers:
-    - state: vegetable
+    - state: pizza-vegetable
   - type: SliceableFood
     slice: FoodPizzaVegetableSlice
   - type: SolutionContainerManager
@@ -243,7 +241,6 @@
         - ReagentId: Flavorol
           Quantity: 3
 
-# Tastes like crust, tomato, cheese, carrot.
 
 - type: entity
   name: donk-pocket pizza
@@ -256,7 +253,7 @@
       - donk
   - type: Sprite
     layers:
-    - state: donkpocket
+    - state: pizza-donkpocket
   - type: SliceableFood
     slice: FoodPizzaDonkpocketSlice
   - type: SolutionContainerManager
@@ -308,7 +305,6 @@
     - Meat
     - Pizza
     - Slice
-# Tastes like crust, tomato, cheese, meat, laziness.
 
 - type: entity
   name: dank pizza
@@ -324,7 +320,7 @@
       - leafy
   - type: Sprite
     layers:
-    - state: dank
+    - state: pizza-dank
   - type: SliceableFood
     slice: FoodPizzaDankSlice
   - type: SolutionContainerManager
@@ -365,13 +361,12 @@
           Quantity: 5
         - ReagentId: Flavorol # Frontier
           Quantity: 3 # Frontier
-# Tastes like crust, tomato, cheese, meat, satisfaction.
 
 - type: entity
-  name: sassysage pizza
+  name: sausage pizza
   parent: FoodPizzaBase
-  id: FoodPizzaSassysage
-  description: You can really smell the sassiness.
+  id: FoodPizzaSausage
+  description: A pizza without sausage is the absolute wurst.
   components:
   - type: FlavorProfile
     flavors:
@@ -381,18 +376,18 @@
       - bread
   - type: Sprite
     layers:
-    - state: sassysage
+    - state: pizza-sausage
   - type: SliceableFood
-    slice: FoodPizzaSassysageSlice
+    slice: FoodPizzaSausageSlice
   - type: Tag
     tags:
     - Meat
     - Pizza
 
 - type: entity
-  name: slice of sassysage pizza
+  name: slice of sausage pizza
   parent: FoodPizzaSliceBase
-  id: FoodPizzaSassysageSlice
+  id: FoodPizzaSausageSlice
   description: Deliciously sassy.
   components:
   - type: FlavorProfile
@@ -403,13 +398,12 @@
       - bread
   - type: Sprite
     layers:
-    - state: sassysage-slice
+    - state: sausage-slice
   - type: Tag
     tags:
     - Meat
     - Pizza
     - Slice
-# Tastes like crust, tomato, cheese, sausage, sass.
 
 - type: entity
   name: Hawaiian pizza
@@ -426,7 +420,7 @@
       - bread
   - type: Sprite
     layers:
-    - state: pineapple
+    - state: pizza-pineapple
   - type: SliceableFood
     slice: FoodPizzaPineappleSlice
   - type: Tag
@@ -455,7 +449,6 @@
     - Meat
     - Pizza
     - Slice
-# Tastes like crust, tomato, cheese, pineapple, ham.
 
 #TODO: This is a meme pizza from /tg/. It has specially coded mechanics.
 - type: entity
@@ -473,7 +466,7 @@
       - gunpowder
   - type: Sprite
     layers:
-    - state: arnold
+    - state: pizza-arnold
   - type: SliceableFood
     slice: FoodPizzaArnoldSlice
   - type: SolutionContainerManager
@@ -532,7 +525,6 @@
     - Meat
     - Pizza
     - Slice
-# Tastes like crust, tomato, cheese, pepperoni, 9 millimeter bullets.
 
 #TODO: Make this do poison damage and make cut pizza slices eventually rot into this.
 - type: entity
@@ -564,7 +556,6 @@
           Quantity: 2
         - ReagentId: Vitamin
           Quantity: 1
-# Tastes like stale crust, rancid cheese, mushroom.
 
 - type: entity
   name: spicy rock pizza
@@ -580,7 +571,7 @@
     - bread
   - type: Sprite
     layers:
-    - state: uranium-pizza
+    - state: pizza-uranium
   - type: SliceableFood
     slice: FoodPizzaUraniumSlice
   - type: Tag
@@ -637,8 +628,6 @@
         - ReagentId: Uranium
           Quantity: 2
 
-# Tastes like crust, tomato, cheese, radiation.
-
 - type: entity
   name: cotton pizza
   parent: FoodPizzaBase
@@ -651,7 +640,7 @@
     - bread
   - type: Sprite
     layers:
-    - state: cotton-pizza
+    - state: pizza-cotton
   - type: Food
     requiresSpecialDigestion: true
   - type: SliceableFood
@@ -718,7 +707,7 @@
       - numbingtranquility
   - type: Sprite
     layers:
-    - state: worldpeas
+    - state: pizza-worldpeas
   - type: SliceableFood
     slice: FoodPizzaWorldpeasSlice
   - type: SolutionContainerManager
@@ -757,3 +746,264 @@
           Quantity: 2
         - ReagentId: Pax
           Quantity: 1.5
+
+- type: entity
+  name: bbq chicken garlic pizza
+  parent: FoodPizzaBase
+  id: FoodPizzaChickenGarlic
+  description: A flavourful pizza with a smokey after taste.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - garlic
+    - chicken
+  - type: Sprite
+    layers:
+    - state: pizza-meat
+  - type: SliceableFood
+    slice: FoodPizzaChickenGarlicSliceSlice
+
+- type: entity
+  name: slice of bbq chicken garlic pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaChickenGarlicSliceSlice
+  description: A flavourful pizza with a smokey after taste.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - garlic
+    - chicken
+  - type: Sprite
+    layers:
+    - state: meat-slice
+
+- type: entity
+  name: cheese pizza
+  parent: FoodPizzaBase
+  id: FoodPizzaCheese
+  description: As they call it in New York. "Plain"
+  components:
+  - type: FlavorProfile
+    flavors:
+    - basic
+  - type: Sprite
+    layers:
+    - state: pizza-cheese
+  - type: SliceableFood
+    slice: FoodPizzaCheeseSlice
+
+- type: entity
+  name: slice of cheese pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaCheeseSlice
+  description: As they call it in New York. "Plain"
+  components:
+  - type: FlavorProfile
+    flavors:
+    - basic
+  - type: Sprite
+    layers:
+    - state: cheese-slice
+
+- type: entity
+  name: pepperoni pizza
+  parent: FoodPizzaBase
+  id: FoodPizzaPepperoni
+  description: Come on! Let's kill each other over the pepperoni!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - savory
+  - type: Sprite
+    layers:
+    - state: pizza-pepperoni
+  - type: SliceableFood
+    slice: FoodPizzaPepperoniSlice
+
+- type: entity
+  name: slice of pepperoni pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaPepperoniSlice
+  description: Come on! Let's kill each other over the pepperoni!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - savory
+  - type: Sprite
+    layers:
+    - state: pepperoni-slice
+
+- type: entity
+  name: bbq cheese pizza
+  parent: FoodPizzaBase
+  id: FoodPizzaBbqCheese
+  description: You forgot the toppings...
+  components:
+  - type: FlavorProfile
+    flavors:
+    - basic
+  - type: Sprite
+    layers:
+    - state: pizza-cheese
+  - type: SliceableFood
+    slice: FoodPizzaBbqCheeseSlice
+
+- type: entity
+  name: slice of bbq cheese pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaBbqCheeseSlice
+  description: You forgot the toppings...
+  components:
+  - type: FlavorProfile
+    flavors:
+    - basic
+  - type: Sprite
+    layers:
+    - state: cheese-slice
+
+- type: entity
+  name: pesto cheese pizza
+  parent: FoodPizzaBase
+  id: FoodPizzaPestoCheese
+  description: You forgot the toppings...
+  components:
+  - type: FlavorProfile
+    flavors:
+    - basic
+  - type: Sprite
+    layers:
+    - state: pizza-cheese
+  - type: SliceableFood
+    slice: FoodPizzaPestoCheeseSlice
+
+- type: entity
+  name: slice of pesto cheese pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaPestoCheeseSlice
+  description: You forgot the toppings...
+  components:
+  - type: FlavorProfile
+    flavors:
+    - basic
+  - type: Sprite
+    layers:
+    - state: cheese-slice
+
+- type: entity
+  name: supreme pizza
+  parent: FoodPizzaBase
+  id: FoodPizzaSupreme
+  description: A delicious Supreme Pizza topped with onion, pepperoni, and mushrooms.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - savory
+    - onion
+  - type: Sprite
+    layers:
+    - state: pizza-supreme
+  - type: SliceableFood
+    slice: FoodPizzaSupremeSlice
+
+- type: entity
+  name: slice of supreme pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaSupremeSlice
+  description: A delicious Supreme Pizza topped with onion, pepperoni, and mushrooms.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - savory
+    - onion
+  - type: Sprite
+    layers:
+    - state: supreme-slice
+
+- type: entity
+  name: seafood pizza
+  parent: FoodPizzaBase
+  id: FoodPizzaSeafood
+  description: A New Haven specialty, also popular among Feroxi.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - fishy
+    - crabby
+  - type: Sprite
+    layers:
+    - state: pizza-seafood
+  - type: SliceableFood
+    slice: FoodPizzaSeafoodSlice
+
+- type: entity
+  name: slice of seafood pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaSeafoodSlice
+  description: A New Haven specialty, also popular among Feroxi.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - fishy
+    - crabby
+  - type: Sprite
+    layers:
+    - state: seafood-slice
+
+- type: entity
+  name: stinger pizza
+  parent: FoodPizzaBase
+  id: FoodPizzaStingingMeat
+  description: When Humans and Rodentia first brought pizza to Moghes, it was only natural the Unathi would find a way to make it their own.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - pyrotton
+  - type: Sprite
+    layers:
+    - state: pizza-stinger
+  - type: SliceableFood
+    slice: FoodPizzaStingingMeatSlice
+
+
+- type: entity
+  name: slice of stinger pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaStingingMeatSlice
+  description: When Humans and Rodentia first brought pizza to Moghes, it was only natural the Unathi would find a way to make it their own.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cheesy
+    - oily
+    - bread
+    - pyrotton
+  - type: Sprite
+    layers:
+    - state: stinger-slice

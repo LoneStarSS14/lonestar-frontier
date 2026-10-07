@@ -14,6 +14,9 @@
   - type: Sprite
     sprite: Nyanotrasen/Objects/Consumable/Food/cheese.rsi
     state: curdcheese
+  - type: Tag
+    tags:
+    - CurdCheese
   - type: SolutionContainerManager
     solutions:
       food:
@@ -66,3 +69,7 @@
           Quantity: 3
         - ReagentId: Cream
           Quantity: 1
+  - type: Tag # LoneStar Pizza
+    tags:
+      - Ingredient
+      - Mozzarella

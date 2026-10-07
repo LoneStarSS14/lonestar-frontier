@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterApronLittleCheesers
+  name: Little Cheeser's apron
+  description: A waist level apron to protect your company uniform.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OuterClothing/Misc/little_cheesers_apron.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OuterClothing/Misc/little_cheesers_apron.rsi
+  - type: Tag
+    tags:
+    - LittleCheesers
+    - Clothing

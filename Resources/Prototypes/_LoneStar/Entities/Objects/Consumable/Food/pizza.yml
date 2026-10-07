@@ -1,0 +1,478 @@
+
+# Cheap Pizza
+
+- type: entity
+  parent: FoodInjectableBase
+  id: FoodCheapPizzaBase
+  abstract: true
+  components:
+  - type: FlavorProfile
+    flavors:
+      - oily
+      - bread
+      - donk
+  - type: Food
+  - type: Sprite
+    sprite: _LoneStar/Objects/Consumable/Food/pizza.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 60
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 20
+        - ReagentId: Protein
+          Quantity: 2
+        - ReagentId: Fat
+          Quantity: 20
+  - type: SliceableFood
+    count: 8
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,1
+  - type: Tag
+    tags:
+    - Pizza
+    - CheapPizza
+    - ReptilianFood
+
+- type: entity
+  parent: FoodInjectableBase # Not sliceable
+  id: FoodCheapPizzaSliceBase
+  abstract: true
+  components:
+  - type: FlavorProfile
+    flavors:
+      - oily
+      - bread
+      - donk
+  - type: Food
+  - type: Sprite
+    sprite: _LoneStar/Objects/Consumable/Food/pizza.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 8
+        - ReagentId: Protein
+          Quantity: 0.8
+        - ReagentId: Fat
+          Quantity: 8
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - Pizza
+    - CheapPizza
+    - ReptilianFood
+    - Slice
+
+# Little Cheesers Pizza
+
+- type: entity
+  name: Meatzza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaMeat
+  description: The famous "Meatzza" from Little Cheesers. What kinda meats? Fuggedaboutit!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - meaty
+      - donk
+  - type: Sprite
+    layers:
+    - state: pizza-meat
+  - type: SliceableFood
+    slice: FoodCheapPizzaMeatSlice
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - CheapPizza
+
+- type: entity
+  name: slice of Meatzza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodCheapPizzaMeatSlice
+  description: A slice of Little Cheesers' famous Meatzza.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - meaty
+      - donk
+  - type: Sprite
+    layers:
+    - state: meat-slice
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - Slice
+    - CheapPizza
+
+- type: entity
+  name: Fungi Town pizza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaMushroom
+  description: Won't you take me to...
+  components:
+  - type: FlavorProfile
+    flavors:
+      - mushroom
+      - donk
+  - type: Sprite
+    layers:
+    - state: pizza-mushroom
+  - type: SliceableFood
+    slice: FoodCheapPizzaMushroomSlice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: slice of Fungi Town pizza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodPizzaCheapMushroomSlice
+  description: The mushrooms look a little sad.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - mushroom
+      - donk
+  - type: Sprite
+    layers:
+    - state: mushroom-slice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: Veggie Variety pizza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaVegetable
+  description: What kinda vegetables? Fuggedaboutit!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - vegetables
+      - donk
+  - type: Sprite
+    layers:
+    - state: pizza-vegetable
+  - type: SliceableFood
+    slice: FoodCheapPizzaVegetableSlice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: slice of Veggie Variety pizza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodCheapPizzaVegetableSlice
+  description: Finally a "health" option.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - vegetables
+      - donk
+  - type: Sprite
+    layers:
+    - state: vegetable-slice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: Smokin' Sausage pizza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaSausage
+  description: It has that natural* smoke house flavor.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - meaty
+      - donk
+  - type: Sprite
+    layers:
+    - state: pizza-sausage
+  - type: SliceableFood
+    slice: FoodCheapPizzaSausageSlice
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - CheapPizza
+
+- type: entity
+  name: slice of Smokin' Sausage pizza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodCheapPizzaSausageSlice
+  description: What's in the sausage? Fuggedaboutit!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - meaty
+      - donk
+  - type: Sprite
+    layers:
+    - state: sausage-slice
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - Slice
+    - CheapPizza
+
+- type: entity
+  name: Hula Hawaiian pizza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaPineapple
+  description: Authentic Hawaiian flavors of Pork* and Pineapple!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - meaty
+      - pineapple
+      - donk
+  - type: Sprite
+    layers:
+    - state: pizza-pineapple
+  - type: SliceableFood
+    slice: FoodCheapPizzaPineappleSlice
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - CheapPizza
+
+- type: entity
+  name: slice of Hula Hawaiian pizza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodCheapPizzaPineappleSlice
+  description: It tastes pretty good when there isn't a guy complaining about it in your ear.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - meaty
+      - pineapple
+      - donk
+  - type: Sprite
+    layers:
+    - state: pineapple-slice
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - Slice
+    - CheapPizza
+
+- type: entity
+  name: Copious Cotton pizza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaCotton
+  description: Lots and lots of cotton!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cotton
+    - donk
+  - type: Sprite
+    layers:
+    - state: pizza-cotton
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SliceableFood
+    slice: FoodCheapPizzaCottonSlice
+  - type: Tag
+    tags:
+    - ClothMade
+    - Pizza
+    - CheapPizza
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 40
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 20
+  - type: MothFood # Frontier
+
+- type: entity
+  name: slice of Copious Cotton pizza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodCheapPizzaCottonSlice
+  description: The Mothic Fleets LOVE this one!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - cotton
+    - donk
+  - type: Sprite
+    layers:
+    - state: cotton-slice
+  - type: Tag
+    tags:
+    - ClothMade
+    - Pizza
+    - Slice
+    - CheapPizza
+  - type: Food # Frontier
+    requiresSpecialDigestion: true # Frontier
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 3
+  - type: MothFood # Frontier
+
+- type: entity
+  name: Little Cheeser's Plain pizza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaCheese
+  description: Hot N Ready!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - basic
+    - donk
+  - type: Sprite
+    layers:
+    - state: pizza-cheese
+  - type: SliceableFood
+    slice: FoodCheapPizzaCheeseSlice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: slice of Little Cheeser's Plain pizza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodCheapPizzaCheeseSlice
+  description: Popular with the kids!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - basic
+    - donk
+  - type: Sprite
+    layers:
+    - state: cheese-slice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: Little Cheeser's Classic pizza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaPepperoni
+  description: Sauce, Cheese, and Pepperoni. The classic combination. An icon of the big NYC that has journeyed across the stars!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - donk
+    - savory
+  - type: Sprite
+    layers:
+    - state: pizza-pepperoni
+  - type: SliceableFood
+    slice: FoodCheapPizzaPepperoniSlice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: slice of Little Cheeser's Classic pizza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodCheapPizzaPepperoniSlice
+  description: You can't go wrong with the classic!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - donk
+    - savory
+  - type: Sprite
+    layers:
+    - state: pepperoni-slice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: Big Boss pizza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaSupreme
+  description: A Supreme pizza so big, it calls itself da BOSS of other Supreme pizzas. Listen up, capiche?
+  components:
+  - type: FlavorProfile
+    flavors:
+    - donk
+    - savory
+    - onion
+  - type: Sprite
+    layers:
+    - state: pizza-supreme
+  - type: SliceableFood
+    slice: FoodCheapPizzaSupremeSlice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: slice of Big Boss pizza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodCheapPizzaSupremeSlice
+  description: A slice of Little Cheeser's patented Supreme pizza
+  components:
+  - type: FlavorProfile
+    flavors:
+    - donk
+    - savory
+    - onion
+  - type: Sprite
+    layers:
+    - state: supreme-slice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+- type: entity
+  name: Sizzling Spider pizza
+  parent: FoodCheapPizzaBase
+  id: FoodCheapPizzaStingingMeat
+  description: By popular demand from our franchisee's in the Uueoa-Esa system, this Moghesian favorite is now Hot N Ready for you!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - donk
+    - pyrotton
+  - type: Sprite
+    layers:
+    - state: pizza-stinger
+  - type: SliceableFood
+    slice: FoodCheapPizzaStingingMeatSlice
+  - type: Tag
+    tags:
+    - CheapPizza
+
+
+- type: entity
+  name: slice of Sizzling spider pizza
+  parent: FoodCheapPizzaSliceBase
+  id: FoodCheapPizzaStingingMeatSlice
+  description: From Moghes to Ouerea, Unathi can finally unite under the banner of Little Cheeser's!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - donk
+    - pyrotton
+  - type: Sprite
+    layers:
+    - state: stinger-slice
+  - type: Tag
+    tags:
+    - CheapPizza
