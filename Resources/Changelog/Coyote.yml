@@ -4283,3 +4283,10 @@ Entries:
   id: 467
   time: '2026-10-07T11:55:57.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/229
+- author: lexiwitch
+  changes:
+    - type: Tweak
+      message: ChemMaster now pulls from beaker by default.
+  id: 468
+  time: '2026-10-07T20:30:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/233
