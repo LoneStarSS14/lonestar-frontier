@@ -35,19 +35,19 @@
 
 - type: entity
   id: NFBaseMagazinePistolSubMachineGun45
-  name: pistol magazine, extended (.45 pistol) #LoneStar
+  name: smg magazine (.45 pistol)
   parent: [ BaseC1Contraband, BaseMagazineMagnumSubMachineGun, RecyclableItemSteelTiny ]
   abstract: true
   components:
   - type: Tag
     tags:
-      - NFMagazinePistol45 # LoneStar
+      - NFMagazineSubMachineGunPistol45
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
         - NFCartridgePistol45
-    capacity: 13 # LoneStar It's a singlestack
+    capacity: 25
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol45/smg_mag.rsi
     layers:
@@ -66,8 +66,6 @@
       - state: inhand-left-mag
       right:
       - state: inhand-right-mag
-    shape: # LoneStar
-    - 0,0,0,2
 
 #region standard mags .45
 - type: entity
@@ -236,7 +234,7 @@
 #region smg mags .45
 - type: entity
   id: NFMagazineSubMachineGun45Empty
-  name: pistol magazine, extended (.45 pistol, any) # LoneStar
+  name: SMG magazine (.45 pistol, any)
   parent: NFBaseMagazinePistolSubMachineGun45
   components:
   - type: BallisticAmmoProvider
@@ -244,7 +242,7 @@
 
 - type: entity
   id: NFMagazineSubMachineGun45
-  name: pistol magazine, extended (.45 pistol) # LoneStar
+  name: SMG magazine (.45 pistol)
   parent: NFBaseMagazinePistolSubMachineGun45
   components:
   - type: BallisticAmmoProvider
@@ -252,7 +250,7 @@
 
 - type: entity
   id: NFMagazineSubMachineGun45Overpressure
-  name: pistol magazine, extended (.45 pistol, overpressure) # LoneStar
+  name: SMG magazine (.45 pistol, overpressure)
   parent: NFBaseMagazinePistolSubMachineGun45
   components:
   - type: BallisticAmmoProvider
@@ -278,7 +276,7 @@
 
 - type: entity
   id: NFMagazineSubMachineGun45Rubber
-  name: pistol magazine, extended (.45 pistol, rubber) # LoneStar
+  name: SMG magazine (.45 pistol, rubber)
   parent: NFBaseMagazinePistolSubMachineGun45
   components:
   - type: BallisticAmmoProvider
