@@ -31,6 +31,6 @@ namespace Content.Server.Chemistry.Components
         /// Which source the chem master should draw from when making pills/bottles.
         /// </summary>
         [DataField]
-        public ChemMasterDrawSource DrawSource = ChemMasterDrawSource.Internal;
+        public ChemMasterDrawSource DrawSource = ChemMasterDrawSource.External; // LoneStar
     }
 }
