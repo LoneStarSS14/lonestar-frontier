@@ -78,7 +78,7 @@
   name: box magazine (.20 rifle)
   parent: NFBaseMagazineRifle20
   abstract: true
-  description: A 100-round linkless feed system for the GSW LMG-6.
+  description: A 100-round linkless feed system for the GSW LMG-6. # LoneStar
   components:
   - type: Tag
     tags:

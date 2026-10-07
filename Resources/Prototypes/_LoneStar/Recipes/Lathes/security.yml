@@ -1,12 +1,5 @@
 - type: latheRecipe
   parent: BaseEmptyMagazineRecipe
-  id: NFMagazineSubMachineGun45Empty # LoneStar
-  result: NFMagazineSubMachineGun45Empty
-  materials:
-    Steel: 30
-
-- type: latheRecipe
-  parent: BaseEmptyMagazineRecipe
   id: NFMagazineShotgunDrumEmpty
   result: NFMagazineShotgunDrumEmpty
   materials:

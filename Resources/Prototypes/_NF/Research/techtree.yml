@@ -1783,7 +1783,6 @@
   - CSMagazinePistol40Empty
   - CSMagazineSubMachineGun40Empty
   - NFMagazinePistol45Empty
-  - NFMagazineSubMachineGun45Empty # LoneStar
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFBasicAmmunitionProduction
