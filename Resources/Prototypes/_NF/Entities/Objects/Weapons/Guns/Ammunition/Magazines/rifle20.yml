@@ -78,6 +78,7 @@
   name: box magazine (.20 rifle)
   parent: NFBaseMagazineRifle20
   abstract: true
+  description: A 100-round linkless feed system for the GSW LMG-6
   components:
   - type: Tag
     tags:
@@ -98,6 +99,19 @@
       - state: inhand-left
       right:
       - state: inhand-right
+    shape:  # LoneStar
+    - 0,0,1,1 # LoneStar
+
+# LoneStar below
+- type: entity
+  id: LSMagazineBoxRifle20Empty
+  name: box magazine (.20 rifle, any)
+  parent: NFBaseMagazineBoxRifle20
+  suffix: empty
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+# LoneStar end
 
 #region .20 magazines
 - type: entity

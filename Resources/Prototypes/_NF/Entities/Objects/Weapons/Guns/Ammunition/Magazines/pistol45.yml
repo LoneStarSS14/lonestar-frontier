@@ -47,7 +47,7 @@
     whitelist:
       tags:
         - NFCartridgePistol45
-    capacity: 15 # LoneStar It's a singlestack
+    capacity: 13 # LoneStar It's a singlestack
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol45/smg_mag.rsi
     layers:
@@ -66,6 +66,8 @@
       - state: inhand-left-mag
       right:
       - state: inhand-right-mag
+    shape: # LoneStar
+    - 0,0,0,2
 
 #region standard mags .45
 - type: entity

@@ -496,6 +496,7 @@
   - NFMagazineSubMachineGun35Empty
   - NFMagazineSubMachineGunTopMounted35Empty
   - NFMagazinePistol45Empty
+  - NFMagazineSubMachineGun45Empty # LoneStar
   # ImprovedRifleAmmo
   - NFAmmunitionBoxRifle20Overpressure
   - NFAmmunitionBoxRifle30Overpressure
@@ -503,6 +504,8 @@
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
   - NFMagazineDrumRifle20Empty
+  - LSMagazineBoxRifle20Empty # LoneStar
+  - NFMagazineShotgunDrumEmpty # LoneStar
   - MagazineAsmgtUniversalEmpty
   # BulkAmmo
   - NFAmmunitionBoxBigPistol35
