@@ -666,6 +666,6 @@
   description: #TODO
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/present.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/present.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/jumpskirt/present.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/present.rsi
