@@ -12,7 +12,7 @@
 
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtEnteraColorable
+  id: ClothingUniformJumpskirtTailoredGownColorable
   name: tailored gown
   suffix: Random
   components:
@@ -65,8 +65,8 @@
           icon-extra: extra
 
 - type: entity
-  parent: ClothingUniformJumpskirtEnteraColorable
-  id: ClothingUniformJumpskirtEnteraMonoColorable
+  parent: ClothingUniformJumpskirtTailoredGownColorable
+  id: ClothingUniformJumpskirtTailoredGownMonoColorable
   name: tailored gown (simple)
   suffix: Random
   components:
@@ -661,7 +661,7 @@
 
 - type: entity
   parent: [ ClothingUniformSkirtBase ]
-  id: ClothingUniformJumpskirtPresentColorable
+  id: ClothingUniformJumpskirtPresent
   name: backless ribbon dress
   description: #TODO
   components:

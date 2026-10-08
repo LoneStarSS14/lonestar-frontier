@@ -139,6 +139,7 @@
     ClothingUniformJumpskirtSchoolGreen: 4294967295
     ClothingUniformJumpskirtSchoolWhite: 4294967295
     ClothingUniformJumpskirtSchoolBlack: 4294967295
+    ClothingUniformJumpskirtSchoolColorable: 4294967295
     ClothingHandsGlovesColorSatinWhite: 4294967295
     ClothingHandsGlovesColorSatinWhiteLong: 4294967295
     ClothingHeadHatMaidHeadband: 4294967295
@@ -238,7 +239,11 @@
     ClothingUniformJumpsuitCapFormal: 4294967295
     ClothingUniformJumpskirtHosFormal: 4294967295
     ClothingUniformJumpsuitHosFormal: 4294967295
-    ClothingUniformJumpsuitMilitaryBrat: 4294967295 # Lonestar end
+    ClothingUniformJumpsuitMilitaryBrat: 4294967295
+    ClothingUniformJumpskirtPresent: 4294967295
+    ClothingUniformJumpskirtSpottyColorable: 4294967295
+    ClothingUniformJumpskirtCheckerColorable: 4294967295
+    ClothingUniformJumpskirtStraplessColorable: 4294967295 # Lonestar end
     # Euphoria
     ClothingShoesHeelsKitten: 4294967295
     ClothingShoesHeelsKittenBlack: 4294967295
