@@ -30,6 +30,8 @@
   - type: InteractionOutline
   - type: Anchorable
   - type: Pullable
+  - type: Rotatable
+
 
 # Base Double Beds Left
 - type: entity
@@ -43,9 +45,38 @@
     position: Down
     rotation: -90
     buckleOffset: "0, -0.25"
+    hasChairBack: false
+  - type: HealOnBuckle
+    damage:
+      types:
+        Poison: -0.1
+        Blunt: -0.1
+  # Construction has to be before PlaceableSurface or you'll place things onto the entity instead of deconstructing it.
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeft
   - type: PlaceableSurface
     placeCentered: true
     positionOffset: "0, -0.25"
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 3
+          MaterialCloth1:
+            min: 2
+            max: 3
 
 # Base Double Beds Right
 - type: entity
@@ -58,10 +89,39 @@
   - type: Strap
     position: Down
     rotation: -90
-    buckleOffset: "0, 0.35" 
+    buckleOffset: "0, -0.25"
+    hasChairBack: false
+  - type: HealOnBuckle
+    damage:
+      types:
+        Poison: -0.1
+        Blunt: -0.1
+  # Construction has to be before PlaceableSurface or you'll place things onto the entity instead of deconstructing it.
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRight
   - type: PlaceableSurface
     placeCentered: true
-    positionOffset: "0, -0.35"
+    positionOffset: "0, -0.25"
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 3
+          MaterialCloth1:
+            min: 2
+            max: 3
 
 # Children
 # black
@@ -120,6 +180,7 @@
   parent: DoubleBedLeft
   id: DoubleBedLeftCC
   suffix: CC, Left
+  description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
   components:
   - type: Sprite
     state: left_cc
@@ -128,6 +189,7 @@
   parent: DoubleBedRight
   id: DoubleBedRightCC
   suffix: CC, Right
+  description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
   components:
   - type: Sprite
     state: right_cc
@@ -137,6 +199,7 @@
   parent: DoubleBedLeft
   id: DoubleBedLeftClown
   suffix: Clown, Left
+  description: A rainbow blanket with a clown mask woven in. It smells faintly of bananas.
   components:
   - type: Sprite
     state: left_clown
@@ -145,6 +208,7 @@
   parent: DoubleBedRight
   id: DoubleBedRightClown
   suffix: Clown, Right
+  description: A rainbow blanket with a clown mask woven in. It smells faintly of bananas.
   components:
   - type: Sprite
     state: right_clown
@@ -154,6 +218,7 @@
   parent: DoubleBedLeft
   id: DoubleBedLeftCult
   suffix: Cult, Left
+  description: You might dream of Nar'Sie if you sleep in this. It seems rather tattered and glows of an eldritch presence.
   components:
   - type: Sprite
     state: left_cult
@@ -162,6 +227,7 @@
   parent: DoubleBedRight
   id: DoubleBedRightCult
   suffix: Cult, Right
+  description: You might dream of Nar'Sie if you sleep in this. It seems rather tattered and glows of an eldritch presence.
   components:
   - type: Sprite
     state: right_cult
@@ -336,6 +402,23 @@
   - type: Sprite
     state: right_green
 
+# grey
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftGrey
+  suffix: Grey, Left
+  components:
+  - type: Sprite
+    state: left_grey
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightGrey
+  suffix: Grey, Right
+  components:
+  - type: Sprite
+    state: right_grey
+    
 # ian
 - type: entity
   parent: DoubleBedLeft
@@ -358,6 +441,7 @@
   parent: DoubleBedLeft
   id: DoubleBedLeftMime
   suffix: Mime, Left
+  description: A very soothing striped blanket.  All the noise just seems to fade out when you're under the covers in this.
   components:
   - type: Sprite
     state: left_mime
@@ -366,6 +450,7 @@
   parent: DoubleBedRight
   id: DoubleBedRightMime
   suffix: Mime, Right
+  description: A very soothing striped blanket.  All the noise just seems to fade out when you're under the covers in this.
   components:
   - type: Sprite
     state: right_mime
@@ -375,6 +460,7 @@
   parent: DoubleBedLeft
   id: DoubleBedLeftNT
   suffix: NT, Left
+  description: It has the Nanotrasen logo on it and an aura of duty.
   components:
   - type: Sprite
     state: left_nt
@@ -383,6 +469,7 @@
   parent: DoubleBedRight
   id: DoubleBedRightNT
   suffix: NT, Right
+  description: It has the Nanotrasen logo on it and an aura of duty.
   components:
   - type: Sprite
     state: right_nt
@@ -460,6 +547,7 @@
   parent: DoubleBedLeft
   id: DoubleBedLeftSyndie
   suffix: Syndie, Left
+  description: It has a syndicate emblem and it has an aura of evil.
   components:
   - type: Sprite
     state: left_syndie
@@ -468,6 +556,7 @@
   parent: DoubleBedRight
   id: DoubleBedRightSyndie
   suffix: Syndie, Right
+  description: It has a syndicate emblem and it has an aura of evil.
   components:
   - type: Sprite
     state: right_syndie
@@ -477,6 +566,7 @@
   parent: DoubleBedLeft
   id: DoubleBedLeftTSF
   suffix: TSF, Left
+  description: The TSF can now sleep soundly, and patriotically.
   components:
   - type: Sprite
     state: left_tsf
@@ -485,6 +575,7 @@
   parent: DoubleBedRight
   id: DoubleBedRightTSF
   suffix: TSF, Right
+  description: The TSF can now sleep soundly, and patriotically.
   components:
   - type: Sprite
     state: right_tsf
@@ -528,6 +619,7 @@
   parent: DoubleBedLeft
   id: DoubleBedLeftWizard
   suffix: Wizard, Left
+  description: A special fabric enchanted with magic so you can have an enchanted night. It even glows!
   components:
   - type: Sprite
     state: left_wizard
@@ -536,6 +628,7 @@
   parent: DoubleBedRight
   id: DoubleBedRightWizard
   suffix: Wizard, Right
+  description: A special fabric enchanted with magic so you can have an enchanted night. It even glows!
   components:
   - type: Sprite
     state: right_wizard

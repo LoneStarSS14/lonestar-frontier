@@ -1,0 +1,997 @@
+# SPDX-FileCopyrightText: 2026 Sushiburger
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Double Bed Recipes
+
+# Base Bed Left
+- type: construction
+  name: double bed left (base)
+  id: DoubleBedLeft
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeft
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left
+  objectType: Structure
+
+# Base Bed Right
+- type: construction
+  name: double bed right (base)
+  id: DoubleBedRight
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRight
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right
+  objectType: Structure
+
+# Black Bed Left
+- type: construction
+  name: double bed left (black)
+  id: DoubleBedLeftBlack
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftBlack
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_black
+  objectType: Structure
+
+# Black Bed Right
+- type: construction
+  name: double bed right (black)
+  id: DoubleBedRightBlack
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightBlack
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_black
+  objectType: Structure
+
+# Blue Bed Left
+- type: construction
+  name: double bed left (blue)
+  id: DoubleBedLeftBlue
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftBlue
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_blue
+  objectType: Structure
+
+# Blue Bed Right
+- type: construction
+  name: double bed right (blue)
+  id: DoubleBedRightBlue
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightBlue
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_blue
+  objectType: Structure
+
+# Brown Bed Left
+- type: construction
+  name: double bed left (brown)
+  id: DoubleBedLeftBrown
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftBrown
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_brown
+  objectType: Structure
+
+# Brown Bed Right
+- type: construction
+  name: double bed right (brown)
+  id: DoubleBedRightBrown
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightBrown
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_brown
+  objectType: Structure
+
+# CC Bed Left
+- type: construction
+  name: double bed left (centcom)
+  id: DoubleBedLeftCC
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftCC
+  category: construction-category-furniture
+  description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_cc
+  objectType: Structure
+
+# CC Bed Right
+- type: construction
+  name: double bed right (centcom)
+  id: DoubleBedRightCC
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightCC
+  category: construction-category-furniture
+  description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_cc
+  objectType: Structure
+
+# Clown Bed Left
+- type: construction
+  name: double bed left (clown)
+  id: DoubleBedLeftClown
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftClown
+  category: construction-category-furniture
+  description: A rainbow blanket with a clown mask woven in. It smells faintly of bananas.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_clown
+  objectType: Structure
+
+# Clown Bed Right
+- type: construction
+  name: double bed right (clown)
+  id: DoubleBedRightClown
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightClown
+  category: construction-category-furniture
+  description: A rainbow blanket with a clown mask woven in. It smells faintly of bananas.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_clown
+  objectType: Structure
+
+# Cult Bed Left
+- type: construction
+  name: double bed left (cult)
+  id: DoubleBedLeftCult
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftCult
+  category: construction-category-furniture
+  description: You might dream of Nar'Sie if you sleep on this. It seems rather tattered and glows of an eldritch presence.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_cult
+  objectType: Structure
+
+# Cult Bed Right
+- type: construction
+  name: double bed right (cult)
+  id: DoubleBedRightCult
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightCult
+  category: construction-category-furniture
+  description: You might dream of Nar'Sie if you sleep on this. It seems rather tattered and glows of an eldritch presence.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_cult
+  objectType: Structure
+
+# Fancy Black Bed Left
+- type: construction
+  name: double bed left (fancy black)
+  id: DoubleBedLeftFancyBlack
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyBlack
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_fancy_black
+  objectType: Structure
+
+# Fancy Black Bed Right
+- type: construction
+  name: double bed right (fancy black)
+  id: DoubleBedRightFancyBlack
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyBlack
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_fancy_black
+  objectType: Structure
+
+# Fancy Blue Bed Left
+- type: construction
+  name: double bed left (fancy blue)
+  id: DoubleBedLeftFancyBlue
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyBlue
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_fancy_blue
+  objectType: Structure
+
+# Fancy Blue Bed Right
+- type: construction
+  name: double bed right (fancy blue)
+  id: DoubleBedRightFancyBlue
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyBlue
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_fancy_blue
+  objectType: Structure
+
+# Fancy Green Bed Left
+- type: construction
+  name: double bed left (fancy green)
+  id: DoubleBedLeftFancyGreen
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyGreen
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_fancy_green
+  objectType: Structure
+
+# Fancy Green Bed Right
+- type: construction
+  name: double bed right (fancy green)
+  id: DoubleBedRightFancyGreen
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyGreen
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_fancy_green
+  objectType: Structure
+
+# Fancy Pink Bed Left
+- type: construction
+  name: double bed left (fancy pink)
+  id: DoubleBedLeftFancyPink
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyPink
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_fancy_pink
+  objectType: Structure
+
+# Fancy Pink Bed Right
+- type: construction
+  name: double bed right (fancy pink)
+  id: DoubleBedRightFancyPink
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyPink
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_fancy_pink
+  objectType: Structure
+
+# Fancy Purple Bed Left
+- type: construction
+  name: double bed left (fancy purple)
+  id: DoubleBedLeftFancyPurple
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyPurple
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_fancy_purple
+  objectType: Structure
+
+# Fancy Purple Bed Right
+- type: construction
+  name: double bed right (fancy purple)
+  id: DoubleBedRightFancyPurple
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyPurple
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_fancy_purple
+  objectType: Structure
+
+# Fancy Red Bed Left
+- type: construction
+  name: double bed left (fancy red)
+  id: DoubleBedLeftFancyRed
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyRed
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_fancy_red
+  objectType: Structure
+
+# Fancy Red Bed Right
+- type: construction
+  name: double bed right (fancy red)
+  id: DoubleBedRightFancyRed
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyRed
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_fancy_red
+  objectType: Structure
+
+# Fancy Skyblue Bed Left
+- type: construction
+  name: double bed left (fancy sky blue)
+  id: DoubleBedLeftFancySkyblue
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancySkyblue
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_fancy_skyblue
+  objectType: Structure
+
+# Fancy Skyblue Bed Right
+- type: construction
+  name: double bed right (fancy sky blue)
+  id: DoubleBedRightFancySkyblue
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancySkyblue
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_fancy_skyblue
+  objectType: Structure
+
+# Fancy Teal Bed Left
+- type: construction
+  name: double bed left (fancy teal)
+  id: DoubleBedLeftFancyTeal
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyTeal
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_fancy_teal
+  objectType: Structure
+
+# Fancy Teal Bed Right
+- type: construction
+  name: double bed right (fancy teal)
+  id: DoubleBedRightFancyTeal
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyTeal
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_fancy_teal
+  objectType: Structure
+
+# Fancy White Bed Left
+- type: construction
+  name: double bed left (fancy white)
+  id: DoubleBedLeftFancyWhite
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyWhite
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_fancy_white
+  objectType: Structure
+
+# Fancy White Bed Right
+- type: construction
+  name: double bed right (fancy white)
+  id: DoubleBedRightFancyWhite
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyWhite
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_fancy_white
+  objectType: Structure
+
+# Green Bed Left
+- type: construction
+  name: double bed left (green)
+  id: DoubleBedLeftGreen
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftGreen
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_green
+  objectType: Structure
+
+# Green Bed Right
+- type: construction
+  name: double bed right (green)
+  id: DoubleBedRightGreen
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightGreen
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_green
+  objectType: Structure
+
+# Grey Bed Left
+- type: construction
+  name: double bed left (grey)
+  id: DoubleBedLeftGrey
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftGrey
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_grey
+  objectType: Structure
+
+# Grey Bed Right
+- type: construction
+  name: double bed right (grey)
+  id: DoubleBedRightGrey
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightGrey
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_grey
+  objectType: Structure
+
+# Ian Bed Left
+- type: construction
+  name: double bed left (ian)
+  id: DoubleBedLeftIan
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftIan
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_ian
+  objectType: Structure
+
+# Ian Bed Right
+- type: construction
+  name: double bed right (ian)
+  id: DoubleBedRightIan
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightIan
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_ian
+  objectType: Structure
+
+# Mime Bed Left
+- type: construction
+  name: double bed left (mime)
+  id: DoubleBedLeftMime
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftMime
+  category: construction-category-furniture
+  description: A very soothing striped blanket.  All the noise just seems to fade out when you're under the covers in this.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_mime
+  objectType: Structure
+
+# Mime Bed Right
+- type: construction
+  name: double bed right (mime)
+  id: DoubleBedRightMime
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightMime
+  category: construction-category-furniture
+  description: A very soothing striped blanket.  All the noise just seems to fade out when you're under the covers in this.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_mime
+  objectType: Structure
+
+# NT Bed Left
+- type: construction
+  name: double bed left (nt)
+  id: DoubleBedLeftNT
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftNT
+  category: construction-category-furniture
+  description: It has the Nanotrasen logo on it and an aura of duty.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_nt
+  objectType: Structure
+
+# NT Bed Right
+- type: construction
+  name: double bed right (nt)
+  id: DoubleBedRightNT
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightNT
+  category: construction-category-furniture
+  description: It has the Nanotrasen logo on it and an aura of duty.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_nt
+  objectType: Structure
+
+# Orange Bed Left
+- type: construction
+  name: double bed left (orange)
+  id: DoubleBedLeftOrange
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftOrange
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_orange
+  objectType: Structure
+
+# Orange Bed Right
+- type: construction
+  name: double bed right (orange)
+  id: DoubleBedRightOrange
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightOrange
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_orange
+  objectType: Structure
+
+# Purple Bed Left
+- type: construction
+  name: double bed left (purple)
+  id: DoubleBedLeftPurple
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftPurple
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_purple
+  objectType: Structure
+
+# Purple Bed Right
+- type: construction
+  name: double bed right (purple)
+  id: DoubleBedRightPurple
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightPurple
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_purple
+  objectType: Structure
+
+# Rainbow Bed Left
+- type: construction
+  name: double bed left (rainbow)
+  id: DoubleBedLeftRainbow
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftRainbow
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_rainbow
+  objectType: Structure
+
+# Rainbow Bed Right
+- type: construction
+  name: double bed right (rainbow)
+  id: DoubleBedRightRainbow
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightRainbow
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_rainbow
+  objectType: Structure
+
+# Red Bed Left
+- type: construction
+  name: double bed left (red)
+  id: DoubleBedLeftRed
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftRed
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_red
+  objectType: Structure
+
+# Red Bed Right
+- type: construction
+  name: double bed right (red)
+  id: DoubleBedRightRed
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightRed
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_red
+  objectType: Structure
+
+# Syndie Bed Left
+- type: construction
+  name: double bed left (syndie)
+  id: DoubleBedLeftSyndie
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftSyndie
+  category: construction-category-furniture
+  description: It has a syndicate emblem and it has an aura of evil.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_syndie
+  objectType: Structure
+
+# Syndie Bed Right
+- type: construction
+  name: double bed right (syndie)
+  id: DoubleBedRightSyndie
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightSyndie
+  category: construction-category-furniture
+  description: It has a syndicate emblem and it has an aura of evil.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_syndie
+  objectType: Structure
+
+# TSF Bed Left
+- type: construction
+  name: double bed left (tsf)
+  id: DoubleBedLeftTSF
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftTSF
+  category: construction-category-furniture
+  description: The TSF can now sleep soundly, and patriotically.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_tsf
+  objectType: Structure
+
+# TSF Bed Right
+- type: construction
+  name: double bed right (tsf)
+  id: DoubleBedRightTSF
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightTSF
+  category: construction-category-furniture
+  description: The TSF can now sleep soundly, and patriotically.
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_tsf
+  objectType: Structure
+
+# USA Bed Left
+- type: construction
+  name: double bed left (usa)
+  id: DoubleBedLeftUS
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftUS
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_us
+  objectType: Structure
+
+# USA Bed Right
+- type: construction
+  name: double bed right (usa)
+  id: DoubleBedRightUS
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightUS
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_us
+  objectType: Structure
+
+# White Bed Left
+- type: construction
+  name: double bed left (white)
+  id: DoubleBedLeftWhite
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftWhite
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_white
+  objectType: Structure
+
+# White Bed Right
+- type: construction
+  name: double bed right (white)
+  id: DoubleBedRightWhite
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightWhite
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_white
+  objectType: Structure
+
+# Wizard Bed Left
+- type: construction
+  name: double bed left (wizard)
+  id: DoubleBedLeftWizard
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftWizard
+  category: construction-category-furniture
+  description: A special fabric enchanted with magic so you can have an enchanted night. It even glows!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_wizard
+  objectType: Structure
+
+# Wizard Bed Right
+- type: construction
+  name: double bed right (wizard)
+  id: DoubleBedRightWizard
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightWizard
+  category: construction-category-furniture
+  description: A special fabric enchanted with magic so you can have an enchanted night. It even glows!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_wizard
+  objectType: Structure
+
+# Yellow Bed Left
+- type: construction
+  name: double bed left (yellow)
+  id: DoubleBedLeftYellow
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftYellow
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left_yellow
+  objectType: Structure
+
+# Yellow Bed Right
+- type: construction
+  name: double bed right (yellow)
+  id: DoubleBedRightYellow
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightYellow
+  category: construction-category-furniture
+  description: This is used to lie in, sleep in or strap to. Double the bed, double the fun!
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: right_yellow
+  objectType: Structure
