@@ -4290,3 +4290,10 @@ Entries:
   id: 468
   time: '2026-10-07T20:30:03.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/233
+- author: archee1
+  changes:
+    - type: Fix
+      message: Newly added colorable clothes have been added to clothes vendors.
+  id: 469
+  time: '2026-10-08T22:23:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/236
