@@ -49,7 +49,6 @@
         - to: DoubleBedLeftBlack
           steps:
             - tag: BedsheetBlack
-              amount: 1
               doAfter: 2
               name: "black bedsheet" # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
               icon: 
@@ -59,7 +58,6 @@
         - to: DoubleBedLeftBlue
           steps:
             - tag: BedsheetBlue
-              amount: 1
               doAfter: 2
               name: "blue bedsheet"
               icon: 
@@ -69,7 +67,6 @@
         - to: DoubleBedLeftBrown
           steps:
             - tag: BedsheetBrown
-              amount: 1
               doAfter: 2
               name: "brown bedsheet"
               icon: 
@@ -79,7 +76,6 @@
         - to: DoubleBedLeftCC
           steps:
             - tag: BedsheetCentcom
-              amount: 1
               doAfter: 2
               name: "Centcomm bedsheet"
               icon: 
@@ -89,7 +85,6 @@
         - to: DoubleBedLeftClown
           steps:
             - tag: BedsheetClown
-              amount: 1
               doAfter: 2
               name: "clown bedsheet"
               icon: 
@@ -99,98 +94,20 @@
         - to: DoubleBedLeftCult
           steps:
             - tag: BedsheetCult
-              amount: 1
               doAfter: 2
               name: "cult bedsheet"
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetcult
 # Made the fancy beds require durathread and carpet instead of bedsheets.
-        - to: DoubleBedLeftFancyBlack
+        - to: DoubleBedLeftPadded
           steps:
             - material: Durathread
               amount: 3
               doAfter: 2
-            - material: FloorCarpetBlack
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedLeftFancyBlue
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetBlue
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedLeftFancyGreen
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetGreen
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedLeftFancyPink
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetPink
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedLeftFancyPurple
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetPurple
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedLeftFancyRed
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetRed
-              amount: 1
-              doAfter: 2
-# Sky Blue ones are mega bugged and I don't know how to fix them. Even going through the tag system doesn't make the bed take the carpet.
-        - to: DoubleBedLeftFancySkyblue
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetSkyBlue
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedLeftFancyTeal
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetCyan
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedLeftFancyWhite
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetWhite
-              amount: 1
-              doAfter: 2
-              
         - to: DoubleBedLeftGreen
           steps:
             - tag: BedsheetGreen
-              amount: 1
               doAfter: 2
               name: "green bedsheet"
               icon: 
@@ -200,7 +117,6 @@
         - to: DoubleBedLeftGrey
           steps:
             - tag: BedsheetGrey
-              amount: 1
               doAfter: 2
               name: "grey bedsheet"
               icon: 
@@ -210,7 +126,6 @@
         - to: DoubleBedLeftIan
           steps:
             - tag: BedsheetIan
-              amount: 1
               doAfter: 2
               name: "ian bedsheet"
               icon: 
@@ -220,7 +135,6 @@
         - to: DoubleBedLeftMime
           steps:
             - tag: BedsheetMime
-              amount: 1
               doAfter: 2
               name: "mime bedsheet"
               icon: 
@@ -230,7 +144,6 @@
         - to: DoubleBedLeftNT
           steps:
             - tag: BedsheetNT
-              amount: 1
               doAfter: 2
               name: "NT bedsheet"
               icon: 
@@ -240,7 +153,6 @@
         - to: DoubleBedLeftOrange
           steps:
             - tag: BedsheetOrange
-              amount: 1
               doAfter: 2
               name: "orange bedsheet"
               icon: 
@@ -250,7 +162,6 @@
         - to: DoubleBedLeftPurple
           steps:
             - tag: BedsheetPurple
-              amount: 1
               doAfter: 2
               name: "purple bedsheet"
               icon: 
@@ -260,7 +171,6 @@
         - to: DoubleBedLeftRainbow
           steps:
             - tag: BedsheetRainbow
-              amount: 1
               doAfter: 2
               name: "rainbow bedsheet"
               icon: 
@@ -270,7 +180,6 @@
         - to: DoubleBedLeftRed
           steps:
             - tag: BedsheetRed
-              amount: 1
               doAfter: 2
               name: "red bedsheet"
               icon: 
@@ -280,7 +189,6 @@
         - to: DoubleBedLeftSyndie
           steps:
             - tag: BedsheetSyndie
-              amount: 1
               doAfter: 2
               name: "syndie bedsheet"
               icon: 
@@ -290,7 +198,6 @@
         - to: DoubleBedLeftTSF
           steps:
             - tag: BedsheetCaptain
-              amount: 1
               doAfter: 2
               name: "captain bedsheet"
               icon: 
@@ -300,7 +207,6 @@
         - to: DoubleBedLeftUS
           steps:
             - tag: BedsheetUSA
-              amount: 1
               doAfter: 2
               name: "USA bedsheet"
               icon: 
@@ -310,7 +216,6 @@
         - to: DoubleBedLeftWhite
           steps:
             - tag: BedsheetWhite
-              amount: 1
               doAfter: 2
               name: "white bedsheet"
               icon: 
@@ -320,7 +225,6 @@
         - to: DoubleBedLeftWizard
           steps:
             - tag: BedsheetWiz
-              amount: 1
               doAfter: 2
               name: "wizard bedsheet"
               icon: 
@@ -330,13 +234,72 @@
         - to: DoubleBedLeftYellow
           steps:
             - tag: BedsheetYellow
-              amount: 1
               doAfter: 2
               name: "yellow bedsheet"
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetyellow
-
+# Cami Bugfix. Step for the durathread before the carpet. They will not work if you don't do this and I'm not sure why.
+    - node: DoubleBedLeftPadded
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+          steps:
+            - tool: Prying
+              doAfter: 2
+        - to: DoubleBedLeftFancyBlack
+          steps:
+            - material: FloorCarpetBlack
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyBlue
+          steps:
+            - material: FloorCarpetBlue
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyGreen
+          steps:
+            - material: FloorCarpetGreen
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyOrange
+          steps:
+            - material: FloorCarpetOrange
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyPink
+          steps:
+            - material: FloorCarpetPink
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyPurple
+          steps:
+            - material: FloorCarpetPurple
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyRed
+          steps:
+            - material: FloorCarpetRed
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancySkyblue
+          steps:
+            - material: FloorCarpetSkyBlue
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyTeal
+          steps:
+            - material: FloorCarpetCyan
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyWhite
+          steps:
+            - material: FloorCarpetWhite
+              amount: 1
+              doAfter: 2
 # Finished constructions + Deconstructions. Removing bedsheets requires crowbar.
     - node: DoubleBedLeftBlack
       entity: DoubleBedLeftBlack
@@ -450,6 +413,21 @@
               amount: 3
             - !type:SpawnPrototype
               prototype: FloorCarpetItemGreen
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyOrange
+      entity: DoubleBedLeftFancyOrange
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemOrange
               amount: 1
           steps:
             - tool: Prying
@@ -765,7 +743,6 @@
         - to: DoubleBedRightBlack
           steps:
             - tag: BedsheetBlack
-              amount: 1
               doAfter: 2
               name: "black bedsheet" # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
               icon: 
@@ -775,7 +752,6 @@
         - to: DoubleBedRightBlue
           steps:
             - tag: BedsheetBlue
-              amount: 1
               doAfter: 2
               name: "blue bedsheet"
               icon: 
@@ -785,7 +761,6 @@
         - to: DoubleBedRightBrown
           steps:
             - tag: BedsheetBrown
-              amount: 1
               doAfter: 2
               name: "brown bedsheet"
               icon: 
@@ -795,7 +770,6 @@
         - to: DoubleBedRightCC
           steps:
             - tag: BedsheetCentcom
-              amount: 1
               doAfter: 2
               name: "Centcomm bedsheet"
               icon: 
@@ -805,7 +779,6 @@
         - to: DoubleBedRightClown
           steps:
             - tag: BedsheetClown
-              amount: 1
               doAfter: 2
               name: "clown bedsheet"
               icon: 
@@ -815,98 +788,20 @@
         - to: DoubleBedRightCult
           steps:
             - tag: BedsheetCult
-              amount: 1
               doAfter: 2
               name: "cult bedsheet"
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetcult
 # Made the fancy beds require durathread and carpet instead of bedsheets.
-        - to: DoubleBedRightFancyBlack
+        - to: DoubleBedRightPadded
           steps:
             - material: Durathread
               amount: 3
               doAfter: 2
-            - material: FloorCarpetBlack
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedRightFancyBlue
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetBlue
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedRightFancyGreen
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetGreen
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedRightFancyPink
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetPink
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedRightFancyPurple
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetPurple
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedRightFancyRed
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetRed
-              amount: 1
-              doAfter: 2
-# Sky Blue ones are mega bugged and I don't know how to fix them. Even going through the tag system doesn't make the bed take the carpet.
-        - to: DoubleBedRightFancySkyblue
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetSkyBlue
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedRightFancyTeal
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetCyan
-              amount: 1
-              doAfter: 2
-
-        - to: DoubleBedRightFancyWhite
-          steps:
-            - material: Durathread
-              amount: 3
-              doAfter: 2
-            - material: FloorCarpetWhite
-              amount: 1
-              doAfter: 2
-              
         - to: DoubleBedRightGreen
           steps:
             - tag: BedsheetGreen
-              amount: 1
               doAfter: 2
               name: "green bedsheet"
               icon: 
@@ -916,7 +811,6 @@
         - to: DoubleBedRightGrey
           steps:
             - tag: BedsheetGrey
-              amount: 1
               doAfter: 2
               name: "grey bedsheet"
               icon: 
@@ -926,7 +820,6 @@
         - to: DoubleBedRightIan
           steps:
             - tag: BedsheetIan
-              amount: 1
               doAfter: 2
               name: "ian bedsheet"
               icon: 
@@ -936,7 +829,6 @@
         - to: DoubleBedRightMime
           steps:
             - tag: BedsheetMime
-              amount: 1
               doAfter: 2
               name: "mime bedsheet"
               icon: 
@@ -946,17 +838,15 @@
         - to: DoubleBedRightNT
           steps:
             - tag: BedsheetNT
-              amount: 1
               doAfter: 2
               name: "NT bedsheet"
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetNT
-# Bugged from here down. Dunno why - KC
+
         - to: DoubleBedRightOrange
           steps:
             - tag: BedsheetOrange
-              amount: 1
               doAfter: 2
               name: "orange bedsheet"
               icon:
@@ -966,7 +856,6 @@
         - to: DoubleBedRightPurple
           steps:
             - tag: BedsheetPurple
-              amount: 1
               doAfter: 2
               name: "purple bedsheet"
               icon: 
@@ -976,7 +865,6 @@
         - to: DoubleBedRightRainbow
           steps:
             - tag: BedsheetRainbow
-              amount: 1
               doAfter: 2
               name: "rainbow bedsheet"
               icon: 
@@ -986,7 +874,6 @@
         - to: DoubleBedRightRed
           steps:
             - tag: BedsheetRed
-              amount: 1
               doAfter: 2
               name: "red bedsheet"
               icon: 
@@ -996,7 +883,6 @@
         - to: DoubleBedRightSyndie
           steps:
             - tag: BedsheetSyndie
-              amount: 1
               doAfter: 2
               name: "syndie bedsheet"
               icon: 
@@ -1006,7 +892,6 @@
         - to: DoubleBedRightTSF
           steps:
             - tag: BedsheetCaptain
-              amount: 1
               doAfter: 2
               name: "captain bedsheet"
               icon: 
@@ -1016,7 +901,6 @@
         - to: DoubleBedRightUS
           steps:
             - tag: BedsheetUSA
-              amount: 1
               doAfter: 2
               name: "USA bedsheet"
               icon: 
@@ -1026,7 +910,6 @@
         - to: DoubleBedRightWhite
           steps:
             - tag: BedsheetWhite
-              amount: 1
               doAfter: 2
               name: "white bedsheet"
               icon: 
@@ -1036,7 +919,6 @@
         - to: DoubleBedRightWizard
           steps:
             - tag: BedsheetWiz
-              amount: 1
               doAfter: 2
               name: "wizard bedsheet"
               icon: 
@@ -1046,13 +928,72 @@
         - to: DoubleBedRightYellow
           steps:
             - tag: BedsheetYellow
-              amount: 1
               doAfter: 2
               name: "yellow bedsheet"
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetyellow
-
+# Cami Bugfix. Step for the durathread before the carpet. They will not work if you don't do this and I'm not sure why.
+    - node: DoubleBedRightPadded
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+          steps:
+            - tool: Prying
+              doAfter: 2
+        - to: DoubleBedRightFancyBlack
+          steps:
+            - material: FloorCarpetBlack
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyBlue
+          steps:
+            - material: FloorCarpetBlue
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyGreen
+          steps:
+            - material: FloorCarpetGreen
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyOrange
+          steps:
+            - material: FloorCarpetOrange
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyPink
+          steps:
+            - material: FloorCarpetPink
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyPurple
+          steps:
+            - material: FloorCarpetPurple
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyRed
+          steps:
+            - material: FloorCarpetRed
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancySkyblue
+          steps:
+            - material: FloorCarpetSkyBlue
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyTeal
+          steps:
+            - material: FloorCarpetCyan
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyWhite
+          steps:
+            - material: FloorCarpetWhite
+              amount: 1
+              doAfter: 2
 # Finished constructions + Deconstructions. Removing bedsheets requires crowbar.
     - node: DoubleBedRightBlack
       entity: DoubleBedRightBlack
@@ -1166,6 +1107,21 @@
               amount: 3
             - !type:SpawnPrototype
               prototype: FloorCarpetItemGreen
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyOrange
+      entity: DoubleBedRightFancyOrange
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemOrange
               amount: 1
           steps:
             - tool: Prying

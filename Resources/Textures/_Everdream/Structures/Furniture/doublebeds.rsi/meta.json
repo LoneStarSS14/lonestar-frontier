@@ -48,6 +48,10 @@
       "directions": 4
     },
     {
+      "name": "left_fancy_orange",
+      "directions": 4
+    },
+    {
       "name": "left_fancy_pink",
       "directions": 4
     },
@@ -169,6 +173,10 @@
     },
     {
       "name": "right_fancy_green",
+      "directions": 4
+    },
+    {
+      "name": "right_fancy_orange",
       "directions": 4
     },
     {

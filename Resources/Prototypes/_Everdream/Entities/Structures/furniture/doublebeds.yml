@@ -132,6 +132,10 @@
   components:
   - type: Sprite
     state: left_black
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftBlack
+    # Cami Bugfix. Needing the construction type is very important or else you will just put what you're constructing with down on it.
 
 - type: entity
   parent: DoubleBedRight
@@ -140,6 +144,9 @@
   components:
   - type: Sprite
     state: right_black
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightBlack
 
 # blue
 - type: entity
@@ -149,6 +156,9 @@
   components:
   - type: Sprite
     state: left_blue
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftBlue
 
 - type: entity
   parent: DoubleBedRight
@@ -157,7 +167,10 @@
   components:
   - type: Sprite
     state: right_blue
-    
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightBlue 
+
 # brown
 - type: entity
   parent: DoubleBedLeft
@@ -166,6 +179,9 @@
   components:
   - type: Sprite
     state: left_brown
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftBrown
 
 - type: entity
   parent: DoubleBedRight
@@ -174,6 +190,9 @@
   components:
   - type: Sprite
     state: right_brown
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightBrown
 
 # cc
 - type: entity
@@ -184,6 +203,9 @@
   components:
   - type: Sprite
     state: left_cc
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftCC
 
 - type: entity
   parent: DoubleBedRight
@@ -193,6 +215,9 @@
   components:
   - type: Sprite
     state: right_cc
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightCC
 
 # clown
 - type: entity
@@ -203,6 +228,9 @@
   components:
   - type: Sprite
     state: left_clown
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftClown
 
 - type: entity
   parent: DoubleBedRight
@@ -212,6 +240,9 @@
   components:
   - type: Sprite
     state: right_clown
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightClown
 
 # cult
 - type: entity
@@ -222,6 +253,9 @@
   components:
   - type: Sprite
     state: left_cult
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftCult
 
 - type: entity
   parent: DoubleBedRight
@@ -231,6 +265,9 @@
   components:
   - type: Sprite
     state: right_cult
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightCult
 
 # fancy black
 - type: entity
@@ -240,6 +277,9 @@
   components:
   - type: Sprite
     state: left_fancy_black
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyBlack
 
 - type: entity
   parent: DoubleBedRight
@@ -248,8 +288,12 @@
   components:
   - type: Sprite
     state: right_fancy_black
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyBlack
 
 # fancy blue
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftFancyBlue
@@ -257,6 +301,9 @@
   components:
   - type: Sprite
     state: left_fancy_blue
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyBlue
 
 - type: entity
   parent: DoubleBedRight
@@ -265,6 +312,9 @@
   components:
   - type: Sprite
     state: right_fancy_blue
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyBlue
 
 # fancy green
 - type: entity
@@ -274,6 +324,9 @@
   components:
   - type: Sprite
     state: left_fancy_green
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyGreen
 
 - type: entity
   parent: DoubleBedRight
@@ -282,6 +335,32 @@
   components:
   - type: Sprite
     state: right_fancy_green
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyGreen
+
+# fancy orange
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyOrange
+  suffix: Fancy Orange, Left
+  components:
+  - type: Sprite
+    state: left_fancy_orange
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyOrange
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyOrange
+  suffix: Fancy Orange, Right
+  components:
+  - type: Sprite
+    state: right_fancy_orange
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyOrange
 
 # fancy pink
 - type: entity
@@ -291,6 +370,9 @@
   components:
   - type: Sprite
     state: left_fancy_pink
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyPink
 
 - type: entity
   parent: DoubleBedRight
@@ -301,6 +383,9 @@
     state: right_fancy_pink
 
 # fancy purple
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyPink
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftFancyPurple
@@ -308,6 +393,9 @@
   components:
   - type: Sprite
     state: left_fancy_purple
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyPurple
 
 - type: entity
   parent: DoubleBedRight
@@ -316,8 +404,12 @@
   components:
   - type: Sprite
     state: right_fancy_purple
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyPurple
 
 # fancy red
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftFancyRed
@@ -325,6 +417,9 @@
   components:
   - type: Sprite
     state: left_fancy_red
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyRed
 
 - type: entity
   parent: DoubleBedRight
@@ -333,8 +428,12 @@
   components:
   - type: Sprite
     state: right_fancy_red
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyRed
 
 # fancy skyblue
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftFancySkyblue
@@ -342,6 +441,9 @@
   components:
   - type: Sprite
     state: left_fancy_skyblue
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancySkyblue
 
 - type: entity
   parent: DoubleBedRight
@@ -350,8 +452,12 @@
   components:
   - type: Sprite
     state: right_fancy_skyblue
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancySkyblue
 
 # fancy teal
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftFancyTeal
@@ -359,6 +465,9 @@
   components:
   - type: Sprite
     state: left_fancy_teal
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyTeal
 
 - type: entity
   parent: DoubleBedRight
@@ -367,8 +476,12 @@
   components:
   - type: Sprite
     state: right_fancy_teal
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyTeal
 
 # fancy white
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftFancyWhite
@@ -376,6 +489,9 @@
   components:
   - type: Sprite
     state: left_fancy_white
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyWhite
 
 - type: entity
   parent: DoubleBedRight
@@ -384,8 +500,12 @@
   components:
   - type: Sprite
     state: right_fancy_white
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyWhite
 
 # green
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftGreen
@@ -393,6 +513,9 @@
   components:
   - type: Sprite
     state: left_green
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftGreen
 
 - type: entity
   parent: DoubleBedRight
@@ -401,8 +524,12 @@
   components:
   - type: Sprite
     state: right_green
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightGreen
 
 # grey
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftGrey
@@ -410,6 +537,9 @@
   components:
   - type: Sprite
     state: left_grey
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftGrey
 
 - type: entity
   parent: DoubleBedRight
@@ -418,8 +548,12 @@
   components:
   - type: Sprite
     state: right_grey
-    
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightGreen
+
 # ian
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftIan
@@ -427,6 +561,9 @@
   components:
   - type: Sprite
     state: left_ian
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftIan
 
 - type: entity
   parent: DoubleBedRight
@@ -435,8 +572,12 @@
   components:
   - type: Sprite
     state: right_ian
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightIan
 
 # mime
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftMime
@@ -445,6 +586,9 @@
   components:
   - type: Sprite
     state: left_mime
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftMime
 
 - type: entity
   parent: DoubleBedRight
@@ -454,8 +598,12 @@
   components:
   - type: Sprite
     state: right_mime
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightMime
 
 # nt
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftNT
@@ -464,6 +612,9 @@
   components:
   - type: Sprite
     state: left_nt
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftNT
 
 - type: entity
   parent: DoubleBedRight
@@ -473,8 +624,12 @@
   components:
   - type: Sprite
     state: right_nt
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightNT
 
 # orange
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftOrange
@@ -482,6 +637,9 @@
   components:
   - type: Sprite
     state: left_orange
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftOrange
 
 - type: entity
   parent: DoubleBedRight
@@ -490,8 +648,12 @@
   components:
   - type: Sprite
     state: right_orange
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightOrange
 
 # purple
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftPurple
@@ -499,6 +661,9 @@
   components:
   - type: Sprite
     state: left_purple
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftPurple
 
 - type: entity
   parent: DoubleBedRight
@@ -507,8 +672,12 @@
   components:
   - type: Sprite
     state: right_purple
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightPurple
 
 # rainbow
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftRainbow
@@ -516,6 +685,9 @@
   components:
   - type: Sprite
     state: left_rainbow
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftRainbow
 
 - type: entity
   parent: DoubleBedRight
@@ -524,8 +696,12 @@
   components:
   - type: Sprite
     state: right_rainbow
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightRainbow
 
 # red
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftRed
@@ -533,6 +709,9 @@
   components:
   - type: Sprite
     state: left_red
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftRed
 
 - type: entity
   parent: DoubleBedRight
@@ -541,8 +720,12 @@
   components:
   - type: Sprite
     state: right_red
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightRed
 
 # syndie
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftSyndie
@@ -551,6 +734,9 @@
   components:
   - type: Sprite
     state: left_syndie
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftSyndie
 
 - type: entity
   parent: DoubleBedRight
@@ -560,8 +746,12 @@
   components:
   - type: Sprite
     state: right_syndie
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightSyndie
 
 # tsf
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftTSF
@@ -570,6 +760,9 @@
   components:
   - type: Sprite
     state: left_tsf
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftTSF
 
 - type: entity
   parent: DoubleBedRight
@@ -579,8 +772,12 @@
   components:
   - type: Sprite
     state: right_tsf
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightTSF
 
 # us
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftUS
@@ -588,6 +785,9 @@
   components:
   - type: Sprite
     state: left_us
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftUS
 
 - type: entity
   parent: DoubleBedRight
@@ -596,8 +796,12 @@
   components:
   - type: Sprite
     state: right_us
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightUS
 
 # white
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftWhite
@@ -605,6 +809,9 @@
   components:
   - type: Sprite
     state: left_white
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftWhite
 
 - type: entity
   parent: DoubleBedRight
@@ -613,8 +820,12 @@
   components:
   - type: Sprite
     state: right_white
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightWhite
 
 # wizard
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftWizard
@@ -623,6 +834,9 @@
   components:
   - type: Sprite
     state: left_wizard
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftWizard
 
 - type: entity
   parent: DoubleBedRight
@@ -632,8 +846,12 @@
   components:
   - type: Sprite
     state: right_wizard
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightWizard
 
 # yellow
+
 - type: entity
   parent: DoubleBedLeft
   id: DoubleBedLeftYellow
@@ -641,6 +859,9 @@
   components:
   - type: Sprite
     state: left_yellow
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftYellow
 
 - type: entity
   parent: DoubleBedRight
@@ -649,3 +870,6 @@
   components:
   - type: Sprite
     state: right_yellow
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightYellow
