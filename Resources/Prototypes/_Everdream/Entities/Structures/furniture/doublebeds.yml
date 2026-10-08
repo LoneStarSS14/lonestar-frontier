@@ -166,6 +166,159 @@
   - type: Sprite
     state: right_cult
 
+# fancy black
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyBlack
+  suffix: Fancy Black, Left
+  components:
+  - type: Sprite
+    state: left_fancy_black
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyBlack
+  suffix: Fancy Black, Right
+  components:
+  - type: Sprite
+    state: right_fancy_black
+
+# fancy blue
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyBlue
+  suffix: Fancy Blue, Left
+  components:
+  - type: Sprite
+    state: left_fancy_blue
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyBlue
+  suffix: Fancy Blue, Right
+  components:
+  - type: Sprite
+    state: right_fancy_blue
+
+# fancy green
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyGreen
+  suffix: Fancy Green, Left
+  components:
+  - type: Sprite
+    state: left_fancy_green
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyGreen
+  suffix: Fancy Green, Right
+  components:
+  - type: Sprite
+    state: right_fancy_green
+
+# fancy pink
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyPink
+  suffix: Fancy Pink, Left
+  components:
+  - type: Sprite
+    state: left_fancy_pink
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyPink
+  suffix: Fancy Pink, Right
+  components:
+  - type: Sprite
+    state: right_fancy_pink
+
+# fancy purple
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyPurple
+  suffix: Fancy Purple, Left
+  components:
+  - type: Sprite
+    state: left_fancy_purple
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyPurple
+  suffix: Fancy Purple, Right
+  components:
+  - type: Sprite
+    state: right_fancy_purple
+
+# fancy red
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyRed
+  suffix: Fancy Red, Left
+  components:
+  - type: Sprite
+    state: left_fancy_red
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyRed
+  suffix: Fancy Red, Right
+  components:
+  - type: Sprite
+    state: right_fancy_red
+
+# fancy skyblue
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancySkyblue
+  suffix: Fancy Skyblue, Left
+  components:
+  - type: Sprite
+    state: left_fancy_skyblue
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancySkyblue
+  suffix: Fancy Skyblue, Right
+  components:
+  - type: Sprite
+    state: right_fancy_skyblue
+
+# fancy teal
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyTeal
+  suffix: Fancy Teal, Left
+  components:
+  - type: Sprite
+    state: left_fancy_teal
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyTeal
+  suffix: Fancy Teal, Right
+  components:
+  - type: Sprite
+    state: right_fancy_teal
+
+# fancy white
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyWhite
+  suffix: Fancy White, Left
+  components:
+  - type: Sprite
+    state: left_fancy_white
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyWhite
+  suffix: Fancy White, Right
+  components:
+  - type: Sprite
+    state: right_fancy_white
+
 # green
 - type: entity
   parent: DoubleBedLeft
@@ -318,6 +471,23 @@
   components:
   - type: Sprite
     state: right_syndie
+
+# tsf
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftTSF
+  suffix: TSF, Left
+  components:
+  - type: Sprite
+    state: left_tsf
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightTSF
+  suffix: TSF, Right
+  components:
+  - type: Sprite
+    state: right_tsf
 
 # us
 - type: entity

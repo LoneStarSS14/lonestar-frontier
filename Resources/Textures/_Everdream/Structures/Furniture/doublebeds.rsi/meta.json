@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Sprites by Hederadaii https://github.com/Hederadaii",
+  "copyright": "Sprites by Hederadaii https://github.com/Hederadaii , TSF bed by KC ",
   "size": {
     "x": 32,
     "y": 32
@@ -36,7 +36,47 @@
       "directions": 4
     },
     {
+      "name": "left_fancy_black",
+      "directions": 4
+    },
+    {
+      "name": "left_fancy_blue",
+      "directions": 4
+    },
+    {
+      "name": "left_fancy_green",
+      "directions": 4
+    },
+    {
+      "name": "left_fancy_pink",
+      "directions": 4
+    },
+    {
+      "name": "left_fancy_purple",
+      "directions": 4
+    },
+    {
+      "name": "left_fancy_red",
+      "directions": 4
+    },
+    {
+      "name": "left_fancy_skyblue",
+      "directions": 4
+    },
+    {
+      "name": "left_fancy_teal",
+      "directions": 4
+    },
+    {
+      "name": "left_fancy_white",
+      "directions": 4
+    },
+    {
       "name": "left_green",
+      "directions": 4
+    },
+    {
+      "name": "left_grey",
       "directions": 4
     },
     {
@@ -69,6 +109,10 @@
     },
     {
       "name": "left_syndie",
+      "directions": 4
+    },
+    {
+      "name": "left_tsf",
       "directions": 4
     },
     {
@@ -116,7 +160,47 @@
       "directions": 4
     },
     {
+      "name": "right_fancy_black",
+      "directions": 4
+    },
+    {
+      "name": "right_fancy_blue",
+      "directions": 4
+    },
+    {
+      "name": "right_fancy_green",
+      "directions": 4
+    },
+    {
+      "name": "right_fancy_pink",
+      "directions": 4
+    },
+    {
+      "name": "right_fancy_purple",
+      "directions": 4
+    },
+    {
+      "name": "right_fancy_red",
+      "directions": 4
+    },
+    {
+      "name": "right_fancy_skyblue",
+      "directions": 4
+    },
+    {
+      "name": "right_fancy_teal",
+      "directions": 4
+    },
+    {
+      "name": "right_fancy_white",
+      "directions": 4
+    },
+    {
       "name": "right_green",
+      "directions": 4
+    },
+    {
+      "name": "right_grey",
       "directions": 4
     },
     {
@@ -149,6 +233,10 @@
     },
     {
       "name": "right_syndie",
+      "directions": 4
+    },
+    {
+      "name": "right_tsf",
       "directions": 4
     },
     {
