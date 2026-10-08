@@ -99,6 +99,7 @@
   parent: BaseMobPompom
   id: MobSuperPompom
   description: A small, dainty creature with many legs. It hovers through the air like a squid. This one seems heartier than it's kin.
+  suffix: Ghost, AI
   components:
   - type: GhostRole
     prob: 1
