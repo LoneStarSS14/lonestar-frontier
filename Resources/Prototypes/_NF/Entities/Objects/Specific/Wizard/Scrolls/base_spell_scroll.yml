@@ -25,6 +25,7 @@
   - type: Tag
     tags:
     - Sidearm
+    - Scroll
   - type: StaticPrice
     price: 500
 
