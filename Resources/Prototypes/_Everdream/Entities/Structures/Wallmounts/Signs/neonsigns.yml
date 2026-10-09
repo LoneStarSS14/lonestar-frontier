@@ -18,6 +18,8 @@
     - type: Anchorable
     - type: Pullable
     - type: Rotatable
+    - type: Transform
+      anchored: true
     - type: Destructible
       thresholds:
       - trigger:
