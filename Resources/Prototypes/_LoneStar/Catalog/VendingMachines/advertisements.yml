@@ -3,3 +3,9 @@
   values:
     prefix: advertisement-slotmachine-
     count: 6
+
+- type: localizedDataset
+  id: PunkSmartFridgeAds
+  values:
+    prefix: advertisement-punksmartfridge-
+    count: 6
