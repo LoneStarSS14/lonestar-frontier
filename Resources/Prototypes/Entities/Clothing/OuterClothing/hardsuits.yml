@@ -349,7 +349,7 @@
         Slash: 0.8
         Piercing: 0.8
         Heat: 0.4
-        Radiation: 0.05 # Frontier - 0<0.05
+        Radiation: 0.01 # Lonestar - 0.05 > 0.01
         Caustic: 0.7
   - type: ClothingSpeedModifier
     walkModifier: 0.9
@@ -587,7 +587,7 @@
         Slash: 0.6
         Piercing: 0.6
         Heat: 0.2
-        Radiation: 0.01
+        Radiation: 0.04 # lonestar 0.01 > 0.04
         Caustic: 0.5
   - type: Item
     size: Huge
