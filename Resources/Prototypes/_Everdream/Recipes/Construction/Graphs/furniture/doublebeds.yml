@@ -50,7 +50,7 @@
           steps:
             - tag: BedsheetBlack
               doAfter: 2
-              name: "black bedsheet" # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
+              name: black-bedsheet # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetblack
@@ -59,7 +59,7 @@
           steps:
             - tag: BedsheetBlue
               doAfter: 2
-              name: "blue bedsheet"
+              name: blue-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetblue
@@ -68,7 +68,7 @@
           steps:
             - tag: BedsheetBrown
               doAfter: 2
-              name: "brown bedsheet"
+              name: brown-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetbrown
@@ -77,7 +77,7 @@
           steps:
             - tag: BedsheetCentcom
               doAfter: 2
-              name: "Centcomm bedsheet"
+              name: centcomm-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetcentcom
@@ -86,7 +86,7 @@
           steps:
             - tag: BedsheetClown
               doAfter: 2
-              name: "clown bedsheet"
+              name: clown-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetclown
@@ -95,7 +95,7 @@
           steps:
             - tag: BedsheetCult
               doAfter: 2
-              name: "cult bedsheet"
+              name: cult-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetcult
@@ -109,7 +109,7 @@
           steps:
             - tag: BedsheetGreen
               doAfter: 2
-              name: "green bedsheet"
+              name: green-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetgreen
@@ -118,7 +118,7 @@
           steps:
             - tag: BedsheetGrey
               doAfter: 2
-              name: "grey bedsheet"
+              name: grey-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetgrey
@@ -127,7 +127,7 @@
           steps:
             - tag: BedsheetIan
               doAfter: 2
-              name: "ian bedsheet"
+              name: ian-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetian
@@ -136,7 +136,7 @@
           steps:
             - tag: BedsheetMime
               doAfter: 2
-              name: "mime bedsheet"
+              name: mime-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetmime
@@ -145,7 +145,7 @@
           steps:
             - tag: BedsheetNT
               doAfter: 2
-              name: "NT bedsheet"
+              name: nt-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetNT
@@ -154,7 +154,7 @@
           steps:
             - tag: BedsheetOrange
               doAfter: 2
-              name: "orange bedsheet"
+              name: orange-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetorange
@@ -163,7 +163,7 @@
           steps:
             - tag: BedsheetPurple
               doAfter: 2
-              name: "purple bedsheet"
+              name: purple-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetpurple
@@ -172,7 +172,7 @@
           steps:
             - tag: BedsheetRainbow
               doAfter: 2
-              name: "rainbow bedsheet"
+              name: rainbow-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetrainbow
@@ -181,7 +181,7 @@
           steps:
             - tag: BedsheetRed
               doAfter: 2
-              name: "red bedsheet"
+              name: red-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetred
@@ -190,7 +190,7 @@
           steps:
             - tag: BedsheetSyndie
               doAfter: 2
-              name: "syndie bedsheet"
+              name: syndicate-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetsyndie
@@ -199,7 +199,7 @@
           steps:
             - tag: BedsheetCaptain
               doAfter: 2
-              name: "captain bedsheet"
+              name: captain-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetcaptain
@@ -208,7 +208,7 @@
           steps:
             - tag: BedsheetUSA
               doAfter: 2
-              name: "USA bedsheet"
+              name: usa-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetUSA
@@ -217,7 +217,7 @@
           steps:
             - tag: BedsheetWhite
               doAfter: 2
-              name: "white bedsheet"
+              name: white-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetwhite
@@ -226,7 +226,7 @@
           steps:
             - tag: BedsheetWiz
               doAfter: 2
-              name: "wizard bedsheet"
+              name: wizard-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetwiz
@@ -235,7 +235,7 @@
           steps:
             - tag: BedsheetYellow
               doAfter: 2
-              name: "yellow bedsheet"
+              name: yellow-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetyellow
@@ -744,7 +744,7 @@
           steps:
             - tag: BedsheetBlack
               doAfter: 2
-              name: "black bedsheet" # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
+              name: black-bedsheet # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetblack
@@ -753,7 +753,7 @@
           steps:
             - tag: BedsheetBlue
               doAfter: 2
-              name: "blue bedsheet"
+              name: blue-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetblue
@@ -762,7 +762,7 @@
           steps:
             - tag: BedsheetBrown
               doAfter: 2
-              name: "brown bedsheet"
+              name: brown-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetbrown
@@ -771,7 +771,7 @@
           steps:
             - tag: BedsheetCentcom
               doAfter: 2
-              name: "Centcomm bedsheet"
+              name: centcomm-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetcentcom
@@ -780,7 +780,7 @@
           steps:
             - tag: BedsheetClown
               doAfter: 2
-              name: "clown bedsheet"
+              name: clown-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetclown
@@ -789,7 +789,7 @@
           steps:
             - tag: BedsheetCult
               doAfter: 2
-              name: "cult bedsheet"
+              name: cult-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetcult
@@ -803,7 +803,7 @@
           steps:
             - tag: BedsheetGreen
               doAfter: 2
-              name: "green bedsheet"
+              name: green-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetgreen
@@ -812,7 +812,7 @@
           steps:
             - tag: BedsheetGrey
               doAfter: 2
-              name: "grey bedsheet"
+              name: grey-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetgrey
@@ -821,7 +821,7 @@
           steps:
             - tag: BedsheetIan
               doAfter: 2
-              name: "ian bedsheet"
+              name: ian-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetian
@@ -830,7 +830,7 @@
           steps:
             - tag: BedsheetMime
               doAfter: 2
-              name: "mime bedsheet"
+              name: mime-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetmime
@@ -839,7 +839,7 @@
           steps:
             - tag: BedsheetNT
               doAfter: 2
-              name: "NT bedsheet"
+              name: nt-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetNT
@@ -848,7 +848,7 @@
           steps:
             - tag: BedsheetOrange
               doAfter: 2
-              name: "orange bedsheet"
+              name: orange-bedsheet
               icon:
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetorange
@@ -857,7 +857,7 @@
           steps:
             - tag: BedsheetPurple
               doAfter: 2
-              name: "purple bedsheet"
+              name: purple-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetpurple
@@ -866,7 +866,7 @@
           steps:
             - tag: BedsheetRainbow
               doAfter: 2
-              name: "rainbow bedsheet"
+              name: rainbow-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetrainbow
@@ -875,7 +875,7 @@
           steps:
             - tag: BedsheetRed
               doAfter: 2
-              name: "red bedsheet"
+              name: red-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetred
@@ -884,7 +884,7 @@
           steps:
             - tag: BedsheetSyndie
               doAfter: 2
-              name: "syndie bedsheet"
+              name: syndicate-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetsyndie
@@ -893,7 +893,7 @@
           steps:
             - tag: BedsheetCaptain
               doAfter: 2
-              name: "captain bedsheet"
+              name: captain-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetcaptain
@@ -902,7 +902,7 @@
           steps:
             - tag: BedsheetUSA
               doAfter: 2
-              name: "USA bedsheet"
+              name: usa-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetUSA
@@ -911,7 +911,7 @@
           steps:
             - tag: BedsheetWhite
               doAfter: 2
-              name: "white bedsheet"
+              name: white-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetwhite
@@ -920,7 +920,7 @@
           steps:
             - tag: BedsheetWiz
               doAfter: 2
-              name: "wizard bedsheet"
+              name: wizard-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetwiz
@@ -929,7 +929,7 @@
           steps:
             - tag: BedsheetYellow
               doAfter: 2
-              name: "yellow bedsheet"
+              name: yellow-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
                 state: sheetyellow

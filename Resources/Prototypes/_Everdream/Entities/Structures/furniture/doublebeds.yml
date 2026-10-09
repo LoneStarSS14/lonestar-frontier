@@ -69,7 +69,6 @@
     position: Down
     rotation: -90
     buckleOffset: "0, -0.25"
-    hasChairBack: false
   # Construction has to be before PlaceableSurface or you'll place things onto the entity instead of deconstructing it.
   - type: Construction
     graph: DoubleBedLeft
@@ -90,7 +89,6 @@
     position: Down
     rotation: -90
     buckleOffset: "0, 0.35"
-    hasChairBack: false
   # Construction has to be before PlaceableSurface or you'll place things onto the entity instead of deconstructing it.
   - type: Construction
     graph: DoubleBedRight
