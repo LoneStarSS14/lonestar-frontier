@@ -4261,3 +4261,55 @@ Entries:
   id: 465
   time: '2026-10-05T19:17:54.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/222
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: >-
+        Adds the bio djinn lathe, a bio generator with a larger self filling
+        buffer of biomass
+  id: 466
+  time: '2026-10-06T10:06:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/221
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        7 new colourable outfits are now available at the autodrobe and clothes
+        mate.
+    - type: Tweak
+      message: Random coloured clothes can now be darker blacks or lighter pinks.
+    - type: Fix
+      message: Colourable turtlenecks are no longer named 'white' turtleneck
+  id: 467
+  time: '2026-10-07T11:55:57.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/229
+- author: lexiwitch
+  changes:
+    - type: Tweak
+      message: ChemMaster now pulls from beaker by default.
+  id: 468
+  time: '2026-10-07T20:30:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/233
+- author: archee1
+  changes:
+    - type: Fix
+      message: Newly added colorable clothes have been added to clothes vendors.
+  id: 469
+  time: '2026-10-08T22:23:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/236
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: >-
+        Made L6 and Bulldog mags researchable and printable, and made L6 mag
+        bigger.
+  id: 470
+  time: '2026-10-09T00:17:30.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/232
+- author: archee1
+  changes:
+    - type: Add
+      message: A new science shuttle from frontier has been added, the Stronghold
+  id: 471
+  time: '2026-10-09T01:27:42.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/238

@@ -1865,6 +1865,8 @@
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
   - NFMagazineDrumRifle20Empty
+  - LSMagazineBoxRifle20Empty # LoneStar
+  - NFMagazineShotgunDrumEmpty # LoneStar
   - MagazineAsmgtUniversalEmpty
   technologyPrerequisites:
   - NFImprovedPistolAmmo

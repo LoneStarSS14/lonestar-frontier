@@ -1422,7 +1422,7 @@ entities:
     - type: Transform
       pos: 3.5,-19.5
       parent: 2
-- proto: Biogenerator
+- proto: BioDjinn # LoneStar
   entities:
   - uid: 692
     components:

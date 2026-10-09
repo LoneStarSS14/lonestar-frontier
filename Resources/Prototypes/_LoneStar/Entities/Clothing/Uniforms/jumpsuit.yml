@@ -2,7 +2,7 @@
 - type: entity
   parent: [ ClothingUniformBase, ClothingUniformRandomSpriteMono ]
   id: ClothingUniformTurtleneckColorable
-  name: white turtleneck
+  name: turtleneck jumpsuit
   description: For some reason, wearing this makes you feel like working in tech support at a product store.
   components:
   - type: Sprite
