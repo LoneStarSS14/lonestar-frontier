@@ -1,6 +1,7 @@
 ﻿- type: palette # Adapted from the departmental palette
   id: NTInteriorDesign
-  name: NT Interior Design
+  hidden: true
+  name: NT Fabrics
   colors:
     navyLight: "#5F7FA3" # Command
     navyDark: "#243A56"
@@ -29,13 +30,18 @@
     magentaLight: "#C65ACB" # Salvage
     magentaDark: "#5C1C5E"
     silverLight: "#F0F0F0" # Greys
-    silverDark: "#8A8A8A"
-    grayLight: "#F2F2F2"
+    SilverDark: "#cdcdcd"
+    grayLight: "#8A8A8A"
     grayDark: "#777777"
+    blackLight: "#535353"
+    blackDark: "#353535"
+    mewLight: "#ff99d8"
+    mewDark: "#bf3c8d"
 
 - type: palette
   id: TechniColors
-  name: TechniColors
+  hidden: true
+  name: TechniColor
   colors:
     TechniRed: "#d24949"
     TechniOrange: "#db9e53"
@@ -44,3 +50,19 @@
     TechniCyan: "#59dbc6"
     TechniPurple: "#aa5dda"
     TechniFuchsia: "#d84699"
+
+- type: palette
+  id: LSSilks
+  name: Silks
+  hidden: true
+  colors:
+    SilkWhite: "#F8F6F3"
+    SilkCream: "#EADFCB"
+    SilkStone: "#C7BDB5"
+    SilkTaupe: "#A99585"
+    SilkBlush: "#E8D5D0"
+    SilkRose: "#D9A7A0"
+    SilkPetal: "#F1C7D0"
+    SilkPink: "#D88CA2"
+    SilkSlate: "#B3B7BD"
+    SilkCharcoal: "#4B4F55"

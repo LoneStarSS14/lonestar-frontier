@@ -10,12 +10,13 @@
     ClothingWalletLeatherBrown: 4294967295
     ClothingWalletLeatherBlack: 4294967295
     ClothingHeadHatBeret: 4294967295
+    ClothingHeadHatBeretColorable: 4294967295
     ClothingHeadBandBlack: 4294967295
     ClothingHeadBandBlue: 4294967295
     ClothingHeadBandGreen: 4294967295
     ClothingHeadBandRed: 4294967295
     ClothingHeadBandSkull: 4294967295
-    ClothingHeadHatPropeller: 4294967295 # Goobstation
+    ClothingHeadHatPropeller: 4294967295
     ClothingHeadHatGreyFlatcap: 4294967295
     ClothingHeadHatBrownFlatcap: 4294967295
     ClothingUniformJumpsuitColorGrey: 4294967295
@@ -29,7 +30,6 @@
     ClothingUniformJumpsuitColorYellow: 4294967295
     ClothingUniformJumpskirtColorYellow: 4294967295
     ClothingUniformJumpsuitColorGreen: 4294967295
-   # DO NOT ADD MORE, USE UNIFORM DYING
     ClothingUniformJumpskirtColorGreen: 4294967295
     ClothingUniformJumpsuitColorOrange: 4294967295
     ClothingUniformJumpskirtColorOrange: 4294967295
@@ -58,7 +58,8 @@
     ClothingUniformJumpskirtCasualRed: 4294967295
     ClothingUniformJumpsuitCasualGreen: 4294967295
     ClothingUniformJumpskirtCasualGreen: 4294967295
-   # DO NOT ADD MORE, USE UNIFORM DYING
+    ClothingUniformTurtleskirtColorable: 4294967295
+    ClothingUniformTurtleneckColorable: 4294967295
     ClothingShoesColorBlack: 4294967295
     ClothingShoesColorBrown: 4294967295
     ClothingShoesColorWhite: 4294967295
@@ -75,7 +76,6 @@
     ClothingHeadHatGreensoft: 4294967295
     ClothingHeadHatOrangesoft: 4294967295
     ClothingHeadHatRedsoft: 4294967295
-    # DO NOT ADD MORE, USE UNIFORM DYING
     ClothingHeadHatBlacksoft: 4294967295
     ClothingHeadHatPurplesoft: 4294967295
     ClothingHeadHatCorpsoft: 4294967295
@@ -83,6 +83,7 @@
     ClothingHeadRastaHat: 4294967295
     ClothingBeltStorageWaistbag: 4294967295
     ClothingEyesGlasses: 4294967295
+    ClothingEyesGlassesRimless: 4294967295
     ClothingHandsGlovesColorBlack: 4294967295
     ClothingHandsGlovesColorGray: 4294967295
     ClothingHandsGlovesColorBrown: 4294967295
@@ -93,11 +94,12 @@
     ClothingHandsGlovesColorGreen: 4294967295
     ClothingHandsGlovesColorOrange: 4294967295
     ClothingHandsGlovesColorPurple: 4294967295
-    ClothingEyesGlassesCheapSunglasses: 4294967295  # Coyote: Uniform dying doesn't exist. ]
-    # DO NOT ADD MORE, USE UNIFORM DYING
+    ClothingHandsWristCuffsSpiked: 4294967295
+    ClothingEyesGlassesCheapSunglasses: 4294967295
     ClothingNeckCollarBlue: 4294967295 # Floofstation - Collar addition
     ClothingNeckCollarBlack: 4294967295 # Floofstation - Collar addition
     ClothingNeckCollarPink: 4294967295 # Floofstation - Collar addition
+    ClothingNeckSpikedCollar: 4294967295
     ClothingOuterCyberJacket: 4294967295
     ClothingOuterCyberJacketPurple: 4294967295
     ClothingOuterCyberJacketYellow: 4294967295
@@ -137,6 +139,7 @@
     ClothingUniformJumpskirtSchoolGreen: 4294967295
     ClothingUniformJumpskirtSchoolWhite: 4294967295
     ClothingUniformJumpskirtSchoolBlack: 4294967295
+    ClothingUniformJumpskirtSchoolColorable: 4294967295
     ClothingHandsGlovesColorSatinWhite: 4294967295
     ClothingHandsGlovesColorSatinWhiteLong: 4294967295
     ClothingHeadHatMaidHeadband: 4294967295
@@ -196,6 +199,7 @@
     PunkJeansUniformSuit: 4294967295
     RefereeUniformSuit: 4294967295
     SailorUniformSuit: 4294967295
+    ClothingNeckSailorAscotColorable: 4294967295
     StripedClownUniformSuit: 4294967295
     SundressUniformSuit: 4294967295
     TatteredClothesUniformSuit: 4294967295
@@ -234,7 +238,12 @@
     ClothingUniformJumpskirtCapFormalDress: 4294967295
     ClothingUniformJumpsuitCapFormal: 4294967295
     ClothingUniformJumpskirtHosFormal: 4294967295
-    ClothingUniformJumpsuitHosFormal: 4294967295 # Lonestar end
+    ClothingUniformJumpsuitHosFormal: 4294967295
+    ClothingUniformJumpsuitMilitaryBrat: 4294967295
+    ClothingUniformJumpskirtPresent: 4294967295
+    ClothingUniformJumpskirtSpottyColorable: 4294967295
+    ClothingUniformJumpskirtCheckerColorable: 4294967295
+    ClothingUniformJumpskirtStraplessColorable: 4294967295 # Lonestar end
     # Euphoria
     ClothingShoesHeelsKitten: 4294967295
     ClothingShoesHeelsKittenBlack: 4294967295

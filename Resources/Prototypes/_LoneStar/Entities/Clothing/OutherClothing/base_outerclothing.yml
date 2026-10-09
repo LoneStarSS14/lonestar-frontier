@@ -1,0 +1,59 @@
+- type: entity
+  abstract: true
+  id: ClothingOuterClothingRandomSpriteMono
+  suffix: Random
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "outerclothing-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+        map: [ "outerclothing-equipped" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - outerclothing-icon:
+          icon: Base
+        outerclothing-equipped:
+          equipped-OUTERCLOTHING: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+
+# For variants that want to use icon-open and open-equipped-OUTERCLOTHING.
+# For technical reasons foldable clothing does not support RandomSprite.
+- type: entity
+  abstract: true
+  id: ClothingOuterClothingRandomSpriteMonoOpen
+  suffix: Random
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-open
+      map: [ "outerclothing-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: open-equipped-OUTERCLOTHING
+        map: [ "outerclothing-equipped" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - outerclothing-icon:
+          icon-open: Base
+        outerclothing-equipped:
+          open-equipped-OUTERCLOTHING: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable

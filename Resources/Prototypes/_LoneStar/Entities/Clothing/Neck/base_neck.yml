@@ -1,0 +1,40 @@
+- type: entity
+  parent: [ClothingNeckCollarBase, BaseFoldable]
+  id: ClothingNeckCollarBaseFoldable
+  abstract: true
+  components:
+  - type: Foldable
+    canFoldInsideContainer: true
+    foldVerbText: unfold-verb
+    unfoldVerbText: fold-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: folded
+
+- type: entity
+  abstract: true
+  id: ClothingNeckRandomSpriteMono
+  suffix: Random
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "neck-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK
+        map: [ "neck-equipped" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - neck-icon:
+          icon: Base
+        neck-equipped:
+          equipped-NECK: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable

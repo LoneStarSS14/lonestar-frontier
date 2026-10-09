@@ -665,6 +665,9 @@
       path: /Audio/Weapons/bladeslice.ogg
       params:
         variation: 0.250
+  # LoneStar v
+  - type: Loadout
+    prototypes:
 
 #region Tier 2
 - type: entity

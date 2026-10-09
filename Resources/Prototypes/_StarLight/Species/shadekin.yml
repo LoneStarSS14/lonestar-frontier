@@ -8,7 +8,6 @@
   markingLimits: MobShadekinMarkingLimits
   dollPrototype: AppearanceShadekin
   skinColoration: Hues
-  # eyeColoration: Shadekin # Wayfarer
   maleFirstNames: names_shadekin
   femaleFirstNames: names_shadekin
   naming: First
@@ -16,7 +15,9 @@
   maxAge: 300
   youngAge: 100
   oldAge: 200
-  # customName: true # Wayfarer
+  # LoneStar v
+  kind:
+  - BasicHumanlike
 
 - type: speciesBaseSprites
   id: MobShadekinSprites
@@ -25,7 +26,10 @@
     UndergarmentTop: MobHumanoidAnyMarking
     UndergarmentBottom: MobHumanoidAnyMarking
     Snout: MobShadekinAnyMarkingFollowSkin
+    UndershirtUnderclothes: MobHumanoidAnyMarking
+    UndershirtOverclothes: MobHumanoidAnyMarking
     Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
     Chest: MobShadekinTorso
     HeadTop: MobShadekinAnyMarking
     HeadSide: MobShadekinAnyMarkingFollowSkin
@@ -39,14 +43,12 @@
     RLeg: MobShadekinRLeg
     LFoot: MobShadekinLFoot
     RFoot: MobShadekinRFoot
-    # Wayfarer
     Genital: MobHumanoidAnyMarking
     Special: MobHumanoidAnyMarking
     NeckFluff: MobHumanoidAnyMarking
     TailBehind: MobHumanoidAnyMarking
     TailOversuit: MobHumanoidAnyMarking
     RArmExtension: MobHumanoidAnyMarking
-    # End Wayfarer
 
 
 - type: markingPoints
@@ -55,7 +57,6 @@
     Hair:
       points: 32 # Wayfarer: 1<32
       required: false
-    # Wayfarer: BELIEVE ME, YOU DON'T WANT TO SEE SHADEKIN WITH FACIAL HAIR.
     FacialHair:
       points: 0
       required: false
@@ -67,6 +68,12 @@
       points: 32 # Wayfarer: 1<32
       required: true
       defaultMarkings: [EarsShadekin]
+    Snout:
+      points: 35
+      required: false
+    HeadSide:
+      points: 35
+      required: false
     UndergarmentTop:
       points: 32 # Wayfarer: 1<32
       required: false
@@ -82,6 +89,9 @@
     Arms:
       points: 32 # Wayfarer: 2<32
       required: false
+    Head:
+      points: 32
+      required: false
     # Wayfarer
     Genital:
       points: 32
@@ -93,6 +103,46 @@
       points: 32
       required: false
     # End Wayfarer
+    Overlay:
+      points: 35
+      required: false
+    # Copypaste these into every species I HATE THIS CODE
+    BaseChest:
+      points: 35
+      required: false
+    BaseHead:
+      points: 35
+      required: false
+    BaseLArm:
+      points: 35
+      required: false
+    BaseLFoot:
+      points: 35
+      required: false
+    BaseLHand:
+      points: 35
+      required: false
+    BaseLLeg:
+      points: 35
+      required: false
+    BaseRArm:
+      points: 35
+      required: false
+    BaseRFoot:
+      points: 35
+      required: false
+    BaseRHand:
+      points: 35
+      required: false
+    BaseRLeg:
+      points: 35
+      required: false
+    BaseArms:
+      points: 35
+      required: false
+    BaseLegs:
+      points: 35
+      required: false
 
 - type: humanoidBaseSprite
   id: MobShadekinAnyMarkingFollowSkin

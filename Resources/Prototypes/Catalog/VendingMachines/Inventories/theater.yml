@@ -16,6 +16,14 @@
     ClothingUniformBodysuitRandomLeotard: 4294967295
     ClothingUniformBodysuitRandomDealer: 4294967295
     ClothingUniformBodysuitRandomClown: 4294967295
+    ClothingOuterCoatBomberWhite: 4294967295
+    ClothingOuterCoatBomberWhiteOpen: 4294967295
+    ClothingOuterCoatBomberWhiteLoose: 4294967295
+    ClothingOuterCoatBomberWhiteLooseOpen: 4294967295
+    ClothingUniformJumpskirtTailoredGownColorable: 4294967295
+    ClothingUniformJumpskirtTailoredGownMonoColorable: 4294967295
+    ClothingUniformJumpskirtPartyPrincessColorable: 4294967295
+    ClothingUniformJumpskirtWesternColorable: 4294967295
     MagicNeedle: 4294967295
     ClothingHeadHatJester: 4294967295
     ClothingUniformJumpsuitJester: 4294967295
@@ -85,10 +93,16 @@
     ClothingUniformJumpskirtPerformer: 4294967295
     ClothingShoesBootsPerformer: 4294967295
     ClothingUniformJumpskirtPerformerAlt: 4294967295 # LoneStar
+    ClothingUniformMusicianSingerDress: 4294967295
+    ClothingHandsMusicianSingerGloves: 4294967295
+    ClothingOuterCoatMusicianFurCoat: 4294967295
+    ClothingNeckFeatherBoa: 4294967295
     ClothingNeckCloakMoth: 4294967295
     ClothingUniformJumpskirtJanimaid: 4294967295
     ClothingNeckCloakVoid: 4294967295
     ClothingNeckCloakHero: 4294967295
+    ClothingNeckCowBellCollar: 4294967295
+    ClothingNeckTeddyRibbon: 4294967295
     ClothingHeadBandRed: 4294967295
     ClothingHeadHatPirate: 4294967295
     ClothingOuterCoatPirate: 4294967295
@@ -110,10 +124,12 @@
     ClothingBackpackMessengerClown: 4294967295
     ClothingMaskClown: 4294967295
     ClothingMaskClownBald: 4294967295
+    ClothingMaskClownNose: 4294967295
     ClothingShoesClown: 4294967295
     ClothingUniformJumpsuitClown: 4294967295
     ClothingOuterWinterClown: 4294967295
     ClothingOuterClownPriest: 4294967295
+    ClothingNeckRuffle: 4294967295
     RubberStampClown: 4294967295
     ClothingBackpackMime: 4294967295
     ClothingBackpackSatchelMime: 4294967295
@@ -330,6 +346,7 @@
     CoolCoyoteClothesWhitesun: 4294967295
     CoolCoyoteClothesYellowwshort: 4294967295
     CoolCoyoteClothesGearHarness: 4294967295
+    ClothingNeckVetCone: 4294967295
     ClothingShoesFootProtectors: 4294967295
     ClothingHeadHatGrenzel: 4294967295
     ClothingUniformJumpsuitGrenzel: 4294967295
@@ -348,6 +365,7 @@
     ClothingShoesAngelSandals: 4294967295
     ClothingNeckAngelWings: 4294967295
     HandheldHarpInstrument: 4294967295
+    ClothingMaskKistune: 4294967295
     ClothingUniformHitmanSuit: 4294967295
     ClothingUniformHitmanSuitSkirt: 4294967295
     ClothingUniformBrosBlazer: 4294967295

@@ -1,0 +1,29 @@
+- type: entity
+  name: pom boll
+  description: Moth people's favorite sna- wait... how did you get this...?
+  id: PomBol
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Specific/Hydroponics/poms.rsi
+  - type: FlavorProfile
+    flavors:
+      - cotton
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+  - type: Log
+    spawnedPrototype: MaterialPom1
+    spawnCount: 3
+  - type: Produce
+    seedId: pompombush
+  - type: Tag
+    tags:
+    - ClothMade
+    - PomBoll
+  - type: MothFood # Frontier
