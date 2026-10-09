@@ -1,25 +1,21 @@
 # SPDX-FileCopyrightText: 2026 Sushiburger
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
-
-# 32x32
 - type: entity
   parent: BaseSign
   id: NeonSignBase
   abstract: true
   components:
-    - type: WallMount
-      arc: 360
     - type: Sprite
       drawdepth: Overdoors
-      snapCardinals: true # one direction
-      damageContainer: Inorganic
-      damageModifierSet: RGlass
+      snapCardinals: true
     - type: Anchorable
     - type: Pullable
-    - type: Rotatable
     - type: Transform
       anchored: true
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: RGlass
     - type: Destructible
       thresholds:
       - trigger:
@@ -35,6 +31,7 @@
                 volume: -8
 
 - type: entity
+  parent: NeonSignBase
   id: NeonSignLCbg
   name: Little Cheeser's Neon Sign
   description: Featuring the Little Cheeser's mascot.
@@ -82,7 +79,6 @@
   id: NeonSignPizza
   name: Pizza Neon Sign
   description: Pizza time.
-  suffix: background
   components:
   - type: Sprite
     sprite: _Everdream/Structures/Wallmounts/neonsigns.rsi
