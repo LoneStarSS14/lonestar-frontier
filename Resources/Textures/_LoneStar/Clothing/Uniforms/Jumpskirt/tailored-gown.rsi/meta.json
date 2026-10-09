@@ -1,0 +1,42 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from coyote bayou at commit af94b33, split and recolored by Archee.",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "icon-base"
+        },
+        {
+            "name": "icon-decor"
+        },
+        {
+            "name": "icon-accent"
+        },
+        {
+            "name": "icon-extra"
+        },
+        {
+            "name": "equipped-INNERCLOTHING-base",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-decor",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-accent",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-extra",
+            "directions": 4
+        }
+    ]
+}

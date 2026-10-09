@@ -1,0 +1,134 @@
+- type: entity
+  name: pom pom
+  parent: [ SimpleSpaceMobBase, FlyingMobBase ]
+  id: BaseMobPompom
+  abstract: true
+  description: A small, dainty creature with many legs. It hovers through the air like a squid.
+  components:
+  - type: PointLight
+    color: White
+    radius: 1.1
+    energy: 6
+    netsync: false
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 4
+  - type: MovementIgnoreGravity # nyoom
+    # weightless: true # LoneStar
+  - type: FloatingVisuals
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: pompom
+      sprite: _Impstation/Mobs/Animals/pompom.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 7.5
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      20: Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: pompom
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 5
+  - type: Butcherable
+    spawned:
+    - id: MaterialPom1
+      amount: 3
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - Trash
+    # - MultitoolDefibrillatorTarget # LoneStar
+  - type: Bloodstream
+    bloodReagent: InsectBlood
+    bloodMaxVolume: 0.1
+  - type: MobPrice
+    price: 50
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 20
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: ZombieImmune
+  # - type: PleebnarGibbable # LoneStar
+  - type: AlwaysRevolutionaryConvertible
+
+- type: entity
+  parent: BaseMobPompom
+  id: MobPompom
+  components:
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Dead
+    damageCap: 20
+    damage:
+      types:
+        Blunt: 0.01
+
+- type: entity
+  parent: BaseMobPompom
+  id: MobSuperPompom
+  description: A small, dainty creature with many legs. It hovers through the air like a squid. This one seems heartier than it's kin.
+  suffix: Ghost, AI
+  components:
+  - type: GhostRole
+    prob: 1
+    name: Pom Pom!
+    allowMovement: true
+    description: A small, dainty creature with many legs. It hovers through the air like a squid. This one seems heartier than it's kin.
+    rules: ghost-role-information-nonantagonist-rules #TODO
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+  - type: Speech
+    speechSounds: Moth
+    speechVerb: SmallMob
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 5
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+  - type: CanEscapeInventory
+    baseResistTime: 2
+  - type: Examiner
+  - type: DoAfter
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Animals/cat_hiss.ogg
+    hidden: true
+    damage:
+      types:
+        Slash: 1

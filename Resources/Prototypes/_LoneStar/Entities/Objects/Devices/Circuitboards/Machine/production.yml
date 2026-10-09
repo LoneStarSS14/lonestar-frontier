@@ -1,0 +1,15 @@
+- type: entity
+  id: BioDjinnMachineCircuitboard
+  parent: BiogeneratorMachineCircuitboard
+  name: Bio Djinn machine board
+  description: A machine printed circuit board for a Bio Djinn.
+  components:
+    - type: MachineBoard
+      prototype: BioDjinn
+      requirements:
+        MatterBin: 1
+        Manipulator: 1
+      tagRequirements:
+        GlassBeaker:
+          amount: 1
+          defaultPrototype: Beaker

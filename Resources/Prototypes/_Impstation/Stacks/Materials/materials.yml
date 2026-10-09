@@ -1,0 +1,6 @@
+- type: stack
+  id: Pompoms
+  name: stack-pompoms
+  icon: { sprite: /Textures/_Impstation/Materials/poms.rsi, state: pompile }
+  spawn: MaterialPom1
+  maxCount: 30

@@ -1,0 +1,15 @@
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: NFMagazineShotgunDrumEmpty
+  result: NFMagazineShotgunDrumEmpty
+  materials:
+    Steel: 40
+    Plastic: 40
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: LSMagazineBoxRifle20Empty
+  result: LSMagazineBoxRifle20Empty
+  materials:
+    Steel: 40
+    Plastic: 40
