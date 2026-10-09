@@ -213,6 +213,15 @@
           shouldHave: false
       - !type:Drunk
         boozePower: 2
+      # LoneStar below
+      - !type:HealthChange
+        conditions:
+        - !type:TotalDamage
+          max: 5
+        damage:
+          types:
+            Radiation: -0.05
+      # LoneStar end
 
 - type: reagent
   id: Gin

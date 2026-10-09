@@ -884,7 +884,16 @@
             Heat: -0.33
             Shock: -0.33
             Cold: -0.33
-            Radiation: -0.1 # Coyote: Heals a minuscule amount of radiation, also shuts up medibots.
+      # LoneStar below
+      - !type:HealthChange
+        conditions:
+        - !type:TotalDamage
+          max: 10
+        damage:
+          types:
+            Radiation: -0.1
+      # LoneStar end
+
 
 - type: reagent
   id: Lipozine
