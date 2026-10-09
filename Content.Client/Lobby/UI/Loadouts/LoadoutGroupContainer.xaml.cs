@@ -62,9 +62,8 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                 Margin = new Thickness(5, 0, 5, 5),
             });
         }
-        Dictionary<string, BoxContainer> categories = new();
         LoadoutsContainer.DisposeAllChildren();
-
+        Dictionary<string, LoadoutCategoryContainer> categories = new();
         // Didn't use options because this is more robust in future.
 
         var selected = loadout.SelectedLoadouts[_groupProto.ID];
@@ -95,29 +94,26 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                     OnLoadoutUnpressed?.Invoke(loadoutProto);
             };
 
-                var category = loadProto.Category;
-                if (string.IsNullOrEmpty(category))
+
+
+            // Frontier: allows sorting loadouts by category into lists
+            var category = loadProto.Category;
+            if (string.IsNullOrEmpty(category))
+            {
+                LoadoutsContainer.AddChild(loadoutContainer);
+            }
+            else
+            {
+                if (!categories.TryGetValue(category, out var categoryContainer))
                 {
-                    LoadoutsContainer.AddChild(loadoutContainer);
+                    categoryContainer = new LoadoutCategoryContainer(category);
+                    LoadoutsContainer.AddChild(categoryContainer);
+                    categories[category] = categoryContainer;
                 }
-                else
-                {
-                    if (!categories.TryGetValue(category, out var categoryBox))
-                    {
-                        var heading = new CollapsibleHeading(Loc.GetString(category));
-                        var body = new CollapsibleBody();
-                        categoryBox = new BoxContainer { Orientation = LayoutOrientation.Vertical };
-                        body.AddChild(categoryBox);
 
-                        var collapsible = new Collapsible(heading, body);
-                        LoadoutsContainer.AddChild(collapsible);
-
-                        categories[category] = categoryBox;
-                    }
-
-                    categoryBox.AddChild(loadoutContainer);
-                }
-        }
+                categoryContainer.AddItem(loadoutContainer);
+            }
+        } // End Frontier
 
         // Frontier: loadoutGroup subgroups
 
