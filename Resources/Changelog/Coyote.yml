@@ -4306,3 +4306,10 @@ Entries:
   id: 470
   time: '2026-10-09T00:17:30.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/232
+- author: archee1
+  changes:
+    - type: Add
+      message: A new science shuttle from frontier has been added, the Stronghold
+  id: 471
+  time: '2026-10-09T01:27:42.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/238
