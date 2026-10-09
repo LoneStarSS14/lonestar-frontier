@@ -4297,3 +4297,12 @@ Entries:
   id: 469
   time: '2026-10-08T22:23:15.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/236
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: >-
+        Made L6 and Bulldog mags researchable and printable, and made L6 mag
+        bigger.
+  id: 470
+  time: '2026-10-09T00:17:30.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/232
