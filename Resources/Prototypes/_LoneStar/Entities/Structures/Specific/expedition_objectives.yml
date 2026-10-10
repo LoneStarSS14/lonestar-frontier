@@ -29,7 +29,7 @@
     spawnIntervalVariance: 5
     maxNearby: 7
     nearbyFactions:
-    - Dragon
+    - CarpExpeditionLS
     spawnPrototypes:
     - NFMobPurpleSnake
     - LSSpawnMobCarp
