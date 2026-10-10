@@ -479,7 +479,7 @@
         Slash: 0.37
         Piercing: 0.9
         Heat: 0.7
-        Radiation: 0.02
+        Radiation: 0.01
         Caustic: 0.2
   - type: ClothingSpeedModifier
     walkModifier: 0.75
