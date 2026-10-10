@@ -66,6 +66,7 @@
         - Write
         - Book
         - Spellbook
+        - Scroll # LoneStar
   - type: UserInterface
     interfaces:
       enum.StorageUiKey.Key:

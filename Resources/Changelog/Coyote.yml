@@ -4297,3 +4297,37 @@ Entries:
   id: 469
   time: '2026-10-08T22:23:15.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/236
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: >-
+        Made L6 and Bulldog mags researchable and printable, and made L6 mag
+        bigger.
+  id: 470
+  time: '2026-10-09T00:17:30.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/232
+- author: archee1
+  changes:
+    - type: Add
+      message: A new science shuttle from frontier has been added, the Stronghold
+  id: 471
+  time: '2026-10-09T01:27:42.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/238
+- author: trashqueenlily
+  changes:
+    - type: Fix
+      message: >-
+        Uploaded a software patch to all cyborgs fixing a critical coordination
+        bug.
+  id: 472
+  time: '2026-10-10T01:48:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/231
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        Projectiles that can mine hard rocks can now also mine soft rocks
+        without the ore items getting destroyed
+  id: 473
+  time: '2026-10-10T01:48:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/234

@@ -25,6 +25,7 @@
   - type: Tag
     tags:
     - Sidearm
+    - Scroll # LoneStar
   - type: StaticPrice
     price: 500
 

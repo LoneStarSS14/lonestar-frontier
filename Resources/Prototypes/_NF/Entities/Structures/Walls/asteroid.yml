@@ -5,7 +5,7 @@
   - type: OreVein
     gatherDestructionWhitelist:
       components:
-      - MiningGatheringHard
+      #- MiningGatheringHard # LoneStar
 
 - type: entity
   parent: [NFBaseSoftOreVein, AsteroidRock]
