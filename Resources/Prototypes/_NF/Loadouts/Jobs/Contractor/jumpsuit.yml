@@ -330,6 +330,7 @@
     jumpsuit: ClothingUniformJumpskirtColorRainbow
 
 - type: loadout
+  category: Hawaiian Shirts
   id: ContractorClothingUniformJumpsuitHawaiBlack
   effects:
   - !type:GroupLoadoutEffect
@@ -339,6 +340,7 @@
     jumpsuit: ClothingUniformJumpsuitHawaiBlack
 
 - type: loadout
+  category: Hawaiian Shirts
   id: ContractorClothingUniformJumpsuitHawaiBlue
   effects:
   - !type:GroupLoadoutEffect
@@ -348,6 +350,7 @@
     jumpsuit: ClothingUniformJumpsuitHawaiBlue
 
 - type: loadout
+  category: Hawaiian Shirts
   id: ContractorClothingUniformJumpsuitHawaiRed
   effects:
   - !type:GroupLoadoutEffect
@@ -357,6 +360,7 @@
     jumpsuit: ClothingUniformJumpsuitHawaiRed
 
 - type: loadout
+  category: Hawaiian Shirts
   id: ContractorClothingUniformJumpsuitHawaiYellow
   effects:
   - !type:GroupLoadoutEffect

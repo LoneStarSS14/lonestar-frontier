@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Client.Replay.UI.Loading;
 using Content.Shared.Clothing;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
@@ -61,10 +62,13 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                 Margin = new Thickness(5, 0, 5, 5),
             });
         }
-
         LoadoutsContainer.DisposeAllChildren();
+
         // Didn't use options because this is more robust in future.
 
+        //Frontier: dictionary as to keep track of existing categories
+        Dictionary<string, LoadoutCategoryContainer> categories = new();
+        //End Frontier
         var selected = loadout.SelectedLoadouts[_groupProto.ID];
 
         foreach (var loadoutProto in _groupProto.Loadouts)
@@ -93,10 +97,31 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                     OnLoadoutUnpressed?.Invoke(loadoutProto);
             };
 
-            LoadoutsContainer.AddChild(loadoutContainer);
-        }
+
+
+            // Frontier: allows sorting loadouts by category into lists
+            var category = loadProto.Category;
+            if (string.IsNullOrEmpty(category))
+            {
+                LoadoutsContainer.AddChild(loadoutContainer);
+            }
+            else
+            {
+                if (!categories.TryGetValue(category, out var categoryContainer))
+                {
+                    categoryContainer = new LoadoutCategoryContainer(category);
+                    LoadoutsContainer.AddChild(categoryContainer);
+                    categories[category] = categoryContainer;
+                }
+
+                categoryContainer.AddItem(loadoutContainer);
+            }
+        } // End Frontier
 
         // Frontier: loadoutGroup subgroups
+
+
+
         foreach (var subgroupProto in _groupProto.Subgroups)
         {
             if (!protoMan.TryIndex(subgroupProto, out var loadoutGroupProto))
@@ -125,8 +150,23 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                     else
                         OnLoadoutUnpressed?.Invoke(loadoutProto);
                 };
+                // collapsibles for subgroups
+                var category = loadProto.Category;
+                if (string.IsNullOrEmpty(category))
+                {
+                    LoadoutsContainer.AddChild(loadoutContainer);
+                }
+                else
+                {
+                    if (!categories.TryGetValue(category, out var categoryContainer))
+                    {
+                        categoryContainer = new LoadoutCategoryContainer(category);
+                        LoadoutsContainer.AddChild(categoryContainer);
+                        categories[category] = categoryContainer;
+                    }
 
-                LoadoutsContainer.AddChild(loadoutContainer);
+                    categoryContainer.AddItem(loadoutContainer);
+                }
             }
         }
         // End Frontier
