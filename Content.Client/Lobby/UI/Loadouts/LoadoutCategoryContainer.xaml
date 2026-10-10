@@ -3,11 +3,11 @@ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 xmlns:controls="clr-namespace:Robust.Client.UserInterface.Controls;assembly=Robust.Client"
 xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
 Margin="0 2 0 4">
-<controls:CollapsibleHeading Name="CategoryHeading" HorizontalAlignment="Center"/>
-<controls:CollapsibleBody Margin="0 2 0 4">
+<controls:CollapsibleHeading Name="CategoryHeading" StyleClasses="button" HorizontalAlignment="Center" MinHeight="32" Margin="0 2 0 4" />
+<controls:CollapsibleBody Margin="0 2 0 4" >
     <PanelContainer>
         <PanelContainer.PanelOverride>
-            <graphics:StyleBoxFlat BackgroundColor="#47474f" />
+            <graphics:StyleBoxFlat BackgroundColor="#38383d" />
         </PanelContainer.PanelOverride>
         <BoxContainer Name="ItemsContainer"
             Orientation="Vertical"

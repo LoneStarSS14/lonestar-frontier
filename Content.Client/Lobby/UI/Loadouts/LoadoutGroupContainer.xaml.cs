@@ -63,9 +63,12 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
             });
         }
         LoadoutsContainer.DisposeAllChildren();
-        Dictionary<string, LoadoutCategoryContainer> categories = new();
+
         // Didn't use options because this is more robust in future.
 
+        //Frontier: dictionary as to keep track of existing categories
+        Dictionary<string, LoadoutCategoryContainer> categories = new();
+        //End Frontier
         var selected = loadout.SelectedLoadouts[_groupProto.ID];
 
         foreach (var loadoutProto in _groupProto.Loadouts)
