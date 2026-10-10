@@ -1,5 +1,5 @@
 using Robust.Shared.Prototypes;
-
+//goob station start
 namespace Content.Shared.Clothing.Components
 {
     [RegisterComponent]
@@ -10,6 +10,7 @@ namespace Content.Shared.Clothing.Components
         public ComponentRegistry Components { get; private set; } = new();
 
         [ViewVariables(VVAccess.ReadWrite)]
-        public Dictionary<string, bool> Active = new(); // Goobstation
+        public Dictionary<string, bool> Active = new();
     }
 }
+//goob station end
