@@ -349,7 +349,7 @@
         Slash: 0.8
         Piercing: 0.8
         Heat: 0.4
-        Radiation: 0.05 # Frontier - 0<0.05
+        Radiation: 0.01 # Lonestar - 0.05 > 0.01
         Caustic: 0.7
   - type: ClothingSpeedModifier
     walkModifier: 0.9
@@ -357,7 +357,10 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitEngineeringWhite
-
+  - type: SupermatterImmune
+  - type: ClothingGrantComponent
+    component:
+        - type: SupermatterImmune
 #Chief Medical Officer's Hardsuit
 - type: entity
   parent: ClothingOuterHardsuitBase # Removed BaseCommandContraband
