@@ -1,22 +1,26 @@
 - type: loadout
+  category: Mercenary Jumpsuits
   id: MercenaryClothingUniformJumpsuitMercenary
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitMercenary
 
 - type: loadout
+  category: Mercenary Jumpsuits
   id: MercenaryClothingUniformJumpskirtMercenary
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtMercenary
 
 - type: loadout
+  category: Mercenary Jumpsuits
   id: MercenaryClothingUniformJumpsuitPrivateSec
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitPrivateSec
 
 - type: loadout
+  category: Mercenary Jumpsuits
   id: MercenaryClothingUniformJumpskirtPrivateSec
   price: 0
   equipment:
@@ -24,6 +28,7 @@
 
 # T3 "Military"
 - type: loadout
+  category: Mercenary Turtlenecks
   id: MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenary
   effects:
   - !type:GroupLoadoutEffect
@@ -33,6 +38,7 @@
     jumpsuit: ClothingUniformJumpsuitMilitaryTurtleneckMercenary
 
 - type: loadout
+  category: Mercenary Turtlenecks
   id: MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenaryMedic
   effects:
   - !type:GroupLoadoutEffect
@@ -42,6 +48,7 @@
     jumpsuit: ClothingUniformJumpsuitMilitaryTurtleneckMercenaryMedic
 
 - type: loadout
+  category: Mercenary Turtlenecks
   id: MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenaryCaptain
   effects:
   - !type:GroupLoadoutEffect
@@ -51,6 +58,7 @@
     jumpsuit: ClothingUniformJumpsuitMilitaryTurtleneckMercenaryCaptain
 
 - type: loadout
+  category: Mercenary Turtlenecks
   id: MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenary
   effects:
   - !type:GroupLoadoutEffect
@@ -60,6 +68,7 @@
     jumpsuit: ClothingUniformJumpsuitMilitaryTurtleneckBlueMercenary
 
 - type: loadout
+  category: Mercenary Turtlenecks
   id: MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic
   effects:
   - !type:GroupLoadoutEffect
@@ -69,6 +78,7 @@
     jumpsuit: ClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic
 
 - type: loadout
+  category: Mercenary Turtlenecks
   id: MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryCaptain
   effects:
   - !type:GroupLoadoutEffect

@@ -150,8 +150,23 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                     else
                         OnLoadoutUnpressed?.Invoke(loadoutProto);
                 };
+                // collapsibles for subgroups
+                var category = loadProto.Category;
+                if (string.IsNullOrEmpty(category))
+                {
+                    LoadoutsContainer.AddChild(loadoutContainer);
+                }
+                else
+                {
+                    if (!categories.TryGetValue(category, out var categoryContainer))
+                    {
+                        categoryContainer = new LoadoutCategoryContainer(category);
+                        LoadoutsContainer.AddChild(categoryContainer);
+                        categories[category] = categoryContainer;
+                    }
 
-                LoadoutsContainer.AddChild(loadoutContainer);
+                    categoryContainer.AddItem(loadoutContainer);
+                }
             }
         }
         // End Frontier
