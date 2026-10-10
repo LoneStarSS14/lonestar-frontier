@@ -1,6 +1,6 @@
 #region clothes
 - type: entity
-  parent: BunnysuitBase
+  parent: BunnysuitBaseFoldable
   id: BunnysuitDataminer
   name: dataminer bunny suit
   components:

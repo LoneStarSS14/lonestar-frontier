@@ -1,6 +1,6 @@
 #region clothes
 - type: entity
-  parent: BunnysuitBase
+  parent: BunnysuitBaseFoldable
   id: BunnysuitGorlex
   name: gorlex bunny suit
   components:
