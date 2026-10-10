@@ -1,5 +1,5 @@
 namespace Content.Shared.Clothing.Components;
-
+// goob station start
 [RegisterComponent]
 public sealed partial class ClothingGrantTagComponent : Component
 {
@@ -9,3 +9,4 @@ public sealed partial class ClothingGrantTagComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     public bool IsActive = false;
 }
+// goob station end
