@@ -5,6 +5,7 @@ using Content.Shared.Contraband;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
+using Content.Shared.Movement.Components; // LoneStar
 using Content.Shared.Tag;
 using Content.Shared.Verbs;
 using Robust.Shared.Prototypes;
@@ -99,6 +100,20 @@ public abstract class SharedChameleonClothingSystem : EntitySystem
         {
             _clothingSystem.CopyVisuals(uid, otherClothing, clothing);
         }
+
+        // LoneStar start: chameleon footsteps
+        // clothing footstep sounds
+        if (proto.TryGetComponent(out FootstepModifierComponent? otherFootstepModifier, Factory))
+        {
+            var footstepModifier = EnsureComp<FootstepModifierComponent>(uid);
+            footstepModifier.FootstepSoundCollection = otherFootstepModifier.FootstepSoundCollection;
+            Dirty(uid, footstepModifier);
+        }
+        else
+        {
+            RemComp<FootstepModifierComponent>(uid);
+        }
+        // LoneStar end: chameleon footsteps
 
         // appearance data logic
         if (TryComp(uid, out AppearanceComponent? appearance) &&
