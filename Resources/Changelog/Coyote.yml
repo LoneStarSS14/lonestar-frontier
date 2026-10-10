@@ -4322,3 +4322,12 @@ Entries:
   id: 472
   time: '2026-10-10T01:48:00.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/231
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        Projectiles that can mine hard rocks can now also mine soft rocks
+        without the ore items getting destroyed
+  id: 473
+  time: '2026-10-10T01:48:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/234
