@@ -34,8 +34,8 @@
         reagents:
         - ReagentId: Water
           Quantity: 50
-  - type: TrashOnSolutionEmpty
-    solution: drink
+  # - type: TrashOnSolutionEmpty # LoneStar
+  #   solution: drink
   - type: StaticPrice
     price: 20 # Frontier: 12.5<20
 
