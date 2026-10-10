@@ -4313,3 +4313,12 @@ Entries:
   id: 471
   time: '2026-10-09T01:27:42.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/238
+- author: trashqueenlily
+  changes:
+    - type: Fix
+      message: >-
+        Uploaded a software patch to all cyborgs fixing a critical coordination
+        bug.
+  id: 472
+  time: '2026-10-10T01:48:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/231
