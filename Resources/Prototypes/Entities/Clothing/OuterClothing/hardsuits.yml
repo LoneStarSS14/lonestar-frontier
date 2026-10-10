@@ -352,16 +352,15 @@
         Radiation: 0.01 # Lonestar - 0.05 > 0.01
         Caustic: 0.7
   - type: ClothingSpeedModifier
-  - type: SupermatterImmune
-  - type: ClothingGrantComponent
-    component:
-        - type: SupermatterImmune
     walkModifier: 0.9
     sprintModifier: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitEngineeringWhite
-
+  - type: SupermatterImmune
+  - type: ClothingGrantComponent
+    component:
+        - type: SupermatterImmune
 #Chief Medical Officer's Hardsuit
 - type: entity
   parent: ClothingOuterHardsuitBase # Removed BaseCommandContraband
