@@ -894,7 +894,6 @@
             Radiation: -0.1
       # LoneStar end
 
-
 - type: reagent
   id: Lipozine
   name: reagent-name-lipozine
