@@ -67,9 +67,27 @@
   id: NFMobPurpleSnake
   suffix: Frontier
   categories: [ HideSpawnMenu ]
+  # LoneStar v
+  components:
+  - type: NpcFactionMember
+    factions:
+    - CarpExpeditionLS
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      64: Dead
 
 - type: entity
   parent: [MobStaminaFodder, MobMovementSpeedModifierMelee, NFMobSimpleHostileBase, MobSmallPurpleSnake]
   id: NFMobSmallPurpleSnake
   suffix: Frontier, Small
   categories: [ HideSpawnMenu ]
+  # LoneStar v
+  components:
+  - type: NpcFactionMember
+    factions:
+    - CarpExpeditionLS
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      32: Dead
