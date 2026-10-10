@@ -1,0 +1,1398 @@
+# SPDX-FileCopyrightText: 2022 Lamrr
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2025 Comet.Void
+# SPDX-FileCopyrightText: 2025 CometVoid
+# SPDX-FileCopyrightText: 2025 Sir Warock
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2026 Sushiburger
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# From KC/Sushiburger: Double bed construction graphs. Based partially off of how fancy tables work.
+
+# Base Bed Left
+- type: constructionGraph
+  id: DoubleBedLeft
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: Steel
+              amount: 3
+              doAfter: 2
+            - material: Cloth
+              amount: 3
+              doAfter: 2
+
+# Finished Base Bed. Deconstructing requires screwdriver.
+    - node: DoubleBedLeft
+      entity: DoubleBedLeft
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 3
+          steps:
+            - tool: Screwing
+              doAfter: 2
+# Transformative Constructions
+        - to: DoubleBedLeftBlack
+          steps:
+            - tag: BedsheetBlack
+              doAfter: 2
+              name: black-bedsheet # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetblack
+    
+        - to: DoubleBedLeftBlue
+          steps:
+            - tag: BedsheetBlue
+              doAfter: 2
+              name: blue-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetblue
+
+        - to: DoubleBedLeftBrown
+          steps:
+            - tag: BedsheetBrown
+              doAfter: 2
+              name: brown-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetbrown
+
+        - to: DoubleBedLeftCC
+          steps:
+            - tag: BedsheetCentcom
+              doAfter: 2
+              name: centcomm-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetcentcom
+
+        - to: DoubleBedLeftClown
+          steps:
+            - tag: BedsheetClown
+              doAfter: 2
+              name: clown-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetclown
+
+        - to: DoubleBedLeftCult
+          steps:
+            - tag: BedsheetCult
+              doAfter: 2
+              name: cult-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetcult
+# Made the fancy beds require durathread and carpet instead of bedsheets.
+        - to: DoubleBedLeftPadded
+          steps:
+            - material: Durathread
+              amount: 3
+              doAfter: 2
+        - to: DoubleBedLeftGreen
+          steps:
+            - tag: BedsheetGreen
+              doAfter: 2
+              name: green-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetgreen
+
+        - to: DoubleBedLeftGrey
+          steps:
+            - tag: BedsheetGrey
+              doAfter: 2
+              name: grey-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetgrey
+
+        - to: DoubleBedLeftIan
+          steps:
+            - tag: BedsheetIan
+              doAfter: 2
+              name: ian-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetian
+
+        - to: DoubleBedLeftMime
+          steps:
+            - tag: BedsheetMime
+              doAfter: 2
+              name: mime-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetmime
+
+        - to: DoubleBedLeftNT
+          steps:
+            - tag: BedsheetNT
+              doAfter: 2
+              name: nt-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetNT
+
+        - to: DoubleBedLeftOrange
+          steps:
+            - tag: BedsheetOrange
+              doAfter: 2
+              name: orange-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetorange
+
+        - to: DoubleBedLeftPurple
+          steps:
+            - tag: BedsheetPurple
+              doAfter: 2
+              name: purple-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetpurple
+
+        - to: DoubleBedLeftRainbow
+          steps:
+            - tag: BedsheetRainbow
+              doAfter: 2
+              name: rainbow-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetrainbow
+
+        - to: DoubleBedLeftRed
+          steps:
+            - tag: BedsheetRed
+              doAfter: 2
+              name: red-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetred
+
+        - to: DoubleBedLeftSyndie
+          steps:
+            - tag: BedsheetSyndie
+              doAfter: 2
+              name: syndicate-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetsyndie
+# Made the TSF bed take the Captain's Bedsheet. In lieu of an actual TSF bedsheet. This can be changed when one is sprited.
+        - to: DoubleBedLeftTSF
+          steps:
+            - tag: BedsheetCaptain
+              doAfter: 2
+              name: captain-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetcaptain
+
+        - to: DoubleBedLeftUS
+          steps:
+            - tag: BedsheetUSA
+              doAfter: 2
+              name: usa-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetUSA
+
+        - to: DoubleBedLeftWhite
+          steps:
+            - tag: BedsheetWhite
+              doAfter: 2
+              name: white-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetwhite
+
+        - to: DoubleBedLeftWizard
+          steps:
+            - tag: BedsheetWiz
+              doAfter: 2
+              name: wizard-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetwiz
+
+        - to: DoubleBedLeftYellow
+          steps:
+            - tag: BedsheetYellow
+              doAfter: 2
+              name: yellow-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetyellow
+# Cami Bugfix. Step for the durathread before the carpet. They will not work if you don't do this and I'm not sure why.
+    - node: DoubleBedLeftPadded
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+          steps:
+            - tool: Prying
+              doAfter: 2
+        - to: DoubleBedLeftFancyBlack
+          steps:
+            - material: FloorCarpetBlack
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyBlue
+          steps:
+            - material: FloorCarpetBlue
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyGreen
+          steps:
+            - material: FloorCarpetGreen
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyOrange
+          steps:
+            - material: FloorCarpetOrange
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyPink
+          steps:
+            - material: FloorCarpetPink
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyPurple
+          steps:
+            - material: FloorCarpetPurple
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyRed
+          steps:
+            - material: FloorCarpetRed
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancySkyblue
+          steps:
+            - material: FloorCarpetSkyBlue
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyTeal
+          steps:
+            - material: FloorCarpetCyan
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedLeftFancyWhite
+          steps:
+            - material: FloorCarpetWhite
+              amount: 1
+              doAfter: 2
+# Finished constructions + Deconstructions. Removing bedsheets requires crowbar.
+    - node: DoubleBedLeftBlack
+      entity: DoubleBedLeftBlack
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetBlack
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftBlue
+      entity: DoubleBedLeftBlue
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetBlue
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftBrown
+      entity: DoubleBedLeftBrown
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetBrown
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftCC
+      entity: DoubleBedLeftCC
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetCentcom
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftClown
+      entity: DoubleBedLeftClown
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetClown
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftCult
+      entity: DoubleBedLeftCult
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetCult
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyBlack
+      entity: DoubleBedLeftFancyBlack
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemBlack
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyBlue
+      entity: DoubleBedLeftFancyBlue
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemBlue
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyGreen
+      entity: DoubleBedLeftFancyGreen
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemGreen
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyOrange
+      entity: DoubleBedLeftFancyOrange
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemOrange
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyPink
+      entity: DoubleBedLeftFancyPink
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemPink
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyPurple
+      entity: DoubleBedLeftFancyPurple
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemPurple
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyRed
+      entity: DoubleBedLeftFancyRed
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemRed
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancySkyblue
+      entity: DoubleBedLeftFancySkyblue
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemSkyBlue
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyTeal
+      entity: DoubleBedLeftFancyTeal
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemCyan
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftFancyWhite
+      entity: DoubleBedLeftFancyWhite
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemWhite
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftGreen
+      entity: DoubleBedLeftGreen
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetGreen
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftGrey
+      entity: DoubleBedLeftGrey
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetGrey
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftIan
+      entity: DoubleBedLeftIan
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetIan
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftMime
+      entity: DoubleBedLeftMime
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetMime
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftNT
+      entity: DoubleBedLeftNT
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetNT
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftOrange
+      entity: DoubleBedLeftOrange
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetOrange
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftPurple
+      entity: DoubleBedLeftPurple
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetPurple
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftRainbow
+      entity: DoubleBedLeftRainbow
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetRainbow
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftRed
+      entity: DoubleBedLeftRed
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetRed
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftSyndie
+      entity: DoubleBedLeftSyndie
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetSyndie
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftTSF
+      entity: DoubleBedLeftTSF
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetCaptain
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftUS
+      entity: DoubleBedLeftUS
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetUSA
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftWhite
+      entity: DoubleBedLeftWhite
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetWhite
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftWizard
+      entity: DoubleBedLeftWizard
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetWiz
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedLeftYellow
+      entity: DoubleBedLeftYellow
+      edges:
+        - to: DoubleBedLeft
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetYellow
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+
+# Base Bed Right. Just the same thing but Right.
+- type: constructionGraph
+  id: DoubleBedRight
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: Steel
+              amount: 3
+              doAfter: 2
+            - material: Cloth
+              amount: 3
+              doAfter: 2
+
+# Finished Base Bed. Deconstructing requires screwdriver.
+    - node: DoubleBedRight
+      entity: DoubleBedRight
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 3
+          steps:
+            - tool: Screwing
+              doAfter: 2
+# Transformative Constructions
+        - to: DoubleBedRightBlack
+          steps:
+            - tag: BedsheetBlack
+              doAfter: 2
+              name: black-bedsheet # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetblack
+    
+        - to: DoubleBedRightBlue
+          steps:
+            - tag: BedsheetBlue
+              doAfter: 2
+              name: blue-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetblue
+
+        - to: DoubleBedRightBrown
+          steps:
+            - tag: BedsheetBrown
+              doAfter: 2
+              name: brown-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetbrown
+
+        - to: DoubleBedRightCC
+          steps:
+            - tag: BedsheetCentcom
+              doAfter: 2
+              name: centcomm-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetcentcom
+
+        - to: DoubleBedRightClown
+          steps:
+            - tag: BedsheetClown
+              doAfter: 2
+              name: clown-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetclown
+
+        - to: DoubleBedRightCult
+          steps:
+            - tag: BedsheetCult
+              doAfter: 2
+              name: cult-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetcult
+# Made the fancy beds require durathread and carpet instead of bedsheets.
+        - to: DoubleBedRightPadded
+          steps:
+            - material: Durathread
+              amount: 3
+              doAfter: 2
+        - to: DoubleBedRightGreen
+          steps:
+            - tag: BedsheetGreen
+              doAfter: 2
+              name: green-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetgreen
+
+        - to: DoubleBedRightGrey
+          steps:
+            - tag: BedsheetGrey
+              doAfter: 2
+              name: grey-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetgrey
+
+        - to: DoubleBedRightIan
+          steps:
+            - tag: BedsheetIan
+              doAfter: 2
+              name: ian-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetian
+
+        - to: DoubleBedRightMime
+          steps:
+            - tag: BedsheetMime
+              doAfter: 2
+              name: mime-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetmime
+
+        - to: DoubleBedRightNT
+          steps:
+            - tag: BedsheetNT
+              doAfter: 2
+              name: nt-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetNT
+
+        - to: DoubleBedRightOrange
+          steps:
+            - tag: BedsheetOrange
+              doAfter: 2
+              name: orange-bedsheet
+              icon:
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetorange
+
+        - to: DoubleBedRightPurple
+          steps:
+            - tag: BedsheetPurple
+              doAfter: 2
+              name: purple-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetpurple
+
+        - to: DoubleBedRightRainbow
+          steps:
+            - tag: BedsheetRainbow
+              doAfter: 2
+              name: rainbow-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetrainbow
+
+        - to: DoubleBedRightRed
+          steps:
+            - tag: BedsheetRed
+              doAfter: 2
+              name: red-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetred
+
+        - to: DoubleBedRightSyndie
+          steps:
+            - tag: BedsheetSyndie
+              doAfter: 2
+              name: syndicate-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetsyndie
+# Made the TSF bed take the Captain's Bedsheet. In lieu of an actual TSF bedsheet. This can be changed when one is sprited.
+        - to: DoubleBedRightTSF
+          steps:
+            - tag: BedsheetCaptain
+              doAfter: 2
+              name: captain-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetcaptain
+
+        - to: DoubleBedRightUS
+          steps:
+            - tag: BedsheetUSA
+              doAfter: 2
+              name: usa-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetUSA
+
+        - to: DoubleBedRightWhite
+          steps:
+            - tag: BedsheetWhite
+              doAfter: 2
+              name: white-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetwhite
+
+        - to: DoubleBedRightWizard
+          steps:
+            - tag: BedsheetWiz
+              doAfter: 2
+              name: wizard-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetwiz
+
+        - to: DoubleBedRightYellow
+          steps:
+            - tag: BedsheetYellow
+              doAfter: 2
+              name: yellow-bedsheet
+              icon: 
+                sprite: Objects/Misc/bedsheets.rsi
+                state: sheetyellow
+# Cami Bugfix. Step for the durathread before the carpet. They will not work if you don't do this and I'm not sure why.
+    - node: DoubleBedRightPadded
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+          steps:
+            - tool: Prying
+              doAfter: 2
+        - to: DoubleBedRightFancyBlack
+          steps:
+            - material: FloorCarpetBlack
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyBlue
+          steps:
+            - material: FloorCarpetBlue
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyGreen
+          steps:
+            - material: FloorCarpetGreen
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyOrange
+          steps:
+            - material: FloorCarpetOrange
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyPink
+          steps:
+            - material: FloorCarpetPink
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyPurple
+          steps:
+            - material: FloorCarpetPurple
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyRed
+          steps:
+            - material: FloorCarpetRed
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancySkyblue
+          steps:
+            - material: FloorCarpetSkyBlue
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyTeal
+          steps:
+            - material: FloorCarpetCyan
+              amount: 1
+              doAfter: 2
+        - to: DoubleBedRightFancyWhite
+          steps:
+            - material: FloorCarpetWhite
+              amount: 1
+              doAfter: 2
+# Finished constructions + Deconstructions. Removing bedsheets requires crowbar.
+    - node: DoubleBedRightBlack
+      entity: DoubleBedRightBlack
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetBlack
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightBlue
+      entity: DoubleBedRightBlue
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetBlue
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightBrown
+      entity: DoubleBedRightBrown
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetBrown
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightCC
+      entity: DoubleBedRightCC
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetCentcom
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightClown
+      entity: DoubleBedRightClown
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetClown
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightCult
+      entity: DoubleBedRightCult
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetCult
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyBlack
+      entity: DoubleBedRightFancyBlack
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemBlack
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyBlue
+      entity: DoubleBedRightFancyBlue
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemBlue
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyGreen
+      entity: DoubleBedRightFancyGreen
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemGreen
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyOrange
+      entity: DoubleBedRightFancyOrange
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemOrange
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyPink
+      entity: DoubleBedRightFancyPink
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemPink
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyPurple
+      entity: DoubleBedRightFancyPurple
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemPurple
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyRed
+      entity: DoubleBedRightFancyRed
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemRed
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancySkyblue
+      entity: DoubleBedRightFancySkyblue
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemSkyBlue
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyTeal
+      entity: DoubleBedRightFancyTeal
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemCyan
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightFancyWhite
+      entity: DoubleBedRightFancyWhite
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialDurathread1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemWhite
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightGreen
+      entity: DoubleBedRightGreen
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetGreen
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightGrey
+      entity: DoubleBedRightGrey
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetGrey
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightIan
+      entity: DoubleBedRightIan
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetIan
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightMime
+      entity: DoubleBedRightMime
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetMime
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightNT
+      entity: DoubleBedRightNT
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetNT
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightOrange
+      entity: DoubleBedRightOrange
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetOrange
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightPurple
+      entity: DoubleBedRightPurple
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetPurple
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightRainbow
+      entity: DoubleBedRightRainbow
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetRainbow
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightRed
+      entity: DoubleBedRightRed
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetRed
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightSyndie
+      entity: DoubleBedRightSyndie
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetSyndie
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightTSF
+      entity: DoubleBedRightTSF
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetCaptain
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightUS
+      entity: DoubleBedRightUS
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetUSA
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightWhite
+      entity: DoubleBedRightWhite
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetWhite
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightWizard
+      entity: DoubleBedRightWizard
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetWiz
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleBedRightYellow
+      entity: DoubleBedRightYellow
+      edges:
+        - to: DoubleBedRight
+          completed:
+            - !type:SpawnPrototype
+              prototype: BedsheetYellow
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2

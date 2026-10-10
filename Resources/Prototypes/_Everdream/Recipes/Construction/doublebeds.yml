@@ -1,0 +1,837 @@
+# SPDX-FileCopyrightText: 2026 Sushiburger
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Double Bed Recipes
+
+# Base Bed Left
+- type: construction
+  name: double-bed-left
+  id: DoubleBedLeft
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeft
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Base Bed Right
+- type: construction
+  name: double-bed-right
+  id: DoubleBedRight
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRight
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Black Bed Left
+- type: construction
+  name: black-double-bed-left
+  id: DoubleBedLeftBlack
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftBlack
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Black Bed Right
+- type: construction
+  name: black-double-bed-right
+  id: DoubleBedRightBlack
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightBlack
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Blue Bed Left
+- type: construction
+  name: blue-double-bed-left
+  id: DoubleBedLeftBlue
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftBlue
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Blue Bed Right
+- type: construction
+  name: blue-double-bed-right
+  id: DoubleBedRightBlue
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightBlue
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Brown Bed Left
+- type: construction
+  name: brown-double-bed-left
+  id: DoubleBedLeftBrown
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftBrown
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Brown Bed Right
+- type: construction
+  name: brown-double-bed-right
+  id: DoubleBedRightBrown
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightBrown
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# CC Bed Left
+- type: construction
+  name: centcomm-double-bed-left
+  id: DoubleBedLeftCC
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftCC
+  category: construction-category-furniture
+  description: centcomm-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# CC Bed Right
+- type: construction
+  name: centcomm-double-bed-right
+  id: DoubleBedRightCC
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightCC
+  category: construction-category-furniture
+  description: centcomm-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Clown Bed Left
+- type: construction
+  name: clown-double-bed-left
+  id: DoubleBedLeftClown
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftClown
+  category: construction-category-furniture
+  description: clown-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Clown Bed Right
+- type: construction
+  name: clown-double-bed-right
+  id: DoubleBedRightClown
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightClown
+  category: construction-category-furniture
+  description: clown-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Cult Bed Left
+- type: construction
+  name: cult-double-bed-left
+  id: DoubleBedLeftCult
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftCult
+  category: construction-category-furniture
+  description: cult-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Cult Bed Right
+- type: construction
+  name: cult-double-bed-right
+  id: DoubleBedRightCult
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightCult
+  category: construction-category-furniture
+  description: cult-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Black Bed Left
+- type: construction
+  name: fancy-black-double-bed-left
+  id: DoubleBedLeftFancyBlack
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyBlack
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Black Bed Right
+- type: construction
+  name: fancy-black-double-bed-right
+  id: DoubleBedRightFancyBlack
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyBlack
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Blue Bed Left
+- type: construction
+  name: fancy-blue-double-bed-left
+  id: DoubleBedLeftFancyBlue
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyBlue
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Blue Bed Right
+- type: construction
+  name: fancy-blue-double-bed-right
+  id: DoubleBedRightFancyBlue
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyBlue
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Green Bed Left
+- type: construction
+  name: fancy-green-double-bed-left
+  id: DoubleBedLeftFancyGreen
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyGreen
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Green Bed Right
+- type: construction
+  name: fancy-green-double-bed-right
+  id: DoubleBedRightFancyGreen
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyGreen
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Orange Bed Left
+- type: construction
+  name: fancy-orange-double-bed-left
+  id: DoubleBedLeftFancyOrange
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyOrange
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Orange Bed Right
+- type: construction
+  name: fancy-orange-double-bed-right
+  id: DoubleBedRightFancyOrange
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyOrange
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Pink Bed Left
+- type: construction
+  name: fancy-pink-double-bed-left
+  id: DoubleBedLeftFancyPink
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyPink
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Pink Bed Right
+- type: construction
+  name: fancy-pink-double-bed-right
+  id: DoubleBedRightFancyPink
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyPink
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Purple Bed Left
+- type: construction
+  name: fancy-purple-double-bed-left
+  id: DoubleBedLeftFancyPurple
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyPurple
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Purple Bed Right
+- type: construction
+  name: fancy-purple-double-bed-right
+  id: DoubleBedRightFancyPurple
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyPurple
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Red Bed Left
+- type: construction
+  name: fancy-red-double-bed-left
+  id: DoubleBedLeftFancyRed
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyRed
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Red Bed Right
+- type: construction
+  name: fancy-red-double-bed-right
+  id: DoubleBedRightFancyRed
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyRed
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Skyblue Bed Left
+- type: construction
+  name: fancy-sky-blue-double-bed-left
+  id: DoubleBedLeftFancySkyblue
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancySkyblue
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Skyblue Bed Right
+- type: construction
+  name: fancy-sky-blue-double-bed-right
+  id: DoubleBedRightFancySkyblue
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancySkyblue
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Teal Bed Left
+- type: construction
+  name: fancy-teal-double-bed-left
+  id: DoubleBedLeftFancyTeal
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyTeal
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-Teal Bed Right
+- type: construction
+  name: fancy-teal-double-bed-right
+  id: DoubleBedRightFancyTeal
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyTeal
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-White Bed Left
+- type: construction
+  name: fancy-white-double-bed-left
+  id: DoubleBedLeftFancyWhite
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftFancyWhite
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# fancy-White Bed Right
+- type: construction
+  name: fancy-white-double-bed-right
+  id: DoubleBedRightFancyWhite
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightFancyWhite
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Green Bed Left
+- type: construction
+  name: green-double-bed-left
+  id: DoubleBedLeftGreen
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftGreen
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Green Bed Right
+- type: construction
+  name: green-double-bed-right
+  id: DoubleBedRightGreen
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightGreen
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Grey Bed Left
+- type: construction
+  name: grey-double-bed-left
+  id: DoubleBedLeftGrey
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftGrey
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Grey Bed Right
+- type: construction
+  name: grey-double-bed-right
+  id: DoubleBedRightGrey
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightGrey
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Ian Bed Left
+- type: construction
+  name: ian-double-bed-left
+  id: DoubleBedLeftIan
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftIan
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Ian Bed Right
+- type: construction
+  name: ian-double-bed-right
+  id: DoubleBedRightIan
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightIan
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Mime Bed Left
+- type: construction
+  name: mime-double-bed-left
+  id: DoubleBedLeftMime
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftMime
+  category: construction-category-furniture
+  description: mime-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Mime Bed Right
+- type: construction
+  name: mime-double-bed-right
+  id: DoubleBedRightMime
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightMime
+  category: construction-category-furniture
+  description: mime-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# NT Bed Left
+- type: construction
+  name: nt-double-bed-left
+  id: DoubleBedLeftNT
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftNT
+  category: construction-category-furniture
+  description: nt-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# NT Bed Right
+- type: construction
+  name: nt-double-bed-right
+  id: DoubleBedRightNT
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightNT
+  category: construction-category-furniture
+  description: nt-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Orange Bed Left
+- type: construction
+  name: orange-double-bed-left
+  id: DoubleBedLeftOrange
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftOrange
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Orange Bed Right
+- type: construction
+  name: orange-double-bed-right
+  id: DoubleBedRightOrange
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightOrange
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Purple Bed Left
+- type: construction
+  name: purple-double-bed-left
+  id: DoubleBedLeftPurple
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftPurple
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Purple Bed Right
+- type: construction
+  name: purple-double-bed-right
+  id: DoubleBedRightPurple
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightPurple
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Rainbow Bed Left
+- type: construction
+  name: rainbow-double-bed-left
+  id: DoubleBedLeftRainbow
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftRainbow
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Rainbow Bed Right
+- type: construction
+  name: rainbow-double-bed-right
+  id: DoubleBedRightRainbow
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightRainbow
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Red Bed Left
+- type: construction
+  name: red-double-bed-left
+  id: DoubleBedLeftRed
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftRed
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Red Bed Right
+- type: construction
+  name: red-double-bed-right
+  id: DoubleBedRightRed
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightRed
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Syndie Bed Left
+- type: construction
+  name: syndicate-double-bed-left
+  id: DoubleBedLeftSyndie
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftSyndie
+  category: construction-category-furniture
+  description: syndicate-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Syndie Bed Right
+- type: construction
+  name: syndicate-double-bed-right
+  id: DoubleBedRightSyndie
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightSyndie
+  category: construction-category-furniture
+  description: syndicate-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# TSF Bed Left
+- type: construction
+  name: tsf-double-bed-left
+  id: DoubleBedLeftTSF
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftTSF
+  category: construction-category-furniture
+  description: tsf-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# TSF Bed Right
+- type: construction
+  name: tsf-double-bed-right
+  id: DoubleBedRightTSF
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightTSF
+  category: construction-category-furniture
+  description: tsf-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# USA Bed Left
+- type: construction
+  name: usa-double-bed-left
+  id: DoubleBedLeftUS
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftUS
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# USA Bed Right
+- type: construction
+  name: usa-double-bed-right
+  id: DoubleBedRightUS
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightUS
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# White Bed Left
+- type: construction
+  name: white-double-bed-left
+  id: DoubleBedLeftWhite
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftWhite
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# White Bed Right
+- type: construction
+  name: white-double-bed-right
+  id: DoubleBedRightWhite
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightWhite
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Wizard Bed Left
+- type: construction
+  name: wizard-double-bed-left
+  id: DoubleBedLeftWizard
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftWizard
+  category: construction-category-furniture
+  description: wizard-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Wizard Bed Right
+- type: construction
+  name: wizard-double-bed-right
+  id: DoubleBedRightWizard
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightWizard
+  category: construction-category-furniture
+  description: wizard-double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Yellow Bed Left
+- type: construction
+  name: yellow-double-bed-left
+  id: DoubleBedLeftYellow
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeftYellow
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Yellow Bed Right
+- type: construction
+  name: yellow-double-bed-right
+  id: DoubleBedRightYellow
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRightYellow
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure

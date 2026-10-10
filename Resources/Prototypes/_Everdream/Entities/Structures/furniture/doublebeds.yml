@@ -1,0 +1,849 @@
+# Implementation of Hedera's double beds.
+# The janky buckling when rotated north or south is the cost of having big beds. But it's Fine.
+
+# The Base Double Bed
+- type: entity
+  parent: BaseStructure # Can't parent from Bed or they'll try to use bedsheets, as well as be unable to rotate.
+  id: BaseDoubleBed
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  name: "double bed"
+  description: "This is used to lie in, sleep in or strap to. Double the bed, double the fun!"
+  components:
+  - type: Sprite
+    sprite: _Everdream/Structures/Furniture/doublebeds.rsi
+    state: left
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    anchored: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,0.0,0.45,0.5"
+        hard: false
+        density: 190
+        mask:
+        - TableMask
+  - type: InteractionOutline
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: HealOnBuckle
+    damage:
+      types:
+        Poison: -0.1
+        Blunt: -0.1
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 3
+          MaterialCloth1:
+            min: 2
+            max: 3
+
+
+# Base Double Beds Left
+- type: entity
+  parent: BaseDoubleBed
+  id: DoubleBedLeft
+  suffix: Left
+  components:
+  - type: Sprite
+    state: left
+  - type: Strap
+    position: Down
+    rotation: -90
+    buckleOffset: "0, -0.25"
+  # Construction has to be before PlaceableSurface or you'll place things onto the entity instead of deconstructing it.
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeft
+  - type: PlaceableSurface
+    placeCentered: true
+    positionOffset: "0, -0.25"
+
+# Base Double Beds Right
+- type: entity
+  parent: BaseDoubleBed
+  id: DoubleBedRight
+  suffix: Right
+  components:
+  - type: Sprite
+    state: right
+  - type: Strap
+    position: Down
+    rotation: -90
+    buckleOffset: "0, 0.35"
+  # Construction has to be before PlaceableSurface or you'll place things onto the entity instead of deconstructing it.
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRight
+  - type: PlaceableSurface
+    placeCentered: true
+    positionOffset: "0, 0.35"
+
+# Children
+# black
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftBlack
+  suffix: Black, Left
+  components:
+  - type: Sprite
+    state: left_black
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftBlack
+    # Cami Bugfix. Needing the construction type is very important or else you will just put what you're constructing with down on it.
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightBlack
+  suffix: Black, Right
+  components:
+  - type: Sprite
+    state: right_black
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightBlack
+
+# blue
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftBlue
+  suffix: Blue, Left
+  components:
+  - type: Sprite
+    state: left_blue
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftBlue
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightBlue
+  suffix: Blue, Right
+  components:
+  - type: Sprite
+    state: right_blue
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightBlue 
+
+# brown
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftBrown
+  suffix: Brown, Left
+  components:
+  - type: Sprite
+    state: left_brown
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftBrown
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightBrown
+  suffix: Brown, Right
+  components:
+  - type: Sprite
+    state: right_brown
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightBrown
+
+# cc
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftCC
+  suffix: CC, Left
+  description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
+  components:
+  - type: Sprite
+    state: left_cc
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftCC
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightCC
+  suffix: CC, Right
+  description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
+  components:
+  - type: Sprite
+    state: right_cc
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightCC
+
+# clown
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftClown
+  suffix: Clown, Left
+  description: A rainbow blanket with a clown mask woven in. It smells faintly of bananas.
+  components:
+  - type: Sprite
+    state: left_clown
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftClown
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightClown
+  suffix: Clown, Right
+  description: A rainbow blanket with a clown mask woven in. It smells faintly of bananas.
+  components:
+  - type: Sprite
+    state: right_clown
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightClown
+
+# cult
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftCult
+  suffix: Cult, Left
+  description: You might dream of Nar'Sie if you sleep in this. It seems rather tattered and glows of an eldritch presence.
+  components:
+  - type: Sprite
+    state: left_cult
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftCult
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightCult
+  suffix: Cult, Right
+  description: You might dream of Nar'Sie if you sleep in this. It seems rather tattered and glows of an eldritch presence.
+  components:
+  - type: Sprite
+    state: right_cult
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightCult
+
+# fancy black
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyBlack
+  suffix: Fancy Black, Left
+  components:
+  - type: Sprite
+    state: left_fancy_black
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyBlack
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyBlack
+  suffix: Fancy Black, Right
+  components:
+  - type: Sprite
+    state: right_fancy_black
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyBlack
+
+# fancy blue
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyBlue
+  suffix: Fancy Blue, Left
+  components:
+  - type: Sprite
+    state: left_fancy_blue
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyBlue
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyBlue
+  suffix: Fancy Blue, Right
+  components:
+  - type: Sprite
+    state: right_fancy_blue
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyBlue
+
+# fancy green
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyGreen
+  suffix: Fancy Green, Left
+  components:
+  - type: Sprite
+    state: left_fancy_green
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyGreen
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyGreen
+  suffix: Fancy Green, Right
+  components:
+  - type: Sprite
+    state: right_fancy_green
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyGreen
+
+# fancy orange
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyOrange
+  suffix: Fancy Orange, Left
+  components:
+  - type: Sprite
+    state: left_fancy_orange
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyOrange
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyOrange
+  suffix: Fancy Orange, Right
+  components:
+  - type: Sprite
+    state: right_fancy_orange
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyOrange
+
+# fancy pink
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyPink
+  suffix: Fancy Pink, Left
+  components:
+  - type: Sprite
+    state: left_fancy_pink
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyPink
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyPink
+  suffix: Fancy Pink, Right
+  components:
+  - type: Sprite
+    state: right_fancy_pink
+
+# fancy purple
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyPink
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyPurple
+  suffix: Fancy Purple, Left
+  components:
+  - type: Sprite
+    state: left_fancy_purple
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyPurple
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyPurple
+  suffix: Fancy Purple, Right
+  components:
+  - type: Sprite
+    state: right_fancy_purple
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyPurple
+
+# fancy red
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyRed
+  suffix: Fancy Red, Left
+  components:
+  - type: Sprite
+    state: left_fancy_red
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyRed
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyRed
+  suffix: Fancy Red, Right
+  components:
+  - type: Sprite
+    state: right_fancy_red
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyRed
+
+# fancy skyblue
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancySkyblue
+  suffix: Fancy Skyblue, Left
+  components:
+  - type: Sprite
+    state: left_fancy_skyblue
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancySkyblue
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancySkyblue
+  suffix: Fancy Skyblue, Right
+  components:
+  - type: Sprite
+    state: right_fancy_skyblue
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancySkyblue
+
+# fancy teal
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyTeal
+  suffix: Fancy Teal, Left
+  components:
+  - type: Sprite
+    state: left_fancy_teal
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyTeal
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyTeal
+  suffix: Fancy Teal, Right
+  components:
+  - type: Sprite
+    state: right_fancy_teal
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyTeal
+
+# fancy white
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftFancyWhite
+  suffix: Fancy White, Left
+  components:
+  - type: Sprite
+    state: left_fancy_white
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftFancyWhite
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightFancyWhite
+  suffix: Fancy White, Right
+  components:
+  - type: Sprite
+    state: right_fancy_white
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightFancyWhite
+
+# green
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftGreen
+  suffix: Green, Left
+  components:
+  - type: Sprite
+    state: left_green
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftGreen
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightGreen
+  suffix: Green, Right
+  components:
+  - type: Sprite
+    state: right_green
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightGreen
+
+# grey
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftGrey
+  suffix: Grey, Left
+  components:
+  - type: Sprite
+    state: left_grey
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftGrey
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightGrey
+  suffix: Grey, Right
+  components:
+  - type: Sprite
+    state: right_grey
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightGreen
+
+# ian
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftIan
+  suffix: Ian, Left
+  components:
+  - type: Sprite
+    state: left_ian
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftIan
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightIan
+  suffix: Ian, Right
+  components:
+  - type: Sprite
+    state: right_ian
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightIan
+
+# mime
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftMime
+  suffix: Mime, Left
+  description: A very soothing striped blanket.  All the noise just seems to fade out when you're under the covers in this.
+  components:
+  - type: Sprite
+    state: left_mime
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftMime
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightMime
+  suffix: Mime, Right
+  description: A very soothing striped blanket.  All the noise just seems to fade out when you're under the covers in this.
+  components:
+  - type: Sprite
+    state: right_mime
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightMime
+
+# nt
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftNT
+  suffix: NT, Left
+  description: It has the Nanotrasen logo on it and an aura of duty.
+  components:
+  - type: Sprite
+    state: left_nt
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftNT
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightNT
+  suffix: NT, Right
+  description: It has the Nanotrasen logo on it and an aura of duty.
+  components:
+  - type: Sprite
+    state: right_nt
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightNT
+
+# orange
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftOrange
+  suffix: Orange, Left
+  components:
+  - type: Sprite
+    state: left_orange
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftOrange
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightOrange
+  suffix: Orange, Right
+  components:
+  - type: Sprite
+    state: right_orange
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightOrange
+
+# purple
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftPurple
+  suffix: Purple, Left
+  components:
+  - type: Sprite
+    state: left_purple
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftPurple
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightPurple
+  suffix: Purple, Right
+  components:
+  - type: Sprite
+    state: right_purple
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightPurple
+
+# rainbow
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftRainbow
+  suffix: Rainbow, Left
+  components:
+  - type: Sprite
+    state: left_rainbow
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftRainbow
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightRainbow
+  suffix: Rainbow, Right
+  components:
+  - type: Sprite
+    state: right_rainbow
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightRainbow
+
+# red
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftRed
+  suffix: Red, Left
+  components:
+  - type: Sprite
+    state: left_red
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftRed
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightRed
+  suffix: Red, Right
+  components:
+  - type: Sprite
+    state: right_red
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightRed
+
+# syndie
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftSyndie
+  suffix: Syndie, Left
+  description: It has a syndicate emblem and it has an aura of evil.
+  components:
+  - type: Sprite
+    state: left_syndie
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftSyndie
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightSyndie
+  suffix: Syndie, Right
+  description: It has a syndicate emblem and it has an aura of evil.
+  components:
+  - type: Sprite
+    state: right_syndie
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightSyndie
+
+# tsf
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftTSF
+  suffix: TSF, Left
+  description: The TSF can now sleep soundly, and patriotically.
+  components:
+  - type: Sprite
+    state: left_tsf
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftTSF
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightTSF
+  suffix: TSF, Right
+  description: The TSF can now sleep soundly, and patriotically.
+  components:
+  - type: Sprite
+    state: right_tsf
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightTSF
+
+# us
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftUS
+  suffix: US, Left
+  components:
+  - type: Sprite
+    state: left_us
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftUS
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightUS
+  suffix: US, Right
+  components:
+  - type: Sprite
+    state: right_us
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightUS
+
+# white
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftWhite
+  suffix: White, Left
+  components:
+  - type: Sprite
+    state: left_white
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftWhite
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightWhite
+  suffix: White, Right
+  components:
+  - type: Sprite
+    state: right_white
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightWhite
+
+# wizard
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftWizard
+  suffix: Wizard, Left
+  description: A special fabric enchanted with magic so you can have an enchanted night. It even glows!
+  components:
+  - type: Sprite
+    state: left_wizard
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftWizard
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightWizard
+  suffix: Wizard, Right
+  description: A special fabric enchanted with magic so you can have an enchanted night. It even glows!
+  components:
+  - type: Sprite
+    state: right_wizard
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightWizard
+
+# yellow
+
+- type: entity
+  parent: DoubleBedLeft
+  id: DoubleBedLeftYellow
+  suffix: Yellow, Left
+  components:
+  - type: Sprite
+    state: left_yellow
+  - type: Construction
+    graph: DoubleBedLeft
+    node: DoubleBedLeftYellow
+
+- type: entity
+  parent: DoubleBedRight
+  id: DoubleBedRightYellow
+  suffix: Yellow, Right
+  components:
+  - type: Sprite
+    state: right_yellow
+  - type: Construction
+    graph: DoubleBedRight
+    node: DoubleBedRightYellow

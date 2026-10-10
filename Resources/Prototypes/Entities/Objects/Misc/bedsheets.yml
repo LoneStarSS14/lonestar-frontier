@@ -34,6 +34,9 @@
     state: sheetblack
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/black.rsi
+  - type: Tag
+    tags:
+    - BedsheetBlack
 
 - type: entity
   id: BedsheetBlue
@@ -44,6 +47,9 @@
     state: sheetblue
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/blue.rsi
+  - type: Tag
+    tags:
+    - BedsheetBlue
 
 - type: entity
   id: BedsheetBrown
@@ -54,6 +60,9 @@
     state: sheetbrown
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/brown.rsi
+  - type: Tag
+    tags:
+    - BedsheetBrown
 
 - type: entity
   id: BedsheetCaptain
@@ -67,6 +76,9 @@
     sprite: Clothing/Neck/Bedsheets/captain.rsi
   - type: StealTarget
     stealGroup: HeadBedsheet
+  - type: Tag
+    tags:
+    - BedsheetCaptain
 
 - type: entity
   id: BedsheetCE
@@ -93,6 +105,9 @@
     sprite: Clothing/Neck/Bedsheets/centcom.rsi
   - type: StealTarget
     stealGroup: HeadBedsheet
+  - type: Tag
+    tags:
+    - BedsheetCentcom
 
 - type: entity
   id: BedsheetClown
@@ -104,6 +119,9 @@
     state: sheetclown
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/rainbow.rsi
+  - type: Tag
+    tags:
+    - BedsheetClown
 
 - type: entity
   id: BedsheetCMO
@@ -139,6 +157,9 @@
     state: sheetcult
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/cult.rsi
+  - type: Tag
+    tags:
+    - BedsheetCult
 
 - type: entity
   id: BedsheetGreen
@@ -149,6 +170,9 @@
     state: sheetgreen
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/green.rsi
+  - type: Tag
+    tags:
+    - BedsheetGreen
 
 - type: entity
   id: BedsheetGrey
@@ -159,6 +183,9 @@
     state: sheetgrey
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/grey.rsi
+  - type: Tag
+    tags:
+    - BedsheetGrey
 
 - type: entity
   id: BedsheetHOP
@@ -195,6 +222,9 @@
     state: sheetian
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/ian.rsi
+  - type: Tag
+    tags:
+    - BedsheetIan
 
 - type: entity
   id: BedsheetMedical
@@ -217,6 +247,9 @@
     state: sheetmime
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/mime.rsi
+  - type: Tag
+    tags:
+    - BedsheetMime
 
 - type: entity
   id: BedsheetNT
@@ -228,6 +261,9 @@
     state: sheetNT
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/NT.rsi
+  - type: Tag
+    tags:
+    - BedsheetNT
 
 - type: entity
   id: BedsheetOrange
@@ -238,6 +274,9 @@
     state: sheetorange
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/orange.rsi
+  - type: Tag
+    tags:
+    - BedsheetOrange
 
 - type: entity
   id: BedsheetPurple
@@ -248,6 +287,9 @@
     state: sheetpurple
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/purple.rsi
+  - type: Tag
+    tags:
+    - BedsheetPurple
 
 - type: entity
   id: BedsheetQM
@@ -270,6 +312,9 @@
     state: sheetrainbow
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/rainbow.rsi
+  - type: Tag
+    tags:
+    - BedsheetRainbow
 
 - type: entity
   id: BedsheetRD
@@ -304,6 +349,9 @@
     state: sheetred
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/red.rsi
+  - type: Tag
+    tags:
+    - BedsheetRed
 
 - type: entity
   id: BedsheetSyndie
@@ -315,6 +363,9 @@
     state: sheetsyndie
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/syndie.rsi
+  - type: Tag
+    tags:
+    - BedsheetSyndie
 
 - type: entity
   id: BedsheetUSA
@@ -325,6 +376,9 @@
     state: sheetUSA
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/USA.rsi
+  - type: Tag
+    tags:
+    - BedsheetUSA
 
 - type: entity
   id: BedsheetWhite
@@ -339,6 +393,9 @@
     state: sheetwhite
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/white.rsi
+  - type: Tag
+    tags:
+    - BedsheetWhite
 
 - type: entity
   id: BedsheetWiz
@@ -350,6 +407,9 @@
     state: sheetwiz
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/wiz.rsi
+  - type: Tag
+    tags:
+    - BedsheetWiz
 
 - type: entity
   id: BedsheetYellow
@@ -360,3 +420,6 @@
     state: sheetyellow
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/yellow.rsi
+  - type: Tag
+    tags:
+    - BedsheetYellow
