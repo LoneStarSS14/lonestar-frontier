@@ -1,7 +1,6 @@
 #region clothes
-
 - type: entity
-  parent: BunnysuitBase
+  parent: BunnysuitBaseFoldable
   id: BunnysuitPink
   name: pink bunny suit
   components:
@@ -43,7 +42,7 @@
 #region box
 - type: entity
   parent: BunnysuitBox
-  id: BunnysuitBoxpink
+  id: BunnysuitBoxPink
   name: pink bunnysuit box
   components:
   - type: EntityTableContainerFill
