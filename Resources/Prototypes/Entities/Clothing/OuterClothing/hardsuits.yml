@@ -587,7 +587,7 @@
         Slash: 0.6
         Piercing: 0.6
         Heat: 0.2
-        Radiation: 0.02 # lonestar 0.01 > 0.02
+        Radiation: 0.01
         Caustic: 0.5
   - type: Item
     size: Huge
