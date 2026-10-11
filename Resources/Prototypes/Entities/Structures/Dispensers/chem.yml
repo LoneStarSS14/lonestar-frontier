@@ -69,7 +69,7 @@
       - id: JugCopper
       - id: ReinforcedJugEthanol # Frontier
       - id: JugFluorine
-      - id: ReinforcedJugSugar # Frontier
+      - id: ReinforcedJugSugarMonomers # LoneStar
       - id: ReinforcedJugHydrogen # Frontier
       - id: JugIodine
       - id: JugIron

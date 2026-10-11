@@ -1,0 +1,10 @@
+- type: reagent
+  id: SugarMonomers
+  parent: Sugar
+  name: reagent-name-sugar-monomers
+  group: Foods
+  desc: reagent-desc-sugar-monomers
+  physicalDesc: reagent-physical-desc-sweet
+  flavor: sweet
+  color: white
+  meltingPoint: 146.0

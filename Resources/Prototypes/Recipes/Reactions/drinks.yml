@@ -831,7 +831,7 @@
 - type: reaction
   id: Mead
   reactants:
-    Sugar:
+    Honey: # LoneStar
       amount: 1
       # TODO replace Sugar with Honey once added
     Enzyme:
