@@ -110,6 +110,7 @@ public sealed class EntityEffectSystem : EntitySystem
         SubscribeLocalEvent<ExecuteEntityEffectEvent<PlantPhalanximine>>(OnExecutePlantPhalanximine);
         SubscribeLocalEvent<ExecuteEntityEffectEvent<PlantRestoreSeeds>>(OnExecutePlantRestoreSeeds);
         SubscribeLocalEvent<ExecuteEntityEffectEvent<RobustHarvest>>(OnExecuteRobustHarvest);
+        SubscribeLocalEvent<ExecuteEntityEffectEvent<PlantWeedKiller>>(OnExecutePlantWeedKiller); // LoneStar
         SubscribeLocalEvent<ExecuteEntityEffectEvent<AdjustTemperature>>(OnExecuteAdjustTemperature);
         SubscribeLocalEvent<ExecuteEntityEffectEvent<AreaReactionEffect>>(OnExecuteAreaReactionEffect);
         SubscribeLocalEvent<ExecuteEntityEffectEvent<CauseZombieInfection>>(OnExecuteCauseZombieInfection);
@@ -506,6 +507,20 @@ public sealed class EntityEffectSystem : EntitySystem
             plantHolderComp.Seed.Yield--;
         }
     }
+
+    // LoneStar Start
+    private void OnExecutePlantWeedKiller(ref ExecuteEntityEffectEvent<PlantWeedKiller> args)
+    {
+        if (!CanMetabolizePlant(args.Args.TargetEntity, out var plantHolderComp))
+            return;
+
+        if (plantHolderComp.Seed == null)
+            return;
+
+        _plantHolder.EnsureUniqueSeed(args.Args.TargetEntity, plantHolderComp);
+        plantHolderComp.Seed.TurnIntoKudzu = false;
+    }
+    // LoneStar End
 
     private void OnExecuteAdjustTemperature(ref ExecuteEntityEffectEvent<AdjustTemperature> args)
     {
