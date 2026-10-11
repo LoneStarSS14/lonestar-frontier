@@ -23,23 +23,23 @@
       tableId: TableDungeonLootWeaponsMeleeUnique
 
 # region melee T1
-- type: entityTable
+- type: entityTable # LoneStar note; this tier is literally just trash? its called LOOT.
   id: TableDungeonLootWeaponsMeleeTier1
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
       weight: 0.95
       children:
-      - id: BrokenBottle
+      # - id: BrokenBottle # LoneStar, literally trash
       - id: WhiteCane
       - id: Cane
       - id: Shiv
-      - id: ClaymoreDulled
-      - id: KatanaDulled
+      # - id: ClaymoreDulled # LoneStar, bad UX
+      # - id: KatanaDulled # LoneStar, bad UX
       - id: WeaponBrassKnucklesWhoopie
       - id: Pickaxe
-      - id: WhiteCane
-      - id: CaptainSabreHilt
+      # - id: WhiteCane # LoneStar, duplicate
+      # - id: CaptainSabreHilt # LoneStar, bad UX
       - id: Gohei
     - !type:NestedSelector
       weight: 0.05
@@ -53,15 +53,17 @@
     - !type:GroupSelector
       weight: 0.95
       children:
-      - id: ReinforcedShiv
-      - id: UraniumShiv
+      # - id: ReinforcedShiv # LoneStar, Makeshift weapon
+      # - id: UraniumShiv # LoneStar, Makeshift weapon
       - id: BaseBallBat
       - id: CavemanClub
       - id: KitchenKnife
       - id: Chainsaw
-      - id: FlashlightSeclite
+      # - id: FlashlightSeclite # LoneStar, its a tool
       - id: ClothingHandsKnuckleDusters
-      - id: PowerDrill
+      # - id: PowerDrill # LoneStar, its a tool
+      # LoneStar v
+      - id: Shinai
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsMeleeTier3
@@ -74,7 +76,7 @@
     - !type:GroupSelector
       weight: 0.95
       children:
-      - id: Shovel
+      # - id: Shovel # LoneStar, its a tool
       - id: Spear
       - id: SpearBone
       - id: KukriKnife
@@ -82,18 +84,14 @@
       - id: RitualDagger
       - id: CombatKnife
       - id: SurvivalKnife
-      - id: ClothingHandsKnuckleDustersQM
+      # - id: ClothingHandsKnuckleDustersQM # LoneStar, moved to tier 4
       - id: ButchCleaver
       - id: EldritchBlade
-      # - id: Katana # Coyote: move: banished to tier 4
+      - id: ClothingBeltKatanaSheathFilled
+      - id: Wakizashi
       - id: Machete
-      - id: SpearReinforced # Coyote: move: moved to tier 3
-      - id: SpearPlasma # Coyote: move: moved to tier 3
-      - id: SpearSharkMinnow # Coyote: move: moved to tier 3
-      - id: WeaponCrusherDagger # Coyote: move: moved to tier 3
-      - id: WeaponCrusher # Coyote: move: moved to tier 3
-      - id: WeaponCrusherGlaive # Coyote: move: moved to tier 3
-      - id: ToolboxSyndicate # Coyote: move: moved to tier 3
+      # LoneStar v
+      - id: Sledgehammer
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsMeleeTier4
@@ -109,28 +107,27 @@
       - id: CaneBlade
       - id: Cutlass
       - id: ClothingHandsKnuckleDustersSyndicate
-      - id: Shinai
-      - id: WeaponBaguette
+      # - id: Shinai # LoneStar, moved to tier 2
+      # - id: WeaponBaguette # LoneStar, bad UX
       - id: PlasteelArmingSword
-      - id: KatanaHF # Lonestar
-      - id: KatanaMurasama # Lonestar
-      - id: KatanaPhaseblade # Lonestar
-      # - id: SpearReinforced # Coyote: move: moved to tier 3
-      - id: Sledgehammer
+      # - id: SpearReinforced # LoneStar, Makeshift weapon
+      # - id: Sledgehammer # LoneStar, moved to tier 3
       - id: Claymore
       - id: ClothingHandsKnuckleDustersStun
-      # - id: SpearPlasma # Coyote: move: moved to tier 3
-      # - id: SpearSharkMinnow # Coyote: move: moved to tier 3
+      # - id: SpearPlasma # LoneStar, Makeshift weapon
+      - id: SpearSharkMinnow
       - id: CaptainSabre
-      - id: ClothingHandsGlovesNorthStar # Coyote: move: banished to tier 5
-      # - id: ToolboxSyndicate # Coyote: move: moved to tier 3
-      # - id: WeaponCrusherDagger # Coyote: move: moved to tier 3
-      # - id: WeaponCrusher # Coyote: move: moved to tier 3
-      # - id: WeaponCrusherGlaive # Coyote: move: moved to tier 3
-      - id: Katana # Coyote: move: banished to tier 4
-      - id: WeaponCaseShortEnergyDaggerExpedition # Coyote: move: moved to tier 4
-      - id: Sledgehammer # Coyote move: to tier 4
-      - id: ClothingHandsGlovesBoxingRigged # Coyote: move: to tier 4
+      # - id: ClothingHandsGlovesNorthStar # LoneStar, moved to tier 5
+      - id: ToolboxSyndicate
+      # - id: WeaponCrusherDagger # LoneStar, found enough by other means
+      # - id: WeaponCrusher # LoneStar, found enough by other means
+      # - id: WeaponCrusherGlaive # LoneStar, found enough by other means#
+      # LoneStar v
+      - id: ClothingHandsKnuckleDustersQM
+      - id: WeaponCaseShortEnergyDaggerExpedition
+      - id: KatanaHF # LoneStar, TODO: Make a sheathed variant
+      - id: KatanaMurasama # LoneStar, TODO: Make a sheathed variant
+      - id: KatanaPhaseblade # LoneStar, TODO: Make a sheathed variant
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsMeleeTier5
@@ -141,23 +138,24 @@
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
-      weight: 0.99
+      weight: 0.95
       children:
-      # - id: WeaponCaseShortEnergyDaggerExpedition # Coyote: move: moved to tier 4
+      # - id: WeaponCaseShortEnergyDaggerExpedition # LoneStar, moved to tier 4
       - id: WeaponCaseShortEnergySwordExpedition
       - id: WeaponCaseShortEnergyCutlassExpedition
-      # - id: WeaponCaseShortEnergySwordDoubleExpedition # Coyote: Banishing to the unique table
-      # - id: ClothingHandsGlovesBoxingRigged # Coyote: move: to tier 4
+      # - id: WeaponCaseShortEnergySwordDoubleExpedition # LoneStar, moved to unqiue
+      # - id: ClothingHandsGlovesBoxingRigged # LoneStar, bad UX
       - id: UnholyHalberd
       - id: SecBreachingHammer
       - id: ThrowingKnife
-      - id: MiningDrillDiamond
-      - id: EnergyKatana
+      # - id: MiningDrillDiamond # LoneStar, its a tool
+      # - id: EnergyKatana # LoneStar, moved to unique
       - id: Truncheon
-      # - id: Sledgehammer # Coyote move: to tier 4
-      - id: ClothingHandsGlovesNorthStar # Coyote: move: banished to tier 5
+      # LoneStar v
+      - id: ClothingHandsGlovesNorthStar
+      - id: Kanabou
     - !type:NestedSelector
-      weight: 0.01
+      weight: 0.05
       tableId: TableDungeonLootWeaponsMeleeUnique
 
 # region melee unique
@@ -165,10 +163,12 @@
   id: TableDungeonLootWeaponsMeleeUnique
   table: !type:GroupSelector
     children:
-    #- id: ClothingHandsKnuckleBoneCrushers # Coyote: This is an admeme weapon, it should not be spawnable.
+    # - id: HyperEutacticBlade # LoneStar, no thankyou
     - id: ArmBlade
-    - id: Kanabou
-    - id: WeaponCaseShortEnergySwordDoubleExpedition # Coyote: Banishing to the unique table
+    # - id: Kanabou # LoneStar, moved to tier 5
+    # LoneStar v
+    - id: WeaponCaseShortEnergySwordDoubleExpedition
+    - id: EnergyKatana
 
 # region ranged
 - type: entityTable
@@ -197,21 +197,25 @@
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
-      weight: 0.95
+      weight: 0.85 # LoneStar
       children:
-      # - id: WeaponCaseShortMk58Expedition # Coyote: remove: vendor gun
-      - id: WeaponCaseShortUniversalExpedition
-      # - id: WeaponCaseShortPollockExpedition # Coyote: remove: vendor gun
+      - id: WeaponCaseShortMk58Expedition
+      # - id: WeaponCaseShortUniversalExpedition # LoneStar, moved to tier 2
+      - id: WeaponCaseShortPollockExpedition
       - id: WeaponCaseShortFaithExpedition
-      # - id: WeaponCaseShortArgentiExpedition # Coyote: remove: vendor gun
-      - id: WeaponCaseShortLuckyExpedition
-      - id: WeaponCaseShortDeckardExpedition
-      - id: WeaponCaseShortRitland45Expedition
-      - id: WeaponCaseLongBarlowsBoltExpedition
-      # - id: WeaponCaseLongRepeaterExpedition # Coyote: remove: vendor gun
-      - id: WeaponCaseLongSniperCeremonialExpedition
+      - id: WeaponCaseShortArgentiExpedition
+      # - id: WeaponCaseShortLuckyExpedition # LoneStar, moved to tier 2
+      # - id: WeaponCaseShortDeckardExpedition # LoneStar, moved to tier 2
+      # - id: WeaponCaseShortRitland45Expedition # LoneStar, moved to tier 3
+      # - id: WeaponCaseLongBarlowsBoltExpedition # LoneStar, moved to tier 2
+      - id: WeaponCaseLongRepeaterExpedition
+      # - id: WeaponCaseLongSniperCeremonialExpedition # LoneStar, moved to tier 2
+      # LoneStar v
+      - id: WeaponCaseShortFitzExpedition
+      - id: WeaponCaseLongKammererExpedition
+      - id: WeaponCaseShortLaserGunExpedition
     - !type:NestedSelector
-      weight: 0.05
+      weight: 0.15 # LoneStar
       tableId: TableDungeonLootWeaponsRangedTier2
 
 # region ranged T2
@@ -222,20 +226,29 @@
     - !type:GroupSelector
       weight: 0.95
       children:
-      - id: WeaponCaseShortCobra
-      - id: WeaponCaseShortN1984Expedition
-      - id: WeaponCaseShortViper
-      # - id: WeaponCaseShortFitzExpedition # Coyote: remove: vendor gun
-      - id: WeaponCaseShortWard45Expedition
-      - id: WeaponCaseShortRevolverPirate
-      - id: WeaponCaseLongC20r
-      - id: WeaponCaseLongJackdaw
-      - id: WeaponCaseLongLecterExpedition # Coyote: add: two chances at a basic .20 rifle
-      # - id: WeaponCaseLongGestioExpedition # Coyote: remove: vendor gun
-      # - id: WeaponCaseLongWeaponRifleNovaliteC1Expedition # Coyote: remove: vendor gun
+      # - id: WeaponCaseShortCobra # LoneStar, moved to tier 3
+      # - id: WeaponCaseShortN1984Expedition # LoneStar, moved to tier 3
+      # - id: WeaponCaseShortViper # LoneStar, moved to tier 3
+      # - id: WeaponCaseShortFitzExpedition # LoneStar, moved to tier 1
+      # - id: WeaponCaseShortWard45Expedition # LoneStar, moved to tier 3
+      # - id: WeaponCaseShortRevolverPirate # LoneStar, moved to tier 3
+      # - id: WeaponCaseLongC20r # LoneStar, moved to tier 4
+      # - id: WeaponCaseLongJackdaw # LoneStar, moved to tier 3
+      # - id: WeaponCaseLongEstoc # LoneStar, moved to tier 5
+      - id: WeaponCaseLongGestioExpedition
+      - id: WeaponCaseLongWeaponRifleNovaliteC1Expedition
       - id: WeaponCaseLongSVSExpedition
-      # - id: WeaponCaseLongKammererExpedition # Coyote: remove: vendor gun
-      # - id: WeaponCaseShortLaserGunExpedition # Coyote: remove: vendor gun
+      # - id: WeaponCaseLongKammererExpedition # LoneStar, moved to tier 1
+      # - id: WeaponCaseShortLaserGunExpedition # LoneStar, moved to tier 1
+      # - id: WeaponCaseLongLaserRepeaterExpedition # LoneStar, we dont have this
+      # LoneStar v
+      - id: WeaponCaseShortUniversalExpedition
+      - id: WeaponCaseShortLuckyExpedition
+      - id: WeaponCaseShortDeckardExpedition
+      - id: WeaponCaseLongBarlowsBoltExpedition
+      - id: WeaponCaseLongSniperCeremonialExpedition
+      - id: WeaponCaseLongTypewriterExpedition
+      - id: WeaponCaseLongMusketExpedition
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier3
@@ -248,20 +261,29 @@
     - !type:GroupSelector
       weight: 0.95
       children:
-      - id: WeaponCaseLongTypewriterExpedition
-      - id: WeaponCaseLongAtreidesExpedition
+      # - id: WeaponCaseLongTypewriterExpedition # LoneStar, moved to tier 2
+      # - id: WeaponCaseLongAtreidesExpedition # LoneStar, moved to tier 4
       - id: WeaponCaseLongWT550Expedition
       - id: WeaponCaseLongDrozdExpedition
       - id: WeaponCaseLongM90Expedition
       - id: WeaponCaseLongLecterExpedition
-      - id: WeaponCaseLongAkm # Coyote: add: AK47S, FOR EVERYONE *incoherent cheering*.... oh also its the worst of the .30 rifles so it can be down here with the gang
-      - id: WeaponCaseLongEnergyGunExpedition # Coyote: move: why is the energy SMG in tier 5, moving to tier 3
-      - id: WeaponCaseLongJackdaw # Coyote: add: two chances to get this because we need more decent .20 rifles and there are too many dang SMGs
-      - id: WeaponCaseShortSvalinnExpedition
-      # - id: WeaponCaseLongHristovExpedition # Coyote move: banishing you to tier 4
-      - id: WeaponCaseLongMusketExpedition
+      # - id: WeaponCaseShortSvalinnExpedition # LoneStar, moved to tier 4
+      # - id: WeaponCaseLongHristovExpedition # LoneStar, moved to tier 5
+      # - id: WeaponCaseLongMusketExpedition # LoneStar, moved to tier 2
+      # LoneStar v
+      - id: WeaponCaseShortRitland45Expedition
+      - id: WeaponCaseShortCobra
+      - id: WeaponCaseShortN1984Expedition
+      - id: WeaponCaseShortViper
+      - id: WeaponCaseShortWard45Expedition
+      - id: WeaponCaseShortRevolverPirate
+      - id: WeaponCaseLongJackdaw
+      - id: WeaponCaseLongEnforcerExpedition
+      - id: WeaponCaseShortAntiqueLaserExpedition
+      - id: WeaponCaseShortAdvancedLaserExpedition
+      - id: WeaponCaseLongLaserCarbineExpedition
     - !type:NestedSelector
-      weight: 0.03 # Coyote further reduction to lower the amount of high tier weapons
+      weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier4
 
 # region ranged T4
@@ -270,22 +292,25 @@
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
-      weight: 0.99
+      weight: 0.95
       children:
       - id: WeaponCaseLongSm
-      - id: WeaponCaseLongVulcanExpedition
+      # - id: WeaponCaseLongVulcanExpedition # LoneStar, faction unique
+      # - id: WeaponCaseLongRomulanExpedition # LoneStar, faction unique
       - id: WeaponCaseLongBulldog
-      - id: WeaponCaseLongEnforcerExpedition
-      - id: WeaponCaseLongEstocExpedition
-      - id: WeaponCaseShortAnacondaExpedition # Coyote
-      - id: WeaponCaseShortAntiqueLaserExpedition
-      - id: WeaponCaseShortAdvancedLaserExpedition
-      - id: WeaponCaseLongLaserCarbineExpedition
-      # - id: WeaponCaseLongXrayCannonExpedition # Coyote: move: banished to tier 5
-      # - id: WeaponCaseLongTemperatureGunExpedition # Coyote: move: banished to tier 5
-      - id: WeaponCaseLongHristovExpedition # Coyote move: banished to tier 4
+      # - id: WeaponCaseLongEnforcerExpedition # LoneStar, moved to tier 3
+      # - id: WeaponCaseShortAntiqueLaserExpedition # LoneStar, moved to tier 3
+      # - id: WeaponCaseShortAdvancedLaserExpedition # LoneStar, moved to tier 3
+      # - id: WeaponCaseLongLaserCarbineExpedition # LoneStar, moved to tier 3
+      # - id: WeaponCaseLongXrayCannonExpedition # LoneStar, blueprint only
+      # - id: WeaponCaseLongTemperatureGunExpedition # LoneStar, blueprint only
+      # LoneStar v
+      - id: WeaponCaseLongC20r
+      - id: WeaponCaseLongAtreidesExpedition
+      - id: WeaponCaseShortSvalinnExpedition
+      - id: WeaponCaseLongEnergyGunExpedition
     - !type:NestedSelector
-      weight: 0.01
+      weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier5
 
 # region ranged T5
@@ -299,14 +324,12 @@
       - id: WeaponCaseLongLauncherRocketExpedition
       - id: WeaponCaseLongLauncherChinaLake
       - id: WeaponCaseHeavyLightMachineGunL6
-      # - id: WeaponCaseLongEnergyGunExpedition # Coyote: move: why is the energy SMG in tier 5, moving to tier 3
-      - id: WeaponCaseLongLaserCannonExpedition
+      # - id: WeaponCaseLongEnergyGunExpedition # LoneStar, moved to tier 4
+      # - id: WeaponCaseLongLaserCannonExpedition # LoneStar, blueprint only
       - id: WeaponCaseHeavyAsmgtExpeditions
-      - id: WeaponCaseLongXrayCannonExpedition # Coyote: move: banished to tier 5
-      - id: WeaponCaseLongTemperatureGunExpedition # Coyote: move: banished to tier 5
-      - id: WeaponCaseLongPrototypePulseRifleExpedition # Coyote: Re-add to loot tables
-      - id: WeaponCaseLongHristovExpedition # Coyote extra trash drop.
-      - id: WeaponCaseLongC19r # Coyote: add: C19r because there is finally an SMG that doesnt need to be tier 3. I mean it could be tier 4 but lets keep the prototype rare.
+      # LoneStar v
+      - id: WeaponCaseLongEstoc
+      - id: WeaponCaseLongHristovExpedition
 
 # region explosives
 - type: entityTable
@@ -408,7 +431,7 @@
     - !type:NestedSelector
       weight: 0.15
       tableId: TableDungeonLootWeaponsAmmunitionUranium
-    - !type:NestedSelector
+    - !type:NestedSelector # LoneStar
       weight: 0.05
       tableId: TableDungeonLootWeaponsAmmunitionPractice
 
@@ -423,11 +446,10 @@
       children:
       - id: WeaponCaseShortAmmoBoxLethal20
       - id: WeaponCaseShortAmmoBoxBigLethal20
-    # Coyote: Remove .25 from tables
-    #- !type:GroupSelector
-    #  children:
-    #  - id: WeaponCaseShortAmmoBoxLethal25
-    #  - id: WeaponCaseShortAmmoBoxBigLethal25
+    # - !type:GroupSelector # LoneStar
+    #   children:
+    #   - id: WeaponCaseShortAmmoBoxLethal25
+    #   - id: WeaponCaseShortAmmoBoxBigLethal25
     - !type:GroupSelector
       children:
       - id: WeaponCaseShortAmmoBoxLethal30
@@ -436,17 +458,15 @@
       children:
       - id: WeaponCaseShortAmmoBoxLethal35
       - id: WeaponCaseShortAmmoBoxBigLethal35
-    # Coyote: .40 ammo
-    - !type:GroupSelector
-      children:
-      - id: WeaponCaseShortAmmoBoxLethal40
-      - id: WeaponCaseShortAmmoBoxBigLethal40
-    # End Coyote
     - !type:GroupSelector
       children:
       - id: WeaponCaseShortAmmoBoxLethalShotgun
       - id: WeaponCaseShortAmmoBoxSlugShotgun
       - id: WeaponCaseShortAmmoBoxBigLethalShotgun
+    - !type:GroupSelector # LoneStar
+      children:
+      - id: WeaponCaseShortAmmoBoxLethal40
+      - id: WeaponCaseShortAmmoBoxBigLethal40
 
 # region ammo rubber
 - type: entityTable
@@ -455,18 +475,17 @@
     children:
     - id: WeaponCaseShortAmmoBoxRubber30
     - id: WeaponCaseShortAmmoBoxRubber35
-    - id: WeaponCaseShortAmmoBoxRubber40 # Coyote
     - id: WeaponCaseShortAmmoBoxRubber45
     - id: WeaponCaseShortAmmoBoxRubberShotgun
+    - id: WeaponCaseShortAmmoBoxRubber40 # LoneStar
     - !type:GroupSelector
       children:
       - id: WeaponCaseShortAmmoBoxRubber20
       - id: WeaponCaseShortAmmoBoxBigRubber20
-    # Coyote: Remove .25 from tables
-    #- !type:GroupSelector
-    #  children:
-    #  - id: WeaponCaseShortAmmoBoxRubber25
-    #  - id: WeaponCaseShortAmmoBoxBigRubber25
+    # - !type:GroupSelector # LoneStar
+    #   children:
+    #   - id: WeaponCaseShortAmmoBoxRubber25
+    #   - id: WeaponCaseShortAmmoBoxBigRubber25
 
 # region ammo incendiary
 - type: entityTable
@@ -477,8 +496,8 @@
     - id: WeaponCaseShortAmmoBoxIncendiary30
     - id: WeaponCaseShortAmmoBoxIncendiary35
     - id: WeaponCaseShortAmmoBoxIncendiaryShotgun
-    - id: WeaponCaseShortAmmoBoxIncendiary40 # Coyote
     - id: WeaponCaseShortAmmoBoxIncendiary45
+    - id: WeaponCaseShortAmmoBoxIncendiary40 # LoneStar
 
 # region ammo uranium
 - type: entityTable
@@ -489,8 +508,8 @@
     - id: WeaponCaseShortAmmoBoxUranium30
     - id: WeaponCaseShortAmmoBoxUranium35
     - id: WeaponCaseShortAmmoBoxUraniumShotgun
-    - id: WeaponCaseShortAmmoBoxUranium40 # Coyote
     - id: WeaponCaseShortAmmoBoxUranium45
+    - id: WeaponCaseShortAmmoBoxUranium40 # LoneStar
 
 # region ammo practice
 - type: entityTable
@@ -500,10 +519,10 @@
     - id: WeaponCaseShortAmmoBoxPractice20
     - id: WeaponCaseShortAmmoBoxPractice30
     - id: WeaponCaseShortAmmoBoxPractice35
-    #- id: WeaponCaseShortAmmoBoxPractice25 # Coyote: Remove .25 from tables
+    # - id: WeaponCaseShortAmmoBoxPractice25 # LoneStar
     - id: WeaponCaseShortAmmoBoxPracticeShotgun
-    - id: WeaponCaseShortAmmoBoxPractice40 # Coyote
     - id: WeaponCaseShortAmmoBoxPractice45
+    - id: WeaponCaseShortAmmoBoxPractice40 # LoneStar
 
 # region combined
 - type: entityTable
