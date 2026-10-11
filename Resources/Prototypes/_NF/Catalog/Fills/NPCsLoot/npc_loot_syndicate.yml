@@ -9,13 +9,13 @@
     table: !type:GroupSelector
       children:
       - id: WeaponCaseShortRitland45Expedition
-        weight: 0.2
+        weight: 0.3 # LoneStar
       - id: WeaponCaseShortViper
         weight: 0.3
       - id: WeaponCaseShortCobra
-        weight: 0.3
-      - id: WeaponCaseShortN1984Expedition
-        weight: 0.2
+        weight: 0.4 # LoneStar
+      # - id: WeaponCaseShortN1984Expedition # LoneStar
+      #   weight: 0.2
 
 - type: entity
   parent: MarkerBasePlaceFree
@@ -46,8 +46,11 @@
     table: !type:GroupSelector
       children:
       - id: WeaponCaseLongTypewriterExpedition
+        weight: 0.3 # LoneStar
       - id: WeaponCaseLongC20r
+        weight: 0.6 # LoneStar
       - id: WeaponCaseLongAtreidesExpedition
+        weight: 0.1 # LoneStar
 
 # region pistol ammo
 - type: entityTable
@@ -62,6 +65,7 @@
       children:
       - id: NFAmmunitionBoxPistol35
       - id: NFAmmunitionBoxPistol45
+      - id: CSAmmunitionBoxPistol40 # LoneStar
     # +P+
     - !type:GroupSelector
       weight: 0.6
@@ -70,6 +74,7 @@
       children:
       - id: NFAmmunitionBoxPistol35Overpressure
       - id: NFAmmunitionBoxPistol45Overpressure
+      - id: CSAmmunitionBoxPistol40Overpressure # LoneStar
 
 - type: entity
   parent: MarkerBasePlaceFree
@@ -93,6 +98,7 @@
       children:
       - id: NFAmmunitionBoxPistol35Incendiary
       - id: NFAmmunitionBoxPistol45Incendiary
+      - id: CSAmmunitionBoxPistol40Incendiary # LoneStar
 
 - type: entity
   parent: MarkerBasePlaceFree
@@ -120,6 +126,7 @@
       children:
       - id: NFAmmunitionBoxPistol35Uranium
       - id: NFAmmunitionBoxPistol45Uranium
+      - id: CSAmmunitionBoxPistol40Uranium # LoneStar
 
 - type: entity
   parent: MarkerBasePlaceFree
@@ -141,6 +148,7 @@
           tableId: TableDungeonLootNpcSyndicateAmmoPistolUranium
 
 - type: entityTable
+  abstract: true
   id: TableDungeonLootNpcSyndicateAmmoPistolEmp
   table: !type:GroupSelector
     children:
@@ -152,6 +160,7 @@
       - id: NFAmmunitionBoxPistol45Emp
 
 - type: entity
+  abstract: true
   parent: MarkerBasePlaceFree
   id: SpawnDungeonLootNpcSyndicateAmmoPistolEmp
   categories: [ HideSpawnMenu ]
@@ -180,9 +189,9 @@
       - id: WeaponCaseLongKammererExpedition
         weight: 0.3
       - id: WeaponCaseLongEnforcerExpedition
-        weight: 0.55
+        weight: 0.6 # LoneStar
       - id: WeaponCaseLongBulldog
-        weight: 0.15
+        weight: 0.1 # LoneStar
 
 # region shotgun ammo
 - type: entity
@@ -224,12 +233,12 @@
       children:
       - id: WeaponCaseLongM90Expedition
         weight: 0.2
-      - id: WeaponCaseLongVulcanExpedition
-        weight: 0.3
+      # - id: WeaponCaseLongVulcanExpedition # LoneStar
+      #   weight: 0.3
       - id: WeaponCaseLongSm
-        weight: 0.4
+        weight: 0.75 # LoneStar
       - id: WeaponCaseHeavyLightMachineGunL6
-        weight: 0.1
+        weight: 0.05 # LoneStar
 
 # region rifle ammo
 - type: entity
@@ -248,8 +257,10 @@
           range: 1, 2
         children:
         - id: NFAmmunitionBoxRifle20Incendiary
-        - id: NFAmmunitionBoxRifle25Incendiary
+        # - id: NFAmmunitionBoxRifle25Incendiary # LoneStar
         - id: NFAmmunitionBoxRifle30Incendiary
+        - id: CSAmmunitionBoxPistol40Incendiary # LoneStar
+
       # big boxes
       - !type:GroupSelector
         weight: 0.1
@@ -257,8 +268,9 @@
           range: 1, 2
         children:
         - id: NFAmmunitionBoxBigRifle20Incendiary
-        - id: NFAmmunitionBoxBigRifle25Incendiary
+        # - id: NFAmmunitionBoxBigRifle25Incendiary # LoneStar
         - id: NFAmmunitionBoxBigRifle30Incendiary
+        - id: CSAmmunitionBoxBigPistol40Incendiary # LoneStar
 
 - type: entity
   parent: MarkerBasePlaceFree
@@ -276,8 +288,9 @@
           range: 1, 2
         children:
         - id: NFAmmunitionBoxRifle20Uranium
-        - id: NFAmmunitionBoxRifle25Uranium
+        # - id: NFAmmunitionBoxRifle25Uranium # LoneStar
         - id: NFAmmunitionBoxRifle30Uranium
+        - id: CSAmmunitionBoxPistol40Uranium # LoneStar
       # big boxes
       - !type:GroupSelector
         weight: 0.1
@@ -285,11 +298,13 @@
           range: 1, 2
         children:
         - id: NFAmmunitionBoxBigRifle20Uranium
-        - id: NFAmmunitionBoxBigRifle25Uranium
+        # - id: NFAmmunitionBoxBigRifle25Uranium # LoneStar
         - id: NFAmmunitionBoxBigRifle30Uranium
+        - id: CSAmmunitionBoxBigPistol40Uranium # LoneStar
 
 # region fluff
-- type: entity
+- type: entity # LoneStar note, replaced by TablePrizeBallSyndicate in all applications
+  abstract: true # LoneStar
   parent: MarkerBasePlaceFree
   id: SpawnDungeonLootNpcSyndicateFluffItems
   categories: [ HideSpawnMenu ]
@@ -364,6 +379,7 @@
 
 # region blueprints
 - type: entity
+  abstract: true # LoneStar
   parent: MarkerBasePlaceFree
   id: SpawnDungeonLootNpcSyndicateBlueprints
   categories: [ HideSpawnMenu ]

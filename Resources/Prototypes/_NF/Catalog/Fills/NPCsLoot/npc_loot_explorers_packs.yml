@@ -258,9 +258,9 @@
     - id: ClothingOuterHardsuitLuxury
       onGroup: Armor
       prob: 0.15
-    - id: ClothingOuterHardsuitMaximPrototype
-      orGroup: Armor
-      prob: 0.05
+    # - id: ClothingOuterHardsuitMaximPrototype # LoneStar, faction unique
+    #   orGroup: Armor
+    #   prob: 0.05
     # Items
     - id: SpawnDungeonLootClutterEngi
       orGroup: Items

@@ -140,7 +140,7 @@
     - id: SpawnDungeonLootMaterialsBasicFull
       orGroup: Items
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
 
@@ -158,13 +158,13 @@
       prob: 0.1
     - id: SpawnDungeonLootNpcSyndicateAmmoPistolIncendiary
       orGroup: Ammo
-      prob: 0.1
+      prob: 0.3 # LoneStar
     - id: SpawnDungeonLootNpcSyndicateAmmoPistolUranium
       orGroup: Ammo
-      prob: 0.1
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolEmp
-      orGroup: Ammo
-      prob: 0.7
+      prob: 0.6 # LoneStar
+    # - id: SpawnDungeonLootNpcSyndicateAmmoPistolEmp # LoneStar
+    #   orGroup: Ammo
+    #   prob: 0.7
 
 - type: entity # TODO: make a something unique for the saboteur backpack
   parent: ClothingBackpackSyndicateT1Deckhand
@@ -225,7 +225,7 @@
     - id: SpawnDungeonLootMaterialsBasicFull
       orGroup: Items
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
 
@@ -270,16 +270,16 @@
     - id: SpawnDungeonLootToolsAdvancedEngineering
       orGroup: Items
       prob: 0.4
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.2
     - id: SpawnDungeonLootMaterialsValuableFull
       orGroup: Items
       amount: 2
       prob: 0.1
-    - id: SpawnDungeonLootNpcSyndicateBlueprints
-      orGroup: Items
-      prob: 0.05
+    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
+    #   orGroup: Items
+    #   prob: 0.05
 
 # region Medic
 - type: entity
@@ -303,7 +303,7 @@
     - id: SpawnDungeonClutterMedipens
       orGroup: Items
       prob: 0.7
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
 
@@ -368,12 +368,12 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateBlueprints
-      orGroup: Items
-      prob: 0.05
+    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
+    #   orGroup: Items
+    #   prob: 0.05
 
 # region Tier 3
 - type: entity
@@ -434,12 +434,12 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateBlueprints
-      orGroup: Items
-      prob: 0.1
+    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
+    #   orGroup: Items
+    #   prob: 0.1
 
 # region Grenadier
 - type: entity
@@ -496,12 +496,12 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateBlueprints
-      orGroup: Items
-      prob: 0.1
+    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
+    #   orGroup: Items
+    #   prob: 0.1
 
 # region Chemwarrior
 - type: entity
@@ -541,12 +541,12 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateBlueprints
-      orGroup: Items
-      prob: 0.1
+    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
+    #   orGroup: Items
+    #   prob: 0.1
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -582,12 +582,12 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateBlueprints
-      orGroup: Items
-      prob: 0.1
+    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
+    #   orGroup: Items
+    #   prob: 0.1
 
 # region Tier 4 (Boss)
 - type: entity
@@ -645,12 +645,12 @@
       orGroup: Armor
       prob: 0.3
     # Items
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateBlueprints
-      orGroup: Items
-      prob: 0.3
+    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
+    #   orGroup: Items
+    #   prob: 0.3
     # BossLoot
     - id: SpawnDungeonLootGunT3
       orGroup: BossLoot
@@ -661,9 +661,9 @@
     - id: SpawnDungeonLootNpcMercenariesBlueprints
       orGroup: BossLoot
       prob: 0.45
-    - id: SpawnDungeonLootNpcSyndicateFluffItems
+    - id: TablePrizeBallSyndicate # LoneStar
       orGroup: BossLoot
       prob: 0.05
-    - id: SpawnDungeonLootNpcSyndicateBlueprints
-      orGroup: BossLoot
-      prob: 0.3
+    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
+    #   orGroup: BossLoot
+    #   prob: 0.3

@@ -308,6 +308,7 @@
     - NFMagazineDrumRifle20Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionMercenary
   id: NFBlueprintJackdawMercenary
   categories: [ HideSpawnMenu ]
@@ -321,6 +322,7 @@
     - NFMagazineRifle20Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionMercenary
   id: NFBlueprintLecterMercenary
   categories: [ HideSpawnMenu ]
@@ -334,6 +336,7 @@
     - NFMagazineRifle20Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionMercenary
   id: NFBlueprintWt550Mercenary
   categories: [ HideSpawnMenu ]
@@ -347,6 +350,7 @@
     - NFMagazineSubMachineGunTopMounted35Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionMercenary
   id: NFBlueprintDrozdMercenary
   categories: [ HideSpawnMenu ]
@@ -430,6 +434,7 @@
 
 # parts (Rating 4)
 - type: entity
+  abstract: true # LoneStar, no printable bluespace
   parent: NFBaseBlueprintExpeditionRogueSilicon
   id: NFBlueprintRogueSiliconBluespaceCapacitor
   categories: [ HideSpawnMenu ]
@@ -441,6 +446,7 @@
     - QuadraticCapacitorStockPart
 
 - type: entity
+  abstract: true # LoneStar, no printable bluespace
   parent: NFBaseBlueprintExpeditionRogueSilicon
   id: NFBlueprintRogueSiliconBluespaceMatterBin
   categories: [ HideSpawnMenu ]
@@ -452,6 +458,7 @@
     - BluespaceMatterBinStockPart
 
 - type: entity
+  abstract: true # LoneStar, no printable bluespace
   parent: NFBaseBlueprintExpeditionRogueSilicon
   id: NFBlueprintRogueSiliconBluespaceManipulator
   categories: [ HideSpawnMenu ]
@@ -608,6 +615,7 @@
 
 # battery guns
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionRogueSilicon
   id: NFBlueprintRogueSiliconPistolLaserSvalinn
   categories: [ HideSpawnMenu ]
@@ -619,6 +627,7 @@
     - NFWeaponEnergyPistolLaserSvalinn
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionRogueSilicon
   id: NFBlueprintRogueSiliconPistolLaserAdvanced
   categories: [ HideSpawnMenu ]
@@ -630,6 +639,7 @@
     - NFWeaponEnergyPistolLaserAdvanced
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionRogueSilicon
   id: NFBlueprintRogueSiliconEnergyRifleCarbine
   categories: [ HideSpawnMenu ]
@@ -641,6 +651,7 @@
     - NFWeaponEnergyRifleCarbine
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionRogueSilicon
   id: NFBlueprintRogueSiliconEnergySubMachineGunDeltaV
   categories: [ HideSpawnMenu ]
@@ -653,11 +664,13 @@
 
 # region syndicate
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: [NFBaseBlueprintExpeditionSyndicate, NFBaseBlueprintExpeditionMercenary]
   id: NFBlueprintAmmoOverpressureSyndicate
   categories: [ HideSpawnMenu ]
 
 - type: entity
+  abstract: true # LoneStar
   parent: NFBaseBlueprintExpeditionSyndicate
   id: NFBlueprintAmmoIncendiarySyndicate
   categories: [ HideSpawnMenu ]
@@ -673,6 +686,7 @@
     - NFAmmunitionBoxShellShotgunIncendiary
 
 - type: entity
+  abstract: true # LoneStar
   parent: NFBaseBlueprintExpeditionSyndicate
   id: NFBlueprintAmmoUraniumSyndicate
   categories: [ HideSpawnMenu ]
@@ -688,6 +702,7 @@
     - NFAmmunitionBoxShellShotgunUranium
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionSyndicate
   id: NFBlueprintPistolViperSyndicate
   categories: [ HideSpawnMenu ]
@@ -701,6 +716,7 @@
     - NFMagazineHighCapacityPistol35Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionSyndicate
   id: NFBlueprintPistolCobraSyndicate
   categories: [ HideSpawnMenu ]
@@ -714,6 +730,7 @@
     - NFMagazinePistol45Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionSyndicate
   id: NFBlueprintC20rSyndicate
   categories: [ HideSpawnMenu ]
@@ -727,6 +744,7 @@
     - NFMagazineSubMachineGun35Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionSyndicate
   id: NFBlueprintAtreidesSyndicate
   categories: [ HideSpawnMenu ]
@@ -740,6 +758,7 @@
     - NFMagazineSubMachineGun35Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionSyndicate
   id: NFBlueprintM90glSyndicate
   categories: [ HideSpawnMenu ]
@@ -753,6 +772,7 @@
     - NFMagazineRifle20Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionSyndicate
   id: NFBlueprintSmSyndicate
   categories: [ HideSpawnMenu ]
@@ -766,6 +786,7 @@
     - NFMagazineRifle30Empty
 
 - type: entity
+  abstract: true # LoneStar, no printing FUC-able-like guns
   parent: NFBaseBlueprintExpeditionSyndicate
   id: NFBlueprintLightMachineGunL6Syndicate
   categories: [ HideSpawnMenu ]

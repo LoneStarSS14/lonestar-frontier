@@ -57,7 +57,7 @@
       prototypes:
         - SyndicateNavalGearT1Deckhand
     - type: BasicEntityAmmoProvider
-      proto: NFBulletPistol35Uranium
+      proto: NFBulletPistol35Overpressure # LoneStar
       capacity: 4
       count: 4
     - type: Gun
@@ -74,7 +74,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: BasicEntityAmmoProvider
-      proto: NFBulletPistol35Incendiary
+      proto: NFBulletPistol35Overpressure # LoneStar
       capacity: 4
       count: 4
 
@@ -94,7 +94,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: BasicEntityAmmoProvider
-      proto: NFBulletPistol35
+      proto: NFBulletPistol35Overpressure # LoneStar
       capacity: 4
       count: 4
 
@@ -114,7 +114,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: NFCartridgePistol35Emp
+      proto: NFCartridgePistol35Overpressure # LoneStar
       capacity: 4
       count: 4
     - type: Gun
@@ -176,7 +176,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: NFCartridgePistol45
+      proto: NFCartridgePistol45Overpressure # LoneStar
       capacity: 1
       count: 1
     - type: Gun
@@ -193,7 +193,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: BasicEntityAmmoProvider
-      proto: NFBulletPistol45
+      proto: NFBulletPistol45Overpressure # LoneStar
       capacity: 1
       count: 1
 
@@ -203,7 +203,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: BasicEntityAmmoProvider
-      proto: NFCartridgePistol45
+      proto: NFCartridgePistol45Overpressure # LoneStar
       capacity: 1
       count: 1
 
@@ -213,7 +213,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: BasicEntityAmmoProvider
-      proto: NFCartridgePistol45
+      proto: NFCartridgePistol45Overpressure # LoneStar
       capacity: 1
       count: 1
 
@@ -233,7 +233,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: NFShellShotgunBuckshot
+      proto: NFShellShotgunOverpressure # LoneStar
       capacity: 1
       count: 1
     - type: Gun
@@ -254,7 +254,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: BasicEntityAmmoProvider
-      proto: NFShellShotgunBuckshot
+      proto: NFShellShotgunOverpressure # LoneStar
       capacity: 1
       count: 1
 
@@ -264,7 +264,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: BasicEntityAmmoProvider
-      proto: NFShellShotgunBuckshot
+      proto: NFShellShotgunOverpressure # LoneStar
       capacity: 1
       count: 1
 
@@ -274,7 +274,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: BasicEntityAmmoProvider
-      proto: NFShellShotgunBeanbag
+      proto: NFShellShotgunOverpressure # LoneStar
       capacity: 1
       count: 1
 
@@ -336,7 +336,7 @@
       count: 1
 
 # region Second Officer (laser)
-- type: entity
+- type: entity # LoneStar note, these guys just dont spawn anywhere?
   parent: MobSyndicateNavalBase
   id: MobSyndicateNavalSecondOfficerA
   categories: [ HideSpawnMenu ]
@@ -407,7 +407,7 @@
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgePistol35Uranium
+    proto: NFCartridgePistol35Overpressure # LoneStar
     capacity: 7
     count: 7
   - type: Gun
@@ -428,7 +428,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgePistol35Incendiary
+    proto: NFCartridgePistol35Overpressure # LoneStar
     capacity: 7
     count: 7
 
@@ -448,7 +448,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgePistol35
+    proto: NFCartridgePistol35Overpressure # LoneStar
     capacity: 7
     count: 7
 
@@ -618,7 +618,7 @@
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgeRifle25Uranium
+    proto: NFCartridgeRifle30Overpressure # LoneStar
     capacity: 4
     count: 4
   - type: Gun
@@ -635,7 +635,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgeRifle25Incendiary
+    proto: NFCartridgeRifle30Overpressure # LoneStar
     capacity: 4
     count: 4
   - type: Gun
@@ -647,7 +647,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgeRifle25Overpressure
+    proto: NFCartridgeRifle30Overpressure # LoneStar
     capacity: 4
     count: 4
 
@@ -657,7 +657,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgeRifle25
+    proto: NFCartridgeRifle30Overpressure # LoneStar
     capacity: 4
     count: 4
 
@@ -673,7 +673,7 @@
     prototypes:
     - SyndicateNavalCaptainVoidGear
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgePistol45Uranium
+    proto: NFCartridgePistol45Overpressure # LoneStar
     capacity: 1
     count: 1
 
@@ -709,7 +709,7 @@
     prototypes:
     - SyndicateNavalEngineerVoidGear
   - type: BasicEntityAmmoProvider
-    proto: NFShellShotgunUranium
+    proto: NFShellShotgunOverpressure # LoneStar
     capacity: 1
     count: 1
 

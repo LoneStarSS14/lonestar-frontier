@@ -42,29 +42,40 @@
       - !type:GroupSelector
         weight: 0.4
         children:
-        - id: NFBlueprintMineralScannerEmpty
+        # - id: NFBlueprintMineralScannerEmpty # LoneStar, moved to tier 2
+        # LoneStar v
+        - id: NFBlueprintMiningDrill
       # T2 - Uncommon
       - !type:GroupSelector
         weight: 0.3
         children:
         - id: NFBlueprintPouchExplorers
+        # LoneStar v
+        - id: NFBlueprintMineralScannerEmpty
       # T3 - Rare
       - !type:GroupSelector
         weight: 0.15
         children:
-        - id: NFBlueprintEnergyPickaxe
+        # - id: NFBlueprintEnergyPickaxe # LoneStar, moved to tier 5
         - id: NFBlueprintOreBagOfHolding
         - id: NFBlueprintConstructionBagOfHolding
+        # LoneStar v
+        # - id: NFBlueprintWeaponCrusherDagger
       # T4 - Epic
       - !type:GroupSelector
         weight: 0.1
         children:
-        - id: NFBlueprintWeaponCrusherDagger
-        - id: NFBlueprintMiningDrill
+        # - id: NFBlueprintWeaponCrusherDagger # LoneStar, moved to tier 3
+        # - id: NFBlueprintMiningDrill # LoneStar, moved to tier 1
+        # LoneStar v
+        - id: NFBlueprintWeaponCrusher
+        - id: NFBlueprintWeaponCrusherGlaive
       # T5 - Legendary
       - !type:GroupSelector
         weight: 0.05
         children:
         - id: MiningDrillDiamond
-        - id: NFBlueprintWeaponCrusher
-        - id: NFBlueprintWeaponCrusherGlaive
+        # - id: NFBlueprintWeaponCrusher # LoneStar, moved to tier 4
+        # - id: NFBlueprintWeaponCrusherGlaive # LoneStar, moved to tier 4
+        # LoneStar v
+        - id: NFBlueprintEnergyPickaxe

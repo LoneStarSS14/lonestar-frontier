@@ -11,9 +11,9 @@
       - id: WeaponCaseShortMk58Expedition
         weight: 0.4
       - id: WeaponCaseShortUniversalExpedition
-        weight: 0.3
+        weight: 0.2 # LoneStar
       - id: WeaponCaseShortPollockExpedition
-        weight: 0.2
+        weight: 0.3 # LoneStar
       - id: WeaponCaseShortViper
         weight: 0.1
 
@@ -28,11 +28,11 @@
     table: !type:GroupSelector
       children:
       - id: WeaponCaseLongKammererExpedition
-        weight: 0.85
+        weight: 0.6 # LoneStar
       - id: WeaponCaseLongEnforcerExpedition
-        weight: 0.1
+        weight: 0.3 # LoneStar
       - id: WeaponCaseLongBulldog
-        weight: 0.05
+        weight: 0.1 # LoneStar
 
 # region assault rifles (.20)
 - type: entity
@@ -45,15 +45,15 @@
     table: !type:GroupSelector
       children:
       - id: WeaponCaseLongWeaponRifleNovaliteC1Expedition
-        weight: 0.65
+        weight: 0.6 # LoneStar
       - id: WeaponCaseLongJackdaw
         weight: 0.2
-      - id: WeaponCaseLongGestioExpedition
-        weight: 0.05
+      # - id: WeaponCaseLongGestioExpedition # LoneStar, its regioned for .20
+      #   weight: 0.05
       - id: WeaponCaseLongLecterExpedition
-        weight: 0.05
+        weight: 0.125 # LoneStar
       - id: WeaponCaseLongM90Expedition
-        weight: 0.05
+        weight: 0.075 # LoneStar
 
 # region energy
 - type: entity
@@ -68,9 +68,9 @@
       - id: WeaponCaseShortLaserGunExpedition
         weight: 0.75
       - id: WeaponCaseShortSvalinnExpedition
-        weight: 0.23
+        weight: 0.01 # LoneStar
       - id: WeaponCaseLongLaserCarbineExpedition
-        weight: 0.01
+        weight: 0.23 # LoneStar
       - id: WeaponCaseShortAdvancedLaserExpedition
         weight: 0.01
 
@@ -120,6 +120,7 @@
 
 # region blueprints
 - type: entity
+  abtract: true
   parent: MarkerBasePlaceFree
   id: SpawnDungeonLootNpcMercenariesBlueprints
   categories: [ HideSpawnMenu ]

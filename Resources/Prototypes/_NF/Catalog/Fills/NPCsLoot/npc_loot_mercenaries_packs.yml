@@ -409,17 +409,8 @@
     sprite: Clothing/Belt/bandolier.rsi
     state: icon
   - type: SpawnItemsOnUse
-    items:
-    - id: NFSpeedLoaderPistol35Empty
-      prob: 0.9
-    - id: NFSpeedLoaderPistol35Empty
-      prob: 0.6
-    - id: NFSpeedLoaderPistol35Empty
-      prob: 0.1
-    - id: NFAmmunitionBoxPistol35Overpressure
-      prob: 0.9
-    - id: NFAmmunitionBoxPistol35Overpressure
-      prob: 0.2
+    items: # LoneStar, overwritten
+    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
 
 #region tier 3
 - type: entity
@@ -502,7 +493,7 @@
   - type: SpawnItemsOnUse
     items:
     # Weapons
-    - id: SpawnDungeonLootGunT3
+    - id: SpawnDungeonLootGunT2 # LoneStar, less powerful weapons
       orGroup: Weapons
       prob: 0.4
     # Armor
@@ -525,9 +516,9 @@
     - id: SpawnDungeonLootNpcMercenariesFluff
       orGroup: Items
       prob: 0.15
-    - id: SpawnDungeonLootNpcMercenariesBlueprints
-      orGroup: Items
-      prob: 0.05
+    # - id: SpawnDungeonLootNpcMercenariesBlueprints # LoneStar, no blueprints
+    #   orGroup: Items
+    #   prob: 0.05
 
 - type: entity
   parent: NFBaseNpcLootBeltMercenary
@@ -600,9 +591,9 @@
     - id: AmmoTechFabCircuitboard
       orGroup: Items
       prob: 0.1
-    - id: SpawnDungeonLootNpcMercenariesBlueprints
-      orGroup: Items
-      prob: 0.05
+    # - id: SpawnDungeonLootNpcMercenariesBlueprints # LoneStar, no blueprints
+    #   orGroup: Items
+    #   prob: 0.05
     # BossLoot
     - id: SpawnDungeonLootGunT3
       orGroup: BossLoot
@@ -610,6 +601,6 @@
     - id: SpawnDungeonLootNpcBossLootShared
       orGroup: BossLoot
       prob: 0.3
-    - id: SpawnDungeonLootNpcMercenariesBlueprints
-      orGroup: BossLoot
-      prob: 0.45
+    # - id: SpawnDungeonLootNpcMercenariesBlueprints # LoneStar, no blueprints
+    #   orGroup: BossLoot
+    #   prob: 0.45

@@ -146,10 +146,10 @@
     - id: NFWeaponEnergyLightMachineGunTurbo
       orGroup: Weapons
       prob: 0.4
-    - id: SpawnDungeonLootGunT5
+    - id: SpawnDungeonLootGunT4 # LoneStar, less high tier weapons
       orGroup: Weapons
       prob: 0.3
-    - id: SpawnDungeonLootMeleeT5
+    - id: SpawnDungeonLootMeleeT4 # LoneStar, less high tier weapons
       orGroup: Weapons
       prob: 0.3
     # Scrap

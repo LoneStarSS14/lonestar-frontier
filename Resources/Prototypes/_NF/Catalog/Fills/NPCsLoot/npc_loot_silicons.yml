@@ -26,7 +26,7 @@
         - id: TreasureSelfRepairModule # 1350 spesos
 
 # region borg module
-- type: entity
+- type: entity # LoneStar note, need to overhaul this
   parent: MarkerBasePlaceFree
   id: SpawnDungeonLootNpcRogueSiliconBorgModule
   categories: [ HideSpawnMenu ]
@@ -110,49 +110,68 @@
       - !type:GroupSelector
         weight: 0.4
         children:
-        - id: NFBlueprintRogueSiliconAdvancedCapacitor
-        - id: NFBlueprintRogueSiliconAdvancedMatterBin
-        - id: NFBlueprintRogueSiliconAdvancedManipulator
+        # - id: NFBlueprintRogueSiliconAdvancedCapacitor # LoneStar, trash
+        # - id: NFBlueprintRogueSiliconAdvancedMatterBin # LoneStar, trash
+        # - id: NFBlueprintRogueSiliconAdvancedManipulator # LoneStar, trash
         - id: NFBlueprintRogueSiliconPowerCellHigh
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconSuperCapacitor
+        - id: NFBlueprintRogueSiliconSuperMatterBin
+        - id: NFBlueprintRogueSiliconSuperManipulator
       # T2 - Uncommon
       - !type:GroupSelector
         weight: 0.3
         children:
         - id: NFBlueprintRogueSiliconAdvancedTools
-        - id: NFBlueprintRogueSiliconSuperCapacitor
-        - id: NFBlueprintRogueSiliconSuperMatterBin
-        - id: NFBlueprintRogueSiliconSuperManipulator
-        - id: NFBlueprintRogueSiliconPowerCellHyper
+        # - id: NFBlueprintRogueSiliconSuperCapacitor # LoneStar, moved to tier 1
+        # - id: NFBlueprintRogueSiliconSuperMatterBin # LoneStar, moved to tier 1
+        # - id: NFBlueprintRogueSiliconSuperManipulator # LoneStar, moved to tier 1
+        # - id: NFBlueprintRogueSiliconPowerCellHyper # LoneStar, moved to unique
+        # - id: NFBlueprintRogueSiliconPowerCellMicroreactor # LoneStar, moved to tier 5
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconRPED
+        - id: NFBlueprintRogueSiliconShipyardRCD
       # T3 - Rare
       - !type:GroupSelector
         weight: 0.15
         children:
-        - id: NFBlueprintRogueSiliconRPED
-        - id: NFBlueprintRogueSiliconShipyardRCD
-        - id: NFBlueprintOreBagOfHolding
-        - id: NFBlueprintConstructionBagOfHolding
-        # - id: NFBlueprintRogueSiliconPistolLaserSvalinn # TODO: restore the blueprint when the weapon is fixed
+        # - id: NFBlueprintRogueSiliconRPED # LoneStar, moved to tier 2
+        # - id: NFBlueprintRogueSiliconShipyardRCD # LoneStar, moved to tier 2
+        # - id: NFBlueprintOreBagOfHolding # LoneStar, moved to tier 4
+        # - id: NFBlueprintConstructionBagOfHolding # LoneStar, moved to tier 4
+        # - id: NFBlueprintRogueSiliconPistolLaserSvalinn # LoneStar, moved to tier 4
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconRipley
+        - id: NFBlueprintRogueSiliconMechEquipmentFork
+        - id: NFBlueprintRogueSiliconMechEquipmentGrabber
       # T4 - Epic
       - !type:GroupSelector
         weight: 0.1
         children:
-        - id: NFBlueprintRogueSiliconRipley
-        - id: NFBlueprintRogueSiliconMechEquipmentFork
-        - id: NFBlueprintRogueSiliconMechEquipmentGrabber
-        - id: NFBlueprintRogueSiliconEnergyRifleCarbine
-        - id: NFBlueprintRogueSiliconPistolLaserAdvanced
+        # - id: NFBlueprintRogueSiliconRipley # LoneStar, moved to tier 3
+        # - id: NFBlueprintRogueSiliconMechEquipmentFork # LoneStar, moved to tier 3
+        # - id: NFBlueprintRogueSiliconMechEquipmentGrabber # LoneStar, moved to tier 3
+        # - id: NFBlueprintRogueSiliconEnergyRifleCarbine # LoneStar, no printing FUC-able-like weapons
+        # - id: NFBlueprintRogueSiliconPistolLaserAdvanced # LoneStar, no printing FUC-able-like weapons
+        # LoneStar v
+        - id: NFBlueprintOreBagOfHolding
+        - id: NFBlueprintConstructionBagOfHolding
+        - id: NFBlueprintRogueSiliconPistolLaserSvalinn
       # T5 - Legendary
       - !type:GroupSelector
         weight: 0.05
         children:
         - id: NFBlueprintRogueSiliconHonker
         - id: NFBlueprintRogueSiliconBluespaceBags
-        - id: NFBlueprintRogueSiliconEnergySubMachineGunDeltaV
+        # - id: NFBlueprintRogueSiliconEnergySubMachineGunDeltaV # LoneStar, no printing FUC-able-like weapons
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconPowerCellMicroreactor
       # Unique
       - !type:GroupSelector
         weight: 0.01
         children:
-        #- id: NFBlueprintRogueSiliconBluespaceCapacitor
-        #- id: NFBlueprintRogueSiliconBluespaceMatterBin
-        #- id: NFBlueprintRogueSiliconBluespaceManipulator
-        - id: NFBlueprintRogueSiliconPowerCellMicroreactor
+        # - id: NFBlueprintRogueSiliconBluespaceCapacitor # LoneStar, no
+        # - id: NFBlueprintRogueSiliconBluespaceMatterBin # LoneStar, no
+        # - id: NFBlueprintRogueSiliconBluespaceManipulator # LoneStar, no
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconPowerCellHyper
