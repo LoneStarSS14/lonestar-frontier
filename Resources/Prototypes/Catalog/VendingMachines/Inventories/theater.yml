@@ -70,11 +70,6 @@
     ClothingShoesDameDane: 4294967295
     ClothingOuterDameDane: 4294967295
     ClothingUniformJumpsuitKimono: 4294967295
-    ClothingKimonoBlue: 4294967295
-    ClothingKimonoPink: 4294967295
-    ClothingKimonoPurple: 4294967295
-    ClothingKimonoSky: 4294967295
-    ClothingKimonoGreen: 4294967295
     ClothingHeadHatCasa: 4294967295
     ClothingHeadHatHairflower: 4294967295 # LoneStar: Clothing version, not food.
     ClothingHeadHatGladiator: 4294967295
@@ -150,8 +145,6 @@
     ClothingBeltSuspendersBlack: 4294967295
     ClothingBeltSuspendersRed: 4294967295
     RubberStampMime: 4294967295
-    ClothingMaskOniBlue: 4294967295
-    ClothingMaskOniRed: 4294967295
     # End Frontier Additions
     ClothingUniformMusicKing: 4294967295
     ClothingUniformMusicKingBlack: 4294967295
