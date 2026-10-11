@@ -426,8 +426,8 @@
     solution: injector
   - type: Spillable
     solution: injector
-  # - type: TrashOnSolutionEmpty # LoneStar
-  #   solution: injector
+   - type: TrashOnSolutionEmpty # LoneStar
+     solution: injector
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 2
