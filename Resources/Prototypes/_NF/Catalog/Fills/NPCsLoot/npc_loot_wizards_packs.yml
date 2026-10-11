@@ -1,4 +1,3 @@
-# _CS Start
 #region base
 - type: entity
   abstract: true
@@ -278,4 +277,3 @@
   id: NFPurpleWizardGiftBoxMaster
   name: purple wizard gear bundle
   categories: [ HideSpawnMenu ]
-# _CS End

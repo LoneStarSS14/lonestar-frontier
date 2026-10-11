@@ -96,23 +96,14 @@
       Male: MaleHuman
       Female: FemaleHuman
       Unsexed: MaleHuman
-  # Coyote: Behind on WizDen upgrades so here we go
-  # - type: Vocalizer
-  #   hideChat: true
-  #   minVocalizeInterval: 30
-  #   maxVocalizeInterval: 120
-  # - type: DatasetVocalizer
-  #   dataset: spacepunkhumanoidchatter
-  # # End Coyote
+  - type: Vocalizer
+    hideChat: true
+    minVocalizeInterval: 30
+    maxVocalizeInterval: 120
+  - type: DatasetVocalizer
+    dataset: spacepunkhumanoidchatter
   - type: AutoWakeUp
   - type: StinkyTrait
-  # Coyote: old style mob vocalisations
-  - type: Advertise
-    pack: spacepunkhumanoidchatter
-    minimumWait: 30
-    maximumWait: 120
-    nextAdvertisementTime: 10
-  # # End Coyote
 
 # region common zombie
 - type: entity

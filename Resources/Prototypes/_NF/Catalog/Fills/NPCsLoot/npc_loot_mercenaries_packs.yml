@@ -578,7 +578,7 @@
   - type: SpawnItemsOnUse
     items:
     # Weapons
-    - id: NFWeaponRifleRepeaterExpedition
+    - id: LSWeaponRifleMahifa # LoneStar
       orGroup: Weapons
       prob: 0.9
     # Armor
