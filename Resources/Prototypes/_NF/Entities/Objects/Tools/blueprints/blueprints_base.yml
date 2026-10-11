@@ -93,7 +93,7 @@
   parent: NFBaseBlueprint
   id: NFBaseBlueprintFaxable
   name: blueprint
-  description: A blueprint with schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  description: A blueprint with schematics on it. It can be inserted into its respective techfab, or sent via fax. # LoneStar
   abstract: true
   components:
   - type: FaxableObject
@@ -130,7 +130,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintGeneral
   name: blueprint
-  description: A blueprint with schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  description: A blueprint with schematics on it. It can be inserted into its respective techfab, or sent via fax. # LoneStar
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -168,7 +168,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintEngineering
   name: engineering blueprint
-  description: A blueprint with engineering schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  description: A blueprint with engineering schematics on it. It can be inserted into an engineering techfab, or sent via fax. # LoneStar
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -198,7 +198,7 @@
   - type: Tag
     tags:
     - NFBlueprintEngineeringTechfab
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # LoneStar
     - Document
     - Paper
 
@@ -207,7 +207,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintSalvage
   name: salvage blueprint
-  description: A blueprint with salvage schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  description: A blueprint with salvage schematics on it. It can be inserted into a salvage techfab, or sent via fax. # LoneStar
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -237,7 +237,7 @@
   - type: Tag
     tags:
     - NFBlueprintSalvageTechfab
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # LoneStar
     - Document
     - Paper
 
@@ -246,7 +246,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintScience
   name: science blueprint
-  description: A blueprint with science schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  description: A blueprint with science schematics on it. It can be inserted into a protolathe, or sent via fax.
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -276,7 +276,7 @@
   - type: Tag
     tags:
     - NFBlueprintProtolathe
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # LoneStar
     - Document
     - Paper
 
@@ -285,7 +285,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintService
   name: service blueprint
-  description: A blueprint with service schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  description: A blueprint with service schematics on it. It can be inserted into a service techfab, or sent via fax. # LoneStar
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -315,7 +315,7 @@
   - type: Tag
     tags:
     - NFBlueprintServiceTechfab
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # LoneStar
     - Document
     - Paper
 
@@ -324,7 +324,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintMedical
   name: medical blueprint
-  description: A blueprint with medical schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  description: A blueprint with medical schematics on it. It can be inserted into a medical techfab, or sent via fax. # LoneStar
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -354,7 +354,7 @@
   - type: Tag
     tags:
     - NFBlueprintMedicalTechfab
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # LoneStar
     - Document
     - Paper
 
@@ -363,7 +363,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintArsenalMercenary
   name: combat blueprint
-  description: A blueprint with combat schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  description: A blueprint with combat schematics on it. It can be inserted into an LSRD or mercenary techfab, or sent via fax. # LoneStar
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -393,7 +393,7 @@
   - type: Tag
     tags:
     - NFBlueprintMercenaryTechfab
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # LoneStar
     - Document
     - Paper
 
@@ -401,7 +401,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintArsenalNfsd
   name: restricted combat blueprint
-  description: A blueprint with combat schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  description: A blueprint with combat schematics on it. It can be inserted into an LSRD techfab, or sent via fax. # LoneStar
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -431,7 +431,7 @@
   - type: Tag
     tags:
     - NFBlueprintNfsdTechfab
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # LoneStar
     - Document
     - Paper
 
@@ -518,7 +518,7 @@
     - NFBlueprintServiceTechfab
     - NFBlueprintMercenaryTechfab
     - NFBlueprintSalvageTechfab
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # Lonestar
     - Document
     - Paper
 
@@ -554,7 +554,7 @@
   - type: Tag
     tags:
     - NFBlueprintSalvageTechfab
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # LoneStar
     - Document
     - Paper
 
@@ -598,6 +598,6 @@
     tags:
     - NFBlueprintMercenaryTechfab
     - NFBlueprintNfsdTechfab
-    - NFBlueprintAdvanced
+    # - NFBlueprintAdvanced # LoneStar
     - Document
     - Paper
