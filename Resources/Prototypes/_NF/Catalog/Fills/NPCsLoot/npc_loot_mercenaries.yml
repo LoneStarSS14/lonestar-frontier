@@ -120,7 +120,7 @@
 
 # region blueprints
 - type: entity
-  abtract: true
+  abstract: true
   parent: MarkerBasePlaceFree
   id: SpawnDungeonLootNpcMercenariesBlueprints
   categories: [ HideSpawnMenu ]

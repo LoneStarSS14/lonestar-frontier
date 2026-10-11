@@ -140,7 +140,7 @@
     - id: SpawnDungeonLootMaterialsBasicFull
       orGroup: Items
       prob: 0.3
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
 
@@ -225,7 +225,7 @@
     - id: SpawnDungeonLootMaterialsBasicFull
       orGroup: Items
       prob: 0.3
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
 
@@ -270,7 +270,7 @@
     - id: SpawnDungeonLootToolsAdvancedEngineering
       orGroup: Items
       prob: 0.4
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.2
     - id: SpawnDungeonLootMaterialsValuableFull
@@ -303,7 +303,7 @@
     - id: SpawnDungeonClutterMedipens
       orGroup: Items
       prob: 0.7
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
 
@@ -368,7 +368,7 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
     # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
@@ -434,7 +434,7 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
     # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
@@ -496,7 +496,7 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
     # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
@@ -541,7 +541,7 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
     # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
@@ -582,7 +582,7 @@
       orGroup: Items
       amount: 2
       prob: 0.3
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
     # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
@@ -645,7 +645,7 @@
       orGroup: Armor
       prob: 0.3
     # Items
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
     # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
@@ -661,7 +661,7 @@
     - id: SpawnDungeonLootNpcMercenariesBlueprints
       orGroup: BossLoot
       prob: 0.45
-    - id: TablePrizeBallSyndicate # LoneStar
+    - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: BossLoot
       prob: 0.05
     # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar

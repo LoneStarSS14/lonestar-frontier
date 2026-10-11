@@ -328,7 +328,7 @@
       # - id: WeaponCaseLongLaserCannonExpedition # LoneStar, blueprint only
       - id: WeaponCaseHeavyAsmgtExpeditions
       # LoneStar v
-      - id: WeaponCaseLongEstoc
+      - id: WeaponCaseLongEstocExpedition
       - id: WeaponCaseLongHristovExpedition
 
 # region explosives
