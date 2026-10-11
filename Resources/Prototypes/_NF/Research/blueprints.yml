@@ -1,4 +1,5 @@
 - type: blueprint
+  abstract: true
   id: NFAllResearchable
   name: nf-research-discipline-all
   blueprint: NFBlueprintGeneral
