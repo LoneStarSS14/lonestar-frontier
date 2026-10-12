@@ -7,6 +7,11 @@
   - MobMovementSpeedModifierMelee
   - NFMobSimpleHostileBase
   - NFMobRoadkillable
+  components:
+  # LoneStar v
+  - type: NpcFactionMember
+    factions:
+    - CarpExpeditionLS
 
 #region Carps!
 - type: entity
@@ -257,6 +262,10 @@
     availableModes:
     - SemiAuto
     soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  # LoneStar v
+  - type: NpcFactionMember
+    factions:
+    - CarpExpeditionLS
 
 - type: entity
   parent: NFMobRainbowWyvernIce
@@ -367,3 +376,7 @@
   - type: ActionGun
     action: ActionDragonsBreath
     gunProto: DragonsBreathGun
+  # LoneStar v
+  - type: NpcFactionMember
+    factions:
+    - CarpExpeditionLS

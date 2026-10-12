@@ -5865,7 +5865,7 @@ entities:
     - type: Transform
       pos: -5.5906544,10.660943
       parent: 1
-- proto: SheetSteel
+- proto: BunnysuitBoxBloodcult
   entities:
   - uid: 1192
     components:
