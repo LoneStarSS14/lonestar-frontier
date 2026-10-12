@@ -4313,3 +4313,50 @@ Entries:
   id: 471
   time: '2026-10-09T01:27:42.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/238
+- author: trashqueenlily
+  changes:
+    - type: Fix
+      message: >-
+        Uploaded a software patch to all cyborgs fixing a critical coordination
+        bug.
+  id: 472
+  time: '2026-10-10T01:48:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/231
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        Projectiles that can mine hard rocks can now also mine soft rocks
+        without the ore items getting destroyed
+  id: 473
+  time: '2026-10-10T01:48:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/234
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Carp destruction expeditions now properly count carp towards the spawner
+        limits.
+  id: 474
+  time: '2026-10-11T01:03:34.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/244
+- author: Synthestra
+  changes:
+    - type: Fix
+      message: Flipped windoors now rotate correctly when rotating your camera.
+    - type: Fix
+      message: South-facing windoors now display in the correct direction.
+  id: 475
+  time: '2026-10-12T01:31:45.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/249
+- author: archee1
+  changes:
+    - type: Add
+      message: a new Gorlex bunnysuit is buyable from the syndie drobe.
+    - type: Tweak
+      message: >-
+        Blood-red bunnysuits are now buyable from the syndie drobes hacked
+        inventory
+  id: 476
+  time: '2026-10-12T01:49:37.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/167
