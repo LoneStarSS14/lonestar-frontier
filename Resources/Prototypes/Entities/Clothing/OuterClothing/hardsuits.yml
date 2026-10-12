@@ -329,7 +329,7 @@
   parent: ClothingOuterHardsuitBase # Removed BaseCommandContraband
   id: ClothingOuterHardsuitEngineeringWhite
   name: advanced engineering hardsuit
-  description: A special hardsuit custom made to protect the user from enviromental hazards while doing engineering work. It's white coating a special protection from being consumed by the supermatter.
+  description: A special hardsuit custom made to protect the user from enviromental hazards while doing engineering work. Its white coating a special protection from being consumed by the supermatter.
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi
