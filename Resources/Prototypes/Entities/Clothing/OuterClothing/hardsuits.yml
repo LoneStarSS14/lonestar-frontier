@@ -328,8 +328,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBase # Removed BaseCommandContraband
   id: ClothingOuterHardsuitEngineeringWhite
-  name: chief engineer's hardsuit
-  description: A special hardsuit that protects against hazardous, low pressure environments, made for the chief engineer of the station.
+  name: advanced engineering hardsuit
+  description: A special hardsuit custom made to protect the user from enviromental hazards while doing engineering work. It's white coating a special protection from being consumed by the supermatter.
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi

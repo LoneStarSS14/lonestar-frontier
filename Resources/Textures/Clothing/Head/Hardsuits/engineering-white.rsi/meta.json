@@ -55,7 +55,7 @@
             "name": "equipped-head-unshaded-dog",
             "directions": 4
         },
-                {
+        {
             "name": "equipped-head-resomi",
             "directions": 4
         },
@@ -68,7 +68,7 @@
             "directions": 4
         },
         {
-            "name": "equipped-head-avali",
+            "name": "equipped-head-light-avali",
             "directions": 4
         },
         {
@@ -76,20 +76,24 @@
             "directions": 4
         },
         {
-            "name": "equipped-head-light-avali",
+            "name": "equipped-head-avali",
             "directions": 4
         },
         {
-        "name": "equipped-head-feroxi",
-        "directions": 4
+            "name": "equipped-head-feroxi",
+            "directions": 4
         },
         {
-        "name": "equipped-head-light-feroxi",
-        "directions": 4
+            "name": "equipped-head-light-feroxi",
+            "directions": 4
         },
         {
-        "name": "equipped-head-unshaded-feroxi",
-        "directions": 4
+            "name": "equipped-head-vulpkanin",
+            "directions": 4
+        },
+        {
+            "name": "equipped-head-unshaded-feroxi",
+            "directions": 4
         }
     ]
 }
