@@ -22,7 +22,13 @@
   name: epi psionics visor
   description: An upgraded visor that provide flash immunity and a epistemics psionics HUD.
   components:
-  - type: Sprite
-    sprite: _DEN/Clothing/Eyes/Glasses/epiglasses_alt.rsi
-  - type: Clothing
-    sprite: _DEN/Clothing/Eyes/Glasses/epiglasses_alt.rsi
+    - type: Sprite
+      sprite: _DEN/Clothing/Eyes/Glasses/epiglasses_alt.rsi
+    - type: Clothing
+      sprite: _DEN/Clothing/Eyes/Glasses/epiglasses_alt.rsi
+      slots:
+      - HEAD
+      - EYES
+    - type: Tag
+      tags:
+      - WhitelistChameleon
