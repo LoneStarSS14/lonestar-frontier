@@ -309,6 +309,7 @@
       - id: WeaponCaseLongAtreidesExpedition
       - id: WeaponCaseShortSvalinnExpedition
       - id: WeaponCaseLongEnergyGunExpedition
+      - id: WeaponCaseShortAnacondaExpedition
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier5
@@ -330,6 +331,8 @@
       # LoneStar v
       - id: WeaponCaseLongEstocExpedition
       - id: WeaponCaseLongHristovExpedition
+      - id: WeaponCaseLongC19r
+      - id: WeaponCaseLongPrototypePulseRifleExpedition
 
 # region explosives
 - type: entityTable
