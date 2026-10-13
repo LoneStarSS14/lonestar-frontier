@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingNeckCollarBaseFoldable
+  id: ClothingNeckChaplainCollar
+  name: chaplain collar
+  description: A black collar with an included crucifix and rosary, for the spiritually inclined.
+  components:
+  - type: Sprite
+    sprite: _Everdream/Clothing/Neck/Collars/chaplain_collar.rsi
+  - type: Clothing
+    sprite: _Everdream/Clothing/Neck/Collars/chaplain_collar.rsi
+  - type: Tag
+    tags:
+    - ObjectOfSpiritualSignificance # Not sure what this does! It's also on the stole. But I like it. -kc
+    - WhitelistChameleon
+    - WhitelistChameleonAdvancedCollar

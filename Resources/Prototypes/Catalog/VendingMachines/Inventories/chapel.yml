@@ -48,6 +48,7 @@
     ClothingUnderSocksChaplain: 3
     ClothingUniformChaplainThong: 3
     ClothingOuterEpiChaplainMantle: 3
+    ClothingNeckChaplainCollar: 3 # Everdream
   contrabandInventory:
     # FoodBakedBunHotX: 2 # Frontier
     DrinkWineBottleFull: 1

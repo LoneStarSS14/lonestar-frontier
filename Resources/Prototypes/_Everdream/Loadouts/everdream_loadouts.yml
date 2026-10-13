@@ -3,3 +3,9 @@
   price: 0
   equipment:
     jumpsuit: ClothingPriestessCorsetAndTabard
+
+- type: loadout
+  id: LoadoutClothingNeckChaplainCollar
+  price: 0
+  equipment:
+    neck: ClothingNeckChaplainCollar
