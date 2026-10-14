@@ -6,7 +6,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server.Sprite;
+namespace Content.Server._LoneStar.Sprite;
 
 public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
 {

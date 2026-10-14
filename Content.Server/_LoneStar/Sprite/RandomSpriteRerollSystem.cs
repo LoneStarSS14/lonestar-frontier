@@ -1,8 +1,9 @@
-using Content.Server.Sprite;
+using Content.Server._LoneStar.Sprite;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
-using Content.Shared.Sprite;
+using Content.Shared._LoneStar.Sprite;
 using Content.Shared.Popups;
+using Content.Shared.Sprite;
 using Content.Shared.Verbs;
 using Content.Shared.Decals;
 using Content.Shared.Hands;

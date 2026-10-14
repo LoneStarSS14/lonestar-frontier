@@ -1,4 +1,4 @@
-using Content.Shared.Sprite;
+using Content.Shared._LoneStar.Sprite;
 using Robust.Client.UserInterface;
 
 namespace Content.Client._LoneStar.Sprite;

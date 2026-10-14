@@ -1,7 +1,7 @@
 using Robust.Shared.Serialization;
 using Robust.Shared.GameObjects;
 
-namespace Content.Shared.Sprite;
+namespace Content.Shared._LoneStar.Sprite;
 
 [Serializable, NetSerializable]
 public enum RandomSpriteRerollUiKey : byte
