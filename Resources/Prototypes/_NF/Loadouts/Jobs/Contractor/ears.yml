@@ -87,3 +87,16 @@
   price: 0
   equipment:
     ears: ClothingHeadsetAltScienceCommon
+
+# Mantis Clothes Port from the Den
+- type: loadout
+  id: ContractorClothingHeadsetMantis
+  price: 0
+  equipment:
+    ears: ClothingHeadsetMantis
+
+- type: loadout
+  id: ContractorClothingHeadsetAltMantis
+  price: 0
+  equipment:
+    ears: ClothingHeadsetAltMantis
