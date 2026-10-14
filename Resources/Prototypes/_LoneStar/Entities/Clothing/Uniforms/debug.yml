@@ -30,7 +30,7 @@
   suffix: Random
   categories: [ HideSpawnMenu ]
   components:
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
         Col1: NTInteriorDesign
@@ -48,7 +48,7 @@
   suffix: Random
   categories: [ HideSpawnMenu ]
   components:
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
         Col1: NTInteriorDesign
@@ -68,7 +68,7 @@
   suffix: Random
   categories: [ HideSpawnMenu ]
   components:
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
         Col1: NTInteriorDesign
@@ -88,7 +88,7 @@
   suffix: Random
   categories: [ HideSpawnMenu ]
   components:
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
         Col1: NTInteriorDesign
@@ -108,7 +108,7 @@
   suffix: Random
   categories: [ HideSpawnMenu ]
   components:
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
         Col1: NTInteriorDesign

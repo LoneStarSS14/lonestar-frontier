@@ -4,13 +4,13 @@ using Robust.Shared.GameObjects;
 namespace Content.Shared._LoneStar.Sprite;
 
 [Serializable, NetSerializable]
-public enum RandomSpriteRerollUiKey : byte
+public enum ColorizerUiKey : byte
 {
     Key,
 }
 
 [Serializable, NetSerializable]
-public sealed class RandomSpriteRerollBoundUserInterfaceState : BoundUserInterfaceState
+public sealed class ColorizerBoundUserInterfaceState : BoundUserInterfaceState
 {
     public readonly NetEntity Target;
     public readonly Dictionary<string, Dictionary<string, Color>> Palettes;
@@ -19,7 +19,7 @@ public sealed class RandomSpriteRerollBoundUserInterfaceState : BoundUserInterfa
     public readonly Dictionary<string, List<string>> AvailableVariants;
     public readonly Dictionary<string, string> SelectedVariants;
 
-    public RandomSpriteRerollBoundUserInterfaceState(
+    public ColorizerBoundUserInterfaceState(
         NetEntity target,
         Dictionary<string, Dictionary<string, Color>> palettes,
         Dictionary<string, Color> activeColors,
@@ -37,12 +37,12 @@ public sealed class RandomSpriteRerollBoundUserInterfaceState : BoundUserInterfa
 }
 
 [Serializable, NetSerializable]
-public sealed class RandomSpriteRerollSelectColorMessage : BoundUserInterfaceMessage
+public sealed class ColorizerSelectColorMessage : BoundUserInterfaceMessage
 {
     public readonly string MappedColorKey;
     public readonly string ColorName;
 
-    public RandomSpriteRerollSelectColorMessage(string mappedColorKey, string colorName)
+    public ColorizerSelectColorMessage(string mappedColorKey, string colorName)
     {
         MappedColorKey = mappedColorKey;
         ColorName = colorName;
@@ -50,12 +50,12 @@ public sealed class RandomSpriteRerollSelectColorMessage : BoundUserInterfaceMes
 }
 
 [Serializable, NetSerializable]
-public sealed class RandomSpriteRerollSelectVariantMessage : BoundUserInterfaceMessage
+public sealed class ColorizerSelectVariantMessage : BoundUserInterfaceMessage
 {
     public readonly string Layer;
     public readonly string State;
 
-    public RandomSpriteRerollSelectVariantMessage(string layer, string state)
+    public ColorizerSelectVariantMessage(string layer, string state)
     {
         Layer = layer;
         State = state;
@@ -63,6 +63,6 @@ public sealed class RandomSpriteRerollSelectVariantMessage : BoundUserInterfaceM
 }
 
 [Serializable, NetSerializable]
-public sealed class RandomSpriteRerollRandomizeMessage : BoundUserInterfaceMessage
+public sealed class ColorizerRandomizeMessage : BoundUserInterfaceMessage
 {
 }

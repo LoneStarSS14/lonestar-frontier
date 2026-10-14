@@ -10,7 +10,7 @@ using Robust.Shared.Maths;
 namespace Content.Client._LoneStar.Sprite;
 
 [GenerateTypedNameReferences]
-public sealed partial class RandomSpriteRerollWindow : DefaultWindow
+public sealed partial class ColorizerWindow : DefaultWindow
 {
     private readonly Dictionary<string, (string Name, Color Color)> _selectedColors = new();
     private readonly List<string> _paletteOrder = new();
@@ -20,16 +20,16 @@ public sealed partial class RandomSpriteRerollWindow : DefaultWindow
     public event Action<string, string>? OnVariantSelected;
     public event Action? OnRandomize;
 
-    public RandomSpriteRerollWindow()
+    public ColorizerWindow()
     {
         RobustXamlLoader.Load(this);
-        Title = Loc.GetString("randomsprite-reroll-window-title");
-        RandomizeButton.Text = Loc.GetString("randomsprite-reroll-window-randomize");
+        Title = Loc.GetString("colorizer-window-title");
+        RandomizeButton.Text = Loc.GetString("colorizer-window-randomize");
         RandomizeButton.OnPressed += _ => OnRandomize?.Invoke();
         CompositionPreview.SpriteOffset = false;
     }
 
-    public void UpdateState(RandomSpriteRerollBoundUserInterfaceState state)
+    public void UpdateState(ColorizerBoundUserInterfaceState state)
     {
         CompositionPreview.SetEntity(state.Target);
         PaletteList.RemoveAllChildren();
