@@ -640,7 +640,7 @@
 
 # region Misc
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteDualColor ]
   id: ClothingUniformJumpskirtMaidDressLong
   name: long maid dress
   components:
