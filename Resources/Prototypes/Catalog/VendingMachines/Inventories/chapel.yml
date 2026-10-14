@@ -48,7 +48,7 @@
     ClothingUnderSocksChaplain: 3
     ClothingUniformChaplainThong: 3
     ClothingOuterEpiChaplainMantle: 3
-    # Mantis Clothes Port from the Den
+    # Mantis Clothes Port from the Den - LoneStar
     # Hats
     ClothingHeadHoodMantisDark: 3
     ClothingHeadHatFezMantisAiry: 3
@@ -94,6 +94,7 @@
     ClothingEyesHudEpistemicsMantis: 3
     # Handcuffs (they're really easy to remove, similar to fuzzy handcuffs)
     HandcuffsMantis: 3
+    # End Mantis Clothes Port - LoneStar
 
 
   contrabandInventory:
