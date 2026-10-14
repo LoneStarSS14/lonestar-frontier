@@ -1,11 +1,13 @@
-- type: loadout
+﻿- type: loadout
   id: ContractorClothingUniformJumpsuitAtmos
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitAtmos
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtAtmos
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtAtmos
@@ -24,18 +26,21 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitCargo
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitCargo
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtCargo
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtCargo
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitSalvageSpecialist
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
@@ -54,204 +59,238 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitEngineering
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitEngineering
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtEngineering
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtEngineering
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitHydroponics
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitHydroponics
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtHydroponics
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtHydroponics
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMedicalDoctor
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitMedicalDoctor
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtMedicalDoctor
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtMedicalDoctor
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitScientist
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitScientist
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtScientist
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtScientist
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorGrey
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorGrey
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorGrey
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorGrey
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorWhite
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorWhite
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorWhite
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorWhite
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorBlack
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlack
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorBlack
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorBlack
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorBlue
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlue
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorBlue
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorBlue
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorYellow
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorYellow
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorYellow
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorYellow
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorGreen
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorGreen
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorGreen
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorGreen
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorOrange
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorOrange
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorOrange
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorOrange
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorRed
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorRed
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorRed
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorRed
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorMaroon
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorMaroon
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorMaroon
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorMaroon
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorPurple
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorPurple
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorPurple
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorPurple
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorLightBrown
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorLightBrown
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorLightBrown
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorLightBrown
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorBrown
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBrown
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorBrown
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorBrown
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorPink
+  groupBy: "Jumpsuit"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorPink
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorPink
+  groupBy: "Jumpskirt"
   price: 0
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorPink
@@ -259,6 +298,7 @@
 #T1
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorDarkBlue
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -268,6 +308,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorDarkBlue
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -277,6 +318,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorDarkGreen
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -286,6 +328,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorDarkGreen
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -295,6 +338,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorTeal
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -304,6 +348,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorTeal
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -313,6 +358,7 @@
 
 - type: loadout
   id: ContractorClothingUniformColorRainbow
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -322,6 +368,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtColorRainbow
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -439,6 +486,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitEngineeringHazard
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -448,6 +496,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitAtmosCasual
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -466,6 +515,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitChaplain
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -475,6 +525,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtChaplain
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -502,6 +553,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitLibrarian
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -511,6 +563,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtLibrarian
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -592,6 +645,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitParamedic
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -601,6 +655,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtParamedic
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -610,6 +665,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitVirology
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -619,6 +675,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtVirology
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -628,6 +685,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitChemistry
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -637,6 +695,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtChemistry
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -646,6 +705,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitGenetics
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -655,6 +715,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtGenetics
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -682,6 +743,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitScientistFormal
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -691,6 +753,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitRoboticist
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -700,6 +763,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtRoboticist
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
@@ -1166,6 +1230,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitSeniorPhysician
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1175,6 +1240,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtSeniorPhysician
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1184,6 +1250,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitCMO
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1193,6 +1260,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtCMO
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1220,6 +1288,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitSeniorResearcher
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1229,6 +1298,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtSeniorResearcher
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1256,6 +1326,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitSeniorEngineer
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1265,6 +1336,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtSeniorEngineer
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1274,6 +1346,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitChiefEngineerNT
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1283,6 +1356,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitChiefEngineer
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1292,6 +1366,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtChiefEngineer
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1490,6 +1565,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitCaptain
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1499,6 +1575,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtCaptain
+  groupBy: "Jumpskirt"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -1528,6 +1605,7 @@
 # T3 "Military"
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryContractor
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1537,6 +1615,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryContractorTac
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1546,6 +1625,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryCaptain
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1555,6 +1635,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryAtmospherics
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1564,6 +1645,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryEngineering
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1573,6 +1655,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryEngineeringChief
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1582,6 +1665,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitarySalvageSpecialist
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1591,6 +1675,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryCargo
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1600,6 +1685,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryQM
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1609,6 +1695,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryParamedic
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1618,6 +1705,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryMedicalDoctor
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1627,6 +1715,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryChemistry
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1636,6 +1725,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryVirology
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1645,6 +1735,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryGenetics
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1654,6 +1745,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryCMO
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1663,6 +1755,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryScientist
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1681,6 +1774,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryService
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1690,6 +1784,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryHydroponics
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1699,6 +1794,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorGrey
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1708,6 +1804,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorBlack
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1717,6 +1814,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorBlue
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1726,6 +1824,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorDarkBlue
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1735,6 +1834,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorTeal
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1744,6 +1844,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorGreen
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1753,6 +1854,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorDarkGreen
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1762,6 +1864,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorOrange
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1771,6 +1874,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorPink
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1780,6 +1884,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorRed
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1789,6 +1894,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorYellow
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1798,6 +1904,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorPurple
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1807,6 +1914,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorLightBrown
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1816,6 +1924,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorBrown
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
@@ -1825,6 +1934,7 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitMilitaryColorMaroon
+  groupBy: "Jumpsuit"
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT3
