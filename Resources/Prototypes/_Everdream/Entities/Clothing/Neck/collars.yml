@@ -13,3 +13,18 @@
     - ObjectOfSpiritualSignificance # Not sure what this does! It's also on the stole. But I like it. -kc
     - WhitelistChameleon
     - WhitelistChameleonAdvancedCollar
+
+- type: entity
+  parent: ClothingNeckCollarBaseFoldable
+  id: ClothingNeckKeepsakeCollar
+  name: keepsake collar
+  description: A black collar with a ring necklace. Wearing your heart on your chest has never been so easy.
+  components:
+  - type: Sprite
+    sprite: _Everdream/Clothing/Neck/Collars/keepsake_collar.rsi
+  - type: Clothing
+    sprite: _Everdream/Clothing/Neck/Collars/keepsake_collar.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - WhitelistChameleonAdvancedCollar

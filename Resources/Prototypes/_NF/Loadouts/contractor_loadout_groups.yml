@@ -717,8 +717,9 @@
   - FloofClothingCollarCmd
   - FloofClothingShockCollar
   # Flooftier collars end
-  # Everdream Collar
+  # Everdream Collars
   - LoadoutClothingNeckChaplainCollar
+  - LoadoutClothingNeckKeepsakeCollar
 
 - type: loadoutGroup
   id: ContractorPDA

@@ -6,6 +6,12 @@
 
 - type: loadout
   id: LoadoutClothingNeckChaplainCollar
-  price: 0
+  price: 500
   equipment:
     neck: ClothingNeckChaplainCollar
+
+- type: loadout
+  id: LoadoutClothingNeckKeepsakeCollar
+  price: 500
+  equipment:
+    neck: ClothingNeckKeepsakeCollar
