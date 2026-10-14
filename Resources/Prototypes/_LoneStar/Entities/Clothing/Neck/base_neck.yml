@@ -10,7 +10,8 @@
   - type: FoldableClothing
     foldedEquippedPrefix: folded
 
-- type: entity
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
   abstract: true
   id: ClothingNeckRandomSpriteMono
   suffix: Random
@@ -37,4 +38,141 @@
     tags:
     - ClothMade
     - Recyclable
-    - HamsterWearable
+
+- type: entity # for sprites with a set layer, and a single colored layer
+  abstract: true
+  id: ClothingNeckRandomSpriteBaseColor
+  suffix: Random
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-color
+      map: [ "neck-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK
+      - state: equipped-NECK-color
+        map: [ "neck-equipped" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - neck-icon:
+          icon-color: Base
+        neck-equipped:
+          equipped-NECK-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingNeckRandomSpriteBaseColor
+  id: ClothingNeckRandomSpriteBaseColorInhand
+  suffix: Random
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-color
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+      - state: inhand-right-color
+        map: [ "hr-color" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - neck-icon:
+          icon-color: Base
+        neck-equipped:
+          equipped-NECK-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a 2 colored layers
+  abstract: true
+  id: ClothingNeckRandomSpriteDualColor
+  suffix: Random
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "neck-icon-primary" ]
+    - state: icon-color
+      map: [ "neck-icon-secondary" ]
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK
+        map: [ "neck-equipped-primary" ]
+      - state: equipped-NECK-color
+        map: [ "neck-equipped-secondary" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - neck-icon-primary:
+          icon: Primary
+        neck-icon-secondary:
+          icon-color: Secondary
+        neck-equipped-primary:
+          equipped-NECK: Primary
+        neck-equipped-secondary:
+          equipped-NECK-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a 2 colored layers, supporting inhands
+  abstract: true
+  parent: ClothingNeckRandomSpriteDualColor
+  id: ClothingNeckRandomSpriteDualColorInhand
+  suffix: Random
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-primary" ]
+      - state: inhand-left-color
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-primary" ]
+      - state: inhand-right-color
+        map: [ "hr-secondary" ]
+  - type: RandomSprite
+    denyReroll: false
+    available:
+      - neck-icon-primary:
+          icon: Primary
+        neck-icon-secondary:
+          icon-color: Secondary
+        neck-equipped-primary:
+          equipped-NECK: Primary
+        neck-equipped-secondary:
+          equipped-NECK-color: Secondary
+        hl-primary:
+          inhand-left: Primary
+        hl-secondary:
+          inhand-left-color: Secondary
+        hr-primary:
+          inhand-right: Primary
+        hr-secondary:
+          inhand-right-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
