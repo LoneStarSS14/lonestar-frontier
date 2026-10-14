@@ -1,0 +1,48 @@
+# SPDX-FileCopyrightText: 2025 Shaman
+# SPDX-FileCopyrightText: 2025 Steven Higginbotham
+# SPDX-FileCopyrightText: 2025 sheepie
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Mantis Clothes Port from the Den
+
+- type: entity
+  parent: [ClothingHeadBase, BaseFoldable]
+  id: ClothingHeadHoodMantisDark
+  name: dark mantis hood
+  description: "A gloomy hood that sits low on the head, ornamented with magenta tassles. It matches your cloak nicely, though it can be worn on its own. If you have a knife, you could probably tailor it to fit more comfortably atop your shoulders."
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hoods/mantis_hood_dark.rsi
+    layers:
+    - state: icon
+      map: ["unfoldedLayer"]
+    - state: icon-folded
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hoods/mantis_hood_dark.rsi
+  - type: Foldable
+    canFoldInsideContainer: true
+    foldVerbText: fold-verb
+    unfoldVerbText: unfold-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: folded
+  # Removed to make foldable - kc
+  # - type: HideLayerClothing
+  #   slots:
+  #   - Hair
+  #   - HeadTop
+  #   - HeadSide
+  #   clothingSlots:
+  #   - ears
+
+- type: entity
+  parent: ClothingHeadHoodMantisDark
+  id: ClothingHeadHoodMantisDarkFolded
+  suffix: Folded
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: folded

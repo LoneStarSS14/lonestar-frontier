@@ -1,0 +1,75 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 Tim Falken
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Milon
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 Rane
+# SPDX-FileCopyrightText: 2024 ShatteredSwords
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2024 sleepyyapril
+# SPDX-FileCopyrightText: 2025 John Willis
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Shaman
+# SPDX-FileCopyrightText: 2025 Steven Higginbotham
+# SPDX-FileCopyrightText: 2026 Jakumba
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Mantis Clothes Port from the Den
+
+- type: entity # TheDen - Changed pretty much everything
+  parent: BasePDA
+  id: PsionicMantisPDA
+  name: mantis PDA
+  description: "This PDA marks its bearer as a member of the Outer Chamber--a mantis, the Greek word for \"seer.\" The eye on its display seems to track whoever dares to look back. Carried in a pocket, because you couldn't bear to hang this hunk of plastic on your belt."
+  components:
+  - type: Item # I gave them custom sprites so they don't need the color codes that I added later
+    sprite: _DEN/Objects/Devices/pda.rsi
+    heldPrefix: mantis
+  - type: Clothing
+    sprite: _DEN/Objects/Devices/pda.rsi
+    equippedPrefix: mantis
+  - type: Sprite
+    sprite: _DEN/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "mantis-light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "mantis-id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: PointLight
+    enabled: false
+    radius: 1.75
+    energy: 2
+    softness: 1.1
+    color: "#d9418d"
+  - type: Pda
+    id: CaptainIDCard
+    state: pda-mantis
+    penSlot:
+      startingItem: PenMantis
+      priority: -2
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#3b3640"
+    accentVColor: "#431b57"
+    accentHColor: "#8c1c54"
+  - type: Icon
+    sprite: _DEN/Objects/Devices/pda.rsi
+    state: pda-mantis
+  # - type: CartridgeLoader
+  #   preinstalled:
+  #    - CrewManifestCartridge
+  #    - NotekeeperCartridge
+  #    - NewsReaderCartridge
+  #    - GlimmerMonitorCartridge
+  #    - NanoChatCartridge
+  #    - PsiWatchCartridge
+  # - type: GuideHelp
+  #   guides: [ MantisGuide ]
