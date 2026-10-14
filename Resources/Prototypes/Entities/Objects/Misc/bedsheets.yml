@@ -34,7 +34,7 @@
     state: sheetblack
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/black.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetBlack
 
@@ -47,7 +47,7 @@
     state: sheetblue
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/blue.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetBlue
 
@@ -60,7 +60,7 @@
     state: sheetbrown
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/brown.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetBrown
 
@@ -76,7 +76,7 @@
     sprite: Clothing/Neck/Bedsheets/captain.rsi
   - type: StealTarget
     stealGroup: HeadBedsheet
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetCaptain
 
@@ -105,7 +105,7 @@
     sprite: Clothing/Neck/Bedsheets/centcom.rsi
   - type: StealTarget
     stealGroup: HeadBedsheet
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetCentcom
 
@@ -119,7 +119,7 @@
     state: sheetclown
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/rainbow.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetClown
 
@@ -157,7 +157,7 @@
     state: sheetcult
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/cult.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetCult
 
@@ -170,7 +170,7 @@
     state: sheetgreen
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/green.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetGreen
 
@@ -183,7 +183,7 @@
     state: sheetgrey
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/grey.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetGrey
 
@@ -222,7 +222,7 @@
     state: sheetian
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/ian.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetIan
 
@@ -247,7 +247,7 @@
     state: sheetmime
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/mime.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetMime
 
@@ -261,7 +261,7 @@
     state: sheetNT
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/NT.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetNT
 
@@ -274,7 +274,7 @@
     state: sheetorange
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/orange.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetOrange
 
@@ -287,7 +287,7 @@
     state: sheetpurple
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/purple.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetPurple
 
@@ -312,7 +312,7 @@
     state: sheetrainbow
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/rainbow.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetRainbow
 
@@ -349,7 +349,7 @@
     state: sheetred
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/red.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetRed
 
@@ -363,7 +363,7 @@
     state: sheetsyndie
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/syndie.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetSyndie
 
@@ -376,7 +376,7 @@
     state: sheetUSA
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/USA.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetUSA
 
@@ -393,7 +393,7 @@
     state: sheetwhite
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/white.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetWhite
 
@@ -407,7 +407,7 @@
     state: sheetwiz
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/wiz.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetWiz
 
@@ -420,6 +420,6 @@
     state: sheetyellow
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/yellow.rsi
-  - type: Tag
+  - type: Tag #LoneStar
     tags:
     - BedsheetYellow

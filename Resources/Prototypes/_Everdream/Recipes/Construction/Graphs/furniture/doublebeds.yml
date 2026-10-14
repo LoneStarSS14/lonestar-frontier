@@ -49,7 +49,7 @@
         - to: DoubleBedLeftBlack
           steps:
             - tag: BedsheetBlack
-              doAfter: 2
+              doAfter: 1
               name: black-bedsheet # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -58,7 +58,7 @@
         - to: DoubleBedLeftBlue
           steps:
             - tag: BedsheetBlue
-              doAfter: 2
+              doAfter: 1
               name: blue-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -67,7 +67,7 @@
         - to: DoubleBedLeftBrown
           steps:
             - tag: BedsheetBrown
-              doAfter: 2
+              doAfter: 1
               name: brown-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -76,7 +76,7 @@
         - to: DoubleBedLeftCC
           steps:
             - tag: BedsheetCentcom
-              doAfter: 2
+              doAfter: 1
               name: centcomm-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -85,7 +85,7 @@
         - to: DoubleBedLeftClown
           steps:
             - tag: BedsheetClown
-              doAfter: 2
+              doAfter: 1
               name: clown-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -94,7 +94,7 @@
         - to: DoubleBedLeftCult
           steps:
             - tag: BedsheetCult
-              doAfter: 2
+              doAfter: 1
               name: cult-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -104,11 +104,11 @@
           steps:
             - material: Durathread
               amount: 3
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftGreen
           steps:
             - tag: BedsheetGreen
-              doAfter: 2
+              doAfter: 1
               name: green-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -117,7 +117,7 @@
         - to: DoubleBedLeftGrey
           steps:
             - tag: BedsheetGrey
-              doAfter: 2
+              doAfter: 1
               name: grey-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -126,7 +126,7 @@
         - to: DoubleBedLeftIan
           steps:
             - tag: BedsheetIan
-              doAfter: 2
+              doAfter: 1
               name: ian-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -135,7 +135,7 @@
         - to: DoubleBedLeftMime
           steps:
             - tag: BedsheetMime
-              doAfter: 2
+              doAfter: 1
               name: mime-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -144,7 +144,7 @@
         - to: DoubleBedLeftNT
           steps:
             - tag: BedsheetNT
-              doAfter: 2
+              doAfter: 1
               name: nt-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -153,7 +153,7 @@
         - to: DoubleBedLeftOrange
           steps:
             - tag: BedsheetOrange
-              doAfter: 2
+              doAfter: 1
               name: orange-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -162,7 +162,7 @@
         - to: DoubleBedLeftPurple
           steps:
             - tag: BedsheetPurple
-              doAfter: 2
+              doAfter: 1
               name: purple-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -171,7 +171,7 @@
         - to: DoubleBedLeftRainbow
           steps:
             - tag: BedsheetRainbow
-              doAfter: 2
+              doAfter: 1
               name: rainbow-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -180,7 +180,7 @@
         - to: DoubleBedLeftRed
           steps:
             - tag: BedsheetRed
-              doAfter: 2
+              doAfter: 1
               name: red-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -189,7 +189,7 @@
         - to: DoubleBedLeftSyndie
           steps:
             - tag: BedsheetSyndie
-              doAfter: 2
+              doAfter: 1
               name: syndicate-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -198,7 +198,7 @@
         - to: DoubleBedLeftTSF
           steps:
             - tag: BedsheetCaptain
-              doAfter: 2
+              doAfter: 1
               name: captain-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -207,7 +207,7 @@
         - to: DoubleBedLeftUS
           steps:
             - tag: BedsheetUSA
-              doAfter: 2
+              doAfter: 1
               name: usa-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -216,7 +216,7 @@
         - to: DoubleBedLeftWhite
           steps:
             - tag: BedsheetWhite
-              doAfter: 2
+              doAfter: 1
               name: white-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -225,7 +225,7 @@
         - to: DoubleBedLeftWizard
           steps:
             - tag: BedsheetWiz
-              doAfter: 2
+              doAfter: 1
               name: wizard-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -234,7 +234,7 @@
         - to: DoubleBedLeftYellow
           steps:
             - tag: BedsheetYellow
-              doAfter: 2
+              doAfter: 1
               name: yellow-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -249,57 +249,57 @@
               amount: 3
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancyBlack
           steps:
             - material: FloorCarpetBlack
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancyBlue
           steps:
             - material: FloorCarpetBlue
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancyGreen
           steps:
             - material: FloorCarpetGreen
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancyOrange
           steps:
             - material: FloorCarpetOrange
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancyPink
           steps:
             - material: FloorCarpetPink
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancyPurple
           steps:
             - material: FloorCarpetPurple
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancyRed
           steps:
             - material: FloorCarpetRed
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancySkyblue
           steps:
             - material: FloorCarpetSkyBlue
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancyTeal
           steps:
             - material: FloorCarpetCyan
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedLeftFancyWhite
           steps:
             - material: FloorCarpetWhite
               amount: 1
-              doAfter: 2
+              doAfter: 1
 # Finished constructions + Deconstructions. Removing bedsheets requires crowbar.
     - node: DoubleBedLeftBlack
       entity: DoubleBedLeftBlack
@@ -311,7 +311,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftBlue
       entity: DoubleBedLeftBlue
@@ -323,7 +323,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftBrown
       entity: DoubleBedLeftBrown
@@ -335,7 +335,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftCC
       entity: DoubleBedLeftCC
@@ -347,7 +347,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftClown
       entity: DoubleBedLeftClown
@@ -359,7 +359,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftCult
       entity: DoubleBedLeftCult
@@ -371,7 +371,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancyBlack
       entity: DoubleBedLeftFancyBlack
@@ -386,7 +386,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancyBlue
       entity: DoubleBedLeftFancyBlue
@@ -401,7 +401,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancyGreen
       entity: DoubleBedLeftFancyGreen
@@ -416,7 +416,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancyOrange
       entity: DoubleBedLeftFancyOrange
@@ -431,7 +431,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancyPink
       entity: DoubleBedLeftFancyPink
@@ -446,7 +446,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancyPurple
       entity: DoubleBedLeftFancyPurple
@@ -461,7 +461,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancyRed
       entity: DoubleBedLeftFancyRed
@@ -476,7 +476,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancySkyblue
       entity: DoubleBedLeftFancySkyblue
@@ -491,7 +491,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancyTeal
       entity: DoubleBedLeftFancyTeal
@@ -506,7 +506,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftFancyWhite
       entity: DoubleBedLeftFancyWhite
@@ -521,7 +521,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftGreen
       entity: DoubleBedLeftGreen
@@ -533,7 +533,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftGrey
       entity: DoubleBedLeftGrey
@@ -545,7 +545,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftIan
       entity: DoubleBedLeftIan
@@ -557,7 +557,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftMime
       entity: DoubleBedLeftMime
@@ -569,7 +569,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftNT
       entity: DoubleBedLeftNT
@@ -581,7 +581,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftOrange
       entity: DoubleBedLeftOrange
@@ -593,7 +593,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftPurple
       entity: DoubleBedLeftPurple
@@ -605,7 +605,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftRainbow
       entity: DoubleBedLeftRainbow
@@ -617,7 +617,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftRed
       entity: DoubleBedLeftRed
@@ -629,7 +629,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftSyndie
       entity: DoubleBedLeftSyndie
@@ -641,7 +641,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftTSF
       entity: DoubleBedLeftTSF
@@ -653,7 +653,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftUS
       entity: DoubleBedLeftUS
@@ -665,7 +665,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftWhite
       entity: DoubleBedLeftWhite
@@ -677,7 +677,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftWizard
       entity: DoubleBedLeftWizard
@@ -689,7 +689,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedLeftYellow
       entity: DoubleBedLeftYellow
@@ -701,7 +701,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
 
 # Base Bed Right. Just the same thing but Right.
@@ -719,10 +719,10 @@
           steps:
             - material: Steel
               amount: 3
-              doAfter: 2
+              doAfter: 1
             - material: Cloth
               amount: 3
-              doAfter: 2
+              doAfter: 1
 
 # Finished Base Bed. Deconstructing requires screwdriver.
     - node: DoubleBedRight
@@ -738,12 +738,12 @@
               amount: 3
           steps:
             - tool: Screwing
-              doAfter: 2
+              doAfter: 1
 # Transformative Constructions
         - to: DoubleBedRightBlack
           steps:
             - tag: BedsheetBlack
-              doAfter: 2
+              doAfter: 1
               name: black-bedsheet # Needed to make the construction menu pretty. By tag does not fetch this stuff by itself.
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -752,7 +752,7 @@
         - to: DoubleBedRightBlue
           steps:
             - tag: BedsheetBlue
-              doAfter: 2
+              doAfter: 1
               name: blue-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -761,7 +761,7 @@
         - to: DoubleBedRightBrown
           steps:
             - tag: BedsheetBrown
-              doAfter: 2
+              doAfter: 1
               name: brown-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -770,7 +770,7 @@
         - to: DoubleBedRightCC
           steps:
             - tag: BedsheetCentcom
-              doAfter: 2
+              doAfter: 1
               name: centcomm-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -779,7 +779,7 @@
         - to: DoubleBedRightClown
           steps:
             - tag: BedsheetClown
-              doAfter: 2
+              doAfter: 1
               name: clown-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -788,7 +788,7 @@
         - to: DoubleBedRightCult
           steps:
             - tag: BedsheetCult
-              doAfter: 2
+              doAfter: 1
               name: cult-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -798,11 +798,11 @@
           steps:
             - material: Durathread
               amount: 3
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightGreen
           steps:
             - tag: BedsheetGreen
-              doAfter: 2
+              doAfter: 1
               name: green-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -811,7 +811,7 @@
         - to: DoubleBedRightGrey
           steps:
             - tag: BedsheetGrey
-              doAfter: 2
+              doAfter: 1
               name: grey-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -820,7 +820,7 @@
         - to: DoubleBedRightIan
           steps:
             - tag: BedsheetIan
-              doAfter: 2
+              doAfter: 1
               name: ian-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -829,7 +829,7 @@
         - to: DoubleBedRightMime
           steps:
             - tag: BedsheetMime
-              doAfter: 2
+              doAfter: 1
               name: mime-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -838,7 +838,7 @@
         - to: DoubleBedRightNT
           steps:
             - tag: BedsheetNT
-              doAfter: 2
+              doAfter: 1
               name: nt-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -847,7 +847,7 @@
         - to: DoubleBedRightOrange
           steps:
             - tag: BedsheetOrange
-              doAfter: 2
+              doAfter: 1
               name: orange-bedsheet
               icon:
                 sprite: Objects/Misc/bedsheets.rsi
@@ -856,7 +856,7 @@
         - to: DoubleBedRightPurple
           steps:
             - tag: BedsheetPurple
-              doAfter: 2
+              doAfter: 1
               name: purple-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -865,7 +865,7 @@
         - to: DoubleBedRightRainbow
           steps:
             - tag: BedsheetRainbow
-              doAfter: 2
+              doAfter: 1
               name: rainbow-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -874,7 +874,7 @@
         - to: DoubleBedRightRed
           steps:
             - tag: BedsheetRed
-              doAfter: 2
+              doAfter: 1
               name: red-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -883,7 +883,7 @@
         - to: DoubleBedRightSyndie
           steps:
             - tag: BedsheetSyndie
-              doAfter: 2
+              doAfter: 1
               name: syndicate-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -892,7 +892,7 @@
         - to: DoubleBedRightTSF
           steps:
             - tag: BedsheetCaptain
-              doAfter: 2
+              doAfter: 1
               name: captain-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -901,7 +901,7 @@
         - to: DoubleBedRightUS
           steps:
             - tag: BedsheetUSA
-              doAfter: 2
+              doAfter: 1
               name: usa-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -910,7 +910,7 @@
         - to: DoubleBedRightWhite
           steps:
             - tag: BedsheetWhite
-              doAfter: 2
+              doAfter: 1
               name: white-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -919,7 +919,7 @@
         - to: DoubleBedRightWizard
           steps:
             - tag: BedsheetWiz
-              doAfter: 2
+              doAfter: 1
               name: wizard-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -928,7 +928,7 @@
         - to: DoubleBedRightYellow
           steps:
             - tag: BedsheetYellow
-              doAfter: 2
+              doAfter: 1
               name: yellow-bedsheet
               icon: 
                 sprite: Objects/Misc/bedsheets.rsi
@@ -943,57 +943,57 @@
               amount: 3
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancyBlack
           steps:
             - material: FloorCarpetBlack
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancyBlue
           steps:
             - material: FloorCarpetBlue
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancyGreen
           steps:
             - material: FloorCarpetGreen
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancyOrange
           steps:
             - material: FloorCarpetOrange
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancyPink
           steps:
             - material: FloorCarpetPink
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancyPurple
           steps:
             - material: FloorCarpetPurple
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancyRed
           steps:
             - material: FloorCarpetRed
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancySkyblue
           steps:
             - material: FloorCarpetSkyBlue
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancyTeal
           steps:
             - material: FloorCarpetCyan
               amount: 1
-              doAfter: 2
+              doAfter: 1
         - to: DoubleBedRightFancyWhite
           steps:
             - material: FloorCarpetWhite
               amount: 1
-              doAfter: 2
+              doAfter: 1
 # Finished constructions + Deconstructions. Removing bedsheets requires crowbar.
     - node: DoubleBedRightBlack
       entity: DoubleBedRightBlack
@@ -1005,7 +1005,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightBlue
       entity: DoubleBedRightBlue
@@ -1017,7 +1017,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightBrown
       entity: DoubleBedRightBrown
@@ -1029,7 +1029,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightCC
       entity: DoubleBedRightCC
@@ -1041,7 +1041,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightClown
       entity: DoubleBedRightClown
@@ -1053,7 +1053,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightCult
       entity: DoubleBedRightCult
@@ -1065,7 +1065,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancyBlack
       entity: DoubleBedRightFancyBlack
@@ -1080,7 +1080,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancyBlue
       entity: DoubleBedRightFancyBlue
@@ -1095,7 +1095,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancyGreen
       entity: DoubleBedRightFancyGreen
@@ -1110,7 +1110,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancyOrange
       entity: DoubleBedRightFancyOrange
@@ -1125,7 +1125,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancyPink
       entity: DoubleBedRightFancyPink
@@ -1140,7 +1140,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancyPurple
       entity: DoubleBedRightFancyPurple
@@ -1155,7 +1155,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancyRed
       entity: DoubleBedRightFancyRed
@@ -1170,7 +1170,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancySkyblue
       entity: DoubleBedRightFancySkyblue
@@ -1185,7 +1185,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancyTeal
       entity: DoubleBedRightFancyTeal
@@ -1200,7 +1200,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightFancyWhite
       entity: DoubleBedRightFancyWhite
@@ -1215,7 +1215,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightGreen
       entity: DoubleBedRightGreen
@@ -1227,7 +1227,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightGrey
       entity: DoubleBedRightGrey
@@ -1239,7 +1239,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightIan
       entity: DoubleBedRightIan
@@ -1251,7 +1251,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightMime
       entity: DoubleBedRightMime
@@ -1263,7 +1263,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightNT
       entity: DoubleBedRightNT
@@ -1275,7 +1275,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightOrange
       entity: DoubleBedRightOrange
@@ -1287,7 +1287,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightPurple
       entity: DoubleBedRightPurple
@@ -1299,7 +1299,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightRainbow
       entity: DoubleBedRightRainbow
@@ -1311,7 +1311,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightRed
       entity: DoubleBedRightRed
@@ -1323,7 +1323,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightSyndie
       entity: DoubleBedRightSyndie
@@ -1335,7 +1335,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightTSF
       entity: DoubleBedRightTSF
@@ -1347,7 +1347,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightUS
       entity: DoubleBedRightUS
@@ -1359,7 +1359,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightWhite
       entity: DoubleBedRightWhite
@@ -1371,7 +1371,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightWizard
       entity: DoubleBedRightWizard
@@ -1383,7 +1383,7 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
 
     - node: DoubleBedRightYellow
       entity: DoubleBedRightYellow
@@ -1395,4 +1395,4 @@
               amount: 1
           steps:
             - tool: Prying
-              doAfter: 2
+              doAfter: 1
