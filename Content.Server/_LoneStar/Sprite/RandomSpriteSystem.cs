@@ -25,24 +25,28 @@ public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
         if (component.Selected.Count > 0)
             return;
 
-        Reroll(uid, component); // LoneStar
+        Reroll(uid, component);
     }
-
-    public bool Reroll(EntityUid uid, RandomSpriteComponent component) // LoneStar: Breaks body of code from OnMapInit
+    /// <summary>
+    /// Randomizes the entire range of options.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <returns></returns>
+    public bool Reroll(EntityUid uid, RandomSpriteComponent component)
     {
         if (component.Available.Count == 0)
-            return false; // LoneStar
+            return false;
 
-        component.Selected.Clear(); // LoneStar
+        component.Selected.Clear();
 
-        // Frontier: select mapped colours
+        // Select mapped colours
         Dictionary<string, Color> mappedColors = new();
         foreach (var (key, value) in component.MappedColors)
         {
             if (_prototype.TryIndex<ColorPalettePrototype>(value, out var palette))
                 mappedColors[key] = _random.Pick(palette.Colors.Values);
         }
-        // End Frontier: select mapped colours
 
         var groups = new List<Dictionary<string, Dictionary<string, string?>>>();
         if (component.GetAllGroups)
@@ -67,14 +71,13 @@ public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
                 var selectedState = _random.Pick(layer.Value);
                 if (!string.IsNullOrEmpty(selectedState.Value))
                 {
+                    // Inherit reuses the last direct palette color selected in traversal order.
                     if (selectedState.Value == $"Inherit")
                         color = previousColor;
-                    // Frontier: mapped colours
                     else if (mappedColors.TryGetValue(selectedState.Value, out var mappedColor))
                     {
                         color = mappedColor;
                     }
-                    // End Frontier
                     else
                     {
                         color = _random.Pick(_prototype.Index<ColorPalettePrototype>(selectedState.Value).Colors.Values);
@@ -87,9 +90,17 @@ public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
         }
 
         Dirty(uid, component);
-        return true; // LoneStar
+        return true;
     }
 
+    /// <summary>
+    /// Sets a mappedColor's value to a given color.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <param name="mappedColorKey"></param>
+    /// <param name="color"></param>
+    /// <returns></returns>
     public bool SetMappedColor(EntityUid uid, RandomSpriteComponent component, string mappedColorKey, Color color)
     {
         if (!component.MappedColors.ContainsKey(mappedColorKey))
