@@ -1,14 +1,14 @@
 #region colorable
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteMono ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColorInhand ]
   id: ClothingUniformTurtleskirtColorable
   name: turtleneck jumpskirt
   description: For some reason, wearing this makes you feel like working in tech support at a product store.
   components:
   - type: Sprite
-    sprite: _DEN/Clothing/Uniforms/Jumpskirt/whiteturtleskirt.rsi
+    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
   - type: Clothing
-    sprite: _DEN/Clothing/Uniforms/Jumpskirt/whiteturtleskirt.rsi
+    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
