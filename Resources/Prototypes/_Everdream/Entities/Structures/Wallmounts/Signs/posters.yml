@@ -1,0 +1,20 @@
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandGorlexGirlfriends
+  name: "Gorlex Girlfriends Cover Art"
+  description: "A skimpy magazine cover with a vulpkanin in Gorlex colors. 'Peace was never an option with girls like these. Kill corpos and get paid.'"
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: _Everdream/Structures/Wallmounts/posters.rsi
+    state: gorlex_girlfriend0
+    snapCardinals: true
+
+- type: entity
+  parent: PosterContrabandGorlexGirlfriends
+  id: PosterContrabandGorlexGirlfriends2
+  name: "Gorlex Girlfriends Limited Edition"
+  description: "A salacious shot of a vulpkanin holding an M-90 rifle in the crook of her arm. 'Kicking hyperzine was the hardest thing I've ever done.' 'At least thirty tips for pawcare inside that NT won't tell you...'"
+  components:
+  - type: Sprite
+    state: gorlex_girlfriend1

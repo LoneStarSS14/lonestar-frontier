@@ -6,6 +6,7 @@
     whitelist:
       tags:
       - BlueprintAutolathe
+      - NFBlueprintAdvanced
   - type: ContainerContainer
     containers:
       machine_board: !type:Container
@@ -111,6 +112,7 @@
     whitelist:
       tags:
       - NFBlueprintServiceTechfab
+      - NFBlueprintAdvanced
   - type: OreSiloClient
 
 - type: entity
@@ -205,6 +207,7 @@
     whitelist:
       tags:
       - NFBlueprintEngineeringTechfab
+      - NFBlueprintAdvanced
   - type: OreSiloClient
 
 - type: entity
@@ -254,6 +257,7 @@
     whitelist:
       tags:
       - NFBlueprintSalvageTechfab
+      - NFBlueprintAdvanced
   - type: OreSiloClient
 
 - type: entity
@@ -304,6 +308,7 @@
     whitelist:
       tags:
       - NFBlueprintNfsdTechfab
+      - NFBlueprintAdvanced
   - type: OreSiloClient
 
 - type: entity
@@ -358,6 +363,7 @@
     whitelist:
       tags:
       - NFBlueprintMercenaryTechfab
+      - NFBlueprintAdvanced
   - type: OreSiloClient
 
 - type: entity
@@ -425,6 +431,7 @@
       tags:
       - NFBlueprintMercenaryTechfab
       - NFBlueprintNfsdTechfab
+      - NFBlueprintAdvanced
   - type: OreSiloClient
 
 - type: entity
@@ -443,8 +450,18 @@
   - type: LitOnPowered
   - type: ApcPowerReceiver
     powerLoad: 200
-  - type: Advertise
-    pack: CuddlyCritterAds
+  # LoneStar start
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Vending
+  - type: Vocalizer
+    minVocalizeInterval: 8m
+    maxVocalizeInterval: 10m
+    hideChat: true
+  - type: VocalizerRequiresPower
+  # LoneStar end
+  - type: DatasetVocalizer
+    dataset: CuddlyCritterAds
   - type: PointLight
     radius: 1.5
     energy: 1.6

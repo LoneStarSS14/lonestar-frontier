@@ -26,8 +26,8 @@
     denyState: deny-unshaded
     ejectState: eject-unshaded
     screenState: screen
-  - type: Advertise
-    pack: SweetToofAds # Todo - Make these
+  - type: DatasetVocalizer
+    dataset: SweetToofAds # Todo - Make these
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Transform
