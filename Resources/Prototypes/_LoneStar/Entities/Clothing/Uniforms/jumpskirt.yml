@@ -39,7 +39,7 @@
         map: [ "accent" ]
       - state: equipped-INNERCLOTHING-extra
         map: [ "extra" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
         Silks: LSSilks
@@ -93,7 +93,7 @@
         map: [ "accent" ]
       - state: equipped-INNERCLOTHING-extra
         map: [ "extra" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
         Silks: LSSilks
@@ -138,7 +138,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: Rainbow
 
@@ -152,7 +152,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
@@ -166,7 +166,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
@@ -180,7 +180,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
@@ -509,7 +509,7 @@
         - state: inhand-right
         - state: inhand-right-detail
           map: [ "hr-detail" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
       detail: NTInteriorDesign

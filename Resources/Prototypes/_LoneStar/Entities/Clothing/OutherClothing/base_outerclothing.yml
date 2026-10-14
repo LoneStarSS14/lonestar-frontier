@@ -12,7 +12,7 @@
       outerClothing:
       - state: equipped-OUTERCLOTHING
         map: [ "outerclothing-equipped" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     available:
       - outerclothing-icon:
@@ -25,10 +25,9 @@
     tags:
     - ClothMade
     - Recyclable
-    - HamsterWearable
 
 # For variants that want to use icon-open and open-equipped-OUTERCLOTHING.
-# For technical reasons foldable clothing does not support RandomSprite.
+# For technical reasons foldable clothing does not support ColorableClothing.
 - type: entity
   abstract: true
   id: ClothingOuterClothingRandomSpriteMonoOpen
@@ -43,7 +42,7 @@
       outerClothing:
       - state: open-equipped-OUTERCLOTHING
         map: [ "outerclothing-equipped" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     available:
       - outerclothing-icon:
@@ -56,4 +55,3 @@
     tags:
     - ClothMade
     - Recyclable
-    - HamsterWearable

@@ -103,7 +103,7 @@
       - state: decor-equipped-MASK
         map: [ "clothing_mask_decor" ]
         shader: unshaded
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
     - mask_main:

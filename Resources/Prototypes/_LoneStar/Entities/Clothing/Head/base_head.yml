@@ -12,7 +12,7 @@
       head:
       - state: equipped-HELMET
         map: [ "head-equipped" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     available:
       - head-icon:
