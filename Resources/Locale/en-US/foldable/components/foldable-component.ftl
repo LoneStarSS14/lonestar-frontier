@@ -14,3 +14,7 @@ fold-unzip-verb = Unzip
 
 fold-verb-clothing-jacket = Take off jacket
 unfold-verb-clothing-jacket = Put on jacket
+
+# Mantis Sleeves
+fold-rollsleeves-verb = Roll sleeves up
+fold-unrollsleeves-verb = Roll sleeves down

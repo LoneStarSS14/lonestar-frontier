@@ -51,7 +51,6 @@
     sprite: _DEN/Clothing/Neck/Misc/mantispendulum.rsi
   - type: MeleeWeapon
     attackRate: .6666
-    maxTargets: 1
     angle: 90
     soundHit:
       path: /Audio/_DEN/Effects/crystaltap3.ogg
@@ -61,7 +60,7 @@
     damage:
       types: # Melee damage (per the description, it's for testing psionic ability, not fighting)
         Blunt: 1 # 1.5 DPS, or 1.88 DPS against psions
-        Holy: 0.5 # 2.81 total DPS against psionic supernaturals
+        #Holy: 0.5 # 2.81 total DPS against psionic supernaturals
   - type: Tag
     tags:
     - WhitelistChameleon
