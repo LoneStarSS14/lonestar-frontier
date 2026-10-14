@@ -55,10 +55,12 @@
     baseSprintSpeed: 5
     baseWeightlessModifier: 1.5
   - type: RandomSprite
+    mappedColors:
+      Scales: Rainbow
     denyReroll: false # LoneStar
     available:
     - enum.DamageStateVisualLayers.Base:
-        alive: Rainbow
+        alive: Scales
   - type: Sprite
     sprite: _NF/Mobs/Pets/baby_dragon.rsi
     noRot: true

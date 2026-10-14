@@ -42,27 +42,27 @@
   - type: RandomSprite
     denyReroll: false
     mappedColors:
-        base: NTInteriorDesign
-        decor: NTInteriorDesign
-        accent: NTInteriorDesign
-        extra: TechniColors
+        Silks: LSSilks
+        Primary: NTInteriorDesign
+        Secondary: NTInteriorDesign
+        Gems: TechniColors
     available:
       - base:
-          equipped-INNERCLOTHING-base: base
+          equipped-INNERCLOTHING-base: Primary
         decor:
-          equipped-INNERCLOTHING-decor: decor
+          equipped-INNERCLOTHING-decor: Secondary
         accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Silks
         extra:
-          equipped-INNERCLOTHING-extra: extra
+          equipped-INNERCLOTHING-extra: Gems
         icon-base:
-          icon-base: base
+          icon-base: Primary
         icon-decor:
-          icon-decor: decor
+          icon-decor: Secondary
         icon-accent:
-          icon-accent: accent
+          icon-accent: Silks
         icon-extra:
-          icon-extra: extra
+          icon-extra: Gems
 
 - type: entity
   parent: ClothingUniformJumpskirtTailoredGownColorable
@@ -96,26 +96,26 @@
   - type: RandomSprite
     denyReroll: false
     mappedColors:
-        base: NTInteriorDesign
-        accent: NTInteriorDesign
-        extra: TechniColors
+        Silks: LSSilks
+        Primary: NTInteriorDesign
+        Gems: TechniColors
     available:
       - base:
-          equipped-INNERCLOTHING-base: base
+          equipped-INNERCLOTHING-base: Primary
         decor:
-          equipped-INNERCLOTHING-decor: base
+          equipped-INNERCLOTHING-decor: Primary
         accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Silks
         extra:
-          equipped-INNERCLOTHING-extra: extra
+          equipped-INNERCLOTHING-extra: Gems
         icon-base:
-          icon-base: base
+          icon-base: Primary
         icon-decor:
-          icon-decor: base
+          icon-decor: Primary
         icon-accent:
-          icon-accent: accent
+          icon-accent: Silks
         icon-extra:
-          icon-extra: extra
+          icon-extra: Gems
 
 - type: entity
   parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteMono ]

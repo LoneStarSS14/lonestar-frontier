@@ -17,3 +17,12 @@
       params:
         variation: 0.175
         volume: -4
+  - type: UserInterface
+    interfaces:
+      enum.RandomSpriteRerollUiKey.Key:
+        type: RandomSpriteRerollBoundUserInterface
+  - type: ActivatableUI
+    key: enum.RandomSpriteRerollUiKey.Key
+    inHandsOnly: true
+    requireActiveHand: true
+    verbOnly: true

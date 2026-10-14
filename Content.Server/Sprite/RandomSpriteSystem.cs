@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Decals;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Sprite;
@@ -87,6 +88,33 @@ public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
 
         Dirty(uid, component);
         return true; // LoneStar
+    }
+
+    public bool SetMappedColor(EntityUid uid, RandomSpriteComponent component, string mappedColorKey, Color color)
+    {
+        if (!component.MappedColors.ContainsKey(mappedColorKey))
+            return false;
+
+        var changed = false;
+        foreach (var (layer, selected) in component.Selected.ToArray())
+        {
+            var usesMappedColor = component.Available.Any(group =>
+                group.TryGetValue(layer, out var states) &&
+                states.TryGetValue(selected.State, out var value) &&
+                value == mappedColorKey);
+
+            if (!usesMappedColor)
+                continue;
+
+            component.Selected[layer] = (selected.State, color);
+            changed = true;
+        }
+
+        if (!changed)
+            return false;
+
+        Dirty(uid, component);
+        return true;
     }
 
     private void OnGetState(EntityUid uid, RandomSpriteComponent component, ref ComponentGetState args)
