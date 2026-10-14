@@ -38,7 +38,7 @@
     equippedPrefix: folded
 
 - type: entity
-  parent: Clothing # It's not edible or butcherable!
+  parent: Clothing
   id: ClothingNeckCloakMantisShroud
   name: mantis wolfskin
   description: "A heavy traveler's cloak adorned with a charm-laden necklace, built to turn wind, rain, and dust alike. The origins of the name are lost to history, but the association with hunting remains."

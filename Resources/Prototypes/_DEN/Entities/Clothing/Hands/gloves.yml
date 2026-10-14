@@ -94,6 +94,7 @@
 - type: entity
   parent: ClothingHandsGlovesMantisOrnate
   id: ClothingHandsGlovesMantisOrnateFlipped
+  categories: [ HideSpawnMenu ]
   suffix: Flipped
   components:
   - type: Foldable

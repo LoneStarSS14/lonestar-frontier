@@ -37,6 +37,7 @@
 - type: entity # So chameleon clothes can select the folded sprite
   parent: ClothingUniformSkirtMantisOrnate
   id: ClothingUniformSkirtMantisOrnateFlipped
+  categories: [ HideSpawnMenu ]
   suffix: Flipped
   components:
   - type: Foldable

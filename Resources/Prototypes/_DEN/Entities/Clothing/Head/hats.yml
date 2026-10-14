@@ -49,6 +49,7 @@
 - type: entity
   parent: ClothingHeadHatFezMantisOrnate
   id: ClothingHeadHatFezMantisOrnateFolded
+  categories: [ HideSpawnMenu ]
   suffix: Folded
   components:
   - type: Foldable
