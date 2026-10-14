@@ -428,8 +428,12 @@ public sealed class ColorizerSystem : EntitySystem
         {
             Act = () =>
             {
-                if (!disabled)
-                    TryReroll(uid, component, reroll);
+                if (disabled)
+                    return;
+
+                reroll.Target = uid;
+                _uiSystem.SetUiState(usingEntity, ColorizerUiKey.Key, GetUiState(uid, component));
+                _uiSystem.OpenUi(usingEntity, ColorizerUiKey.Key, args.User);
             },
             Message = message,
             Disabled = disabled,
