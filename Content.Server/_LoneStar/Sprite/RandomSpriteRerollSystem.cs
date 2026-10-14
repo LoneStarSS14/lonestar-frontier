@@ -40,7 +40,11 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         SubscribeLocalEvent<RandomSpriteRerollComponent, RandomSpriteRerollRandomizeMessage>(OnRandomize);
         SubscribeLocalEvent<RandomSpriteRerollComponent, ActivatableUIOpenAttemptEvent>(OnActivatableUIOpenAttempt);
     }
-
+    /// <summary>
+    /// Primarily handles closing the UI when the player is too far from the target.
+    /// Sadly im not sure if theres any other prebuilt method for this exact case.
+    /// </summary>
+    /// <param name="frameTime"></param>
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
@@ -65,6 +69,12 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         }
     }
 
+    /// <summary>
+    /// Handles initiating the BUI of the targeted entity, provided it is valid.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <param name="args"></param>
     private void OnAfterInteract(EntityUid uid, RandomSpriteRerollComponent component, AfterInteractEvent args)
     {
         if (args.Handled || args.Target is null || !args.CanReach || !IsInPrimaryHand(uid, args.User))
@@ -91,6 +101,12 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         args.Handled = true;
     }
 
+    /// <summary>
+    /// Builds the UI state from the targeted entities available palettes/mappedColors/variants.
+    /// </summary>
+    /// <param name="target"></param>
+    /// <param name="randomSprite"></param>
+    /// <returns></returns>
     private RandomSpriteRerollBoundUserInterfaceState GetUiState(EntityUid target, RandomSpriteComponent randomSprite)
     {
         var palettes = new Dictionary<string, Dictionary<string, Color>>();
@@ -150,11 +166,14 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
             selectedVariants);
     }
 
-    private static void AddActiveColorName(
-        Dictionary<string, string> activeColorNames,
-        string key,
-        ColorPalettePrototype palette,
-        Color color)
+    /// <summary>
+    /// Gets the active color's name of a given palette
+    /// </summary>
+    /// <param name="activeColorNames"></param>
+    /// <param name="key"></param>
+    /// <param name="palette"></param>
+    /// <param name="color"></param>
+    private static void AddActiveColorName(Dictionary<string, string> activeColorNames, string key, ColorPalettePrototype palette, Color color)
     {
         foreach (var (name, paletteColor) in palette.Colors)
         {
@@ -166,6 +185,12 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         }
     }
 
+    /// <summary>
+    /// Handles selecting a color on the UI and attempts to apply it.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <param name="args"></param>
     private void OnSelectColor(EntityUid uid, RandomSpriteRerollComponent component, RandomSpriteRerollSelectColorMessage args)
     {
         if (!TryGetAccessibleTarget(uid, component, args.Actor, out var target, out var randomSprite))
@@ -195,11 +220,15 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
             _uiSystem.SetUiState(uid, RandomSpriteRerollUiKey.Key, GetUiState(target, randomSprite));
     }
 
-    private bool TrySetAvailableColor(
-        EntityUid target,
-        RandomSpriteComponent randomSprite,
-        string layer,
-        string colorName)
+    /// <summary>
+    /// Sets a color by looking through Available's keys for layers that match.
+    /// </summary>
+    /// <param name="target"></param>
+    /// <param name="randomSprite"></param>
+    /// <param name="layer"></param>
+    /// <param name="colorName"></param>
+    /// <returns></returns>
+    private bool TrySetAvailableColor(EntityUid target, RandomSpriteComponent randomSprite, string layer, string colorName)
     {
         if (!randomSprite.Selected.TryGetValue(layer, out var selected))
             return false;
@@ -223,10 +252,13 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         return false;
     }
 
-    private void OnSelectVariant(
-        EntityUid uid,
-        RandomSpriteRerollComponent component,
-        RandomSpriteRerollSelectVariantMessage args)
+    /// <summary>
+    /// Applies the selected variant states to the target.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <param name="args"></param>
+    private void OnSelectVariant(EntityUid uid, RandomSpriteRerollComponent component, RandomSpriteRerollSelectVariantMessage args)
     {
         if (!TryGetAccessibleTarget(uid, component, args.Actor, out var target, out var randomSprite) ||
             !randomSprite.Selected.TryGetValue(args.Layer, out var selected) ||
@@ -270,6 +302,13 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         }
     }
 
+    /// <summary>
+    /// Gets the first palette color.
+    /// </summary>
+    /// <param name="randomSprite"></param>
+    /// <param name="paletteId"></param>
+    /// <param name="color"></param>
+    /// <returns></returns>
     private bool TryGetFirstPaletteColor(RandomSpriteComponent randomSprite, string paletteId, out Color color)
     {
         if (randomSprite.MappedColors.TryGetValue(paletteId, out var mappedPaletteId))
@@ -286,6 +325,12 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         return false;
     }
 
+    /// <summary>
+    /// Rerolls the entire selection of variants and palettes.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <param name="args"></param>
     private void OnRandomize(EntityUid uid, RandomSpriteRerollComponent component, RandomSpriteRerollRandomizeMessage args)
     {
         if (!TryGetAccessibleTarget(uid, component, args.Actor, out var target, out var randomSprite))
@@ -295,12 +340,16 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
             _uiSystem.SetUiState(uid, RandomSpriteRerollUiKey.Key, GetUiState(target, randomSprite));
     }
 
-    private bool TryGetAccessibleTarget(
-        EntityUid tool,
-        RandomSpriteRerollComponent component,
-        EntityUid actor,
-        out EntityUid target,
-        out RandomSpriteComponent randomSprite)
+    /// <summary>
+    /// Checks if the conditions to update the item are true.
+    /// </summary>
+    /// <param name="tool"></param>
+    /// <param name="component"></param>
+    /// <param name="actor"></param>
+    /// <param name="target"></param>
+    /// <param name="randomSprite"></param>
+    /// <returns></returns>
+    private bool TryGetAccessibleTarget(EntityUid tool, RandomSpriteRerollComponent component, EntityUid actor, out EntityUid target, out RandomSpriteComponent randomSprite)
     {
         target = default;
         randomSprite = default!;
@@ -319,6 +368,12 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         return true;
     }
 
+    /// <summary>
+    /// Checks the tool is in the primary active hand.
+    /// </summary>
+    /// <param name="tool"></param>
+    /// <param name="actor"></param>
+    /// <returns></returns>
     private bool IsInPrimaryHand(EntityUid tool, EntityUid actor)
     {
         if (!TryComp<HandsComponent>(actor, out var hands) ||
@@ -328,10 +383,7 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         return true;
     }
 
-    private void OnActivatableUIOpenAttempt(
-        EntityUid uid,
-        RandomSpriteRerollComponent component,
-        ActivatableUIOpenAttemptEvent args)
+    private void OnActivatableUIOpenAttempt(EntityUid uid, RandomSpriteRerollComponent component, ActivatableUIOpenAttemptEvent args)
     {
         if (!TryGetAccessibleTarget(uid, component, args.User, out _, out _))
             args.Cancel();
@@ -345,6 +397,12 @@ public sealed class RandomSpriteRerollSystem : EntitySystem
         return _randomSprite.Reroll(target, randomSprite);
     }
 
+    /// <summary>
+    /// Handles creating the verb menu action.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <param name="args"></param>
     private void OnGetInteractionVerbs(EntityUid uid, RandomSpriteComponent component, GetVerbsEvent<InteractionVerb> args)
     {
         if (!args.CanAccess || !args.CanInteract || args.Using is not { } usingEntity ||
