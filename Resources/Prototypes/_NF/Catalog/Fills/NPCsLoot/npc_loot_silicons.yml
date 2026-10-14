@@ -1,0 +1,177 @@
+# region treasure
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: SpawnDungeonLootNpcRogueSiliconTreasure
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector
+        weight: 0.2
+        children:
+        - id: TreasureHardDiskDrive # 275 spesos
+        - id: TreasureCDDrive # 300 spesos
+        - id: TreasureFlopDiskDrive # 350 spesos
+      - !type:GroupSelector
+        weight: 0.3
+        children:
+        - id: TreasureDatadiskEncrypted # 500 spesos
+        - id: TreasureCPUSupercharged # 750 spesos
+      - !type:GroupSelector
+        weight: 0.5
+        children:
+        - id: TreasureSsd # 900 spesos
+        - id: TreasureSelfRepairModule # 1350 spesos
+
+# region borg module
+- type: entity # LoneStar note, need to overhaul this
+  parent: MarkerBasePlaceFree
+  id: SpawnDungeonLootNpcRogueSiliconBorgModule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: BorgModuleJetpack
+      - id: BorgModuleCustodial
+      - id: BorgModuleCable
+      - id: BorgModuleFireExtinguisher
+      - id: BorgModuleAppraisal
+      - id: BorgModuleTraversal
+      - id: BorgModuleTopicals
+      - id: BorgModuleDiagnosis
+      - id: BorgModuleArtifact
+      - id: BorgModuleAnomaly
+      - id: BorgModuleService
+      - id: BorgModuleNFService
+      - id: BorgModuleBureaucracy
+      - id: BorgModuleChef
+      - id: BorgModuleMusique
+      - id: BorgModuleGardening
+      - id: BorgModuleHarvesting
+      - id: BorgModuleClowning
+      - !type:GroupSelector
+        children:
+        - id: BorgModuleRescue
+          weight: 0.9
+        - id: BorgModuleAdvancedParamedic
+          weight: 0.1
+      - !type:GroupSelector
+        children:
+        - id: BorgModuleChemical
+          weight: 0.9
+        - id: BorgModuleAdvancedChemical
+          weight: 0.1
+      - !type:GroupSelector
+        children:
+        - id: BorgModuleCleaning
+          weight: 0.9
+        - id: BorgModuleAdvancedCleaning
+          weight: 0.1
+      - !type:GroupSelector
+        children:
+        - id: BorgModuleConstruction
+          weight: 0.9
+        - id: BorgModuleRCDShipyard
+          weight: 0.1
+      - !type:GroupSelector
+        children:
+        - id: BorgModuleTool
+          weight: 0.9
+        - id: BorgModuleAdvancedTool
+          weight: 0.1
+      - !type:GroupSelector
+        children:
+        - id: BorgModuleMining
+          weight: 0.9
+        - id: BorgModuleAdvancedMining
+          weight: 0.1
+      - !type:GroupSelector
+        weight: 0.005
+        children:
+        - id: BorgModuleSyndicateWeapon
+        - id: BorgModuleEsword
+        - id: BorgModuleL6C
+
+# region blueprints
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: SpawnDungeonLootNpcRogueSiliconBlueprints
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      # T1 - Common
+      - !type:GroupSelector
+        weight: 0.4
+        children:
+        # - id: NFBlueprintRogueSiliconAdvancedCapacitor # LoneStar, trash
+        # - id: NFBlueprintRogueSiliconAdvancedMatterBin # LoneStar, trash
+        # - id: NFBlueprintRogueSiliconAdvancedManipulator # LoneStar, trash
+        - id: NFBlueprintRogueSiliconPowerCellHigh
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconSuperCapacitor
+        - id: NFBlueprintRogueSiliconSuperMatterBin
+        - id: NFBlueprintRogueSiliconSuperManipulator
+      # T2 - Uncommon
+      - !type:GroupSelector
+        weight: 0.3
+        children:
+        - id: NFBlueprintRogueSiliconAdvancedTools
+        # - id: NFBlueprintRogueSiliconSuperCapacitor # LoneStar, moved to tier 1
+        # - id: NFBlueprintRogueSiliconSuperMatterBin # LoneStar, moved to tier 1
+        # - id: NFBlueprintRogueSiliconSuperManipulator # LoneStar, moved to tier 1
+        # - id: NFBlueprintRogueSiliconPowerCellHyper # LoneStar, moved to unique
+        # - id: NFBlueprintRogueSiliconPowerCellMicroreactor # LoneStar, moved to tier 5
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconRPED
+        - id: NFBlueprintRogueSiliconShipyardRCD
+      # T3 - Rare
+      - !type:GroupSelector
+        weight: 0.15
+        children:
+        # - id: NFBlueprintRogueSiliconRPED # LoneStar, moved to tier 2
+        # - id: NFBlueprintRogueSiliconShipyardRCD # LoneStar, moved to tier 2
+        # - id: NFBlueprintOreBagOfHolding # LoneStar, moved to tier 4
+        # - id: NFBlueprintConstructionBagOfHolding # LoneStar, moved to tier 4
+        # - id: NFBlueprintRogueSiliconPistolLaserSvalinn # LoneStar, moved to tier 4
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconRipley
+        - id: NFBlueprintRogueSiliconMechEquipmentFork
+        - id: NFBlueprintRogueSiliconMechEquipmentGrabber
+      # T4 - Epic
+      - !type:GroupSelector
+        weight: 0.1
+        children:
+        # - id: NFBlueprintRogueSiliconRipley # LoneStar, moved to tier 3
+        # - id: NFBlueprintRogueSiliconMechEquipmentFork # LoneStar, moved to tier 3
+        # - id: NFBlueprintRogueSiliconMechEquipmentGrabber # LoneStar, moved to tier 3
+        # - id: NFBlueprintRogueSiliconEnergyRifleCarbine # LoneStar, no printing FUC-able-like weapons
+        # - id: NFBlueprintRogueSiliconPistolLaserAdvanced # LoneStar, no printing FUC-able-like weapons
+        # LoneStar v
+        - id: NFBlueprintOreBagOfHolding
+        - id: NFBlueprintConstructionBagOfHolding
+        - id: NFBlueprintRogueSiliconPistolLaserSvalinn
+      # T5 - Legendary
+      - !type:GroupSelector
+        weight: 0.05
+        children:
+        - id: NFBlueprintRogueSiliconHonker
+        - id: NFBlueprintRogueSiliconBluespaceBags
+        # - id: NFBlueprintRogueSiliconEnergySubMachineGunDeltaV # LoneStar, no printing FUC-able-like weapons
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconPowerCellMicroreactor
+      # Unique
+      - !type:GroupSelector
+        weight: 0.01
+        children:
+        # - id: NFBlueprintRogueSiliconBluespaceCapacitor # LoneStar, no
+        # - id: NFBlueprintRogueSiliconBluespaceMatterBin # LoneStar, no
+        # - id: NFBlueprintRogueSiliconBluespaceManipulator # LoneStar, no
+        # LoneStar v
+        - id: NFBlueprintRogueSiliconPowerCellHyper

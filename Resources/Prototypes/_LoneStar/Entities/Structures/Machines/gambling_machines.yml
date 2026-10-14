@@ -55,8 +55,13 @@
     weight: 0.125
   - type: StaticPrice
     price: 100
-  - type: Advertise
-    pack: SlotMachineAds
+  - type: Vocalizer
+    minVocalizeInterval: 8m
+    maxVocalizeInterval: 10m
+    hideChat: true
+  - type: VocalizerRequiresPower
+  - type: DatasetVocalizer
+    dataset: SlotMachineAds
   - type: ContainerContainer
     containers:
       money: !type:ContainerSlot
@@ -252,8 +257,8 @@
     weight: 0.125
   - type: StaticPrice
     price: 100
-  - type: Advertise
-    pack: SlotMachineAds
+  - type: DatasetVocalizer
+    dataset: SlotMachineAds
   - type: ContainerContainer
     containers:
       money: !type:ContainerSlot
@@ -356,8 +361,8 @@
     weight: 0.125
   - type: StaticPrice
     price: 100
-  - type: Advertise
-    pack: SlotMachineAds
+  - type: DatasetVocalizer
+    dataset: SlotMachineAds
   - type: ClawMachine
     winChance: 0.15
     rewards:

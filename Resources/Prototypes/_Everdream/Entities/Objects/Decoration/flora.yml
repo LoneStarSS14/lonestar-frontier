@@ -1,0 +1,38 @@
+- type: entity
+  parent: BaseTree
+  id: PalmTree01
+  name: palm tree
+  description: "A tropical palm tree, with a tall, thin trunk and a crown of large, fan-shaped leaves."
+  suffix: "Palm Tree, #1"
+  components:
+  - type: Sprite
+    sprite: _Everdream/Objects/Decoration/Flora/palmtrees.rsi
+    layers:
+    - state: tree01
+
+- type: entity
+  parent: PalmTree01
+  id: PalmTree02
+  suffix: "Palm Tree, #2"
+  components:
+  - type: Sprite
+    layers:
+    - state: tree02
+
+- type: entity
+  parent: PalmTree01
+  id: PalmTree03
+  suffix: "Palm Tree, #3"
+  components:
+  - type: Sprite
+    layers:
+    - state: tree03
+
+- type: entity
+  parent: PalmTree01
+  id: PalmTree04
+  suffix: "Palm Tree, #4"
+  components:
+  - type: Sprite
+    layers:
+    - state: tree04
