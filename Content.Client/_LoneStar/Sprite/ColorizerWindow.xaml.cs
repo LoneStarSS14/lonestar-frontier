@@ -12,9 +12,14 @@ namespace Content.Client._LoneStar.Sprite;
 [GenerateTypedNameReferences]
 public sealed partial class ColorizerWindow : DefaultWindow
 {
+    private const int SwatchColumns = 12;
+    private const int SwatchHeight = 20;
+    private const int SwatchRowSpacing = 4;
+    private const int MinimumPreviewRows = 3;
+
     private readonly Dictionary<string, (string Name, Color Color)> _selectedColors = new();
-    private readonly List<string> _paletteOrder = new();
     private readonly List<(string Key, string Name, StyleBoxFlat Style)> _swatchStyles = new();
+    private readonly Dictionary<string, PanelContainer> _colorPreviews = new();
 
     public event Action<string, string>? OnColorSelected;
     public event Action<string, string>? OnVariantSelected;
@@ -33,9 +38,10 @@ public sealed partial class ColorizerWindow : DefaultWindow
     {
         CompositionPreview.SetEntity(state.Target);
         PaletteList.RemoveAllChildren();
+        VariantList.RemoveAllChildren();
         _selectedColors.Clear();
-        _paletteOrder.Clear();
         _swatchStyles.Clear();
+        _colorPreviews.Clear();
 
         foreach (var (layer, variants) in state.AvailableVariants)
         {
@@ -45,36 +51,34 @@ public sealed partial class ColorizerWindow : DefaultWindow
             var selector = new BoxContainer
             {
                 Orientation = BoxContainer.LayoutOrientation.Horizontal,
+                SetWidth = 184,
                 VerticalExpand = false,
             };
-            selector.AddChild(new Label
-            {
-                Text = layer,
-                MinWidth = 90,
-                VerticalAlignment = VAlignment.Center,
-            });
-
             var previousButton = new Button { Text = "<", MinSize = new Vector2(28, 24) };
-            var variantLabel = new Label
-            {
-                Text = selectedVariant,
-                HorizontalExpand = true,
-                VerticalAlignment = VAlignment.Center,
-                HorizontalAlignment = HAlignment.Center,
-            };
             var nextButton = new Button { Text = ">", MinSize = new Vector2(28, 24) };
             previousButton.OnPressed += _ => SelectVariant(layer, variants, selectedVariant, -1);
             nextButton.OnPressed += _ => SelectVariant(layer, variants, selectedVariant, 1);
             selector.AddChild(previousButton);
-            selector.AddChild(variantLabel);
+            selector.AddChild(new Label
+            {
+                Text = layer,
+                MinWidth = 90,
+                HorizontalExpand = true,
+                Align = Label.AlignMode.Center,
+                VerticalAlignment = VAlignment.Center,
+                HorizontalAlignment = HAlignment.Center,
+            });
             selector.AddChild(nextButton);
-            PaletteList.AddChild(selector);
+            VariantList.AddChild(selector);
         }
 
         foreach (var (key, colors) in state.Palettes)
         {
-            _paletteOrder.Add(key);
-            PaletteList.AddChild(new Label
+            var palette = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical,
+            };
+            palette.AddChild(new Label
             {
                 Text = key,
                 StyleClasses = { "LabelHeading" },
@@ -83,7 +87,8 @@ public sealed partial class ColorizerWindow : DefaultWindow
 
             var swatches = new GridContainer
             {
-                Columns = 12,
+                Columns = SwatchColumns,
+                VSeparationOverride = SwatchRowSpacing,
             };
 
             if (state.ActiveColorNames.TryGetValue(key, out var currentColorName) &&
@@ -98,6 +103,33 @@ public sealed partial class ColorizerWindow : DefaultWindow
                     _selectedColors[key] = (colorName, color);
                     break;
                 }
+            }
+
+            var colorRow = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Horizontal,
+            };
+
+            if (_selectedColors.TryGetValue(key, out var selected))
+            {
+                var rows = Math.Max(MinimumPreviewRows, (colors.Count + SwatchColumns - 1) / SwatchColumns);
+                var previewHeight = rows * SwatchHeight + (rows - 1) * SwatchRowSpacing;
+                var preview = new PanelContainer
+                {
+                    ToolTip = selected.Name,
+                    MinSize = new Vector2(32, previewHeight),
+                    SetSize = new Vector2(32, previewHeight),
+                    PanelOverride = new StyleBoxFlat(selected.Color),
+                };
+                _colorPreviews.Add(key, preview);
+                colorRow.AddChild(preview);
+                colorRow.AddChild(new PanelContainer
+                {
+                    StyleClasses = { "LowDivider" },
+                    MinSize = new Vector2(1, previewHeight),
+                    SetSize = new Vector2(1, previewHeight),
+                    Margin = new Thickness(3, 0),
+                });
             }
 
             foreach (var (colorName, color) in colors)
@@ -118,17 +150,18 @@ public sealed partial class ColorizerWindow : DefaultWindow
                 button.OnPressed += _ =>
                 {
                     _selectedColors[key] = (colorName, color);
-                    UpdateActiveColorPreview();
+                    UpdateColorPreview(key, colorName, color);
                     UpdateSelectedSwatchBorders();
                     OnColorSelected?.Invoke(key, colorName);
                 };
                 swatches.AddChild(button);
             }
 
-            PaletteList.AddChild(swatches);
+            colorRow.AddChild(swatches);
+            palette.AddChild(colorRow);
+            PaletteList.AddChild(palette);
         }
 
-        UpdateActiveColorPreview();
         UpdateSelectedSwatchBorders();
     }
 
@@ -152,23 +185,10 @@ public sealed partial class ColorizerWindow : DefaultWindow
         }
     }
 
-    private void UpdateActiveColorPreview()
+    private void UpdateColorPreview(string key, string colorName, Color color)
     {
-        ActiveColorPreview.RemoveAllChildren();
-
-        foreach (var key in _paletteOrder)
-        {
-            if (!_selectedColors.TryGetValue(key, out var selected))
-                continue;
-
-            ActiveColorPreview.AddChild(new PanelContainer
-            {
-                ToolTip = selected.Name,
-                HorizontalExpand = true,
-                VerticalExpand = true,
-                MinSize = new Vector2(1, 0),
-                PanelOverride = new StyleBoxFlat(selected.Color),
-            });
-        }
+        var preview = _colorPreviews[key];
+        preview.ToolTip = colorName;
+        preview.PanelOverride = new StyleBoxFlat(color);
     }
 }

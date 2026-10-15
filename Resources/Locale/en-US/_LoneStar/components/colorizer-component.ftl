@@ -9,7 +9,7 @@ colorizer-denyreroll = You cant colorize this.
 colorizer-denyreroll-restitch = You cant restitch this.
 
 ## Mapped color reroll window
-colorizer-window-title = Mapped colors
+colorizer-window-title = Colorizer Menu
 colorizer-window-randomize = Randomize All
 colorizer-active-color = Active color
 colorizer-color-preview = Color preview
