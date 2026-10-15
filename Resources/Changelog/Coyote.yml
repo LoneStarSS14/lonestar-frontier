@@ -4374,3 +4374,23 @@ Entries:
   id: 478
   time: '2026-10-13T04:07:34.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/251
+- author: Wolfhauler
+  changes:
+    - type: Tweak
+      message: Buff CE suit rad resistance and supermatter immunity
+    - type: Tweak
+      message: >-
+        Changed CE suit name to advanced engineering suit and changed
+        description to mention sm immunity
+    - type: Fix
+      message: used goobs ce helmet as a stop gap for no vulp helmet.
+  id: 479
+  time: '2026-10-14T16:03:31.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/243
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: Priestess Corset and Tabard jumpskirt
+  id: 480
+  time: '2026-10-14T17:02:29.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/254

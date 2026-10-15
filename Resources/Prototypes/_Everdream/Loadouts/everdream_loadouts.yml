@@ -1,0 +1,17 @@
+- type: loadout
+  id: LoadoutClothingPriestessCorsetAndTabard
+  price: 0
+  equipment:
+    jumpsuit: ClothingPriestessCorsetAndTabard
+
+- type: loadout
+  id: LoadoutClothingNeckChaplainCollar
+  price: 500
+  equipment:
+    neck: ClothingNeckChaplainCollar
+
+- type: loadout
+  id: LoadoutClothingNeckKeepsakeCollar
+  price: 500
+  equipment:
+    neck: ClothingNeckKeepsakeCollar
