@@ -25,10 +25,10 @@
   components:
   - type: Item # I gave them custom sprites so they don't need the color codes that I added later
     sprite: _DEN/Objects/Devices/pda.rsi
-    # heldPrefix: mantis
+    heldPrefix: mantis
   - type: Clothing
     sprite: _DEN/Objects/Devices/pda.rsi
-    # equippedPrefix: mantis
+    equippedPrefix: mantis
   - type: Sprite
     sprite: _DEN/Objects/Devices/pda.rsi
     layers:
