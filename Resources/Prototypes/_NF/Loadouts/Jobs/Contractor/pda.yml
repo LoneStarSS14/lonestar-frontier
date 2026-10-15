@@ -283,7 +283,7 @@
   equipment:
     id: MusicianPDA
 
-# Mantis Clothes Port from the Den
+# LoneStar - Mantis Clothes Port from the Den
 - type: loadout
   id: ContractorPsionicMantisPDA
   effects:
@@ -292,3 +292,4 @@
   price: 1500
   equipment:
     id: PsionicMantisPDA
+# LoneStar - Mantis Clothes Port from the Den end

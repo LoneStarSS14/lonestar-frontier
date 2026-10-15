@@ -32,9 +32,6 @@
   description: "An unusual, ornate headset with a chained nosering that functions as a microphone. It has a direct line to the Epistemics Cult."
   components:
   - type: Sprite
-    state: icon_alt
+    sprite: _DEN/Clothing/Ears/Headsets/mantisalt.rsi
   - type: Clothing
-    equippedPrefix: alt
-  - type: Tag
-    tags:
-    - WhitelistChameleon
+    sprite: _DEN/Clothing/Ears/Headsets/mantisalt.rsi

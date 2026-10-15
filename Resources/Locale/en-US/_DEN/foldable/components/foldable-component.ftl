@@ -5,3 +5,7 @@
 # Straps
 fold-straps-verb = Remove straps
 unfold-straps-verb = Reattach straps
+
+# Mantis Sleeves
+fold-rollsleeves-verb = Roll sleeves up
+fold-unrollsleeves-verb = Roll sleeves down

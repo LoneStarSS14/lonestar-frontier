@@ -1,0 +1,13 @@
+  # Mantis Clothes Port from the Den
+
+- type: loadoutGroup
+  id: PsionicMantisHeadsets
+  name: loadout-group-contractor-ears
+  minLimit: 0
+  loadouts:
+  - ContractorClothingHeadsetMantis
+  - ContractorClothingHeadsetAltMantis
+  subgroups:
+  - MercenaryEars
+  - PilotEars
+  - ContractorEars
