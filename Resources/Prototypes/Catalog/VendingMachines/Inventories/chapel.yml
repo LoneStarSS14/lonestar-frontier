@@ -3,6 +3,14 @@
   startingInventory:
     NFClothingBackpackDuffelChaplain: 2 # Frontier
     ClothingBackpackMessengerChaplain: 2 # Frontier
+    #Mantis Clothes Port
+    # Bags
+    ClothingBackpackMantis: 3
+    ClothingBackpackDuffelMantis: 3
+    ClothingBackpackSatchelMantis: 3
+    ClothingBackpackSatchelMantisPurse: 3
+    ClothingBackpackMessengerMantis: 3
+    # Bags End
     ClothingUniformJumpsuitChaplain: 3
     ClothingUniformJumpskirtChaplain: 3
     ClothingUniformFuneralSuit: 4 #imp
