@@ -93,6 +93,9 @@
 		},
 		{
 			"name": "mode-lethal"
+		},
+		{
+			"name": "mode-flare"
 		}
 	]
 }

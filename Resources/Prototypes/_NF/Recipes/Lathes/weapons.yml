@@ -81,6 +81,18 @@
     Glass: 200
     Plastic: 200
 
+# LoneStar below
+- type: latheRecipe
+  id: LSWeaponComboLaserPistol
+  result: LSWeaponComboLaserPistol
+  parent: BaseWeaponRecipeLong
+  materials:
+    Steel: 1200
+    Glass: 800
+    Silver: 850
+    Plastic: 200
+# LoneStar end
+
 # region Melee weapons
 - type: latheRecipe
   id: NFWeaponPka

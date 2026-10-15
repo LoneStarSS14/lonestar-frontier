@@ -133,6 +133,15 @@
   components:
   - type: Sprite
     sprite: _LoneStar/Objects/Weapons/Guns/Battery/combo_laser_pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mode-flare
+      map: ["Firemode"]
+      shader: unshaded
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
   - type: Clothing
     sprite: _LoneStar/Objects/Weapons/Guns/Battery/combo_laser_pistol.rsi
   - type: Item
@@ -149,8 +158,8 @@
       - state: inhand-right-unshaded
         shader: unshaded
   - type: ProjectileBatteryAmmoProvider
-    proto: NFBulletLaserLow
-    fireCost: 60
+    proto: HoloFlareCyan
+    fireCost: 260
   - type: EnergyGun
     fireModes:
     - proto: NFBulletDisabler
@@ -162,7 +171,7 @@
       name: kill
       state: lethal
     - proto: HoloFlareCyan
-      fireCost: 240
+      fireCost: 260
       name: flare
       state: flare
   - type: GenericVisualizer

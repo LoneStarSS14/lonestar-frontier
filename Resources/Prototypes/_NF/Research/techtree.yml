@@ -1633,6 +1633,7 @@
   tier: 1
   cost: 2500
   recipeUnlocks:
+  - LSWeaponComboLaserPistol # LoneStar
   - NFWeaponPka
   - WeaponCrusher
   - WeaponCrusherDagger
