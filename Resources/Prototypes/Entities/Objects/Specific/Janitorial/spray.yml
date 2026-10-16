@@ -38,7 +38,7 @@
     sprayVelocity: 2
     spraySound:
       path: /Audio/Effects/spray2.ogg
-  - type: TrashOnSolutionEmpty # LoneStar
+  - type: TrashOnSolutionEmpty
     solution: spray
   - type: ExaminableSolution
     solution: spray
