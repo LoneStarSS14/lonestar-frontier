@@ -26,8 +26,8 @@
     offset: 0.1
     table: !type:GroupSelector
       children:
-      - id: WeaponSprayNozzle
-        weight: 0.4
+      # - id: WeaponSprayNozzle # LoneStar
+      #   weight: 0.4
       - id: WeaponWaterBlasterSuper
         weight: 0.3
       - id: WeaponWaterBlaster
@@ -49,8 +49,14 @@
         weight: 0.3 # LoneStar
       - id: WeaponCaseLongC20r
         weight: 0.6 # LoneStar
-      - id: WeaponCaseLongAtreidesExpedition
-        weight: 0.1 # LoneStar
+      # LoneStar v
+      - !type:GroupSelector
+        weight: 0.1
+        children:
+        - id: WeaponCaseLongAtreidesExpedition
+          weight: 0.2
+        - id: WeaponCaseLongC19r
+          weight: 0.8
 
 # region pistol ammo
 - type: entityTable
@@ -148,7 +154,7 @@
           tableId: TableDungeonLootNpcSyndicateAmmoPistolUranium
 
 - type: entityTable
-  abstract: true
+  abstract: true # LoneStar
   id: TableDungeonLootNpcSyndicateAmmoPistolEmp
   table: !type:GroupSelector
     children:
@@ -160,7 +166,7 @@
       - id: NFAmmunitionBoxPistol45Emp
 
 - type: entity
-  abstract: true
+  abstract: true # LoneStar
   parent: MarkerBasePlaceFree
   id: SpawnDungeonLootNpcSyndicateAmmoPistolEmp
   categories: [ HideSpawnMenu ]
