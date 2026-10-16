@@ -277,9 +277,9 @@
       orGroup: Items
       amount: 2
       prob: 0.1
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.05
+    - id: LSSpawnLootSyndicateBlueprint # LoneStar
+      orGroup: Items
+      prob: 0.05
 
 # region Medic
 - type: entity
@@ -371,9 +371,9 @@
     - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.05
+    - id: LSSpawnLootSyndicateBlueprint # LoneStar
+      orGroup: Items
+      prob: 0.05
 
 # region Tier 3
 - type: entity
@@ -437,9 +437,9 @@
     - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.1
+    - id: LSSpawnLootSyndicateBlueprint # LoneStar
+      orGroup: Items
+      prob: 0.1
 
 # region Grenadier
 - type: entity
@@ -499,9 +499,9 @@
     - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.1
+    - id: LSSpawnLootSyndicateBlueprint # LoneStar
+      orGroup: Items
+      prob: 0.1
 
 # region Chemwarrior
 - type: entity
@@ -544,9 +544,9 @@
     - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.1
+    - id: LSSpawnLootSyndicateBlueprint # LoneStar
+      orGroup: Items
+      prob: 0.1
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -585,9 +585,9 @@
     - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
       prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.1
+    - id: LSSpawnLootSyndicateBlueprint # LoneStar
+      orGroup: Items
+      prob: 0.1
 
 # region Tier 4 (Boss)
 - type: entity
@@ -658,12 +658,12 @@
     - id: SpawnDungeonLootNpcBossLootShared
       orGroup: BossLoot
       prob: 0.2
-    # - id: SpawnDungeonLootNpcMercenariesBlueprints # LoneStar, no blueprints
-    #   orGroup: BossLoot
-    #   prob: 0.45
+    - id: LSSpawnLootSyndicateBlueprint # LoneStar
+      orGroup: BossLoot
+      prob: 0.45
     - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: BossLoot
       prob: 0.05
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: BossLoot
-    #   prob: 0.3
+    - id: LSSpawnLootSyndicateBlueprint # LoneStar
+      orGroup: BossLoot
+      prob: 0.3
