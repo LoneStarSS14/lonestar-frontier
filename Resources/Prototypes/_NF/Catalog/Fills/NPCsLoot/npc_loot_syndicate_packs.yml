@@ -667,3 +667,7 @@
     - id: LSSpawnLootSyndicateBlueprint # LoneStar
       orGroup: BossLoot
       prob: 0.3
+    # LoneStar v
+    - id: ClothingOuterHardsuitSyndieElite
+      orGroup: BossLoot
+      prob: 0.1

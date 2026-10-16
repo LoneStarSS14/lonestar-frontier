@@ -20,14 +20,14 @@
           children:
           - id: LSSpawnLootSiliconsBlueprintT4
         - !type:GroupSelector
-          weight: 19
+          weight: 24
           children:
           - !type:GroupSelector # Rare
             weight: 1
             children:
             - id: LSSpawnLootSiliconsBlueprintT3
           - !type:GroupSelector
-            weight: 14
+            weight: 12
             children:
             - !type:GroupSelector # Uncommon
               weight: 1
