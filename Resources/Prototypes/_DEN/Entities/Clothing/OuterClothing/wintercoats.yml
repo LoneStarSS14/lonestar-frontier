@@ -1,7 +1,7 @@
 # Mantis Clothes Port from the Den
 
 - type: entity
-  parent: [ClothingOuterBase, BaseFoldable]
+  parent: [ClothingOuterStorageBase, BaseFoldable]
   id: ClothingOuterWinterCoatMantisDark
   name: dark mantis coat
   description: "A grand, warm coat with a high collar. You can roll the sleeves up into the shoulders to show off your gloves."
@@ -36,7 +36,7 @@
     equippedPrefix: rolled
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: ClothingOuterWinterCoatMantisMu
   name: mantis mu-metal tabard
   description: "A warm tabard with an eye motif on its split collar. Mu-metal discs adorn the fabric, said to help the mantis regulate their powers, at least in theory."

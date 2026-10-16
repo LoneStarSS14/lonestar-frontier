@@ -1,7 +1,7 @@
 # Mantis Clothes Port from the Den
 
 - type: entity
-  parent: [ClothingOuterBase, BaseFoldable]
+  parent: [ClothingOuterStorageBase, BaseFoldable]
   id: ClothingOuterCoatMantisAiry
   name: airy mantis sash
   description: "A colorful sash with swinging tassles. You can wear it over either shoulder."
@@ -35,7 +35,7 @@
     equippedPrefix: flipped
 
 - type: entity
-  parent: [ClothingOuterBase, BaseFoldable]
+  parent: [ClothingOuterStorageBase, BaseFoldable]
   id: ClothingOuterCoatMantisOrnate
   name: ornate mantis waistplate
   description: "A reinforced wrap fitted with a heavy Greek psi, built to protect your middle. You can fold the top down further, if you like."
