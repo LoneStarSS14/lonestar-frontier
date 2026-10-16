@@ -25,21 +25,17 @@ public sealed partial class ColorableClothingComponent : Component
     [ViewVariables(VVAccess.ReadWrite), DataField("selected")]
     public Dictionary<string, (string State, Color? Color)> Selected = new();
 
-    // Frontier: mapped random colours
     /// <summary>
     /// Maps arbitrary strings to palettes.
     /// Keys can be used in <c>Available</c> to refer to a mapped colour in multiple layers.
     /// </summary>
     [DataField]
     public Dictionary<string, string> MappedColors = new();
-    // End Frontier
 
-    // LoneStar: ColorizerComponent support
     /// <summary>
     /// Should Colorizer be able to effect this?
     /// if false, this sprite may be rerolled. note randomsprite is used by things such as space carp.
     /// </summary>
     [DataField]
     public bool DenyReroll = true;
-    // End LoneStar
 }

@@ -1,7 +1,7 @@
 using Content.Client.Clothing;
 using Content.Shared._LoneStar.Sprite;
 using Content.Shared.Clothing.Components;
-using Content.Shared.Item; // Frontier
+using Content.Shared.Item;
 using Content.Shared.Sprite;
 using Robust.Client.GameObjects;
 using Robust.Shared.GameStates;
@@ -39,7 +39,7 @@ public sealed class ColorableClothingSystem : SharedColorableClothingSystem
 
         UpdateSpriteComponentAppearance(uid, component);
         UpdateClothingComponentAppearance(uid, component);
-        UpdateItemComponentAppearance(uid, component); // Frontier
+        UpdateItemComponentAppearance(uid, component);
     }
 
     private void UpdateClothingComponentAppearance(EntityUid uid, ColorableClothingComponent component, ClothingComponent? clothing = null)
@@ -73,17 +73,13 @@ public sealed class ColorableClothingSystem : SharedColorableClothingSystem
             else if (!_sprite.LayerMapTryGet((uid, sprite), layer.Key, out index, false))
             {
                 if (layer.Key is not { } strKey || !int.TryParse(strKey, out index))
-                {
-                    // Log.Error($"Invalid key `{layer.Key}` for entity with random sprite {ToPrettyString(uid)}"); // Frontier: spammy
                     continue;
-                }
             }
             _sprite.LayerSetRsiState((uid, sprite), index, layer.Value.State);
             _sprite.LayerSetColor((uid, sprite), index, layer.Value.Color ?? Color.White);
         }
     }
 
-    // Frontier: edit inhand visuals
     private void UpdateItemComponentAppearance(EntityUid uid, ColorableClothingComponent component, ItemComponent? sprite = null)
     {
         if (!Resolve(uid, ref sprite, false))
@@ -107,5 +103,4 @@ public sealed class ColorableClothingSystem : SharedColorableClothingSystem
             }
         }
     }
-    // End Frontier: edit inhand visuals
 }
