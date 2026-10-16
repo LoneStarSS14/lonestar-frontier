@@ -31,6 +31,10 @@
     delay: 0.5
   - type: ExplosionResistance
     damageCoefficient: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Backpack
   - type: AllowsSleepInside # Frontier
 
 - type: entity

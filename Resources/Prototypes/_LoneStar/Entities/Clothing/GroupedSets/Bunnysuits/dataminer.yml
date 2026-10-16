@@ -1,0 +1,44 @@
+#region clothes
+- type: entity
+  parent: BunnysuitBaseFoldable
+  id: BunnysuitDataminer
+  name: dataminer bunny suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/dataminer.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/dataminer.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsDataminer
+  name: dataminer bunny ears
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/dataminer.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/dataminer.rsi
+
+- type: entity
+  parent: BaseBowtieFoldable
+  id: BowtieDataminer
+  name: dataminer bowtie
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/dataminer.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/dataminer.rsi
+
+#region box
+- type: entity
+  parent: BunnysuitBox
+  id: BunnysuitBoxDataminer
+  name: dataminer bunnysuit box
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BunnysuitDataminer
+        - id: BowtieDataminer
+        - id: BunnyEarsDataminer

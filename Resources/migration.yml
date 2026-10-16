@@ -679,4 +679,8 @@ BarSignEmprahAlignTile: BarSignEmprah
 BarSignSpacebucksAlignTile: BarSignSpacebucks
 # BarSignMaltroachAlignTile: BarSignMaltroach # Frontier
 BarSignWhiskeyEchoesAlignTile: BarSignWhiskeyEchoes
+
+# 2025-06-21
+ClothingNeckHeadphones: ClothingMultipleHeadphones
+
 # Frontier: put Frontier-related migrations in nf_migration.yml. Thank you.

@@ -100,6 +100,7 @@
     ClothingNeckCollarBlack: 4294967295 # Floofstation - Collar addition
     ClothingNeckCollarPink: 4294967295 # Floofstation - Collar addition
     ClothingNeckSpikedCollar: 4294967295
+    ClothingNeckKeepsakeCollar: 4294967295
     ClothingOuterCyberJacket: 4294967295
     ClothingOuterCyberJacketPurple: 4294967295
     ClothingOuterCyberJacketYellow: 4294967295
@@ -252,6 +253,8 @@
     ClothingShoesHeelsBallet: 4294967295
     # Funky
     ClothingShoesHighheelBootsNanotrasen: 4294967295
+    # Everdream
+    ClothingPriestessCorsetAndTabard: 4294967295
   contrabandInventory:
     ClothingMaskNeckGaiter: 4294967295
     ClothingUniformJumpsuitTacticool: 4294967295

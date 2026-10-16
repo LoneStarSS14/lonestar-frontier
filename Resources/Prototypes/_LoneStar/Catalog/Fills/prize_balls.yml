@@ -41,6 +41,8 @@
       - id: ClothingMaskGasSyndicate
       - id: ClothingOuterCoatSyndieCapArmored
       - id: SyndicateJawsOfLife
+      - id: ClothingEyesHudSyndicateAgent
+      - id: ClothingEyesHudSyndicate
 
 - type: entity
   parent: MarkerBasePlaceFree

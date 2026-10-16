@@ -4313,3 +4313,116 @@ Entries:
   id: 471
   time: '2026-10-09T01:27:42.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/238
+- author: trashqueenlily
+  changes:
+    - type: Fix
+      message: >-
+        Uploaded a software patch to all cyborgs fixing a critical coordination
+        bug.
+  id: 472
+  time: '2026-10-10T01:48:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/231
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        Projectiles that can mine hard rocks can now also mine soft rocks
+        without the ore items getting destroyed
+  id: 473
+  time: '2026-10-10T01:48:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/234
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Carp destruction expeditions now properly count carp towards the spawner
+        limits.
+  id: 474
+  time: '2026-10-11T01:03:34.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/244
+- author: Synthestra
+  changes:
+    - type: Fix
+      message: Flipped windoors now rotate correctly when rotating your camera.
+    - type: Fix
+      message: South-facing windoors now display in the correct direction.
+  id: 475
+  time: '2026-10-12T01:31:45.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/249
+- author: archee1
+  changes:
+    - type: Add
+      message: a new Gorlex bunnysuit is buyable from the syndie drobe.
+    - type: Tweak
+      message: >-
+        Blood-red bunnysuits are now buyable from the syndie drobes hacked
+        inventory
+  id: 476
+  time: '2026-10-12T01:49:37.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/167
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Tweaked layering on the Australian Shepherd Tail
+  id: 477
+  time: '2026-10-12T11:58:46.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/252
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: Palm Trees
+  id: 478
+  time: '2026-10-13T04:07:34.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/251
+- author: Wolfhauler
+  changes:
+    - type: Tweak
+      message: Buff CE suit rad resistance and supermatter immunity
+    - type: Tweak
+      message: >-
+        Changed CE suit name to advanced engineering suit and changed
+        description to mention sm immunity
+    - type: Fix
+      message: used goobs ce helmet as a stop gap for no vulp helmet.
+  id: 479
+  time: '2026-10-14T16:03:31.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/243
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: Priestess Corset and Tabard jumpskirt
+  id: 480
+  time: '2026-10-14T17:02:29.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/254
+- author: tenmillimaster
+  changes:
+    - type: Add
+      message: >-
+        Cherrypicked shaker, teatime and piety lathe/uniform printer recipes
+        from upstream
+  id: 481
+  time: '2026-10-16T10:58:49.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/230
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Chemical barrels hitboxes now better match their visuals.
+  id: 482
+  time: '2026-10-16T19:41:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/265
+- author: seekssss
+  changes:
+    - type: Add
+      message: Added group lists for loadouts
+  id: 483
+  time: '2026-10-16T19:47:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/257
+- author: lexiwitch
+  changes:
+    - type: Tweak
+      message: >-
+        Sink bounties from inactive players to the bottom of the board. Now you
+        don't have to scroll through a dozen sleepy people's bounties!
+  id: 484
+  time: '2026-10-16T19:55:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/261

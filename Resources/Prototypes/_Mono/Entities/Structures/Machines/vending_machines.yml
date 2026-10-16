@@ -22,8 +22,8 @@
     initialStockQuality: 1
   - type: MarketModifier
     mod: 10
-  - type: Advertise
-    pack: BaristaAds
+  - type: DatasetVocalizer
+    dataset: BaristaAds
   - type: SpeakOnUIClosed
     pack: BaristaGoodbyes
   - type: Sprite
