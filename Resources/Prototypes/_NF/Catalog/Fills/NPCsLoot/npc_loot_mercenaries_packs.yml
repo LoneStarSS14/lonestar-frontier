@@ -459,9 +459,9 @@
     - id: SpawnDungeonLootNpcMercenariesFluff
       orGroup: Items
       prob: 0.15
-    - id: SpawnDungeonLootNpcMercenariesBlueprints
-      orGroup: Items
-      prob: 0.05
+    # - id: SpawnDungeonLootNpcMercenariesBlueprints # LoneStar, no blueprints
+    #   orGroup: Items
+    #   prob: 0.05
 
 - type: entity
   parent: NFBaseNpcLootBeltMercenary

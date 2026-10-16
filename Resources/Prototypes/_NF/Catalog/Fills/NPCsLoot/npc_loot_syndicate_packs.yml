@@ -658,9 +658,9 @@
     - id: SpawnDungeonLootNpcBossLootShared
       orGroup: BossLoot
       prob: 0.2
-    - id: SpawnDungeonLootNpcMercenariesBlueprints
-      orGroup: BossLoot
-      prob: 0.45
+    # - id: SpawnDungeonLootNpcMercenariesBlueprints # LoneStar, no blueprints
+    #   orGroup: BossLoot
+    #   prob: 0.45
     - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: BossLoot
       prob: 0.05
