@@ -426,7 +426,7 @@
     solution: injector
   - type: Spillable
     solution: injector
-  - type: TrashOnSolutionEmpty # LoneStar
+  - type: TrashOnSolutionEmpty
     solution: injector
   - type: Appearance
   - type: SolutionContainerVisuals
