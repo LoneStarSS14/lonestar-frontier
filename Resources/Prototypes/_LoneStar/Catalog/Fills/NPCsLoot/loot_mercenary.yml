@@ -93,11 +93,11 @@
     offset: 0.1
     table: !type:GroupSelector
       children:
-      - table: !type:GroupSelector
+      - !type:GroupSelector
         weight: 7
         children:
         - id: NFBlueprintPouchMercenary
-      - table: !type:GroupSelector
+      - !type:GroupSelector
         weight: 3
         children:
         - id: LSBlueprintMercenaryAmmunitionBoxPistol35Overpressure

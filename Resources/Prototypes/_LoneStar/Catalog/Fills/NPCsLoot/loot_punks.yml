@@ -90,12 +90,12 @@
     offset: 0.1
     table: !type:GroupSelector
       children:
-      - table: !type:GroupSelector
+      - !type:GroupSelector
         weight: 5
         children:
         - id: NFBlueprintWearablePunks
       - id: NFBlueprintPouchPunks
-      - table: !type:GroupSelector
+      - !type:GroupSelector
         weight: 2
         children:
         - id: LSBlueprintPunksAmmunitionBoxPistol35Overpressure
@@ -111,12 +111,12 @@
     offset: 0.1
     table: !type:GroupSelector
       children:
-      - table: !type:GroupSelector
+      - !type:GroupSelector
         weight: 1
         children:
         - id: NFBlueprintClothesPunks
         - id: NFBlueprintArmorPunks
-      - table: !type:GroupSelector
+      - !type:GroupSelector
         weight: 2
         children:
         - id: LSBlueprintPunksAmmunitionBoxPistol35
@@ -149,13 +149,3 @@
       - id: LSBlueprintPunksAmmunitionBoxBigPistol35Practice
       - id: LSBlueprintPunksAmmunitionBoxBigPistol40Practice
       - id: LSBlueprintPunksAmmunitionBoxBigShotgunPractice
-
-
-
-
-
-
-
-
-
-
