@@ -98,6 +98,44 @@
   materials:
     Steel: 5850 # box - free, 260 [bullets] * 22.5 [Steel per bullet]
 
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol35Practice
+  result: NFAmmunitionBoxBigPistol35Practice
+  materials:
+    Steel: 2080 # box - free, 260 [bullets] * 8 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol35Incendiary
+  result: NFAmmunitionBoxBigPistol35Incendiary
+  materials:
+    Plastic: 3900 # box - free, 260 [bullets] * 15 [Plastic per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol35Uranium
+  result: NFAmmunitionBoxBigPistol35Uranium
+  materials:
+    Plastic: 1950 # box - free, 260 [bullets] * 7.5 [Plastic per bullet]
+    Uranium: 1950 # box - free, 260 [bullets] * 7.5 [Uranium per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol35Rubber
+  result: NFAmmunitionBoxBigPistol35Rubber
+  materials:
+    Plastic: 1950 # box - free, 260 [bullets] * 7.5 [Plastic per bullet]
+    Steel: 1950 # box - free, 260 [bullets] * 7.5 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol35Emp
+  result: NFAmmunitionBoxBigPistol35Emp
+  materials:
+    Plasma: 2600 # box - free, 260 [bullets] * 10 [Plasma per bullet]
+    Silver: 1300 # box - free, 260 [bullets] * 5 [Silver per bullet]
+
 #region .40 Ammo Box (Coyote)
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -165,6 +203,46 @@
   materials:
     Steel: 5400 # box - free, 240 [bullets] * 22.5 [Steel per bullet]
 
+# LoneStar start
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: CSAmmunitionBoxBigPistol40Practice
+  result: CSAmmunitionBoxBigPistol40Practice
+  materials:
+    Steel: 1920 # box - free, 240 [bullets] * 8 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: CSAmmunitionBoxBigPistol40Incendiary
+  result: CSAmmunitionBoxBigPistol40Incendiary
+  materials:
+    Plastic: 3600 # box - free, 240 [bullets] * 15 [Plastic per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: CSAmmunitionBoxBigPistol40Uranium
+  result: CSAmmunitionBoxBigPistol40Uranium
+  materials:
+    Plastic: 1800 # box - free, 240 [bullets] * 7.5 [Plastic per bullet]
+    Uranium: 1800 # box - free, 240 [bullets] * 7.5 [Uranium per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: CSAmmunitionBoxBigPistol40Rubber
+  result: CSAmmunitionBoxBigPistol40Rubber
+  materials:
+    Plastic: 1800 # box - free, 240 [bullets] * 7.5 [Plastic per bullet]
+    Steel: 1800 # box - free, 240 [bullets] * 7.5 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: CSAmmunitionBoxBigPistol40Emp
+  result: CSAmmunitionBoxBigPistol40Emp
+  materials:
+    Plasma: 2400 # box - free, 240 [bullets] * 10 [Plasma per bullet]
+    Silver: 1200 # box - free, 240 [bullets] * 5 [Silver per bullet]
+# LoneStar end
+
 #region .45 Ammo Box
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -215,8 +293,8 @@
   id: NFAmmunitionBoxPistol45Emp
   result: NFAmmunitionBoxPistol45Emp
   materials:
-    Plasma: 800 # box - free, 80 [bullets] * 10 [Plasma per bullet]
-    Silver: 400 # box - free, 80 [bullets] * 5 [Silver per bullet]
+    Plasma: 600 # box - free, 60 [bullets] * 10 [Plasma per bullet] # LoneStar, corrected
+    Silver: 300 # box - free, 60 [bullets] * 5 [Silver per bullet] # LoneStar, corrected
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -231,6 +309,46 @@
   result: NFAmmunitionBoxBigPistol45Overpressure
   materials:
     Steel: 4500 # box - free, 200 [bullets] * 22.5 [Steel per bullet]
+
+# LoneStar start
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol45Practice
+  result: NFAmmunitionBoxBigPistol45Practice
+  materials:
+    Steel: 1600 # box - free, 200 [bullets] * 8 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol45Incendiary
+  result: NFAmmunitionBoxBigPistol45Incendiary
+  materials:
+    Plastic: 3000 # box - free, 200 [bullets] * 15 [Plastic per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol45Uranium
+  result: NFAmmunitionBoxBigPistol45Uranium
+  materials:
+    Plastic: 1500 # box - free, 200 [bullets] * 7.5 [Plastic per bullet]
+    Uranium: 1500 # box - free, 200 [bullets] * 7.5 [Uranium per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol45Rubber
+  result: NFAmmunitionBoxBigPistol45Rubber
+  materials:
+    Plastic: 1500 # box - free, 200 [bullets] * 7.5 [Plastic per bullet]
+    Steel: 1500 # box - free, 200 [bullets] * 7.5 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigPistol45Emp
+  result: NFAmmunitionBoxBigPistol45Emp
+  materials:
+    Plasma: 2000 # box - free, 200 [bullets] * 10 [Plasma per bullet]
+    Silver: 1000 # box - free, 200 [bullets] * 5 [Silver per bullet]
+# LoneStar end
 
 #region .20 Ammo Box
 - type: latheRecipe
@@ -459,8 +577,8 @@
   id: NFAmmunitionBoxShellShotgunBeanbag
   result: NFAmmunitionBoxShellShotgunBeanbag
   materials:
-    Steel: 200 # box - free, 20 [bullets] * 20 [Steel per bullet]
-    Plastic: 200 # box - free, 20 [bullets] * 20 [Plastic per bullet]
+    Steel: 200 # box - free, 20 [bullets] * 10 [Steel per bullet] # LoneStar, corrected
+    Plastic: 200 # box - free, 20 [bullets] * 10 [Plastic per bullet] # LoneStar, corrected
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -494,6 +612,45 @@
   result: NFAmmunitionBoxBigShellShotgunOverpressure
   materials:
     Steel: 1800 # box - free, 60 [bullets] * 30 [Steel per bullet]
+
+# LoneStar start
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigShellShotgunIncendiary
+  result: NFAmmunitionBoxBigShellShotgunIncendiary
+  materials:
+    Plastic: 1200 # box - free, 60 [bullets] * 20 [Plastic per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigShellShotgunPractice
+  result: NFAmmunitionBoxBigShellShotgunPractice
+  materials:
+    Steel: 780 # box - free, 60 [bullets] * 13 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigShellShotgunUranium
+  result: NFAmmunitionBoxBigShellShotgunUranium
+  materials:
+    Plastic: 750 # box - free, 60 [bullets] * 12.5 [Plastic per bullet]
+    Uranium: 750 # box - free, 60 [bullets] * 12.5 [Uranium per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigShellShotgunSlug
+  result: NFAmmunitionBoxBigShellShotgunSlug
+  materials:
+    Steel: 1200 # box - free, 60 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxBigShellShotgunBeanbag
+  result: NFAmmunitionBoxBigShellShotgunBeanbag
+  materials:
+    Steel: 600 # box - free, 60 [bullets] * 10 [Steel per bullet] # LoneStar, corrected
+    Plastic: 600 # box - free, 60 [bullets] * 10 [Plastic per bullet] # LoneStar, corrected
+# LoneStar end
 
 #region .60 Ammo Box
 - type: latheRecipe
