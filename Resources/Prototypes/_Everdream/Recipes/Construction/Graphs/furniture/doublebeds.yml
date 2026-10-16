@@ -719,10 +719,10 @@
           steps:
             - material: Steel
               amount: 3
-              doAfter: 1
+              doAfter: 2
             - material: Cloth
               amount: 3
-              doAfter: 1
+              doAfter: 2
 
 # Finished Base Bed. Deconstructing requires screwdriver.
     - node: DoubleBedRight
@@ -738,7 +738,7 @@
               amount: 3
           steps:
             - tool: Screwing
-              doAfter: 1
+              doAfter: 2
 # Transformative Constructions
         - to: DoubleBedRightBlack
           steps:
