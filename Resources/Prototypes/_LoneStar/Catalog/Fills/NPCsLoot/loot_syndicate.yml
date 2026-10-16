@@ -1,0 +1,194 @@
+# region ammo blueprints
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateBlueprint
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector # Legendary
+        weight: 1
+        children:
+        - id: LSSpawnLootSyndicateBlueprintT5
+      - !type:GroupSelector
+        weight: 49
+        children:
+        - !type:GroupSelector # Epic
+          weight: 1
+          children:
+          - id: LSSpawnLootSyndicateBlueprintT4
+        - !type:GroupSelector
+          weight: 19
+          children:
+          - !type:GroupSelector # Rare
+            weight: 1
+            children:
+            - id: LSSpawnLootSyndicateBlueprintT3
+          - !type:GroupSelector
+            weight: 9
+            children:
+            - !type:GroupSelector # Uncommon
+              weight: 1
+              children:
+              - id: LSSpawnLootSyndicateBlueprintT2
+            - !type:GroupSelector
+              weight: 3
+              children:
+              - !type:GroupSelector # Common
+                weight: 4
+                children:
+                - id: LSSpawnLootSyndicateBlueprintT1
+              - !type:GroupSelector # Trash
+                weight: 1
+                children:
+                - id: LSSpawnLootSyndicateBlueprintT0
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateBlueprintT5
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol35Uranium
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol40Uranium
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle20Uranium
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle30Uranium
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Uranium
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Uranium
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Uranium
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Uranium
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateBlueprintT4
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol45Uranium
+      - id: LSBlueprintSyndicateAmmunitionBoxShotgunUranium
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol35Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol40Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle20Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle30Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Uranium
+      - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunUranium
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Incendiary
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateBlueprintT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol45Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle20Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle30Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxShotgunIncendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle20Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle30Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Incendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunIncendiary
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Overpressure
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateBlueprintT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol35Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol40Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol45Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle20Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle30Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxShotgunOverpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxShotgunSlug
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunOverpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunSlug
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateBlueprintT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol45Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxShotgunOverpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol35
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol40
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol45
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle20
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle30
+      - id: LSBlueprintSyndicateAmmunitionBoxShotgunBuckshot
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol35Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol40Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxShotgunBeanbag
+      - id: LSBlueprintSyndicateAmmunitionBoxShotgunSlug
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Overpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunOverpressure
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol35
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol40
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol45
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle20
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30
+      - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunBuckshot
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunBeanbag
+      - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunSlug
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateBlueprintT0
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol45Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle20Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle30Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol35Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol40Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxPistol45Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle20Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxRifle30Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxShotgunPractice
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Rubber
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Practice
+      - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunPractice

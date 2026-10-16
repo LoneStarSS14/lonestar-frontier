@@ -1,0 +1,1160 @@
+#region AMMO Standard
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol35
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk .35 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of ammunition (.35 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol35
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol40
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk .40 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of ammunition (.40 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - CSAmmunitionBoxBigPistol40
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol45
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk .45 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of ammunition (.45 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol45
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle20
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk .20 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of ammunition (.20 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle20
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle30
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk .30 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of ammunition (.30 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle30
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBuckshot
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk shells box)
+  description: A blueprint with a schematic for a bulk box of buckshot shells (.50 buckshot), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigShellShotgunBuckshot
+
+#region AMMO Practice
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Practice
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk practice .35 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of practice ammunition (.35 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol35Practice
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Practice
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk practice .40 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of practice ammunition (.40 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - CSAmmunitionBoxBigPistol40Practice
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Practice
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk practice .45 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of practice ammunition (.45 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol45Practice
+
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Practice
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk practice .20 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of practice ammunition (.20 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle20Practice
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Practice
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk practice .30 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of practice ammunition (.30 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle30Practice
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigShotgunPractice
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk practice shells box)
+  description: A blueprint with a schematic for a bulk box of practice shells (.50 practice), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigShellShotgunPractice
+
+#region AMMO Rubber
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Rubber
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk rubber .35 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of rubber ammunition (.35 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol35Rubber
+    
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Rubber
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk rubber .40 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of rubber ammunition (.40 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - CSAmmunitionBoxBigPistol40Rubber
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Rubber
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk rubber .45 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of rubber ammunition (.45 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol45Rubber
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Rubber
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk rubber .20 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of rubber ammunition (.20 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle20Rubber
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Rubber
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk rubber .30 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of rubber ammunition (.30 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle30Rubber
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBeanbag
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk beanbag shells box)
+  description: A blueprint with a schematic for a bulk box of beanbag shells (.50 beanbag), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigShellShotgunBeanbag
+
+#region AMMO Overpressure
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Overpressure
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk overpressure .35 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of overpressure ammunition (.35 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol35Overpressure
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Overpressure
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk overpressure .40 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of overpressure ammunition (.40 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - CSAmmunitionBoxBigPistol40Overpressure
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Overpressure
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk overpressure .45 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of overpressure ammunition (.45 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol45Overpressure
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Overpressure
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk overpressure .20 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of overpressure ammunition (.20 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle20Overpressure
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Overpressure
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk overpressure .30 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of overpressure ammunition (.30 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle30Overpressure
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigShotgunOverpressure
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk overpressure shells box)
+  description: A blueprint with a schematic for a bulk box of overpressure shells (.50 overpressure), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigShellShotgunOverpressure
+
+
+#region AMMO Incendiary
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Incendiary
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk incendiary .35 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of incendiary ammunition (.35 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol35Incendiary
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Incendiary
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk incendiary .40 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of incendiary ammunition (.40 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - CSAmmunitionBoxBigPistol40Incendiary
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Incendiary
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk incendiary .45 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of incendiary ammunition (.45 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol45Incendiary
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Incendiary
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk incendiary .20 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of incendiary ammunition (.20 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle20Incendiary
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Incendiary
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk incendiary .30 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of incendiary ammunition (.30 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle30Incendiary
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigShotgunIncendiary
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk incendiary shells box)
+  description: A blueprint with a schematic for a bulk box of incendiary shells (.50 incendiary), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigShellShotgunIncendiary
+
+#region AMMO Uranium
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Uranium
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk uranium .35 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of uranium ammunition (.35 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol35Uranium
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Uranium
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk uranium .40 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of uranium ammunition (.40 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - CSAmmunitionBoxBigPistol40Uranium
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Uranium
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk uranium .45 pistol ammunition box)
+  description: A blueprint with a schematic for a bulk box of uranium ammunition (.45 pistol), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigPistol45Uranium
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Uranium
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk uranium .20 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of uranium ammunition (.20 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle20Uranium
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Uranium
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk uranium .30 rifle ammunition box)
+  description: A blueprint with a schematic for a bulk box of uranium ammunition (.30 rifle), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigRifle30Uranium
+
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigShotgunUranium
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk uranium shells box)
+  description: A blueprint with a schematic for a bulk box of uranium shells (.50 uranium), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigShellShotgunUranium
+
+#region AMMO Other
+- type: entity
+  abstract: true
+  id: LSBaseBlueprintRecipeAmmunitionBoxBigShotgunSlug
+  categories: [ HideSpawnMenu ]
+  name: blueprint (bulk slug shells box)
+  description: A blueprint with a schematic for a bulk box of slug shells (.50 slug), it can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - NFAmmunitionBoxBigShellShotgunSlug
+
+#region Faction Blueprints
+#region Explorers
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol35
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol40
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol45
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle20
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle30
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigShotgunBuckshot
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBuckshot, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol35Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Practice, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol40Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Practice, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol45Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Practice, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle20Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Practice, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle30Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Practice, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigShotgunPractice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunPractice, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol35Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Rubber, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol40Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Rubber, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol45Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Rubber, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle20Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Rubber, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle30Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Rubber, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigShotgunBeanbag
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBeanbag, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol35Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Overpressure, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol40Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Overpressure, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol45Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Overpressure, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle20Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Overpressure, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle30Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Overpressure, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigShotgunOverpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunOverpressure, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol35Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Incendiary, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol40Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Incendiary, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol45Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Incendiary, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle20Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Incendiary, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle30Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Incendiary, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigShotgunIncendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunIncendiary, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol35Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Uranium, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol40Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Uranium, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigPistol45Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Uranium, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle20Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Uranium, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigRifle30Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Uranium, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigShotgunUranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunUranium, NFBaseBlueprintExpeditionSalvage ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSalvageAmmunitionBoxBigShotgunSlug
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunSlug, NFBaseBlueprintExpeditionSalvage ]
+
+#region Punks
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol35
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol40
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol45
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle20
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle30
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigShotgunBuckshot
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBuckshot, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol35Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Practice, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol40Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Practice, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol45Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Practice, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle20Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Practice, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle30Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Practice, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigShotgunPractice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunPractice, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol35Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Rubber, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol40Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Rubber, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol45Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Rubber, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle20Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Rubber, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle30Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Rubber, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigShotgunBeanbag
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBeanbag, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol35Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Overpressure, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol40Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Overpressure, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol45Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Overpressure, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle20Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Overpressure, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle30Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Overpressure, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigShotgunOverpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunOverpressure, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol35Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Incendiary, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol40Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Incendiary, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol45Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Incendiary, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle20Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Incendiary, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle30Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Incendiary, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigShotgunIncendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunIncendiary, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol35Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Uranium, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol40Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Uranium, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigPistol45Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Uranium, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle20Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Uranium, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigRifle30Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Uranium, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigShotgunUranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunUranium, NFBaseBlueprintExpeditionPunk ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintPunkAmmunitionBoxBigShotgunSlug
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunSlug, NFBaseBlueprintExpeditionPunk ]
+
+#region Mercenaries
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol35
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol40
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol45
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle20
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle30
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigShotgunBuckshot
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBuckshot, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Practice, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol40Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Practice, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Practice, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Practice, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Practice, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigShotgunPractice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunPractice, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Rubber, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol40Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Rubber, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Rubber, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Rubber, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Rubber, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigShotgunBeanbag
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBeanbag, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Overpressure, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol40Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Overpressure, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Overpressure, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Overpressure, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Overpressure, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigShotgunOverpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunOverpressure, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Incendiary, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol40Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Incendiary, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Incendiary, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Incendiary, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Incendiary, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigShotgunIncendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunIncendiary, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Uranium, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol40Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Uranium, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Uranium, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Uranium, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Uranium, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigShotgunUranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunUranium, NFBaseBlueprintExpeditionMercenary ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintMercenaryAmmunitionBoxBigShotgunSlug
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunSlug, NFBaseBlueprintExpeditionMercenary ]
+
+#region Syndicate
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol35
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol40
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol45
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle20
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle30
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigShotgunBuckshot
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBuckshot, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Practice, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Practice, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Practice, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Practice, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Practice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Practice, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigShotgunPractice
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunPractice, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Rubber, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Rubber, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Rubber, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Rubber, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Rubber
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Rubber, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigShotgunBeanbag
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBeanbag, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Overpressure, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Overpressure, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Overpressure, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Overpressure, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Overpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Overpressure, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigShotgunOverpressure
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunOverpressure, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Incendiary, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Incendiary, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Incendiary, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Incendiary, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Incendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Incendiary, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigShotgunIncendiary
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunIncendiary, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol35Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Uranium, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol40Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Uranium, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigPistol45Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Uranium, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Uranium, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Uranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Uranium, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigShotgunUranium
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunUranium, NFBaseBlueprintExpeditionSyndicate ]
+
+- type: entity
+  categories: [ HideSpawnMenu]
+  id: LSBlueprintSyndicateAmmunitionBoxBigShotgunSlug
+  parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunSlug, NFBaseBlueprintExpeditionSyndicate ]
