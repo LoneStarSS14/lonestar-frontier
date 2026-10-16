@@ -1,0 +1,11 @@
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: LSSyndicateJawsOfLife
+  result: SyndicateJawsOfLife
+  completetime: 6
+  materials:
+    Steel: 3000
+    Glass: 900
+    Plasma: 600
+    Uranium: 150
+    Gold: 100

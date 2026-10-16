@@ -1,0 +1,132 @@
+# region ammo blueprints
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSiliconsBlueprint
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector # Legendary
+        weight: 1
+        children:
+        - id: LSSpawnLootSiliconsBlueprintT5
+      - !type:GroupSelector
+        weight: 299
+        children:
+        - !type:GroupSelector # Epic
+          weight: 1
+          children:
+          - id: LSSpawnLootSiliconsBlueprintT4
+        - !type:GroupSelector
+          weight: 19
+          children:
+          - !type:GroupSelector # Rare
+            weight: 1
+            children:
+            - id: LSSpawnLootSiliconsBlueprintT3
+          - !type:GroupSelector
+            weight: 9
+            children:
+            - !type:GroupSelector # Uncommon
+              weight: 1
+              children:
+              - id: LSSpawnLootSiliconsBlueprintT2
+            - !type:GroupSelector
+              weight: 3
+              children:
+              - !type:GroupSelector # Common
+                weight: 4
+                children:
+                - id: LSSpawnLootSiliconsBlueprintT1
+              - !type:GroupSelector # Trash
+                weight: 1
+                children:
+                - id: LSSpawnLootSiliconsBlueprintT0
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSiliconsBlueprintT5
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: NFBlueprintRogueSiliconBluespaceCapacitor
+      - id: NFBlueprintRogueSiliconBluespaceMatterBin
+      - id: NFBlueprintRogueSiliconBluespaceManipulator
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSiliconsBlueprintT4
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: NFBlueprintRogueSiliconPowerCellHyper
+      - id: NFBlueprintRogueSiliconBluespaceBags
+      - id: LSBlueprintRogueSiliconSyndicateJawsOfLife
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSiliconsBlueprintT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: NFBlueprintRogueSiliconAdvancedTools
+      - id: NFBlueprintOreBagOfHolding
+      - id: NFBlueprintConstructionBagOfHolding
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSiliconsBlueprintT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: NFBlueprintRogueSiliconSuperCapacitor
+      - id: NFBlueprintRogueSiliconSuperMatterBin
+      - id: NFBlueprintRogueSiliconSuperManipulator
+      - id: NFBlueprintRogueSiliconShipyardRCD
+      - id: NFBlueprintRogueSiliconPowerCellMicroreactor
+      - id: NFBlueprintRogueSiliconHonker
+      - id: LSBlueprintRogueSiliconJawsOfLife
+      - id: LSBlueprintRogueSiliconWelderExperimental
+      - id: LSBlueprintRogueSiliconPowerDrill
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSiliconsBlueprintT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: NFBlueprintRogueSiliconPowerCellHigh
+      - id: NFBlueprintRogueSiliconRPED
+      - id: NFBlueprintRogueSiliconRipley
+      - id: NFBlueprintRogueSiliconMechEquipmentFork
+      - id: NFBlueprintRogueSiliconMechEquipmentGrabber
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSiliconsBlueprintT0
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: NFBlueprintRogueSiliconAdvancedCapacitor
+      - id: NFBlueprintRogueSiliconAdvancedMatterBin
+      - id: NFBlueprintRogueSiliconAdvancedManipulator
