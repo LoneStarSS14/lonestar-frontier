@@ -1,7 +1,7 @@
 # Mantis Clothes Port from the Den
 
 - type: entity
-  parent: [ClothingBeltBase, BaseFoldable]
+  parent: [ClothingBeltStorageBase, BaseFoldable]
   id: ClothingBeltMantisAiry
   name: airy mantis belt
   description: "A finely-woven rope belt with loops to carry mantis equipment. The loose end can be tucked in, if you prefer clean lines. It has sheaths for certain weapons."
@@ -24,7 +24,7 @@
     foldedEquippedPrefix: folded
 
 - type: entity
-  parent: [ClothingBeltBase, BaseFoldable]
+  parent: [ClothingBeltStorageBase, BaseFoldable]
   id: ClothingBeltMantisDark
   name: dark mantis belt
   description: "A structured, layered sash designed to carry mantis equipment. The loose end can be tucked in, if you prefer clean lines. It has sheaths for certain weapons."
@@ -47,7 +47,7 @@
     foldedEquippedPrefix: folded
 
 - type: entity
-  parent: ClothingBeltBase
+  parent: ClothingBeltStorageBase
   id: ClothingBeltMantisOrnate
   name: ornate mantis belt
   description: "A thick band fastened by an electrum chain, with inner pockets designed to carry mantis equipment. It has sheaths for certain weapons."
