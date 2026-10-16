@@ -27,7 +27,7 @@
             children:
             - id: LSSpawnLootSiliconsBlueprintT3
           - !type:GroupSelector
-            weight: 9
+            weight: 14
             children:
             - !type:GroupSelector # Uncommon
               weight: 1
