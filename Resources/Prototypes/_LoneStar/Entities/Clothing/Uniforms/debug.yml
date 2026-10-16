@@ -1,0 +1,122 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: DebugUniformRandomSpriteTest
+  abstract: true
+  name: debug bodysuit
+  suffix: Debug
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SuitSensor
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/random-bodysuit.rsi
+    layers:
+    - state: torso_plain
+      map: [ "base" ]
+    - state: legs_plain
+      map: [ "leg" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/random-bodysuit.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: torso_plain
+        map: [ "base" ]
+      - state: legs_plain
+        map: [ "leg" ]
+
+- type: entity
+  parent: DebugUniformRandomSpriteTest
+  id: DebugUniformA
+  name: 2mapped, unused
+  suffix: Random
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+        Col1: NTInteriorDesign
+        Col2: LSSilks
+    available:
+      - base:
+          torso_plain: NTInteriorDesign
+        leg:
+          legs_plain: NTInteriorDesign
+          
+- type: entity
+  parent: DebugUniformRandomSpriteTest
+  id: DebugUniformB
+  name: 2 mapped, unused, null and variant each
+  suffix: Random
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+        Col1: NTInteriorDesign
+        Col2: LSSilks
+    available:
+      - base:
+          decor_suspenders: ""
+          torso_plain: NTInteriorDesign
+        leg:
+          legs_pvc: ""
+          legs_plain: NTInteriorDesign
+          
+- type: entity
+  parent: DebugUniformRandomSpriteTest
+  id: DebugUniformC
+  name: 2 mapped, 1 shared use
+  suffix: Random
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+        Col1: NTInteriorDesign
+        Col2: LSSilks
+    available:
+      - base:
+          decor_suspenders: ""
+          torso_plain: Col1
+        leg:
+          legs_pvc: ""
+          legs_plain: Col1
+
+- type: entity
+  parent: DebugUniformRandomSpriteTest
+  id: DebugUniformD
+  name: 2 mapped, shared use
+  suffix: Random
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+        Col1: NTInteriorDesign
+        Col2: LSSilks
+    available:
+      - base:
+          decor_suspenders: Col1
+          torso_plain: Col2
+        leg:
+          legs_pvc: Col1
+          legs_plain: Col2
+
+- type: entity
+  parent: DebugUniformRandomSpriteTest
+  id: DebugUniformE
+  name: 2 mapped, seperate use
+  suffix: Random
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+        Col1: NTInteriorDesign
+        Col2: LSSilks
+    available:
+      - base:
+          decor_suspenders: Col2
+          torso_plain: Col2
+        leg:
+          legs_pvc: Col1
+          legs_plain: Col1

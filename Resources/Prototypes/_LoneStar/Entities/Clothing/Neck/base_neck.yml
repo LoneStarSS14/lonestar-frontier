@@ -24,7 +24,7 @@
       neck:
       - state: equipped-NECK
         map: [ "neck-equipped" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     available:
       - neck-icon:

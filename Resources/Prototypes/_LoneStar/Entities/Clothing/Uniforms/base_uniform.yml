@@ -12,7 +12,7 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         map: [ "uniform-equipped" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     available:
       - uniform-icon:
@@ -42,7 +42,7 @@
       - state: equipped-INNERCLOTHING
       - state: equipped-INNERCLOTHING-color
         map: [ "uniform-equipped" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     available:
       - uniform-icon:

@@ -10,10 +10,19 @@
   - type: Item
     sprite: _LoneStar/Objects/Tools/magic-needle.rsi
     size: Tiny
-  - type: RandomSpriteReroll
+  - type: Colorizer
     denyRerollMessage: randomsprite-reroll-denyreroll-restitch
     rerollSound:
       path: /Audio/Items/wirecutter.ogg
       params:
         variation: 0.175
         volume: -4
+  - type: UserInterface
+    interfaces:
+      enum.ColorizerUiKey.Key:
+        type: ColorizerBoundUserInterface
+  - type: ActivatableUI
+    key: enum.ColorizerUiKey.Key
+    inHandsOnly: true
+    requireActiveHand: true
+    verbOnly: true

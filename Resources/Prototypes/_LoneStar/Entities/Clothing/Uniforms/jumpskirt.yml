@@ -39,30 +39,30 @@
         map: [ "accent" ]
       - state: equipped-INNERCLOTHING-extra
         map: [ "extra" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
-        base: NTInteriorDesign
-        decor: NTInteriorDesign
-        accent: NTInteriorDesign
-        extra: TechniColors
+        Silks: LSSilks
+        Primary: NTInteriorDesign
+        Secondary: NTInteriorDesign
+        Gems: TechniColors
     available:
       - base:
-          equipped-INNERCLOTHING-base: base
+          equipped-INNERCLOTHING-base: Primary
         decor:
-          equipped-INNERCLOTHING-decor: decor
+          equipped-INNERCLOTHING-decor: Secondary
         accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Silks
         extra:
-          equipped-INNERCLOTHING-extra: extra
+          equipped-INNERCLOTHING-extra: Gems
         icon-base:
-          icon-base: base
+          icon-base: Primary
         icon-decor:
-          icon-decor: decor
+          icon-decor: Secondary
         icon-accent:
-          icon-accent: accent
+          icon-accent: Silks
         icon-extra:
-          icon-extra: extra
+          icon-extra: Gems
 
 - type: entity
   parent: ClothingUniformJumpskirtTailoredGownColorable
@@ -93,29 +93,29 @@
         map: [ "accent" ]
       - state: equipped-INNERCLOTHING-extra
         map: [ "extra" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
-        base: NTInteriorDesign
-        accent: NTInteriorDesign
-        extra: TechniColors
+        Silks: LSSilks
+        Primary: NTInteriorDesign
+        Gems: TechniColors
     available:
       - base:
-          equipped-INNERCLOTHING-base: base
+          equipped-INNERCLOTHING-base: Primary
         decor:
-          equipped-INNERCLOTHING-decor: base
+          equipped-INNERCLOTHING-decor: Primary
         accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Silks
         extra:
-          equipped-INNERCLOTHING-extra: extra
+          equipped-INNERCLOTHING-extra: Gems
         icon-base:
-          icon-base: base
+          icon-base: Primary
         icon-decor:
-          icon-decor: base
+          icon-decor: Primary
         icon-accent:
-          icon-accent: accent
+          icon-accent: Silks
         icon-extra:
-          icon-extra: extra
+          icon-extra: Gems
 
 - type: entity
   parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteMono ]
@@ -138,7 +138,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: Rainbow
 
@@ -152,7 +152,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
@@ -166,7 +166,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
@@ -180,7 +180,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
@@ -509,7 +509,7 @@
         - state: inhand-right
         - state: inhand-right-detail
           map: [ "hr-detail" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
       detail: NTInteriorDesign
