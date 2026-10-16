@@ -65,8 +65,8 @@
     offset: 0.1
     table: !type:GroupSelector
       children:
-      - id: NFBlueprintWeaponsMeleePunks
-      - id: NFBlueprintArmorHeavyPunks
+      - id: NFBlueprintWeaponsMeleePunk
+      - id: NFBlueprintArmorHeavyPunk
 
 - type: entity
   parent: MarkerBasePlaceFree
@@ -93,8 +93,8 @@
       - !type:GroupSelector
         weight: 5
         children:
-        - id: NFBlueprintWearablePunks
-      - id: NFBlueprintPouchPunks
+        - id: NFBlueprintWearablePunk
+        - id: NFBlueprintPouchPunk
       - !type:GroupSelector
         weight: 2
         children:
@@ -114,8 +114,8 @@
       - !type:GroupSelector
         weight: 1
         children:
-        - id: NFBlueprintClothesPunks
-        - id: NFBlueprintArmorPunks
+        - id: NFBlueprintClothesPunk
+        - id: NFBlueprintArmorPunk
       - !type:GroupSelector
         weight: 2
         children:

@@ -604,187 +604,187 @@
 #region Punks
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol35
+  id: LSBlueprintPunksAmmunitionBoxBigPistol35
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol40
+  id: LSBlueprintPunksAmmunitionBoxBigPistol40
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol45
+  id: LSBlueprintPunksAmmunitionBoxBigPistol45
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle20
+  id: LSBlueprintPunksAmmunitionBoxBigRifle20
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle30
+  id: LSBlueprintPunksAmmunitionBoxBigRifle30
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigShotgunBuckshot
+  id: LSBlueprintPunksAmmunitionBoxBigShotgunBuckshot
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBuckshot, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol35Practice
+  id: LSBlueprintPunksAmmunitionBoxBigPistol35Practice
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Practice, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol40Practice
+  id: LSBlueprintPunksAmmunitionBoxBigPistol40Practice
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Practice, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol45Practice
+  id: LSBlueprintPunksAmmunitionBoxBigPistol45Practice
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Practice, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle20Practice
+  id: LSBlueprintPunksAmmunitionBoxBigRifle20Practice
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Practice, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle30Practice
+  id: LSBlueprintPunksAmmunitionBoxBigRifle30Practice
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Practice, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigShotgunPractice
+  id: LSBlueprintPunksAmmunitionBoxBigShotgunPractice
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunPractice, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol35Rubber
+  id: LSBlueprintPunksAmmunitionBoxBigPistol35Rubber
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Rubber, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol40Rubber
+  id: LSBlueprintPunksAmmunitionBoxBigPistol40Rubber
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Rubber, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol45Rubber
+  id: LSBlueprintPunksAmmunitionBoxBigPistol45Rubber
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Rubber, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle20Rubber
+  id: LSBlueprintPunksAmmunitionBoxBigRifle20Rubber
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Rubber, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle30Rubber
+  id: LSBlueprintPunksAmmunitionBoxBigRifle30Rubber
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Rubber, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigShotgunBeanbag
+  id: LSBlueprintPunksAmmunitionBoxBigShotgunBeanbag
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunBeanbag, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol35Overpressure
+  id: LSBlueprintPunksAmmunitionBoxBigPistol35Overpressure
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Overpressure, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol40Overpressure
+  id: LSBlueprintPunksAmmunitionBoxBigPistol40Overpressure
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Overpressure, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol45Overpressure
+  id: LSBlueprintPunksAmmunitionBoxBigPistol45Overpressure
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Overpressure, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle20Overpressure
+  id: LSBlueprintPunksAmmunitionBoxBigRifle20Overpressure
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Overpressure, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle30Overpressure
+  id: LSBlueprintPunksAmmunitionBoxBigRifle30Overpressure
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Overpressure, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigShotgunOverpressure
+  id: LSBlueprintPunksAmmunitionBoxBigShotgunOverpressure
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunOverpressure, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol35Incendiary
+  id: LSBlueprintPunksAmmunitionBoxBigPistol35Incendiary
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Incendiary, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol40Incendiary
+  id: LSBlueprintPunksAmmunitionBoxBigPistol40Incendiary
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Incendiary, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol45Incendiary
+  id: LSBlueprintPunksAmmunitionBoxBigPistol45Incendiary
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Incendiary, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle20Incendiary
+  id: LSBlueprintPunksAmmunitionBoxBigRifle20Incendiary
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Incendiary, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle30Incendiary
+  id: LSBlueprintPunksAmmunitionBoxBigRifle30Incendiary
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Incendiary, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigShotgunIncendiary
+  id: LSBlueprintPunksAmmunitionBoxBigShotgunIncendiary
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunIncendiary, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol35Uranium
+  id: LSBlueprintPunksAmmunitionBoxBigPistol35Uranium
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol35Uranium, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol40Uranium
+  id: LSBlueprintPunksAmmunitionBoxBigPistol40Uranium
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol40Uranium, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigPistol45Uranium
+  id: LSBlueprintPunksAmmunitionBoxBigPistol45Uranium
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigPistol45Uranium, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle20Uranium
+  id: LSBlueprintPunksAmmunitionBoxBigRifle20Uranium
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle20Uranium, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigRifle30Uranium
+  id: LSBlueprintPunksAmmunitionBoxBigRifle30Uranium
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigRifle30Uranium, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigShotgunUranium
+  id: LSBlueprintPunksAmmunitionBoxBigShotgunUranium
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunUranium, NFBaseBlueprintExpeditionPunk ]
 
 - type: entity
   categories: [ HideSpawnMenu]
-  id: LSBlueprintPunkAmmunitionBoxBigShotgunSlug
+  id: LSBlueprintPunksAmmunitionBoxBigShotgunSlug
   parent: [ LSBaseBlueprintRecipeAmmunitionBoxBigShotgunSlug, NFBaseBlueprintExpeditionPunk ]
 
 #region Mercenaries

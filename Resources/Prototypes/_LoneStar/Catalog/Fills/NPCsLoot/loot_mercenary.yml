@@ -79,7 +79,7 @@
       children:
       - id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Overpressure
       - id: LSBlueprintMercenaryAmmunitionBoxBigPistol40Overpressure
-      - id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Overpressur
+      - id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Overpressure
       - id: LSBlueprintMercenaryAmmunitionBoxBigShotgunOverpressure
       - id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Overpressure
       - id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Overpressure
