@@ -1,6 +1,7 @@
 ## Walls
 construction-ghost-shuttle-wall-diagonal = shuttle wall (diagonal)
 construction-ghost-shuttle-wall-interior = shuttle wall (interior)
+construction-ghost-reinforced-wall-diagonal = reinforced wall (diagonal)
 
 ## Grilles
 construction-ghost-grille-diagonal = grille (diagonal)

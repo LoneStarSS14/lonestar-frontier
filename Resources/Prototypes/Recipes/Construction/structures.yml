@@ -63,6 +63,22 @@
   conditions:
     - !type:TileNotBlocked
 
+# Lonestar - Diagonal Wall
+- type: construction
+  id: WallReinforcedDiagonal
+  name: 
+  graph: Girder
+  startNode: start
+  targetNode: reinforceddiagonalWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+# Lonestar - End
+
 - type: construction
   id: WallClock
   graph: ClockworkGirder
