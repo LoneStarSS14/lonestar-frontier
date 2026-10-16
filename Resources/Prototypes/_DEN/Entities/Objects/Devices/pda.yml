@@ -31,6 +31,7 @@
     equippedPrefix: mantis
   - type: Sprite
     sprite: _DEN/Objects/Devices/pda.rsi
+    state: pda
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
     - state: "mantis-light_overlay"
