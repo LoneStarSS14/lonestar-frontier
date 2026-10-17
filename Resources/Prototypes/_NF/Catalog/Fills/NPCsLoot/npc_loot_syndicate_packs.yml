@@ -1,3 +1,5 @@
+## LoneStar, file moderately modified for our loot tables.
+
 # region BASE
 - type: entity
   abstract: true
@@ -130,9 +132,7 @@
       orGroup: Weapons
       prob: 0.5
     # Armor
-    - id: ClothingOuterArmorBasicSlim
-      orGroup: Armor
-      prob: 0.5
+    - id: LSSpawnLootSyndicateArmorNonLegendary # LoneStar
     # Items
     - id: SpawnDungeonClutterMedipens
       orGroup: Items
@@ -212,12 +212,7 @@
       orGroup: Weapons
       prob: 0.5
     # Armor
-    - id: ClothingOuterCoatSyndieCapArmored
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitSyndieFormalNF
-      orGroup: Armor
-      prob: 0.3
+    - id: LSSpawnLootSyndicateArmorNonLegendary # LoneStar
     # Items
     - id: SpawnDungeonClutterMedipens
       orGroup: Items
@@ -253,12 +248,7 @@
       orGroup: Weapons
       prob: 0.5
     # Armor
-    - id: ClothingOuterArmorBasic
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitChiefEngineerSyndieNF
-      orGroup: Armor
-      prob: 0.3
+    - id: LSSpawnLootSyndicateArmorNonLegendary # LoneStar
     # Items
     - id: SpawnDungeonLootPartsEngi
       orGroup: Items
@@ -316,12 +306,7 @@
     items:
     # Weapons
     # Armor
-    - id: ClothingOuterCoatAMG
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitParamedicSyndieNF
-      orGroup: Armor
-      prob: 0.3
+    - id: LSSpawnLootSyndicateArmorNonLegendary # LoneStar
     # Items
     - id: HypoMiniLimitedEdition
       orGroup: Items
@@ -353,12 +338,7 @@
       orGroup: Weapons
       prob: 0.05
     # Armor
-    - id: ClothingOuterArmorBasic
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitRecruitSyndieNF
-      orGroup: Armor
-      prob: 0.3
+    - id: LSSpawnLootSyndicateArmor # LoneStar
     # Items
     - id: SpawnDungeonLootMaterialsValuableFull
       orGroup: Items
@@ -419,12 +399,7 @@
       orGroup: Weapons
       prob: 0.7
     # Armor
-    - id: ClothingOuterArmorBulletproof
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitOperative
-      orGroup: Armor
-      prob: 0.3
+    - id: LSSpawnLootSyndicateArmor # LoneStar
     # Items
     - id: SpawnDungeonLootMaterialsValuableFull
       orGroup: Items
@@ -478,15 +453,7 @@
       orGroup: Weapons
       prob: 0.1
     # Armor
-    - id: ClothingOuterSuitBombSyndie
-      orGroup: Armor
-      prob: 0.6
-    - id: ClothingHeadHelmetBombSuitSyndie
-      orGroup: Armor
-      prob: 0.3
-    - id: ClothingUniformJumpsuitPyjamaSyndicateRed
-      orGroup: Armor
-      prob: 0.1
+    - id: LSSpawnLootSyndicateArmor # LoneStar
     # Items
     - id: SpawnDungeonLootMaterialsValuableFull
       orGroup: Items
@@ -519,15 +486,7 @@
       orGroup: Weapons
       prob: 0.6
     # Armor
-    - id: ClothingOuterBioArmoredSyndicate
-      orGroup: Armor
-      prob: 0.6
-    - id: ClothingHeadHatHoodBioArmoredSyndicate
-      orGroup: Armor
-      prob: 0.3
-    - id: ClothingUniformJumpsuitPyjamaSyndicateRed
-      orGroup: Armor
-      prob: 0.1
+    - id: LSSpawnLootSyndicateArmor # LoneStar
     # Items
     - id: ClothingBackpackWaterTank
       orGroup: Items
@@ -563,17 +522,12 @@
       orGroup: Weapons
       prob: 0.6
     # Armor
-    - id: ClothingOuterWinterSyndie
-      orGroup: Armor
-      prob: 0.6
-    - id: ClothingUniformJumpsuitPyjamaSyndicateRed
-      orGroup: Armor
-      prob: 0.3
+    - id: LSSpawnLootSyndicateArmor # LoneStar
     # Items
-    - id: ClothingBackpackWaterTank
-      orGroup: Items
-      amount: 1
-      prob: 0.3
+    # - id: ClothingBackpackWaterTank
+    #   orGroup: Items
+    #   amount: 1
+    #   prob: 0.3
     - id: SpawnDungeonLootMaterialsValuableFull
       orGroup: Items
       amount: 4
@@ -638,19 +592,14 @@
       orGroup: Weapons
       prob: 0.7
     # Armor
-    - id: ClothingOuterArmorBulletproof
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitOperative
-      orGroup: Armor
-      prob: 0.3
+    - id: LSSpawnLootSyndicateArmor # LoneStar
     # Items
     - id: SpawnRewardPrizeBallSyndicate # LoneStar
       orGroup: Items
+      prob: 0.7
+    - id: LSSpawnLootSyndicateBlueprint # LoneStar
+      orGroup: Items
       prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.3
     # BossLoot
     - id: SpawnDungeonLootGunT3
       orGroup: BossLoot
