@@ -120,7 +120,7 @@
 
 # region blueprints
 - type: entity
-  abstract: true
+  abstract: true # LoneStar
   parent: MarkerBasePlaceFree
   id: SpawnDungeonLootNpcMercenariesBlueprints
   categories: [ HideSpawnMenu ]

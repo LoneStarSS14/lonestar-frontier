@@ -1,0 +1,44 @@
+#region Tools
+- type: entity
+  parent: NFBaseBlueprintExpeditionRogueSilicon
+  id: LSBlueprintRogueSiliconPowerDrill
+  categories: [ HideSpawnMenu ]
+  name: power drill blueprint
+  description: A blueprint with a schematic of a power drill. It can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - PowerDrill
+
+- type: entity
+  parent: NFBaseBlueprintExpeditionRogueSilicon
+  id: LSBlueprintRogueSiliconWelderExperimental
+  categories: [ HideSpawnMenu ]
+  name: experimental welder blueprint
+  description: A blueprint with a schematic of an experimental welder. It can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - WelderExperimental
+
+- type: entity
+  parent: NFBaseBlueprintExpeditionRogueSilicon
+  id: LSBlueprintRogueSiliconJawsOfLife
+  categories: [ HideSpawnMenu ]
+  name: jaws of life blueprint
+  description: A blueprint with a schematic of a jaws of life. It can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - JawsOfLife
+
+- type: entity
+  parent: NFBaseBlueprintExpeditionRogueSilicon
+  id: LSBlueprintRogueSiliconSyndicateJawsOfLife
+  categories: [ HideSpawnMenu ]
+  name: jaws of death blueprint
+  description: A blueprint with a schematic of a jaws of death. It can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - LSSyndicateJawsOfLife

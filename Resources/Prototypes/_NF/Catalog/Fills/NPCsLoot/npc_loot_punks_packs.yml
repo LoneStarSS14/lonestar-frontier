@@ -345,7 +345,7 @@
     - id: SpawnDungeonLootMaterialsValuableFull
       orGroup: Items
       prob: 0.2
-    - id: SpawnDungeonLootNpcPunksBlueprints
+    - id: LSSpawnLootPunksBlueprint # LoneStar
       orGroup: Items
       prob: 0.05
     - id: SpawnDungeonLootNpcPunksFluffItems
@@ -380,7 +380,7 @@
     - id: SpawnDungeonLootMaterialsValuableFull
       orGroup: Items
       prob: 0.2
-    - id: SpawnDungeonLootNpcPunksBlueprints
+    - id: LSSpawnLootPunksBlueprint # LoneStar
       orGroup: Items
       prob: 0.05
     - id: SpawnDungeonLootNpcPunksFluffItems
@@ -461,14 +461,14 @@
     - id: SpawnDungeonLootMaterialsValuableFull
       orGroup: Items
       prob: 0.2
-    - id: SpawnDungeonLootNpcPunksBlueprints
+    - id: LSSpawnLootPunksBlueprint # LoneStar
       orGroup: Items
       prob: 0.05
     - id: SpawnDungeonLootNpcPunksFluffItems
       orGroup: Items
       prob: 0.3
     # BossLoot
-    - id: SpawnDungeonLootNpcPunksBlueprints
+    - id: LSSpawnLootPunksBlueprint # LoneStar
       orGroup: BossLoot
       prob: 0.45
     - id: SpawnDungeonLootGunT3
