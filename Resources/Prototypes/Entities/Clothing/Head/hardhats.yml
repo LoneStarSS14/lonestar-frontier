@@ -66,11 +66,13 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
-      HeadTop: HEAD
-      HeadSide: HEAD
+  # LoneStar below
+  #  - type: HideLayerClothing
+  #    layers:
+  #      Hair: HEAD
+  #      HeadTop: HEAD
+  #      HeadSide: HEAD
+  # LoneStar end
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
