@@ -4394,3 +4394,35 @@ Entries:
   id: 480
   time: '2026-10-14T17:02:29.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/254
+- author: tenmillimaster
+  changes:
+    - type: Add
+      message: >-
+        Cherrypicked shaker, teatime and piety lathe/uniform printer recipes
+        from upstream
+  id: 481
+  time: '2026-10-16T10:58:49.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/230
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Chemical barrels hitboxes now better match their visuals.
+  id: 482
+  time: '2026-10-16T19:41:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/265
+- author: seekssss
+  changes:
+    - type: Add
+      message: Added group lists for loadouts
+  id: 483
+  time: '2026-10-16T19:47:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/257
+- author: lexiwitch
+  changes:
+    - type: Tweak
+      message: >-
+        Sink bounties from inactive players to the bottom of the board. Now you
+        don't have to scroll through a dozen sleepy people's bounties!
+  id: 484
+  time: '2026-10-16T19:55:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/261
