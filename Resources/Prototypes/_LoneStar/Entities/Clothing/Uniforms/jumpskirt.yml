@@ -669,3 +669,19 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/present.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/present.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtLittleCheesers
+  name: Little Cheeser's Uniform
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/little-cheesers-skirt.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/little-cheesers-skirt.rsi
+  - type: Tag
+    tags:
+    - LittleCheesers
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon

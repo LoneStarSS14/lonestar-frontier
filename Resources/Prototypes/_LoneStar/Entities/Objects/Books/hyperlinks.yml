@@ -1,0 +1,34 @@
+# Lone Star Hyperlink Books
+
+- type: entity
+  parent: BaseHyperlinkBook
+  id: HyperlinkBookPizzaGuide
+  name: Remi's Guide to Pizza
+  description: A book written by renowned chef Remi Ricotta that teaches people how to make pizza.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/books.rsi
+    layers:
+    - state: pizza_guide
+  - type: HyperlinkBook
+    url: https://docs.google.com/document/d/1-vn83HarY3ZNk_impS3O2kXoE04MfuSgr0K-_MblKSI/edit?usp=sharing
+  - type: Tag
+    tags:
+    - Book
+
+- type: entity
+  parent: BaseHyperlinkBook
+  id: HyperlinkBookLittleCheesers
+  name: Little Cheeser's Employee Handbook
+  description: A handbook for Little Cheeser's employees.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/books.rsi
+    layers:
+    - state: little_cheesers_guide
+  - type: HyperlinkBook
+    url: https://docs.google.com/document/d/1OGMRB562h-QCUV-dw_p52QOMGeFTl-tpm-K4pKt19fs/edit?usp=sharing
+  - type: Tag
+    tags:
+    - Book
+    - LittleCheesers

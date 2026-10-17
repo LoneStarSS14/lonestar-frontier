@@ -1,0 +1,11 @@
+# Lone Star Signs
+
+- type: entity
+  parent: NFBaseSign
+  id: LittleCheesersLogo
+  name: Little Cheeser's Logo
+  description: Founded in 2159 in the big NYC, Little Cheesers has become ubiquitous throughout Sol and beyond for offering cheap, edible pizza.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Wallmounts/signs.rsi
+    state: little_cheesers_logo

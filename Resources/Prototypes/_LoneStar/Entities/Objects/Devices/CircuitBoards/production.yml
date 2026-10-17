@@ -1,0 +1,35 @@
+- type: entity
+  id: LittleCheesersServiceTechFabCircuitboard
+  parent: ServiceTechFabCircuitboard
+  name: little cheeser's service techfab machine board
+  description: A machine printed circuit board for a little cheeser's service techfab
+  components:
+    - type: MachineBoard
+      prototype: LittleCheesersServiceTechFab
+
+- type: entity
+  id: LittleCheesersBiogeneratorMachineCircuitboard
+  parent: BiogeneratorMachineCircuitboard
+  name: biogenerator machine board
+  description: A machine printed circuit board for a biogenerator. A serial number on the board indicates its for a Little Cheeser's.
+
+- type: entity # Lone Star
+  id: HotCaseCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Hot n Ready Case machine board
+  description: A machine printed circuit board for a Hot Case.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: HotCase
+    requirements:
+      Manipulator: 1
+      Capacitor: 3
+      MatterBin: 1
+    stackRequirements:
+      Glass: 5
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker

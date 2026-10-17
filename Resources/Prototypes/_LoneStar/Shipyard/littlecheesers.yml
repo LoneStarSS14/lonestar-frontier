@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: dustylens (https://github.com/dustylens) Renovated by Chokovit
+# Discord: dustylens/Chokovit
+
+# Maintainer Info
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens/Chokovit
+
+# Shuttle Notes:
+# this is supposed to be a cheap shuttle, you CAN cook here but it's cramped and not very optimal for it. It's SPECIFICALLY meant for making and delivering Pizzas.
+- type: vessel
+  id: LittleCheesers
+  parent: BaseVessel
+  name: DC Little Cheeser's
+  description: A compact cargo ship designed for hauling shipments.
+  price: 35000
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/littlecheesers.yml
+  guidebookPage: ShipyardLittleCheesers
+  class:
+  - Cargo
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: LittleCheesers
+  mapName: 'DC Little Cheesers'
+  mapPath: /Maps/_LoneStar/Shuttles/littlecheesers.yml
+  minPlayers: 0
+  stations:
+    LittleCheesers:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Little Cheesers {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 2, 2 ]
+          CompanionInterview: [ 2, 2 ]
+          PilotInterview: [ 2, 2 ]
+          MercenaryInterview: [ 2, 2 ]

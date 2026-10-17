@@ -385,7 +385,7 @@
 - type: guideEntry
   id: ShipyardStronghold
   name: guide-entry-shipyard-stronghold
-  text: "/ServerInfo/_NF/Guidebook/Shipyard/Stronghold.xml"  
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Stronghold.xml"
 
 - type: guideEntry
   id: ShipyardSurveyor
@@ -429,3 +429,10 @@
   name: guide-entry-shipyard-yegorov
   text: "/ServerInfo/_CS/Guidebook/Shipyard/Yegorov.xml"
 # End Coyote
+
+# Lone Star
+
+- type: guideEntry
+  id: ShipyardLittleCheesers
+  name: guide-entry-shipyard-little-cheesers
+  text: "/ServerInfo/_LoneStar/Guidebook/Shipyard/LittleCheesers.xml"

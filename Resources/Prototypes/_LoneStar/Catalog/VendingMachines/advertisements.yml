@@ -3,3 +3,9 @@
   values:
     prefix: advertisement-slotmachine-
     count: 6
+
+- type: localizedDataset
+  id: HotnReadyAds
+  values:
+    prefix: advertisement-hotcase-
+    count: 8

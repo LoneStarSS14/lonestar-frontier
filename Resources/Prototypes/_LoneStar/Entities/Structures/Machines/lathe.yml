@@ -50,3 +50,106 @@
     containers:
       beaker_slot:
       - LargeBeaker
+
+- type: entity
+  parent: DonkcoServiceTechFab
+  id: LittleCheesersServiceTechFab
+  name: Little Cheeser's service techfab
+  description: Prints equipment for Little Cheeser's service staff.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/techfab.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: littlecheesers
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: LittleCheesersServiceTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticPacks:
+    - NFLightsStatic
+    - NFBasicToolsStatic
+    - NFBasicStorageStatic
+    - NFBasicPartsStatic
+    - NFBasicElectronicsStatic
+    - NFBasicEvaStatic
+    - NFBasicEVAToolsStatic
+    - NFMaterialElectronicsStatic
+    - NFServiceStorageStatic
+    - NFBotanyToolsStatic
+    - NFServiceToolsStatic
+    - NFServiceEvaPackStatic
+    - NFServiceKitchenStatic
+    - NFServiceStatic
+    - NFPaperAndPaperAccessories
+    - ReportingStatic # DeltaV
+    - NFLightsColoredStatic
+    - NFServiceArchetypeStatic
+    - CSPlumbingStatic # Coyote: showers, sinks, drains
+    - LittleCheesersServiceTechfabStatic
+    - LSFancyLightPack #LS Adds Special bulbs for mood lighting
+    - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - NFServiceTechfabEmagStatic
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintServiceTechfab
+  - type: OreSiloClient
+
+- type: entity
+  id: LittleCheesersBiogenerator
+  parent: BioDjinn
+  name: pre-programmed biogenerator
+  description: The beating heart of every Fast Food chain. The serial number for this one indicates it belongs to a Little Cheeser's.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/biofabricator.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: beaker # Frontier
+      map: ["beaker"] # Frontier
+      visible: false # Frontier
+  - type: Machine
+    board: LittleCheesersBiogeneratorMachineCircuitboard
+  - type: Lathe
+    reagentOutputSlotId: beaker_slot
+    idleState: icon
+    runningState: building
+    staticPacks:
+    - BioGenLittleCheesersRecipeStatic
+  # Frontier: emag lathe recipes, item mapper
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - HostileCubesStatic
+    - NFBioGenIngredientsDangerous
+    - BioGenIngredientsStatic
+    - BioGenMaterialsStatic
+    - FriendlyCubesStatic
+    - NFBioGenIngredientsStatic
+    - NFBioGenMaterialsStatic
+    - NFBioGenSodaStatic
+    - NFBioGenSeedsStatic
+    - NFBioGenSeedsMedicalStatic
+    - NFBioGenSoil
+    - NFBioGenAnimalCubesStatic

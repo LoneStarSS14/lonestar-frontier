@@ -1,0 +1,100 @@
+# Little Cheeser's Delivery Scooter
+- type: entity
+  parent: VehicleHoverbikeMailcarrier
+  id: VehicleHoverscooterPizza
+  name: Little Cheeser's hoverscooter
+  description: An adorable little scooter made to navigate vertical cities like New York, Zijun, oh and space I guess.
+  components:
+  - type: MovementIgnoreGravity
+  - type: MovementAlwaysTouching
+  - type: CanMoveInAir
+  - type: AmbientSound
+    sound: /Audio/_LoneStar/Effects/Vehicle/scooter_run.ogg
+    range: 8
+    volume: 5
+    enabled: false
+  - type: Sprite
+    sprite: _LoneStar/Objects/Vehicles/hoverscooter.rsi
+    layers:
+    - state: hull
+      color: "#8fd3ff"
+    - state: engine
+      map: ["enum.VehicleVisualLayers.AutoAnimate"]
+    - state: lights
+    noRot: true
+  - type: ItemSlots
+    slots:
+      key_slot:
+        name: vehicle-slot-component-slot-name-keys
+        whitelist:
+          requireAll: true
+          tags:
+          - VehicleKey
+          - HoverbikeKeys
+        priority: 1
+        insertSound:
+          path: /Audio/_LoneStar/Effects/Vehicle/scooter_start.ogg
+          params:
+            volume: -5
+      hull:
+        name: pizza case
+        whitelist:
+          components:
+            - PizzaBox
+        priority: 2
+  - type: ItemMapper
+    mapLayers:
+      hull:
+        whitelist:
+          components:
+            - PizzaBox
+    sprite: _LoneStar/Objects/Vehicles/hoverscooter.rsi
+  - type: Appearance
+  - type: PointLight
+    enabled: false
+    radius: 7
+    energy: 3
+  - type: Vehicle
+    hornSound:
+      collection: NFVehicleHorn # resetting from the motorbike
+      params:
+        variation: 0.125
+
+- type: entity
+  parent: VehicleHoverscooterPizza
+  id: VehicleHoverscooterPizzaKey
+  suffix: With key
+  components:
+  - type: ItemSlots
+    slots:
+      key_slot:
+        name: vehicle-slot-component-slot-name-keys
+        whitelist:
+          requireAll: true
+          tags:
+          - VehicleKey
+          - HoverbikeKeys
+        startingItem: VehicleKeyHoverScooterPizza
+        priority: 1
+        insertSound:
+          path: /Audio/_LoneStar/Effects/Vehicle/scooter_start.ogg
+          params:
+            volume: -5
+
+# Keys
+
+- type: entity
+  parent: BaseKey
+  id: VehicleKeyHoverScooterPizza
+  name: hoverscooter keys
+  description: The key to a Hoverscooter. It's got a keychain of the Little Cheeser's mascot on it.
+  components:
+  - type: Tag
+    tags:
+    - VehicleKey
+    - HoverbikeKeys
+  - type: Sprite
+    sprite: _LoneStar/Objects/Vehicles/hoverscooter.rsi
+    state: keys
+  - type: StaticPrice
+    price: 50

@@ -657,7 +657,7 @@
     flavors:
       - meaty
   - type: Sprite
-    sprite: _NF/Objects/Consumable/Food/meat.rsi
+    sprite: _LoneStar/Objects/Consumable/Food/meats.rsi
     state: sausagecooked
   - type: SolutionContainerManager
     solutions:
