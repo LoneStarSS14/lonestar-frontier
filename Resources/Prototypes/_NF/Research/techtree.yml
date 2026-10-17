@@ -1621,6 +1621,12 @@
   recipeUnlocks:
   - MiningDrill
   - MineralScannerEmpty
+  - ClothingHeadHatHardhatBlue # LoneStar
+  - ClothingHeadHatHardhatOrange # LoneStar
+  - ClothingHeadHatHardhatRed # LoneStar
+  - ClothingHeadHatHardhatWhite # LoneStar
+  - ClothingHeadHatHardhatYellow # LoneStar
+  - ClothingHeadHatHardhatYellowDark # LoneStar
   technologyPrerequisites:
   - NFIndustrialOreProcessor
   position: 1, 38
@@ -1651,6 +1657,7 @@
   recipeUnlocks:
   - MiningDrillDiamond
   - AdvancedMineralScannerEmpty
+  - ClothingHeadHatHardhatArmored # LoneStar
   technologyPrerequisites:
   - NFExcavation
   position: 2, 38

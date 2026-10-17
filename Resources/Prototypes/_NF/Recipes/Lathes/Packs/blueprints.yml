@@ -307,6 +307,13 @@
   # HardsuitsAdvanced
   - ClothingOuterHardsuitLuxury
   - ImpCoffeeMachineCircuitboard #imp
+  - ClothingHeadHatHardhatArmored # LoneStar
+  - ClothingHeadHatHardhatBlue # LoneStar
+  - ClothingHeadHatHardhatOrange # LoneStar
+  - ClothingHeadHatHardhatRed # LoneStar
+  - ClothingHeadHatHardhatWhite # LoneStar
+  - ClothingHeadHatHardhatYellow # LoneStar
+  - ClothingHeadHatHardhatYellowDark # LoneStar
 
 # region Science
 - type: latheRecipePack
