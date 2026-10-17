@@ -1,0 +1,69 @@
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootDebugTable
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector # Legendary
+        weight: 1
+        children:
+        - id: IngotGold1
+      - !type:GroupSelector
+        weight: 119
+        children:
+        - !type:GroupSelector # Epic
+          weight: 1
+          children:
+          - id: IngotSilver1
+        - !type:GroupSelector
+          weight: 34
+          children:
+          - !type:GroupSelector # Rare
+            weight: 1
+            children:
+            - id: SheetPlasteel1
+          - !type:GroupSelector
+            weight: 14
+            children:
+            - !type:GroupSelector # Uncommon
+              weight: 1
+              children:
+              - id: SheetSteel1
+            - !type:GroupSelector
+              weight: 4
+              children:
+              - !type:GroupSelector # Common
+                weight: 3
+                children:
+                - id: MaterialWoodPlank1
+              - !type:GroupSelector # Trash
+                weight: 1
+                children:
+                - id: SheetPaper1
+
+- type: entityList
+  id: LSSpawnLootDebugTable20
+  entities:
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
+  - LSSpawnLootDebugTable
