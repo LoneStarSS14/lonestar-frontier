@@ -587,36 +587,4 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: SpawnDungeonLootNpcSyndicateWeaponsRifles
-      orGroup: Weapons
-      prob: 0.7
-    # Armor
-    - id: LSSpawnLootSyndicateArmor # LoneStar
-    # Items
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.7
-    - id: LSSpawnLootSyndicateBlueprint # LoneStar
-      orGroup: Items
-      prob: 0.3
-    # BossLoot
-    - id: SpawnDungeonLootGunT3
-      orGroup: BossLoot
-      prob: 0.25
-    - id: SpawnDungeonLootNpcBossLootShared
-      orGroup: BossLoot
-      prob: 0.2
-    - id: LSSpawnLootSyndicateBlueprint # LoneStar
-      orGroup: BossLoot
-      prob: 0.45
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: BossLoot
-      prob: 0.05
-    - id: LSSpawnLootSyndicateBlueprint # LoneStar
-      orGroup: BossLoot
-      prob: 0.3
-    # LoneStar v
-    - id: ClothingOuterHardsuitSyndieElite
-      orGroup: BossLoot
-      prob: 0.1
+    - id: LSSpawnLootSyndicateT4Commander # LoneStar

@@ -1,0 +1,45 @@
+#region Tier 1
+
+#region Tier 2
+
+#region Elite / Horrors
+
+#region Bosses
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateT4Commander
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:AllSelector
+      children:
+      - !type:AllSelector # Weapon
+        children:
+        - id: SpawnDungeonLootNpcSyndicateWeaponsRifles
+          prob: 0.8
+        - id: SpawnDungeonLootGunT3
+          prob: 0.3
+      - !type:GroupSelector # Armor
+        children:
+        - id: ClothingOuterHardsuitSyndieElite
+          weight: 1
+        - id: LSSpawnLootSyndicateArmor
+          weight: 14
+      - !type:AllSelector # Blueprints
+        children:
+        - id: LSSpawnLootSyndicateBlueprint
+        - id: LSSpawnLootSyndicateBlueprint
+          prob: 0.7
+        - id: LSSpawnLootSyndicateBlueprint
+          prob: 0.3
+      - !type:AllSelector # Loot
+        children:
+        - id: SpawnDungeonLootNpcBossLootShared
+          prob: 0.3
+        - id: SpawnDungeonLootNpcBossLootShared
+          prob: 0.3
+        - id: SpawnDungeonLootNpcBossLootShared
+          prob: 0.3
+        - id: SpawnRewardPrizeBallSyndicate
+          prob: 0.3
