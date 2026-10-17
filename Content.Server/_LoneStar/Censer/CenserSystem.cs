@@ -38,7 +38,7 @@ namespace Content.Server._LoneStar.Censer
         {
             if (!HasComp<BibleUserComponent>(args.User) && args.User.HasValue)
             {
-                _popupSystem.PopupEntity(Loc.GetString("bible-sizzle"), args.User.Value, args.User.Value);
+                _popupSystem.PopupEntity(Loc.GetString("censer-sizzle"), args.User.Value, args.User.Value);
 
                 _audio.PlayPvs(comp.SizzleSoundPath, args.User.Value);
                 _damageableSystem.TryChangeDamage(args.User, comp.DamageOnUntrainedUse, true, origin: uid);
