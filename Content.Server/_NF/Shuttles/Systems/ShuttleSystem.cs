@@ -2,14 +2,10 @@
 // Copyright (c) 2024 New Frontiers Contributors
 // See AGPLv3.txt for details.
 
-using Content.Server._NF.Shuttles.Components;
 using Content.Server._NF.Station.Components;
 using Content.Server._WF.Shuttles.Components; // Wayfarer: Autopilot
 using Content.Server._WF.Shuttles.Systems; // Wayfarer: Autopilot
-using Content.Server.Chat.Managers;
-using Content.Server.Chat.Systems;
 using Content.Server.Popups;
-using Content.Server.Power.EntitySystems;
 using Content.Server._NF.Radar;
 using Content.Server.Shuttles.Components;
 using Content.Shared._CS;
@@ -17,17 +13,14 @@ using Content.Shared._NF.Shuttles.Events;
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared.Audio;
 using Content.Shared.Ghost;
-using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Shuttles.Components;
-using Content.Server._CS.ShuttleCrewStatus;
 using System.Numerics;
+using Content.Server._Coyote.ShuttleCrewStatus;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics.Components;
-using Robust.Shared.Utility;
 
 namespace Content.Server.Shuttles.Systems;
 
