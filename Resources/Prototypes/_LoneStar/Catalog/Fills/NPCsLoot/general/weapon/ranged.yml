@@ -1,0 +1,181 @@
+#region routing
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponRanged
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector # Legendary
+        weight: 1
+        children:
+        - id: LSSpawnLootGeneralWeaponRangedT5
+      - !type:GroupSelector
+        weight: 29
+        children:
+        - !type:GroupSelector # Epic
+          weight: 1
+          children:
+          - id: LSSpawnLootGeneralWeaponRangedT4
+        - !type:GroupSelector
+          weight: 11
+          children:
+          - !type:GroupSelector # Rare
+            weight: 2
+            children:
+            - id: LSSpawnLootGeneralWeaponRangedT3
+          - !type:GroupSelector
+            weight: 7
+            children:
+            - !type:GroupSelector # Uncommon
+              weight: 2
+              children:
+              - id: LSSpawnLootGeneralWeaponRangedT2
+            - !type:GroupSelector
+              weight: 3
+              children:
+              - !type:GroupSelector # Common
+                weight: 14
+                children:
+                - id: LSSpawnLootGeneralWeaponRangedT1
+              - !type:GroupSelector # Trash
+                weight: 1
+                children:
+                - id: LSSpawnLootGeneralWeaponRangedT0
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponRangedRare
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector # Legendary
+        weight: 1
+        children:
+        - id: LSSpawnLootGeneralWeaponRangedT5
+      - !type:GroupSelector
+        weight: 29
+        children:
+        - !type:GroupSelector # Epic
+          weight: 1
+          children:
+          - id: LSSpawnLootGeneralWeaponRangedT4
+        - !type:GroupSelector # Rare
+          weight: 11
+          children:
+          - id: LSSpawnLootGeneralWeaponRangedT3
+
+#region tiers
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponRangedT5
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: WeaponCaseLongLauncherRocketExpedition
+      - id: WeaponCaseLongLauncherChinaLake
+      - id: WeaponCaseHeavyLightMachineGunL6
+      - id: WeaponCaseHeavyAsmgtExpeditions
+      - id: WeaponCaseLongEstocExpedition
+      - id: WeaponCaseLongHristovExpedition
+      - id: WeaponCaseLongC19r
+      - id: WeaponCaseLongPrototypePulseRifleExpedition
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponRangedT4
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: WeaponCaseLongSm
+      - id: WeaponCaseLongBulldog
+      - id: WeaponCaseLongC20r
+      - id: WeaponCaseLongAtreidesExpedition
+      - id: WeaponCaseShortSvalinnExpedition
+      - id: WeaponCaseLongEnergyGunExpedition
+      - id: WeaponCaseShortAnacondaExpedition
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponRangedT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: WeaponCaseLongWT550Expedition
+      - id: WeaponCaseLongDrozdExpedition
+      - id: WeaponCaseLongM90Expedition
+      - id: WeaponCaseLongLecterExpedition
+      - id: WeaponCaseShortRitland45Expedition
+      - id: WeaponCaseShortCobra
+      - id: WeaponCaseShortN1984Expedition
+      - id: WeaponCaseShortViper
+      - id: WeaponCaseShortWard45Expedition
+      - id: WeaponCaseShortRevolverPirate
+      - id: NFRevolverCapGunFake
+      - id: WeaponCaseLongJackdaw
+      - id: WeaponCaseLongEnforcerExpedition
+      - id: WeaponCaseShortAntiqueLaserExpedition
+      - id: WeaponCaseShortAdvancedLaserExpedition
+      - id: WeaponCaseLongLaserCarbineExpedition
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponRangedT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: WeaponCaseLongGestioExpedition
+      - id: WeaponCaseLongWeaponRifleNovaliteC1Expedition
+      - id: WeaponCaseLongSVSExpedition
+      - id: WeaponCaseShortUniversalExpedition
+      - id: WeaponCaseShortLuckyExpedition
+      - id: WeaponCaseShortDeckardExpedition
+      - id: WeaponCaseLongBarlowsBoltExpedition
+      - id: WeaponCaseLongSniperCeremonialExpedition
+      - id: WeaponCaseLongTypewriterExpedition
+      - id: WeaponCaseLongMusketExpedition
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponRangedT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: WeaponCaseShortMk58Expedition
+      - id: WeaponCaseShortPollockExpedition
+      - id: WeaponCaseShortFaithExpedition
+      - id: WeaponCaseShortArgentiExpedition
+      - id: WeaponCaseLongRepeaterExpedition
+      - id: WeaponCaseShortFitzExpedition
+      - id: WeaponCaseLongKammererExpedition
+      - id: WeaponCaseShortLaserGunExpedition
+
+- type: entity # No real guns in this group pls.
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponRangedT0
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: NFRevolverCapGun

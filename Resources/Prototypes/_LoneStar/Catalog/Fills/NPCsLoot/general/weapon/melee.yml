@@ -1,0 +1,234 @@
+#region routing
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponMelee
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector # Legendary
+        weight: 1
+        children:
+        - id: LSSpawnLootGeneralWeaponMeleeT5
+      - !type:GroupSelector
+        weight: 74
+        children:
+        - !type:GroupSelector # Epic
+          weight: 1
+          children:
+          - id: LSSpawnLootGeneralWeaponMeleeT4
+        - !type:GroupSelector
+          weight: 19
+          children:
+          - !type:GroupSelector # Rare
+            weight: 2
+            children:
+            - id: LSSpawnLootGeneralWeaponMeleeT3
+          - !type:GroupSelector
+            weight: 11
+            children:
+            - !type:GroupSelector # Uncommon
+              weight: 2
+              children:
+              - id: LSSpawnLootGeneralWeaponMeleeT2
+            - !type:GroupSelector
+              weight: 3
+              children:
+              - !type:GroupSelector # Common
+                weight: 11
+                children:
+                - id: LSSpawnLootGeneralWeaponMeleeT1
+              - !type:GroupSelector # Trash
+                weight: 1
+                children:
+                - id: LSSpawnLootGeneralWeaponMeleeT0
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponMeleeRare
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector # Legendary
+        weight: 1
+        children:
+        - id: LSSpawnLootGeneralWeaponMeleeT5
+      - !type:GroupSelector
+        weight: 29
+        children:
+        - !type:GroupSelector # Epic
+          weight: 2
+          children:
+          - id: LSSpawnLootGeneralWeaponMeleeT4
+        - !type:GroupSelector # Rare
+          weight: 11
+          children:
+          - id: LSSpawnLootGeneralWeaponMeleeT3
+
+#region tiers
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponMeleeT5
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: ArmBlade
+      - id: WeaponCaseShortEnergySwordDoubleExpedition
+      - id: EnergyKatana
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponMeleeT4
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: ClothingHandsGlovesNorthStar
+      - !type:GroupSelector
+        weight: 1.5
+        children:
+        - id: WeaponCaseShortEnergySwordExpedition
+        - id: WeaponCaseShortEnergyCutlassExpedition
+      - !type:GroupSelector
+        weight: 2
+        children:
+        - id: RatvarianSpear
+        - id: UnholyHalberd
+        - id: SecBreachingHammer
+      - id: Truncheon
+      - id: Kanabou
+      - !type:GroupSelector
+        children:
+        - id: ThrowingKnife
+        - id: ThrowingKnife
+          weight: 3
+          amount: 2
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponMeleeT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: WeaponCaseShortEnergyDaggerExpedition
+      - id: CaneSheathFilled
+      - id: Cutlass
+      - id: Claymore
+      - id: SpearSharkMinnow
+      - !type:GroupSelector
+        weight: 2
+        children:
+        - id: ClothingHandsKnuckleDustersSyndicate
+        - id: ClothingHandsKnuckleDustersQM
+        - id: ClothingHandsKnuckleDustersStun
+      - !type:GroupSelector
+        weight: 3
+        children:
+        - id: PlasteelArmingSword
+          weight: 5
+        - id: CaptainSabre
+          weight: 5
+        - id: KatanaMurasama
+          weight: 4
+        - id: KatanaHF
+          weight: 3
+        - id: KatanaPhaseblade
+          weight: 2
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponMeleeT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector
+        weight: 2
+        children:
+        - id: Spear
+        - id: SpearReinforced
+        - id: SpearPlasma
+        - id: SpearUnranium
+        - id: SpearBone
+      - !type:GroupSelector
+        weight: 3
+        children:
+        - id: KukriKnife
+        - id: SurvivalKnife
+        - id: CombatKnife
+        - id: SurvivalKnife
+        - id: ButchCleaver
+      - !type:GroupSelector
+        weight: 1
+        children:
+        - id: EldritchBlade
+        - id: RitualDagger
+      - id: ClothingBeltKatanaSheathFilled
+      - id: Wakizashi
+      - id: Machete
+      - id: Sledgehammer
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponMeleeT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: ClothingHandsKnuckleDusters
+      - id: BaseBallBat
+      - id: CavemanClub
+      - id: Chainsaw
+      - id: KitchenKnife
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootGeneralWeaponMeleeT0
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.1
+    table: !type:GroupSelector
+      children:
+      - id: WeaponBrassKnucklesWhoopie
+      - !type:GroupSelector
+        children:
+        - id: WhiteCane
+        - id: Cane
+      - !type:GroupSelector
+        weight: 2
+        children:
+        - id: Shiv
+          weight: 4
+        - id: ReinforcedShiv
+          weight: 3
+        - id: PlasmaShiv
+          weight: 2
+        - id: UraniumShiv
+          weight: 1
+      - id: Pickaxe
+      - id: Shinai
+      - id: Gohei
+
+
+
+
+
+
+
