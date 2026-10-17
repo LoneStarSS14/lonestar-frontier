@@ -66,11 +66,13 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
-      HeadTop: HEAD
-      HeadSide: HEAD
+  # LoneStar below
+  #  - type: HideLayerClothing
+  #    layers:
+  #      Hair: HEAD
+  #      HeadTop: HEAD
+  #      HeadSide: HEAD
+  # LoneStar end
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
@@ -82,6 +84,12 @@
     sprite: Clothing/Head/Hardhats/blue.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/blue.rsi
+  # LoneStar below
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+  # LoneStar end
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
@@ -93,6 +101,12 @@
     sprite: Clothing/Head/Hardhats/orange.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/orange.rsi
+  # LoneStar below
+  - type: Armor
+    modifiers:
+      flatReductions:
+        Blunt: 1
+  # LoneStar end
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
@@ -104,6 +118,12 @@
     sprite: Clothing/Head/Hardhats/red.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/red.rsi
+  # LoneStar below
+  - type: Armor
+    modifiers:
+      flatReductions:
+        Blunt: 1
+  # LoneStar end
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
@@ -115,6 +135,12 @@
     sprite: Clothing/Head/Hardhats/white.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/white.rsi
+  # LoneStar below
+  - type: Armor
+    modifiers:
+      flatReductions:
+        Blunt: 1
+  # LoneStar end
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
@@ -126,6 +152,12 @@
     sprite: Clothing/Head/Hardhats/yellow.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/yellow.rsi
+  # LoneStar below
+  - type: Armor
+    modifiers:
+      flatReductions:
+        Blunt: 1
+  # LoneStar end
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
@@ -137,12 +169,18 @@
     sprite: Clothing/Head/Hardhats/dark_yellow.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/dark_yellow.rsi
+  # LoneStar below
+  - type: Armor
+    modifiers:
+      flatReductions:
+        Blunt: 1
+  # LoneStar end
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
   id: ClothingHeadHatHardhatArmored
   name: armored hard hat
-  description: An armored hard hat. Provides the best of both worlds in both protection & utility - perfect for the engineer on the frontlines.
+  description: An armored hard hat. Provides the best of both worlds in both protection & utility - perfect for the miner or engineer out in the frontiers. # LoneStar
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardhats/armored.rsi
@@ -151,7 +189,7 @@
   - type: Armor #Copied from the sec helmet, as it's hard to give these sane values without locational damage existing.
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.8
+        Blunt: 0.9 # LoneStar
+        Slash: 0.9 # LoneStar
         Piercing: 0.9
-        Heat: 0.8
+        Heat: 0.9 # LoneStar
