@@ -600,6 +600,10 @@
   - ContractorClothingHeadsetAltEngineeringCommon
   - ContractorClothingHeadsetAltMedicalCommon
   - ContractorClothingHeadsetAltScienceCommon
+  # Mantis Clothes Port from the Den
+  - ContractorClothingHeadsetMantis
+  - ContractorClothingHeadsetAltMantis
+  # End Mantis Clothes Port
   fallbacks:
   - ContractorClothingHeadsetGreyCommon
 
@@ -759,6 +763,7 @@
   - ContractorMusicianPDA
   - ContractorClownPDA
   - ContractorMimePDA
+  - ContractorPsionicMantisPDA # LoneStar - Mantis Clothes Port from the Den
   fallbacks:
   - ContractorContractorPDA
 

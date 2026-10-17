@@ -3,6 +3,14 @@
   startingInventory:
     NFClothingBackpackDuffelChaplain: 2 # Frontier
     ClothingBackpackMessengerChaplain: 2 # Frontier
+    #Mantis Clothes Port
+    # Bags
+    ClothingBackpackMantis: 3
+    ClothingBackpackDuffelMantis: 3
+    ClothingBackpackSatchelMantis: 3
+    ClothingBackpackSatchelMantisPurse: 3
+    ClothingBackpackMessengerMantis: 3
+    # Bags End
     ClothingUniformJumpsuitChaplain: 3
     ClothingUniformJumpskirtChaplain: 3
     ClothingUniformFuneralSuit: 4 #imp
@@ -49,6 +57,55 @@
     ClothingUniformChaplainThong: 3
     ClothingOuterEpiChaplainMantle: 3
     ClothingNeckChaplainCollar: 3 # Everdream
+    # Mantis Clothes Port from the Den - LoneStar
+    # Hats
+    ClothingHeadHoodMantisDark: 3
+    ClothingHeadHatFezMantisAiry: 3
+    ClothingHeadHatFezMantisOrnate: 3
+    # Neck
+    ClothingNeckMantleMantisOrnate: 3
+    ClothingNeckCloakMantisDark: 3
+    ClothingNeckCloakMantisShroud: 3
+    ClothingNeckMantisPendulum: 3
+    # Leash and Collar
+    LeashMantis: 3
+    ClothingNeckMantisShackles: 3
+    # Uniforms
+    ClothingUniformJumpsuitMantisDark: 3
+    ClothingUniformSkirtMantisAiry: 3
+    ClothingUniformSkirtMantisOrnate: 3
+    ClothingUniformJumpsuitMantisLoincloth: 3
+    ClothingUniformMantisEpiThongAlt: 3
+    # Outer
+    ClothingOuterWinterCoatMantisDark: 3
+    ClothingOuterCoatMantisAiry: 3
+    ClothingOuterCoatMantisOrnate: 3
+    ClothingOuterWinterCoatMantisMu: 3
+    # Belts
+    ClothingBeltMantisDark: 3
+    ClothingBeltMantisAiry: 3
+    ClothingBeltMantisOrnate: 3
+    # Gloves
+    ClothingHandsGlovesMantisDark: 3
+    ClothingHandsGlovesMantisAiry: 3
+    ClothingHandsGlovesMantisOrnate: 3
+    ClothingHandsGlovesMantisChains: 3
+    ClothingHandsMantisEpiWarmersAlt: 3
+    # Masks
+    ClothingMaskMantisVeil: 3
+    ClothingMaskMantisRitual: 3
+    # Glasses
+    ClothingEyesGlassesEpistemicsVisor: 3
+    ClothingEyesGlassesEpistemicsMantis: 3
+    ClothingEyesGlassesEpistemicsMantisTinted: 3
+    ClothingEyesGlassesEpistemicsMantisMirrored: 3
+    ClothingEyesGlassesEpistemicsMantisVeil: 3
+    ClothingEyesHudEpistemicsMantis: 3
+    # Handcuffs (they're really easy to remove, similar to fuzzy handcuffs)
+    HandcuffsMantis: 3
+    # End Mantis Clothes Port - LoneStar
+
+
   contrabandInventory:
     # FoodBakedBunHotX: 2 # Frontier
     DrinkWineBottleFull: 1
