@@ -19,13 +19,13 @@
       tableId: TableDungeonLootMercenaryFlatpacks
       weight: 0.05
     - !type:NestedSelector
-      tableId: TableDungeonLootWeaponsRanged
+      tableId: LSSpawnLootGeneralWeaponRanged # LoneStar
       weight: 0.1
     - !type:NestedSelector
       tableId: TableDungeonLootWeaponsAmmunition
       weight: 0.1
     - !type:NestedSelector
-      tableId: TableDungeonLootWeaponsMelee
+      tableId: LSSpawnLootGeneralWeaponMelee # LoneStar
       weight: 0.1
     - !type:NestedSelector
       tableId: TableDungeonLootWeaponsExplosives
