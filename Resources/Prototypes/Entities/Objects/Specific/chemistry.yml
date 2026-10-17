@@ -93,8 +93,8 @@
   - type: StaticPrice
     price: 30
   - type: DnaSubstanceTrace
-  - type: TrashOnSolutionEmpty # Frontier
-    solution: beaker # Frontier
+  # - type: TrashOnSolutionEmpty # LoneStar
+  #   solution: beaker
 
 - type: entity
   parent: BaseItem
@@ -215,8 +215,8 @@
   - type: StaticPrice
     price: 30
   - type: DnaSubstanceTrace
-  - type: TrashOnSolutionEmpty # Frontier
-    solution: beaker # Frontier
+  # - type: TrashOnSolutionEmpty # LoneStar
+  #   solution: beaker
 
 - type: entity
   name: beaker
