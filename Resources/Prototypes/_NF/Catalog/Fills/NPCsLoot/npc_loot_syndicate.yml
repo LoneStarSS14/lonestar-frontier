@@ -54,9 +54,9 @@
         weight: 0.1
         children:
         - id: WeaponCaseLongAtreidesExpedition
-          weight: 0.2
-        - id: WeaponCaseLongC19r
           weight: 0.8
+        - id: WeaponCaseLongC19r
+          weight: 0.2
 
 # region pistol ammo
 - type: entityTable
