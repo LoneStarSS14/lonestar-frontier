@@ -154,7 +154,6 @@
           tableId: TableDungeonLootNpcSyndicateAmmoPistolUranium
 
 - type: entityTable
-  abstract: true # LoneStar
   id: TableDungeonLootNpcSyndicateAmmoPistolEmp
   table: !type:GroupSelector
     children:
@@ -166,7 +165,6 @@
       - id: NFAmmunitionBoxPistol45Emp
 
 - type: entity
-  abstract: true # LoneStar
   parent: MarkerBasePlaceFree
   id: SpawnDungeonLootNpcSyndicateAmmoPistolEmp
   categories: [ HideSpawnMenu ]

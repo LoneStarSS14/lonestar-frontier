@@ -1,0 +1,125 @@
+# region ammo blueprints
+- type: entityTable
+  id: LSSpawnLootMercenaryBlueprint
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSSpawnLootMercenaryBlueprintT5
+    - !type:GroupSelector
+      weight: 49
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSSpawnLootMercenaryBlueprintT4
+      - !type:GroupSelector
+        weight: 19
+        children:
+        - !type:NestedSelector # Rare
+          weight: 1
+          tableId: LSSpawnLootMercenaryBlueprintT3
+        - !type:GroupSelector
+          weight: 9
+          children:
+          - !type:NestedSelector # Uncommon
+            weight: 1
+            tableId: LSSpawnLootMercenaryBlueprintT2
+          - !type:GroupSelector
+            weight: 3
+            children:
+            - !type:NestedSelector # Common
+              weight: 7
+              tableId: LSSpawnLootMercenaryBlueprintT1
+            - !type:NestedSelector # Trash
+              weight: 1
+              tableId: LSSpawnLootMercenaryBlueprintT0
+
+- type: entityTable
+  id: LSSpawnLootMercenaryBlueprintT5
+  table: !type:GroupSelector
+    children:
+    - id: NFBlueprintAmmo60Mercenary
+
+- type: entityTable
+  id: LSSpawnLootMercenaryBlueprintT4
+  table: !type:GroupSelector
+    children:
+    - id: NFBlueprintHighCapRifle20MagMercenary
+    - id: NFBlueprintHighCapPistol35MagMercenary
+
+- type: entityTable
+  id: LSSpawnLootMercenaryBlueprintT3
+  table: !type:GroupSelector
+    children:
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Overpressure
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol40Overpressure
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Overpressure
+    - id: LSBlueprintMercenaryAmmunitionBoxBigShotgunOverpressure
+    - id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Overpressure
+    - id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Overpressure
+
+- type: entityTable
+  id: LSSpawnLootMercenaryBlueprintT2
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 7
+      children:
+      - id: NFBlueprintPouchMercenary
+    - !type:GroupSelector
+      weight: 3
+      children:
+      - id: LSBlueprintMercenaryAmmunitionBoxPistol35Overpressure
+      - id: LSBlueprintMercenaryAmmunitionBoxPistol40Overpressure
+      - id: LSBlueprintMercenaryAmmunitionBoxPistol45Overpressure
+      - id: LSBlueprintMercenaryAmmunitionBoxShotgunOverpressure
+      - id: LSBlueprintMercenaryAmmunitionBoxRifle20Overpressure
+      - id: LSBlueprintMercenaryAmmunitionBoxRifle30Overpressure
+
+- type: entityTable
+  id: LSSpawnLootMercenaryBlueprintT1
+  table: !type:GroupSelector
+    children:
+    - id: LSBlueprintMercenaryAmmunitionBoxPistol35
+    - id: LSBlueprintMercenaryAmmunitionBoxPistol40
+    - id: LSBlueprintMercenaryAmmunitionBoxPistol45
+    - id: LSBlueprintMercenaryAmmunitionBoxShotgunBuckshot
+    - id: LSBlueprintMercenaryAmmunitionBoxShotgunSlug
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol35
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol40
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol45
+    - id: LSBlueprintMercenaryAmmunitionBoxBigShotgunBuckshot
+    - id: LSBlueprintMercenaryAmmunitionBoxBigShotgunSlug
+
+- type: entityTable
+  id: LSSpawnLootMercenaryBlueprintT0
+  table: !type:GroupSelector
+    children:
+    - id: LSBlueprintMercenaryAmmunitionBoxRifle20
+    - id: LSBlueprintMercenaryAmmunitionBoxRifle30
+    - id: LSBlueprintMercenaryAmmunitionBoxBigRifle20
+    - id: LSBlueprintMercenaryAmmunitionBoxBigRifle30
+    - id: LSBlueprintMercenaryAmmunitionBoxPistol35Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxPistol40Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxPistol45Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxRifle20Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxRifle30Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxShotgunBeanbag
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol40Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Rubber
+    - id: LSBlueprintMercenaryAmmunitionBoxBigShotgunBeanbag
+    - id: LSBlueprintMercenaryAmmunitionBoxPistol35Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxPistol40Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxPistol45Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxRifle20Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxRifle30Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxShotgunPractice
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol40Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxBigPistol45Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Practice
+    - id: LSBlueprintMercenaryAmmunitionBoxBigShotgunPractice

@@ -1,0 +1,198 @@
+# region tier 1
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootPunkMeleeT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:NestedSelector # Weapon
+        tableId: LSSpawnLootGeneralWeaponMeleeT2
+        prob: 0.7
+      - id: SpawnDungeonLootNpcPunksOuterClothes # Armor
+        prob: 0.3
+      - id: SpawnDungeonLootNpcPunksSubstances # Substances
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootMaterialsBasicFull
+        - id: SpawnDungeonLootNpcPunksFluffItems
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootPunkRangedT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:NestedSelector # Weapon
+        tableId: LSSpawnLootGeneralWeaponRangedT1
+        prob: 0.7
+      - id: SpawnDungeonLootNpcPunksOuterClothes # Armor
+        prob: 0.3
+      - id: SpawnDungeonLootNpcPunksSubstances # Substances
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootMaterialsBasicFull
+        - id: SpawnDungeonLootNpcPunksFluffItems
+
+# region tier 2
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootPunkMeleeT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:NestedSelector # Weapon
+        tableId: LSSpawnLootGeneralWeaponMeleeT2
+        prob: 0.7
+      - !type:GroupSelector # Armor
+        children:
+        - id: SpawnDungeonLootNpcPunksArmor
+          weight: 0.7
+        - id: SpawnDungeonLootNpcPunksOuterClothes
+          weight: 0.3
+      - id: SpawnDungeonLootNpcPunksSubstances # Substances
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootMaterialsValuableFull
+        - id: SpawnDungeonLootNpcPunksFluffItems
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootPunkRangedT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:NestedSelector # Weapons
+        tableId: LSSpawnLootGeneralWeaponRangedT2
+        prob: 0.7
+      - !type:GroupSelector # Armor
+        children:
+        - id: SpawnDungeonLootNpcPunksArmor
+          weight: 0.7
+        - id: SpawnDungeonLootNpcPunksOuterClothes
+          weight: 0.3
+      - id: SpawnDungeonLootNpcPunksSubstances # Substances
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootMaterialsValuableFull
+        - id: SpawnDungeonLootNpcPunksFluffItems
+
+# region Elites / Horrors
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootPunkMeleeT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:NestedSelector # Weapons
+        tableId: LSSpawnLootGeneralWeaponMeleeT3
+        prob: 0.7
+      - !type:GroupSelector # Armor
+        children:
+        - id: SpawnDungeonLootNpcPunksArmor
+          weight: 0.7
+        - id: SpawnDungeonLootNpcPunksOuterClothes
+          weight: 0.3
+      - id: SpawnDungeonLootNpcPunksSubstances # Substances
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootNpcJewelry
+          weight: 0.25
+        - id: SpawnDungeonLootMaterialsValuableFull
+          weight: 0.2
+        - !type:NestedSelector
+          tableId: LSSpawnLootPunksBlueprint
+          weight: 0.05
+        - id: SpawnDungeonLootNpcPunksFluffItems
+          weight: 0.3
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootPunkRangedT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:NestedSelector # Weapons
+        tableId: LSSpawnLootGeneralWeaponRangedT3
+        prob: 0.7
+      - !type:GroupSelector # Armor
+        children:
+        - id: SpawnDungeonLootNpcPunksArmor
+          weight: 0.7
+        - id: SpawnDungeonLootNpcPunksOuterClothes
+          weight: 0.3
+      - id: SpawnDungeonLootNpcPunksSubstances # Substances
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootNpcJewelry # From 10 to 5000 spesos
+          weight: 0.25
+        - id: SpawnDungeonLootMaterialsValuableFull
+          weight: 0.2
+        - !type:NestedSelector # LoneStar
+          tableId: LSSpawnLootPunksBlueprint
+          weight: 0.05
+        - id: SpawnDungeonLootNpcPunksFluffItems
+          weight: 0.3
+
+# region tier 4 (boss)
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootPunkLootBoss
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Weapon
+        children:
+        - id: WeaponCaseLongLaserCarbineExpedition
+          weight: 0.6
+        - id: SpawnDungeonLootNpcMercenariesEnergy
+          weight: 0.4
+      - !type:GroupSelector # Armor
+        children:
+        - id: ClothingOuterArmorElitePunkRandomized
+          weight: 0.6
+        - id: SpawnDungeonLootNpcPunksArmor
+          weight: 0.3
+        - id: SpawnDungeonLootNpcPunksOuterClothes
+          weight: 0.1
+      - id: SpawnDungeonLootNpcPunksSubstances # Substances
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootNpcCoins
+          weight: 0.2
+        - id: SpawnDungeonLootMaterialsValuableFull
+          weight: 0.2
+        - !type:NestedSelector
+          tableId: LSSpawnLootPunksBlueprint
+          weight: 0.05
+        - id: SpawnDungeonLootNpcPunksFluffItems
+          weight: 0.3
+        - !type:GroupSelector # Loot 2
+          children:
+          - !type:NestedSelector
+            tableId: LSSpawnLootPunksBlueprint
+            weight: 0.45
+          - id: SpawnDungeonLootGunT3
+            weight: 0.25
+          - id: SpawnDungeonLootNpcBossLootShared
+            weight: 0.3

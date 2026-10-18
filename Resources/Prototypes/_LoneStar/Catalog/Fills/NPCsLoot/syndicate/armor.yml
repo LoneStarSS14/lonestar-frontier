@@ -1,207 +1,156 @@
 #region routing
-- type: entity
-  parent: MarkerBasePlaceFree
+- type: entityTable
   id: LSSpawnLootSyndicateArmor
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    offset: 0.1
-    table: !type:GroupSelector
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSSpawnLootSyndicateArmorT5
+    - !type:GroupSelector
+      weight: 119
       children:
-      - !type:GroupSelector # Legendary
+      - !type:NestedSelector # Epic
         weight: 1
-        children:
-        - id: LSSpawnLootSyndicateArmorT5
-      - !type:GroupSelector
-        weight: 119
-        children:
-        - !type:GroupSelector # Epic
-          weight: 1
-          children:
-          - id: LSSpawnLootSyndicateArmorT4
-        - !type:GroupSelector
-          weight: 34
-          children:
-          - !type:GroupSelector # Rare
-            weight: 1
-            children:
-            - id: LSSpawnLootSyndicateArmorT3
-          - !type:GroupSelector
-            weight: 14
-            children:
-            - !type:GroupSelector # Uncommon
-              weight: 1
-              children:
-              - id: LSSpawnLootSyndicateArmorT2
-            - !type:GroupSelector
-              weight: 4
-              children:
-              - !type:GroupSelector # Common
-                weight: 3
-                children:
-                - id: LSSpawnLootSyndicateArmorT1
-              - !type:GroupSelector # Trash
-                weight: 1
-                children:
-                - id: LSSpawnLootSyndicateArmorT0
-- type: entity
-  parent: MarkerBasePlaceFree
-  id: LSSpawnLootSyndicateArmorNonLegendary
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    offset: 0.1
-    table: !type:GroupSelector
-      children:
-      - !type:GroupSelector # Epic
-        weight: 1
-        children:
-        - id: LSSpawnLootSyndicateArmorT4
+        tableId: LSSpawnLootSyndicateArmorT4
       - !type:GroupSelector
         weight: 34
         children:
-        - !type:GroupSelector # Rare
+        - !type:NestedSelector # Rare
           weight: 1
-          children:
-          - id: LSSpawnLootSyndicateArmorT3
+          tableId: LSSpawnLootSyndicateArmorT3
         - !type:GroupSelector
           weight: 14
           children:
-          - !type:GroupSelector # Uncommon
+          - !type:NestedSelector # Uncommon
             weight: 1
-            children:
-            - id: LSSpawnLootSyndicateArmorT2
+            tableId: LSSpawnLootSyndicateArmorT2
           - !type:GroupSelector
             weight: 4
             children:
-            - !type:GroupSelector # Common
+            - !type:NestedSelector # Common
               weight: 3
-              children:
-              - id: LSSpawnLootSyndicateArmorT1
-            - !type:GroupSelector # Trash
+              tableId: LSSpawnLootSyndicateArmorT1
+            - !type:NestedSelector # Trash
               weight: 1
-              children:
-              - id: LSSpawnLootSyndicateArmorT0
+              tableId: LSSpawnLootSyndicateArmorT0
+
+- type: entityTable
+  id: LSSpawnLootSyndicateArmorNonLegendary
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Epic
+      weight: 1
+      tableId: LSSpawnLootSyndicateArmorT4
+    - !type:GroupSelector
+      weight: 34
+      children:
+      - !type:NestedSelector # Rare
+        weight: 1
+        tableId: LSSpawnLootSyndicateArmorT3
+      - !type:GroupSelector
+        weight: 14
+        children:
+        - !type:NestedSelector # Uncommon
+          weight: 1
+          tableId: LSSpawnLootSyndicateArmorT2
+        - !type:GroupSelector
+          weight: 4
+          children:
+          - !type:NestedSelector # Common
+            weight: 3
+            tableId: LSSpawnLootSyndicateArmorT1
+          - !type:NestedSelector # Trash
+            weight: 1
+            tableId: LSSpawnLootSyndicateArmorT0
 
 #region tiers
-- type: entity
-  parent: MarkerBasePlaceFree
+- type: entityTable
   id: LSSpawnLootSyndicateArmorT5
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    offset: 0.1
-    table: !type:GroupSelector
+  table: !type:GroupSelector
+    children:
+    - !type:AllSelector
       children:
-      - !type:AllSelector
-        children:
-        - id: ClothingOuterArmorRaid
-        - id: ClothingHeadHelmetRaid
-      - id: ClothingOuterHardsuitSyndieElite
-      - id: ClothingOuterHardsuitSyndieCommander
-      - id: ClothingOuterHardsuitJuggernaut
+      - id: ClothingOuterArmorRaid
+      - id: ClothingHeadHelmetRaid
+    - id: ClothingOuterHardsuitSyndieElite
+    - id: ClothingOuterHardsuitSyndieCommander
+    - id: ClothingOuterHardsuitJuggernaut
 
-- type: entity
-  parent: MarkerBasePlaceFree
+- type: entityTable
   id: LSSpawnLootSyndicateArmorT4
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    offset: 0.1
-    table: !type:GroupSelector
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
       children:
-      - !type:GroupSelector
-        children:
-        - id: ClothingOuterHardsuitSyndie
-        - id: ClothingOuterHardsuitSyndieMedic
-      - id: ClothingHeadHelmetSwat
-      - id: ClothingOuterVestWebElite
+      - id: ClothingOuterHardsuitSyndie
+      - id: ClothingOuterHardsuitSyndieMedic
+    - id: ClothingHeadHelmetSwat
+    - id: ClothingOuterVestWebElite
 
-- type: entity
-  parent: MarkerBasePlaceFree
+- type: entityTable
   id: LSSpawnLootSyndicateArmorT3
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    offset: 0.1
-    table: !type:GroupSelector
+  table: !type:GroupSelector
+    children:
+    - !type:AllSelector
       children:
-      - !type:AllSelector
-        children:
-        - id: ClothingOuterSuitBombSyndie
-        - id: ClothingHeadHelmetBombSuitSyndie
-      - !type:AllSelector
-        children:
-        - id: ClothingOuterBioArmoredSyndicate
-        - id: ClothingHeadHatHoodBioArmoredSyndicate
-      - !type:GroupSelector
-        children:
-        - id: ClothingOuterArmorHeavy
-        - id: ClothingOuterArmorHeavyGreen
-        - id: ClothingOuterArmorHeavyRed
-      - id: ClothingOuterVestWeb
+      - id: ClothingOuterSuitBombSyndie
+      - id: ClothingHeadHelmetBombSuitSyndie
+    - !type:AllSelector
+      children:
+      - id: ClothingOuterBioArmoredSyndicate
+      - id: ClothingHeadHatHoodBioArmoredSyndicate
+    - !type:GroupSelector
+      children:
+      - id: ClothingOuterArmorHeavy
+      - id: ClothingOuterArmorHeavyGreen
+      - id: ClothingOuterArmorHeavyRed
+    - id: ClothingOuterVestWeb
 
-- type: entity
-  parent: MarkerBasePlaceFree
+- type: entityTable
   id: LSSpawnLootSyndicateArmorT2
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    offset: 0.1
-    table: !type:GroupSelector
+  table: !type:GroupSelector
+    children:
+    - !type:AllSelector
       children:
-      - !type:AllSelector
-        children:
-        - id: ClothingOuterArmorRiot
-        - id: ClothingHeadHelmetRiot
-      - id: ClothingOuterCoatSyndieCapArmored
-      - id: ClothingOuterWinterSyndieCapArmored
-      - !type:GroupSelector
-        children:
-        - id: ClothingOuterCoatWarden
-        - id: ClothingOuterCoatHoSTrench
-        - id: ClothingOuterWinterHoS
-        - id: ClothingOuterWinterWarden
+      - id: ClothingOuterArmorRiot
+      - id: ClothingHeadHelmetRiot
+    - id: ClothingOuterCoatSyndieCapArmored
+    - id: ClothingOuterWinterSyndieCapArmored
+    - !type:GroupSelector
+      children:
+      - id: ClothingOuterCoatWarden
+      - id: ClothingOuterCoatHoSTrench
+      - id: ClothingOuterWinterHoS
+      - id: ClothingOuterWinterWarden
 
-- type: entity
-  parent: MarkerBasePlaceFree
+- type: entityTable
   id: LSSpawnLootSyndicateArmorT1
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    offset: 0.1
-    table: !type:GroupSelector
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
       children:
-      - !type:GroupSelector
-        children:
-        - id: ClothingOuterArmorBulletproof
-        - id: ClothingOuterCoatAMG
-        - id: ClothingOuterArmorReflective
-        - id: ClothingOuterCoatArcadiaTrench
-        - id: ClothingOuterCoatBHTrench
-      - !type:GroupSelector
-        children:
-        - id: ClothingOuterArmorBasic
-        - id: ClothingOuterArmorBasicSlim
-        - id: ClothingOuterVestWebMercenary
-      - !type:GroupSelector
-        children:
-        - id: ClothingHeadHelmetBasic
-        - id: ClothingHeadHelmetMercenary
+      - id: ClothingOuterArmorBulletproof
+      - id: ClothingOuterCoatAMG
+      - id: ClothingOuterArmorReflective
+      - id: ClothingOuterCoatArcadiaTrench
+      - id: ClothingOuterCoatBHTrench
+    - !type:GroupSelector
+      children:
+      - id: ClothingOuterArmorBasic
+      - id: ClothingOuterArmorBasicSlim
+      - id: ClothingOuterVestWebMercenary
+    - !type:GroupSelector
+      children:
+      - id: ClothingHeadHelmetBasic
+      - id: ClothingHeadHelmetMercenary
 
-- type: entity
-  parent: MarkerBasePlaceFree
+- type: entityTable
   id: LSSpawnLootSyndicateArmorT0
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    offset: 0.1
-    table: !type:NestedSelector
-      tableId: LSSpawnLootSyndicateClothes
-      prob: 1.00
+  table: !type:NestedSelector
+    tableId: LSSpawnLootSyndicateClothes
 
 #region Tables
-- type: entityTable # LoneStar
+- type: entityTable
   id: LSSpawnLootSyndicateClothes
   table: !type:GroupSelector
     children:

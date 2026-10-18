@@ -1,0 +1,279 @@
+# region Tier 1
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootMercenaryLootRangedT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootNpcMercenariesPistols # Weapon
+        prob: 0.4
+      - id: ClothingOuterVestWebMercenary # Armor
+        prob: 0.4
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootMercenaryBlueprint
+        prob: 0.1
+      - !type:GroupSelector # Loot
+        children:
+        - id: ClothingNeckIFFNeutral
+          weight: 0.2
+        - id: SpawnDungeonLootNpcPunksSmokes
+          weight: 0.15
+        - id: SpawnDungeonClutterMedipens
+          weight: 0.25
+        - id: SpawnDungeonLootNpcMercenariesFluff
+          weight: 0.15
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootMercenaryLootRangedAltT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootNpcMercenariesRifles # Weapon
+        prob: 0.4
+      - id: ClothingOuterVestWebMercenary # Armor
+        prob: 0.4
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootMercenaryBlueprint
+        prob: 0.1
+      - !type:GroupSelector # Loot
+        children:
+        - id: ClothingNeckIFFNeutral
+          weight: 0.2
+        - id: SpawnDungeonLootNpcPunksSmokes
+          weight: 0.15
+        - id: SpawnDungeonClutterMedipens
+          weight: 0.25
+        - id: SpawnDungeonLootNpcMercenariesFluff
+          weight: 0.15
+
+# region Tier 2
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootMercenaryLootMeleeT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootMeleeT3 # Weapons
+        prob: 0.5
+      - !type:GroupSelector # Armor
+        children:
+        - id: ClothingOuterArmorBasicSlim
+          weight: 0.5
+        - id: SpawnDungeonLootShieldsMercenary
+          weight: 0.5
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootMercenaryBlueprint
+        prob: 0.3
+      - !type:GroupSelector # Loot
+        children:
+        - id: ClothingNeckIFFNeutral
+          weight: 0.2
+        - id: SpawnDungeonLootNpcPunksSmokes
+          weight: 0.15
+        - id: SpawnDungeonClutterMedipens
+          weight: 0.25
+        - id: SpawnDungeonLootMaterialsBasicFull
+          weight: 0.3
+        - id: SpawnDungeonLootNpcMercenariesFluff
+          weight: 0.15
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootMercenaryLootRangedT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootNpcMercenariesShotguns # Weapon
+        prob: 0.6
+      - id: ClothingOuterArmorBasicSlim # Armor
+        prob: 0.4
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootMercenaryBlueprint
+        prob: 0.3
+      - !type:GroupSelector # Loot
+        children:
+        - id: ClothingNeckIFFNeutral
+          weight: 0.2
+        - id: SpawnDungeonLootNpcPunksSmokes
+          weight: 0.15
+        - id: SpawnDungeonClutterMedipens
+          weight: 0.25
+        - id: SpawnDungeonLootMaterialsBasicFull
+          weight: 0.3
+        - id: SpawnDungeonLootNpcMercenariesFluff
+          weight: 0.15
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootMercenaryLootRangedAltT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Weapon
+        children:
+        - id: NFWeaponRevolverArgentiExpedition
+          weight: 0.7
+        - id: NFWeaponRevolverArgentiExpedition
+          weight: 0.3
+          amount: 2
+      - !type:GroupSelector # Armor
+        children:
+        - id: ClothingOuterCoatBHTrench
+        - id: ClothingHeadHatBH
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootMercenaryBlueprint
+        prob: 0.3
+      - !type:GroupSelector # Loot
+        children:
+        - id: ClothingNeckIFFNeutral
+          prob: 0.2
+        - id: SpawnDungeonLootNpcPunksSmokes
+          prob: 0.15
+        - id: SpawnDungeonClutterMedipens
+          prob: 0.25
+        - id: SpawnDungeonLootMaterialsBasicFull
+          prob: 0.3
+        - id: SpawnDungeonLootNpcMercenariesFluff
+          prob: 0.15
+
+#region Elites / Horrors
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootMercenaryLootRangedT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Weapon
+        children:
+        - id: SpawnDungeonLootNpcMercenariesEnergy
+          weight: 0.6
+        - id: SawElectric
+          weight: 0.4
+      - id: ClothingOuterArmorBasicSlim # Armor
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootMercenaryBlueprint
+        prob: 0.45
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootKitsFirstAid
+          weight: 0.7
+        - id: ClothingNeckIFFNeutral
+          weight: 0.2
+        - id: SpawnDungeonLootNpcPunksSmokes
+          weight: 0.15
+        - id: SpawnDungeonClutterMedipens
+          weight: 0.25
+        - id: SpawnDungeonLootMaterialsValuableFull
+          weight: 0.3
+        - id: SpawnDungeonLootNpcMercenariesFluff
+          weight: 0.15
+        - !type:NestedSelector # LoneStar
+          tableId: LSSpawnLootMercenaryBlueprint
+          weight: 0.05
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootMercenaryLootRangedAltT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootGunT2 # Weapon
+        prob: 0.4
+      - id: ClothingOuterArmorBasicSlim # Armor
+        prob: 0.4
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootMercenaryBlueprint
+        prob: 0.45
+      - !type:GroupSelector # Loot
+        children:
+        - id: ClothingNeckIFFNeutral
+          weight: 0.2
+        - id: SpawnDungeonLootNpcPunksSmokes
+          weight: 0.15
+        - id: SpawnDungeonClutterMedipens
+          weight: 0.25
+        - id: SpawnDungeonLootMaterialsValuableFull
+          weight: 0.3
+        - id: SpawnDungeonLootNpcMercenariesFluff
+          weight: 0.15
+        - !type:NestedSelector
+          tableId: LSSpawnLootMercenaryBlueprint
+          weight: 0.05
+
+#region Bosses
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootMercenaryLootBoss
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Weapon
+        children:
+        - !type:AllSelector
+          weight: 2
+          children:
+          - id: LSWeaponRifleMahifa
+          - id: !type:GroupSelector
+            children:
+            - id: NFAmmunitionBoxRifle30Overpressure
+              weight: 4
+            - id: NFAmmunitionBoxBigRifle30Overpressure
+              weight: 1
+            rolls: !type:RangeNumberSelector
+              range: 1, 2
+        - !type:AllSelector
+          children:
+          - !type:GroupSelector:
+            children:
+            - !type:NestedSelector
+              weight: 22
+              tableId: LSSpawnLootGeneralWeaponRangedT3
+            - !type:NestedSelector
+              weight: 7
+              tableId: LSSpawnLootGeneralWeaponRangedT4
+          - !type:NestedSelector
+            tableId: LSSpawnLootGeneralWeaponAmmoOverpressureAny
+            rolls: !type:RangeNumberSelector
+              range: 2, 3
+        - !type:GroupSelector:
+          children:
+          - !type:NestedSelector
+            weight: 22
+            tableId: LSSpawnLootGeneralWeaponMeleeT3
+          - !type:NestedSelector
+            weight: 7
+            tableId: LSSpawnLootGeneralWeaponMeleeT4
+      - id: ClothingOuterHardsuitScaf # Armor
+        prob: 0.4
+      - !type:AllSelector # Blueprints
+        children:
+        - !type:NestedSelector
+          tableId: LSSpawnLootMercenaryBlueprint
+        - !type:NestedSelector
+          tableId: LSSpawnLootMercenaryBlueprint
+          prob: 0.3

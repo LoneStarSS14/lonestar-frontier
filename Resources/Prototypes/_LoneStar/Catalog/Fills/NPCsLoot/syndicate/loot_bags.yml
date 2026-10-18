@@ -1,8 +1,232 @@
 #region Tier 1
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateT1Deckhand
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootNpcSyndicateWeaponsPistols # Weapon
+      - !type:NestedSelector # Armor
+        tableId: LSSpawnLootSyndicateArmorNonLegendary
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootSyndicateBlueprint
+        prob: 0.15
+      - !type:AllSelector # Loot
+        children:
+        - id: SpawnDungeonClutterMedipens
+          prob: 0.25
+        - id: SpawnDungeonLootMaterialsBasicFull
+          prob: 0.3
+        - id: SpawnRewardPrizeBallSyndicate
+          prob: 0.3
 
 #region Tier 2
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateT2Captain
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootNpcSyndicateWeaponsPistols # Weapon
+      - !type:NestedSelector # Armor
+        tableId: LSSpawnLootSyndicateArmorNonLegendary
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootSyndicateBlueprint
+        prob: 0.25
+      - !type:AllSelector # Loot
+        children:
+        - id: SpawnDungeonClutterMedipens
+          prob: 0.25
+        - id: SpawnDungeonLootMaterialsBasicFull
+          prob: 0.3
+        - id: SpawnRewardPrizeBallSyndicate
+          prob: 0.3
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateT2Engineer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootNpcSyndicateWeaponsShotguns # Weapon
+      - !type:NestedSelector # Armor
+        tableId: LSSpawnLootSyndicateArmorNonLegendary
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootSyndicateBlueprint
+        prob: 0.25
+      - !type:GroupSelector # Loot
+        children:
+        - id: SyndicateJawsOfLife
+          weight: 0.6
+        - id: SpawnDungeonLootPartsEngi
+          amount: 2
+        - id: SpawnDungeonLootCircuitBoardEngi
+          weight: 1
+        - id: SpawnDungeonLootToolsAdvancedEngineering
+          weight: 2
+        - id: SpawnRewardPrizeBallSyndicate
+          weight: 1.5
+        - id: SpawnDungeonLootMaterialsValuableFull
+          weight: 2
+          amount: 2
+        - !type:NestedSelector
+          tableId: LSSpawnLootSyndicateBlueprint
+          weight: 0.1
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateT2Medic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # 'Weapon'
+        children:
+        - id: HypoMiniLimitedEdition
+        - id: BruteAutoInjector
+        - id: AntiPoisonMedipen
+        - id: MedicatedSuture
+        - id: Stimpack
+      - !type:NestedSelector # Armor
+        tableId: LSSpawnLootSyndicateArmorNonLegendary
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootSyndicateBlueprint
+        prob: 0.05
+      - !type:AllSelector # Loot
+        children:
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 4
+          prob: 0.3
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 2
+          prob: 0.3
+        - id: SpawnRewardPrizeBallSyndicate
+          prob: 0.3
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateT2SecondOfficer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Weapon
+        children:
+        - id: NFWeaponEnergyPistolLaserAdvancedExpedition
+          prob: 0.7
+        - id: NFWeaponEnergyPistolLaserAntiqueExpedition
+          prob: 0.25
+        - id: NFWeaponEnergySubMachineGunDeltaVExpedition
+          prob: 0.05
+      - !type:NestedSelector # Armor
+        tableId: LSSpawnLootSyndicateArmorNonLegendary
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootSyndicateBlueprint
+        prob: 0.05
+      - !type:AllSelector # Loot
+        children:
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 4
+          prob: 0.3
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 2
+          prob: 0.3
+        - id: SpawnRewardPrizeBallSyndicate
+          prob: 0.3
 
 #region Elite / Horrors
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateT3Operative
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootNpcSyndicateWeaponsSmgs # Weapon
+      - !type:NestedSelector # Armor
+        tableId: LSSpawnLootSyndicateArmor
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootSyndicateBlueprint
+        prob: 0.1
+      - !type:AllSelector # Loot
+        children:
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 4
+          prob: 0.3
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 2
+          prob: 0.3
+        - id: SpawnRewardPrizeBallSyndicate
+          prob: 0.3
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateT3Grenadier
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:NestedSelector # Weapon
+        tableId: LSSpawnLootGeneralWeaponRangedRare
+        prob: 0.7
+      - !type:NestedSelector # Armor
+        tableId: LSSpawnLootSyndicateArmor
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootSyndicateBlueprint
+        prob: 0.1
+      - !type:AllSelector # Loot
+        children:
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 4
+          prob: 0.3
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 2
+          prob: 0.3
+        - id: SpawnRewardPrizeBallSyndicate
+          prob: 0.3
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootSyndicateT3Chemwarrior
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - id: SpawnDungeonLootNpcSyndicateWeaponsPistolsChemical # Weapon
+      - !type:NestedSelector # Armor
+        tableId: LSSpawnLootSyndicateArmor
+      - !type:NestedSelector # Blueprints
+        tableId: LSSpawnLootSyndicateBlueprint
+        prob: 0.1
+      - !type:AllSelector # Loot
+        children:
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 4
+          prob: 0.3
+        - id: SpawnDungeonLootMaterialsValuableFull
+          amount: 2
+          prob: 0.3
+        - id: SpawnRewardPrizeBallSyndicate
+          prob: 0.3
 
 #region Bosses
 - type: entity
@@ -11,7 +235,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
-    offset: 0.1
+    offset: 0.25
     table: !type:AllSelector
       children:
       - !type:AllSelector # Weapon
@@ -24,22 +248,24 @@
         children:
         - id: ClothingOuterHardsuitSyndieElite
           weight: 1
-        - id: LSSpawnLootSyndicateArmor
+        - !type:NestedSelector
           weight: 14
+          tableId: LSSpawnLootSyndicateArmor
       - !type:AllSelector # Blueprints
         children:
-        - id: LSSpawnLootSyndicateBlueprint
-        - id: LSSpawnLootSyndicateBlueprint
+        - !type:NestedSelector
+          tableId: LSSpawnLootSyndicateBlueprint
+        - !type:NestedSelector
+          tableId: LSSpawnLootSyndicateBlueprint
           prob: 0.7
-        - id: LSSpawnLootSyndicateBlueprint
+        - !type:NestedSelector
+          tableId: LSSpawnLootSyndicateBlueprint
           prob: 0.3
       - !type:AllSelector # Loot
         children:
-        - id: SpawnDungeonLootNpcBossLootShared
-          prob: 0.3
-        - id: SpawnDungeonLootNpcBossLootShared
-          prob: 0.3
-        - id: SpawnDungeonLootNpcBossLootShared
+        - !type:NestedSelector
+          tableId: TableDungeonLootNpcBossLootShared
+          rolls: 3
           prob: 0.3
         - id: SpawnRewardPrizeBallSyndicate
           prob: 0.3
