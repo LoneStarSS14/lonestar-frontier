@@ -37,5 +37,5 @@ public sealed partial class ColorableClothingComponent : Component
     /// if false, this sprite may be rerolled. note randomsprite is used by things such as space carp.
     /// </summary>
     [DataField]
-    public bool DenyReroll = true;
+    public bool DenyReroll = false;
 }

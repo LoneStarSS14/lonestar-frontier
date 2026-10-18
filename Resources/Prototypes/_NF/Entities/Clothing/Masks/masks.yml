@@ -104,7 +104,6 @@
         map: [ "clothing_mask_decor" ]
         shader: unshaded
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
     available:
     - mask_main:
         icon-base-mask: Base

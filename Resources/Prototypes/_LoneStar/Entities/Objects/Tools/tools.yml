@@ -11,7 +11,7 @@
     sprite: _LoneStar/Objects/Tools/magic-needle.rsi
     size: Tiny
   - type: Colorizer
-    denyRerollMessage: randomsprite-reroll-denyreroll-restitch
+    denyRerollMessage: colorizer-denyreroll-restitch
     rerollSound:
       path: /Audio/Items/wirecutter.ogg
       params:
