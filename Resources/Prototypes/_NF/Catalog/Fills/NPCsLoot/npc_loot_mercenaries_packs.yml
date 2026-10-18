@@ -169,7 +169,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootMercenaryLootRangedT1
+    - id: LSSpawnLootMercenaryLootRangedT1 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltMercenary
@@ -201,7 +201,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootMercenaryLootRangedAltT1
+    - id: LSSpawnLootMercenaryLootRangedAltT1 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltMercenary
@@ -245,7 +245,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootMercenaryLootMeleeT2
+    - id: LSSpawnLootMercenaryLootMeleeT2 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackMercenary
@@ -254,7 +254,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootMercenaryLootRangedT2
+    - id: LSSpawnLootMercenaryLootRangedT2 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltMercenary
@@ -279,7 +279,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootMercenaryLootRangedAltT2
+    - id: LSSpawnLootMercenaryLootRangedAltT2 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltMercenary
@@ -310,7 +310,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootMercenaryLootRangedT3
+    - id: LSSpawnLootMercenaryLootRangedT3 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltMercenary
@@ -341,7 +341,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootMercenaryLootRangedAltT3
+    - id: LSSpawnLootMercenaryLootRangedAltT3 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltMercenary
@@ -391,4 +391,4 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootMercenaryLootBoss
+    - id: LSSpawnLootMercenaryLootBoss # LoneStar

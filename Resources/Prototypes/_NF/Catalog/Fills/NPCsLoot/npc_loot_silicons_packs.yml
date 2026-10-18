@@ -1,5 +1,3 @@
-## LoneStar, SpawnItemsOnUse simplified for our entityTables.
-
 # region base
 - type: entity
   abstract: true
