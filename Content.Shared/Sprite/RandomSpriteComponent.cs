@@ -13,12 +13,6 @@ public sealed partial class RandomSpriteComponent : Component
     public bool GetAllGroups;
 
     /// <summary>
-    /// Whether to randomize this sprite when the entity is first created.
-    /// </summary>
-    [DataField]
-    public bool RandomOnCreation = true;
-
-    /// <summary>
     /// Available colors based on group, parsed layer enum, state, and color.
     /// Stored as a list so we can have groups of random sprites (e.g. tech_base + tech_flare for holoparasite)
     /// </summary>

@@ -21,7 +21,7 @@ public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
 
     private void OnMapInit(EntityUid uid, RandomSpriteComponent component, MapInitEvent args)
     {
-        if (!component.RandomOnCreation || component.Selected.Count > 0)
+        if (component.Selected.Count > 0)
             return;
 
         if (component.Available.Count == 0)

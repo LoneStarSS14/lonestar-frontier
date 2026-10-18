@@ -38,4 +38,11 @@ public sealed partial class ColorableClothingComponent : Component
     /// </summary>
     [DataField]
     public bool DenyReroll = false;
+
+    /// <summary>
+    /// Whether to randomize this sprite when the entity is first created.
+    /// </summary>
+    [DataField]
+    public bool RandomOnCreation = true;
+
 }

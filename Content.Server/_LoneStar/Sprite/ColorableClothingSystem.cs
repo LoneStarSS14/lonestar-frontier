@@ -24,7 +24,7 @@ public sealed class ColorableClothingSystem : SharedColorableClothingSystem
 
     private void OnMapInit(EntityUid uid, ColorableClothingComponentT component, MapInitEvent args)
     {
-        if (component.Selected.Count > 0)
+        if (!component.RandomOnCreation || component.Selected.Count > 0)
             return;
 
         Reroll(uid, component);
