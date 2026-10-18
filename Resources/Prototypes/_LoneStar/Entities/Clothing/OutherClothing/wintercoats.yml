@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingOuterBase, ClothingOuterClothingRandomSpriteMono ]
+  parent: [ ClothingOuterBase, ClothingOuterClothingColorableMono ]
   id: ClothingOuterCoatTurtleneckHalfBlouseColorable
   name: turtleneck half blouse
   description: A cropped, ribbed half blouse with a high collar.

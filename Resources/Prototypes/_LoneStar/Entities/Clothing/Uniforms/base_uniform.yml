@@ -2,8 +2,8 @@
 #region Colorable Bases
 - type: entity # for sprites with a single colored layer
   abstract: true
-  id: ClothingUniformRandomSpriteMono
-  suffix: Random
+  id: ClothingUniformColorableMono
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -15,7 +15,6 @@
       - state: equipped-INNERCLOTHING
         map: [ "uniform-equipped" ]
   - type: ColorableClothing
-    denyReroll: false
     available:
       - uniform-icon:
           icon: Base
@@ -30,8 +29,8 @@
 
 - type: entity # for sprites with a set layer, and a single colored layer
   abstract: true
-  id: ClothingUniformRandomSpriteBaseColor
-  suffix: Random
+  id: ClothingUniformColorableBaseColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -45,7 +44,6 @@
       - state: equipped-INNERCLOTHING-color
         map: [ "uniform-equipped" ]
   - type: ColorableClothing
-    denyReroll: false
     available:
       - uniform-icon:
           icon-color: Base
@@ -56,9 +54,9 @@
 
 - type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
   abstract: true
-  parent: ClothingUniformRandomSpriteBaseColor
-  id: ClothingUniformRandomSpriteBaseColorInhand
-  suffix: Random
+  parent: ClothingUniformColorableBaseColor
+  id: ClothingUniformColorableBaseColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -70,8 +68,7 @@
         - state: inhand-right
         - state: inhand-right-color
           map: [ "hr-color" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - uniform-icon:
           icon-color: Base
@@ -86,8 +83,8 @@
 
 - type: entity # for sprites with a 2 colored layers
   abstract: true
-  id: ClothingUniformRandomSpriteDualColor
-  suffix: Random
+  id: ClothingUniformColorableDualColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -102,8 +99,7 @@
         map: [ "uniform-equipped-primary" ]
       - state: equipped-INNERCLOTHING-color
         map: [ "uniform-equipped-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - uniform-icon-primary:
           icon: Primary
@@ -119,9 +115,9 @@
 
 - type: entity # for sprites with a 2 colored layers, supporting inhands
   abstract: true
-  parent: ClothingUniformRandomSpriteDualColor
-  id: ClothingUniformRandomSpriteDualColorInhand
-  suffix: Random
+  parent: ClothingUniformColorableDualColor
+  id: ClothingUniformColorableDualColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -135,8 +131,7 @@
           map: [ "hr-primary" ]
         - state: inhand-right-color
           map: [ "hr-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - uniform-icon-primary:
           icon: Primary

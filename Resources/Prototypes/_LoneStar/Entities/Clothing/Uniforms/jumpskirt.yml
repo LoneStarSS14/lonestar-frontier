@@ -118,7 +118,7 @@
           icon-extra: Gems
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteMono ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableMono ]
   id: ClothingUniformJumpskirtStraplessColorable
   name: strapless dress
   description: A light flowing dress made of a breathable fabric.
@@ -129,7 +129,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/strapless.rsi
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtPartyPrincessColorable
   name: party-princess dress
   description: #TODO
@@ -143,7 +143,7 @@
       Base: Rainbow
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtCheckerColorable
   name: checker dress
   description: #TODO
@@ -157,7 +157,7 @@
       Base: NTInteriorDesign
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtSpottyColorable
   name: spotty dress
   description: #TODO
@@ -171,7 +171,7 @@
       Base: NTInteriorDesign
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtWesternColorable
   name: saloon dress
   description: #TODO
@@ -640,7 +640,7 @@
 
 # region Misc
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteDualColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableDualColor ]
   id: ClothingUniformJumpskirtMaidDressLong
   name: long maid dress
   components:

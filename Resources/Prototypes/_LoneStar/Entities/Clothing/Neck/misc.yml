@@ -16,11 +16,13 @@
     - WhitelistChameleonAdvancedCollar
 
 - type: entity
-  parent: [ ClothingNeckBase, ClothingNeckRandomSpriteMono ]
+  parent: [ ClothingNeckBase, ClothingNeckColorableMono ]
   id: ClothingNeckSailorAscotColorable
   name: sailor's ascot
   description: The preferred accessory for mystery solving whtieboys
   components:
+  - type: ColorableClothing
+    randomOnCreation: false
   - type: Sprite
     sprite: _Impstation/Clothing/Neck/Misc/sailorascot.rsi
   - type: Clothing
@@ -28,4 +30,3 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-

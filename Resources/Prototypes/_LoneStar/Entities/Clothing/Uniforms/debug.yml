@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingUniformBase
-  id: DebugUniformRandomSpriteTest
+  id: DebugUniformColorableTest
   abstract: true
   name: debug bodysuit
   suffix: Debug
@@ -24,7 +24,7 @@
         map: [ "leg" ]
 
 - type: entity
-  parent: DebugUniformRandomSpriteTest
+  parent: DebugUniformColorableTest
   id: DebugUniformA
   name: 2mapped, unused
   suffix: Random
@@ -42,7 +42,7 @@
           legs_plain: NTInteriorDesign
           
 - type: entity
-  parent: DebugUniformRandomSpriteTest
+  parent: DebugUniformColorableTest
   id: DebugUniformB
   name: 2 mapped, unused, null and variant each
   suffix: Random
@@ -62,7 +62,7 @@
           legs_plain: NTInteriorDesign
           
 - type: entity
-  parent: DebugUniformRandomSpriteTest
+  parent: DebugUniformColorableTest
   id: DebugUniformC
   name: 2 mapped, 1 shared use
   suffix: Random
@@ -82,7 +82,7 @@
           legs_plain: Col1
 
 - type: entity
-  parent: DebugUniformRandomSpriteTest
+  parent: DebugUniformColorableTest
   id: DebugUniformD
   name: 2 mapped, shared use
   suffix: Random
@@ -102,7 +102,7 @@
           legs_plain: Col2
 
 - type: entity
-  parent: DebugUniformRandomSpriteTest
+  parent: DebugUniformColorableTest
   id: DebugUniformE
   name: 2 mapped, seperate use
   suffix: Random

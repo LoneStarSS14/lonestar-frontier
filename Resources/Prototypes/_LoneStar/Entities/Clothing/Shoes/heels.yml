@@ -1,6 +1,6 @@
 #region Kitten
 - type: entity
-  parent: [ ClothingShoesBaseButcherableHeelsNoisy, ClothingShoesRandomSpriteBaseColorInhand ]
+  parent: [ ClothingShoesBaseButcherableHeelsNoisy, ClothingShoesColorableBaseColorInhand ]
   id: ClothingShoesHeelsKittenColorable
   name: kitten-heels
   description: A pair of cute kitten heels with a dainty ankle strap.
@@ -14,8 +14,9 @@
   parent: ClothingShoesHeelsKittenColorable
   id: ClothingShoesHeelsKitten
   categories: [ HideSpawnMenu ]
+  suffix: White
   components:
-  - type: RandomSprite
+  - type: ColorableClothing
     randomOnCreation: false
   - type: Sprite
     layers:
@@ -47,8 +48,9 @@
   parent: ClothingShoesHeelsKittenColorable
   id: ClothingShoesHeelsKittenBlack
   categories: [ HideSpawnMenu ]
+  suffix: Black
   components:
-  - type: RandomSprite
+  - type: ColorableClothing
     randomOnCreation: false
   - type: Sprite
     layers:
@@ -80,8 +82,9 @@
   parent: ClothingShoesHeelsKittenColorable
   id: ClothingShoesHeelsKittenCrimson
   categories: [ HideSpawnMenu ]
+  suffix: Crimson
   components:
-  - type: RandomSprite
+  - type: ColorableClothing
     randomOnCreation: false
   - type: Sprite
     layers:
@@ -113,8 +116,9 @@
   parent: ClothingShoesHeelsKittenColorable
   id: ClothingShoesHeelsKittenRose
   categories: [ HideSpawnMenu ]
+  suffix: Rose
   components:
-  - type: RandomSprite
+  - type: ColorableClothing
     randomOnCreation: false
   - type: Sprite
     layers:

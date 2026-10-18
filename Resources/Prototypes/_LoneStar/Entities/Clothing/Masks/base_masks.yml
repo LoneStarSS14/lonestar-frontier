@@ -2,8 +2,8 @@
 #region Colorable Bases
 - type: entity # for sprites with a single colored layer
   abstract: true
-  id: ClothingMaskRandomSpriteMono
-  suffix: Random
+  id: ClothingMaskColorableMono
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -14,8 +14,7 @@
       mask:
       - state: equipped-MASK
         map: [ "mask-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - mask-icon:
           icon: Base
@@ -30,8 +29,8 @@
 
 - type: entity # for sprites with a set layer, and a single colored layer
   abstract: true
-  id: ClothingMaskRandomSpriteBaseColor
-  suffix: Random
+  id: ClothingMaskColorableBaseColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -44,8 +43,7 @@
       - state: equipped-MASK
       - state: equipped-MASK-color
         map: [ "mask-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - mask-icon:
           icon-color: Base
@@ -60,9 +58,9 @@
 
 - type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
   abstract: true
-  parent: ClothingMaskRandomSpriteBaseColor
-  id: ClothingMaskRandomSpriteBaseColorInhand
-  suffix: Random
+  parent: ClothingMaskColorableBaseColor
+  id: ClothingMaskColorableBaseColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -74,8 +72,7 @@
       - state: inhand-right
       - state: inhand-right-color
         map: [ "hr-color" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - mask-icon:
           icon-color: Base
@@ -90,8 +87,8 @@
 
 - type: entity # for sprites with a 2 colored layers
   abstract: true
-  id: ClothingMaskRandomSpriteDualColor
-  suffix: Random
+  id: ClothingMaskColorableDualColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -106,8 +103,7 @@
         map: [ "mask-equipped-primary" ]
       - state: equipped-MASK-color
         map: [ "mask-equipped-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - mask-icon-primary:
           icon: Primary
@@ -127,9 +123,9 @@
 
 - type: entity # for sprites with a 2 colored layers, supporting inhands
   abstract: true
-  parent: ClothingMaskRandomSpriteDualColor
-  id: ClothingMaskRandomSpriteDualColorInhand
-  suffix: Random
+  parent: ClothingMaskColorableDualColor
+  id: ClothingMaskColorableDualColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -143,8 +139,7 @@
         map: [ "hr-primary" ]
       - state: inhand-right-color
         map: [ "hr-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - mask-icon-primary:
           icon: Primary

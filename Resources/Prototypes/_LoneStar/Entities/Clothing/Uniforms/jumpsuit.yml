@@ -1,18 +1,18 @@
 #region colorable
 - type: entity
-  parent: [ ClothingUniformBase, ClothingUniformRandomSpriteBaseColorInhand ]
+  parent: [ ClothingUniformBase, ClothingUniformColorableBaseColorInhand ]
   id: ClothingUniformTurtleneckColorable
   name: turtleneck jumpsuit
   description: For some reason, wearing this makes you feel like working in tech support at a product store.
   components:
   - type: Sprite
-    sprite: _Starlight/Clothing/Uniforms/Jumpsuit/color_turtle.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/color_turtle.rsi
   - type: Clothing
-    sprite: _Starlight/Clothing/Uniforms/Jumpsuit/color_turtle.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/color_turtle.rsi
 
 - type: entity
-  parent: [ ClothingUniformBase, ClothingUniformRandomSpriteBaseColorInhand ]
-  id: ClothingUniformFlannelColorable
+  parent: [ ClothingUniformBase, ClothingUniformColorableBaseColorInhand ]
+  id: ClothingUniformJumpsuitFlannelColorable
   name: flannel jumpsuit
   description: Smells like someones been grillin'.
   components:

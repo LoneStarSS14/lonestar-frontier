@@ -1,6 +1,6 @@
 #region Misc
 - type: entity
-  parent: [ ClothingOuterBase, ClothingOuterClothingRandomSpriteMono ]
+  parent: [ ClothingOuterBase, ClothingOuterClothingColorableMono ]
   id: ClothingOuterVestPinafore
   name: pinafore
   description: What do you mean no pockets!?
@@ -9,7 +9,7 @@
     sprite: _LoneStar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/OuterClothing/Vest/maid-pinafore.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: LSSilks
 

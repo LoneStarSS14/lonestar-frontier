@@ -2,8 +2,8 @@
 #region Colorable Bases
 - type: entity # for sprites with a single colored layer
   abstract: true
-  id: ClothingEarsRandomSpriteMono
-  suffix: Random
+  id: ClothingEarsColorableMono
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -14,8 +14,7 @@
       ears:
       - state: equipped-EARS
         map: [ "ears-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - ears-icon:
           icon: Base
@@ -30,8 +29,8 @@
 
 - type: entity # for sprites with a set layer, and a single colored layer
   abstract: true
-  id: ClothingEarsRandomSpriteBaseColor
-  suffix: Random
+  id: ClothingEarsColorableMonoBaseColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -44,8 +43,7 @@
       - state: equipped-EARS
       - state: equipped-EARS-color
         map: [ "ears-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - ears-icon:
           icon-color: Base
@@ -60,9 +58,9 @@
 
 - type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
   abstract: true
-  parent: ClothingEarsRandomSpriteBaseColor
-  id: ClothingEarsRandomSpriteBaseColorInhand
-  suffix: Random
+  parent: ClothingEarsColorableMonoBaseColor
+  id: ClothingEarsColorableMonoBaseColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -74,8 +72,7 @@
       - state: inhand-right
       - state: inhand-right-color
         map: [ "hr-color" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - ears-icon:
           icon-color: Base
@@ -90,8 +87,8 @@
 
 - type: entity # for sprites with a 2 colored layers
   abstract: true
-  id: ClothingEarsRandomSpriteDualColor
-  suffix: Random
+  id: ClothingEarsColorableDualColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -106,8 +103,7 @@
         map: [ "ears-equipped-primary" ]
       - state: equipped-EARS-color
         map: [ "ears-equipped-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - ears-icon-primary:
           icon: Primary
@@ -127,9 +123,9 @@
 
 - type: entity # for sprites with a 2 colored layers, supporting inhands
   abstract: true
-  parent: ClothingEarsRandomSpriteDualColor
-  id: ClothingEarsRandomSpriteDualColorInhand
-  suffix: Random
+  parent: ClothingEarsColorableDualColor
+  id: ClothingEarsColorableDualColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -143,8 +139,7 @@
         map: [ "hr-primary" ]
       - state: inhand-right-color
         map: [ "hr-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - ears-icon-primary:
           icon: Primary

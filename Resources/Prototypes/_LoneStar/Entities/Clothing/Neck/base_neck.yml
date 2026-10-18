@@ -13,8 +13,8 @@
 #region Colorable Bases
 - type: entity # for sprites with a single colored layer
   abstract: true
-  id: ClothingNeckRandomSpriteMono
-  suffix: Random
+  id: ClothingNeckColorableMono
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -26,7 +26,6 @@
       - state: equipped-NECK
         map: [ "neck-equipped" ]
   - type: ColorableClothing
-    denyReroll: false
     available:
       - neck-icon:
           icon: Base
@@ -39,10 +38,37 @@
     - ClothMade
     - Recyclable
 
+- type: entity # for sprites with a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingNeckColorableMono
+  id: ClothingNeckColorableMonoInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - neck-icon:
+          icon: Base
+        neck-equipped:
+          equipped-NECK: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
 - type: entity # for sprites with a set layer, and a single colored layer
   abstract: true
-  id: ClothingNeckRandomSpriteBaseColor
-  suffix: Random
+  id: ClothingNeckColorableBaseColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -55,8 +81,7 @@
       - state: equipped-NECK
       - state: equipped-NECK-color
         map: [ "neck-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - neck-icon:
           icon-color: Base
@@ -71,9 +96,9 @@
 
 - type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
   abstract: true
-  parent: ClothingNeckRandomSpriteBaseColor
-  id: ClothingNeckRandomSpriteBaseColorInhand
-  suffix: Random
+  parent: ClothingNeckColorableBaseColor
+  id: ClothingNeckColorableBaseColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -85,8 +110,7 @@
       - state: inhand-right
       - state: inhand-right-color
         map: [ "hr-color" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - neck-icon:
           icon-color: Base
@@ -101,8 +125,8 @@
 
 - type: entity # for sprites with a 2 colored layers
   abstract: true
-  id: ClothingNeckRandomSpriteDualColor
-  suffix: Random
+  id: ClothingNeckColorableDualColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -117,8 +141,7 @@
         map: [ "neck-equipped-primary" ]
       - state: equipped-NECK-color
         map: [ "neck-equipped-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - neck-icon-primary:
           icon: Primary
@@ -138,9 +161,9 @@
 
 - type: entity # for sprites with a 2 colored layers, supporting inhands
   abstract: true
-  parent: ClothingNeckRandomSpriteDualColor
-  id: ClothingNeckRandomSpriteDualColorInhand
-  suffix: Random
+  parent: ClothingNeckColorableDualColor
+  id: ClothingNeckColorableDualColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -154,8 +177,7 @@
         map: [ "hr-primary" ]
       - state: inhand-right-color
         map: [ "hr-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - neck-icon-primary:
           icon: Primary
