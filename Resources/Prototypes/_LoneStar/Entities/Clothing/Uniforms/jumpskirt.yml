@@ -506,7 +506,7 @@
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolColorable
-  name: school skirt (random)
+  name: school skirt (colorable)
   components:
   - type: Sprite
     layers:
@@ -567,82 +567,14 @@
 
 # region Regal Gown
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpsuitRegalGown
-  name: blue regal gown
+  name: regal gown
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownRed
-  name: red regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#96526f"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#96526f"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownGreen
-  name: green regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#56a452"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#56a452"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownBlack
-  name: black regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#5c5c60"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#5c5c60"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownPink
-  name: pink regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#ffaae1"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#ffaae1"
 
 # region Kimonos
 - type: entity

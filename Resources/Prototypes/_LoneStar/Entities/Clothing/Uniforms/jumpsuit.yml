@@ -47,82 +47,14 @@
 
 #region Regal Suit
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpsuitRegalSuitPrince
-  name: red regal suit
+  name: regal suit
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalSuitPrince
-  id: ClothingUniformJumpsuitRegalSuitBlue
-  name: blue regal suit
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#5882c6"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#5882c6"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalSuitPrince
-  id: ClothingUniformJumpsuitRegalSuitGreen
-  name: green regal suit
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#56a452"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#56a452"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalSuitPrince
-  id: ClothingUniformJumpsuitRegalSuitBlack
-  name: black regal suit
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#5c5c60"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#5c5c60"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalSuitPrince
-  id: ClothingUniformJumpsuitRegalSuitPink
-  name: pink regal suit
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#ffaae1"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#ffaae1"
 
 # region Misc
 - type: entity
