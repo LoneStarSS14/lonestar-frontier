@@ -218,9 +218,22 @@
         conditions:
         - !type:TotalDamage
           max: 5
+        - !type:OrganType
+          type: Dwarf
+          shouldHave: false
         damage:
           types:
             Radiation: -0.05
+      - !type:HealthChange
+        conditions:
+        - !type:TotalDamage
+          max: 30
+        - !type:OrganType
+          type: Dwarf
+          shouldHave: true
+        damage:
+          types:
+            Radiation: -0.1
       # LoneStar end
 
 - type: reagent
