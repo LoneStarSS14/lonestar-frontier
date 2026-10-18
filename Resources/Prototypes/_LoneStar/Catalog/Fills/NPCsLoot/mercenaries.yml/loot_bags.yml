@@ -238,7 +238,7 @@
           weight: 2
           children:
           - id: LSWeaponRifleMahifa
-          - id: !type:GroupSelector
+          - !type:GroupSelector
             children:
             - id: NFAmmunitionBoxRifle30Overpressure
               weight: 4
@@ -248,7 +248,7 @@
               range: 1, 2
         - !type:AllSelector
           children:
-          - !type:GroupSelector:
+          - !type:GroupSelector
             children:
             - !type:NestedSelector
               weight: 22
@@ -260,7 +260,7 @@
             tableId: LSSpawnLootGeneralWeaponAmmoOverpressureAny
             rolls: !type:RangeNumberSelector
               range: 2, 3
-        - !type:GroupSelector:
+        - !type:GroupSelector
           children:
           - !type:NestedSelector
             weight: 22

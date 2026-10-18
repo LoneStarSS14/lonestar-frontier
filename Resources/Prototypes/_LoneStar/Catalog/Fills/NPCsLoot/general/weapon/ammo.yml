@@ -192,7 +192,7 @@
       - id: NFAmmunitionBoxBigRifle30
       - !type:GroupSelector
         children:
-        - id: NFAmmunitionBoxBigShellShotgun
+        - id: NFAmmunitionBoxBigShellShotgunBuckshot
           weight: 2
         - id: NFAmmunitionBoxBigShellShotgunSlug
           weight: 1
@@ -207,7 +207,7 @@
       - id: NFAmmunitionBoxRifle30
       - !type:GroupSelector
         children:
-        - id: NFAmmunitionBoxShellShotgun
+        - id: NFAmmunitionBoxShellShotgunBuckshot
           weight: 2
         - id: NFAmmunitionBoxShellShotgunSlug
           weight: 1
