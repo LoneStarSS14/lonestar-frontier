@@ -600,12 +600,10 @@
   - ContractorClothingHeadsetAltEngineeringCommon
   - ContractorClothingHeadsetAltMedicalCommon
   - ContractorClothingHeadsetAltScienceCommon
-  # Mantis Clothes Port from the Den
-  - ContractorClothingHeadsetMantis
-  - ContractorClothingHeadsetAltMantis
-  # End Mantis Clothes Port
   fallbacks:
   - ContractorClothingHeadsetGreyCommon
+  subgroups:
+  - PsionicMantisEars # LoneStar
 
 - type: loadoutGroup
   id: ContractorGloves
@@ -763,9 +761,10 @@
   - ContractorMusicianPDA
   - ContractorClownPDA
   - ContractorMimePDA
-  - ContractorPsionicMantisPDA # LoneStar - Mantis Clothes Port from the Den
   fallbacks:
   - ContractorContractorPDA
+  subgroups:
+  - PsionicMantisPDA # LoneStar
 
 - type: loadoutGroup
   id: ContractorGlasses

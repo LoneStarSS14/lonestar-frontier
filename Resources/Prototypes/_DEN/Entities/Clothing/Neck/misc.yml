@@ -36,7 +36,7 @@
     delay: 0.92 # This is just under one swing animation
   - type: Appearance
   - type: ToggleableVisuals
-    spriteLayer: null # Swinging it only changes the inhand sprites
+    spriteLayer: null # Swinging it only changes the inhand sprites # LoneStar - this is broken. Revisit.
     replaceMode: true # The original inhand sprites won't remain visible when toggled
     inhandVisuals:
       left:
@@ -60,7 +60,7 @@
     damage:
       types: # Melee damage (per the description, it's for testing psionic ability, not fighting)
         Blunt: 1 # 1.5 DPS, or 1.88 DPS against psions
-        #Holy: 0.5 # 2.81 total DPS against psionic supernaturals
+        Holy: 0.5 # 2.81 total DPS against psionic supernaturals
   - type: Tag
     tags:
     - WhitelistChameleon

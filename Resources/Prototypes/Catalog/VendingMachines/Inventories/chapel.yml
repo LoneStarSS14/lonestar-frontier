@@ -91,6 +91,10 @@
     ClothingHandsGlovesMantisOrnate: 3
     ClothingHandsGlovesMantisChains: 3
     ClothingHandsMantisEpiWarmersAlt: 3
+    # Shoes
+    ClothingShoesSandalsMantisDark: 3
+    ClothingShoesSandalsMantisAiry: 3
+    ClothingShoesSandalsMantisOrnate: 3
     # Masks
     ClothingMaskMantisVeil: 3
     ClothingMaskMantisRitual: 3
