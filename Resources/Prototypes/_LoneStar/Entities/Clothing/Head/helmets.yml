@@ -26,6 +26,6 @@
   description: A lightweight headlamp for strapping to your head. When worn and lit, it will light wherever your head's pointed, which is usually wherever you're looking! How convenient.
   components:
   - type: Sprite
-    sprite: _LoneStar/Clothing/Head/hat/headlamp.rsi
+    sprite: _LoneStar/Clothing/Head/Hat/headlamp.rsi
   - type: Clothing
-    sprite: _LoneStar/Clothing/Head/hat/headlamp.rsi
+    sprite: _LoneStar/Clothing/Head/Hat/headlamp.rsi
