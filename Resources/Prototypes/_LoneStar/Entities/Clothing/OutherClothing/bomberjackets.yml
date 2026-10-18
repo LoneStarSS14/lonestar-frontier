@@ -1,6 +1,6 @@
 - type: entity
   parent: [ ClothingOuterStorageBase, ClothingOuterClothingColorableMonoInhand ]
-  id: ClothingOuterCoatBomberWhite
+  id: ClothingOuterCoatBomberColorable
   name: bomber jacket
   description: A lightweight bomber jacket, worn with the sleeves pushed up.
   components:
