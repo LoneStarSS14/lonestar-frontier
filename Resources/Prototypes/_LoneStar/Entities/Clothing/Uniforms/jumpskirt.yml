@@ -487,6 +487,7 @@
   - type: Sprite
     layers:
     - state: icon
+      map: [ "i-base" ]
     - state: icon-detail
       map: [ "i-detail" ]
     - state: icon-accent
@@ -495,6 +496,7 @@
     clothingVisuals:
       jumpsuit:
       - state: equipped-INNERCLOTHING
+        map: [ "e-base" ]
       - state: equipped-INNERCLOTHING-detail
         map: [ "e-detail" ]
       - state: equipped-INNERCLOTHING-accent
@@ -503,30 +505,41 @@
     inhandVisuals:
       left:
         - state: inhand-left
+          map: [ "hl-base" ]
         - state: inhand-left-detail
           map: [ "hl-detail" ]
       right:
         - state: inhand-right
+          map: [ "hr-base" ]
         - state: inhand-right-detail
           map: [ "hr-detail" ]
   - type: ColorableClothing
     denyReroll: false
     mappedColors:
-      detail: NTInteriorDesign
-      accent: NTInteriorDesign
+      Shirt: LSSilks
+      Dress: NTInteriorDesign
+      Ribbon: NTInteriorDesign
     available:
-      - i-detail:
-          icon-detail: detail
+      - i-base:
+          icon: Shirt
+        i-detail:
+          icon-detail: Dress
         i-accent:
-          icon-accent: accent
+          icon-accent: Ribbon
+        e-base:
+          equipped-INNERCLOTHING: Shirt
         e-detail:
-          equipped-INNERCLOTHING-detail: detail
+          equipped-INNERCLOTHING-detail: Dress
         e-accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Ribbon
+        hl-base:
+          inhand-left: Shirt
         hl-detail:
-          inhand-left-detail: detail
+          inhand-left-detail: Dress
+        hr-base:
+          inhand-right: Shirt
         hr-detail:
-          inhand-right-detail: detail
+          inhand-right-detail: Dress
 
 # region Regal Gown
 - type: entity
