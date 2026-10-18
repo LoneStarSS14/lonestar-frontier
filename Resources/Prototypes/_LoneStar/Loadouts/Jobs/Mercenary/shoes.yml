@@ -1,0 +1,7 @@
+# LoneStar
+
+- type: loadout
+  id: MercenaryClothingShoesToelessJackboots
+  price: 0
+  equipment:
+    shoes: ClothingShoesToelessJackboots

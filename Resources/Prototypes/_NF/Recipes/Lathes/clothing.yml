@@ -1319,13 +1319,6 @@
   parent: NFBaseBootRecipe
   result: ClothingShoesBootsJack
 
-  # LoneStar
-- type: latheRecipe
-  id: ClothingShoesToelessJackboots
-  parent: NFBaseBootRecipe
-  result: ClothingShoesToelessJackboots
-# LoneStar end
-
 - type: latheRecipe
   id: ClothingShoesBootsPunkRandomized
   parent: NFBaseBootRecipe

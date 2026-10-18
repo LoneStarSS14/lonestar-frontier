@@ -1,7 +1,0 @@
-# LoneStar
-
-- type: loadout
-  id: LoadoutClothingShoesToelessJackboots
-  price: 0
-  equipment:
-    shoes: ClothingShoesToelessJackboots
