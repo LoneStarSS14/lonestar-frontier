@@ -1,0 +1,26 @@
+- type: npcFaction # TODO: this is a copy of Dragon, expect mistakes.
+  id: CarpExpeditionLS
+  hostile:
+    - NanoTrasen
+    - Syndicate
+    - Xeno
+    - PetsNT
+    - Zombie
+    - Revolutionary
+    - AllHostile
+    - WizFedFaction
+    - BloodCultNF
+    - NFSyndicate
+    - NFPirate
+    - ExplorersExpeditionNF
+    - ArtifactConstruct
+    - StreetGangNF
+    - DinosaursNF
+    - MercenariesExpeditionNF
+    - SiliconsExpeditionNF
+    - AberrantFleshExpeditionNF
+    - ContrabandClothing
+    - ContrabandDetection
+    # Edits compared to copying from Dragon below.
+  friendly:
+    - Dragon

@@ -110,6 +110,7 @@
   subgroups:
   - PilotEars
   - ContractorEars
+  - PsionicMantisEars # LoneStar
 
 - type: loadoutGroup
   id: MercenaryGloves
@@ -131,6 +132,7 @@
   subgroups:
   - PilotPDA
   - ContractorPDA
+  - PsionicMantisPDA # LoneStar
   fallbacks:
   - MercenaryMercenaryPDA
 

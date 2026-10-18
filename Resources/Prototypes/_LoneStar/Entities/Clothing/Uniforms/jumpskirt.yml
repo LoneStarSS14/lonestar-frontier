@@ -1,20 +1,45 @@
 #region colorable
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteMono ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColorInhand ]
   id: ClothingUniformTurtleskirtColorable
   name: turtleneck jumpskirt
   description: For some reason, wearing this makes you feel like working in tech support at a product store.
   components:
   - type: Sprite
-    sprite: _DEN/Clothing/Uniforms/Jumpskirt/whiteturtleskirt.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
+    layers: # TODO: add support for sprite+clothing mappings to keep layers sync'd and revert this to icons.
+    - state: equipped-INNERCLOTHING-color
+      map: [ "uniform-equipped" ]
+    - state: equipped-INNERCLOTHING
+      map: [ "uniform-equipped-skirt" ]
   - type: Clothing
-    sprite: _DEN/Clothing/Uniforms/Jumpskirt/whiteturtleskirt.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-color
+        map: [ "uniform-equipped" ]
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-equipped-skirt" ]
+  - type: ColorableClothing
+    available:
+      - uniform-icon:
+          icon-color: Base
+        uniform-equipped-skirt:
+          equipped-INNERCLOTHING: ""
+          equipped-INNERCLOTHING-long: ""
+          equipped-INNERCLOTHING-pencil: ""
+          equipped-INNERCLOTHING-poofy: ""
+        uniform-equipped:
+          equipped-INNERCLOTHING-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
 
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtEnteraColorable
+  id: ClothingUniformJumpskirtTailoredGownColorable
   name: tailored gown
-  suffix: Random
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
@@ -39,36 +64,35 @@
         map: [ "accent" ]
       - state: equipped-INNERCLOTHING-extra
         map: [ "extra" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
-        base: NTInteriorDesign
-        decor: NTInteriorDesign
-        accent: NTInteriorDesign
-        extra: TechniColors
+        Silks: LSSilks
+        Primary: NTInteriorDesign
+        Secondary: NTInteriorDesign
+        Gems: TechniColors
     available:
       - base:
-          equipped-INNERCLOTHING-base: base
+          equipped-INNERCLOTHING-base: Primary
         decor:
-          equipped-INNERCLOTHING-decor: decor
+          equipped-INNERCLOTHING-decor: Secondary
         accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Silks
         extra:
-          equipped-INNERCLOTHING-extra: extra
+          equipped-INNERCLOTHING-extra: Gems
         icon-base:
-          icon-base: base
+          icon-base: Primary
         icon-decor:
-          icon-decor: decor
+          icon-decor: Secondary
         icon-accent:
-          icon-accent: accent
+          icon-accent: Silks
         icon-extra:
-          icon-extra: extra
+          icon-extra: Gems
 
 - type: entity
-  parent: ClothingUniformJumpskirtEnteraColorable
-  id: ClothingUniformJumpskirtEnteraMonoColorable
+  parent: ClothingUniformJumpskirtTailoredGownColorable
+  id: ClothingUniformJumpskirtTailoredGownMonoColorable
   name: tailored gown (simple)
-  suffix: Random
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
@@ -93,32 +117,32 @@
         map: [ "accent" ]
       - state: equipped-INNERCLOTHING-extra
         map: [ "extra" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
-        base: NTInteriorDesign
-        accent: NTInteriorDesign
-        extra: TechniColors
+        Silks: LSSilks
+        Primary: NTInteriorDesign
+        Gems: TechniColors
     available:
       - base:
-          equipped-INNERCLOTHING-base: base
+          equipped-INNERCLOTHING-base: Primary
         decor:
-          equipped-INNERCLOTHING-decor: base
+          equipped-INNERCLOTHING-decor: Primary
         accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Silks
         extra:
-          equipped-INNERCLOTHING-extra: extra
+          equipped-INNERCLOTHING-extra: Gems
         icon-base:
-          icon-base: base
+          icon-base: Primary
         icon-decor:
-          icon-decor: base
+          icon-decor: Primary
         icon-accent:
-          icon-accent: accent
+          icon-accent: Silks
         icon-extra:
-          icon-extra: extra
+          icon-extra: Gems
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteMono ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableMono ]
   id: ClothingUniformJumpskirtStraplessColorable
   name: strapless dress
   description: A light flowing dress made of a breathable fabric.
@@ -129,7 +153,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/strapless.rsi
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtPartyPrincessColorable
   name: party-princess dress
   description: #TODO
@@ -138,12 +162,12 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: Rainbow
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtCheckerColorable
   name: checker dress
   description: #TODO
@@ -152,12 +176,12 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtSpottyColorable
   name: spotty dress
   description: #TODO
@@ -166,12 +190,12 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtWesternColorable
   name: saloon dress
   description: #TODO
@@ -180,7 +204,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
@@ -482,11 +506,12 @@
 - type: entity
   parent: ClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolColorable
-  name: school skirt (random)
+  name: school skirt (colorable)
   components:
   - type: Sprite
     layers:
     - state: icon
+      map: [ "i-base" ]
     - state: icon-detail
       map: [ "i-detail" ]
     - state: icon-accent
@@ -495,6 +520,7 @@
     clothingVisuals:
       jumpsuit:
       - state: equipped-INNERCLOTHING
+        map: [ "e-base" ]
       - state: equipped-INNERCLOTHING-detail
         map: [ "e-detail" ]
       - state: equipped-INNERCLOTHING-accent
@@ -503,109 +529,52 @@
     inhandVisuals:
       left:
         - state: inhand-left
+          map: [ "hl-base" ]
         - state: inhand-left-detail
           map: [ "hl-detail" ]
       right:
         - state: inhand-right
+          map: [ "hr-base" ]
         - state: inhand-right-detail
           map: [ "hr-detail" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
-      detail: NTInteriorDesign
-      accent: NTInteriorDesign
+      Shirt: LSSilks
+      Dress: NTInteriorDesign
+      Ribbon: NTInteriorDesign
     available:
-      - i-detail:
-          icon-detail: detail
+      - i-base:
+          icon: Shirt
+        i-detail:
+          icon-detail: Dress
         i-accent:
-          icon-accent: accent
+          icon-accent: Ribbon
+        e-base:
+          equipped-INNERCLOTHING: Shirt
         e-detail:
-          equipped-INNERCLOTHING-detail: detail
+          equipped-INNERCLOTHING-detail: Dress
         e-accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Ribbon
+        hl-base:
+          inhand-left: Shirt
         hl-detail:
-          inhand-left-detail: detail
+          inhand-left-detail: Dress
+        hr-base:
+          inhand-right: Shirt
         hr-detail:
-          inhand-right-detail: detail
+          inhand-right-detail: Dress
 
 # region Regal Gown
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpsuitRegalGown
-  name: blue regal gown
+  name: regal gown
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownRed
-  name: red regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#96526f"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#96526f"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownGreen
-  name: green regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#56a452"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#56a452"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownBlack
-  name: black regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#5c5c60"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#5c5c60"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownPink
-  name: pink regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#ffaae1"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#ffaae1"
 
 # region Kimonos
 - type: entity
@@ -640,7 +609,7 @@
 
 # region Misc
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableDualColor ]
   id: ClothingUniformJumpskirtMaidDressLong
   name: long maid dress
   components:
@@ -661,7 +630,7 @@
 
 - type: entity
   parent: [ ClothingUniformSkirtBase ]
-  id: ClothingUniformJumpskirtPresentColorable
+  id: ClothingUniformJumpskirtPresent
   name: backless ribbon dress
   description: #TODO
   components:

@@ -1,0 +1,69 @@
+# region base
+- type: entity
+  abstract: true
+  parent: NFBaseNpcLootBackpack
+  id: RogueSiliconGiftBox
+  name: rogue unit's bundle
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Tools/bundles.rsi
+    state: engi-base
+    scale: 0.7, 0.7
+  - type: Clothing
+    sprite: _NF/Objects/Tools/bundles.rsi
+    clothingVisuals:
+      back:
+      - state: mask_null
+  - type: SpawnItemsOnUse
+    sound:
+      path: /Audio/Machines/windoor_open.ogg
+
+# region tier 0 (asteroid)
+- type: entity
+  parent: RogueSiliconGiftBox
+  id: ClothingBackpackRogueSiliconT0
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LSSpawnLootRogueSiliconT0 # LoneStar
+
+# region tier 1
+- type: entity
+  parent: RogueSiliconGiftBox
+  id: ClothingBackpackRogueSiliconT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LSSpawnLootRogueSiliconT1 # LoneStar
+
+# region tier 2
+- type: entity
+  parent: RogueSiliconGiftBox
+  id: ClothingBackpackRogueSiliconT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LSSpawnLootRogueSiliconT2 # LoneStar
+
+# region tier 3
+- type: entity
+  parent: RogueSiliconGiftBox
+  id: ClothingBackpackRogueSiliconT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LSSpawnLootRogueSiliconT3 # LoneStar
+
+# region tier 4 (boss)
+- type: entity
+  parent: RogueSiliconGiftBox
+  id: ClothingBackpackRogueSiliconT4
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LSSpawnLootRogueSiliconT4 # LoneStar

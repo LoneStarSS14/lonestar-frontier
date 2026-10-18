@@ -602,6 +602,8 @@
   - ContractorClothingHeadsetAltScienceCommon
   fallbacks:
   - ContractorClothingHeadsetGreyCommon
+  subgroups:
+  - PsionicMantisEars # LoneStar
 
 - type: loadoutGroup
   id: ContractorGloves
@@ -643,7 +645,7 @@
   - ContractorClothingNeckTieRed
   - ContractorClothingNeckTieSci
   - ContractorClothingNeckLawyerbadge
-  - ContractorClothingNeckHeadphones
+  - ContractorClothingMultipleHeadphones
   - ContractorClothingNeckCrucifix
   - ContractorClothingNeckBellCollar
   - ContractorCDDogtags
@@ -717,6 +719,9 @@
   - FloofClothingCollarCmd
   - FloofClothingShockCollar
   # Flooftier collars end
+  # Everdream Collars
+  - LoadoutClothingNeckChaplainCollar
+  - LoadoutClothingNeckKeepsakeCollar
 
 - type: loadoutGroup
   id: ContractorPDA
@@ -758,6 +763,8 @@
   - ContractorMimePDA
   fallbacks:
   - ContractorContractorPDA
+  subgroups:
+  - PsionicMantisPDA # LoneStar
 
 - type: loadoutGroup
   id: ContractorGlasses

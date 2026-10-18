@@ -23,7 +23,7 @@
         map: [ "clothing_belt_decor" ]
       - state: mask_null
         map: [ "clothing_belt_overlay" ]
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - belt_main:

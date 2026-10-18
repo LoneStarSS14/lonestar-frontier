@@ -38,8 +38,10 @@
     fixtures:
       fix1:
         shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.3,0.2,0.4"
+          # LoneStar start
+          !type:PhysShapeCircle
+          radius: 0.28
+          # LoneStar end
         density: 200
         mask:
         - SmallMobMask #this is so they can go under plastic flaps

@@ -171,7 +171,7 @@
 - type: marking
   id: DwarfConstellationHead
   bodyPart: Head
-  markingCategory: Overlay
+  markingCategory: Head
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:
@@ -188,7 +188,7 @@
 - type: marking
   id: DwarfConstellationChest
   bodyPart: Chest
-  markingCategory: Overlay
+  markingCategory: Chest
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:
@@ -205,7 +205,7 @@
 - type: marking
   id: DwarfConstellationLArm
   bodyPart: LArm
-  markingCategory: Overlay
+  markingCategory: Arms
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:
@@ -222,7 +222,7 @@
 - type: marking
   id: DwarfConstellationLHand
   bodyPart: LHand
-  markingCategory: Overlay
+  markingCategory: Arms
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:
@@ -239,7 +239,7 @@
 - type: marking
   id: DwarfConstellationRArm
   bodyPart: RArm
-  markingCategory: Overlay
+  markingCategory: Arms
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:
@@ -256,7 +256,7 @@
 - type: marking
   id: DwarfConstellationRHand
   bodyPart: RHand
-  markingCategory: Overlay
+  markingCategory: Arms
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:
@@ -273,7 +273,7 @@
 - type: marking
   id: DwarfConstellationLLeg
   bodyPart: LLeg
-  markingCategory: Overlay
+  markingCategory: Legs
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:
@@ -290,7 +290,7 @@
 - type: marking
   id: DwarfConstellationLFoot
   bodyPart: LFoot
-  markingCategory: Overlay
+  markingCategory: Legs
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:
@@ -307,7 +307,7 @@
 - type: marking
   id: DwarfConstellationRLeg
   bodyPart: RLeg
-  markingCategory: Overlay
+  markingCategory: Legs
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:
@@ -324,7 +324,7 @@
 - type: marking
   id: DwarfConstellationRFoot
   bodyPart: RFoot
-  markingCategory: Overlay
+  markingCategory: Legs
   speciesRestriction: [ Dwarf ]
   kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   coloring:

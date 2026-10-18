@@ -1,43 +1,28 @@
 - type: entity
-  parent: [ ClothingOuterStorageBase, ClothingOuterClothingRandomSpriteMonoOpen ]
-  id: ClothingOuterCoatBomberWhite
+  parent: [ ClothingOuterStorageBase, ClothingOuterClothingColorableMonoInhand ]
+  id: ClothingOuterCoatBomberColorable
   name: bomber jacket
   description: A lightweight bomber jacket, worn with the sleeves pushed up.
   components:
   - type: Sprite
     sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
+    layers: # TODO: add support for sprite+clothing mappings to keep layers sync'd and revert this to icons. 
+    - state: equipped-OUTERCLOTHING
+      map: [ "outerclothing-equipped" ]
   - type: Clothing
     sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
-
-- type: entity
-  parent: [ ClothingOuterStorageBase, ClothingOuterClothingRandomSpriteMono ]
-  id: ClothingOuterCoatBomberWhiteOpen
-  name: bomber jacket (open)
-  description: A lightweight bomber jacket, worn with the sleeves pushed up.
-  components:
-  - type: Sprite
-    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
-  - type: Clothing
-    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white.rsi
-
-- type: entity
-  parent: [ ClothingOuterStorageBase, ClothingOuterClothingRandomSpriteMonoOpen ]
-  id: ClothingOuterCoatBomberWhiteLoose
-  name: bomber jacket (loose)
-  description: A lightweight bomber jacket, worn low and loose.
-  components:
-  - type: Sprite
-    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi
-  - type: Clothing
-    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi
-
-- type: entity
-  parent: [ ClothingOuterClothingRandomSpriteMono, ClothingOuterStorageBase ]
-  id: ClothingOuterCoatBomberWhiteLooseOpen
-  name: bomber jacket (loose, open)
-  description: A lightweight bomber jacket, worn low and loose.
-  components:
-  - type: Sprite
-    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi
-  - type: Clothing
-    sprite: _Impstation/Clothing/OuterClothing/BomberJackets/bomber_white_loose.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+        map: [ "outerclothing-equipped" ]
+  - type: ColorableClothing
+    available:
+      - outerclothing-equipped:
+          equipped-OUTERCLOTHING: Base
+          equipped-OUTERCLOTHING-open: Base
+          equipped-OUTERCLOTHING-loose: Base
+          equipped-OUTERCLOTHING-loose-open: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base

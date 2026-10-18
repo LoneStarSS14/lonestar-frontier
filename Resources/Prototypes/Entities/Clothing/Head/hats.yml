@@ -10,15 +10,38 @@
     sprite: Clothing/Head/Hats/beaver_hat.rsi
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, ClothingHeadColorableMonoInhand ] # LoneStar, added colorable
   id: ClothingHeadHatBeret
-  name: beret
+  name: beret (colorable) # LoneStar
   description: A beret, an artists favorite headwear.
   components:
+  # LoneStar start, colrability
   - type: Sprite
-    sprite: Clothing/Head/Hats/beret.rsi
+    sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi
+    layers:
+    - state: icon
+      color: "#9E2020"
+      map: [ "head-icon" ]
   - type: Clothing
-    sprite: Clothing/Head/Hats/beret.rsi
+    sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#9E2020"
+        map: [ "head-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#9E2020"
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        color: "#9E2020"
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+  # LoneStar end
   - type: Tag
     tags:
     - ClothMade

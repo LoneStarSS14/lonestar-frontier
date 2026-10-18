@@ -1,0 +1,165 @@
+#region Tier 0 (asteroid)
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootRogueSiliconT0
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Scrap
+        children:
+        - id: ScrapOreRandomVeryLow
+          orGroup: Scrap
+          prob: 0.8
+        - id: ScrapOreTechRandomVeryLow
+          orGroup: Scrap
+          prob: 0.2
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootNpcMaterialRandom
+          weight: 4
+        - id: SpawnDungeonLootNpcRogueSiliconTreasure
+          prob: 5
+
+#region Tier 1
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootRogueSiliconT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Scrap
+        children:
+        - id: ScrapOreRandomLow
+          weight: 0.7
+        - id: ScrapOreTechRandomLow
+          weight: 0.3
+      - !type:NestedSelector # Blueprints
+        tableId: LSTableSiliconsBlueprint
+        prob: 0.3
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootNpcMaterialRandom
+          weight: 4
+        - id: SpawnDungeonLootNpcRogueSiliconTreasure
+          weight: 5
+          amount: 2
+        - id: SpawnDungeonLootNpcRogueSiliconBorgModule
+          weight: 10
+
+#region Tier 2
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootRogueSiliconT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Scrap
+        children:
+        - id: ScrapOreRandomReduced
+          weight: 6
+        - id: ScrapOreTechRandomReduced
+          weight: 4
+      - !type:NestedSelector # Blueprints
+        tableId: LSTableSiliconsBlueprint
+        prob: 0.6
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootNpcMaterialRandom
+          weight: 8
+        - id: SpawnDungeonLootNpcRogueSiliconTreasure
+          weight: 10
+          amount: 3
+        - id: SpawnDungeonLootNpcRogueSiliconBorgModule
+          weight: 3
+
+#region Elite / Horrors
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootRogueSiliconT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Scrap
+        children:
+        - id: ScrapOreRandom
+        - id: ScrapOreTechRandom
+      - !type:NestedSelector # Blueprints
+        tableId: LSTableSiliconsBlueprint
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootNpcMaterialRandom
+          weight: 3
+        - id: SpawnDungeonLootNpcRogueSiliconTreasure
+          weight: 5
+          amount: 4
+        - id: SpawnDungeonLootNpcRogueSiliconBorgModule
+          weight: 2
+
+#region Bosses
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootRogueSiliconT4
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector # Weapons
+        children:
+        - id: NFWeaponEnergyLightMachineGunTurbo
+          weight: 0.4
+        - id: SpawnDungeonLootGunT4
+          weight: 0.3
+        - id: SpawnDungeonLootMeleeT4
+          weight: 0.3
+      - !type:GroupSelector # Scrap
+        children:
+        - id: ScrapOreRandom
+          amount: 4
+        - id: ScrapOreTechRandom
+          amount: 4
+      - !type:GroupSelector # Blueprints
+        children:
+        - !type:NestedSelector
+          tableId: LSTableSiliconsBlueprint
+        - !type:NestedSelector
+          tableId: LSTableSiliconsBlueprint
+          prob: 0.45
+      - !type:GroupSelector # Loot
+        children:
+        - id: SpawnDungeonLootPowerCell
+          weight: 1
+        - id: SpawnDungeonLootPartsEngi
+          amount: 3
+          weight: 5
+        - id: SpawnDungeonLootFlatpacks
+          weight: 2
+      - !type:GroupSelector # Loot 2
+        children:
+        - id: SpawnDungeonLootNpcMaterialRandom
+          weight: 8
+          amount: 4
+        - id: SpawnDungeonLootNpcRogueSiliconTreasure
+          weight: 12
+          amount: 4
+        - id: SpawnDungeonLootFlatpacks
+          weight: 2
+        - id: SpawnDungeonLootPartsEngi
+          weight: 5
+          amount: 3
+        - id: SpawnDungeonLootNpcRogueSiliconBorgModule
+          weight: 5
+          amount: 3

@@ -59,8 +59,8 @@
     damage:
       types:
         Blunt: 0
-  - type: TrashOnSolutionEmpty
-    solution: drink
+  # - type: TrashOnSolutionEmpty # LoneStar
+  #   solution: drink
   - type: StaticPrice
     price: 0
   - type: DamageOnLand
