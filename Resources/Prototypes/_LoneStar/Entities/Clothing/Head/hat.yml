@@ -31,7 +31,7 @@
       - state: equipped-HELMET
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, ClothingHeadColorableMono ]
   id: ClothingHeadHatMaidHeadband
   name: maid headband
   components:
@@ -39,3 +39,6 @@
     sprite: _LoneStar/Clothing/Head/Hat/maid-headband.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Head/Hat/maid-headband.rsi
+  - type: ColorableClothing
+    mappedColors:
+      Base: LSSilks
