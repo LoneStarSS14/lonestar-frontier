@@ -1,0 +1,49 @@
+#region clothes
+- type: entity
+  parent: BunnysuitBaseFoldable
+  id: BunnysuitBloodcult
+  name: bloodcult bunny suit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/bloodcult.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Suits/bloodcult.rsi
+
+- type: entity
+  parent: BunnyEarsBase
+  id: BunnyEarsBloodcult
+  name: bloodcult bunny ears
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/bloodcult.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Ears/bloodcult.rsi
+
+- type: entity
+  parent: BaseBowtie
+  id: BowtieBloodcult
+  name: bloodcult bowtie
+  components:
+  - type: Tag
+    tags:
+    - Bunnysuit
+    - ClothMade
+    - WhitelistChameleon
+  - type: Sprite
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/bloodcult.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/GroupedSets/Bunnysuits/Bowties/bloodcult.rsi
+
+#region box
+- type: entity
+  parent: BunnysuitBox
+  id: BunnysuitBoxBloodcult
+  name: bloodcult bunnysuit box
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BunnysuitBloodcult
+        - id: BowtieBloodcult
+        - id: BunnyEarsBloodcult

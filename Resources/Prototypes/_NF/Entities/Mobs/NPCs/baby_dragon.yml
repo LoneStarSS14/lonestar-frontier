@@ -54,11 +54,15 @@
     baseWalkSpeed: 3
     baseSprintSpeed: 5
     baseWeightlessModifier: 1.5
-  - type: RandomSprite
+  # LoneStar start, Yeah i know... dragons arent clothing.
+  - type: ColorableClothing
+    mappedColors:
+      Scales: Rainbow
     denyReroll: false # LoneStar
     available:
     - enum.DamageStateVisualLayers.Base:
-        alive: Rainbow
+        alive: Scales
+  # LoneStar end
   - type: Sprite
     sprite: _NF/Mobs/Pets/baby_dragon.rsi
     noRot: true

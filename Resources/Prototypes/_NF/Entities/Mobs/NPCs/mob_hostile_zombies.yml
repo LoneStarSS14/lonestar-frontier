@@ -96,83 +96,14 @@
       Male: MaleHuman
       Female: FemaleHuman
       Unsexed: MaleHuman
-  # Coyote: Behind on WizDen upgrades so here we go
-  # - type: Vocalizer
-  #   hideChat: true
-  #   minVocalizeInterval: 30
-  #   maxVocalizeInterval: 120
-  # - type: DatasetVocalizer
-  #   dataset: spacepunkhumanoidchatter
-  # # End Coyote
+  - type: Vocalizer
+    hideChat: true
+    minVocalizeInterval: 30
+    maxVocalizeInterval: 120
+  - type: DatasetVocalizer
+    dataset: spacepunkhumanoidchatter
   - type: AutoWakeUp
   - type: StinkyTrait
-  # Coyote: old style mob vocalisations
-  - type: Advertise
-    pack: spacepunkhumanoidchatter
-    minimumWait: 30
-    maximumWait: 120
-    nextAdvertisementTime: 10
-  # # End Coyote
-
-# region loot
-- type: entityTable
-  id: TableZombieLoot
-  table: !type:AllSelector
-    children:
-    - id: FoodMeatRotten
-      rolls: !type:RangeNumberSelector
-        range: 0, 2
-    # Cash
-    - !type:GroupSelector
-      children:
-      - id: SpaceCash100
-        weight: 0.05
-      - id: SpaceCash500
-        rolls: !type:ConstantNumberSelector
-          value: 3
-        weight: 0.2
-      - id: SpaceCash1000
-        rolls: !type:ConstantNumberSelector
-          value: 2
-        weight: 0.25
-      - id: SpaceCash2500
-        weight: 0.5
-    # Things
-    - !type:AllSelector
-      children:
-      - id: TreasureSampleTube
-        rolls: !type:RangeNumberSelector
-          range: 0, 2
-      - id: ScrapTube
-        rolls: !type:RangeNumberSelector
-          range: -1, 1
-      - !type:NestedSelector
-        tableId: SalvageTreasureUncommon
-        rolls: !type:RangeNumberSelector
-          range: 1, 2
-    # Meds
-    - !type:GroupSelector
-      rolls: !type:RangeNumberSelector
-        range: -1, 1
-      children:
-      - id: PillCharcoal
-      - id: PillHyronalin
-      - id: PillTricordrazine
-      - id: Gauze1
-      - id: Brutepack1
-      - id: ChemistryBottleMysteryLiquid
-        weight: 0.05
-
-- type: entity
-  parent: MarkerBasePlaceFree
-  id: NFSpawnZombieLoot
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    offset: 0.15
-    table: !type:NestedSelector
-      tableId: TableZombieLoot
-      prob: 1.00
 
 # region common zombie
 - type: entity

@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "gorlex_girlfriend0 by Gawdayumeet, gorlex_girlfriend1 by KC (Sushiburger on github)",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        { "name": "gorlex_girlfriend0" },
+        { "name": "gorlex_girlfriend1" }
+    ]
+}

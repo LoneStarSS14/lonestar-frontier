@@ -1,0 +1,12 @@
+namespace Content.Shared.Clothing.Components;
+// goob station start
+[RegisterComponent]
+public sealed partial class ClothingGrantTagComponent : Component
+{
+    [DataField("tag", required: true), ViewVariables(VVAccess.ReadWrite)]
+    public string Tag = "";
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    public bool IsActive = false;
+}
+// goob station end

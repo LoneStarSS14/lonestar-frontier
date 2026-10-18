@@ -1,0 +1,12 @@
+# Everdream additions
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingPriestessCorsetAndTabard
+  name: priestess corset and tabard
+  description: For the wandering Space-Christian. Bears some marks from travel that haven't marred the jewelry and crucifix at all.
+  components:
+  - type: Sprite
+    sprite: _Everdream/Clothing/Uniforms/clothing.rsi
+  - type: Clothing
+    sprite: _Everdream/Clothing/Uniforms/clothing.rsi

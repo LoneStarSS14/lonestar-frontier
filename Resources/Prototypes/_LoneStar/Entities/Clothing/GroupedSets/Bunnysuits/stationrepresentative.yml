@@ -1,7 +1,6 @@
 #region clothes
-
 - type: entity
-  parent: BunnysuitBase
+  parent: BunnysuitBaseFoldable
   id: BunnysuitSR
   name: station representative bunny suit
   components:

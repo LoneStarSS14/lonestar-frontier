@@ -10,7 +10,6 @@
     ClothingWalletLeatherBrown: 4294967295
     ClothingWalletLeatherBlack: 4294967295
     ClothingHeadHatBeret: 4294967295
-    ClothingHeadHatBeretColorable: 4294967295
     ClothingHeadBandBlack: 4294967295
     ClothingHeadBandBlue: 4294967295
     ClothingHeadBandGreen: 4294967295
@@ -49,7 +48,7 @@
     ClothingUniformJumpsuitHawaiBlue: 4294967295
     ClothingUniformJumpsuitHawaiRed: 4294967295
     ClothingUniformJumpsuitHawaiYellow: 4294967295
-    ClothingUniformJumpsuitFlannel: 4294967295
+    ClothingUniformJumpsuitFlannelColorable: 4294967295
     ClothingUniformJumpsuitCasualBlue: 4294967295
     ClothingUniformJumpskirtCasualBlue: 4294967295
     ClothingUniformJumpsuitCasualPurple: 4294967295
@@ -100,6 +99,7 @@
     ClothingNeckCollarBlack: 4294967295 # Floofstation - Collar addition
     ClothingNeckCollarPink: 4294967295 # Floofstation - Collar addition
     ClothingNeckSpikedCollar: 4294967295
+    ClothingNeckKeepsakeCollar: 4294967295
     ClothingOuterCyberJacket: 4294967295
     ClothingOuterCyberJacketPurple: 4294967295
     ClothingOuterCyberJacketYellow: 4294967295
@@ -140,8 +140,10 @@
     ClothingUniformJumpskirtSchoolWhite: 4294967295
     ClothingUniformJumpskirtSchoolBlack: 4294967295
     ClothingUniformJumpskirtSchoolColorable: 4294967295
-    ClothingHandsGlovesColorSatinWhite: 4294967295
-    ClothingHandsGlovesColorSatinWhiteLong: 4294967295
+    ClothingHandsGlovesColorableSilk: 4294967295
+    ClothingHandsGlovesLongColorableSilk: 4294967295
+    ClothingHandsGlovesColorableCotton: 4294967295
+    ClothingHandsGlovesLongColorableCotton: 4294967295
     ClothingHeadHatMaidHeadband: 4294967295
     ClothingUniformJumpskirtMaidDressLong: 4294967295
     ClothingOuterVestPinafore: 4294967295
@@ -218,20 +220,8 @@
     LatexSocks: 4294967295
     LatexHeels: 4294967295 # Hardlight end
     ClothingUniformJumpsuitRegalSuitPrince: 4294967295 # Lonestar start
-    ClothingUniformJumpsuitRegalSuitBlue: 4294967295
-    ClothingUniformJumpsuitRegalSuitGreen: 4294967295
-    ClothingUniformJumpsuitRegalSuitBlack: 4294967295
-    ClothingUniformJumpsuitRegalSuitPink: 4294967295
     ClothingUniformJumpsuitRegalGown: 4294967295
-    ClothingUniformJumpsuitRegalGownRed: 4294967295
-    ClothingUniformJumpsuitRegalGownGreen: 4294967295
-    ClothingUniformJumpsuitRegalGownBlack: 4294967295
-    ClothingUniformJumpsuitRegalGownPink: 4294967295
     ClothingHandsGlovesRegalSleeves: 4294967295
-    ClothingHandsGlovesRegalSleevesRed: 4294967295
-    ClothingHandsGlovesRegalSleevesGreen: 4294967295
-    ClothingHandsGlovesRegalSleevesBlack: 4294967295
-    ClothingHandsGlovesRegalSleevesPink: 4294967295
     ClothingHeadHatRegalCrown: 4294967295
     ClothingUniformJumpsuitRegalShirt: 4294967295
     ClothingOuterVestMedievalLongcoat: 4294967295
@@ -245,6 +235,7 @@
     ClothingUniformJumpskirtCheckerColorable: 4294967295
     ClothingUniformJumpskirtStraplessColorable: 4294967295 # Lonestar end
     # Euphoria
+    ClothingShoesHeelsKittenColorable: 4294967295
     ClothingShoesHeelsKitten: 4294967295
     ClothingShoesHeelsKittenBlack: 4294967295
     ClothingShoesHeelsKittenCrimson: 4294967295
@@ -252,6 +243,8 @@
     ClothingShoesHeelsBallet: 4294967295
     # Funky
     ClothingShoesHighheelBootsNanotrasen: 4294967295
+    # Everdream
+    ClothingPriestessCorsetAndTabard: 4294967295
   contrabandInventory:
     ClothingMaskNeckGaiter: 4294967295
     ClothingUniformJumpsuitTacticool: 4294967295

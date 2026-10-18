@@ -1,0 +1,133 @@
+#region routing
+- type: entityTable
+  id: LSTableGeneralWeaponRanged
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralWeaponRangedT5
+    - !type:GroupSelector
+      weight: 29
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralWeaponRangedT4
+      - !type:GroupSelector
+        weight: 11
+        children:
+        - !type:NestedSelector # Rare
+          weight: 2
+          tableId: LSTableGeneralWeaponRangedT3
+        - !type:GroupSelector
+          weight: 7
+          children:
+          - !type:NestedSelector # Uncommon
+            weight: 2
+            tableId: LSTableGeneralWeaponRangedT2
+          - !type:GroupSelector
+            weight: 3
+            children:
+            - !type:NestedSelector # Common
+              weight: 14
+              tableId: LSTableGeneralWeaponRangedT1
+            - !type:NestedSelector # Trash
+              weight: 1
+              tableId: LSTableGeneralWeaponRangedT0
+
+- type: entityTable
+  id: LSTableGeneralWeaponRangedRare
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralWeaponRangedT5
+    - !type:GroupSelector
+      weight: 29
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralWeaponRangedT4
+      - !type:NestedSelector # Rare
+        weight: 11
+        tableId: LSTableGeneralWeaponRangedT3
+
+#region tiers
+- type: entityTable
+  id: LSTableGeneralWeaponRangedT5
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseLongLauncherRocketExpedition
+    - id: WeaponCaseLongLauncherChinaLake
+    - id: WeaponCaseHeavyLightMachineGunL6
+    - id: WeaponCaseHeavyAsmgtExpeditions
+    - id: WeaponCaseLongEstocExpedition
+    - id: WeaponCaseLongHristovExpedition
+    - id: WeaponCaseLongC19r
+    - id: WeaponCaseLongPrototypePulseRifleExpedition
+
+- type: entityTable
+  id: LSTableGeneralWeaponRangedT4
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseLongSm
+    - id: WeaponCaseLongBulldog
+    - id: WeaponCaseLongC20r
+    - id: WeaponCaseLongAtreidesExpedition
+    - id: WeaponCaseShortSvalinnExpedition
+    - id: WeaponCaseLongEnergyGunExpedition
+    - id: WeaponCaseShortAnacondaExpedition
+
+- type: entityTable
+  id: LSTableGeneralWeaponRangedT3
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseLongWT550Expedition
+    - id: WeaponCaseLongDrozdExpedition
+    - id: WeaponCaseLongM90Expedition
+    - id: WeaponCaseLongLecterExpedition
+    - id: WeaponCaseShortRitland45Expedition
+    - id: WeaponCaseShortCobra
+    - id: WeaponCaseShortN1984Expedition
+    - id: WeaponCaseShortViper
+    - id: WeaponCaseShortWard45Expedition
+    - id: WeaponCaseShortRevolverPirate
+    - id: NFRevolverCapGunFake
+    - id: WeaponCaseLongJackdaw
+    - id: WeaponCaseLongEnforcerExpedition
+    - id: WeaponCaseShortAntiqueLaserExpedition
+    - id: WeaponCaseShortAdvancedLaserExpedition
+    - id: WeaponCaseLongLaserCarbineExpedition
+
+- type: entityTable
+  id: LSTableGeneralWeaponRangedT2
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseLongGestioExpedition
+    - id: WeaponCaseLongWeaponRifleNovaliteC1Expedition
+    - id: WeaponCaseLongSVSExpedition
+    - id: WeaponCaseShortUniversalExpedition
+    - id: WeaponCaseShortLuckyExpedition
+    - id: WeaponCaseShortDeckardExpedition
+    - id: WeaponCaseLongBarlowsBoltExpedition
+    - id: WeaponCaseLongSniperCeremonialExpedition
+    - id: WeaponCaseLongTypewriterExpedition
+    - id: WeaponCaseLongMusketExpedition
+
+- type: entityTable
+  id: LSTableGeneralWeaponRangedT1
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseShortMk58Expedition
+    - id: WeaponCaseShortPollockExpedition
+    - id: WeaponCaseShortFaithExpedition
+    - id: WeaponCaseShortArgentiExpedition
+    - id: WeaponCaseLongRepeaterExpedition
+    - id: WeaponCaseShortFitzExpedition
+    - id: WeaponCaseLongKammererExpedition
+    - id: WeaponCaseShortLaserGunExpedition
+
+- type: entityTable # No real guns in this group pls.
+  id: LSTableGeneralWeaponRangedT0
+  table: !type:GroupSelector
+    children:
+      - id: NFRevolverCapGun
