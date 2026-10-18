@@ -1,20 +1,45 @@
 #region colorable
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColorInhand ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColorInhand ]
   id: ClothingUniformTurtleskirtColorable
   name: turtleneck jumpskirt
   description: For some reason, wearing this makes you feel like working in tech support at a product store.
   components:
   - type: Sprite
-    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
+    layers: # TODO: add support for sprite+clothing mappings to keep layers sync'd and revert this to icons.
+    - state: equipped-INNERCLOTHING-color
+      map: [ "uniform-equipped" ]
+    - state: equipped-INNERCLOTHING
+      map: [ "uniform-equipped-skirt" ]
   - type: Clothing
-    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-color
+        map: [ "uniform-equipped" ]
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-equipped-skirt" ]
+  - type: ColorableClothing
+    available:
+      - uniform-icon:
+          icon-color: Base
+        uniform-equipped-skirt:
+          equipped-INNERCLOTHING: ""
+          equipped-INNERCLOTHING-long: ""
+          equipped-INNERCLOTHING-pencil: ""
+          equipped-INNERCLOTHING-poofy: ""
+        uniform-equipped:
+          equipped-INNERCLOTHING-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
 
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtTailoredGownColorable
   name: tailored gown
-  suffix: Random
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
@@ -68,7 +93,6 @@
   parent: ClothingUniformJumpskirtTailoredGownColorable
   id: ClothingUniformJumpskirtTailoredGownMonoColorable
   name: tailored gown (simple)
-  suffix: Random
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
