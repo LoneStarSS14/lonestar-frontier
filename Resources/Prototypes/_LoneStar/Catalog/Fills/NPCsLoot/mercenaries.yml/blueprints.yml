@@ -1,54 +1,54 @@
 # region ammo blueprints
 - type: entityTable
-  id: LSSpawnLootMercenaryBlueprint
+  id: LSTableMercenaryBlueprint
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootMercenaryBlueprintT5
+      tableId: LSTableMercenaryBlueprintT5
     - !type:GroupSelector
       weight: 49
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootMercenaryBlueprintT4
+        tableId: LSTableMercenaryBlueprintT4
       - !type:GroupSelector
         weight: 19
         children:
         - !type:NestedSelector # Rare
           weight: 1
-          tableId: LSSpawnLootMercenaryBlueprintT3
+          tableId: LSTableMercenaryBlueprintT3
         - !type:GroupSelector
           weight: 9
           children:
           - !type:NestedSelector # Uncommon
             weight: 1
-            tableId: LSSpawnLootMercenaryBlueprintT2
+            tableId: LSTableMercenaryBlueprintT2
           - !type:GroupSelector
             weight: 3
             children:
             - !type:NestedSelector # Common
               weight: 7
-              tableId: LSSpawnLootMercenaryBlueprintT1
+              tableId: LSTableMercenaryBlueprintT1
             - !type:NestedSelector # Trash
               weight: 1
-              tableId: LSSpawnLootMercenaryBlueprintT0
+              tableId: LSTableMercenaryBlueprintT0
 
 - type: entityTable
-  id: LSSpawnLootMercenaryBlueprintT5
+  id: LSTableMercenaryBlueprintT5
   table: !type:GroupSelector
     children:
     - id: NFBlueprintAmmo60Mercenary
 
 - type: entityTable
-  id: LSSpawnLootMercenaryBlueprintT4
+  id: LSTableMercenaryBlueprintT4
   table: !type:GroupSelector
     children:
     - id: NFBlueprintHighCapRifle20MagMercenary
     - id: NFBlueprintHighCapPistol35MagMercenary
 
 - type: entityTable
-  id: LSSpawnLootMercenaryBlueprintT3
+  id: LSTableMercenaryBlueprintT3
   table: !type:GroupSelector
     children:
     - id: LSBlueprintMercenaryAmmunitionBoxBigPistol35Overpressure
@@ -59,7 +59,7 @@
     - id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Overpressure
 
 - type: entityTable
-  id: LSSpawnLootMercenaryBlueprintT2
+  id: LSTableMercenaryBlueprintT2
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
@@ -77,7 +77,7 @@
       - id: LSBlueprintMercenaryAmmunitionBoxRifle30Overpressure
 
 - type: entityTable
-  id: LSSpawnLootMercenaryBlueprintT1
+  id: LSTableMercenaryBlueprintT1
   table: !type:GroupSelector
     children:
     - id: LSBlueprintMercenaryAmmunitionBoxPistol35
@@ -92,7 +92,7 @@
     - id: LSBlueprintMercenaryAmmunitionBoxBigShotgunSlug
 
 - type: entityTable
-  id: LSSpawnLootMercenaryBlueprintT0
+  id: LSTableMercenaryBlueprintT0
   table: !type:GroupSelector
     children:
     - id: LSBlueprintMercenaryAmmunitionBoxRifle20

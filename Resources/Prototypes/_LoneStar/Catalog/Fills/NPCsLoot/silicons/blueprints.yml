@@ -1,41 +1,41 @@
 # region ammo blueprints
 - type: entityTable
-  id: LSSpawnLootSiliconsBlueprint
+  id: LSTableSiliconsBlueprint
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootSiliconsBlueprintT5
+      tableId: LSTableSiliconsBlueprintT5
     - !type:GroupSelector
       weight: 299
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootSiliconsBlueprintT4
+        tableId: LSTableSiliconsBlueprintT4
       - !type:GroupSelector
         weight: 24
         children:
         - !type:NestedSelector # Rare
           weight: 1
-          tableId: LSSpawnLootSiliconsBlueprintT3
+          tableId: LSTableSiliconsBlueprintT3
         - !type:GroupSelector
           weight: 12
           children:
           - !type:NestedSelector # Uncommon
             weight: 1
-            tableId: LSSpawnLootSiliconsBlueprintT2
+            tableId: LSTableSiliconsBlueprintT2
           - !type:GroupSelector
             weight: 3
             children:
             - !type:NestedSelector # Common
               weight: 4
-              tableId: LSSpawnLootSiliconsBlueprintT1
+              tableId: LSTableSiliconsBlueprintT1
             - !type:NestedSelector # Trash
               weight: 1
-              tableId: LSSpawnLootSiliconsBlueprintT0
+              tableId: LSTableSiliconsBlueprintT0
 
 - type: entityTable
-  id: LSSpawnLootSiliconsBlueprintT5
+  id: LSTableSiliconsBlueprintT5
   table: !type:GroupSelector
     children:
     - id: NFBlueprintRogueSiliconBluespaceCapacitor
@@ -43,7 +43,7 @@
     - id: NFBlueprintRogueSiliconBluespaceManipulator
 
 - type: entityTable
-  id: LSSpawnLootSiliconsBlueprintT4
+  id: LSTableSiliconsBlueprintT4
   table: !type:GroupSelector
     children:
     - id: NFBlueprintRogueSiliconPowerCellHyper
@@ -51,7 +51,7 @@
     - id: LSBlueprintRogueSiliconSyndicateJawsOfLife
 
 - type: entityTable
-  id: LSSpawnLootSiliconsBlueprintT3
+  id: LSTableSiliconsBlueprintT3
   table: !type:GroupSelector
     children:
     - id: NFBlueprintRogueSiliconAdvancedTools
@@ -59,7 +59,7 @@
     - id: NFBlueprintConstructionBagOfHolding
 
 - type: entityTable
-  id: LSSpawnLootSiliconsBlueprintT2
+  id: LSTableSiliconsBlueprintT2
   table: !type:GroupSelector
     children:
     - id: NFBlueprintRogueSiliconSuperCapacitor
@@ -73,7 +73,7 @@
     - id: LSBlueprintRogueSiliconPowerDrill
 
 - type: entityTable
-  id: LSSpawnLootSiliconsBlueprintT1
+  id: LSTableSiliconsBlueprintT1
   table: !type:GroupSelector
     children:
     - id: NFBlueprintRogueSiliconPowerCellHigh
@@ -83,7 +83,7 @@
     - id: NFBlueprintRogueSiliconMechEquipmentGrabber
 
 - type: entityTable
-  id: LSSpawnLootSiliconsBlueprintT0
+  id: LSTableSiliconsBlueprintT0
   table: !type:GroupSelector
     children:
     - id: NFBlueprintRogueSiliconAdvancedCapacitor

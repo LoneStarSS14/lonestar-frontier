@@ -19,7 +19,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponMeleeT1 # LoneStar
+      tableId: LSTableGeneralWeaponMeleeT1 # LoneStar
 
 #region melee T2
 - type: entity
@@ -42,7 +42,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponMeleeT2 # LoneStar
+      tableId: LSTableGeneralWeaponMeleeT2 # LoneStar
 
 #region melee T3
 - type: entity
@@ -65,7 +65,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponMeleeT3 # LoneStar
+      tableId: LSTableGeneralWeaponMeleeT3 # LoneStar
 
 #region melee T4
 - type: entity
@@ -88,7 +88,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponMeleeT4 # LoneStar
+      tableId: LSTableGeneralWeaponMeleeT4 # LoneStar
 
 #region melee T5
 - type: entity
@@ -111,7 +111,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponMeleeT5 # LoneStar
+      tableId: LSTableGeneralWeaponMeleeT5 # LoneStar
 
 # region ranged T1
 - type: entity
@@ -134,7 +134,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponRangedT1 # LoneStar
+      tableId: LSTableGeneralWeaponRangedT1 # LoneStar
 
 # region ranged T2
 - type: entity
@@ -157,7 +157,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponRangedT2 # LoneStar
+      tableId: LSTableGeneralWeaponRangedT2 # LoneStar
 
 # region ranged T3
 - type: entity
@@ -180,7 +180,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponRangedT3 # LoneStar
+      tableId: LSTableGeneralWeaponRangedT3 # LoneStar
 
 # region ranged T4
 - type: entity
@@ -203,7 +203,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponRangedT4 # LoneStar
+      tableId: LSTableGeneralWeaponRangedT4 # LoneStar
 
 # region ranged T5
 - type: entity
@@ -226,7 +226,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponRangedT5 # LoneStar
+      tableId: LSTableGeneralWeaponRangedT5 # LoneStar
 
 # region explosives T1
 - type: entity

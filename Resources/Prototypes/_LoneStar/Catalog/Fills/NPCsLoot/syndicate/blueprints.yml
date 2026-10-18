@@ -1,42 +1,42 @@
 #region routing
 - type: entityTable
-  id: LSSpawnLootSyndicateBlueprint
+  id: LSTableSyndicateBlueprint
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootSyndicateBlueprintT5
+      tableId: LSTableSyndicateBlueprintT5
     - !type:GroupSelector
       weight: 49
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootSyndicateBlueprintT4
+        tableId: LSTableSyndicateBlueprintT4
       - !type:GroupSelector
         weight: 19
         children:
         - !type:NestedSelector # Rare
           weight: 1
-          tableId: LSSpawnLootSyndicateBlueprintT3
+          tableId: LSTableSyndicateBlueprintT3
         - !type:GroupSelector
           weight: 9
           children:
           - !type:NestedSelector # Uncommon
             weight: 1
-            tableId: LSSpawnLootSyndicateBlueprintT2
+            tableId: LSTableSyndicateBlueprintT2
           - !type:GroupSelector
             weight: 3
             children:
             - !type:NestedSelector # Common
               weight: 4
-              tableId: LSSpawnLootSyndicateBlueprintT1
+              tableId: LSTableSyndicateBlueprintT1
             - !type:NestedSelector # Trash
               weight: 1
-              tableId: LSSpawnLootSyndicateBlueprintT0
+              tableId: LSTableSyndicateBlueprintT0
 
 #region tiers
 - type: entityTable
-  id: LSSpawnLootSyndicateBlueprintT5
+  id: LSTableSyndicateBlueprintT5
   table: !type:GroupSelector
     children:
     - id: LSBlueprintSyndicateAmmunitionBoxPistol35Uranium
@@ -49,7 +49,7 @@
     - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Uranium
 
 - type: entityTable
-  id: LSSpawnLootSyndicateBlueprintT4
+  id: LSTableSyndicateBlueprintT4
   table: !type:GroupSelector
     children:
     - id: LSBlueprintSyndicateAmmunitionBoxPistol45Uranium
@@ -66,7 +66,7 @@
     - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Incendiary
 
 - type: entityTable
-  id: LSSpawnLootSyndicateBlueprintT3
+  id: LSTableSyndicateBlueprintT3
   table: !type:GroupSelector
     children:
     - id: LSBlueprintSyndicateAmmunitionBoxPistol45Incendiary
@@ -85,7 +85,7 @@
       weight: 4
 
 - type: entityTable
-  id: LSSpawnLootSyndicateBlueprintT2
+  id: LSTableSyndicateBlueprintT2
   table: !type:GroupSelector
     children:
     - id: LSBlueprintSyndicateAmmunitionBoxPistol35Overpressure
@@ -104,7 +104,7 @@
     - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunSlug
 
 - type: entityTable
-  id: LSSpawnLootSyndicateBlueprintT1
+  id: LSTableSyndicateBlueprintT1
   table: !type:GroupSelector
     children:
     - id: LSBlueprintSyndicateAmmunitionBoxPistol45Overpressure
@@ -133,7 +133,7 @@
     - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunSlug
 
 - type: entityTable
-  id: LSSpawnLootSyndicateBlueprintT0
+  id: LSTableSyndicateBlueprintT0
   table: !type:GroupSelector
     children:
     - id: LSBlueprintSyndicateAmmunitionBoxPistol45Rubber

@@ -1,59 +1,59 @@
 #region routing
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmo
+  id: LSTableGeneralWeaponAmmo
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootGeneralWeaponAmmoT5
+      tableId: LSTableGeneralWeaponAmmoT5
     - !type:GroupSelector
       weight: 14
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootGeneralWeaponAmmoT4
+        tableId: LSTableGeneralWeaponAmmoT4
       - !type:GroupSelector
         weight: 9
         children:
         - !type:NestedSelector # Rare
           weight: 1
-          tableId: LSSpawnLootGeneralWeaponAmmoT3
+          tableId: LSTableGeneralWeaponAmmoT3
         - !type:GroupSelector
           weight: 4
           children:
           - !type:NestedSelector # Uncommon
             weight: 1
-            tableId: LSSpawnLootGeneralWeaponAmmoT2
+            tableId: LSTableGeneralWeaponAmmoT2
           - !type:GroupSelector
             weight: 2
             children:
             - !type:NestedSelector # Common
               weight: 9
-              tableId: LSSpawnLootGeneralWeaponAmmoT1
+              tableId: LSTableGeneralWeaponAmmoT1
             - !type:NestedSelector # Trash
               weight: 1
-              tableId: LSSpawnLootGeneralWeaponAmmoT0
+              tableId: LSTableGeneralWeaponAmmoT0
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoRare
+  id: LSTableGeneralWeaponAmmoRare
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootGeneralWeaponAmmoT5
+      tableId: LSTableGeneralWeaponAmmoT5
     - !type:GroupSelector
       weight: 9
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootGeneralWeaponAmmoT4
+        tableId: LSTableGeneralWeaponAmmoT4
       - !type:NestedSelector # Rare
         weight: 4
-        tableId: LSSpawnLootGeneralWeaponAmmoT3
+        tableId: LSTableGeneralWeaponAmmoT3
 
 #region tiers
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoT5
+  id: LSTableGeneralWeaponAmmoT5
   table: !type:GroupSelector
     children:
     - id: NFAmmunitionBoxPistol35Uranium
@@ -66,7 +66,7 @@
     - id: NFAmmunitionBoxBigRifle30Uranium
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoT4
+  id: LSTableGeneralWeaponAmmoT4
   table: !type:GroupSelector
     children:
     - id: NFAmmunitionBoxPistol45Uranium
@@ -83,7 +83,7 @@
     - id: NFAmmunitionBoxBigRifle30Incendiary
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoT3
+  id: LSTableGeneralWeaponAmmoT3
   table: !type:GroupSelector
     children:
     - id: NFAmmunitionBoxPistol45Incendiary
@@ -100,7 +100,7 @@
     - id: NFAmmunitionBoxBigRifle30Overpressure
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoT2
+  id: LSTableGeneralWeaponAmmoT2
   table: !type:GroupSelector
     children:
     - id: NFAmmunitionBoxPistol35Overpressure
@@ -119,7 +119,7 @@
     - id: NFAmmunitionBoxBigShellShotgunSlug
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoT1
+  id: LSTableGeneralWeaponAmmoT1
   table: !type:GroupSelector
     children:
     - id: NFAmmunitionBoxPistol45Overpressure
@@ -148,7 +148,7 @@
     - id: NFAmmunitionBoxBigShellShotgunSlug
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoT0
+  id: LSTableGeneralWeaponAmmoT0
   table: !type:GroupSelector
     children:
     - id: NFAmmunitionBoxPistol45Rubber
@@ -172,17 +172,17 @@
 
 #region Normal
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoNormalAny
+  id: LSTableGeneralWeaponAmmoNormalAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoNormalBox
+      tableId: LSTableGeneralWeaponAmmoNormalBox
       weight: 6
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoNormalBoxBig
+      tableId: LSTableGeneralWeaponAmmoNormalBoxBig
       weight: 1
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoNormalBox
+  id: LSTableGeneralWeaponAmmoNormalBox
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxBigPistol35
@@ -197,7 +197,7 @@
         - id: NFAmmunitionBoxBigShellShotgunSlug
           weight: 1
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoNormalBoxBig
+  id: LSTableGeneralWeaponAmmoNormalBoxBig
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxPistol35
@@ -214,17 +214,17 @@
 
 #region Overpressure
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoOverpressureAny
+  id: LSTableGeneralWeaponAmmoOverpressureAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoOverpressureBox
+      tableId: LSTableGeneralWeaponAmmoOverpressureBox
       weight: 6
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoOverpressureBoxBig
+      tableId: LSTableGeneralWeaponAmmoOverpressureBoxBig
       weight: 1
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoOverpressureBox
+  id: LSTableGeneralWeaponAmmoOverpressureBox
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxBigPistol35Overpressure
@@ -237,7 +237,7 @@
         - id: NFAmmunitionBoxBigShellShotgunOverpressure
         - id: NFAmmunitionBoxBigShellShotgunSlug
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoOverpressureBoxBig
+  id: LSTableGeneralWeaponAmmoOverpressureBoxBig
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxPistol35Overpressure
@@ -252,17 +252,17 @@
 
 #region Incendiary
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoIncendiaryAny
+  id: LSTableGeneralWeaponAmmoIncendiaryAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoIncendiaryBox
+      tableId: LSTableGeneralWeaponAmmoIncendiaryBox
       weight: 6
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoIncendiaryBoxBig
+      tableId: LSTableGeneralWeaponAmmoIncendiaryBoxBig
       weight: 1
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoIncendiaryBox
+  id: LSTableGeneralWeaponAmmoIncendiaryBox
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxBigPistol35Incendiary
@@ -272,7 +272,7 @@
       - id: NFAmmunitionBoxBigRifle30Incendiary
       - id: NFAmmunitionBoxBigShellShotgunIncendiary
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoIncendiaryBoxBig
+  id: LSTableGeneralWeaponAmmoIncendiaryBoxBig
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxPistol35Incendiary
@@ -284,17 +284,17 @@
 
 #region Uranium
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoUraniumAny
+  id: LSTableGeneralWeaponAmmoUraniumAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoUraniumBox
+      tableId: LSTableGeneralWeaponAmmoUraniumBox
       weight: 6
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoUraniumBoxBig
+      tableId: LSTableGeneralWeaponAmmoUraniumBoxBig
       weight: 1
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoUraniumBox
+  id: LSTableGeneralWeaponAmmoUraniumBox
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxBigPistol35Uranium
@@ -304,7 +304,7 @@
       - id: NFAmmunitionBoxBigRifle30Uranium
       - id: NFAmmunitionBoxBigShellShotgunUranium
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoUraniumBoxBig
+  id: LSTableGeneralWeaponAmmoUraniumBoxBig
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxPistol35Uranium
@@ -316,17 +316,17 @@
 
 #region Rubber
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoRubberAny
+  id: LSTableGeneralWeaponAmmoRubberAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoRubberBox
+      tableId: LSTableGeneralWeaponAmmoRubberBox
       weight: 6
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoRubberBoxBig
+      tableId: LSTableGeneralWeaponAmmoRubberBoxBig
       weight: 1
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoRubberBox
+  id: LSTableGeneralWeaponAmmoRubberBox
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxBigPistol35Rubber
@@ -336,7 +336,7 @@
       - id: NFAmmunitionBoxBigRifle30Rubber
       - id: NFAmmunitionBoxBigShellShotgunBeanbag
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoRubberBoxBig
+  id: LSTableGeneralWeaponAmmoRubberBoxBig
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxPistol35Rubber
@@ -348,17 +348,17 @@
 
 #region Practice
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoPracticeAny
+  id: LSTableGeneralWeaponAmmoPracticeAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoPracticeBox
+      tableId: LSTableGeneralWeaponAmmoPracticeBox
       weight: 6
     - !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponAmmoPracticeBoxBig
+      tableId: LSTableGeneralWeaponAmmoPracticeBoxBig
       weight: 1
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoPracticeBox
+  id: LSTableGeneralWeaponAmmoPracticeBox
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxBigPistol35Practice
@@ -368,7 +368,7 @@
       - id: NFAmmunitionBoxBigRifle30Practice
       - id: NFAmmunitionBoxBigShellShotgunPractice
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponAmmoPracticeBoxBig
+  id: LSTableGeneralWeaponAmmoPracticeBoxBig
   table: !type:GroupSelector
       children:
       - id: NFAmmunitionBoxPistol35Practice

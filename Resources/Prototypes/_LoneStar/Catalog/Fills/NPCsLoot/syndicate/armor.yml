@@ -1,71 +1,71 @@
 #region routing
 - type: entityTable
-  id: LSSpawnLootSyndicateArmor
+  id: LSTableSyndicateArmor
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootSyndicateArmorT5
+      tableId: LSTableSyndicateArmorT5
     - !type:GroupSelector
       weight: 119
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootSyndicateArmorT4
+        tableId: LSTableSyndicateArmorT4
       - !type:GroupSelector
         weight: 34
         children:
         - !type:NestedSelector # Rare
           weight: 1
-          tableId: LSSpawnLootSyndicateArmorT3
+          tableId: LSTableSyndicateArmorT3
         - !type:GroupSelector
           weight: 14
           children:
           - !type:NestedSelector # Uncommon
             weight: 1
-            tableId: LSSpawnLootSyndicateArmorT2
+            tableId: LSTableSyndicateArmorT2
           - !type:GroupSelector
             weight: 4
             children:
             - !type:NestedSelector # Common
               weight: 3
-              tableId: LSSpawnLootSyndicateArmorT1
+              tableId: LSTableSyndicateArmorT1
             - !type:NestedSelector # Trash
               weight: 1
-              tableId: LSSpawnLootSyndicateArmorT0
+              tableId: LSTableSyndicateArmorT0
 
 - type: entityTable
-  id: LSSpawnLootSyndicateArmorNonLegendary
+  id: LSTableSyndicateArmorNonLegendary
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Epic
       weight: 1
-      tableId: LSSpawnLootSyndicateArmorT4
+      tableId: LSTableSyndicateArmorT4
     - !type:GroupSelector
       weight: 34
       children:
       - !type:NestedSelector # Rare
         weight: 1
-        tableId: LSSpawnLootSyndicateArmorT3
+        tableId: LSTableSyndicateArmorT3
       - !type:GroupSelector
         weight: 14
         children:
         - !type:NestedSelector # Uncommon
           weight: 1
-          tableId: LSSpawnLootSyndicateArmorT2
+          tableId: LSTableSyndicateArmorT2
         - !type:GroupSelector
           weight: 4
           children:
           - !type:NestedSelector # Common
             weight: 3
-            tableId: LSSpawnLootSyndicateArmorT1
+            tableId: LSTableSyndicateArmorT1
           - !type:NestedSelector # Trash
             weight: 1
-            tableId: LSSpawnLootSyndicateArmorT0
+            tableId: LSTableSyndicateArmorT0
 
 #region tiers
 - type: entityTable
-  id: LSSpawnLootSyndicateArmorT5
+  id: LSTableSyndicateArmorT5
   table: !type:GroupSelector
     children:
     - !type:AllSelector
@@ -77,7 +77,7 @@
     - id: ClothingOuterHardsuitJuggernaut
 
 - type: entityTable
-  id: LSSpawnLootSyndicateArmorT4
+  id: LSTableSyndicateArmorT4
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
@@ -88,7 +88,7 @@
     - id: ClothingOuterVestWebElite
 
 - type: entityTable
-  id: LSSpawnLootSyndicateArmorT3
+  id: LSTableSyndicateArmorT3
   table: !type:GroupSelector
     children:
     - !type:AllSelector
@@ -107,7 +107,7 @@
     - id: ClothingOuterVestWeb
 
 - type: entityTable
-  id: LSSpawnLootSyndicateArmorT2
+  id: LSTableSyndicateArmorT2
   table: !type:GroupSelector
     children:
     - !type:AllSelector
@@ -124,7 +124,7 @@
       - id: ClothingOuterWinterWarden
 
 - type: entityTable
-  id: LSSpawnLootSyndicateArmorT1
+  id: LSTableSyndicateArmorT1
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
@@ -145,13 +145,13 @@
       - id: ClothingHeadHelmetMercenary
 
 - type: entityTable
-  id: LSSpawnLootSyndicateArmorT0
+  id: LSTableSyndicateArmorT0
   table: !type:NestedSelector
-    tableId: LSSpawnLootSyndicateClothes
+    tableId: LSTableSyndicateClothes
 
 #region Tables
 - type: entityTable
-  id: LSSpawnLootSyndicateClothes
+  id: LSTableSyndicateClothes
   table: !type:GroupSelector
     children:
     - !type:GroupSelector # Operative

@@ -13,7 +13,7 @@
       - id: ClothingOuterVestWebMercenary # Armor
         prob: 0.4
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootMercenaryBlueprint
+        tableId: LSTableMercenaryBlueprint
         prob: 0.1
       - !type:GroupSelector # Loot
         children:
@@ -40,7 +40,7 @@
       - id: ClothingOuterVestWebMercenary # Armor
         prob: 0.4
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootMercenaryBlueprint
+        tableId: LSTableMercenaryBlueprint
         prob: 0.1
       - !type:GroupSelector # Loot
         children:
@@ -72,7 +72,7 @@
         - id: SpawnDungeonLootShieldsMercenary
           weight: 0.5
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootMercenaryBlueprint
+        tableId: LSTableMercenaryBlueprint
         prob: 0.3
       - !type:GroupSelector # Loot
         children:
@@ -101,7 +101,7 @@
       - id: ClothingOuterArmorBasicSlim # Armor
         prob: 0.4
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootMercenaryBlueprint
+        tableId: LSTableMercenaryBlueprint
         prob: 0.3
       - !type:GroupSelector # Loot
         children:
@@ -137,7 +137,7 @@
         - id: ClothingOuterCoatBHTrench
         - id: ClothingHeadHatBH
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootMercenaryBlueprint
+        tableId: LSTableMercenaryBlueprint
         prob: 0.3
       - !type:GroupSelector # Loot
         children:
@@ -170,7 +170,7 @@
           weight: 0.4
       - id: ClothingOuterArmorBasicSlim # Armor
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootMercenaryBlueprint
+        tableId: LSTableMercenaryBlueprint
         prob: 0.45
       - !type:GroupSelector # Loot
         children:
@@ -187,7 +187,7 @@
         - id: SpawnDungeonLootNpcMercenariesFluff
           weight: 0.15
         - !type:NestedSelector # LoneStar
-          tableId: LSSpawnLootMercenaryBlueprint
+          tableId: LSTableMercenaryBlueprint
           weight: 0.05
 
 - type: entity
@@ -204,7 +204,7 @@
       - id: ClothingOuterArmorBasicSlim # Armor
         prob: 0.4
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootMercenaryBlueprint
+        tableId: LSTableMercenaryBlueprint
         prob: 0.45
       - !type:GroupSelector # Loot
         children:
@@ -219,7 +219,7 @@
         - id: SpawnDungeonLootNpcMercenariesFluff
           weight: 0.15
         - !type:NestedSelector
-          tableId: LSSpawnLootMercenaryBlueprint
+          tableId: LSTableMercenaryBlueprint
           weight: 0.05
 
 #region Bosses
@@ -252,28 +252,28 @@
             children:
             - !type:NestedSelector
               weight: 22
-              tableId: LSSpawnLootGeneralWeaponRangedT3
+              tableId: LSTableGeneralWeaponRangedT3
             - !type:NestedSelector
               weight: 7
-              tableId: LSSpawnLootGeneralWeaponRangedT4
+              tableId: LSTableGeneralWeaponRangedT4
           - !type:NestedSelector
-            tableId: LSSpawnLootGeneralWeaponAmmoOverpressureAny
+            tableId: LSTableGeneralWeaponAmmoOverpressureAny
             rolls: !type:RangeNumberSelector
               range: 2, 3
         - !type:GroupSelector
           children:
           - !type:NestedSelector
             weight: 22
-            tableId: LSSpawnLootGeneralWeaponMeleeT3
+            tableId: LSTableGeneralWeaponMeleeT3
           - !type:NestedSelector
             weight: 7
-            tableId: LSSpawnLootGeneralWeaponMeleeT4
+            tableId: LSTableGeneralWeaponMeleeT4
       - id: ClothingOuterHardsuitScaf # Armor
         prob: 0.4
       - !type:AllSelector # Blueprints
         children:
         - !type:NestedSelector
-          tableId: LSSpawnLootMercenaryBlueprint
+          tableId: LSTableMercenaryBlueprint
         - !type:NestedSelector
-          tableId: LSSpawnLootMercenaryBlueprint
+          tableId: LSTableMercenaryBlueprint
           prob: 0.3

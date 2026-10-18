@@ -1,59 +1,59 @@
 #region routing
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponRanged
+  id: LSTableGeneralWeaponRanged
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootGeneralWeaponRangedT5
+      tableId: LSTableGeneralWeaponRangedT5
     - !type:GroupSelector
       weight: 29
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootGeneralWeaponRangedT4
+        tableId: LSTableGeneralWeaponRangedT4
       - !type:GroupSelector
         weight: 11
         children:
         - !type:NestedSelector # Rare
           weight: 2
-          tableId: LSSpawnLootGeneralWeaponRangedT3
+          tableId: LSTableGeneralWeaponRangedT3
         - !type:GroupSelector
           weight: 7
           children:
           - !type:NestedSelector # Uncommon
             weight: 2
-            tableId: LSSpawnLootGeneralWeaponRangedT2
+            tableId: LSTableGeneralWeaponRangedT2
           - !type:GroupSelector
             weight: 3
             children:
             - !type:NestedSelector # Common
               weight: 14
-              tableId: LSSpawnLootGeneralWeaponRangedT1
+              tableId: LSTableGeneralWeaponRangedT1
             - !type:NestedSelector # Trash
               weight: 1
-              tableId: LSSpawnLootGeneralWeaponRangedT0
+              tableId: LSTableGeneralWeaponRangedT0
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponRangedRare
+  id: LSTableGeneralWeaponRangedRare
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootGeneralWeaponRangedT5
+      tableId: LSTableGeneralWeaponRangedT5
     - !type:GroupSelector
       weight: 29
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootGeneralWeaponRangedT4
+        tableId: LSTableGeneralWeaponRangedT4
       - !type:NestedSelector # Rare
         weight: 11
-        tableId: LSSpawnLootGeneralWeaponRangedT3
+        tableId: LSTableGeneralWeaponRangedT3
 
 #region tiers
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponRangedT5
+  id: LSTableGeneralWeaponRangedT5
   table: !type:GroupSelector
     children:
     - id: WeaponCaseLongLauncherRocketExpedition
@@ -66,7 +66,7 @@
     - id: WeaponCaseLongPrototypePulseRifleExpedition
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponRangedT4
+  id: LSTableGeneralWeaponRangedT4
   table: !type:GroupSelector
     children:
     - id: WeaponCaseLongSm
@@ -78,7 +78,7 @@
     - id: WeaponCaseShortAnacondaExpedition
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponRangedT3
+  id: LSTableGeneralWeaponRangedT3
   table: !type:GroupSelector
     children:
     - id: WeaponCaseLongWT550Expedition
@@ -99,7 +99,7 @@
     - id: WeaponCaseLongLaserCarbineExpedition
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponRangedT2
+  id: LSTableGeneralWeaponRangedT2
   table: !type:GroupSelector
     children:
     - id: WeaponCaseLongGestioExpedition
@@ -114,7 +114,7 @@
     - id: WeaponCaseLongMusketExpedition
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponRangedT1
+  id: LSTableGeneralWeaponRangedT1
   table: !type:GroupSelector
     children:
     - id: WeaponCaseShortMk58Expedition
@@ -127,7 +127,7 @@
     - id: WeaponCaseShortLaserGunExpedition
 
 - type: entityTable # No real guns in this group pls.
-  id: LSSpawnLootGeneralWeaponRangedT0
+  id: LSTableGeneralWeaponRangedT0
   table: !type:GroupSelector
     children:
       - id: NFRevolverCapGun

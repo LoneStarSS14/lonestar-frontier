@@ -63,10 +63,10 @@
     table: !type:GroupSelector
       children:
       - !type:NestedSelector
-        tableId: LSSpawnLootGeneralWeaponMelee # LoneStar
+        tableId: LSTableGeneralWeaponMelee # LoneStar
         weight: 0.2
       - !type:NestedSelector
-        tableId: LSSpawnLootGeneralWeaponRanged # LoneStar
+        tableId: LSTableGeneralWeaponRanged # LoneStar
         weight: 0.45
       - !type:NestedSelector
         tableId: TableDungeonLootWeaponsAmmunition
@@ -96,10 +96,10 @@
     table: !type:GroupSelector
       children:
       - !type:NestedSelector
-        tableId: LSSpawnLootGeneralWeaponMelee # LoneStar
+        tableId: LSTableGeneralWeaponMelee # LoneStar
         weight: 0.2
       - !type:NestedSelector
-        tableId: LSSpawnLootGeneralWeaponRanged # LoneStar
+        tableId: LSTableGeneralWeaponRanged # LoneStar
         weight: 0.5
       - !type:NestedSelector
         tableId: TableDungeonLootWeaponsAmmunition
@@ -127,7 +127,7 @@
     offset: 0.1
     deleteSpawnerAfterSpawn: false
     table: !type:NestedSelector
-      tableId: LSSpawnLootGeneralWeaponMelee # LoneStar
+      tableId: LSTableGeneralWeaponMelee # LoneStar
 
 - type: entity
   parent: MarkerBasePlaceFree
@@ -150,10 +150,10 @@
     table: !type:GroupSelector
       children:
       - !type:NestedSelector
-        tableId: LSSpawnLootGeneralWeaponMelee # LoneStar
+        tableId: LSTableGeneralWeaponMelee # LoneStar
         weight: 0.3
       - !type:NestedSelector
-        tableId: LSSpawnLootGeneralWeaponRanged # LoneStar
+        tableId: LSTableGeneralWeaponRanged # LoneStar
         weight: 0.5
       - !type:NestedSelector
         tableId: TableDungeonLootWeaponsAmmunition

@@ -1,54 +1,54 @@
 # region ammo blueprints
 - type: entityTable
-  id: LSSpawnLootPunksBlueprint
+  id: LSTablePunksBlueprint
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootPunksBlueprintT5
+      tableId: LSTablePunksBlueprintT5
     - !type:GroupSelector
       weight: 49
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootPunksBlueprintT4
+        tableId: LSTablePunksBlueprintT4
       - !type:GroupSelector
         weight: 19
         children:
         - !type:NestedSelector # Rare
           weight: 1
-          tableId: LSSpawnLootPunksBlueprintT3
+          tableId: LSTablePunksBlueprintT3
         - !type:GroupSelector
           weight: 9
           children:
           - !type:NestedSelector # Uncommon
             weight: 1
-            tableId: LSSpawnLootPunksBlueprintT2
+            tableId: LSTablePunksBlueprintT2
           - !type:GroupSelector
             weight: 3
             children:
             - !type:NestedSelector # Common
               weight: 7
-              tableId: LSSpawnLootPunksBlueprintT1
+              tableId: LSTablePunksBlueprintT1
             - !type:NestedSelector # Trash
               weight: 1
-              tableId: LSSpawnLootPunksBlueprintT0
+              tableId: LSTablePunksBlueprintT0
 
 - type: entityTable
-  id: LSSpawnLootPunksBlueprintT5
+  id: LSTablePunksBlueprintT5
   table: !type:GroupSelector
     children:
     - id: NFBlueprintPortableRecharger
 
 - type: entityTable
-  id: LSSpawnLootPunksBlueprintT4
+  id: LSTablePunksBlueprintT4
   table: !type:GroupSelector
     children:
     - id: NFBlueprintWeaponsMeleePunk
     - id: NFBlueprintArmorHeavyPunk
 
 - type: entityTable
-  id: LSSpawnLootPunksBlueprintT3
+  id: LSTablePunksBlueprintT3
   table: !type:GroupSelector
     children:
     - id: LSBlueprintPunksAmmunitionBoxBigPistol35Overpressure
@@ -56,7 +56,7 @@
     - id: LSBlueprintPunksAmmunitionBoxBigShotgunOverpressure
 
 - type: entityTable
-  id: LSSpawnLootPunksBlueprintT2
+  id: LSTablePunksBlueprintT2
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
@@ -72,7 +72,7 @@
       - id: LSBlueprintPunksAmmunitionBoxShotgunOverpressure
 
 - type: entityTable
-  id: LSSpawnLootPunksBlueprintT1
+  id: LSTablePunksBlueprintT1
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
@@ -93,7 +93,7 @@
       - id: LSBlueprintPunksAmmunitionBoxBigShotgunSlug
 
 - type: entityTable
-  id: LSSpawnLootPunksBlueprintT0
+  id: LSTablePunksBlueprintT0
   table: !type:GroupSelector
     children:
     - id: LSBlueprintPunksAmmunitionBoxPistol35Rubber

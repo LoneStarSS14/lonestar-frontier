@@ -40,7 +40,7 @@
         - id: ScrapOreTechRandomLow
           weight: 0.3
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSiliconsBlueprint
+        tableId: LSTableSiliconsBlueprint
         prob: 0.3
       - !type:GroupSelector # Loot
         children:
@@ -69,7 +69,7 @@
         - id: ScrapOreTechRandomReduced
           weight: 4
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSiliconsBlueprint
+        tableId: LSTableSiliconsBlueprint
         prob: 0.6
       - !type:GroupSelector # Loot
         children:
@@ -96,7 +96,7 @@
         - id: ScrapOreRandom
         - id: ScrapOreTechRandom
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSiliconsBlueprint
+        tableId: LSTableSiliconsBlueprint
       - !type:GroupSelector # Loot
         children:
         - id: SpawnDungeonLootNpcMaterialRandom
@@ -134,9 +134,9 @@
       - !type:GroupSelector # Blueprints
         children:
         - !type:NestedSelector
-          tableId: LSSpawnLootSiliconsBlueprint
+          tableId: LSTableSiliconsBlueprint
         - !type:NestedSelector
-          tableId: LSSpawnLootSiliconsBlueprint
+          tableId: LSTableSiliconsBlueprint
           prob: 0.45
       - !type:GroupSelector # Loot
         children:

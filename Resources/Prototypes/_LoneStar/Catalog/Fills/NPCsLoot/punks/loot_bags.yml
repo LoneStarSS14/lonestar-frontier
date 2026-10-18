@@ -9,7 +9,7 @@
     table: !type:AllSelector
       children:
       - !type:NestedSelector # Weapon
-        tableId: LSSpawnLootGeneralWeaponMeleeT2
+        tableId: LSTableGeneralWeaponMeleeT2
         prob: 0.7
       - id: SpawnDungeonLootNpcPunksOuterClothes # Armor
         prob: 0.3
@@ -29,7 +29,7 @@
     table: !type:AllSelector
       children:
       - !type:NestedSelector # Weapon
-        tableId: LSSpawnLootGeneralWeaponRangedT1
+        tableId: LSTableGeneralWeaponRangedT1
         prob: 0.7
       - id: SpawnDungeonLootNpcPunksOuterClothes # Armor
         prob: 0.3
@@ -50,7 +50,7 @@
     table: !type:AllSelector
       children:
       - !type:NestedSelector # Weapon
-        tableId: LSSpawnLootGeneralWeaponMeleeT2
+        tableId: LSTableGeneralWeaponMeleeT2
         prob: 0.7
       - !type:GroupSelector # Armor
         children:
@@ -74,7 +74,7 @@
     table: !type:AllSelector
       children:
       - !type:NestedSelector # Weapons
-        tableId: LSSpawnLootGeneralWeaponRangedT2
+        tableId: LSTableGeneralWeaponRangedT2
         prob: 0.7
       - !type:GroupSelector # Armor
         children:
@@ -99,7 +99,7 @@
     table: !type:AllSelector
       children:
       - !type:NestedSelector # Weapons
-        tableId: LSSpawnLootGeneralWeaponMeleeT3
+        tableId: LSTableGeneralWeaponMeleeT3
         prob: 0.7
       - !type:GroupSelector # Armor
         children:
@@ -115,7 +115,7 @@
         - id: SpawnDungeonLootMaterialsValuableFull
           weight: 0.2
         - !type:NestedSelector
-          tableId: LSSpawnLootPunksBlueprint
+          tableId: LSTablePunksBlueprint
           weight: 0.05
         - id: SpawnDungeonLootNpcPunksFluffItems
           weight: 0.3
@@ -130,7 +130,7 @@
     table: !type:AllSelector
       children:
       - !type:NestedSelector # Weapons
-        tableId: LSSpawnLootGeneralWeaponRangedT3
+        tableId: LSTableGeneralWeaponRangedT3
         prob: 0.7
       - !type:GroupSelector # Armor
         children:
@@ -146,7 +146,7 @@
         - id: SpawnDungeonLootMaterialsValuableFull
           weight: 0.2
         - !type:NestedSelector # LoneStar
-          tableId: LSSpawnLootPunksBlueprint
+          tableId: LSTablePunksBlueprint
           weight: 0.05
         - id: SpawnDungeonLootNpcPunksFluffItems
           weight: 0.3
@@ -183,14 +183,14 @@
         - id: SpawnDungeonLootMaterialsValuableFull
           weight: 0.2
         - !type:NestedSelector
-          tableId: LSSpawnLootPunksBlueprint
+          tableId: LSTablePunksBlueprint
           weight: 0.05
         - id: SpawnDungeonLootNpcPunksFluffItems
           weight: 0.3
         - !type:GroupSelector # Loot 2
           children:
           - !type:NestedSelector
-            tableId: LSSpawnLootPunksBlueprint
+            tableId: LSTablePunksBlueprint
             weight: 0.45
           - id: SpawnDungeonLootGunT3
             weight: 0.25

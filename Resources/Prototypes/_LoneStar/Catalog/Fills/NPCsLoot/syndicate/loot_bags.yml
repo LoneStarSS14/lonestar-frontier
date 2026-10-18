@@ -10,9 +10,9 @@
       children:
       - id: SpawnDungeonLootNpcSyndicateWeaponsPistols # Weapon
       - !type:NestedSelector # Armor
-        tableId: LSSpawnLootSyndicateArmorNonLegendary
+        tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSyndicateBlueprint
+        tableId: LSTableSyndicateBlueprint
         prob: 0.15
       - !type:AllSelector # Loot
         children:
@@ -35,9 +35,9 @@
       children:
       - id: SpawnDungeonLootNpcSyndicateWeaponsPistols # Weapon
       - !type:NestedSelector # Armor
-        tableId: LSSpawnLootSyndicateArmorNonLegendary
+        tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSyndicateBlueprint
+        tableId: LSTableSyndicateBlueprint
         prob: 0.25
       - !type:AllSelector # Loot
         children:
@@ -59,9 +59,9 @@
       children:
       - id: SpawnDungeonLootNpcSyndicateWeaponsShotguns # Weapon
       - !type:NestedSelector # Armor
-        tableId: LSSpawnLootSyndicateArmorNonLegendary
+        tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSyndicateBlueprint
+        tableId: LSTableSyndicateBlueprint
         prob: 0.25
       - !type:GroupSelector # Loot
         children:
@@ -79,7 +79,7 @@
           weight: 2
           amount: 2
         - !type:NestedSelector
-          tableId: LSSpawnLootSyndicateBlueprint
+          tableId: LSTableSyndicateBlueprint
           weight: 0.1
 
 - type: entity
@@ -99,9 +99,9 @@
         - id: MedicatedSuture
         - id: Stimpack
       - !type:NestedSelector # Armor
-        tableId: LSSpawnLootSyndicateArmorNonLegendary
+        tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSyndicateBlueprint
+        tableId: LSTableSyndicateBlueprint
         prob: 0.05
       - !type:AllSelector # Loot
         children:
@@ -132,9 +132,9 @@
         - id: NFWeaponEnergySubMachineGunDeltaVExpedition
           prob: 0.05
       - !type:NestedSelector # Armor
-        tableId: LSSpawnLootSyndicateArmorNonLegendary
+        tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSyndicateBlueprint
+        tableId: LSTableSyndicateBlueprint
         prob: 0.05
       - !type:AllSelector # Loot
         children:
@@ -159,9 +159,9 @@
       children:
       - id: SpawnDungeonLootNpcSyndicateWeaponsSmgs # Weapon
       - !type:NestedSelector # Armor
-        tableId: LSSpawnLootSyndicateArmor
+        tableId: LSTableSyndicateArmor
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSyndicateBlueprint
+        tableId: LSTableSyndicateBlueprint
         prob: 0.1
       - !type:AllSelector # Loot
         children:
@@ -184,12 +184,12 @@
     table: !type:AllSelector
       children:
       - !type:NestedSelector # Weapon
-        tableId: LSSpawnLootGeneralWeaponRangedRare
+        tableId: LSTableGeneralWeaponRangedRare
         prob: 0.7
       - !type:NestedSelector # Armor
-        tableId: LSSpawnLootSyndicateArmor
+        tableId: LSTableSyndicateArmor
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSyndicateBlueprint
+        tableId: LSTableSyndicateBlueprint
         prob: 0.1
       - !type:AllSelector # Loot
         children:
@@ -213,9 +213,9 @@
       children:
       - id: SpawnDungeonLootNpcSyndicateWeaponsPistolsChemical # Weapon
       - !type:NestedSelector # Armor
-        tableId: LSSpawnLootSyndicateArmor
+        tableId: LSTableSyndicateArmor
       - !type:NestedSelector # Blueprints
-        tableId: LSSpawnLootSyndicateBlueprint
+        tableId: LSTableSyndicateBlueprint
         prob: 0.1
       - !type:AllSelector # Loot
         children:
@@ -250,16 +250,16 @@
           weight: 1
         - !type:NestedSelector
           weight: 14
-          tableId: LSSpawnLootSyndicateArmor
+          tableId: LSTableSyndicateArmor
       - !type:AllSelector # Blueprints
         children:
         - !type:NestedSelector
-          tableId: LSSpawnLootSyndicateBlueprint
+          tableId: LSTableSyndicateBlueprint
         - !type:NestedSelector
-          tableId: LSSpawnLootSyndicateBlueprint
+          tableId: LSTableSyndicateBlueprint
           prob: 0.7
         - !type:NestedSelector
-          tableId: LSSpawnLootSyndicateBlueprint
+          tableId: LSTableSyndicateBlueprint
           prob: 0.3
       - !type:AllSelector # Loot
         children:

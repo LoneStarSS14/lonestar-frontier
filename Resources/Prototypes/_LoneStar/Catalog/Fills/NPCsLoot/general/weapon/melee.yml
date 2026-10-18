@@ -1,59 +1,59 @@
 #region routing tables
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponMelee
+  id: LSTableGeneralWeaponMelee
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootGeneralWeaponMeleeT5
+      tableId: LSTableGeneralWeaponMeleeT5
     - !type:GroupSelector
       weight: 74
       children:
       - !type:NestedSelector # Epic
         weight: 1
-        tableId: LSSpawnLootGeneralWeaponMeleeT4
+        tableId: LSTableGeneralWeaponMeleeT4
       - !type:GroupSelector
         weight: 19
         children:
         - !type:NestedSelector # Rare
           weight: 2
-          tableId: LSSpawnLootGeneralWeaponMeleeT3
+          tableId: LSTableGeneralWeaponMeleeT3
         - !type:GroupSelector
           weight: 11
           children:
           - !type:NestedSelector # Uncommon
             weight: 2
-            tableId: LSSpawnLootGeneralWeaponMeleeT2
+            tableId: LSTableGeneralWeaponMeleeT2
           - !type:GroupSelector
             weight: 3
             children:
             - !type:NestedSelector # Common
               weight: 11
-              tableId: LSSpawnLootGeneralWeaponMeleeT1
+              tableId: LSTableGeneralWeaponMeleeT1
             - !type:NestedSelector # Trash
               weight: 1
-              tableId: LSSpawnLootGeneralWeaponMeleeT0
+              tableId: LSTableGeneralWeaponMeleeT0
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponMeleeRare
+  id: LSTableGeneralWeaponMeleeRare
   table: !type:GroupSelector
     children:
     - !type:NestedSelector # Legendary
       weight: 1
-      tableId: LSSpawnLootGeneralWeaponMeleeT5
+      tableId: LSTableGeneralWeaponMeleeT5
     - !type:GroupSelector
       weight: 29
       children:
       - !type:NestedSelector # Epic
         weight: 2
-        tableId: LSSpawnLootGeneralWeaponMeleeT4
+        tableId: LSTableGeneralWeaponMeleeT4
       - !type:NestedSelector # Rare
         weight: 11
-        tableId: LSSpawnLootGeneralWeaponMeleeT3
+        tableId: LSTableGeneralWeaponMeleeT3
 
 #region tiers
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponMeleeT5
+  id: LSTableGeneralWeaponMeleeT5
   table: !type:GroupSelector
     children:
     - id: ArmBlade
@@ -61,7 +61,7 @@
     - id: EnergyKatana
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponMeleeT4
+  id: LSTableGeneralWeaponMeleeT4
   table: !type:GroupSelector
     children:
     - id: ClothingHandsGlovesNorthStar
@@ -86,7 +86,7 @@
         amount: 2
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponMeleeT3
+  id: LSTableGeneralWeaponMeleeT3
   table: !type:GroupSelector
     children:
     - id: WeaponCaseShortEnergyDaggerExpedition
@@ -115,7 +115,7 @@
         weight: 2
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponMeleeT2
+  id: LSTableGeneralWeaponMeleeT2
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
@@ -145,7 +145,7 @@
     - id: Sledgehammer
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponMeleeT1
+  id: LSTableGeneralWeaponMeleeT1
   table: !type:GroupSelector
     children:
     - id: ClothingHandsKnuckleDusters
@@ -155,7 +155,7 @@
     - id: KitchenKnife
 
 - type: entityTable
-  id: LSSpawnLootGeneralWeaponMeleeT0
+  id: LSTableGeneralWeaponMeleeT0
   table: !type:GroupSelector
     children:
     - id: WeaponBrassKnucklesWhoopie
