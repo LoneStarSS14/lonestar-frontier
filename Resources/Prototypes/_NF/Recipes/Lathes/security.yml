@@ -98,6 +98,7 @@
   materials:
     Steel: 5850 # box - free, 260 [bullets] * 22.5 [Steel per bullet]
 
+# LoneStar start
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: NFAmmunitionBoxBigPistol35Practice
@@ -203,7 +204,6 @@
   materials:
     Steel: 5400 # box - free, 240 [bullets] * 22.5 [Steel per bullet]
 
-# LoneStar start
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: CSAmmunitionBoxBigPistol40Practice
