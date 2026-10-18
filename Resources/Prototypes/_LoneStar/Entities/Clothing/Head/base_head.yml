@@ -2,8 +2,8 @@
 #region Colorable Bases
 - type: entity # for sprites with a single colored layer
   abstract: true
-  id: ClothingHeadRandomSpriteMono
-  suffix: Random
+  id: ClothingHeadColorableMono
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -15,7 +15,6 @@
       - state: equipped-HELMET
         map: [ "head-equipped" ]
   - type: ColorableClothing
-    denyReroll: false
     available:
       - head-icon:
           icon: Base
@@ -28,11 +27,38 @@
     - ClothMade
     - Recyclable
 
+- type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingHeadColorableMono
+  id: ClothingHeadColorableMonoInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - head-icon:
+          icon: Base
+        head-equipped:
+          equipped-HELMET: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
 - type: entity # for sprites with a set layer, and a single colored layer
   abstract: true
-  parent: ClothingHeadRandomSpriteMono
-  id: ClothingHeadRandomSpriteBaseColor
-  suffix: Random
+  parent: ClothingHeadColorableMono
+  id: ClothingHeadColorableBaseColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -45,8 +71,7 @@
       - state: equipped-HELMET
       - state: equipped-HELMET-color
         map: [ "head-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - head-icon:
           icon-color: Base
@@ -61,9 +86,9 @@
 
 - type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
   abstract: true
-  parent: ClothingHeadRandomSpriteBaseColor
-  id: ClothingHeadRandomSpriteBaseColorInhand
-  suffix: Random
+  parent: ClothingHeadColorableBaseColor
+  id: ClothingHeadColorableBaseColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -75,8 +100,7 @@
       - state: inhand-right
       - state: inhand-right-color
         map: [ "hr-color" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - head-icon:
           icon-color: Base
@@ -91,8 +115,8 @@
 
 - type: entity # for sprites with a 2 colored layers
   abstract: true
-  id: ClothingHeadRandomSpriteDualColor
-  suffix: Random
+  id: ClothingHeadColorableDualColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -107,8 +131,7 @@
         map: [ "head-equipped-primary" ]
       - state: equipped-HELMET-color
         map: [ "head-equipped-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - head-icon-primary:
           icon: Primary
@@ -128,9 +151,9 @@
 
 - type: entity # for sprites with a 2 colored layers, supporting inhands
   abstract: true
-  parent: ClothingHeadRandomSpriteDualColor
-  id: ClothingHeadRandomSpriteDualColorInhand
-  suffix: Random
+  parent: ClothingHeadColorableDualColor
+  id: ClothingHeadColorableDualColorInhand
+  suffix: Colorable
   components:
   - type: Item
     inhandVisuals:
@@ -144,8 +167,7 @@
         map: [ "hr-primary" ]
       - state: inhand-right-color
         map: [ "hr-secondary" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - head-icon-primary:
           icon: Primary
