@@ -7,10 +7,12 @@ using Content.Shared.Damage;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Item.ItemToggle.Components;
+using Content.Shared.Item.ItemToggle;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Timing;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
+using Content.Shared._LoneStar.EntityEffects;
 
 namespace Content.Server._LoneStar.Censer
 {
@@ -26,6 +28,7 @@ namespace Content.Server._LoneStar.Censer
         [Dependency] private readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly UseDelaySystem _delay = default!;
         [Dependency] private readonly SharedTransformSystem _transform = default!;
+        [Dependency] private readonly ItemToggleSystem _toggle = default!;
 
         public override void Initialize()
         {
@@ -42,9 +45,30 @@ namespace Content.Server._LoneStar.Censer
 
                 _audio.PlayPvs(comp.SizzleSoundPath, args.User.Value);
                 _damageableSystem.TryChangeDamage(args.User, comp.DamageOnUntrainedUse, true, origin: uid);
+                /// SLOP CODE OF SOMEONE WHO DOESN'T UNDERSTAND C# BELOW, BEWARE
+                if (Entity(uid) = IsActivated) /// how to point to entity???
+                {
+                    _toggle.TryDeactivate(uid);/// should also deactivate or not activate on untrained use; "TryDeactivate" seems to need "IsActivated" to work
+                }
+               /// _toggle.TryDeactivate(uid);
 
                 return;
             }
+        }
+
+        private void IsActivated(Entity uid, CenserComponent comp, ItemToggledEvent args)
+        {
+            if (!HasComp<BibleUserComponent>(args.User) && args.User.HasValue)
+            {
+                /// reference picking up or holding an item. EntityPickUpAnimationSystem? Something else?
+                /// It should essentially be a copy of the code above, but instead of activating on ground...
+                /// untrained user picks up activated item > gets burned > item deactivates in their hand
+                /// seems better for general gameplay than having a lit fireball only chaplains can interact with
+                ///_toggle.TryDeactivate(uid);
+                ///
+                /// Alternatively, this method can be if IsActivated = true, then IgniteOnMeleeHit is called and is true.
+            }
+
         }
     }
 }
