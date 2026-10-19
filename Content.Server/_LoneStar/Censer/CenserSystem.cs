@@ -43,25 +43,43 @@ namespace Content.Server._LoneStar.Censer
 
         private void OnInteract(EntityUid uid, CenserComponent comp, ItemToggledEvent args)
         {
-            var isBibleUser = HasComp<BibleUserComponent>(args.User);
+            if (args.User == null)
+                return;
 
-            if (!isBibleUser && args.User.HasValue)
+            var isBibleUser = IsBibleUser(args.User.Value);
+
+            if (!isBibleUser)
             {
-                _popupSystem.PopupEntity(Loc.GetString(comp.Sizzle), args.User.Value, args.User.Value);
-
-                _audio.PlayPvs(comp.SizzleSoundPath, args.User.Value);
-                _damageableSystem.TryChangeDamage(args.User, comp.DamageOnUntrainedUse, true, origin: uid);
-                /// SLOP CODE OF SOMEONE WHO DOESN'T UNDERSTAND C# BELOW, BEWARE
-
-                if (_toggle.IsActivated(uid)) /// how to point to entity???
-                {
-                    _toggle.TryDeactivate(uid);/// should also deactivate or not activate on untrained use; "TryDeactivate" seems to need "IsActivated" to work
-                }
+                HandleNonBibleInteraction(uid, comp, args.User.Value);
             }
 
             if (isBibleUser)
             {
-                if (_toggle.IsActivated(uid) && comp.ToggledIgnite)
+                HandleBibleUserInteraction(uid, comp, args.User.Value);
+            }
+            return;
+        }
+
+        private void OnPickUp(EntityUid uid, CenserComponent comp, PickedUpEvent args)
+        {
+            if (!IsBibleUser(uid) && _toggle.IsActivated(uid))
+            {
+                HandleNonBibleInteraction(uid, comp, args.User);
+            }
+
+            return;
+        }
+
+        private bool IsBibleUser(EntityUid uid)
+        {
+            return HasComp<BibleUserComponent>(uid);
+        }
+
+        private void HandleBibleUserInteraction(EntityUid uid, CenserComponent comp, EntityUid userUid)
+        {
+            if (IsBibleUser(userUid))
+            {
+                if (_toggle.IsActivated(uid) && comp.ToggledIgnite && !HasComp<IgniteOnMeleeHitComponent>(uid))
                 {
                     AddComp<IgniteOnMeleeHitComponent>(uid);
 
@@ -71,22 +89,29 @@ namespace Content.Server._LoneStar.Censer
                     }
                 }
             }
+
             return;
         }
 
-        private void OnPickUp(EntityUid uid, CenserComponent comp, PickedUpEvent args)
+        private void HandleNonBibleInteraction(EntityUid uid, CenserComponent comp, EntityUid userUid)
         {
-            if (_toggle.IsActivated(uid) && !HasComp<BibleUserComponent>(args.User))
+            if (!IsBibleUser(userUid))
             {
-                _popupSystem.PopupEntity(Loc.GetString(comp.Sizzle), args.User, args.User);
-                _audio.PlayPvs(comp.SizzleSoundPath, args.User);
-                _damageableSystem.TryChangeDamage(args.User, comp.DamageOnUntrainedUse, true, origin: uid);
+                _popupSystem.PopupEntity(Loc.GetString(comp.Sizzle), userUid, userUid);
+                _audio.PlayPvs(comp.SizzleSoundPath, userUid);
+                _damageableSystem.TryChangeDamage(userUid, comp.DamageOnUntrainedUse, true, origin: uid);
 
-                if (_toggle.IsActivated(uid)) /// how to point to entity???
+                if (_toggle.IsActivated(uid))
                 {
-                    _toggle.TryDeactivate(uid);/// should also deactivate or not activate on untrained use; "TryDeactivate" seems to need "IsActivated" to work
+                    _toggle.TryDeactivate(uid);
+
+                    if (HasComp<IgniteOnMeleeHitComponent>(uid))
+                    {
+                        RemComp<IgniteOnMeleeHitComponent>(uid);
+                    }
                 }
             }
+
             return;
         }
     }
