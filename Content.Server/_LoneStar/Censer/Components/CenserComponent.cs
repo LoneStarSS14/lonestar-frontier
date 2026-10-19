@@ -12,6 +12,17 @@ namespace Content.Server._LoneStar.Censer.Components
         [DataField("damageOnUntrainedUse", required: true)]
         [ViewVariables(VVAccess.ReadWrite)]
         public DamageSpecifier DamageOnUntrainedUse = default!;
+
+        [DataField("sizzle")]
+        public string Sizzle = "prayer-popup-notify-pray-locked";
+
+        [DataField("toggledIgnite")]
+
+        public bool ToggledIgnite;
+
+        [DataField("fireStacks")]
+
+        public int FireStacks = 1;
     }
 }
 

@@ -13,6 +13,9 @@ using Content.Shared.Timing;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
 using Content.Shared._LoneStar.EntityEffects;
+using Content.Shared._NF.Item;
+using Content.Server.Atmos.Components;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Content.Server._LoneStar.Censer
 {
@@ -35,40 +38,56 @@ namespace Content.Server._LoneStar.Censer
             base.Initialize();
 
             SubscribeLocalEvent<CenserComponent, ItemToggledEvent>(OnInteract);
+            SubscribeLocalEvent<CenserComponent, PickedUpEvent>(OnPickUp);
         }
 
         private void OnInteract(EntityUid uid, CenserComponent comp, ItemToggledEvent args)
         {
-            if (!HasComp<BibleUserComponent>(args.User) && args.User.HasValue)
+            var isBibleUser = HasComp<BibleUserComponent>(args.User);
+
+            if (!isBibleUser && args.User.HasValue)
             {
-                _popupSystem.PopupEntity(Loc.GetString("censer-sizzle"), args.User.Value, args.User.Value);
+                _popupSystem.PopupEntity(Loc.GetString(comp.Sizzle), args.User.Value, args.User.Value);
 
                 _audio.PlayPvs(comp.SizzleSoundPath, args.User.Value);
                 _damageableSystem.TryChangeDamage(args.User, comp.DamageOnUntrainedUse, true, origin: uid);
                 /// SLOP CODE OF SOMEONE WHO DOESN'T UNDERSTAND C# BELOW, BEWARE
-                if (Entity(uid) = IsActivated) /// how to point to entity???
+
+                if (_toggle.IsActivated(uid)) /// how to point to entity???
                 {
                     _toggle.TryDeactivate(uid);/// should also deactivate or not activate on untrained use; "TryDeactivate" seems to need "IsActivated" to work
                 }
-               /// _toggle.TryDeactivate(uid);
-
-                return;
             }
+
+            if (isBibleUser)
+            {
+                if (_toggle.IsActivated(uid) && comp.ToggledIgnite)
+                {
+                    AddComp<IgniteOnMeleeHitComponent>(uid);
+
+                    if (TryComp<IgniteOnMeleeHitComponent>(uid, out var igniteComp))
+                    {
+                        igniteComp.FireStacks = comp.FireStacks;
+                    }
+                }
+            }
+            return;
         }
 
-        private void IsActivated(Entity uid, CenserComponent comp, ItemToggledEvent args)
+        private void OnPickUp(EntityUid uid, CenserComponent comp, PickedUpEvent args)
         {
-            if (!HasComp<BibleUserComponent>(args.User) && args.User.HasValue)
+            if (_toggle.IsActivated(uid) && !HasComp<BibleUserComponent>(args.User))
             {
-                /// reference picking up or holding an item. EntityPickUpAnimationSystem? Something else?
-                /// It should essentially be a copy of the code above, but instead of activating on ground...
-                /// untrained user picks up activated item > gets burned > item deactivates in their hand
-                /// seems better for general gameplay than having a lit fireball only chaplains can interact with
-                ///_toggle.TryDeactivate(uid);
-                ///
-                /// Alternatively, this method can be if IsActivated = true, then IgniteOnMeleeHit is called and is true.
-            }
+                _popupSystem.PopupEntity(Loc.GetString(comp.Sizzle), args.User, args.User);
+                _audio.PlayPvs(comp.SizzleSoundPath, args.User);
+                _damageableSystem.TryChangeDamage(args.User, comp.DamageOnUntrainedUse, true, origin: uid);
 
+                if (_toggle.IsActivated(uid)) /// how to point to entity???
+                {
+                    _toggle.TryDeactivate(uid);/// should also deactivate or not activate on untrained use; "TryDeactivate" seems to need "IsActivated" to work
+                }
+            }
+            return;
         }
     }
 }
