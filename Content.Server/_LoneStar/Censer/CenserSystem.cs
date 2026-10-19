@@ -43,9 +43,11 @@ namespace Content.Server._LoneStar.Censer
 
         private void OnInteract(EntityUid uid, CenserComponent comp, ItemToggledEvent args)
         {
+            // Check that we actually have a user, bail out if we do not
             if (args.User == null)
                 return;
 
+            // Our logic paths need to know if the user has the BibleUserComp
             var isBibleUser = IsBibleUser(args.User.Value);
 
             if (!isBibleUser)
@@ -62,6 +64,8 @@ namespace Content.Server._LoneStar.Censer
 
         private void OnPickUp(EntityUid uid, CenserComponent comp, PickedUpEvent args)
         {
+            // If a non-BibleUser picks up an activated censer, it should treat the user
+            // as though they tried to activate it, and then turn off
             if (!IsBibleUser(uid) && _toggle.IsActivated(uid))
             {
                 HandleNonBibleInteraction(uid, comp, args.User);
