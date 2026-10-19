@@ -70,11 +70,22 @@ namespace Content.Server._LoneStar.Censer
             return;
         }
 
+        /// <summary>
+        /// Checks if the user has the BibleUserComp
+        /// </summary>
+        /// <param name="uid">user uid</param>
+        /// <returns></returns>
         private bool IsBibleUser(EntityUid uid)
         {
             return HasComp<BibleUserComponent>(uid);
         }
 
+        /// <summary>
+        /// If the user has the BibleUserComp it will add IgniteOnMeleeHitComp if specified in CenserComp
+        /// </summary>
+        /// <param name="uid">the censer uid</param>
+        /// <param name="comp">censer component</param>
+        /// <param name="userUid">uid of the user interacting with the censer</param>
         private void HandleBibleUserInteraction(EntityUid uid, CenserComponent comp, EntityUid userUid)
         {
             if (IsBibleUser(userUid))
@@ -93,6 +104,12 @@ namespace Content.Server._LoneStar.Censer
             return;
         }
 
+        /// <summary>
+        /// If the user does not have the BibleUserComp it will damage them, play a popup, deactivate the censer and remove the IgniteOnMeleeHitComp
+        /// </summary>
+        /// <param name="uid">the censer uid</param>
+        /// <param name="comp">censer component</param>
+        /// <param name="userUid">uid of the user interacting with the censer</param>
         private void HandleNonBibleInteraction(EntityUid uid, CenserComponent comp, EntityUid userUid)
         {
             if (!IsBibleUser(userUid))
