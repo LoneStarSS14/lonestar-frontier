@@ -8,4 +8,4 @@ advertisement-punkfridge-7 = SLAP IT WITH YOUR LEFT. SLAP IT WITH YOUR RIGHT. SL
 advertisement-punkfridge-8 = When they kick at your front door, how you gonna come?
 advertisement-punkfridge-9 = Réalisant mon espoir, je me lance vers la gloire, okay?
 advertisement-punkfridge-10 = A clip of ammunition for your little Novalite!
-advertisement-punkfridge-10 = FEED ME A CAT.
+advertisement-punkfridge-11 = FEED ME A CAT.
