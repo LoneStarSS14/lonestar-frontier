@@ -7,7 +7,7 @@
   name: divine thurible
   parent: BaseItem
   id: DivineThurible
-  description: A vessel that usually contains coals, but this one seems divinely powered...
+  description: A vessel that usually contains coals, but this one seems powered by holy energy...
   components:
   - type: Appearance
   - type: Item
