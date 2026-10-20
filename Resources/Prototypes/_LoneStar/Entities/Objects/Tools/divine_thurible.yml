@@ -1,0 +1,161 @@
+# SPDX-FileCopyrightText: 2026 Sushiburger
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# LoneStar - Divine Thurible by KC.
+- type: entity
+  name: divine thurible
+  parent: BaseItem
+  id: Divine Thurible
+  description: A divine vessel that usually contains coals, but this one seems divinely powered...
+  components:
+  - type: Appearance
+  - type: Item
+    size: Small
+    sprite: _LoneStar/Objects/Tools/divinethurible.rsi
+    state: icon
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+    clothingVisuals:
+        suitstorage:
+        - state: on-equipped-SUITSTORAGE-flame
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+    sprite: _LoneStar/Objects/Tools/divinethurible.rsi
+    clothingVisuals:
+      back:
+      - state: equipped-SUITSTORAGE
+      suitstorage:
+      - state: equipped-SUITSTORAGE
+  - type: MeleeWeapon
+    wideAnimationRotation: 0
+    attackRate: 0.5
+    damage:
+      types:
+        Blunt: 6
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+        types:
+            Blunt: 6
+            Heat: 6
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -12
+    deactivatedSoundOnHitNoDamage:
+      collection: MetalThud
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      path: /Audio/Effects/cig_light.ogg
+      params:
+        variation: 0.15
+        volume: 20
+    soundDeactivate:
+      path: /Audio/Effects/cig_snuff.ogg
+      params:
+        variation: 0.15
+        volume: 10
+  - type: ItemToggleHot
+  - type: Sprite
+    sprite: _LoneStar/Objects/Tools/divinethurible.rsi
+    state: icon
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+    layers:
+    - state: icon
+    - state: flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleableVisuals.Layer"]
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ToggleableVisuals
+    spriteLayer: flame
+    inhandVisuals:
+      left:
+      - state: inhand-left-flame
+        shader: unshaded
+      right:
+      - state: inhand-right-flame
+        shader: unshaded
+    clothingVisuals:
+        suitstorage:
+        - state: equipped-SUITSTORAGE-flame
+          shader: unshaded
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 1
+        maxVol: 1
+  - type: SolutionTransfer
+    transferAmount: 5
+    canChangeTransferAmount: false
+  - type: DrawableSolution
+    solution: Welder
+  - type: RefillableSolution
+    solution: Welder
+  - type: DrainableSolution
+    solution: Welder
+  - type: ExaminableSolution
+    solution: Welder
+  - type: SolutionRegeneration
+    solution: Welder
+    generated:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 0.1
+    duration: 5
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Welder
+    fuelConsumption: 0
+    fuelLitCost: 0
+    tankSafe: true
+  - type: PointLight
+    enabled: false
+    netsync: false
+    radius: 5
+    color: "#e39c40"
+  - type: ItemTogglePointLight
+  - type: StaticPrice
+    price: 1500
+  - type: Censer
+    toggledIgnite: true
+    fireStacks: 1
+    damageOnUntrainedUse:
+      types:
+        Heat: 10
+  - type: UseDelay
+    delay: 3.0
+  - type: Prayable
+    bibleUserOnly: true
+    sentMessage: prayer-popup-notify-pray-sent
+    notificationPrefix: prayer-chat-notify-censer
+    verb: prayer-verbs-pray
+    verbImage: null
+  - type: Tag
+    tags:
+     - ObjectOfSpiritualSignificance
