@@ -1,0 +1,11 @@
+# LoneStar - divine thurible
+
+- type: loadout
+  id: LoadoutChaplainDivineThurible
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 15000
+  storage:
+    back:
+    - DivineThurible

@@ -893,6 +893,8 @@
   - ContractorHypoMini
   - ContractorBible
   - ContractorBibleDruid # Coyote
+  subgroups:
+  - ChaplainBackpackItems # LoneStar
 
 - type: loadoutGroup
   id: ContractorFace

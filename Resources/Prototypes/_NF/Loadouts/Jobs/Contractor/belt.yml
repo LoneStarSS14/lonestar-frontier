@@ -134,7 +134,7 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT1
-  price: 15000 # LoneStar - To match the price of divine thurible
+  price: 0
   equipment:
     belt: ClothingBeltChaplainSash
 
