@@ -1,0 +1,64 @@
+{
+"version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Stained glass holo-projector and windows by KC (https://github.com/Sushiburger)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "stainedglassholo"
+    },
+    {
+      "name": "glow"
+    },
+    {
+      "name": "christian"
+    },
+    {
+      "name": "christian2"
+    },
+    {
+      "name": "druidism"
+    },
+    {
+      "name": "druidism2"
+    },
+    {
+      "name": "narsie"
+    },
+    {
+      "name": "narsie2"
+    },
+    {
+      "name": "narsie3"
+    },
+    {
+      "name": "pinkcat"
+    },
+    {
+      "name": "ratvar"
+    },
+    {
+      "name": "ratvar2"
+    },
+    {
+      "name": "ratvar3"
+    },
+    {
+      "name": "satanism",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+    ]
+    },
+    {
+      "name": "satanism2"
+    }
+  ]
+}
