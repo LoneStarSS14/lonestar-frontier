@@ -72,7 +72,7 @@
       - id: ClothingNeckCrucifix
       - id: Censer
       - id: Bible
-      - id: Lantern
+      - id: DivineThurible # LoneStar
       - id: ChaplainHolywaterFlaskFilled
       - id: UrnMortuary
 

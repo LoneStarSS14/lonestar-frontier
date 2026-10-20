@@ -40,6 +40,7 @@
     Urn: 5
     UrnMortuary: 4 # Frontier
     Censer: 2 # Frontier
+    DivineThurible: 2 # LoneStar
     SilverRing: 2 # Frontier
     GoldRing: 2 # Frontier
     ClothingNeckCrucifix: 3 # Frontier

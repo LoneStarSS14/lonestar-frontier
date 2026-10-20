@@ -6,7 +6,7 @@
 - type: entity
   name: divine thurible
   parent: BaseItem
-  id: Divine Thurible
+  id: DivineThurible
   description: A vessel that usually contains coals, but this one seems divinely powered...
   components:
   - type: Appearance
@@ -39,6 +39,8 @@
     damage:
       types:
         Blunt: 6
+  - type: IgnitionSource
+    ignited: false
   - type: ItemToggleMeleeWeapon
     activatedDamage:
         types:
