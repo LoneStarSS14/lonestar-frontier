@@ -9,9 +9,6 @@ prayer-chat-notify-centcom = CENTCOMM
 prayer-chat-notify-syndicate = SYNDICATE
 prayer-chat-notify-lamp = LAMP
 prayer-chat-notify-monolith = MONOLITH
-# LoneStar
-prayer-chat-notify-censer = CENSER
-# LoneStar end
 
 prayer-popup-subtle-default = You hear a voice in your head...
 

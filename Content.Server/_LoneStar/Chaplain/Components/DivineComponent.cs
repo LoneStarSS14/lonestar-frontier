@@ -1,10 +1,10 @@
 using Content.Shared.Damage;
 using Robust.Shared.Audio;
 
-namespace Content.Server._LoneStar.Censer.Components
+namespace Content.Server._LoneStar.Chaplain.Components
 {
     [RegisterComponent]
-    public sealed partial class CenserComponent : Component
+    public sealed partial class DivineComponent : Component
     {
         [DataField("sizzleSound")]
         public SoundSpecifier SizzleSoundPath = new SoundPathSpecifier("/Audio/Effects/lightburn.ogg");

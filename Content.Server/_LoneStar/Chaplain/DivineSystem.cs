@@ -1,4 +1,4 @@
-using Content.Server._LoneStar.Censer.Components;
+using Content.Server._LoneStar.Chaplain.Components;
 using Content.Server.Bible.Components;
 using Content.Server.Popups;
 using Content.Shared.ActionBlocker;
@@ -17,9 +17,9 @@ using Content.Shared._NF.Item;
 using Content.Server.Atmos.Components;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace Content.Server._LoneStar.Censer
+namespace Content.Server._LoneStar.Divine
 {
-    public sealed class CenserSystem : EntitySystem
+    public sealed class DivineSystem : EntitySystem
     {
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly ActionBlockerSystem _blocker = default!;
@@ -37,11 +37,11 @@ namespace Content.Server._LoneStar.Censer
         {
             base.Initialize();
 
-            SubscribeLocalEvent<CenserComponent, ItemToggledEvent>(OnInteract);
-            SubscribeLocalEvent<CenserComponent, PickedUpEvent>(OnPickUp);
+            SubscribeLocalEvent<DivineComponent, ItemToggledEvent>(OnInteract);
+            SubscribeLocalEvent<DivineComponent, PickedUpEvent>(OnPickUp);
         }
 
-        private void OnInteract(EntityUid uid, CenserComponent comp, ItemToggledEvent args)
+        private void OnInteract(EntityUid uid, DivineComponent comp, ItemToggledEvent args)
         {
             // Check that we actually have a user, bail out if we do not
             if (args.User == null)
@@ -62,9 +62,9 @@ namespace Content.Server._LoneStar.Censer
             return;
         }
 
-        private void OnPickUp(EntityUid uid, CenserComponent comp, PickedUpEvent args)
+        private void OnPickUp(EntityUid uid, DivineComponent comp, PickedUpEvent args)
         {
-            // If a non-BibleUser picks up an activated censer, it should treat the user
+            // If a non-BibleUser picks up an activated Divine, it should treat the user
             // as though they tried to activate it, and then turn off
             if (!IsBibleUser(uid) && _toggle.IsActivated(uid))
             {
@@ -85,12 +85,12 @@ namespace Content.Server._LoneStar.Censer
         }
 
         /// <summary>
-        /// If the user has the BibleUserComp it will add IgniteOnMeleeHitComp if specified in CenserComp
+        /// If the user has the BibleUserComp it will add IgniteOnMeleeHitComp if specified in DivineComp
         /// </summary>
-        /// <param name="uid">the censer uid</param>
-        /// <param name="comp">censer component</param>
-        /// <param name="userUid">uid of the user interacting with the censer</param>
-        private void HandleBibleUserInteraction(EntityUid uid, CenserComponent comp, EntityUid userUid)
+        /// <param name="uid">the Divine uid</param>
+        /// <param name="comp">Divine component</param>
+        /// <param name="userUid">uid of the user interacting with the Divine</param>
+        private void HandleBibleUserInteraction(EntityUid uid, DivineComponent comp, EntityUid userUid)
         {
             if (IsBibleUser(userUid))
             {
@@ -109,12 +109,12 @@ namespace Content.Server._LoneStar.Censer
         }
 
         /// <summary>
-        /// If the user does not have the BibleUserComp it will damage them, play a popup, deactivate the censer and remove the IgniteOnMeleeHitComp
+        /// If the user does not have the BibleUserComp it will damage them, play a popup, deactivate the Divine and remove the IgniteOnMeleeHitComp
         /// </summary>
-        /// <param name="uid">the censer uid</param>
-        /// <param name="comp">censer component</param>
-        /// <param name="userUid">uid of the user interacting with the censer</param>
-        private void HandleNonBibleInteraction(EntityUid uid, CenserComponent comp, EntityUid userUid)
+        /// <param name="uid">the Divine uid</param>
+        /// <param name="comp">Divine component</param>
+        /// <param name="userUid">uid of the user interacting with the Divine</param>
+        private void HandleNonBibleInteraction(EntityUid uid, DivineComponent comp, EntityUid userUid)
         {
             if (!IsBibleUser(userUid))
             {

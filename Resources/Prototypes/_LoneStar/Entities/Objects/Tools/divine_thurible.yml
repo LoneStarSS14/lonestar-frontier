@@ -7,7 +7,7 @@
   name: divine thurible
   parent: BaseItem
   id: Divine Thurible
-  description: A divine vessel that usually contains coals, but this one seems divinely powered...
+  description: A vessel that usually contains coals, but this one seems divinely powered...
   components:
   - type: Appearance
   - type: Item
@@ -142,7 +142,7 @@
   - type: ItemTogglePointLight
   - type: StaticPrice
     price: 1500
-  - type: Censer
+  - type: Divine
     toggledIgnite: true
     fireStacks: 1
     damageOnUntrainedUse:
@@ -153,7 +153,7 @@
   - type: Prayable
     bibleUserOnly: true
     sentMessage: prayer-popup-notify-pray-sent
-    notificationPrefix: prayer-chat-notify-censer
+    notificationPrefix: prayer-chat-notify-pray
     verb: prayer-verbs-pray
     verbImage: null
   - type: Tag
