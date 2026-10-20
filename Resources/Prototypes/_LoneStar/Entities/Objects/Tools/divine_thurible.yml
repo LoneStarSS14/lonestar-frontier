@@ -18,9 +18,6 @@
       - state: inhand-left
       right:
       - state: inhand-right
-    clothingVisuals:
-        suitstorage:
-        - state: on-equipped-SUITSTORAGE-flame
   - type: Clothing
     quickEquip: false
     slots:
@@ -108,13 +105,7 @@
   - type: SolutionTransfer
     transferAmount: 5
     canChangeTransferAmount: false
-  - type: DrawableSolution
-    solution: Welder
   - type: RefillableSolution
-    solution: Welder
-  - type: DrainableSolution
-    solution: Welder
-  - type: ExaminableSolution
     solution: Welder
   - type: SolutionRegeneration
     solution: Welder
