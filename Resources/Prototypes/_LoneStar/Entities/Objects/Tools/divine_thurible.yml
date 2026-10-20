@@ -13,7 +13,6 @@
   - type: Item
     size: Small
     sprite: _LoneStar/Objects/Tools/divinethurible.rsi
-    state: icon
     inhandVisuals:
       left:
       - state: inhand-left
@@ -28,11 +27,6 @@
     - Back
     - suitStorage
     sprite: _LoneStar/Objects/Tools/divinethurible.rsi
-    clothingVisuals:
-      back:
-      - state: equipped-SUITSTORAGE
-      suitstorage:
-      - state: equipped-SUITSTORAGE
   - type: MeleeWeapon
     wideAnimationRotation: 0
     attackRate: 0.5
