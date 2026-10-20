@@ -4426,3 +4426,74 @@ Entries:
   id: 484
   time: '2026-10-16T19:55:09.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/261
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: >-
+        You can now construct 'prop' double beds and apply a range of bedsheets
+        to them.
+  id: 485
+  time: '2026-10-18T05:58:16.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/239
+- author: trashqueenlily
+  changes:
+    - type: Tweak
+      message: Trashbags no longer collect chemistry related things.
+    - type: Tweak
+      message: Trashbags no longer collect all cardboard boxes up.
+    - type: Tweak
+      message: >-
+        Bluespace trash bags are now [4x4 -> 2x2] in bag, but are [20x10
+        ->15x10] inside
+  id: 486
+  time: '2026-10-18T06:08:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/197
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Colourable clothing is now recoloured with a UI instead of by
+        randomizing it until you are happy.
+  id: 487
+  time: '2026-10-18T06:36:59.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/260
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Holo-parasites can no longer be bought from contra-vends or found from
+        surplus crates.
+    - type: Tweak
+      message: >-
+        Player summoned drained-ones (cult amulet ghosts) can now be shot by
+        ballistics weapons.
+  id: 488
+  time: '2026-10-18T12:27:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/270
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: >-
+        Port of Shaman's Mantis clothes. In the PietyVend. PDA and headset in
+        loadout.
+  id: 489
+  time: '2026-10-18T12:34:53.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/259
+- author: archee1
+  changes:
+    - type: Add
+      message: Adds support for colorability to a bunch of extra clothing items.
+    - type: Tweak
+      message: >-
+        The primary color palette used by colorable clothing has been
+        re-organized
+  id: 490
+  time: '2026-10-18T13:03:25.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/271
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Ethanol, nicotine and Trico rad healing changes
+  id: 491
+  time: '2026-10-18T13:31:51.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/242

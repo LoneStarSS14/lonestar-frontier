@@ -205,7 +205,7 @@
       - state: mask_null
         map: [ "jacket_overlay" ]
         shader: unshaded
-  - type: RandomSprite
+  - type: ColorableClothing #LoneStar
     denyReroll: false # LoneStar
     available:
     - jacket_main:
@@ -262,7 +262,7 @@
         map: [ "jacket_main" ]
       - state: decor_base_OuterClothing_letterman
         map: [ "jacket_decor" ]
-  - type: RandomSprite
+  - type: ColorableClothing #LoneStar
     denyReroll: false # LoneStar
     available:
     - jacket_main:
@@ -298,7 +298,7 @@
       - state: mask_null
         map: [ "jacket_overlay" ]
         shader: unshaded
-  - type: RandomSprite
+  - type: ColorableClothing #LoneStar
     denyReroll: false #LoneStar
     available:
     - jacket_main:

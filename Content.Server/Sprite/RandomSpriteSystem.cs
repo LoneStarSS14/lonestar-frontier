@@ -24,15 +24,8 @@ public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
         if (component.Selected.Count > 0)
             return;
 
-        Reroll(uid, component); // LoneStar
-    }
-
-    public bool Reroll(EntityUid uid, RandomSpriteComponent component) // LoneStar: Breaks body of code from OnMapInit
-    {
         if (component.Available.Count == 0)
-            return false; // LoneStar
-
-        component.Selected.Clear(); // LoneStar
+            return;
 
         // Frontier: select mapped colours
         Dictionary<string, Color> mappedColors = new();
@@ -86,7 +79,6 @@ public sealed class RandomSpriteSystem : SharedRandomSpriteSystem
         }
 
         Dirty(uid, component);
-        return true; // LoneStar
     }
 
     private void OnGetState(EntityUid uid, RandomSpriteComponent component, ref ComponentGetState args)

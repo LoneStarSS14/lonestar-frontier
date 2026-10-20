@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2026 Sushiburger
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Double Bed Recipes
+
+# Base Bed Left
+- type: construction
+  name: double-bed-left
+  id: DoubleBedLeft
+  graph: DoubleBedLeft
+  startNode: start
+  targetNode: DoubleBedLeft
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure
+
+# Base Bed Right
+- type: construction
+  name: double-bed-right
+  id: DoubleBedRight
+  graph: DoubleBedRight
+  startNode: start
+  targetNode: DoubleBedRight
+  category: construction-category-furniture
+  description: double-bed-recipe-description
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  objectType: Structure

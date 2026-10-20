@@ -56,6 +56,7 @@
   name: Silks
   hidden: true
   colors:
+    SilkTrue: "#FFFFFF"
     SilkWhite: "#F8F6F3"
     SilkCream: "#EADFCB"
     SilkStone: "#C7BDB5"
@@ -66,3 +67,11 @@
     SilkPink: "#D88CA2"
     SilkSlate: "#B3B7BD"
     SilkCharcoal: "#4B4F55"
+    SilkPowderBlue: "#B8CCDE"
+    SilkBlue: "#6F91B2"
+    SilkNavy: "#3D536B"
+    SilkCocoa: "#806454"
+    SilkWalnut: "#5E4639"
+    SilkYellow: "#D9C27A"
+    SilkGreen: "#8FAF91"
+    SilkLavender: "#B5A3C9"

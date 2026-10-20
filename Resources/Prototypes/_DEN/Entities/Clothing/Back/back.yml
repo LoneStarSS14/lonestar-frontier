@@ -1,0 +1,128 @@
+# Mantis Clothes Port from the Den
+
+- type: entity
+  parent: NFClothingBackpack
+  id: ClothingBackpackMantis
+  name: mantis backpack
+  description: "A low-profile backpack for the mantis, signified by the Greek psi in electrum. Designed with clips that fit your uniform perfectly, allowing the strap to be removed as desired."
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Back/Backpacks/mantis.rsi
+    layers:
+    - state: icon
+      map: ["unfoldedLayer"]
+    - state: icon-flipped
+      map: ["foldedLayer"]
+      visible: false
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+    foldVerbText: fold-straps-verb
+    unfoldVerbText: unfold-straps-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped
+
+- type: entity
+  parent: ClothingBackpackMantis
+  id: ClothingBackpackMantisFlipped
+  categories: [HideSpawnMenu]
+  suffix: Folded
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: flipped
+
+- type: entity
+  parent: [NFClothingDuffel, BaseFoldable]
+  id: ClothingBackpackDuffelMantis
+  categories: [HideSpawnMenu]
+  name: mantis duffel bag
+  description: "A relatively low-profile duffel bag with a braided handle for the mantis. Designed with clips that fit your uniform perfectly, allowing the strap to be removed as desired."
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Back/Duffels/mantis.rsi
+    layers:
+    - state: icon
+      map: ["unfoldedLayer"]
+    - state: icon-flipped
+      map: ["foldedLayer"]
+      visible: false
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+    foldVerbText: fold-straps-verb
+    unfoldVerbText: unfold-straps-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped
+
+- type: entity
+  parent: ClothingBackpackDuffelMantis
+  id: ClothingBackpackDuffelMantisFlipped
+  suffix: Folded
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: flipped
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelMantis
+  name: mantis satchel
+  description: "A low-profile satchel for the mantis that hooks onto the back of your belt, bearing a Greek psi on the flap. Perhaps the only bag that won't get caught on the sleeves of your robes."
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Back/Satchels/mantis.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelMantisPurse
+  name: mantis handbag
+  description: "A low-profile handbag for the mantis with a polished clasp. It can be worn on either shoulder, and it's easily hidden beneath a cloak."
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Back/Satchels/mantispurse.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchelMantisPurse
+  id: ClothingBackpackSatchelMantisPurseFlipped
+  suffix: Flipped
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: flipped
+
+- type: entity
+  parent: [NFClothingMessenger, BaseFoldable]
+  id: ClothingBackpackMessengerMantis
+  name: mantis messenger bag
+  description: "A low-profile messenger bag for the mantis, within an electrum shell shaped like a watchful eye. Designed with clips that fit your uniform perfectly, allowing the strap to be removed as desired."
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Back/Messenger/mantis.rsi
+    layers:
+    - state: icon
+      map: ["unfoldedLayer"]
+    - state: icon-flipped
+      map: ["foldedLayer"]
+      visible: false
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+    foldVerbText: fold-straps-verb
+    unfoldVerbText: unfold-straps-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped
+
+- type: entity
+  parent: ClothingBackpackMessengerMantis
+  id: ClothingBackpackMessengerMantisFlipped
+  categories: [HideSpawnMenu]
+  suffix: Folded
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: flipped

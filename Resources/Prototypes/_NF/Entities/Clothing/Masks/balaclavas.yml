@@ -82,7 +82,7 @@
       right:
       - state: inhand-right
         map: [ "inhandRightBalaclava" ]
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
     - unfoldedLayer:

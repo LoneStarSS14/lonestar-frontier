@@ -1,12 +1,25 @@
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ ClothingNeckBase, ClothingNeckColorableMono ]
   id: ClothingNeckTeddyRibbon
   name: teddy ribbon
-  description: A big red ribbon, like you'd see on a new stuffed toy.
+  description: A big ribbon, like you'd see on a new stuffed toy.
   components:
+  - type: ColorableClothing
+    randomOnCreation: false
   - type: Sprite
-    sprite: _DEN/Clothing/Neck/Misc/teddyribbon.rsi
+    sprite: _LoneStar/Clothing/Neck/teddyribbon.rsi
+    layers:
+    - state: icon
+      color: "#F06A6A"
+      map: [ "neck-icon" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Neck/teddyribbon.rsi
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK
+        color: "#F06A6A"
+        map: [ "neck-equipped" ]
   - type: Engraveable
   - type: Tag
     tags:
@@ -16,11 +29,13 @@
     - WhitelistChameleonAdvancedCollar
 
 - type: entity
-  parent: [ ClothingNeckBase, ClothingNeckRandomSpriteMono ]
+  parent: [ ClothingNeckBase, ClothingNeckColorableMono ]
   id: ClothingNeckSailorAscotColorable
   name: sailor's ascot
   description: The preferred accessory for mystery solving whtieboys
   components:
+  - type: ColorableClothing
+    randomOnCreation: false
   - type: Sprite
     sprite: _Impstation/Clothing/Neck/Misc/sailorascot.rsi
   - type: Clothing
@@ -28,4 +43,3 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-
