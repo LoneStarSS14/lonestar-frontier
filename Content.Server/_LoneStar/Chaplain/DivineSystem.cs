@@ -94,7 +94,10 @@ namespace Content.Server._LoneStar.Divine
         {
             if (IsBibleUser(userUid))
             {
-                if (_toggle.IsActivated(uid) && comp.ToggledIgnite && !HasComp<IgniteOnMeleeHitComponent>(uid))
+                var hasIgniteOnMeleeHit = HasComp<IgniteOnMeleeHitComponent>(uid);
+                var isActivated = _toggle.IsActivated(uid);
+
+                if (isActivated && comp.ToggledIgnite && !hasIgniteOnMeleeHit)
                 {
                     AddComp<IgniteOnMeleeHitComponent>(uid);
 
@@ -102,6 +105,10 @@ namespace Content.Server._LoneStar.Divine
                     {
                         igniteComp.FireStacks = comp.FireStacks;
                     }
+                }
+                else if (!isActivated && comp.ToggledIgnite && hasIgniteOnMeleeHit)
+                {
+                    RemComp<IgniteOnMeleeHitComponent>(uid);
                 }
             }
 
