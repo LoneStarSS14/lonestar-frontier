@@ -24,7 +24,7 @@
     sprite: _NF/Objects/Misc/module.rsi
     state: hacked-merc-fab-board
   - type: MachineBoard
-    prototype: PunkSmartFridge
+    prototype: LSPunkSmartFridge
     requirements:
       Manipulator: 1
       Capacitor: 3
