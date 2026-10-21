@@ -5,7 +5,7 @@
   description: trait-descriptor-icy-desc
   category: Examine
   cost: 0
-  descriptorExamineProto: descriptorExamineNoErp
+  descriptorExamineProto: NoErp
 
 - type: trait
   id: DescriptorExamineLonely
