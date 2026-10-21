@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseVendingMachineRestock
-  id: VendingMachineRestockHornyHawker
+  id: VendingMachineRestockHawker
   name: Hawker restock box
   description: A pink box for restocking the Hawker vending machine.
   components:
