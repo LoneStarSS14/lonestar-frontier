@@ -1,0 +1,179 @@
+#region routing tables
+- type: entityTable
+  id: LSTableGeneralWeaponMelee
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralWeaponMeleeT5
+    - !type:GroupSelector
+      weight: 74
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralWeaponMeleeT4
+      - !type:GroupSelector
+        weight: 19
+        children:
+        - !type:NestedSelector # Rare
+          weight: 2
+          tableId: LSTableGeneralWeaponMeleeT3
+        - !type:GroupSelector
+          weight: 11
+          children:
+          - !type:NestedSelector # Uncommon
+            weight: 2
+            tableId: LSTableGeneralWeaponMeleeT2
+          - !type:GroupSelector
+            weight: 3
+            children:
+            - !type:NestedSelector # Common
+              weight: 11
+              tableId: LSTableGeneralWeaponMeleeT1
+            - !type:NestedSelector # Trash
+              weight: 1
+              tableId: LSTableGeneralWeaponMeleeT0
+
+- type: entityTable
+  id: LSTableGeneralWeaponMeleeRare
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralWeaponMeleeT5
+    - !type:GroupSelector
+      weight: 29
+      children:
+      - !type:NestedSelector # Epic
+        weight: 2
+        tableId: LSTableGeneralWeaponMeleeT4
+      - !type:NestedSelector # Rare
+        weight: 11
+        tableId: LSTableGeneralWeaponMeleeT3
+
+#region tiers
+- type: entityTable
+  id: LSTableGeneralWeaponMeleeT5
+  table: !type:GroupSelector
+    children:
+    - id: ArmBlade
+    - id: WeaponCaseShortEnergySwordDoubleExpedition
+    - id: EnergyKatana
+
+- type: entityTable
+  id: LSTableGeneralWeaponMeleeT4
+  table: !type:GroupSelector
+    children:
+    - id: ClothingHandsGlovesNorthStar
+    - id: Truncheon
+    - id: Kanabou
+    - !type:GroupSelector
+      weight: 1.5
+      children:
+      - id: WeaponCaseShortEnergySwordExpedition
+      - id: WeaponCaseShortEnergyCutlassExpedition
+    - !type:GroupSelector
+      weight: 2
+      children:
+      - id: RatvarianSpear
+      - id: UnholyHalberd
+      - id: SecBreachingHammer
+    - !type:GroupSelector
+      children:
+      - id: ThrowingKnife
+      - id: ThrowingKnife
+        weight: 3
+        amount: 2
+
+- type: entityTable
+  id: LSTableGeneralWeaponMeleeT3
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseShortEnergyDaggerExpedition
+    - id: CaneSheathFilled
+    - id: Cutlass
+    - id: Claymore
+    - id: SpearSharkMinnow
+    - !type:GroupSelector
+      weight: 2
+      children:
+      - id: ClothingHandsKnuckleDustersSyndicate
+      - id: ClothingHandsKnuckleDustersQM
+      - id: ClothingHandsKnuckleDustersStun
+    - !type:GroupSelector
+      weight: 3
+      children:
+      - id: PlasteelArmingSword
+        weight: 5
+      - id: CaptainSabre
+        weight: 5
+      - id: KatanaMurasama
+        weight: 4
+      - id: KatanaHF
+        weight: 3
+      - id: KatanaPhaseblade
+        weight: 2
+
+- type: entityTable
+  id: LSTableGeneralWeaponMeleeT2
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 2
+      children:
+      - id: Spear
+      - id: SpearReinforced
+      - id: SpearPlasma
+      - id: SpearUranium
+      - id: SpearBone
+    - !type:GroupSelector
+      weight: 3
+      children:
+      - id: KukriKnife
+      - id: SurvivalKnife
+      - id: CombatKnife
+      - id: SurvivalKnife
+      - id: ButchCleaver
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - id: EldritchBlade
+      - id: RitualDagger
+    - id: ClothingBeltKatanaSheathFilled
+    - id: Wakizashi
+    - id: Machete
+    - id: Sledgehammer
+
+- type: entityTable
+  id: LSTableGeneralWeaponMeleeT1
+  table: !type:GroupSelector
+    children:
+    - id: ClothingHandsKnuckleDusters
+    - id: BaseBallBat
+    - id: CavemanClub
+    - id: Chainsaw
+    - id: KitchenKnife
+
+- type: entityTable
+  id: LSTableGeneralWeaponMeleeT0
+  table: !type:GroupSelector
+    children:
+    - id: WeaponBrassKnucklesWhoopie
+    - !type:GroupSelector
+      children:
+      - id: WhiteCane
+      - id: Cane
+    - !type:GroupSelector
+      weight: 2
+      children:
+      - id: Shiv
+        weight: 4
+      - id: ReinforcedShiv
+        weight: 3
+      - id: PlasmaShiv
+        weight: 2
+      - id: UraniumShiv
+        weight: 1
+    - id: Pickaxe
+    - id: Shinai
+    - id: Gohei

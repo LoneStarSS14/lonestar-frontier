@@ -1274,7 +1274,6 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: RandomSprite
-    denyReroll: false # LoneStar
     available:
     - eva_decal_boxing:
         equipped-decals-02-boxer: Cyberpunk

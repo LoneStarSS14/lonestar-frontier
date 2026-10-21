@@ -1,0 +1,379 @@
+#region routing
+- type: entityTable
+  id: LSTableGeneralWeaponAmmo
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralWeaponAmmoT5
+    - !type:GroupSelector
+      weight: 14
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralWeaponAmmoT4
+      - !type:GroupSelector
+        weight: 9
+        children:
+        - !type:NestedSelector # Rare
+          weight: 1
+          tableId: LSTableGeneralWeaponAmmoT3
+        - !type:GroupSelector
+          weight: 4
+          children:
+          - !type:NestedSelector # Uncommon
+            weight: 1
+            tableId: LSTableGeneralWeaponAmmoT2
+          - !type:GroupSelector
+            weight: 2
+            children:
+            - !type:NestedSelector # Common
+              weight: 9
+              tableId: LSTableGeneralWeaponAmmoT1
+            - !type:NestedSelector # Trash
+              weight: 1
+              tableId: LSTableGeneralWeaponAmmoT0
+
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoRare
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralWeaponAmmoT5
+    - !type:GroupSelector
+      weight: 9
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralWeaponAmmoT4
+      - !type:NestedSelector # Rare
+        weight: 4
+        tableId: LSTableGeneralWeaponAmmoT3
+
+#region tiers
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoT5
+  table: !type:GroupSelector
+    children:
+    - id: NFAmmunitionBoxPistol35Uranium
+    - id: CSAmmunitionBoxPistol40Uranium
+    - id: NFAmmunitionBoxRifle20Uranium
+    - id: NFAmmunitionBoxRifle30Uranium
+    - id: NFAmmunitionBoxBigPistol35Uranium
+    - id: CSAmmunitionBoxBigPistol40Uranium
+    - id: NFAmmunitionBoxBigRifle20Uranium
+    - id: NFAmmunitionBoxBigRifle30Uranium
+
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoT4
+  table: !type:GroupSelector
+    children:
+    - id: NFAmmunitionBoxPistol45Uranium
+    - id: NFAmmunitionBoxShellShotgunUranium
+    - id: NFAmmunitionBoxPistol35Incendiary
+    - id: CSAmmunitionBoxPistol40Incendiary
+    - id: NFAmmunitionBoxRifle20Incendiary
+    - id: NFAmmunitionBoxRifle30Incendiary
+    - id: NFAmmunitionBoxBigPistol45Uranium
+    - id: NFAmmunitionBoxBigShellShotgunUranium
+    - id: NFAmmunitionBoxBigPistol35Incendiary
+    - id: CSAmmunitionBoxBigPistol40Incendiary
+    - id: NFAmmunitionBoxBigRifle20Incendiary
+    - id: NFAmmunitionBoxBigRifle30Incendiary
+
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoT3
+  table: !type:GroupSelector
+    children:
+    - id: NFAmmunitionBoxPistol45Incendiary
+    - id: NFAmmunitionBoxRifle20Incendiary
+    - id: NFAmmunitionBoxRifle30Incendiary
+    - id: NFAmmunitionBoxShellShotgunIncendiary
+    - id: NFAmmunitionBoxRifle20Overpressure
+    - id: NFAmmunitionBoxRifle30Overpressure
+    - id: NFAmmunitionBoxBigPistol45Incendiary
+    - id: NFAmmunitionBoxBigRifle20Incendiary
+    - id: NFAmmunitionBoxBigRifle30Incendiary
+    - id: NFAmmunitionBoxBigShellShotgunIncendiary
+    - id: NFAmmunitionBoxBigRifle20Overpressure
+    - id: NFAmmunitionBoxBigRifle30Overpressure
+
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoT2
+  table: !type:GroupSelector
+    children:
+    - id: NFAmmunitionBoxPistol35Overpressure
+    - id: CSAmmunitionBoxPistol40Overpressure
+    - id: NFAmmunitionBoxPistol45Overpressure
+    - id: NFAmmunitionBoxRifle20Overpressure
+    - id: NFAmmunitionBoxRifle30Overpressure
+    - id: NFAmmunitionBoxShellShotgunOverpressure
+    - id: NFAmmunitionBoxShellShotgunSlug
+    - id: NFAmmunitionBoxBigPistol35Overpressure
+    - id: CSAmmunitionBoxBigPistol40Overpressure
+    - id: NFAmmunitionBoxBigPistol45Overpressure
+    - id: NFAmmunitionBoxBigRifle20Overpressure
+    - id: NFAmmunitionBoxBigRifle30Overpressure
+    - id: NFAmmunitionBoxBigShellShotgunOverpressure
+    - id: NFAmmunitionBoxBigShellShotgunSlug
+
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoT1
+  table: !type:GroupSelector
+    children:
+    - id: NFAmmunitionBoxPistol45Overpressure
+    - id: NFAmmunitionBoxShellShotgunOverpressure
+    - id: NFAmmunitionBoxPistol35
+    - id: CSAmmunitionBoxPistol40
+    - id: NFAmmunitionBoxPistol45
+    - id: NFAmmunitionBoxRifle20
+    - id: NFAmmunitionBoxRifle30
+    - id: NFAmmunitionBoxShellShotgunBuckshot
+    - id: NFAmmunitionBoxPistol35Rubber
+    - id: CSAmmunitionBoxPistol40Rubber
+    - id: NFAmmunitionBoxShellShotgunBeanbag
+    - id: NFAmmunitionBoxShellShotgunSlug
+    - id: NFAmmunitionBoxBigPistol45Overpressure
+    - id: NFAmmunitionBoxBigShellShotgunOverpressure
+    - id: NFAmmunitionBoxBigPistol35
+    - id: CSAmmunitionBoxBigPistol40
+    - id: NFAmmunitionBoxBigPistol45
+    - id: NFAmmunitionBoxBigRifle20
+    - id: NFAmmunitionBoxBigRifle30
+    - id: NFAmmunitionBoxBigShellShotgunBuckshot
+    - id: NFAmmunitionBoxBigPistol35Rubber
+    - id: CSAmmunitionBoxBigPistol40Rubber
+    - id: NFAmmunitionBoxBigShellShotgunBeanbag
+    - id: NFAmmunitionBoxBigShellShotgunSlug
+
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoT0
+  table: !type:GroupSelector
+    children:
+    - id: NFAmmunitionBoxPistol45Rubber
+    - id: NFAmmunitionBoxRifle20Rubber
+    - id: NFAmmunitionBoxRifle30Rubber
+    - id: NFAmmunitionBoxPistol35Practice
+    - id: CSAmmunitionBoxPistol40Practice
+    - id: NFAmmunitionBoxPistol45Practice
+    - id: NFAmmunitionBoxRifle20Practice
+    - id: NFAmmunitionBoxRifle30Practice
+    - id: NFAmmunitionBoxShellShotgunPractice
+    - id: NFAmmunitionBoxBigPistol45Rubber
+    - id: NFAmmunitionBoxBigRifle20Rubber
+    - id: NFAmmunitionBoxBigRifle30Rubber
+    - id: NFAmmunitionBoxBigPistol35Practice
+    - id: CSAmmunitionBoxBigPistol40Practice
+    - id: NFAmmunitionBoxBigPistol45Practice
+    - id: NFAmmunitionBoxBigRifle20Practice
+    - id: NFAmmunitionBoxBigRifle30Practice
+    - id: NFAmmunitionBoxBigShellShotgunPractice
+
+#region Normal
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoNormalAny
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoNormalBox
+      weight: 6
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoNormalBoxBig
+      weight: 1
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoNormalBox
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxBigPistol35
+      - id: CSAmmunitionBoxBigPistol40
+      - id: NFAmmunitionBoxBigPistol45
+      - id: NFAmmunitionBoxBigRifle20
+      - id: NFAmmunitionBoxBigRifle30
+      - !type:GroupSelector
+        children:
+        - id: NFAmmunitionBoxBigShellShotgunBuckshot
+          weight: 2
+        - id: NFAmmunitionBoxBigShellShotgunSlug
+          weight: 1
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoNormalBoxBig
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxPistol35
+      - id: CSAmmunitionBoxPistol40
+      - id: NFAmmunitionBoxPistol45
+      - id: NFAmmunitionBoxRifle20
+      - id: NFAmmunitionBoxRifle30
+      - !type:GroupSelector
+        children:
+        - id: NFAmmunitionBoxShellShotgunBuckshot
+          weight: 2
+        - id: NFAmmunitionBoxShellShotgunSlug
+          weight: 1
+
+#region Overpressure
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoOverpressureAny
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoOverpressureBox
+      weight: 6
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoOverpressureBoxBig
+      weight: 1
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoOverpressureBox
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxBigPistol35Overpressure
+      - id: CSAmmunitionBoxBigPistol40Overpressure
+      - id: NFAmmunitionBoxBigPistol45Overpressure
+      - id: NFAmmunitionBoxBigRifle20Overpressure
+      - id: NFAmmunitionBoxBigRifle30Overpressure
+      - !type:GroupSelector
+        children:
+        - id: NFAmmunitionBoxBigShellShotgunOverpressure
+        - id: NFAmmunitionBoxBigShellShotgunSlug
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoOverpressureBoxBig
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxPistol35Overpressure
+      - id: CSAmmunitionBoxPistol40Overpressure
+      - id: NFAmmunitionBoxPistol45Overpressure
+      - id: NFAmmunitionBoxRifle20Overpressure
+      - id: NFAmmunitionBoxRifle30Overpressure
+      - !type:GroupSelector
+        children:
+        - id: NFAmmunitionBoxShellShotgunOverpressure
+        - id: NFAmmunitionBoxShellShotgunSlug
+
+#region Incendiary
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoIncendiaryAny
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoIncendiaryBox
+      weight: 6
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoIncendiaryBoxBig
+      weight: 1
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoIncendiaryBox
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxBigPistol35Incendiary
+      - id: CSAmmunitionBoxBigPistol40Incendiary
+      - id: NFAmmunitionBoxBigPistol45Incendiary
+      - id: NFAmmunitionBoxBigRifle20Incendiary
+      - id: NFAmmunitionBoxBigRifle30Incendiary
+      - id: NFAmmunitionBoxBigShellShotgunIncendiary
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoIncendiaryBoxBig
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxPistol35Incendiary
+      - id: CSAmmunitionBoxPistol40Incendiary
+      - id: NFAmmunitionBoxPistol45Incendiary
+      - id: NFAmmunitionBoxRifle20Incendiary
+      - id: NFAmmunitionBoxRifle30Incendiary
+      - id: NFAmmunitionBoxShellShotgunIncendiary
+
+#region Uranium
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoUraniumAny
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoUraniumBox
+      weight: 6
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoUraniumBoxBig
+      weight: 1
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoUraniumBox
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxBigPistol35Uranium
+      - id: CSAmmunitionBoxBigPistol40Uranium
+      - id: NFAmmunitionBoxBigPistol45Uranium
+      - id: NFAmmunitionBoxBigRifle20Uranium
+      - id: NFAmmunitionBoxBigRifle30Uranium
+      - id: NFAmmunitionBoxBigShellShotgunUranium
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoUraniumBoxBig
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxPistol35Uranium
+      - id: CSAmmunitionBoxPistol40Uranium
+      - id: NFAmmunitionBoxPistol45Uranium
+      - id: NFAmmunitionBoxRifle20Uranium
+      - id: NFAmmunitionBoxRifle30Uranium
+      - id: NFAmmunitionBoxShellShotgunUranium
+
+#region Rubber
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoRubberAny
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoRubberBox
+      weight: 6
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoRubberBoxBig
+      weight: 1
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoRubberBox
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxBigPistol35Rubber
+      - id: CSAmmunitionBoxBigPistol40Rubber
+      - id: NFAmmunitionBoxBigPistol45Rubber
+      - id: NFAmmunitionBoxBigRifle20Rubber
+      - id: NFAmmunitionBoxBigRifle30Rubber
+      - id: NFAmmunitionBoxBigShellShotgunBeanbag
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoRubberBoxBig
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxPistol35Rubber
+      - id: CSAmmunitionBoxPistol40Rubber
+      - id: NFAmmunitionBoxPistol45Rubber
+      - id: NFAmmunitionBoxRifle20Rubber
+      - id: NFAmmunitionBoxRifle30Rubber
+      - id: NFAmmunitionBoxShellShotgunBeanbag
+
+#region Practice
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoPracticeAny
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoPracticeBox
+      weight: 6
+    - !type:NestedSelector
+      tableId: LSTableGeneralWeaponAmmoPracticeBoxBig
+      weight: 1
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoPracticeBox
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxBigPistol35Practice
+      - id: CSAmmunitionBoxBigPistol40Practice
+      - id: NFAmmunitionBoxBigPistol45Practice
+      - id: NFAmmunitionBoxBigRifle20Practice
+      - id: NFAmmunitionBoxBigRifle30Practice
+      - id: NFAmmunitionBoxBigShellShotgunPractice
+- type: entityTable
+  id: LSTableGeneralWeaponAmmoPracticeBoxBig
+  table: !type:GroupSelector
+      children:
+      - id: NFAmmunitionBoxPistol35Practice
+      - id: CSAmmunitionBoxPistol40Practice
+      - id: NFAmmunitionBoxPistol45Practice
+      - id: NFAmmunitionBoxRifle20Practice
+      - id: NFAmmunitionBoxRifle30Practice
+      - id: NFAmmunitionBoxShellShotgunPractice

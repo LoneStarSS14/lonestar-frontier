@@ -38,7 +38,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#96A3B0"
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     available:
       - wizard_stole_base:
           equipped-NECK: WizardMagicColorsBlue
@@ -84,7 +84,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#7A3D00"
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     available:
       - wizard_stole_base:
           equipped-NECK: WizardMagicColorsRed
@@ -130,7 +130,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#AB769E"
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     available:
       - wizard_stole_base:
           equipped-NECK: WizardMagicColorsPurple
@@ -176,7 +176,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#6e3c3c"
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     available:
       - wizard_stole_base:
           equipped-NECK: BloodCultMagicColors
@@ -228,7 +228,7 @@
     coolingCoefficient: 0.05
   - type: FireProtection
     reduction: 0.1
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     available:
       - wizard_stole_base:
           equipped-NECK: WizardMagicColorsPurple
