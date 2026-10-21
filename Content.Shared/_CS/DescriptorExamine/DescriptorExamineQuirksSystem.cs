@@ -4,12 +4,9 @@ using Content.Shared.IdentityManagement;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CS.HornyQuirks;
+namespace Content.Shared._CS.DescriptorQuirks;
 
-/// <summary>
-/// This handles my balls
-/// </summary>
-public sealed class HornyExamineQuirksSystem : EntitySystem
+public sealed class DescriptorExamineQuirksSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _rnd = default!;
@@ -17,26 +14,26 @@ public sealed class HornyExamineQuirksSystem : EntitySystem
     /// <inheritdoc/>
     public override void Initialize()
     {
-        SubscribeLocalEvent<HornyExamineQuirksComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<DescriptorExamineQuirksComponent, ExaminedEvent>(OnExamined);
     }
 
-    private void OnExamined(EntityUid uid, HornyExamineQuirksComponent component, ExaminedEvent args)
+    private void OnExamined(EntityUid uid, DescriptorExamineQuirksComponent component, ExaminedEvent args)
     {
         List<string> temperaments = new();
         var isSalf = args.Examiner == args.Examined;
         var targetIdent = ("target", Identity.Entity(args.Examined, EntityManager));
         var examinerIdent = ("examiner", Identity.Entity(args.Examiner, EntityManager));
-        TryComp<HornyExamineQuirksComponent>(args.Examiner, out var examinerQuirks);
-        using (args.PushGroup("DanIsCool"))
+        TryComp<DescriptorExamineQuirksComponent>(args.Examiner, out var examinerQuirks);
+        using (args.PushGroup("ExtraExamineDetails"))
         {
-            foreach (var showable in component.HornyShowables)
+            foreach (var showable in component.DescriptorShowables)
             {
-                if (!_prototypeManager.TryIndex(showable, out var hornyProto))
+                if (!_prototypeManager.TryIndex(showable, out var descriptorProto))
                     continue;
 
                 if (isSalf)
                 {
-                    if (hornyProto.SelfExamine)
+                    if (descriptorProto.SelfExamine)
                     {
                         goto ShowIt;
                     }
@@ -44,20 +41,20 @@ public sealed class HornyExamineQuirksSystem : EntitySystem
                     continue;
                 }
 
-                if (string.IsNullOrEmpty(hornyProto.NeededTag))
+                if (string.IsNullOrEmpty(descriptorProto.NeededTag))
                 {
                     goto ShowIt;
                 }
 
                 // check if examiner has the needed tag
                 if (examinerQuirks is not null
-                    && !examinerQuirks.HasTagToShow(hornyProto.NeededTag))
+                    && !examinerQuirks.HasTagToShow(descriptorProto.NeededTag))
                 {
                     continue;
                 }
 
-                ShowIt:
-                temperaments.Add(hornyProto.TextToShow);
+            ShowIt:
+                temperaments.Add(descriptorProto.TextToShow);
             }
 
             if (temperaments.Count > 0)
@@ -72,7 +69,7 @@ public sealed class HornyExamineQuirksSystem : EntitySystem
                 }
             }
 
-            string bodyWords = formatulateBodyWords(uid, component);
+            string bodyWords = FormatulateBodyWords(uid, component);
             // stick body words at start
             if (!string.IsNullOrEmpty(bodyWords))
             {
@@ -82,37 +79,37 @@ public sealed class HornyExamineQuirksSystem : EntitySystem
     }
 
     /// <summary>
-    /// Formatulate body words for horny quirks
+    /// Formatulate body words for descriptor quirks
     /// bodywords have two parts, descriptive and brief
     /// if its just one entry, just use the descriptive
     /// if its more than that, first one use descriptive, then rest use brief
     /// Supports up to infinity entries
     /// Example:
-    /// Single entry: "She has a bountiful flowing erection for days."
-    /// two entries: "She has a bountiful flowing erection for days, and broad shoulders."
-    /// Three entries: "She has a bountiful flowing erection for days, broad shoulders, and a cupcake."
-    /// Four entries: "She has a bountiful flowing erection for days, broad shoulders, a cupcake, and my dad."
+    /// Single entry: "She has bountiful flowing hair for days."
+    /// two entries: "She has bountiful flowing hair for days, and broad shoulders."
+    /// Three entries: "She has bountiful flowing hair for days, broad shoulders, and a cupcake."
+    /// Four entries: "She has bountiful flowing hair for days, broad shoulders, a cupcake, and my dad."
     /// BUT WHICH ONE IS FIRST? its random, each time you examine!
     /// </summary>
-    private string formatulateBodyWords(EntityUid horny, HornyExamineQuirksComponent component)
+    private string FormatulateBodyWords(EntityUid descriptor, DescriptorExamineQuirksComponent component)
     {
-        if (component.HornyAppearances.Count == 0)
+        if (component.DescriptorAppearances.Count == 0)
             return string.Empty;
 
-        var appearances = component.HornyAppearances.ToList();
+        var appearances = component.DescriptorAppearances.ToList();
         _rnd.Shuffle(appearances);
         // localize all entries in the appearances list
-        var hormy = Identity.Entity(horny, EntityManager);
+        var quirk = Identity.Entity(descriptor, EntityManager);
         for (int i = 0; i < appearances.Count; i++)
         {
             var descriptiveLoc = Loc.GetString(
                 appearances[i].Item1,
-                ("them", hormy));
+                ("them", quirk));
             var briefLoc = Loc.GetString(
                 appearances[i].Item2,
-                ("them", hormy));
+                ("them", quirk));
             descriptiveLoc = $"[color=forestgreen]{descriptiveLoc}[/color]";
-            briefLoc =       $"[color=forestgreen]{briefLoc}[/color]";
+            briefLoc = $"[color=forestgreen]{briefLoc}[/color]";
             appearances[i] = (descriptiveLoc, briefLoc);
         }
         var descriptive = appearances[0].Item1;
@@ -121,27 +118,27 @@ public sealed class HornyExamineQuirksSystem : EntitySystem
         {
             case 0:
                 return Loc.GetString(
-                    "horny-examine-quirk-bodyword-single",
-                    ("them", hormy),
+                    "examine-quirk-bodyword-single",
+                    ("them", quirk),
                     ("first", descriptive));
             // case: two
             case 1:
                 return Loc.GetString(
-                    "horny-examine-quirk-bodyword-two",
-                    ("them", hormy),
+                    "examine-quirk-bodyword-two",
+                    ("them", quirk),
                     ("first", descriptive),
                     ("second", briefList[0]));
             default:
-            {
-                var last = briefList.Last();
-                var middle = briefList.Take(briefList.Count - 1).ToList();
-                return Loc.GetString(
-                    "horny-examine-quirk-bodyword-multiple",
-                    ("them", hormy),
-                    ("first", descriptive),
-                    ("second", string.Join(", ", middle)),
-                    ("last", last));
-            }
+                {
+                    var last = briefList.Last();
+                    var middle = briefList.Take(briefList.Count - 1).ToList();
+                    return Loc.GetString(
+                        "examine-quirk-bodyword-multiple",
+                        ("them", quirk),
+                        ("first", descriptive),
+                        ("second", string.Join(", ", middle)),
+                        ("last", last));
+                }
         }
     }
 }

@@ -1,12 +1,12 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CS.HornyQuirks;
+namespace Content.Shared._CS.DescriptorQuirks;
 
 /// <summary>
-/// This is a prototype for...
+/// This is used for descriptors visible on players when examining them.
 /// </summary>
-[Prototype("hornyExamine")]
-public sealed partial class HornyExaminePrototype : IPrototype
+[Prototype("descriptorExamine")]
+public sealed partial class DescriptorExaminePrototype : IPrototype
 {
     /// <inheritdoc/>
     [IdDataField]

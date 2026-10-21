@@ -254,7 +254,7 @@ public sealed class ScentSystem : EntitySystem
                 ("scents", string.Join(", ", allButLast)),
                 ("lastscent", last));
         }
-        using (args.PushGroup("DanIsCool"))
+        using (args.PushGroup("ExtraExamineDetails"))
         {
             // cus its easier to edit colors from code
             combinedDesc = $"[color=aquamarine]{combinedDesc}[/color]";
