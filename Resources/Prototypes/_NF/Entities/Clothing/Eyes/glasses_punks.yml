@@ -23,7 +23,7 @@
       - state: decor_base_glasses_01
         map: [ "clothing_glasses_decor" ]
         shader: unshaded
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - glasses_main:
@@ -73,7 +73,7 @@
       - state: decor_base_glasses_02
         map: [ "clothing_infoshades_decor" ]
         shader: unshaded
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - infoshades_main:

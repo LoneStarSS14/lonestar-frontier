@@ -1,0 +1,110 @@
+# region ammo blueprints
+- type: entityTable
+  id: LSTablePunksBlueprint
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTablePunksBlueprintT5
+    - !type:GroupSelector
+      weight: 49
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTablePunksBlueprintT4
+      - !type:GroupSelector
+        weight: 19
+        children:
+        - !type:NestedSelector # Rare
+          weight: 1
+          tableId: LSTablePunksBlueprintT3
+        - !type:GroupSelector
+          weight: 9
+          children:
+          - !type:NestedSelector # Uncommon
+            weight: 1
+            tableId: LSTablePunksBlueprintT2
+          - !type:GroupSelector
+            weight: 3
+            children:
+            - !type:NestedSelector # Common
+              weight: 7
+              tableId: LSTablePunksBlueprintT1
+            - !type:NestedSelector # Trash
+              weight: 1
+              tableId: LSTablePunksBlueprintT0
+
+- type: entityTable
+  id: LSTablePunksBlueprintT5
+  table: !type:GroupSelector
+    children:
+    - id: NFBlueprintPortableRecharger
+
+- type: entityTable
+  id: LSTablePunksBlueprintT4
+  table: !type:GroupSelector
+    children:
+    - id: NFBlueprintWeaponsMeleePunk
+    - id: NFBlueprintArmorHeavyPunk
+
+- type: entityTable
+  id: LSTablePunksBlueprintT3
+  table: !type:GroupSelector
+    children:
+    - id: LSBlueprintPunksAmmunitionBoxBigPistol35Overpressure
+    - id: LSBlueprintPunksAmmunitionBoxBigPistol40Overpressure
+    - id: LSBlueprintPunksAmmunitionBoxBigShotgunOverpressure
+
+- type: entityTable
+  id: LSTablePunksBlueprintT2
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 5
+      children:
+      - id: NFBlueprintWearablePunk
+      - id: NFBlueprintPouchPunk
+    - !type:GroupSelector
+      weight: 2
+      children:
+      - id: LSBlueprintPunksAmmunitionBoxPistol35Overpressure
+      - id: LSBlueprintPunksAmmunitionBoxPistol40Overpressure
+      - id: LSBlueprintPunksAmmunitionBoxShotgunOverpressure
+
+- type: entityTable
+  id: LSTablePunksBlueprintT1
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - id: NFBlueprintClothesPunk
+      - id: NFBlueprintArmorPunk
+    - !type:GroupSelector
+      weight: 2
+      children:
+      - id: LSBlueprintPunksAmmunitionBoxPistol35
+      - id: LSBlueprintPunksAmmunitionBoxPistol40
+      - id: LSBlueprintPunksAmmunitionBoxShotgunBuckshot
+      - id: LSBlueprintPunksAmmunitionBoxShotgunSlug
+      - id: LSBlueprintPunksAmmunitionBoxBigPistol35
+      - id: LSBlueprintPunksAmmunitionBoxBigPistol40
+      - id: LSBlueprintPunksAmmunitionBoxBigShotgunBuckshot
+      - id: LSBlueprintPunksAmmunitionBoxBigShotgunSlug
+
+- type: entityTable
+  id: LSTablePunksBlueprintT0
+  table: !type:GroupSelector
+    children:
+    - id: LSBlueprintPunksAmmunitionBoxPistol35Rubber
+    - id: LSBlueprintPunksAmmunitionBoxPistol40Rubber
+    - id: LSBlueprintPunksAmmunitionBoxShotgunBeanbag
+    - id: LSBlueprintPunksAmmunitionBoxBigPistol35Rubber
+    - id: LSBlueprintPunksAmmunitionBoxBigPistol40Rubber
+    - id: LSBlueprintPunksAmmunitionBoxBigShotgunBeanbag
+    - id: LSBlueprintPunksAmmunitionBoxPistol35Practice
+    - id: LSBlueprintPunksAmmunitionBoxPistol40Practice
+    - id: LSBlueprintPunksAmmunitionBoxShotgunPractice
+    - id: LSBlueprintPunksAmmunitionBoxBigPistol35Practice
+    - id: LSBlueprintPunksAmmunitionBoxBigPistol40Practice
+    - id: LSBlueprintPunksAmmunitionBoxBigShotgunPractice

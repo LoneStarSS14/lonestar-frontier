@@ -11,14 +11,14 @@
             "name": "icon"
         },
         {
-            "name": "icon-detail"
+            "name": "icon-color"
         },
         {
             "name": "equipped-HAND",
             "directions": 4
         },
         {
-            "name": "equipped-HAND-detail",
+            "name": "equipped-HAND-color",
             "directions": 4
         }
     ]

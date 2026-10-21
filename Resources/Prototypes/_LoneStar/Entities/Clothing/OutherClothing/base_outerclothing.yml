@@ -1,7 +1,9 @@
-- type: entity
+
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
   abstract: true
-  id: ClothingOuterClothingRandomSpriteMono
-  suffix: Random
+  id: ClothingOuterClothingColorableMono
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -12,8 +14,7 @@
       outerClothing:
       - state: equipped-OUTERCLOTHING
         map: [ "outerclothing-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - outerclothing-icon:
           icon: Base
@@ -25,35 +26,164 @@
     tags:
     - ClothMade
     - Recyclable
-    - HamsterWearable
 
-# For variants that want to use icon-open and open-equipped-OUTERCLOTHING.
-# For technical reasons foldable clothing does not support RandomSprite.
-- type: entity
+- type: entity # for sprites with a single colored layer, supporting inhands
   abstract: true
-  id: ClothingOuterClothingRandomSpriteMonoOpen
-  suffix: Random
+  parent: ClothingOuterClothingColorableMono
+  id: ClothingOuterClothingColorableMonoInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - outerclothing-icon:
+          icon: Base
+        outerclothing-equipped:
+          equipped-OUTERCLOTHING: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a set layer, and a single colored layer
+  abstract: true
+  id: ClothingOuterClothingColorableBaseColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
-    - state: icon-open
+    - state: icon
+    - state: icon-color
       map: [ "outerclothing-icon" ]
   - type: Clothing
     clothingVisuals:
       outerClothing:
-      - state: open-equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-color
         map: [ "outerclothing-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - outerclothing-icon:
-          icon-open: Base
+          icon-color: Base
         outerclothing-equipped:
-          open-equipped-OUTERCLOTHING: Base
+          equipped-OUTERCLOTHING-color: Base
     mappedColors:
       Base: NTInteriorDesign
   - type: Tag
     tags:
     - ClothMade
     - Recyclable
-    - HamsterWearable
+
+- type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingOuterClothingColorableBaseColor
+  id: ClothingOuterClothingColorableBaseColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-color
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+      - state: inhand-right-color
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - outerclothing-icon:
+          icon-color: Base
+        outerclothing-equipped:
+          equipped-OUTERCLOTHING-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a 2 colored layers
+  abstract: true
+  id: ClothingOuterClothingColorableDualColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "outerclothing-icon-primary" ]
+    - state: icon-color
+      map: [ "outerclothing-icon-secondary" ]
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+        map: [ "outerclothing-equipped-primary" ]
+      - state: equipped-OUTERCLOTHING-color
+        map: [ "outerclothing-equipped-secondary" ]
+  - type: ColorableClothing
+    available:
+      - outerclothing-icon-primary:
+          icon: Primary
+        outerclothing-icon-secondary:
+          icon-color: Secondary
+        outerclothing-equipped-primary:
+          equipped-OUTERCLOTHING: Primary
+        outerclothing-equipped-secondary:
+          equipped-OUTERCLOTHING-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a 2 colored layers, supporting inhands
+  abstract: true
+  parent: ClothingOuterClothingColorableDualColor
+  id: ClothingOuterClothingColorableDualColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-primary" ]
+      - state: inhand-left-color
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-primary" ]
+      - state: inhand-right-color
+        map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    available:
+      - outerclothing-icon-primary:
+          icon: Primary
+        outerclothing-icon-secondary:
+          icon-color: Secondary
+        outerclothing-equipped-primary:
+          equipped-OUTERCLOTHING: Primary
+        outerclothing-equipped-secondary:
+          equipped-OUTERCLOTHING-color: Secondary
+        hl-primary:
+          inhand-left: Primary
+        hl-secondary:
+          inhand-left-color: Secondary
+        hr-primary:
+          inhand-right: Primary
+        hr-secondary:
+          inhand-right-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
