@@ -1,3 +1,5 @@
+# LoneStar, TODO: sort these out.
+
 - type: entity
   parent: BaseItem
   id: BaseWhip
@@ -8,11 +10,6 @@
     damage:
       types:
         Slash: 2
-    # Flooftier - removed as frontier doesn't have the EE combat system.
-    # heavyRateModifier: 0.5
-    # heavyDamageBaseModifier: 1.75
-    # heavyStaminaCost: 10
-    # maxTargets: 1
     angle: 120
     animation: WeaponArcSlash
     soundHit:
@@ -30,72 +27,68 @@
   parent: BaseWhip
   id: WhipPink
   name: pink whip
-  description: A pink whip for discipline!
+  description: A pink whip to keep someone on task.
   components:
   - type: Sprite
-    sprite: Floof/Objects/Fun/Lewd/Weapons/whip_pink.rsi
+    sprite: _CS/Objects/Weapons/Floof/whip_pink.rsi
     state: icon
 
 - type: entity
   parent: BaseWhip
   id: WhipTeal
   name: teal whip
-  description: A teal whip for discipline!
+  description: A teal whip to keep someone on task.
   components:
   - type: Sprite
-    sprite: Floof/Objects/Fun/Lewd/Weapons/whip_teal.rsi
+    sprite: _CS/Objects/Weapons/Floof/whip_teal.rsi
     state: icon
 
 - type: entity
   parent: BaseWhip
-  id: WhipPinkCrotch
-  name: pink crotch whip
-  description: A pink crotch whip for discipline!
+  id: WhipPinkBaton
+  name: pink baton
+  description: A pink baton to keep someone in order.
   components:
   - type: Sprite
-    sprite: Floof/Objects/Fun/Lewd/Weapons/crotch_pink.rsi
+    sprite: _CS/Objects/Weapons/Floof/baton_pink.rsi
     state: icon
 
 - type: entity
   parent: BaseWhip
-  id: WhipTealCrotch
-  name: teal crotch whip
-  description: A teal crotch whip for discipline!
+  id: WhipTealBaton
+  name: teal baton
+  description: A teal baton to keep someone in order.
   components:
   - type: Sprite
-    sprite: Floof/Objects/Fun/Lewd/Weapons/crotch_teal.rsi
+    sprite: _CS/Objects/Weapons/Floof/baton_teal.rsi
     state: icon
 
 - type: entity
   parent: BaseWhip
   id: SpankPinkPaddle
   name: pink paddle
-  description: A pink paddle for spanking your naughty pal!
+  description: A pink paddle for keeping someone in check.
   components:
   - type: Sprite
-    sprite: Floof/Objects/Fun/Lewd/Weapons/spank_pink.rsi
+    sprite: _CS/Objects/Weapons/Floof/spank_pink.rsi
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -135
     damage:
       types:
         Blunt: 4
-    # Flooftier - removed as frontier doesn't have the EE combat system.
-    # heavyDamageBaseModifier: 1.25
 
 - type: entity
   parent: BaseWhip
   id: SpankTealPaddle
   name: teal paddle
-  description: A teal paddle for spanking your naughty pal!
+  description: A teal paddle for keeping someone in check.
   components:
   - type: Sprite
-    sprite: Floof/Objects/Fun/Lewd/Weapons/spank_teal.rsi
+    sprite: _CS/Objects/Weapons/Floof/spank_teal.rsi
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -135
     damage:
       types:
         Blunt: 4
-    # Flooftier - removed as frontier doesn't have the EE combat system.
-    # heavyDamageBaseModifier: 1.25
