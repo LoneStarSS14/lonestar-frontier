@@ -46,13 +46,3 @@
 - type: consentToggle
   id: MindControl
   priority: 10
-
-
-#- type: consentToggle
-#  id: Cum
-#  priority: 6
-#
-#- type: consentToggle
-#  id: NaturalLubricant
-#  priority: 6
-
