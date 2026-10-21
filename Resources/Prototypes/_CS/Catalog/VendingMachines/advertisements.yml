@@ -1,5 +1,5 @@
 - type: localizedDataset
-  id: HornyHawkerAds
+  id: HawkerAds
   values:
-    prefix: advertisement-hornyhawker-
+    prefix: advertisement-hawker-
     count: 8

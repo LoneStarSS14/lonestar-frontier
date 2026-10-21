@@ -1,5 +1,5 @@
 - type: vendingMachineInventory
-  id: HornyHawkerInventory
+  id: HawkerInventory
   startingInventory:
     # Collars
     ClothingNeckCollarBlack: 4294967295
@@ -21,7 +21,7 @@
     ClothingNeckAdvancedCollarMed: 4294967295
     ClothingNeckAdvancedCollarSec: 4294967295
     ClothingNeckAdvancedCollarCmd: 4294967295
-    AdvCollarModuleBondage: 4294967295
+    AdvCollarModuleSealing: 4294967295
     AdvCollarModuleShock: 4294967295
     AdvCollarModuleJingling: 4294967295
     AdvCollarModuleSpeechModifier: 4294967295
@@ -37,50 +37,29 @@
     Zipties: 4294967295
     TwistTies: 4294967295
     ClothingOuterStraightjacketBodysuit: 4294967295
-    # Bondage
-    BondageHarness: 4294967295
-    BondageLegSleeve: 4294967295
-    BondageArmSleeve: 4294967295
-    BondageMitts: 4294967295
-    AnkleCuffs: 4294967295
-    WristCuffs: 4294967295
-    RingGag: 4294967295
-    BallGag: 4294967295
-    BlindfoldBDSM: 4294967295
-    LeashBasic: 4294967295
-    LeashAdvanced: 4294967295
+    ClothingOuterHarness: 4294967295
+    ClothingHandsWristCuffs: 4294967295
+    ClothingHandsMitts: 4294967295
+    ClothingHandsArmSleeve: 4294967295
+    ClothingShoesAnkleCuffs: 4294967295
+    ClothingShoesLegSleeve: 4294967295
+    ClothingMaskMuzzleRing: 4294967295
+    ClothingMaskMuzzleBall: 4294967295
+    ClothingEyesLeatherBlindfold: 4294967295
     # Whips & Paddles
     WhipPink: 4294967295
     WhipTeal: 4294967295
-    WhipPinkCrotch: 4294967295
-    WhipTealCrotch: 4294967295
+    WhipPinkBaton: 4294967295
+    WhipTealBaton: 4294967295
     SpankPinkPaddle: 4294967295
     SpankTealPaddle: 4294967295
-    # Accessories
+    # Pets
     Clicker: 4294967295
+    LeashBasic: 4294967295
+    LeashAdvanced: 4294967295
+    # Mental
     ServantBell: 4294967295
     ClothingEyesNeuralyzer: 4294967295
-    # Toys - Vibrators
-    LewdVibeGreen: 4294967295
-    LewdVibePink: 4294967295
-    LewdVibeRed: 4294967295
-    LewdVibeTeal: 4294967295
-    LewdVibeYellow: 4294967295
-    LewdWand: 4294967295
-    # Toys - Fleshlights
-    LewdFleshlightGreen: 4294967295
-    LewdFleshlightPink: 4294967295
-    LewdFleshlightRed: 4294967295
-    LewdFleshlightTeal: 4294967295
-    LewdFleshlightYellow: 4294967295
-    # Toys - Dildos
-    AvianDildo: 4294967295
-    CanineDildo: 4294967295
-    DoubleDildo: 4294967295
-    DragonDildo: 4294967295
-    HorseDildo: 4294967295
-    NormalDildo: 4294967295
-    TentacleDildo: 4294967295
     # Candles
     CandleRed: 4294967295
     CandleBlack: 4294967295
@@ -88,7 +67,7 @@
     CandleBlackSmall: 4294967295
     # Lubricants
     DrinkSpaceLube: 4294967295
-    # Weapons
+    # Size Manipulation
     WeaponSizeManipulator: 4294967295
     RemoteSignaller: 4294967295
   contrabandInventory:
@@ -104,4 +83,3 @@
   emaggedInventory:
     ClothingNeckCollarSyndi: 4294967295
     ClothingNeckAdvancedCollarSyndi: 4294967295
-    CanineDildoRed: 4294967295

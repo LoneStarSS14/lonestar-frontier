@@ -1,5 +1,5 @@
 - type: localizedDataset
-  id: HornyHawkerGoodbyes
+  id: HawkerGoodbyes
   values:
-    prefix: thankyou-hornyhawker-
+    prefix: thankyou-hawker-
     count: 5
