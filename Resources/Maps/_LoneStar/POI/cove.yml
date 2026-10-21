@@ -21562,7 +21562,7 @@ entities:
     - type: Transform
       pos: -55.5,26.5
       parent: 1
-- proto: VendingMachineKink
+- proto: VendingMachineHawker
   entities:
   - uid: 825
     components:
