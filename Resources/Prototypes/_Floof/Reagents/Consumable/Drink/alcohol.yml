@@ -117,15 +117,15 @@
         amount: 0.15
 
 - type: reagent
-  id: BethanysCumLust
-  name: reagent-name-bethanyscumlust
+  id: BethanysSpirit
+  name: reagent-name-bethanysspirit
   parent: BaseAphrodisiacAlcohols
-  desc: reagent-desc-bethanyscumlust
+  desc: reagent-desc-bethanysspirit
   physicalDesc: reagent-physical-desc-gloopy
-  flavor: bethanyscumlust
+  flavor: bethanysspirit
   color: "#c977b5"
   metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/bethanyscumlust.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/bethanysspirit.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
@@ -143,15 +143,15 @@
         amount: 0.14
 
 - type: reagent
-  id: BethanysSluttyCumLust
-  name: reagent-name-bethanyssluttycumlust
+  id: BethanysSpicedSpirit
+  name: reagent-name-bethanysspicedspirit
   parent: BaseAphrodisiacAlcohols
-  desc: reagent-desc-bethanyssluttycumlust
+  desc: reagent-desc-bethanysspicedspirit
   physicalDesc: reagent-physical-desc-gloopy
-  flavor: bethanyssluttycumlust
+  flavor: bethanysspicedspirit
   color: "#c977b5"
   metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/bethanyssluttycumlust.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/bethanysspicedspirit.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
@@ -581,15 +581,15 @@
         amount: 0.15
 
 - type: reagent
-  id: HornyStallion
-  name: reagent-name-hornystallion
+  id: Bojack
+  name: reagent-name-bojack
   parent: BaseAphrodisiacAlcohols
-  desc: reagent-desc-hornystallion
+  desc: reagent-desc-bojack
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: hornystallion
+  flavor: bojack
   color: "#6b4247"
   metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/hornystallion.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/bojack.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
@@ -862,15 +862,15 @@
         amount: 0.5
 
 - type: reagent
-  id: OrgasmOnTheBeach
-  name: reagent-name-orgasmonthebeach
+  id: SexOnTheBeach
+  name: reagent-name-sexonthebeach
   parent: BaseAlcohol
-  desc: reagent-desc-orgasmonthebeach
+  desc: reagent-desc-sexonthebeach
   physicalDesc: reagent-physical-desc-tart
-  flavor: orgasmonthebeach
+  flavor: sexonthebeach
   color: "#b5693a"
   metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/orgasmonthebeach.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/sexonthebeach.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
@@ -1093,15 +1093,15 @@
         amount: 0.4
 
 - type: reagent
-  id: SemenBomb
-  name: reagent-name-semenbomb
+  id: SaltBomb
+  name: reagent-name-saltbomb
   parent: BaseAlcohol
-  desc: reagent-desc-semenbomb
+  desc: reagent-desc-saltbomb
   physicalDesc: reagent-physical-desc-foamy
-  flavor: semenbomb
+  flavor: saltbomb
   color: "#fbb117"
   metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/semenbomb.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/saltbomb.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
@@ -1119,15 +1119,15 @@
         amount: 0.15
 
 - type: reagent
-  id: SemenHemorrhage
-  name: reagent-name-semenhemorrhage
+  id: SaltySchnapps
+  name: reagent-name-saltyschnapps
   parent: BaseAlcohol
-  desc: reagent-desc-semenhemorrhage
+  desc: reagent-desc-saltyschnapps
   physicalDesc: reagent-physical-desc-heterogeneous
-  flavor: semenhemorrhage
+  flavor: saltyschnapps
   color: "#c83341"
   metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/semenhemorrhage.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/saltyschnapps.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
@@ -1540,7 +1540,7 @@
         reagent: Ethanol
         amount: 0.08
 
-- type: entity
+- type: entity # LoneStar, TODO: why are you here.
   parent: DrinkGlass
   id: DrinkSyndicateEggnogGlass
   suffix: eggnog
@@ -1557,15 +1557,15 @@
     state: icon
 
 - type: reagent
-  id: GinandPussy
-  name: reagent-name-gin-and-pussy
+  id: KittyGin
+  name: reagent-name-kittygin
   parent: BaseAlcohol
-  desc: reagent-desc-gin-and-pussy
+  desc: reagent-desc-kittygin
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: ginandpussy
+  flavor: kittygin
   color: "#fcf0f9"
   metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/ginandpussy.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/kittygin.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
@@ -1578,26 +1578,6 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
-
-- type: reagent
-  id: PussyTonic
-  name: reagent-name-pussytonic
-  parent: BaseAlcohol
-  desc: reagent-desc-pussytonic
-  physicalDesc: reagent-physical-desc-fizzy
-  flavor: pussytonic
-  color: "#dec0f6"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/pussytonicglass.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 6
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
 
 - type: reagent
   id: SuperheavyCream

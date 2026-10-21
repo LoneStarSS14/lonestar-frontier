@@ -59,7 +59,7 @@
     BandE: 3
 
 - type: reaction
-  id: BethanysCumLust
+  id: BethanysSpirit
   requiredMixerCategories:
   - Shake
   reactants:
@@ -70,19 +70,19 @@
     NikkosNaughtyNectar:
       amount: 4
   products:
-    BethanysCumLust: 11
+    BethanysSpirit: 11
 
 - type: reaction
-  id: BethanysSluttyCumLust
+  id: BethanysSpicecSpirit
   requiredMixerCategories:
   - Shake
   reactants:
-    BethanysCumLust:
+    BethanysSpirit:
       amount: 11
     Philterex:
       amount: 3
   products:
-    BethanysSluttyCumLust: 14
+    BethanysSpicedSpirit: 14
 
 - type: reaction
   id: BlueBaller
@@ -335,7 +335,7 @@
     HolyVice: 3
 
 - type: reaction
-  id: HornyStallion
+  id: Bojack
   requiredMixerCategories:
   - Stir
   reactants:
@@ -346,7 +346,7 @@
     SodaWater:
       amount: 1
   products:
-    HornyStallion: 3
+    Bojack: 3
 
 - type: reaction
   id: KoboldKooler
@@ -491,7 +491,7 @@
     OpsShine: 3
 
 - type: reaction
-  id: OrgasmOnTheBeach
+  id: SexOnTheBeach
   requiredMixerCategories:
   - Shake
   reactants:
@@ -504,7 +504,7 @@
     Vodka:
       amount: 1
   products:
-    OrgasmOnTheBeach: 5
+    SexOnTheBeach: 5
 
 - type: reaction
   id: Pomonade
@@ -641,7 +641,7 @@
     SalvagersDelight: 10
 
 - type: reaction
-  id: SemenBomb
+  id: SaltBomb
   requiredMixerCategories:
   - Shake
   reactants:
@@ -650,10 +650,10 @@
     Saline:
       amount: 1
   products:
-    SemenBomb: 3
+    SaltBomb: 3
 
 - type: reaction
-  id: SemenHemorrhage
+  id: SaltySchnapps
   requiredMixerCategories:
   - Shake
   reactants:
@@ -664,7 +664,7 @@
     JuiceApple:
       amount: 2
   products:
-    SemenHemorrhage: 5
+    SaltySchnapps: 5
 
 - type: reaction
   id: SilverStallion
@@ -911,28 +911,16 @@
     Hallelujah : 6
 
 - type: reaction
-  id: GinandPussy
+  id: KittyGin
   requiredMixerCategories:
   - Shake
   reactants:
     Gin:
       amount: 1
-    Saline:
+    SpaceLube:
       amount: 2
   products:
-    GinandPussy: 3
-
-- type: reaction
-  id: PussyTonic
-  requiredMixerCategories:
-  - Shake
-  reactants:
-    TonicWater:
-      amount: 1
-    Saline:
-      amount: 1
-  products:
-    PussyTonic: 2
+    KittyGin: 3
 
 - type: reaction
   id: SuperheavyCream
