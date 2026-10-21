@@ -62,7 +62,7 @@ public sealed partial class ScentPrototype : IPrototype, IInheritingPrototype
     /// Range at which far scents can be smelled
     /// </summary>
     [DataField("farRange")]
-    public float FarRange = 7.0f;
+    public float FarRange = 10.0f;
     #endregion
 
     /// <summary>>
@@ -80,10 +80,10 @@ public sealed partial class ScentPrototype : IPrototype, IInheritingPrototype
     public int MaxCooldown = 300;
 
     /// <summary>
-    /// percent chance of being detected per interval
+    /// chance of being detected per interval
     /// </summary>
-    [DataField("detectionPercent")]
-    public int DetectionPercent;
+    [DataField("detectionChance")]
+    public float DetectionChance = 0.35f;
 
     /// <summary>
     /// Whether or not this scent is considered "bad"
@@ -92,10 +92,10 @@ public sealed partial class ScentPrototype : IPrototype, IInheritingPrototype
     public bool Stinky = false;
 
     /// <summary>
-    /// Whether or not this scent is considered "lewd"
+    /// Whether or not this scent is hidden by consent preferences
     /// </summary>
-    [DataField("isLewd")]
-    public bool Lewd = false;
+    [DataField("consentToggled")]
+    public bool ConsentToggled = false;
 
     /// <summary>
     /// Direct only?

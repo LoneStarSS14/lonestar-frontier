@@ -634,9 +634,6 @@ trait-scent-kitchen-desc = You smell kinda like the Kitchen!
 trait-scent-blood-name = Blood
 trait-scent-blood-desc = You smell kinda like blood!
 
-trait-scent-bankcustomers-name = Bank Customers
-trait-scent-bankcustomers-desc = You smell kinda like Bank Customers!
-
 trait-bodytype-morphable-name = Morphable
 trait-bodytype-morphable-desc = You look morphable
 

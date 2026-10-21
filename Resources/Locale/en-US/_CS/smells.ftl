@@ -14,21 +14,6 @@ scent-verb-passive-ignore-popup   = Now ignoring scents from your surroundings.
 # Dan Kelly sniffs you.
 scent-sniffed-popup    = {CAPITALIZE($sniffer)} sniffs you.
 
-# Default scent messages
-# please dont show up ingame
-# She smells like something.
-scent-default-examine      = something.
-# Dan Kelly has a distinct smell.
-scent-default-direct       = {CAPITALIZE($src)} has a distinct smell.
-# You can smell something.
-scent-default-close        = You can smell something.
-# You catch a faint scent of something.
-scent-default-far          = You catch a faint scent of something.
-
-scent-default-lewd-direct  = {CAPITALIZE($src)} has a distinctly arousing scent.
-scent-default-lewd-close   = You can smell an arousing scent.
-scent-default-lewd-far     = You catch a faint arousing scent.
-
 scent-default-cool-direct  = {CAPITALIZE($src)} smells cool and refreshing.
 
 ## Actual scents
@@ -308,62 +293,6 @@ scent-wildflowers-direct       = {CAPITALIZE($src)} smells like wildflowers.
 scent-wildflowers-close        = You smell a trace of wildflowers.
 scent-wildflowers-far          = You catch a faint whiff of wildflowers.
 
-
-# Lewd scents
-# musk
-scent-musk-examine         = musk
-scent-musk-direct          = {CAPITALIZE($src)} has a very musky scent.
-scent-musk-close           = You smell something musky.
-scent-musk-far             = You catch a faint musky scent.
-
-# heat
-scent-heat-examine      = heat
-scent-heat-direct       = {CAPITALIZE($src)} smells like they're in heat.
-scent-heat-close        = You smell a trace of someone being heat.
-scent-heat-far          = You catch a faint whiff of someone being in heat.
-
-# latex
-scent-latex-examine      = latex
-scent-latex-direct       = {CAPITALIZE($src)} smells like latex.
-scent-latex-close        = You smell a trace of latex.
-scent-latex-far          = You catch a faint whiff of latex.
-
-# boystink
-scent-boystink-examine      = boystink
-scent-boystink-direct       = {CAPITALIZE($src)} smells like boystink.
-scent-boystink-close        = You smell a trace of boystink.
-scent-boystink-far          = You catch a faint whiff of boystink.
-
-# boysmell
-scent-boysmell-examine      = boysmell
-scent-boysmell-direct       = {CAPITALIZE($src)} smells like boysmell.
-scent-boysmell-close        = You smell a trace of boysmell.
-scent-boysmell-far          = You catch a faint whiff of boysmell.
-
-# skunk
-scent-skunk-examine      = skunk
-scent-skunk-direct       = {CAPITALIZE($src)} smells like skunk.
-scent-skunk-close        = You smell a trace of skunk.
-scent-skunk-far          = You catch a faint whiff of skunk.
-
-# girlstink
-scent-girlstink-examine      = girlstink
-scent-girlstink-direct       = {CAPITALIZE($src)} smells like girlstink.
-scent-girlstink-close        = You smell a trace of girlstink.
-scent-girlstink-far          = You catch a faint whiff of girlstink.
-
-# girlsmell
-scent-girlsmell-examine      = girlsmell
-scent-girlsmell-direct       = {CAPITALIZE($src)} smells like girlsmell.
-scent-girlsmell-close        = You smell a trace of girlsmell.
-scent-girlsmell-far          = You catch a faint whiff of girlsmell.
-
-# spaceweed
-scent-spaceweed-examine      = spaceweed
-scent-spaceweed-direct       = {CAPITALIZE($src)} smells like spaceweed.
-scent-spaceweed-close        = You smell a trace of spaceweed.
-scent-spaceweed-far          = You catch a faint whiff of spaceweed.
-
 # gunpowder
 scent-gunpowder-examine      = gunpowder
 scent-gunpowder-direct       = {CAPITALIZE($src)} smells like gunpowder.
@@ -538,12 +467,6 @@ scent-blood-direct       = {CAPITALIZE($src)} smells like blood.
 scent-blood-close        = You smell a trace of a blood.
 scent-blood-far          = You catch a faint whiff of a blood.
 
-# bankcustomers
-scent-bankcustomers-examine      = bank customers
-scent-bankcustomers-direct       = {CAPITALIZE($src)} smells like bank customers.
-scent-bankcustomers-close        = You smell a trace of bank customers.
-scent-bankcustomers-far          = You catch a faint whiff of bank customers.
-
 # birthdaycake
 scent-birthdaycake-examine      = birthday cake
 scent-birthdaycake-direct       = {CAPITALIZE($src)} smells like birthday cake.
@@ -568,12 +491,6 @@ scent-redwood-direct       = {CAPITALIZE($src)} smells like redwood.
 scent-redwood-close        = You smell a trace of redwood.
 scent-redwood-far          = You catch a faint whiff of redwood.
 
-# hotdog water
-scent-hotdogwater-examine      = hotdogwater
-scent-hotdogwater-direct       = {CAPITALIZE($src)} smells like hotdog water.
-scent-hotdogwater-close        = You smell a trace of hotdog water.
-scent-hotdogwater-far          = You catch a faint whiff of hotdog water.
-
 # metal
 scent-metal-examine      = metal
 scent-metal-direct       = {CAPITALIZE($src)} smells like metal.
@@ -585,3 +502,65 @@ scent-pennies-examine      = pennies
 scent-pennies-direct       = {CAPITALIZE($src)} smells like pennies.
 scent-pennies-close        = You smell a trace of pennies.
 scent-pennies-far          = You catch a faint whiff of pennies.
+
+# latex
+scent-latex-examine      = latex
+scent-latex-direct       = {CAPITALIZE($src)} smells like latex.
+scent-latex-close        = You smell a trace of latex.
+scent-latex-far          = You catch a faint whiff of latex.
+
+# hotdog water
+scent-hotdogwater-examine      = hotdogwater
+scent-hotdogwater-direct       = {CAPITALIZE($src)} smells like hotdog water.
+scent-hotdogwater-close        = You smell a trace of hotdog water.
+scent-hotdogwater-far          = You catch a faint whiff of hotdog water.
+
+# spaceweed
+scent-spaceweed-examine      = spaceweed
+scent-spaceweed-direct       = {CAPITALIZE($src)} smells like spaceweed.
+scent-spaceweed-close        = You smell a trace of spaceweed.
+scent-spaceweed-far          = You catch a faint whiff of spaceweed.
+
+# skunk
+scent-skunk-examine      = skunk
+scent-skunk-direct       = {CAPITALIZE($src)} smells like skunk.
+scent-skunk-close        = You smell a trace of skunk.
+scent-skunk-far          = You catch a faint whiff of skunk.
+
+
+# Consent scents
+# musk
+scent-musk-examine         = musk
+scent-musk-direct          = {CAPITALIZE($src)} has a very musky scent.
+scent-musk-close           = You smell something musky.
+scent-musk-far             = You catch a faint musky scent.
+
+# heat
+scent-heat-examine      = heat
+scent-heat-direct       = {CAPITALIZE($src)} smells like they're in heat.
+scent-heat-close        = You smell a trace of someone being heat.
+scent-heat-far          = You catch a faint whiff of someone being in heat.
+
+# boystink
+scent-boystink-examine      = boystink
+scent-boystink-direct       = {CAPITALIZE($src)} smells like boystink.
+scent-boystink-close        = You smell a trace of boystink.
+scent-boystink-far          = You catch a faint whiff of boystink.
+
+# boysmell
+scent-boysmell-examine      = boysmell
+scent-boysmell-direct       = {CAPITALIZE($src)} smells like boysmell.
+scent-boysmell-close        = You smell a trace of boysmell.
+scent-boysmell-far          = You catch a faint whiff of boysmell.
+
+# girlstink
+scent-girlstink-examine      = girlstink
+scent-girlstink-direct       = {CAPITALIZE($src)} smells like girlstink.
+scent-girlstink-close        = You smell a trace of girlstink.
+scent-girlstink-far          = You catch a faint whiff of girlstink.
+
+# girlsmell
+scent-girlsmell-examine      = girlsmell
+scent-girlsmell-direct       = {CAPITALIZE($src)} smells like girlsmell.
+scent-girlsmell-close        = You smell a trace of girlsmell.
+scent-girlsmell-far          = You catch a faint whiff of girlsmell.

@@ -653,7 +653,7 @@ namespace Content.Client.Lobby.UI
                 "SpeechTraits",
                 "Disabilities",
                 "Scents",
-                "ScentsNSFW",
+                "ScentsConsent",
                 "BodyType",
                 "Quirks",
             };
