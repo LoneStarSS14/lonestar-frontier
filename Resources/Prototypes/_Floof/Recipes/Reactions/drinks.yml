@@ -73,7 +73,7 @@
     BethanysSpirit: 11
 
 - type: reaction
-  id: BethanysSpicecSpirit
+  id: BethanysSpicedSpirit
   requiredMixerCategories:
   - Shake
   reactants:
@@ -497,12 +497,10 @@
   reactants:
     Saline:
       amount: 1
-    JuiceOrange:
-      amount: 2
+    ScrewdriverCocktail:
+      amount: 3
     JuiceWatermelon:
       amount: 2
-    Vodka:
-      amount: 1
   products:
     SexOnTheBeach: 5
 
