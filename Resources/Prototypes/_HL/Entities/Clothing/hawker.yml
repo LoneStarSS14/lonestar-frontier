@@ -80,7 +80,7 @@
 - type: entity
   parent: ClothingHandsBase
   id: ClothingHandsArmSleeve
-  name: leahter arm sleeves
+  name: leather arm sleeves
   description: Nice and snug around your hands, how you'll manage to hold anything with these on is a wonder..
   components:
   - type: Sprite
