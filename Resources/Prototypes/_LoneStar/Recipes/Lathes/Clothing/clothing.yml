@@ -1,0 +1,10 @@
+- type: latheRecipe
+  id: LSHeadlamp
+  parent: NFBaseArmorRecipe
+  result: LSHeadlamp
+  completetime: 3
+  materials:
+    Steel: 100
+    Cloth: 100
+    Glass: 100
+    Plastic: 200

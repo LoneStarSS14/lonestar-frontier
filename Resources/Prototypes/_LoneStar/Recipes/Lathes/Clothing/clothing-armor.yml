@@ -19,3 +19,52 @@
   id: ClothingOuterArmoredJacketPMCPunkRandomized
   parent: NFBaseArmorRecipe
   result: ClothingOuterArmoredJacketPMCPunkRandomized
+
+- type: latheRecipe
+  id: ClothingHeadHatHardhatWhite
+  parent: NFBaseArmorRecipe
+  result: ClothingHeadHatHardhatWhite
+  completetime: 3
+  materials:
+    Steel: 100
+    Cloth: 100
+    Glass: 100
+    Plastic: 500
+
+- type: latheRecipe
+  id: ClothingHeadHatHardhatBlue
+  parent: ClothingHeadHatHardhatWhite
+  result: ClothingHeadHatHardhatBlue
+
+- type: latheRecipe
+  id: ClothingHeadHatHardhatOrange
+  parent: ClothingHeadHatHardhatWhite
+  result: ClothingHeadHatHardhatOrange
+
+- type: latheRecipe
+  id: ClothingHeadHatHardhatRed
+  parent: ClothingHeadHatHardhatWhite
+  result: ClothingHeadHatHardhatRed
+
+- type: latheRecipe
+  id: ClothingHeadHatHardhatYellow
+  parent: ClothingHeadHatHardhatWhite
+  result: ClothingHeadHatHardhatYellow
+
+- type: latheRecipe
+  id: ClothingHeadHatHardhatYellowDark
+  parent: ClothingHeadHatHardhatWhite
+  result: ClothingHeadHatHardhatYellowDark
+
+- type: latheRecipe
+  id: ClothingHeadHatHardhatArmored
+  parent: NFBaseArmorRecipe
+  result: ClothingHeadHatHardhatArmored
+  completetime: 3
+  materials:
+    Cloth: 100
+    Durathread: 100
+    Steel: 500
+    Plasteel: 500
+    Glass: 100
+    Plastic: 500
