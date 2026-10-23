@@ -32,16 +32,13 @@ namespace Content.Server._LoneStar.Divine
                 return;
 
             // Our logic paths need to know if the user has the BibleUserComp
-            var isBibleUser = IsBibleUser(args.User.Value);
-
-            if (!isBibleUser)
-            {
-                HandleNonBibleInteraction(uid, comp, args.User.Value);
-            }
-
-            if (isBibleUser)
+            if (IsBibleUser(args.User.Value))
             {
                 HandleBibleUserInteraction(uid, comp, args.User.Value);
+            }
+            else
+            {
+                HandleNonBibleInteraction(uid, comp, args.User.Value);
             }
             return;
         }
@@ -76,23 +73,18 @@ namespace Content.Server._LoneStar.Divine
         /// <param name="userUid">uid of the user interacting with the Divine</param>
         private void HandleBibleUserInteraction(EntityUid uid, DivineComponent comp, EntityUid userUid)
         {
-            if (IsBibleUser(userUid))
+            if (IsBibleUser(userUid) && comp.ToggledIgnite)
             {
                 var hasIgniteOnMeleeHit = HasComp<IgniteOnMeleeHitComponent>(uid);
                 var isActivated = _toggle.IsActivated(uid);
 
-                if (isActivated && comp.ToggledIgnite && !hasIgniteOnMeleeHit)
+                if (isActivated && !hasIgniteOnMeleeHit)
                 {
-                    AddComp<IgniteOnMeleeHitComponent>(uid);
-
-                    if (TryComp<IgniteOnMeleeHitComponent>(uid, out var igniteComp))
-                    {
-                        igniteComp.FireStacks = comp.FireStacks;
-                    }
+                    AddIgniteOnMelee(uid, comp);
                 }
-                else if (!isActivated && comp.ToggledIgnite && hasIgniteOnMeleeHit)
+                else
                 {
-                    RemComp<IgniteOnMeleeHitComponent>(uid);
+                    RemoveIgniteOnMelee(uid, comp);
                 }
             }
 
@@ -109,22 +101,46 @@ namespace Content.Server._LoneStar.Divine
         {
             if (!IsBibleUser(userUid))
             {
-                _popupSystem.PopupEntity(Loc.GetString(comp.Sizzle), userUid, userUid);
-                _audio.PlayPvs(comp.SizzleSoundPath, userUid);
-                _damageableSystem.TryChangeDamage(userUid, comp.DamageOnUntrainedUse, true, origin: uid);
-
                 if (_toggle.IsActivated(uid))
                 {
+                    _popupSystem.PopupEntity(Loc.GetString(comp.Sizzle), userUid, userUid);
+                    _audio.PlayPvs(comp.SizzleSoundPath, userUid);
+                    _damageableSystem.TryChangeDamage(userUid, comp.DamageOnUntrainedUse, true, origin: uid);
                     _toggle.TryDeactivate(uid);
 
-                    if (HasComp<IgniteOnMeleeHitComponent>(uid))
-                    {
-                        RemComp<IgniteOnMeleeHitComponent>(uid);
-                    }
+                    RemoveIgniteOnMelee(uid, comp);
                 }
             }
 
             return;
+        }
+
+        /// <summary>
+        /// Adds the IgniteOnMeleeHitComp and sets the FireStacks applied to the stacks set in comp
+        /// </summary>
+        /// <param name="uid"></param>
+        /// <param name="comp">Used for adding the IgniteOnMeleeHit and setting it's params</param>
+        private void AddIgniteOnMelee(EntityUid uid, DivineComponent comp)
+        {
+            AddComp<IgniteOnMeleeHitComponent>(uid);
+
+            if (TryComp<IgniteOnMeleeHitComponent>(uid, out var igniteComp))
+            {
+                igniteComp.FireStacks = comp.FireStacks;
+            }
+        }
+
+        /// <summary>
+        /// Removes the IgniteOnMeleeHitComp if present
+        /// </summary>
+        /// <param name="uid"></param>
+        /// <param name="comp"></param>
+        private void RemoveIgniteOnMelee(EntityUid uid, DivineComponent comp)
+        {
+            if (HasComp<IgniteOnMeleeHitComponent>(uid))
+            {
+                RemComp<IgniteOnMeleeHitComponent>(uid);
+            }
         }
     }
 }
