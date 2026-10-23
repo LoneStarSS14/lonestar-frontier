@@ -8,16 +8,13 @@
   },
   "states": [
     {
-      "name": "empty"
-    },
-    {
-      "name": "glow"
-    },
-    {
       "name": "christian"
     },
     {
       "name": "christian2"
+    },
+    {
+      "name": "christian2alt"
     },
     {
       "name": "druidism"
