@@ -4859,14 +4859,16 @@ entities:
     - type: Transform
       pos: -2.5,-6.5
       parent: 1
-- proto: StorageFillMaterialsFilled
-  entities:
-  - uid: 11
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-12.5
-      parent: 1
+  # LoneStar below
+  #   - proto: StorageFillMaterialsFilled
+  #   entities:
+  #   - uid: 11
+  #     components:
+  #     - type: Transform
+  #       rot: 3.141592653589793 rad
+  #       pos: 0.5,-12.5
+  #       parent: 1
+  # LoneStar end
 - proto: StructureGunRackWallmountedSalvage
   entities:
   - uid: 461
