@@ -1,0 +1,82 @@
+<Document>
+  # COURIER-CLASS CARGO SHUTTLE
+  <Box>
+  <GuideEntityEmbed Entity="LittleCheesersBiogenerator" Caption="food printer"/>
+  <GuideEntityEmbed Entity="LittleCheesersLogo" Caption="franchisee"/>
+  <GuideEntityEmbed Entity="VehicleHoverscooterPizza" Caption="food delivery"/>
+  </Box>
+  <Box>
+  <GuideEntityEmbed Entity="ShuttleMapCourier" Caption=""/>
+  </Box>
+
+  [color=#a4885c]Ship Size:[/color] Small
+
+  [color=#a4885c]Recommended Crew:[/color] 1-3
+
+  [color=#a4885c]Power Gen Type:[/color] Plasma
+
+  [color=#a4885c]Base Power Draw:[/color] 14kw
+
+  [color=#a4885c]Expeditions:[/color] None
+
+  [color=#a4885c]IFF Console:[/color] None
+
+  "A streamlined shuttle designed for express delivery of inter-system goods. This one has been retrofitted by one of Donk Co's subsidiaries, Little Cheeser's"
+
+  # PREFLIGHT CHECKLIST
+
+  ## 1. Power supply
+
+  ## 1.1. Battery units
+  <Box>
+  <GuideEntityEmbed Entity="SubstationWallBasic"/>
+  <GuideEntityEmbed Entity="APCBasic"/>
+  </Box>
+
+  - Check that the substation unit is anchored to the floor.
+  - Check that the APC unit's Main Breaker is toggled on.
+  - Check the APC unit's current Load* (W).
+
+  ## 1.2. P.A.C.M.A.N. generator unit
+  <Box>
+  <GuideEntityEmbed Entity="PortableGeneratorPacmanShuttle"/>
+  <GuideEntityEmbed Entity="SheetPlasma"/>
+  </Box>
+
+  - Check that the P.A.C.M.A.N. generator unit is anchored to the floor.
+  - Check that the P.A.C.M.A.N. generator unit has fuel. For extended flights make sure that you have enough fuel stockpiled to sustain prolonged power generation during flight.
+  - Check that the P.A.C.M.A.N. generator unit is set to HV output.
+  - Set Target Power to 12-13** [bold]kW[/bold].
+  - Start the P.A.C.M.A.N. generator unit.
+
+  ## 2. Atmospherics
+
+  ## 2.1. Distribution Loop
+  <Box>
+  <GuideEntityEmbed Entity="AirCanister"/>
+  <GuideEntityEmbed Entity="GasPort"/>
+  <GuideEntityEmbed Entity="GasPressurePump"/>
+  </Box>
+
+  - Check that the air canister is anchored to connector port.
+  - Check that the distribution pump is set to 101kPa.
+  - Enable the distribution pump.
+
+  ## 3. Other checks
+  <Box>
+  <GuideEntityEmbed Entity="SmallGyroscope"/>
+  <GuideEntityEmbed Entity="GravityGeneratorMini"/>
+  <GuideEntityEmbed Entity="ShuttersWindow"/>
+  </Box>
+
+  - Check that the gyroscope is anchored, powered, and enabled.
+  - Check that the mini gravity generator is anchored, powered, and enabled.
+  - Check that the counter shutters are closed before exiting the craft.
+
+  ## Sidenotes
+
+  * - This is a franchisee ship, Little Cheeser's has provided you with everything you need. Print pizza's from the biogen, cook 'em in your patented Donk Co Oven, and deliver them to hungry folks.
+
+  ** - Charge people reasonably, don't give things out for free, but don't overcharge people either.
+
+</Document>

@@ -1674,7 +1674,7 @@
       whitelist:
       - Escort
 
-#Lone Star
+# LoneStar
 
 - type: listing
   id: UplinkFreelancerPistolMackerel

@@ -1,0 +1,62 @@
+#region Base Little Cheeser's Food
+
+- type: latheRecipe
+  abstract: true
+  id: BioGenLittleCheesersRecipe
+  categories:
+  - Food
+  completetime: 1
+  materials:
+    Biomass: 110
+
+#region Little Cheesers Pizza's
+
+- type: latheRecipe
+  id: BioGenFoodCheapCheesePizzaRaw
+  result: FoodCheapCheesePizzaRaw
+  parent: BioGenLittleCheesersRecipe
+
+- type: latheRecipe
+  id: BioGenFoodCheapPepperoniPizzaRaw
+  result: FoodCheapPepperoniPizzaRaw
+  parent: BioGenLittleCheesersRecipe
+
+- type: latheRecipe
+  id: BioGenFoodCheapMeatPizzaRaw
+  result: FoodCheapMeatPizzaRaw
+  parent: BioGenLittleCheesersRecipe
+
+- type: latheRecipe
+  id: BioGenFoodCheapPineapplePizzaRaw
+  result: FoodCheapPineapplePizzaRaw
+  parent: BioGenLittleCheesersRecipe
+
+- type: latheRecipe
+  id: BioGenFoodCheapSupremePizzaRaw
+  result: FoodCheapSupremePizzaRaw
+  parent: BioGenLittleCheesersRecipe
+
+- type: latheRecipe
+  id: BioGenFoodCheapVegetablePizzaRaw
+  result: FoodCheapVegetablePizzaRaw
+  parent: BioGenLittleCheesersRecipe
+
+- type: latheRecipe
+  id: BioGenFoodCheapSausagePizzaRaw
+  result: FoodCheapSausagePizzaRaw
+  parent: BioGenLittleCheesersRecipe
+
+- type: latheRecipe
+  id: BioGenFoodCheapMushroomPizzaRaw
+  result: FoodCheapMushroomPizzaRaw
+  parent: BioGenLittleCheesersRecipe
+
+- type: latheRecipe
+  id: BioGenFoodCheapCottonPizzaRaw
+  result: FoodCheapCottonPizzaRaw
+  parent: BioGenLittleCheesersRecipe
+
+- type: latheRecipe
+  id: BioGenFoodCheapStingerPizzaRaw
+  result: FoodCheapStingerPizzaRaw
+  parent: BioGenLittleCheesersRecipe

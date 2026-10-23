@@ -1,0 +1,9 @@
+- type: entity
+  id: CrateFunHoverscooter # LoneStar
+  parent: CrateLivestock
+  name: delivery scooter crate
+  description: Ey those pizza's won't deliver themselves!
+  components:
+  - type: StorageFill
+    contents:
+    - id: VehicleHoverscooterPizza

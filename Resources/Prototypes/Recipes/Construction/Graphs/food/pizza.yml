@@ -11,7 +11,6 @@
         doAfter: 1
   - node: flat
     entity: FoodDoughFlat
-    # Frontier: adding butter and rolling to pastries
     edges:
     - to: flat-butter
       steps:
@@ -20,6 +19,272 @@
         icon:
           sprite: Objects/Consumable/Food/ingredients.rsi
           state: butter
+    - to: pizza-base # LoneStar
+      steps:
+      - tag: TomatoPuree
+        name: construction-graph-tag-tomato-puree
+    - to: pizza-base-pesto # LoneStar
+      steps:
+      - tag: PestoPuree
+        name: construction-graph-tag-pesto-puree
+    - to: pizza-base-bbq # LoneStar
+      steps:
+      - tag: BbqPuree
+        name: construction-graph-tag-bbq-puree
+
+  # LoneStar: Pizza
+  - node: pizza-base
+    entity: FoodPizzaDough
+    edges:
+    - to: pizza-cheese-raw
+      steps:
+      - tag: Mozzarella
+        name: construction-graph-tag-mozzarella
+  - node: pizza-cheese-raw
+    entity: FoodCheesePizzaRaw
+    edges:
+
+    - to: pizza-pepperoni-raw
+      steps:
+      - tag: PepperoniSlice
+        name: construction-graph-tag-pepperoni-slice
+      - tag: PepperoniSlice
+        name: construction-graph-tag-pepperoni-slice
+      - tag: PepperoniSlice
+        name: construction-graph-tag-pepperoni-slice
+
+    - to: pizza-pineapple-raw
+      steps:
+      - tag: PineappleSlice
+        name: construction-graph-tag-pineapple-slice
+      - tag: PineappleSlice
+        name: construction-graph-tag-pineapple-slice
+      - tag: PineappleSlice
+        name: construction-graph-tag-pineapple-slice
+      - tag: RawBacon
+        name: construction-graph-tag-bacon
+
+    - to: pizza-meat-raw
+      steps:
+      - tag: Cutlet
+        name: construction-graph-tag-cutlet
+      - tag: RawSausage
+        name: construction-graph-tag-sausage
+      - tag: RawBacon
+        name: construction-graph-tag-bacon
+
+    - to: pizza-vegetable-raw
+      steps:
+      - tag: Chili
+        name: construction-graph-tag-chili
+      - tag: SlicedVegetable
+        name: construction-graph-tag-sliced-vegetable
+
+    - to: pizza-fourcheese-raw
+      steps:
+      - tag: CheeseSlice
+        name: construction-graph-tag-cheese-wedge
+      - tag: ChevreSlice
+        name: construction-graph-tag-sliced-chevre
+      - tag: Mozzarella
+        name: construction-graph-tag-mozzarella
+      - tag: CurdCheese
+        name: construction-graph-tag-curd-cheese
+
+    - to: pizza-sassysage-raw
+      steps:
+      - tag: RawSausage
+        name: construction-graph-tag-sausage
+
+    - to: pizza-uranium-raw
+      steps:
+      - material: Uranium
+      - tag: Chili
+        name: construction-graph-tag-chili
+      - tag: Garlic
+        name: construction-graph-tag-garlic
+      - tag: PepperoniSlice
+        name: construction-graph-tag-pepperoni-slice
+      - tag: PepperoniSlice
+        name: construction-graph-tag-pepperoni-slice
+
+    - to: pizza-donkpocket-raw
+      steps:
+      - tag: DonkPocket
+        name: construction-graph-tag-donkpocket
+      - tag: DonkPocket
+        name: construction-graph-tag-donkpocket
+
+    - to: pizza-mushroom-raw
+      steps:
+      - tag: Mushroom
+        name: construction-graph-tag-mushroom
+      - tag: Mushroom
+        name: construction-graph-tag-mushroom
+
+    - to: pizza-margherita-raw
+      steps:
+      - tag: TomatoSlice
+        name: construction-graph-tag-tomato-slice
+      - tag: TomatoSlice
+        name: construction-graph-tag-tomato-slice
+
+    - to: pizza-cotton-raw
+      steps:
+      - tag: CottonBoll
+        name: construction-graph-tag-cottonboll
+      - tag: CottonBoll
+        name: construction-graph-tag-cottonboll
+
+    - to: pizza-supreme-raw
+      steps:
+      - tag: OnionSlice
+        name: construction-graph-tag-onion-slice
+      - tag: OnionSlice
+        name: construction-graph-tag-onion-slice
+      - tag: PepperoniSlice
+        name: construction-graph-tag-pepperoni-slice
+      - tag: PepperoniSlice
+        name: construction-graph-tag-pepperoni-slice
+      - tag: Mushroom
+        name: construction-graph-tag-mushroom
+      - tag: Mushroom
+        name: construction-graph-tag-mushroom
+
+    - to: pizza-seafood-raw
+      steps:
+      - tag: CrabMeat
+        name: construction-graph-tag-crab-meat
+      - tag: CrabMeat
+        name: construction-graph-tag-crab-meat
+      - tag: RawFish
+        name: construction-graph-tag-raw-fish
+      - tag: RawFish
+        name: construction-graph-tag-raw-fish
+      - tag: Garlic
+        name: construction-graph-tag-garlic
+
+    - to: pizza-stinger-raw
+      steps:
+      - tag: XenoCutlet
+        name: construction-graph-tag-xeno-cutlet
+      - tag: XenoCutlet
+        name: construction-graph-tag-xeno-cutlet
+      - tag: SpiderCutlet
+        name: construction-graph-tag-spider-cutlet
+      - tag: SpiderCutlet
+        name: construction-graph-tag-spider-cutlet
+      - tag: Garlic
+        name: construction-graph-tag-garlic
+
+    - to: pizza-dank-raw
+      steps:
+      - tag: CannabisButter
+        name: construction-graph-tag-cannabis-butter
+      - tag: Cannabis
+        name: construction-graph-tag-cannabis
+      - tag: Cannabis
+        name: construction-graph-tag-cannabis
+      - tag: Cannabis
+        name: construction-graph-tag-cannabis
+
+    - to: pizza-worldpeas-raw
+      steps:
+      - tag: WorldPeas
+        name: construction-graph-tag-worldpeas
+      - tag: WorldPeas
+        name: construction-graph-tag-worldpeas
+      - tag: WorldPeas
+        name: construction-graph-tag-worldpeas
+
+  - node: pizza-pepperoni-raw
+    entity: FoodPepperoniPizzaRaw
+  - node: pizza-pineapple-raw
+    entity: FoodPineapplePizzaRaw
+  - node: pizza-meat-raw
+    entity: FoodMeatPizzaRaw
+  - node: pizza-vegetable-raw
+    entity: FoodVegetablePizzaRaw
+  - node: pizza-fourcheese-raw
+    entity: FoodFourCheesePizzaRaw
+  - node: pizza-sassysage-raw
+    entity: FoodSassysagePizzaRaw
+  - node: pizza-uranium-raw
+    entity: FoodUraniumPizzaRaw
+  - node: pizza-donkpocket-raw
+    entity: FoodDonkPocketPizzaRaw
+  - node: pizza-mushroom-raw
+    entity: FoodMushroomPizzaRaw
+  - node: pizza-margherita-raw
+    entity: FoodMargheritaPizzaRaw
+  - node: pizza-cotton-raw
+    entity: FoodCottonPizzaRaw
+  - node: pizza-supreme-raw
+    entity: FoodSupremePizzaRaw
+  - node: pizza-seafood-raw
+    entity: FoodSeafoodPizzaRaw
+  - node: pizza-stinger-raw
+    entity: FoodStingerPizzaRaw
+  - node: pizza-dank-raw
+    entity: FoodDankPizzaRaw
+  - node: pizza-worldpeas-raw
+    entity: FoodWorldPeazzaRaw
+
+  # Pesto Pizzas
+  - node: pizza-base-pesto
+    entity: FoodPestoPizzaDough
+    edges:
+    - to: pizza-pesto-cheese-raw
+      steps:
+      - tag: Mozzarella
+        name: construction-graph-tag-mozzarella
+  - node: pizza-pesto-cheese-raw
+    entity: FoodPestoCheesePizzaRaw
+    edges:
+    - to: pizza-pesto-raw
+      steps:
+      - tag: TomatoSlice
+        name: construction-graph-tag-tomato-slice
+    - to: pizza-pesto-raw
+      steps:
+      - tag: Mozzarella
+        name: construction-graph-tag-mozzarella
+
+  - node: pizza-pesto-raw
+    entity: FoodPestoPizzaRaw
+
+  # BBQ Pizzas
+  - node: pizza-base-bbq
+    entity: FoodBbqPizzaDough
+    edges:
+    - to: pizza-bbq-cheese-raw
+      steps:
+      - tag: Mozzarella
+        name: construction-graph-tag-mozzarella
+  - node: pizza-bbq-cheese-raw
+    entity: FoodBbqCheesePizzaRaw
+    edges:
+    - to: pizza-firecracker-raw
+      steps:
+      - tag: Chili
+        name: construction-graph-tag-chili
+      - tag: CheeseSlice
+        name: construction-graph-tag-cheese-wedge
+      - tag: Cutlet
+        name: construction-graph-tag-cutlet
+    - to: pizza-chicken-garlic-raw
+      steps:
+      - tag: ChickenCutlet
+        name: construction-graph-tag-chicken-cutlet
+      - tag: Garlic
+        name: construction-graph-tag-garlic
+
+  - node: pizza-firecracker-raw
+    entity: FoodFirecrackerPizzaRaw
+  - node: pizza-chicken-garlic-raw
+    entity: FoodChickenGarlicPizzaRaw
+
+  # Frontier: making buttered flat dough
   - node: flat-butter
     entity: FoodDoughFlatButtered
     edges:
@@ -29,5 +294,3 @@
         doAfter: 2 # Lamination takes time
   - node: pastry
     entity: FoodDoughFlatPastry
-  # End Frontier
-  # TODO: add stuff for adding ingredients then cooking the pizza, wsci

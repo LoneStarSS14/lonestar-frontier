@@ -1,0 +1,54 @@
+#region softsuits or "EVA" suits
+- type: entity
+  parent: NFDepartmentalEVASuit
+  id: ClothingOuterEVASuitLittleCheesers
+  name: pizza delivery EVA suit
+  description: An EVA suit with a built-in helmet issued to Little Cheeser's delivery workers.
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-base
+      color: "#d4511a"
+    - state: icon-decals-01
+      color: "#3d2f34"
+    - state: icon-reinforced-points
+      color: "#34282d"
+    - state: icon-breathing-gear
+    - state: icon-unshaded
+      shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#d4511a"
+      - state: inhand-left-decals-01
+        color: "#3d2f34"
+      - state: inhand-left-reinforced-points
+        color: "#34282d"
+      - state: inhand-left-breathing-gear
+      - state: inhand-left-unshaded
+        shader: unshaded
+      right:
+      - state: inhand-right-base
+        color: "#d4511a"
+      - state: inhand-right-decals-01
+        color: "#3d2f34"
+      - state: inhand-right-reinforced-points
+        color: "#34282d"
+      - state: inhand-right-breathing-gear
+      - state: inhand-right-unshaded
+        shader: unshaded
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-base
+        color: "#d4511a"
+      - state: equipped-decals-01
+        color: "#3d2f34"
+      - state: equipped-reinforced-points
+        color: "#34282d"
+      - state: equipped-breathing-gear
+      - state: equipped-unshaded
+        shader: unshaded
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadEVAHelmetLittleCheesers
