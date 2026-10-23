@@ -27,6 +27,8 @@ public sealed class RCDMenuBoundUserInterface : BoundUserInterface
             ["Lighting"] = ("rcd-component-lighting", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/lighting.png"))),
             ["LatticeTiles"] = ("rcd-component-latticetiles", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/lattice.png"))), // Mono - #3919
             ["PlatingTiles"] = ("rcd-component-platingtiles", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/plating.png"))), // Mono - #3919
+            ["StainedGlass"] = ("rcd-component-stainedglass", new SpriteSpecifier.Texture(new ResPath("/Textures/_LoneStar/Structures/Wallmounts/stainedglass.rsi/christian2alt.png"))),
+            ["Altars"] = ("rcd-component-altars", new SpriteSpecifier.Texture(new ResPath("/Textures/Structures/Furniture/Altars/Gods/nanotrasen.rsi/space-christian.png"))),
         };
 
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;

@@ -1,116 +1,214 @@
+# Stained Glass Windows
+
 - type: rcd
   id: ChristianStainedGlassSmall1
-  category: Christian
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian.png
-  mode: ConstructObject
+  name: rcd-component-stainedglass
+  category: StainedGlass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian
   prototype: ChristianStainedGlassSmall1
+  mode: ConstructObject
   cost: 1
   delay: 1
-  rotation: Camera
+  rotation: User
   collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
   id: ChristianStainedGlassSmall2
-  parent: ChristianStainedGlassSmall1
-  category: Christian
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian2.png
+  name: rcd-component-stainedglass
+  category: StainedGlass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian2
   prototype: ChristianStainedGlassSmall2
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: ChristianStainedGlassSmall2Alt
+  name: rcd-component-stainedglass
+  category: StainedGlass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian2alt
+  prototype: ChristianStainedGlassSmall2Alt
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: DruidismStainedGlassSmall1
-  parent: ChristianStainedGlassSmall1
-  category: Druidic
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/druidism.png
+  name: rcd-component-stainedglass
+  category: StainedGlass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/druidism
   prototype: DruidismStainedGlassSmall1
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: DruidismStainedGlassSmall2
-  parent: ChristianStainedGlassSmall1
-  category: Druidic
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/druidism2.png
+  name: rcd-component-stainedglass
+  category: StainedGlass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/druidism2
   prototype: DruidismStainedGlassSmall2
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: SatanismStainedGlassSmall1
-  parent: ChristianStainedGlassSmall1
-  category: Satanic
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/satanism.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/satanism
   prototype: SatanismStainedGlassSmall1
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: SatanismStainedGlassSmall2
-  parent: ChristianStainedGlassSmall1
-  category: Satanic
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/satanism2.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/satanism2
   prototype: SatanismStainedGlassSmall2
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: PinkCatStainedGlassSmall
-  parent: ChristianStainedGlassSmall1
-  category: Satanic
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/pinkcat.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/pinkcat
   prototype: PinkCatStainedGlassSmall
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: OracleStainedGlassLarge
-  parent: ChristianStainedGlassSmall1
-  category: Christian
-  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/oracle.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/oracle
   prototype: OracleStainedGlassLarge
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: NarsieStainedGlassSmall1
-  parent: ChristianStainedGlassSmall1
-  category: Nar'sic
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie
   prototype: NarsieStainedGlassSmall1
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: NarsieStainedGlassSmall2
-  parent: ChristianStainedGlassSmall1
-  category: Nar'sic
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie2.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie2
   prototype: SatanismStainedGlassSmall2
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: NarsieStainedGlassSmall3
-  parent: ChristianStainedGlassSmall1
-  category: Nar'sic
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie3.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie3
   prototype: SatanismStainedGlassSmall2
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: NarsieStainedGlassLarge
-  parent: ChristianStainedGlassSmall1
-  category: Nar'sic
-  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/narsie_large.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/narsie_large
   prototype: NarsieStainedGlassLarge
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: RatvarStainedGlassSmall1
-  parent: ChristianStainedGlassSmall1
-  category: Rat'var
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar
   prototype: RatvarStainedGlassSmall1
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: RatvarStainedGlassSmall2
-  parent: ChristianStainedGlassSmall1
-  category: Rat'var
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar2.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar2
   prototype: RatvarStainedGlassSmall2
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: RatvarStainedGlassSmall3
-  parent: ChristianStainedGlassSmall1
-  category: Rat'var
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar3.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar3
   prototype: RatvarStainedGlassSmall3
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: RatvarStainedGlassLarge
-  parent: ChristianStainedGlassSmall1
-  category: Rat'var
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar_large.png
+  name: rcd-component-stainedglass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar_large
   prototype: RatvarStainedGlassLarge
+  mode: ConstructObject
+  cost: 1
+  delay: 1
+  rotation: User
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
+
+
+# Altars
+
