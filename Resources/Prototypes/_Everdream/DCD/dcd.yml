@@ -4,7 +4,7 @@
   id: ChristianStainedGlassSmall1
   name: rcd-component-stainedglass
   category: StainedGlass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian
+  sprite: _Everdream/Interface/Radial/RCD/christian.png
   prototype: ChristianStainedGlassSmall1
   mode: ConstructObject
   cost: 1
@@ -12,12 +12,14 @@
   rotation: User
   collisionMask: FullTileMask
   fx: EffectRCDConstruct1
+  rules:
+    - IsWindow
 
 - type: rcd
   id: ChristianStainedGlassSmall2
   name: rcd-component-stainedglass
   category: StainedGlass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian2
+  sprite: _Everdream/Interface/Radial/RCD/christian2.png
   prototype: ChristianStainedGlassSmall2
   mode: ConstructObject
   cost: 1
@@ -30,7 +32,7 @@
   id: ChristianStainedGlassSmall2Alt
   name: rcd-component-stainedglass
   category: StainedGlass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian2alt
+  sprite: _Everdream/Interface/Radial/RCD/christian2alt.png
   prototype: ChristianStainedGlassSmall2Alt
   mode: ConstructObject
   cost: 1
@@ -43,7 +45,7 @@
   id: DruidismStainedGlassSmall1
   name: rcd-component-stainedglass
   category: StainedGlass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/druidism
+  sprite: _Everdream/Interface/Radial/RCD/druidism.png
   prototype: DruidismStainedGlassSmall1
   mode: ConstructObject
   cost: 1
@@ -56,7 +58,7 @@
   id: DruidismStainedGlassSmall2
   name: rcd-component-stainedglass
   category: StainedGlass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/druidism2
+  sprite: _Everdream/Interface/Radial/RCD/druidism2.png
   prototype: DruidismStainedGlassSmall2
   mode: ConstructObject
   cost: 1
@@ -68,7 +70,7 @@
 - type: rcd
   id: SatanismStainedGlassSmall1
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/satanism
+  sprite: _Everdream/Interface/Radial/RCD/satanism.png
   prototype: SatanismStainedGlassSmall1
   mode: ConstructObject
   cost: 1
@@ -80,7 +82,7 @@
 - type: rcd
   id: SatanismStainedGlassSmall2
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/satanism2
+  sprite: _Everdream/Interface/Radial/RCD/satanism2.png
   prototype: SatanismStainedGlassSmall2
   mode: ConstructObject
   cost: 1
@@ -92,7 +94,7 @@
 - type: rcd
   id: PinkCatStainedGlassSmall
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/pinkcat
+  sprite: _Everdream/Interface/Radial/RCD/pinkcat.png
   prototype: PinkCatStainedGlassSmall
   mode: ConstructObject
   cost: 1
@@ -104,7 +106,7 @@
 - type: rcd
   id: OracleStainedGlassLarge
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/oracle
+  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/oracle.png
   prototype: OracleStainedGlassLarge
   mode: ConstructObject
   cost: 1
@@ -116,7 +118,7 @@
 - type: rcd
   id: NarsieStainedGlassSmall1
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie
+  sprite: _Everdream/Interface/Radial/RCD/narsie.png
   prototype: NarsieStainedGlassSmall1
   mode: ConstructObject
   cost: 1
@@ -128,7 +130,7 @@
 - type: rcd
   id: NarsieStainedGlassSmall2
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie2
+  sprite: _Everdream/Interface/Radial/RCD/narsie2.png
   prototype: SatanismStainedGlassSmall2
   mode: ConstructObject
   cost: 1
@@ -140,7 +142,7 @@
 - type: rcd
   id: NarsieStainedGlassSmall3
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie3
+  sprite: _Everdream/Interface/Radial/RCD/narsie3.png
   prototype: SatanismStainedGlassSmall2
   mode: ConstructObject
   cost: 1
@@ -152,7 +154,7 @@
 - type: rcd
   id: NarsieStainedGlassLarge
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/narsie_large
+  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/narsie_large.png
   prototype: NarsieStainedGlassLarge
   mode: ConstructObject
   cost: 1
@@ -164,7 +166,7 @@
 - type: rcd
   id: RatvarStainedGlassSmall1
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar
+  sprite: _Everdream/Interface/Radial/RCD/ratvar.png
   prototype: RatvarStainedGlassSmall1
   mode: ConstructObject
   cost: 1
@@ -176,7 +178,7 @@
 - type: rcd
   id: RatvarStainedGlassSmall2
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar2
+  sprite: _Everdream/Interface/Radial/RCD/ratvar2.png
   prototype: RatvarStainedGlassSmall2
   mode: ConstructObject
   cost: 1
@@ -188,7 +190,7 @@
 - type: rcd
   id: RatvarStainedGlassSmall3
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar3
+  sprite: _Everdream/Interface/Radial/RCD/ratvar3.png
   prototype: RatvarStainedGlassSmall3
   mode: ConstructObject
   cost: 1
@@ -200,7 +202,7 @@
 - type: rcd
   id: RatvarStainedGlassLarge
   name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar_large
+  sprite: _Everdream/Interface/Radial/RCD/ratvar_large.png
   prototype: RatvarStainedGlassLarge
   mode: ConstructObject
   cost: 1

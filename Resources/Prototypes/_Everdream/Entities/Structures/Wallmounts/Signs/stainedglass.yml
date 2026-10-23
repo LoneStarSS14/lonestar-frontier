@@ -45,7 +45,7 @@
 - type: entity
   parent: BaseStainedGlass
   id: ChristianStainedGlassSmall1
-  name: space-christian stained glass window
+  name: space-Christian stained glass window
   description: placeholder
   suffix: christian
   components:
@@ -57,7 +57,7 @@
 - type: entity
   parent: BaseStainedGlass
   id: ChristianStainedGlassSmall2
-  name: space-christian stained glass window
+  name: space-Christian stained glass window
   description: placeholder
   suffix: christian
   components:
@@ -69,7 +69,7 @@
 - type: entity
   parent: BaseStainedGlass
   id: ChristianStainedGlassSmall2Alt
-  name: space-christian stained glass window
+  name: space-Christian stained glass window
   description: placeholder
   suffix: christian, alt
   components:
