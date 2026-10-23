@@ -274,7 +274,6 @@
   - WeaponCrusher
   - WeaponCrusherDagger
   - WeaponCrusherGlaive
-  - LSWeaponComboLaserPistol # LoneStar
   # MiscellaneousItemsOrganization
   - NFPouchSalvage
   - NFPouchCargo # in lieu of a proper cargo fab
@@ -549,8 +548,6 @@
   - ArmorPlateMedium
   - ArmorPlateTactical
   - ArmorPlateRefractive
-  # LoneStar
-  - LSWeaponComboLaserPistol
 
 # region Engineering & Science
 - type: latheRecipePack
