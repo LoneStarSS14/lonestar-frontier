@@ -449,6 +449,8 @@ public sealed class RCDSystem : EntitySystem
 
         // Entity specific rules
 
+        // Check rule: The entity ignores collision - LoneStar
+        var isWallAllowed = prototype.ConstructionRules.Contains(RcdConstructionRule.CanBuildOnWall);
         // Check rule: The tile is unoccupied
         var isWindow = prototype.ConstructionRules.Contains(RcdConstructionRule.IsWindow);
         var isCatwalk = prototype.ConstructionRules.Contains(RcdConstructionRule.IsCatwalk);
@@ -489,6 +491,9 @@ public sealed class RCDSystem : EntitySystem
 
                 return false;
             }
+
+            if (isWallAllowed) // LoneStar
+                continue; // LoneStar
 
             if (prototype.CollisionMask != CollisionGroup.None && TryComp<FixturesComponent>(ent, out var fixtures))
             {

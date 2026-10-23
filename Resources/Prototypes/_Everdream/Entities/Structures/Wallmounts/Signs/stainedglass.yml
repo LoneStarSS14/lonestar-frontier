@@ -28,13 +28,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 50
+        damage: 20
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
         sound:
-          collection: MetalGlassBreak
+          collection: GlassBreak
   - type: PointLight
     radius: 3
     energy: 5

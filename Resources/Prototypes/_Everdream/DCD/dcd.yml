@@ -1,4 +1,7 @@
 # Stained Glass Windows
+# Construction Behavior - I think one of two things is happening.
+# Either IsWallAllowed check just continues on every proto regardless of having a rule or not, or CanBuildOnWall has become the default rule?
+# Everything else the RCD is able to build has collision in some way, so this is probably a nonissue.
 
 - type: rcd
   id: ChristianStainedGlassSmall1
@@ -10,10 +13,8 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
-  rules:
-    - IsWindow
+
 
 - type: rcd
   id: ChristianStainedGlassSmall2
@@ -25,7 +26,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -38,7 +38,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -51,7 +50,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -64,7 +62,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -76,7 +73,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -88,7 +84,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -100,7 +95,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -112,7 +106,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -124,7 +117,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -136,7 +128,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -148,7 +139,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -160,7 +150,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -172,7 +161,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -184,7 +172,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -196,7 +183,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 - type: rcd
@@ -208,7 +194,6 @@
   cost: 1
   delay: 1
   rotation: User
-  collisionMask: FullTileMask
   fx: EffectRCDConstruct1
 
 
