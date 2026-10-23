@@ -1,0 +1,51 @@
+- type: entity
+  id: DCD
+  parent: BaseItem # Frontier: remove BaseEngineeringContraband
+  name: DCD
+  description: The divine construction device can be used to quickly place and remove various station structures and fixtures. Requires compressed matter to function.
+  components:
+  - type: RCD
+    availablePrototypes:
+    - ChristianStainedGlassSmall1
+    - ChristianStainedGlassSmall2
+    - ChristianStainedGlassSmall2Alt
+    - DruidismStainedGlassSmall1
+    - DruidismStainedGlassSmall2
+    - SatanismStainedGlassSmall1
+    - SatanismStainedGlassSmall2
+    - PinkCatStainedGlassSmall
+    - OracleStainedGlassLarge
+    - NarsieStainedGlassSmall1
+    - NarsieStainedGlassSmall2
+    - NarsieStainedGlassSmall3
+    - NarsieStainedGlassLarge
+    - RatvarStainedGlassSmall1
+    - RatvarStainedGlassSmall2
+    - RatvarStainedGlassSmall3
+    - RatvarStainedGlassLarge
+  - type: LimitedCharges
+    maxCharges: 30
+  - type: Sprite
+    sprite: Objects/Tools/rcd.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: Objects/Tools/rcd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 500 # Frontier: 600<500
+      Plastic: 100
+  - type: StaticPrice
+    price: 55 # Frontier 110<55
+    vendPrice: 5000 # Frontier
+  - type: UserInterface
+    interfaces:
+      enum.RcdUiKey.Key:
+        type: RCDMenuBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.RcdUiKey.Key

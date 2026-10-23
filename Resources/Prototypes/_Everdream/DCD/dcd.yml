@@ -1,0 +1,116 @@
+- type: rcd
+  id: ChristianStainedGlassSmall1
+  category: Christian
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian.png
+  mode: ConstructObject
+  prototype: ChristianStainedGlassSmall1
+  cost: 1
+  delay: 1
+  rotation: Camera
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: ChristianStainedGlassSmall2
+  parent: ChristianStainedGlassSmall1
+  category: Christian
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/christian2.png
+  prototype: ChristianStainedGlassSmall2
+
+- type: rcd
+  id: DruidismStainedGlassSmall1
+  parent: ChristianStainedGlassSmall1
+  category: Druidic
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/druidism.png
+  prototype: DruidismStainedGlassSmall1
+
+- type: rcd
+  id: DruidismStainedGlassSmall2
+  parent: ChristianStainedGlassSmall1
+  category: Druidic
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/druidism2.png
+  prototype: DruidismStainedGlassSmall2
+
+- type: rcd
+  id: SatanismStainedGlassSmall1
+  parent: ChristianStainedGlassSmall1
+  category: Satanic
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/satanism.png
+  prototype: SatanismStainedGlassSmall1
+
+- type: rcd
+  id: SatanismStainedGlassSmall2
+  parent: ChristianStainedGlassSmall1
+  category: Satanic
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/satanism2.png
+  prototype: SatanismStainedGlassSmall2
+
+- type: rcd
+  id: PinkCatStainedGlassSmall
+  parent: ChristianStainedGlassSmall1
+  category: Satanic
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/pinkcat.png
+  prototype: PinkCatStainedGlassSmall
+
+- type: rcd
+  id: OracleStainedGlassLarge
+  parent: ChristianStainedGlassSmall1
+  category: Christian
+  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/oracle.png
+  prototype: OracleStainedGlassLarge
+
+- type: rcd
+  id: NarsieStainedGlassSmall1
+  parent: ChristianStainedGlassSmall1
+  category: Nar'sic
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie.png
+  prototype: NarsieStainedGlassSmall1
+
+- type: rcd
+  id: NarsieStainedGlassSmall2
+  parent: ChristianStainedGlassSmall1
+  category: Nar'sic
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie2.png
+  prototype: SatanismStainedGlassSmall2
+
+- type: rcd
+  id: NarsieStainedGlassSmall3
+  parent: ChristianStainedGlassSmall1
+  category: Nar'sic
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/narsie3.png
+  prototype: SatanismStainedGlassSmall2
+
+- type: rcd
+  id: NarsieStainedGlassLarge
+  parent: ChristianStainedGlassSmall1
+  category: Nar'sic
+  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/narsie_large.png
+  prototype: NarsieStainedGlassLarge
+
+- type: rcd
+  id: RatvarStainedGlassSmall1
+  parent: ChristianStainedGlassSmall1
+  category: Rat'var
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar.png
+  prototype: RatvarStainedGlassSmall1
+
+- type: rcd
+  id: RatvarStainedGlassSmall2
+  parent: ChristianStainedGlassSmall1
+  category: Rat'var
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar2.png
+  prototype: RatvarStainedGlassSmall2
+
+- type: rcd
+  id: RatvarStainedGlassSmall3
+  parent: ChristianStainedGlassSmall1
+  category: Rat'var
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar3.png
+  prototype: RatvarStainedGlassSmall3
+
+- type: rcd
+  id: RatvarStainedGlassLarge
+  parent: ChristianStainedGlassSmall1
+  category: Rat'var
+  sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi/ratvar_large.png
+  prototype: RatvarStainedGlassLarge
