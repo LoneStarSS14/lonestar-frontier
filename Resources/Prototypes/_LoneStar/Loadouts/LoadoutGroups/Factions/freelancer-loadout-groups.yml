@@ -1,0 +1,314 @@
+#region Base Loadouts
+# Should contain all 'generic' things, anything job specific should subgroup these.
+# Direct Clothing
+- type: loadoutGroup
+  id: LSFreelancersFactionJumpsuit
+  minLimit: 1
+  loadouts:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+  - NFPirateClothingUniformJumpsuitPirateSlops
+  - NFPirateClothingUniformJumpsuitPirateLuffy
+  - FreelancerClothingBunnysuitPirate
+  subgroups:
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
+  fallbacks:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+- type: loadoutGroup
+  id: LSFreelancersFactionOuterClothing
+  minLimit: 0
+  loadouts:
+  - FreelancerClothingBunnyJacketPirate
+  subgroups:
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+- type: loadoutGroup
+  id: LSFreelancersFactionShoes
+  minLimit: 0
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+- type: loadoutGroup
+  id: LSFreelancersFactionGloves
+  minLimit: 0
+  subgroup:
+  - ContractorGloves
+- type: loadoutGroup
+  id: LSFreelancersFactionHead
+  minLimit: 0
+  loadouts:
+  - NFPirateClothingHeadBandBlack
+  - NFPirateClothingHeadBandBrown
+  - NFPirateClothingHeadBandGrey
+  - NFPirateClothingHeadBandRed
+  - NFPirateClothingHeadHatPirateTricord
+  - NFPirateClothingHeadHatPirateLuffy
+  - FreelancerClothingBunnyEarsPirate
+  subgroups:
+  - MercenaryHead
+  - PilotHead
+  - ContractorHead
+- type: loadoutGroup
+  id: LSFreelancersFactionMask
+  minLimit: 0
+  subgroups:
+  - ContractorFace
+- type: loadoutGroup
+  id: LSFreelancersFactionEyes
+  minLimit: 0
+  subgroups:
+  - ContractorGlasses
+- type: loadoutGroup
+  id: LSFreelancersFactionNeck
+  minLimit: 0
+  loadouts:
+  - FreelancerClothingBowtiePirate
+  subgroups:
+  - ContractorNeck
+# Storages
+- type: loadoutGroup
+  id: LSFreelancersFactionBackpack
+  minLimit: 0
+  subgropus:
+  - ContractorBackpack
+  fallbacks:
+  - ContractorClothingBackpack
+- type: loadoutGroup
+  id: LSFreelancersFactionBelt
+  minLimit: 0
+  subgroups:
+  - ContractorBelt
+- type: loadoutGroup
+  id: LSFreelancersFactionWallet
+  loadouts:
+  - ClothingWalletLeatherPirate
+  subgroups:
+  - ContractorWallet
+  fallbacks:
+  - ClothingWalletLeatherPirate
+# Factional Specific
+- type: loadoutGroup
+  id: LSFreelancersFactionEars
+  minLimit: 1
+  maxLimit: 1
+  subgroup:
+  - ContractorEars
+  fallbacks:
+  - ContractorClothingHeadsetGreyCommon
+# - type: loadoutGroup # Note; for now just use hardset PDAs. leader/combatant/resident.
+#   id: LSFreelancersFactionPDA
+- type: loadoutGroup
+  id: LSFreelancersFactionEncryptionKey
+  name: loadout-group-pirate-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  loadouts:
+  - EncryptionKeyFreelance
+  subgroups:
+  - ContractorEncryptionKey
+  fallbacks:
+  - EncryptionKeyFreelance
+- type: loadoutGroup
+  id: LSFreelancersFactionImplanter
+  name: loadout-group-contractor-implanter
+  minLimit: 0
+  maxLimit: 2
+  subgroups:
+  - ContractorImplanter
+  fallbacks:
+  - ContractorMedicalTrackingImplanter
+#endregion
+
+#region Combatant Additions # TODO: Make these subgroup the merc specific groups
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantJumpsuit
+  minLimit: 1
+  subgroups:
+  - LSFreelancersFactionJumpsuit
+  fallbacks:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantOuterClothing
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionOuterClothing
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantShoes
+  minLimit: 0
+  fallbacks:
+  - LSFreelancersFactionShoes
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantGloves
+  minLimit: 0
+  subgroup:
+  - LSFreelancersFactionGloves
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantHead
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionHead
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantMask
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionMask
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantEyes
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionEyes
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantNeck
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionNeck
+# Storages
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantBackpack
+  minLimit: 0
+  subgropus:
+  - LSFreelancersFactionBackpack
+  fallbacks:
+  - ContractorClothingBackpack
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantBelt
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionBelt
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantWallet
+  subgroups:
+  - LSFreelancersFactionWallet
+  fallbacks:
+  - ClothingWalletLeatherPirate
+# Factional Specific
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantEars
+  minLimit: 1
+  maxLimit: 1
+  subgroup:
+  - LSFreelancersFactionEars
+  fallbacks:
+  - ContractorClothingHeadsetGreyCommon
+# - type: loadoutGroup # Note; for now just use hardset PDAs. leader/combatant/resident.
+#   id: LSFreelancersCombatantFactionPDA
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantEncryptionKey
+  name: loadout-group-pirate-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  subgroups:
+  - LSFreelancersFactionEncryptionKey
+  fallbacks:
+  - EncryptionKeyFreelance
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantImplanter
+  name: loadout-group-contractor-implanter
+  minLimit: 0
+  maxLimit: 2
+  subgroups:
+  - LSFreelancersFactionImplanter
+  fallbacks:
+  - ContractorMedicalTrackingImplanter
+#endregion
+
+#region Master-at-Arms
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderJumpsuit
+  minLimit: 1
+  subgroups:
+  - LSFreelancersFactionCombatantJumpsuit
+  fallbacks:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderOuterClothing
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionCombatantOuterClothing
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderShoes
+  minLimit: 0
+  fallbacks:
+  - LSFreelancersFactionCombatantShoes
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderGloves
+  minLimit: 0
+  subgroup:
+  - LSFreelancersFactionCombatantGloves
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderHead
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionCombatantHead
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderMask
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionCombatantMask
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderEyes
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionCombatantEyes
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderNeck
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionCombatantNeck
+# Storages
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderBackpack
+  minLimit: 0
+  subgropus:
+  - LSFreelancersFactionCombatantBackpack
+  fallbacks:
+  - ContractorClothingBackpack
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderBelt
+  minLimit: 0
+  subgroups:
+  - LSFreelancersFactionCombatantBelt
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderWallet
+  subgroups:
+  - LSFreelancersFactionCombatantWallet
+  fallbacks:
+  - ClothingWalletLeatherPirate
+# Factional Specific
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderEars
+  minLimit: 1
+  maxLimit: 1
+  subgroup:
+  - LSFreelancersFactionCombatantEars
+  fallbacks:
+  - ContractorClothingHeadsetGreyCommon
+# - type: loadoutGroup # Note; for now just use hardset PDAs. leader/combatant/resident.
+#   id: LSFreelancersCombatantFactionPDA
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderEncryptionKey
+  name: loadout-group-pirate-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  subgroups:
+  - LSFreelancersFactionCombatantEncryptionKey
+  fallbacks:
+  - EncryptionKeyFreelance
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderImplanter
+  name: loadout-group-contractor-implanter
+  minLimit: 0
+  maxLimit: 2
+  subgroups:
+  - LSFreelancersFactionCombatantImplanter
+  fallbacks:
+  - ContractorMedicalTrackingImplanter
+#endregion
