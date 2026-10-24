@@ -1,66 +1,68 @@
-- type: job
-  id: PublicAffairsLiaison
-  name: job-name-pal
-  description: job-description-public-affairs-liaison
-  playTimeTracker: JobPublicAffairsLiaison
-  requirements: # Coyote: editted the playtime required for Sergeant
-  - !type:OverallPlaytimeRequirement
-    time: 108000
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 28800 # 8 hours
-  startingGear: PublicAffairGear
-  icon: "JobIconPublicAffairsLiaison"
-  supervisors: job-supervisors-cadet
-  consoleAdjustable: false
-  canBeAntag: false
-  weight: 105
-  displayWeight: 16
-  access: # Access was editted by Coyote
-  - HeadOfSecurity
-  - Command
-  - Armory
-  - Sergeant
-  - Bailiff
-  - Brigmedic
-  accessGroups:
-  - GeneralNfsdAccess
-  special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant ]
-  - !type:AddComponentSpecial
-    components:
-    - type: CommandStaff
-    - type: IsNfsd
-      worth: 2
-  - !type:GiveItemOnHolidaySpecial
-    holiday: FrontierBirthday
-    prototype: FrontierBirthdayGift
+## LoneStar, moved to _CS/Roles/Jobs/LSRD/clerk.yml
 
-- type: startingGear
-  id: PublicAffairGear
-  equipment:
-    pocket1: NFHyperlinkBookSpaceLaw
-    pocket2: BoxFolderClipboardPal
-  storage:
-    back:
-    - Flash
-    - BoxFolderPalBrown
-    - BoxFolderNfsdForms
-    - RubberStampPal
-    - BaseSecurityUplinkRadioOfficer
-    - FrontierUplinkCoin5 # Coyote: added 5 FUCs to Sergeants
-    - ShipVoucherNfsdSergeant
-    - EncryptionKeyCommand
+# - type: job
+#   id: PublicAffairsLiaison
+#   name: job-name-pal
+#   description: job-description-public-affairs-liaison
+#   playTimeTracker: JobPublicAffairsLiaison
+#   requirements: # Coyote: editted the playtime required for Sergeant
+#   - !type:OverallPlaytimeRequirement
+#     time: 108000
+#   - !type:DepartmentTimeRequirement
+#     department: Security
+#     time: 28800 # 8 hours
+#   startingGear: PublicAffairGear
+#   icon: "JobIconPublicAffairsLiaison"
+#   supervisors: job-supervisors-cadet
+#   consoleAdjustable: false
+#   canBeAntag: false
+#   weight: 105
+#   displayWeight: 16
+#   access: # Access was editted by Coyote
+#   - HeadOfSecurity
+#   - Command
+#   - Armory
+#   - Sergeant
+#   - Bailiff
+#   - Brigmedic
+#   accessGroups:
+#   - GeneralNfsdAccess
+#   special:
+#   - !type:AddImplantSpecial
+#     implants: [ MindShieldImplant, TrackingImplant ]
+#   - !type:AddComponentSpecial
+#     components:
+#     - type: CommandStaff
+#     - type: IsNfsd
+#       worth: 2
+#   - !type:GiveItemOnHolidaySpecial
+#     holiday: FrontierBirthday
+#     prototype: FrontierBirthdayGift
 
-- type: chameleonOutfit
-  id: PublicAffairsLiaisonChameleonOutfit
-  job: PublicAffairsLiaison
-  hasMindShield: true
-  equipment:
-    head: ClothingHeadHatBowlerHat
-    eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskBreath
-    neck: ClothingNeckLawyerbadge
-    outerClothing: ClothingOuterWinterColorBlack
-    gloves: ClothingHandsGlovesColorBlack
+# - type: startingGear
+#   id: PublicAffairGear
+#   equipment:
+#     pocket1: NFHyperlinkBookSpaceLaw
+#     pocket2: BoxFolderClipboardPal
+#   storage:
+#     back:
+#     - Flash
+#     - BoxFolderPalBrown
+#     - BoxFolderNfsdForms
+#     - RubberStampPal
+#     - BaseSecurityUplinkRadioOfficer
+#     - FrontierUplinkCoin5 # Coyote: added 5 FUCs to Sergeants
+#     - ShipVoucherNfsdSergeant
+#     - EncryptionKeyCommand
+
+# - type: chameleonOutfit
+#   id: PublicAffairsLiaisonChameleonOutfit
+#   job: PublicAffairsLiaison
+#   hasMindShield: true
+#   equipment:
+#     head: ClothingHeadHatBowlerHat
+#     eyes: ClothingEyesGlassesCheapSunglasses
+#     mask: ClothingMaskBreath
+#     neck: ClothingNeckLawyerbadge
+#     outerClothing: ClothingOuterWinterColorBlack
+#     gloves: ClothingHandsGlovesColorBlack
