@@ -1,35 +1,36 @@
-# The job itself
-# Freelancer + Medic + Crime
 - type: job
-  id: RipperDoc
-  name: job-name-ripperdoc
-  description: job-description-ripperdoc
-  playTimeTracker: JobRipperDoc
+  id: LSRipperDoc
+  name: job-name-ls-ripper-doc
+  description: job-description-ls-ripper-doc
+  supervisors: job-supervisors-ls-master-at-arms
+  playTimeTracker: JobLSRipperDoc
   whitelisted: true
-  startingGear: RipperGear
-  alwaysUseSpawner: true
-  hideConsoleVisibility: true
-  canBeAntag: true
-  consoleAdjustable: false
+  weight: 20
+  displayWeight: 20
+  # TODO section
+  startingGear: LSRipperDocGear
   icon: "JobIconMedicalIntern"
-  supervisors: job-supervisors-freebooters-union
-  weight: 40
-  displayWeight: 3
-  setPreference: true
+  # Frontier's fields
+  hideConsoleVisibility: true
   newPlayerMessage: false
+  # Uncertain if needed
+  alwaysUseSpawner: true
+  consoleAdjustable: false
+  # Common v
   access:
   - Pirate
-  - BlackMarket
   accessGroups:
   - GeneralAccess
   special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
   - !type:AddComponentSpecial
     components:
-#    - type: AutoPirate
-    - type: SpecialSectorStationRecord # must be given on spawn
-      recordGeneration: FalseRecord
-    - type: DisableSuitSensors
     - type: IsPirate
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI
   - !type:AddRpiJobModifierSpecial
     modifiersToAdd:
     - rpiJobModifierPirate
@@ -39,21 +40,16 @@
   - !type:RpiChatJudgementModifierSpecial
     modsToAdd:
     - rpiChatJudgementModifierNurse
-  - !type:AddImplantSpecial
-    implants: [ FreelanceTrackingImplant, EmpImplant ]
-  - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
-    holiday: FrontierBirthday
-    prototype: FrontierBirthdayGift
 
 #play time tracker
 - type: playTimeTracker
-  id: JobRipperDoc
+  id: JobLSRipperDoc
 
 - type: entity
-  id: SpawnPointRipper
+  id: SpawnPointLSRipperDoc
   parent: SpawnPointJobBase
-  name: ripper spawn point
-  suffix: Frontier
+  name: ripper doc spawn point
+  suffix: LoneStar
   components:
   - type: SpawnPoint
     job_id: RipperDoc
@@ -62,45 +58,33 @@
     state: banner-red
 
 - type: startingGear
-  id: RipperGear
+  id: LSRipperDocGear
   equipment:
     pocket1: BasePirateUplinkPirateCrew
-  storage:
-    back:
-    - ContrabandAppraisalToolPirate
-
-- type: chameleonOutfit
-  id: RipperDocChameleonOutfit
-  job: RipperDoc
-  equipment:
-    head: ClothingHeadNurseHat
-    eyes: ClothingEyesHudMedical
-    mask: ClothingMaskSterile
-    neck: ClothingNeckStethoscope
-    outerClothing: ClothingOuterCoatLab
-    gloves: ClothingHandsGlovesLatex
+    pocket2: ContrabandAppraisalToolPirate
 
 - type: roleLoadout
-  id: JobRipperDoc
+  id: JobLSRipperDoc
+  canCustomizeName: true
   groups:
-  - FreelancerFactionHead # LoneStar
-  - FreelancerFactionNeck # LoneStar
-  - FreelancerFactionJumpsuit # LoneStar
-  - MercenaryGloves
-  - PilotBackpack
-  - FreelancerFactionOuterClothing # LoneStar
-  - MercenaryShoes
-  - PilotFace
-  - MercenaryGlasses
-  - MercenaryBelt
-  - PilotEars
-  - FreelancerEncryptionKey
+  - LSFreelancersFactionJumpsuit
+  - LSFreelancersFactionOuterClothing
+  - LSFreelancersFactionShoes
+  - LSFreelancersFactionGloves
+  - LSFreelancersFactionHead
+  - LSFreelancersFactionMask
+  - LSFreelancersFactionEyes
+  - LSFreelancersFactionNeck
+  - LSFreelancersFactionEars
+  - LSFreelancersFactionBackpack
+  - LSFreelancersFactionBelt
+  - LSFreelancersFactionWallet
+  - LSFreelancersFactionEncryptionKey
+  - LSFreelancersFactionImplanter
+  # Common v
   - ContractorBoxSurvival
-  - SmugglerPDA
-  - ContractorWallet
   - ContractorCartridge
   - ContractorBackpackItems
   - ContractorHandItems
   - ContractorInstruments
   - NFSpeciesSpecific
-  canCustomizeName: true # pseudonym?
