@@ -227,7 +227,7 @@
   id: AltarSpaceChristian
   name: rcd-component-altars
   category: Altars
-  sprite: _Everdream/Interface/Radial/RCD/chaos.png
+  sprite: _Everdream/Interface/Radial/RCD/space-christian.png
   prototype: AltarSpaceChristian
   mode: ConstructObject
   cost: 6

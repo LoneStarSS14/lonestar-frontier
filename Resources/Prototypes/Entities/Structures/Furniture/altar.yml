@@ -72,7 +72,7 @@
   - type: RCDDeconstructable # LoneStar
     cost: 5 # LoneStar
     delay: 3 # LoneStar
-    fx: EffectRCDDeconstruct3 # LoneStar
+    fx: EffectRCDDeconstruct4 # LoneStar
 
 - type: entity
   id: AltarChaos
