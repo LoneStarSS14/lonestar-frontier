@@ -12,6 +12,7 @@
   price: 20000 #29313 1.25 65954.25
   category: Small
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_CS/Shuttles/BlackMarket/Escort/hitchhiker.yml
   guidebookPage: Null
   class:
