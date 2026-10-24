@@ -10,10 +10,10 @@
   sprite: _Everdream/Interface/Radial/RCD/christian.png
   prototype: ChristianStainedGlassSmall1
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 
 - type: rcd
@@ -23,10 +23,10 @@
   sprite: _Everdream/Interface/Radial/RCD/christian2.png
   prototype: ChristianStainedGlassSmall2
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: ChristianStainedGlassSmall2Alt
@@ -35,10 +35,22 @@
   sprite: _Everdream/Interface/Radial/RCD/christian2alt.png
   prototype: ChristianStainedGlassSmall2Alt
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: OracleStainedGlassLarge
+  name: rcd-component-stainedglass
+  category: StainedGlass
+  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/oracle.png
+  prototype: OracleStainedGlassLarge
+  mode: ConstructObject
+  cost: 9
+  delay: 3
+  rotation: User
+  fx: EffectRCDConstruct3
 
 - type: rcd
   id: DruidismStainedGlassSmall1
@@ -47,10 +59,10 @@
   sprite: _Everdream/Interface/Radial/RCD/druidism.png
   prototype: DruidismStainedGlassSmall1
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: DruidismStainedGlassSmall2
@@ -59,143 +71,226 @@
   sprite: _Everdream/Interface/Radial/RCD/druidism2.png
   prototype: DruidismStainedGlassSmall2
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: SatanismStainedGlassSmall1
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/satanism.png
   prototype: SatanismStainedGlassSmall1
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: SatanismStainedGlassSmall2
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/satanism2.png
   prototype: SatanismStainedGlassSmall2
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: PinkCatStainedGlassSmall
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/pinkcat.png
   prototype: PinkCatStainedGlassSmall
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
-
-- type: rcd
-  id: OracleStainedGlassLarge
-  name: rcd-component-stainedglass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/oracle.png
-  prototype: OracleStainedGlassLarge
-  mode: ConstructObject
-  cost: 1
-  delay: 1
-  rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: NarsieStainedGlassSmall1
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/narsie.png
   prototype: NarsieStainedGlassSmall1
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: NarsieStainedGlassSmall2
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/narsie2.png
   prototype: SatanismStainedGlassSmall2
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: NarsieStainedGlassSmall3
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/narsie3.png
   prototype: SatanismStainedGlassSmall2
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: NarsieStainedGlassLarge
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/narsie_large.png
   prototype: NarsieStainedGlassLarge
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 9
+  delay: 3
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct3
 
 - type: rcd
   id: RatvarStainedGlassSmall1
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/ratvar.png
   prototype: RatvarStainedGlassSmall1
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: RatvarStainedGlassSmall2
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/ratvar2.png
   prototype: RatvarStainedGlassSmall2
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct3
 
 - type: rcd
   id: RatvarStainedGlassSmall3
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/ratvar3.png
   prototype: RatvarStainedGlassSmall3
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 3
+  delay: 2
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: RatvarStainedGlassLarge
   name: rcd-component-stainedglass
+  category: StainedGlass
   sprite: _Everdream/Interface/Radial/RCD/ratvar_large.png
   prototype: RatvarStainedGlassLarge
   mode: ConstructObject
-  cost: 1
-  delay: 1
+  cost: 9
+  delay: 3
   rotation: User
-  fx: EffectRCDConstruct1
+  fx: EffectRCDConstruct3
 
 
 # Altars
 
+- type: rcd
+  id: ChaosAltar
+  name: rcd-component-altars
+  category: Altars
+  sprite: _Everdream/Interface/Radial/RCD/chaos.png
+  prototype: AltarChaos
+  mode: ConstructObject
+  cost: 6
+  delay: 3
+  rotation: Fixed
+  fx: EffectRCDConstruct3
+
+- type: rcd
+  id: AltarSpaceChristian
+  name: rcd-component-altars
+  category: Altars
+  sprite: _Everdream/Interface/Radial/RCD/chaos.png
+  prototype: AltarSpaceChristian
+  mode: ConstructObject
+  cost: 6
+  delay: 3
+  rotation: Fixed
+  fx: EffectRCDConstruct3
+
+- type: rcd
+  id: AltarDruid
+  name: rcd-component-altars
+  category: Altars
+  sprite: _Everdream/Interface/Radial/RCD/druid.png
+  prototype: AltarDruid
+  mode: ConstructObject
+  cost: 6
+  delay: 3
+  rotation: Fixed
+  fx: EffectRCDConstruct3
+
+- type: rcd
+  id: AltarNanotrasen
+  name: rcd-component-altars
+  category: Altars
+  sprite: _Everdream/Interface/Radial/RCD/nanotrasen.png
+  prototype: AltarNanotrasen
+  mode: ConstructObject
+  cost: 6
+  delay: 2
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: AltarSatana
+  name: rcd-component-altars
+  category: Altars
+  sprite: _Everdream/Interface/Radial/RCD/satana.png
+  prototype: AltarSatana
+  mode: ConstructObject
+  cost: 6
+  delay: 2
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: AltarTechnology
+  name: rcd-component-altars
+  category: Altars
+  sprite: _Everdream/Interface/Radial/RCD/technology.png
+  prototype: AltarTechnology
+  mode: ConstructObject
+  cost: 6
+  delay: 2
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: AltarToolbox
+  name: rcd-component-altars
+  category: Altars
+  sprite: _Everdream/Interface/Radial/RCD/toolbox.png
+  prototype: AltarToolbox
+  mode: ConstructObject
+  cost: 6
+  delay: 2
+  rotation: Fixed
+  fx: EffectRCDConstruct2

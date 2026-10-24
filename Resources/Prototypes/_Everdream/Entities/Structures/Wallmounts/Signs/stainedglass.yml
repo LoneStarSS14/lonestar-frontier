@@ -40,6 +40,10 @@
     energy: 5
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
+  - type: RCDDeconstructable
+    cost: 3
+    delay: 2
+    fx: EffectRCDDeconstruct2
 
 # Generic
 - type: entity

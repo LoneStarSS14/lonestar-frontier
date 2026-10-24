@@ -6,6 +6,8 @@
   components:
   - type: RCD
     availablePrototypes:
+    - Deconstruct
+    # Stained Glass
     - ChristianStainedGlassSmall1
     - ChristianStainedGlassSmall2
     - ChristianStainedGlassSmall2Alt
@@ -23,6 +25,14 @@
     - RatvarStainedGlassSmall2
     - RatvarStainedGlassSmall3
     - RatvarStainedGlassLarge
+    # Altars
+    - ChaosAltar
+    - AltarSpaceChristian
+    - AltarDruid
+    - AltarNanotrasen
+    - AltarSatana
+    - AltarTechnology
+    - AltarToolbox
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite
