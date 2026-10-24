@@ -33,6 +33,8 @@
     - AltarSatana
     - AltarTechnology
     - AltarToolbox
+    # Water
+    - FloorWaterEntity
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite

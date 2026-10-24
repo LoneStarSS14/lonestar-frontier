@@ -63,7 +63,7 @@
   - type: TileEntityEffect
     effects:
     - !type:ExtinguishReaction
-  - type: RCDDeconstructable
-    cost: 3
-    delay: 2
-    fx: EffectRCDDeconstruct2
+  - type: RCDDeconstructable # LoneStar
+    cost: 3 # LoneStar
+    delay: 2 # LoneStar
+    fx: EffectRCDDeconstruct2 # LoneStar
