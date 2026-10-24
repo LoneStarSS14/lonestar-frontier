@@ -8,11 +8,11 @@
   },
   "states": [
       {
-          "name": "regular-water",
+          "name": "waterfall",
           "delays": [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]]
       },
       {
-          "name": "pool-water",
+          "name": "waterfallshine",
           "delays": [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]]
       }
   ]
