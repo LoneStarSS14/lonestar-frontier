@@ -12,6 +12,7 @@
   price: 14750 #appraised 13421, LL0 10% markup.
   category: Small
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_CS/Shuttles/BlackMarket/Escort/glizzy.yml
   guidebookPage: ShipyardGlizzy
   class:
