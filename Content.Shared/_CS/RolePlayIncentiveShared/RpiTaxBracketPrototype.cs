@@ -105,7 +105,7 @@ public sealed partial class RpiJournalismData
     public RpiJournalismPayResult GetPaypig(bool isJournal, int charCount, TimeSpan lastArticleTime)
     {
         var basePay = isJournal ? BaseFlatPayout : BaseNonJournalistFlatPayout;
-        var pay = (double) basePay;
+        var pay = (double)basePay;
         if (isJournal)
         {
             if (charCount > CharCountDivisor)
@@ -120,23 +120,23 @@ public sealed partial class RpiJournalismData
         }
         var cooldownMult = CooldownMult(lastArticleTime);
         pay *= cooldownMult;
-        var adjustedBasePay = (float) BaseFlatPayout;
+        var adjustedBasePay = (float)BaseFlatPayout;
         adjustedBasePay *= cooldownMult;
-        basePay = (int) Math.Ceiling(adjustedBasePay);
-        var totalPay = (int) Math.Ceiling(pay);
+        basePay = (int)Math.Ceiling(adjustedBasePay);
+        var totalPay = (int)Math.Ceiling(pay);
         var minsTillCooled = GetTimeWhenFullyCooledDown(lastArticleTime).TotalMinutes;
         if (minsTillCooled < 0)
             minsTillCooled = 0;
         // cooldown mult is the resulting percent of their pay they are getting, after cooldown penalties.
         // 0.1 means they are getting 90% less pay.
-        var cooldownMultPercent = 100 - (int) Math.Ceiling(cooldownMult * 100);
+        var cooldownMultPercent = 100 - (int)Math.Ceiling(cooldownMult * 100);
         return new RpiJournalismPayResult(
             isJournal,
             basePay,
             totalPay,
             cooldownMult,
             cooldownMultPercent,
-            (int) Math.Ceiling(minsTillCooled));
+            (int)Math.Ceiling(minsTillCooled));
     }
 
     private float CooldownMult(TimeSpan lastArticleTime)
@@ -161,7 +161,7 @@ public sealed partial class RpiJournalismData
 
         // interpolate from CooldownPenalty -> 1.0
         var mulTout = CooldownPenalty + (1.0 - CooldownPenalty) * eased;
-        return (float) mulTout;
+        return (float)mulTout;
     }
 
     private TimeSpan GetTimeWhenFullyCooledDown(TimeSpan lastArticleTime)

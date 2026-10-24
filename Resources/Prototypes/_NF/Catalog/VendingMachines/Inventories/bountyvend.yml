@@ -81,6 +81,8 @@
 # Goofy detective stuff
     ClothingHeadHatDetGadget: 1
     ClothingEyesGlassesNoir: 1
+# ToelessJackboots - LoneStar
+    ClothingShoesToelessJackboots: 4294967295
 
 - type: vendingMachineInventory
   id: BountyVendPOIInventory
@@ -155,3 +157,5 @@
 # Goofy detective stuff
     ClothingHeadHatDetGadget: 4294967295
     ClothingEyesGlassesNoir: 4294967295
+# ToelessJackboots - LoneStar
+    ClothingShoesToelessJackboots: 4294967295

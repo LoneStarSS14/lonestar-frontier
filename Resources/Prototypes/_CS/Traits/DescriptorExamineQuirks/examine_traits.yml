@@ -1,0 +1,296 @@
+
+- type: trait
+  id: DescriptorExamineIcy
+  name: trait-descriptor-icy-name
+  description: trait-descriptor-icy-desc
+  category: Examine
+  cost: 0
+  descriptorExamineProto: NoErp
+
+- type: trait
+  id: DescriptorExamineLonely
+  name: trait-descriptor-lonely-name
+  description: trait-descriptor-lonely-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Lonely
+
+- type: trait
+  id: DescriptorExamineShy
+  name: trait-descriptor-shy-name
+  description: trait-descriptor-shy-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Shy
+
+- type: trait
+  id: DescriptorExamineFriendly
+  name: trait-descriptor-friendly-name
+  description: trait-descriptor-friendly-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Friendly
+
+- type: trait
+  id: DescriptorExamineCuddly
+  name: trait-descriptor-cuddly-name
+  description: trait-descriptor-cuddly-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Cuddly
+
+- type: trait
+  id: DescriptorExamineMelancholic
+  name: trait-descriptor-melancholic-name
+  description: trait-descriptor-melancholic-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Melancholic
+
+- type: trait
+  id: DescriptorExamineRuffled
+  name: trait-descriptor-ruffled-name
+  description: trait-descriptor-ruffled-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Ruffled
+
+- type: trait
+  id: DescriptorExamineTired
+  name: trait-descriptor-tired-name
+  description: trait-descriptor-tired-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Tired
+
+- type: trait
+  id: DescriptorExamineIndifferent
+  name: trait-descriptor-indifferent-name
+  description: trait-descriptor-indifferent-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Indifferent
+
+- type: trait
+  id: DescriptorExamineAnxious
+  name: trait-descriptor-anxious-name
+  description: trait-descriptor-anxious-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Anxious
+
+- type: trait
+  id: DescriptorExamineBratty
+  name: trait-descriptor-bratty-name
+  description: trait-descriptor-bratty-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Bratty
+
+- type: trait
+  id: DescriptorExamineGregarious
+  name: trait-descriptor-gregarious-name
+  description: trait-descriptor-gregarious-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Gregarious
+
+- type: trait
+  id: DescriptorExamineFlirty
+  name: trait-descriptor-flirty-name
+  description: trait-descriptor-flirty-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Flirty
+
+- type: trait
+  id: DescriptorExamineDistracted
+  name: trait-descriptor-distracted-name
+  description: trait-descriptor-distracted-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Distracted
+
+- type: trait
+  id: DescriptorExamineTrustworthy
+  name: trait-descriptor-trustworthy-name
+  description: trait-descriptor-trustworthy-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Trustworthy
+
+- type: trait
+  id: DescriptorExamineWarm
+  name: trait-descriptor-warm-name
+  description: trait-descriptor-warm-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Warm
+
+- type: trait
+  id: DescriptorExamineConfident
+  name: trait-descriptor-confident-name
+  description: trait-descriptor-confident-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Confident
+
+- type: trait
+  id: DescriptorExamineForward
+  name: trait-descriptor-forward-name
+  description: trait-descriptor-forward-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Forward
+
+- type: trait
+  id: DescriptorExamineDorky
+  name: trait-descriptor-dorky-name
+  description: trait-descriptor-dorky-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Dorky
+
+- type: trait
+  id: DescriptorExamineDopey
+  name: trait-descriptor-dopey-name
+  description: trait-descriptor-dopey-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Dopey
+
+- type: trait
+  id: DescriptorExamineeasygoing
+  name: trait-descriptor-easygoing-name
+  description: trait-descriptor-easygoing-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Easygoing
+
+- type: trait
+  id: DescriptorExamineinnocent
+  name: trait-descriptor-innocent-name
+  description: trait-descriptor-innocent-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Innocent
+
+- type: trait
+  id: DescriptorExamineflighty
+  name: trait-descriptor-flighty-name
+  description: trait-descriptor-flighty-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Flighty
+
+- type: trait
+  id: DescriptorExaminemature
+  name: trait-descriptor-mature-name
+  description: trait-descriptor-mature-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Mature
+
+- type: trait
+  id: DescriptorExaminesmart
+  name: trait-descriptor-smart-name
+  description: trait-descriptor-smart-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Smart
+
+- type: trait
+  id: DescriptorExaminecurious
+  name: trait-descriptor-curious-name
+  description: trait-descriptor-curious-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Curious
+
+- type: trait
+  id: DescriptorExamineeager
+  name: trait-descriptor-eager-name
+  description: trait-descriptor-eager-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Eager
+
+- type: trait
+  id: DescriptorExamineaggressive
+  name: trait-descriptor-aggressive-name
+  description: trait-descriptor-aggressive-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Aggressive
+
+- type: trait
+  id: DescriptorExamineRebellious
+  name: trait-descriptor-rebellious-name
+  description: trait-descriptor-rebellious-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Rebellious
+
+- type: trait
+  id: DescriptorExamineRelaxed
+  name: trait-descriptor-relaxed-name
+  description: trait-descriptor-relaxed-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Relaxed
+
+- type: trait
+  id: DescriptorExamineLazy
+  name: trait-descriptor-lazy-name
+  description: trait-descriptor-lazy-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Lazy
+
+- type: trait
+  id: DescriptorExamineNaive
+  name: trait-descriptor-naive-name
+  description: trait-descriptor-naive-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Naive
+
+- type: trait
+  id: DescriptorExamineSilly
+  name: trait-descriptor-silly-name
+  description: trait-descriptor-silly-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Silly
+
+- type: trait
+  id: DescriptorExamineGentle
+  name: trait-descriptor-gentle-name
+  description: trait-descriptor-gentle-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Gentle
+
+- type: trait
+  id: DescriptorExamineTimid
+  name: trait-descriptor-timid-name
+  description: trait-descriptor-timid-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Timid
+
+- type: trait
+  id: DescriptorExamineCalm
+  name: trait-descriptor-calm-name
+  description: trait-descriptor-calm-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Calm
+
+- type: trait
+  id: DescriptorExamineModest
+  name: trait-descriptor-modest-name
+  description: trait-descriptor-modest-desc
+  category: Temperament
+  cost: 1
+  descriptorExamineProto: Modest

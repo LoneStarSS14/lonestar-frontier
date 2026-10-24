@@ -18,7 +18,7 @@ public enum RpiActionType : byte
     Pilot,
     Librarian,
     Chaplain,
-    Horny,
+    Subtle,
     StationPrincess,
     Combat,
 }

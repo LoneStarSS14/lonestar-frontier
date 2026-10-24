@@ -1,5 +1,5 @@
 using Content.Shared._Floof.Examine;
-using Content.Shared._CS.HornyQuirks;
+using Content.Shared._CS.DescriptorQuirks;
 using Robust.Shared.Prototypes;
 
 
@@ -10,8 +10,8 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
-    private const string InHeatProtoId = "hornyExamineInHeat";
-    private const string InRutProtoId = "hornyExamineInRut";
+    private const string InHeatProtoId = "InHeat";
+    private const string InRutProtoId = "InRut";
 
     public override void Initialize()
     {
@@ -33,24 +33,24 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
         comp.InHeatEnabled = msg.InHeatEnabled;
         comp.InRutEnabled = msg.InRutEnabled;
 
-        var hornyComp = EnsureComp<HornyExamineQuirksComponent>(target);
-        UpdateShowable(hornyComp, InHeatProtoId, comp.InHeatEnabled);
-        UpdateShowable(hornyComp, InRutProtoId, comp.InRutEnabled);
+        var descriptorComp = EnsureComp<DescriptorExamineQuirksComponent>(target);
+        UpdateShowable(descriptorComp, InHeatProtoId, comp.InHeatEnabled);
+        UpdateShowable(descriptorComp, InRutProtoId, comp.InRutEnabled);
 
         Dirty(target, comp);
     }
 
-    private void UpdateShowable(HornyExamineQuirksComponent hornyComp, string prototypeId, bool enabled)
+    private void UpdateShowable(DescriptorExamineQuirksComponent descriptorComp, string prototypeId, bool enabled)
     {
-        if (!_prototypeManager.TryIndex<HornyExaminePrototype>(prototypeId, out var proto))
+        if (!_prototypeManager.TryIndex<DescriptorExaminePrototype>(prototypeId, out var proto))
             return;
 
         if (enabled)
         {
-            hornyComp.AddHornyExamineTrait(proto, _prototypeManager);
+            descriptorComp.AddDescriptorExamineTrait(proto, _prototypeManager);
             return;
         }
 
-        hornyComp.HornyShowables.Remove(proto.ID);
+        descriptorComp.DescriptorShowables.Remove(proto.ID);
     }
 }

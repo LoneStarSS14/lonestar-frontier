@@ -343,7 +343,7 @@ namespace Content.Shared.Examine
         /// </remarks>
         private readonly Dictionary<string, int> _groupPriorities = new()
         {
-            {"DanIsCool", 100},
+            {"ExtraExamineDetails", 100},
         };
 
         public ExaminedEvent(FormattedMessage message, EntityUid examined, EntityUid examiner, bool isInDetailsRange, bool hasDescription)
@@ -619,4 +619,3 @@ namespace Content.Shared.Examine
         }
     }
 }
-

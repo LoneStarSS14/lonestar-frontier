@@ -1,0 +1,222 @@
+- type: descriptorExamine
+  id: InHeat
+  neededTag: InRut
+  textToShow: "descriptor-examine-in-heat"
+  selfExamine: false
+
+- type: descriptorExamine
+  id: InRut
+  neededTag: InHeat
+  textToShow: "descriptor-examine-in-rut"
+  selfExamine: false
+
+- type: descriptorExamine
+  id: NoErp
+  textToShow: "descriptor-examine-no-erp"
+  suppressTags:
+  - InRut
+  - InHeat
+  selfExamine: false
+
+- type: descriptorExamine
+  id: Overweight
+  neededTag: Overweight
+  textToShow: "descriptor-examine-overweight"
+  selfExamine: false
+
+- type: descriptorExamine
+  id: Lonely
+  textToShow: "descriptor-examine-lonely"
+
+- type: descriptorExamine
+  id: Shy
+  textToShow: "descriptor-examine-shy"
+
+- type: descriptorExamine
+  id: Friendly
+  textToShow: "descriptor-examine-friendly"
+
+- type: descriptorExamine
+  id: Cuddly
+  textToShow: "descriptor-examine-cuddly"
+
+- type: descriptorExamine
+  id: Melancholic
+  textToShow: "descriptor-examine-melancholic"
+
+- type: descriptorExamine
+  id: Ruffled
+  textToShow: "descriptor-examine-ruffled"
+
+- type: descriptorExamine
+  id: Tired
+  textToShow: "descriptor-examine-tired"
+
+- type: descriptorExamine
+  id: Indifferent
+  textToShow: "descriptor-examine-indifferent"
+
+- type: descriptorExamine
+  id: Anxious
+  textToShow: "descriptor-examine-anxious"
+
+- type: descriptorExamine
+  id: Bratty
+  textToShow: "descriptor-examine-bratty"
+
+- type: descriptorExamine
+  id: Gregarious
+  textToShow: "descriptor-examine-gregarious"
+
+- type: descriptorExamine
+  id: Flirty
+  textToShow: "descriptor-examine-flirty"
+
+- type: descriptorExamine
+  id: Distracted
+  textToShow: "descriptor-examine-distracted"
+
+- type: descriptorExamine
+  id: Trustworthy
+  textToShow: "descriptor-examine-trustworthy"
+
+- type: descriptorExamine
+  id: Warm
+  textToShow: "descriptor-examine-warm"
+
+- type: descriptorExamine
+  id: Confident
+  textToShow: "descriptor-examine-confident"
+
+- type: descriptorExamine
+  id: Forward
+  textToShow: "descriptor-examine-forward"
+
+- type: descriptorExamine
+  id: Dorky
+  textToShow: "descriptor-examine-dorky"
+
+- type: descriptorExamine
+  id: Dopey
+  textToShow: "descriptor-examine-dopey"
+
+- type: descriptorExamine
+  id: Easygoing
+  textToShow: "descriptor-examine-easygoing"
+
+- type: descriptorExamine
+  id: Innocent
+  textToShow: "descriptor-examine-innocent"
+
+- type: descriptorExamine
+  id: Flighty
+  textToShow: "descriptor-examine-flighty"
+
+- type: descriptorExamine
+  id: Mature
+  textToShow: "descriptor-examine-mature"
+
+- type: descriptorExamine
+  id: Smart
+  textToShow: "descriptor-examine-smart"
+
+- type: descriptorExamine
+  id: Curious
+  textToShow: "descriptor-examine-curious"
+
+- type: descriptorExamine
+  id: Eager
+  textToShow: "descriptor-examine-eager"
+
+- type: descriptorExamine
+  id: Aggressive
+  textToShow: "descriptor-examine-aggressive"
+
+- type: descriptorExamine
+  id: Rebellious
+  textToShow: "descriptor-examine-rebellious"
+
+- type: descriptorExamine
+  id: Relaxed
+  textToShow: "descriptor-examine-relaxed"
+
+- type: descriptorExamine
+  id: Lazy
+  textToShow: "descriptor-examine-lazy"
+
+- type: descriptorExamine
+  id: Naive
+  textToShow: "descriptor-examine-naive"
+
+- type: descriptorExamine
+  id: Silly
+  textToShow: "descriptor-examine-silly"
+
+- type: descriptorExamine
+  id: Gentle
+  textToShow: "descriptor-examine-gentle"
+
+- type: descriptorExamine
+  id: Timid
+  textToShow: "descriptor-examine-timid"
+
+- type: descriptorExamine
+  id: Calm
+  textToShow: "descriptor-examine-calm"
+
+- type: descriptorExamine
+  id: Modest
+  textToShow: "descriptor-examine-modest"
+
+- type: descriptorExamine
+  id: Morphable
+  textToShow: "descriptor-examine-morphable"
+
+- type: descriptorExamine
+  id: Swimmer
+  textToShow: "descriptor-examine-swimmer"
+
+- type: descriptorExamine
+  id: Androgynous
+  textToShow: "descriptor-examine-androgynous"
+
+- type: descriptorExamine
+  id: MasculinePresenting
+  textToShow: "descriptor-examine-masculinepresenting"
+
+- type: descriptorExamine
+  id: FemininePresenting
+  textToShow: "descriptor-examine-femininepresenting"
+
+- type: descriptorExamine
+  id: Fluffy
+  textToShow: "descriptor-examine-fluffy"
+
+- type: descriptorExamine
+  id: ExtremelyFluffy
+  textToShow: "descriptor-examine-extremelyfluffy"
+
+- type: descriptorExamine
+  id: Jacked
+  textToShow: "descriptor-examine-jacked"
+
+- type: descriptorExamine
+  id: Shortstack
+  textToShow: "descriptor-examine-shortstack"
+
+- type: descriptorExamine
+  id: Buttsum
+  textToShow: "descriptor-examine-buttsum"
+
+- type: descriptorExamine
+  id: ExtremelyButtsum
+  textToShow: "descriptor-examine-extremelybuttsum"
+
+- type: descriptorExamine
+  id: Flatchested
+  textToShow: "descriptor-examine-flatchested"
+
+- type: descriptorExamine
+  id: Flatassed
+  textToShow: "descriptor-examine-flatassed"
+

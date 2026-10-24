@@ -28,7 +28,7 @@ public sealed class ScentSystem : EntitySystem
     [Dependency] private readonly SharedConsentSystem _consent = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
 
-    public TimeSpan BaseSmellCooldown = TimeSpan.FromSeconds(5);
+    public TimeSpan BaseSmellCooldown = TimeSpan.FromSeconds(12);
     public TimeSpan NextSmellDetectionTime = TimeSpan.Zero;
 
     /// <inheritdoc/>
@@ -195,14 +195,14 @@ public sealed class ScentSystem : EntitySystem
                 continue; // invalid scent proto
             if (proto.ScentsExamine.Count == 0)
                 continue;
-            if (!LewdOkay(args.Examiner, proto.Lewd))
+            if (!ConsentEnabled(args.Examiner, proto.ConsentToggled))
                 continue;
             var smellColor = "slateblue";
-            if (proto.Stinky && proto.Lewd)
+            if (proto.Stinky && proto.ConsentToggled)
             {
                 smellColor = "Magenta";
             }
-            else if (proto.Lewd)
+            else if (proto.ConsentToggled)
             {
                 smellColor = "HotPink";
             }
@@ -254,7 +254,7 @@ public sealed class ScentSystem : EntitySystem
                 ("scents", string.Join(", ", allButLast)),
                 ("lastscent", last));
         }
-        using (args.PushGroup("DanIsCool"))
+        using (args.PushGroup("ExtraExamineDetails"))
         {
             // cus its easier to edit colors from code
             combinedDesc = $"[color=aquamarine]{combinedDesc}[/color]";
@@ -388,7 +388,7 @@ public sealed class ScentSystem : EntitySystem
         // early bounces
         if (distance > scentProto.FarRange)
             return false; // out of range!
-        if (scentProto.DetectionPercent <= 0)
+        if (scentProto.DetectionChance <= 0)
             return false; // undetectable scent
         if (scentProto.DirectOnly)
             return false; // dont detect non-passive scents
@@ -397,9 +397,9 @@ public sealed class ScentSystem : EntitySystem
         // check if we have any components blocking us from smelling this scent
         if (CompBlockSmell(uid, scentSourceUid, scentProto))
             return false;
-        // lewd check
-        if (!LewdOkay(uid, scentProto.Lewd))
-            return false; // cant detect lewd scents
+        // consent check
+        if (!ConsentEnabled(uid, scentProto.ConsentToggled))
+            return false; // cant detect consent based scents
         if (SmellGuidIsOnCooldown(component, scentGuid))
             return false; // on cooldown
         // check LOS, if required
@@ -460,10 +460,7 @@ public sealed class ScentSystem : EntitySystem
     /// <summary>
     /// Assigns priority to a smell ticket based on scent proto and distance.
     /// </summary>
-    private void UpdatePriority(
-        SmellTicket ticket,
-        ProtoId<ScentPrototype> protoid,
-        float dist)
+    private void UpdatePriority(SmellTicket ticket, ProtoId<ScentPrototype> protoid, float dist)
     {
         if (!_proto.TryIndex(protoid, out var proto))
             throw new InvalidOperationException($"Invalid scent prototype ID {protoid} in UpdatePriority.");
@@ -483,7 +480,7 @@ public sealed class ScentSystem : EntitySystem
             var distanceFactor = proto.CloseRange - dist;
             if (distanceFactor < 0.1f)
                 distanceFactor = 0.1f;
-            priority += 2.0 + (3.0 * distanceFactor / proto.CloseRange);
+            priority += 2.0 + 3.0 * distanceFactor / proto.CloseRange;
             // max priority is 6.0 at 0 distance
         }
         else
@@ -561,7 +558,7 @@ public sealed class ScentSystem : EntitySystem
                 ticket.Distance);
             continue;
 
-            RemoveTicket:
+        RemoveTicket:
             component.PendingSmells.Remove(ticket);
         }
     }
@@ -602,17 +599,14 @@ public sealed class ScentSystem : EntitySystem
                 component.PendingSmells.Remove(ticket);
                 continue; // invalid scent proto
             }
-            var percentChance = (double) scentProto.DetectionPercent;
+            var chance = scentProto.DetectionChance;
             var ticketPriority = ticket.GetPriority(_proto);
             if (ticketPriority > 1.0)
-            {
-                percentChance *= ticketPriority;
-                if (percentChance > 100f)
-                    percentChance = 100f;
-            }
-            var roll = _rng.NextFloat(0f, 100f);
-            if (roll >= percentChance)
-                continue; // failed to smell this tick, you suck at smelling
+                chance *= (float)ticketPriority;
+
+            bool successfullySmelled = _rng.Prob(Math.Clamp(chance, 0f, 1f));
+            if (!successfullySmelled)
+                continue;
             SmellScent(
                 uid,
                 component,
@@ -652,7 +646,7 @@ public sealed class ScentSystem : EntitySystem
     {
         if (!_proto.TryIndex<ScentPrototype>(ticket.ScentProto, out var proto))
             throw new InvalidOperationException($"Invalid scent prototype ID {ticket.ScentProto} in SmellScent.");
-        if (!LewdOkay(uid, proto.Lewd))
+        if (!ConsentEnabled(uid, proto.ConsentToggled))
             return;
 
         IncurSmellCooldown(component, ticket);
@@ -751,7 +745,7 @@ public sealed class ScentSystem : EntitySystem
                 continue; // invalid scent proto
             // if (SmellGuidIsOnCooldown(smellerComp, scent.ScentInstanceId))
             //     continue;
-            if (!LewdOkay(smellerUid, scentProto.Lewd))
+            if (!ConsentEnabled(smellerUid, scentProto.ConsentToggled))
                 continue;
             availableScents.Add(scent);
         }
@@ -832,20 +826,19 @@ public sealed class ScentSystem : EntitySystem
     }
 
     /// <summary>
-    /// Lewd guard: prevents smelling lewd scents if the user has no business doing so
-    /// If the scent isnt lewd, then, its allowed i guess
-    /// If smeller is Aghost, its allowed (admins are made to be prefbroken)
+    /// Consent checks: prevents smelling scents if the user has them disabled.
+    /// If the scent isnt consent toggled, then allow it.
+    /// Allows admin ghosts.
     /// Otherwise, checl consents
     /// </summary>
-    private bool LewdOkay(EntityUid uid, bool lood)
+    private bool ConsentEnabled(EntityUid uid, bool consent)
     {
-        if (!lood)
+        if (!consent)
             return true;
-        if (HasComp<AdminGhostComponent>(uid))
+        if (HasComp<AdminGhostComponent>(uid)) // Allow aghosts.
             return true;
-        return _consent.HasConsent(uid, "CanSmellLewdScents");
-        // dont like the fact that consents default to *ON*
+        return _consent.HasConsent(uid, "CanSmellConsentToggled");
     }
-   #endregion
+    #endregion
 
 }

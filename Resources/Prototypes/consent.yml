@@ -20,7 +20,7 @@
   priority: 3
 
 - type: consentToggle
-  id: CanSmellLewdScents
+  id: CanSmellConsentToggled
   priority: 4
 
 - type: consentToggle
@@ -46,13 +46,3 @@
 - type: consentToggle
   id: MindControl
   priority: 10
-
-
-#- type: consentToggle
-#  id: Cum
-#  priority: 6
-#
-#- type: consentToggle
-#  id: NaturalLubricant
-#  priority: 6
-

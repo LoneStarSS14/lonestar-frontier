@@ -1,4 +1,4 @@
-using Content.Shared._CS.HornyQuirks;
+using Content.Shared._CS.DescriptorQuirks;
 using Content.Shared._CS.SniffAndSmell;
 using Content.Shared.GameTicking;
 using Content.Shared.Hands.Components;
@@ -12,8 +12,8 @@ namespace Content.Server.Traits;
 
 public sealed class TraitSystem : EntitySystem
 {
-    private const string LegacyInHeatTraitId = "HornyInHeat";
-    private const string LegacyInRutTraitId = "HornyInRut";
+    private const string LegacyInHeatTraitId = "descriptorExamineInHeat";
+    private const string LegacyInRutTraitId = "descriptorExamineInRut";
 
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly SharedHandsSystem _sharedHandsSystem = default!;
@@ -52,7 +52,7 @@ public sealed class TraitSystem : EntitySystem
                 continue;
 
             // Add all components required by the prototype
-            if (traitPrototype.Components is {Count: > 0 })
+            if (traitPrototype.Components is { Count: > 0 })
             {
                 EntityManager.AddComponents(
                     args.Mob,
@@ -60,18 +60,18 @@ public sealed class TraitSystem : EntitySystem
                     false);
             }
 
-            // Add the horny examine stuff, if applicable
-            if (traitPrototype.HornyExamineProto is not null)
+            // Add the descriptor examine stuff, if applicable
+            if (traitPrototype.DescriptorExamineProto is not null)
             {
-                if (_prototypeManager.TryIndex(traitPrototype.HornyExamineProto, out var hormy))
+                if (_prototypeManager.TryIndex(traitPrototype.DescriptorExamineProto, out var hormy))
                 {
-                    EnsureComp<HornyExamineQuirksComponent>(args.Mob).AddHornyExamineTrait(hormy, _prototypeManager);
+                    EnsureComp<DescriptorExamineQuirksComponent>(args.Mob).AddDescriptorExamineTrait(hormy, _prototypeManager);
                 }
             }
 
             if (traitPrototype.Bodytype is not null)
             {
-                EnsureComp<HornyExamineQuirksComponent>(args.Mob).AddHornyAppearance(traitPrototype.Bodytype);
+                EnsureComp<DescriptorExamineQuirksComponent>(args.Mob).AddDescriptorAppearance(traitPrototype.Bodytype);
             }
 
             if (traitPrototype.Scents is { Count: > 0 })

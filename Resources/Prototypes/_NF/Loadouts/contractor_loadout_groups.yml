@@ -500,6 +500,7 @@
   - ContractorClothingShoesColorBlack
   subgroups:
   - CoyoteShoes
+  - MercenaryShoes # LoneStar
 
 - type: loadoutGroup
   id: ContractorHead

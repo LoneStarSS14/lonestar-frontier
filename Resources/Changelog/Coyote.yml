@@ -4497,3 +4497,39 @@ Entries:
   id: 491
   time: '2026-10-18T13:31:51.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/242
+- author: Wolfhauler
+  changes:
+    - type: Fix
+      message: Casey atmos , bnuuy drobe unanchorable
+  id: 492
+  time: '2026-10-22T02:23:13.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/277
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Toeless Jackboots should be available from the usual spots now.
+  id: 493
+  time: '2026-10-22T08:17:27.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/268
+- author: archee1
+  changes:
+    - type: Remove
+      message: Hawkers 'Toys' are gone.
+    - type: Remove
+      message: One old floof station drink has been removed.
+    - type: Remove
+      message: the sex emote sound wheel group has been removed.
+    - type: Tweak
+      message: >-
+        A large censoring of explicit facing content has been made without
+        affecting anything player facing.
+  id: 494
+  time: '2026-10-22T08:25:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/276
+- author: archee1
+  changes:
+    - type: Fix
+      message: Xeno destruction expeditions no longer spawn xenos indefinetly.
+  id: 495
+  time: '2026-10-22T20:24:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/278

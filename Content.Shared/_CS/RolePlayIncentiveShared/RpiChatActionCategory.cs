@@ -29,7 +29,7 @@ public enum RpiChatActionCategory : byte
     QuickEmoting,
 
     /// <summary>
-    /// The player has done a sexy subtle emote. (*removes pants)
+    /// The player has done a subtle emote. (-removes shoes)
     /// </summary>
     Subtling,
 
@@ -39,7 +39,7 @@ public enum RpiChatActionCategory : byte
     Radio,
 
     /// <summary>
-    /// Its an emote OR a quick emote, so more dickery is needed to figure it
+    /// Its an emote OR a quick emote, so more fuckery is needed to figure it
     /// out.
     /// </summary>
     EmotingOrQuickEmoting,
