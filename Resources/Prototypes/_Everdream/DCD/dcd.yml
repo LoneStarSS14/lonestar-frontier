@@ -44,7 +44,7 @@
   id: OracleStainedGlassLarge
   name: rcd-component-stainedglass
   category: StainedGlass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/oracle.png
+  sprite: _Everdream/Interface/Radial/RCD/oracle.png
   prototype: OracleStainedGlassLarge
   mode: ConstructObject
   cost: 9
@@ -152,7 +152,7 @@
   id: NarsieStainedGlassLarge
   name: rcd-component-stainedglass
   category: StainedGlass
-  sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi/narsie_large.png
+  sprite: _Everdream/Interface/Radial/RCD/narsie_large.png
   prototype: NarsieStainedGlassLarge
   mode: ConstructObject
   cost: 9

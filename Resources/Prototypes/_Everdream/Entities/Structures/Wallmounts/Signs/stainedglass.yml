@@ -18,7 +18,7 @@
     arc: 360
   - type: Sprite
     drawdepth: WallMountedItems
-    sprite: _LoneStar/Structures/Wallmounts/stainedglass.rsi
+    sprite: _Everdream/Structures/Wallmounts/stainedglass.rsi
     state: pinkcat
   - type: InteractionOutline
   - type: Appearance
@@ -118,6 +118,7 @@
   - type: Sprite
     state: satanism
   - type: PointLight
+    energy: 10
     color: '#c60000'
 
 - type: entity
@@ -130,6 +131,7 @@
   - type: Sprite
     state: satanism2
   - type: PointLight
+    energy: 10
     color: '#c60000'
 
 - type: entity
@@ -154,7 +156,7 @@
   suffix: oracle
   components:
   - type: Sprite
-    sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi
+    sprite: _Everdream/Structures/Wallmounts/stainedglasslarge.rsi
     state: oracle
   - type: PointLight
     color: '#ff5100'
@@ -171,6 +173,7 @@
   - type: Sprite
     state: narsie
   - type: PointLight
+    energy: 10
     color: '#c60000'
 
 - type: entity
@@ -183,6 +186,7 @@
   - type: Sprite
     state: narsie2
   - type: PointLight
+    energy: 10
     color: '#c60000'
 
 - type: entity
@@ -195,6 +199,7 @@
   - type: Sprite
     state: narsie3
   - type: PointLight
+    energy: 10
     color: '#c60000'
 
 - type: entity
@@ -205,9 +210,10 @@
   suffix: blood cult
   components:
   - type: Sprite
-    sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi
+    sprite: _Everdream/Structures/Wallmounts/stainedglasslarge.rsi
     state: narsie_large
   - type: PointLight
+    energy: 10
     color: '#c60000'
 
 # Ratvar
@@ -256,7 +262,7 @@
   suffix: clockwork
   components:
   - type: Sprite
-    sprite: _LoneStar/Structures/Wallmounts/stainedglasslarge.rsi
+    sprite: _Everdream/Structures/Wallmounts/stainedglasslarge.rsi
     state: ratvar_large
   - type: PointLight
     color: '#5588dc'
