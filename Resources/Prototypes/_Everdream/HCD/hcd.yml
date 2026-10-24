@@ -251,6 +251,32 @@
   fx: EffectRCDConstruct3
 
 - type: rcd
+  id: AltarFangs
+  name: rcd-component-altars
+  category: Altars
+  sprite: _Everdream/Interface/Radial/RCD/fanged.png
+  prototype: AltarFangs
+  mode: ConstructObject
+  cost: 6
+  delay: 3
+  rotation: Fixed
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct3
+
+- type: rcd
+  id: AltarHeaven
+  name: rcd-component-altars
+  category: Altars
+  sprite: _Everdream/Interface/Radial/RCD/heaven.png
+  prototype: AltarHeaven
+  mode: ConstructObject
+  cost: 6
+  delay: 3
+  rotation: Fixed
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct3
+
+- type: rcd
   id: AltarNanotrasen
   name: rcd-component-altars
   category: Altars
