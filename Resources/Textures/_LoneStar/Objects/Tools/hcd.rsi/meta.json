@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "original taken from cev-eris at commit https://github.com/discordia-space/CEV-Eris/commit/ce025775f73b66934ca96f3a8edc30993ea70b4d and modified by Swept",
+  "extra_copyright": [
+        "Chaplain themed sprite remix by KC (https://github.com/Sushiburger)"
+    ],
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+      {
+          "name": "icon"
+      },
+      {
+          "name": "icon-unshaded",
+          "delays": [
+            [0.2, 0.2, 0.2, 0.2]
+        ]
+      },
+      {
+          "name": "inhand-left",
+          "directions": 4
+      },
+      {
+          "name": "inhand-right",
+          "directions": 4
+      },
+      {
+          "name": "inhand-left-unshaded",
+          "directions": 4,
+          "delays":
+          [
+            [ 0.2, 0.2, 0.2 ],
+            [ 0.2, 0.2, 0.2 ],
+            [ 0.2, 0.2, 0.2 ],
+            [ 0.2, 0.2, 0.2 ]
+          ]
+      },
+      {
+          "name": "inhand-right-unshaded",
+          "directions": 4,
+          "delays":
+          [
+            [ 0.2, 0.2, 0.2 ],
+            [ 0.2, 0.2, 0.2 ],
+            [ 0.2, 0.2, 0.2 ],
+            [ 0.2, 0.2, 0.2 ]
+          ]
+      }
+    ]
+}

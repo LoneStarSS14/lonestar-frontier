@@ -1,8 +1,8 @@
 - type: entity
-  id: DCD
+  id: HCD
   parent: BaseItem # Frontier: remove BaseEngineeringContraband
-  name: DCD
-  description: The divine construction device can be used to quickly place and remove various station structures and fixtures. Requires compressed matter to function.
+  name: HCD
+  description: The Holy Construction Device. Clearly not a widespread manufacture and more the product of religious fanatics modifying technology. The blessings upon it imbue it with some manner of alchemical thaumaturgy, combined with holo-technology, rendering water, glass, and sites of worship with ease.
   components:
   - type: RCD
     availablePrototypes:
@@ -43,12 +43,25 @@
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite
-    sprite: Objects/Tools/rcd.rsi
-    state: icon
+    sprite: _LoneStar/Objects/Tools/hcd.rsi
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
   - type: Item
     size: Normal
+    sprite: _LoneStar/Objects/Tools/hcd.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-unshaded
+        shader: unshaded
+      right:
+      - state: inhand-right
+      - state: inhand-right-unshaded
+        shader: unshaded
   - type: Clothing
-    sprite: Objects/Tools/rcd.rsi
+    sprite: _LoneStar/Objects/Tools/hcd.rsi
     quickEquip: false
     slots:
     - Belt
