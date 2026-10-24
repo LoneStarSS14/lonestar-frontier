@@ -92,6 +92,7 @@
   - type: Sprite
     state: druidism
   - type: PointLight
+    energy: 10
     color: '#226a21'
 
 - type: entity
@@ -104,6 +105,7 @@
   - type: Sprite
     state: druidism2
   - type: PointLight
+    energy: 10
     color: '#226a21'
 
 - type: entity

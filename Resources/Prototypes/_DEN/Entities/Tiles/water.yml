@@ -1,4 +1,6 @@
 # SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2026 Shaman
+# SPDX-FileCopyrightText: 2026 Sushiburger
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -12,10 +14,10 @@
     volume: -10 # LoneStar. I think it's too loud at 4 - kc.
     range: 6
     sound:
-      path: Audio/_DEN/Effects/Fluids/waterfall.ogg
+      path: /Audio/_DEN/Effects/Fluids/waterfall.ogg
 
 - type: entity
-  parent: [FloorWaterEntity, FloorWaterfallBase]
+  parent: [ FloorWaterEntity, FloorWaterfallBase ]
   id: FloorWaterfallEntity
   name: waterfall
   suffix: non-occluded
@@ -38,7 +40,7 @@
 
 # Somber Pool Waterfall (renamed. Credits to sha-seng(github))
 - type: entity
-  parent: [ FloorWaterfallBase, FloorWaterEntity ]
+  parent: [ FloorWaterEntity, FloorWaterfallBase ]
   id: FloorWaterfallEntityPool
   name: pool waterfall
   suffix: non-occluded
