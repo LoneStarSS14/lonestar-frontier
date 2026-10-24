@@ -314,3 +314,63 @@
   delay: 2
   rotation: Fixed
   fx: EffectRCDConstruct2
+
+- type: rcd
+  id: FloorWaterfallEntity
+  name: rcd-component-water
+  category: WaterAndWaterfalls
+  sprite: _Everdream/Interface/Radial/RCD/waterfall.png
+  prototype: FloorWaterfallEntity
+  mode: ConstructObject
+  cost: 3
+  delay: 2
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: FloorWaterfallEntityOccluded
+  name: rcd-component-water
+  category: WaterAndWaterfalls
+  sprite: _Everdream/Interface/Radial/RCD/waterfall_occluded.png
+  prototype: FloorWaterfallEntityOccluded
+  mode: ConstructObject
+  cost: 3
+  delay: 2
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: FloorWaterfallEntityPool
+  name: rcd-component-water
+  category: WaterAndWaterfalls
+  sprite: _Everdream/Interface/Radial/RCD/pool_waterfall.png
+  prototype: FloorWaterfallEntityPool
+  mode: ConstructObject
+  cost: 3
+  delay: 2
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: PoolWaterfallSpout
+  name: rcd-component-water
+  category: WaterAndWaterfalls
+  sprite: _Everdream/Interface/Radial/RCD/poolwaterfallspout.png
+  prototype: PoolWaterfallSpout
+  mode: ConstructObject
+  cost: 3
+  delay: 2
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: PoolWaterfallSpoutDark
+  name: rcd-component-water
+  category: WaterAndWaterfalls
+  sprite: _Everdream/Interface/Radial/RCD/poolwaterfallspoutdark.png
+  prototype: PoolWaterfallSpoutDark
+  mode: ConstructObject
+  cost: 3
+  delay: 2
+  rotation: User
+  fx: EffectRCDConstruct2

@@ -33,8 +33,13 @@
     - AltarSatana
     - AltarTechnology
     - AltarToolbox
-    # Water
+    # Water and Waterfalls
     - FloorWaterEntity
+    - FloorWaterfallEntity
+    - FloorWaterfallEntityOccluded
+    - FloorWaterfallEntityPool
+    - PoolWaterfallSpout
+    - PoolWaterfallSpoutDark
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite
@@ -49,11 +54,11 @@
     - Belt
   - type: PhysicalComposition
     materialComposition:
-      Steel: 500 # Frontier: 600<500
+      Steel: 500
       Plastic: 100
   - type: StaticPrice
-    price: 55 # Frontier 110<55
-    vendPrice: 5000 # Frontier
+    price: 55
+    vendPrice: 5000
   - type: UserInterface
     interfaces:
       enum.RcdUiKey.Key:
