@@ -8,7 +8,7 @@
   weight: 50
   displayWeight: 50
   # TODO section
-  startingGear: NFPirateGear
+  startingGear: LSFreelancerPirateGear
   icon: "JobIconNFPirate"
   # Frontier's fields
   hideConsoleVisibility: true
@@ -40,7 +40,7 @@
   id: SpawnPointLSFreelancerPirate # TODO: mapping migrations.
   parent: SpawnPointJobBase
   name: freelancer pirate spawn point
-  suffix: Frontier
+  suffix: LoneStar
   components:
   - type: SpawnPoint
     job_id: LSFreelancerPirate
@@ -57,21 +57,21 @@
 - type: roleLoadout
   id: JobLSFreelancerPirate
   canCustomizeName: true
-  groups: # TODO: Set the 'combatant' variants here
-  - LSFreelancersFactionJumpsuit
-  - LSFreelancersFactionOuterClothing
-  - LSFreelancersFactionShoes
-  - LSFreelancersFactionGloves
-  - LSFreelancersFactionHead
-  - LSFreelancersFactionMask
-  - LSFreelancersFactionEyes
-  - LSFreelancersFactionNeck
-  - LSFreelancersFactionEars
-  - LSFreelancersFactionBackpack
-  - LSFreelancersFactionBelt
-  - LSFreelancersFactionWallet
-  - LSFreelancersFactionEncryptionKey
-  - LSFreelancersFactionImplanter
+  groups:
+  - LSFreelancersFactionCombatantJumpsuit
+  - LSFreelancersFactionCombatantOuterClothing
+  - LSFreelancersFactionCombatantShoes
+  - LSFreelancersFactionCombatantGloves
+  - LSFreelancersFactionCombatantHead
+  - LSFreelancersFactionCombatantMask
+  - LSFreelancersFactionCombatantEyes
+  - LSFreelancersFactionCombatantNeck
+  - LSFreelancersFactionCombatantEars
+  - LSFreelancersFactionCombatantBackpack
+  - LSFreelancersFactionCombatantBelt
+  - LSFreelancersFactionCombatantWallet
+  - LSFreelancersFactionCombatantEncryptionKey
+  - LSFreelancersFactionCombatantImplanter
   # Common v
   - ContractorBoxSurvival
   - ContractorWallet

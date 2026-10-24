@@ -1,94 +1,84 @@
 - type: job
-  id: Smuggler
-  name: job-name-smuggler
-  description: job-description-smuggler
-  playTimeTracker: JobSmuggler
+  id: LSSmuggler
+  name: job-name-ls-smuggler
+  description: job-description-ls-smuggler
+  supervisors: job-supervisors-ls-master-at-arms
+  playTimeTracker: JobLSSmuggler
   whitelisted: true
-  startingGear: SmugglerGear
-  alwaysUseSpawner: true
-  hideConsoleVisibility: true
-  canBeAntag: true
-  consoleAdjustable: false
+  weight: 50
+  displayWeight: 50
+  # TODO section
+  startingGear: LSSmugglerGear
   icon: "JobIconPilot"
-  supervisors: job-supervisors-freebooters-union
-  weight: 20
-  displayWeight: 20
-  setPreference: true
+  # Frontier's fields
+  hideConsoleVisibility: true
   newPlayerMessage: false
+  # Uncertain if needed
+  alwaysUseSpawner: true
+  consoleAdjustable: false
+  # Common v
   access:
   - Pirate
   - BlackMarket
   accessGroups:
   - GeneralAccess
   special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
   - !type:AddComponentSpecial
     components:
-#    - type: AutoPirate
-    - type: SpecialSectorStationRecord # must be given on spawn
-      recordGeneration: FalseRecord
-    - type: DisableSuitSensors
     - type: IsPirate
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI
   - !type:AddRpiJobModifierSpecial
     modifiersToAdd:
     - rpiJobModifierPirate
   - !type:AddComponentSpecial
     components:
-    - type: PaywardProximityShuttleConsole
-  - !type:AddImplantSpecial
-    implants: [ FreelanceTrackingImplant, StorageImplant ]
-  - !type:GiveItemOnHolidaySpecial
-    holiday: FrontierBirthday
-    prototype: FrontierBirthdayGift
-
-#play time tracker
-- type: playTimeTracker
-  id: JobSmuggler
+    - type: PaywardProximityShuttleConsole # TODO: Look into how useful this even is.
 
 - type: entity
-  id: SpawnPointSmuggler
+  id: SpawnPointLSSmuggler # TODO: mapping migrations.
   parent: SpawnPointJobBase
   name: smuggler spawn point
-  suffix: Frontier
+  suffix: LoneStar
   components:
   - type: SpawnPoint
-    job_id: Smuggler
+    job_id: LSSmuggler
   - type: Sprite
     sprite: Structures/Decoration/banner.rsi
     state: banner-red
 
 - type: startingGear
-  id: SmugglerGear
-  equipment:
+  id: LSSmugglerGear
+  equipment: # TODO: add PDA
     pocket1: BasePirateUplinkPirateCrew
-  storage:
-    back:
-    - ContrabandAppraisalToolPirate
-
-- type: chameleonOutfit
-  id: SmugglerChameleonOutfit
-  job: Smuggler
+    pocket2: ContrabandAppraisalToolPirate
 
 - type: roleLoadout
-  id: JobSmuggler
+  id: JobLSSmuggler
+  canCustomizeName: true
   groups:
-  - FreelancerFactionHead # LoneStar
-  - FreelancerFactionNeck # LoneStar
-  - FreelancerFactionJumpsuit # LoneStar
-  - MercenaryGloves
-  - PilotBackpack
-  - FreelancerFactionOuterClothing # LoneStar
-  - MercenaryShoes
-  - PilotFace
-  - MercenaryGlasses
-  - MercenaryBelt
-  - PilotEars
-  - FreelancerEncryptionKey
+  - LSFreelancersFactionCombatantJumpsuit
+  - LSFreelancersFactionCombatantOuterClothing
+  - LSFreelancersFactionCombatantShoes
+  - LSFreelancersFactionCombatantGloves
+  - LSFreelancersFactionCombatantHead
+  - LSFreelancersFactionCombatantMask
+  - LSFreelancersFactionCombatantEyes
+  - LSFreelancersFactionCombatantNeck
+  - LSFreelancersFactionCombatantEars
+  - LSFreelancersFactionCombatantBackpack
+  - LSFreelancersFactionCombatantBelt
+  - LSFreelancersFactionCombatantWallet
+  - LSFreelancersFactionCombatantEncryptionKey
+  - LSFreelancersFactionCombatantImplanter
+  # Common v
   - ContractorBoxSurvival
-  - SmugglerPDA
   - ContractorWallet
-  - ContractorCartridge
-  - ContractorBackpackItems
+  - PirateBackpackItems
   - ContractorHandItems
   - ContractorInstruments
   - NFSpeciesSpecific
-  canCustomizeName: true # Allows pseudonyms.
