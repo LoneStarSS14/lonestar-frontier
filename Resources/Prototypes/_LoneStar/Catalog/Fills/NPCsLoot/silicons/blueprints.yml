@@ -1,4 +1,4 @@
-# region ammo blueprints
+#region Routing Tables
 - type: entityTable
   id: LSTableSiliconsBlueprint
   table: !type:GroupSelector
@@ -33,7 +33,9 @@
             - !type:NestedSelector # Trash
               weight: 1
               tableId: LSTableSiliconsBlueprintT0
+#endregion
 
+#region Loot Tiers
 - type: entityTable
   id: LSTableSiliconsBlueprintT5
   table: !type:GroupSelector
@@ -89,3 +91,7 @@
     - id: NFBlueprintRogueSiliconAdvancedCapacitor
     - id: NFBlueprintRogueSiliconAdvancedMatterBin
     - id: NFBlueprintRogueSiliconAdvancedManipulator
+#endregion
+
+#region Misc Tables
+#endregion

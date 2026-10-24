@@ -1,4 +1,4 @@
-#region routing
+#region Routing Tables
 - type: entityTable
   id: LSTableSyndicateBlueprint
   table: !type:GroupSelector
@@ -7,34 +7,35 @@
       weight: 1
       tableId: LSTableSyndicateBlueprintT5
     - !type:GroupSelector
-      weight: 49
+      weight: 64
       children:
       - !type:NestedSelector # Epic
         weight: 1
         tableId: LSTableSyndicateBlueprintT4
       - !type:GroupSelector
-        weight: 19
+        weight: 29
         children:
         - !type:NestedSelector # Rare
           weight: 1
           tableId: LSTableSyndicateBlueprintT3
         - !type:GroupSelector
-          weight: 9
+          weight: 14
           children:
           - !type:NestedSelector # Uncommon
             weight: 1
             tableId: LSTableSyndicateBlueprintT2
           - !type:GroupSelector
-            weight: 3
+            weight: 4
             children:
             - !type:NestedSelector # Common
-              weight: 4
+              weight: 7
               tableId: LSTableSyndicateBlueprintT1
             - !type:NestedSelector # Trash
               weight: 1
               tableId: LSTableSyndicateBlueprintT0
+#endregion
 
-#region tiers
+#region Loot Tiers
 - type: entityTable
   id: LSTableSyndicateBlueprintT5
   table: !type:GroupSelector
@@ -154,3 +155,7 @@
     - id: LSBlueprintSyndicateAmmunitionBoxBigRifle20Practice
     - id: LSBlueprintSyndicateAmmunitionBoxBigRifle30Practice
     - id: LSBlueprintSyndicateAmmunitionBoxBigShotgunPractice
+#endregion
+
+#region Misc Tables
+#endregion

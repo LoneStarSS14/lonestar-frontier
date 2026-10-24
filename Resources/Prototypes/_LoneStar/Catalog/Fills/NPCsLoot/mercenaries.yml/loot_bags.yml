@@ -52,6 +52,7 @@
           weight: 0.25
         - id: SpawnDungeonLootNpcMercenariesFluff
           weight: 0.15
+#endregion
 
 # region Tier 2
 - type: entity
@@ -151,6 +152,7 @@
           prob: 0.3
         - id: SpawnDungeonLootNpcMercenariesFluff
           prob: 0.15
+#endregion
 
 #region Elites / Horrors
 - type: entity
@@ -221,6 +223,7 @@
         - !type:NestedSelector
           tableId: LSTableMercenaryBlueprint
           weight: 0.05
+#endregion
 
 #region Bosses
 - type: entity
@@ -277,3 +280,4 @@
         - !type:NestedSelector
           tableId: LSTableMercenaryBlueprint
           prob: 0.3
+#endregion

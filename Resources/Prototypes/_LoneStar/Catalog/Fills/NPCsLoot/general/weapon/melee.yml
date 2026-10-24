@@ -7,25 +7,25 @@
       weight: 1
       tableId: LSTableGeneralWeaponMeleeT5
     - !type:GroupSelector
-      weight: 74
+      weight: 89
       children:
       - !type:NestedSelector # Epic
         weight: 1
         tableId: LSTableGeneralWeaponMeleeT4
       - !type:GroupSelector
-        weight: 19
+        weight: 24
         children:
         - !type:NestedSelector # Rare
           weight: 2
           tableId: LSTableGeneralWeaponMeleeT3
         - !type:GroupSelector
-          weight: 11
+          weight: 14
           children:
           - !type:NestedSelector # Uncommon
             weight: 2
             tableId: LSTableGeneralWeaponMeleeT2
           - !type:GroupSelector
-            weight: 3
+            weight: 5
             children:
             - !type:NestedSelector # Common
               weight: 11
@@ -42,16 +42,16 @@
       weight: 1
       tableId: LSTableGeneralWeaponMeleeT5
     - !type:GroupSelector
-      weight: 29
+      weight: 44
       children:
       - !type:NestedSelector # Epic
         weight: 2
         tableId: LSTableGeneralWeaponMeleeT4
       - !type:NestedSelector # Rare
-        weight: 11
+        weight: 13
         tableId: LSTableGeneralWeaponMeleeT3
 
-#region tiers
+#region Loot Tiers
 - type: entityTable
   id: LSTableGeneralWeaponMeleeT5
   table: !type:GroupSelector
@@ -177,3 +177,5 @@
     - id: Pickaxe
     - id: Shinai
     - id: Gohei
+#endregion
+

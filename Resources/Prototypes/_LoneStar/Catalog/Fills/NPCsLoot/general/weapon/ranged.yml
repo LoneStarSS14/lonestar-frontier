@@ -1,4 +1,4 @@
-#region routing
+#region Routing Tables
 - type: entityTable
   id: LSTableGeneralWeaponRanged
   table: !type:GroupSelector
@@ -7,16 +7,16 @@
       weight: 1
       tableId: LSTableGeneralWeaponRangedT5
     - !type:GroupSelector
-      weight: 29
+      weight: 39
       children:
       - !type:NestedSelector # Epic
         weight: 1
         tableId: LSTableGeneralWeaponRangedT4
       - !type:GroupSelector
-        weight: 11
+        weight: 19
         children:
         - !type:NestedSelector # Rare
-          weight: 2
+          weight: 1
           tableId: LSTableGeneralWeaponRangedT3
         - !type:GroupSelector
           weight: 7
@@ -50,8 +50,9 @@
       - !type:NestedSelector # Rare
         weight: 11
         tableId: LSTableGeneralWeaponRangedT3
+#endregion
 
-#region tiers
+#region Loot Tiers
 - type: entityTable
   id: LSTableGeneralWeaponRangedT5
   table: !type:GroupSelector
@@ -131,3 +132,4 @@
   table: !type:GroupSelector
     children:
       - id: NFRevolverCapGun
+#endregion

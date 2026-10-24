@@ -1,4 +1,4 @@
-# region ammo blueprints
+#region Routing Tables
 - type: entityTable
   id: LSTableMercenaryBlueprint
   table: !type:GroupSelector
@@ -33,7 +33,9 @@
             - !type:NestedSelector # Trash
               weight: 1
               tableId: LSTableMercenaryBlueprintT0
+#endregion
 
+#region Loot Tiers
 - type: entityTable
   id: LSTableMercenaryBlueprintT5
   table: !type:GroupSelector
@@ -123,3 +125,7 @@
     - id: LSBlueprintMercenaryAmmunitionBoxBigRifle20Practice
     - id: LSBlueprintMercenaryAmmunitionBoxBigRifle30Practice
     - id: LSBlueprintMercenaryAmmunitionBoxBigShotgunPractice
+#endregion
+
+#region Misc Tables
+#endregion

@@ -22,6 +22,7 @@
           weight: 4
         - id: SpawnDungeonLootNpcRogueSiliconTreasure
           prob: 5
+#endregion
 
 #region Tier 1
 - type: entity
@@ -51,6 +52,7 @@
           amount: 2
         - id: SpawnDungeonLootNpcRogueSiliconBorgModule
           weight: 10
+#endregion
 
 #region Tier 2
 - type: entity
@@ -80,6 +82,7 @@
           amount: 3
         - id: SpawnDungeonLootNpcRogueSiliconBorgModule
           weight: 3
+#endregion
 
 #region Elite / Horrors
 - type: entity
@@ -106,6 +109,7 @@
           amount: 4
         - id: SpawnDungeonLootNpcRogueSiliconBorgModule
           weight: 2
+#endregion
 
 #region Bosses
 - type: entity
@@ -163,3 +167,4 @@
         - id: SpawnDungeonLootNpcRogueSiliconBorgModule
           weight: 5
           amount: 3
+#endregion

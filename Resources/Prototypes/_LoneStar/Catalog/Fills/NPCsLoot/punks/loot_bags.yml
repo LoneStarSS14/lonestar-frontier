@@ -38,6 +38,7 @@
         children:
         - id: SpawnDungeonLootMaterialsBasicFull
         - id: SpawnDungeonLootNpcPunksFluffItems
+#endregion
 
 # region tier 2
 - type: entity
@@ -87,6 +88,7 @@
         children:
         - id: SpawnDungeonLootMaterialsValuableFull
         - id: SpawnDungeonLootNpcPunksFluffItems
+#endregion
 
 # region Elites / Horrors
 - type: entity
@@ -150,6 +152,7 @@
           weight: 0.05
         - id: SpawnDungeonLootNpcPunksFluffItems
           weight: 0.3
+#endregion
 
 # region tier 4 (boss)
 - type: entity
@@ -196,3 +199,4 @@
             weight: 0.25
           - id: SpawnDungeonLootNpcBossLootShared
             weight: 0.3
+#endregion

@@ -22,6 +22,7 @@
           prob: 0.3
         - id: SpawnRewardPrizeBallSyndicate
           prob: 0.3
+#endregion
 
 #region Tier 2
 - type: entity
@@ -146,6 +147,7 @@
           prob: 0.3
         - id: SpawnRewardPrizeBallSyndicate
           prob: 0.3
+#endregion
 
 #region Elite / Horrors
 - type: entity
@@ -227,6 +229,7 @@
           prob: 0.3
         - id: SpawnRewardPrizeBallSyndicate
           prob: 0.3
+#endregion
 
 #region Bosses
 - type: entity
@@ -269,3 +272,4 @@
           prob: 0.3
         - id: SpawnRewardPrizeBallSyndicate
           prob: 0.3
+#endregion

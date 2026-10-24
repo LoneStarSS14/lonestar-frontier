@@ -1,4 +1,4 @@
-#region routing
+#region Routing Tables
 - type: entityTable
   id: LSTableGeneralWeaponAmmo
   table: !type:GroupSelector
@@ -7,25 +7,25 @@
       weight: 1
       tableId: LSTableGeneralWeaponAmmoT5
     - !type:GroupSelector
-      weight: 14
+      weight: 29
       children:
       - !type:NestedSelector # Epic
         weight: 1
         tableId: LSTableGeneralWeaponAmmoT4
       - !type:GroupSelector
-        weight: 9
+        weight: 19
         children:
         - !type:NestedSelector # Rare
           weight: 1
           tableId: LSTableGeneralWeaponAmmoT3
         - !type:GroupSelector
-          weight: 4
+          weight: 9
           children:
           - !type:NestedSelector # Uncommon
             weight: 1
             tableId: LSTableGeneralWeaponAmmoT2
           - !type:GroupSelector
-            weight: 2
+            weight: 3
             children:
             - !type:NestedSelector # Common
               weight: 9
@@ -42,16 +42,17 @@
       weight: 1
       tableId: LSTableGeneralWeaponAmmoT5
     - !type:GroupSelector
-      weight: 9
+      weight: 14
       children:
       - !type:NestedSelector # Epic
         weight: 1
         tableId: LSTableGeneralWeaponAmmoT4
       - !type:NestedSelector # Rare
-        weight: 4
+        weight: 9
         tableId: LSTableGeneralWeaponAmmoT3
+#endregion
 
-#region tiers
+#region Loot Tiers
 - type: entityTable
   id: LSTableGeneralWeaponAmmoT5
   table: !type:GroupSelector
@@ -169,15 +170,17 @@
     - id: NFAmmunitionBoxBigRifle20Practice
     - id: NFAmmunitionBoxBigRifle30Practice
     - id: NFAmmunitionBoxBigShellShotgunPractice
+#endregion
 
-#region Normal
+#region Ammos by Type
+#MARK: Normal
 - type: entityTable
   id: LSTableGeneralWeaponAmmoNormalAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoNormalBox
-      weight: 6
+      weight: 9
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoNormalBoxBig
       weight: 1
@@ -212,14 +215,14 @@
         - id: NFAmmunitionBoxShellShotgunSlug
           weight: 1
 
-#region Overpressure
+#MARK: Overpressure
 - type: entityTable
   id: LSTableGeneralWeaponAmmoOverpressureAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoOverpressureBox
-      weight: 6
+      weight: 9
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoOverpressureBoxBig
       weight: 1
@@ -250,14 +253,14 @@
         - id: NFAmmunitionBoxShellShotgunOverpressure
         - id: NFAmmunitionBoxShellShotgunSlug
 
-#region Incendiary
+#MARK: Incendiary
 - type: entityTable
   id: LSTableGeneralWeaponAmmoIncendiaryAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoIncendiaryBox
-      weight: 6
+      weight: 9
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoIncendiaryBoxBig
       weight: 1
@@ -282,14 +285,14 @@
       - id: NFAmmunitionBoxRifle30Incendiary
       - id: NFAmmunitionBoxShellShotgunIncendiary
 
-#region Uranium
+#MARK: Uranium
 - type: entityTable
   id: LSTableGeneralWeaponAmmoUraniumAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoUraniumBox
-      weight: 6
+      weight: 9
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoUraniumBoxBig
       weight: 1
@@ -314,14 +317,14 @@
       - id: NFAmmunitionBoxRifle30Uranium
       - id: NFAmmunitionBoxShellShotgunUranium
 
-#region Rubber
+#MARK: Rubber
 - type: entityTable
   id: LSTableGeneralWeaponAmmoRubberAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoRubberBox
-      weight: 6
+      weight: 9
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoRubberBoxBig
       weight: 1
@@ -346,14 +349,14 @@
       - id: NFAmmunitionBoxRifle30Rubber
       - id: NFAmmunitionBoxShellShotgunBeanbag
 
-#region Practice
+#MARK: Practice
 - type: entityTable
   id: LSTableGeneralWeaponAmmoPracticeAny
   table: !type:GroupSelector
     children:
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoPracticeBox
-      weight: 6
+      weight: 9
     - !type:NestedSelector
       tableId: LSTableGeneralWeaponAmmoPracticeBoxBig
       weight: 1
@@ -377,3 +380,4 @@
       - id: NFAmmunitionBoxRifle20Practice
       - id: NFAmmunitionBoxRifle30Practice
       - id: NFAmmunitionBoxShellShotgunPractice
+#endregion
