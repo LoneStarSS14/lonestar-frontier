@@ -221,6 +221,7 @@
   cost: 6
   delay: 3
   rotation: Fixed
+  collisionMask: FullTileMask
   fx: EffectRCDConstruct3
 
 - type: rcd
@@ -233,6 +234,7 @@
   cost: 6
   delay: 3
   rotation: Fixed
+  collisionMask: FullTileMask
   fx: EffectRCDConstruct3
 
 - type: rcd
@@ -245,6 +247,7 @@
   cost: 6
   delay: 3
   rotation: Fixed
+  collisionMask: FullTileMask
   fx: EffectRCDConstruct3
 
 - type: rcd
@@ -257,6 +260,7 @@
   cost: 6
   delay: 2
   rotation: Fixed
+  collisionMask: FullTileMask
   fx: EffectRCDConstruct2
 
 - type: rcd
@@ -269,6 +273,7 @@
   cost: 6
   delay: 2
   rotation: Fixed
+  collisionMask: FullTileMask
   fx: EffectRCDConstruct2
 
 - type: rcd
@@ -281,6 +286,7 @@
   cost: 6
   delay: 2
   rotation: Fixed
+  collisionMask: FullTileMask
   fx: EffectRCDConstruct2
 
 - type: rcd
@@ -291,6 +297,20 @@
   prototype: AltarToolbox
   mode: ConstructObject
   cost: 6
+  delay: 2
+  rotation: Fixed
+  collisionMask: FullTileMask
+  fx: EffectRCDConstruct2
+
+# Water and Waterfalls
+- type: rcd
+  id: FloorWaterEntity
+  name: rcd-component-water
+  category: WaterAndWaterfalls
+  sprite: _Everdream/Interface/Radial/RCD/shoreline_water.png
+  prototype: FloorWaterEntity
+  mode: ConstructObject
+  cost: 3
   delay: 2
   rotation: Fixed
   fx: EffectRCDConstruct2

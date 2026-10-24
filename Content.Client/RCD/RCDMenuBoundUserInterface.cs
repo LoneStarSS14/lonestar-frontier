@@ -28,7 +28,8 @@ public sealed class RCDMenuBoundUserInterface : BoundUserInterface
             ["LatticeTiles"] = ("rcd-component-latticetiles", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/lattice.png"))), // Mono - #3919
             ["PlatingTiles"] = ("rcd-component-platingtiles", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/plating.png"))), // Mono - #3919
             ["StainedGlass"] = ("rcd-component-stainedglass", new SpriteSpecifier.Texture(new ResPath("/Textures/_Everdream/Interface/Radial/RCD/christian2alt.png"))),
-            ["Altars"] = ("rcd-component-altars", new SpriteSpecifier.Texture(new ResPath("/Textures/Structures/Furniture/Altars/Gods/nanotrasen.rsi/space-christian.png"))),
+            ["Altars"] = ("rcd-component-altars", new SpriteSpecifier.Texture(new ResPath("/Textures/_Everdream/Interface/Radial/RCD/space-christian.png"))),
+            ["WaterAndWaterfalls"] = ("rcd-component-water", new SpriteSpecifier.Texture(new ResPath("/Textures/_Everdream/Interface/Radial/RCD/shoreline-water.png"))),
         };
 
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
