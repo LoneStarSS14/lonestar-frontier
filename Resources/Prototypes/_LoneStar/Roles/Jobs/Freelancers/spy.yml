@@ -1,109 +1,91 @@
-# The job itself
-# Escort + ERPer + touchytouchy
 - type: job
-  id: Escort
-  name: job-name-escort
-  description: job-description-escort
-  playTimeTracker: JobEscort
+  id: LSSpy
+  name: job-name-ls-spy
+  description: job-description-ls-spy
+  supervisors: job-supervisors-ls-master-at-arms
+  playTimeTracker: LSJobSpy
   whitelisted: true
-  startingGear: EscortGear
-  alwaysUseSpawner: true
-  hideConsoleVisibility: true
-  canBeAntag: true
-  consoleAdjustable: false
+  weight: 30
+  displayWeight: 30
+  # TODO section
+  startingGear: LSSpyGear
   icon: "JobIconBoxer"
-  supervisors: job-supervisors-freebooters-union
-  weight: 40
-  displayWeight: 3
-  setPreference: true
+  # Frontier's fields
+  hideConsoleVisibility: true
   newPlayerMessage: false
+  # Uncertain if needed
+  alwaysUseSpawner: true
+  consoleAdjustable: false
+  # Common v
   access:
   - Pirate
-  - BlackMarket
+  - BlackMarket # TODO: Consider if spys should get 'combat' vessels
   accessGroups:
   - GeneralAccess
   special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #freelancer specific
   - !type:AddComponentSpecial
     components:
-    # - type: AutoPirate
-    - type: SpecialSectorStationRecord # must be given on spawn
-      recordGeneration: FalseRecord
-    - type: DisableSuitSensors
-    - type: IsPirate
+    - type: IsPirate # TODO: Rename this to IsFreelancer
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ] # TODO: consider giving freedoms back
+  #RPI
   - !type:AddRpiJobModifierSpecial
     modifiersToAdd:
     - rpiJobModifierPirate
   - !type:AddRpiAuraSpecial
     aurasToAdd:
-    - rpiAuraMassageTherapist
+    - rpiAuraMassageTherapist # TODO: replace this
   - !type:RpiChatJudgementModifierSpecial
     modsToAdd:
-    - rpiChatJudgementModifierMassageTherapist
-  - !type:AddImplantSpecial
-    implants: [ FreelanceTrackingImplant, FreedomImplant ]
-  - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
-    holiday: FrontierBirthday
-    prototype: FrontierBirthdayGift
-
-#play time tracker
-- type: playTimeTracker
-  id: JobEscort
+    - rpiChatJudgementModifierMassageTherapist # TODO: replace this
 
 - type: entity
-  id: SpawnPointEscort
+  id: SpawnPointLSSpy
   parent: SpawnPointJobBase
-  name: escort spawn point
-  suffix: Frontier
+  name: spy spawn point
+  suffix: LoneStar
   components:
   - type: SpawnPoint
-    job_id: Escort
+    job_id: LSSpy
   - type: Sprite
     sprite: Structures/Decoration/banner.rsi
     state: banner-red
 
 - type: startingGear
-  id: EscortGear
+  id: LSSpyGear
   equipment:
     pocket1: BasePirateUplinkPirateCrew
-    pocket2: LSWeaponPistolMackerel
+    pocket2: ContrabandAppraisalToolPirate
   storage:
-    back:
-    - ShipVoucherCoyoteEscort
-    - ContrabandAppraisalToolPirate
-
-- type: chameleonOutfit
-  id: EscortChameleonOutfit
-  job: Escort
-  equipment:
-    head: ClothingHeadHatChef
-    eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskItalianMoustache
-    neck: ClothingNeckScarfStripedBrown
-    outerClothing: ClothingOuterJacketChef
-    gloves: ClothingHandsGlovesColorWhite
-    shoes: ClothingShoesChef
+    wallet: # TODO: check this works
+    - LSWeaponPistolMackerel
 
 - type: roleLoadout
-  id: JobEscort
+  id: LSJobSpy
+  canCustomizeName: true
   groups:
-  - FreelancerFactionHead # LoneStar
-  - FreelancerFactionNeck # LoneStar
-  - FreelancerFactionJumpsuit # LoneStar
-  - MercenaryGloves
-  - PilotBackpack
-  - FreelancerFactionOuterClothing # LoneStar
-  - MercenaryShoes
-  - PilotFace
-  - MercenaryGlasses
-  - MercenaryBelt
-  - PilotEars
-  - FreelancerEncryptionKey
+  - LSFreelancersFactionJumpsuit
+  - LSFreelancersFactionOuterClothing
+  - LSFreelancersFactionShoes
+  - LSFreelancersFactionGloves
+  - LSFreelancersFactionHead
+  - LSFreelancersFactionMask
+  - LSFreelancersFactionEyes
+  - LSFreelancersFactionNeck
+  - LSFreelancersFactionEars
+  - LSFreelancersFactionBackpack
+  - LSFreelancersFactionBelt
+  - LSFreelancersFactionWallet
+  - LSFreelancersFactionEncryptionKey
+  - LSFreelancersFactionImplanter
+  # Common v
   - ContractorBoxSurvival
-  - SmugglerPDA
-  - ContractorWallet
   - ContractorCartridge
   - ContractorBackpackItems
   - ContractorHandItems
   - ContractorInstruments
   - NFSpeciesSpecific
-  canCustomizeName: true # pseudonym?
