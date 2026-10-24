@@ -43,14 +43,14 @@
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite
-    sprite: _LoneStar/Objects/Tools/hcd.rsi
+    sprite: _Everdream/Objects/Tools/hcd.rsi
     layers:
     - state: icon
     - state: icon-unshaded
       shader: unshaded
   - type: Item
     size: Normal
-    sprite: _LoneStar/Objects/Tools/hcd.rsi
+    sprite: _Everdream/Objects/Tools/hcd.rsi
     inhandVisuals:
       left:
       - state: inhand-left
@@ -61,7 +61,7 @@
       - state: inhand-right-unshaded
         shader: unshaded
   - type: Clothing
-    sprite: _LoneStar/Objects/Tools/hcd.rsi
+    sprite: _Everdream/Objects/Tools/hcd.rsi
     quickEquip: false
     slots:
     - Belt
