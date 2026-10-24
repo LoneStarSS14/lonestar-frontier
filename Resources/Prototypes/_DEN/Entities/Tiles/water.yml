@@ -12,7 +12,7 @@
     volume: -10 # LoneStar. I think it's too loud at 4 - kc.
     range: 6
     sound:
-      path: /Audio/_DEN/Effects/Fluids/waterfall.ogg
+      path: Audio/_DEN/Effects/Fluids/waterfall.ogg
 
 - type: entity
   parent: [FloorWaterEntity, FloorWaterfallBase]
@@ -37,56 +37,54 @@
   - type: Occluder
 
 # Somber Pool Waterfall (renamed. Credits to sha-seng(github))
-- type: entity
-  parent: FloorWaterfallBase
-  id: FloorWaterfallEntityPool
-  name: pool waterfall
-  suffix: Non-Occluded
-  description: "Dark water, like something drawn up from far below. But there's nothing down there."
-  components:
-  - type: Transform
-    anchored: false # So it can use other snapping modes
-  - type: Sprite
-    drawdepth: Overdoors
-    sprite: _DEN/Tiles/Planet/waterfall.rsi
-    layers:
-    - state: poolwaterfallcut
-      offset: 0,0.125 # 4 pixels up to reach the spout
-    - state: poolwaterfallshinecut
-      offset: 0,0.125
-      shader: unshaded
+# - type: entity
+#   parent: [ FloorWaterfallBase, FloorWaterEntity ]
+#   id: FloorWaterfallEntityPool
+#   name: pool waterfall
+#   suffix: non-occluded
+#   description: "Dark water, like something drawn up from far below. But there's nothing down there."
+#   components:
+#   - type: Transform
+#     anchored: false # So it can use other snapping modes
+#   - type: Sprite
+#     drawdepth: Overdoors
+#     sprite: _DEN/Tiles/Planet/waterfall.rsi
+#     layers:
+#     - state: poolwaterfallcut
+#     - state: poolwaterfallshinecut
+#       shader: unshaded
 
-# Somber Waterfall Spouts. Renamed. Credits to sha-seng (github)
+# # Somber Waterfall Spouts. Renamed. Credits to sha-seng (github)
 
-- type: entity
-  parent: BaseStructure
-  id: PoolWaterfallSpout
-  name: pool waterfall spout
-  description: "A narrow spout set into the wall, providing fresh water from hidden filters."
-  components:
-  - type: Sprite
-    drawdepth: Overdoors
-    sprite: _DEN/Tiles/Planet/waterfall.rsi
-    state: poolwaterfallspout
-  - type: Damageable
-    damageContainer: Inorganic
-    damageModifierSet: Metallic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 50
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
+# - type: entity
+#   parent: BaseStructure
+#   id: PoolWaterfallSpout
+#   name: pool waterfall spout
+#   description: "A narrow spout set into the wall, providing fresh water from hidden filters."
+#   components:
+#   - type: Sprite
+#     drawdepth: Overdoors
+#     sprite: _DEN/Tiles/Planet/waterfall.rsi
+#     state: poolwaterfallspout
+#   - type: Damageable
+#     damageContainer: Inorganic
+#     damageModifierSet: Metallic
+#   - type: Destructible
+#     thresholds:
+#     - trigger:
+#         !type:DamageTrigger
+#         damage: 50
+#       behaviors:
+#       - !type:DoActsBehavior
+#         acts: ["Destruction"]
+#       - !type:PlaySoundBehavior
+#         sound:
+#           collection: MetalBreak
 
-- type: entity
-  parent: PoolWaterfallSpout
-  id: PoolWaterfallSpoutDark
-  suffix: Wall, Dark
-  components:
-  - type: Sprite
-    state: poolwaterfallspoutdark
+# - type: entity
+#   parent: PoolWaterfallSpout
+#   id: PoolWaterfallSpoutDark
+#   suffix: Wall, Dark
+#   components:
+#   - type: Sprite
+#     state: poolwaterfallspoutdark
