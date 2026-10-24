@@ -9,3 +9,9 @@
     Plasma: 600
     Uranium: 150
     Gold: 100
+
+# HCD
+- type: latheRecipe
+  parent: ShipyardRCD
+  id: LSHCD
+  result: HCD
