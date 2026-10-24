@@ -41,6 +41,8 @@
     ClothingNeckStoleChaplain: 3
     ClothingBeltChaplainSash: 3 # Frontier
 #    ClothingHeadsetService: 4 # Frontier
+    HCD: 4294967295 # LoneStar
+    ShipyardRCDAmmo: 4294967295 # LoneStar
     RubberStampChaplain: 3
     Bible: 3 # Frontier: 1<3
     BoxCandle: 2
