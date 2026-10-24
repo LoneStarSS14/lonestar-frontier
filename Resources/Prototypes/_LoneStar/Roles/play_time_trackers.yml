@@ -1,2 +1,49 @@
+#region Command
 - type: playTimeTracker
   id: JobGuildLeader
+#endregion
+
+#region Residential
+#endregion
+
+#region LSRD
+- type: playTimeTracker
+  id: JobLSChiefRanger
+
+- type: playTimeTracker
+  id: JobLSEnforcer
+
+- type: playTimeTracker
+  id: JobLSRetrievalOfficer
+
+- type: playTimeTracker
+  id: JobLSDetective
+
+- type: playTimeTracker
+  id: JobLSCorpsman
+
+- type: playTimeTracker
+  id: JobLSClerk
+#endregion
+
+#region Freelancers
+- type: playTimeTracker
+  id: JobLSMasterAtArms
+
+- type: playTimeTracker
+  id: JobLSEnforcer
+
+- type: playTimeTracker
+  id: JobLSSmuggler
+
+- type: playTimeTracker
+  id: JobLSRipperdoc
+
+- type: playTimeTracker
+  id: JobLSSpy
+
+- type: playTimeTracker
+  id: JobLSEscort
+#endregion
+
+
