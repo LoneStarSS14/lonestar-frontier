@@ -69,6 +69,10 @@
   - type: Construction # Frontier
     graph: AltarsGraph # Frontier
     node: AltarNanotrasenNode # Frontier
+  - type: RCDDeconstructable # LoneStar
+    cost: 5 # LoneStar
+    delay: 3 # LoneStar
+    fx: EffectRCDDeconstruct3 # LoneStar
 
 - type: entity
   id: AltarChaos
