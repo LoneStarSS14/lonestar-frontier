@@ -1,75 +1,81 @@
 - type: job
-  id: NFPirate
-  name: job-name-nf-pirate
-  description: job-description-nf-pirate
-  playTimeTracker: JobPirate
+  id: LSFreelancerPirate
+  name: job-name-ls-freelancer-pirate
+  description: job-description-ls-freelancer-pirate
+  supervisors: job-supervisors-ls-master-at-arms
+  playTimeTracker: JobLSFreelancerPirate
   whitelisted: true
+  weight: 50
+  displayWeight: 50
+  # TODO section
   startingGear: NFPirateGear
-  alwaysUseSpawner: true
-  hideConsoleVisibility: true
-  canBeAntag: true
-  consoleAdjustable: false
   icon: "JobIconNFPirate"
-  supervisors: job-supervisors-nf-pirate
-  weight: 20
-  displayWeight: 20
-  setPreference: true
+  # Frontier's fields
+  hideConsoleVisibility: true
   newPlayerMessage: false
+  # Uncertain if needed
+  alwaysUseSpawner: true
+  consoleAdjustable: false
+  # Common v
   access:
   - Pirate
   - BlackMarket
   accessGroups:
   - GeneralAccess
   special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
   - !type:AddComponentSpecial
     components:
-#    - type: AutoPirate
-    - type: SpecialSectorStationRecord # must be given on spawn
-      recordGeneration: FalseRecord
-    - type: DisableSuitSensors
     - type: IsPirate
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI
   - !type:AddRpiJobModifierSpecial
     modifiersToAdd:
     - rpiJobModifierPirate
-  - !type:AddImplantSpecial
-    implants: [ FreelanceTrackingImplant ]
-  - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
-    holiday: FrontierBirthday
-    prototype: FrontierBirthdayGift
+
+- type: entity
+  id: SpawnPointLSFreelancerPirate # TODO: mapping migrations.
+  parent: SpawnPointJobBase
+  name: freelancer pirate spawn point
+  suffix: Frontier
+  components:
+  - type: SpawnPoint
+    job_id: LSFreelancerPirate
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
 
 - type: startingGear
-  id: NFPirateGear
-  equipment:
+  id: LSFreelancerPirateGear
+  equipment: # TODO: add PDA
     pocket1: BasePirateUplinkPirateCrew
-  storage:
-    back:
-    - ContrabandAppraisalToolPirate
-    - ComputerIFFFlatpack
-
-- type: chameleonOutfit
-  id: NFPirateChameleonOutfit
-  job: NFPirate
+    pocket2: ContrabandAppraisalToolPirate
 
 - type: roleLoadout
-  id: JobNFPirate
-  groups:
-  - FreelancerFactionHead # LoneStar
-  - FreelancerFactionNeck # LoneStar
-  - FreelancerFactionJumpsuit # LoneStar
-  - MercenaryGloves # Coyote: Pirate Loadout Expansion
-  - ContractorBackpack
-  - FreelancerFactionOuterClothing # LoneStar
-  - NFPirateShoes
-  - NFPirateFace
-  - MercenaryGlasses # Coyote: Pirate Loadout Expansion
-  - MercenaryBelt # Coyote: Pirate Loadout Expansion
-  - PilotEars # LoneStar
-  - FreelancerEncryptionKey # Coyote: Pirates get comm keys
+  id: JobLSFreelancerPirate
+  canCustomizeName: true
+  groups: # TODO: Set the 'combatant' variants here
+  - LSFreelancersFactionJumpsuit
+  - LSFreelancersFactionOuterClothing
+  - LSFreelancersFactionShoes
+  - LSFreelancersFactionGloves
+  - LSFreelancersFactionHead
+  - LSFreelancersFactionMask
+  - LSFreelancersFactionEyes
+  - LSFreelancersFactionNeck
+  - LSFreelancersFactionEars
+  - LSFreelancersFactionBackpack
+  - LSFreelancersFactionBelt
+  - LSFreelancersFactionWallet
+  - LSFreelancersFactionEncryptionKey
+  - LSFreelancersFactionImplanter
+  # Common v
   - ContractorBoxSurvival
-  - SmugglerPDA
   - ContractorWallet
   - PirateBackpackItems
   - ContractorHandItems
-  - ContractorInstruments # Coyote
+  - ContractorInstruments
   - NFSpeciesSpecific
-  canCustomizeName: true # pseudonym?
