@@ -123,6 +123,32 @@
       storagebase: !type:Container
         ents: []
 
+- type: entity
+  parent: ClothingOuterHardsuitSyndieCommander
+  id: ClothingOuterHardsuitTSFm86
+  name: M86 TSF Marine Hardsuit
+  description: The m86 hardsuit used by the Trans-Solarian Federation's Marine Corps. A bulky, well-protected suit of armor for frontline engagement.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OutherClothing/Hardsuits/m86.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OutherClothing/Hardsuits/m86.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitTSFm86
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndieCommander
+  id: ClothingOuterHardsuitTSFmk4
+  name: M86 Mk4 TSF Marine Hardsuit
+  description: The m86 mk4 hardsuit used by the Trans-Solarian Federation's Marine Corps. The Mk4 is an upgraded variant designed to be a bit more comfortable for the wearer.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/OutherClothing/Hardsuits/m86_mk4.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/OutherClothing/Hardsuits/m86_mk4.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitTSFm86
+
 # region helmets
 - type: entity
   parent: [ ClothingHeadSuitWithLightBase, ClothingHeadEVAHelmetBase ]
@@ -161,7 +187,7 @@
         shader: unshaded
   - type: PointLight
     color: "#d96050"
-    radius: 7  
+    radius: 7
     energy: 3
 
 - type: entity
@@ -201,8 +227,31 @@
         shader: unshaded
   - type: PointLight
     color: "#53e1ee"
-    radius: 7  
-    energy: 3 
+    radius: 7
+    energy: 3
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndieCommander
+  id: ClothingHeadHelmetHardsuitTSFm86
+  name: TSF Marine Helmet
+  description: The m86 hardsuit used by the Trans-Solarian Federation's Marine Corps. A bulky, well-protected suit of armor for frontline engagement.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Head/Hardsuits/m86.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Head/Hardsuits/m86.rsi
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        shader: unshaded
+      head-vox:
+      - state: equipped-HELMET-vox
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-HELMET-reptilian
+        shader: unshaded
 
 # region actions
 - type: entity
