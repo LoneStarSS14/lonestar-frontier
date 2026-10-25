@@ -1,59 +1,57 @@
-## LoneStar, moved to _CS/Roles/Jobs/LSRD/enforcer.yml
+- type: job
+  id: Deputy
+  name: job-name-deputy
+  description: job-description-deputy
+  playTimeTracker: JobSecurityOfficer
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 14400 # 4 hours
+  startingGear: DeputyGear
+  icon: JobIconDeputy
+  supervisors: job-supervisors-sergeant
+  weight: 130
+  displayWeight: 40
+  canBeAntag: false
+  consoleAdjustable: false
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierDeputy
+  - !type:AddComponentSpecial
+    components:
+    - type: IsNfsd
 
-# - type: job
-#   id: Deputy
-#   name: job-name-deputy
-#   description: job-description-deputy
-#   playTimeTracker: JobSecurityOfficer
-#   requirements:
-#     - !type:OverallPlaytimeRequirement
-#       time: 43200 # 12 hours
-#     - !type:DepartmentTimeRequirement
-#       department: Security
-#       time: 14400 # 4 hours
-#   startingGear: DeputyGear
-#   icon: JobIconDeputy
-#   supervisors: job-supervisors-sergeant
-#   weight: 130
-#   displayWeight: 40
-#   canBeAntag: false
-#   consoleAdjustable: false
-#   accessGroups:
-#   - GeneralNfsdAccess
-#   special:
-#   - !type:AddImplantSpecial
-#     implants: [ MindShieldImplant, TrackingImplant ]
-#   - !type:GiveItemOnHolidaySpecial
-#     holiday: FrontierBirthday
-#     prototype: FrontierBirthdayGift
-#   - !type:AddRpiJobModifierSpecial
-#     modifiersToAdd:
-#     - rpiJobModifierDeputy
-#   - !type:AddComponentSpecial
-#     components:
-#     - type: IsNfsd
+- type: startingGear
+  id: DeputyGear
+  equipment:
+    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+  storage:
+    back:
+    - Flash
+    - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
+    - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
+    - BaseSecurityUplinkRadioOfficer # Coyote: added uplink for deputies, removed their starting uplink coins
 
-# - type: startingGear
-#   id: DeputyGear
-#   equipment:
-#     pocket1: NFWeaponPistolUniversalNfsdLessLethal
-#   storage:
-#     back:
-#     - Flash
-#     - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
-#     - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
-#     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink for deputies, removed their starting uplink coins
-
-# - type: chameleonOutfit
-#   id: DeputyChameleonOutfit
-#   job: Deputy
-#   hasMindShield: true
-#   equipment:
-#     head: ClothingHeadHatNfsdBeretBrown
-#     mask: ClothingMaskGasNfsd
-#     eyes: ClothingEyesGlassesNfsd
-#     outerClothing: ClothingOuterArmorNfsd
-#     neck: ClothingNeckNfsdBadgeSecurity
-#     belt: ClothingBeltNfsdFilled
-#     gloves: ClothingHandsGlovesCombatNfsdBrown
-#     shoes: ClothingShoesBootsNfsdBrownFilled
+- type: chameleonOutfit
+  id: DeputyChameleonOutfit
+  job: Deputy
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretBrown
+    mask: ClothingMaskGasNfsd
+    eyes: ClothingEyesGlassesNfsd
+    outerClothing: ClothingOuterArmorNfsd
+    neck: ClothingNeckNfsdBadgeSecurity
+    belt: ClothingBeltNfsdFilled
+    gloves: ClothingHandsGlovesCombatNfsdBrown
+    shoes: ClothingShoesBootsNfsdBrownFilled

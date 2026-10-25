@@ -1,60 +1,60 @@
-- type: job
-  id: Brigmedic
-  name: job-name-brigmedic
-  description: job-description-brigmedic-nf
-  playTimeTracker: JobBrigmedic
-  requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 43200 # 12 hours
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 14400 # 4 hours
-  startingGear: BrigmedicGear
-  icon: JobIconBrigmedicNF
-  supervisors: job-supervisors-bailiff
-  weight: 125
-  displayWeight: 35
-  canBeAntag: false
-  consoleAdjustable: false
-  access:
-  - Brigmedic
-  accessGroups:
-  - GeneralNfsdAccess
-  special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant ]
-  - !type:GiveItemOnHolidaySpecial
-    holiday: FrontierBirthday
-    prototype: FrontierBirthdayGift
-  - !type:AddRpiJobModifierSpecial
-    modifiersToAdd:
-    - rpiJobModifierBrigMedic
-  - !type:AddComponentSpecial
-    components:
-    - type: IsNfsd
+# - type: job
+#   id: Brigmedic
+#   name: job-name-brigmedic
+#   description: job-description-brigmedic-nf
+#   playTimeTracker: JobBrigmedic
+#   requirements:
+#   - !type:OverallPlaytimeRequirement
+#     time: 43200 # 12 hours
+#   - !type:DepartmentTimeRequirement
+#     department: Security
+#     time: 14400 # 4 hours
+#   startingGear: BrigmedicGear
+#   icon: JobIconBrigmedicNF
+#   supervisors: job-supervisors-bailiff
+#   weight: 125
+#   displayWeight: 35
+#   canBeAntag: false
+#   consoleAdjustable: false
+#   access:
+#   - Brigmedic
+#   accessGroups:
+#   - GeneralNfsdAccess
+#   special:
+#   - !type:AddImplantSpecial
+#     implants: [ MindShieldImplant, TrackingImplant ]
+#   - !type:GiveItemOnHolidaySpecial
+#     holiday: FrontierBirthday
+#     prototype: FrontierBirthdayGift
+#   - !type:AddRpiJobModifierSpecial
+#     modifiersToAdd:
+#     - rpiJobModifierBrigMedic
+#   - !type:AddComponentSpecial
+#     components:
+#     - type: IsNfsd
 
-- type: startingGear
-  id: BrigmedicGear
-  equipment:
-    pocket1: NFWeaponPistolUniversalNfsdLessLethal
-  storage:
-    back:
-    - EncryptionKeyMedical
-    - Flash
-    - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
-    - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
-    - BaseSecurityUplinkRadioOfficer # Coyote: added uplink to brigmedics and removed starting FUCs
+# - type: startingGear
+#   id: BrigmedicGear
+#   equipment:
+#     pocket1: NFWeaponPistolUniversalNfsdLessLethal
+#   storage:
+#     back:
+#     - EncryptionKeyMedical
+#     - Flash
+#     - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
+#     - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
+#     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink to brigmedics and removed starting FUCs
 
-- type: chameleonOutfit
-  id: BrigmedicChameleonOutfit
-  job: Brigmedic
-  hasMindShield: true
-  equipment:
-    head: ClothingHeadHatNfsdBeretCream
-    mask: ClothingMaskBreathMedicalSecurity
-    eyes: ClothingEyesHudNfsdMed
-    outerClothing: ClothingOuterCoatNfsdBomberBrigmed
-    neck: ClothingNeckNfsdBadgeSecurityBrigmedic
-    belt: ClothingBeltNfsdWebbingFilledBrigmedic
-    gloves: ClothingHandsGlovesNitrile
-    shoes: ClothingShoesBootsNfsdBrownFilled
+# - type: chameleonOutfit
+#   id: BrigmedicChameleonOutfit
+#   job: Brigmedic
+#   hasMindShield: true
+#   equipment:
+#     head: ClothingHeadHatNfsdBeretCream
+#     mask: ClothingMaskBreathMedicalSecurity
+#     eyes: ClothingEyesHudNfsdMed
+#     outerClothing: ClothingOuterCoatNfsdBomberBrigmed
+#     neck: ClothingNeckNfsdBadgeSecurityBrigmedic
+#     belt: ClothingBeltNfsdWebbingFilledBrigmedic
+#     gloves: ClothingHandsGlovesNitrile
+#     shoes: ClothingShoesBootsNfsdBrownFilled

@@ -1,68 +1,68 @@
-## LoneStar, moved to _CS/Roles/Jobs/LSRD/retrieval-officer.yml
+# Sergeant
 
-# - type: job
-#   id: SeniorOfficer
-#   name: job-name-senior-officer
-#   description: job-description-senior-officer
-#   playTimeTracker: JobSeniorOfficer
-#   requirements: # Coyote: editted the playtime required for Sergeant
-#   - !type:OverallPlaytimeRequirement
-#     time: 108000
-#   - !type:DepartmentTimeRequirement
-#     department: Security
-#     time: 28800 # 8 hours
-#   startingGear: SeniorOfficerGear
-#   icon: JobIconSergeant
-#   supervisors: job-supervisors-bailiff
-#   weight: 140
-#   displayWeight: 50
-#   canBeAntag: false
-#   consoleAdjustable: false
-#   access: # Access was editted by Coyote
-#   - HeadOfSecurity
-#   - Command
-#   - Armory
-#   - Sergeant
-#   - Bailiff
-#   - Brigmedic
-#   accessGroups:
-#   - GeneralNfsdAccess
-#   special:
-#   - !type:AddImplantSpecial
-#     implants: [ MindShieldImplant, TrackingImplant ]
-#   - !type:GiveItemOnHolidaySpecial
-#     holiday: FrontierBirthday
-#     prototype: FrontierBirthdayGift
-#   - !type:AddComponentSpecial
-#     components:
-#     - type: IsNfsd
-#       worth: 2
+- type: job
+  id: SeniorOfficer
+  name: job-name-senior-officer
+  description: job-description-senior-officer
+  playTimeTracker: JobSeniorOfficer
+  requirements: # Coyote: editted the playtime required for Sergeant
+  - !type:OverallPlaytimeRequirement
+    time: 108000
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 28800 # 8 hours
+  startingGear: SeniorOfficerGear
+  icon: JobIconSergeant
+  supervisors: job-supervisors-bailiff
+  weight: 140
+  displayWeight: 50
+  canBeAntag: false
+  consoleAdjustable: false
+  access: # Access was editted by Coyote
+  - HeadOfSecurity
+  - Command
+  - Armory
+  - Sergeant
+  - Bailiff
+  - Brigmedic
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  - !type:AddComponentSpecial
+    components:
+    - type: IsNfsd
+      worth: 2
 
-# - type: startingGear
-#   id: SeniorOfficerGear
-#   equipment:
-#     pocket1: NFWeaponPistolUniversalNfsdLessLethal
-#   storage:
-#     back:
-#     - Flash
-#     - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
-#     - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
-#     - BaseSecurityUplinkRadioOfficer
-#     - FrontierUplinkCoin5 # Coyote: added 5 FUCs to Sergeants
-#     - ShipVoucherNfsdSergeant
-#     - RubberStampSergeant
-#     - EncryptionKeyCommand
+- type: startingGear
+  id: SeniorOfficerGear
+  equipment:
+    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+  storage:
+    back:
+    - Flash
+    - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
+    - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
+    - BaseSecurityUplinkRadioOfficer
+    - FrontierUplinkCoin5 # Coyote: added 5 FUCs to Sergeants
+    - ShipVoucherNfsdSergeant
+    - RubberStampSergeant
+    - EncryptionKeyCommand
 
-# - type: chameleonOutfit
-#   id: SeniorOfficerChameleonOutfit
-#   job: SeniorOfficer
-#   hasMindShield: true
-#   equipment:
-#     head: ClothingHeadHatNfsdBeretBrown
-#     mask: ClothingMaskGasNfsd
-#     eyes: ClothingEyesGlassesNfsd
-#     outerClothing: ClothingOuterArmorNfsd
-#     neck: ClothingNeckNfsdBadgeSeniorOfficer
-#     belt: ClothingBeltNfsdFilled
-#     gloves: ClothingHandsGlovesCombatNfsdBrown
-#     shoes: ClothingShoesBootsNfsdBrownFilled
+- type: chameleonOutfit
+  id: SeniorOfficerChameleonOutfit
+  job: SeniorOfficer
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretBrown
+    mask: ClothingMaskGasNfsd
+    eyes: ClothingEyesGlassesNfsd
+    outerClothing: ClothingOuterArmorNfsd
+    neck: ClothingNeckNfsdBadgeSeniorOfficer
+    belt: ClothingBeltNfsdFilled
+    gloves: ClothingHandsGlovesCombatNfsdBrown
+    shoes: ClothingShoesBootsNfsdBrownFilled
