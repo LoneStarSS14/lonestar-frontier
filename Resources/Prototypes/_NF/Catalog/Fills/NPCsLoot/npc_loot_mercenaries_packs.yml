@@ -138,29 +138,7 @@
   - type: SpawnItemsOnUse
     items:
     # Weapons
-    - id: SpawnDungeonLootMeleeT2
-      orGroup: Weapons
-      prob: 0.6
-    # Armor
-    - id: ClothingOuterVestWebMercenary
-      orGroup: Armor
-      prob: 0.3
-    - id: SpawnDungeonLootShieldsMercenary
-      orGroup: Armor
-      prob: 0.3
-    # Items
-    - id: ClothingNeckIFFNeutral
-      orGroup: Items
-      prob: 0.2
-    - id: SpawnDungeonLootNpcPunksSmokes
-      orGroup: Items
-      prob: 0.15
-    - id: SpawnDungeonClutterMedipens
-      orGroup: Items
-      prob: 0.25
-    - id: SpawnDungeonLootNpcMercenariesFluff
-      orGroup: Items
-      prob: 0.15
+    - id: LSSpawnLootBeltMercenaryLootMeleeT1 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackMercenary
@@ -178,21 +156,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Magazines
-    - id: NFMagazinePistol35Overpressure
-      orGroup: Magazines
-      prob: 0.3
-    - id: NFMagazinePistol35Empty
-      orGroup: Magazines
-      amount: 2
-      prob: 0.4
-    - id: NFMagazinePistol35Empty
-      orGroup: Magazines
-      amount: 3
-      prob: 0.3
-    # Ammo
-    - id: NFAmmunitionBoxPistol35Overpressure
-      orGroup: Ammo
+    - id: LSSpawnLootBeltMercnaryLootRangedT1 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackMercenary
@@ -210,23 +174,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Magazines
-    - id: NFAmmunitionBoxRifle20Overpressure
-      orGroup: Magazines
-      prob: 0.4
-    - id: NFMagazineClipRifle20
-      orGroup: Magazines
-      prob: 0.2
-    - id: NFMagazineClipRifle20Empty
-      orGroup: Magazines
-      prob: 0.1
-    - id: NFMagazineClipRifle20Empty
-      orGroup: Magazines
-      prob: 0.3
-      amount: 2
-    # Ammo
-    - id: NFAmmunitionBoxBigRifle20Overpressure
-      orGroup: Ammo
+    - id: LSSpawnLootBeltMercnaryLootRangedAltT1 # LoneStar
 
 # region tier 2
 - type: entity
@@ -263,14 +211,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: NFAmmunitionBoxShellShotgunOverpressure
-      orGroup: Ammo
-      prob: 0.6
-    - id: NFAmmunitionBoxShellShotgunOverpressure
-      orGroup: Ammo
-      prob: 0.4
-      amount: 2
+    - id: LSSpawnLootBeltMercnaryLootRangedT2 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackMercenary
@@ -290,8 +231,8 @@
     sprite: Clothing/Belt/bandolier.rsi
     state: icon
   - type: SpawnItemsOnUse
-    items: # LoneStar, overwritten
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
+    items:
+    - id: LSSpawnLootBeltMercnaryLootRangedAltT2 # LoneStar
 
 #region tier 3
 - type: entity
@@ -322,17 +263,7 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    # Topicals
-    - id: SpawnDungeonClutterMedsFull
-      orGroup: Topicals
-      prob: 0.4
-    - id: SpawnDungeonClutterMedsSingle
-      orGroup: Topicals
-      prob: 0.6
-    # Items
-    - id: SpawnDungeonClutterMedipens
-      orGroup: Items
-      prob: 0.7
+    - id: LSSpawnLootBeltMercnaryLootRangedT3 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackMercenary
@@ -353,16 +284,7 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    - id: NFMagazineRifle30Overpressure
-      prob: 0.4
-    - id: NFMagazineRifle30Overpressure
-      prob: 0.2
-    - id: NFAmmunitionBoxRifle30Overpressure
-      prob: 0.3
-    - id: Tourniquet
-      prob: 0.4
-    - id: NFAmmunitionBoxBigRifle30Overpressure
-      prob: 0.1
+    - id: LSSpawnLootBeltMercnaryLootRangedAltT3 # LoneStar
 
 #region tier 4 (boss)
 - type: entity
