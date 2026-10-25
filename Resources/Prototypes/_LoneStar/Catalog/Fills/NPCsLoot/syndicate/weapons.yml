@@ -34,13 +34,6 @@
   id: LSTableSyndicateWeaponRangedPistol
   table: !type:GroupSelector
     children:
-    - id: WeaponCaseShortRitland45Expedition
-      weight: 0.3
-    - id: WeaponCaseShortViper
-      weight: 0.3
-    - id: WeaponCaseShortCobra
-      weight: 0.4
-    children:
     - !type:GroupSelector
       weight: 1
       children:
@@ -103,6 +96,7 @@
 - type: entityTable
   id: LSTableSyndicateWeaponRangedRifle
   table: !type:GroupSelector
+    children:
     - !type:GroupSelector
       weight: 1
       children:
@@ -122,15 +116,12 @@
 #MARK: Chemical
 - type: entityTable
   id: LSTableSyndicateWeaponRangedChemical
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableSpawner
-    table: !type:GroupSelector
-      children:
-      - id: WeaponWaterBlasterSuper
-        weight: 0.3
-      - id: WeaponWaterBlaster
-        weight: 0.2
-      - id: WeaponWaterPistol
-        weight: 0.1
+  table: !type:GroupSelector
+    children:
+    - id: WeaponWaterBlasterSuper
+      weight: 0.3
+    - id: WeaponWaterBlaster
+      weight: 0.2
+    - id: WeaponWaterPistol
+      weight: 0.1
 #endregion
