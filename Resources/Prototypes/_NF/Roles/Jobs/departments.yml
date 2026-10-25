@@ -18,18 +18,17 @@
   - Therapist # Frontier
 
 - type: department
+  abstract: true # LoneStar
   id: Antag
   name: department-Antag
   description: department-NFAntag-description
   color: "#DE3A3A"
   weight: -20 # accounted for in jobs
   roles:
-  # LoneStar start
-  - LSMasterAtArms
-  - LSFreelancerPirate
-  - LSSmuggler
-  - LSSpy
-  - LSRipperDoc
-  - LSEscort
-  - Prisoner # LoneStar, TODO: Remove this fully
-  # LoneStar end
+  - NFPirateCaptain
+  - NFPirateFirstMate
+  - NFPirate
+  - Smuggler # Coyote
+  - Escort # Coyote
+  - Prisoner #nyano
+  - RipperDoc # Coyote
