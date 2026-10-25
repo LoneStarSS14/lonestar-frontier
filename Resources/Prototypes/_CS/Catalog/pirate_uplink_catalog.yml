@@ -15,7 +15,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkRandomMelee
@@ -34,7 +34,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkPirateRCD
@@ -69,9 +69,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - NFPirate
-    - NFPirateFirstMate
-    - NFPirateCaptain
+    - LSFreelancerPirate
+    - LSMasterAtArms
 
 - type: listing
   id: UplinkSvalinnMachineGun
@@ -90,7 +89,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkChemicalsCrateD
@@ -109,7 +108,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkChemicalsCrateP
@@ -128,7 +127,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkChemicalsCrateS
@@ -147,7 +146,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerHardsuit
@@ -166,9 +165,9 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - Escort
-    - RipperDoc
+    - LSSmuggler
+    - LSSpy
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerHardsuitGoliath
@@ -187,7 +186,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkFreelancerHardsuitMaxim
@@ -206,7 +205,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkEscortHardsuit
@@ -225,7 +224,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkRipperDocHardsuit
@@ -244,7 +243,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkMaidHardsuit
@@ -263,7 +262,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerAccessBreaker
@@ -326,7 +325,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerSlipocalypseClusterSoap
@@ -344,7 +343,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerCameraBug
@@ -392,7 +391,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkFreelancerMedsBundle
@@ -410,7 +409,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 #- type: listing
 #  id: UplinkFreelancerCash5000
@@ -503,8 +502,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
-    - Smuggler
+    - LSRipperDoc
+    - LSSmuggler
 
 - type: listing
   id: UplinkFreelancerStimpack
@@ -522,8 +521,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
-    - Smuggler
+    - LSRipperDoc
+    - LSSmuggler
 
 - type: listing
   id: UplinkFreelancerNocturineChemistryBottle
@@ -541,7 +540,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerCombatMedkit
@@ -559,7 +558,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerChemistryKitBundle
@@ -578,7 +577,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerHypopen
@@ -597,7 +596,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerHypospray
@@ -616,7 +615,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerGlovesKnuckleDusters
@@ -651,7 +650,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerStorageImplanter
@@ -670,8 +669,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
-    - Escort
+    - LSRipperDoc
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerFreedomImplanter
@@ -690,7 +689,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerDnaScramblerImplant
@@ -709,7 +708,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerEmpImplanter
@@ -728,7 +727,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkFreelancerUplinkImplanter
@@ -747,7 +746,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkFreelancerJawsOfLife
@@ -765,7 +764,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerVoiceMask
@@ -783,7 +782,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkFreelancerHolster
@@ -832,7 +831,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerClothingNoSlipsShoes
@@ -850,7 +849,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerClothingThievingGloves
@@ -868,7 +867,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerClothingOuterVestWeb
@@ -901,9 +900,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - NFPirate
-    - NFPirateFirstMate
-    - NFPirateCaptain
+    - LSFreelancerPirate
+    - LSMasterAtArms
 
 - type: listing
   id: UplinkFreelancerOutlawHat
@@ -951,7 +949,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkIffConsole
@@ -984,8 +982,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - Escort
+    - LSSmuggler
+    - LSSpy
 
 - type: listing
   id: UplinkMicrowave
@@ -1003,8 +1001,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - Escort
+    - LSSmuggler
+    - LSSpy
 
 - type: listing
   id: UplinkAssembler
@@ -1022,8 +1020,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - Escort
+    - LSSmuggler
+    - LSSpy
 
 - type: listing
   id: UplinkBoozeFlatpack
@@ -1041,7 +1039,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkSyndieDrobeFlatpack
@@ -1059,7 +1057,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkAmmoTechfabFlatpack
@@ -1077,10 +1075,9 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - NFPirate
-    - NFPirateFirstMate
-    - NFPirateCaptain
-    - Smuggler
+    - LSFreelancerPirate
+    - LSMasterAtArms
+    - LSSmuggler
 
 - type: listing
   id: UplinkMercTechfabFlatpack
@@ -1098,10 +1095,9 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - NFPirate
-    - NFPirateFirstMate
-    - NFPirateCaptain
-    - Smuggler
+    - LSFreelancerPirate
+    - LSMasterAtArms
+    - LSSmuggler
 
 - type: listing
   id: UplinkMedicalTechfabFlatpack
@@ -1119,7 +1115,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkUniformPrinterFlatpack
@@ -1152,7 +1148,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkVendingMachineClothingPunkFlatpack
@@ -1170,9 +1166,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - NFPirate
-    - NFPirateFirstMate
-    - NFPirateCaptain
+    - LSFreelancerPirate
+    - LSMasterAtArms
 
 - type: listing
   id: UplinkVendingMachineBountyVendPunkFlatpack
@@ -1190,9 +1185,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - NFPirate
-    - NFPirateFirstMate
-    - NFPirateCaptain
+    - LSFreelancerPirate
+    - LSMasterAtArms
 
 - type: listing
   id: UplinkStunKnuckles
@@ -1211,7 +1205,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - RipperDoc
+    - LSRipperDoc
 
 - type: listing
   id: UplinkPirateShotgunAmmoUranium
@@ -1230,7 +1224,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkPirateRevolverAmmoUranium
@@ -1249,7 +1243,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkPirate20AmmoUranium
@@ -1268,7 +1262,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkPirate25AmmoUranium
@@ -1287,7 +1281,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkPirate30AmmoUranium
@@ -1306,7 +1300,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkPirate35AmmoUranium
@@ -1325,7 +1319,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkPirate40AmmoUranium
@@ -1344,7 +1338,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
+    - LSSmuggler
 
 - type: listing
   id: UplinkPirateShotgunAmmoIncendiary
@@ -1363,8 +1357,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - NFPirate
+    - LSSmuggler
+    - LSFreelancerPirate
 
 - type: listing
   id: UplinkPirateRevolverAmmoIncendiary
@@ -1383,8 +1377,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - NFPirate
+    - LSSmuggler
+    - LSFreelancerPirate
 
 - type: listing
   id: UplinkPirate20AmmoIncendiary
@@ -1403,8 +1397,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - NFPirate
+    - LSSmuggler
+    - LSFreelancerPirate
 
 - type: listing
   id: UplinkPirate25AmmoIncendiary
@@ -1423,8 +1417,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - NFPirate
+    - LSSmuggler
+    - LSFreelancerPirate
 
 - type: listing
   id: UplinkPirate30AmmoIncendiary
@@ -1443,8 +1437,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - NFPirate
+    - LSSmuggler
+    - LSFreelancerPirate
 
 - type: listing
   id: UplinkPirate35AmmoIncendiary
@@ -1463,8 +1457,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - NFPirate
+    - LSSmuggler
+    - LSFreelancerPirate
 
 - type: listing
   id: UplinkPirate40AmmoIncendiary
@@ -1483,8 +1477,8 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Smuggler
-    - NFPirate
+    - LSSmuggler
+    - LSFreelancerPirate
 
 - type: listing
   id: UplinkFreelancerThrowingKnivesKit
@@ -1503,7 +1497,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: UplinkFreelancerPistolCobra
@@ -1521,7 +1515,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id:  UplinkPirateAmmunitionBoxRifle60Rubber
@@ -1540,7 +1534,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
+    - LSSpy
 
 - type: listing
   id: PirateUplinkChameleonProjector
@@ -1559,7 +1553,7 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
-      - Escort
+      - LSSpy
 
 - type: listing
   id: PirateUplinkStealthBox
@@ -1577,7 +1571,7 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
-      - Escort
+      - LSSpy
 
 #Lone Star
 
@@ -1597,5 +1591,5 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-    - Escort
-    - Smuggler
+    - LSSpy
+    - LSSmuggler

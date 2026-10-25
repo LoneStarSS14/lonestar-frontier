@@ -3,8 +3,12 @@
   name: job-name-ls-spy
   description: job-description-ls-spy
   supervisors: job-supervisors-ls-master-at-arms
-  playTimeTracker: LSJobSpy
+  playTimeTracker: JobLSSpy
   whitelisted: true
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Antag
+      time: 57600 # 16 hours
   weight: 30
   displayWeight: 30
   # TODO section
@@ -68,6 +72,9 @@
   id: LSJobSpy
   canCustomizeName: true
   groups:
+  # Unique v
+  - LSFreelancerSpyPDA
+  # Freelancer v
   - LSFreelancersFactionJumpsuit
   - LSFreelancersFactionOuterClothing
   - LSFreelancersFactionShoes

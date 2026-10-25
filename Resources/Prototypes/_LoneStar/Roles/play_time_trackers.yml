@@ -31,7 +31,7 @@
   id: JobLSMasterAtArms
 
 - type: playTimeTracker
-  id: JobLSEnforcer
+  id: JobLSFreelancerPirate
 
 - type: playTimeTracker
   id: JobLSSmuggler

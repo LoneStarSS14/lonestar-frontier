@@ -45,7 +45,7 @@
   id: SpawnPointLSEscort # TODO: mapping migrations.
   parent: SpawnPointJobBase
   name: escort spawn point
-  suffix: Frontier
+  suffix: LoneStar
   components:
   - type: SpawnPoint
     job_id: LSEscort
@@ -62,6 +62,9 @@
   id: JobLSEscort
   canCustomizeName: true
   groups:
+  # Unique v
+  - LSFreelancerEscortPDA
+  # Freelancer v
   - LSFreelancersFactionJumpsuit
   - LSFreelancersFactionOuterClothing
   - LSFreelancersFactionShoes
