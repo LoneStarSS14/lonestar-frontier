@@ -1,5 +1,3 @@
-# LoneStar - chaplain loadout groups
-
 - type: loadoutGroup
   id: ChaplainBackpackItems
   name: loadout-group-hand-items

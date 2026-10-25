@@ -1,5 +1,4 @@
-# LoneStar - Divine Thurible by KC.
-- type: entity
+- type: entity # LoneStar - Divine Thurible by KC.
   name: divine thurible
   parent: BaseItem
   id: DivineThurible
