@@ -6,12 +6,12 @@
   playTimeTracker: JobLSMasterAtArms
   whitelisted: true
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Antag
-      time: 360000 # 100 hours
-    - !type:RoleTimeRequirement
-      role: JobLSFreelancerPirate
-      time: 144000 # 40 hours
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSFreelancers
+    #   time: 360000 # 100 hours
+    # - !type:RoleTimeRequirement
+    #   role: JobLSFreelancerPirate
+    #   time: 144000 # 40 hours
   weight: 60
   displayWeight: 60
   # TODO section
@@ -20,11 +20,8 @@
   # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Uncertain if needed
-  alwaysUseSpawner: true
-  consoleAdjustable: false
   # Common v
-  access:
+  access: # TODO: Add special 'war leader access', use command? unsure.
   - Pirate
   - BlackMarket
   accessGroups:

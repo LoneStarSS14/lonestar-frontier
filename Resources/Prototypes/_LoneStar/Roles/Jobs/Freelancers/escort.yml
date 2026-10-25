@@ -4,6 +4,9 @@
   description: job-description-ls-escort
   supervisors: job-supervisors-ls-master-at-arms
   playTimeTracker: JobLSEscort
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 6 hours
   weight: 10
   displayWeight: 10
   # TODO section
@@ -12,9 +15,6 @@
   # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Uncertain if needed
-  alwaysUseSpawner: true
-  consoleAdjustable: false
   # Common v
   access:
   - Pirate
