@@ -1,0 +1,135 @@
+#region Tier 1
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltSyndicateLootRangedT1Deckhand
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:GroupSelector
+      children:
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoNormalAny
+        weight: 2
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoOverpressureAny
+        weight: 6
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoIncendiaryAny
+        weight: 1
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltSyndicateLootRangedT1Saboteur
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:GroupSelector
+      children:
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoOverpressureAny
+        weight: 6
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoIncendiaryAny
+        weight: 2
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoUraniumAny
+        weight: 1
+#endregion
+
+#region Tier 2
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltSyndicateLootRangedT2Captain
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:GroupSelector
+      amount: 2
+      children:
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoOverpressureAny
+        weight: 6
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoIncendiaryAny
+        weight: 2
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoUraniumAny
+        weight: 1
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltSyndicateLootRangedT2Medic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        children:
+        - !type:NestedSelector
+          tableId: LSTableGeneralMedicalTopicals
+        - !type:NestedSelector
+          tableId: LSTableGeneralMedicalInjectors
+      - !type:GroupSelector
+        prob: 0.5
+        children:
+        - !type:NestedSelector
+          tableId: LSTableGeneralMedicalTopicals
+          weight: 4
+        - !type:NestedSelector
+          tableId: LSTableGeneralMedicalInjectors
+#endregion
+
+#region Elite / Horrors
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltSyndicateLootRangedT3Operative
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:GroupSelector
+      amount: 2
+      children:
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoOverpressureAny
+        weight: 1
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoIncendiaryAny
+        weight: 3
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoUraniumAny
+        weight: 2
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltSyndicateLootRangedT3Grenadier
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: LSTableSyndicateExplosiveGrenades
+#endregion
+
+#region Bosses
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltSyndicateLootRangedT4Commander
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:GroupSelector
+      amount: 2
+      children:
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoIncendiaryAny
+        weight: 1
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoUraniumAny
+        weight: 2
+#endregion

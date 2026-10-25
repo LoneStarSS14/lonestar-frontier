@@ -172,7 +172,6 @@
     items:
     # Ammo
     - id: SpawnDungeonLootNpcSyndicateAmmoShotgun
-      orGroup: Ammo
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -315,7 +314,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootBeltSyndicateT4Commander # LoneStar
+    - id: LSSpawnLootBeltSyndicateLootRangedT4Commander # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicateAlt
