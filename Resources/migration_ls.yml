@@ -1,0 +1,7 @@
+
+# LSRD / Freelancers overhaul part 1
+SpawnPointNFPirateCaptain: SpawnPointLSMasterAtArms
+SpawnPointNFPirate: SpawnPointLSFreelancerPirate
+SpawnPointSmuggler: SpawnPointLSSmuggler
+SpawnPointRipper: SpawnPointLSRipperDoc
+SpawnPointEscort: SpawnPointLSEscort

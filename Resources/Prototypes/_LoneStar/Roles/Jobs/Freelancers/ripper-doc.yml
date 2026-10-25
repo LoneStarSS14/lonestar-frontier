@@ -4,7 +4,13 @@
   description: job-description-ls-ripper-doc
   supervisors: job-supervisors-ls-master-at-arms
   playTimeTracker: JobLSRipperDoc
-  whitelisted: true
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Antag
+      time: 57600 # 16 hours
+    - !type:RoleTimeRequirement
+      role: JobMedicalNurse
+      time: 57600 # 16 hours
   weight: 20
   displayWeight: 20
   # TODO section
@@ -25,6 +31,7 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  #freelancer specific
   - !type:AddComponentSpecial
     components:
     - type: IsPirate
@@ -52,7 +59,7 @@
   suffix: LoneStar
   components:
   - type: SpawnPoint
-    job_id: RipperDoc
+    job_id: LSRipperDoc
   - type: Sprite
     sprite: Structures/Decoration/banner.rsi
     state: banner-red
@@ -67,6 +74,9 @@
   id: JobLSRipperDoc
   canCustomizeName: true
   groups:
+  # Unique v
+  - LSFreelancerRipperDocPDA
+  # Freelancer v
   - LSFreelancersFactionJumpsuit
   - LSFreelancersFactionOuterClothing
   - LSFreelancersFactionShoes

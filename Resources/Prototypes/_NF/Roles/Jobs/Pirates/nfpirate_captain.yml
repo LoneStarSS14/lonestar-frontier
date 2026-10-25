@@ -1,58 +1,56 @@
-## LoneStar, moved to _CS/Roles/Jobs/Freelancers/master-at-arms.yml
+- type: job
+  id: NFPirateCaptain
+  name: job-name-nf-pirate-captain
+  description: job-description-nf-pirate-captain
+  playTimeTracker: JobPirateCaptain
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 172800 # 48 hours
+  whitelisted: true
+  startingGear: NFPirateCaptainGear
+  alwaysUseSpawner: true
+  hideConsoleVisibility: true
+  canBeAntag: true
+  icon: "JobIconNFPirateCaptain"
+  supervisors: job-supervisors-freebooters-union
+  weight: 40
+  displayWeight: 40
+  setPreference: false
+  newPlayerMessage: false
+  access:
+  - Pirate
+  - BlackMarket
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:AddComponentSpecial
+    components:
+#    - type: AutoPirateCaptain
+    - type: SpecialSectorStationRecord # must be given on spawn
+      recordGeneration: FalseRecord
+    - type: DisableSuitSensors
+    - type: IsPirate
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirateCaptain
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
 
-# - type: job
-#   id: NFPirateCaptain
-#   name: job-name-nf-pirate-captain
-#   description: job-description-nf-pirate-captain
-#   playTimeTracker: JobPirateCaptain
-#   requirements:
-#     - !type:OverallPlaytimeRequirement
-#       time: 172800 # 48 hours
-#   whitelisted: true
-#   startingGear: NFPirateCaptainGear
-#   alwaysUseSpawner: true
-#   hideConsoleVisibility: true
-#   canBeAntag: true
-#   icon: "JobIconNFPirateCaptain"
-#   supervisors: job-supervisors-freebooters-union
-#   weight: 40
-#   displayWeight: 40
-#   setPreference: false
-#   newPlayerMessage: false
-#   access:
-#   - Pirate
-#   - BlackMarket
-#   accessGroups:
-#   - GeneralAccess
-#   special:
-#   - !type:AddComponentSpecial
-#     components:
-# #    - type: AutoPirateCaptain
-#     - type: SpecialSectorStationRecord # must be given on spawn
-#       recordGeneration: FalseRecord
-#     - type: DisableSuitSensors
-#     - type: IsPirate
-#   - !type:AddRpiJobModifierSpecial
-#     modifiersToAdd:
-#     - rpiJobModifierPirateCaptain
-#   - !type:AddImplantSpecial
-#     implants: [ FreelanceTrackingImplant ]
-#   - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
-#     holiday: FrontierBirthday
-#     prototype: FrontierBirthdayGift
+- type: startingGear
+  id: NFPirateCaptainGear
+  equipment:
+    belt: ClothingBeltUtility
+    pocket1: BasePirateUplinkRadioPirateCaptain
+    pocket2: EnergyCutlass
+  storage:
+    back:
+    - AppraisalTool
+    # - PirateTechFabFlatpack # Coyote: Disable pending piratefab rework/change
+    - Multitool
 
-# - type: startingGear
-#   id: NFPirateCaptainGear
-#   equipment:
-#     belt: ClothingBeltUtility
-#     pocket1: BasePirateUplinkRadioPirateCaptain
-#     pocket2: EnergyCutlass
-#   storage:
-#     back:
-#     - AppraisalTool
-#     # - PirateTechFabFlatpack # Coyote: Disable pending piratefab rework/change
-#     - Multitool
-
-# - type: chameleonOutfit
-#   id: NFPirateCaptainChameleonOutfit
-#   job: NFPirateCaptain
+- type: chameleonOutfit
+  id: NFPirateCaptainChameleonOutfit
+  job: NFPirateCaptain

@@ -1,3 +1,4 @@
+#region Command
 - type: entity
   parent: IDCardStandard
   id: GuildLeaderIDCard
@@ -14,3 +15,69 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
   - type: Item
     heldPrefix: silver
+#endregion
+
+#region Freelancers
+- type: entity
+  parent: IDCardStandard
+  id: BaseLSFreelancerIDCard
+  name: freelancer ID card
+  components:
+  - type: PresetIdCard
+    job: LSEscort
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: pirate
+    - state: idpirate
+  - type: Item
+    heldPrefix: pirate
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerEscortIDCard
+  name: freelancer ID card
+  components:
+  - type: PresetIdCard
+    job: LSEscort
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerRipperDocIDCard
+  name: ripper doc ID card
+  components:
+  - type: PresetIdCard
+    job: LSRipperDoc
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerSpyIDCard
+  name: spy ID card
+  components:
+  - type: PresetIdCard
+    job: LSSpy
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerSmugglerIDCard
+  name: smuggler ID card
+  components:
+  - type: PresetIdCard
+    job: LSSmuggler
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerFreelancerPirateIDCard
+  name: ripper doc ID card
+  components:
+  - type: PresetIdCard
+    job: LSFreelancerPirate
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerMasterAtArmsIDCard
+  name: master at arms ID card
+  components:
+  - type: PresetIdCard
+    job: LSMasterAtArms
+#endregion

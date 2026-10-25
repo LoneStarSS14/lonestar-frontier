@@ -35,6 +35,3 @@
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            RipperDoc: [ 0, 0 ]

@@ -1,77 +1,77 @@
-## LoneStar, moved to _CS/Roles/Jobs/Freelancers/freelancer-pirate.yml
+- type: job
+  abstract: true # LoneStar
+  id: NFPirate
+  name: job-name-nf-pirate
+  description: job-description-nf-pirate
+  playTimeTracker: JobPirate
+  whitelisted: true
+  startingGear: NFPirateGear
+  alwaysUseSpawner: true
+  hideConsoleVisibility: true
+  canBeAntag: true
+  consoleAdjustable: false
+  icon: "JobIconNFPirate"
+  supervisors: job-supervisors-nf-pirate
+  weight: 20
+  displayWeight: 20
+  setPreference: true
+  newPlayerMessage: false
+  access:
+  - Pirate
+  - BlackMarket
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:AddComponentSpecial
+    components:
+#    - type: AutoPirate
+    - type: SpecialSectorStationRecord # must be given on spawn
+      recordGeneration: FalseRecord
+    - type: DisableSuitSensors
+    - type: IsPirate
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirate
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
 
-# - type: job
-#   id: NFPirate
-#   name: job-name-nf-pirate
-#   description: job-description-nf-pirate
-#   playTimeTracker: JobPirate
-#   whitelisted: true
-#   startingGear: NFPirateGear
-#   alwaysUseSpawner: true
-#   hideConsoleVisibility: true
-#   canBeAntag: true
-#   consoleAdjustable: false
-#   icon: "JobIconNFPirate"
-#   supervisors: job-supervisors-nf-pirate
-#   weight: 20
-#   displayWeight: 20
-#   setPreference: true
-#   newPlayerMessage: false
-#   access:
-#   - Pirate
-#   - BlackMarket
-#   accessGroups:
-#   - GeneralAccess
-#   special:
-#   - !type:AddComponentSpecial
-#     components:
-# #    - type: AutoPirate
-#     - type: SpecialSectorStationRecord # must be given on spawn
-#       recordGeneration: FalseRecord
-#     - type: DisableSuitSensors
-#     - type: IsPirate
-#   - !type:AddRpiJobModifierSpecial
-#     modifiersToAdd:
-#     - rpiJobModifierPirate
-#   - !type:AddImplantSpecial
-#     implants: [ FreelanceTrackingImplant ]
-#   - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
-#     holiday: FrontierBirthday
-#     prototype: FrontierBirthdayGift
+- type: startingGear
+  id: NFPirateGear
+  equipment:
+    pocket1: BasePirateUplinkPirateCrew
+  storage:
+    back:
+    - ContrabandAppraisalToolPirate
+    - ComputerIFFFlatpack
 
-# - type: startingGear
-#   id: NFPirateGear
-#   equipment:
-#     pocket1: BasePirateUplinkPirateCrew
-#   storage:
-#     back:
-#     - ContrabandAppraisalToolPirate
-#     - ComputerIFFFlatpack
+- type: chameleonOutfit
+  id: NFPirateChameleonOutfit
+  job: NFPirate
 
-# - type: chameleonOutfit
-#   id: NFPirateChameleonOutfit
-#   job: NFPirate
-
-# - type: roleLoadout
-#   id: JobNFPirate
-#   groups:
-#   - FreelancerFactionHead # LoneStar
-#   - FreelancerFactionNeck # LoneStar
-#   - FreelancerFactionJumpsuit # LoneStar
-#   - MercenaryGloves # Coyote: Pirate Loadout Expansion
-#   - ContractorBackpack
-#   - FreelancerFactionOuterClothing # LoneStar
-#   - NFPirateShoes
-#   - NFPirateFace
-#   - MercenaryGlasses # Coyote: Pirate Loadout Expansion
-#   - MercenaryBelt # Coyote: Pirate Loadout Expansion
-#   - PilotEars # LoneStar
-#   - FreelancerEncryptionKey # Coyote: Pirates get comm keys
-#   - ContractorBoxSurvival
-#   - SmugglerPDA
-#   - ContractorWallet
-#   - PirateBackpackItems
-#   - ContractorHandItems
-#   - ContractorInstruments # Coyote
-#   - NFSpeciesSpecific
-#   canCustomizeName: true # pseudonym?
+- type: roleLoadout
+  abstract: true
+  id: JobNFPirate
+  groups:
+  - FreelancerFactionHead # LoneStar
+  - FreelancerFactionNeck # LoneStar
+  - FreelancerFactionJumpsuit # LoneStar
+  - MercenaryGloves # Coyote: Pirate Loadout Expansion
+  - ContractorBackpack
+  - FreelancerFactionOuterClothing # LoneStar
+  - NFPirateShoes
+  - NFPirateFace
+  - MercenaryGlasses # Coyote: Pirate Loadout Expansion
+  - MercenaryBelt # Coyote: Pirate Loadout Expansion
+  - PilotEars # LoneStar
+  - FreelancerEncryptionKey # Coyote: Pirates get comm keys
+  - ContractorBoxSurvival
+  - SmugglerPDA
+  - ContractorWallet
+  - PirateBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments # Coyote
+  - NFSpeciesSpecific
+  canCustomizeName: true # pseudonym?
