@@ -1,0 +1,68 @@
+#region Tier 1
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltPunkLootRangedT1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:GroupSelector
+      amount: 1
+      children:
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoNormalAny
+        weight: 6
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoOverpressureAny
+        weight: 2
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoIncendiaryAny
+        weight: 1
+
+# region tier 2
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltPunkLootRangedT2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelecotr
+        children:
+        - !type:NestedSelector
+          tableId: LSTableGeneralWeaponAmmoNormalAny
+          weight: 2
+        - !type:NestedSelector
+          tableId: LSTableGeneralWeaponAmmoOverpressureAny
+          weight: 4
+        - !type:NestedSelector
+          tableId: LSTableGeneralWeaponAmmoIncendiaryAny
+          weight: 1
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoT2
+
+#region Elite / Horrors
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootBeltPunkLootRangedT3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelecotr
+        children:
+        - !type:NestedSelector
+          tableId: LSTableGeneralWeaponAmmoNormalAny
+          weight: 1
+        - !type:NestedSelector
+          tableId: LSTableGeneralWeaponAmmoOverpressureAny
+          weight: 4
+        - !type:NestedSelector
+          tableId: LSTableGeneralWeaponAmmoIncendiaryAny
+          weight: 2
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponAmmoT3

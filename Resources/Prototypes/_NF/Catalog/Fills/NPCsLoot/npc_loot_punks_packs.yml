@@ -173,21 +173,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Magazines
-    - id: NFMagazinePistol35Overpressure
-      orGroup: Magazines
-      prob: 0.3
-    - id: NFMagazinePistol35Empty
-      orGroup: Magazines
-      amount: 2
-      prob: 0.4
-    - id: NFMagazinePistol35Empty
-      orGroup: Magazines
-      amount: 3
-      prob: 0.3
-    # Ammo
-    - id: NFAmmunitionBoxPistol35Overpressure
-      orGroup: Ammo
+    - id: LSSpawnLootBeltPunkLootRangedT1 # LoneStar
 
 # region tier 2
 - type: entity
@@ -224,14 +210,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: NFAmmunitionBoxShellShotgunOverpressure
-      orGroup: Ammo
-      prob: 0.6
-    - id: NFAmmunitionBoxShellShotgunOverpressure
-      orGroup: Ammo
-      prob: 0.4
-      amount: 2
+    - id: LSSpawnLootBeltPunkLootRangedT2 # LoneStar
 
 # region tier 3
 - type: entity
@@ -268,22 +247,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Magazines
-    - id: NFMagazineSubMachineGun35Overpressure
-      orGroup: Magazines
-      prob: 0.3
-    - id: NFMagazineSubMachineGun35Empty
-      orGroup: Magazines
-      amount: 2
-      prob: 0.4
-    - id: NFMagazineSubMachineGun35Empty
-      orGroup: Magazines
-      amount: 3
-      prob: 0.3
-    # Ammo
-    - id: NFAmmunitionBoxPistol35Overpressure
-      amount: 2
-      orGroup: Ammo
+    - id: LSSpawnLootBeltPunkLootRangedT3
 
 # region tier 4 (boss)
 - type: entity
