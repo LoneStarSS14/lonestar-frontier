@@ -1,7 +1,7 @@
 # region tier 1
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkMeleeT1
+  id: LSSpawnLootBagPunkMeleeT1
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -21,7 +21,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkRangedT1
+  id: LSSpawnLootBagPunkRangedT1
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -43,7 +43,7 @@
 # region tier 2
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkMeleeT2
+  id: LSSpawnLootBagPunkMeleeT2
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -67,7 +67,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkRangedT2
+  id: LSSpawnLootBagPunkRangedT2
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -93,7 +93,7 @@
 # region Elites / Horrors
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkMeleeT3
+  id: LSSpawnLootBagPunkMeleeT3
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -124,7 +124,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkRangedT3
+  id: LSSpawnLootBagPunkRangedT3
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -157,7 +157,7 @@
 # region tier 4 (boss)
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkLootBoss
+  id: LSSpawnLootBagPunkLootBoss
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner

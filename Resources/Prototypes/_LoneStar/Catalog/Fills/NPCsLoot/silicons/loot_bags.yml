@@ -1,7 +1,7 @@
 #region Tier 0 (asteroid)
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootRogueSiliconT0
+  id: LSSpawnLootBagRogueSiliconT0
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -27,7 +27,7 @@
 #region Tier 1
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootRogueSiliconT1
+  id: LSSpawnLootBagRogueSiliconT1
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -57,7 +57,7 @@
 #region Tier 2
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootRogueSiliconT2
+  id: LSSpawnLootBagRogueSiliconT2
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -87,7 +87,7 @@
 #region Elite / Horrors
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootRogueSiliconT3
+  id: LSSpawnLootBagRogueSiliconT3
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -114,7 +114,7 @@
 #region Bosses
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootRogueSiliconT4
+  id: LSSpawnLootBagRogueSiliconT4
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner

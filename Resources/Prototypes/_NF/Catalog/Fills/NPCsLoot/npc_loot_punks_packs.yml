@@ -155,7 +155,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkMeleeT1 # LoneStar
+    - id: LSSpawnLootBagPunkMeleeT1 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackPunk
@@ -164,7 +164,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkRangedT1 # LoneStar
+    - id: LSSpawnLootBagPunkRangedT1 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltPunk
@@ -206,7 +206,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkMeleeT2 # LoneStar
+    - id: LSSpawnLootBagPunkMeleeT2 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackPunk
@@ -215,7 +215,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkRangedT2 # LoneStar
+    - id: LSSpawnLootBagPunkRangedT2 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltPunk
@@ -250,7 +250,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkMeleeT3 # LoneStar
+    - id: LSSpawnLootBagPunkMeleeT3 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackPunk
@@ -259,7 +259,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkRangedT3 # LoneStar
+    - id: LSSpawnLootBagPunkRangedT3 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltPunk
@@ -308,4 +308,4 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkLootBoss # LoneStar
+    - id: LSSpawnLootBagPunkLootBoss # LoneStar

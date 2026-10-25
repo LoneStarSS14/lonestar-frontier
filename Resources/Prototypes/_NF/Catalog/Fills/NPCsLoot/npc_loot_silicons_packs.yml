@@ -26,7 +26,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootRogueSiliconT0 # LoneStar
+    - id: LSSpawnLootBagRogueSiliconT0 # LoneStar
 
 # region tier 1
 - type: entity
@@ -36,7 +36,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootRogueSiliconT1 # LoneStar
+    - id: LSSpawnLootBagRogueSiliconT1 # LoneStar
 
 # region tier 2
 - type: entity
@@ -46,7 +46,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootRogueSiliconT2 # LoneStar
+    - id: LSSpawnLootBagRogueSiliconT2 # LoneStar
 
 # region tier 3
 - type: entity
@@ -56,7 +56,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootRogueSiliconT3 # LoneStar
+    - id: LSSpawnLootBagRogueSiliconT3 # LoneStar
 
 # region tier 4 (boss)
 - type: entity
@@ -66,4 +66,4 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootRogueSiliconT4 # LoneStar
+    - id: LSSpawnLootBagRogueSiliconT4 # LoneStar
