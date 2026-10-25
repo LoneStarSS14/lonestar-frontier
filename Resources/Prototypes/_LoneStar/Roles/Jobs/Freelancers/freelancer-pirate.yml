@@ -6,9 +6,9 @@
   playTimeTracker: JobLSFreelancerPirate
   whitelisted: true
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Antag
-      time: 57600 # 16 hours
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSFreelancers
+    #   time: 57600 # 16 hours
   weight: 50
   displayWeight: 50
   # TODO section
@@ -17,9 +17,6 @@
   # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Uncertain if needed
-  alwaysUseSpawner: true
-  consoleAdjustable: false
   # Common v
   access:
   - Pirate
