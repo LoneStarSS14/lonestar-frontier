@@ -14,8 +14,10 @@
         tableId: LSTableGeneralArmorShieldsT2
       - !type:GroupSelector # Loot
         children:
-        - id: LSTableGeneralMedicalInjectors
-        - id: LSTableGeneralMedicalTopicals
+        - !type:NestedSelector
+          tableId: LSTableGeneralMedicalInjectors
+        - !type:NestedSelector
+          tableId: LSTableGeneralMedicalTopicals
         - id: SpawnDungeonLootNpcMercenariesFluff
           weight: 6
 
@@ -68,7 +70,7 @@
     offset: 0.25
     table: !type:GroupSelector
       children:
-      - !type:GroupSelecotr
+      - !type:GroupSelector
         children:
         - !type:NestedSelector
           tableId: LSTableGeneralWeaponAmmoNormalAny
@@ -137,7 +139,7 @@
     offset: 0.25
     table: !type:GroupSelector
       children:
-      - !type:GroupSelecotr
+      - !type:GroupSelector
         children:
         - !type:NestedSelector
           tableId: LSTableGeneralWeaponAmmoNormalAny
