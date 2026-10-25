@@ -37,7 +37,13 @@
     },
     {
       "name": "lsrd-inhand-right",
-      "directions": 4
+      "directions": 4,
+    },
+    {
+      "name": "tsfnbase"
+    },
+    {
+      "name": "tsfn"
     }
   ]
 }
