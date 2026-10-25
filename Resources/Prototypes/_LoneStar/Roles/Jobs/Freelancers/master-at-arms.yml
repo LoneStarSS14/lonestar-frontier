@@ -1,56 +1,92 @@
 - type: job
-  id: NFPirateCaptain
-  name: job-name-nf-pirate-captain
-  description: job-description-nf-pirate-captain
-  playTimeTracker: JobPirateCaptain
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 172800 # 48 hours
+  id: LSMasterAtArms
+  name: job-name-ls-master-at-arms
+  description: job-description-ls-master-at-arms
+  supervisors: job-supervisors-ls-tsf-war-director
+  playTimeTracker: JobLSMasterAtArms
   whitelisted: true
-  startingGear: NFPirateCaptainGear
-  alwaysUseSpawner: true
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Antag
+      time: 360000 # 100 hours
+    - !type:RoleTimeRequirement
+      role: JobLSFreelancerPirate
+      time: 144000 # 40 hours
+  weight: 60
+  displayWeight: 60
+  # TODO section
+  startingGear: LSMasterAtArmsGear
+  icon: "JobIconCaptain"
+  # Frontier's fields
   hideConsoleVisibility: true
-  canBeAntag: true
-  icon: "JobIconNFPirateCaptain"
-  supervisors: job-supervisors-freebooters-union
-  weight: 40
-  displayWeight: 40
-  setPreference: false
   newPlayerMessage: false
+  # Uncertain if needed
+  alwaysUseSpawner: true
+  consoleAdjustable: false
+  # Common v
   access:
   - Pirate
   - BlackMarket
   accessGroups:
   - GeneralAccess
   special:
-  - !type:AddComponentSpecial
-    components:
-#    - type: AutoPirateCaptain
-    - type: SpecialSectorStationRecord # must be given on spawn
-      recordGeneration: FalseRecord
-    - type: DisableSuitSensors
-    - type: IsPirate
-  - !type:AddRpiJobModifierSpecial
-    modifiersToAdd:
-    - rpiJobModifierPirateCaptain
-  - !type:AddImplantSpecial
-    implants: [ FreelanceTrackingImplant ]
-  - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
+  - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  #freelancer specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsPirate
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI TODO: Add SR-like RPI modifiers.
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirate
 
-- type: startingGear
-  id: NFPirateCaptainGear
+- type: entity
+  id: SpawnPointLSMasterAtArms # TODO: mapping migrations.
+  parent: SpawnPointJobBase
+  name: master at arms spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSMasterAtArms
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear # TODO: Give them some unique starter thing like the EG-4a on guild leader
+  id: LSMasterAtArmsGear
   equipment:
-    belt: ClothingBeltUtility
     pocket1: BasePirateUplinkRadioPirateCaptain
-    pocket2: EnergyCutlass
-  storage:
-    back:
-    - AppraisalTool
-    # - PirateTechFabFlatpack # Coyote: Disable pending piratefab rework/change
-    - Multitool
+    pocket2: ContrabandAppraisalToolPirate
 
-- type: chameleonOutfit
-  id: NFPirateCaptainChameleonOutfit
-  job: NFPirateCaptain
+- type: roleLoadout
+  id: JobLSMasterAtArms
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSFreelancerMasterAtArmsPDA
+  # Freelancer v
+  - LSFreelancersFactionLeaderJumpsuit
+  - LSFreelancersFactionLeaderOuterClothing
+  - LSFreelancersFactionLeaderShoes
+  - LSFreelancersFactionLeaderGloves
+  - LSFreelancersFactionLeaderHead
+  - LSFreelancersFactionLeaderMask
+  - LSFreelancersFactionLeaderEyes
+  - LSFreelancersFactionLeaderNeck
+  - LSFreelancersFactionLeaderEars
+  - LSFreelancersFactionLeaderBackpack
+  - LSFreelancersFactionLeaderBelt
+  - LSFreelancersFactionLeaderWallet
+  - LSFreelancersFactionLeaderEncryptionKey
+  - LSFreelancersFactionLeaderImplanter
+  # Common v
+  - ContractorBoxSurvival
+  - ContractorCartridge
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific

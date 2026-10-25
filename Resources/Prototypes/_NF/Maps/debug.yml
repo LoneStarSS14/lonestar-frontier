@@ -38,12 +38,12 @@
             Deputy: [ -1, -1]
             Cadet: [ -1, -1]
             PublicAffairsLiaison: [ -1, -1]
-#            NFPirateCaptain: [ -1, -1]
-#            NFPirateFirstMate: [ -1, -1]
-            NFPirate: [ -1, -1]
-            Smuggler: [-1, -1] # Coyote
-            Escort: [-1, -1] # Coyote
-#            Prisoner: [ -1, -1] # Coyote
-            RipperDoc: [ -1, -1] # Coyote
+            # LoneStar v
+            LSEscort: [ -1, -1]
+            LSRipperDoc: [ -1, -1]
+            LSSpy: [ -1, -1]
+            LSSmuggler: [ -1, -1]
+            LSFreelancerPirate: [ -1, -1]
+            LSMasterAtArms: [ -1, -1]
         - type: StationDeadDrop
           maxDeadDrops: 20 # Testing

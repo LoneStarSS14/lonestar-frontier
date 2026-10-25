@@ -22,7 +22,7 @@ public sealed class MapMigrationSystem : EntitySystem
 #pragma warning restore CS0414
     [Dependency] private readonly IResourceManager _resMan = default!;
 
-    private static readonly string[] MigrationFiles = { "/migration.yml", "/nf_migration.yml" }; // Frontier: use array of migration files
+    private static readonly string[] MigrationFiles = { "/migration.yml", "/nf_migration.yml", "/migration_ls.yml" }; // Frontier: use array of migration files // LoneStar: Us too.
 
     public override void Initialize()
     {
@@ -83,7 +83,7 @@ public sealed class MapMigrationSystem : EntitySystem
         if (documents == null)
             return false;
 
-        mappings = (MappingDataNode) documents.Root;
+        mappings = (MappingDataNode)documents.Root;
         return true;
     }
 

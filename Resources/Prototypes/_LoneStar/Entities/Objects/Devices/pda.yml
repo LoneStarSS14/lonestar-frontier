@@ -1,3 +1,4 @@
+#region Command
 - type: entity
   parent: [MercenaryPDA, BaseC4Contraband]
   id: GuildLeaderPDA
@@ -37,3 +38,78 @@
     - NanoChatCartridge # DeltaV
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
+#endregion
+
+#region Freelancers
+- type: entity
+  parent: BasePDA
+  id: BaseLSFreelancerPDA
+  name: freelancer PDA
+  description: It smells... of citrus and gunpowder.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Devices/pda.rsi # TODO: make unique one
+  - type: Pda
+    id: BaseLSFreelancerIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-pirate
+  - type: PdaBorderColor # TODO: make unique one
+    borderColor: "#1f1f1f"
+    accentVColor: "#a09d9d"
+  - type: Icon
+    sprite: _NF/Objects/Devices/pda.rsi # TODO: make unique one
+    state: pda-mercenary # TODO: make unique one
+  - type: BlipCartridge
+    defaultPreset: BlipPresetPirate # TODO: make unique one
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerEscortPDA
+  name: escort PDA
+  components:
+  - type: Pda
+    id: LSFreelancerEscortIDCard
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerRipperDocPDA
+  name: ripper doc PDA
+  components:
+  - type: Pda
+    id: LSFreelancerRipperDocIDCard
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerSpyPDA
+  name: spy PDA
+  components:
+  - type: Pda
+    id: LSFreelancerSpyIDCard
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerSmugglerPDA
+  name: smuggler PDA
+  components:
+  - type: Pda
+    id: LSFreelancerSmugglerIDCard
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerFreelancerPiratePDA
+  name: freelancer pirate PDA
+  components:
+  - type: Pda
+    id: LSFreelancerFreelancerPirateIDCard
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerMasterAtArmsPDA
+  name: master at arms PDA
+  components:
+  - type: Pda
+    id: LSFreelancerMasterAtArmsIDCard
+#endregion

@@ -5,6 +5,10 @@
   supervisors: job-supervisors-ls-master-at-arms
   playTimeTracker: JobLSSmuggler
   whitelisted: true
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Antag
+      time: 57600 # 16 hours
   weight: 50
   displayWeight: 50
   # TODO section
@@ -26,6 +30,7 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  #freelancer specific
   - !type:AddComponentSpecial
     components:
     - type: IsPirate
@@ -61,6 +66,9 @@
   id: JobLSSmuggler
   canCustomizeName: true
   groups:
+  # Unique v
+  - LSFreelancerSmugglerPDA
+  # Freelancer v
   - LSFreelancersFactionCombatantJumpsuit
   - LSFreelancersFactionCombatantOuterClothing
   - LSFreelancersFactionCombatantShoes
