@@ -1,0 +1,136 @@
+#region Routing Tables
+- type: entityTable # This loot table is to refer to guns relating to the syndicate and not for generation.
+  abstract: true
+  id: LSTableSyndicateWeaponRanged
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector # OP / Special
+      children:
+      - id: WeaponCaseLongLauncherChinaLake
+      - id: WeaponCaseHeavyLightMachineGunL6
+      - id: WeaponCaseLongEstocExpedition
+      - id: WeaponCaseLongHristovExpedition
+      - id: WeaponCaseLongC19r
+      - id: WeaponCaseShortAnacondaExpedition
+    - !type:GroupSelector # Strong / Appealing
+      children:
+      - id: WeaponCaseLongSm
+      - id: WeaponCaseLongM90Expedition
+      - id: WeaponCaseLongAtreidesExpedition
+      - id: WeaponCaseLongC20r
+      - id: WeaponCaseLongBulldog
+      - id: WeaponCaseShortViper
+    - !type:GroupSelector # Weak / 'Trash tier'
+      children:
+      - id: WeaponCaseShortCobra
+      - id: NFRevolverCapGunFake
+      - id: WeaponCaseLongBarlowsBoltExpedition
+      - id: WeaponCaseShortRitland45Expedition
+#endregion
+
+#region Guns by archetype
+#MARK: Pistol
+- type: entityTable
+  id: LSTableSyndicateWeaponRangedPistol
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseShortRitland45Expedition
+      weight: 0.3
+    - id: WeaponCaseShortViper
+      weight: 0.3
+    - id: WeaponCaseShortCobra
+      weight: 0.4
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - !type:GroupSelector
+        weight: 1
+        children:
+        - id: WeaponCaseShortRitland45Expedition
+          weight: 1
+        - id: WeaponCaseShortCobra
+          weight: 2
+      - id: WeaponCaseShortViper
+        weight: 2
+    - !type:NestedSelector
+      weight: 3
+      tableId: LSTableGeneralWeaponRanged
+
+#MARK: Shotgun
+- type: entityTable
+  id: LSTableSyndicateWeaponRangedShotgun
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - !type:GroupSelector
+        weight: 1
+        children:
+        - id: WeaponCaseLongBulldog
+          weight: 1
+        - id: WeaponCaseLongEnforcerExpedition
+          weight: 3
+      - id: WeaponCaseLongKammererExpedition
+        weight: 1
+    - !type:NestedSelector
+      weight: 4
+      tableId: LSTableGeneralWeaponRanged
+
+#MARK: SMG
+- type: entityTable
+  id: LSTableSyndicateWeaponRangedSMG
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - !type:GroupSelector
+        weight: 1
+        children:
+        - id: WeaponCaseLongC19r
+          weight: 1
+        - id: WeaponCaseLongAtreidesExpedition
+          weight: 4
+      - id: WeaponCaseLongC20r
+        weight: 9
+    - !type:NestedSelector
+      weight: 4
+      tableId: LSTableGeneralWeaponRanged
+
+#MARK: Rifle
+- type: entityTable
+  id: LSTableSyndicateWeaponRangedRifle
+  table: !type:GroupSelector
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - !type:GroupSelector
+        weight: 1
+        children:
+        - id: WeaponCaseHeavyLightMachineGunL6
+          weight: 1
+        - id: WeaponCaseLongSm
+          weight: 19
+      - id: WeaponCaseLongM90Expedition
+        weight: 4
+    - !type:NestedSelector
+      weight: 4
+      tableId: LSTableGeneralWeaponRangedRare
+
+#MARK: Chemical
+- type: entityTable
+  id: LSTableSyndicateWeaponRangedChemical
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: WeaponWaterBlasterSuper
+        weight: 0.3
+      - id: WeaponWaterBlaster
+        weight: 0.2
+      - id: WeaponWaterPistol
+        weight: 0.1
+#endregion

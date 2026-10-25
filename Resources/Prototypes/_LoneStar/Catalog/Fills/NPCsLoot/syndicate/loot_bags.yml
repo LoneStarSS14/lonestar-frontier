@@ -8,7 +8,8 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootNpcSyndicateWeaponsPistols # Weapon
+      - !type:NestedSelector # Weapon
+        tableId: LSTableSyndicateWeaponRangedPistol # Weapon
       - !type:NestedSelector # Armor
         tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
@@ -34,7 +35,8 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootNpcSyndicateWeaponsPistols # Weapon
+      - !type:NestedSelector # Weapon
+        tableId: LSTableSyndicateWeaponRangedPistol
       - !type:NestedSelector # Armor
         tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
@@ -58,7 +60,8 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootNpcSyndicateWeaponsShotguns # Weapon
+      - !type:NestedSelector # Weapon
+        tableId: LSTableSyndicateWeaponRangedShotgun
       - !type:NestedSelector # Armor
         tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
@@ -92,13 +95,12 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - !type:GroupSelector # 'Weapon'
+      - !type:AllSelector # 'Weapon'
         children:
-        - id: HypoMiniLimitedEdition
-        - id: BruteAutoInjector
-        - id: AntiPoisonMedipen
-        - id: MedicatedSuture
-        - id: Stimpack
+        - !type:NestedSelector
+          tableId: LSTableGeneralMedicalTopicalsRare
+        - !type:NestedSelector
+          tableId: LSTableGeneralMedicalInjectorsRare
       - !type:NestedSelector # Armor
         tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
@@ -115,6 +117,7 @@
         - id: SpawnRewardPrizeBallSyndicate
           prob: 0.3
 
+
 - type: entity
   parent: MarkerBasePlaceFree
   id: LSSpawnLootBagSyndicateT2SecondOfficer
@@ -124,14 +127,8 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - !type:GroupSelector # Weapon
-        children:
-        - id: NFWeaponEnergyPistolLaserAdvancedExpedition
-          prob: 0.7
-        - id: NFWeaponEnergyPistolLaserAntiqueExpedition
-          prob: 0.25
-        - id: NFWeaponEnergySubMachineGunDeltaVExpedition
-          prob: 0.05
+      - !type:NestedSelector # Weapon
+        tableId: LSTableSyndicateWeaponRangedPistol
       - !type:NestedSelector # Armor
         tableId: LSTableSyndicateArmorNonLegendary
       - !type:NestedSelector # Blueprints
@@ -159,7 +156,8 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootNpcSyndicateWeaponsSmgs # Weapon
+      - !type:NestedSelector # Weapon
+        tableId: LSTableSyndicateWeaponRangedSMG
       - !type:NestedSelector # Armor
         tableId: LSTableSyndicateArmor
       - !type:NestedSelector # Blueprints
@@ -213,7 +211,8 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootNpcSyndicateWeaponsPistolsChemical # Weapon
+      - !type:NestedSelector # Weapon
+        tableId: LSTableSyndicateWeaponRangedChemical
       - !type:NestedSelector # Armor
         tableId: LSTableSyndicateArmor
       - !type:NestedSelector # Blueprints
@@ -243,16 +242,18 @@
       children:
       - !type:AllSelector # Weapon
         children:
-        - id: SpawnDungeonLootNpcSyndicateWeaponsRifles
-          prob: 0.8
-        - id: SpawnDungeonLootGunT3
+        - !type:NestedSelector # Weapon
+          tableId: LSTableSyndicateWeaponRangedRifle
+          prob: 0.6
+        - !type:NestedSelector # Weapon
+          tableId: LSTableGeneralWeaponRangedT3
           prob: 0.3
       - !type:GroupSelector # Armor
         children:
         - id: ClothingOuterHardsuitSyndieElite
           weight: 1
         - !type:NestedSelector
-          weight: 14
+          weight: 17
           tableId: LSTableSyndicateArmor
       - !type:AllSelector # Blueprints
         children:

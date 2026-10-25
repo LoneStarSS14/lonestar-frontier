@@ -113,7 +113,8 @@
   components:
   - type: EntityTableSpawner
     offset: 0.25
-    table: LSTableSyndicateExplosiveGrenades
+    table: !type:NestedSelector
+      tableId: LSTableSyndicateExplosiveGrenades
 #endregion
 
 #region Bosses
