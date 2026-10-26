@@ -56,6 +56,41 @@
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-suit.rsi
 
+# region Uniforms
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTSFMC
+  name: TSF Marine Corps Service Uniform
+  description: Military Fatigues of the TSF Marine Corps, typically worn during space faring missions.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTSFMCDigi
+  name: TSF Marine Corps Combat Fatigues
+  description: Military Fatigues of the TSF Marine Corps, typically worn during planet-side operations.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/tsfmc_digital.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/tsfmc_digital.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTSFMCEngie
+  name: TSF Marines Engineering Corps Uniform
+  description: Military Fatigues of the TSF Marines. The patch on the shoulder indicates this belongs to the Engineering corps.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/tsfmcengi.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/tsfmcengi.rsi
+
 # region Misc
 - type: entity
   parent: ClothingUniformBase
