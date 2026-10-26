@@ -1,0 +1,45 @@
+- type: job
+  id: TSFMC
+  name: job-name-tsfmc
+  description: job-description-tsfmc
+  playTimeTracker: JobDeathSquad
+  setPreference: false
+  startingGear: TSFMCGear
+  icon: "JobIconTSFMarine"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+
+- type: startingGear
+  id: TSFMCGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitTSFMC
+    back: ClothingBackpackTSFMC
+    mask: ClothingMaskGasDeathSquad
+    eyes: ClothingEyesHudSecurity
+    ears: ClothingHeadsetAltCentCom
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingHeadHelmetHardsuitTSFm86
+    shoes: ClothingShoesBootsMagAdv
+    id: TSFMCPDA
+    pocket1: SmokeGrenade
+    pocket2: GrenadeFlash
+    belt: ClothingBeltTSFMCWebbing
+  storage:
+    back:
+    - NFCombatKnife
+    - WeaponPistolLSRDmk22
+    - NFMagazineRifle20Overpressure
+    - NFMagazineRifle20Overpressure
+    - NFBaseMagazinePistol45
+    - GrenadeFrag
+    - GrenadeFrag
+    - MedkitCombatFilled
+  inhand:
+  - WeaponRifleLecter
