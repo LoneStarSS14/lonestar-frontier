@@ -2,7 +2,7 @@
   id: TSFMC
   name: job-name-tsfmc
   description: job-description-tsfmc
-  playTimeTracker: JobDeathSquad
+  playTimeTracker: JobTSFMarine
   setPreference: false
   startingGear: TSFMCGear
   icon: "JobIconTSFMarine"
