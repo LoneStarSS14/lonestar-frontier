@@ -1,8 +1,8 @@
 {
 	"version": 1,
 	"license": "CC-BY-SA-3.0",
-	"copyright": "Icon taken from baystation at https://github.com/Baystation12/Baystation12/blob/dev/icons/obj/guns/ion_pistol.dmi. Edited further by Tenmillimaster.| inhands sprites by erhardsteinhauer (discord/github)",
-	"size": {
+    "copyright": "antique laser pistol - icon by RiceMar1244 based on icon taken from tg station at commit https://github.com/tgstation/tgstation/commit/8b7f8ba6a3327c7381967c550f185dffafd11a57, edited by GaussiArson, holoflare pistol - Icon taken from baystation at https://github.com/Baystation12/Baystation12/blob/dev/icons/obj/guns/ion_pistol.dmi | inhands sprites by erhardsteinhauer (discord/github), unholy mix of antique laser pistol and holoflare pistol- sprite remix by KC (https://github.com/Sushiburger) ",
+    "size": {
 		"x": 32,
 		"y": 32
 	},
@@ -86,6 +86,30 @@
 		},
 		{
 			"name": "inhand-right-unshaded",
+			"directions": 4
+		},
+		{
+			"name": "disabler-inhand-left",
+			"directions": 4
+		},
+		{
+			"name": "disabler-inhand-right",
+			"directions": 4
+		},
+        {
+			"name": "lethal-inhand-left",
+			"directions": 4
+		},
+		{
+			"name": "lethal-inhand-right",
+			"directions": 4
+		},
+        {
+			"name": "flare-inhand-left",
+			"directions": 4
+		},
+		{
+			"name": "flare-inhand-right",
 			"directions": 4
 		},
 		{

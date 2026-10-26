@@ -150,12 +150,10 @@
     - 0,0,1,1
     inhandVisuals:
       left:
-      - state: inhand-left
-      - state: inhand-left-unshaded
+      - state: flare-inhand-left
         shader: unshaded
       right:
-      - state: inhand-right
-      - state: inhand-right-unshaded
+      - state: flare-inhand-right
         shader: unshaded
   - type: ProjectileBatteryAmmoProvider
     proto: HoloFlareCyan
