@@ -2,7 +2,7 @@
   id: LSFreelancers
   name: department-LSFreelancers
   description: department-ls-freelancers-description
-  color: "#DE3A3A" # TODO: put the right color here
+  color: "#e1bb78"
   weight: -20 # accounted for in jobs
   roles:
   - LSMasterAtArms
@@ -11,3 +11,17 @@
   - LSSpy
   - LSRipperDoc
   - LSEscort
+
+- type: department
+  id: LSLSRD
+  name: department-LSLSRD
+  description: department-ls-lsrd-description
+  color: "#68553d"
+  weight: -10 # accounted for in jobs
+  roles:
+  - LSChiefRanger
+  - LSEnforcer
+  - LSRetrievalOfficer
+  - LSDetective
+  - LSCorpsman
+  - LSClerk

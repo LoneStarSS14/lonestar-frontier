@@ -127,6 +127,7 @@
 - type: entity
   parent: [BaseSecurityPDA, BaseC4Contraband]
   id: SheriffPDA
+  abstract: true # LoneStar
   name: chief ranger PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA is the law.
   components:
@@ -170,6 +171,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: CadetPDA
+  abstract: true # LoneStar
   name: junior ranger PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA could be the law.
   components:
@@ -196,6 +198,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: DeputyPDA
+  abstract: true # LoneStar
   name: ranger PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA is close to being the law.
   components:
@@ -222,6 +225,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: BrigmedicNFPDA
+  abstract: true # LoneStar
   name: corpsman PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA heals the law.
   components:
@@ -248,6 +252,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: SergeantPDA
+  abstract: true # LoneStar
   name: senior ranger PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA puts the law on their back.
   components:
@@ -274,6 +279,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: BailiffPDA
+  abstract: true # LoneStar
   name: armorer PDA # Lonestar changes NFSD -> LSRD
   description: Whosoever bears this PDA puts the law on their back.
   components:
@@ -300,6 +306,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: NFDetectivePDA
+  abstract: true # LoneStar
   name: detective PDA
   description: Smells like rain... pouring down the rooftops...
   components:
@@ -325,6 +332,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: PublicAffairsLiaisonPDA
+  abstract: true # LoneStar
   name: public affairs liaison PDA
   description: Paperwork, paperwork, paperwork!
   components:
@@ -395,6 +403,7 @@
 - type: entity
   parent: PiratePDA
   id: NFPiratePDA
+  abstract: true # LoneStar
   name: pirate PDA
   suffix: Frontier
   components:
@@ -411,6 +420,7 @@
 - type: entity
   parent: PiratePDA
   id: NFPirateCaptainPDA
+  abstract: true # LoneStar
   name: pirate captain PDA
   suffix: Frontier
   components:
@@ -425,6 +435,7 @@
 - type: entity
   parent: PiratePDA
   id: NFPirateFirstMatePDA
+  abstract: true # LoneStar
   name: pirate first mate PDA
   suffix: Frontier
   components:

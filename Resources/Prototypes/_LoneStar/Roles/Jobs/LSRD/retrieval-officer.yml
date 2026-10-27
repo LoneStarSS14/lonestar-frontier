@@ -28,8 +28,6 @@
 #   accessGroups:
 #   - GeneralNfsdAccess
 #   special:
-#   - !type:AddImplantSpecial
-#     implants: [ MindShieldImplant, TrackingImplant ]
 #   - !type:GiveItemOnHolidaySpecial
 #     holiday: FrontierBirthday
 #     prototype: FrontierBirthdayGift
@@ -38,31 +36,95 @@
 #     - type: IsNfsd
 #       worth: 2
 
-# - type: startingGear
-#   id: SeniorOfficerGear
-#   equipment:
-#     pocket1: NFWeaponPistolUniversalNfsdLessLethal
-#   storage:
-#     back:
-#     - Flash
-#     - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
-#     - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
-#     - BaseSecurityUplinkRadioOfficer
-#     - FrontierUplinkCoin5 # Coyote: added 5 FUCs to Sergeants
-#     - ShipVoucherNfsdSergeant
-#     - RubberStampSergeant
-#     - EncryptionKeyCommand
 
-# - type: chameleonOutfit
-#   id: SeniorOfficerChameleonOutfit
-#   job: SeniorOfficer
-#   hasMindShield: true
-#   equipment:
-#     head: ClothingHeadHatNfsdBeretBrown
-#     mask: ClothingMaskGasNfsd
-#     eyes: ClothingEyesGlassesNfsd
-#     outerClothing: ClothingOuterArmorNfsd
-#     neck: ClothingNeckNfsdBadgeSeniorOfficer
-#     belt: ClothingBeltNfsdFilled
-#     gloves: ClothingHandsGlovesCombatNfsdBrown
-#     shoes: ClothingShoesBootsNfsdBrownFilled
+
+- type: job
+  id: LSRetrievalOfficer
+  name: job-name-ls-retrieval-officer
+  description: job-description-ls-retrieval-officer
+  supervisors: job-supervisors-ls-master-at-arms
+  playTimeTracker: JobLSRetrievalOfficer
+  whitelisted: true
+  requirements:
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSFreelancers
+    #   time: 57600 # 16 hours
+  weight: 50
+  displayWeight: 50
+  # TODO section
+  startingGear: LSRetrievalOfficerGear
+  icon: "JobIconLSRetrievalOfficer"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #freelancer specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsPirate
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  #RPI
+  # TODO: Add rpis
+  - !type:AddComponentSpecial
+    components:
+    - type: PaywardProximityShuttleConsole # TODO: Look into how useful this even is.
+
+- type: entity
+  id: SpawnPointLSRetrievalOfficer # TODO: mapping migrations.
+  parent: SpawnPointJobBase
+  name: retrieval officer spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSRetrievalOfficer
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear
+  id: LSRetrievalOfficerGear
+  equipment: # TODO: add PDA
+    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket2: ContrabandAppraisalTool
+  storage:
+    back:
+    - Flash
+    - CSMagazinePistol40Overpressure
+    - CSMagazinePistol40Rubber
+    - BaseSecurityUplinkRadioOfficer
+
+- type: roleLoadout
+  id: JobLSRetrievalOfficer
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSLSRDRetrievalOfficerPDA
+  # LSRD v
+  - LSLSRDFactionCombatantJumpsuit
+  - LSLSRDFactionCombatantOuterClothing
+  - LSLSRDFactionCombatantShoes
+  - LSLSRDFactionCombatantGloves
+  - LSLSRDFactionCombatantHead
+  - LSLSRDFactionCombatantMask
+  - LSLSRDFactionCombatantEyes
+  - LSLSRDFactionCombatantNeck
+  - LSLSRDFactionCombatantEars
+  - LSLSRDFactionCombatantBackpack
+  - LSLSRDFactionCombatantBelt
+  - LSLSRDFactionCombatantWallet
+  - LSLSRDFactionCombatantEncryptionKey
+  - LSLSRDFactionCombatantImplanter
+  # Common v
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - PirateBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific

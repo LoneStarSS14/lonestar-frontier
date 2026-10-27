@@ -121,22 +121,10 @@
   description: department-NFSecurity-description # Frontier
   color: "#5C7D4D" # Frontier: DE3A3A<5C7D4D
   weight: 1 # Frontier: 20<1 - accounted for in jobs
-  roles:
-#  - Detective # Frontier
-#  - HeadOfSecurity # Frontier
-#  - SecurityCadet # Frontier
-#  - SecurityOfficer # Frontier
-#  - Warden # Frontier
-  - PrisonGuard ##nyano
-  - Brigmedic # Frontier
-#  - SecurityGuard # Frontier
-  - NFDetective # Frontier
-  - Cadet # Frontier
-  - Deputy # Frontier
-  - Bailiff # Frontier
-  - Sheriff # Frontier
-  - SeniorOfficer # Frontier
-  - PublicAffairsLiaison # Frontier
+  # LoneStar start, removes roles list and hides from menus
+  primary: false
+  editorHidden: true
+  # LoneStar end
 
 - type: department
   id: Science

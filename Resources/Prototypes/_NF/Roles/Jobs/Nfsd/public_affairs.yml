@@ -1,4 +1,5 @@
 - type: job
+  abstract: true
   id: PublicAffairsLiaison
   name: job-name-pal
   description: job-description-public-affairs-liaison
@@ -38,6 +39,7 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
+  abstract: true
   id: PublicAffairGear
   equipment:
     pocket1: NFHyperlinkBookSpaceLaw
@@ -54,6 +56,7 @@
     - EncryptionKeyCommand
 
 - type: chameleonOutfit
+  abstract: true
   id: PublicAffairsLiaisonChameleonOutfit
   job: PublicAffairsLiaison
   hasMindShield: true
