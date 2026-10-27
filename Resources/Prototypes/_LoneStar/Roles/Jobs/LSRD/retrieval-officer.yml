@@ -108,6 +108,7 @@
   # LSRD v
   - LSLSRDFactionCombatantJumpsuit
   - LSLSRDFactionCombatantOuterClothing
+  - LSLSRDFactionForcedOuterClothing
   - LSLSRDFactionCombatantShoes
   - LSLSRDFactionCombatantGloves
   - LSLSRDFactionCombatantHead

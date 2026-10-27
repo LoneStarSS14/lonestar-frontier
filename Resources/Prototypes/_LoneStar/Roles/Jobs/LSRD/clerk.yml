@@ -65,6 +65,7 @@
   # LSRD v
   - LSLSRDFactionJumpsuit
   - LSLSRDFactionOuterClothing
+  - LSLSRDFactionForcedOuterClothing
   - LSLSRDFactionShoes
   - LSLSRDFactionGloves
   - LSLSRDFactionHead

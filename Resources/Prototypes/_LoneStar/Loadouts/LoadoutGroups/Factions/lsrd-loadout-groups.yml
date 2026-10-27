@@ -1,4 +1,3 @@
-# TODO: Add all the Nfsd stuff to these
 # TODO: Check vox and sheleg dont get fucked.
 
 #region Base Loadouts
@@ -9,30 +8,25 @@
   name: loadout-group-jumpsuit
   minLimit: 1
   loadouts:
+  - PalClothingUniformJumpsuitPublicAffairsLiaison
+  - PalClothingUniformJumpskirtPublicAffairsLiaison
   - DeputyClothingUniformJumpsuitDeputy
   - DeputyClothingUniformJumpskirtDeputy
-  - BailiffClothingUniformJumpsuitBailiff
-  - BailiffClothingUniformJumpskirtBailiff
-  - BrigmedicClothingUniformJumpsuitBrigmedic
-  - BrigmedicClothingUniformJumpskirtBrigmedic
   - CadetClothingUniformJumpsuitCadet
   - CadetClothingUniformJumpskirtCadet
-  - DeputyClothingUniformJumpsuitDeputy
-  - DeputyClothingUniformJumpskirtDeputy
+  - BailiffClothingUniformJumpsuitBailiff
   - NFDetectiveClothingUniformJumpsuitDetective
   - NFDetectiveClothingUniformJumpskirtDetective
   - NFDetectiveClothingUniformJumpsuitDetectiveGrey
   - NFDetectiveClothingUniformJumpskirtDetectiveGrey
-  - PalClothingUniformJumpsuitPublicAffairsLiaison
-  - PalClothingUniformJumpskirtPublicAffairsLiaison
   subgroups:
   - MercenaryJumpsuit
   - PilotJumpsuit
   - ContractorJumpsuit
   - CoyoteJumpsuit
   fallbacks:
-  - DeputyClothingUniformJumpsuitDeputy
-  - DeputyClothingUniformJumpskirtDeputy
+  - PalClothingUniformJumpsuitPublicAffairsLiaison
+  - PalClothingUniformJumpskirtPublicAffairsLiaison
 
 - type: loadoutGroup
   id: LSLSRDFactionOuterClothing
@@ -41,7 +35,6 @@
   loadouts:
   - BailiffOuterClothing
   - BrigmedicOuterClothing
-  - NfsdForcedClothingOuterEVASuitNfsd
   subgroups:
   - MercenaryOuterClothing
   - PilotOuterClothing
@@ -306,7 +299,6 @@
   loadouts:
   - NfsdWebbing
   - NfsdBelt
-  - BrigmedicClothingBeltBrigmedicWebbing # TODO: Put this on the corpsman specifically
   subgroups:
   - LSLSRDFactionBelt
   - ContractorBelt
@@ -601,4 +593,17 @@
   - LSLSRDChiefRangerPDA
   fallbacks:
   - LSLSRDChiefRangerPDA
+#endregion
+
+#region Special Cases
+- type: loadoutGroup
+  id: LSLSRDFactionForcedOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 1
+  maxLimit: 1
+  hidden: true
+  loadouts:
+  - LSLSRDForcedClothingOuterEVASuit
+  fallbacks:
+  - LSLSRDForcedClothingOuterEVASuit
 #endregion
