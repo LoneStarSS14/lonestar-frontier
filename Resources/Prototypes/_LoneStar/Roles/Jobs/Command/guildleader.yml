@@ -51,17 +51,26 @@
     - BoxFolderGreen
     - RubberStampGuildLeader
 
-- type: chameleonOutfit
-  id: GuildLeaderChameleonOutfit
-  job: GuildLeader
-  hasMindShield: true
-  equipment:
-    head: ClothingHeadHatBeretSecurity
-    ears: ClothingHeadsetGuildLeader
-    eyes: ClothingEyesHudMedical
-    mask: ClothingMaskGasExplorer
-    neck: ClothingNeckScarfStripedBrown
-    jumpsuit: ClothingUniformJumpsuitPrivateSec
-    outerClothing: ClothingOuterVestWebMercenaryBlack
-    gloves: ClothingHandsGlovesCombat
-    shoes: ClothingShoesBootsJack
+- type: roleLoadout
+  id: JobGuildLeader
+  groups:
+  - GuildLeaderHead
+  - ContractorNeck
+  - GuildLeaderJumpsuit
+  - GuildLeaderGloves
+  - GuildLeaderBackpack
+  - GuildLeaderOuterClothing
+  - GuildLeaderShoes
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorBelt
+  - GuildLeaderEars
+  - ContractorBoxSurvival
+  - GuildLeaderPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific
