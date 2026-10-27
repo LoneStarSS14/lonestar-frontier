@@ -558,3 +558,16 @@
   fallbacks:
   - LSFreelancerMasterAtArmsPDA
 #endregion
+
+#region Special Cases
+- type: loadoutGroup
+  id: LSFreelancersFactionForcedOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 1
+  maxLimit: 1
+  hidden: true
+  loadouts:
+  - LSFreelancerForcedClothingOuterEVASuit
+  fallbacks:
+  - LSFreelancerForcedClothingOuterEVASuit
+#endregion

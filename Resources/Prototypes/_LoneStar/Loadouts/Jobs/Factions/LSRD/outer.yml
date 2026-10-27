@@ -1,0 +1,8 @@
+- type: loadout
+  id: LSLSRDForcedClothingOuterEVASuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NFOuterSuitRequired
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterEVASuitNfsd

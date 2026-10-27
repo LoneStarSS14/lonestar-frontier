@@ -74,6 +74,7 @@
   # LSRD v
   - LSLSRDFactionLeaderJumpsuit
   - LSLSRDFactionLeaderOuterClothing
+  - LSLSRDFactionForcedOuterClothing
   - LSLSRDFactionLeaderShoes
   - LSLSRDFactionLeaderGloves
   - LSLSRDFactionLeaderHead

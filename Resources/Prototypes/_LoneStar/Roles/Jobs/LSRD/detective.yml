@@ -74,12 +74,13 @@
   # LSRD v
   - LSLSRDFactionJumpsuit
   - LSLSRDFactionOuterClothing
+  - LSLSRDFactionForcedOuterClothing
   - LSLSRDFactionShoes
   - LSLSRDFactionGloves
   - LSLSRDFactionHead
   - LSLSRDFactionMask
   - LSLSRDFactionEyes
-  - LSLSRDFactionNeck
+  - LSLSRDFactionDetectiveNeck
   - LSLSRDFactionEars
   - LSLSRDFactionBackpack
   - LSLSRDFactionBelt
