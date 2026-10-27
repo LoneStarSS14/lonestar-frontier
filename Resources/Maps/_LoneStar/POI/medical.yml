@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 10/27/2026 13:07:36
+  time: 10/27/2026 13:24:45
   entityCount: 2741
 maps: []
 grids:
@@ -45,8 +45,6 @@ entities:
     components:
     - type: MetaData
       name: grid
-    - type: Transform
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -3389,20 +3387,6 @@ entities:
       pos: -21.5,8.5
       parent: 1
     - type: ItemSlots
-  - uid: 82
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -14.5,19.5
-      parent: 1
-    - type: ItemSlots
-  - uid: 83
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -13.5,19.5
-      parent: 1
-    - type: ItemSlots
   - uid: 84
     components:
     - type: Transform
@@ -3422,20 +3406,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,19.5
-      parent: 1
-    - type: ItemSlots
-  - uid: 87
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 14.5,19.5
-      parent: 1
-    - type: ItemSlots
-  - uid: 88
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 15.5,19.5
       parent: 1
     - type: ItemSlots
   - uid: 89
@@ -3508,6 +3478,36 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 10.5,-5.5
+      parent: 1
+    - type: ItemSlots
+- proto: AirlockGlassShuttle
+  entities:
+  - uid: 82
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 15.5,19.5
+      parent: 1
+    - type: ItemSlots
+  - uid: 83
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 14.5,19.5
+      parent: 1
+    - type: ItemSlots
+  - uid: 87
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -13.5,19.5
+      parent: 1
+    - type: ItemSlots
+  - uid: 88
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -14.5,19.5
       parent: 1
     - type: ItemSlots
 - proto: AirlockHydroponicsGlass
@@ -17539,147 +17539,147 @@ entities:
       parent: 1
 - proto: SpawnPointDirectorOfCare
   entities:
-  - uid: 2280
+  - uid: 2277
     components:
     - type: Transform
       pos: -9.5,15.5
       parent: 1
 - proto: SpawnPointLatejoin
   entities:
-  - uid: 2281
+  - uid: 2278
     components:
     - type: Transform
       pos: 0.5,-7.5
       parent: 1
 - proto: SpawnPointMedicalNurse
   entities:
-  - uid: 2282
+  - uid: 2279
     components:
     - type: Transform
       pos: -3.5,-4.5
       parent: 1
-  - uid: 2283
+  - uid: 2280
     components:
     - type: Transform
       pos: -2.5,-3.5
       parent: 1
-  - uid: 2284
+  - uid: 2281
     components:
     - type: Transform
       pos: -11.5,-2.5
       parent: 1
-  - uid: 2285
+  - uid: 2282
     components:
     - type: Transform
       pos: -12.5,-0.5
       parent: 1
-  - uid: 2286
+  - uid: 2283
     components:
     - type: Transform
       pos: -8.5,-0.5
       parent: 1
-  - uid: 2287
+  - uid: 2284
     components:
     - type: Transform
       pos: -8.5,-2.5
       parent: 1
-  - uid: 2288
+  - uid: 2285
     components:
     - type: Transform
       pos: -9.5,-2.5
       parent: 1
-  - uid: 2289
+  - uid: 2286
     components:
     - type: Transform
       pos: -12.5,-2.5
       parent: 1
-  - uid: 2290
+  - uid: 2287
     components:
     - type: Transform
       pos: -11.5,-0.5
       parent: 1
-  - uid: 2291
+  - uid: 2288
     components:
     - type: Transform
       pos: -9.5,-0.5
       parent: 1
 - proto: SpawnPointMercenary
   entities:
-  - uid: 2292
+  - uid: 2289
     components:
     - type: Transform
       pos: 10.5,-1.5
       parent: 1
-  - uid: 2293
+  - uid: 2290
     components:
     - type: Transform
       pos: 10.5,-2.5
       parent: 1
-  - uid: 2294
+  - uid: 2291
     components:
     - type: Transform
       pos: 10.5,-3.5
       parent: 1
-  - uid: 2295
+  - uid: 2292
     components:
     - type: Transform
       pos: 11.5,-2.5
       parent: 1
-  - uid: 2296
+  - uid: 2293
     components:
     - type: Transform
       pos: 11.5,-1.5
       parent: 1
-  - uid: 2297
+  - uid: 2294
     components:
     - type: Transform
       pos: 11.5,-3.5
       parent: 1
 - proto: SpawnPointPilot
   entities:
-  - uid: 2298
+  - uid: 2295
     components:
     - type: Transform
       pos: 8.5,-1.5
       parent: 1
-  - uid: 2299
+  - uid: 2296
     components:
     - type: Transform
       pos: 8.5,-2.5
       parent: 1
-  - uid: 2300
+  - uid: 2297
     components:
     - type: Transform
       pos: 9.5,-1.5
       parent: 1
-  - uid: 2301
+  - uid: 2298
     components:
     - type: Transform
       pos: 8.5,-3.5
       parent: 1
-  - uid: 2302
+  - uid: 2299
     components:
     - type: Transform
       pos: 9.5,-2.5
       parent: 1
-  - uid: 2303
+  - uid: 2300
     components:
     - type: Transform
       pos: 9.5,-3.5
       parent: 1
 - proto: SpawnPointTherapist
   entities:
-  - uid: 2277
+  - uid: 2301
     components:
     - type: Transform
       pos: -14.5,5.5
       parent: 1
-  - uid: 2278
+  - uid: 2302
     components:
     - type: Transform
       pos: -13.5,7.5
       parent: 1
-  - uid: 2279
+  - uid: 2303
     components:
     - type: Transform
       pos: -14.5,7.5
