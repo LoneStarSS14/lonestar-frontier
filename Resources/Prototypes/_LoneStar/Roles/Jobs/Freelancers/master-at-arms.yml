@@ -15,7 +15,6 @@
     #   time: 144000 # 40 hours
   weight: 60
   displayWeight: 60
-  # TODO section
   startingGear: LSMasterAtArmsGear
   icon: "JobIconLSMasterAtArms"
   # Frontier's fields

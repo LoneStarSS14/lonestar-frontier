@@ -1,70 +1,14 @@
-# - type: job
-#   id: PublicAffairsLiaison
-#   name: job-name-pal
-#   description: job-description-public-affairs-liaison
-#   playTimeTracker: JobPublicAffairsLiaison
-#   requirements: # Coyote: editted the playtime required for Sergeant
-#   - !type:OverallPlaytimeRequirement
-#     time: 108000
-#   - !type:DepartmentTimeRequirement
-#     department: Security
-#     time: 28800 # 8 hours
-#   startingGear: PublicAffairGear
-#   icon: "JobIconPublicAffairsLiaison"
-#   supervisors: job-supervisors-cadet
-#   consoleAdjustable: false
-#   canBeAntag: false
-#   weight: 105
-#   displayWeight: 16
-#   access: # Access was editted by Coyote
-#   - HeadOfSecurity
-#   - Command
-#   - Armory
-#   - Sergeant
-#   - Bailiff
-#   - Brigmedic
-#   accessGroups:
-#   - GeneralNfsdAccess
-#   special:
-#   - !type:AddImplantSpecial
-#     implants: [ MindShieldImplant, TrackingImplant ]
-#   - !type:AddComponentSpecial
-#     components:
-#     - type: CommandStaff
-#     - type: IsNfsd
-#       worth: 2
-#   - !type:GiveItemOnHolidaySpecial
-#     holiday: FrontierBirthday
-#     prototype: FrontierBirthdayGift
-
-# - type: startingGear
-#   id: PublicAffairGear
-#   equipment:
-#     pocket1: NFHyperlinkBookSpaceLaw
-#     pocket2: BoxFolderClipboardPal
-#   storage:
-#     back:
-#     - Flash
-#     - BoxFolderPalBrown
-#     - BoxFolderNfsdForms
-#     - RubberStampPal
-#     - BaseSecurityUplinkRadioOfficer
-#     - FrontierUplinkCoin5 # Coyote: added 5 FUCs to Sergeants
-#     - ShipVoucherNfsdSergeant
-#     - EncryptionKeyCommand
-
 - type: job
   id: LSClerk
   name: job-name-ls-clerk
   description: job-description-ls-clerk
-  supervisors: job-supervisors-ls-chief-ranger
+  supervisors: job-supervisors-ls-faction-resident
   playTimeTracker: JobLSClerk
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 43200 # 6 hours
   weight: 10
   displayWeight: 10
-  # TODO section
   startingGear: LSClerkGear
   icon: "JobIconLSClerk"
   # Frontier's fields
