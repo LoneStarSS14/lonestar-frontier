@@ -45,6 +45,7 @@
     - EncryptionKeyService
     - EncryptionKeySecurity
     - EncryptionKeyNfsd
+    - EncryptionKeyFreelancer # LoneStar
     - Flash
     - CSMagazinePistol40 # Coyote: NFMagazineHighCapacityPistol35 < CSMagazinePistol40
     - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber

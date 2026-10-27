@@ -9,7 +9,7 @@
   id: EncryptionKeyLSRD
   price: 0
   encryptionKeys:
-  - EncryptionKeyNfsd # TODO: Make unique one
+  - EncryptionKeyNfsd
 
 - type: loadout
   id: EncryptionKeyCommand
