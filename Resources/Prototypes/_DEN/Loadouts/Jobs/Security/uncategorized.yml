@@ -1,69 +1,15 @@
 - type: loadout
-  id: LoadoutSecurityHeadHatSeniorTrooper
-  category: JobsSecurityAUncategorized
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutSecurityHead
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Security
-  items:
-    - ClothingHeadHatSeniorTrooper
-
-- type: loadout
-  id: LoadoutSecurityUniformJumpsuitSeniorTrooper
-  category: JobsSecurityAUncategorized
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutSecurityUniforms
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Security
-  items:
-    - ClothingUniformJumpsuitSeniorTrooper
-
-- type: loadout
-  id: LoadoutSecurityHeadHelmetCombat
-  category: JobsSecurityAUncategorized
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutSecurityHead
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Security
-  items:
-    - ClothingHeadHelmetSecurityCombat
-
-- type: loadout
-  id: LoadoutSecurityMaskGasCombat
-  category: JobsSecurityAUncategorized
-  cost: 2 # Slightly tougher than the normal security mask
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutSecurityMask
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Security
-  items:
-    - ClothingMaskGasSecurityCombat
-
-- type: loadout
   id: LoadoutSecurityMaskGasBallistic
   category: JobsSecurityAUncategorized
-  cost: 2 # Slightly tougher than the normal security mask
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutSecurityMask
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Security
-  items:
+  price: 0
+  storage:
+    back:
     - ClothingMaskGasSecurityBallistic
+
+- type: loadout
+  id: LoadoutItemDroneMaskHoodless
+  category: ItemsLewd
+  price: 0
+  storage:
+    back:
+    - ClothingMaskGasDroneHoodless
