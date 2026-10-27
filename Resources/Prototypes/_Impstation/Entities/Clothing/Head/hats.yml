@@ -107,16 +107,18 @@
     delay: 1.0
   - type: ToggleClothing
     action: ActionToggleCaduceusCap
+    mustEquip: false
   - type: ItemTogglePointLight
-  - type: ToggleableLightVisuals
+  - type: ToggleableVisuals
     spriteLayer: light
     clothingVisuals:
       head:
       - state: on-equipped-HELMET
+        shader: unshaded
   - type: PointLight
     enabled: false
     radius: 1.4
-    energy: 1.8
+    energy: 2.5
     color: deepskyblue
     netsync: false
     mask: /Textures/Effects/LightMasks/double_cone.png
@@ -151,7 +153,9 @@
   name: Toggle Caduceus Cap
   description: Turn the siren on or off.
   components:
-  - type: InstantAction
+  - type: Action
+    useDelay: 1
     itemIconStyle: BigItem
+  - type: InstantAction
     event: !type:ToggleActionEvent
 # Paramedic Siren Hat End
