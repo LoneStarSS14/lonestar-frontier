@@ -29,7 +29,7 @@
     sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
     - state: freelancer
-    - state: id-freelancer-clerk
+    - state: id-freelancer-escort
   - type: Item
     heldPrefix: freelancer
 
