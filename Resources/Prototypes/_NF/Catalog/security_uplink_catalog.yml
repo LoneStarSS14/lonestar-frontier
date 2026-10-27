@@ -48,7 +48,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition # Coyote: added Brigmedic as a job requirement for the hardsuit
       whitelist:
-        - Brigmedic
+        - LSCorpsman
 
 - type: listing
   id: UplinkSecurityHardsuitWarden
@@ -67,9 +67,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - LSChiefRanger
 
 - type: listing
   id: UplinkSecurityCombatHardsuit
@@ -104,9 +102,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - LSChiefRanger
 
 - type: listing
   id: UplinkSecurityHardsuitSheriff
@@ -125,7 +121,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
+        - LSChiefRanger
 
 - type: listing # Coyote: removed job restrictions for this hardsuit
   id: UplinkSecurityHardsuitSyndieReverseEngineered
@@ -273,7 +269,7 @@
       - SecurityUplink
   - !type:BuyerJobCondition # Coyote
     whitelist:
-    - Sheriff
+    - LSChiefRanger
 
 - type: listing # Coyote added hristov to NFSD uplink
   id: UplinkSecurityHristov
@@ -292,9 +288,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Bailiff
-        - SeniorOfficer
+        - LSChiefRanger
 
 - type: listing # Coyote: added hristov ammo to NFSD uplink
   id: UplinkSecurityHristovAmmo
@@ -313,9 +307,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Bailiff
-        - SeniorOfficer
+        - LSChiefRanger
 
 - type: listing # Coyote: removed job restrictions for this weapon
   id: UplinkSecurityLaserCarbine
@@ -479,9 +471,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Bailiff
-        - SeniorOfficer
+        - LSChiefRanger
 
 - type: listing # Coyote: added bailiff and sergeant to the list of people who can get this
   id: UplinkSecurityKey
@@ -500,9 +490,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Bailiff
-        - SeniorOfficer
+        - LSChiefRanger
 
 - type: listing # Coyote: removed job restrictions for this ammo
   id: UplinkSecurityEmpRocket
@@ -666,8 +654,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Brigmedic
-        - Sheriff
+        - LSCorpsman
+        - LSChiefRanger
 
 - type: listing
   id: UplinkSecurityAmbuzol
@@ -686,8 +674,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Brigmedic
-        - Sheriff
+        - LSCorpsman
+        - LSChiefRanger
 
 - type: listing # Coyote: removed job restrictions for this gear
   id: UplinkSecurityMedkit
@@ -706,7 +694,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Brigmedic
+        - LSCorpsman
 
 - type: listing
   id: UplinkSecurityInspector
@@ -1093,9 +1081,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - LSChiefRanger
 
 - type: listing
   id: UplinkSecurityTrackingBundle
@@ -1146,9 +1132,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - LSChiefRanger
 
 - type: listing
   id: UplinkSecurityEmpGrenadeAmmo
