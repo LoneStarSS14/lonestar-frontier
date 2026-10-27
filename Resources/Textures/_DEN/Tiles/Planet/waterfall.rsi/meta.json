@@ -14,7 +14,7 @@
         ]
       },
       {
-          "name": "waterfallshine",
+          "name": "waterfallshine-unshaded",
           "delays": [
             [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
         ]
@@ -27,7 +27,7 @@
           ]
       },
       {
-          "name": "poolwaterfallshine",
+          "name": "poolwaterfallshine-unshaded",
           "delays":
           [
             [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ]
@@ -45,7 +45,7 @@
           ]
       },
       {
-          "name": "poolwaterfallshinecut",
+          "name": "poolwaterfallshinecut-unshaded",
           "directions": 4,
           "delays":
           [

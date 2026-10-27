@@ -27,7 +27,7 @@
     sprite: _DEN/Tiles/Planet/waterfall.rsi
     layers:
     - state: waterfall
-    - state: waterfallshine
+    - state: waterfallshine-unshaded
     drawdepth: Overdoors
 
 - type: entity
@@ -52,7 +52,7 @@
     sprite: _DEN/Tiles/Planet/waterfall.rsi
     layers:
     - state: poolwaterfallcut
-    - state: poolwaterfallshinecut
+    - state: poolwaterfallshinecut-unshaded
     offset: 0, 0.1
 
 # Somber Waterfall Spouts. Renamed. Credits to sha-seng (github)
@@ -81,6 +81,10 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+  - type: RCDDeconstructable # LoneStar
+    cost: 3 # LoneStar
+    delay: 2 # LoneStar
+    fx: EffectRCDDeconstruct2 # LoneStar
 
 - type: entity
   parent: PoolWaterfallSpout

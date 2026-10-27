@@ -1,6 +1,6 @@
 - type: entity
   id: HCD
-  parent: ShipyardRCD
+  parent: BaseItem
   name: HCD
   description: The Holy Construction Device. Clearly not a widespread manufacture and more the product of religious fanatics modifying technology. The blessings upon it imbue it with some manner of alchemical thaumaturgy alongside holo-technology, rendering water, glass, and sites of worship with ease.
   components:
@@ -70,8 +70,8 @@
     - Belt
   - type: PointLight
     color: "#e39c40"
-    radius: 1
-    power: 5
+    radius: 2.5
+    power: 10
   - type: PhysicalComposition
     materialComposition:
       Steel: 500
