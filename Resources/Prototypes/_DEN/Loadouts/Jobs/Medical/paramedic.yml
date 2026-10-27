@@ -1,13 +1,5 @@
 - type: loadout
   id: LoadoutMedicalHeadHatParamedicSiren
-  category: JobsMedicalParamedic
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutParamedicHead
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Medical
+  price: 0
   items:
     - ClothingHeadHatParamedicSiren
