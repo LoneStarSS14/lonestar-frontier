@@ -251,7 +251,7 @@
     - NFSalvageBoardsStatic
     - NFInflatablesStatic
     - NFSalvageArchetypeStatic
-    - LSSalvageStatic # LoneStar
+    - LSSalvageWeapons # LoneStar
 
   - type: EmagLatheRecipes
     emagStaticPacks:
@@ -307,6 +307,7 @@
     - NfsdTargetsStatic
     - CSMagazineStatic
     - NfsdBoardsStatic
+    - LSSalvageWeapons # LoneStar
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -362,6 +363,7 @@
     - NFMercenaryArchetypeStatic
     - LSMercenaryStatic # LoneStar
     - NFMercenaryArchetypeMeleeStatic
+    - LSSalvageWeapons # LoneStar
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -429,6 +431,7 @@
     - CSMagazineStatic
     - NFMercenaryArchetypeStatic
     - NFMercenaryArchetypeMeleeStatic
+    - LSSalvageWeapons # LoneStar
   - type: BlueprintReceiver
     whitelist:
       tags:

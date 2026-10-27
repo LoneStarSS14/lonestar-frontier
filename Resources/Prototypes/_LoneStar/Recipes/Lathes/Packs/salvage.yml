@@ -1,4 +1,4 @@
 - type: latheRecipePack
-  id: LSSalvageStatic
+  id: LSSalvageWeapons
   recipes:
   - LSWeaponComboLaserPistol
