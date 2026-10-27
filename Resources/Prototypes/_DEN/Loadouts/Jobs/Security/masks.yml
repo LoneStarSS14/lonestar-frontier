@@ -1,6 +1,5 @@
 - type: loadout
   id: LoadoutSecurityMaskGasBallistic
-  category: JobsSecurityAUncategorized
   price: 0
   storage:
     back:
@@ -8,7 +7,6 @@
 
 - type: loadout
   id: LoadoutItemDroneMaskHoodless
-  category: ItemsLewd
   price: 0
   storage:
     back:
