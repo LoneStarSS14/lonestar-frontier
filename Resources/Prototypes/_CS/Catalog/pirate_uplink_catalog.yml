@@ -1029,24 +1029,6 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkFreelancerSmugglerID
-  name: uplink-smuggler-id-name
-  description: uplink-smuggler-id-desc
-  productEntity: SmugglerPDA
-  cost:
-    Doubloon: 3
-  categories:
-  - UplinkPirateDeception
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-  - !type:BuyerJobCondition # Coyote
-    whitelist:
-    - LSSmuggler
-
-- type: listing
   id: UplinkIffConsole
   name: uplink-iff-name
   description: uplink-iff-desc
