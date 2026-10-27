@@ -2,7 +2,7 @@
   id: LSCorpsman
   name: job-name-ls-corpsman
   description: job-description-ls-corpsman
-  supervisors: job-supervisors-ls-chief-ranger
+  supervisors: job-supervisors-ls-chief-ranger # TODO: update after corpsman is demilitarized
   playTimeTracker: JobLSCorpsman
   requirements:
     # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
@@ -13,7 +13,6 @@
       time: 57600 # 16 hours
   weight: 20
   displayWeight: 20
-  # TODO section
   startingGear: LSCorpsmanGear
   icon: "JobIconLSCorpsman"
   # Frontier's fields

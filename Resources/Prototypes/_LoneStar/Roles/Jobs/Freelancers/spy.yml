@@ -11,7 +11,6 @@
     #   time: 57600 # 16 hours
   weight: 30
   displayWeight: 30
-  # TODO section
   startingGear: LSSpyGear
   icon: "JobIconLSSpy"
   # Frontier's fields

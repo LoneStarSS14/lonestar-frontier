@@ -51,7 +51,6 @@
     #   time: 57600 # 16 hours
   weight: 50
   displayWeight: 50
-  # TODO section
   startingGear: LSRetrievalOfficerGear
   icon: "JobIconLSRetrievalOfficer"
   # Frontier's fields

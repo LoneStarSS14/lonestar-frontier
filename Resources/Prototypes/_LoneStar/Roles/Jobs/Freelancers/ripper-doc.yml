@@ -2,7 +2,7 @@
   id: LSRipperDoc
   name: job-name-ls-ripper-doc
   description: job-description-ls-ripper-doc
-  supervisors: job-supervisors-ls-master-at-arms
+  supervisors: job-supervisors-ls-faction-medic
   playTimeTracker: JobLSRipperDoc
   requirements:
     # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
@@ -13,7 +13,6 @@
       time: 57600 # 16 hours
   weight: 20
   displayWeight: 20
-  # TODO section
   startingGear: LSRipperDocGear
   icon: "JobIconLSRipperDoc"
   # Frontier's fields
