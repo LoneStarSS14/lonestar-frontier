@@ -329,7 +329,7 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - NfsdClothingHeadsetNfsdBrown # TODO: make these start with only broadband
+  - NfsdClothingHeadsetNfsdBrown
   - NfsdClothingHeadsetNfsdCream
   - NfsdClothingHeadsetNfsdGreen
   - NfsdClothingHeadsetAltNfsdBrown
@@ -525,7 +525,7 @@
 - type: loadoutGroup
   id: LSLSRDFactionLeaderEncryptionKey
   name: loadout-group-encryption-key
-  minLimit: 2
+  minLimit: 0
   maxLimit: 7
   loadouts:
     []

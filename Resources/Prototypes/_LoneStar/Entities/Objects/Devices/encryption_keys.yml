@@ -34,12 +34,12 @@
     - Command
     defaultChannel: Command
   - type: Item
-    sprite: _NF/Objects/Devices/encryption_keys.rsi
+    sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
   - type: Sprite
-    sprite: _NF/Objects/Devices/encryption_keys.rsi
-    layers: # TODO: make unique one
-    - state: crypt_silver
-    - state: guildleader_label
+    sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_freelancer
+    - state: label_freelancer
 
 - type: entity
   parent: EncryptionKey
@@ -54,9 +54,9 @@
     - Command
     defaultChannel: Command
   - type: Item
-    sprite: _NF/Objects/Devices/encryption_keys.rsi
+    sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
   - type: Sprite
-    sprite: _NF/Objects/Devices/encryption_keys.rsi
+    sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
     layers: # TODO: make unique one
-    - state: crypt_silver
-    - state: guildleader_label
+    - state: crypt_lsrd
+    - state: label_lsrd

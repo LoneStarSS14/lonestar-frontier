@@ -7,6 +7,7 @@
     containers:
       key_slots:
       - EncryptionKeyGuildLeader
+      - EncryptionKeyCommon
 
 - type: entity
   parent: ClothingHeadsetAltMercenary
@@ -17,6 +18,7 @@
     containers:
       key_slots:
       - EncryptionKeyLSMasterAtArms
+      - EncryptionKeyCommon
 
 - type: entity
   parent: ClothingHeadsetAltMercenary
@@ -27,3 +29,4 @@
     containers:
       key_slots:
       - EncryptionKeyLSChiefRanger
+      - EncryptionKeyCommon
