@@ -5,7 +5,7 @@
   playTimeTracker: JobDetectiveOld
   requirements:
   - !type:RoleTimeRequirement
-    role: JobSecurityOfficer
+    role: JobSecurityOfficerOld
     time: 18000 #5 hrs
   startingGear: DetectiveGear
   icon: "JobIconDetective"

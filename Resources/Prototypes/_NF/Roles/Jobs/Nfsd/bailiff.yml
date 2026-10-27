@@ -1,4 +1,5 @@
 - type: job
+  abstract: true
   id: Bailiff
   name: job-name-bailiff
   description: job-description-bailiff
@@ -42,6 +43,7 @@
 
 
 - type: startingGear
+  abstract: true
   id: BailiffGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
@@ -58,6 +60,7 @@
     - EncryptionKeyCommand
 
 - type: chameleonOutfit
+  abstract: true
   id: BailiffChameleonOutfit
   job: Bailiff
   hasMindShield: true

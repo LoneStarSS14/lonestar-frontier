@@ -1,57 +1,91 @@
-# - type: job
-#   id: Deputy
-#   name: job-name-deputy
-#   description: job-description-deputy
-#   playTimeTracker: JobSecurityOfficer
-#   requirements:
-#     - !type:OverallPlaytimeRequirement
-#       time: 43200 # 12 hours
-#     - !type:DepartmentTimeRequirement
-#       department: Security
-#       time: 14400 # 4 hours
-#   startingGear: DeputyGear
-#   icon: JobIconDeputy
-#   supervisors: job-supervisors-sergeant
-#   weight: 130
-#   displayWeight: 40
-#   canBeAntag: false
-#   consoleAdjustable: false
-#   accessGroups:
-#   - GeneralNfsdAccess
-#   special:
-#   - !type:AddImplantSpecial
-#     implants: [ MindShieldImplant, TrackingImplant ]
-#   - !type:GiveItemOnHolidaySpecial
-#     holiday: FrontierBirthday
-#     prototype: FrontierBirthdayGift
-#   - !type:AddRpiJobModifierSpecial
-#     modifiersToAdd:
-#     - rpiJobModifierDeputy
-#   - !type:AddComponentSpecial
-#     components:
-#     - type: IsNfsd
+- type: job
+  id: LSEnforcer
+  name: job-name-ls-enforcer
+  description: job-description-ls-enforcer
+  supervisors: job-supervisors-ls-chief-ranger
+  playTimeTracker: JobLSEnforcer
+  whitelisted: true
+  requirements:
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSLSRD
+    #   time: 57600 # 16 hours
+  weight: 50
+  displayWeight: 50
+  # TODO section
+  startingGear: LSEnforcerGear
+  icon: "JobIconLSEnforcer"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #lsrd specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsNfsd
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  #RPI
+  # TODO: Add rpis
 
-# - type: startingGear
-#   id: DeputyGear
-#   equipment:
-#     pocket1: NFWeaponPistolUniversalNfsdLessLethal
-#   storage:
-#     back:
-#     - Flash
-#     - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
-#     - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
-#     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink for deputies, removed their starting uplink coins
+- type: entity
+  id: SpawnPointLSEnforcer # TODO: mapping migrations.
+  parent: SpawnPointJobBase
+  name: enforcer spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSEnforcer
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
 
-# - type: chameleonOutfit
-#   id: DeputyChameleonOutfit
-#   job: Deputy
-#   hasMindShield: true
-#   equipment:
-#     head: ClothingHeadHatNfsdBeretBrown
-#     mask: ClothingMaskGasNfsd
-#     eyes: ClothingEyesGlassesNfsd
-#     outerClothing: ClothingOuterArmorNfsd
-#     neck: ClothingNeckNfsdBadgeSecurity
-#     belt: ClothingBeltNfsdFilled
-#     gloves: ClothingHandsGlovesCombatNfsdBrown
-#     shoes: ClothingShoesBootsNfsdBrownFilled
+- type: startingGear
+  id: LSEnforcerGear
+  equipment: # TODO: add PDA
+    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket2: ContrabandAppraisalTool
+  storage:
+    back:
+    - Flash
+    - CSMagazinePistol40Overpressure
+    - CSMagazinePistol40Rubber
+    - BaseSecurityUplinkRadioOfficer
+
+- type: roleLoadout
+  id: JobLSEnforcer
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSLSRDEnforcerPDA
+  # LSRD v
+  - LSLSRDFactionCombatantJumpsuit
+  - LSLSRDFactionCombatantOuterClothing
+  - LSLSRDFactionCombatantShoes
+  - LSLSRDFactionCombatantGloves
+  - LSLSRDFactionCombatantHead
+  - LSLSRDFactionCombatantMask
+  - LSLSRDFactionCombatantEyes
+  - LSLSRDFactionCombatantNeck
+  - LSLSRDFactionCombatantEars
+  - LSLSRDFactionCombatantBackpack
+  - LSLSRDFactionCombatantBelt
+  - LSLSRDFactionCombatantWallet
+  - LSLSRDFactionCombatantEncryptionKey
+  - LSLSRDFactionCombatantImplanter
+  # Common v
+  # - ContractorBoxSurvival
+  - ContractorCartridge
+  # - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  # - NFSpeciesSpecific
+  # Temporary / TODO: replace
+  - NfsdBoxSurvival
+  - SeniorOfficerBackpackItems
+  - NfsdSpeciesSpecific

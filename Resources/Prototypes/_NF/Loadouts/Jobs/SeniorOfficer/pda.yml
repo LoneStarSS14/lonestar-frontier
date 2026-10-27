@@ -1,5 +1,5 @@
 - type: loadout
   id: SeniorOfficerSeniorOfficerPDA
+  abstract: true # LoneStar
   equipment:
     id: SergeantPDA
-    

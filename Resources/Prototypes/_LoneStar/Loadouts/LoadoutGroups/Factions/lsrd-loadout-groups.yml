@@ -1,4 +1,5 @@
 # TODO: Add all the Nfsd stuff to these
+# TODO: Check vox and sheleg dont get fucked.
 
 #region Base Loadouts
 # Should contain all 'generic' things, anything job specific should subgroup these.
@@ -8,22 +9,39 @@
   name: loadout-group-jumpsuit
   minLimit: 1
   loadouts:
-    []
+  - DeputyClothingUniformJumpsuitDeputy
+  - DeputyClothingUniformJumpskirtDeputy
+  - BailiffClothingUniformJumpsuitBailiff
+  - BailiffClothingUniformJumpskirtBailiff
+  - BrigmedicClothingUniformJumpsuitBrigmedic
+  - BrigmedicClothingUniformJumpskirtBrigmedic
+  - CadetClothingUniformJumpsuitCadet
+  - CadetClothingUniformJumpskirtCadet
+  - DeputyClothingUniformJumpsuitDeputy
+  - DeputyClothingUniformJumpskirtDeputy
+  - NFDetectiveClothingUniformJumpsuitDetective
+  - NFDetectiveClothingUniformJumpskirtDetective
+  - NFDetectiveClothingUniformJumpsuitDetectiveGrey
+  - NFDetectiveClothingUniformJumpskirtDetectiveGrey
+  - PalClothingUniformJumpsuitPublicAffairsLiaison
+  - PalClothingUniformJumpskirtPublicAffairsLiaison
   subgroups:
   - MercenaryJumpsuit
   - PilotJumpsuit
   - ContractorJumpsuit
   - CoyoteJumpsuit
   fallbacks:
-  - ClothingUniformJumpsuitNfsd
-  - ClothingUniformJumpskirtNfsd
+  - DeputyClothingUniformJumpsuitDeputy
+  - DeputyClothingUniformJumpskirtDeputy
 
 - type: loadoutGroup
   id: LSLSRDFactionOuterClothing
   name: loadout-group-outerclothing
   minLimit: 0
   loadouts:
-  - FreelancerClothingBunnyJacketPirate
+  - BailiffOuterClothing
+  - BrigmedicOuterClothing
+  - NfsdForcedClothingOuterEVASuitNfsd
   subgroups:
   - MercenaryOuterClothing
   - PilotOuterClothing
@@ -45,7 +63,7 @@
   name: loadout-group-gloves
   minLimit: 0
   loadouts:
-    []
+  - PalClothingHandsGlovesHop
   subgroups:
   - ContractorGloves
 
@@ -54,13 +72,12 @@
   name: loadout-group-head
   minLimit: 0
   loadouts:
-  - NFPirateClothingHeadBandBlack
-  - NFPirateClothingHeadBandBrown
-  - NFPirateClothingHeadBandGrey
-  - NFPirateClothingHeadBandRed
-  - NFPirateClothingHeadHatPirateTricord
-  - NFPirateClothingHeadHatPirateLuffy
-  - FreelancerClothingBunnyEarsPirate
+  - BailiffClothingHeadHatBailiff
+  - BrigmedicClothingHeadHatBrigmedic
+  - CadetClothingHeadHatCadet
+  - DeputyClothingHeadHatDeputy
+  - NFDetectiveClothingHeadHatFedoraBrown
+  - NFDetectiveClothingHeadHatFedoraGrey
   subgroups:
   - MercenaryHead
   - PilotHead
@@ -71,7 +88,8 @@
   name: loadout-group-face
   minLimit: 0
   loadouts:
-    []
+  - BrigmedicClothingMaskBrigmedic
+  - NfsdClothingMaskGasNfsd
   subgroups:
   - ContractorFace
 
@@ -80,7 +98,8 @@
   name: loadout-group-glasses
   minLimit: 0
   loadouts:
-    []
+  - NfsdClothingEyesGlasses
+  - BrigmedicClothingEyesGlasses
   subgroups:
   - ContractorGlasses
 
@@ -89,7 +108,11 @@
   name: loadout-group-neck
   minLimit: 0
   loadouts:
-  - FreelancerClothingBowtiePirate
+  - BrigmedicClothingNeckNfsdBadgeSecurityBrigmedic
+  - CadetClothingNeckBadgeCadet
+  - DeputyClothingNeckBadgeDeputy
+  - NFDetectiveClothingNeckNfsdBadgeDetective
+  - PalClothingNeckPublicAffairsLiaisonBadge
   subgroups:
   - ContractorNeck
 
@@ -99,7 +122,11 @@
   name: loadout-group-backpack
   minLimit: 0
   loadouts:
-    []
+  - NfsdClothingBackpackNfsdBrown
+  - NfsdClothingBackpackSatchelNfsdBrown
+  - NfsdClothingBackpackDuffelNfsdBrown
+  - NfsdClothingBackpackMessengerNfsdBrown
+  - NfsdClothingBackpackMessengerNfsdCream
   subgroups:
   - ContractorBackpack
   fallbacks:
@@ -122,7 +149,7 @@
   subgroups:
   - ContractorWallet
   fallbacks:
-  - ClothingWalletLeatherBrown
+  - ContractorClothingWalletLeatherBrown
 
 # Factional Specific
 - type: loadoutGroup
@@ -143,11 +170,11 @@
   minLimit: 0
   maxLimit: 7
   loadouts:
-  - EncryptionKeyFreelance
+  - EncryptionKeyLSRD
   subgroups:
   - ContractorEncryptionKey
   fallbacks:
-  - EncryptionKeyNfsd
+  - EncryptionKeyLSRD
 
 - type: loadoutGroup
   id: LSLSRDFactionImplanter
@@ -176,15 +203,19 @@
   - ContractorJumpsuit
   - CoyoteJumpsuit
   fallbacks:
-  - ClothingUniformJumpsuitNfsd
-  - ClothingUniformJumpskirtNfsd
+  - DeputyClothingUniformJumpsuitDeputy
+  - DeputyClothingUniformJumpskirtDeputy
 
 - type: loadoutGroup
   id: LSLSRDFactionCombatantOuterClothing
   name: loadout-group-outerclothing
   minLimit: 0
   loadouts:
-    []
+  - NFDetectiveClothingOuterArmorBasic
+  - NFDetectiveClothingOuterCoatDetectiveLoadout
+  - NFDetectiveClothingOuterCoatDetectiveLoadoutGrey
+  - NFDetectiveClothingOuterCoatTrench
+  - NfsdOuterClothing
   subgroups:
   - LSLSRDFactionOuterClothing
   - MercenaryOuterClothing
@@ -196,7 +227,7 @@
   name: loadout-group-shoes
   minLimit: 0
   loadouts:
-    []
+  - NfsdClothingShoesBootsBrown
   subgroups:
   - LSLSRDFactionShoes
   - ContractorShoes
@@ -208,7 +239,7 @@
   name: loadout-group-gloves
   minLimit: 0
   loadouts:
-    []
+  - NfsdClothingHandsGlovesCombatNfsdBrown
   subgroups:
   - LSLSRDFactionGloves
   - ContractorGloves
@@ -250,7 +281,7 @@
   name: loadout-group-neck
   minLimit: 0
   loadouts:
-    []
+  - BailiffClothingNeckBadgeBailiff
   subgroups:
   - LSLSRDFactionNeck
   - ContractorNeck
@@ -273,7 +304,9 @@
   name: loadout-group-belt
   minLimit: 0
   loadouts:
-    []
+  - NfsdWebbing
+  - NfsdBelt
+  - BrigmedicClothingBeltBrigmedicWebbing # TODO: Put this on the corpsman specifically
   subgroups:
   - LSLSRDFactionBelt
   - ContractorBelt
@@ -287,7 +320,7 @@
   - LSLSRDFactionWallet
   - ContractorWallet
   fallbacks:
-  - ClothingWalletLeatherBrown
+  - ContractorClothingWalletLeatherBrown
 
 # Factional Specific
 - type: loadoutGroup
@@ -296,7 +329,12 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-    []
+  - NfsdClothingHeadsetNfsdBrown # TODO: make these start with only broadband
+  - NfsdClothingHeadsetNfsdCream
+  - NfsdClothingHeadsetNfsdGreen
+  - NfsdClothingHeadsetAltNfsdBrown
+  - NfsdClothingHeadsetAltNfsdCreamandBrown
+  - NfsdClothingHeadsetAltNfsdGreen
   subgroups:
   - LSLSRDFactionEars
   - ContractorEars
@@ -314,7 +352,7 @@
   - LSLSRDFactionEncryptionKey
   - ContractorEncryptionKey
   fallbacks:
-  - EncryptionKeyNfsd
+  - EncryptionKeyLSRD
 
 - type: loadoutGroup
   id: LSLSRDFactionCombatantImplanter
@@ -336,7 +374,8 @@
   name: loadout-group-jumpsuit
   minLimit: 1
   loadouts:
-    []
+  - SheriffClothingUniformJumpsuitSheriff
+  - SheriffClothingUniformJumpskirtSheriff
   subgroups:
   - LSLSRDFactionJumpsuit
   - LSLSRDFactionCombatantJumpsuit
@@ -345,15 +384,18 @@
   - ContractorJumpsuit
   - CoyoteJumpsuit
   fallbacks:
-  - ClothingUniformJumpsuitNfsd
-  - ClothingUniformJumpskirtNfsd
+  - SheriffClothingUniformJumpsuitSheriff
+  - SheriffClothingUniformJumpskirtSheriff
 
 - type: loadoutGroup
   id: LSLSRDFactionLeaderOuterClothing
   name: loadout-group-outerclothing
   minLimit: 0
   loadouts:
-    []
+  - SheriffOuterClothing
+  - SeniorOfficerOuterClothing
+  - BailiffOuterClothing
+  - LoadoutLSRDBomber
   subgroups:
   - LSLSRDFactionOuterClothing
   - LSLSRDFactionCombatantOuterClothing
@@ -390,7 +432,7 @@
   name: loadout-group-head
   minLimit: 0
   loadouts:
-    []
+  - SheriffClothingHeadHatSheriff
   subgroups:
   - LSLSRDFactionHead
   - LSLSRDFactionCombatantHead
@@ -403,11 +445,13 @@
   name: loadout-group-face
   minLimit: 0
   loadouts:
-    []
+  - SheriffClothingMaskSheriff
   subgroups:
   - LSLSRDFactionMask
   - LSLSRDFactionCombatantMask
   - ContractorFace
+  fallbacks:
+  - SheriffClothingMaskSheriff
 
 - type: loadoutGroup
   id: LSLSRDFactionLeaderEyes
@@ -425,7 +469,9 @@
   name: loadout-group-neck
   minLimit: 0
   loadouts:
-    []
+  - SheriffClothingNeckMantleSheriff
+  - SheriffClothingNeckCloakSheriff
+  - SheriffClothingNeckNfsdBadgeSheriff
   subgroups:
   - LSLSRDFactionNeck
   - LSLSRDFactionCombatantNeck
@@ -466,36 +512,25 @@
   - LSLSRDFactionCombatantWallet
   - ContractorWallet
   fallbacks:
-  - ClothingWalletLeatherBrown
+  - ContractorClothingWalletLeatherBrown
 
 # Factional Specific
 - type: loadoutGroup
   id: LSLSRDFactionLeaderEars
   name: loadout-group-ears
-  minLimit: 1
-  maxLimit: 1
+  hidden: true
   loadouts:
-    []
-  subgroups:
-  - LSLSRDFactionEars
-  - LSLSRDFactionCombatantEars
-  - ContractorEars
-  fallbacks:
-  - ContractorClothingHeadsetGreyCommon
+    - LSLSRDChiefRangerHeadset
 
 - type: loadoutGroup
   id: LSLSRDFactionLeaderEncryptionKey
   name: loadout-group-encryption-key
-  minLimit: 0
+  minLimit: 2
   maxLimit: 7
   loadouts:
     []
   subgroups:
-  - LSLSRDFactionEncryptionKey
-  - LSLSRDFactionCombatantEncryptionKey
   - ContractorEncryptionKey
-  fallbacks:
-  - EncryptionKeyNfsd
 
 - type: loadoutGroup
   id: LSLSRDFactionLeaderImplanter

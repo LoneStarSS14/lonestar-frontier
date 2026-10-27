@@ -1,62 +1,100 @@
-# - type: job
-#   id: NFDetective
-#   name: job-name-nf-detective
-#   description: job-description-nf-detective
-#   playTimeTracker: JobDetective
-#   requirements:
-#   - !type:OverallPlaytimeRequirement
-#     time: 43200 # 12 hours
-#   - !type:DepartmentTimeRequirement
-#     department: Security
-#     time: 14400 # 4 hours
-#   startingGear: NFDetectiveGear
-#   icon: JobIconNFDetective
-#   supervisors: job-supervisors-bailiff
-#   weight: 110
-#   displayWeight: 20
-#   canBeAntag: false
-#   consoleAdjustable: false
-#   access:
-#   - Detective
-#   accessGroups:
-#   - GeneralNfsdAccess
-#   special:
-#   - !type:AddImplantSpecial
-#     implants: [ MindShieldImplant, TrackingImplant ]
-#   - !type:GiveItemOnHolidaySpecial
-#     holiday: FrontierBirthday
-#     prototype: FrontierBirthdayGift
-#   - !type:AddComponentSpecial
-#     components:
-#     - type: IsNfsd
+- type: job
+  id: LSDetective
+  name: job-name-ls-detective
+  description: job-description-ls-detective
+  supervisors: job-supervisors-ls-chief-ranger
+  playTimeTracker: JobLSDetective
+  whitelisted: true
+  requirements:
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSFreelancers
+    #   time: 57600 # 16 hours
+  weight: 30
+  displayWeight: 30
+  # TODO section
+  startingGear: LSDetectiveGear
+  icon: "JobIconLSDetective"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  access:
+  - Detective
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #lsrd specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsNfsd # TODO: Rename this to IsLsrd
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  #RPI
+  # TODO: Add rpis
 
-# - type: startingGear
-#   id: NFDetectiveGear
-#   equipment:
-#     pocket1: NFWeaponRevolverInspector
-#     pocket2: FlashlightNfsdLite
-#   storage:
-#     back:
-#     - Flash
-#     - NFSpeedLoaderPistol45Overpressure
-#     - NFSpeedLoaderPistol45Rubber
-#     - ForensicPad
-#     - ForensicScanner
-#     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink to detectives and removed starting FUCs
-#     - LogProbeCartridge
-#     - RubberStampDetective
-#     - ContrabandForensicsModule
+- type: entity
+  id: SpawnPointLSDetective
+  parent: SpawnPointJobBase
+  name: detective spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSDetective
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
 
-# - type: chameleonOutfit
-#   id: NFDetectiveChameleonOutfit
-#   job: NFDetective
-#   hasMindShield: true
-#   equipment:
-#     head: ClothingHeadHatFedoraBrown
-#     mask: ClothingMaskGasSecurity
-#     eyes: ClothingEyesGlassesNfsd
-#     neck: ClothingNeckNfsdBadgeDetective
-#     gloves: ClothingHandsGlovesForensic
-#     shoes: ClothingShoesBootsNfsdBrownFilled
-#     belt: ClothingBeltNfsdFilled
-#     outerClothing: ClothingOuterCoatTrench
+- type: startingGear
+  id: LSDetectiveGear
+  equipment:
+    pocket1: NFWeaponRevolverInspector
+    pocket2: ContrabandAppraisalTool
+  storage:
+    back:
+    - Flash
+    - NFSpeedLoaderPistol45Overpressure
+    - NFSpeedLoaderPistol45Rubber
+    - BaseSecurityUplinkRadioOfficer
+    - ForensicPad
+    - ForensicScanner
+    - LogProbeCartridge
+    - RubberStampDetective
+    - ContrabandForensicsModule
+    - FlashlightNfsdLite
+    - ClothingHandsGlovesForensicNF
+
+- type: roleLoadout
+  id: JobLSDetective
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSLSRDDetectivePDA
+  # LSRD v
+  - LSLSRDFactionJumpsuit
+  - LSLSRDFactionOuterClothing
+  - LSLSRDFactionShoes
+  - LSLSRDFactionGloves
+  - LSLSRDFactionHead
+  - LSLSRDFactionMask
+  - LSLSRDFactionEyes
+  - LSLSRDFactionNeck
+  - LSLSRDFactionEars
+  - LSLSRDFactionBackpack
+  - LSLSRDFactionBelt
+  - LSLSRDFactionWallet
+  - LSLSRDFactionEncryptionKey
+  - LSLSRDFactionImplanter
+  # Common v
+  # - ContractorBoxSurvival
+  - ContractorCartridge
+  # - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  # - NFSpeciesSpecific
+  # Temporary / TODO: replace
+  - NfsdBoxSurvival
+  - SeniorOfficerBackpackItems
+  - NfsdSpeciesSpecific
