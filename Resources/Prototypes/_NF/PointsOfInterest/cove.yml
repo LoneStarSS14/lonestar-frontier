@@ -46,7 +46,7 @@
             LSSmuggler: [ 5, 5 ]
             LSSpy: [ 5, 5 ]
             LSRipperDoc: [ 5, 5 ]
-            LSEscort: [ 5, 5 ]
+            LSEscort: [ -1, -1 ]
             # LoneStar end
         - type: StationDeadDropReporting
           messageSet: Pirate
