@@ -7,3 +7,23 @@
     containers:
       key_slots:
       - EncryptionKeyGuildLeader
+
+- type: entity
+  parent: ClothingHeadsetAltMercenary
+  id: ClothingHeadsetLSMasterAtArms
+  name: master at arms' headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyLSMasterAtArms
+
+- type: entity
+  parent: ClothingHeadsetAltMercenary
+  id: ClothingHeadsetLSChiefRanger
+  name: chief ranger's headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyLSChiefRanger

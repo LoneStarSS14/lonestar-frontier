@@ -1,0 +1,4 @@
+- type: loadout
+  id: LSFreelancerMasterAtArmsHeadset
+  equipment:
+    ears: ClothingHeadsetLSMasterAtArms

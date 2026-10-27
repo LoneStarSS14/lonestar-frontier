@@ -13,7 +13,7 @@
   displayWeight: 50
   # TODO section
   startingGear: LSFreelancerPirateGear
-  icon: "JobIconNFPirate"
+  icon: "JobIconLSFreelancerPirate"
   # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
