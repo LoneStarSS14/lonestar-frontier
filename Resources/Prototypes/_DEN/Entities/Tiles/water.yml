@@ -28,7 +28,6 @@
     layers:
     - state: waterfall
     - state: waterfallshine
-      shader: unshaded
     drawdepth: Overdoors
 
 - type: entity
@@ -54,7 +53,7 @@
     layers:
     - state: poolwaterfallcut
     - state: poolwaterfallshinecut
-      shader: unshaded
+    offset: 0, 0.1
 
 # Somber Waterfall Spouts. Renamed. Credits to sha-seng (github)
 
@@ -86,6 +85,7 @@
 - type: entity
   parent: PoolWaterfallSpout
   id: PoolWaterfallSpoutDark
+  name: dark pool waterfall spout
   suffix: Wall, Dark
   components:
   - type: Sprite
