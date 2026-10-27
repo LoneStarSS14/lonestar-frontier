@@ -251,6 +251,7 @@
     - NFSalvageBoardsStatic
     - NFInflatablesStatic
     - NFSalvageArchetypeStatic
+    - LSSalvageStatic # LoneStar
 
   - type: EmagLatheRecipes
     emagStaticPacks:
