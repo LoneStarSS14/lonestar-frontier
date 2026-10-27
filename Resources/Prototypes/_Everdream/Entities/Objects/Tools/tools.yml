@@ -68,6 +68,10 @@
     quickEquip: false
     slots:
     - Belt
+  - type: PointLight
+    color: "#e39c40"
+    radius: 1
+    power: 5
   - type: PhysicalComposition
     materialComposition:
       Steel: 500
