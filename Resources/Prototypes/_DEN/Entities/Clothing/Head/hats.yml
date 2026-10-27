@@ -1,4 +1,4 @@
-# Mantis Clothes Port from the Den
+# LoneStar- Clothes Port from the Den
 
 - type: entity
   parent: [ClothingHeadBase, BaseFoldable]
@@ -165,7 +165,10 @@
   name: Toggle Salvation Shako
   description: Turn the siren on or off.
   components:
-  - type: InstantAction
+  - type: Action
+    useDelay: 1
     itemIconStyle: BigItem
+  - type: InstantAction
     event: !type:ToggleActionEvent
+# Paramedic Siren Hat End
 # siren beret end
