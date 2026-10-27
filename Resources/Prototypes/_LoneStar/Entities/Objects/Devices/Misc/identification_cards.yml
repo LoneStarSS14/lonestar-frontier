@@ -26,12 +26,12 @@
   - type: PresetIdCard
     job: LSEscort
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: pirate
-    - state: idpirate
+    - state: freelancer
+    - state: id-freelancer-clerk
   - type: Item
-    heldPrefix: pirate
+    heldPrefix: freelancer
 
 - type: entity
   parent: BaseLSFreelancerIDCard
@@ -40,6 +40,10 @@
   components:
   - type: PresetIdCard
     job: LSEscort
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-escort
 
 - type: entity
   parent: BaseLSFreelancerIDCard
@@ -48,6 +52,10 @@
   components:
   - type: PresetIdCard
     job: LSRipperDoc
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-ripper-doc
 
 - type: entity
   parent: BaseLSFreelancerIDCard
@@ -56,6 +64,10 @@
   components:
   - type: PresetIdCard
     job: LSSpy
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-spy
 
 - type: entity
   parent: BaseLSFreelancerIDCard
@@ -64,6 +76,10 @@
   components:
   - type: PresetIdCard
     job: LSSmuggler
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-smuggler
 
 - type: entity
   parent: BaseLSFreelancerIDCard
@@ -72,6 +88,10 @@
   components:
   - type: PresetIdCard
     job: LSFreelancerPirate
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-freelancer-pirate
 
 - type: entity
   parent: BaseLSFreelancerIDCard
@@ -80,6 +100,10 @@
   components:
   - type: PresetIdCard
     job: LSMasterAtArms
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-master-at-arms
 #endregion
 
 #region LSRD
@@ -91,12 +115,12 @@
   - type: PresetIdCard
     job: LSClerk
   - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
     layers:
-    - state: nfsd
-    - state: idnfsdcadet
+    - state: lsrd
+    - state: id-lsrd-clerk
   - type: Item
-    heldPrefix: nfsd
+    heldPrefix: lsrd
 
 - type: entity
   parent: BaseLSLSRDIDCard
@@ -105,6 +129,10 @@
   components:
   - type: PresetIdCard
     job: LSClerk
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-clerk
 
 - type: entity
   parent: BaseLSLSRDIDCard
@@ -113,6 +141,10 @@
   components:
   - type: PresetIdCard
     job: LSCorpsman
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-corpsman
 
 - type: entity
   parent: BaseLSLSRDIDCard
@@ -121,6 +153,10 @@
   components:
   - type: PresetIdCard
     job: LSDetective
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-detective
 
 - type: entity
   parent: BaseLSLSRDIDCard
@@ -129,6 +165,10 @@
   components:
   - type: PresetIdCard
     job: LSRetrievalOfficer
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-retrieval-officer
 
 - type: entity
   parent: BaseLSLSRDIDCard
@@ -137,6 +177,10 @@
   components:
   - type: PresetIdCard
     job: LSEnforcer
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-enforcer
 
 - type: entity
   parent: BaseLSLSRDIDCard
@@ -145,4 +189,8 @@
   components:
   - type: PresetIdCard
     job: LSChiefRanger
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-chief-ranger
 #endregion
