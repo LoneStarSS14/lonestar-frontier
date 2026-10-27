@@ -51,7 +51,6 @@
   parent: BaseStainedGlass
   id: ChristianStainedGlassSmall1
   name: space-Christian stained glass window
-  description: placeholder
   suffix: christian
   components:
   - type: Sprite
@@ -63,7 +62,6 @@
   parent: BaseStainedGlass
   id: ChristianStainedGlassSmall2
   name: space-Christian stained glass window
-  description: placeholder
   suffix: christian
   components:
   - type: Sprite
@@ -75,7 +73,6 @@
   parent: BaseStainedGlass
   id: ChristianStainedGlassSmall2Alt
   name: space-Christian stained glass window
-  description: placeholder
   suffix: christian, alt
   components:
   - type: Sprite
@@ -87,7 +84,6 @@
   parent: BaseStainedGlass
   id: DruidismStainedGlassSmall1
   name: druidic stained glass window
-  description: placeholder
   suffix: druidism
   components:
   - type: Sprite
@@ -100,7 +96,6 @@
   parent: BaseStainedGlass
   id: DruidismStainedGlassSmall2
   name: druidic stained glass window
-  description: placeholder
   suffix: druidism
   components:
   - type: Sprite
@@ -113,7 +108,6 @@
   parent: BaseStainedGlass
   id: SatanismStainedGlassSmall1
   name: satanic stained glass window
-  description: placeholder
   suffix: satanism
   components:
   - type: Sprite
@@ -126,7 +120,6 @@
   parent: BaseStainedGlass
   id: SatanismStainedGlassSmall2
   name: satanic stained glass window
-  description: placeholder
   suffix: satanism
   components:
   - type: Sprite
@@ -139,7 +132,6 @@
   parent: BaseStainedGlass
   id: PinkCatStainedGlassSmall
   name: pink cat stained glass window
-  description: placeholder
   suffix: pink cat
   components:
   - type: Sprite
@@ -153,7 +145,6 @@
   parent: BaseStainedGlass
   id: OracleStainedGlassLarge
   name: oracle stained glass window
-  description: placeholder
   suffix: oracle
   components:
   - type: Sprite
@@ -168,7 +159,6 @@
   parent: BaseStainedGlass
   id: NarsieStainedGlassSmall1
   name: nar'sic stained glass window
-  description: placeholder
   suffix: blood cult
   components:
   - type: Sprite
@@ -181,7 +171,6 @@
   parent: BaseStainedGlass
   id: NarsieStainedGlassSmall2
   name: nar'sic stained glass window
-  description: placeholder
   suffix: blood cult
   components:
   - type: Sprite
@@ -194,7 +183,6 @@
   parent: BaseStainedGlass
   id: NarsieStainedGlassSmall3
   name: nar'sic stained glass window
-  description: placeholder
   suffix: blood cult
   components:
   - type: Sprite
@@ -207,7 +195,6 @@
   parent: BaseStainedGlass
   id: NarsieStainedGlassLarge
   name: nar'sic stained glass window
-  description: placeholder
   suffix: blood cult
   components:
   - type: Sprite
@@ -223,7 +210,6 @@
   parent: BaseStainedGlass
   id: RatvarStainedGlassSmall1
   name: rat'varian stained glass window
-  description: placeholder
   suffix: clockwork
   components:
   - type: Sprite
@@ -235,7 +221,6 @@
   parent: BaseStainedGlass
   id: RatvarStainedGlassSmall2
   name: rat'varian stained glass window
-  description: placeholder
   suffix: clockwork
   components:
   - type: Sprite
@@ -247,7 +232,6 @@
   parent: BaseStainedGlass
   id: RatvarStainedGlassSmall3
   name: rat'varian stained glass window
-  description: placeholder
   suffix: clockwork
   components:
   - type: Sprite
@@ -259,7 +243,6 @@
   parent: BaseStainedGlass
   id: RatvarStainedGlassLarge
   name: rat'varian stained glass window
-  description: placeholder
   suffix: clockwork
   components:
   - type: Sprite
