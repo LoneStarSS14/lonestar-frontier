@@ -13,3 +13,18 @@
   materials:
     Steel: 40
     Plastic: 40
+
+- type: latheRecipe
+  id: ClothingHeadHelmetMercenaryBlack
+  parent: NFBaseHelmetRecipe
+  result: ClothingHeadHelmetMercenaryBlack
+
+- type: latheRecipe
+  id: ClothingMaskGasSecurityBallistic
+  parent: NFBaseMaskArmoredRecipe
+  result: ClothingMaskGasSecurityBallistic
+
+- type: latheRecipe
+  id: ClothingOuterArmorBasicCompact
+  parent: NFBaseArmorRecipe
+  result: ClothingOuterArmorBasicCompact
