@@ -127,9 +127,9 @@
 # Frontier
 - type: entity
   id: LSWeaponComboLaserPistol
-  parent: [NFWeaponEnergyPistolLaser ]
+  parent: [ NFBaseWeaponEnergyPistolFireModes, NFBaseWeaponFrameEnergyPistolNanotrasen ]
   name: laser/holoflare pistol
-  description: A combination laser pistol with harm and disable settings, along with a holoflare launcher.
+  description: A combination laser pistol with harm and disable settings, along with a miniaturized holoflare launcher.
   components:
   - type: Sprite
     sprite: _LoneStar/Objects/Weapons/Guns/Battery/combo_laser_pistol.rsi
@@ -148,13 +148,8 @@
     size: Small
     shape:
     - 0,0,1,1
-    inhandVisuals:
-      left:
-      - state: flare-inhand-left
-        shader: unshaded
-      right:
-      - state: flare-inhand-right
-        shader: unshaded
+    heldPrefix: lethal
+    inhandVisuals: {}
   - type: ProjectileBatteryAmmoProvider
     proto: HoloFlareCyan
     fireCost: 260
