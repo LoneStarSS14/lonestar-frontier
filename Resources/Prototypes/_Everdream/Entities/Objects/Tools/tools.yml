@@ -2,7 +2,7 @@
   id: HCD
   parent: BaseItem
   name: HCD
-  description: The Holy Construction Device. Clearly not a widespread manufacture and more the product of religious fanatics modifying technology. The blessings upon it imbue it with some manner of alchemical thaumaturgy alongside holo-technology, rendering water, glass, and sites of worship with ease.
+  description: The Holy Construction Device. Clearly not a widespread manufacture and more the product of religious fanatics modifying technology.
   components:
   - type: RCD
     isShipyardRCD: true

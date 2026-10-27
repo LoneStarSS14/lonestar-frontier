@@ -8,6 +8,7 @@
   id: BaseStainedGlass
   parent: BaseStructure
   name: stained glass
+  description: A mural of glass that may represent saints, patrons, or symbolic motifs armorial.
   abstract: true
   components:
   - type: MeleeSound

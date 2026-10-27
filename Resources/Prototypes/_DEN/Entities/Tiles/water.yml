@@ -43,7 +43,7 @@
   id: FloorWaterfallEntityPool
   name: pool waterfall
   suffix: non-occluded
-  description: "Dark water, like something drawn up from far below. But there's nothing down there."
+  description: A narrow stream of water.
   components:
   - type: Transform
     anchored: false # So it can use other snapping modes
