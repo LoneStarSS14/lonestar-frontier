@@ -70,6 +70,8 @@
     # Size Manipulation
     WeaponSizeManipulator: 4294967295
     RemoteSignaller: 4294967295
+    # Masks
+    ClothingMaskGasDroneHoodless: 4294967295
   contrabandInventory:
     # Adv Collars
     ClothingNeckAdvancedCollarCC: 4294967295
