@@ -1,4 +1,5 @@
 - type: job
+  abstract: true
   id: Cadet
   name: job-name-cadet-nf
   description: job-description-cadet-nf
@@ -29,6 +30,7 @@
     - type: IsNfsd
 
 - type: startingGear
+  abstract: true
   id: CadetGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
@@ -42,6 +44,7 @@
     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink for chunguses, removed their starting uplink coins
 
 - type: chameleonOutfit
+  abstract: true
   id: CadetChameleonOutfit
   job: Cadet
   hasMindShield: true

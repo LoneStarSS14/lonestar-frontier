@@ -1,60 +1,103 @@
-# - type: job
-#   id: Brigmedic
-#   name: job-name-brigmedic
-#   description: job-description-brigmedic-nf
-#   playTimeTracker: JobBrigmedic
-#   requirements:
-#   - !type:OverallPlaytimeRequirement
-#     time: 43200 # 12 hours
-#   - !type:DepartmentTimeRequirement
-#     department: Security
-#     time: 14400 # 4 hours
-#   startingGear: BrigmedicGear
-#   icon: JobIconBrigmedicNF
-#   supervisors: job-supervisors-bailiff
-#   weight: 125
-#   displayWeight: 35
-#   canBeAntag: false
-#   consoleAdjustable: false
-#   access:
-#   - Brigmedic
-#   accessGroups:
-#   - GeneralNfsdAccess
-#   special:
-#   - !type:AddImplantSpecial
-#     implants: [ MindShieldImplant, TrackingImplant ]
-#   - !type:GiveItemOnHolidaySpecial
-#     holiday: FrontierBirthday
-#     prototype: FrontierBirthdayGift
-#   - !type:AddRpiJobModifierSpecial
-#     modifiersToAdd:
-#     - rpiJobModifierBrigMedic
-#   - !type:AddComponentSpecial
-#     components:
-#     - type: IsNfsd
+- type: job
+  id: LSCorpsman
+  name: job-name-ls-corpsman
+  description: job-description-ls-corpsman
+  supervisors: job-supervisors-ls-chief-ranger
+  playTimeTracker: JobLSCorpsman
+  requirements:
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSLSRD
+    #   time: 57600 # 16 hours
+    - !type:RoleTimeRequirement
+      role: JobMedicalNurse
+      time: 57600 # 16 hours
+  weight: 20
+  displayWeight: 20
+  # TODO section
+  startingGear: LSCorpsmanGear
+  icon: "JobIconLSCorpsman"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  access:
+  - Brigmedic
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #lsrd specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsNfsd
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  #RPI
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierBrigMedic
+  - !type:AddRpiAuraSpecial
+    aurasToAdd:
+    - rpiAuraNurse
+  - !type:RpiChatJudgementModifierSpecial
+    modsToAdd:
+    - rpiChatJudgementModifierNurse
 
-# - type: startingGear
-#   id: BrigmedicGear
-#   equipment:
-#     pocket1: NFWeaponPistolUniversalNfsdLessLethal
-#   storage:
-#     back:
-#     - EncryptionKeyMedical
-#     - Flash
-#     - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
-#     - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
-#     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink to brigmedics and removed starting FUCs
+- type: entity
+  id: SpawnPointLSCorpsman
+  parent: SpawnPointJobBase
+  name: corpsman spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSCorpsman
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
 
-# - type: chameleonOutfit
-#   id: BrigmedicChameleonOutfit
-#   job: Brigmedic
-#   hasMindShield: true
-#   equipment:
-#     head: ClothingHeadHatNfsdBeretCream
-#     mask: ClothingMaskBreathMedicalSecurity
-#     eyes: ClothingEyesHudNfsdMed
-#     outerClothing: ClothingOuterCoatNfsdBomberBrigmed
-#     neck: ClothingNeckNfsdBadgeSecurityBrigmedic
-#     belt: ClothingBeltNfsdWebbingFilledBrigmedic
-#     gloves: ClothingHandsGlovesNitrile
-#     shoes: ClothingShoesBootsNfsdBrownFilled
+- type: startingGear
+  id: LSCorpsmanGear
+  equipment:
+    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket2: ContrabandAppraisalTool
+  storage:
+    back:
+    - Flash
+    - CSMagazinePistol40Overpressure
+    - CSMagazinePistol40Rubber
+    - BaseSecurityUplinkRadioOfficer
+
+- type: roleLoadout
+  id: JobLSCorpsman
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSLSRDCorpsmanPDA
+  # LSRD v
+  - LSLSRDFactionJumpsuit
+  - LSLSRDFactionOuterClothing
+  - LSLSRDFactionShoes
+  - LSLSRDFactionGloves
+  - LSLSRDFactionHead
+  - LSLSRDFactionMask
+  - LSLSRDFactionEyes
+  - LSLSRDFactionNeck
+  - LSLSRDFactionEars
+  - LSLSRDFactionBackpack
+  - LSLSRDFactionBelt
+  - LSLSRDFactionWallet
+  - LSLSRDFactionEncryptionKey
+  - LSLSRDFactionImplanter
+  # Common v
+  # - ContractorBoxSurvival
+  - ContractorCartridge
+  # - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  # - NFSpeciesSpecific
+  # Temporary / TODO: replace
+  - NfsdBoxSurvival
+  - SeniorOfficerBackpackItems
+  - NfsdSpeciesSpecific

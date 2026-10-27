@@ -35,12 +35,12 @@
 - type: vendingMachineInventory
   id: NFPTechNfsdInventory
   startingInventory:
-    CadetPDA: 10
-    DeputyPDA: 10
-    BrigmedicNFPDA: 10
-    NFDetectivePDA: 10
-    SergeantPDA: 10
-    BailiffPDA: 10
+    # CadetPDA: 10 # LoneStar start
+    # DeputyPDA: 10
+    # BrigmedicNFPDA: 10
+    # NFDetectivePDA: 10
+    # SergeantPDA: 10
+    # BailiffPDA: 10 # LoneStar end
     ClothingHeadsetNfsdBrownCommon: 4294967295 #infinite
     ClothingHeadsetNfsdCreamCommon: 4294967295 #infinite
     ClothingHeadsetNfsdGreenCommon: 4294967295 #infinite

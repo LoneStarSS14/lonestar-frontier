@@ -62,13 +62,12 @@
     maxDuration: 1350
     reoccurrenceDelay: 720 # 9 hours
     requiredJobs:
-      Sheriff: 1
-      Deputy: 1
-      Bailiff: 1
-      Brigmedic: 1
-      NFDetective: 1
-      PublicAffairsLiaison: 1
-      SeniorOfficer: 1
+      # LoneStar start
+      LSChiefRanger: 1
+      LSEnforcer: 1
+      LSCorpsman: 1
+      LSDetective: 1
+      # LoneStar end
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -112,13 +111,12 @@
     maxDuration: 780
     reoccurrenceDelay: 720 # 3 hours
     requiredJobs:
-      Sheriff: 1
-      Deputy: 1
-      Bailiff: 1
-      Brigmedic: 1
-      NFDetective: 1
-      PublicAffairsLiaison: 1
-      SeniorOfficer: 1
+      # LoneStar start
+      LSChiefRanger: 1
+      LSEnforcer: 1
+      LSCorpsman: 1
+      LSDetective: 1
+      # LoneStar end
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup

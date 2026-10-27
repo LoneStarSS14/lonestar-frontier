@@ -6,26 +6,6 @@
 #region Residential
 #endregion
 
-#region LSRD
-- type: playTimeTracker
-  id: JobLSChiefRanger
-
-- type: playTimeTracker
-  id: JobLSEnforcer
-
-- type: playTimeTracker
-  id: JobLSRetrievalOfficer
-
-- type: playTimeTracker
-  id: JobLSDetective
-
-- type: playTimeTracker
-  id: JobLSCorpsman
-
-- type: playTimeTracker
-  id: JobLSClerk
-#endregion
-
 #region Freelancers
 - type: playTimeTracker
   id: JobLSMasterAtArms
@@ -46,4 +26,22 @@
   id: JobLSEscort
 #endregion
 
+#region LSRD
+- type: playTimeTracker
+  id: JobLSChiefRanger
 
+- type: playTimeTracker
+  id: JobLSEnforcer
+
+- type: playTimeTracker
+  id: JobLSRetrievalOfficer
+
+- type: playTimeTracker
+  id: JobLSDetective
+
+- type: playTimeTracker
+  id: JobLSCorpsman
+
+- type: playTimeTracker
+  id: JobLSClerk
+#endregion

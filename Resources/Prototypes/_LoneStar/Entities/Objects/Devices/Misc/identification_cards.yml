@@ -36,7 +36,7 @@
 - type: entity
   parent: BaseLSFreelancerIDCard
   id: LSFreelancerEscortIDCard
-  name: freelancer ID card
+  name: escort ID card
   components:
   - type: PresetIdCard
     job: LSEscort
@@ -68,7 +68,7 @@
 - type: entity
   parent: BaseLSFreelancerIDCard
   id: LSFreelancerFreelancerPirateIDCard
-  name: ripper doc ID card
+  name: freelancer pirate ID card
   components:
   - type: PresetIdCard
     job: LSFreelancerPirate
@@ -80,4 +80,69 @@
   components:
   - type: PresetIdCard
     job: LSMasterAtArms
+#endregion
+
+#region LSRD
+- type: entity
+  parent: IDCardStandard
+  id: BaseLSLSRDIDCard
+  name: LSRD ID card
+  components:
+  - type: PresetIdCard
+    job: LSClerk
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: nfsd
+    - state: idnfsdcadet
+  - type: Item
+    heldPrefix: nfsd
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDClerkIDCard
+  name: clerk ID card
+  components:
+  - type: PresetIdCard
+    job: LSClerk
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDCorpsmanIDCard
+  name: corpsman ID card
+  components:
+  - type: PresetIdCard
+    job: LSCorpsman
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDDetectiveIDCard
+  name: detective ID card
+  components:
+  - type: PresetIdCard
+    job: LSDetective
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDRetrievalOfficerIDCard
+  name: retrieval officer ID card
+  components:
+  - type: PresetIdCard
+    job: LSRetrievalOfficer
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDEnforcerIDCard
+  name: enforcer ID card
+  components:
+  - type: PresetIdCard
+    job: LSEnforcer
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDChiefRangerIDCard
+  name: chief ranger ID card
+  components:
+  - type: PresetIdCard
+    job: LSChiefRanger
 #endregion

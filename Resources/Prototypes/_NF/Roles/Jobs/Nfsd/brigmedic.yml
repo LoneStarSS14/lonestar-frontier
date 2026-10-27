@@ -1,4 +1,5 @@
 - type: job
+  abstract: true
   id: Brigmedic
   name: job-name-brigmedic
   description: job-description-brigmedic-nf
@@ -34,6 +35,7 @@
     - type: IsNfsd
 
 - type: startingGear
+  abstract: true
   id: BrigmedicGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
@@ -46,6 +48,7 @@
     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink to brigmedics and removed starting FUCs
 
 - type: chameleonOutfit
+  abstract: true
   id: BrigmedicChameleonOutfit
   job: Brigmedic
   hasMindShield: true

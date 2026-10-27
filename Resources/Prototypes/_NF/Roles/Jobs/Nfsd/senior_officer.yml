@@ -1,6 +1,7 @@
 # Sergeant
 
 - type: job
+  abstract: true
   id: SeniorOfficer
   name: job-name-senior-officer
   description: job-description-senior-officer
@@ -39,6 +40,7 @@
       worth: 2
 
 - type: startingGear
+  abstract: true
   id: SeniorOfficerGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
@@ -54,6 +56,7 @@
     - EncryptionKeyCommand
 
 - type: chameleonOutfit
+  abstract: true
   id: SeniorOfficerChameleonOutfit
   job: SeniorOfficer
   hasMindShield: true

@@ -113,3 +113,77 @@
   - type: Pda
     id: LSFreelancerMasterAtArmsIDCard
 #endregion
+
+#region LSRD
+- type: entity
+  parent: BasePDA
+  id: BaseLSLSRDPDA
+  name: LSRD PDA
+  description: It smells... of blood and sweat, for now.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Devices/pda.rsi # TODO: make unique one
+  - type: Pda
+    id: BaseLSLSRDIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-cadet
+  - type: PdaBorderColor # TODO: make unique one
+    borderColor: "#FFFDD0"
+    accentHColor: "#896b49"
+  - type: Icon
+    sprite: _NF/Objects/Devices/pda.rsi # TODO: make unique one
+    state: pda-mercenary # TODO: make unique one
+  - type: BlipCartridge
+    defaultPreset: BlipPresetSecurity # TODO: make unique one
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDClerkPDA
+  name: clerk PDA
+  components:
+  - type: Pda
+    id: LSLSRDClerkIDCard
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDCorpsmanPDA
+  name: corpsman PDA
+  components:
+  - type: Pda
+    id: LSLSRDCorpsmanIDCard
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDDetectivePDA
+  name: detective PDA
+  components:
+  - type: Pda
+    id: LSLSRDDetectiveIDCard
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDRetrievalOfficerPDA
+  name: retrieval officer PDA
+  components:
+  - type: Pda
+    id: LSLSRDRetrievalOfficerIDCard
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDEnforcerPDA
+  name: enforcer PDA
+  components:
+  - type: Pda
+    id: LSLSRDEnforcerIDCard
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDChiefRangerPDA
+  name: chief ranger PDA
+  components:
+  - type: Pda
+    id: LSLSRDChiefRangerIDCard
+#endregion
