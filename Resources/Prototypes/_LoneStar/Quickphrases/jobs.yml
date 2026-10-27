@@ -1,0 +1,70 @@
+#region Command
+- type: quickPhrase
+  parent: BaseCommandJobPhrase
+  id: LSGuildLeaderPhrase
+  text: job-name-guild-leader
+#endregion
+
+#region Freelancer
+- type: quickPhrase
+  parent: BaseFreelancerPhrase
+  id: LSMasterAtArmsPhrase
+  text: job-name-ls-master-at-arms
+
+- type: quickPhrase
+  parent: BaseFreelancerPhrase
+  id: LSFreelancerPiratePhrase
+  text: job-name-ls-freelancer-pirate
+
+- type: quickPhrase
+  parent: BaseFreelancerPhrase
+  id: LSSmugglerPhrase
+  text: job-name-ls-smuggler
+
+- type: quickPhrase
+  parent: BaseFreelancerPhrase
+  id: LSSpyPhrase
+  text: job-name-ls-spy
+
+- type: quickPhrase
+  parent: BaseFreelancerPhrase
+  id: LSRipperDocPhrase
+  text: job-name-ls-ripper-doc
+
+- type: quickPhrase
+  parent: BaseFreelancerPhrase
+  id: LSEscortPhrase
+  text: job-name-ls-escort
+#endregion
+
+#region LSRD
+- type: quickPhrase
+  parent: BaseLSRDPhrase
+  id: LSChiefRangerPhrase
+  text: job-name-ls-chief-ranger
+
+- type: quickPhrase
+  parent: BaseLSRDPhrase
+  id: LSEnforcerPhrase
+  text: job-name-ls-enforcer
+
+- type: quickPhrase
+  parent: BaseLSRDPhrase
+  id: LSRetrievalOfficerPhrase
+  text: job-name-ls-retrieval-officer
+
+- type: quickPhrase
+  parent: BaseLSRDPhrase
+  id: LSDetectivePhrase
+  text: job-name-ls-detective
+
+- type: quickPhrase
+  parent: BaseLSRDPhrase
+  id: LSCorpsmansPhrase
+  text: job-name-ls-corpsman
+
+- type: quickPhrase
+  parent: BaseLSRDPhrase
+  id: LSClerkPhrase
+  text: job-name-ls-clerk
+#endregion
