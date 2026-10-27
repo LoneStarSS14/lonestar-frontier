@@ -3,6 +3,7 @@
   startingInventory:
     ClothingBackpackMedical: 4
     ClothingBackpackSatchelMedical: 4
+    ClothingBackpackSatchelMedicalTrauma: 4 # LoneStar
     ClothingBackpackDuffelMedical: 4
     ClothingBackpackDuffelTrauma: 4 # Frontier
     ClothingBackpackMessengerMedical: 4 # Frontier

@@ -29,6 +29,7 @@
   - DocClothingBackpackMedical
   - DocClothingBackpackDuffelMedical
   - DocClothingBackpackSatchelMedical
+  - DocClothingBackpackSatchelMedicalTrauma # LoneStar
   - DocClothingBackpackMessengerMedical
   subgroups:
   - ContractorBackpack

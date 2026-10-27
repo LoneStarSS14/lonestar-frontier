@@ -760,8 +760,8 @@
   sprites:
   - sprite: _DEN/Mobs/Species/Ovinia/parts.rsi
     state: l_leg
-  altSprites:
-    Digitigrade: DigilegPawDarkLegLeft
+  # altSprites: # Lone Star
+  #   Digitigrade: DigilegPawDarkLegLeft
 
 - type: marking
   id: SpeciesAdaptorOviniaLFoot
@@ -772,8 +772,8 @@
   sprites:
   - sprite: _DEN/Mobs/Species/Ovinia/parts.rsi
     state: l_foot
-  altSprites:
-    Digitigrade: DigilegPawDarkFootLeft
+  # altSprites: # Lone Star
+  #   Digitigrade: DigilegPawDarkFootLeft
 
 - type: marking
   id: SpeciesAdaptorOviniaRLeg
@@ -784,8 +784,8 @@
   sprites:
   - sprite: _DEN/Mobs/Species/Ovinia/parts.rsi
     state: r_leg
-  altSprites:
-    Digitigrade: DigilegPawDarkLegRight
+  # altSprites: # Lone Star
+  #   Digitigrade: DigilegPawDarkLegRight
 
 - type: marking
   id: SpeciesAdaptorOviniaRFoot
@@ -796,8 +796,8 @@
   sprites:
   - sprite: _DEN/Mobs/Species/Ovinia/parts.rsi
     state: r_foot
-  altSprites:
-    Digitigrade: DigilegPawDarkFootRight
+  # altSprites: # Lone Star
+  #   Digitigrade: DigilegPawDarkFootRight
 
 ######################Right
 #### DIGILEG ADAPTORS ####

@@ -1,8 +1,7 @@
-# LoneStar - chaplain loadout groups
-
 - type: loadoutGroup
   id: ChaplainBackpackItems
   name: loadout-group-hand-items
   minLimit: 0
   loadouts:
+  - LoadoutChaplainDivineThurible
   - LoadoutHCD
