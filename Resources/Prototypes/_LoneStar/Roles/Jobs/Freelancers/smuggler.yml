@@ -13,7 +13,7 @@
   displayWeight: 50
   # TODO section
   startingGear: LSSmugglerGear
-  icon: "JobIconPilot"
+  icon: "JobIconLSSmuggler"
   # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false

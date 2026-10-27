@@ -20,3 +20,43 @@
     layers:
     - state: crypt_silver
     - state: guildleader_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyLSMasterAtArms
+  name: master at arms encryption key
+  suffix: DO NOT MAP
+  description: An encryption key for a master at arms.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Freelance
+    - Command
+    defaultChannel: Command
+  - type: Item
+    sprite: _NF/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _NF/Objects/Devices/encryption_keys.rsi
+    layers: # TODO: make unique one
+    - state: crypt_silver
+    - state: guildleader_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyLSChiefRanger
+  name: chief ranger encryption key
+  suffix: DO NOT MAP
+  description: An encryption key for a chief ranger.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Nfsd
+    - Command
+    defaultChannel: Command
+  - type: Item
+    sprite: _NF/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _NF/Objects/Devices/encryption_keys.rsi
+    layers: # TODO: make unique one
+    - state: crypt_silver
+    - state: guildleader_label

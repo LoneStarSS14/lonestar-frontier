@@ -1,5 +1,6 @@
 - type: job
   id: NFPirateFirstMate
+  abstract: true
   name: job-name-nf-pirate-first-mate
   description: job-description-nf-pirate-first-mate
   playTimeTracker: JobPirateFirstMate

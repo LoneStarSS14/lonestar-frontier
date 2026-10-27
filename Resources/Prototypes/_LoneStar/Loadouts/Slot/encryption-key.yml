@@ -4,3 +4,15 @@
   price: 0
   encryptionKeys:
   - EncryptionKeyFreelance
+
+- type: loadout
+  id: EncryptionKeyLSRD
+  price: 0
+  encryptionKeys:
+  - EncryptionKeyNfsd # TODO: Make unique one
+
+- type: loadout
+  id: EncryptionKeyCommand
+  price: 0
+  encryptionKeys:
+  - EncryptionKeyCommand

@@ -69,6 +69,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconNFPirate
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: pirate
@@ -77,6 +78,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconNFPirateCaptain
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: piratecaptain
@@ -85,6 +87,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconNFPirateFirstMate
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: piratefirstmate

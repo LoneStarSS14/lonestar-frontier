@@ -15,7 +15,7 @@
   displayWeight: 20
   # TODO section
   startingGear: LSRipperDocGear
-  icon: "JobIconMedicalIntern"
+  icon: "JobIconLSRipperDoc"
   # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false

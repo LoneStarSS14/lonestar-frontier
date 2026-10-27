@@ -1,3 +1,4 @@
+#region Bunnysuit
 - type: loadout
   id: FreelancerClothingBunnyEarsPirate
   hideEffects:
@@ -30,3 +31,4 @@
   price: 0
   equipment:
     outerClothing: BunnyJacketPirate
+#endregion

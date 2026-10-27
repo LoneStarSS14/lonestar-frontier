@@ -13,7 +13,7 @@
   displayWeight: 30
   # TODO section
   startingGear: LSSpyGear
-  icon: "JobIconBoxer"
+  icon: "JobIconLSSpy"
   # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
