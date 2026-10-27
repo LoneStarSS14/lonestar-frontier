@@ -4,6 +4,7 @@
   description: job-description-ls-master-at-arms
   supervisors: job-supervisors-ls-tsf-war-director
   playTimeTracker: JobLSMasterAtArms
+  requireAdminNotify: true
   whitelisted: true
   requirements:
     # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
@@ -16,7 +17,7 @@
   displayWeight: 60
   # TODO section
   startingGear: LSMasterAtArmsGear
-  icon: "JobIconCaptain"
+  icon: "JobIconLSMasterAtArms"
   # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false

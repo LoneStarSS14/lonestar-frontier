@@ -11,7 +11,7 @@
   displayWeight: 10
   # TODO section
   startingGear: LSEscortGear
-  icon: "JobIconBoxer"
+  icon: "JobIconLSEscort"
   # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
@@ -55,7 +55,7 @@
 
 - type: startingGear
   id: LSEscortGear
-  equipment: # TODO: add PDA
+  equipment:
     pocket1: ContrabandAppraisalToolPirate
 
 - type: roleLoadout

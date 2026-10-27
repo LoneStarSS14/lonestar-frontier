@@ -474,16 +474,9 @@
 - type: loadoutGroup
   id: LSFreelancersFactionLeaderEars
   name: loadout-group-ears
-  minLimit: 1
-  maxLimit: 1
+  hidden: true
   loadouts:
-    []
-  subgroups:
-  - LSFreelancersFactionEars
-  - LSFreelancersFactionCombatantEars
-  - ContractorEars
-  fallbacks:
-  - ContractorClothingHeadsetGreyCommon
+    - LSFreelancerMasterAtArmsHeadset
 
 - type: loadoutGroup
   id: LSFreelancersFactionLeaderEncryptionKey
@@ -493,11 +486,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionEncryptionKey
-  - LSFreelancersFactionCombatantEncryptionKey
   - ContractorEncryptionKey
-  fallbacks:
-  - EncryptionKeyFreelance
 
 - type: loadoutGroup
   id: LSFreelancersFactionLeaderImplanter
