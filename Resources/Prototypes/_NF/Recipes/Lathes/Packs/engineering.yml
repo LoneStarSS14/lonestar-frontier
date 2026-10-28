@@ -86,7 +86,6 @@
   - FastWeakThrusterMachineCircuitboard
   - FastStrongThrusterMachineCircuitboard
   - FasterWeakThrusterMachineCircuitboard
-  - FasterStrongThrusterMachineCircuitboard
 
 - type: latheRecipePack
   id: NFEngineeringBoardsCircuitImprinter

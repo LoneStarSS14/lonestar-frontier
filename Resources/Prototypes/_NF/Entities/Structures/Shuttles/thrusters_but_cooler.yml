@@ -241,55 +241,6 @@
   - type: Machine
     board: FasterWeakThrusterMachineCircuitboard
 
-#region UltraPutt Titan - Higher speed, highest thrust thruster
-- type: entity
-  id: FasterStrongThruster
-  parent: Thruster
-  name: UltraPutt Titan thruster
-  description: A turbocharged superthruster that will zoom you around the galaxy at breakneck speeds... if you have the power to feed it.
-    Has a very high max speed and acceleration, but uses a lot of power.
-  components:
-  - type: Thruster
-    baseThrust: 330
-    thrust: 750
-    thrustPerPartLevel: [975, 1200, 1425, 1650]
-    damage:
-      types:
-        Heat: 40
-  - type: ApcPowerReceiver
-    powerLoad: 50000 # This is a lot of power, but it is a super thruster after all
-  - type: Sprite
-    sprite: _NF/Structures/Shuttles/thruster.rsi # Frontier: use _NF prefix
-    layers:
-    - state: base
-      map: ["enum.ThrusterVisualLayers.Base"]
-    - state: thrust
-      map: ["enum.ThrusterVisualLayers.ThrustOn"]
-      shader: unshaded
-      visible: false
-    - state: thrust_burn_unshaded
-      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
-      shader: unshaded
-      visible: false
-      offset: 0, 1
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.35,-0.45,0.35,0.45" # Thruster is slightly narrower than the big one but still long
-        density: 60 # Same density as big thruster, will be slightly lighter
-        mask:
-        - SmallMobMask #this is so they can go under plastic flaps
-        layer:
-        - MidImpassable
-        - LowImpassable
-  - type: StaticPrice
-    price: 250
-  - type: Machine
-    board: FasterStrongThrusterMachineCircuitboard
-
-
 #region circuit boards
 
 
@@ -415,37 +366,6 @@
     Gold: 200
     Plasma: 100
 
-#region UltraPutt Titan
-- type: entity
-  id: FasterStrongThrusterMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: UltraPutt Titan machine board
-  description: A machine board for the UltraPutt Titan thruster.
-    It is the ultimate in going unreasonably fast with extreme acceleration and thrust,
-    but it requires a LOT of power to run. Fully upgraded, just one can fly an Ambition.
-    Be sure to upgrade your power systems first! It uses around 50kW of power, each.
-  components:
-  - type: Sprite
-    state: supply
-  - type: MachineBoard
-    prototype: FasterStrongThruster
-    requirements: # Frontier
-      Capacitor: 6 # Frontier stackRequirements<requirements
-    stackRequirements:
-      Steel: 20
-      Plasma: 10
-
-- type: latheRecipe
-  parent: [BaseCircuitboardRecipe, BaseEngineeringMachineRecipeCategory, BaseGeneralMachineRecipeCategory]
-  id: FasterStrongThrusterMachineCircuitboard
-  result: FasterStrongThrusterMachineCircuitboard
-  materials:
-    Steel: 800
-    Glass: 900
-    Gold: 200
-    Plasma: 100
-    Diamond: 100
-
 #region tags i guess
 - type: Tag
   id: SlowWeakThrusterMachineCircuitboard
@@ -457,6 +377,3 @@
   id: FastStrongThrusterMachineCircuitboard
 - type: Tag
   id: FasterWeakThrusterMachineCircuitboard
-- type: Tag
-  id: FasterStrongThrusterMachineCircuitboard
-
