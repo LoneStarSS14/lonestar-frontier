@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "sprited by honeyed-lemons (github), pool waterfalls recolored by Sha-Seng to match somber water, recolored again by kc to match regular shorewater (https://github.com/Sushiburger)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+      {
+          "name": "waterfall",
+          "delays": [
+            [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+        ]
+      },
+      {
+          "name": "waterfallshine-unshaded",
+          "delays": [
+            [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+        ]
+      },
+      {
+          "name": "poolwaterfall",
+          "delays":
+          [
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ]
+          ]
+      },
+      {
+          "name": "poolwaterfallshine-unshaded",
+          "delays":
+          [
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ]
+          ]
+      },
+      {
+          "name": "poolwaterfallcut",
+          "directions": 4,
+          "delays":
+          [
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ],
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ],
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ],
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ]
+          ]
+      },
+      {
+          "name": "poolwaterfallshinecut-unshaded",
+          "directions": 4,
+          "delays":
+          [
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ],
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ],
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ],
+            [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ]
+          ]
+      },
+      {
+          "name": "poolwaterfallspout"
+      },
+      {
+          "name": "poolwaterfallspoutdark"
+      },
+      {
+          "name": "poolwaterfallspoutwindow"
+      },
+      {
+          "name": "poolwaterfallspoutwindowdark"
+      }
+  ]
+}

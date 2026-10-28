@@ -106,6 +106,7 @@
     - LSFancyLightPack #LS Adds Special bulbs for mood lighting
     - LSAccessibilityPack #LoneStar Adds accessiblity lights to service techfab
     - NFPietyStatic
+    - LSPietyStatic # LoneStar
     - NFCandlesStatic
   - type: EmagLatheRecipes
     emagStaticPacks:

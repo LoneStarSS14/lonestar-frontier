@@ -860,6 +860,8 @@
   - ContractorRubberStampTrader
   - ContractorRubberStampClown
   - ContractorRubberStampMime
+  subgroups:
+  - ChaplainBackpackItems # LoneStar
 
 - type: loadoutGroup
   id: ContractorHandItems

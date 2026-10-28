@@ -1,0 +1,104 @@
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2026 Shaman
+# SPDX-FileCopyrightText: 2026 Sushiburger
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# LoneStar Port of Den Waterfalls - KC
+
+- type: entity
+  id: FloorWaterfallBase
+  abstract: true
+  components:
+  - type: AmbientSound
+    volume: -10 # LoneStar. I think it's too loud at 4 - kc.
+    range: 6
+    sound:
+      path: /Audio/_DEN/Effects/Fluids/waterfall.ogg
+
+- type: entity
+  parent: [ FloorWaterEntity, FloorWaterfallBase ]
+  id: FloorWaterfallEntity
+  name: waterfall
+  suffix: non-occluded
+  description: Secrets lie behind.. Or not. Find out.
+  components:
+  - type: Sprite
+    sprite: _DEN/Tiles/Planet/waterfall.rsi
+    layers:
+    - state: waterfall
+    - state: waterfallshine-unshaded
+    drawdepth: Overdoors
+
+- type: entity
+  parent: FloorWaterfallEntity
+  id: FloorWaterfallEntityOccluded
+  suffix: occluded
+  components:
+  - type: Occluder
+
+# Somber Pool Waterfall (renamed. Credits to sha-seng(github))
+- type: entity
+  parent: [ FloorWaterEntity, FloorWaterfallBase ]
+  id: FloorWaterfallEntityPool
+  name: pool waterfall
+  suffix: non-occluded
+  description: A narrow stream of water.
+  components:
+  - type: Transform
+    anchored: false # So it can use other snapping modes
+  - type: Sprite
+    drawdepth: Overdoors
+    sprite: _DEN/Tiles/Planet/waterfall.rsi
+    layers:
+    - state: poolwaterfallcut
+    - state: poolwaterfallshinecut-unshaded
+    offset: 0, 0.1
+
+# Somber Waterfall Spouts. Renamed. Credits to sha-seng (github)
+
+- type: entity
+  parent: BaseStructure
+  id: PoolWaterfallSpout
+  name: pool waterfall spout
+  description: "A narrow spout set into the wall, providing fresh water from hidden filters."
+  components:
+  - type: Sprite
+    drawdepth: Overdoors
+    sprite: _DEN/Tiles/Planet/waterfall.rsi
+    state: poolwaterfallspout
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        hard: false
+        density: 190
+  - type: RCDDeconstructable # LoneStar
+    cost: 3 # LoneStar
+    delay: 2 # LoneStar
+    fx: EffectRCDDeconstruct2 # LoneStar
+
+- type: entity
+  parent: PoolWaterfallSpout
+  id: PoolWaterfallSpoutDark
+  name: dark pool waterfall spout
+  suffix: Wall, Dark
+  components:
+  - type: Sprite
+    state: poolwaterfallspoutdark
