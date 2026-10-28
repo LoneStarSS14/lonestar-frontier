@@ -5,10 +5,10 @@
   description: Exotic energy shield, when folded, can even fit in your pocket.
   components:
     - type: Sprite
-      sprite: _Lonestar/Objects/Weapons/Melee/enforcer_shield.rsi
+      sprite: _LoneStar/Objects/Weapons/Melee/enforcer_shield.rsi
       state: eshield-icon
     - type: Item
-      sprite: _Lonestar/Objects/Weapons/Melee/enforcer_shield.rsi
+      sprite: _LoneStar/Objects/Weapons/Melee/enforcer_shield.rsi
       size: Ginormous
       heldPrefix: eshield
     - type: HeldSpeedModifier
