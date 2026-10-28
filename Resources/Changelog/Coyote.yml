@@ -4577,3 +4577,14 @@ Entries:
   id: 501
   time: '2026-10-28T02:35:04.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/287
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: >-
+        Caduceus Cap, Salvation Shako, Compact Armor Vest, Security Ballistic
+        Mask, Rubber gas mask
+    - type: Tweak
+      message: Better accessibility for merc helmets
+  id: 502
+  time: '2026-10-28T17:00:19.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/289
