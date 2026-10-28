@@ -24,6 +24,8 @@
 # Mercenary
     ClothingHeadBandMercenary: 3
     ClothingHeadHatBeretMercenary: 3
+    ClothingHeadHelmetMercenary: 3 # LoneStar
+    ClothingHeadHelmetMercenaryBlack: 3 # LoneStar
     ClothingEyesGlassesMercenary: 3
     ClothingUniformJumpsuitMercenary: 3
     ClothingUniformJumpskirtMercenary: 3
@@ -81,8 +83,10 @@
 # Goofy detective stuff
     ClothingHeadHatDetGadget: 1
     ClothingEyesGlassesNoir: 1
-# ToelessJackboots - LoneStar
+# LoneStar
     ClothingShoesToelessJackboots: 4294967295
+    ClothingMaskGasSecurityBallistic: 4294967295
+    ClothingOuterArmorBasicCompact: 4294967295 # I think competing for limited stock for these is already quite dumb.
 
 - type: vendingMachineInventory
   id: BountyVendPOIInventory
@@ -110,6 +114,8 @@
 # Mercenary
     ClothingHeadBandMercenary: 4294967295
     ClothingHeadHatBeretMercenary: 4294967295
+    ClothingHeadHelmetMercenary: 3 # LoneStar
+    ClothingHeadHelmetMercenaryBlack: 3 # LoneStar
     ClothingEyesGlassesMercenary: 4294967295
     ClothingUniformJumpsuitMercenary: 4294967295
     ClothingUniformJumpskirtMercenary: 4294967295
@@ -157,5 +163,7 @@
 # Goofy detective stuff
     ClothingHeadHatDetGadget: 4294967295
     ClothingEyesGlassesNoir: 4294967295
-# ToelessJackboots - LoneStar
+# LoneStar
     ClothingShoesToelessJackboots: 4294967295
+    ClothingMaskGasSecurityBallistic: 4294967295
+    ClothingOuterArmorBasicCompact: 4294967295 # I think competing for limited stock for these is already quite dumb.

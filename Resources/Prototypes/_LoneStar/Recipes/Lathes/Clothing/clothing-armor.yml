@@ -19,3 +19,13 @@
   id: ClothingOuterArmoredJacketPMCPunkRandomized
   parent: NFBaseArmorRecipe
   result: ClothingOuterArmoredJacketPMCPunkRandomized
+
+- type: latheRecipe
+  id: ClothingOuterArmorBasicCompact
+  parent: NFBaseArmorRecipe
+  result: ClothingOuterArmorBasicCompact
+
+- type: latheRecipe
+  id: ClothingMaskGasSecurityBallistic
+  parent: NFBaseMaskArmoredRecipe
+  result: ClothingMaskGasSecurityBallistic

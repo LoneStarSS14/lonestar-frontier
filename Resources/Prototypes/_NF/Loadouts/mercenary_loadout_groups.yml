@@ -60,6 +60,7 @@
   subgroups:
   - PilotOuterClothing
   - ContractorOuterClothing
+  - DenSecurityOuterClothing # LoneStar
 
 - type: loadoutGroup
   id: MercenaryShoes
@@ -158,6 +159,7 @@
   subgroups:
   - PilotFace
   - ContractorFace
+  - DenSecurityFace # LoneStar
   fallbacks:
   - MercenaryClothingMaskGasMercenary
 

@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2024 V
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingOuterCoatBHTrench # LoneStar. Inherit stats from bounty hunter flak trenchcoat
+  id: ClothingOuterArmorBasicCompact
+  name: compact armor vest
+  description: A compact Type I armored vest that provides decent protection against puncturing wounds.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/Armor/security_compact.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/Armor/security_compact.rsi
