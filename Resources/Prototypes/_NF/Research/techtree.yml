@@ -1426,7 +1426,6 @@
   - FastWeakThrusterMachineCircuitboard
   - FastStrongThrusterMachineCircuitboard
   - FasterWeakThrusterMachineCircuitboard
-  - FasterStrongThrusterMachineCircuitboard
   technologyPrerequisites:
   - NFShuttlecraftThrust
   position: 2, 32
