@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 10/27/2026 13:24:45
-  entityCount: 2741
+  time: 10/28/2026 16:35:50
+  entityCount: 2755
 maps: []
 grids:
 - 1
@@ -118,6 +118,52 @@ entities:
         version: 2
         nodes:
         - node:
+            angle: -9.42477796076938 rad
+            color: '#FFFFFFFF'
+            id: Arrows
+          decals:
+            1813: 18,7
+        - node:
+            angle: -7.853981633974483 rad
+            color: '#FFFFFFFF'
+            id: Arrows
+          decals:
+            1812: -1,10
+        - node:
+            angle: -6.283185307179586 rad
+            color: '#FFFFFFFF'
+            id: Arrows
+          decals:
+            1810: 0,16
+        - node:
+            angle: -4.71238898038469 rad
+            color: '#FFFFFFFF'
+            id: Arrows
+          decals:
+            1803: -19,-8
+            1805: 1,-9
+            1811: 1,10
+        - node:
+            angle: -3.141592653589793 rad
+            color: '#FFFFFFFF'
+            id: Arrows
+          decals:
+            1804: -15,-9
+            1807: 15,-9
+        - node:
+            angle: -1.5707963267948966 rad
+            color: '#FFFFFFFF'
+            id: Arrows
+          decals:
+            1806: -1,-9
+            1808: 19,-8
+        - node:
+            angle: 3.141592653589793 rad
+            color: '#FFFFFFFF'
+            id: Arrows
+          decals:
+            1802: -18,7
+        - node:
             cleanable: True
             color: '#FFFFFFFF'
             id: Basalt4
@@ -150,6 +196,10 @@ entities:
             495: -9,5
             638: -3,8
             639: -3,5
+            1796: -17,-6
+            1798: -17,9
+            1799: 17,9
+            1800: 17,-6
         - node:
             color: '#FFFFFFFF'
             id: BoxGreyscale
@@ -793,7 +843,6 @@ entities:
             1361: -13,11
             1364: -15,11
             1365: -16,11
-            1366: -17,11
             1367: -18,11
             1410: -13,-7
             1411: -12,-7
@@ -804,6 +853,7 @@ entities:
             1476: -3,-7
             1477: -5,-7
             1481: -7,-7
+            1801: -17,11
         - node:
             color: '#8C347F96'
             id: BrickTileWhiteLineN
@@ -3387,63 +3437,63 @@ entities:
       pos: -21.5,8.5
       parent: 1
     - type: ItemSlots
-  - uid: 84
+  - uid: 82
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,19.5
       parent: 1
     - type: ItemSlots
-  - uid: 85
+  - uid: 83
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,19.5
       parent: 1
     - type: ItemSlots
-  - uid: 86
+  - uid: 84
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,19.5
       parent: 1
     - type: ItemSlots
-  - uid: 89
+  - uid: 85
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 22.5,8.5
       parent: 1
     - type: ItemSlots
-  - uid: 90
+  - uid: 86
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 22.5,7.5
       parent: 1
     - type: ItemSlots
-  - uid: 91
+  - uid: 87
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 22.5,6.5
       parent: 1
     - type: ItemSlots
-  - uid: 92
+  - uid: 88
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 22.5,-6.5
       parent: 1
     - type: ItemSlots
-  - uid: 93
+  - uid: 89
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 22.5,-8.5
       parent: 1
     - type: ItemSlots
-  - uid: 94
+  - uid: 90
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -3452,13 +3502,13 @@ entities:
     - type: ItemSlots
 - proto: AirlockFreezer
   entities:
-  - uid: 95
+  - uid: 91
     components:
     - type: Transform
       pos: 9.5,15.5
       parent: 1
     - type: ItemSlots
-  - uid: 96
+  - uid: 92
     components:
     - type: Transform
       pos: 11.5,15.5
@@ -3466,14 +3516,14 @@ entities:
     - type: ItemSlots
 - proto: AirlockGlass
   entities:
-  - uid: 97
+  - uid: 93
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 9.5,-5.5
       parent: 1
     - type: ItemSlots
-  - uid: 98
+  - uid: 94
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -3482,28 +3532,28 @@ entities:
     - type: ItemSlots
 - proto: AirlockGlassShuttle
   entities:
-  - uid: 82
+  - uid: 95
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 15.5,19.5
       parent: 1
     - type: ItemSlots
-  - uid: 83
+  - uid: 96
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 14.5,19.5
       parent: 1
     - type: ItemSlots
-  - uid: 87
+  - uid: 97
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -13.5,19.5
       parent: 1
     - type: ItemSlots
-  - uid: 88
+  - uid: 98
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -4686,6 +4736,33 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 3.5,1.5
+      parent: 1
+- proto: BorgCharger
+  entities:
+  - uid: 2742
+    components:
+    - type: Transform
+      pos: -7.5,-2.5
+      parent: 1
+  - uid: 2743
+    components:
+    - type: Transform
+      pos: 12.5,-4.5
+      parent: 1
+  - uid: 2744
+    components:
+    - type: Transform
+      pos: 14.5,8.5
+      parent: 1
+  - uid: 2745
+    components:
+    - type: Transform
+      pos: -11.5,-8.5
+      parent: 1
+  - uid: 2746
+    components:
+    - type: Transform
+      pos: 12.5,-8.5
       parent: 1
 - proto: BoxBodyBag
   entities:
@@ -9547,6 +9624,12 @@ entities:
     components:
     - type: Transform
       pos: -2.5,3.5
+      parent: 1
+  - uid: 2750
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -13.5,18.5
       parent: 1
 - proto: ExtinguisherCabinetFilled
   entities:
@@ -16595,6 +16678,54 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -14.5,18.5
       parent: 1
+  - uid: 2747
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -13.5,-10.5
+      parent: 1
+  - uid: 2748
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -20.5,-8.5
+      parent: 1
+  - uid: 2749
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -20.5,6.5
+      parent: 1
+  - uid: 2751
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 1.5,18.5
+      parent: 1
+  - uid: 2752
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 21.5,6.5
+      parent: 1
+  - uid: 2753
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 21.5,-8.5
+      parent: 1
+  - uid: 2754
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 16.5,-10.5
+      parent: 1
+  - uid: 2755
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 1.5,-10.5
+      parent: 1
 - proto: PoweredWarmSmallLight
   entities:
   - uid: 2141
@@ -17132,7 +17263,7 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        95:
+        91:
         - - Pressed
           - DoorBolt
   - uid: 2232
@@ -17143,7 +17274,7 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        96:
+        92:
         - - Pressed
           - DoorBolt
   - uid: 2233
