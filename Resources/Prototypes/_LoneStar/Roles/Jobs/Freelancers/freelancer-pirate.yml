@@ -1,0 +1,86 @@
+- type: job
+  id: LSFreelancerPirate
+  name: job-name-ls-freelancer-pirate
+  description: job-description-ls-freelancer-pirate
+  supervisors: job-supervisors-ls-master-at-arms
+  playTimeTracker: JobLSFreelancerPirate
+  whitelisted: true
+  requirements:
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSFreelancers
+    #   time: 57600 # 16 hours
+  weight: 50
+  displayWeight: 50
+  startingGear: LSFreelancerPirateGear
+  icon: "JobIconLSFreelancerPirate"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  access:
+  - Pirate
+  - BlackMarket
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #freelancer specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsPirate
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirate
+
+- type: entity
+  id: SpawnPointLSFreelancerPirate # TODO: mapping migrations.
+  parent: SpawnPointJobBase
+  name: freelancer pirate spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSFreelancerPirate
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear
+  id: LSFreelancerPirateGear
+  equipment: # TODO: add PDA
+    pocket1: BasePirateUplinkPirateCrew
+    pocket2: ContrabandAppraisalToolPirate
+
+- type: roleLoadout
+  id: JobLSFreelancerPirate
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSFreelancerFreelancerPiratePDA
+  # Freelancer v
+  - LSFreelancersFactionCombatantJumpsuit
+  - LSFreelancersFactionCombatantOuterClothing
+  - LSFreelancersFactionForcedOuterClothing
+  - LSFreelancersFactionCombatantShoes
+  - LSFreelancersFactionCombatantGloves
+  - LSFreelancersFactionCombatantHead
+  - LSFreelancersFactionCombatantMask
+  - LSFreelancersFactionCombatantEyes
+  - LSFreelancersFactionCombatantNeck
+  - LSFreelancersFactionCombatantEars
+  - LSFreelancersFactionCombatantBackpack
+  - LSFreelancersFactionCombatantBelt
+  - LSFreelancersFactionCombatantWallet
+  - LSFreelancersFactionCombatantEncryptionKey
+  - LSFreelancersFactionCombatantImplanter
+  # Common v
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - PirateBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific

@@ -16,6 +16,7 @@
   price: 18000 #15583, LL1 115% (Bar and Solar equipment push it over LL0)
   category: Small
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_CS/Shuttles/BlackMarket/Escort/peeper.yml
   guidebookPage: Null
   class:

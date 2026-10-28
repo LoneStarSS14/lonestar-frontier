@@ -92,9 +92,6 @@ uplink-booze-flatpack-desc = A flatpack used for deploying a Bruise-O-Mat
 uplink-syndiedrobe-name = SyndieDrobe
 uplink-syndiedrobe-desc = A flatpack used for deploying a SyndieDrobe
 
-uplink-smuggler-id-name = Smuggler PDA and ID
-uplink-smuggler-id-desc = A spare PDA and ID, for yourself or someone else
-
 uplink-hypospray-name = One of 3 random Hyposprays
 uplink-hypospray-desc = A commercial hypospray designed by Nanotrasen Chemical Supply
 

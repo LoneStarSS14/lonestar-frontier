@@ -1,3 +1,4 @@
+#region Command
 - type: jobIcon
   parent: JobIcon
   id: JobIconGuildLeader
@@ -6,3 +7,106 @@
     state: guildleader
   jobName: job-name-guildleader
   allowSelection: false # Prevents impersonation with agent IDs etc.
+#endregion
+
+#region Freelancers
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSMasterAtArms
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: master-at-arms
+  jobName: job-name-ls-master-at-arms
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSFreelancerPirate
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: freelancer-pirate
+  jobName: job-name-ls-freelancer-pirate
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSSmuggler
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: smuggler
+  jobName: job-name-ls-smuggler
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSSpy
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: spy
+  jobName: job-name-ls-spy
+  allowSelection: true
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSRipperDoc
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: ripper-doc
+  jobName: job-name-ls-ripper-doc
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSEscort
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: escort
+  jobName: job-name-ls-escort
+#endregion
+
+#region LSRD
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSChiefRanger
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: chief-ranger
+  jobName: job-name-ls-chief-ranger
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSEnforcer
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: enforcer
+  jobName: job-name-ls-enforcer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSRetrievalOfficer
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: retrieval-officer
+  jobName: job-name-ls-retrieval-officer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSDetective
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: detective
+  jobName: job-name-ls-detective
+  allowSelection: true
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSCorpsman
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: corpsman
+  jobName: job-name-ls-corpsman
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLSClerk
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: clerk
+  jobName: job-name-ls-clerk
+#endregion

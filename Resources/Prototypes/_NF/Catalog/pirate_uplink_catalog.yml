@@ -15,9 +15,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateHardsuitCaptain
@@ -36,9 +35,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateHardsuitElite
@@ -57,9 +55,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateCaptainCrateFilled
@@ -78,9 +75,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateCrateFilled
@@ -99,9 +95,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateSatchelFilled
@@ -120,9 +115,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateMagboots
@@ -141,9 +135,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateHoverbike
@@ -162,9 +155,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateBlunderbuss
@@ -183,9 +175,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateRevolver
@@ -204,9 +195,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateRomulan
@@ -241,9 +231,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkFlintlock
@@ -278,9 +267,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateAnchor
@@ -299,9 +287,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateRedGrenade
@@ -320,9 +307,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateGreenGrenade
@@ -341,9 +327,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateGrayGrenade
@@ -362,9 +347,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateShotgunAmmo
@@ -431,9 +415,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateNFCannonBallEmp
@@ -452,9 +435,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateGrapeshot
@@ -473,9 +455,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateGlassshot
@@ -494,9 +475,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSFreelancerPirate
+      - LSMasterAtArms
 
 - type: listing
   id: UplinkPirateAccessConfigurator
@@ -609,9 +589,8 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
-        - NFPirate
-        - NFPirateFirstMate
-        - NFPirateCaptain
+        - LSFreelancerPirate
+        - LSMasterAtArms
   categories:
   - UplinkPirateUtility
 
@@ -630,9 +609,8 @@
           - PirateUplink
     - !type:BuyerJobCondition # Coyote
       whitelist:
-        - NFPirate
-        - NFPirateFirstMate
-        - NFPirateCaptain
+        - LSFreelancerPirate
+        - LSMasterAtArms
   categories:
   - UplinkPirateUtility
 
@@ -651,19 +629,3 @@
       whitelist:
         tags:
           - PirateUplink
-
-#- type: listing # Coyote
-#  id: UplinkTeleCrystal
-#  name:  uplink-Telecrystal
-#  description: uplink-Telecrystal-desc
-#  productEntity: Telecrystal1
-#  icon: { sprite: Objects/Specific/Syndicate/telecrystal.rsi, state: telecrystal }
-#  cost:
-#    Doubloon: 3
-#  categories:
-#    - UplinkPirateUtility
-#  conditions:
-#    - !type:StoreWhitelistCondition
-#       whitelist:
-#          tags:
-#            - PirateUplink

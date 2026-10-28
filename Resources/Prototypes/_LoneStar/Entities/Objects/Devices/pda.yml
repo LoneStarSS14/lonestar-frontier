@@ -1,3 +1,4 @@
+#region Command
 - type: entity
   parent: [MercenaryPDA, BaseC4Contraband]
   id: GuildLeaderPDA
@@ -37,3 +38,236 @@
     - NanoChatCartridge # DeltaV
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
+#endregion
+
+#region Freelancers
+- type: entity
+  parent: BasePDA
+  id: BaseLSFreelancerPDA
+  categories: [ HideSpawnMenu ]
+  name: freelancer PDA
+  description: It smells... of citrus and gunpowder.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+  - type: Pda
+    id: BaseLSFreelancerIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-freelancer
+  - type: PdaBorderColor
+    borderColor: "#891417"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-freelancer
+  - type: BlipCartridge
+    defaultPreset: BlipPresetPirate # TODO: make unique one
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerEscortPDA
+  name: escort PDA
+  components:
+  - type: Pda
+    id: LSFreelancerEscortIDCard
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerRipperDocPDA
+  name: ripper doc PDA
+  components:
+  - type: Pda
+    id: LSFreelancerRipperDocIDCard
+  - type: PdaBorderColor
+    accentVColor: "#4d855c"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-freelancer-ripper-doc
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-freelancer-ripper-doc
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerSpyPDA
+  name: spy PDA
+  components:
+  - type: Pda
+    id: LSFreelancerSpyIDCard
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerSmugglerPDA
+  name: smuggler PDA
+  components:
+  - type: Pda
+    id: LSFreelancerSmugglerIDCard
+  - type: PdaBorderColor
+    accentHColor: "#4d855c"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-freelancer-smuggler
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-freelancer-smuggler
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerFreelancerPiratePDA
+  name: freelancer pirate PDA
+  components:
+  - type: Pda
+    id: LSFreelancerFreelancerPirateIDCard
+  - type: PdaBorderColor
+    accentHColor: "#4d855c"
+    accentVColor: "#4d855c"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-freelancer-freelancer-pirate
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-freelancer-freelancer-pirate
+
+- type: entity
+  parent: BaseLSFreelancerPDA
+  id: LSFreelancerMasterAtArmsPDA
+  name: master at arms PDA
+  components:
+  - type: Pda
+    id: LSFreelancerMasterAtArmsIDCard
+  - type: PdaBorderColor
+    accentHColor: "#864622"
+    accentVColor: "#4d855c"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-freelancer-master-at-arms
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-freelancer-master-at-arms
+#endregion
+
+#region LSRD
+- type: entity
+  parent: BasePDA
+  id: BaseLSLSRDPDA
+  categories: [ HideSpawnMenu ]
+  name: LSRD PDA
+  description: It smells... of blood and sweat, for now.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+  - type: Pda
+    id: BaseLSLSRDIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-lsrd
+  - type: PdaBorderColor
+    borderColor: "#b09c85"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-lsrd
+  - type: BlipCartridge
+    defaultPreset: BlipPresetSecurity # TODO: make unique one
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDClerkPDA
+  name: clerk PDA
+  components:
+  - type: Pda
+    id: LSLSRDClerkIDCard
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDCorpsmanPDA
+  name: corpsman PDA
+  components:
+  - type: Pda
+    id: LSLSRDCorpsmanIDCard
+  - type: PdaBorderColor
+    accentVColor: "#5b8343"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-lsrd-corpsman
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-lsrd-corpsman
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDDetectivePDA
+  name: detective PDA
+  components:
+  - type: Pda
+    id: LSLSRDDetectiveIDCard
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDRetrievalOfficerPDA
+  name: retrieval officer PDA
+  components:
+  - type: Pda
+    id: LSLSRDRetrievalOfficerIDCard
+  - type: PdaBorderColor
+    accentHColor: "#5b8343"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-lsrd-retrieval-officer
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-lsrd-retrieval-officer
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDEnforcerPDA
+  name: enforcer PDA
+  components:
+  - type: Pda
+    id: LSLSRDEnforcerIDCard
+  - type: PdaBorderColor
+    accentHColor: "#5b8343"
+    accentVColor: "#5b8343"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-lsrd-enforcer
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-lsrd-enforcer
+
+- type: entity
+  parent: BaseLSLSRDPDA
+  id: LSLSRDChiefRangerPDA
+  name: chief ranger PDA
+  components:
+  - type: Pda
+    id: LSLSRDChiefRangerIDCard
+  - type: PdaBorderColor
+    accentHColor: "#864622"
+    accentVColor: "#5b8343"
+  - type: Icon
+    sprite: _LoneStar/Objects/Devices/pda.rsi
+    state: pda-lsrd-chief-ranger
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-lsrd-chief-ranger
+#endregion

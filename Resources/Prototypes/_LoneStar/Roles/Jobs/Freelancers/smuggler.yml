@@ -1,0 +1,89 @@
+- type: job
+  id: LSSmuggler
+  name: job-name-ls-smuggler
+  description: job-description-ls-smuggler
+  supervisors: job-supervisors-ls-master-at-arms
+  playTimeTracker: JobLSSmuggler
+  whitelisted: true
+  requirements:
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSFreelancers
+    #   time: 57600 # 16 hours
+  weight: 50
+  displayWeight: 50
+  startingGear: LSSmugglerGear
+  icon: "JobIconLSSmuggler"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  access:
+  - Pirate
+  - BlackMarket
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #freelancer specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsPirate
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirate
+  - !type:AddComponentSpecial
+    components:
+    - type: PaywardProximityShuttleConsole # TODO: Look into how useful this even is.
+
+- type: entity
+  id: SpawnPointLSSmuggler # TODO: mapping migrations.
+  parent: SpawnPointJobBase
+  name: smuggler spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSSmuggler
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear
+  id: LSSmugglerGear
+  equipment: # TODO: add PDA
+    pocket1: BasePirateUplinkPirateCrew
+    pocket2: ContrabandAppraisalToolPirate
+
+- type: roleLoadout
+  id: JobLSSmuggler
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSFreelancerSmugglerPDA
+  # Freelancer v
+  - LSFreelancersFactionCombatantJumpsuit
+  - LSFreelancersFactionCombatantOuterClothing
+  - LSFreelancersFactionForcedOuterClothing
+  - LSFreelancersFactionCombatantShoes
+  - LSFreelancersFactionCombatantGloves
+  - LSFreelancersFactionCombatantHead
+  - LSFreelancersFactionCombatantMask
+  - LSFreelancersFactionCombatantEyes
+  - LSFreelancersFactionCombatantNeck
+  - LSFreelancersFactionCombatantEars
+  - LSFreelancersFactionCombatantBackpack
+  - LSFreelancersFactionCombatantBelt
+  - LSFreelancersFactionCombatantWallet
+  - LSFreelancersFactionCombatantEncryptionKey
+  - LSFreelancersFactionCombatantImplanter
+  # Common v
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - PirateBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific

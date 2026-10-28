@@ -69,6 +69,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconNFPirate
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: pirate
@@ -77,6 +78,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconNFPirateCaptain
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: piratecaptain
@@ -85,6 +87,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconNFPirateFirstMate
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: piratefirstmate
@@ -95,6 +98,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconCadetNF
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: nfsdcadet
@@ -103,6 +107,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconDeputy
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: nfsddeputy
@@ -111,6 +116,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconPublicAffairsLiaison
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: publicaffairsliaison
@@ -119,6 +125,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconNFDetective
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: nfsddetective
@@ -127,6 +134,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconBrigmedicNF
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: nfsdbrigmed
@@ -135,6 +143,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconSergeant
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: nfsdsergeant
@@ -143,6 +152,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconBailiff
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: nfsdbailiff
@@ -151,6 +161,7 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconSheriff
+  abstract: true # LoneStar
   icon:
     sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
     state: nfsdsheriff

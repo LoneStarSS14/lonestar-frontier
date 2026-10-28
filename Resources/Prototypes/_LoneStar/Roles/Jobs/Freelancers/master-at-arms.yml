@@ -1,0 +1,90 @@
+- type: job
+  id: LSMasterAtArms
+  name: job-name-ls-master-at-arms
+  description: job-description-ls-master-at-arms
+  supervisors: job-supervisors-ls-tsf-war-director
+  playTimeTracker: JobLSMasterAtArms
+  requireAdminNotify: true
+  whitelisted: true
+  requirements:
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSFreelancers
+    #   time: 360000 # 100 hours
+    # - !type:RoleTimeRequirement
+    #   role: JobLSFreelancerPirate
+    #   time: 144000 # 40 hours
+  weight: 60
+  displayWeight: 60
+  startingGear: LSMasterAtArmsGear
+  icon: "JobIconLSMasterAtArms"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  access: # TODO: Add special 'war leader access', use command? unsure.
+  - Pirate
+  - BlackMarket
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #freelancer specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsPirate
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI TODO: Add SR-like RPI modifiers.
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirate
+
+- type: entity
+  id: SpawnPointLSMasterAtArms # TODO: mapping migrations.
+  parent: SpawnPointJobBase
+  name: master at arms spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSMasterAtArms
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear # TODO: Give them some unique starter thing like the EG-4a on guild leader
+  id: LSMasterAtArmsGear
+  equipment:
+    pocket1: BasePirateUplinkRadioPirateCaptain
+    pocket2: ContrabandAppraisalToolPirate
+
+- type: roleLoadout
+  id: JobLSMasterAtArms
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSFreelancerMasterAtArmsPDA
+  # Freelancer v
+  - LSFreelancersFactionLeaderJumpsuit
+  - LSFreelancersFactionLeaderOuterClothing
+  - LSFreelancersFactionForcedOuterClothing
+  - LSFreelancersFactionLeaderShoes
+  - LSFreelancersFactionLeaderGloves
+  - LSFreelancersFactionLeaderHead
+  - LSFreelancersFactionLeaderMask
+  - LSFreelancersFactionLeaderEyes
+  - LSFreelancersFactionLeaderNeck
+  - LSFreelancersFactionLeaderEars
+  - LSFreelancersFactionLeaderBackpack
+  - LSFreelancersFactionLeaderBelt
+  - LSFreelancersFactionLeaderWallet
+  - LSFreelancersFactionLeaderEncryptionKey
+  - LSFreelancersFactionLeaderImplanter
+  # Common v
+  - ContractorBoxSurvival
+  - ContractorCartridge
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific

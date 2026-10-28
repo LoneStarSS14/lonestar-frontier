@@ -1,0 +1,29 @@
+- type: loadout
+  id: LSFreelancerEscortPDA
+  equipment:
+    id: LSFreelancerEscortPDA
+
+- type: loadout
+  id: LSFreelancerRipperDocPDA
+  equipment:
+    id: LSFreelancerRipperDocPDA
+
+- type: loadout
+  id: LSFreelancerSpyPDA
+  equipment:
+    id: LSFreelancerSpyPDA
+
+- type: loadout
+  id: LSFreelancerSmugglerPDA
+  equipment:
+    id: LSFreelancerSmugglerPDA
+
+- type: loadout
+  id: LSFreelancerFreelancerPiratePDA
+  equipment:
+    id: LSFreelancerFreelancerPiratePDA
+
+- type: loadout
+  id: LSFreelancerMasterAtArmsPDA
+  equipment:
+    id: LSFreelancerMasterAtArmsPDA

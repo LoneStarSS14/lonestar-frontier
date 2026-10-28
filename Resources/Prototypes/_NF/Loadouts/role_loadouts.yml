@@ -567,6 +567,7 @@
 #  canCustomizeName: true # pseudonym?
 
 - type: roleLoadout
+  abstract: true # LoneStar
   id: JobNFPirateFirstMate
   groups:
   - NFPirateFirstMateHead
@@ -595,6 +596,7 @@
   canCustomizeName: true # pseudonym?
 
 - type: roleLoadout
+  abstract: true
   id: JobNFPirateCaptain
   groups:
   - NFPirateCaptainHead

@@ -1,5 +1,6 @@
 - type: job
   id: NFPirateCaptain
+  abstract: true
   name: job-name-nf-pirate-captain
   description: job-description-nf-pirate-captain
   playTimeTracker: JobPirateCaptain

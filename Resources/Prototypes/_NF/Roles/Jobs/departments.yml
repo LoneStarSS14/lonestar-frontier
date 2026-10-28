@@ -18,6 +18,7 @@
   - Therapist # Frontier
 
 - type: department
+  abstract: true # LoneStar
   id: Antag
   name: department-Antag
   description: department-NFAntag-description

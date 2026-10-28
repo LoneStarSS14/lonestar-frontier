@@ -12,6 +12,7 @@
   price: 62500 #29313 1.25 65954.25
   category: Medium
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_CS/Shuttles/BlackMarket/Escort/speakeasy.yml
   guidebookPage: Null
   class:

@@ -5,13 +5,13 @@
   playTimeTracker: JobHeadOfSecurityOld # Frontier JobHeadOfSecurity<JobHeadOfSecurityOld
   requirements:
     - !type:RoleTimeRequirement
-      role: JobWarden
+      role: JobWardenOld
       time: 3600 #1 hr
     - !type:RoleTimeRequirement
-      role: JobDetective
+      role: JobDetectiveOld
       time: 3600 #1 hr, knowing how to use the tools is important
     - !type:RoleTimeRequirement
-      role: JobSecurityOfficer
+      role: JobSecurityOfficerOld
       time: 18000 #5 hrs
     - !type:DepartmentTimeRequirement
       department: Security

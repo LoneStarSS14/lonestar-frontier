@@ -41,17 +41,12 @@
           lobbySortOrder: 2
         - type: StationJobs
           availableJobs:
-            Sheriff: [ 2, 2 ]
-            Bailiff: [ 2, 2 ]
-            PublicAffairsLiaison: [ 2, 2 ]
-            SeniorOfficer: [ 2, 2 ]
-            Brigmedic: [ 2, 2 ]
-            NFDetective: [ 2, 2 ]
-            Deputy: [ 5, 5 ]
-            Cadet: [ 3, 3 ]
-          tags:
-          - HeadOfPersonnel
-          - HeadOfSecurity
+            LSChiefRanger: [ 2, 2 ]
+            LSEnforcer: [ 5, 5 ]
+            LSRetrievalOfficer: [ 5, 5 ]
+            LSDetective: [ 5, 5 ]
+            LSCorpsman: [ 5, 5 ]
+            LSClerk: [ -1, -1 ]
         - type: StationDeadDropReporting
           messageSet: Nfsd
         - type: StationDeadDropHintExempt

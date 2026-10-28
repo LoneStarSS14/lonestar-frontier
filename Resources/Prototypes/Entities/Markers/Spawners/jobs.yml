@@ -523,6 +523,7 @@
 
 - type: entity
   id: SpawnPointBrigmedic
+  abstract: true # LoneStar
   parent: SpawnPointJobBase
   name: brigmedic
   components:
