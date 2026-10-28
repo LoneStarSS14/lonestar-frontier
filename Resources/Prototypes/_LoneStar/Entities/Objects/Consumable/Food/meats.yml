@@ -1,0 +1,39 @@
+- type: entity
+  name: pepperoni
+  parent: FoodBakingBase
+  id: FoodPepperoni
+  description: A cured pepperoni, slice it up for a pizza or just eat it raw.
+  components:
+  - type: Item
+    size: Normal
+  - type: FlavorProfile
+    flavors:
+    - savory
+  - type: Sprite
+    sprite: _LoneStar/Objects/Consumable/Food/meats.rsi
+    state: pepperoni
+  - type: SliceableFood
+    count: 6
+    slice: FoodPepperoniSlice
+  - type: Tag
+    tags:
+    - Meat
+
+- type: entity
+  name: pepperoni slice
+  parent: FoodBakingBase
+  id: FoodPepperoniSlice
+  description: A slice of pepperoni.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - savory
+  - type: Sprite
+    sprite: _LoneStar/Objects/Consumable/Food/meats.rsi
+    state: pepperoni-slice
+  - type: Tag
+    tags:
+    - Slice
+    - Meat
+    - Ingredient
+    - PepperoniSlice

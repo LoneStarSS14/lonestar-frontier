@@ -1,0 +1,107 @@
+- type: entity
+  parent: DVSmartFridge
+  id: HotCase
+  name: Hot 'n Ready Case
+  description: A hot case for storing warm, ready-to-eat food.
+  components:
+  - type: StationAiWhitelist
+  - type: DatasetVocalizer
+    dataset: HotnReadyAds
+  - type: Speech
+  - type: Sprite
+    sprite: _LoneStar/Structures/Machines/hotnreadycase.rsi
+    snapCardinals: true
+    layers:
+    - state: hotcase
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: hotcase_door
+      map: ["enum.StorageVisualLayers.Door"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      visible: false
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    energy: 1.6
+    color: "#eb701e"
+  - type: Machine
+    board: HotCaseCircuitboard
+  - type: ContainerContainer
+    containers:
+      smart_fridge_inventory: !type:Container
+      smart_fridge_insertion: !type:ContainerSlot
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+    - smart_fridge_inventory
+  - type: WiresPanel
+  - type: WiresVisuals
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: SmartFridge
+    whitelist:
+      components:
+      - FitsInDispenser
+      - Pill
+      - Produce
+      - Seed
+      - Hypospray
+      - Food # Coyote
+      - Healing # Coyote
+      tags:
+      - PillCanister
+      - Bottle
+      - Syringe
+      - ChemDispensable
+      - BoxCardboard
+      - Pizza # Lone Star
+      - LittleCheesers # Lone Star
+  - type: ActivatableUI
+    key: enum.SmartFridgeUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.SmartFridgeUiKey.Key:
+        type: SmartFridgeBoundUserInterface
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        density: 200
+  - type: Anchorable
+    delay: 2
+  - type: InteractionOutline
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Dumpable
+  - type: AccessReader
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: AntiRottingContainer

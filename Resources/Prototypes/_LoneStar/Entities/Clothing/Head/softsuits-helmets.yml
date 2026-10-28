@@ -1,0 +1,26 @@
+
+- type: entity
+  parent: ClothingHeadEVAHelmetWithLightBase
+  id: ClothingHeadEVAHelmetLittleCheesers
+  name: pizza delivery EVA helmet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
+    layers:
+    - state: icon-base
+      color: "#d4511a"
+    - state: icon-reinforced-points
+      color: "#3d2f34"
+    - state: icon-visor
+      color: "#adcfd5"
+  - type: Clothing
+    sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-head-base
+        color: "#d4511a"
+      - state: equipped-head-reinforced-points
+        color: "#3d2f34"
+      - state: equipped-head-visor
+        color: "#adcfd5"

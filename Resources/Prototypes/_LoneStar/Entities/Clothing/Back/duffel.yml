@@ -1,0 +1,8 @@
+- type: entity
+  id: ClothingBackpackDuffelLittleCheesers
+  name: Little Cheeser's duffel bag
+  parent: NFClothingDuffel
+  description: A duffelbag produced for Little Cheesers, deliver those pizzas!
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Back/Duffels/little_cheesers_duffel.rsi
