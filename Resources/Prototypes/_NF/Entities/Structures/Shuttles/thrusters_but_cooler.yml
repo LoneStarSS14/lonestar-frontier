@@ -351,7 +351,7 @@
   - type: MachineBoard
     prototype: FasterWeakThruster
     requirements: # Frontier
-      Capacitor: 6 # Frontier stackRequirements<requirements
+      Capacitor: 3 # Frontier stackRequirements<requirements
     stackRequirements:
       Steel: 10
       Plasma: 5
