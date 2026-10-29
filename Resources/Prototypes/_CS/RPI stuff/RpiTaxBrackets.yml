@@ -25,7 +25,7 @@
     Pilot: 2.0
     Librarian: 2.0
     Chaplain: 2.0
-    Horny: 2.0
+    Subtle: 2.0
     StationPrincess: 2.0
 
 - type: rpiTaxBracket
@@ -55,7 +55,7 @@
     Pilot: 2.0
     Librarian: 2.0
     Chaplain: 2.0
-    Horny: 2.0
+    Subtle: 2.0
     StationPrincess: 2.0
 
 - type: rpiTaxBracket
@@ -85,7 +85,7 @@
     Pilot: 2.0
     Librarian: 2.0
     Chaplain: 2.0
-    Horny: 2.0
+    Subtle: 2.0
     StationPrincess: 2.0
 
 - type: rpiTaxBracket
@@ -115,7 +115,7 @@
     Pilot: 1.0
     Librarian: 1.0
     Chaplain: 1.0
-    Horny: 1.0
+    Subtle: 1.0
     StationPrincess: 1.0
 
 
@@ -131,7 +131,7 @@
 #Pilot
 #Librarian
 #Chaplain
-#Horny
+#Subtle
 #StationPrincess
 
 

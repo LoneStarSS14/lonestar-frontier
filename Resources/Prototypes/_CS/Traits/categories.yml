@@ -22,6 +22,6 @@
   maxTraitPoints: 2
 
 - type: traitCategory
-  id: ScentsNSFW
-  name: trait-category-scents-nsfw
+  id: ScentsConsent
+  name: trait-category-scents-consent
   maxTraitPoints: 2

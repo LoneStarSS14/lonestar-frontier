@@ -6,6 +6,7 @@
   storage:
     back:
     - CigPackBlue
+  groupBy: "smokeables"
 
 - type: loadout
   id: ContractorCigPackRed
@@ -13,6 +14,7 @@
   storage:
     back:
     - CigPackRed
+  groupBy: "smokeables"
 
 - type: loadout
   id: ContractorCigPackBlack
@@ -20,6 +22,7 @@
   storage:
     back:
     - CigPackBlack
+  groupBy: "smokeables"
 
 - type: loadout
   id: ContractorCigPackGreen
@@ -27,6 +30,7 @@
   storage:
     back:
     - CigPackGreen
+  groupBy: "smokeables"
 
 #T1
 - type: loadout
@@ -38,6 +42,7 @@
   storage:
     back:
     - CigarCase
+  groupBy: "smokeables"
 
 - type: loadout
   id: ContractorNFAshtray
@@ -48,6 +53,7 @@
   storage:
     back:
     - NFAshtray
+  groupBy: "smokeables"
 
 - type: loadout
   id: ContractorTapeRecorder
@@ -69,6 +75,8 @@
   storage:
     back:
     - SmokingPipeFilledTobacco
+  groupBy: "smokeables"
+
 
 - type: loadout
   id: ContractorTobaccoPouchBrownFilled
@@ -79,6 +87,7 @@
   storage:
     back:
     - TobaccoPouchBrownFilled
+  groupBy: "smokeables"
 
 - type: loadout
   id: ContractorTobaccoPouchBlueFilled
@@ -89,6 +98,7 @@
   storage:
     back:
     - TobaccoPouchBlueFilled
+  groupBy: "smokeables"
 
 - type: loadout
   id: ContractorTobaccoPouchRedFilled
@@ -99,6 +109,7 @@
   storage:
     back:
     - TobaccoPouchRedFilled
+  groupBy: "smokeables"
 
 - type: loadout
   id: ContractorTobaccoPouchPurpleFilled
@@ -109,6 +120,7 @@
   storage:
     back:
     - TobaccoPouchPurpleFilled
+  groupBy: "smokeables"
 
 - type: loadout
   id: ContractorVape
@@ -119,6 +131,7 @@
   storage:
     back:
     - Vape
+  groupBy: "smokeables"
 
 #T3 for lols
 - type: loadout
@@ -130,6 +143,7 @@
   storage:
     back:
     - CigarGoldCase
+  groupBy: "smokeables"
 
 # Lighters:
 #T0
@@ -139,6 +153,7 @@
   storage:
     back:
     - Matchbox
+  groupBy: "Lighters"
 
 #T1
 - type: loadout
@@ -150,6 +165,7 @@
   storage:
     back:
     - Lighter
+  groupBy: "Lighters"
 
 #T2
 - type: loadout
@@ -161,6 +177,7 @@
   storage:
     back:
     - FlippoLighter
+  groupBy: "Lighters"
 
 #T3 for lols
 - type: loadout
@@ -172,6 +189,7 @@
   storage:
     back:
     - FlippoEngravedLighter
+  groupBy: "Lighters"
 
 # Flasks:
 #T0
@@ -393,6 +411,8 @@
   storage:
     back:
     - HarmonicaInstrument
+  groupBy: "Instruments"
+
 
 - type: loadout
   id: ContractorSaxophoneInstrument
@@ -403,6 +423,7 @@
   storage:
     back:
     - SaxophoneInstrument
+  groupBy: "Instruments"
 
 - type: loadout
   id: ContractorAcousticGuitarInstrument
@@ -413,6 +434,7 @@
   storage:
     back:
     - AcousticGuitarInstrument
+  groupBy: "Instruments"
 
 #T2
 - type: loadout
@@ -509,6 +531,7 @@
     back:
     - RubberStampApproved
     - RubberStampDenied
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorRubberStampClown
@@ -516,6 +539,7 @@
   storage:
     back:
     - RubberStampClown
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorRubberStampMime
@@ -523,6 +547,7 @@
   storage:
     back:
     - RubberStampMime
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorRubberStampTrader
@@ -530,6 +555,7 @@
   storage:
     back:
     - RubberStampTrader
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorRubberStampChaplain
@@ -537,6 +563,7 @@
   storage:
     back:
     - RubberStampChaplain
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorRubberStampCaptain
@@ -544,6 +571,7 @@
   storage:
     back:
     - RubberStampCaptain
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorRubberStampLawyer
@@ -551,6 +579,7 @@
   storage:
     back:
     - RubberStampLawyer
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorRubberStampPsychologist
@@ -558,6 +587,7 @@
   storage:
     back:
     - RubberStampPsychologist
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorRubberStampDoctor
@@ -565,6 +595,7 @@
   storage:
     back:
     - RubberStampDoctor
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorRubberStampEngineer
@@ -572,6 +603,7 @@
   storage:
     back:
     - RubberStampEngineer
+  groupBy: "Stamps"
 
 - type: loadout
   id: ContractorClicker
@@ -579,7 +611,7 @@
   storage:
     back:
     - Clicker
-  
+
 - type: loadout # Lone Star: start
   id: ContractorPlushieYarrMoth
   effects:

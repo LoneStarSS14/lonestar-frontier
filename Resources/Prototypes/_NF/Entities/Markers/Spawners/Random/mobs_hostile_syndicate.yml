@@ -421,6 +421,10 @@
     - MobSyndicateNavalChemwarriorB
     - MobSyndicateNavalChemwarriorC
     - MobSyndicateNavalChemwarriorD
+    - MobSyndicateNavalEnforcerA
+    - MobSyndicateNavalEnforcerA
+    - MobSyndicateNavalEnforcerB
+    - MobSyndicateNavalEnforcerB
     chance: 1
     offset: 0.0
     rarePrototypes:

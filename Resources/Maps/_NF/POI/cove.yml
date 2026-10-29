@@ -34905,7 +34905,7 @@ entities:
     - type: Transform
       pos: 34.5,10.5
       parent: 1
-- proto: VendingMachineKink
+- proto: VendingMachineHawker
   entities:
   - uid: 5285
     components:

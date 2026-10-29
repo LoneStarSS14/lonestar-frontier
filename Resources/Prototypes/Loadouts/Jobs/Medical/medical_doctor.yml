@@ -125,6 +125,13 @@
   equipment:
     back: ClothingBackpackSatchelMedical
 
+# LoneStar start
+- type: loadout
+  id: MedicalDoctorSatchelTrauma
+  equipment:
+    back: ClothingBackpackSatchelMedicalTrauma
+# LoneStar end
+
 - type: loadout
   id: MedicalDoctorDuffel
   equipment:

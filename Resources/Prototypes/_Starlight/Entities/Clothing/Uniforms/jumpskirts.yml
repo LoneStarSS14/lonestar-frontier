@@ -320,7 +320,7 @@
     sprite: _Starlight/Clothing/Uniforms/Jumpskirt/lady.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableDualColorInhand ]
   id: ClothingUniformPastryDress
   name: sweet pastry dress
   description: A delicate pastry dress made from light, comfortable fabric with an elegant cut.

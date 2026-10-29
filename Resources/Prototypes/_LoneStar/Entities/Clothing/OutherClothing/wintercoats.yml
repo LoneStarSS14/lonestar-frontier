@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingOuterBase, ClothingOuterClothingRandomSpriteMono ]
+  parent: [ ClothingOuterBase, ClothingOuterClothingColorableMono ]
   id: ClothingOuterCoatTurtleneckHalfBlouseColorable
   name: turtleneck half blouse
   description: A cropped, ribbed half blouse with a high collar.
@@ -10,4 +10,4 @@
       sprite: _DEN/Clothing/OuterClothing/WinterCoats/turtleneckhalfblouse.rsi
     - type: TemperatureProtection
       heatingCoefficient: 1.1
-      coolingCoefficient: 0.1
+      coolingCoefficient: 0.1 # How? idk...

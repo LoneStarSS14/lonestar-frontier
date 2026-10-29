@@ -1,7 +1,9 @@
-- type: entity
+
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
   abstract: true
-  id: ClothingUniformRandomSpriteMono
-  suffix: Random
+  id: ClothingUniformColorableMono
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -12,8 +14,7 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         map: [ "uniform-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - uniform-icon:
           icon: Base
@@ -26,10 +27,10 @@
     - ClothMade
     - Recyclable
 
-- type: entity # for sprites with a set color layer, and a single colorable layer
+- type: entity # for sprites with a set layer, and a single colored layer
   abstract: true
-  id: ClothingUniformRandomSpriteBaseColor
-  suffix: Random
+  id: ClothingUniformColorableBaseColor
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -42,8 +43,7 @@
       - state: equipped-INNERCLOTHING
       - state: equipped-INNERCLOTHING-color
         map: [ "uniform-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - uniform-icon:
           icon-color: Base
@@ -51,3 +51,104 @@
           equipped-INNERCLOTHING-color: Base
     mappedColors:
       Base: NTInteriorDesign
+
+- type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingUniformColorableBaseColor
+  id: ClothingUniformColorableBaseColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+        - state: inhand-left-color
+          map: [ "hl-color" ]
+      right:
+        - state: inhand-right
+        - state: inhand-right-color
+          map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - uniform-icon:
+          icon-color: Base
+        uniform-equipped:
+          equipped-INNERCLOTHING-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a 2 colored layers
+  abstract: true
+  id: ClothingUniformColorableDualColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "uniform-icon-primary" ]
+    - state: icon-color
+      map: [ "uniform-icon-secondary" ]
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-equipped-primary" ]
+      - state: equipped-INNERCLOTHING-color
+        map: [ "uniform-equipped-secondary" ]
+  - type: ColorableClothing
+    available:
+      - uniform-icon-primary:
+          icon: Primary
+        uniform-icon-secondary:
+          icon-color: Secondary
+        uniform-equipped-primary:
+          equipped-INNERCLOTHING: Primary
+        uniform-equipped-secondary:
+          equipped-INNERCLOTHING-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
+
+- type: entity # for sprites with a 2 colored layers, supporting inhands
+  abstract: true
+  parent: ClothingUniformColorableDualColor
+  id: ClothingUniformColorableDualColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-primary" ]
+        - state: inhand-left-color
+          map: [ "hl-secondary" ]
+      right:
+        - state: inhand-right
+          map: [ "hr-primary" ]
+        - state: inhand-right-color
+          map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    available:
+      - uniform-icon-primary:
+          icon: Primary
+        uniform-icon-secondary:
+          icon-color: Secondary
+        uniform-equipped-primary:
+          equipped-INNERCLOTHING: Primary
+        uniform-equipped-secondary:
+          equipped-INNERCLOTHING-color: Secondary
+        hl-primary:
+          inhand-left: Primary
+        hl-secondary:
+          inhand-left-color: Secondary
+        hr-primary:
+          inhand-right: Primary
+        hr-secondary:
+          inhand-right-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign

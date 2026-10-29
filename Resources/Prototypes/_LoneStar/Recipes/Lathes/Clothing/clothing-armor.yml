@@ -68,3 +68,13 @@
     Plasteel: 500
     Glass: 100
     Plastic: 500
+    
+- type: latheRecipe
+  id: ClothingOuterArmorBasicCompact
+  parent: NFBaseArmorRecipe
+  result: ClothingOuterArmorBasicCompact
+
+- type: latheRecipe
+  id: ClothingMaskGasSecurityBallistic
+  parent: NFBaseMaskArmoredRecipe
+  result: ClothingMaskGasSecurityBallistic

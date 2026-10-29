@@ -1,0 +1,13 @@
+- type: loadoutGroup
+  id: DenSecurityFace
+  name: loadout-group-contractor-face
+  minLimit: 0
+  loadouts:
+  - LoadoutSecurityMaskGasBallistic
+
+- type: loadoutGroup
+  id: DenSecurityOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - LoadoutSecurityOuterArmorBasicCompact

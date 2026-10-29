@@ -8,18 +8,18 @@
   components:
   - type: Bloodstream
     bloodMaxVolume: 650
-  - type: GhostRole
-    allowMovement: true
-    allowSpeech: true
-    makeSentient: true
-    name: ghost-role-information-space-dragon-name
-    description: ghost-role-information-space-dragon-description
-    rules: ghost-role-information-space-dragon-rules
-    mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
-    raffle:
-      settings: default
-  - type: GhostTakeoverAvailable
+  # - type: GhostRole # LoneStar v
+  #   allowMovement: true
+  #   allowSpeech: true
+  #   makeSentient: true
+  #   name: ghost-role-information-space-dragon-name
+  #   description: ghost-role-information-space-dragon-description
+  #   rules: ghost-role-information-space-dragon-rules
+  #   mindRoles:
+  #   - MindRoleGhostRoleTeamAntagonist
+  #   raffle:
+  #     settings: default
+  # - type: GhostTakeoverAvailable
   - type: HTN
     rootTask:
       task: XenoCompound
@@ -210,11 +210,11 @@
   id: MobDragonDungeon
   suffix: Dungeon
   components:
-  - type: GhostRole
-    description: ghost-role-information-space-dragon-dungeon-description
-    rules: ghost-role-information-space-dragon-dungeon-rules
-    raffle:
-      settings: default
+  # - type: GhostRole # LoneStar v
+  #   description: ghost-role-information-space-dragon-dungeon-description
+  #   rules: ghost-role-information-space-dragon-dungeon-rules
+  #   raffle:
+  #     settings: default
   - type: SlowOnDamage
     speedModifierThresholds:
       100: 0.7

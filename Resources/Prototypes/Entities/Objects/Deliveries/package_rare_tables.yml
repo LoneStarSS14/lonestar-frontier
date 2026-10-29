@@ -78,6 +78,7 @@
       - id: ClothingBackpackMedical
       - id: ClothingBackpackDuffelMedical
       - id: ClothingBackpackSatchelMedical
+      - id: ClothingBackpackSatchelMedicalTrauma # LoneStar
     - !type:GroupSelector
       children:
       - id: ClothingHandsGlovesNitrile

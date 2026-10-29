@@ -4403,3 +4403,188 @@ Entries:
   id: 481
   time: '2026-10-16T10:58:49.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/230
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Chemical barrels hitboxes now better match their visuals.
+  id: 482
+  time: '2026-10-16T19:41:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/265
+- author: seekssss
+  changes:
+    - type: Add
+      message: Added group lists for loadouts
+  id: 483
+  time: '2026-10-16T19:47:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/257
+- author: lexiwitch
+  changes:
+    - type: Tweak
+      message: >-
+        Sink bounties from inactive players to the bottom of the board. Now you
+        don't have to scroll through a dozen sleepy people's bounties!
+  id: 484
+  time: '2026-10-16T19:55:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/261
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: >-
+        You can now construct 'prop' double beds and apply a range of bedsheets
+        to them.
+  id: 485
+  time: '2026-10-18T05:58:16.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/239
+- author: trashqueenlily
+  changes:
+    - type: Tweak
+      message: Trashbags no longer collect chemistry related things.
+    - type: Tweak
+      message: Trashbags no longer collect all cardboard boxes up.
+    - type: Tweak
+      message: >-
+        Bluespace trash bags are now [4x4 -> 2x2] in bag, but are [20x10
+        ->15x10] inside
+  id: 486
+  time: '2026-10-18T06:08:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/197
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Colourable clothing is now recoloured with a UI instead of by
+        randomizing it until you are happy.
+  id: 487
+  time: '2026-10-18T06:36:59.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/260
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Holo-parasites can no longer be bought from contra-vends or found from
+        surplus crates.
+    - type: Tweak
+      message: >-
+        Player summoned drained-ones (cult amulet ghosts) can now be shot by
+        ballistics weapons.
+  id: 488
+  time: '2026-10-18T12:27:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/270
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: >-
+        Port of Shaman's Mantis clothes. In the PietyVend. PDA and headset in
+        loadout.
+  id: 489
+  time: '2026-10-18T12:34:53.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/259
+- author: archee1
+  changes:
+    - type: Add
+      message: Adds support for colorability to a bunch of extra clothing items.
+    - type: Tweak
+      message: >-
+        The primary color palette used by colorable clothing has been
+        re-organized
+  id: 490
+  time: '2026-10-18T13:03:25.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/271
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Ethanol, nicotine and Trico rad healing changes
+  id: 491
+  time: '2026-10-18T13:31:51.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/242
+- author: Wolfhauler
+  changes:
+    - type: Fix
+      message: Casey atmos , bnuuy drobe unanchorable
+  id: 492
+  time: '2026-10-22T02:23:13.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/277
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Toeless Jackboots should be available from the usual spots now.
+  id: 493
+  time: '2026-10-22T08:17:27.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/268
+- author: archee1
+  changes:
+    - type: Remove
+      message: Hawkers 'Toys' are gone.
+    - type: Remove
+      message: One old floof station drink has been removed.
+    - type: Remove
+      message: the sex emote sound wheel group has been removed.
+    - type: Tweak
+      message: >-
+        A large censoring of explicit facing content has been made without
+        affecting anything player facing.
+  id: 494
+  time: '2026-10-22T08:25:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/276
+- author: archee1
+  changes:
+    - type: Fix
+      message: Xeno destruction expeditions no longer spawn xenos indefinetly.
+  id: 495
+  time: '2026-10-22T20:24:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/278
+- author: lexiwitch
+  changes:
+    - type: Add
+      message: Medical Trauma Satchel, now available in loadout and the Medidrobe!
+  id: 496
+  time: '2026-10-25T12:10:54.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/281
+- author: archee1
+  changes:
+    - type: Fix
+      message: Pacifists can now fire the holoflare pistol
+  id: 497
+  time: '2026-10-25T12:27:44.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/282
+- author: tenmillimaster
+  changes:
+    - type: Tweak
+      message: Upstreamed modern brigand map from frontier
+  id: 498
+  time: '2026-10-26T09:35:20.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/279
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: Divine Thurible to PietyVend and filled Chaplain Sash
+  id: 499
+  time: '2026-10-26T11:00:37.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/274
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Syndicate/Punk/Merc loot tables have had a second pass for their
+        rarities and what they provide
+  id: 500
+  time: '2026-10-28T02:34:02.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/284
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Double Bed tweaks
+  id: 501
+  time: '2026-10-28T02:35:04.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/287
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: >-
+        Caduceus Cap, Salvation Shako, Compact Armor Vest, Security Ballistic
+        Mask, Rubber gas mask
+    - type: Tweak
+      message: Better accessibility for merc helmets
+  id: 502
+  time: '2026-10-28T17:00:19.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/289

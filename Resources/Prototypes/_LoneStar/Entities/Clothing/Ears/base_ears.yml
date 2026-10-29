@@ -1,0 +1,162 @@
+
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
+  abstract: true
+  id: ClothingEarsColorableMono
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "ears-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      ears:
+      - state: equipped-EARS
+        map: [ "ears-equipped" ]
+  - type: ColorableClothing
+    available:
+      - ears-icon:
+          icon: Base
+        ears-equipped:
+          equipped-EARS: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a set layer, and a single colored layer
+  abstract: true
+  id: ClothingEarsColorableMonoBaseColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-color
+      map: [ "ears-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      ears:
+      - state: equipped-EARS
+      - state: equipped-EARS-color
+        map: [ "ears-equipped" ]
+  - type: ColorableClothing
+    available:
+      - ears-icon:
+          icon-color: Base
+        ears-equipped:
+          equipped-EARS-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingEarsColorableMonoBaseColor
+  id: ClothingEarsColorableMonoBaseColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-color
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+      - state: inhand-right-color
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - ears-icon:
+          icon-color: Base
+        ears-equipped:
+          equipped-EARS-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a 2 colored layers
+  abstract: true
+  id: ClothingEarsColorableDualColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "ears-icon-primary" ]
+    - state: icon-color
+      map: [ "ears-icon-secondary" ]
+  - type: Clothing
+    clothingVisuals:
+      ears:
+      - state: equipped-EARS
+        map: [ "ears-equipped-primary" ]
+      - state: equipped-EARS-color
+        map: [ "ears-equipped-secondary" ]
+  - type: ColorableClothing
+    available:
+      - ears-icon-primary:
+          icon: Primary
+        ears-icon-secondary:
+          icon-color: Secondary
+        ears-equipped-primary:
+          equipped-EARS: Primary
+        ears-equipped-secondary:
+          equipped-EARS-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a 2 colored layers, supporting inhands
+  abstract: true
+  parent: ClothingEarsColorableDualColor
+  id: ClothingEarsColorableDualColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-primary" ]
+      - state: inhand-left-color
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-primary" ]
+      - state: inhand-right-color
+        map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    available:
+      - ears-icon-primary:
+          icon: Primary
+        ears-icon-secondary:
+          icon-color: Secondary
+        ears-equipped-primary:
+          equipped-EARS: Primary
+        ears-equipped-secondary:
+          equipped-EARS-color: Secondary
+        hl-primary:
+          inhand-left: Primary
+        hl-secondary:
+          inhand-left-color: Secondary
+        hr-primary:
+          inhand-right: Primary
+        hr-secondary:
+          inhand-right-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign

@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 08/24/2026 02:21:13
+  time: 10/21/2026 05:59:20
   entityCount: 1527
 maps: []
 grids:
@@ -4600,14 +4600,6 @@ entities:
       parent: 2
     - type: AtmosPipeColor
       color: '#990000FF'
-  - uid: 808
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -9.5,-0.5
-      parent: 2
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
 - proto: GasPipeBend
   entities:
   - uid: 254
@@ -6456,6 +6448,14 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 708
+    - type: AtmosPipeColor
+      color: '#0055CCFF'
+  - uid: 808
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,-0.5
+      parent: 2
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 901
@@ -9015,6 +9015,8 @@ entities:
     - type: Transform
       pos: -5.5,15.5
       parent: 2
+    missingComponents:
+    - Anchorable
 - proto: VendingMachineBoozePOI
   entities:
   - uid: 290

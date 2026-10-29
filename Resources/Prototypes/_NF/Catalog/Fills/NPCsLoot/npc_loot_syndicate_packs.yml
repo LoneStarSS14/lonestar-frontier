@@ -107,16 +107,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
-      orGroup: Ammo
-      prob: 0.6
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolIncendiary
-      orGroup: Ammo
-      prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolUranium
-      orGroup: Ammo
-      prob: 0.1
+    - id: LSSpawnLootBeltSyndicateLootRangedT1Deckhand # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -125,24 +116,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: SpawnDungeonLootNpcSyndicateWeaponsPistols
-      orGroup: Weapons
-      prob: 0.5
-    # Armor
-    - id: ClothingOuterArmorBasicSlim
-      orGroup: Armor
-      prob: 0.5
-    # Items
-    - id: SpawnDungeonClutterMedipens
-      orGroup: Items
-      prob: 0.25
-    - id: SpawnDungeonLootMaterialsBasicFull
-      orGroup: Items
-      prob: 0.3
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
+    - id: LSSpawnLootBagSyndicateT1Deckhand # LoneStar
 
 # region Saboteur
 - type: entity
@@ -152,19 +126,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
-      orGroup: Ammo
-      prob: 0.1
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolIncendiary
-      orGroup: Ammo
-      prob: 0.3 # LoneStar
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolUranium
-      orGroup: Ammo
-      prob: 0.6 # LoneStar
-    # - id: SpawnDungeonLootNpcSyndicateAmmoPistolEmp # LoneStar
-    #   orGroup: Ammo
-    #   prob: 0.7
+    - id: LSSpawnLootBeltSyndicateLootRangedT1Saboteur # LoneStar
 
 - type: entity # TODO: make a something unique for the saboteur backpack
   parent: ClothingBackpackSyndicateT1Deckhand
@@ -189,16 +151,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
-      orGroup: Ammo
-      prob: 0.6
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolIncendiary
-      orGroup: Ammo
-      prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolUranium
-      orGroup: Ammo
-      prob: 0.1
+    - id: LSSpawnLootBeltSyndicateLootRangedT2Captain # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicateAlt
@@ -207,27 +160,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: SpawnDungeonLootNpcSyndicateWeaponsPistols
-      orGroup: Weapons
-      prob: 0.5
-    # Armor
-    - id: ClothingOuterCoatSyndieCapArmored
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitSyndieFormalNF
-      orGroup: Armor
-      prob: 0.3
-    # Items
-    - id: SpawnDungeonClutterMedipens
-      orGroup: Items
-      prob: 0.25
-    - id: SpawnDungeonLootMaterialsBasicFull
-      orGroup: Items
-      prob: 0.3
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
+    - id: LSSpawnLootBagSyndicateT2Captain # LoneStar
 
 # region Engineer
 - type: entity
@@ -239,7 +172,6 @@
     items:
     # Ammo
     - id: SpawnDungeonLootNpcSyndicateAmmoShotgun
-      orGroup: Ammo
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -248,38 +180,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: SpawnDungeonLootNpcSyndicateWeaponsShotguns
-      orGroup: Weapons
-      prob: 0.5
-    # Armor
-    - id: ClothingOuterArmorBasic
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitChiefEngineerSyndieNF
-      orGroup: Armor
-      prob: 0.3
-    # Items
-    - id: SpawnDungeonLootPartsEngi
-      orGroup: Items
-      amount: 2
-      prob: 0.2
-    - id: SpawnDungeonLootCircuitBoardEngi
-      orGroup: Items
-      prob: 0.2
-    - id: SpawnDungeonLootToolsAdvancedEngineering
-      orGroup: Items
-      prob: 0.4
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.2
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 2
-      prob: 0.1
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.05
+    - id: LSSpawnLootBagSyndicateT2Engineer # LoneStar
 
 # region Medic
 - type: entity
@@ -292,20 +193,7 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    # Topicals
-    - id: SpawnDungeonClutterMedsFull
-      orGroup: Topicals
-      prob: 0.4
-    - id: SpawnDungeonClutterMedsSingle
-      orGroup: Topicals
-      prob: 0.6
-    # Items
-    - id: SpawnDungeonClutterMedipens
-      orGroup: Items
-      prob: 0.7
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
+    - id: LSSpawnLootBeltSyndicateLootRangedT2Medic # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -314,25 +202,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    # Armor
-    - id: ClothingOuterCoatAMG
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitParamedicSyndieNF
-      orGroup: Armor
-      prob: 0.3
-    # Items
-    - id: HypoMiniLimitedEdition
-      orGroup: Items
-    - id: BruteAutoInjector
-      orGroup: Items
-    - id: AntiPoisonMedipen
-      orGroup: Items
-    - id: MedicatedSuture
-      orGroup: Items
-    - id: Stimpack
-      orGroup: Items
+    - id: LSSpawnLootBagSyndicateT2Medic # LoneStar
 
 # region Second Officer
 - type: entity
@@ -342,38 +212,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: NFWeaponEnergyPistolLaserAdvancedExpedition
-      orGroup: Weapons
-      prob: 0.7
-    - id: NFWeaponEnergyPistolLaserAntiqueExpedition
-      orGroup: Weapons
-      prob: 0.25
-    - id: NFWeaponEnergySubMachineGunDeltaVExpedition
-      orGroup: Weapons
-      prob: 0.05
-    # Armor
-    - id: ClothingOuterArmorBasic
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitRecruitSyndieNF
-      orGroup: Armor
-      prob: 0.3
-    # Items
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 4
-      prob: 0.3
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 2
-      prob: 0.3
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.05
+    - id: LSSpawnLootBagSyndicateT2SecondOfficer # LoneStar
 
 # region Tier 3
 - type: entity
@@ -393,19 +232,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
-      orGroup: Ammo
-      prob: 0.6
-      amount: 2
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolIncendiary
-      orGroup: Ammo
-      prob: 0.3
-      amount: 2
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolUranium
-      orGroup: Ammo
-      prob: 0.1
-      amount: 2
+    - id: LSSpawnLootBeltSyndicateLootRangedT3Operative # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -414,32 +241,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: SpawnDungeonLootNpcSyndicateWeaponsSmgs
-      orGroup: Weapons
-      prob: 0.7
-    # Armor
-    - id: ClothingOuterArmorBulletproof
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitOperative
-      orGroup: Armor
-      prob: 0.3
-    # Items
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 4
-      prob: 0.3
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 2
-      prob: 0.3
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.1
+    - id: LSSpawnLootBagSyndicateT3Operative # LoneStar
 
 # region Grenadier
 - type: entity
@@ -449,19 +251,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: ExGrenade
-      orGroup: Ammo
-      prob: 0.6
-      amount: 5
-    - id: ExGrenade
-      orGroup: Ammo
-      prob: 0.3
-      amount: 3
-    - id: ExGrenade
-      orGroup: Ammo
-      prob: 0.1
-      amount: 1
+    - id: LSSpawnLootBeltSyndicateLootRangedT3Grenadier # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -470,38 +260,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: WeaponCaseLongLauncherChinaLake
-      orGroup: Weapons
-      prob: 0.15
-    - id: WeaponCaseLongLauncherRocketExpedition
-      orGroup: Weapons
-      prob: 0.1
-    # Armor
-    - id: ClothingOuterSuitBombSyndie
-      orGroup: Armor
-      prob: 0.6
-    - id: ClothingHeadHelmetBombSuitSyndie
-      orGroup: Armor
-      prob: 0.3
-    - id: ClothingUniformJumpsuitPyjamaSyndicateRed
-      orGroup: Armor
-      prob: 0.1
-    # Items
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 4
-      prob: 0.3
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 2
-      prob: 0.3
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.1
+    - id: LSSpawnLootBagSyndicateT3Grenadier # LoneStar
 
 # region Chemwarrior
 - type: entity
@@ -514,39 +273,7 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: SpawnDungeonLootNpcSyndicateWeaponsPistolsChemical
-      orGroup: Weapons
-      prob: 0.6
-    # Armor
-    - id: ClothingOuterBioArmoredSyndicate
-      orGroup: Armor
-      prob: 0.6
-    - id: ClothingHeadHatHoodBioArmoredSyndicate
-      orGroup: Armor
-      prob: 0.3
-    - id: ClothingUniformJumpsuitPyjamaSyndicateRed
-      orGroup: Armor
-      prob: 0.1
-    # Items
-    - id: ClothingBackpackWaterTank
-      orGroup: Items
-      amount: 1
-      prob: 0.3
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 4
-      prob: 0.3
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 2
-      prob: 0.3
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.1
+    - id: LSSpawnLootBagSyndicateT3Chemwarrior # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -558,36 +285,7 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: SpawnDungeonLootNpcSyndicateWeaponsPistolsChemical
-      orGroup: Weapons
-      prob: 0.6
-    # Armor
-    - id: ClothingOuterWinterSyndie
-      orGroup: Armor
-      prob: 0.6
-    - id: ClothingUniformJumpsuitPyjamaSyndicateRed
-      orGroup: Armor
-      prob: 0.3
-    # Items
-    - id: ClothingBackpackWaterTank
-      orGroup: Items
-      amount: 1
-      prob: 0.3
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 4
-      prob: 0.3
-    - id: SpawnDungeonLootMaterialsValuableFull
-      orGroup: Items
-      amount: 2
-      prob: 0.3
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.1
+    - id: LSSpawnLootBagSyndicateT3Chemwarrior # LoneStar
 
 # region Tier 4 (Boss)
 - type: entity
@@ -616,15 +314,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoRifleIncendiary
-      orGroup: Ammo
-      prob: 0.6
-      amount: 2
-    - id: SpawnDungeonLootNpcSyndicateAmmoRifleUranium
-      orGroup: Ammo
-      prob: 0.4
-      amount: 2
+    - id: LSSpawnLootBeltSyndicateLootRangedT4Commander # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicateAlt
@@ -633,37 +323,4 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Weapons
-    - id: SpawnDungeonLootNpcSyndicateWeaponsRifles
-      orGroup: Weapons
-      prob: 0.7
-    # Armor
-    - id: ClothingOuterArmorBulletproof
-      orGroup: Armor
-      prob: 0.7
-    - id: ClothingUniformJumpsuitOperative
-      orGroup: Armor
-      prob: 0.3
-    # Items
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: Items
-    #   prob: 0.3
-    # BossLoot
-    - id: SpawnDungeonLootGunT3
-      orGroup: BossLoot
-      prob: 0.25
-    - id: SpawnDungeonLootNpcBossLootShared
-      orGroup: BossLoot
-      prob: 0.2
-    - id: SpawnDungeonLootNpcMercenariesBlueprints
-      orGroup: BossLoot
-      prob: 0.45
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: BossLoot
-      prob: 0.05
-    # - id: SpawnDungeonLootNpcSyndicateBlueprints # LoneStar
-    #   orGroup: BossLoot
-    #   prob: 0.3
+    - id: LSSpawnLootBagSyndicateT4Commander # LoneStar

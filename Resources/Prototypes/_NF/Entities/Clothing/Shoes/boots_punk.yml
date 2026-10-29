@@ -23,7 +23,7 @@
         map: [ "clothing_boots_decor" ]
       - state: mask_null
         map: [ "clothing_boots_overlay" ]
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
     # decor present

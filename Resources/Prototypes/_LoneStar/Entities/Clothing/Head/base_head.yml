@@ -1,7 +1,9 @@
-- type: entity
+
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
   abstract: true
-  id: ClothingHeadRandomSpriteMono
-  suffix: Random
+  id: ClothingHeadColorableMono
+  suffix: Colorable
   components:
   - type: Sprite
     layers:
@@ -12,8 +14,7 @@
       head:
       - state: equipped-HELMET
         map: [ "head-equipped" ]
-  - type: RandomSprite
-    denyReroll: false
+  - type: ColorableClothing
     available:
       - head-icon:
           icon: Base
@@ -25,4 +26,165 @@
     tags:
     - ClothMade
     - Recyclable
-    - HamsterWearable
+
+- type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingHeadColorableMono
+  id: ClothingHeadColorableMonoInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - head-icon:
+          icon: Base
+        head-equipped:
+          equipped-HELMET: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a set layer, and a single colored layer
+  abstract: true
+  parent: ClothingHeadColorableMono
+  id: ClothingHeadColorableBaseColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-color
+      map: [ "head-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-color
+        map: [ "head-equipped" ]
+  - type: ColorableClothing
+    available:
+      - head-icon:
+          icon-color: Base
+        head-equipped:
+          equipped-HELMET-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingHeadColorableBaseColor
+  id: ClothingHeadColorableBaseColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-color
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+      - state: inhand-right-color
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - head-icon:
+          icon-color: Base
+        head-equipped:
+          equipped-HELMET-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a 2 colored layers
+  abstract: true
+  id: ClothingHeadColorableDualColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "head-icon-primary" ]
+    - state: icon-color
+      map: [ "head-icon-secondary" ]
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        map: [ "head-equipped-primary" ]
+      - state: equipped-HELMET-color
+        map: [ "head-equipped-secondary" ]
+  - type: ColorableClothing
+    available:
+      - head-icon-primary:
+          icon: Primary
+        head-icon-secondary:
+          icon-color: Secondary
+        head-equipped-primary:
+          equipped-HELMET: Primary
+        head-equipped-secondary:
+          equipped-HELMET-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a 2 colored layers, supporting inhands
+  abstract: true
+  parent: ClothingHeadColorableDualColor
+  id: ClothingHeadColorableDualColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-primary" ]
+      - state: inhand-left-color
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-primary" ]
+      - state: inhand-right-color
+        map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    available:
+      - head-icon-primary:
+          icon: Primary
+        head-icon-secondary:
+          icon-color: Secondary
+        head-equipped-primary:
+          equipped-HELMET: Primary
+        head-equipped-secondary:
+          equipped-HELMET-color: Secondary
+        hl-primary:
+          inhand-left: Primary
+        hl-secondary:
+          inhand-left-color: Secondary
+        hr-primary:
+          inhand-right: Primary
+        hr-secondary:
+          inhand-right-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign

@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingScarfBase, ClothingNeckRandomSpriteMono ]
+  parent: [ ClothingScarfBase, ClothingNeckColorableMono ]
   id: ClothingNeckScarfStripedColorable
   name: striped scarf
   description: A stylish striped scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.

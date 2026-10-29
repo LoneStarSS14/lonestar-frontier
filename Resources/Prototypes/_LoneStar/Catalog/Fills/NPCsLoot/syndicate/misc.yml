@@ -1,0 +1,7 @@
+- type: entityTable
+  id: LSTableSyndicateExplosiveGrenades
+  table: !type:GroupSelector
+    children:
+    - id: ExGrenade
+      amount: !type:RangeNumberSelector
+          range: 1, 5

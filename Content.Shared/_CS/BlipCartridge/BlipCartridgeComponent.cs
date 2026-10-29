@@ -101,7 +101,7 @@ public sealed partial class BlipCartridgeComponent : Component
         "BlipPresetSecurity",
         "BlipPresetScience",
         "BlipPresetSupply",
-        "BlipPresetHorny",
+        "BlipPresetDesirable",
         "BlipPresetBooty",
         "BlipPresetMailCourier",
     };

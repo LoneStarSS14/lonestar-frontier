@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelMedicalTrauma
+  name: medical trauma satchel
+  description: A sterile satchel produced for an ERT specialist.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Back/Satchels/medical_trauma.rsi

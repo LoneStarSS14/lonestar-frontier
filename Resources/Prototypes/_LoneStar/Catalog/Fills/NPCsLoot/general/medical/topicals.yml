@@ -1,0 +1,123 @@
+#region Routing Tables
+- type: entityTable
+  id: LSTableGeneralMedicalTopicals
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralMedicalTopicalsT5
+    - !type:GroupSelector
+      weight: 54
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralMedicalTopicalsT4
+      - !type:GroupSelector
+        weight: 29
+        children:
+        - !type:NestedSelector # Rare
+          weight: 1
+          tableId: LSTableGeneralMedicalTopicalsT3
+        - !type:GroupSelector
+          weight: 11
+          children:
+          - !type:NestedSelector # Uncommon
+            weight: 3
+            tableId: LSTableGeneralMedicalTopicalsT2
+          - !type:GroupSelector
+            weight: 5
+            children:
+            - !type:NestedSelector # Common
+              weight: 19
+              tableId: LSTableGeneralMedicalTopicalsT1
+            - !type:NestedSelector # Trash
+              weight: 1
+              tableId: LSTableGeneralMedicalTopicalsT0
+
+- type: entityTable
+  id: LSTableGeneralMedicalTopicalsRare
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralMedicalTopicalsT5
+    - !type:GroupSelector
+      weight: 19
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralMedicalTopicalsT4
+      - !type:NestedSelector # Rare
+        weight: 9
+        tableId: LSTableGeneralMedicalTopicalsT3
+#endregion
+
+#region Loot Tiers
+- type: entityTable
+  id: LSTableGeneralMedicalTopicalsT5
+  table: !type:GroupSelector
+    children:
+    - id: MedkitCombatFilled
+      weight: 0.25
+    - id: MedkitAdvancedFilled
+      weight: 0.25
+    - id: MedicatedSuture
+      amount: 2
+    - id: RegenerativeMesh
+      amount: 2
+
+- type: entityTable
+  id: LSTableGeneralMedicalTopicalsT4
+  table: !type:GroupSelector
+    children:
+    - id: AloeCream
+      amount: 2
+    - id: Gauze
+      amount: 2
+    - id: MedicatedSuture
+      weight: 0.5
+    - id: RegenerativeMesh
+      weight: 0.5
+
+- type: entityTable
+  id: LSTableGeneralMedicalTopicalsT3
+  table: !type:GroupSelector
+    children:
+    - id: Bloodpack
+      weight: 0.5
+    - id: Gauze
+    - id: Brutepack
+      amount: 2
+    - id: Ointment
+      amount: 2
+    - id: AloeCream
+
+- type: entityTable
+  id: LSTableGeneralMedicalTopicalsT2
+  table: !type:GroupSelector
+    children:
+    - id: Gauze
+      weight: 0.5
+    - id: Brutepack
+    - id: Brutepack
+      amount: 2
+    - id: Ointment
+    - id: Ointment
+      amount: 2
+
+- type: entityTable
+  id: LSTableGeneralMedicalTopicalsT1
+  table: !type:GroupSelector
+    children:
+    - id: Tourniquet
+    - id: Bloodpack1
+    - id: Brutepack1
+    - id: Ointment1
+    - id: Gauze1
+
+- type: entityTable
+  id: LSTableGeneralMedicalTopicalsT0 # TODO: Flesh this out with 'garbage'
+  table: !type:GroupSelector
+    children:
+    - id: Tourniquet
+#endregion
