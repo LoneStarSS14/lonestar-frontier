@@ -1,7 +1,7 @@
 # region tier 1
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkMeleeT1
+  id: LSSpawnLootBagPunkMeleeT1
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -21,7 +21,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkRangedT1
+  id: LSSpawnLootBagPunkRangedT1
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -38,11 +38,12 @@
         children:
         - id: SpawnDungeonLootMaterialsBasicFull
         - id: SpawnDungeonLootNpcPunksFluffItems
+#endregion
 
 # region tier 2
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkMeleeT2
+  id: LSSpawnLootBagPunkMeleeT2
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -66,7 +67,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkRangedT2
+  id: LSSpawnLootBagPunkRangedT2
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -87,11 +88,12 @@
         children:
         - id: SpawnDungeonLootMaterialsValuableFull
         - id: SpawnDungeonLootNpcPunksFluffItems
+#endregion
 
 # region Elites / Horrors
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkMeleeT3
+  id: LSSpawnLootBagPunkMeleeT3
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -122,7 +124,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkRangedT3
+  id: LSSpawnLootBagPunkRangedT3
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -150,11 +152,12 @@
           weight: 0.05
         - id: SpawnDungeonLootNpcPunksFluffItems
           weight: 0.3
+#endregion
 
 # region tier 4 (boss)
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootPunkLootBoss
+  id: LSSpawnLootBagPunkLootBoss
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -196,3 +199,4 @@
             weight: 0.25
           - id: SpawnDungeonLootNpcBossLootShared
             weight: 0.3
+#endregion

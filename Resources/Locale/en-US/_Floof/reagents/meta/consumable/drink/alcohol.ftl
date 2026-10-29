@@ -11,13 +11,13 @@ reagent-name-appleberryfizz = appleberry fizz
 reagent-desc-appleberryfizz = A sweet, delightful little drink.
 
 reagent-name-bande = b&e
-reagent-desc-bande = A mischevious, dark drink, with a splash of bodily fluids.
+reagent-desc-bande = A mischevious, dark drink, with a splash of salty fluid.
 
-reagent-name-bethanyscumlust = bethany's cum-lust
-reagent-desc-bethanyscumlust = Named after a very particularly fiesty member of the crew within the Floof sector.
+reagent-name-bethanysspirit = bethany's spirit
+reagent-desc-bethanysspirit = Named after a very particularly fiesty member of the crew within the Floof sector.
 
-reagent-name-bethanyssluttycumlust = bethany's slutty cum-lust
-reagent-desc-bethanyssluttycumlust = For those looking for an even more intense version.
+reagent-name-bethanysspicedspirit = bethany's spiced spirit
+reagent-desc-bethanysspicedspirit = For those looking for an even more intense version.
 
 reagent-name-blueballer = blue baller
 reagent-desc-blueballer = For those love-shy workers.
@@ -56,7 +56,7 @@ reagent-name-dragonsseed = dragon's seed
 reagent-desc-dragonsseed = Tastes like an actual dragon's nethers.
 
 reagent-name-emeraldswinger = emerald swinger
-reagent-desc-emeraldswinger = A colorful cocktail, perfect for the platter at a sex party.
+reagent-desc-emeraldswinger = A colorful cocktail, perfect for the platter at a high society party.
 
 reagent-name-goldbloomspecial = goldbloom special
 reagent-desc-goldbloomspecial = The tried and true method coined by a pair of brothers to get through those long, dreary shifts.
@@ -70,8 +70,8 @@ reagent-desc-heartbreakmountain = A mix of incredible carbonation, designed to m
 reagent-name-holyvice = holy vice
 reagent-desc-holyvice = Despite seeming somewhat contrary, the ingredients of this cocktail mix nicely.
 
-reagent-name-hornystallion = horny stallion
-reagent-desc-hornystallion = A drink with a strong effect on anyone stupid enough to take it. Either served as a shot or a full glass, for those who are more risky.
+reagent-name-bojack = bojack
+reagent-desc-bojack = A drink with a strong effect on anyone stupid enough to take it. Either served as a shot or a full glass, for those who are more risky.
 
 reagent-name-koboldkooler = kobold kooler
 reagent-desc-koboldkooler = A cool, soothing drink for the cold-blooded amongst the crew.
@@ -103,8 +103,8 @@ reagent-desc-numberone = The perfect drink to help ensure that YOU stay on top o
 reagent-name-opsshine = ops' shine
 reagent-desc-opsshine = A drink made for the slime personnel on board. Not meeting the criteria may include a trip to the Medical Bay.
 
-reagent-name-orgasmonthebeach = orgasm on the beach
-reagent-desc-orgasmonthebeach = A classic drink that tickles the pudendal nerve.
+reagent-name-sexonthebeach = sex on the beach
+reagent-desc-sexonthebeach = A classic drink that tickles the right itch.
 
 reagent-name-pomonade = pomonade
 reagent-desc-pomonade = A spin on a classic lemonade, with a sweeter side.
@@ -133,11 +133,11 @@ reagent-desc-redrocket = A sugary drink that would be very sought after in an ap
 reagent-name-salvagersdelight = salvager's delight
 reagent-desc-salvagersdelight = Said to have originated as a hazing ritual among deep-space salvagers, this vile concoction can only be stomached by true sons of Salvonia.
 
-reagent-name-semenbomb = semen bomb
-reagent-desc-semenbomb = A drink that will make one feel like they have a full stomach, one way or another.
+reagent-name-saltbomb = salt bomb
+reagent-desc-saltbomb = A drink that will make one feel like they have a full stomach, one way or another.
 
-reagent-name-semenhemorrhage = semen hemorrhage
-reagent-desc-semenhemorrhage = A succubi spin on a classic spooky shot.
+reagent-name-saltyschnapps = salty schnapps
+reagent-desc-saltyschnapps = A develish spin on a classic fruity shot.
 
 reagent-name-silverstallion = silver stallion
 reagent-desc-silverstallion = A strong drink that'll put hair on your chest.
@@ -149,7 +149,7 @@ reagent-name-snowball = snowball
 reagent-desc-snowball = A sweet mix of a snowcone, with a very special kind of syrup.
 
 reagent-name-specialsundae = special sundae
-reagent-desc-specialsundae = A pleasing enouhg mix of ice cream and pomegranate-- with one extra ingredient, in place of the nuts.
+reagent-desc-specialsundae = A pleasing enough mix of ice cream and pomegranate-- with one extra ingredient, in place of the nuts.
 
 reagent-name-syndicatesoverseer = syndicate's overseer
 reagent-desc-syndicatesoverseer = This drink is menacing, you don't even know if you should be drinking this or not.
@@ -187,11 +187,8 @@ reagent-desc-hallelujah = Exactly what you need.
 reagent-name-syndicate-eggnog = Syndicate Eggnog
 reagent-desc-syndicate-eggnog = creamy, pale yellow and topped with a sprinkle of cinnamon and strongly alcoholic.
 
-reagent-name-gin-and-pussy = Gin and Pussy
-reagent-desc-gin-and-pussy = A Sapphic twist on the classic Gin and Tonic, featuring locally sourced Natural Lubricant as a replacement for Tonic, A favorite of Maintenance Bars everywhere.
-
-reagent-name-pussytonic = Pussy Tonic
-reagent-desc-pussytonic = Natural Lubrican with some tonic, for pussy lovers.
+reagent-name-kittygin = kitty gin
+reagent-desc-kittygin = A sapphic twist on the classic gin and tonic, featuring locally sourced lubricant as a replacement for tonic, A favorite of maintenance bars everywhere.
 
 reagent-name-superheavycream = Superheavy Cream
 reagent-desc-superheavycream = The creamiest of creams, known to rise up to the top.

@@ -107,16 +107,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
-      orGroup: Ammo
-      prob: 0.6
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolIncendiary
-      orGroup: Ammo
-      prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolUranium
-      orGroup: Ammo
-      prob: 0.1
+    - id: LSSpawnLootBeltSyndicateLootRangedT1Deckhand # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -125,7 +116,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT1Deckhand # LoneStar
+    - id: LSSpawnLootBagSyndicateT1Deckhand # LoneStar
 
 # region Saboteur
 - type: entity
@@ -135,19 +126,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
-      orGroup: Ammo
-      prob: 0.1
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolIncendiary
-      orGroup: Ammo
-      prob: 0.3 # LoneStar
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolUranium
-      orGroup: Ammo
-      prob: 0.6 # LoneStar
-    # - id: SpawnDungeonLootNpcSyndicateAmmoPistolEmp # LoneStar
-    #   orGroup: Ammo
-    #   prob: 0.7
+    - id: LSSpawnLootBeltSyndicateLootRangedT1Saboteur # LoneStar
 
 - type: entity # TODO: make a something unique for the saboteur backpack
   parent: ClothingBackpackSyndicateT1Deckhand
@@ -172,16 +151,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
-      orGroup: Ammo
-      prob: 0.6
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolIncendiary
-      orGroup: Ammo
-      prob: 0.3
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolUranium
-      orGroup: Ammo
-      prob: 0.1
+    - id: LSSpawnLootBeltSyndicateLootRangedT2Captain # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicateAlt
@@ -190,7 +160,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT2Captain # LoneStar
+    - id: LSSpawnLootBagSyndicateT2Captain # LoneStar
 
 # region Engineer
 - type: entity
@@ -202,7 +172,6 @@
     items:
     # Ammo
     - id: SpawnDungeonLootNpcSyndicateAmmoShotgun
-      orGroup: Ammo
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -211,7 +180,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT2Engineer # LoneStar
+    - id: LSSpawnLootBagSyndicateT2Engineer # LoneStar
 
 # region Medic
 - type: entity
@@ -224,20 +193,7 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    # Topicals
-    - id: SpawnDungeonClutterMedsFull
-      orGroup: Topicals
-      prob: 0.4
-    - id: SpawnDungeonClutterMedsSingle
-      orGroup: Topicals
-      prob: 0.6
-    # Items
-    - id: SpawnDungeonClutterMedipens
-      orGroup: Items
-      prob: 0.7
-    - id: SpawnRewardPrizeBallSyndicate # LoneStar
-      orGroup: Items
-      prob: 0.3
+    - id: LSSpawnLootBeltSyndicateLootRangedT2Medic # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -246,7 +202,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT2Medic # LoneStar
+    - id: LSSpawnLootBagSyndicateT2Medic # LoneStar
 
 # region Second Officer
 - type: entity
@@ -256,7 +212,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT2SecondOfficer # LoneStar
+    - id: LSSpawnLootBagSyndicateT2SecondOfficer # LoneStar
 
 # region Tier 3
 - type: entity
@@ -276,19 +232,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistol
-      orGroup: Ammo
-      prob: 0.6
-      amount: 2
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolIncendiary
-      orGroup: Ammo
-      prob: 0.3
-      amount: 2
-    - id: SpawnDungeonLootNpcSyndicateAmmoPistolUranium
-      orGroup: Ammo
-      prob: 0.1
-      amount: 2
+    - id: LSSpawnLootBeltSyndicateLootRangedT3Operative # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -297,7 +241,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT3Operative # LoneStar
+    - id: LSSpawnLootBagSyndicateT3Operative # LoneStar
 
 # region Grenadier
 - type: entity
@@ -307,19 +251,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: ExGrenade
-      orGroup: Ammo
-      prob: 0.6
-      amount: 5
-    - id: ExGrenade
-      orGroup: Ammo
-      prob: 0.3
-      amount: 3
-    - id: ExGrenade
-      orGroup: Ammo
-      prob: 0.1
-      amount: 1
+    - id: LSSpawnLootBeltSyndicateLootRangedT3Grenadier # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -328,7 +260,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT3Grenadier # LoneStar
+    - id: LSSpawnLootBagSyndicateT3Grenadier # LoneStar
 
 # region Chemwarrior
 - type: entity
@@ -341,7 +273,7 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT3Chemwarrior # LoneStar
+    - id: LSSpawnLootBagSyndicateT3Chemwarrior # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicate
@@ -353,7 +285,7 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT3Chemwarrior # LoneStar
+    - id: LSSpawnLootBagSyndicateT3Chemwarrior # LoneStar
 
 # region Tier 4 (Boss)
 - type: entity
@@ -382,15 +314,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: SpawnDungeonLootNpcSyndicateAmmoRifleIncendiary
-      orGroup: Ammo
-      prob: 0.6
-      amount: 2
-    - id: SpawnDungeonLootNpcSyndicateAmmoRifleUranium
-      orGroup: Ammo
-      prob: 0.4
-      amount: 2
+    - id: LSSpawnLootBeltSyndicateLootRangedT4Commander # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackSyndicateAlt
@@ -399,4 +323,4 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootSyndicateT4Commander # LoneStar
+    - id: LSSpawnLootBagSyndicateT4Commander # LoneStar

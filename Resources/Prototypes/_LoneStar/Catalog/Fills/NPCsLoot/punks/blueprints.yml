@@ -1,4 +1,4 @@
-# region ammo blueprints
+#region Routing Tables
 - type: entityTable
   id: LSTablePunksBlueprint
   table: !type:GroupSelector
@@ -33,7 +33,9 @@
             - !type:NestedSelector # Trash
               weight: 1
               tableId: LSTablePunksBlueprintT0
+#endregion
 
+#region Loot Tiers
 - type: entityTable
   id: LSTablePunksBlueprintT5
   table: !type:GroupSelector
@@ -108,3 +110,7 @@
     - id: LSBlueprintPunksAmmunitionBoxBigPistol35Practice
     - id: LSBlueprintPunksAmmunitionBoxBigPistol40Practice
     - id: LSBlueprintPunksAmmunitionBoxBigShotgunPractice
+#endregion
+
+#region Misc Tables
+#endregion

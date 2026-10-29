@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackAtreides
+  name: combat gloves
+  suffix: atreides
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: _NF/Objects/Weapons/Guns/SMGs/atreides.rsi
+        state: inhand-left

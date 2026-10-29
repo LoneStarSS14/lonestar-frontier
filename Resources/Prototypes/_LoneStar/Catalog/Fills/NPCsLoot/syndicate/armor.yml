@@ -1,4 +1,4 @@
-#region routing
+#region Routing Tables
 - type: entityTable
   id: LSTableSyndicateArmor
   table: !type:GroupSelector
@@ -13,19 +13,19 @@
         weight: 1
         tableId: LSTableSyndicateArmorT4
       - !type:GroupSelector
-        weight: 34
+        weight: 44
         children:
         - !type:NestedSelector # Rare
           weight: 1
           tableId: LSTableSyndicateArmorT3
         - !type:GroupSelector
-          weight: 14
+          weight: 19
           children:
           - !type:NestedSelector # Uncommon
             weight: 1
             tableId: LSTableSyndicateArmorT2
           - !type:GroupSelector
-            weight: 4
+            weight: 7
             children:
             - !type:NestedSelector # Common
               weight: 3
@@ -42,19 +42,19 @@
       weight: 1
       tableId: LSTableSyndicateArmorT4
     - !type:GroupSelector
-      weight: 34
+      weight: 59
       children:
       - !type:NestedSelector # Rare
         weight: 1
         tableId: LSTableSyndicateArmorT3
       - !type:GroupSelector
-        weight: 14
+        weight: 19
         children:
         - !type:NestedSelector # Uncommon
           weight: 1
           tableId: LSTableSyndicateArmorT2
         - !type:GroupSelector
-          weight: 4
+          weight: 7
           children:
           - !type:NestedSelector # Common
             weight: 3
@@ -62,8 +62,9 @@
           - !type:NestedSelector # Trash
             weight: 1
             tableId: LSTableSyndicateArmorT0
+#endregion
 
-#region tiers
+#region Loot Tiers
 - type: entityTable
   id: LSTableSyndicateArmorT5
   table: !type:GroupSelector
@@ -148,8 +149,9 @@
   id: LSTableSyndicateArmorT0
   table: !type:NestedSelector
     tableId: LSTableSyndicateClothes
+#endregion
 
-#region Tables
+#region Misc Tables
 - type: entityTable
   id: LSTableSyndicateClothes
   table: !type:GroupSelector
@@ -203,3 +205,4 @@
             prob: 0.33
           - id: ClothingNeckScarfStripedSyndieGreen
             prob: 0.33
+#endregion

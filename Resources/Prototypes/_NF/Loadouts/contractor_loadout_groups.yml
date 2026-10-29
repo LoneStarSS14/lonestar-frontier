@@ -256,6 +256,7 @@
   - ContractorClothingBackpackDuffelMedical
   - ContractorClothingBackpackDuffelTrauma
   - ContractorClothingBackpackSatchelMedical
+  - ContractorClothingBackpackSatchelMedicalTrauma # LoneStar
   - ContractorClothingBackpackMessengerMedical
   - ContractorClothingBackpackChemistry
   - ContractorClothingBackpackDuffelChemistry
@@ -500,6 +501,7 @@
   - ContractorClothingShoesColorBlack
   subgroups:
   - CoyoteShoes
+  - MercenaryShoes # LoneStar
 
 - type: loadoutGroup
   id: ContractorHead
@@ -578,6 +580,8 @@
   - ContractorClothingHeadHatCone
   - ContractorClothingHeadBandGold
   - ContractorClothingHeadHatTophat
+  subgroups:
+  - DenParamedicHead # LoneStar
 
 - type: loadoutGroup
   id: ContractorEars
@@ -893,6 +897,8 @@
   - ContractorHypoMini
   - ContractorBible
   - ContractorBibleDruid # Coyote
+  subgroups:
+  - ChaplainBackpackItems # LoneStar
 
 - type: loadoutGroup
   id: ContractorFace
@@ -913,6 +919,8 @@
   - ContractorClothingMaskSadMime
   - ContractorClothingMaskClown
   - ContractorClothingMaskClownBald
+  subgroups:
+  - DenMiscFace # LoneStar
   fallbacks:
   - ContractorClothingMaskBreath
 

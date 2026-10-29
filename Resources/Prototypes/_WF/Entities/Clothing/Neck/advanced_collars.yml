@@ -183,10 +183,10 @@
       size: Tiny
     - type: AdvancedCollarModule
 
-- type: entity
+- type: entity # LoneStar, edited for censoring reasons
   parent: BaseAdvCollarModule
-  id: AdvCollarModuleBondage
-  name: collar module (bondage) # LoneStar
+  id: AdvCollarModuleSealing
+  name: collar module (sealing) # LoneStar
   description: A module that prevents the wearer from removing the collar themselves.
   components:
     - type: Sprite

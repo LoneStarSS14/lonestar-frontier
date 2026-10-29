@@ -155,7 +155,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkMeleeT1 # LoneStar
+    - id: LSSpawnLootBagPunkMeleeT1 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackPunk
@@ -164,7 +164,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkRangedT1 # LoneStar
+    - id: LSSpawnLootBagPunkRangedT1 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltPunk
@@ -173,21 +173,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Magazines
-    - id: NFMagazinePistol35Overpressure
-      orGroup: Magazines
-      prob: 0.3
-    - id: NFMagazinePistol35Empty
-      orGroup: Magazines
-      amount: 2
-      prob: 0.4
-    - id: NFMagazinePistol35Empty
-      orGroup: Magazines
-      amount: 3
-      prob: 0.3
-    # Ammo
-    - id: NFAmmunitionBoxPistol35Overpressure
-      orGroup: Ammo
+    - id: LSSpawnLootBeltPunkLootRangedT1 # LoneStar
 
 # region tier 2
 - type: entity
@@ -206,7 +192,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkMeleeT2 # LoneStar
+    - id: LSSpawnLootBagPunkMeleeT2 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackPunk
@@ -215,7 +201,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkRangedT2 # LoneStar
+    - id: LSSpawnLootBagPunkRangedT2 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltPunk
@@ -224,14 +210,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Ammo
-    - id: NFAmmunitionBoxShellShotgunOverpressure
-      orGroup: Ammo
-      prob: 0.6
-    - id: NFAmmunitionBoxShellShotgunOverpressure
-      orGroup: Ammo
-      prob: 0.4
-      amount: 2
+    - id: LSSpawnLootBeltPunkLootRangedT2 # LoneStar
 
 # region tier 3
 - type: entity
@@ -250,7 +229,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkMeleeT3 # LoneStar
+    - id: LSSpawnLootBagPunkMeleeT3 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootPackPunk
@@ -259,7 +238,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkRangedT3 # LoneStar
+    - id: LSSpawnLootBagPunkRangedT3 # LoneStar
 
 - type: entity
   parent: NFBaseNpcLootBeltPunk
@@ -268,22 +247,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    # Magazines
-    - id: NFMagazineSubMachineGun35Overpressure
-      orGroup: Magazines
-      prob: 0.3
-    - id: NFMagazineSubMachineGun35Empty
-      orGroup: Magazines
-      amount: 2
-      prob: 0.4
-    - id: NFMagazineSubMachineGun35Empty
-      orGroup: Magazines
-      amount: 3
-      prob: 0.3
-    # Ammo
-    - id: NFAmmunitionBoxPistol35Overpressure
-      amount: 2
-      orGroup: Ammo
+    - id: LSSpawnLootBeltPunkLootRangedT3
 
 # region tier 4 (boss)
 - type: entity
@@ -308,4 +272,4 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: LSSpawnLootPunkLootBoss # LoneStar
+    - id: LSSpawnLootBagPunkLootBoss # LoneStar

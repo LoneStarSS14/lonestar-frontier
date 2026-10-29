@@ -9,6 +9,9 @@
     spawned:
     - id: SpawnDungeonLootNpcXenoBurrower
       amount: 1
+  - type: NpcFactionMember # LoneStar, added
+    factions:
+    - Xeno
 
 - type: entity
   parent: [MobStaminaFodder, MobMovementSpeedModifierMelee, NFMobSimpleHostileBase, MobXenoPraetorian]
@@ -21,6 +24,9 @@
     spawned:
     - id: SpawnDungeonLootNpcXenoPraetorian
       amount: 1
+  - type: NpcFactionMember # LoneStar, added
+    factions:
+    - Xeno
 
 - type: entity
   parent: [MobStaminaFodder, MobMovementSpeedModifierMelee, NFMobSimpleHostileBase, MobXenoDrone]
@@ -33,6 +39,9 @@
     spawned:
     - id: SpawnDungeonLootNpcXenoDrone
       amount: 1
+  - type: NpcFactionMember # LoneStar, added
+    factions:
+    - Xeno
 
 - type: entity
   parent: [MobHostileBossBase, NFMobSimpleHostileBase, MobXenoQueen]
@@ -47,19 +56,24 @@
       amount: 1
   - type: ReplacementAccent
     accent: xeno
-  # - type: GhostRole # Coyote: disable ghost role
-    # prob: 1
-    # allowMovement: true
-    # allowSpeech: true
-    # makeSentient: true
-    # name: ghost-role-information-xeno-name
-    # description: ghost-role-information-xeno-description
-    # rules: ghost-role-information-xeno-rules
-    # mindRoles:
-    # - MindRoleGhostRoleTeamAntagonist
-    # raffle:
-      # settings: default
+  # LoneStar start, no ghostroles
+  # - type: GhostRole
+  #   prob: 1
+  #   allowMovement: true
+  #   allowSpeech: true
+  #   makeSentient: true
+  #   name: ghost-role-information-xeno-name
+  #   description: ghost-role-information-xeno-description
+  #   rules: ghost-role-information-xeno-rules
+  #   mindRoles:
+  #   - MindRoleGhostRoleTeamAntagonist
+  #   raffle:
+  #     settings: default
   # - type: GhostTakeoverAvailable
+  - type: NpcFactionMember # LoneStar, added
+    factions:
+    - Xeno
+  # LoneStar end
 
 - type: entity
   parent: [MobStaminaFodder, MobMovementSpeedModifierMelee, NFMobSimpleHostileBase, MobXenoRavager]
@@ -72,6 +86,9 @@
     spawned:
     - id: SpawnDungeonLootNpcXenoRavager
       amount: 1
+  - type: NpcFactionMember # LoneStar, added
+    factions:
+    - Xeno
 
 - type: entity
   parent: [MobStaminaSpecial, MobMovementSpeedModifierSpecial, NFMobSimpleHostileBase, MobXenoRunner]
@@ -84,6 +101,9 @@
     spawned:
     - id: SpawnDungeonLootNpcXenoRavager
       amount: 1
+  - type: NpcFactionMember # LoneStar, added
+    factions:
+    - Xeno
 
 - type: entity
   parent: [MobStaminaFodder, MobMovementSpeedModifierMelee, NFMobSimpleHostileBase, MobXenoRouny]
@@ -96,6 +116,9 @@
     spawned:
     - id: SpawnDungeonLootNpcXenoRavager
       amount: 1
+  - type: NpcFactionMember # LoneStar, added
+    factions:
+    - Xeno
 
 - type: entity
   parent: [MobStaminaFodder, MobMovementSpeedModifierRanged, NFMobSimpleHostileBase, MobXenoSpitter]
@@ -108,6 +131,9 @@
     spawned:
     - id: SpawnDungeonLootNpcXenoSpitter
       amount: 1
+  - type: NpcFactionMember # LoneStar, added
+    factions:
+    - Xeno
 
 - type: entity
   parent: [MobStaminaFodder, MobMovementSpeedModifierMelee, NFMobSimpleHostileBase, MobPurpleSnake]

@@ -1,0 +1,147 @@
+#region Routing Tables
+- type: entityTable
+  id: LSTableGeneralMedicalInjectors
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralMedicalInjectorsT5
+    - !type:GroupSelector
+      weight: 54
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralMedicalInjectorsT4
+      - !type:GroupSelector
+        weight: 29
+        children:
+        - !type:NestedSelector # Rare
+          weight: 1
+          tableId: LSTableGeneralMedicalInjectorsT3
+        - !type:GroupSelector
+          weight: 11
+          children:
+          - !type:NestedSelector # Uncommon
+            weight: 3
+            tableId: LSTableGeneralMedicalInjectorsT2
+          - !type:GroupSelector
+            weight: 5
+            children:
+            - !type:NestedSelector # Common
+              weight: 19
+              tableId: LSTableGeneralMedicalInjectorsT1
+            - !type:NestedSelector # Trash
+              weight: 1
+              tableId: LSTableGeneralMedicalInjectorsT0
+
+- type: entityTable
+  id: LSTableGeneralMedicalInjectorsRare
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralMedicalInjectorsT5
+    - !type:GroupSelector
+      weight: 19
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralMedicalInjectorsT4
+      - !type:NestedSelector # Rare
+        weight: 9
+        tableId: LSTableGeneralMedicalInjectorsT3
+#endregion
+
+#region Loot Tiers
+- type: entityTable
+  id: LSTableGeneralMedicalInjectorsT5
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: SyndiHypo
+      - id: Hypospray
+    - !type:GroupSelector
+      weight: 4
+      children:
+      - id: CombatMedipen
+      - id: Stimpack
+      - id: StimpackMini
+        amount: 2
+      - !type:AllSelector
+        children:
+        - id: PunctAutoInjector
+        - id: LacerAutoInjector
+        - id: PyraAutoInjector
+
+- type: entityTable
+  id: LSTableGeneralMedicalInjectorsT4
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: HypoExperimental
+    - !type:GroupSelector
+      weight: 4
+      children:
+      - id: PolyAutoInjector
+        amount: 2
+      - id: PunctAutoInjector
+        amount: 2
+      - id: StimpackMini
+      - id: StimulantAutoInjector
+
+- type: entityTable
+  id: LSTableGeneralMedicalInjectorsT3
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: HypoMini
+      - id: HypoMiniLimitedEdition
+      - id: HypoBrigmedic
+    - !type:GroupSelector
+      weight: 4
+      children:
+      - id: EphedrineAutoInjector
+      - id: HemostasisAutoInjector
+      - id: PolyAutoInjector
+      - id: PunctAutoInjector
+
+- type: entityTable
+  id: LSTableGeneralMedicalInjectorsT2
+  table: !type:GroupSelector
+    children:
+    - id: BruteAutoInjector
+      weight: 2
+    - id: BurnAutoInjector
+      weight: 2
+    - id: AirlossAutoInjector
+    - id: BruizAutoInjector
+    - id: LacerAutoInjector
+    - id: PyraAutoInjector
+
+- type: entityTable
+  id: LSTableGeneralMedicalInjectorsT1
+  table: !type:GroupSelector
+    children:
+    - id: EmergencyMedipen
+      weight: 1.5
+    - id: SpaceMedipen
+      weight: 0.5
+    - id: CrisisAutoInjector
+    - id: AntiPoisonMedipen
+    - id: RadAutoInjector
+    - id: EthylredoxrazineAutoInjector
+
+- type: entityTable
+  id: LSTableGeneralMedicalInjectorsT0
+  table: !type:GroupSelector
+    children:
+    - id: WehMedipen
+      weight: 1
+    - id: BlankMediPen # For assembling
+      weight: 3
+    - id: ChemicalMedipen # Literally trash
+      weight: 6
+#endregion

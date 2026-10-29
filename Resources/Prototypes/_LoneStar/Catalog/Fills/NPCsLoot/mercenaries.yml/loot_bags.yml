@@ -1,7 +1,7 @@
 # region Tier 1
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootMercenaryLootRangedT1
+  id: LSSpawnLootBagMercenaryLootRangedT1
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -28,7 +28,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootMercenaryLootRangedAltT1
+  id: LSSpawnLootBagMercenaryLootRangedAltT1
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -52,11 +52,12 @@
           weight: 0.25
         - id: SpawnDungeonLootNpcMercenariesFluff
           weight: 0.15
+#endregion
 
 # region Tier 2
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootMercenaryLootMeleeT2
+  id: LSSpawnLootBagMercenaryLootMeleeT2
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -89,7 +90,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootMercenaryLootRangedT2
+  id: LSSpawnLootBagMercenaryLootRangedT2
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -118,7 +119,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootMercenaryLootRangedAltT2
+  id: LSSpawnLootBagMercenaryLootRangedAltT2
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -151,11 +152,12 @@
           prob: 0.3
         - id: SpawnDungeonLootNpcMercenariesFluff
           prob: 0.15
+#endregion
 
 #region Elites / Horrors
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootMercenaryLootRangedT3
+  id: LSSpawnLootBagMercenaryLootRangedT3
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -192,7 +194,7 @@
 
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootMercenaryLootRangedAltT3
+  id: LSSpawnLootBagMercenaryLootRangedAltT3
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -221,11 +223,12 @@
         - !type:NestedSelector
           tableId: LSTableMercenaryBlueprint
           weight: 0.05
+#endregion
 
 #region Bosses
 - type: entity
   parent: MarkerBasePlaceFree
-  id: LSSpawnLootMercenaryLootBoss
+  id: LSSpawnLootBagMercenaryLootBoss
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTableSpawner
@@ -277,3 +280,4 @@
         - !type:NestedSelector
           tableId: LSTableMercenaryBlueprint
           prob: 0.3
+#endregion

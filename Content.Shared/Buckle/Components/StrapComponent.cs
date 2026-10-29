@@ -117,6 +117,13 @@ public sealed partial class StrapComponent : Component
     [DataField, Access(typeof(SharedBuckleSystem))]
     public bool RenderOnTopWhenBehind;
     // End Frontier: fix vehicles unbuckling
+
+    // Everdream: Implement setting to disable variable chair layers per prototype
+    /// <summary>
+    /// Whether to change layers when rotating north.
+    /// </summary>
+    [DataField]
+    public bool HasChairBack = true;
 }
 
 public enum StrapPosition
