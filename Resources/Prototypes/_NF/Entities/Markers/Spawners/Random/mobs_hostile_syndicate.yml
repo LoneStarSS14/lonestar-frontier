@@ -168,8 +168,8 @@
     chance: 1
     offset: 0.0
     rarePrototypes:
-    - MobSyndicateNavalOperatorA
-    rareChance: 0.1
+    - MobSyndicateNavalOperatorE # LoneStar
+    rareChance: 0.25 #LoneStar
 
 - type: entity
   name: syndicate naval grenadier spawner

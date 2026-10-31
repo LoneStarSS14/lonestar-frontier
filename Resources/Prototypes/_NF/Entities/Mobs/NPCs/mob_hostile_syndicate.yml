@@ -430,7 +430,7 @@
 - type: entity
   parent: MobSyndicateNavalOperatorA
   id: MobSyndicateNavalOperatorB
-  categories: [ HideSpawnMenu ]
+  categories: # [ HideSpawnMenu ]
   components:
   - type: BasicEntityAmmoProvider
     proto: NFCartridgePistol35Overpressure # LoneStar
@@ -440,7 +440,7 @@
 - type: entity
   parent: MobSyndicateNavalOperatorA
   id: MobSyndicateNavalOperatorC
-  categories: [ HideSpawnMenu ]
+  categories: # [ HideSpawnMenu ]
   components:
   - type: BasicEntityAmmoProvider
     proto: NFCartridgePistol35Overpressure
@@ -450,7 +450,7 @@
 - type: entity
   parent: MobSyndicateNavalOperatorA
   id: MobSyndicateNavalOperatorD
-  categories: [ HideSpawnMenu ]
+  categories: # [ HideSpawnMenu ]
   components:
   - type: BasicEntityAmmoProvider
     proto: NFCartridgePistol35Overpressure # LoneStar
