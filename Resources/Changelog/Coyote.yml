@@ -4588,3 +4588,10 @@ Entries:
   id: 502
   time: '2026-10-28T17:00:19.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/289
+- author: Rellu225
+  changes:
+    - type: Tweak
+      message: Replaced St. Micheals
+  id: 503
+  time: '2026-10-31T12:15:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/288
