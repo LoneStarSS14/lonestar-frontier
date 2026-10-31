@@ -4595,3 +4595,10 @@ Entries:
   id: 503
   time: '2026-10-31T12:15:01.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/288
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: 3 "new" hairstyles, Eve, Remilia, Impish (Short)
+  id: 504
+  time: '2026-10-31T12:16:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/293
