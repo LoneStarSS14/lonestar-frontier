@@ -1,0 +1,53 @@
+- type: entity # Slowdown and 16 poison over 27 seconds
+  parent: MobHostileThrowableWeapon
+  id: DartSyndicateLeadVestine
+  name: syndicate lead dart
+  categories: # [ HideSpawnMenu ]
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 7
+        reagents:
+        - ReagentId: Lead
+          Quantity: 0.8
+        - ReagentId: Vestine
+          Quantity: 4
+  - type: SolutionInjectOnEmbed
+    transferAmount: 7
+    blockSlots: NONE
+    solution: melee
+  - type: SolutionTransfer
+    maxTransferAmount: 7
+
+- type: entity # 9 rads and 2 cellular over 3 seconds
+  parent: DartSyndicateLeadVestine
+  id: DartSyndicateMutagenBenzene
+  name: syndicate mutagen dart
+  categories: # [ HideSpawnMenu ]
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 3
+        reagents:
+        - ReagentId: UnstableMutagen
+          Quantity: 1.5
+        - ReagentId: Benzene
+          Quantity: 1
+
+- type: entity # 2 will crit over the course of 84 seconds
+  parent: DartSyndicateLeadVestine
+  id: DartSyndicateHeavyLeadVestine
+  name: syndicate heavy lead dart
+  categories: # [ HideSpawnMenu ]
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 7
+        reagents:
+        - ReagentId: Lead
+          Quantity: 2.51
+        - ReagentId: Vestine
+          Quantity: 4
