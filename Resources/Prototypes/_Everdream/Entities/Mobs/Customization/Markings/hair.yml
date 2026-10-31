@@ -1,0 +1,23 @@
+- type: marking
+  id: eve
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Everdream/Mobs/Customization/Hair/hairkc.rsi
+      state: hair_eve
+
+- type: marking
+  id: impish_short
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Everdream/Mobs/Customization/Hair/hairkc.rsi
+      state: hair_impish_short
+
+- type: marking
+  id: remilia
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Everdream/Mobs/Customization/Hair/hairkc.rsi
+      state: hair_remilia
