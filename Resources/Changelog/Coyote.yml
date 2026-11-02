@@ -4625,3 +4625,10 @@ Entries:
   id: 507
   time: '2026-11-02T20:57:53.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/297
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: Port of Bubber's armored cnc maid outfit.
+  id: 508
+  time: '2026-11-02T21:01:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/298
