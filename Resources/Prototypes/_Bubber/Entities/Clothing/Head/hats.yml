@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHelmetTacticalMaid
-  name: mercenary maid maid headband
+  name: mercenary maid headband
   description: A highly durable mercenary maid headband.
   components:
   - type: Sprite
