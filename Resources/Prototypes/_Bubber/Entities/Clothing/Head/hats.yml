@@ -37,8 +37,8 @@
   - type: ColorableClothing
     denyReroll: false
     mappedColors:
-      Frills: NTInteriorDesign
-      Embroidery: Advanced
+      Frills: LSSilks
+      Embroidery: TechniColors
     available:
       - head-icon-base:
           icon: Frills

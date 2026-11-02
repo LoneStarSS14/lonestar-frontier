@@ -37,8 +37,8 @@
   - type: ColorableClothing
     denyReroll: false
     mappedColors:
-      Apron: NTInteriorDesign
-      Embroidery: Advanced
+      Apron: LSSilks
+      Embroidery: TechniColors
     available:
       - outerclothing-icon-base:
           icon: Apron
