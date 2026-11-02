@@ -6,16 +6,52 @@
   components:
   - type: Sprite
     sprite: _Bubber/Clothing/Head/tacticalmaid.rsi
-    state: icon
+    layers:
+    - state: icon
+      map: [ "head-icon-base" ]
+    - state: icon-accent
+      map: [ "head-icon-accent" ]
   - type: Clothing
-    sprite: _Bubber/Clothing/Head/tacticalmaid.rsi
-  - type: Armor
-    modifiers:
-      flatReductions:
-        Caustic: 1
-  - type: StaticPrice
-    price: 100
-    vendPrice: 100
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        map: [ "head-equipped-base" ]
+      - state: equipped-HELMET-accent
+        map: [ "head-equipped-accent" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-base" ]
+        - state: inhand-left-accent
+          map: [ "hl-accent" ]
+      right:
+        - state: inhand-right
+          map: [ "hr-base" ]
+        - state: inhand-right-accent
+          map: [ "hr-accent" ]
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+      Frills: NTInteriorDesign
+      Embroidery: Advanced
+    available:
+      - head-icon-base:
+          icon: Frills
+        head-icon-accent:
+          icon-accent: Embroidery
+        head-equipped-base:
+          equipped-HELMET: Frills
+        head-equipped-accent:
+          equipped-HELMET-accent: Embroidery
+        hl-base:
+          inhand-left: Frills
+        hl-accent:
+          inhand-left-accent: Embroidery
+        hr-base:
+          inhand-right: Frills
+        hr-accent:
+          inhand-right-accent: Embroidery
   - type: Tag
     tags:
     - WhitelistChameleon

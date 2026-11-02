@@ -6,8 +6,53 @@
   components:
   - type: Sprite
     sprite: _Bubber/Clothing/OuterClothing/tacticalmaid.rsi
+    layers:
+    - state: icon
+      map: [ "outerclothing-icon-base" ]
+    - state: icon-accent
+      map: [ "outerclothing-icon-accent" ]
   - type: Clothing
-    sprite: _Bubber/Clothing/OuterClothing/tacticalmaid.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+        map: [ "outerclothing-equipped-base" ]
+      - state: equipped-OUTERCLOTHING-accent
+        map: [ "outerclothing-equipped-accent" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-base" ]
+        - state: inhand-left-accent
+          map: [ "hl-accent" ]
+      right:
+        - state: inhand-right
+          map: [ "hr-base" ]
+        - state: inhand-right-accent
+          map: [ "hr-accent" ]
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+      Apron: NTInteriorDesign
+      Embroidery: Advanced
+    available:
+      - outerclothing-icon-base:
+          icon: Apron
+        outerclothing-icon-accent:
+          icon-accent: Embroidery
+        outerclothing-equipped-base:
+          equipped-OUTERCLOTHING: Apron
+        outerclothing-equipped-accent:
+          equipped-OUTERCLOTHING-accent: Embroidery
+        hl-base:
+          inhand-left: Apron
+        hl-accent:
+          inhand-left-accent: Embroidery
+        hr-base:
+          inhand-right: Apron
+        hr-accent:
+          inhand-right-accent: Embroidery
   - type: Tag
     tags:
     - WhitelistChameleon
+

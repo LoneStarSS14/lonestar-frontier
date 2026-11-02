@@ -6,8 +6,62 @@
   components:
   - type: Sprite
     sprite: _Bubber/Clothing/Uniforms/tacticalmaid.rsi
+    layers:
+    - state: icon
+      map: [ "uniform-icon-base" ]
+    - state: icon-detail
+      map: [ "uniform-icon-detail" ]
+    - state: icon-accent
+      map: [ "uniform-icon-accent" ]
   - type: Clothing
-    sprite: _Bubber/Clothing/Uniforms/tacticalmaid.rsi
-  - type: Tag
-    tags:
-    - WhitelistChameleon
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-equipped-base" ]
+      - state: equipped-INNERCLOTHING-detail
+        map: [ "uniform-equipped-detail" ]
+      - state: equipped-INNERCLOTHING-accent
+        map: [ "uniform-equipped-accent" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-base" ]
+        - state: inhand-left-detail
+          map: [ "hl-detail" ]
+      right:
+        - state: inhand-right
+          map: [ "hr-base" ]
+        - state: inhand-right-detail
+          map: [ "hr-detail" ]
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+      Dress: LSSilks
+      Frills: NTInteriorDesign
+      Embroidery: Advanced
+    available:
+      - uniform-icon-base:
+          icon: Dress
+        uniform-icon-detail:
+          icon-detail: Frills
+        uniform-icon-accent:
+          icon-accent: Embroidery
+        uniform-equipped-base:
+          equipped-INNERCLOTHING: Dress
+        uniform-equipped-detail:
+          equipped-INNERCLOTHING-detail: Frills
+        uniform-equipped-accent:
+          equipped-INNERCLOTHING-accent: Embroidery
+        hl-base:
+          inhand-left: Dress
+        hl-detail:
+          inhand-left-detail: Frills
+        hl-accent:
+          inhand-left-accent: Embroidery
+        hr-base:
+          inhand-right: Dress
+        hr-detail:
+          inhand-right-detail: Frills
+        hr-accent:
+          inhand-right-accent: Embroidery
