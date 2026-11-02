@@ -14,7 +14,7 @@
     quickEquip: false
     slots:
     - back
-    - suitStorage
+    - suitStorage # LoneStar
   - type: Charger
     chargeRate: 50 # Frontier: chargeRate: 50
     slotId: charger_slot
