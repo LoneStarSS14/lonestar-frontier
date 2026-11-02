@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingTacticalMaid
-  name: cnc maid uniform
-  description: Unlike a normal maid costume, this one is made of high-performance durathread weave. This relatively innocent at first glance outfit is actually the specialized type worn by Nanotrasen's infamous high profile 'Cleaning and Clearing' kill squads. It's a lot more robust than it's janitorial counterpart...
+  name: mercenary maid uniform
+  description: Unlike a normal maid costume, this one is made of high-performance durathread weave.
   components:
   - type: Sprite
     sprite: _Bubber/Clothing/Uniforms/tacticalmaid.rsi

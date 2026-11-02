@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingOuterCoatBHTrench # LoneStar. Inherit stats from bounty hunter flak trenchcoat
   id: ClothingOuterArmorTacticalMaid
-  name: cnc discreet armour vest
-  description: An armored durathread apron. This relatively innocent at first glance outfit is actually the specialized type worn by Nanotrasen's infamous high profile 'Cleaning and Clearing' kill squads. It's a lot more robust than it's janitorial counterpart. There are loops on the back for holding your 'mop'.
+  name: mercenary maid discreet armour vest
+  description: An armored durathread apron. There are loops on the back for holding your 'mop'.
   components:
   - type: Sprite
     sprite: _Bubber/Clothing/OuterClothing/tacticalmaid.rsi
