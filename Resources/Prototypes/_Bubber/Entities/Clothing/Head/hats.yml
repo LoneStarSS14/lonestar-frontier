@@ -9,7 +9,7 @@
     layers:
     - state: icon
       map: [ "head-icon-base" ]
-    - state: icon-accent-unshaded
+    - state: icon-accent
       shader: unshaded
       map: [ "head-icon-accent" ]
   - type: Clothing
