@@ -5,7 +5,6 @@
   parent: ClothingUniformSkirtBase
   id: CoolCoyoteClothes
   name: Cool Coyote Jumpskirt
-  description: A cute jumpskirt that will be the template for ALL Coyote Bayou uniforms! at least in this file
   abstract: true
   components:
   - type: Sprite
@@ -44,7 +43,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesAcolyte
   name: acolyte garb
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -62,7 +60,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesAfrMerc
   name: khaki mercenary outfit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -80,7 +77,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesArtisan
   name: artisan kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -98,7 +94,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesAssyrian
   name: village tunic
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -116,7 +111,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBLandschneckt
   name: royal tabard
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -134,7 +128,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBeggar
   name: beggar rags
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -152,7 +145,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBlackTango
   name: tango dress in black
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -170,7 +162,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBlackDress
   name: sleek black nightgown
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -190,7 +181,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBloodshot
   name: bloodshot gunslinger suit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -208,7 +198,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBlueKimono
   name: kimono in blue
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -226,7 +215,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBlueSari
   name: sari in blue
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -244,7 +232,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBlueSkirt
   name: skirt in blue
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -262,7 +249,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBlueDress
   name: flowing blue dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -280,7 +266,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBlueRanger
   name: blue ranger uniform
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -298,7 +283,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBlueSun
   name: blue sun maid dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -316,7 +300,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBowSun
   name: sun dress with a bow
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -334,7 +317,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBridalBlue
   name: bridal gown in blue
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -352,7 +334,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBridalOrange
   name: bridal gown in orange
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -370,7 +351,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBridalPurple
   name: bridal gown in purple
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -388,7 +368,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBridalRed
   name: bridal gown in red
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -406,7 +385,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBridalWhite
   name: bridal gown in white
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -424,7 +402,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBrownPunkPants
   name: brown punk pants
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -442,7 +419,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesBunnySuit
   name: classic black bunnysuit # LoneStar
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -460,7 +436,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCartel
   name: tropical runner outfit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -478,7 +453,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesChad
   name: chad
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -496,7 +470,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCheong
   name: cheong sam
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -514,7 +487,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCheongRed
   name: cheong sam in red
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -532,7 +504,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCheongWhite
   name: cheong sam in white
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -550,7 +521,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCheongWhiteShort
   name: cheong sam in white (short)
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -568,7 +538,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesConquistador
   name: conquistador standard
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -586,7 +555,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCorset
   name: corset
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -604,7 +572,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCorsetDress
   name: corset dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -622,7 +589,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCountess
   name: countess gown
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -640,7 +606,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCrinoline
   name: crinoline dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -658,7 +623,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCustomToga
   name: custom toga
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -676,7 +640,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesCyberHell
   name: cyber hell
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -694,7 +657,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDarkHanfu
   name: dark hanfu
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -712,7 +674,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDivineRobe
   name: divine robe
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -730,7 +691,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDomina
   name: domina latex
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -748,7 +708,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDougDimmadome
   name: doug suit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -766,7 +725,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDraculass
   name: draculass slutskirt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -784,7 +742,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDress2
   name: dress 'two'
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -802,7 +759,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDress3
   name: dress 'three'
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -820,7 +776,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDressBlack
   name: dress in black
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -838,7 +793,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDressSaloon
   name: short saloonkeeper dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -856,7 +810,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDress5
   name: dress 'five'
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -874,7 +827,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDress6
   name: dress 'six'
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -892,7 +844,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDutch
   name: dutch vestsuit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -910,7 +861,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesExplorerStripper
   name: explorer stripper
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -928,7 +878,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesFlamenco
   name: flamenco dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -946,7 +895,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesFloofDress
   name: floofy dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -964,7 +912,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesFlashyGreenDress
   name: horrible neon green dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -982,7 +929,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesFlowRed
   name: horrible neon red dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1000,7 +946,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesFlowerDress
   name: flower dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1018,7 +963,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesFlowerKimono
   name: flower kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1036,7 +980,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesFormalRedDress
   name: blood red formal dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1054,7 +997,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesFoxFlannel
   name: fox flannel
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1072,7 +1014,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGoldDress
   name: golden dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1090,7 +1031,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGoldWrap
   name: golden wrap
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1108,7 +1048,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGothic
   name: gothic dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1126,7 +1065,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGothic2
   name: gothic dress 'two'
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1144,7 +1082,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGreatShendyt
   name: great shendyt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1162,7 +1099,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGreekDress
   name: greek dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1180,7 +1116,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGreekTunic
   name: greek tunic
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1198,7 +1133,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesDress7
   name: dress 'seven'
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1216,7 +1150,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGreenHanfu
   name: green hanfu
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1234,7 +1167,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGreenAsymmetric
   name: green asymmetric dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1252,7 +1184,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesHalfSkirt
   name: blue half skirt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1270,7 +1201,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesHalfHuipil
   name: half huipil
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1288,7 +1218,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesHaori
   name: haori
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1306,7 +1235,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesHaoriSamurai
   name: samurai haori
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1324,7 +1252,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesHuipil
   name: huipil
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1342,7 +1269,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesHunter
   name: hunter leathers
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1360,7 +1286,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesHunterBra
   name: hunter garb
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1378,7 +1303,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesIrisTribal
   name: iris dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1396,7 +1320,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKeyholeSweater
   name: keyhole sweater
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1414,7 +1337,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKimonoBlue
   name: blue kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1432,7 +1354,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKimonoEarth
   name: earth kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1450,7 +1371,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKimonoGreen
   name: green kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1468,7 +1388,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKimonoOrange
   name: orange kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1486,7 +1405,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKimonoPink
   name: pink kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1504,7 +1422,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKimonoPurple
   name: purple kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1522,7 +1439,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKimonoRed
   name: red kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1540,7 +1456,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKimonoViolet
   name: violet kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1558,7 +1473,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesKimonoYellow
   name: yellow kimono
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1576,7 +1490,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesLandschneckt
   name: landschneckt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1594,7 +1507,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesLatexHalf
   name: latex singlet
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1612,7 +1524,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesLeavesSkirt
   name: leaves mini skirt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1630,7 +1541,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesLeavesSkirtLong
   name: leaves skirt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1648,7 +1558,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesLeia
   name: leia
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1666,7 +1575,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesLightHanfu
   name: hanfu in white
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1684,7 +1592,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesLittleBlackDress
   name: little black dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1702,7 +1609,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesLoincloth
   name: DEATHKILLARZ loincloth
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1720,7 +1626,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSexyMaid
   name: sexy maid
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1738,7 +1643,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesMaurader
   name: maurader suit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1756,7 +1660,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesMarlowDuds
   name: marlow duds
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1774,7 +1677,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesMayanLoincloth
   name: mayan loincloth
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1792,7 +1694,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesMikuBikini
   name: miku bikini
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1810,7 +1711,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesOliveCargoPunk
   name: olive cargopunk pants
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1828,7 +1728,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPentatop
   name: pentagram tube top
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1846,7 +1745,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPharaoh
   name: pharaoh trappings
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1864,7 +1762,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPinkDress
   name: dress 'nine'
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1882,7 +1779,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPinkSun
   name: pink sun dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1900,7 +1796,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPinkTutu
   name: pink tutu
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1918,7 +1813,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPinkwshort
   name: pink athletic shorts
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1936,7 +1830,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPolyPerformer
   name: polyester performer drapery
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1954,7 +1847,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPortugueseSailor1d
   name: portuguese sailor
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1972,7 +1864,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPromDress
   name: prom dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -1990,7 +1881,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPuffyDress
   name: puffy dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2008,7 +1898,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesQipao
   name: qipao
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2026,7 +1915,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesQipaoNosleeve
   name: qipao sleeveless
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2044,7 +1932,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesQipaoRed
   name: qipao in red
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2062,7 +1949,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesQipaoRedNosleeve
   name: qipao sleeveless in red
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2080,7 +1966,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesQipaoTealNosleeve
   name: qipao sleeveless in teal
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2098,7 +1983,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesQipaoWhite
   name: qipao in white
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2116,7 +2000,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesQipaoWhiteNosleeve
   name: qipao sleeveless in white
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2134,7 +2017,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteRedLandschneckt
   name: landschneckt in red
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2152,7 +2034,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRadkini
   name: radkini
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2170,7 +2051,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRattyCyberpunk
   name: ratty cyberpunk
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2188,7 +2068,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRattySkirtGreen
   name: ratty green skirt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2206,7 +2085,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRattySkirtPink
   name: ratty pink skirt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2224,7 +2102,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRattySkirtYellow
   name: ratty yellow skirt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2242,7 +2119,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRedEveningDress
   name: red evening dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2260,7 +2136,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRedSari
   name: red sari
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2278,7 +2153,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRedWshort
   name: red athletic shorts
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2296,7 +2170,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRevealingDress
   name: revealing dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2314,7 +2187,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesRippedPunk
   name: ripped punk fishnet pantskini
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2332,7 +2204,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSecslutskirt
   name: sexy redsec skirt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2350,7 +2221,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSecslutskirtpink
   name: sexy mauvesec skirt
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2368,7 +2238,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSecstripper
   name: sexy security stripper
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2386,7 +2255,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSexyclown
   name: sexy clown outfit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2404,7 +2272,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSexymime
   name: sexy mime outfit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2422,7 +2289,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSexynursesuit
   name: sexy nurse outfit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2440,7 +2306,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesShamanblue
   name: shaman in blue
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2458,7 +2323,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSheerblue
   name: sheer blue dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2476,7 +2340,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesShortPink
   name: short pink nightgown
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2494,7 +2357,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesShortsBlue
   name: neon blue flashy shorts
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2512,7 +2374,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesShortsRed
   name: blood red breeches
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2530,7 +2391,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSocietyDress
   name: society dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2548,7 +2408,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSunSkirt
   name: sun skirt in green
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2566,7 +2425,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSunSkirtGrey
   name: sun skirt in grey
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2584,7 +2442,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSundressBlue
   name: sundress in blue
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2602,7 +2459,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSundressOrange
   name: sundress in orange
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2620,7 +2476,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSundressPurple
   name: sundress in purple
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2638,7 +2493,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSundressRed
   name: sundress in red
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2656,7 +2510,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSundressYellow
   name: sundress in yellow
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2674,7 +2527,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSwimBlack
   name: one-piece swimsuit in black
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2692,7 +2544,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSwimBlue
   name: one-piece swimsuit in blue
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2710,7 +2561,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSwimEarth
   name: one-or-more-piece swimsuit in earth
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2728,7 +2578,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSwimGreen
   name: one-or-more-piece swimsuit in green
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2746,7 +2595,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSwimPurp
   name: one-or-more-piece swimsuit in purp
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2764,7 +2612,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSwimRed
   name: one-or-more-piece swimsuit in red
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2782,7 +2629,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesSyclothing
   name: sy-bikini
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2800,7 +2646,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTacticoolHawaiianBlue
   name: tacticool hawaiian shirt in blue
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2818,7 +2663,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTacticoolHawaiianOrange
   name: tacticool hawaiian shirt in orange
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2836,7 +2680,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTacticoolHawaiianPurple
   name: tacticool hawaiian shirt in purple
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2854,7 +2697,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTexas
   name: texan scrobsuit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2872,7 +2714,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesToga
   name: toga
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2890,7 +2731,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesToga2
   name: toga 'two'
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2908,7 +2748,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTradwifeBlue
   name: housewife in blue
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2926,7 +2765,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTradwifeOrange
   name: housewife in orange
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2944,7 +2782,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTradwifePurple
   name: housewife in purple
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2962,7 +2799,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTradwifeRed
   name: housewife in red
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2980,7 +2816,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTradwifeYellow
   name: housewife in yellow
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -2998,7 +2833,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTribalColorful
   name: tribal colorful tribalwear
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3016,7 +2850,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesTribalColorfulTop
   name: tribal colorful tribalwear top
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3034,7 +2867,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesUNIrish
   name: drab uniform
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3052,7 +2884,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesUNGreentrousersOG107
   name: drab green trousers
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3070,7 +2901,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesVictorianDress
   name: victorian dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3088,7 +2918,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesVictorianblackdress
   name: victorian black dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3106,7 +2935,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesVictorianblred
   name: black and red victorian vestsuit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3124,7 +2952,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesHappyVampire
   name: happy vampire vestsuit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3142,7 +2969,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesVictorianlightfire
   name: light fire victorian vestsuit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3160,7 +2986,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesVictorianRedDress
   name: victorian red dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3178,7 +3003,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesVictorianRedVest
   name: victorian red vestsuit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3196,7 +3020,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesVictorianVest
   name: victorian vestsuit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3214,7 +3037,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesWaistcoat
   name: waistcoat
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3232,7 +3054,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesWestender
   name: westender slingsuit
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3250,7 +3071,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesWesternBustle
   name: western bustle dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3268,7 +3088,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesWhitebunnysuit
   name: classic white bunnysuit # LoneStar
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3286,7 +3105,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesWhitegown
   name: white gown
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3304,7 +3122,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesWhitesun
   name: white sun dress
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3316,13 +3133,12 @@
     sprite: _CS/Clothes/cbuniforms.rsi
     clothingVisuals:
       jumpsuit:
-      - state:
+      - state: whitesun
 
 - type: entity
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesYellowwshort
   name: yellow athletic shorts
-  description: |
   components:
   - type: Sprite
     overrideDir: South
@@ -3340,7 +3156,6 @@
   parent: CoolCoyoteClothes
   id: CoolCoyoteClothesGearHarness
   name: nudist gear harness
-  description: |
   components:
   - type: Sprite
     overrideDir: South
