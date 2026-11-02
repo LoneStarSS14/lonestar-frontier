@@ -1,13 +1,24 @@
 - type: entity
-  parent: ClothingHeadHelmetArmoredBase
+  parent: ClothingHeadBase
   id: ClothingHeadHelmetTacticalMaid
-  name: CNC Maid Headdress
+  name: cnc maid headband
   description: A highly durable headband with the 'cleaning and clearing' insignia emblazoned on it. Uses reinforced fabric to offer sufficient protection.
   components:
   - type: Sprite
     sprite: _Bubber/Clothing/Head/tacticalmaid.rsi
+    state: icon
   - type: Clothing
     sprite: _Bubber/Clothing/Head/tacticalmaid.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
   - type: StaticPrice
-    price: 1250
-    vendPrice: 2000
+    price: 100
+    vendPrice: 100
+  - type: Tag
+    tags:
+    - WhitelistChameleon
