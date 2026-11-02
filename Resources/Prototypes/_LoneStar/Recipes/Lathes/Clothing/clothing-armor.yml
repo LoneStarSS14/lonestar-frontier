@@ -29,3 +29,8 @@
   id: ClothingMaskGasSecurityBallistic
   parent: NFBaseMaskArmoredRecipe
   result: ClothingMaskGasSecurityBallistic
+
+- type: latheRecipe
+  id: ClothingOuterArmorTacticalMaid
+  parent: NFBaseArmorRecipe
+  result: ClothingOuterArmorTacticalMaid

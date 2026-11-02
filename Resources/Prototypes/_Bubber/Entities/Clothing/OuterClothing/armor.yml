@@ -5,6 +5,6 @@
   description: A compact Type I armored vest that provides decent protection against puncturing wounds.
   components:
   - type: Sprite
-    sprite: _Impstation/Clothing/OuterClothing/Armor/security_compact.rsi
+    sprite: _Bubber/Clothing/OuterClothing/tacticalmaid.rsi
   - type: Clothing
-    sprite: _Impstation/Clothing/OuterClothing/Armor/security_compact.rsi
+    sprite: _Bubber/Clothing/OuterClothing/tacticalmaid.rsi
