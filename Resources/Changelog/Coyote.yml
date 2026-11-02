@@ -4602,3 +4602,10 @@ Entries:
   id: 504
   time: '2026-10-31T12:16:05.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/293
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Portable Recharger now wearable in suitstorage
+  id: 505
+  time: '2026-11-02T20:33:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/296
