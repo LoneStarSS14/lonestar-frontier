@@ -10,6 +10,7 @@
     - state: icon
       map: [ "outerclothing-icon-base" ]
     - state: icon-accent
+      shader: unshaded
       map: [ "outerclothing-icon-accent" ]
   - type: Clothing
     clothingVisuals:
@@ -17,6 +18,7 @@
       - state: equipped-OUTERCLOTHING
         map: [ "outerclothing-equipped-base" ]
       - state: equipped-OUTERCLOTHING-accent
+        shader: unshaded
         map: [ "outerclothing-equipped-accent" ]
   - type: Item
     inhandVisuals:
@@ -24,11 +26,13 @@
         - state: inhand-left
           map: [ "hl-base" ]
         - state: inhand-left-accent
+          shader: unshaded
           map: [ "hl-accent" ]
       right:
         - state: inhand-right
           map: [ "hr-base" ]
         - state: inhand-right-accent
+          shader: unshaded
           map: [ "hr-accent" ]
   - type: ColorableClothing
     denyReroll: false
