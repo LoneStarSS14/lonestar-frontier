@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingTacticalMaid
+  name: CnC maid dress
+  description: For the wandering Space-Christian. Bears some marks from travel that haven't marred the jewelry and crucifix at all.
+  components:
+  - type: Sprite
+    sprite: _Bubber/Clothing/Uniforms/tacticalmaid.rsi
+  - type: Clothing
+    sprite: _Bubber/Clothing/Uniforms/tacticalmaid.rsi

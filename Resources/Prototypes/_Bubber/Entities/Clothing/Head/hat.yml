@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatTacticalMaid
+  name: CNC Maid Headdress
+  description: While its real gold, the gems appear to be plastic.
+  components:
+  - type: Sprite
+    sprite: _Bubber/Clothing/Head/tacticalmaid.rsi
+  - type: Clothing
+    sprite: _Bubber/Clothing/Head/tacticalmaid.rsi
+  - type: StaticPrice
+    price: 1250
+    vendPrice: 2000

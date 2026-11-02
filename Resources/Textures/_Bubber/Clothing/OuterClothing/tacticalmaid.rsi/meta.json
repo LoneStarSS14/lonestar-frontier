@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-4.0",
+    "copyright": "Originally from Bubber https://github.com/Bubberstation/Bubberstation/pull/2462",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "equipped-INNERCLOTHING",
+            "directions": 4
+        }
+    ]
+}
