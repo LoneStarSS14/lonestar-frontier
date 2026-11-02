@@ -4609,3 +4609,12 @@ Entries:
   id: 505
   time: '2026-11-02T20:33:35.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/296
+- author: archee1
+  changes:
+    - type: Remove
+      message: Removed titan thrusters.
+    - type: Tweak
+      message: Vesper thrusters now take 3 capacitors, down from 6
+  id: 506
+  time: '2026-11-02T20:57:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/292
