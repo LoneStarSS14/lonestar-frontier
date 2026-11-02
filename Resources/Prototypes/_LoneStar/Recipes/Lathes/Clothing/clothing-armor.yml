@@ -34,3 +34,8 @@
   id: ClothingOuterArmorTacticalMaid
   parent: NFBaseArmorRecipe
   result: ClothingOuterArmorTacticalMaid
+
+- type: latheRecipe
+  id: ClothingHeadHelmetTacticalMaid
+  parent: NFBaseHelmetRecipe
+  result: ClothingHeadHelmetTacticalMaid

@@ -2,7 +2,7 @@
   parent: ClothingUniformSkirtBase
   id: ClothingTacticalMaid
   name: CnC maid dress
-  description: For the wandering Space-Christian. Bears some marks from travel that haven't marred the jewelry and crucifix at all.
+  description: Unlike a normal maid costume, this one is made of high-performance durathread weave. This relatively innocent at first glance outfit is actually the specialized type worn by Nanotrasen's infamous high profile 'Cleaning and Clearing' kill squads. It's a lot more robust than it's janitorial counterpart...
   components:
   - type: Sprite
     sprite: _Bubber/Clothing/Uniforms/tacticalmaid.rsi

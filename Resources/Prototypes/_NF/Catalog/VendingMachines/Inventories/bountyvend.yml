@@ -86,7 +86,9 @@
 # LoneStar
     ClothingShoesToelessJackboots: 4294967295
     ClothingMaskGasSecurityBallistic: 4294967295
+    ClothingHeadHelmetTacticalMaid: 4294967295
     ClothingOuterArmorBasicCompact: 4294967295 # I think competing for limited stock for these is already quite dumb.
+    ClothingOuterArmorTacticalMaid: 4294967295
 
 - type: vendingMachineInventory
   id: BountyVendPOIInventory
