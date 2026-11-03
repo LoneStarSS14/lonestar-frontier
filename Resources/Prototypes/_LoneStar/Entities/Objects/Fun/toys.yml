@@ -1,0 +1,116 @@
+
+- type: entity
+  parent: BasePlushie
+  id: LSPlushieMaid
+  name: elf maid plushie
+  description: A stuffed toy that resembles a maid with long wide ears, why is it full of salt?
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Fun/Plushies/elf-maid.rsi
+    state: icon
+  - type: Clothing
+    sprite: _LoneStar/Objects/Fun/Plushies/elf-maid.rsi
+    quickEquip: false
+    slots:
+    - HEAD
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: LSPlushieMaid
+  # Unique
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        reagents:
+        - ReagentId: TableSalt
+          Quantity: 10
+  - type: SolutionTransfer
+    canChangeTransferAmount: false
+  - type: SolutionRegeneration
+    solution: beaker
+    generated:
+      reagents:
+      - ReagentId: TableSalt
+        Quantity: 0.1
+  - type: Spillable
+    solution: beaker
+
+- type: entity
+  parent: BasePlushie
+  id: LSPlushieKitty
+  name: kitty vampire plushie
+  description: A stuffed toy that resembles a vampire kitty, it feels spiritually important, or something.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Fun/Plushies/kitty-vampire.rsi
+    state: icon
+  - type: Clothing
+    sprite: _LoneStar/Objects/Fun/Plushies/kitty-vampire.rsi
+    quickEquip: false
+    slots:
+    - HEAD
+    state: icon
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: LSPlushieKitty
+  # Sounds
+  - type: EmitSoundOnUse
+    sound:
+      collection: FelinidMews
+  - type: EmitSoundOnLand
+    sound:
+      collection: FelinidGrowls
+  - type: EmitSoundOnActivate
+    sound:
+      collection: FelinidMews
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: FelinidMews
+  - type: EmitSoundOnCollide
+    sound:
+      collection: FelinidMews
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      collection: FelinidMews
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      collection: FelinidMews
+  # Unique
+  - type: UseDelay
+    delay: 10.0
+  - type: Bible
+    damage:
+      groups:
+        Brute: -15
+        Burn: -15
+    damageOnFail:
+      groups:
+        Brute: 15
+        Airloss: 15
+    damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
+      groups:
+        Burn: 1
+  - type: ReactionMixer
+    mixMessage: "bible-mixing-success"
+    reactionTypes:
+    - Holy
+
+
+
+
+#region Cotton Burger
+- type: foodSequenceElement
+  id: LSPlushieMaid
+  name: food-sequence-cotton-burger-content-plushie-maid
+  sprites:
+  - sprite: _LoneStar/Objects/Fun/Plushies/elf-maid.rsi
+    state: icon
+
+- type: foodSequenceElement
+  id: LSPlushieKitty
+  name: food-sequence-cotton-burger-content-plushie-kitty
+  sprites:
+  - sprite: _LoneStar/Objects/Fun/Plushies/kitty-vampire.rsi
+    state: icon
+#endregion
