@@ -5,6 +5,8 @@
   colors:
     navyLight: "#5F7FA3" # Command
     navyDark: "#243A56"
+    ceruleanLight: "#3861e8" # Cerulean.
+    ceruleanDark: "#301ed0"
     aquaLight: "#7DD8F0" # Medical
     aquaDark: "#2C7894"
     tealLight: "#67D6B0" # Atmospherics
