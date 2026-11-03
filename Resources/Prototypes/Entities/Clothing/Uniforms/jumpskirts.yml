@@ -744,11 +744,12 @@
     graph: WebObjects
     node: jumpskirt
 
+# LoneStar start, adding colorable support
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtCasualBlue
-  name: casual blue jumpskirt
-  description: A loose worn blue shirt with a grey skirt, perfect for someone looking to relax.
+  name: casual jumpskirt
+  description: A loose worn shirt with a grey skirt, perfect for someone looking to relax.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
@@ -756,16 +757,19 @@
     - state: icon-jumpskirt
     - state: icon-shirt
       color: "#134fc1"
+      map: [ "uniform-icon" ]
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-jumpskirt
       - state: inhand-left-shirt
         color: "#134fc1"
+        map: [ "hl-color" ]
       right:
       - state: inhand-right-jumpskirt
       - state: inhand-right-shirt
         color: "#134fc1"
+        map: [ "hr-color" ]
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
     clothingVisuals:
@@ -773,12 +777,24 @@
       - state: equipped-INNERCLOTHING-jumpskirt
       - state: equipped-INNERCLOTHING-shirt
         color: "#134fc1"
+        map: [ "uniform-equipped" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Base: NTInteriorDesign
+    available:
+      - uniform-icon:
+          icon-shirt: Base
+        uniform-equipped:
+          equipped-INNERCLOTHING-shirt: Base
+        hl-color:
+          inhand-left-shirt: Base
+        hr-color:
+          inhand-right-shirt: Base
 
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: ClothingUniformJumpskirtCasualBlue
   id: ClothingUniformJumpskirtCasualPurple
-  name: casual purple jumpskirt
-  description: A loose worn purple shirt with a grey skirt, perfect for someone looking to relax.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
@@ -786,16 +802,19 @@
     - state: icon-jumpskirt
     - state: icon-shirt
       color: "#9c0dff"
+      map: [ "uniform-icon" ]
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-jumpskirt
       - state: inhand-left-shirt
         color: "#9c0dff"
+        map: [ "hl-color" ]
       right:
       - state: inhand-right-jumpskirt
       - state: inhand-right-shirt
         color: "#9c0dff"
+        map: [ "hr-color" ]
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
     clothingVisuals:
@@ -803,12 +822,11 @@
       - state: equipped-INNERCLOTHING-jumpskirt
       - state: equipped-INNERCLOTHING-shirt
         color: "#9c0dff"
+        map: [ "uniform-equipped" ]
 
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: ClothingUniformJumpskirtCasualBlue
   id: ClothingUniformJumpskirtCasualRed
-  name: casual red jumpskirt
-  description: A loose worn red shirt with a grey skirt, perfect for someone looking to relax.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
@@ -816,16 +834,19 @@
     - state: icon-jumpskirt
     - state: icon-shirt
       color: "#b30000"
+      map: [ "uniform-icon" ]
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-jumpskirt
       - state: inhand-left-shirt
         color: "#b30000"
+        map: [ "hl-color" ]
       right:
       - state: inhand-right-jumpskirt
       - state: inhand-right-shirt
         color: "#b30000"
+        map: [ "hr-color" ]
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
     clothingVisuals:
@@ -833,12 +854,11 @@
       - state: equipped-INNERCLOTHING-jumpskirt
       - state: equipped-INNERCLOTHING-shirt
         color: "#b30000"
+        map: [ "uniform-equipped" ]
 
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: ClothingUniformJumpskirtCasualBlue
   id: ClothingUniformJumpskirtCasualGreen
-  name: casual green jumpskirt
-  description: A loose worn green shirt with a grey skirt, perfect for someone looking to relax.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
@@ -846,16 +866,19 @@
     - state: icon-jumpskirt
     - state: icon-shirt
       color: "#00661D"
+      map: [ "uniform-icon" ]
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-jumpskirt
       - state: inhand-left-shirt
         color: "#00661D"
+        map: [ "hl-color" ]
       right:
       - state: inhand-right-jumpskirt
       - state: inhand-right-shirt
         color: "#00661D"
+        map: [ "hr-color" ]
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
     clothingVisuals:
@@ -863,6 +886,8 @@
       - state: equipped-INNERCLOTHING-jumpskirt
       - state: equipped-INNERCLOTHING-shirt
         color: "#00661D"
+        map: [ "uniform-equipped" ]
+# LoneStar end
 
 - type: entity
   parent: ClothingUniformSkirtBase

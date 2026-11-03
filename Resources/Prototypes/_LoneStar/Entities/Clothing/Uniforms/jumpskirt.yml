@@ -276,6 +276,20 @@
           color: "#9E2020"
           map: [ "hr-base" ]
 
+- type: entity
+  parent: ClothingUniformJumpskirtCasualBlue
+  id: ClothingUniformJumpskirtCasualWhite
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
+    layers:
+    - state: icon-jumpskirt
+    - state: icon-shirt
+      color: "#ffffff"
+      map: [ "uniform-icon" ]
+  - type: ColorableClothing
+    randomOnCreation: true
+
 # region School skirts
 - type: entity
   parent: ClothingUniformSkirtBase

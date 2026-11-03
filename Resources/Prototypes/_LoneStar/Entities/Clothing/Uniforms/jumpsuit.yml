@@ -91,3 +91,17 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/atheltic-shorts.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/atheltic-shorts.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitCasualBlue
+  id: ClothingUniformJumpsuitCasualWhite
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
+    layers:
+    - state: icon-jumpsuit
+    - state: icon-shirt
+      color: "#ffffff"
+      map: [ "uniform-icon" ]
+  - type: ColorableClothing
+    randomOnCreation: true
