@@ -87,8 +87,8 @@
   # LoneStar below
   - type: Armor
     modifiers:
-      coefficients:
-        Blunt: 0.95
+      flatReductions:
+        Blunt: 1
   # LoneStar end
 
 - type: entity
