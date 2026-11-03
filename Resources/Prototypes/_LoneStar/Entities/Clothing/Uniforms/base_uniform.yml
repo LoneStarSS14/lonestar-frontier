@@ -88,27 +88,27 @@
   components:
   - type: Sprite
     layers:
-    - state: icon
+    - state: icon-primary
       map: [ "uniform-icon-primary" ]
-    - state: icon-color
+    - state: icon-secondary
       map: [ "uniform-icon-secondary" ]
   - type: Clothing
     clothingVisuals:
       jumpsuit:
-      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-primary
         map: [ "uniform-equipped-primary" ]
-      - state: equipped-INNERCLOTHING-color
+      - state: equipped-INNERCLOTHING-secondary
         map: [ "uniform-equipped-secondary" ]
   - type: ColorableClothing
     available:
       - uniform-icon-primary:
-          icon: Primary
+          icon-primary: Primary
         uniform-icon-secondary:
-          icon-color: Secondary
+          icon-secondary: Secondary
         uniform-equipped-primary:
-          equipped-INNERCLOTHING: Primary
+          equipped-INNERCLOTHING-primary: Primary
         uniform-equipped-secondary:
-          equipped-INNERCLOTHING-color: Secondary
+          equipped-INNERCLOTHING-secondary: Secondary
     mappedColors:
       Primary: LSSilks
       Secondary: NTInteriorDesign
@@ -122,33 +122,33 @@
   - type: Item
     inhandVisuals:
       left:
-        - state: inhand-left
+        - state: inhand-left-primary
           map: [ "hl-primary" ]
-        - state: inhand-left-color
+        - state: inhand-left-secondary
           map: [ "hl-secondary" ]
       right:
-        - state: inhand-right
+        - state: inhand-right-primary
           map: [ "hr-primary" ]
-        - state: inhand-right-color
+        - state: inhand-right-secondary
           map: [ "hr-secondary" ]
   - type: ColorableClothing
     available:
       - uniform-icon-primary:
-          icon: Primary
+          icon-primary: Primary
         uniform-icon-secondary:
-          icon-color: Secondary
+          icon-secondary: Secondary
         uniform-equipped-primary:
-          equipped-INNERCLOTHING: Primary
+          equipped-INNERCLOTHING-primary: Primary
         uniform-equipped-secondary:
-          equipped-INNERCLOTHING-color: Secondary
+          equipped-INNERCLOTHING-secondary: Secondary
         hl-primary:
-          inhand-left: Primary
+          inhand-left-primary: Primary
         hl-secondary:
-          inhand-left-color: Secondary
+          inhand-left-secondary: Secondary
         hr-primary:
-          inhand-right: Primary
+          inhand-right-primary: Primary
         hr-secondary:
-          inhand-right-color: Secondary
+          inhand-right-secondary: Secondary
     mappedColors:
       Primary: LSSilks
       Secondary: NTInteriorDesign

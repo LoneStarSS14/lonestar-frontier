@@ -120,27 +120,27 @@
   components:
   - type: Sprite
     layers:
-    - state: icon
+    - state: icon-primary
       map: [ "head-icon-primary" ]
-    - state: icon-color
+    - state: icon-secondary
       map: [ "head-icon-secondary" ]
   - type: Clothing
     clothingVisuals:
       head:
-      - state: equipped-HELMET
+      - state: equipped-HELMET-primary
         map: [ "head-equipped-primary" ]
-      - state: equipped-HELMET-color
+      - state: equipped-HELMET-secondary
         map: [ "head-equipped-secondary" ]
   - type: ColorableClothing
     available:
       - head-icon-primary:
-          icon: Primary
+          icon-primary: Primary
         head-icon-secondary:
-          icon-color: Secondary
+          icon-secondary: Secondary
         head-equipped-primary:
-          equipped-HELMET: Primary
+          equipped-HELMET-primary: Primary
         head-equipped-secondary:
-          equipped-HELMET-color: Secondary
+          equipped-HELMET-secondary: Secondary
     mappedColors:
       Primary: LSSilks
       Secondary: NTInteriorDesign
@@ -158,33 +158,33 @@
   - type: Item
     inhandVisuals:
       left:
-      - state: inhand-left
+      - state: inhand-left-primary
         map: [ "hl-primary" ]
-      - state: inhand-left-color
+      - state: inhand-left-secondary
         map: [ "hl-secondary" ]
       right:
-      - state: inhand-right
+      - state: inhand-right-primary
         map: [ "hr-primary" ]
-      - state: inhand-right-color
+      - state: inhand-right-secondary
         map: [ "hr-secondary" ]
   - type: ColorableClothing
     available:
       - head-icon-primary:
-          icon: Primary
+          icon-primary: Primary
         head-icon-secondary:
-          icon-color: Secondary
+          icon-secondary: Secondary
         head-equipped-primary:
-          equipped-HELMET: Primary
+          equipped-HELMET-primary: Primary
         head-equipped-secondary:
-          equipped-HELMET-color: Secondary
+          equipped-HELMET-secondary: Secondary
         hl-primary:
-          inhand-left: Primary
+          inhand-left-primary: Primary
         hl-secondary:
-          inhand-left-color: Secondary
+          inhand-left-secondary: Secondary
         hr-primary:
-          inhand-right: Primary
+          inhand-right-primary: Primary
         hr-secondary:
-          inhand-right-color: Secondary
+          inhand-right-secondary: Secondary
     mappedColors:
       Primary: LSSilks
       Secondary: NTInteriorDesign
