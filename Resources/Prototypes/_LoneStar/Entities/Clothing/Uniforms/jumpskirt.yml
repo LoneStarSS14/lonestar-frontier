@@ -208,6 +208,74 @@
     mappedColors:
       Base: NTInteriorDesign
 
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformEveDressBlue
+  name: evening dress
+  description: a stunning dress for formal occasions.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/evening-dress.rsi
+    layers:
+    - state: equipped-INNERCLOTHING
+      color: "#3861e8"
+      map: [ "uniform-equipped" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/evening-dress.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        color: "#3861e8"
+        map: [ "uniform-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          color: "#3861e8"
+          map: [ "hl-base" ]
+      right:
+        - state: inhand-right
+          color: "#3861e8"
+          map: [ "hr-base" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+    available:
+      - uniform-equipped:
+          equipped-INNERCLOTHING: Base
+          equipped-INNERCLOTHING-alt: Base
+        hl-base:
+          inhand-left: Base
+        hr-base:
+          inhand-right: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity
+  parent: ClothingUniformEveDressBlue
+  id: ClothingUniformEveDressRed
+  components:
+  - type: Sprite
+    layers:
+    - state: equipped-INNERCLOTHING-alt
+      color: "#9E2020"
+      map: [ "uniform-equipped" ]
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-alt
+        color: "#9E2020"
+        map: [ "uniform-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          color: "#9E2020"
+          map: [ "hl-base" ]
+      right:
+        - state: inhand-right
+          color: "#9E2020"
+          map: [ "hr-base" ]
+
 # region School skirts
 - type: entity
   parent: ClothingUniformSkirtBase

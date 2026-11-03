@@ -469,32 +469,6 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformEveDressBlue
-  name: evening dress
-  description: a stunning dress for formal occasions.
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Uniforms/eveningdressblue.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Uniforms/eveningdressblue.rsi
-  - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
-    price: 80 # Frontier
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformEveDressRed
-  name: evening dress
-  description: a stunning dress for formal occasions.
-  components:
-  - type: Sprite
-    sprite: _HL/Clothing/Uniforms/eveningdressred.rsi
-  - type: Clothing
-    sprite: _HL/Clothing/Uniforms/eveningdressred.rsi
-  - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
-    price: 80 # Frontier
-
-- type: entity
-  parent: ClothingUniformBase
   id: ClothingUniformEveDressWhite
   name: evening dress
   description: a stunning dress for formal occasions.
