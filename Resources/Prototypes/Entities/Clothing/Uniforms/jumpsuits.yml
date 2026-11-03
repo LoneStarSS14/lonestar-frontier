@@ -222,25 +222,103 @@
       coefficients:
         Radiation: 0.8
 
+# LoneStar start, colorability support
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, ClothingUniformColorableDualColorInhand ]
   id: ClothingUniformJumpsuitJester
   name: jester suit
   description: A jolly dress, well suited to entertain your master, nuncle.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/jester.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/jester.rsi
+    layers:
+    - state: icon-primary
+      color: "#9E2020"
+      map: [ "uniform-icon-primary" ]
+    - state: icon-secondary
+      color: "#5C9630"
+      map: [ "uniform-icon-secondary" ]
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/jester.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/jester.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-primary
+        color: "#9E2020"
+        map: [ "uniform-equipped-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        color: "#5C9630"
+        map: [ "uniform-equipped-secondary" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left-primary
+          color: "#9E2020"
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          color: "#5C9630"
+          map: [ "hl-secondary" ]
+      right:
+        - state: inhand-right-primary
+          color: "#9E2020"
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          color: "#5C9630"
+          map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
 
 - type: entity
-  parent: ClothingUniformJumpsuitJester
+  parent: [ ClothingUniformBase, ClothingUniformColorableDualColorInhand ]
   id: ClothingUniformJumpsuitJesterAlt
+  name: jester suit
+  description: A jolly dress, well suited to entertain your master, nuncle.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/jester2.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/jester2.rsi
+    layers:
+    - state: icon
+    - state: icon-primary
+      color: "#9E2020"
+      map: [ "uniform-icon-primary" ]
+    - state: icon-secondary
+      color: "#FFD878"
+      map: [ "uniform-icon-secondary" ]
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/jester2.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/jester2.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-primary
+        color: "#9E2020"
+        map: [ "uniform-equipped-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        color: "#FFD878"
+        map: [ "uniform-equipped-secondary" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-primary
+        color: "#9E2020"
+        map: [ "hl-primary" ]
+      - state: inhand-left-secondary
+        color: "#FFD878"
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right-primary
+        color: "#9E2020"
+        map: [ "hr-primary" ]
+      - state: inhand-right-secondary
+        color: "#FFD878"
+        map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
+# LoneStar end
 
 - type: entity
   parent: ClothingUniformBase # Frontier: remove BaseC4Contraband, ClothingUniformFoldableBase
@@ -1274,8 +1352,6 @@
         map: [ "uniform-equipped" ]
   - type: ColorableClothing
     randomOnCreation: false
-    mappedColors:
-      Base: NTInteriorDesign
     available:
       - uniform-icon:
           icon-shirt: Base
