@@ -1238,11 +1238,12 @@
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/gladiator.rsi
 
+# LoneStar start, adding colorable support
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitCasualBlue
-  name: casual blue jumpsuit
-  description: A loose worn blue shirt with a grey pants, perfect for someone looking to relax.
+  name: casual jumpsuit
+  description: A loose shirt with grey pants, perfect for someone looking to relax.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
@@ -1250,16 +1251,19 @@
     - state: icon-jumpsuit
     - state: icon-shirt
       color: "#134fc1"
+      map: [ "uniform-icon" ]
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-jumpsuit
       - state: inhand-left-shirt
         color: "#134fc1"
+        map: [ "hl-color" ]
       right:
       - state: inhand-right-jumpsuit
       - state: inhand-right-shirt
         color: "#134fc1"
+        map: [ "hr-color" ]
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
     clothingVisuals:
@@ -1267,12 +1271,24 @@
       - state: equipped-INNERCLOTHING-jumpsuit
       - state: equipped-INNERCLOTHING-shirt
         color: "#134fc1"
+        map: [ "uniform-equipped" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Base: NTInteriorDesign
+    available:
+      - uniform-icon:
+          icon-shirt: Base
+        uniform-equipped:
+          equipped-INNERCLOTHING-shirt: Base
+        hl-color:
+          inhand-left-shirt: Base
+        hr-color:
+          inhand-right-shirt: Base
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformJumpsuitCasualBlue
   id: ClothingUniformJumpsuitCasualPurple
-  name: casual purple jumpsuit
-  description: A loose worn purple shirt with a grey pants, perfect for someone looking to relax.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
@@ -1280,16 +1296,19 @@
     - state: icon-jumpsuit
     - state: icon-shirt
       color: "#9c0dff"
+      map: [ "uniform-icon" ]
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-jumpsuit
       - state: inhand-left-shirt
         color: "#9c0dff"
+        map: [ "hl-color" ]
       right:
       - state: inhand-right-jumpsuit
       - state: inhand-right-shirt
         color: "#9c0dff"
+        map: [ "hr-color" ]
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
     clothingVisuals:
@@ -1297,12 +1316,11 @@
       - state: equipped-INNERCLOTHING-jumpsuit
       - state: equipped-INNERCLOTHING-shirt
         color: "#9c0dff"
+        map: [ "uniform-equipped" ]
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformJumpsuitCasualBlue
   id: ClothingUniformJumpsuitCasualRed
-  name: casual red jumpsuit
-  description: A loose worn red shirt with a grey pants, perfect for someone looking to relax.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
@@ -1310,16 +1328,19 @@
     - state: icon-jumpsuit
     - state: icon-shirt
       color: "#b30000"
+      map: [ "uniform-icon" ]
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-jumpsuit
       - state: inhand-left-shirt
         color: "#b30000"
+        map: [ "hl-color" ]
       right:
       - state: inhand-right-jumpsuit
       - state: inhand-right-shirt
         color: "#b30000"
+        map: [ "hr-color" ]
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
     clothingVisuals:
@@ -1327,12 +1348,11 @@
       - state: equipped-INNERCLOTHING-jumpsuit
       - state: equipped-INNERCLOTHING-shirt
         color: "#b30000"
+        map: [ "uniform-equipped" ]
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformJumpsuitCasualBlue
   id: ClothingUniformJumpsuitCasualGreen
-  name: casual green jumpsuit
-  description: A loose worn green shirt with a grey pants, perfect for someone looking to relax.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
@@ -1340,16 +1360,19 @@
     - state: icon-jumpsuit
     - state: icon-shirt
       color: "#00661D"
+      map: [ "uniform-icon" ]
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left-jumpsuit
       - state: inhand-left-shirt
         color: "#00661D"
+        map: [ "hl-color" ]
       right:
       - state: inhand-right-jumpsuit
       - state: inhand-right-shirt
         color: "#00661D"
+        map: [ "hr-color" ]
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
     clothingVisuals:
@@ -1357,6 +1380,8 @@
       - state: equipped-INNERCLOTHING-jumpsuit
       - state: equipped-INNERCLOTHING-shirt
         color: "#00661D"
+        map: [ "uniform-equipped" ]
+# LoneStar end
 
 - type: entity
   parent: ClothingUniformBase

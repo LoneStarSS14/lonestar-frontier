@@ -49,14 +49,16 @@
     ClothingUniformJumpsuitHawaiRed: 4294967295
     ClothingUniformJumpsuitHawaiYellow: 4294967295
     ClothingUniformJumpsuitFlannelColorable: 4294967295
-    ClothingUniformJumpsuitCasualBlue: 4294967295
-    ClothingUniformJumpskirtCasualBlue: 4294967295
-    ClothingUniformJumpsuitCasualPurple: 4294967295
-    ClothingUniformJumpskirtCasualPurple: 4294967295
-    ClothingUniformJumpsuitCasualRed: 4294967295
-    ClothingUniformJumpskirtCasualRed: 4294967295
-    ClothingUniformJumpsuitCasualGreen: 4294967295
-    ClothingUniformJumpskirtCasualGreen: 4294967295
+    ClothingUniformJumpsuitCasualWhite: 4294967295
+    ClothingUniformJumpskirtCasualWhite: 4294967295
+    # ClothingUniformJumpsuitCasualBlue: 4294967295 # LoneStar, redudant due to colorizer stuff.
+    # ClothingUniformJumpskirtCasualBlue: 4294967295
+    # ClothingUniformJumpsuitCasualPurple: 4294967295
+    # ClothingUniformJumpskirtCasualPurple: 4294967295
+    # ClothingUniformJumpsuitCasualRed: 4294967295
+    # ClothingUniformJumpskirtCasualRed: 4294967295
+    # ClothingUniformJumpsuitCasualGreen: 4294967295
+    # ClothingUniformJumpskirtCasualGreen: 4294967295
     ClothingUniformTurtleskirtColorable: 4294967295
     ClothingUniformTurtleneckColorable: 4294967295
     ClothingShoesColorBlack: 4294967295
