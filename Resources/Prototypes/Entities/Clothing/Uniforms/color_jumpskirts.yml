@@ -1,6 +1,8 @@
+## LoneStar, all sprite/item/clothing map lines added, also BaseClothingUniformJumpsuitColorable parent added
+
 # White Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorWhite
   name: white jumpskirt
   description: A generic white jumpskirt with no rank markings.
@@ -9,44 +11,53 @@
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
     layers:
     - state: icon
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
     clothingVisuals:
       jumpsuit:
       - state: equipped-INNERCLOTHING
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Grey Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  # LoneStar start, name/desc and parent
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorGrey
-  name: grey jumpskirt
-  description: A tasteful grey jumpskirt that reminds you of the good old days.
+  name: jumpskirt
+  description: A tasteful jumpskirt that reminds you of the good old days.
+  # Lonestar end
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
     layers:
     - state: icon
       color: "#b3b3b3"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#b3b3b3"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#b3b3b3"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -54,11 +65,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#b3b3b3"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Black Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorBlack
   name: black jumpskirt
   description: A generic black jumpskirt with no rank markings.
@@ -68,16 +80,19 @@
     layers:
     - state: icon
       color: "#3f3f3f"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#3f3f3f"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#3f3f3f"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -85,11 +100,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#3f3f3f"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Blue Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorBlue
   name: blue jumpskirt
   description: A generic blue jumpskirt with no rank markings.
@@ -99,16 +115,19 @@
     layers:
     - state: icon
       color: "#52aecc"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#52aecc"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#52aecc"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -116,11 +135,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#52aecc"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Dark Blue Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorDarkBlue
   name: dark blue jumpskirt
   description: A generic dark blue jumpskirt with no rank markings.
@@ -130,16 +150,19 @@
     layers:
     - state: icon
       color: "#3285ba"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#3285ba"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#3285ba"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -147,11 +170,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#3285ba"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Teal Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorTeal
   name: teal jumpskirt
   description: A generic teal jumpskirt with no rank markings.
@@ -161,16 +185,19 @@
     layers:
     - state: icon
       color: "#77f3b7"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#77f3b7"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#77f3b7"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -178,11 +205,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#77f3b7"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Green Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorGreen
   name: green jumpskirt
   description: A generic green jumpskirt with no rank markings.
@@ -192,16 +220,19 @@
     layers:
     - state: icon
       color: "#9ed63a"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#9ed63a"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#9ed63a"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -209,11 +240,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#9ed63a"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
- # Dark Green Jumpskirt
+# Dark Green Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorDarkGreen
   name: dark green jumpskirt
   description: A generic dark green jumpskirt with no rank markings.
@@ -223,16 +255,19 @@
     layers:
     - state: icon
       color: "#007923"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#007923"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#007923"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -240,11 +275,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#007923"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Orange Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorOrange
   name: orange jumpskirt
   description: Don't wear this near paranoid security officers.
@@ -254,16 +290,19 @@
     layers:
     - state: icon
       color: "#ff8c19"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#ff8c19"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#ff8c19"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -271,11 +310,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#ff8c19"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Pink Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorPink
   name: pink jumpskirt
   description: Just looking at this makes you feel <i>fabulous</i>.
@@ -285,16 +325,19 @@
     layers:
     - state: icon
       color: "#ffa69b"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#ffa69b"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#ffa69b"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -302,11 +345,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#ffa69b"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Red Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorRed
   name: red jumpskirt
   description: A generic red jumpskirt with no rank markings.
@@ -316,16 +360,19 @@
     layers:
     - state: icon
       color: "#eb0c07"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#eb0c07"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#eb0c07"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -333,11 +380,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#eb0c07"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Yellow Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorYellow
   name: yellow jumpskirt
   description: A generic yellow jumpskirt with no rank markings.
@@ -347,16 +395,19 @@
     layers:
     - state: icon
       color: "#ffe14d"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#ffe14d"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#ffe14d"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -364,11 +415,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#ffe14d"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Purple Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorPurple
   name: purple jumpskirt
   description: A generic light purple jumpskirt with no rank markings.
@@ -378,16 +430,19 @@
     layers:
     - state: icon
       color: "#9f70cc"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#9f70cc"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#9f70cc"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -395,11 +450,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#9f70cc"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Light Brown Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorLightBrown
   name: light brown jumpskirt
   description: A generic light brown jumpskirt with no rank markings.
@@ -409,16 +465,19 @@
     layers:
     - state: icon
       color: "#c59431"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#c59431"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#c59431"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -426,11 +485,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#c59431"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Brown Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorBrown
   name: brown jumpskirt
   description: A generic brown jumpskirt with no rank markings.
@@ -440,16 +500,19 @@
     layers:
     - state: icon
       color: "#a17229"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#a17229"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#a17229"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -457,11 +520,12 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#a17229"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Maroon Jumpskirt
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorMaroon
   name: maroon jumpskirt
   description: A generic maroon jumpskirt with no rank markings.
@@ -471,16 +535,19 @@
     layers:
     - state: icon
       color: "#cc295f"
+      map: [ "uniform-icon" ]
     - state: trinkets-icon
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#cc295f"
+        map: [ "hl-color" ]
       - state: trinkets-inhand-left
       right:
       - state: inhand-right
         color: "#cc295f"
+        map: [ "hr-color" ]
       - state: trinkets-inhand-right
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -488,6 +555,7 @@
       jumpsuit:
       - state: equipped-INNERCLOTHING
         color: "#cc295f"
+        map: [ "uniform-equipped" ]
       - state: trinkets-equipped-INNERCLOTHING
 
 # Rainbow Jumpskirt

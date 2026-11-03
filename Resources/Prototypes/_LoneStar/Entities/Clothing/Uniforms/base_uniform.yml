@@ -152,3 +152,48 @@
     mappedColors:
       Primary: LSSilks
       Secondary: NTInteriorDesign
+
+#region Specific Bases
+- type: entity # Used as an intermediate by wizden's base colored jumpsuits to minimize changes.
+  id: BaseClothingUniformJumpsuitColorable
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/color.rsi
+    layers:
+    - state: icon
+      color: "#ffffff"
+      map: [ "uniform-icon" ]
+    - state: trinkets-icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#ffffff"
+        map: [ "hl-color" ]
+      - state: trinkets-inhand-left
+      right:
+      - state: inhand-right
+        color: "#ffffff"
+        map: [ "hr-color" ]
+      - state: trinkets-inhand-right
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/color.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        color: "#ffffff"
+        map: [ "uniform-equipped" ]
+      - state: trinkets-equipped-INNERCLOTHING
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Base: NTInteriorDesign
+    available:
+      - uniform-icon:
+          icon: Base
+        uniform-equipped:
+          equipped-INNERCLOTHING: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
