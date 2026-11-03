@@ -20,30 +20,30 @@
     ClothingHeadHatBrownFlatcap: 4294967295
     ClothingUniformJumpsuitColorGrey: 4294967295
     ClothingUniformJumpskirtColorGrey: 4294967295
-    ClothingUniformJumpsuitColorWhite: 4294967295
-    ClothingUniformJumpskirtColorWhite: 4294967295
-    ClothingUniformJumpsuitColorBlack: 4294967295
-    ClothingUniformJumpskirtColorBlack: 4294967295
-    ClothingUniformJumpsuitColorBlue: 4294967295
-    ClothingUniformJumpskirtColorBlue: 4294967295
-    ClothingUniformJumpsuitColorYellow: 4294967295
-    ClothingUniformJumpskirtColorYellow: 4294967295
-    ClothingUniformJumpsuitColorGreen: 4294967295
-    ClothingUniformJumpskirtColorGreen: 4294967295
-    ClothingUniformJumpsuitColorOrange: 4294967295
-    ClothingUniformJumpskirtColorOrange: 4294967295
-    ClothingUniformJumpsuitColorRed: 4294967295
-    ClothingUniformJumpskirtColorRed: 4294967295
-    ClothingUniformJumpsuitColorPurple: 4294967295
-    ClothingUniformJumpskirtColorPurple: 4294967295
-    ClothingUniformJumpsuitColorPink: 4294967295
-    ClothingUniformJumpskirtColorPink: 4294967295
-    ClothingUniformJumpsuitColorDarkBlue: 4294967295
-    ClothingUniformJumpskirtColorDarkBlue: 4294967295
-    ClothingUniformJumpsuitColorDarkGreen:  4294967295
-    ClothingUniformJumpskirtColorDarkGreen: 4294967295
-    ClothingUniformJumpsuitColorTeal: 4294967295
-    ClothingUniformJumpskirtColorTeal: 4294967295
+    # ClothingUniformJumpsuitColorWhite: 4294967295 # LoneStar, redudant due to colorizer stuff.
+    # ClothingUniformJumpskirtColorWhite: 4294967295
+    # ClothingUniformJumpsuitColorBlack: 4294967295
+    # ClothingUniformJumpskirtColorBlack: 4294967295
+    # ClothingUniformJumpsuitColorBlue: 4294967295
+    # ClothingUniformJumpskirtColorBlue: 4294967295
+    # ClothingUniformJumpsuitColorYellow: 4294967295
+    # ClothingUniformJumpskirtColorYellow: 4294967295
+    # ClothingUniformJumpsuitColorGreen: 4294967295
+    # ClothingUniformJumpskirtColorGreen: 4294967295
+    # ClothingUniformJumpsuitColorOrange: 4294967295
+    # ClothingUniformJumpskirtColorOrange: 4294967295
+    # ClothingUniformJumpsuitColorRed: 4294967295
+    # ClothingUniformJumpskirtColorRed: 4294967295
+    # ClothingUniformJumpsuitColorPurple: 4294967295
+    # ClothingUniformJumpskirtColorPurple: 4294967295
+    # ClothingUniformJumpsuitColorPink: 4294967295
+    # ClothingUniformJumpskirtColorPink: 4294967295
+    # ClothingUniformJumpsuitColorDarkBlue: 4294967295
+    # ClothingUniformJumpskirtColorDarkBlue: 4294967295
+    # ClothingUniformJumpsuitColorDarkGreen:  4294967295
+    # ClothingUniformJumpskirtColorDarkGreen: 4294967295
+    # ClothingUniformJumpsuitColorTeal: 4294967295
+    # ClothingUniformJumpskirtColorTeal: 4294967295
     ClothingUniformJumpsuitHawaiBlack: 4294967295
     ClothingUniformJumpsuitHawaiBlue: 4294967295
     ClothingUniformJumpsuitHawaiRed: 4294967295
