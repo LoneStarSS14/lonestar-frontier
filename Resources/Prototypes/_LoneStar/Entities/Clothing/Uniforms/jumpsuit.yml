@@ -81,3 +81,13 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-shirt.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/regal-shirt.rsi
+
+- type: entity
+  parent: [ ClothingUniformBase, ClothingUniformColorableBaseColor ]
+  id: ClothingUniformJumpsuitAthleticShorts
+  name: athletic shorts
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/atheltic-shorts.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/atheltic-shorts.rsi
