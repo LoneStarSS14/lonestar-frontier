@@ -1,278 +1,306 @@
-# DO NOT ARBITRARILY CHANGE THESE TO MAKE THEM "CONSISTENT" WITH THE COLOR JUMPSUITS. You are probably just going to make them look worse.
+## LoneStar, file changed heavily to support colorable clothing.
+## Color of black shoe lines changed to match worn state, same for brown.
+## Parents changed to lead to black shoes to remove specifying the sprite over and over
+
+# DO NOT ARBITRARILY CHANGE THESE TO MAKE THEM "CONSISTENT" WITH THE COLOR JUMPSUITS. You are probably just going to make them look worse. # LoneStar, yo calm down...
 
 # Black Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: [ ClothingShoesBaseButcherable, ClothingShoesColorableBaseColorInhand ]
   id: ClothingShoesColorBlack
   name: black shoes
   description: Stylish black shoes.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/color.rsi
+    sprite: _LoneStar/Clothing/Shoes/color.rsi
     layers:
+    - state: icon-color
+      color: "#1d1d1d"
+      map: [ "shoes-icon" ]
     - state: icon
-      color: "#3f3f3f" #Different from the worn state for contrast reasons.
-    - state: soles-icon
   - type: Item
     inhandVisuals:
       left:
+      - state: inhand-left-color
+        color: "#1d1d1d"
+        map: [ "hl-color" ]
       - state: inhand-left
-        color: "#3f3f3f"
-      - state: soles-inhand-left
       right:
+      - state: inhand-right-color
+        color: "#1d1d1d"
+        map: [ "hr-color" ]
       - state: inhand-right
-        color: "#3f3f3f"
-      - state: soles-inhand-right
   - type: Clothing
-    sprite: Clothing/Shoes/color.rsi
+    sprite: _LoneStar/Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
-      - state: equipped-FEET
+      - state: equipped-FEET-color
         color: "#1d1d1d"
-      - state: soles-equipped-FEET
+        map: [ "shoes-equipped" ]
+      - state: equipped-FEET
+  - type: ColorableClothing
+    randomOnCreation: false
 
 # White Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: ClothingShoesColorBlack
   id: ClothingShoesColorWhite
   name: white shoes
   description: Don't take them off at your office Christmas party.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/color.rsi
     layers:
+    - state: icon-color
+      color: "#EAE8E8"
+      map: [ "shoes-icon" ]
     - state: icon
-      color: "#EAE8E8" #Deliberately NOT pure white
-    - state: soles-icon
   - type: Item
-    inhandVisuals: #We don't want the sole icons. Since this is white, it's just going to look weird (white on white doesn't really contrast.)
+    inhandVisuals:
       left:
+      - state: inhand-left-color
+        color: "#EAE8E8"
+        map: [ "hl-color" ]
       - state: inhand-left
-        color: "#EAE8E8"
       right:
-      - state: inhand-right
+      - state: inhand-right-color
         color: "#EAE8E8"
+        map: [ "hr-color" ]
+      - state: inhand-right
   - type: Clothing
-    sprite: Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
-      - state: equipped-FEET
+      - state: equipped-FEET-color
         color: "#EAE8E8"
-      - state: contrastedsoles-equipped-FEET
+        map: [ "shoes-equipped" ]
+      - state: equipped-FEET
 
 # Blue Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: ClothingShoesColorBlack
   id: ClothingShoesColorBlue
   name: blue shoes
   description: Stylish blue shoes.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/color.rsi
     layers:
+    - state: icon-color
+      color: "#0089ef"
+      map: [ "shoes-icon" ]
     - state: icon
-      color: "#0089EF"    
-    - state: soles-icon
   - type: Item
     inhandVisuals:
       left:
+      - state: inhand-left-color
+        color: "#0089ef"
+        map: [ "hl-color" ]
       - state: inhand-left
-        color: "#0089EF"
-      - state: soles-inhand-left
       right:
+      - state: inhand-right-color
+        color: "#0089ef"
+        map: [ "hr-color" ]
       - state: inhand-right
-        color: "#0089EF"
-      - state: soles-inhand-right
   - type: Clothing
-    sprite: Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
+      - state: equipped-FEET-color
+        color: "#0089ef"
+        map: [ "shoes-equipped" ]
       - state: equipped-FEET
-        color: "#0089EF"
-      - state: soles-equipped-FEET
 
 # Brown Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: ClothingShoesColorBlack
   id: ClothingShoesColorBrown
   name: brown shoes
   description: A pair of brown shoes.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/color.rsi
     layers:
+    - state: icon-color
+      color: "#592D01"
+      map: [ "shoes-icon" ]
     - state: icon
-      color: "#723A02"    
-    - state: soles-icon
   - type: Item
     inhandVisuals:
       left:
+      - state: inhand-left-color
+        color: "#592D01"
+        map: [ "hl-color" ]
       - state: inhand-left
-        color: "#723A02"
-      - state: soles-inhand-left
       right:
+      - state: inhand-right-color
+        color: "#592D01"
+        map: [ "hr-color" ]
       - state: inhand-right
-        color: "#723A02"
-      - state: soles-inhand-right
   - type: Clothing
-    sprite: Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
-      - state: equipped-FEET
+      - state: equipped-FEET-color
         color: "#592D01"
-      - state: soles-equipped-FEET
+        map: [ "shoes-equipped" ]
+      - state: equipped-FEET
 
 # Green Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: ClothingShoesColorBlack
   id: ClothingShoesColorGreen
   name: green shoes
   description: Stylish green shoes.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/color.rsi
     layers:
+    - state: icon-color
+      color: "#5abf2f"
+      map: [ "shoes-icon" ]
     - state: icon
-      color: "#5ABF2F"    
-    - state: soles-icon
   - type: Item
     inhandVisuals:
       left:
+      - state: inhand-left-color
+        color: "#5abf2f"
+        map: [ "hl-color" ]
       - state: inhand-left
-        color: "#5ABF2F"
-      - state: soles-inhand-left
       right:
+      - state: inhand-right-color
+        color: "#5abf2f"
+        map: [ "hr-color" ]
       - state: inhand-right
-        color: "#5ABF2F"
-      - state: soles-inhand-right
   - type: Clothing
-    sprite: Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
+      - state: equipped-FEET-color
+        color: "#5abf2f"
+        map: [ "shoes-equipped" ]
       - state: equipped-FEET
-        color: "#5ABF2F"
-      - state: soles-equipped-FEET
 
 # Orange Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: ClothingShoesColorBlack
   id: ClothingShoesColorOrange
   name: orange shoes
   description: Stylish orange shoes.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/color.rsi
     layers:
+    - state: icon-color
+      color: "#ef8100"
+      map: [ "shoes-icon" ]
     - state: icon
-      color: "#EF8100"    
-    - state: soles-icon
   - type: Item
     inhandVisuals:
       left:
+      - state: inhand-left-color
+        color: "#ef8100"
+        map: [ "hl-color" ]
       - state: inhand-left
-        color: "#EF8100"
-      - state: soles-inhand-left
       right:
+      - state: inhand-right-color
+        color: "#ef8100"
+        map: [ "hr-color" ]
       - state: inhand-right
-        color: "#EF8100"
-      - state: soles-inhand-right
   - type: Clothing
-    sprite: Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
+      - state: equipped-FEET-color
+        color: "#ef8100"
+        map: [ "shoes-equipped" ]
       - state: equipped-FEET
-        color: "#EF8100"
-      - state: soles-equipped-FEET
 
 # Red Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: ClothingShoesColorBlack
   id: ClothingShoesColorRed
   name: red shoes
   description: Stylish red shoes.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/color.rsi
     layers:
+    - state: icon-color
+      color: "#940000"
+      map: [ "shoes-icon" ]
     - state: icon
-      color: "#940000"    
-    - state: soles-icon
   - type: Item
     inhandVisuals:
       left:
+      - state: inhand-left-color
+        color: "#940000"
+        map: [ "hl-color" ]
       - state: inhand-left
-        color: "#940000"
-      - state: soles-inhand-left
       right:
-      - state: inhand-right
+      - state: inhand-right-color
         color: "#940000"
-      - state: soles-inhand-right
+        map: [ "hr-color" ]
+      - state: inhand-right
   - type: Clothing
-    sprite: Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
-      - state: equipped-FEET
+      - state: equipped-FEET-color
         color: "#940000"
-      - state: soles-equipped-FEET
+        map: [ "shoes-equipped" ]
+      - state: equipped-FEET
 
 # Yellow Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: ClothingShoesColorBlack
   id: ClothingShoesColorYellow
   name: yellow shoes
   description: Stylish yellow shoes.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/color.rsi
     layers:
+    - state: icon-color
+      color: "#ebe216"
+      map: [ "shoes-icon" ]
     - state: icon
-      color: "#EBE216"    
-    - state: soles-icon
   - type: Item
     inhandVisuals:
       left:
+      - state: inhand-left-color
+        color: "#ebe216"
+        map: [ "hl-color" ]
       - state: inhand-left
-        color: "#EBE216"
-      - state: soles-inhand-left
       right:
+      - state: inhand-right-color
+        color: "#ebe216"
+        map: [ "hr-color" ]
       - state: inhand-right
-        color: "#EBE216"
-      - state: soles-inhand-right
   - type: Clothing
-    sprite: Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
+      - state: equipped-FEET-color
+        color: "#ebe216"
+        map: [ "shoes-equipped" ]
       - state: equipped-FEET
-        color: "#EBE216"
-      - state: soles-equipped-FEET
 
 # Purple Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: ClothingShoesColorBlack
   id: ClothingShoesColorPurple
   name: purple shoes
   description: Stylish purple shoes.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/color.rsi
     layers:
+    - state: icon-color
+      color: "#9c0de1"
+      map: [ "shoes-icon" ]
     - state: icon
-      color: "#9C0DE1"    
-    - state: soles-icon
   - type: Item
     inhandVisuals:
       left:
+      - state: inhand-left-color
+        color: "#9c0de1"
+        map: [ "hl-color" ]
       - state: inhand-left
-        color: "#9C0DE1"
-      - state: soles-inhand-left
       right:
+      - state: inhand-right-color
+        color: "#9c0de1"
+        map: [ "hr-color" ]
       - state: inhand-right
-        color: "#9C0DE1"
-      - state: soles-inhand-right
   - type: Clothing
-    sprite: Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
+      - state: equipped-FEET-color
+        color: "#9c0de1"
+        map: [ "shoes-equipped" ]
       - state: equipped-FEET
-        color: "#9C0DE1"
-      - state: soles-equipped-FEET
