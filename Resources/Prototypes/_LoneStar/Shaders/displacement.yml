@@ -1,0 +1,7 @@
+
+- type: shader
+  id: DisplacedUnshadedDraw
+  kind: source
+  path: "/Textures/_LoneStar/Shaders/displacement_unshaded.swsl"
+  params:
+    displacementSize: 127

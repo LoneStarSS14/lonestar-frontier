@@ -4588,3 +4588,47 @@ Entries:
   id: 502
   time: '2026-10-28T17:00:19.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/289
+- author: Rellu225
+  changes:
+    - type: Tweak
+      message: Replaced St. Micheals
+  id: 503
+  time: '2026-10-31T12:15:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/288
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: 3 "new" hairstyles, Eve, Remilia, Impish (Short)
+  id: 504
+  time: '2026-10-31T12:16:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/293
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Portable Recharger now wearable in suitstorage
+  id: 505
+  time: '2026-11-02T20:33:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/296
+- author: archee1
+  changes:
+    - type: Remove
+      message: Removed titan thrusters.
+    - type: Tweak
+      message: Vesper thrusters now take 3 capacitors, down from 6
+  id: 506
+  time: '2026-11-02T20:57:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/292
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Ballet Heels tweak
+  id: 507
+  time: '2026-11-02T20:57:53.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/297
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: Port of Bubber's armored cnc maid outfit.
+  id: 508
+  time: '2026-11-02T21:01:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/298

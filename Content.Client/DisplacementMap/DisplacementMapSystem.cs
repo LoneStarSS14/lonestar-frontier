@@ -29,10 +29,18 @@ public sealed class DisplacementMapSystem : EntitySystem
 
         if (key.ToString() is null)
             return false;
+        // LoneStar start, displaced unshaded fix
+        var shaderOverride = data.ShaderOverride;
+        if (shaderOverride == "DisplacedDraw"
+            && sprite.Comp[index] is SpriteComponent.Layer layer
+            && layer.ShaderPrototype == "unshaded")
+        {
+            shaderOverride = "DisplacedUnshadedDraw";
+        }
 
-        if (data.ShaderOverride != null)
-            sprite.Comp.LayerSetShader(index, data.ShaderOverride);
-
+        if (shaderOverride != null)
+            sprite.Comp.LayerSetShader(index, shaderOverride);
+        // LoneStar end
         _sprite.RemoveLayer(sprite.AsNullable(), displacementKey, false);
 
         //allows you not to write it every time in the YML
