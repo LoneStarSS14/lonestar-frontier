@@ -27,6 +27,34 @@
     - ClothMade
     - Recyclable
 
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
+  abstract: true
+  parent: ClothingShoesColorableMono
+  id: ClothingShoesColorableMonoInHand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - shoes-icon:
+          icon-primary: Base
+        shoes-equipped:
+          equipped-FEET: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
 - type: entity # for sprites with a 2 colored layers
   abstract: true
   id: ClothingShoesColorableDualColor
