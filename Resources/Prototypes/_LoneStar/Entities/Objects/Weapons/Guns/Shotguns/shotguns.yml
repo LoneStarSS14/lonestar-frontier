@@ -3,7 +3,7 @@
   name: Shorty
   parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponEncumbranceRifle, NFBaseWeaponFrameShotgun ]
   id: LSWeaponShotgunShorty
-  description: A semi-automatic shotgun for breaching doors and looking cool. Mostly the latter.
+  description: A locally produced clone of an Enforcer for breaching and looking cool. Mostly the latter.
   components:
   - type: Sprite
     sprite: _LoneStar/Objects/Weapons/Guns/Shotguns/shorty.rsi
