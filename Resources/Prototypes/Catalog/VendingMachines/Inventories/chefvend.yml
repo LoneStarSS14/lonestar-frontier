@@ -34,6 +34,7 @@
     FoodMeat: 6
     FoodBoxWaffleCone: 1 # Frontier
     FoodSausageCasing: 3 # Frontier
+    HyperlinkBookPizzaGuide: 3 # LoneStar
   #contrabandInventory: # Frontier - no finished foods in ChefVend
     #EggBoxBroken: 1 # Frontier
     #FoodBoxDonkpocket: 1 # Frontier

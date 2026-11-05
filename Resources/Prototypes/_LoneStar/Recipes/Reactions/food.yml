@@ -1,0 +1,13 @@
+# Sauce
+
+- type: reaction
+  id: CookingTomatosauce
+  reactants:
+    JuiceTomato:
+      amount: 1
+    OilOlive:
+      amount: 1
+    TableSalt:
+      amount: 1
+  products:
+    TomatoSauce: 3

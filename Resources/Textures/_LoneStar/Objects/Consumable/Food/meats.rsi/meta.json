@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Pepperoni and sausagecooked edited from sausage by Chokovit",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "pepperoni"
+    },
+    {
+      "name": "pepperoni-slice"
+    },
+    {
+      "name": "sausage"
+    },
+    {
+      "name": "sausagecooked"
+    }
+  ]
+}

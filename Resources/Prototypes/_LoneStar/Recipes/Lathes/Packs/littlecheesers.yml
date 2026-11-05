@@ -1,0 +1,41 @@
+# Little Cheeser's Lathe
+
+- type: latheRecipePack
+  id: LittleCheesersServiceTechfabStatic
+  recipes:
+    - DrinkLittleCheesersCup
+    - ClothingUniformJumpsuitLittleCheesers
+    - ClothingUniformJumpskirtLittleCheesers
+    - FoodCheapBoxPizza
+    - ClothingOuterApronLittleCheesers
+    - ClothingOuterEVASuitLittleCheesers
+    - ClothingBackpackDuffelLittleCheesers
+    - HotCaseCircuitboard
+  # emagStaticPacks:
+  #   - LittleCheesersServiceTechfabEmagStatic
+
+- type: latheRecipePack
+  id: BioGenLittleCheesersRecipeStatic
+  recipes:
+    - BioGenFoodCheapCheesePizzaRaw
+    - BioGenFoodCheapPepperoniPizzaRaw
+    - BioGenFoodCheapMeatPizzaRaw
+    - BioGenFoodCheapPineapplePizzaRaw
+    - BioGenFoodCheapSupremePizzaRaw
+    - BioGenFoodCheapVegetablePizzaRaw
+    - BioGenFoodCheapSausagePizzaRaw
+    - BioGenFoodCheapMushroomPizzaRaw
+    - BioGenFoodCheapCottonPizzaRaw
+    - BioGenFoodCheapStingerPizzaRaw
+
+
+# Emag Inventory
+
+# - type: EmagLatheRecipes
+#   id: LittleCheesersServiceTechfabEmagStatic
+#   recipes:
+#     - DrinkDonkcoCup
+#     - FoodBoxDonkngo
+#     - ClothingUniformJumpsuitDonkcoChef
+#     - ClothingOuterDonkcoApron
+#     - ClothingHeadHatDonkcoHat

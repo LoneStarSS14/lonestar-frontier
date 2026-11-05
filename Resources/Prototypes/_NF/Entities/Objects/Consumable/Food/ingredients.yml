@@ -305,8 +305,8 @@
   description: A simple sausage. Who knows what's in this thing?
   components:
   - type: Sprite
-    sprite: _NF/Objects/Consumable/Food/ingredients.rsi
-    state: sausageraw
+    sprite: _LoneStar/Objects/Consumable/Food/meats.rsi
+    state: sausage
   - type: SolutionContainerManager
     solutions:
       food:
@@ -314,6 +314,11 @@
         reagents:
         - ReagentId: UncookedAnimalProteins
           Quantity: 5
+  - type: Tag
+    tags:
+    - Raw
+    - Meat
+    - RawSausage
   - type: Construction
     graph: NFHotdogStove
     node: start

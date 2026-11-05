@@ -212,6 +212,9 @@
     - state: box-open
       map: ["enum.StorageVisualLayers.Door"]
   # TODO make these entitystorage again + placeablesurface after entity storage ECS gets merged.
+  - type: Tag
+    tags:
+      - BoxCardboard
   - type: Storage
     grid:
     - 0,0,3,1
