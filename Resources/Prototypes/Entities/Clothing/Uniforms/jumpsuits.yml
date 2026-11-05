@@ -1361,6 +1361,8 @@
           inhand-left-shirt: Base
         hr-color:
           inhand-right-shirt: Base
+    mappedColors:
+      Base: NTInteriorDesign
 
 - type: entity
   parent: ClothingUniformJumpsuitCasualBlue
