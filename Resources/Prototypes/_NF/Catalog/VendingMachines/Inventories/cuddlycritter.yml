@@ -65,6 +65,10 @@
     PlushieLamp: 3
     LampLava: 3
     CrazyGlue: 1
+    # LoneStar v
+    LSPlushieMaid: 1
+    LSPlushieKitty: 1
+    #
   emaggedInventory:
     PrizeBallSyndicate: 10
     PlushieJester: 3
