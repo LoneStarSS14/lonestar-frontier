@@ -64,7 +64,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: PulseWeak 
+    proto: PulseWeak
     fireCost: 200
   - type: Battery
     maxCharge: 5000
@@ -123,3 +123,54 @@
   - type: Battery
     maxCharge: 4000
     startingCharge: 4000
+
+# Frontier
+- type: entity
+  id: LSWeaponComboLaserPistol
+  parent: [ NFBaseWeaponEnergyPistolFireModes, NFBaseWeaponFrameEnergyPistolNanotrasen ]
+  name: laser/holoflare pistol
+  description: A combination laser pistol with harm and disable settings, along with a miniaturized holoflare launcher.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/combo_laser_pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mode-flare
+      map: ["Firemode"]
+      shader: unshaded
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/combo_laser_pistol.rsi
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+    heldPrefix: lethal
+    inhandVisuals: {}
+  - type: ProjectileBatteryAmmoProvider
+    proto: HoloFlareCyan
+    fireCost: 260
+  - type: EnergyGun
+    fireModes:
+    - proto: NFBulletDisabler
+      fireCost: 60
+      name: disable
+      state: disabler
+    - proto: NFBulletLaserLow
+      fireCost: 60
+      name: kill
+      state: lethal
+    - proto: HoloFlareCyan
+      fireCost: 260
+      name: flare
+      state: flare
+  - type: GenericVisualizer
+    visuals:
+      enum.EnergyGunFireModeVisuals.State:
+        Firemode:
+          Disabler: { state: mode-disabler }
+          Lethal: { state: mode-lethal }
+          Flare: { state: mode-flare }
