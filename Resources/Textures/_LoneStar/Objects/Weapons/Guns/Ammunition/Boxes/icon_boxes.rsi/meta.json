@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Based on sprites from cmss13 from https://github.com/cmss13-devs/cmss13/blob/master/icons/obj/items/weapons/guns/ammo_boxes/boxes_and_lids.dmi and https://github.com/cmss13-devs/cmss13/blob/master/icons/obj/items/weapons/guns/ammo_boxes/text.dmi | Modified erhardsteinhauer (discord/github), modified .35, shell, .45 calibre decal by zalindae, layered by AffleTheWaffle",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "box-small-rifle-incendiary"
+    },
+    {
+      "name": "box-rifle-incendiary"
+    },
+    {
+      "name": "box-small-pistol-incendiary"
+    },
+    {
+      "name": "box-pistol-incendiary"
+    },
+    {
+      "name": "box-revolver-incendiary"
+    },
+    {
+      "name": "box-shell-incendiary"
+    }
+  ]
+}

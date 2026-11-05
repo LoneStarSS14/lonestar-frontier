@@ -1,0 +1,67 @@
+# Ammo 
+
+- type: listing
+  id: UplinkNF20IncendiaryAmmo
+  name:  uplink-pirate-20ammo-fire-name
+  description: uplink-pirate-20ammo-fire-desc
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Ammunition/Boxes/icon_boxes.rsi, state: box-small-rifle-incendiary }
+  productEntity: NFAmmunitionBoxRifle20Incendiary # Coyote
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkNF30IncendiaryAmmo
+  name:  uplink-pirate-30ammo-fire-name
+  description: uplink-pirate-30ammo-fire-desc
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Ammunition/Boxes/icon_boxes.rsi, state: box-rifle-incendiary }
+  productEntity: NFAmmunitionBoxRifle30Incendiary # Coyote
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkNF35IncendiaryAmmo
+  name:  uplink-pirate-35ammo-fire-name
+  description: uplink-pirate-35ammo-fire-desc
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Ammunition/Boxes/icon_boxes.rsi, state: box-small-pistol-incendiary }
+  productEntity: NFAmmunitionBoxPistol35Incendiary # Coyote
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkNF40IncendiaryAmmo
+  name:  uplink-pirate-40ammo-fire-name
+  description: uplink-pirate-40ammo-fire-desc
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Ammunition/Boxes/icon_boxes.rsi, state: box-pistol-incendiary }
+  productEntity: CSAmmunitionBoxPistol40Incendiary # Coyote
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkNF45IncendiaryAmmo
+  name:  uplink-pirate-revolverammo-fire-name
+  description: uplink-pirate-revolverammo-fire-desc
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Ammunition/Boxes/icon_boxes.rsi, state: box-revolver-incendiary }
+  productEntity: NFAmmunitionBoxPistol45Incendiary # Coyote
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkNF50IncendiaryAmmo
+  name:  uplink-pirate-shotgunammo-fire-name
+  description: uplink-pirate-shotgunammo-fire-desc
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Ammunition/Boxes/icon_boxes.rsi, state: box-shell-incendiary }
+  productEntity: NFAmmunitionBoxShellShotgunIncendiary # Coyote
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo

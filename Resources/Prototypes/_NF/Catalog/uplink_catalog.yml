@@ -7,7 +7,7 @@
   productEntity: NFWeaponPistolViper
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 3
+    Telecrystal: 1 # LoneStar No one is paying 3TC
   categories:
   - UplinkWeaponry
 
@@ -18,7 +18,7 @@
   productEntity: NFWeaponRevolverRitland45
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 4
+    Telecrystal: 1 # LoneStar No one is paying 4TC
   categories:
   - UplinkWeaponry
 
@@ -29,75 +29,82 @@
   productEntity: NFWeaponPistolCobra
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 4
+    Telecrystal: 1 # LoneStar No one is paying 4TC
   categories:
   - UplinkWeaponry
 
 - type: listing
   id: UplinkNFRifleBarlows
-  name: uplink-rifle-mosin-name
-  description: uplink-rifle-mosin-desc
+  name: uplink-rifle-barlows-name
+  description: uplink-rifle-barlows-desc
   productEntity: NFWeaponRifleBarlowsBolt
-  cost:
-    Telecrystal: 1
+  # LoneStar one free Barlow
+  # cost:
+  #   Telecrystal: 1
   categories:
   - UplinkWeaponry
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
 
 # Ammo
-- type: listing
-  id: UplinkNFPistol9mmMagazine
-  name: uplink-syndicate-40-pistol-magazine-name # LoneStar
-  description: uplink-syndicate-40-pistol-magazine-desc # LoneStar
-  icon: { sprite: /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/pistol_mag.rsi, state: icon } # Coyote
-  productEntity: CSMagazinePistol40 # Coyote
-  cost:
-    Telecrystal: 1
-  categories:
-  - UplinkAmmo
 
-- type: listing
-  id: UplinkNFMagazinePistolSubMachineGun
-  name: uplink-syndicate-40-rifle-magazine-name # LoneStar
-  description: uplink-syndicate-40-rifle-magazine-desc # LoneStar
-  icon: { sprite: /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/smg_mag.rsi, state: icon } # Coyote
-  productEntity: CSMagazineSubMachineGun40 # Coyote
-  cost:
-    Telecrystal: 1 # LoneStar
-  categories:
-  - UplinkAmmo
+# LoneStar Vend change
 
-- type: listing
-  id: UplinkNFMagazinePistolCaselessRifle
-  name: uplink-pistol-magazine-cobra-name
-  description: uplink-pistol-magazine-cobra-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
-  productEntity: NFMagazinePistol45
-  cost:
-    Telecrystal: 1
-  categories:
-  - UplinkAmmo
+# - type: listing
+#   id: UplinkNFPistol9mmMagazine
+#   name: uplink-syndicate-40-pistol-magazine-name # LoneStar
+#   description: uplink-syndicate-40-pistol-magazine-desc # LoneStar
+#   icon: { sprite: /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/pistol_mag.rsi, state: icon } # Coyote
+#   productEntity: CSMagazinePistol40 # Coyote
+#   cost:
+#     Telecrystal: 1
+#   categories:
+#   - UplinkAmmo
 
-- type: listing
-  id: UplinkNFSpeedLoaderMagnum
-  name: uplink-speedloader-magnum-non-ap-name
-  description: uplink-speedloader-magnum-non-ap-desc # Frontier: uplink-speedloader-magnu-desc<uplink-speedloader-magnum-non-ap-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
-  productEntity: NFSpeedLoaderPistol45
-  cost:
-    Telecrystal: 3
-  categories:
-  - UplinkAmmo
+# - type: listing
+#   id: UplinkNFMagazinePistolSubMachineGun
+#   name: uplink-syndicate-40-rifle-magazine-name # LoneStar
+#   description: uplink-syndicate-40-rifle-magazine-desc # LoneStar
+#   icon: { sprite: /Textures/_CS/Objects/Weapons/Guns/Ammunition/Magazine/Pistol40/smg_mag.rsi, state: icon } # Coyote
+#   productEntity: CSMagazineSubMachineGun40 # Coyote
+#   cost:
+#     Telecrystal: 1 # LoneStar
+#   categories:
+#   - UplinkAmmo
 
-- type: listing
-  id: UplinkNFMosinAmmo
-  name: uplink-mosin-ammo-name
-  description: uplink-mosin-ammo-desc
-  icon: { sprite: /Textures/_NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: icon-30 }
-  productEntity: NFAmmunitionBoxRifle30
-  cost:
-    Telecrystal: 1
-  categories:
-  - UplinkAmmo
+# - type: listing
+#   id: UplinkNFMagazinePistolCaselessRifle
+#   name: uplink-pistol-magazine-cobra-name
+#   description: uplink-pistol-magazine-cobra-desc
+#   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
+#   productEntity: NFMagazinePistol45
+#   cost:
+#     Telecrystal: 1
+#   categories:
+#   - UplinkAmmo
+
+# - type: listing
+#   id: UplinkNFSpeedLoaderMagnum
+#   name: uplink-speedloader-magnum-non-ap-name
+#   description: uplink-speedloader-magnum-non-ap-desc # Frontier: uplink-speedloader-magnu-desc<uplink-speedloader-magnum-non-ap-desc
+#   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
+#   productEntity: NFSpeedLoaderPistol45
+#   cost:
+#     Telecrystal: 1 # LoneStar No one will pay 3TC for printable rounds
+#   categories:
+#   - UplinkAmmo
+
+# - type: listing
+#   id: UplinkNFMosinAmmo
+#   name: uplink-mosin-ammo-name
+#   description: uplink-mosin-ammo-desc
+#   icon: { sprite: /Textures/_NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: icon-30 }
+#   productEntity: NFAmmunitionBoxRifle30
+#   cost:
+#     Telecrystal: 1
+#   categories:
+#   - UplinkAmmo
 
 - type: listing
   id: UplinkNFHristovAmmo
@@ -118,7 +125,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncher
   cost:
-    Telecrystal: 25
+    Telecrystal: 12 # LoneStar No one is paying 25TC
   categories:
   - UplinkWeaponry
 
@@ -153,6 +160,6 @@
   productEntity: NFCrateFunSyndicateSegway
   icon: { sprite: Objects/Vehicles/syndicatesegway.rsi, state: vehicle }
   cost:
-    Telecrystal: 25
+    Telecrystal: 8 # LoneStar No one is paying 25TC
   categories:
     - UplinkPointless

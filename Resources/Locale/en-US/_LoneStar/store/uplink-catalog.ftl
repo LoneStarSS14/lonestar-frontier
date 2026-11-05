@@ -49,3 +49,6 @@ uplink-chemicalcrates-desc = A chemical crate containing the S group of chemical
 
 uplink-chemicalcrated-name = Chemical Crate - D Group
 uplink-chemicalcrated-desc = A chemical crate containing the D group of chemicals
+
+uplink-rifle-barlows-name = Barlows
+uplink-rifle-barlows-desc = An old rifle made for hunting or trench warfare. Grab your free sample. Now go do a crime!
