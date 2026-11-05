@@ -4639,3 +4639,10 @@ Entries:
   id: 509
   time: '2026-11-05T07:20:24.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/300
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: 'New item: HCD'
+  id: 510
+  time: '2026-11-05T07:22:04.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/286
