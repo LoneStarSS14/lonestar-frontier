@@ -4646,3 +4646,12 @@ Entries:
   id: 510
   time: '2026-11-05T07:22:04.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/286
+- author: tenmillimaster
+  changes:
+    - type: Add
+      message: >-
+        Added Laser/Holoflare pistol as an upgrade to the laser pistol/
+        holoflare.
+  id: 511
+  time: '2026-11-05T15:26:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/262
