@@ -48,7 +48,6 @@
     quickEquip: false
     slots:
     - HEAD
-    state: icon
   - type: FoodSequenceElement
     entries:
       CottonBurger: LSPlushieKitty
