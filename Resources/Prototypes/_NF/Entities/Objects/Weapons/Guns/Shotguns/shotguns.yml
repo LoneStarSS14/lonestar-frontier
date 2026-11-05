@@ -89,7 +89,23 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,3,1
+    # LoneStar below
+    - 0,0,2,1
+  - type: GunSpreadModifier
+    spread: 1.4
+  - type: Gun
+    minAngle: 6.4
+    maxAngle: 32
+    angleIncrease: 10
+    angleDecay: 4
+    burstFireRate: 100
+    shotsPerBurst: 2
+    burstCooldown: 0
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - Burst
+  # LoneStar end
   - type: BallisticAmmoProvider
     capacity: 2
   - type: NFWeaponDetails
