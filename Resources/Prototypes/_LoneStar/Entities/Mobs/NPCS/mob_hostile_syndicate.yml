@@ -53,3 +53,98 @@
       availableModes:
       - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/smg.ogg
+
+# region Operative (E-sword and Shield)
+- type: entity
+  parent:
+  - NFBaseMobRestrictions
+  - NFMobNoEquipmentOnGib
+  - MobMovementSpeedModifierMelee
+  - MobStaminaFodder
+  - BaseC3MobHuman
+  - MobNonHumanHostileBase
+  - MobHumanoidInvetory
+  - MobHumanoidHostileAISimpleMelee
+  id: MobSyndicateNavalOperatorE
+  categories: [ HideSpawnMenu ]
+  name: Bald Vader
+  description: |-
+   "While you were partying, I studied the blade." Except in this case the blade is supported by a syndicate raid suit.
+  components:
+  - type: Sprite
+    layers:
+      - sprite: _NF/Mobs/Species/Templates/human.rsi
+        state: human
+      - sprite: Clothing/Uniforms/Jumpsuit/tacticool.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: Clothing/Mask/gassyndicate.rsi
+        state: equipped-MASK
+      - sprite: Clothing/Shoes/Boots/jackboots.rsi
+        state: equipped-FEET
+      - sprite: Clothing/OuterClothing/Armor/syndie-raid.rsi
+        state: equipped-OUTERCLOTHING
+        color: "#535353"
+  - type: Damageable
+    damageModifierSet: MobMercenaryDamageModifierSet
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 2
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      80: Critical
+      100: Dead
+    allowRevives: false
+  - type: MobState
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      48: 0.7
+      64: 0.5
+  - type: DamageStateVisuals
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatRotten
+      amount: 2
+  - type: NpcFactionMember
+    factions:
+    - NFSyndicate
+  - type: RandomMetadata
+    nameSegments:
+    - NamesSyndicatePrefix
+    - NamesSyndicateNormal
+    - NamesSyndicateElite
+  - type: Loadout
+    prototypes:
+    - SyndicateNavalGearT3OperatorAlt
+  - type: PointLight
+    enabled: true
+    radius: 2
+    energy: 0.5
+    color: red
+    netsync: false
+  - type: MeleeWeapon
+    attackRate: 1.0
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcPunch
+    damage: # lower damage energy sword
+      types:
+        Slash: 15
+        Heat: 15
+        Structural: 20
+    soundHit:
+      path: /Audio/Weapons/eblade1.ogg
+  - type: Reflect
+    reflectProb: .4
+    spread: 75
+  - type: SoundWhileAlive
+  - type: AmbientSound
+    volume: 100 #This doesn't function very well because of the orignal .ogg file
+    range: 10
+    sound:
+      path: /Audio/Weapons/ebladehum.ogg

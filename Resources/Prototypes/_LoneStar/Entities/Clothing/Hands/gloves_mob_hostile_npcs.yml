@@ -13,3 +13,39 @@
         color: "#535353"
       - sprite: _NF/Objects/Weapons/Guns/SMGs/atreides.rsi
         state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackEsword
+  name: combat gloves
+  suffix: atreides
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Melee/e_sword-inhands.rsi
+        state: inhand-right
+      - sprite: Objects/Weapons/Melee/e_sword-inhands.rsi
+        state: inhand-right-blade
+        color: red
+        visible: true
+        shader: unshaded
+        map: [ "blade" ]
+  - type: Armor # Adding Raid suit resistances otherwise sprites overlay, no slowdown because the meleemob has it
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.35
+        Radiation: 0.35 # Lonestar
+        Caustic: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.35
+  #- type: StaminaResistance
+  #  damageCoefficient: 0.45
+
