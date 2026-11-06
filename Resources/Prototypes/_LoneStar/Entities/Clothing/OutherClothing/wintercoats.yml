@@ -11,3 +11,16 @@
     - type: TemperatureProtection
       heatingCoefficient: 1.1
       coolingCoefficient: 0.1 # How? idk...
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, ClothingOuterClothingColorableMono ]
+  id: ClothingOuterCoatHyenhSweater
+  name: comfy sweater
+  description: It's comfy.
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Clothing/OuterClothing/WinterCoats/comfy-sweater.rsi
+    - type: Clothing
+      sprite: _LoneStar/Clothing/OuterClothing/WinterCoats/comfy-sweater.rsi
+    - type: TemperatureProtection
+      coolingCoefficient: 0.1
