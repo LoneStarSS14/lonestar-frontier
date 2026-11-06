@@ -1,4 +1,5 @@
-# DO NOT ADD MORE, USE UNIFORM DYING
+## LoneStar, generally messy, we can ignore notes for this file and other 'broad' vending machines like theatre.
+
 - type: vendingMachineInventory
   id: ClothesMateInventory
   startingInventory:
@@ -109,7 +110,8 @@
     ClothingUniformloinclothWhite: 4294967295
     ClothingOuterBeltedWear: 4294967295
     ClothingOuterTransparentOuterwear: 4294967295
-    ClothingShoesHighheelShoes: 4294967295 # Starlight start
+    # Starlight
+    ClothingShoesHighheelShoes: 4294967295
     ClothingUniformJumpskirtGothic: 4294967295
     ClothingUniformJumpskirtMaid: 4294967295
     ClothingUniformJumpskirtDressRed: 4294967295
@@ -211,8 +213,9 @@
     TogaUniformSuit: 4294967295
     VintageUniformSuit: 4294967295
     CargoOverallsUniformSuit: 4294967295
-    RedRegaliaSuit: 4294967295 # Starlight end
-    MaidUniformLatex: 4294967295 # Hardlight start
+    RedRegaliaSuit: 4294967295
+    # Hardlight
+    MaidUniformLatex: 4294967295
     MaidUniformAlt: 4294967295
     MaidUniform: 4294967295
     MaidGloves: 4294967295
@@ -220,7 +223,8 @@
     DominantHeels: 4294967295
     KneeBoots: 4294967295
     LatexSocks: 4294967295
-    LatexHeels: 4294967295 # Hardlight end
+    LatexHeels: 4294967295
+    # LoneStar
     ClothingUniformJumpsuitRegalSuitPrince: 4294967295 # Lonestar start
     ClothingUniformJumpsuitRegalGown: 4294967295
     ClothingHandsGlovesRegalSleeves: 4294967295
@@ -235,7 +239,8 @@
     ClothingUniformJumpskirtPresent: 4294967295
     ClothingUniformJumpskirtSpottyColorable: 4294967295
     ClothingUniformJumpskirtCheckerColorable: 4294967295
-    ClothingUniformJumpskirtStraplessColorable: 4294967295 # Lonestar end
+    ClothingUniformJumpskirtStraplessColorable: 4294967295
+    ClothingUniformJumpsuitAthleticShorts: 4294967295
     # Euphoria
     ClothingShoesHeelsKittenColorable: 4294967295
     ClothingShoesHeelsKitten: 4294967295
@@ -258,4 +263,3 @@
     ToyFigurineGreytider: 1
     # ClothingBackpackSatchelSmugglerUnanchored: 1 # Frontier
     ClothingHeadHatSolidHeadband: 4294967295
-  # DO NOT ADD MORE, USE UNIFORM DYING
