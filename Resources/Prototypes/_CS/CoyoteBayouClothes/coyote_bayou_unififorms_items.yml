@@ -1916,24 +1916,6 @@
 
 - type: entity
   parent: CoolCoyoteClothes
-  id: CoolCoyoteClothesPinkwshort
-  name: pink athletic shorts
-  description: |
-  components:
-  - type: Sprite
-    overrideDir: South
-    enableOverrideDir: true
-    sprite: _CS/Clothes/cbuniforms.rsi
-    layers:
-    - state: pinkwshort
-  - type: Clothing
-    sprite: _CS/Clothes/cbuniforms.rsi
-    clothingVisuals:
-      jumpsuit:
-      - state: pinkwshort
-
-- type: entity
-  parent: CoolCoyoteClothes
   id: CoolCoyoteClothesPolyPerformer
   name: polyester performer drapery
   description: |
@@ -2273,24 +2255,6 @@
     clothingVisuals:
       jumpsuit:
       - state: red_sari
-
-- type: entity
-  parent: CoolCoyoteClothes
-  id: CoolCoyoteClothesRedWshort
-  name: red athletic shorts
-  description: |
-  components:
-  - type: Sprite
-    overrideDir: South
-    enableOverrideDir: true
-    sprite: _CS/Clothes/cbuniforms.rsi
-    layers:
-    - state: redwshort
-  - type: Clothing
-    sprite: _CS/Clothes/cbuniforms.rsi
-    clothingVisuals:
-      jumpsuit:
-      - state: redwshort
 
 - type: entity
   parent: CoolCoyoteClothes
@@ -3317,24 +3281,6 @@
     clothingVisuals:
       jumpsuit:
       - state:
-
-- type: entity
-  parent: CoolCoyoteClothes
-  id: CoolCoyoteClothesYellowwshort
-  name: yellow athletic shorts
-  description: |
-  components:
-  - type: Sprite
-    overrideDir: South
-    enableOverrideDir: true
-    sprite: _CS/Clothes/cbuniforms.rsi
-    layers:
-    - state: yellowwshort
-  - type: Clothing
-    sprite: _CS/Clothes/cbuniforms.rsi
-    clothingVisuals:
-      jumpsuit:
-      - state: yellowwshort
 
 - type: entity
   parent: CoolCoyoteClothes

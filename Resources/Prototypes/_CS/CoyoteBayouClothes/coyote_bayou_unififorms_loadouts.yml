@@ -953,15 +953,6 @@
     jumpsuit: CoolCoyoteClothesPinkTutu
 
 - type: loadout
-  id: LoadoutCoolCoyoteClothesPinkwshort
-  price: 0
-#  effects:
-#  - !type:GroupLoadoutEffect
-#    proto: ContractorT1
-  equipment:
-    jumpsuit: CoolCoyoteClothesPinkwshort
-
-- type: loadout
   id: LoadoutCoolCoyoteClothesPolyPerformer
   price: 0
 #  effects:
@@ -1131,15 +1122,6 @@
 #    proto: ContractorT1
   equipment:
     jumpsuit: CoolCoyoteClothesRedSari
-
-- type: loadout
-  id: LoadoutCoolCoyoteClothesRedWshort
-  price: 0
-#  effects:
-#  - !type:GroupLoadoutEffect
-#    proto: ContractorT1
-  equipment:
-    jumpsuit: CoolCoyoteClothesRedWshort
 
 - type: loadout
   id: LoadoutCoolCoyoteClothesRevealingDress
@@ -1653,15 +1635,6 @@
 #    proto: ContractorT1
   equipment:
     jumpsuit: CoolCoyoteClothesWhitesun
-
-- type: loadout
-  id: LoadoutCoolCoyoteClothesYellowwshort
-  price: 0
-#  effects:
-#  - !type:GroupLoadoutEffect
-#    proto: ContractorT1
-  equipment:
-    jumpsuit: CoolCoyoteClothesYellowwshort
 
 - type: loadout
   id: LoadoutCoolCoyoteClothesGearHarness
