@@ -1,0 +1,16 @@
+
+- type: listing
+  id: UplinkPirateShorty
+  name: uplink-pirate-shorty-name
+  description: uplink-pirate-shorty-desc
+  productEntity: LSWeaponShotgunShorty
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Shotguns/shorty.rsi, state: icon }
+  cost:
+    Doubloon: 4
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink

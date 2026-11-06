@@ -49,3 +49,6 @@ uplink-chemicalcrates-desc = A chemical crate containing the S group of chemical
 
 uplink-chemicalcrated-name = Chemical Crate - D Group
 uplink-chemicalcrated-desc = A chemical crate containing the D group of chemicals
+
+uplink-pirate-shorty-name = Shorty
+uplink-pirate-shorty-desc = A sometimes one-handed semi-automatic shotgun for busting doors. Also good on people, not so much airlocks. Uses .50 shells.
