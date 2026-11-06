@@ -4655,3 +4655,29 @@ Entries:
   id: 511
   time: '2026-11-05T15:26:09.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/262
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        2 new colors can be selected among the regular set of colorable clothing
+        options
+    - type: Tweak
+      message: The regular colors set has been re-ordered to be more hue ordered
+    - type: Tweak
+      message: >-
+        All base game 'jester' costume related clothing has been made colorable
+        (2 suits, 2 hats, shoes)
+    - type: Tweak
+      message: Jester shoes now have visible bells on them
+    - type: Tweak
+      message: >-
+        The following now support colorability: Evending Dress (red and blue),
+        Athletic shorts (no longer a loadout option (for now)), Comfy sweater
+    - type: Tweak
+      message: >-
+        Base jumpsuits, casual jumpsuits, and shoes (including skirt
+        alternatives) are now colorable, and are no longer offered by the
+        clothesmate aside their default grey/white variants.
+  id: 512
+  time: '2026-11-06T09:14:11.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/304
