@@ -4,7 +4,7 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorWhite
-  name: white jumpsuit
+  name: jumpsuit
   description: A generic white jumpsuit with no rank markings.
   components:
   - type: Sprite
@@ -72,7 +72,7 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorBlack
-  name: black jumpsuit
+  name: jumpsuit
   description: A generic black jumpsuit with no rank markings.
   components:
   - type: Sprite
@@ -107,8 +107,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorBlue
-  name: blue jumpsuit
-  description: A generic blue jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -142,8 +142,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorDarkBlue
-  name: dark blue jumpsuit
-  description: A generic dark blue jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -177,8 +177,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorTeal
-  name: teal jumpsuit
-  description: A generic teal jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -212,8 +212,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorGreen
-  name: green jumpsuit
-  description: A generic green jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -247,8 +247,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorDarkGreen
-  name: dark green jumpsuit
-  description: A generic dark green jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -282,8 +282,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorOrange
-  name: orange jumpsuit
-  description: Don't wear this near paranoid security officers.
+  name: jumpsuit
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -317,8 +317,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorPink
-  name: pink jumpsuit
-  description: Just looking at this makes you feel <i>fabulous</i>.
+  name: jumpsuit
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -352,8 +352,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorRed
-  name: red jumpsuit
-  description: A generic red jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -387,8 +387,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorYellow
-  name: yellow jumpsuit
-  description: A generic yellow jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -422,8 +422,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorPurple
-  name: purple jumpsuit
-  description: A generic light purple jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -457,8 +457,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorLightBrown
-  name: light brown jumpsuit
-  description: A generic light brown jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -492,8 +492,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorBrown
-  name: brown jumpsuit
-  description: A generic brown jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -527,8 +527,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpsuitColorMaroon
-  name: maroon jumpsuit
-  description: A generic maroon jumpsuit with no rank markings.
+  name: jumpsuit
+  description: A generic jumpsuit with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
