@@ -423,6 +423,7 @@
     - id: JugHydrogen
     - id: JugSugar
     - id: JugEthanol
+    - id: JugSugarMonomers # LoneStar
 
 # region Bottles
 - type: entityTable
@@ -452,6 +453,7 @@
       - id: ChemistryBottleSugar
       - id: ChemistryBottleSulfur
       - id: ChemistryBottleUnstableMutagen
+      - id: ChemistryBottleSugarMonomers #LoneStar
     # Uncommon
     - !type:GroupSelector
       weight: 0.3

@@ -1,0 +1,24 @@
+- type: reaction
+  id: SugarMonomersBreakdown
+  source: true
+  requiredMixerCategories:
+  - Electrolysis
+  reactants:
+    Sugar:
+      amount: 1
+  products:
+    SugarMonomers: 1
+
+- type: reaction
+  id: SugarPolymerization
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  reactants:
+    SugarMonomers:
+      amount: 1
+    Enzyme:
+      amount: 1
+      catalyst: true
+  products:
+    Sugar: 1

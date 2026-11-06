@@ -1,0 +1,44 @@
+- type: entity
+  parent: Jug
+  suffix: sugarmonomers
+  id: JugSugarMonomers
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Label
+    currentLabel: reagent-name-sugar-monomers
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        reagents:
+        - ReagentId: SugarMonomers
+          Quantity: 200
+
+- type: entity
+  parent: ReinforcedJug
+  suffix: sugarmonomers
+  id: ReinforcedJugSugarMonomers
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Label
+    currentLabel: reagent-name-sugar-monomers
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        reagents:
+        - ReagentId: SugarMonomers
+          Quantity: 400
+
+- type: entity
+  id: ChemistryBottleSugarMonomers
+  suffix: sugarmonomers
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: Label
+    currentLabel: reagent-name-sugar-monomers
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SugarMonomers
+          Quantity: 30
