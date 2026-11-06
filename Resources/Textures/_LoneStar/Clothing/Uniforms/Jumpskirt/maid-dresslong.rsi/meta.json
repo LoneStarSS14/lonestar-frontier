@@ -11,17 +11,17 @@
     },
     "states": [
         {
-            "name": "icon"
+            "name": "icon-primary"
         },
         {
-            "name": "icon-color"
+            "name": "icon-secondary"
         },
         {
-            "name": "equipped-INNERCLOTHING",
+            "name": "equipped-INNERCLOTHING-primary",
             "directions": 4
         },
         {
-            "name": "equipped-INNERCLOTHING-color",
+            "name": "equipped-INNERCLOTHING-secondary",
             "directions": 4
         }
     ]
