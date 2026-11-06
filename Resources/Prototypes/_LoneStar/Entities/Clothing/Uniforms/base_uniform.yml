@@ -155,6 +155,7 @@
 
 #region Specific Bases
 - type: entity # Used as an intermediate by wizden's base colored jumpsuits to minimize changes.
+  abstract: true
   id: BaseClothingUniformJumpsuitColorable
   components:
   - type: Sprite
