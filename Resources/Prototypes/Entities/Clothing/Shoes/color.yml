@@ -8,8 +8,8 @@
 - type: entity
   parent: [ ClothingShoesBaseButcherable, ClothingShoesColorableBaseColorInhand ]
   id: ClothingShoesColorBlack
-  name: black shoes
-  description: Stylish black shoes.
+  name: shoes
+  description: Stylish shoes.
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Shoes/color.rsi
@@ -45,7 +45,7 @@
 - type: entity
   parent: ClothingShoesColorBlack
   id: ClothingShoesColorWhite
-  name: white shoes
+  name: shoes
   description: Don't take them off at your office Christmas party.
   components:
   - type: Sprite
@@ -78,8 +78,6 @@
 - type: entity
   parent: ClothingShoesColorBlack
   id: ClothingShoesColorBlue
-  name: blue shoes
-  description: Stylish blue shoes.
   components:
   - type: Sprite
     layers:
@@ -111,8 +109,6 @@
 - type: entity
   parent: ClothingShoesColorBlack
   id: ClothingShoesColorBrown
-  name: brown shoes
-  description: A pair of brown shoes.
   components:
   - type: Sprite
     layers:
@@ -144,8 +140,6 @@
 - type: entity
   parent: ClothingShoesColorBlack
   id: ClothingShoesColorGreen
-  name: green shoes
-  description: Stylish green shoes.
   components:
   - type: Sprite
     layers:
@@ -177,8 +171,6 @@
 - type: entity
   parent: ClothingShoesColorBlack
   id: ClothingShoesColorOrange
-  name: orange shoes
-  description: Stylish orange shoes.
   components:
   - type: Sprite
     layers:
@@ -210,8 +202,6 @@
 - type: entity
   parent: ClothingShoesColorBlack
   id: ClothingShoesColorRed
-  name: red shoes
-  description: Stylish red shoes.
   components:
   - type: Sprite
     layers:
@@ -243,8 +233,6 @@
 - type: entity
   parent: ClothingShoesColorBlack
   id: ClothingShoesColorYellow
-  name: yellow shoes
-  description: Stylish yellow shoes.
   components:
   - type: Sprite
     layers:
@@ -276,8 +264,6 @@
 - type: entity
   parent: ClothingShoesColorBlack
   id: ClothingShoesColorPurple
-  name: purple shoes
-  description: Stylish purple shoes.
   components:
   - type: Sprite
     layers:
