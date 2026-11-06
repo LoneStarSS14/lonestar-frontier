@@ -4,8 +4,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorWhite
-  name: white jumpskirt
-  description: A generic white jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -72,8 +72,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorBlack
-  name: black jumpskirt
-  description: A generic black jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -107,8 +107,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorBlue
-  name: blue jumpskirt
-  description: A generic blue jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -142,8 +142,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorDarkBlue
-  name: dark blue jumpskirt
-  description: A generic dark blue jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -177,8 +177,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorTeal
-  name: teal jumpskirt
-  description: A generic teal jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -212,8 +212,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorGreen
-  name: green jumpskirt
-  description: A generic green jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -247,8 +247,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorDarkGreen
-  name: dark green jumpskirt
-  description: A generic dark green jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -282,8 +282,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorOrange
-  name: orange jumpskirt
-  description: Don't wear this near paranoid security officers.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -317,8 +317,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorPink
-  name: pink jumpskirt
-  description: Just looking at this makes you feel <i>fabulous</i>.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -352,8 +352,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorRed
-  name: red jumpskirt
-  description: A generic red jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -387,8 +387,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorYellow
-  name: yellow jumpskirt
-  description: A generic yellow jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -422,8 +422,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorPurple
-  name: purple jumpskirt
-  description: A generic light purple jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -457,8 +457,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorLightBrown
-  name: light brown jumpskirt
-  description: A generic light brown jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -492,8 +492,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorBrown
-  name: brown jumpskirt
-  description: A generic brown jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
@@ -527,8 +527,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, BaseClothingUniformJumpsuitColorable ]
   id: ClothingUniformJumpskirtColorMaroon
-  name: maroon jumpskirt
-  description: A generic maroon jumpskirt with no rank markings.
+  name: jumpskirt
+  description: A generic jumpskirt with no rank markings.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/color.rsi
