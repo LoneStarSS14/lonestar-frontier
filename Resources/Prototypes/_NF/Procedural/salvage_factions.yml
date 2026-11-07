@@ -249,10 +249,10 @@
       prob: 0.1
     - proto: SpawnMobSyndicateNavalHorror
       cost: 5
-      prob: 0.05 # LoneStar
+      prob: 0.08 # LoneStar
   configs:
     DefenseStructure: CybersunDataMinerExpedition
-    Megafauna: MobSyndicateNavalCommanderA
+    Megafauna: MobSyndicateNavalCommanderA # TODO Someone with Java skill should add a pool option to pick the entity from
     Difficulties: NFExtreme
 
 - type: salvageFaction

@@ -51,7 +51,7 @@
   id: ClothingUniformRandomArmless
   name: colorful sleeveless top and pants # Frontier: hands-free costume<sleeveless top and pants
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:
@@ -59,8 +59,8 @@
         leg:
           base_leg_standard: NTInteriorDesign
           base_leg_short: NTInteriorDesign
-#          base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
-#          base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
+          # base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
+          # base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
         decor:
           decor_torso_armless1: NTInteriorDesign
           decor_torso_armless2: NTInteriorDesign
@@ -79,7 +79,7 @@
   id: ClothingUniformRandomStandard
   name: colorful top and pants # Frontier: costume<top and pants
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:
@@ -88,8 +88,8 @@
         leg:
           base_leg_standard: NTInteriorDesign
           base_leg_short: NTInteriorDesign
-#          base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
-#          base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
+          # base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
+          # base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
         decor:
           decor_torso_armless1: NTInteriorDesign
           decor_torso_armless2: NTInteriorDesign
@@ -117,7 +117,7 @@
   id: ClothingUniformRandomBra
   name: colorful bra and pants # Frontier: and pants
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:
@@ -125,8 +125,8 @@
         leg:
           base_leg_standard: NTInteriorDesign
           base_leg_short: NTInteriorDesign
-#          base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
-#          base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
+          # base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
+          # base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
         decor:
           decor_torso_bra1: NTInteriorDesign
           decor_torso_bra2: NTInteriorDesign
@@ -140,7 +140,7 @@
   id: ClothingUniformRandomShorts
   name: colorful pants
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:
@@ -148,15 +148,15 @@
         leg:
           base_leg_standard: NTInteriorDesign
           base_leg_short: NTInteriorDesign
-#          base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
-#          base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
+          # base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
+          # base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
 
 - type: entity
   parent: ClothingUniformRandom
   id: ClothingUniformRandomShirt
   name: colorful patterned top and pants # Frontier: outfit<patterned top and pants
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:

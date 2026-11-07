@@ -215,8 +215,6 @@
   - type: Emoting
   - type: BodyEmotes
     soundsId: GeneralBodyEmotes
-  - type: SexEmotes
-    soundsId: LewdSounds
   - type: Grammar
     attributes:
       proper: true

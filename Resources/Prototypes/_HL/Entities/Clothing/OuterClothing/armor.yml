@@ -52,10 +52,14 @@
         map: [ "armor_main" ]
       - state: equipped-OUTERCLOTHING-detail
         map: [ "armor_detail" ]
-  - type: RandomSprite
+  # LoneStar start
+  - type: ColorableClothing
     denyReroll: false
     available:
     - armor_main:
-        equipped-OUTERCLOTHING: CyberpunkDark
+        equipped-OUTERCLOTHING: Primary
       armor_detail:
         equipped-OUTERCLOTHING-detail: ""
+    mappedColors:
+      Primary: CyberpunkDark
+  # LoneStar end

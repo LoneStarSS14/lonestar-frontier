@@ -1,0 +1,117 @@
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesLeatherBlindfold
+  name: leather blindfold
+  description: A tougher more fashionable blindfold.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Hawker/leatherblindfold.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Hawker/leatherblindfold.rsi
+    equipDelay: 3
+    unequipDelay: 3
+  - type: Blindfold
+  - type: FlashImmunity
+
+- type: entity
+  parent: ClothingMaskMuzzle
+  id: ClothingMaskMuzzleBall
+  name: ball muzzle
+  description: Silences you, With a ball.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Hawker/ballmuzzle.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Hawker/ballmuzzle.rsi
+
+- type: entity
+  parent: ClothingMaskMuzzle
+  id: ClothingMaskMuzzleRing
+  name: ring muzzle
+  description: Silences you. With a ring.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Hawker/ringmuzzle.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Hawker/ringmuzzle.rsi
+    equipDelay: 3
+    unequipDelay: 3
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsWristCuffs
+  name: leather wrist cuffs
+  description: Leather cuffs for your wrist, with metal O-rings.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Hawker/wristcuffs.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Hawker/wristcuffs.rsi
+    equipDelay: 3
+    unequipDelay: 3
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesAnkleCuffs
+  name: leather ankle cuffs
+  description: Leather cuffs for your ankles, with metal O-rings.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Hawker/anklecuffs.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Hawker/canklecuffs.rsi
+    equipDelay: 3
+    unequipDelay: 3
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsMitts
+  name: leather mitts
+  description: Nice and snug around your hands, how you'll manage to hold anything with these on is a wonder..
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Hawker/mitts.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Hawker/mitts.rsi
+    equipDelay: 3
+    unequipDelay: 3
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsArmSleeve
+  name: leather arm sleeves
+  description: Nice and snug around your hands, how you'll manage to hold anything with these on is a wonder..
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Hawker/armsleeves.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Hawker/armsleeves.rsi
+    equipDelay: 3
+    unequipDelay: 3
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesLegSleeve
+  name: leather leg sleeve
+  description: Nice and snug around your hands, how you'll manage to walk in these is a wonder..
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Hawker/anklecuffs.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Hawker/anklecuffs.rsi
+    equipDelay: 3
+    unequipDelay: 3
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterHarness
+  name: harness
+  description: This doesn't actually do much to restrain you, but atleats it's.. stylish?
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Hawker/harness.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Hawker/harness.rsi
+    equipDelay: 3
+    unequipDelay: 3

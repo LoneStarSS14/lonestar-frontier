@@ -34,7 +34,7 @@
         map: [ "jumpsuit_bottom" ]
       - state: mask_null
         map: [ "jumpsuit_decor" ]
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - jumpsuit_top:
@@ -57,7 +57,7 @@
   parent: ClothingUniformRandomPunkCroptop
   name: punk tanktop jumpsuit
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - jumpsuit_top:
@@ -84,7 +84,7 @@
     sprite: Clothing/Uniforms/procedural.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/procedural.rsi
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - jumpsuit_top:
@@ -124,7 +124,7 @@
         map: [ "jumpsuit_bottom" ]
       - state: mask_null
         map: [ "jumpsuit_decor" ]
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - jumpsuit_top:
@@ -146,7 +146,7 @@
   parent: ClothingUniformRandomPunkCroptopShorts
   name: punk tanktop short jumpsuit
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - jumpsuit_top:
@@ -182,7 +182,7 @@
         map: [ "jumpsuit_bottom" ]
       - state: mask_null
         map: [ "jumpsuit_decor" ]
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - jumpsuit_bottom:
@@ -213,7 +213,7 @@
         map: [ "jumpsuit_bottom" ]
       - state: mask_null
         map: [ "jumpsuit_decor" ]
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - jumpsuit_bottom:

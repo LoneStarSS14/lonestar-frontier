@@ -78,8 +78,8 @@
   minutesUntilDecayDelay: 20
   minutesUntilDecayToZero: 60
 
-# station princess makes everyone horny faster
-# not horny, paid more, wtf
+# station princess
+# prudity pays, wtf
 - type: rpiAura
   id: rpiAuraStationPrincess
   multiplier: 3.0
@@ -88,8 +88,8 @@
   minutesUntilDecayDelay: 120
   minutesUntilDecayToZero: 300
 
-# station Dutchess makes everyone horny faster
-# not horny, paid more, wtf
+# station Dutchess
+# prudity pays, wtf
 - type: rpiAura
   id: rpiAuraStationDutchess
   multiplier: 2.0

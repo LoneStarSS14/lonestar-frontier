@@ -31,7 +31,7 @@ phrase-first = first
 phrase-last = last
 phrase-fabricator = fabricator
 
-# lewd phrases
+# crass phrases
 phrase-butt = butt
 phrase-weiner = weiner
 phrase-balls = balls
@@ -155,9 +155,11 @@ phrase-greentea = green tea
 phrase-gunpowder = gunpowder
 phrase-harshchem = harsh chemicals
 phrase-hazelnut = hazelnut
+phrase-hotdogwater = hotdog water
 phrase-iris = iris
 phrase-jasmine = jasmine
 phrase-kitchen = kitchen
+phrase-latex = latex
 phrase-lavender = lavender
 phrase-lemonzest = lemon zest
 phrase-linen = linen
@@ -183,8 +185,10 @@ phrase-redwood = redwood
 phrase-rosewater = rosewater
 phrase-sandalwood = sandalwood
 phrase-seasalt = seasalt
+phrase-skunk = skunk
 phrase-smoke = smoke
 phrase-smokedwood = smoked wood
+phrase-spaceweed = spaceweed
 phrase-spices = spices
 phrase-strawberry = strawberry
 phrase-superglue = superglue
@@ -194,20 +198,15 @@ phrase-warmhoney = warm honey
 phrase-weldingfuel = welding fuel
 phrase-wildflowers = wildflowers
 
-# lewd scents
+# consent scents
 
-phrase-bankcustomers = bank customers
 phrase-boysmell = boysmell
 phrase-boystink = boystink
 phrase-girlsmell = girlsmell
 phrase-girlstink = girlstink
 phrase-heat = heat
 phrase-inheat = in heat
-phrase-latex = latex
 phrase-musk = musk
-phrase-skunk = skunk
-phrase-spaceweed = spaceweed
-phrase-hotdogwater = hotdog water
 
 # pride
 

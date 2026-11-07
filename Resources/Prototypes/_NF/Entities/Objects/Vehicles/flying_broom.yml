@@ -18,7 +18,7 @@
       visible: false
       map: [ "light" ]
     noRot: true
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     available:
     - broom_wraps:
         hull: Sixteen

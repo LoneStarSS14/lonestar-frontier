@@ -27,6 +27,7 @@
   - ClothingMaskBreathMedicalSecurity
   - ClothingMaskGasSecurity
   - ClothingBeltBandolier
+  - ClothingShoesToelessJackboots # LoneStar
 
 - type: latheRecipePack
   id: NFMercenaryStorageStatic

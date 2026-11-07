@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By Sha-Seng (GitHub)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped-EARS",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-chitinid",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-feroxi",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-ovinia",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-reptilian",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-resomi",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-rodentia",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-shadowkin",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-tajaran",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-vox",
+      "directions": 4
+    },
+    {
+      "name": "equipped-EARS-vulpkanin",
+      "directions": 4
+    }
+  ]
+}

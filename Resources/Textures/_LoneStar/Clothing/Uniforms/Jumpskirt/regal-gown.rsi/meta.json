@@ -11,14 +11,14 @@
             "name": "icon"
         },
         {
-            "name": "icon-detail"
+            "name": "icon-color"
         },
         {
             "name": "equipped-INNERCLOTHING",
             "directions": 4
         },
         {
-            "name": "equipped-INNERCLOTHING-detail",
+            "name": "equipped-INNERCLOTHING-color",
             "directions": 4
         }
     ]

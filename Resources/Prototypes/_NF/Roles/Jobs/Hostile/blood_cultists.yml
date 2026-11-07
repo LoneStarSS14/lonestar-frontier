@@ -9,6 +9,7 @@
     outerClothing: ClothingOuterArmorCult
     belt: ClothingBeltCultWebbing
     back: ClothingBackpackBloodCultLootPriest
+    wallet: ClothingWalletCultT1 # LoneStar
   inhand:
     - WeaponInertStaffCultistLightning
 
@@ -22,6 +23,7 @@
     outerClothing: ClothingOuterArmorCult
     back: ClothingBackpackBloodCultLootB
     belt: ClothingBeltCultWebbing
+    wallet: ClothingWalletCultT1 # LoneStar
   inhand:
     - EldritchBlade
 
@@ -36,6 +38,7 @@
     outerClothing: ClothingOuterCoatBloodCultRobes
     belt: ClothingBeltCultWebbing
     back: ClothingBackpackBloodCultLootD
+    wallet: ClothingWalletCultT1 # LoneStar
   inhand:
     - EldritchBlade
 
@@ -50,6 +53,7 @@
     outerClothing: ClothingOuterCoatBloodCultRobes
     back: ClothingBackpackBloodCultZealotLootA
     belt: ClothingBeltQuiverCrossbowFilledBolt
+    wallet: ClothingWalletCultT1 # LoneStar
   inhand:
     - EldritchBlade
 
@@ -65,6 +69,7 @@
     outerClothing: ClothingOuterCoatBloodCultRobes
     back: ClothingBackpackBloodCultZealotLootCaster
     belt: ClothingBeltCultWebbing
+    wallet: ClothingWalletCultT1 # LoneStar
   inhand:
     - WeaponInertStaffCultistBoltDark
 
@@ -79,5 +84,6 @@
     outerClothing: ClothingOuterCoatCultJanitor
     belt: ClothingBeltCultForceField
     back: ClothingBackpackBloodCultLootJanitor
+    wallet: ClothingWalletCultT1 # LoneStar
   inhand:
     - WeaponInertStaffCultistSoap

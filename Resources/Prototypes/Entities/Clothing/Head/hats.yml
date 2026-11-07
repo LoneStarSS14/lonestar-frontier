@@ -10,15 +10,38 @@
     sprite: Clothing/Head/Hats/beaver_hat.rsi
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, ClothingHeadColorableMonoInhand ] # LoneStar, added colorable
   id: ClothingHeadHatBeret
-  name: beret
+  name: beret (colorable) # LoneStar
   description: A beret, an artists favorite headwear.
   components:
+  # LoneStar start, colrability
   - type: Sprite
-    sprite: Clothing/Head/Hats/beret.rsi
+    sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi
+    layers:
+    - state: icon
+      color: "#9E2020"
+      map: [ "head-icon" ]
   - type: Clothing
-    sprite: Clothing/Head/Hats/beret.rsi
+    sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#9E2020"
+        map: [ "head-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#9E2020"
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        color: "#9E2020"
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+  # LoneStar end
   - type: Tag
     tags:
     - ClothMade
@@ -884,30 +907,110 @@
   - type: Clothing
     sprite: Clothing/Head/Hats/safarihat.rsi
 
+# LoneStar start, colorability support
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, ClothingHeadColorableDualColorInhand ]
   id: ClothingHeadHatJester
   name: jester hat
   description: A hat with bells, to add some merriness to the suit.
   components:
-    - type: Sprite
-      sprite: Clothing/Head/Hats/jester.rsi
-    - type: Clothing
-      sprite: Clothing/Head/Hats/jester.rsi
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Head/Hat/jester.rsi
+    layers:
+    - state: icon
+    - state: icon-primary
+      color: "#9E2020"
+      map: [ "head-icon-primary" ]
+    - state: icon-secondary
+      color: "#5C9630"
+      map: [ "head-icon-secondary" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Head/Hat/jester.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-primary
+        color: "#9E2020"
+        map: [ "head-equipped-primary" ]
+      - state: equipped-HELMET-secondary
+        color: "#5C9630"
+        map: [ "head-equipped-secondary" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-primary
+        color: "#9E2020"
+        map: [ "hl-primary" ]
+      - state: inhand-left-secondary
+        color: "#5C9630"
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right
+      - state: inhand-right-primary
+        color: "#9E2020"
+        map: [ "hr-primary" ]
+      - state: inhand-right-secondary
+        color: "#5C9630"
+        map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
 
 - type: entity
-  parent: ClothingHeadHatJester
+  parent: [ ClothingHeadBase, ClothingHeadColorableDualColorInhand ]
   id: ClothingHeadHatJesterAlt
+  name: jester hat
+  description: A silly hat, to add some merriness to the suit.
   components:
-    - type: Sprite
-      sprite: Clothing/Head/Hats/jester2.rsi
-    - type: Clothing
-      sprite: Clothing/Head/Hats/jester2.rsi
-    - type: HideLayerClothing
-      layers:
-        Hair: HEAD
-        HeadTop : HEAD
-        HeadSide : HEAD
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Head/Hat/jester2.rsi
+    layers:
+    - state: icon-primary
+      color: "#9E2020"
+      map: [ "head-icon-primary" ]
+    - state: icon-secondary
+      color: "#FFD878"
+      map: [ "head-icon-secondary" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Head/Hat/jester2.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET-primary
+        color: "#9E2020"
+        map: [ "head-equipped-primary" ]
+      - state: equipped-HELMET-secondary
+        color: "#FFD878"
+        map: [ "head-equipped-secondary" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-primary
+        color: "#9E2020"
+        map: [ "hl-primary" ]
+      - state: inhand-left-secondary
+        color: "#FFD878"
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right-primary
+        color: "#9E2020"
+        map: [ "hr-primary" ]
+      - state: inhand-right-secondary
+        color: "#FFD878"
+        map: [ "hr-secondary" ]
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
+# LoneStar end
 
 - type: entity
   parent: ClothingHeadBase # Frontier: removed BaseC4Contraband

@@ -1,0 +1,20 @@
+- type: entity
+  name: syndicate naval enforcer spawner
+  id: SpawnMobSyndicateNavalEnforcer
+  parent: MarkerBase
+  suffix: AI, Hostile, RND
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - state: ai
+      - sprite: _NF/Mobs/Species/Templates/human.rsi
+        state: human
+  - type: RandomSpawner
+    prototypes:
+    - MobSyndicateNavalEnforcerA
+    chance: 1
+    offset: 0.0
+    rarePrototypes:
+    - MobSyndicateNavalEnforcerB
+    rareChance: 0.33

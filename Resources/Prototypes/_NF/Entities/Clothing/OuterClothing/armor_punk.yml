@@ -56,7 +56,7 @@
       #- state: mask_null
         #map: [ "armor_overlay" ]
         #shader: unshaded
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
     - armor_main:
@@ -107,7 +107,7 @@
       - state: mask_null
         map: [ "armor_elite_overlay" ]
         shader: unshaded
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
     - armor_elite_main:

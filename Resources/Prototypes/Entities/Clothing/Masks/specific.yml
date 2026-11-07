@@ -85,7 +85,7 @@
   - type: StaticPrice
     price: 5000
   # Frontier: pick random sprite on spawn
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - mask:

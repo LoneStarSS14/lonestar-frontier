@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingHeadBase, ClothingHeadRandomSpriteMono ]
+  parent: [ ClothingHeadBase, ClothingHeadColorableMono ]
   id: ClothingHeadHatFuzzyEarmuffs
   name: fuzzy earmuffs
   description: A headband with faux-fur cushions on each end, designed to protect the ears.

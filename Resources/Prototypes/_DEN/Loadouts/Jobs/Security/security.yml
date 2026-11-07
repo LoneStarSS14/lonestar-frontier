@@ -1,0 +1,15 @@
+- type: loadout
+  id: LoadoutSecurityMaskGasBallistic
+  price: 0
+  storage:
+    back:
+    - ClothingMaskGasSecurityBallistic
+
+- type: loadout
+  id: LoadoutSecurityOuterArmorBasicCompact
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterArmorBasicCompact

@@ -1,25 +1,40 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Mew, slight repalette by Archee",
+  "copyright": "Mew, slight repalette and colorability by Archee",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "icon"
+      "name": "icon-primary"
     },
     {
-      "name": "equipped-INNERCLOTHING",
+      "name": "icon-secondary"
+    },
+    {
+      "name": "equipped-INNERCLOTHING-primary",
       "directions": 4
     },
     {
-      "name": "inhand-left",
+      "name": "equipped-INNERCLOTHING-secondary",
       "directions": 4
     },
     {
-      "name": "inhand-right",
+      "name": "inhand-left-primary",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left-secondary",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right-primary",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right-secondary",
       "directions": 4
     }
   ]

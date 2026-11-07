@@ -1,0 +1,190 @@
+
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
+  abstract: true
+  id: ClothingShoesColorableMono
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "shoes-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+        map: [ "shoes-equipped" ]
+  - type: ColorableClothing
+    available:
+      - shoes-icon:
+          icon: Base
+        shoes-equipped:
+          equipped-FEET: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
+  abstract: true
+  parent: ClothingShoesColorableMono
+  id: ClothingShoesColorableMonoInHand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - shoes-icon:
+          icon-primary: Base
+        shoes-equipped:
+          equipped-FEET: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a 2 colored layers
+  abstract: true
+  id: ClothingShoesColorableDualColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "shoes-icon-primary" ]
+    - state: icon-secondary
+      map: [ "shoes-icon-secondary" ]
+  - type: Clothing
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET-primary
+        map: [ "shoes-equipped-primary" ]
+      - state: equipped-FEET-secondary
+        map: [ "shoes-equipped-secondary" ]
+  - type: ColorableClothing
+    available:
+      - shoes-icon-primary:
+          icon-primary: Primary
+        shoes-icon-secondary:
+          icon-secondary: Secondary
+        shoes-equipped-primary:
+          equipped-FEET-primary: Primary
+        shoes-equipped-secondary:
+          equipped-FEET-secondary: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a 2 colored layers, supporting inhands
+  abstract: true
+  parent: ClothingShoesColorableDualColor
+  id: ClothingShoesColorableDualColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-primary
+        map: [ "hl-primary" ]
+      - state: inhand-left-secondary
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right-primary
+        map: [ "hr-primary" ]
+      - state: inhand-right-secondary
+        map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    available:
+      - shoes-icon-primary:
+          icon-primary: Primary
+        shoes-icon-secondary:
+          icon-secondary: Secondary
+        shoes-equipped-primary:
+          equipped-FEET-primary: Primary
+        shoes-equipped-secondary:
+          equipped-FEET-secondary: Secondary
+        hl-primary:
+          inhand-left-primary: Primary
+        hl-secondary:
+          inhand-left-secondary: Secondary
+        hr-primary:
+          inhand-right-primary: Primary
+        hr-secondary:
+          inhand-right-secondary: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
+
+- type: entity # for sprites with a set color layer, and a single colorable layer
+  abstract: true
+  id: ClothingShoesColorableBaseColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-color
+      map: [ "shoes-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+      - state: equipped-FEET-color
+        map: [ "shoes-equipped" ]
+  - type: ColorableClothing
+    available:
+      - shoes-icon:
+          icon-color: Base
+        shoes-equipped:
+          equipped-FEET-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a set color layer, and a single colorable layer, supporting inhands
+  abstract: true
+  parent: ClothingShoesColorableBaseColor
+  id: ClothingShoesColorableBaseColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+        - state: inhand-left-color
+          map: [ "hl-color" ]
+      right:
+        - state: inhand-right
+        - state: inhand-right-color
+          map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - shoes-icon:
+          icon-color: Base
+        shoes-equipped:
+          equipped-FEET-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
+    mappedColors:
+      Base: NTInteriorDesign

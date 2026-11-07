@@ -1,0 +1,62 @@
+- type: entity
+  parent: ClothingOuterCoatBHTrench # LoneStar. Inherit stats from bounty hunter flak trenchcoat
+  id: ClothingOuterArmorTacticalMaid
+  name: mercenary maid discreet armour vest
+  description: An armored durathread apron. There are loops on the back for holding your 'mop'.
+  components:
+  - type: Sprite
+    sprite: _Bubber/Clothing/OuterClothing/tacticalmaid.rsi
+    layers:
+    - state: icon
+      map: [ "outerclothing-icon-base" ]
+    - state: icon-accent
+      shader: unshaded
+      map: [ "outerclothing-icon-accent" ]
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+        map: [ "outerclothing-equipped-base" ]
+      - state: equipped-OUTERCLOTHING-accent
+        shader: unshaded
+        map: [ "outerclothing-equipped-accent" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-base" ]
+        - state: inhand-left-accent
+          shader: unshaded
+          map: [ "hl-accent" ]
+      right:
+        - state: inhand-right
+          map: [ "hr-base" ]
+        - state: inhand-right-accent
+          shader: unshaded
+          map: [ "hr-accent" ]
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+      Apron: LSSilks
+      Embroidery: TechniColors
+    available:
+      - outerclothing-icon-base:
+          icon: Apron
+        outerclothing-icon-accent:
+          icon-accent: Embroidery
+        outerclothing-equipped-base:
+          equipped-OUTERCLOTHING: Apron
+        outerclothing-equipped-accent:
+          equipped-OUTERCLOTHING-accent: Embroidery
+        hl-base:
+          inhand-left: Apron
+        hl-accent:
+          inhand-left-accent: Embroidery
+        hr-base:
+          inhand-right: Apron
+        hr-accent:
+          inhand-right-accent: Embroidery
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+

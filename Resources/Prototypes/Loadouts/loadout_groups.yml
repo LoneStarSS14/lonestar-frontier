@@ -1235,6 +1235,7 @@
   loadouts:
   - MedicalDoctorBackpack
   - MedicalDoctorSatchel
+  - MedicalDoctorSatchelTrauma # LoneStar
   - MedicalDoctorDuffel
 
 - type: loadoutGroup

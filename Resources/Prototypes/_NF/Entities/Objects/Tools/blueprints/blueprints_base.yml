@@ -518,7 +518,7 @@
     - NFBlueprintServiceTechfab
     - NFBlueprintMercenaryTechfab
     - NFBlueprintSalvageTechfab
-    # - NFBlueprintAdvanced # Lonestar
+    - NFBlueprintAdvanced
     - Document
     - Paper
 
@@ -554,7 +554,7 @@
   - type: Tag
     tags:
     - NFBlueprintSalvageTechfab
-    # - NFBlueprintAdvanced # LoneStar
+    - NFBlueprintAdvanced
     - Document
     - Paper
 
@@ -562,6 +562,12 @@
   abstract: true
   parent: [ NFBaseBlueprintExpedition, NFBlueprintEngineering ]
   id: NFBaseBlueprintExpeditionRogueSilicon
+  components: # LoneStar
+  - type: Tag
+    tags:
+    - NFBlueprintAdvanced
+    - Document
+    - Paper
 
 - type: entity
   abstract: true
@@ -598,6 +604,6 @@
     tags:
     - NFBlueprintMercenaryTechfab
     - NFBlueprintNfsdTechfab
-    # - NFBlueprintAdvanced # LoneStar
+    - NFBlueprintAdvanced
     - Document
     - Paper

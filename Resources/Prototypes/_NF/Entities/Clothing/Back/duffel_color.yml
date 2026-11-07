@@ -1140,7 +1140,7 @@
       - state: inhand-right-zipper
         map: [ "rightDuffelZipper" ]
         shader: unshaded
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
     # icon

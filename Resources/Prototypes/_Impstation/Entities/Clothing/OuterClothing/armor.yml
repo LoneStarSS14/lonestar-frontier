@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2024 V
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingOuterCoatBHTrench # LoneStar. Inherit stats from bounty hunter flak trenchcoat
+  id: ClothingOuterArmorBasicCompact
+  name: compact armor vest
+  description: An armored durathread apron. This relatively innocent at first glance outfit is actually the specialized type worn by Nanotrasen's infamous high profile 'Cleaning and Clearing' kill squads. It's a lot more robust than it's janitorial counterpart. There are loops on the back for holding your 'mop'.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/Armor/security_compact.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/Armor/security_compact.rsi

@@ -1,4 +1,4 @@
-# regular smells
+#region Scents
 - type: trait
   id: ScentVanilla
   name: trait-scent-vanilla-name
@@ -421,7 +421,7 @@
   cost: 1
   scentProtos:
   - Metal
-  
+
 - type: trait
   id: ScentPennies
   name: trait-scent-pennies-name
@@ -430,88 +430,6 @@
   cost: 1
   scentProtos:
   - Pennies
-
-# Lewd smells
-- type: trait
-  id: ScentMusk
-  name: trait-scent-musk-name
-  description: trait-scent-musk-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - ScentLewdMusk
-
-- type: trait
-  id: ScentHeat
-  name: trait-scent-heat-name
-  description: trait-scent-heat-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - Heat
-
-- type: trait
-  id: ScentLatex
-  name: trait-scent-latex-name
-  description: trait-scent-latex-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - Latex
-
-- type: trait
-  id: ScentBoystink
-  name: trait-scent-boystink-name
-  description: trait-scent-boystink-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - Boystink
-
-- type: trait
-  id: ScentBoysmell
-  name: trait-scent-boysmell-name
-  description: trait-scent-boysmell-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - Boysmell
-
-- type: trait
-  id: ScentSkunk
-  name: trait-scent-skunk-name
-  description: trait-scent-skunk-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - Skunk
-
-- type: trait
-  id: ScentGirlstink
-  name: trait-scent-girlstink-name
-  description: trait-scent-girlstink-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - Girlstink
-
-- type: trait
-  id: ScentGirlsmell
-  name: trait-scent-girlsmell-name
-  description: trait-scent-girlsmell-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - Girlsmell
-
-- type: trait
-  id: ScentSpaceweed
-  name: trait-scent-spaceweed-name
-  description: trait-scent-spaceweed-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - Spaceweed
 
 - type: trait
   id: ScentGunpowder
@@ -775,15 +693,6 @@
   - Blood
 
 - type: trait
-  id: ScentBankCustomers
-  name: trait-scent-bankcustomers-name
-  description: trait-scent-bankcustomers-desc
-  category: ScentsNSFW
-  cost: 1
-  scentProtos:
-  - BankCustomers
-
-- type: trait
   id: ScentBirthdayCake
   name: trait-scent-birthdaycake-name
   description: trait-scent-birthdaycake-desc
@@ -820,11 +729,92 @@
   - Redwood
 
 - type: trait
+  id: ScentLatex
+  name: trait-scent-latex-name
+  description: trait-scent-latex-desc
+  category: Scents
+  cost: 1
+  scentProtos:
+  - Latex
+
+- type: trait
   id: ScentHotdogWater
   name: trait-scent-hotdogwater-name
   description: trait-scent-hotdogwater-desc
-  category: ScentsNSFW
+  category: Scents
   cost: 1
   scentProtos:
   - HotdogWater
 
+- type: trait
+  id: ScentSpaceweed
+  name: trait-scent-spaceweed-name
+  description: trait-scent-spaceweed-desc
+  category: Scents
+  cost: 1
+  scentProtos:
+  - Spaceweed
+
+- type: trait
+  id: ScentSkunk
+  name: trait-scent-skunk-name
+  description: trait-scent-skunk-desc
+  category: Scents
+  cost: 1
+  scentProtos:
+  - Skunk
+
+#region Consent Scents
+- type: trait
+  id: ScentMusk
+  name: trait-scent-musk-name
+  description: trait-scent-musk-desc
+  category: ScentsConsent
+  cost: 1
+  scentProtos:
+  - ScentMusk
+
+- type: trait
+  id: ScentHeat
+  name: trait-scent-heat-name
+  description: trait-scent-heat-desc
+  category: ScentsConsent
+  cost: 1
+  scentProtos:
+  - Heat
+
+- type: trait
+  id: ScentBoystink
+  name: trait-scent-boystink-name
+  description: trait-scent-boystink-desc
+  category: ScentsConsent
+  cost: 1
+  scentProtos:
+  - Boystink
+
+- type: trait
+  id: ScentBoysmell
+  name: trait-scent-boysmell-name
+  description: trait-scent-boysmell-desc
+  category: ScentsConsent
+  cost: 1
+  scentProtos:
+  - Boysmell
+
+- type: trait
+  id: ScentGirlstink
+  name: trait-scent-girlstink-name
+  description: trait-scent-girlstink-desc
+  category: ScentsConsent
+  cost: 1
+  scentProtos:
+  - Girlstink
+
+- type: trait
+  id: ScentGirlsmell
+  name: trait-scent-girlsmell-name
+  description: trait-scent-girlsmell-desc
+  category: ScentsConsent
+  cost: 1
+  scentProtos:
+  - Girlsmell

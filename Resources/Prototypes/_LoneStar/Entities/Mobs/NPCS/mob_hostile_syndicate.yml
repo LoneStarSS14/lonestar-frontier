@@ -1,0 +1,55 @@
+- type: entity
+  parent: MobSyndicateNavalBase
+  id: MobSyndicateNavalEnforcerA
+  categories: [ HideSpawnMenu ]
+  name: syndicate enforcer
+  description: The security enforcer that leads the charge in lieu of the commander, syndicate enforcers ensure offensive operations go smoothly. Equipped with a Ward-45 revolver.
+  components:
+    - type: Loadout
+      prototypes:
+        - SyndicateNavalGearT3Enforcer
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 0.6
+      rechargeSound:
+        path: /Audio/_NF/Effects/silence.ogg
+    - type: BasicEntityAmmoProvider
+      proto: NFCartridgePistol45Incendiary # LoneStar
+      capacity: 1
+      count: 1
+    - type: Gun
+      showExamineText: false
+      fireRate: 0.6
+      selectedMode: SemiAuto
+      availableModes:
+      - SemiAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+
+- type: entity
+  parent: MobSyndicateNavalBase
+  id: MobSyndicateNavalEnforcerB
+  categories: [ HideSpawnMenu ]
+  name: syndicate enforcer
+  description: The security enforcer that leads the charge in lieu of the commander, syndicate enforcers ensure offensive operations go smoothly. Equipped with a scavenged pulse pistol.
+  components:
+    - type: Loadout
+      prototypes:
+        - SyndicateNavalGearT3EnforcerAlt
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 1
+      rechargeSound:
+        path: /Audio/_NF/Effects/silence.ogg
+    - type: BasicEntityAmmoProvider
+      proto: NFCartridgePistol35Uranium # LoneStar
+      capacity: 2
+      count: 2
+    - type: Gun
+      showExamineText: false
+      minAngle: 10
+      maxAngle: 30
+      fireRate: 1
+      angleIncrease: 3
+      angleDecay: 6
+      selectedMode: FullAuto
+      availableModes:
+      - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/smg.ogg

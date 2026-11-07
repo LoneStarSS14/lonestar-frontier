@@ -80,7 +80,6 @@ trait-window-cancel = Cancel
 emote-window-title = Configure Emote Categories
 emote-window-category-title = Emotes
 emote-window-description = Checked categories are visible in the emote wheel.
-emote-window-always-enabled = Sex and Vocal categories are always enabled.
 emote-window-button-with-count = Configure... ({$count} visible)
 
 trait-category-disabilities = Disabilities
@@ -91,4 +90,4 @@ trait-category-examine = Examine Modifiers
 trait-category-temperament = Temperament
 trait-category-bodytypes = Physical Appearances
 trait-category-scents = Scents
-trait-category-scents-nsfw = NSFW Scents
+trait-category-scents-consent = Scents (Consent Requiring)

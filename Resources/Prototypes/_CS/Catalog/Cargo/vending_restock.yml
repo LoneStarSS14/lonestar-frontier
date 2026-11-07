@@ -1,9 +1,9 @@
 - type: cargoProduct
-  id: VendingMachineRestockHornyHawker
+  id: VendingMachineRestockHawker
   icon:
     sprite: Objects/Specific/Service/vending_machine_restock.rsi
     state: refill_costume
-  product: VendingMachineRestockHornyHawker
+  product: VendingMachineRestockHawker
   cost: 2000
   category: cargoproduct-category-name-service
   group: market

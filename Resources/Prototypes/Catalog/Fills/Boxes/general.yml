@@ -17,7 +17,7 @@
   - type: Tag
     tags:
     - BoxCardboard
-    - Trash # Frontier
+    # - Trash # LoneStar
 
 - type: entity
   name: mousetrap box

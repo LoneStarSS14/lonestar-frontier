@@ -22,7 +22,7 @@
   description: trait-fat-fox-desc
   category: Disabilities
   cost: 1
-  hornyExamineProto: hornyOverweight
+  descriptorExamineProto: Overweight
   components:
   - type: OverweightTrait
 

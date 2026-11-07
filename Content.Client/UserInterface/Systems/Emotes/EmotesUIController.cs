@@ -41,7 +41,7 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
             [EmoteCategory.Vocal] = ("emote-menu-category-vocal",
                 new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Emotes/vocal.png"))),
             [EmoteCategory.Harpy] = ("emote-menu-category-harpy",
-                new SpriteSpecifier.Texture(new ResPath("/Textures/_CS/Emojis/cock.png"))),
+                new SpriteSpecifier.Texture(new ResPath("/Textures/_CS/Emojis/chicken.png"))),
             [EmoteCategory.Goblin] = ("emote-menu-category-goblin",
                 new SpriteSpecifier.Texture(new ResPath("/Textures/_CS/Emojis/goblin.png"))),
             [EmoteCategory.Vulp] = ("emote-menu-category-vulp",
@@ -74,7 +74,6 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
 
     private static readonly HashSet<EmoteCategory> AlwaysEnabledCategories = new()
     {
-        EmoteCategory.Sex,
         EmoteCategory.Vocal,
     };
 

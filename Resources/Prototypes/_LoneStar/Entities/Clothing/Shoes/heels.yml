@@ -1,0 +1,147 @@
+#region Kitten
+- type: entity
+  parent: [ ClothingShoesBaseButcherableHeelsNoisy, ClothingShoesColorableBaseColorInhand ]
+  id: ClothingShoesHeelsKittenColorable
+  name: kitten-heels
+  description: A pair of cute kitten heels with a dainty ankle strap.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Shoes/Heels/kitten-heels-colorable.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Shoes/Heels/kitten-heels-colorable.rsi
+
+- type: entity
+  parent: ClothingShoesHeelsKittenColorable
+  id: ClothingShoesHeelsKitten
+  categories: [ HideSpawnMenu ]
+  suffix: White
+  components:
+  - type: ColorableClothing
+    randomOnCreation: false
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-color
+      color: "#F0F0F0"
+      map: [ "shoes-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+      - state: equipped-FEET-color
+        color: "#F0F0F0"
+        map: [ "shoes-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+        - state: inhand-left-color
+          color: "#F0F0F0"
+          map: [ "hl-color" ]
+      right:
+        - state: inhand-right
+        - state: inhand-right-color
+          color: "#F0F0F0"
+          map: [ "hr-color" ]
+
+- type: entity
+  parent: ClothingShoesHeelsKittenColorable
+  id: ClothingShoesHeelsKittenBlack
+  categories: [ HideSpawnMenu ]
+  suffix: Black
+  components:
+  - type: ColorableClothing
+    randomOnCreation: false
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-color
+      color: "#353535"
+      map: [ "shoes-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+      - state: equipped-FEET-color
+        color: "#353535"
+        map: [ "shoes-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+        - state: inhand-left-color
+          color: "#353535"
+          map: [ "hl-color" ]
+      right:
+        - state: inhand-right
+        - state: inhand-right-color
+          color: "#353535"
+          map: [ "hr-color" ]
+
+- type: entity
+  parent: ClothingShoesHeelsKittenColorable
+  id: ClothingShoesHeelsKittenCrimson
+  categories: [ HideSpawnMenu ]
+  suffix: Crimson
+  components:
+  - type: ColorableClothing
+    randomOnCreation: false
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-color
+      color: "#9E2020"
+      map: [ "shoes-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+      - state: equipped-FEET-color
+        color: "#9E2020"
+        map: [ "shoes-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+        - state: inhand-left-color
+          color: "#9E2020"
+          map: [ "hl-color" ]
+      right:
+        - state: inhand-right
+        - state: inhand-right-color
+          color: "#9E2020"
+          map: [ "hr-color" ]
+
+- type: entity
+  parent: ClothingShoesHeelsKittenColorable
+  id: ClothingShoesHeelsKittenRose
+  categories: [ HideSpawnMenu ]
+  suffix: Rose
+  components:
+  - type: ColorableClothing
+    randomOnCreation: false
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-color
+      color: "#ff99d8"
+      map: [ "shoes-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+      - state: equipped-FEET-color
+        color: "#ff99d8"
+        map: [ "shoes-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+        - state: inhand-left-color
+          color: "#ff99d8"
+          map: [ "hl-color" ]
+      right:
+        - state: inhand-right
+        - state: inhand-right-color
+          color: "#ff99d8"
+          map: [ "hr-color" ]

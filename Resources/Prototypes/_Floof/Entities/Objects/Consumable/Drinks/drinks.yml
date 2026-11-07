@@ -160,18 +160,18 @@
 
 - type: entity
   parent: DrinkGlass
-  id: DrinkHornyStallionGlass
-  suffix: horny stallion
+  id: DrinkBojackGlass
+  suffix: bojack
   components:
   - type: SolutionContainerManager
     solutions:
       drink:
         maxVol: 30
         reagents:
-        - ReagentId: HornyStallion
+        - ReagentId: Bojack
           Quantity: 30
   - type: Icon
-    sprite: _Floof/Objects/Consumable/Drinks/hornystallion.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/bojack.rsi
     state: icon
 
 - type: entity
@@ -320,18 +320,18 @@
 
 - type: entity
   parent: DrinkGlass
-  id: DrinkOrgasmOnTheBeachGlass
-  suffix: orgasm on the beach
+  id: DrinkSexOnTheBeachGlass
+  suffix: sex on the beach
   components:
   - type: SolutionContainerManager
     solutions:
       drink:
         maxVol: 30
         reagents:
-        - ReagentId: OrgasmOnTheBeach
+        - ReagentId: SexOnTheBeach
           Quantity: 30
   - type: Icon
-    sprite: _Floof/Objects/Consumable/Drinks/orgasmonthebeach.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/sexonthebeach.rsi
     state: icon
 
 - type: entity
@@ -432,34 +432,34 @@
 
 - type: entity
   parent: DrinkGlass
-  id: DrinkSemenBombGlass
-  suffix: semen bomb
+  id: DrinkSaltBombGlass
+  suffix: salt bomb
   components:
   - type: SolutionContainerManager
     solutions:
       drink:
         maxVol: 30
         reagents:
-        - ReagentId: SemenBomb
+        - ReagentId: SaltBomb
           Quantity: 30
   - type: Icon
-    sprite: _Floof/Objects/Consumable/Drinks/semenbomb.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/saltbomb.rsi
     state: icon
 
 - type: entity
   parent: DrinkGlass
-  id: DrinkSemenHemorrhageGlass
-  suffix: semen hemorrhage
+  id: DrinkSaltySchnappsGlass
+  suffix: salty schnapps
   components:
   - type: SolutionContainerManager
     solutions:
       drink:
         maxVol: 30
         reagents:
-        - ReagentId: SemenHemorrhage
+        - ReagentId: SaltySchnapps
           Quantity: 30
   - type: Icon
-    sprite: _Floof/Objects/Consumable/Drinks/semenhemorrhage.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/saltyschnapps.rsi
     state: icon
 
 - type: entity
@@ -544,17 +544,16 @@
 
 - type: entity
   parent: DrinkGlass
-  id: DrinkGinandPussyGlass
-  suffix: Gin and Pussy
+  id: DrinkKittyGinGlass
+  suffix: kitty gin
   components:
   - type: SolutionContainerManager
     solutions:
       drink:
         maxVol: 30
         reagents:
-        - ReagentId: GinandPussy
+        - ReagentId: KittyGin
           Quantity: 30
   - type: Icon
-    sprite: _Floof/Objects/Consumable/Drinks/ginandpussy.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/kittygin.rsi
     state: icon
-

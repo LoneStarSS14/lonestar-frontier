@@ -229,7 +229,6 @@ public sealed class TaxBracketResult(
         actionMultipliers: new Dictionary<RpiActionType, float>(),
         journalismData:    new RpiJournalismData())
     {
-        // piss
     }
 }
 

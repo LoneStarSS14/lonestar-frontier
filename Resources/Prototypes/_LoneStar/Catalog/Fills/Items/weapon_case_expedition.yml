@@ -1,0 +1,25 @@
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseShortRevolverCapGunFakeExpedition
+  suffix: Dungeon, Fake Cap Gun
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFRevolverCapGunFake
+      amount: 1
+    - id: NFSpeedLoaderPistol45
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseShortRevolverCapGunExpedition # This one is the toy
+  suffix: Dungeon, Cap Gun
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFRevolverCapGun
+      amount: 1
+    - id: NFSpeedLoaderCap
+      amount: 2

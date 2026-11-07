@@ -3,6 +3,7 @@
   startingInventory:
     ClothingBackpackMedical: 4
     ClothingBackpackSatchelMedical: 4
+    ClothingBackpackSatchelMedicalTrauma: 4 # LoneStar
     ClothingBackpackDuffelMedical: 4
     ClothingBackpackDuffelTrauma: 4 # Frontier
     ClothingBackpackMessengerMedical: 4 # Frontier
@@ -47,6 +48,8 @@
     ClothingOuterWinterPara: 2
     ClothingShoesBootsWinterParamedic: 2
     ClothingOuterCoatParamedicWB: 2
+    ClothingHeadHatParamedicSiren: 2 # LoneStar
+    ClothingHeadHatParamedicSirenBeret: 2 # LoneStar
     ClothingHeadHatParamedicsoft: 2
     ClothingBeltMedicalEMT: 4 # Frontier, empty
     ClothingOuterHardsuitVoidParamed: 1

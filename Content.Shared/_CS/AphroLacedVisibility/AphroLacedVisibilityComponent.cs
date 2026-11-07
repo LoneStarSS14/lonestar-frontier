@@ -5,14 +5,14 @@ using Robust.Shared.GameStates;
 namespace Content.Shared._CS.AphroLacedVisibility;
 
 /// <summary>
-/// Component that keeps track of solution containers to see if they have been injected by horny juice.
+/// Component that keeps track of solution containers to see if they have been injected by aphrodesiacs.
 /// </summary>
 [RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState]
 public sealed partial class AphroLacedVisibilityComponent : Component
 {
     /// <summary>
-    /// The name of the solution of which to check for HORNY
+    /// The name of the solution of which to check for aphrodesiacs
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("solution")]

@@ -1182,6 +1182,7 @@
 
 - type: listing
   id: UplinkHoloparaKit
+  abstract: true # LoneStar
   name: uplink-holopara-kit-name
   description: uplink-holopara-kit-desc
   icon: { sprite: /Textures/Objects/Misc/guardian_info.rsi, state: icon }
@@ -2103,6 +2104,7 @@
 
 - type: listing
   id: UplinkHoloclownKit
+  abstract: true # LoneStar
   name: uplink-holoclown-kit-name
   description: uplink-holoclown-kit-desc
   icon: { sprite: /Textures/Objects/Fun/figurines.rsi, state: holoclown }

@@ -1,0 +1,68 @@
+# SPDX-FileCopyrightText: 2026 Sushiburger
+
+# SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
+
+# KEEP THIS IN ALPHABETICAL ORDER!!!!!!!!!!!!!!!!!!!
+
+- type: Tag
+  id: BedsheetBlack
+
+- type: Tag
+  id: BedsheetBlue
+
+- type: Tag
+  id: BedsheetBrown
+
+- type: Tag
+  id: BedsheetCaptain
+
+- type: Tag
+  id: BedsheetCentcom
+
+- type: Tag
+  id: BedsheetClown
+
+- type: Tag
+  id: BedsheetCult
+
+- type: Tag
+  id: BedsheetGreen
+
+- type: Tag
+  id: BedsheetGrey
+
+- type: Tag
+  id: BedsheetIan
+
+- type: Tag
+  id: BedsheetMime
+
+- type: Tag
+  id: BedsheetNT
+  
+- type: Tag
+  id: BedsheetOrange
+
+- type: Tag
+  id: BedsheetPurple
+
+- type: Tag
+  id: BedsheetRainbow
+
+- type: Tag
+  id: BedsheetRed
+
+- type: Tag
+  id: BedsheetSyndie
+
+- type: Tag
+  id: BedsheetUSA
+
+- type: Tag
+  id: BedsheetWhite
+
+- type: Tag
+  id: BedsheetWiz
+
+- type: Tag
+  id: BedsheetYellow

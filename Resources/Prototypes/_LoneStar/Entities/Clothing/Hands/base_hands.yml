@@ -1,0 +1,189 @@
+
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
+  abstract: true
+  id: ClothingHandsColorableMono
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "hands-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        map: [ "hands-equipped" ]
+  - type: ColorableClothing
+    available:
+      - hands-icon:
+          icon: Base
+        hands-equipped:
+          equipped-HAND: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingHandsColorableMono
+  id: ClothingHandsColorableMonoInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - hands-icon:
+          icon: Base
+        hands-equipped:
+          equipped-HAND: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a set layer, and a single colored layer
+  abstract: true
+  id: ClothingHandsColorableBaseColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-color
+      map: [ "hands-icon" ]
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+      - state: equipped-HAND-color
+        map: [ "hands-equipped" ]
+  - type: ColorableClothing
+    available:
+      - hands-icon:
+          icon-color: Base
+        hands-equipped:
+          equipped-HAND-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a set layer, and a single colored layer, supporting inhands
+  abstract: true
+  parent: ClothingHandsColorableBaseColor
+  id: ClothingHandsColorableBaseColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-color
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+      - state: inhand-right-color
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - hands-icon:
+          icon-color: Base
+        hands-equipped:
+          equipped-HAND-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity # for sprites with a 2 colored layers
+  abstract: true
+  id: ClothingHandsColorableDualColor
+  suffix: Colorable
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "hands-icon-primary" ]
+    - state: icon-color
+      map: [ "hands-icon-secondary" ]
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        map: [ "hands-equipped-primary" ]
+      - state: equipped-HAND-color
+        map: [ "hands-equipped-secondary" ]
+  - type: ColorableClothing
+    available:
+      - hands-icon-primary:
+          icon: Primary
+        hands-icon-secondary:
+          icon-color: Secondary
+        hands-equipped-primary:
+          equipped-HAND: Primary
+        hands-equipped-secondary:
+          equipped-HAND-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity # for sprites with a 2 colored layers, supporting inhands
+  abstract: true
+  parent: ClothingHandsColorableDualColor
+  id: ClothingHandsColorableDualColorInhand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-primary" ]
+      - state: inhand-left-color
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-primary" ]
+      - state: inhand-right-color
+        map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    available:
+      - hands-icon-primary:
+          icon: Primary
+        hands-icon-secondary:
+          icon-color: Secondary
+        hands-equipped-primary:
+          equipped-HAND: Primary
+        hands-equipped-secondary:
+          equipped-HAND-color: Secondary
+        hl-primary:
+          inhand-left: Primary
+        hl-secondary:
+          inhand-left-color: Secondary
+        hr-primary:
+          inhand-right: Primary
+        hr-secondary:
+          inhand-right-color: Secondary
+    mappedColors:
+      Primary: LSSilks
+      Secondary: NTInteriorDesign

@@ -1,33 +1,33 @@
 - type: entity
   parent: VendingMachine
-  id: VendingMachineKink
-  name: Horny Hawker
-  description: A vending machine stocked with various adult-themed items for those with... unique tastes.
+  id: VendingMachineHawker
+  name: hawker-vend
+  description: A vending machine stocked with various.. items ..for those with unique tastes.
   components:
   - type: VendingMachine
-    pack: HornyHawkerInventory
+    pack: HawkerInventory
     dispenseOnHitChance: 0.25
     dispenseOnHitThreshold: 2
-    offState: kink-off
-    brokenState: kink-off
-    normalState: kink
-    denyState: kink-deny
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
     loopDeny: false
     ejectDelay: 1.9
     initialStockQuality: 1.0
   - type: DatasetVocalizer
-    dataset: HornyHawkerAds
+    dataset: HawkerAds
   - type: SpeakOnUIClosed
-    pack: HornyHawkerGoodbyes
+    pack: HawkerGoodbyes
   - type: Sprite
-    sprite: _CS/Structures/Machines/VendingMachines/kinkvend.rsi
+    sprite: _CS/Structures/Machines/VendingMachines/hawker.rsi
     layers:
-    - state: "kink-off"
+    - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "kink-off"
+    - state: "off"
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
-    - texture: Structures/Machines/VendingMachines/maintenance_panel.png
+    - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5

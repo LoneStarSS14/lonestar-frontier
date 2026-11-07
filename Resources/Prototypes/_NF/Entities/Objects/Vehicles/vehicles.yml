@@ -19,7 +19,7 @@
     northOffset: 0, -0.1
     eastOffset: 0.05, -0.1
     westOffset: -0.05, -0.1
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     available:
       - enum.DamageStateVisualLayers.Base:
           hull: Sixteen # Rainbow, Emagged, Departmental, Advanced
@@ -226,7 +226,7 @@
     - state: lights
       shader: unshaded
     noRot: true
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     available:
       - enum.DamageStateVisualLayers.Base:
           hull: Sixteen # Rainbow, Emagged, Departmental, Advanced

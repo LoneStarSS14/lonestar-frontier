@@ -1,0 +1,88 @@
+- type: entity
+  name: enforcer energy shield
+  parent: [BaseShield, BaseC2Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
+  id: EnergyShieldEnforcer
+  description: Exotic energy shield, when folded, can even fit in your pocket.
+  components:
+    - type: Sprite
+      sprite: _LoneStar/Objects/Weapons/Melee/enforcer_shield.rsi
+      state: eshield-icon
+    - type: Item
+      sprite: _LoneStar/Objects/Weapons/Melee/enforcer_shield.rsi
+      size: Ginormous
+      heldPrefix: eshield
+    - type: HeldSpeedModifier
+      walkModifier: 0.7
+      sprintModifier: 0.7
+    - type: PointLight
+      netsync: false
+      enabled: false
+      radius: 1.5
+      energy: 2
+      color: blue
+    - type: ItemTogglePointLight
+    - type: Reflect
+      reflectProb: 0.95
+      reflects:
+        - Energy
+    - type: Blocking
+      passiveBlockModifier:
+        coefficients:
+          Blunt: 1.0
+          Slash: 0.9
+          Piercing: 0.85
+          Heat: 0.6
+      activeBlockModifier:
+        coefficients:
+          Blunt: 1.2
+          Slash: 0.85
+          Piercing: 0.5
+          Heat: 0.4
+        flatReductions:
+          Heat: 1
+          Piercing: 1
+    - type: Appearance
+    - type: Damageable
+      damageContainer: Shield
+    - type: ExaminableDamage
+      messages: EnergyShieldMessages
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 180
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                BrokenEnergyShield:
+                  min: 1
+                  max: 1
+        - trigger:
+            !type:DamageTrigger
+            damage: 70
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/_CS/GasWarnings/airwarning_low.ogg
+                params:
+                  pitch: 0.8
+    - type: StaticPrice
+      price: 350
+    - type: PassiveDamage
+      damage:
+        types:
+          Heat: -0.5
+          Cold: -0.5
+        groups:
+          Brute: -3

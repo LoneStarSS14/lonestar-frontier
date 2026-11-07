@@ -1,4 +1,5 @@
-# DO NOT ADD MORE, USE UNIFORM DYING
+## LoneStar, generally messy, we can ignore notes for this file and other 'broad' vending machines like theatre.
+
 - type: vendingMachineInventory
   id: ClothesMateInventory
   startingInventory:
@@ -10,7 +11,6 @@
     ClothingWalletLeatherBrown: 4294967295
     ClothingWalletLeatherBlack: 4294967295
     ClothingHeadHatBeret: 4294967295
-    ClothingHeadHatBeretColorable: 4294967295
     ClothingHeadBandBlack: 4294967295
     ClothingHeadBandBlue: 4294967295
     ClothingHeadBandGreen: 4294967295
@@ -21,54 +21,56 @@
     ClothingHeadHatBrownFlatcap: 4294967295
     ClothingUniformJumpsuitColorGrey: 4294967295
     ClothingUniformJumpskirtColorGrey: 4294967295
-    ClothingUniformJumpsuitColorWhite: 4294967295
-    ClothingUniformJumpskirtColorWhite: 4294967295
-    ClothingUniformJumpsuitColorBlack: 4294967295
-    ClothingUniformJumpskirtColorBlack: 4294967295
-    ClothingUniformJumpsuitColorBlue: 4294967295
-    ClothingUniformJumpskirtColorBlue: 4294967295
-    ClothingUniformJumpsuitColorYellow: 4294967295
-    ClothingUniformJumpskirtColorYellow: 4294967295
-    ClothingUniformJumpsuitColorGreen: 4294967295
-    ClothingUniformJumpskirtColorGreen: 4294967295
-    ClothingUniformJumpsuitColorOrange: 4294967295
-    ClothingUniformJumpskirtColorOrange: 4294967295
-    ClothingUniformJumpsuitColorRed: 4294967295
-    ClothingUniformJumpskirtColorRed: 4294967295
-    ClothingUniformJumpsuitColorPurple: 4294967295
-    ClothingUniformJumpskirtColorPurple: 4294967295
-    ClothingUniformJumpsuitColorPink: 4294967295
-    ClothingUniformJumpskirtColorPink: 4294967295
-    ClothingUniformJumpsuitColorDarkBlue: 4294967295
-    ClothingUniformJumpskirtColorDarkBlue: 4294967295
-    ClothingUniformJumpsuitColorDarkGreen:  4294967295
-    ClothingUniformJumpskirtColorDarkGreen: 4294967295
-    ClothingUniformJumpsuitColorTeal: 4294967295
-    ClothingUniformJumpskirtColorTeal: 4294967295
+    # ClothingUniformJumpsuitColorWhite: 4294967295 # LoneStar, redudant due to colorizer stuff.
+    # ClothingUniformJumpskirtColorWhite: 4294967295
+    # ClothingUniformJumpsuitColorBlack: 4294967295
+    # ClothingUniformJumpskirtColorBlack: 4294967295
+    # ClothingUniformJumpsuitColorBlue: 4294967295
+    # ClothingUniformJumpskirtColorBlue: 4294967295
+    # ClothingUniformJumpsuitColorYellow: 4294967295
+    # ClothingUniformJumpskirtColorYellow: 4294967295
+    # ClothingUniformJumpsuitColorGreen: 4294967295
+    # ClothingUniformJumpskirtColorGreen: 4294967295
+    # ClothingUniformJumpsuitColorOrange: 4294967295
+    # ClothingUniformJumpskirtColorOrange: 4294967295
+    # ClothingUniformJumpsuitColorRed: 4294967295
+    # ClothingUniformJumpskirtColorRed: 4294967295
+    # ClothingUniformJumpsuitColorPurple: 4294967295
+    # ClothingUniformJumpskirtColorPurple: 4294967295
+    # ClothingUniformJumpsuitColorPink: 4294967295
+    # ClothingUniformJumpskirtColorPink: 4294967295
+    # ClothingUniformJumpsuitColorDarkBlue: 4294967295
+    # ClothingUniformJumpskirtColorDarkBlue: 4294967295
+    # ClothingUniformJumpsuitColorDarkGreen:  4294967295
+    # ClothingUniformJumpskirtColorDarkGreen: 4294967295
+    # ClothingUniformJumpsuitColorTeal: 4294967295
+    # ClothingUniformJumpskirtColorTeal: 4294967295
     ClothingUniformJumpsuitHawaiBlack: 4294967295
     ClothingUniformJumpsuitHawaiBlue: 4294967295
     ClothingUniformJumpsuitHawaiRed: 4294967295
     ClothingUniformJumpsuitHawaiYellow: 4294967295
-    ClothingUniformJumpsuitFlannel: 4294967295
-    ClothingUniformJumpsuitCasualBlue: 4294967295
-    ClothingUniformJumpskirtCasualBlue: 4294967295
-    ClothingUniformJumpsuitCasualPurple: 4294967295
-    ClothingUniformJumpskirtCasualPurple: 4294967295
-    ClothingUniformJumpsuitCasualRed: 4294967295
-    ClothingUniformJumpskirtCasualRed: 4294967295
-    ClothingUniformJumpsuitCasualGreen: 4294967295
-    ClothingUniformJumpskirtCasualGreen: 4294967295
+    ClothingUniformJumpsuitFlannelColorable: 4294967295
+    ClothingUniformJumpsuitCasualWhite: 4294967295
+    ClothingUniformJumpskirtCasualWhite: 4294967295
+    # ClothingUniformJumpsuitCasualBlue: 4294967295 # LoneStar, redudant due to colorizer stuff.
+    # ClothingUniformJumpskirtCasualBlue: 4294967295
+    # ClothingUniformJumpsuitCasualPurple: 4294967295
+    # ClothingUniformJumpskirtCasualPurple: 4294967295
+    # ClothingUniformJumpsuitCasualRed: 4294967295
+    # ClothingUniformJumpskirtCasualRed: 4294967295
+    # ClothingUniformJumpsuitCasualGreen: 4294967295
+    # ClothingUniformJumpskirtCasualGreen: 4294967295
     ClothingUniformTurtleskirtColorable: 4294967295
     ClothingUniformTurtleneckColorable: 4294967295
     ClothingShoesColorBlack: 4294967295
-    ClothingShoesColorBrown: 4294967295
     ClothingShoesColorWhite: 4294967295
-    ClothingShoesColorBlue: 4294967295
-    ClothingShoesColorYellow: 4294967295
-    ClothingShoesColorGreen: 4294967295
-    ClothingShoesColorOrange: 4294967295
-    ClothingShoesColorRed: 4294967295
-    ClothingShoesColorPurple: 4294967295
+    # ClothingShoesColorBrown: 4294967295 # LoneStar, redudant due to colorizer stuff.
+    # ClothingShoesColorBlue: 4294967295
+    # ClothingShoesColorYellow: 4294967295
+    # ClothingShoesColorGreen: 4294967295
+    # ClothingShoesColorOrange: 4294967295
+    # ClothingShoesColorRed: 4294967295
+    # ClothingShoesColorPurple: 4294967295
     ClothingHeadHatGreysoft: 4294967295
     ClothingHeadHatMimesoft: 4294967295
     ClothingHeadHatBluesoft: 4294967295
@@ -108,7 +110,8 @@
     ClothingUniformloinclothWhite: 4294967295
     ClothingOuterBeltedWear: 4294967295
     ClothingOuterTransparentOuterwear: 4294967295
-    ClothingShoesHighheelShoes: 4294967295 # Starlight start
+    # Starlight
+    ClothingShoesHighheelShoes: 4294967295
     ClothingUniformJumpskirtGothic: 4294967295
     ClothingUniformJumpskirtMaid: 4294967295
     ClothingUniformJumpskirtDressRed: 4294967295
@@ -141,8 +144,10 @@
     ClothingUniformJumpskirtSchoolWhite: 4294967295
     ClothingUniformJumpskirtSchoolBlack: 4294967295
     ClothingUniformJumpskirtSchoolColorable: 4294967295
-    ClothingHandsGlovesColorSatinWhite: 4294967295
-    ClothingHandsGlovesColorSatinWhiteLong: 4294967295
+    ClothingHandsGlovesColorableSilk: 4294967295
+    ClothingHandsGlovesLongColorableSilk: 4294967295
+    ClothingHandsGlovesColorableCotton: 4294967295
+    ClothingHandsGlovesLongColorableCotton: 4294967295
     ClothingHeadHatMaidHeadband: 4294967295
     ClothingUniformJumpskirtMaidDressLong: 4294967295
     ClothingOuterVestPinafore: 4294967295
@@ -208,8 +213,9 @@
     TogaUniformSuit: 4294967295
     VintageUniformSuit: 4294967295
     CargoOverallsUniformSuit: 4294967295
-    RedRegaliaSuit: 4294967295 # Starlight end
-    MaidUniformLatex: 4294967295 # Hardlight start
+    RedRegaliaSuit: 4294967295
+    # Hardlight
+    MaidUniformLatex: 4294967295
     MaidUniformAlt: 4294967295
     MaidUniform: 4294967295
     MaidGloves: 4294967295
@@ -217,22 +223,11 @@
     DominantHeels: 4294967295
     KneeBoots: 4294967295
     LatexSocks: 4294967295
-    LatexHeels: 4294967295 # Hardlight end
+    LatexHeels: 4294967295
+    # LoneStar
     ClothingUniformJumpsuitRegalSuitPrince: 4294967295 # Lonestar start
-    ClothingUniformJumpsuitRegalSuitBlue: 4294967295
-    ClothingUniformJumpsuitRegalSuitGreen: 4294967295
-    ClothingUniformJumpsuitRegalSuitBlack: 4294967295
-    ClothingUniformJumpsuitRegalSuitPink: 4294967295
     ClothingUniformJumpsuitRegalGown: 4294967295
-    ClothingUniformJumpsuitRegalGownRed: 4294967295
-    ClothingUniformJumpsuitRegalGownGreen: 4294967295
-    ClothingUniformJumpsuitRegalGownBlack: 4294967295
-    ClothingUniformJumpsuitRegalGownPink: 4294967295
     ClothingHandsGlovesRegalSleeves: 4294967295
-    ClothingHandsGlovesRegalSleevesRed: 4294967295
-    ClothingHandsGlovesRegalSleevesGreen: 4294967295
-    ClothingHandsGlovesRegalSleevesBlack: 4294967295
-    ClothingHandsGlovesRegalSleevesPink: 4294967295
     ClothingHeadHatRegalCrown: 4294967295
     ClothingUniformJumpsuitRegalShirt: 4294967295
     ClothingOuterVestMedievalLongcoat: 4294967295
@@ -244,8 +239,10 @@
     ClothingUniformJumpskirtPresent: 4294967295
     ClothingUniformJumpskirtSpottyColorable: 4294967295
     ClothingUniformJumpskirtCheckerColorable: 4294967295
-    ClothingUniformJumpskirtStraplessColorable: 4294967295 # Lonestar end
+    ClothingUniformJumpskirtStraplessColorable: 4294967295
+    ClothingUniformJumpsuitAthleticShorts: 4294967295
     # Euphoria
+    ClothingShoesHeelsKittenColorable: 4294967295
     ClothingShoesHeelsKitten: 4294967295
     ClothingShoesHeelsKittenBlack: 4294967295
     ClothingShoesHeelsKittenCrimson: 4294967295
@@ -255,6 +252,8 @@
     ClothingShoesHighheelBootsNanotrasen: 4294967295
     # Everdream
     ClothingPriestessCorsetAndTabard: 4294967295
+    # Bubber
+    ClothingTacticalMaid: 4294967295
   contrabandInventory:
     ClothingMaskNeckGaiter: 4294967295
     ClothingUniformJumpsuitTacticool: 4294967295
@@ -264,4 +263,3 @@
     ToyFigurineGreytider: 1
     # ClothingBackpackSatchelSmugglerUnanchored: 1 # Frontier
     ClothingHeadHatSolidHeadband: 4294967295
-  # DO NOT ADD MORE, USE UNIFORM DYING

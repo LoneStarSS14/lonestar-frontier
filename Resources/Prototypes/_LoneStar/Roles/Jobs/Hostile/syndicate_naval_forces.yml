@@ -1,0 +1,29 @@
+# Syndicate Security Enforcer
+- type: startingGear
+  id: SyndicateNavalGearT3Enforcer
+  equipment:
+    head: ClothingHeadHelmetHardsuitCybersun
+    jumpsuit: ClothingUniformJumpsuitOperative
+    shoes: ClothingShoesBootsMagSyndie
+    gloves: ClothingHandsGlovesColorBlackPython
+    outerClothing: ClothingOuterHardsuitJuggernaut
+    back: ClothingBackpackSyndicateT4Commander
+    belt: ClothingBeltSyndicateLootRangedT4Commander
+    wallet: ClothingWalletSyndicateT4
+  inhand:
+    - EnergyShieldEnforcer
+
+# Syndicate Security Enforcer (Alt)
+- type: startingGear
+  id: SyndicateNavalGearT3EnforcerAlt
+  equipment:
+    head: ClothingHeadHelmetHardsuitCybersun
+    jumpsuit: ClothingUniformJumpsuitOperative
+    shoes: ClothingShoesBootsMagSyndie
+    gloves: ClothingHandsGlovesColorBlackAtreides
+    outerClothing: ClothingOuterHardsuitJuggernaut
+    back: ClothingBackpackSyndicateT4Commander
+    belt: ClothingBeltSyndicateLootRangedT4Commander
+    wallet: ClothingWalletSyndicateT4
+  inhand:
+    - EnergyShieldEnforcer

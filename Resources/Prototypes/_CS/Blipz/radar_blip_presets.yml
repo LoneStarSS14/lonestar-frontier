@@ -69,8 +69,8 @@
   scale: 2.0
 
 - type: radarBlipPreset
-  id: BlipPresetHorny
-  name: Horny DTF Heatwalker
+  id: BlipPresetDesirable
+  name: Desirable Target
   colorSet: BlipColorMagenta
   shapeSet: BlipShapeStar
   scale: 4.0

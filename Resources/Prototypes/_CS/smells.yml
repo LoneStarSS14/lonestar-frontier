@@ -1,115 +1,30 @@
 - type: scent
-  id: ScentBase
+  id: BaseScent
   abstract: true
-  closeRange: 2
-  farRange: 10
   minCooldownSeconds: 20
   maxCooldownSeconds: 120
-  msgsExamine:
-  - scent-default-examine
-  msgsDirect:
-  - scent-default-direct
-  msgsClose:
-  - scent-default-close
-  msgsFar:
-  - scent-default-far
-  detectionPercent: 35
-  directOnly: false
-  isStinky: false
-  isLewd: false
-  priorityMultiplier: 1.0
+  msgsExamine: []
   preventingComponents: []
   blockingComponents: []
 
 - type: scent
-  id: ScentDirectOnly
+  id: BaseDirectOnly
   abstract: true
   directOnly: true
-  msgsDirect:
-  - scent-default-direct
-  msgsFar: []
-  msgsClose: []
+  msgsDirect: []
 
 - type: scent
-  id: ScentLewd
+  id: BaseConsentScent
   abstract: true
-  isLewd: true
+  consentToggled: true
 
-- type: scent
-  id: ScentStinky
-  abstract: true
-  isStinky: true
 
-- type: scent
-  id: ScentNoExamine
-  abstract: true
-  msgsExamine: []
-
-- type: scent
-  id: ScentDefault
-  parent:
-  - ScentBase
-  - ScentNoExamine
-  - ScentDirectOnly
-
-- type: scent
-  id: ScentItemBase
-  abstract: true
-  parent:
-  - ScentDefault
-
-# Example Scents for Fenny
-
-#- type: scent
-#  id: ScentExampleForFenny
-#  parent:
-#  - ScentBase
-#  msgsExamine:
-#  - scent-default-examine
-#  msgsDirect:
-#  - scent-default-direct
-#  msgsClose:
-#  - scent-default-close
-#  msgsFar:
-#  - scent-default-far
-#
-#- type: scent
-#  id: ScentLewdExampleForFenny
-#  parent:
-#  - ScentBase
-#  - ScentLewd
-#  msgsExamine:
-#  - scent-default-lewd-examine
-#  msgsDirect:
-#  - scent-default-lewd-direct
-#  msgsClose:
-#  - scent-default-lewd-close
-#  msgsFar:
-#  - scent-default-lewd-far
-#
-#- type: scent
-#  id: ScentDirectOnlyExampleForFenny
-#  parent:
-#  - ScentBase
-#  - ScentDirectOnly
-#  msgsDirect:
-#  - scent-default-cool-direct
-#
-#- type: scent
-#  id: ScentDirectOnlyLewdExampleForFenny
-#  parent:
-#  - ScentBase
-#  - ScentDirectOnly
-#  - ScentLewd
-#  msgsDirect:
-#  - scent-default-lewd-direct
-
-# Primary Scents
+#region Scents
 
 - type: scent
   id: ScentLinen
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-linen-examine
   msgsDirect:
@@ -122,7 +37,7 @@
 - type: scent
   id: ScentCitrus
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-citrus-examine
   msgsDirect:
@@ -135,7 +50,7 @@
 - type: scent
   id: ScentVanilla
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-vanilla-examine
   msgsDirect:
@@ -148,7 +63,7 @@
 - type: scent
   id: ScentSandalwood
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-sandalwood-examine
   msgsDirect:
@@ -160,7 +75,7 @@
 - type: scent
   id: Sandalwood
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-sandalwood-examine
   msgsDirect:
@@ -173,7 +88,7 @@
 - type: scent
   id: Lavender
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-lavender-examine
   msgsDirect:
@@ -186,7 +101,7 @@
 - type: scent
   id: Green
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-greentea-examine
   msgsDirect:
@@ -199,7 +114,7 @@
 - type: scent
   id: Bergamot
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-bergamot-examine
   msgsDirect:
@@ -212,7 +127,7 @@
 - type: scent
   id: Eucalyptus
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-eucalyptus-examine
   msgsDirect:
@@ -225,7 +140,7 @@
 - type: scent
   id: Cedarwood
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-cedarwood-examine
   msgsDirect:
@@ -238,7 +153,7 @@
 - type: scent
   id: Mint
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-mint-examine
   msgsDirect:
@@ -251,7 +166,7 @@
 - type: scent
   id: Rosewater
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-rosewater-examine
   msgsDirect:
@@ -264,7 +179,7 @@
 - type: scent
   id: Jasmine
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-jasmine-examine
   msgsDirect:
@@ -277,7 +192,7 @@
 - type: scent
   id: Lemon
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-lemonzest-examine
   msgsDirect:
@@ -290,7 +205,7 @@
 - type: scent
   id: Pine
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-pine-examine
   msgsDirect:
@@ -303,7 +218,7 @@
 - type: scent
   id: Warm
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-warmhoney-examine
   msgsDirect:
@@ -316,7 +231,7 @@
 - type: scent
   id: Rain
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-rain-examine
   msgsDirect:
@@ -329,7 +244,7 @@
 - type: scent
   id: Apples
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-apples-examine
   msgsDirect:
@@ -342,7 +257,7 @@
 - type: scent
   id: Cloves
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-cloves-examine
   msgsDirect:
@@ -355,7 +270,7 @@
 - type: scent
   id: Dark
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-darkchocolate-examine
   msgsDirect:
@@ -368,7 +283,7 @@
 - type: scent
   id: Orange
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-orangeblossoms-examine
   msgsDirect:
@@ -381,7 +296,7 @@
 - type: scent
   id: Leather
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-leather-examine
   msgsDirect:
@@ -394,7 +309,7 @@
 - type: scent
   id: Aloe
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-aloe-examine
   msgsDirect:
@@ -407,7 +322,7 @@
 - type: scent
   id: Cardamom
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-cardamom-examine
   msgsDirect:
@@ -420,7 +335,7 @@
 - type: scent
   id: Peaches
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-peaches-examine
   msgsDirect:
@@ -433,7 +348,7 @@
 - type: scent
   id: Basil
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-basil-examine
   msgsDirect:
@@ -446,7 +361,7 @@
 - type: scent
   id: Smoked
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-smokedwood-examine
   msgsDirect:
@@ -459,7 +374,7 @@
 - type: scent
   id: Milk
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-milkandsugar-examine
   msgsDirect:
@@ -472,7 +387,7 @@
 - type: scent
   id: Iris
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-iris-examine
   msgsDirect:
@@ -485,7 +400,7 @@
 - type: scent
   id: Grapefruit
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-grapefruit-examine
   msgsDirect:
@@ -498,7 +413,7 @@
 - type: scent
   id: Frankincense
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-frankincense-examine
   msgsDirect:
@@ -511,7 +426,7 @@
 - type: scent
   id: Pears
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-pears-examine
   msgsDirect:
@@ -524,7 +439,7 @@
 - type: scent
   id: Tobacco
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-tobacco-examine
   msgsDirect:
@@ -537,7 +452,7 @@
 - type: scent
   id: Soap
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-soap-examine
   msgsDirect:
@@ -550,7 +465,7 @@
 - type: scent
   id: Chamomile
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-chamomile-examine
   msgsDirect:
@@ -563,7 +478,7 @@
 - type: scent
   id: Fig
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-fig-examine
   msgsDirect:
@@ -576,7 +491,7 @@
 - type: scent
   id: Ozone
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-ozone-examine
   msgsDirect:
@@ -589,7 +504,7 @@
 - type: scent
   id: Sweat
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-sweat-examine
   msgsDirect:
@@ -602,7 +517,7 @@
 - type: scent
   id: Oil
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-oil-examine
   msgsDirect:
@@ -615,7 +530,7 @@
 - type: scent
   id: Motor
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-motoroil-examine
   msgsDirect:
@@ -628,7 +543,7 @@
 - type: scent
   id: Soil
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-soil-examine
   msgsDirect:
@@ -641,7 +556,7 @@
 - type: scent
   id: Almond
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-almond-examine
   msgsDirect:
@@ -654,7 +569,7 @@
 - type: scent
   id: Patchouli
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-patchouli-examine
   msgsDirect:
@@ -667,7 +582,7 @@
 - type: scent
   id: Blueberry
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-blueberry-examine
   msgsDirect:
@@ -680,7 +595,7 @@
 - type: scent
   id: Cinnamon
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-cinnamon-examine
   msgsDirect:
@@ -693,7 +608,7 @@
 - type: scent
   id: Sea
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-seasalt-examine
   msgsDirect:
@@ -706,7 +621,7 @@
 - type: scent
   id: Wildflowers
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-wildflowers-examine
   msgsDirect:
@@ -719,7 +634,7 @@
 - type: scent
   id: Metal
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-metal-examine
   msgsDirect:
@@ -728,11 +643,11 @@
   - scent-metal-close
   msgsFar:
   - scent-metal-far
-  
+
 - type: scent
   id: Pennies
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-pennies-examine
   msgsDirect:
@@ -742,141 +657,10 @@
   msgsFar:
   - scent-pennies-far
 
-# Lewd Scents
-
-- type: scent
-  id: ScentLewdMusk
-  parent:
-  - ScentBase
-  isLewd: true
-  msgsExamine:
-  - scent-musk-examine
-  msgsDirect:
-  - scent-musk-direct
-  msgsClose:
-  - scent-musk-close
-  msgsFar:
-  - scent-musk-far
-
-- type: scent
-  id: Heat
-  parent:
-  - ScentBase
-  isLewd: true
-  msgsExamine:
-  - scent-heat-examine
-  msgsDirect:
-  - scent-heat-direct
-  msgsClose:
-  - scent-heat-close
-  msgsFar:
-  - scent-heat-far
-
-- type: scent
-  id: Latex
-  parent:
-  - ScentBase
-  isLewd: true
-  msgsExamine:
-  - scent-latex-examine
-  msgsDirect:
-  - scent-latex-direct
-  msgsClose:
-  - scent-latex-close
-  msgsFar:
-  - scent-latex-far
-
-- type: scent
-  id: Boystink
-  parent:
-  - ScentBase
-  isLewd: true
-  isStinky: true
-  msgsExamine:
-  - scent-boystink-examine
-  msgsDirect:
-  - scent-boystink-direct
-  msgsClose:
-  - scent-boystink-close
-  msgsFar:
-  - scent-boystink-far
-
-- type: scent
-  id: Boysmell
-  parent:
-  - ScentBase
-  isLewd: true
-  msgsExamine:
-  - scent-boysmell-examine
-  msgsDirect:
-  - scent-boysmell-direct
-  msgsClose:
-  - scent-boysmell-close
-  msgsFar:
-  - scent-boysmell-far
-
-- type: scent
-  id: Skunk
-  parent:
-  - ScentBase
-  isLewd: true
-  isStinky: true
-  msgsExamine:
-  - scent-skunk-examine
-  msgsDirect:
-  - scent-skunk-direct
-  msgsClose:
-  - scent-skunk-close
-  msgsFar:
-  - scent-skunk-far
-
-- type: scent
-  id: Girlstink
-  parent:
-  - ScentBase
-  isLewd: true
-  isStinky: true
-  msgsExamine:
-  - scent-girlstink-examine
-  msgsDirect:
-  - scent-girlstink-direct
-  msgsClose:
-  - scent-girlstink-close
-  msgsFar:
-  - scent-girlstink-far
-
-- type: scent
-  id: Girlsmell
-  parent:
-  - ScentBase
-  isLewd: true
-  msgsExamine:
-  - scent-girlsmell-examine
-  msgsDirect:
-  - scent-girlsmell-direct
-  msgsClose:
-  - scent-girlsmell-close
-  msgsFar:
-  - scent-girlsmell-far
-
-- type: scent
-  id: Spaceweed
-  parent:
-  - ScentBase
-  isLewd: true
-  msgsExamine:
-  - scent-spaceweed-examine
-  msgsDirect:
-  - scent-spaceweed-direct
-  msgsClose:
-  - scent-spaceweed-close
-  msgsFar:
-  - scent-spaceweed-far
-
 - type: scent
   id: Gunpowder
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-gunpowder-examine
   msgsDirect:
@@ -889,7 +673,7 @@
 - type: scent
   id: Smoke
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-smoke-examine
   msgsDirect:
@@ -902,7 +686,7 @@
 - type: scent
   id: Cigarettes
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-cigarettes-examine
   msgsDirect:
@@ -915,7 +699,7 @@
 - type: scent
   id: Strawberry
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-strawberry-examine
   msgsDirect:
@@ -928,7 +712,7 @@
 - type: scent
   id: FreshBread
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-freshbread-examine
   msgsDirect:
@@ -941,7 +725,7 @@
 - type: scent
   id: OrangeCreamsicle
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-orangecreamsicle-examine
   msgsDirect:
@@ -954,7 +738,7 @@
 - type: scent
   id: Cookies
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-cookies-examine
   msgsDirect:
@@ -967,7 +751,7 @@
 - type: scent
   id: Cherryblossom
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-cherryblossom-examine
   msgsDirect:
@@ -980,7 +764,7 @@
 - type: scent
   id: Cherries
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-cherries-examine
   msgsDirect:
@@ -993,7 +777,7 @@
 - type: scent
   id: Hazelnut
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-hazelnut-examine
   msgsDirect:
@@ -1006,7 +790,7 @@
 - type: scent
   id: Ashwood
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-ashwood-examine
   msgsDirect:
@@ -1019,7 +803,7 @@
 - type: scent
   id: HarshChemicals
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-harshchemicals-examine
   msgsDirect:
@@ -1032,7 +816,7 @@
 - type: scent
   id: Acrid
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-acrid-examine
   msgsDirect:
@@ -1045,7 +829,7 @@
 - type: scent
   id: Liquor
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-liquor-examine
   msgsDirect:
@@ -1058,7 +842,7 @@
 - type: scent
   id: WeldingFuel
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-weldingfuel-examine
   msgsDirect:
@@ -1071,7 +855,7 @@
 - type: scent
   id: Dust
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-dust-examine
   msgsDirect:
@@ -1084,7 +868,7 @@
 - type: scent
   id: OldBooks
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-oldbooks-examine
   msgsDirect:
@@ -1097,7 +881,7 @@
 - type: scent
   id: BurningPlastic
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-burningplastic-examine
   msgsDirect:
@@ -1110,7 +894,7 @@
 - type: scent
   id: Mail
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-mail-examine
   msgsDirect:
@@ -1123,7 +907,7 @@
 - type: scent
   id: Glue
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-glue-examine
   msgsDirect:
@@ -1136,7 +920,7 @@
 - type: scent
   id: Superglue
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-superglue-examine
   msgsDirect:
@@ -1149,7 +933,7 @@
 - type: scent
   id: Paint
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-paint-examine
   msgsDirect:
@@ -1162,7 +946,7 @@
 - type: scent
   id: PaintThinner
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-paintthinner-examine
   msgsDirect:
@@ -1175,7 +959,7 @@
 - type: scent
   id: CookingOil
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-cookingoil-examine
   msgsDirect:
@@ -1188,7 +972,7 @@
 - type: scent
   id: Garlic
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-garlic-examine
   msgsDirect:
@@ -1201,7 +985,7 @@
 - type: scent
   id: Spices
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-spices-examine
   msgsDirect:
@@ -1214,7 +998,7 @@
 - type: scent
   id: FastFood
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-fastfood-examine
   msgsDirect:
@@ -1227,7 +1011,7 @@
 - type: scent
   id: Kitchen
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-kitchen-examine
   msgsDirect:
@@ -1241,7 +1025,7 @@
   id: Blood
   isStinky: true
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-blood-examine
   msgsDirect:
@@ -1252,24 +1036,9 @@
   - scent-blood-far
 
 - type: scent
-  id: BankCustomers
-  parent:
-  - ScentBase
-  isLewd: true
-  isStinky: true
-  msgsExamine:
-  - scent-bankcustomers-examine
-  msgsDirect:
-  - scent-bankcustomers-direct
-  msgsClose:
-  - scent-bankcustomers-close
-  msgsFar:
-  - scent-bankcustomers-far
-
-- type: scent
   id: BirthdayCake
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-birthdaycake-examine
   msgsDirect:
@@ -1282,7 +1051,7 @@
 - type: scent
   id: Bubblegum
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-bubblegum-examine
   msgsDirect:
@@ -1295,7 +1064,7 @@
 - type: scent
   id: Berries
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-berries-examine
   msgsDirect:
@@ -1308,7 +1077,7 @@
 - type: scent
   id: Redwood
   parent:
-  - ScentBase
+  - BaseScent
   msgsExamine:
   - scent-redwood-examine
   msgsDirect:
@@ -1319,10 +1088,22 @@
   - scent-redwood-far
 
 - type: scent
+  id: Latex
+  parent:
+  - BaseScent
+  msgsExamine:
+  - scent-latex-examine
+  msgsDirect:
+  - scent-latex-direct
+  msgsClose:
+  - scent-latex-close
+  msgsFar:
+  - scent-latex-far
+
+- type: scent
   id: HotdogWater
   parent:
-  - ScentBase
-  isLewd: true
+  - BaseScent
   isStinky: true
   msgsExamine:
   - scent-hotdogwater-examine
@@ -1333,5 +1114,112 @@
   msgsFar:
   - scent-hotdogwater-far
 
+- type: scent
+  id: Spaceweed
+  parent:
+  - BaseScent
+  msgsExamine:
+  - scent-spaceweed-examine
+  msgsDirect:
+  - scent-spaceweed-direct
+  msgsClose:
+  - scent-spaceweed-close
+  msgsFar:
+  - scent-spaceweed-far
+
+- type: scent
+  id: Skunk
+  parent:
+  - BaseScent
+  isStinky: true
+  msgsExamine:
+  - scent-skunk-examine
+  msgsDirect:
+  - scent-skunk-direct
+  msgsClose:
+  - scent-skunk-close
+  msgsFar:
+  - scent-skunk-far
 
 
+#region Consent Scents
+
+- type: scent
+  id: ScentMusk
+  parent:
+  - BaseConsentScent
+  msgsExamine:
+  - scent-musk-examine
+  msgsDirect:
+  - scent-musk-direct
+  msgsClose:
+  - scent-musk-close
+  msgsFar:
+  - scent-musk-far
+
+- type: scent
+  id: Heat
+  parent:
+  - BaseConsentScent
+  msgsExamine:
+  - scent-heat-examine
+  msgsDirect:
+  - scent-heat-direct
+  msgsClose:
+  - scent-heat-close
+  msgsFar:
+  - scent-heat-far
+
+- type: scent
+  id: Boystink
+  parent:
+  - BaseConsentScent
+  isStinky: true
+  msgsExamine:
+  - scent-boystink-examine
+  msgsDirect:
+  - scent-boystink-direct
+  msgsClose:
+  - scent-boystink-close
+  msgsFar:
+  - scent-boystink-far
+
+- type: scent
+  id: Boysmell
+  parent:
+  - BaseConsentScent
+  msgsExamine:
+  - scent-boysmell-examine
+  msgsDirect:
+  - scent-boysmell-direct
+  msgsClose:
+  - scent-boysmell-close
+  msgsFar:
+  - scent-boysmell-far
+
+- type: scent
+  id: Girlstink
+  parent:
+  - BaseConsentScent
+  isStinky: true
+  msgsExamine:
+  - scent-girlstink-examine
+  msgsDirect:
+  - scent-girlstink-direct
+  msgsClose:
+  - scent-girlstink-close
+  msgsFar:
+  - scent-girlstink-far
+
+- type: scent
+  id: Girlsmell
+  parent:
+  - BaseConsentScent
+  msgsExamine:
+  - scent-girlsmell-examine
+  msgsDirect:
+  - scent-girlsmell-direct
+  msgsClose:
+  - scent-girlsmell-close
+  msgsFar:
+  - scent-girlsmell-far

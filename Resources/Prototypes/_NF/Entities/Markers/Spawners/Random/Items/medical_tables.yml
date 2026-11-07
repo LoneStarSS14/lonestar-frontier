@@ -711,6 +711,7 @@
       weight: 2
       children:
       - id: ClothingBackpackSatchelMedical
+      - id: ClothingBackpackSatchelMedicalTrauma # LoneStar
       - id: ClothingBackpackSatchelVirology
       - id: ClothingBackpackSatchelGenetics
       - id: ClothingBackpackSatchelChemistry

@@ -29,201 +29,167 @@ trait-capture-bait-desc =
     This does nothing if you happen to *be* a pirate yourself!
 capture-bait-examine-text = They look like they'd be a great person to capture!
 
-trait-horny-in-heat-name = In Heat - ERP Receptive
-trait-horny-in-heat-desc =
-    Your character, for whatever reason, is particularly receptive to advances for sexual actions.
+trait-descriptor-in-heat-name = In Heat - ERP Receptive
+trait-descriptor-in-heat-desc =
+    Your character, for whatever reason, is particularly receptive to being advanced on.
     It's assumed for this trait that you are the submissive partner, or at least more receptive to dominant partners.
 
-trait-horny-in-rut-name = In Rut - ERP Seeking
-trait-horny-in-rut-desc =
-    Your character, for whatever reason, is particularly on the look out for sexual partners.
+trait-descriptor-in-rut-name = In Rut - ERP Seeking
+trait-descriptor-in-rut-desc =
+    Your character, for whatever reason, is particularly on the look out for partners.
     It's assumed for this trait that you are the dominant partner, or at least generally looking for more submissive partners.
 
-trait-horny-icy-name = Icy - Not Seeking ERP
-trait-horny-icy-desc =
-    Your character, for whatever reason, is not looking for new erotic partners.
-    Be it because you are in a committed relationship or just aren't interested in sexual advances.
-    It overrides In Heat and In Rut traits if you have them, effectively removing them from your character.
+trait-descriptor-icy-name = Icy - Not Seeking ERP
+trait-descriptor-icy-desc =
+    Your character, for whatever reason, is not looking for new partners.
+    Be it because you are in a committed relationship or just aren't interested in advances from others.
+    It overrides 'In Heat' and 'In Rut' traits if you have them, effectively removing them from your character.
 
-trait-horny-lonely-name = Lonely
-trait-horny-lonely-desc =
-    Your character (or you yourself) is a bit lonely, and likes being approached.
-    While not opposed to erotic advances, you may need a bit of encouragement to get going.
+trait-descriptor-lonely-name = Lonely
+trait-descriptor-lonely-desc =
+    You are a bit lonely, and wouldnt mind being approached.
+    While not opposed to advances, you may need a bit of encouragement to get going.
 
-trait-horny-shy-name = Shy
-trait-horny-shy-desc =
-    Your character (or you yourself) is a bit shy when it comes to approaching others.
-    While not opposed to erotic advances, you may need a bit of encouragement to get going.
+trait-descriptor-shy-name = Shy
+trait-descriptor-shy-desc =
+    You are a bit shy when it comes to approaching others.
+    While not opposed to advances, you may need a bit of encouragement to get going.
 
-trait-horny-friendly-name = Friendly
-trait-horny-friendly-desc =
-    Your character (or you yourself) is quite friendly. Or at least, they appear to be so.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-friendly-name = Friendly
+trait-descriptor-friendly-desc =
+    You are quite friendly. Or at least appear to be so.
 
-trait-horny-cuddly-name = Cuddly
-trait-horny-cuddly-desc =
-    Your character (or you yourself) is quite cuddly.  You're soft and squishable and like being in those situations.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-cuddly-name = Cuddly
+trait-descriptor-cuddly-desc =
+    You are quite cuddly. You're soft and squishable and like being in those situations.
 
-trait-horny-melancholic-name = Melancholic
-trait-horny-melancholic-desc =
-    Your character (or you yourself) is a bit on the sad side, if still very lovable.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-melancholic-name = Melancholic
+trait-descriptor-melancholic-desc =
+    You are a bit on the sad side, if still very lovable.
 
-trait-horny-ruffled-name = Ruffled
-trait-horny-ruffled-desc =
-    Your character (or you yourself) is a frazzled, maybe their easily confused or just kind of upset.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-ruffled-name = Ruffled
+trait-descriptor-ruffled-desc =
+    Your are a frazzled, maybe easily confused or just kind of upset.
 
-trait-horny-tired-name = Tired
-trait-horny-tired-desc =
-    Your character (or you yourself) is tired. Or, at least appears so to others.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-tired-name = Tired
+trait-descriptor-tired-desc =
+    You are tired. Or, at least appear so to others.
 
-trait-horny-indifferent-name = Indifferent
-trait-horny-indifferent-desc =
-    Your character (or you yourself) is indifferent to the world around them, or at least pretends to be so.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-indifferent-name = Indifferent
+trait-descriptor-indifferent-desc =
+    You are indifferent to the world around yourself, or at least pretends to be so.
 
-trait-horny-anxious-name = Anxious
-trait-horny-anxious-desc =
-    Your character (or you yourself) is a bit anxious and on edge.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-anxious-name = Anxious
+trait-descriptor-anxious-desc =
+    You are a bit anxious and on edge.
 
-trait-horny-bratty-name = Bratty
-trait-horny-bratty-desc =
-    Your character (or you yourself) is a bit of a brat, be you soft hearted or just downright mean.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-bratty-name = Bratty
+trait-descriptor-bratty-desc =
+    You are a bit of a brat, be you soft hearted or just downright mean.
 
-trait-horny-gregarious-name = Gregarious
-trait-horny-gregarious-desc =
-    Your character (or you yourself) is a outgoing and prone to laughter.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-gregarious-name = Gregarious
+trait-descriptor-gregarious-desc =
+    You are outgoing and prone to laughter.
 
-trait-horny-flirty-name = Flirty
-trait-horny-flirty-desc =
-    Your character (or you yourself) is a flirty and prone to teasing others.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-flirty-name = Flirty
+trait-descriptor-flirty-desc =
+    You are a flirty and prone to teasing others.
 
-trait-horny-distracted-name = Distracted
-trait-horny-distracted-desc =
-    Your character (or you yourself) is easily distracted by their tasks.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-distracted-name = Distracted
+trait-descriptor-distracted-desc =
+    You are easily distracted by your tasks.
 
-trait-horny-trustworthy-name = Trustworthy
-trait-horny-trustworthy-desc =
-    Your character (or you yourself) is trustworthy. Or so they like to appear, maybe.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-trustworthy-name = Trustworthy
+trait-descriptor-trustworthy-desc =
+    You are trustworthy. Or so you like to appear, maybe.
 
-trait-horny-warm-name = Warm
-trait-horny-warm-desc =
-    Your character (or you yourself) is warm. Emotionally or physically.  Just kind of loving.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-warm-name = Warm
+trait-descriptor-warm-desc =
+    You are warm. Emotionally or physically. Just kind of loving.
 
-trait-horny-confident-name = Confident
-trait-horny-confident-desc =
-    Your character (or you yourself) is confident, or appears so. Faking it till they make it maybe?
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-confident-name = Confident
+trait-descriptor-confident-desc =
+    You are confident, or appears so. Faking it till you make it maybe?
 
-trait-horny-forward-name = Forward
-trait-horny-forward-desc =
-    Your character (or you yourself) is forward. You say what's on your mind and deal with it after.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-forward-name = Forward
+trait-descriptor-forward-desc =
+    You are forward. You say what's on your mind and deal with it after.
 
-trait-horny-dorky-name = Dorky
-trait-horny-dorky-desc =
-    Your character (or you yourself) is dorky. You tend to put your foot in your mouth socially pretty often.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-dorky-name = Dorky
+trait-descriptor-dorky-desc =
+    You are dorky. You tend to put your foot in your mouth socially pretty often.
 
-trait-horny-dopey-name = Dopey
-trait-horny-dopey-desc =
-    Your character (or you yourself) is dopey. Maybe you just don't care to think too hard about stuff.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-dopey-name = Dopey
+trait-descriptor-dopey-desc =
+    You are dopey. Maybe you just don't care to think too hard about stuff.
 
-trait-horny-easygoing-name = Easy Going
-trait-horny-easygoing-desc =
-    Your character (or you yourself) is easy going.  Generally?  Life just doesn't get you down.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-easygoing-name = Easy Going
+trait-descriptor-easygoing-desc =
+    You are easy going. Generally? Life just doesn't get you down.
 
-trait-horny-innocent-name = Innocent
-trait-horny-innocent-desc =
-    Your character (or you yourself) is a bit innocent - but are they really?  Like, reaaallllly?
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-innocent-name = Innocent
+trait-descriptor-innocent-desc =
+    You are a bit innocent - but are they really?  Like, reaaallllly?
 
-trait-horny-flighty-name = Flighty
-trait-horny-flighty-desc =
-    Your character (or you yourself) is flighty.  Prone to wanting to escape from social situations - but also enjoying being chased.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-flighty-name = Flighty
+trait-descriptor-flighty-desc =
+    You are flighty. Prone to wanting to escape from social situations - but also enjoying being chased.
 
-trait-horny-mature-name = Mature
-trait-horny-mature-desc =
-    Your character (or you yourself) is emotionally mature in a comforting sort of way to others.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-mature-name = Mature
+trait-descriptor-mature-desc =
+    You are emotionally mature in a comforting sort of way to others.
 
-trait-horny-smart-name = Smart
-trait-horny-smart-desc =
-    Your character (or you yourself) is technically smart, or at least likes to seem so.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-smart-name = Smart
+trait-descriptor-smart-desc =
+    You are technically smart, or at least likes to seem so.
 
-trait-horny-curious-name = Curious
-trait-horny-curious-desc =
-    Your character (or you yourself) is very curious about the world around them.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-curious-name = Curious
+trait-descriptor-curious-desc =
+    You are very curious about the world around yourself.
 
-trait-horny-eager-name = Eager
-trait-horny-eager-desc =
-    Your character (or you yourself) is very eager to do anything!  Like a puppy let loose!
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-eager-name = Eager
+trait-descriptor-eager-desc =
+    You are very eager to do anything!  Like a puppy let loose!
 
-trait-horny-aggressive-name = Aggressive
-trait-horny-aggressive-desc =
-    Your character (or you yourself) is kind of aggressive. Verbally or physically - though.  Maybe it's a front.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-aggressive-name = Aggressive
+trait-descriptor-aggressive-desc =
+    You are kind of aggressive. Verbally or physically - though.  Maybe it's a front.
 
-trait-horny-rebellious-name = Rebellious
-trait-horny-rebellious-desc =
-    Your character (or you yourself) is kind of rebellious. Tending to distrust authority.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-rebellious-name = Rebellious
+trait-descriptor-rebellious-desc =
+    You are kind of rebellious. Tending to distrust authority.
 
-trait-horny-relaxed-name = Relaxed
-trait-horny-relaxed-desc =
-    Your character (or you yourself) is visibly relaxed.  Internally?  Who knows.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-relaxed-name = Relaxed
+trait-descriptor-relaxed-desc =
+    You are visibly relaxed.  Internally?  Who knows.
 
-trait-horny-lazy-name = Lazy
-trait-horny-lazy-desc =
-    Your character (or you yourself) is seen as lazy by others.  Are they... actually?
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-lazy-name = Lazy
+trait-descriptor-lazy-desc =
+    You are seen as lazy by others.  Are you... actually?
 
-trait-horny-naive-name = Naive
-trait-horny-naive-desc =
-    Your character (or you yourself) is seen as naive by others.  Are they... actually?
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-naive-name = Naive
+trait-descriptor-naive-desc =
+    You are seen as naive by others.  Are you... actually?
 
-trait-horny-silly-name = Silly
-trait-horny-silly-desc =
-    Your character (or you yourself) is kind of silly. At least, on the outside.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-silly-name = Silly
+trait-descriptor-silly-desc =
+    You are kind of silly. At least, on the outside.
 
-trait-horny-gentle-name = Gentle
-trait-horny-gentle-desc =
-    Your character (or you yourself) is kind of gentle. At least, on the outside.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-gentle-name = Gentle
+trait-descriptor-gentle-desc =
+    You are kind of gentle. At least, on the outside.
 
-trait-horny-timid-name = Timid
-trait-horny-timid-desc =
-    Your character (or you yourself) is kind of timid, at least at first.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-timid-name = Timid
+trait-descriptor-timid-desc =
+    You are kind of timid, at least at first.
 
-trait-horny-calm-name = Calm
-trait-horny-calm-desc =
-    Your character (or you yourself) is kind of calm and collected.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-calm-name = Calm
+trait-descriptor-calm-desc =
+    You are typically calm and collected.
 
-trait-horny-modest-name = Modest
-trait-horny-modest-desc =
-    Your character (or you yourself) is kind of modest, or at least likes to present as so.
-    You tend to be more approachable and welcoming when it comes to such matters.
+trait-descriptor-modest-name = Modest
+trait-descriptor-modest-desc =
+    You are of modest heart, or at least like to present as such.
 
 trait-scent-vanilla-name = Vanilla
 trait-scent-vanilla-desc = You smell like sweet, soothing vanilla.
@@ -633,9 +599,6 @@ trait-scent-kitchen-desc = You smell kinda like the Kitchen!
 
 trait-scent-blood-name = Blood
 trait-scent-blood-desc = You smell kinda like blood!
-
-trait-scent-bankcustomers-name = Bank Customers
-trait-scent-bankcustomers-desc = You smell kinda like Bank Customers!
 
 trait-bodytype-morphable-name = Morphable
 trait-bodytype-morphable-desc = You look morphable

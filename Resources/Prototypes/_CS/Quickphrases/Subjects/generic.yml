@@ -1,3 +1,5 @@
+#region Generic
+
 - type: quickPhrase
   id: MutePhrase
   parent: BaseSubjectPhrase
@@ -158,7 +160,8 @@
   parent: BaseSubjectPhrase
   text: phrase-fabricator
 
-# Lewd Phrases
+
+#region Crass
 
 - type: quickPhrase
   id: ButtPhrase
@@ -180,7 +183,8 @@
   parent: BaseSubjectPhrase
   text: phrase-ass
 
-# Phonetic Alphabet
+
+#region Phonetic Alphabet
 
 - type: quickPhrase
   id: BasePhoneticPhrase
@@ -313,7 +317,8 @@
   parent: [BaseSubjectPhrase, BasePhoneticPhrase]
   text: phrase-zulu
 
-# botanical phrases
+
+#region Botanical
 
 - type: quickPhrase
   id: BaseBotanicalPhrase
@@ -372,7 +377,7 @@
   parent: [BaseSubjectPhrase, BaseBotanicalPhrase]
   text: phrase-mutate
 
-# Plants (non-mutations)
+#region Plants
 
 - type: quickPhrase
   id: AbrosiaVulgarisPhrase
@@ -574,7 +579,8 @@
   parent: [BaseSubjectPhrase, BasePlantPhrase]
   text: phrase-watermelon
 
-# smell phrases
+
+#region Scents
 
 - type: quickPhrase
   id: BaseSmellPhrase
@@ -631,11 +637,6 @@
   id: RedwoodPhrase
   parent: [BaseSubjectPhrase, BaseSmellPhrase]
   text: phrase-redwood
-
-- type: quickPhrase
-  id: HotdogWaterPhrase
-  parent: [BaseSubjectPhrase, BaseSmellPhrase]
-  text: phrase-hotdogwater
 
 - type: quickPhrase
   id: BasilPhrase
@@ -778,6 +779,11 @@
   text: phrase-hazelnut
 
 - type: quickPhrase
+  id: HotdogWaterPhrase
+  parent: [BaseSubjectPhrase, BaseSmellPhrase]
+  text: phrase-hotdogwater
+
+- type: quickPhrase
   id: IrisPhrase
   parent: [BaseSubjectPhrase, BaseSmellPhrase]
   text: phrase-iris
@@ -791,6 +797,11 @@
   id: KitchenPhrase
   parent: [BaseSubjectPhrase, BaseSmellPhrase]
   text: phrase-kitchen
+
+- type: quickPhrase
+  id: LatexPhrase
+  parent: [BaseSubjectPhrase, BaseSmellPhrase]
+  text: phrase-latex
 
 - type: quickPhrase
   id: LavenderPhrase
@@ -913,6 +924,11 @@
   text: phrase-seasalt
 
 - type: quickPhrase
+  id: SkunkPhrase
+  parent: [BaseSubjectPhrase, BaseSmellPhrase]
+  text: phrase-skunk
+
+- type: quickPhrase
   id: SmokePhrase
   parent: [BaseSubjectPhrase, BaseSmellPhrase]
   text: phrase-smoke
@@ -921,6 +937,11 @@
   id: SmokedWoodPhrase
   parent: [BaseSubjectPhrase, BaseSmellPhrase]
   text: phrase-smokedwood
+
+- type: quickPhrase
+  id: SpaceweedPhrase
+  parent: [BaseSubjectPhrase, BaseSmellPhrase]
+  text: phrase-spaceweed
 
 - type: quickPhrase
   id: SpicesPhrase
@@ -962,70 +983,52 @@
   parent: [BaseSubjectPhrase, BaseSmellPhrase]
   text: phrase-wildflowers
 
-# lewd scents
+
+#region Consent Scents
 
 - type: quickPhrase
-  id: BaseSmellLewdPhrase
-  group: Scents (Lewd)
+  id: BaseConsentScentPhrase
+  group: Scents (Extreme)
   styleClass: ScienceButton
   abstract: true
 
 - type: quickPhrase
-  id: BankCustomersPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
-  text: phrase-bankcustomers
-
-- type: quickPhrase
   id: BoysmellPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
+  parent: [BaseSubjectPhrase, BaseConsentScentPhrase]
   text: phrase-boysmell
 
 - type: quickPhrase
   id: BoystinkPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
+  parent: [BaseSubjectPhrase, BaseConsentScentPhrase]
   text: phrase-boystink
 
 - type: quickPhrase
   id: GirlsmellPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
+  parent: [BaseSubjectPhrase, BaseConsentScentPhrase]
   text: phrase-girlsmell
 
 - type: quickPhrase
   id: GirlStinkPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
+  parent: [BaseSubjectPhrase, BaseConsentScentPhrase]
   text: phrase-girlstink
 
 - type: quickPhrase
   id: HeatPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
+  parent: [BaseSubjectPhrase, BaseConsentScentPhrase]
   text: phrase-heat
 
 - type: quickPhrase
   id: InHeatPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
+  parent: [BaseSubjectPhrase, BaseConsentScentPhrase]
   text: phrase-inheat
 
 - type: quickPhrase
-  id: LatexPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
-  text: phrase-latex
-
-- type: quickPhrase
   id: MuskPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
+  parent: [BaseSubjectPhrase, BaseConsentScentPhrase]
   text: phrase-musk
 
-- type: quickPhrase
-  id: SkunkPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
-  text: phrase-skunk
 
-- type: quickPhrase
-  id: SpaceweedPhrase
-  parent: [BaseSubjectPhrase, BaseSmellLewdPhrase]
-  text: phrase-spaceweed
-
-# pride phrases
+#region Pride
 
 - type: quickPhrase
   id: BasePridePhrase

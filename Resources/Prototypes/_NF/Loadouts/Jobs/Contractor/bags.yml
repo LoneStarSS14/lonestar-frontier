@@ -257,6 +257,20 @@
   equipment:
     back: ClothingBackpackSatchelMedical
 
+# LoneStar start
+- type: loadout
+  id: ContractorClothingBackpackSatchelMedicalTrauma
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFNotDoc
+  price: 0
+  equipment:
+    back: ClothingBackpackSatchelMedicalTrauma
+# LoneStar end
+
 - type: loadout
   id: ContractorClothingBackpackMessengerMedical
   effects:

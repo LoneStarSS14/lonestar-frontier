@@ -81,6 +81,7 @@
     Glass: 200
     Plastic: 200
 
+
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
   id: NFWeaponRifleAssaultJackdaw

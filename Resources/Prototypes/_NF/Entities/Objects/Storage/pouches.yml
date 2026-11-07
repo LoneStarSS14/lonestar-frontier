@@ -1289,7 +1289,7 @@
       visible: false
     - state: decal-line-01
       map: [ "decal1" ]
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     available:
       - pouchFill1:
           fill-util1-1: ""

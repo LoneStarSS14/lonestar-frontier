@@ -175,10 +175,6 @@ public sealed partial class CCVars
     [CVarControl(AdminFlags.Server | AdminFlags.Mapping, min: 0, max: int.MaxValue)]
     public static readonly CVarDef<int> EmergencyShuttleAutoCallTime =
         CVarDef.Create("shuttle.auto_call_time", 4320, CVar.SERVERONLY); // Frontier: 90<360
-        // its been ONE WEEK since you docked with me
-        // cocked your head to the side and said "I'm horny"
-        // three days since you laughed at me saying
-        // "call that a shuttle? you're such a noobie"
 
     /// <summary>
     ///     Time in minutes after the round was extended (by recalling the shuttle) to call

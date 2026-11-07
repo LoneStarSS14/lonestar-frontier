@@ -609,9 +609,10 @@
   - type: Blueprint
     providedRecipes:
     - ClothingBackpackHolding
-    - ClothingBackpackSatchelHolding
-    - ClothingBackpackDuffelHolding
-    - ClothingBackpackMessengerHolding
+    # LoneStar v, we dont use these
+    # - ClothingBackpackSatchelHolding
+    # - ClothingBackpackDuffelHolding
+    # - ClothingBackpackMessengerHolding
 
 # battery guns
 - type: entity

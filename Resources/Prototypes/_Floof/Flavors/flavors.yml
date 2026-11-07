@@ -24,14 +24,14 @@
   description: flavor-complex-bande
 
 - type: flavor
-  id: bethanyscumlust
+  id: bethanysspirit
   flavorType: Complex
-  description: flavor-complex-bethanyscumlust
+  description: flavor-complex-bethanysspirit
 
 - type: flavor
-  id: bethanyssluttycumlust
+  id: bethanysspicedspirit
   flavorType: Complex
-  description: flavor-complex-bethanyssluttycumlust
+  description: flavor-complex-bethanysspicedspirit
 
 - type: flavor
   id: blooddrop
@@ -129,9 +129,9 @@
   description: flavor-complex-holyvice
 
 - type: flavor
-  id: hornystallion
+  id: bojack
   flavorType: Complex
-  description: flavor-complex-hornystallion
+  description: flavor-complex-bojack
 
 - type: flavor
   id: koboldkooler
@@ -189,9 +189,9 @@
   description: flavor-complex-opsshine
 
 - type: flavor
-  id: orgasmonthebeach
+  id: sexonthebeach
   flavorType: Complex
-  description: flavor-complex-orgasmonthebeach
+  description: flavor-complex-sexonthebeach
 
 - type: flavor
   id: pomonade
@@ -239,14 +239,14 @@
   description: flavor-complex-salvagersdelight
 
 - type: flavor
-  id: semenbomb
+  id: saltbomb
   flavorType: Complex
-  description: flavor-complex-semenbomb
+  description: flavor-complex-saltbomb
 
 - type: flavor
-  id: semenhemorrhage
+  id: saltyschnapps
   flavorType: Complex
-  description: flavor-complex-semenhemorrhage
+  description: flavor-complex-saltyschnapps
 
 - type: flavor
   id: silverstallion
@@ -354,14 +354,9 @@
   description: flavor-complex-star
 
 - type: flavor
-  id: ginandpussy
+  id: kittygin
   flavorType: Complex
-  description: flavor-complex-ginandpussy
-
-- type: flavor
-  id: pussytonic
-  flavorType: Complex
-  description: flavor-complex-pussytonic
+  description: flavor-complex-kittygin
 
 - type: flavor
   id: superheavycream

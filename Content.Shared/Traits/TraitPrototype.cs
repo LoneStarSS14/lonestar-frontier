@@ -1,4 +1,4 @@
-using Content.Shared._CS.HornyQuirks;
+using Content.Shared._CS.DescriptorQuirks;
 using Content.Shared._CS.SniffAndSmell;
 using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
@@ -64,10 +64,10 @@ public sealed partial class TraitPrototype : IPrototype
     public ProtoId<TraitCategoryPrototype>? Category;
 
     /// <summary>
-    /// Horny examine prototype associated with this trait.
+    /// Descriptor examine prototype associated with this trait.
     /// </summary>
     [DataField]
-    public ProtoId<HornyExaminePrototype>? HornyExamineProto;
+    public ProtoId<DescriptorExaminePrototype>? DescriptorExamineProto;
 
     /// <summary>
     /// bodytype descriptor key

@@ -41,6 +41,11 @@
   result: ClothingHeadHelmetMercenary
 
 - type: latheRecipe
+  id: ClothingHeadHelmetMercenaryBlack
+  parent: NFBaseHelmetRecipe
+  result: ClothingHeadHelmetMercenaryBlack
+
+- type: latheRecipe
   id: ClothingHeadHelmetBasic
   parent: NFBaseHelmetRecipe
   result: ClothingHeadHelmetBasic

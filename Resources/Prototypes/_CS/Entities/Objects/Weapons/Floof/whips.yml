@@ -1,0 +1,94 @@
+# LoneStar, TODO: sort these out.
+
+- type: entity
+  parent: BaseItem
+  id: BaseWhip
+  abstract: true
+  components:
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Slash: 2
+    angle: 120
+    animation: WeaponArcSlash
+    soundHit:
+      path: /Audio/Floof/Lewd/whip.ogg
+  - type: StaminaDamageOnHit
+    damage: 20
+  - type: StaminaDamageOnCollide
+    damage: 20
+  - type: StaticPrice
+    price: 60
+  - type: Item
+    size: Normal
+
+- type: entity
+  parent: BaseWhip
+  id: WhipPink
+  name: pink whip
+  description: A pink whip to keep someone on task.
+  components:
+  - type: Sprite
+    sprite: _CS/Objects/Weapons/Floof/whip_pink.rsi
+    state: icon
+
+- type: entity
+  parent: BaseWhip
+  id: WhipTeal
+  name: teal whip
+  description: A teal whip to keep someone on task.
+  components:
+  - type: Sprite
+    sprite: _CS/Objects/Weapons/Floof/whip_teal.rsi
+    state: icon
+
+- type: entity
+  parent: BaseWhip
+  id: WhipPinkBaton
+  name: pink baton
+  description: A pink baton to keep someone in order.
+  components:
+  - type: Sprite
+    sprite: _CS/Objects/Weapons/Floof/baton_pink.rsi
+    state: icon
+
+- type: entity
+  parent: BaseWhip
+  id: WhipTealBaton
+  name: teal baton
+  description: A teal baton to keep someone in order.
+  components:
+  - type: Sprite
+    sprite: _CS/Objects/Weapons/Floof/baton_teal.rsi
+    state: icon
+
+- type: entity
+  parent: BaseWhip
+  id: SpankPinkPaddle
+  name: pink paddle
+  description: A pink paddle for keeping someone in check.
+  components:
+  - type: Sprite
+    sprite: _CS/Objects/Weapons/Floof/spank_pink.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 4
+
+- type: entity
+  parent: BaseWhip
+  id: SpankTealPaddle
+  name: teal paddle
+  description: A teal paddle for keeping someone in check.
+  components:
+  - type: Sprite
+    sprite: _CS/Objects/Weapons/Floof/spank_teal.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 4

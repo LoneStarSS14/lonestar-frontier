@@ -20,7 +20,7 @@
   name: colorful sleeveless top and skirt
   suffix: Skirt
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:
@@ -47,7 +47,7 @@
   name: colorful top and skirt
   suffix: Skirt
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:
@@ -84,7 +84,7 @@
   name: colorful bra and skirt
   suffix: Skirt
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:
@@ -106,7 +106,7 @@
   name: colorful skirt
   suffix: Skirt
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:
@@ -120,7 +120,7 @@
   id: ClothingSkirtUniformRandomShirt
   name: colorful patterned top and skirt
   components:
-  - type: RandomSprite
+  - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
     available:
       - torso:

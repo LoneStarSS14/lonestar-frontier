@@ -1,0 +1,107 @@
+#region Routing Tables
+- type: entityTable
+  id: LSTableGeneralArmorShields
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralArmorShieldsT5
+    - !type:GroupSelector
+      weight: 49
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralArmorShieldsT4
+      - !type:GroupSelector
+        weight: 29
+        children:
+        - !type:NestedSelector # Rare
+          weight: 1
+          tableId: LSTableGeneralArmorShieldsT3
+        - !type:GroupSelector
+          weight: 19
+          children:
+          - !type:NestedSelector # Uncommon
+            weight: 3
+            tableId: LSTableGeneralArmorShieldsT2
+          - !type:GroupSelector
+            weight: 2
+            children:
+            - !type:NestedSelector # Common
+              weight: 9
+              tableId: LSTableGeneralArmorShieldsT1
+            - !type:NestedSelector # Trash
+              weight: 1
+              tableId: LSTableGeneralArmorShieldsT0
+
+- type: entityTable
+  id: LSTableGeneralArmorShieldsRare
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Legendary
+      weight: 1
+      tableId: LSTableGeneralArmorShieldsT5
+    - !type:GroupSelector
+      weight: 19
+      children:
+      - !type:NestedSelector # Epic
+        weight: 1
+        tableId: LSTableGeneralArmorShieldsT4
+      - !type:NestedSelector # Rare
+        weight: 9
+        tableId: LSTableGeneralArmorShieldsT3
+#endregion
+
+#region Loot Tiers
+- type: entityTable
+  id: LSTableGeneralArmorShieldsT5
+  table: !type:GroupSelector
+    children:
+    - id: EnergyShield
+
+- type: entityTable
+  id: LSTableGeneralArmorShieldsT4
+  table: !type:GroupSelector
+    children:
+    - id: TelescopicShield
+      amount: 3
+    - id: NFShieldBallistic
+      amount: 2
+
+- type: entityTable
+  id: LSTableGeneralArmorShieldsT3
+  table: !type:GroupSelector
+    children:
+    - id: TelescopicShield
+      amount: 2
+    - id: NFShieldBallistic
+    - id: RiotLaserShield
+      amount: 2
+    - id: RiotBulletShield
+      amount: 2
+
+- type: entityTable
+  id: LSTableGeneralArmorShieldsT2
+  table: !type:GroupSelector
+    children:
+    - id: TelescopicShield
+    - id: NFShieldBallistic
+    - id: RiotLaserShield
+    - id: RiotBulletShield
+    - id: NFShieldReflective
+
+- type: entityTable
+  id: LSTableGeneralArmorShieldsT1
+  table: !type:GroupSelector
+    children:
+    - id: RiotShield
+    - id: NFMetalShield
+    - id: NFShieldReflective
+
+- type: entityTable
+  id: LSTableGeneralArmorShieldsT0
+  table: !type:GroupSelector
+    children:
+    - id: WoodenBuckler
+    - id: MakeshiftShield
+    - id: ClockworkShield
