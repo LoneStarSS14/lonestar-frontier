@@ -320,7 +320,7 @@ public sealed class PlantHolderSystem : EntitySystem
             {
                 healthOverride = component.Health;
             }
-            var packetSeed = component.Seed;
+            var packetSeed = component.Seed.Clone(); // LoneStar
             var seed = _botany.SpawnSeedPacket(packetSeed, Transform(args.User).Coordinates, args.User, healthOverride);
             _randomHelper.RandomOffset(seed, 0.25f);
             var displayName = Loc.GetString(component.Seed.DisplayName);

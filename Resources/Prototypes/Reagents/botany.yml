@@ -184,6 +184,10 @@
       amount: 4
     - !type:PlantAdjustWeeds
       amount: -6
+    - !type:PlantWeedKiller # LoneStar
+      conditions:
+      - !type:ReagentThreshold
+        min: 4
   metabolisms:
     Poison:
       effects:
