@@ -1,0 +1,117 @@
+## Naming form; dress = no apron, uniform = built in apron
+#region Base
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: BaseClothingUniformJumpskirtMaidUniform2Tone
+  abstract: true
+  name: maid uniform
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+      color: "#F8F6F3"
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+      color: "#4B4F55"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-primary
+        map: [ "uniform-primary" ]
+        color: "#F8F6F3"
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+        color: "#4B4F55"
+  - type: Item
+    sprite: _LoneStar/Clothing/generic-inhands.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-primary
+        map: [ "hl-primary" ]
+        color: "#F8F6F3"
+      - state: inhand-left-secondary
+        map: [ "hl-secondary" ]
+        color: "#4B4F55"
+      right:
+      - state: inhand-right-primary
+        map: [ "hr-primary" ]
+        color: "#F8F6F3"
+      - state: inhand-right-secondary
+        map: [ "hr-secondary" ]
+        color: "#4B4F55"
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Shirt: LSSilks
+      Dress: NTInteriorDesign
+    available:
+      - i-primary:
+          icon-primary: Shirt
+        i-secondary:
+          icon-secondary: Dress
+        uniform-primary:
+          equipped-INNERCLOTHING-primary: Shirt
+        uniform-secondary:
+          equipped-INNERCLOTHING-secondary: Dress
+        hl-primary:
+          inhand-left-primary: Shirt
+        hl-secondary:
+          inhand-left-secondary: Dress
+        hr-primary:
+          inhand-right-primary: Shirt
+        hr-secondary:
+          inhand-right-secondary: Dress
+
+#region Colorable (Starts black/white)
+- type: entity # Vanderlin
+  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  id: ClothingUniformJumpskirtMaidVictorian
+  name: victorian maid dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-victorian.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-victorian.rsi
+
+- type: entity # Hardlight's
+  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  id: ClothingUniformJumpskirtMaidPoofy
+  name: poofy maid uniform
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-poofy.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-poofy.rsi
+  - type: Item
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-poofy.rsi
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  id: ClothingUniformJumpskirtMaidTavern
+  name: tavern maid uniform
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-tavern.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-tavern.rsi
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  id: ClothingUniformJumpskirtMaidVintage
+  name: vintage maid uniform
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-vintage.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-vintage.rsi
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  id: ClothingUniformJumpskirtMaidVintageAlt
+  name: vintage maid uniform
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-vintage-alt.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-vintage-alt.rsi

@@ -135,22 +135,36 @@
     ClothingUniformJumpskirtCentcomOfficer: 4294967295
     ClothingUniformJumpskirtElegantMaid: 4294967295
     ClothingUniformColorJumpskirtRainbow: 4294967295
-    ClothingUniformJumpskirtSchool: 4294967295
-    ClothingUniformJumpskirtSchoolPink: 4294967295
-    ClothingUniformJumpskirtSchoolRed: 4294967295
-    ClothingUniformJumpskirtSchoolOrange: 4294967295
-    ClothingUniformJumpskirtSchoolYellow: 4294967295
-    ClothingUniformJumpskirtSchoolGreen: 4294967295
-    ClothingUniformJumpskirtSchoolWhite: 4294967295
-    ClothingUniformJumpskirtSchoolBlack: 4294967295
-    ClothingUniformJumpskirtSchoolColorable: 4294967295
+    # LoneStar colorable stuff
+    ClothingUniformJumpskirtGorkas: 4294967295
+    ClothingUniformJumpsuitOveralls: 4294967295
+    ClothingUniformJumpskirtOveralls: 4294967295
+    ClothingUniformJumpskirtPlaidDress: 4294967295
+    ClothingUniformJumpskirtCardiganDress: 4294967295
+    ClothingUniformJumpskirtWeddingDressBow: 4294967295
+    ClothingUniformJumpskirtPrimalDress: 4294967295
+    ClothingUniformJumpskirtSeifukuRandom: 4294967295
+    ClothingUniformJumpskirtSchoolRandom: 4294967295
     ClothingHandsGlovesColorableSilk: 4294967295
     ClothingHandsGlovesLongColorableSilk: 4294967295
     ClothingHandsGlovesColorableCotton: 4294967295
     ClothingHandsGlovesLongColorableCotton: 4294967295
     ClothingHeadHatMaidHeadband: 4294967295
-    ClothingUniformJumpskirtMaidDressLong: 4294967295
+    ClothingUniformJumpskirtMaidVictorian: 4294967295
+    ClothingUniformJumpskirtMaidPoofy: 4294967295
+    ClothingUniformJumpskirtMaidVintage: 4294967295
+    ClothingUniformJumpskirtMaidVintageAlt: 4294967295
+    ClothingUniformJumpskirtMaidTavern: 4294967295
+    ClothingTacticalMaid: 4294967295 # TODO: refactor bubber' yaml into lonestar and proper ID naming.
     ClothingOuterVestPinafore: 4294967295
+    ClothingUniformJumpsuitRegalSuitPrince: 4294967295
+    ClothingUniformJumpsuitRegalGown: 4294967295
+    ClothingHandsGlovesRegalSleeves: 4294967295
+    ClothingHeadHatRegalCrown: 4294967295 # Not colorable.
+    ClothingUniformJumpskirtSpottyColorable: 4294967295
+    ClothingUniformJumpskirtCheckerColorable: 4294967295
+    ClothingUniformJumpskirtStraplessColorable: 4294967295
+    #
     ClothingUniformJumpskirtCapTurtleneck: 4294967295
     ClothingUniformJumpskirtHoPTurtleneck: 4294967295
     ClothingUniformJumpskirtHoSBlack: 4294967295
@@ -216,7 +230,6 @@
     RedRegaliaSuit: 4294967295
     # Hardlight
     MaidUniformLatex: 4294967295
-    MaidUniformAlt: 4294967295
     MaidUniform: 4294967295
     MaidGloves: 4294967295
     MaidGlovesLatex: 4294967295
@@ -225,10 +238,6 @@
     LatexSocks: 4294967295
     LatexHeels: 4294967295
     # LoneStar
-    ClothingUniformJumpsuitRegalSuitPrince: 4294967295 # Lonestar start
-    ClothingUniformJumpsuitRegalGown: 4294967295
-    ClothingHandsGlovesRegalSleeves: 4294967295
-    ClothingHeadHatRegalCrown: 4294967295
     ClothingUniformJumpsuitRegalShirt: 4294967295
     ClothingOuterVestMedievalLongcoat: 4294967295
     ClothingUniformJumpskirtCapFormalDress: 4294967295
@@ -237,9 +246,6 @@
     ClothingUniformJumpsuitHosFormal: 4294967295
     ClothingUniformJumpsuitMilitaryBrat: 4294967295
     ClothingUniformJumpskirtPresent: 4294967295
-    ClothingUniformJumpskirtSpottyColorable: 4294967295
-    ClothingUniformJumpskirtCheckerColorable: 4294967295
-    ClothingUniformJumpskirtStraplessColorable: 4294967295
     ClothingUniformJumpsuitAthleticShorts: 4294967295
     # Euphoria
     ClothingShoesHeelsKittenColorable: 4294967295
@@ -252,8 +258,6 @@
     ClothingShoesHighheelBootsNanotrasen: 4294967295
     # Everdream
     ClothingPriestessCorsetAndTabard: 4294967295
-    # Bubber
-    ClothingTacticalMaid: 4294967295
   contrabandInventory:
     ClothingMaskNeckGaiter: 4294967295
     ClothingUniformJumpsuitTacticool: 4294967295

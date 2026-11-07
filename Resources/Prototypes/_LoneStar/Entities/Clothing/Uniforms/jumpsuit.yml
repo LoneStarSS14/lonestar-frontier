@@ -21,6 +21,30 @@
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/flannel.rsi
 
+- type: entity
+  parent: [ ClothingUniformBase, ClothingUniformColorableDualColor ]
+  id: ClothingUniformJumpsuitOveralls
+  name: overalls jumpsuit
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/overalls.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/overalls.rsi
+  - type: ColorableClothing
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
+
+- type: entity
+  parent: [ ClothingUniformBase, ClothingUniformColorableDualColor ]
+  id: ClothingUniformJumpskirtGorkas
+  name: gorka
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/gorkas.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/gorkas.rsi
+
 #region foldables
 - type: entity
   parent: ClothingUniformBase
