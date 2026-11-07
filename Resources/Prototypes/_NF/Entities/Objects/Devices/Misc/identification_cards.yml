@@ -48,6 +48,7 @@
 - type: entity
   parent: IDCardStandard
   id: PublicAffairsIDCard
+  abstract: true # LoneStar
   name: public affairs liaison ID card
   components:
   - type: PresetIdCard
@@ -61,6 +62,7 @@
 - type: entity
   parent: IDCardStandard
   id: CadetIDCard
+  abstract: true # LoneStar
   name: LSRD Junior Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
@@ -78,6 +80,7 @@
 - type: entity
   parent: CadetIDCard
   id: DeputyIDCard
+  abstract: true # LoneStar
   name: LSRD Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
@@ -91,6 +94,7 @@
 - type: entity
   parent: CadetIDCard
   id: BrigmedicNFIDCard
+  abstract: true # LoneStar
   name: LSRD Corpsman ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
@@ -104,6 +108,7 @@
 - type: entity
   parent: CadetIDCard
   id: SergeantIDCard
+  abstract: true # LoneStar
   name: LSRD Senior Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
@@ -117,6 +122,7 @@
 - type: entity
   parent: CadetIDCard
   id: BailiffIDCard
+  abstract: true # LoneStar
   name: LSRD Armorer ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
@@ -130,6 +136,7 @@
 - type: entity
   parent: [CadetIDCard, BaseC4Contraband]
   id: ShriffIDCard
+  abstract: true # LoneStar
   name: LSRD Chief Ranger ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
@@ -143,6 +150,7 @@
 - type: entity
   parent: CadetIDCard
   id: NFDetectiveIDCard
+  abstract: true # LoneStar
   name: LSRD detective ID card # Lonestar changes NFSD -> LSRD
   components:
   - type: PresetIdCard
@@ -218,6 +226,7 @@
 - type: entity
   parent: PirateIDCard
   id: NFPirateIDCard
+  abstract: true # LoneStar
   name: pirate ID card
   description: Garr, be this wood?
   suffix: Frontier
@@ -235,6 +244,7 @@
 - type: entity
   parent: NFPirateIDCard
   id: NFPirateCaptainIDCard
+  abstract: true # LoneStar
   name: pirate captain ID card
   description: Ahoy, see how it glistens!
   components:
@@ -249,6 +259,7 @@
 - type: entity
   parent: NFPirateIDCard
   id: NFPirateFirstMateIDCard
+  abstract: true # LoneStar
   name: pirate first mate ID card
   components:
   - type: PresetIdCard
@@ -326,7 +337,7 @@
     name: Clippy
 
 - type: entity
-  parent: NFPirateFirstMateIDCard
+  parent: BaseLSFreelancerIDCard # LoneStar, TODO: Check these are ok after rest of id stuff is done
   id: ClarpyIDCard
   name: clarpy ID card
   components:
@@ -334,7 +345,7 @@
     name: Clarpy
 
 - type: entity
-  parent: DeputyIDCard
+  parent: BaseLSLSRDIDCard # LoneStar, TODO: Check these are ok after rest of id stuff is done
   id: CappyIDCard
   name: cappy ID card
   components:

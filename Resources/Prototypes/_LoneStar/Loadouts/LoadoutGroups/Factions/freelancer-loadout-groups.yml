@@ -1,0 +1,573 @@
+#region Base Loadouts
+# Should contain all 'generic' things, anything job specific should subgroup these.
+# Direct Clothing
+- type: loadoutGroup
+  id: LSFreelancersFactionJumpsuit
+  name: loadout-group-jumpsuit
+  minLimit: 1
+  loadouts:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+  - NFPirateClothingUniformJumpsuitPirateSlops
+  - NFPirateClothingUniformJumpsuitPirateLuffy
+  - FreelancerClothingBunnysuitPirate
+  subgroups:
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
+  fallbacks:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+
+- type: loadoutGroup
+  id: LSFreelancersFactionOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 0
+  loadouts:
+  - FreelancerClothingBunnyJacketPirate
+  subgroups:
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: LSFreelancersFactionShoes
+  name: loadout-group-shoes
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: LSFreelancersFactionGloves
+  name: loadout-group-gloves
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: LSFreelancersFactionHead
+  name: loadout-group-head
+  minLimit: 0
+  loadouts:
+  - NFPirateClothingHeadBandBlack
+  - NFPirateClothingHeadBandBrown
+  - NFPirateClothingHeadBandGrey
+  - NFPirateClothingHeadBandRed
+  - NFPirateClothingHeadHatPirateTricord
+  - NFPirateClothingHeadHatPirateLuffy
+  - FreelancerClothingBunnyEarsPirate
+  subgroups:
+  - MercenaryHead
+  - PilotHead
+  - ContractorHead
+
+- type: loadoutGroup
+  id: LSFreelancersFactionMask
+  name: loadout-group-face
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - ContractorFace
+
+- type: loadoutGroup
+  id: LSFreelancersFactionEyes
+  name: loadout-group-glasses
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - ContractorGlasses
+
+- type: loadoutGroup
+  id: LSFreelancersFactionNeck
+  name: loadout-group-neck
+  minLimit: 0
+  loadouts:
+  - FreelancerClothingBowtiePirate
+  subgroups:
+  - ContractorNeck
+
+# Storages
+- type: loadoutGroup
+  id: LSFreelancersFactionBackpack
+  name: loadout-group-backpack
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - ContractorBackpack
+  fallbacks:
+  - ContractorClothingBackpack
+
+- type: loadoutGroup
+  id: LSFreelancersFactionBelt
+  name: loadout-group-belt
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - ContractorBelt
+
+- type: loadoutGroup
+  id: LSFreelancersFactionWallet
+  name: loadout-group-wallet
+  loadouts:
+  - PirateCaptainClothingWalletLeatherPirate
+  subgroups:
+  - ContractorWallet
+  fallbacks:
+  - PirateCaptainClothingWalletLeatherPirate
+
+# Factional Specific
+- type: loadoutGroup
+  id: LSFreelancersFactionEars
+  name: loadout-group-ears
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+    []
+  subgroups:
+  - ContractorEars
+  fallbacks:
+  - ContractorClothingHeadsetGreyCommon
+
+- type: loadoutGroup
+  id: LSFreelancersFactionEncryptionKey
+  name: loadout-group-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  loadouts:
+  - EncryptionKeyFreelance
+  subgroups:
+  - ContractorEncryptionKey
+  fallbacks:
+  - EncryptionKeyFreelance
+
+- type: loadoutGroup
+  id: LSFreelancersFactionImplanter
+  name: loadout-group-implanter
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+    []
+  subgroups:
+  - ContractorImplanter
+  fallbacks:
+  - ContractorMedicalTrackingImplanter
+#endregion
+
+#region Combatant Additions # TODO: Make these subgroup the merc specific groups
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantJumpsuit
+  name: loadout-group-jumpsuit
+  minLimit: 1
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionJumpsuit
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
+  fallbacks:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionOuterClothing
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantShoes
+  name: loadout-group-shoes
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionShoes
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantGloves
+  name: loadout-group-gloves
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantHead
+  name: loadout-group-head
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionHead
+  - MercenaryHead
+  - PilotHead
+  - ContractorHead
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantMask
+  name: loadout-group-face
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionMask
+  - ContractorFace
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantEyes
+  name: loadout-group-glasses
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionEyes
+  - ContractorGlasses
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantNeck
+  name: loadout-group-neck
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionNeck
+  - ContractorNeck
+
+# Storages
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantBackpack
+  name: loadout-group-backpack
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionBackpack
+  - ContractorBackpack
+  fallbacks:
+  - ContractorClothingBackpack
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantBelt
+  name: loadout-group-belt
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionBelt
+  - ContractorBelt
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantWallet
+  name: loadout-group-wallet
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionWallet
+  - ContractorWallet
+  fallbacks:
+  - PirateCaptainClothingWalletLeatherPirate
+
+# Factional Specific
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantEars
+  name: loadout-group-ears
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionEars
+  - ContractorEars
+  fallbacks:
+  - ContractorClothingHeadsetGreyCommon
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantEncryptionKey
+  name: loadout-group-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionEncryptionKey
+  - ContractorEncryptionKey
+  fallbacks:
+  - EncryptionKeyFreelance
+
+- type: loadoutGroup
+  id: LSFreelancersFactionCombatantImplanter
+  name: loadout-group-implanter
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionImplanter
+  - ContractorImplanter
+  fallbacks:
+  - ContractorMedicalTrackingImplanter
+#endregion
+
+#region Master-at-Arms
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderJumpsuit
+  name: loadout-group-jumpsuit
+  minLimit: 1
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionJumpsuit
+  - LSFreelancersFactionCombatantJumpsuit
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
+  fallbacks:
+  - NFPirateJumpsuit
+  - NFPirateJumpskirt
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionOuterClothing
+  - LSFreelancersFactionCombatantOuterClothing
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderShoes
+  name: loadout-group-shoes
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionShoes
+  - LSFreelancersFactionCombatantShoes
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderGloves
+  name: loadout-group-gloves
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionGloves
+  - LSFreelancersFactionCombatantGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderHead
+  name: loadout-group-head
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionHead
+  - LSFreelancersFactionCombatantHead
+  - MercenaryHead
+  - PilotHead
+  - ContractorHead
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderMask
+  name: loadout-group-face
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionMask
+  - LSFreelancersFactionCombatantMask
+  - ContractorFace
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderEyes
+  name: loadout-group-glasses
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionEyes
+  - LSFreelancersFactionCombatantEyes
+  - ContractorGlasses
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderNeck
+  name: loadout-group-neck
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionNeck
+  - LSFreelancersFactionCombatantNeck
+  - ContractorNeck
+
+# Storages
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderBackpack
+  name: loadout-group-backpack
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionBackpack
+  - LSFreelancersFactionCombatantBackpack
+  - ContractorBackpack
+  fallbacks:
+  - ContractorClothingBackpack
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderBelt
+  name: loadout-group-belt
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionBelt
+  - LSFreelancersFactionCombatantBelt
+  - ContractorBelt
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderWallet
+  name: loadout-group-wallet
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionWallet
+  - LSFreelancersFactionCombatantWallet
+  - ContractorWallet
+  fallbacks:
+  - PirateCaptainClothingWalletLeatherPirate
+
+# Factional Specific
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderEars
+  name: loadout-group-ears
+  hidden: true
+  loadouts:
+    - LSFreelancerMasterAtArmsHeadset
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderEncryptionKey
+  name: loadout-group-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  loadouts:
+    []
+  subgroups:
+  - ContractorEncryptionKey
+
+- type: loadoutGroup
+  id: LSFreelancersFactionLeaderImplanter
+  name: loadout-group-implanter
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+    []
+  subgroups:
+  - LSFreelancersFactionImplanter
+  - LSFreelancersFactionCombatantImplanter
+  - ContractorImplanter
+  fallbacks:
+  - ContractorMedicalTrackingImplanter
+#endregion
+
+#region PDAs
+- type: loadoutGroup
+  id: LSFreelancerEscortPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSFreelancerEscortPDA
+  fallbacks:
+  - LSFreelancerEscortPDA
+
+- type: loadoutGroup
+  id: LSFreelancerRipperDocPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSFreelancerRipperDocPDA
+  fallbacks:
+  - LSFreelancerRipperDocPDA
+
+- type: loadoutGroup
+  id: LSFreelancerSpyPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSFreelancerSpyPDA
+  fallbacks:
+  - LSFreelancerSpyPDA
+
+- type: loadoutGroup
+  id: LSFreelancerSmugglerPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSFreelancerSmugglerPDA
+  fallbacks:
+  - LSFreelancerSmugglerPDA
+
+- type: loadoutGroup
+  id: LSFreelancerFreelancerPiratePDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSFreelancerFreelancerPiratePDA
+  fallbacks:
+  - LSFreelancerFreelancerPiratePDA
+
+- type: loadoutGroup
+  id: LSFreelancerMasterAtArmsPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSFreelancerMasterAtArmsPDA
+  fallbacks:
+  - LSFreelancerMasterAtArmsPDA
+#endregion
+
+#region Special Cases
+- type: loadoutGroup
+  id: LSFreelancersFactionForcedOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 1
+  maxLimit: 1
+  hidden: true
+  loadouts:
+  - LSFreelancerForcedClothingOuterEVASuit
+  fallbacks:
+  - LSFreelancerForcedClothingOuterEVASuit
+#endregion

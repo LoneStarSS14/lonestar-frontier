@@ -1,0 +1,97 @@
+- type: job
+  id: LSRipperDoc
+  name: job-name-ls-ripper-doc
+  description: job-description-ls-ripper-doc
+  supervisors: job-supervisors-ls-faction-medic
+  playTimeTracker: JobLSRipperDoc
+  requirements:
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSFreelancers
+    #   time: 57600 # 16 hours
+    - !type:RoleTimeRequirement
+      role: JobMedicalNurse
+      time: 57600 # 16 hours
+  weight: 20
+  displayWeight: 20
+  startingGear: LSRipperDocGear
+  icon: "JobIconLSRipperDoc"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  access:
+  - Pirate
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #freelancer specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsPirate
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirate
+  - !type:AddRpiAuraSpecial
+    aurasToAdd:
+    - rpiAuraNurse
+  - !type:RpiChatJudgementModifierSpecial
+    modsToAdd:
+    - rpiChatJudgementModifierNurse
+
+#play time tracker
+- type: playTimeTracker
+  id: JobLSRipperDoc
+
+- type: entity
+  id: SpawnPointLSRipperDoc
+  parent: SpawnPointJobBase
+  name: ripper doc spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSRipperDoc
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear
+  id: LSRipperDocGear
+  equipment:
+    pocket1: BasePirateUplinkPirateCrew
+    pocket2: ContrabandAppraisalToolPirate
+
+- type: roleLoadout
+  id: JobLSRipperDoc
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSFreelancerRipperDocPDA
+  # Freelancer v
+  - LSFreelancersFactionJumpsuit
+  - LSFreelancersFactionOuterClothing
+  - LSFreelancersFactionForcedOuterClothing
+  - LSFreelancersFactionShoes
+  - LSFreelancersFactionGloves
+  - LSFreelancersFactionHead
+  - LSFreelancersFactionMask
+  - LSFreelancersFactionEyes
+  - LSFreelancersFactionNeck
+  - LSFreelancersFactionEars
+  - LSFreelancersFactionBackpack
+  - LSFreelancersFactionBelt
+  - LSFreelancersFactionWallet
+  - LSFreelancersFactionEncryptionKey
+  - LSFreelancersFactionImplanter
+  # Common v
+  - ContractorBoxSurvival
+  - ContractorCartridge
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific

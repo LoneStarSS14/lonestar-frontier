@@ -1,0 +1,609 @@
+# TODO: Check vox and sheleg dont get fucked.
+
+#region Base Loadouts
+# Should contain all 'generic' things, anything job specific should subgroup these.
+# Direct Clothing
+- type: loadoutGroup
+  id: LSLSRDFactionJumpsuit
+  name: loadout-group-jumpsuit
+  minLimit: 1
+  loadouts:
+  - PalClothingUniformJumpsuitPublicAffairsLiaison
+  - PalClothingUniformJumpskirtPublicAffairsLiaison
+  - DeputyClothingUniformJumpsuitDeputy
+  - DeputyClothingUniformJumpskirtDeputy
+  - CadetClothingUniformJumpsuitCadet
+  - CadetClothingUniformJumpskirtCadet
+  - BailiffClothingUniformJumpsuitBailiff
+  - NFDetectiveClothingUniformJumpsuitDetective
+  - NFDetectiveClothingUniformJumpskirtDetective
+  - NFDetectiveClothingUniformJumpsuitDetectiveGrey
+  - NFDetectiveClothingUniformJumpskirtDetectiveGrey
+  subgroups:
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
+  fallbacks:
+  - PalClothingUniformJumpsuitPublicAffairsLiaison
+  - PalClothingUniformJumpskirtPublicAffairsLiaison
+
+- type: loadoutGroup
+  id: LSLSRDFactionOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 0
+  loadouts:
+  - BailiffOuterClothing
+  - BrigmedicOuterClothing
+  subgroups:
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: LSLSRDFactionShoes
+  name: loadout-group-shoes
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: LSLSRDFactionGloves
+  name: loadout-group-gloves
+  minLimit: 0
+  loadouts:
+  - PalClothingHandsGlovesHop
+  subgroups:
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: LSLSRDFactionHead
+  name: loadout-group-head
+  minLimit: 0
+  loadouts:
+  - BailiffClothingHeadHatBailiff
+  - BrigmedicClothingHeadHatBrigmedic
+  - CadetClothingHeadHatCadet
+  - DeputyClothingHeadHatDeputy
+  - NFDetectiveClothingHeadHatFedoraBrown
+  - NFDetectiveClothingHeadHatFedoraGrey
+  subgroups:
+  - MercenaryHead
+  - PilotHead
+  - ContractorHead
+
+- type: loadoutGroup
+  id: LSLSRDFactionMask
+  name: loadout-group-face
+  minLimit: 0
+  loadouts:
+  - BrigmedicClothingMaskBrigmedic
+  - NfsdClothingMaskGasNfsd
+  subgroups:
+  - ContractorFace
+
+- type: loadoutGroup
+  id: LSLSRDFactionEyes
+  name: loadout-group-glasses
+  minLimit: 0
+  loadouts:
+  - NfsdClothingEyesGlasses
+  - BrigmedicClothingEyesGlasses
+  subgroups:
+  - ContractorGlasses
+
+- type: loadoutGroup
+  id: LSLSRDFactionNeck
+  name: loadout-group-neck
+  minLimit: 0
+  loadouts:
+  - BrigmedicClothingNeckNfsdBadgeSecurityBrigmedic
+  - CadetClothingNeckBadgeCadet
+  - DeputyClothingNeckBadgeDeputy
+  - NFDetectiveClothingNeckNfsdBadgeDetective
+  - PalClothingNeckPublicAffairsLiaisonBadge
+  subgroups:
+  - ContractorNeck
+
+# Storages
+- type: loadoutGroup
+  id: LSLSRDFactionBackpack
+  name: loadout-group-backpack
+  minLimit: 0
+  loadouts:
+  - NfsdClothingBackpackNfsdBrown
+  - NfsdClothingBackpackSatchelNfsdBrown
+  - NfsdClothingBackpackDuffelNfsdBrown
+  - NfsdClothingBackpackMessengerNfsdBrown
+  - NfsdClothingBackpackMessengerNfsdCream
+  subgroups:
+  - ContractorBackpack
+  fallbacks:
+  - ContractorClothingBackpack
+
+- type: loadoutGroup
+  id: LSLSRDFactionBelt
+  name: loadout-group-belt
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - ContractorBelt
+
+- type: loadoutGroup
+  id: LSLSRDFactionWallet
+  name: loadout-group-wallet
+  loadouts:
+    []
+  subgroups:
+  - ContractorWallet
+  fallbacks:
+  - ContractorClothingWalletLeatherBrown
+
+# Factional Specific
+- type: loadoutGroup
+  id: LSLSRDFactionEars
+  name: loadout-group-ears
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+    []
+  subgroups:
+  - ContractorEars
+  fallbacks:
+  - ContractorClothingHeadsetGreyCommon
+
+- type: loadoutGroup
+  id: LSLSRDFactionEncryptionKey
+  name: loadout-group-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  loadouts:
+  - EncryptionKeyLSRD
+  subgroups:
+  - ContractorEncryptionKey
+  fallbacks:
+  - EncryptionKeyLSRD
+
+- type: loadoutGroup
+  id: LSLSRDFactionImplanter
+  name: loadout-group-implanter
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+    []
+  subgroups:
+  - ContractorImplanter
+  fallbacks:
+  - ContractorMedicalTrackingImplanter
+#endregion
+
+#region Combatant Additions # TODO: Make these subgroup the merc specific groups
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantJumpsuit
+  name: loadout-group-jumpsuit
+  minLimit: 1
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionJumpsuit
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
+  fallbacks:
+  - DeputyClothingUniformJumpsuitDeputy
+  - DeputyClothingUniformJumpskirtDeputy
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 0
+  loadouts:
+  - NFDetectiveClothingOuterArmorBasic
+  - NFDetectiveClothingOuterCoatDetectiveLoadout
+  - NFDetectiveClothingOuterCoatDetectiveLoadoutGrey
+  - NFDetectiveClothingOuterCoatTrench
+  - NfsdOuterClothing
+  subgroups:
+  - LSLSRDFactionOuterClothing
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantShoes
+  name: loadout-group-shoes
+  minLimit: 0
+  loadouts:
+  - NfsdClothingShoesBootsBrown
+  subgroups:
+  - LSLSRDFactionShoes
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantGloves
+  name: loadout-group-gloves
+  minLimit: 0
+  loadouts:
+  - NfsdClothingHandsGlovesCombatNfsdBrown
+  subgroups:
+  - LSLSRDFactionGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantHead
+  name: loadout-group-head
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionHead
+  - MercenaryHead
+  - PilotHead
+  - ContractorHead
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantMask
+  name: loadout-group-face
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionMask
+  - ContractorFace
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantEyes
+  name: loadout-group-glasses
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionEyes
+  - ContractorGlasses
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantNeck
+  name: loadout-group-neck
+  minLimit: 0
+  loadouts:
+  - BailiffClothingNeckBadgeBailiff
+  subgroups:
+  - LSLSRDFactionNeck
+  - ContractorNeck
+
+# Storages
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantBackpack
+  name: loadout-group-backpack
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionBackpack
+  - ContractorBackpack
+  fallbacks:
+  - ContractorClothingBackpack
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantBelt
+  name: loadout-group-belt
+  minLimit: 0
+  loadouts:
+  - NfsdWebbing
+  - NfsdBelt
+  subgroups:
+  - LSLSRDFactionBelt
+  - ContractorBelt
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantWallet
+  name: loadout-group-wallet
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionWallet
+  - ContractorWallet
+  fallbacks:
+  - ContractorClothingWalletLeatherBrown
+
+# Factional Specific
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantEars
+  name: loadout-group-ears
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - NfsdClothingHeadsetNfsdBrown
+  - NfsdClothingHeadsetNfsdCream
+  - NfsdClothingHeadsetNfsdGreen
+  - NfsdClothingHeadsetAltNfsdBrown
+  - NfsdClothingHeadsetAltNfsdCreamandBrown
+  - NfsdClothingHeadsetAltNfsdGreen
+  subgroups:
+  - LSLSRDFactionEars
+  - ContractorEars
+  fallbacks:
+  - ContractorClothingHeadsetGreyCommon
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantEncryptionKey
+  name: loadout-group-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionEncryptionKey
+  - ContractorEncryptionKey
+  fallbacks:
+  - EncryptionKeyLSRD
+
+- type: loadoutGroup
+  id: LSLSRDFactionCombatantImplanter
+  name: loadout-group-implanter
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionImplanter
+  - ContractorImplanter
+  fallbacks:
+  - ContractorMedicalTrackingImplanter
+#endregion
+
+#region Chief Ranger
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderJumpsuit
+  name: loadout-group-jumpsuit
+  minLimit: 1
+  loadouts:
+  - SheriffClothingUniformJumpsuitSheriff
+  - SheriffClothingUniformJumpskirtSheriff
+  subgroups:
+  - LSLSRDFactionJumpsuit
+  - LSLSRDFactionCombatantJumpsuit
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  - CoyoteJumpsuit
+  fallbacks:
+  - SheriffClothingUniformJumpsuitSheriff
+  - SheriffClothingUniformJumpskirtSheriff
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 0
+  loadouts:
+  - SheriffOuterClothing
+  - SeniorOfficerOuterClothing
+  - BailiffOuterClothing
+  - LoadoutLSRDBomber
+  subgroups:
+  - LSLSRDFactionOuterClothing
+  - LSLSRDFactionCombatantOuterClothing
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderShoes
+  name: loadout-group-shoes
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionShoes
+  - LSLSRDFactionCombatantShoes
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderGloves
+  name: loadout-group-gloves
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionGloves
+  - LSLSRDFactionCombatantGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderHead
+  name: loadout-group-head
+  minLimit: 0
+  loadouts:
+  - SheriffClothingHeadHatSheriff
+  subgroups:
+  - LSLSRDFactionHead
+  - LSLSRDFactionCombatantHead
+  - MercenaryHead
+  - PilotHead
+  - ContractorHead
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderMask
+  name: loadout-group-face
+  minLimit: 0
+  loadouts:
+  - SheriffClothingMaskSheriff
+  subgroups:
+  - LSLSRDFactionMask
+  - LSLSRDFactionCombatantMask
+  - ContractorFace
+  fallbacks:
+  - SheriffClothingMaskSheriff
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderEyes
+  name: loadout-group-glasses
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionEyes
+  - LSLSRDFactionCombatantEyes
+  - ContractorGlasses
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderNeck
+  name: loadout-group-neck
+  minLimit: 0
+  loadouts:
+  - SheriffClothingNeckMantleSheriff
+  - SheriffClothingNeckCloakSheriff
+  - SheriffClothingNeckNfsdBadgeSheriff
+  subgroups:
+  - LSLSRDFactionNeck
+  - LSLSRDFactionCombatantNeck
+  - ContractorNeck
+
+# Storages
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderBackpack
+  name: loadout-group-backpack
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionBackpack
+  - LSLSRDFactionCombatantBackpack
+  - ContractorBackpack
+  fallbacks:
+  - ContractorClothingBackpack
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderBelt
+  name: loadout-group-belt
+  minLimit: 0
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionBelt
+  - LSLSRDFactionCombatantBelt
+  - ContractorBelt
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderWallet
+  name: loadout-group-wallet
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionWallet
+  - LSLSRDFactionCombatantWallet
+  - ContractorWallet
+  fallbacks:
+  - ContractorClothingWalletLeatherBrown
+
+# Factional Specific
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderEars
+  name: loadout-group-ears
+  hidden: true
+  loadouts:
+    - LSLSRDChiefRangerHeadset
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderEncryptionKey
+  name: loadout-group-encryption-key
+  minLimit: 0
+  maxLimit: 7
+  loadouts:
+    []
+  subgroups:
+  - ContractorEncryptionKey
+
+- type: loadoutGroup
+  id: LSLSRDFactionLeaderImplanter
+  name: loadout-group-implanter
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+    []
+  subgroups:
+  - LSLSRDFactionImplanter
+  - LSLSRDFactionCombatantImplanter
+  - ContractorImplanter
+  fallbacks:
+  - ContractorMedicalTrackingImplanter
+#endregion
+
+#region PDAs
+- type: loadoutGroup
+  id: LSLSRDClerkPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSLSRDClerkPDA
+  fallbacks:
+  - LSLSRDClerkPDA
+
+- type: loadoutGroup
+  id: LSLSRDCorpsmanPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSLSRDCorpsmanPDA
+  fallbacks:
+  - LSLSRDCorpsmanPDA
+
+- type: loadoutGroup
+  id: LSLSRDDetectivePDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSLSRDDetectivePDA
+  fallbacks:
+  - LSLSRDDetectivePDA
+
+- type: loadoutGroup
+  id: LSLSRDRetrievalOfficerPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSLSRDRetrievalOfficerPDA
+  fallbacks:
+  - LSLSRDRetrievalOfficerPDA
+
+- type: loadoutGroup
+  id: LSLSRDEnforcerPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSLSRDEnforcerPDA
+  fallbacks:
+  - LSLSRDEnforcerPDA
+
+- type: loadoutGroup
+  id: LSLSRDChiefRangerPDA
+  name: loadout-group-pda
+  hidden: true
+  loadouts:
+  - LSLSRDChiefRangerPDA
+  fallbacks:
+  - LSLSRDChiefRangerPDA
+#endregion
+
+#region Special Cases
+- type: loadoutGroup
+  id: LSLSRDFactionForcedOuterClothing
+  name: loadout-group-outerclothing
+  minLimit: 1
+  maxLimit: 1
+  hidden: true
+  loadouts:
+  - LSLSRDForcedClothingOuterEVASuit
+  fallbacks:
+  - LSLSRDForcedClothingOuterEVASuit
+#endregion

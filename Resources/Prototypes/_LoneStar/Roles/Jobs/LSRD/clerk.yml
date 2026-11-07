@@ -1,0 +1,91 @@
+- type: job
+  id: LSClerk
+  name: job-name-ls-clerk
+  description: job-description-ls-clerk
+  supervisors: job-supervisors-ls-faction-resident
+  playTimeTracker: JobLSClerk
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 6 hours
+  weight: 10
+  displayWeight: 10
+  startingGear: LSClerkGear
+  icon: "JobIconLSClerk"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  accessGroups:
+  - GeneralAccess
+  - GeneralNfsdAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #lsrd specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsNfsd # TODO: Rename this to IsLsrd
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierDeputy # TODO: replace this
+  - !type:AddRpiAuraSpecial
+    aurasToAdd:
+    - rpiAuraMassageTherapist # TODO: replace this
+  - !type:RpiChatJudgementModifierSpecial
+    modsToAdd:
+    - rpiChatJudgementModifierMassageTherapist # TODO: replace this
+
+- type: entity
+  id: SpawnPointLSClerk # TODO: mapping migrations.
+  parent: SpawnPointJobBase
+  name: clerk spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSClerk
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear
+  id: LSClerkGear
+  equipment:
+    pocket1: ContrabandAppraisalTool
+
+- type: roleLoadout
+  id: JobLSClerk
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSLSRDClerkPDA
+  # LSRD v
+  - LSLSRDFactionJumpsuit
+  - LSLSRDFactionOuterClothing
+  - LSLSRDFactionForcedOuterClothing
+  - LSLSRDFactionShoes
+  - LSLSRDFactionGloves
+  - LSLSRDFactionHead
+  - LSLSRDFactionMask
+  - LSLSRDFactionEyes
+  - LSLSRDFactionNeck
+  - LSLSRDFactionEars
+  - LSLSRDFactionBackpack
+  - LSLSRDFactionBelt
+  - LSLSRDFactionWallet
+  - LSLSRDFactionEncryptionKey
+  - LSLSRDFactionImplanter
+  # Common v
+  # - ContractorBoxSurvival
+  - ContractorCartridge
+  # - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  # - NFSpeciesSpecific
+  # Temporary / TODO: replace
+  - NfsdBoxSurvival
+  - SeniorOfficerBackpackItems
+  - NfsdSpeciesSpecific

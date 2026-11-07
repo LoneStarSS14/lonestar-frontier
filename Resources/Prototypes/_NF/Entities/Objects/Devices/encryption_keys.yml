@@ -27,13 +27,15 @@
     channels:
     - Nfsd
     defaultChannel: Nfsd
+  # LoneStar start
   - type: Item
     sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
   - type: Sprite
     sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
     layers:
-    - state: lsrd_key
-    - state: lsrd_label
+    - state: crypt_lsrd
+    - state: label_lsrd
+  # LoneStar end
 
 - type: entity
   parent: EncryptionKey

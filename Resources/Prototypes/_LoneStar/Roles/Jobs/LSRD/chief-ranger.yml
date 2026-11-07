@@ -1,0 +1,100 @@
+- type: job
+  id: LSChiefRanger
+  name: job-name-ls-chief-ranger
+  description: job-description-ls-chief-ranger
+  supervisors: job-supervisors-ls-tsf-war-director
+  playTimeTracker: JobLSChiefRanger
+  requireAdminNotify: true
+  whitelisted: true
+  requirements:
+    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+    #   department: LSLSRD
+    #   time: 360000 # 100 hours
+    # - !type:RoleTimeRequirement
+    #   role: JobLSEnforcer
+    #   time: 144000 # 40 hours
+  weight: 60
+  displayWeight: 60
+  startingGear: LSChiefRanger
+  icon: "JobIconLSChiefRanger"
+  # Frontier's fields
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  # Common v
+  accessGroups: # TODO: Not AA
+  - AllAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #lsrd specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsNfsd
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  #RPI TODO: Add SR-like RPI modifiers.
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierSheriff
+
+- type: entity
+  id: SpawnPointLSChiefRanger
+  parent: SpawnPointJobBase
+  name: chief ranger spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSChiefRanger
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear # TODO: sort out their inventory parity with MAA
+  id: LSChiefRanger
+  equipment:
+    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket2: NFWeaponEnergyPistolLaserX01Multiphase
+  storage:
+    back:
+    - NfsdTechFabFlatpack
+    - Multitool
+    - HoloprojectorNfsd
+    - DoorRemoteNfsd
+    - BaseSecurityUplinkRadioSheriff
+    - RubberStampSheriff
+    - ShipVoucherNfsdBailiff
+
+- type: roleLoadout
+  id: JobLSChiefRanger
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSLSRDChiefRangerPDA
+  # LSRD v
+  - LSLSRDFactionLeaderJumpsuit
+  - LSLSRDFactionLeaderOuterClothing
+  - LSLSRDFactionForcedOuterClothing
+  - LSLSRDFactionLeaderShoes
+  - LSLSRDFactionLeaderGloves
+  - LSLSRDFactionLeaderHead
+  - LSLSRDFactionLeaderMask
+  - LSLSRDFactionLeaderEyes
+  - LSLSRDFactionLeaderNeck
+  - LSLSRDFactionLeaderEars
+  - LSLSRDFactionLeaderBackpack
+  - LSLSRDFactionLeaderBelt
+  - LSLSRDFactionLeaderWallet
+  - LSLSRDFactionLeaderEncryptionKey
+  - LSLSRDFactionLeaderImplanter
+  # Common v
+  # - ContractorBoxSurvival
+  - ContractorCartridge
+  # - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  # - NFSpeciesSpecific
+  # Temporary / TODO: replace
+  - NfsdBoxSurvival
+  - SeniorOfficerBackpackItems
+  - NfsdSpeciesSpecific

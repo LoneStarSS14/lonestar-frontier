@@ -30,20 +30,19 @@
 #            Valet: [ -1, -1 ]
             NFJanitor: [ -1, -1 ]
             MailCarrier: [ -1, -1 ]
-            Sheriff: [ -1, -1]
-            Bailiff: [ -1, -1]
-            SeniorOfficer: [ -1, -1]
-            Brigmedic: [ -1, -1]
-            NFDetective: [ -1, -1]
-            Deputy: [ -1, -1]
-            Cadet: [ -1, -1]
-            PublicAffairsLiaison: [ -1, -1]
-#            NFPirateCaptain: [ -1, -1]
-#            NFPirateFirstMate: [ -1, -1]
-            NFPirate: [ -1, -1]
-            Smuggler: [-1, -1] # Coyote
-            Escort: [-1, -1] # Coyote
-#            Prisoner: [ -1, -1] # Coyote
-            RipperDoc: [ -1, -1] # Coyote
+            # LoneStar v
+            GuildLeader: [ -1, -1 ]
+            LSEscort: [ -1, -1 ]
+            LSRipperDoc: [ -1, -1 ]
+            LSSpy: [ -1, -1 ]
+            LSSmuggler: [ -1, -1 ]
+            LSFreelancerPirate: [ -1, -1 ]
+            LSMasterAtArms: [ -1, -1 ]
+            LSClerk: [ -1, -1 ]
+            LSCorpsman: [ -1, -1 ]
+            LSDetective: [ -1, -1 ]
+            LSRetrievalOfficer: [ -1, -1 ]
+            LSEnforcer: [ -1, -1 ]
+            LSChiefRanger: [ -1, -1 ]
         - type: StationDeadDrop
           maxDeadDrops: 20 # Testing
