@@ -7,7 +7,7 @@
   - type: RCD
     isShipyardRCD: true
     availablePrototypes:
-    - Deconstruct
+    # - Deconstruct
     # Stained Glass
     - ChristianStainedGlassSmall1
     - ChristianStainedGlassSmall2
