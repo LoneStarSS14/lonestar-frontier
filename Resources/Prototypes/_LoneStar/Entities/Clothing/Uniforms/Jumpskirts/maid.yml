@@ -64,7 +64,7 @@
           inhand-right-secondary: Dress
 
 #region Colorable (Starts black/white)
-- type: entity # Vanderlin
+- type: entity
   parent: BaseClothingUniformJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtMaidVictorian
   name: victorian maid dress
@@ -74,7 +74,7 @@
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-victorian.rsi
 
-- type: entity # Hardlight's
+- type: entity
   parent: BaseClothingUniformJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtMaidPoofy
   name: poofy maid uniform

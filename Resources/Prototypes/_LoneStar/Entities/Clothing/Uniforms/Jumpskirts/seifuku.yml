@@ -4,7 +4,7 @@
   id: BaseClothingUniformJumpskirtSeifuku
   abstract: true
   name: seifuku
-  description: Stylish and comfortable seifuku.
+  description: An old terran styled outfit, bread not included.
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/seifuku.rsi
@@ -77,8 +77,6 @@
 - type: entity
   parent: BaseClothingUniformJumpskirtSeifuku
   id: ClothingUniformJumpskirtSeifukuRandom
-  name: seifuku
-  description: Stylish and comfortable seifuku.
   components:
   - type: ColorableClothing
     randomOnCreation: true

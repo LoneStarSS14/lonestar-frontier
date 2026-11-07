@@ -3,7 +3,8 @@
   parent: ClothingUniformSkirtBase
   id: BaseClothingUniformJumpskirtSchool
   abstract: true
-  name: school skirt (colorable)
+  name: school skirt
+  description: A stylish and comfortable school skirt.
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/school-skirt.rsi
@@ -68,8 +69,6 @@
 - type: entity
   parent: BaseClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolRandom
-  name: school skirt
-  description: Stylish and comfortable school skirt.
   components:
   - type: ColorableClothing
     randomOnCreation: true
@@ -79,7 +78,6 @@
   parent: BaseClothingUniformJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolBlue
   name: school skirt (blue)
-  description: Stylish and comfortable school skirt.
   components:
   - type: Sprite
     layers:

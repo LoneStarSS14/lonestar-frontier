@@ -293,7 +293,8 @@
 - type: entity
   parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseDualColor ]
   id: ClothingUniformJumpskirtPlaidDress
-  name: plaid dress
+  name: plaid "pencil" style skirt
+  description: Coffee stains not included.
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/dress-plaid.rsi
