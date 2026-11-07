@@ -1,0 +1,53 @@
+- type: entity
+  parent: [ DVSmartFridge, PunkHoloGraffitiOverlay ]
+  id: LSPunkSmartFridge
+  name: Bang Wiz
+  description: Keeps ya iron cold and fresh, choom!
+  components:
+  - type: DatasetVocalizer
+    dataset: SmartFridgeAds
+  - type: Sprite
+    sprite: Structures/Machines/smartfridge.rsi
+    snapCardinals: true
+    layers:
+    - state: smartfridge
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: smartfridge_door
+      map: ["enum.StorageVisualLayers.Door"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      visible: false
+    - sprite: _NF/Structures/Holo/graffiti/simple.rsi
+      state: holograffiti01
+      map: [ "graffiti" ]
+      shader: unshaded
+      scale: 0.7, 0.7
+  - type: PointLight
+    radius: 1.5
+    energy: 2
+    color: "#85daeb"
+  - type: RgbLightController
+    layers: [ 0 ]
+  - type: SmartFridge
+    whitelist:
+      components:
+      - Gun
+      - BallisticAmmoProvider
+      - Projectile
+      - CartridgeAmmo
+      - PowerCell
+      - MeleeWeapon
+      - Blocking
+      - WeaponCaseInsertable
+      tags:
+      - Cartridge
+    blacklist:
+      tags:
+      - Screwdriver
+      - Crowbar
+      - JawsOfLife
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Machine
+    board: LSPunkSmartFridgeCircuitboard
