@@ -6,3 +6,12 @@
     state: guildleader
   jobName: job-name-guildleader
   allowSelection: false # Prevents impersonation with agent IDs etc.
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconTSFMarine
+  icon:
+    sprite: /Textures/_LoneStar/Interface/Misc/job_icons.rsi
+    state: tsfmarine
+  jobName: job-name-tsfmc
+  allowSelection: false # Prevents possible "stolen valor" RP

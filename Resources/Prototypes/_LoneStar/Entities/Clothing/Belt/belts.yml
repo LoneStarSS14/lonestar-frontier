@@ -1,0 +1,13 @@
+
+- type: entity
+  parent: [NFClothingBeltStorageHolsterBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageHolsterBase, BaseSyndicateContraband<BaseC1Contraband
+  id: ClothingBeltTSFMCWebbing
+  name: chest rig
+  description: A set of tactical webbing. The flag of the Trans-Solarian Federation is displayed on the back.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Belt/tsfmc_webbing.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Belt/tsfmc_webbing.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
