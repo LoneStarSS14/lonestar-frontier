@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from Meridian Rift at https://github.com/Aphelion-Moon/Meridian-Rift/tree/5cec204da500c61fa94fdaf5c5a138764920e2c1 (/obj/item/clothing/under/dress/skirt/plaid, /datum/greyscale_config/plaidskirt), which carries the art of NovaSector, Skyrat-tg and tgstation. Converted for Wolfgate by Tools/_WF/MeridianClothing/port.py., modified by Archee",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "icon-primary"
+        },
+        {
+            "name": "icon-secondary"
+        },
+        {
+            "name": "equipped-INNERCLOTHING",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-primary",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-secondary",
+            "directions": 4
+        }
+    ]
+}
