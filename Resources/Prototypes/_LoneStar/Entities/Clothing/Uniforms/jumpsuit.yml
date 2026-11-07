@@ -44,6 +44,10 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/gorkas.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpsuit/gorkas.rsi
+  - type: ColorableClothing
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
 
 #region foldables
 - type: entity
