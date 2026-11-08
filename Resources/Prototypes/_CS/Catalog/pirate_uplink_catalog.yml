@@ -261,28 +261,9 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Escort
-
-- type: listing
-  id: UplinkMachineLiberator
-  name: uplink-pirate-pmag-name
-  description: uplink-pirate-pmag-desc
-  productEntity: Pmag
-  icon: { sprite: _NF/Objects/Tools/pmag.rsi, state: icon }
-  cost:
-    Doubloon: 10
-  categories:
-  - UplinkPirateDeception
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-  - !type:BuyerJobCondition # Coyote
-    whitelist:
-    - Smuggler
 
 - type: listing
   id: UplinkFreelancerAccessBreaker
