@@ -55,8 +55,8 @@
 
 - type: palette
   id: LSSilks
-  name: Silks
   hidden: true
+  name: Silks
   colors:
     SilkTrue: "#FFFFFF"
     SilkWhite: "#F8F6F3"
