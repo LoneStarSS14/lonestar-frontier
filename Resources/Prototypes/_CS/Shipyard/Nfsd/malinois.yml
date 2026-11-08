@@ -13,7 +13,7 @@
   price: 39500 #Appraised at 35k, LL1 30% markup but 45k makes this unappealing compared to a hypnos.
   category: Medium
   group: Security
-  access: Sergeant
+  access: LsrdShipyard
   shuttlePath: /Maps/_CS/Shuttles/Nfsd/malinois.yml
   class:
   - Detainment

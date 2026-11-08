@@ -16,7 +16,7 @@
   price: 34500
   category: Medium
   group: Security
-  access: Sergeant
+  access: LsrdShipyard # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml
   class:
   - Pursuit
