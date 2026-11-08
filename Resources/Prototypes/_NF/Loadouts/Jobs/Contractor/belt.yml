@@ -205,6 +205,7 @@
 
 - type: loadout
   id: ContractorClothingBeltPunkRandomized
+  tags: [Colorable] # LoneStar
   name: punk belt (random)
   effects:
   - !type:GroupLoadoutEffect
@@ -215,6 +216,7 @@
 
 - type: loadout
   id: ContractorClothingBeltPunkRandomizedFilled
+  tags: [Colorable] # LoneStar
   name: punk belt (random, filled)
   effects:
   - !type:GroupLoadoutEffect

@@ -1,11 +1,13 @@
 # Head
 - type: loadout
   id: JesterHat
+  tags: [Colorable] # LoneStar
   equipment:
     head: ClothingHeadHatJester
 
 - type: loadout
   id: JesterAltHat
+  tags: [Colorable] # LoneStar
   equipment:
     head: ClothingHeadHatJesterAlt
 
@@ -22,11 +24,13 @@
 
 - type: loadout
   id: JesterSuit
+  tags: [Colorable] # LoneStar
   equipment:
     jumpsuit: ClothingUniformJumpsuitJester
 
 - type: loadout
   id: JesterAltSuit
+  tags: [Colorable] # LoneStar
   equipment:
     jumpsuit: ClothingUniformJumpsuitJesterAlt
 
@@ -54,6 +58,7 @@
 
 - type: loadout
   id: JesterShoes
+  tags: [Colorable] # LoneStar
   equipment:
     shoes: ClothingShoesJester
 

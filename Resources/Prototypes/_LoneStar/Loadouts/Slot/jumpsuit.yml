@@ -1,0 +1,27 @@
+
+- type: loadout
+  id: ContractorClothingUniformJumpsuitCasual
+  tags: [Colorable]
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCasual
+
+- type: loadout
+  id: ContractorClothingUniformJumpskirtCasual
+  tags: [Colorable]
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCasual
+
+- type: loadout
+  id: LSClothingUniformJumpskirtSchool
+  tags: [Colorable]
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSchoolColorable

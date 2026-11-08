@@ -206,38 +206,42 @@
         map: [ "jacket_overlay" ]
         shader: unshaded
   - type: ColorableClothing #LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
+    mappedColors:
+      Primary: Cyberpunk
+      Secondary: Cyberpunk
+      Glow: CyberpunkNeon
     available:
     - jacket_main:
-        base_OuterClothing_jacket_01: Cyberpunk
-        base_OuterClothing_jacket_02: Cyberpunk
-        base_OuterClothing_jacket_04: Cyberpunk
-        base_OuterClothing_jacket_05: Cyberpunk
-        base_OuterClothing_jacket_06: Cyberpunk
+        base_OuterClothing_jacket_01: Primary
+        base_OuterClothing_jacket_02: Primary
+        base_OuterClothing_jacket_04: Primary
+        base_OuterClothing_jacket_05: Primary
+        base_OuterClothing_jacket_06: Primary
       jacket_decor:
-        decor_base_OuterClothing_jacket_01: Cyberpunk
-        decor_base_OuterClothing_jacket_02: Cyberpunk
-        decor_base_OuterClothing_jacket_03: Cyberpunk
-        decor_base_OuterClothing_jacket_04: Cyberpunk
-        decor_base_OuterClothing_jacket_05: Cyberpunk
+        decor_base_OuterClothing_jacket_01: Secondary
+        decor_base_OuterClothing_jacket_02: Secondary
+        decor_base_OuterClothing_jacket_03: Secondary
+        decor_base_OuterClothing_jacket_04: Secondary
+        decor_base_OuterClothing_jacket_05: Secondary
       jacket_overlay:
-        overlay_base_OuterClothing_jacket_01: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_02: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_03: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_04: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_05: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_06: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_07: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_08: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_09: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_10: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_11: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_12: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_13: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_14: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_15: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_16: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_17: CyberpunkNeon
+        overlay_base_OuterClothing_jacket_01: Glow
+        overlay_base_OuterClothing_jacket_02: Glow
+        overlay_base_OuterClothing_jacket_03: Glow
+        overlay_base_OuterClothing_jacket_04: Glow
+        overlay_base_OuterClothing_jacket_05: Glow
+        overlay_base_OuterClothing_jacket_06: Glow
+        overlay_base_OuterClothing_jacket_07: Glow
+        overlay_base_OuterClothing_jacket_08: Glow
+        overlay_base_OuterClothing_jacket_09: Glow
+        overlay_base_OuterClothing_jacket_10: Glow
+        overlay_base_OuterClothing_jacket_11: Glow
+        overlay_base_OuterClothing_jacket_12: Glow
+        overlay_base_OuterClothing_jacket_13: Glow
+        overlay_base_OuterClothing_jacket_14: Glow
+        overlay_base_OuterClothing_jacket_15: Glow
+        overlay_base_OuterClothing_jacket_16: Glow
+        overlay_base_OuterClothing_jacket_17: Glow
         mask_null: ""
 
 - type: entity
@@ -263,12 +267,15 @@
       - state: decor_base_OuterClothing_letterman
         map: [ "jacket_decor" ]
   - type: ColorableClothing #LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
+    mappedColors:
+      Primary: Cyberpunk
+      Secondary: Cyberpunk
     available:
     - jacket_main:
-        base_OuterClothing_letterman: Cyberpunk
+        base_OuterClothing_letterman: Primary
       jacket_decor:
-        decor_base_OuterClothing_letterman: Cyberpunk
+        decor_base_OuterClothing_letterman: Secondary
 
 - type: entity
   id: ClothingOuterCoatRandomized
@@ -299,36 +306,40 @@
         map: [ "jacket_overlay" ]
         shader: unshaded
   - type: ColorableClothing #LoneStar
-    denyReroll: false #LoneStar
+    denyReroll: false
+    mappedColors:
+      Primary: Cyberpunk
+      Secondary: Cyberpunk
+      Glow: CyberpunkNeon
     available:
     - jacket_main:
-        base_OuterClothing_jacket_03: Cyberpunk
-        base_OuterClothing_jacket_07: Cyberpunk
-        base_OuterClothing_jacket_08: Cyberpunk
-        base_OuterClothing_jacket_09: Cyberpunk
+        base_OuterClothing_jacket_03: Primary
+        base_OuterClothing_jacket_07: Primary
+        base_OuterClothing_jacket_08: Primary
+        base_OuterClothing_jacket_09: Primary
       jacket_decor:
-        decor_base_OuterClothing_jacket_01: Cyberpunk
-        decor_base_OuterClothing_jacket_02: Cyberpunk
-        decor_base_OuterClothing_jacket_03: Cyberpunk
-        decor_base_OuterClothing_jacket_04: Cyberpunk
-        decor_base_OuterClothing_jacket_05: Cyberpunk
+        decor_base_OuterClothing_jacket_01: Secondary
+        decor_base_OuterClothing_jacket_02: Secondary
+        decor_base_OuterClothing_jacket_03: Secondary
+        decor_base_OuterClothing_jacket_04: Secondary
+        decor_base_OuterClothing_jacket_05: Secondary
       jacket_overlay:
-        overlay_base_OuterClothing_jacket_01: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_02: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_03: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_04: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_05: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_06: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_07: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_08: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_09: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_10: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_11: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_12: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_13: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_14: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_15: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_16: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_17: CyberpunkNeon
-        overlay_base_OuterClothing_jacket_18: CyberpunkNeon # This one works only with coats
+        overlay_base_OuterClothing_jacket_01: Glow
+        overlay_base_OuterClothing_jacket_02: Glow
+        overlay_base_OuterClothing_jacket_03: Glow
+        overlay_base_OuterClothing_jacket_04: Glow
+        overlay_base_OuterClothing_jacket_05: Glow
+        overlay_base_OuterClothing_jacket_06: Glow
+        overlay_base_OuterClothing_jacket_07: Glow
+        overlay_base_OuterClothing_jacket_08: Glow
+        overlay_base_OuterClothing_jacket_09: Glow
+        overlay_base_OuterClothing_jacket_10: Glow
+        overlay_base_OuterClothing_jacket_11: Glow
+        overlay_base_OuterClothing_jacket_12: Glow
+        overlay_base_OuterClothing_jacket_13: Glow
+        overlay_base_OuterClothing_jacket_14: Glow
+        overlay_base_OuterClothing_jacket_15: Glow
+        overlay_base_OuterClothing_jacket_16: Glow
+        overlay_base_OuterClothing_jacket_17: Glow
+        overlay_base_OuterClothing_jacket_18: Glow
         mask_null: ""

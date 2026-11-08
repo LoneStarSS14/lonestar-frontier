@@ -27,6 +27,7 @@
 
 - type: loadout
   id: MercenaryClothingOuterArmoredJacketPMCPunkRandomized
+  tags: [Colorable] # LoneStar
   name: punk PMC armored jacket (random)
   hideEffects:
   - !type:GroupLoadoutEffect

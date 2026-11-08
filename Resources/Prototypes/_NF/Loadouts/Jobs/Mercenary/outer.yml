@@ -54,6 +54,7 @@
 
 - type: loadout # Punkish (Randomized visuals)
   id: MercenaryClothingOuterArmorPunkRandomized
+  tags: [Colorable] # LoneStar
   name: punk webvest (random)
   hideEffects:
   - !type:GroupLoadoutEffect

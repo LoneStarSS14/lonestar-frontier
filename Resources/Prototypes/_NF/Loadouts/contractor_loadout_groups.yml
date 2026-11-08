@@ -24,36 +24,36 @@
   - ContractorClothingUniformJumpskirtMedicalDoctor
   - ContractorClothingUniformJumpsuitScientist
   - ContractorClothingUniformJumpskirtScientist
-  - ContractorClothingUniformJumpsuitColorWhite
-  - ContractorClothingUniformJumpskirtColorWhite
-  - ContractorClothingUniformJumpsuitColorBlack
-  - ContractorClothingUniformJumpskirtColorBlack
-  - ContractorClothingUniformJumpsuitColorBlue
-  - ContractorClothingUniformJumpskirtColorBlue
-  - ContractorClothingUniformJumpsuitColorYellow
-  - ContractorClothingUniformJumpskirtColorYellow
-  - ContractorClothingUniformJumpsuitColorGreen
-  - ContractorClothingUniformJumpskirtColorGreen
-  - ContractorClothingUniformJumpsuitColorOrange
-  - ContractorClothingUniformJumpskirtColorOrange
-  - ContractorClothingUniformJumpsuitColorRed
-  - ContractorClothingUniformJumpskirtColorRed
-  - ContractorClothingUniformJumpsuitColorMaroon
-  - ContractorClothingUniformJumpskirtColorMaroon
-  - ContractorClothingUniformJumpsuitColorPurple
-  - ContractorClothingUniformJumpskirtColorPurple
-  - ContractorClothingUniformJumpsuitColorLightBrown
-  - ContractorClothingUniformJumpskirtColorLightBrown
-  - ContractorClothingUniformJumpsuitColorBrown
-  - ContractorClothingUniformJumpskirtColorBrown
-  - ContractorClothingUniformJumpsuitColorPink
-  - ContractorClothingUniformJumpskirtColorPink
-  - ContractorClothingUniformJumpsuitColorDarkBlue
-  - ContractorClothingUniformJumpskirtColorDarkBlue
-  - ContractorClothingUniformJumpsuitColorDarkGreen
-  - ContractorClothingUniformJumpskirtColorDarkGreen
-  - ContractorClothingUniformJumpsuitColorTeal
-  - ContractorClothingUniformJumpskirtColorTeal
+  # - ContractorClothingUniformJumpsuitColorWhite
+  # - ContractorClothingUniformJumpskirtColorWhite
+  # - ContractorClothingUniformJumpsuitColorBlack
+  # - ContractorClothingUniformJumpskirtColorBlack
+  # - ContractorClothingUniformJumpsuitColorBlue
+  # - ContractorClothingUniformJumpskirtColorBlue
+  # - ContractorClothingUniformJumpsuitColorYellow
+  # - ContractorClothingUniformJumpskirtColorYellow
+  # - ContractorClothingUniformJumpsuitColorGreen
+  # - ContractorClothingUniformJumpskirtColorGreen
+  # - ContractorClothingUniformJumpsuitColorOrange
+  # - ContractorClothingUniformJumpskirtColorOrange
+  # - ContractorClothingUniformJumpsuitColorRed
+  # - ContractorClothingUniformJumpskirtColorRed
+  # - ContractorClothingUniformJumpsuitColorMaroon
+  # - ContractorClothingUniformJumpskirtColorMaroon
+  # - ContractorClothingUniformJumpsuitColorPurple
+  # - ContractorClothingUniformJumpskirtColorPurple
+  # - ContractorClothingUniformJumpsuitColorLightBrown
+  # - ContractorClothingUniformJumpskirtColorLightBrown
+  # - ContractorClothingUniformJumpsuitColorBrown
+  # - ContractorClothingUniformJumpskirtColorBrown
+  # - ContractorClothingUniformJumpsuitColorPink
+  # - ContractorClothingUniformJumpskirtColorPink
+  # - ContractorClothingUniformJumpsuitColorDarkBlue
+  # - ContractorClothingUniformJumpskirtColorDarkBlue
+  # - ContractorClothingUniformJumpsuitColorDarkGreen
+  # - ContractorClothingUniformJumpskirtColorDarkGreen
+  # - ContractorClothingUniformJumpsuitColorTeal
+  # - ContractorClothingUniformJumpskirtColorTeal
   - ContractorClothingUniformColorRainbow
   - ContractorClothingUniformJumpskirtColorRainbow
   - ContractorClothingUniformJumpsuitHawaiBlack
@@ -61,12 +61,14 @@
   - ContractorClothingUniformJumpsuitHawaiRed
   - ContractorClothingUniformJumpsuitHawaiYellow
   - ContractorClothingUniformJumpsuitFlannel
-  - ContractorClothingUniformJumpsuitCasualBlue
-  - ContractorClothingUniformJumpskirtCasualBlue
-  - ContractorClothingUniformJumpsuitCasualPurple
-  - ContractorClothingUniformJumpskirtCasualPurple
-  - ContractorClothingUniformJumpsuitCasualRed
-  - ContractorClothingUniformJumpskirtCasualRed
+  - ContractorClothingUniformJumpsuitCasual
+  - ContractorClothingUniformJumpskirtCasual
+  # - ContractorClothingUniformJumpsuitCasualBlue
+  # - ContractorClothingUniformJumpskirtCasualBlue
+  # - ContractorClothingUniformJumpsuitCasualPurple
+  # - ContractorClothingUniformJumpskirtCasualPurple
+  # - ContractorClothingUniformJumpsuitCasualRed
+  # - ContractorClothingUniformJumpskirtCasualRed
   - ContractorClothingUniformJumpsuitBartenderPurple
   - ContractorClothingUniformJumpsuitEngineeringHazard
   - ContractorClothingUniformJumpsuitAtmosCasual
@@ -181,7 +183,7 @@
   - ContractorClothingUniformJumpsuitMilitaryChemistry
   - ContractorClothingUniformJumpsuitMilitaryVirology
   - ContractorClothingUniformJumpsuitMilitaryGenetics
- # - ContractorClothingUniformJumpsuitMilitaryCMO # Temp removed for MOM. Will return if replaced.
+  # - ContractorClothingUniformJumpsuitMilitaryCMO # Temp removed for MOM. Will return if replaced.
   - ContractorClothingUniformJumpsuitMilitaryScientist
   - ContractorClothingUniformJumpsuitMilitaryResearchDirector
   - ContractorClothingUniformJumpsuitMilitaryService
@@ -216,6 +218,7 @@
   - ContractorClothingUniformJumpskirtBlueTurtleneckDress
   - ContractorClothingUniformJumpskirtYellowTurtleneckDress
   - ContractorClothingUniformJumpskirtYellowOldDress
+  - LSClothingUniformJumpskirtSchool
   fallbacks:
   - ContractorClothingUniformJumpsuitColorGrey
   - ContractorClothingUniformJumpskirtColorGrey
@@ -447,14 +450,14 @@
   - ContractorClothingShoesTourist
   - ContractorClothingShoesBootsSalvage
   - ContractorClothingShoesChef
-  - ContractorClothingShoesColorBlue
-  - ContractorClothingShoesColorOrange
-  - ContractorClothingShoesColorPurple
-  - ContractorClothingShoesColorRed
-  - ContractorClothingShoesColorBrown
-  - ContractorClothingShoesColorGreen
-  - ContractorClothingShoesColorYellow
-  - ContractorClothingShoesColorWhite
+  # - ContractorClothingShoesColorBlue
+  # - ContractorClothingShoesColorOrange
+  # - ContractorClothingShoesColorPurple
+  # - ContractorClothingShoesColorRed
+  # - ContractorClothingShoesColorBrown
+  # - ContractorClothingShoesColorGreen
+  # - ContractorClothingShoesColorYellow
+  # - ContractorClothingShoesColorWhite
   - ContractorClothingShoesBootsMag
   - ContractorClothingShoesBootsWinter
   - ContractorClothingShoesBootsWinterAtmos
