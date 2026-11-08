@@ -28,7 +28,7 @@
     - type: SpecialSectorStationRecord # must be given on spawn
       recordGeneration: FalseRecord
     - type: DisableSuitSensors
-    - type: IsPirate
+    - type: IsFreelancer
   - !type:AddRpiJobModifierSpecial
     modifiersToAdd:
     - rpiJobModifierPirate

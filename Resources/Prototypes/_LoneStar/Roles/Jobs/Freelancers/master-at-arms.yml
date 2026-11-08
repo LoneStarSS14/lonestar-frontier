@@ -33,7 +33,7 @@
   #freelancer specific
   - !type:AddComponentSpecial
     components:
-    - type: IsPirate
+    - type: IsFreelancer
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   #RPI TODO: Add SR-like RPI modifiers.

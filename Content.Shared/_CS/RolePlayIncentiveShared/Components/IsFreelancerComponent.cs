@@ -4,16 +4,16 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared._CS;
 
 /// <summary>
-/// This is to make you classed as pirate!!!
+/// Marks an entity as a freelancer.
 /// </summary>
 [RegisterComponent]
-public sealed partial class IsPirateComponent : Component;
+public sealed partial class IsFreelancerComponent : Component;
 
 /// <summary>
-/// This is make to have u be classed as NFSd!!!
+/// Marks an entity as LSRD personnel.
 /// </summary>
 [RegisterComponent]
-public sealed partial class IsNfsdComponent : Component
+public sealed partial class IsLsrdComponent : Component
 {
     /// <summary>
     /// How worth are they
