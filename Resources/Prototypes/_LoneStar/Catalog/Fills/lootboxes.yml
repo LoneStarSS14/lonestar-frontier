@@ -1,0 +1,23 @@
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootboxRangedRare
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponRangedRare
+
+- type: entity
+  parent: MarkerBasePlaceFree
+  id: LSSpawnLootboxMeleeRare
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    offset: 0.25
+    table: !type:AllSelector
+      children:
+      - !type:NestedSelector
+        tableId: LSTableGeneralWeaponMeleeRare
