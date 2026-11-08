@@ -34,9 +34,14 @@ public sealed partial class ColorizerWindow : DefaultWindow
         CompositionPreview.SpriteOffset = false;
     }
 
-    public void UpdateState(ColorizerBoundUserInterfaceState state)
+    public void UpdateState(ColorizerBoundUserInterfaceState state, EntityUid? previewEntity = null, bool allowRandomize = true)
     {
-        CompositionPreview.SetEntity(state.Target);
+        if (previewEntity is { } entity)
+            CompositionPreview.SetEntity(entity);
+        else
+            CompositionPreview.SetEntity(state.Target);
+
+        RandomizeButton.Visible = allowRandomize;
         PaletteList.RemoveAllChildren();
         VariantList.RemoveAllChildren();
         _selectedColors.Clear();
@@ -96,41 +101,31 @@ public sealed partial class ColorizerWindow : DefaultWindow
             {
                 _selectedColors[key] = (currentColorName, currentColor);
             }
-            else
-            {
-                foreach (var (colorName, color) in colors)
-                {
-                    _selectedColors[key] = (colorName, color);
-                    break;
-                }
-            }
 
             var colorRow = new BoxContainer
             {
                 Orientation = BoxContainer.LayoutOrientation.Horizontal,
             };
 
-            if (_selectedColors.TryGetValue(key, out var selected))
+            var rows = Math.Max(MinimumPreviewRows, (colors.Count + SwatchColumns - 1) / SwatchColumns);
+            var previewHeight = rows * SwatchHeight + (rows - 1) * SwatchRowSpacing;
+            var hasActiveColor = _selectedColors.TryGetValue(key, out var selected);
+            var preview = new PanelContainer
             {
-                var rows = Math.Max(MinimumPreviewRows, (colors.Count + SwatchColumns - 1) / SwatchColumns);
-                var previewHeight = rows * SwatchHeight + (rows - 1) * SwatchRowSpacing;
-                var preview = new PanelContainer
-                {
-                    ToolTip = selected.Name,
-                    MinSize = new Vector2(32, previewHeight),
-                    SetSize = new Vector2(32, previewHeight),
-                    PanelOverride = new StyleBoxFlat(selected.Color),
-                };
-                _colorPreviews.Add(key, preview);
-                colorRow.AddChild(preview);
-                colorRow.AddChild(new PanelContainer
-                {
-                    StyleClasses = { "LowDivider" },
-                    MinSize = new Vector2(1, previewHeight),
-                    SetSize = new Vector2(1, previewHeight),
-                    Margin = new Thickness(3, 0),
-                });
-            }
+                ToolTip = hasActiveColor ? selected.Name : null,
+                MinSize = new Vector2(32, previewHeight),
+                SetSize = new Vector2(32, previewHeight),
+                PanelOverride = new StyleBoxFlat(hasActiveColor ? selected.Color : Color.FromHex("#444444")),
+            };
+            _colorPreviews.Add(key, preview);
+            colorRow.AddChild(preview);
+            colorRow.AddChild(new PanelContainer
+            {
+                StyleClasses = { "LowDivider" },
+                MinSize = new Vector2(1, previewHeight),
+                SetSize = new Vector2(1, previewHeight),
+                Margin = new Thickness(3, 0),
+            });
 
             foreach (var (colorName, color) in colors)
             {
@@ -187,7 +182,10 @@ public sealed partial class ColorizerWindow : DefaultWindow
 
     private void UpdateColorPreview(string key, string colorName, Color color)
     {
-        var preview = _colorPreviews[key];
+        if (!_colorPreviews.TryGetValue(key, out var preview))
+            return;
+
+        preview.Visible = true;
         preview.ToolTip = colorName;
         preview.PanelOverride = new StyleBoxFlat(color);
     }

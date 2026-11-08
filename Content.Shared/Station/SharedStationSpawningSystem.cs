@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._LoneStar.Sprite;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
@@ -9,6 +10,7 @@ using Content.Shared.Roles;
 using Content.Shared.Storage;
 using Content.Shared.Storage.EntitySystems;
 using Robust.Shared.Collections;
+using Robust.Shared.Maths;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
@@ -60,7 +62,8 @@ public abstract class SharedStationSpawningSystem : EntitySystem
                     continue;
                 }
 
-                EquipStartingGear(entity, loadoutProto, raiseEvent: false);
+                EquipStartingGear(entity, loadoutProto, raiseEvent: false, selectedColors: items.InitialColors,
+                    selectedVariants: items.InitialVariants);
                 equippedItems.Add(loadoutProto.ID); // Frontier
             }
 
@@ -120,25 +123,36 @@ public abstract class SharedStationSpawningSystem : EntitySystem
 
     public void EquipStartingGear(EntityUid entity, LoadoutPrototype loadout, bool raiseEvent = true)
     {
-        EquipStartingGear(entity, loadout.StartingGear, raiseEvent);
-        EquipStartingGear(entity, (IEquipmentLoadout)loadout, raiseEvent);
+        EquipStartingGear(entity, loadout, raiseEvent, null, null);
+    }
+
+    public void EquipStartingGear(EntityUid entity, LoadoutPrototype loadout, bool raiseEvent,
+        IReadOnlyDictionary<string, Color>? selectedColors,
+        IReadOnlyDictionary<string, string>? selectedVariants = null)
+    {
+        EquipStartingGear(entity, loadout.StartingGear, raiseEvent, selectedColors, selectedVariants);
+        EquipStartingGear(entity, (IEquipmentLoadout)loadout, raiseEvent, selectedColors, selectedVariants);
     }
 
     /// <summary>
     /// <see cref="EquipStartingGear(Robust.Shared.GameObjects.EntityUid,System.Nullable{Robust.Shared.Prototypes.ProtoId{Content.Shared.Roles.StartingGearPrototype}},bool)"/>
     /// </summary>
-    public void EquipStartingGear(EntityUid entity, ProtoId<StartingGearPrototype>? startingGear, bool raiseEvent = true)
+    public void EquipStartingGear(EntityUid entity, ProtoId<StartingGearPrototype>? startingGear, bool raiseEvent = true,
+        IReadOnlyDictionary<string, Color>? initialColors = null,
+        IReadOnlyDictionary<string, string>? initialVariants = null)
     {
         PrototypeManager.TryIndex(startingGear, out var gearProto);
-        EquipStartingGear(entity, gearProto, raiseEvent);
+        EquipStartingGear(entity, gearProto, raiseEvent, initialColors, initialVariants);
     }
 
     /// <summary>
     /// <see cref="EquipStartingGear(Robust.Shared.GameObjects.EntityUid,System.Nullable{Robust.Shared.Prototypes.ProtoId{Content.Shared.Roles.StartingGearPrototype}},bool)"/>
     /// </summary>
-    public void EquipStartingGear(EntityUid entity, StartingGearPrototype? startingGear, bool raiseEvent = true)
+    public void EquipStartingGear(EntityUid entity, StartingGearPrototype? startingGear, bool raiseEvent = true,
+        IReadOnlyDictionary<string, Color>? initialColors = null,
+        IReadOnlyDictionary<string, string>? initialVariants = null)
     {
-        EquipStartingGear(entity, (IEquipmentLoadout?)startingGear, raiseEvent);
+        EquipStartingGear(entity, (IEquipmentLoadout?)startingGear, raiseEvent, initialColors, initialVariants);
     }
 
     /// <summary>
@@ -147,7 +161,9 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     /// <param name="entity">Entity to load out.</param>
     /// <param name="startingGear">Starting gear to use.</param>
     /// <param name="raiseEvent">Should we raise the event for equipped. Set to false if you will call this manually</param>
-    public void EquipStartingGear(EntityUid entity, IEquipmentLoadout? startingGear, bool raiseEvent = true)
+    public void EquipStartingGear(EntityUid entity, IEquipmentLoadout? startingGear, bool raiseEvent = true,
+        IReadOnlyDictionary<string, Color>? initialColors = null,
+        IReadOnlyDictionary<string, string>? initialVariants = null)
     {
         if (startingGear == null)
             return;
@@ -162,6 +178,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
                 if (!string.IsNullOrEmpty(equipmentStr))
                 {
                     var equipmentEntity = EntityManager.SpawnEntity(equipmentStr, xform.Coordinates);
+                    SetInitialColorableSelection(equipmentEntity, initialColors, initialVariants);
                     InventorySystem.TryEquip(entity, equipmentEntity, slot.Name, silent: true, force: true);
                 }
             }
@@ -174,6 +191,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
             foreach (var prototype in inhand)
             {
                 var inhandEntity = EntityManager.SpawnEntity(prototype, coords);
+                SetInitialColorableSelection(inhandEntity, initialColors, initialVariants);
 
                 if (_handsSystem.TryGetEmptyHand(entity, out var emptyHand, handsComponent))
                 {
@@ -196,10 +214,10 @@ public abstract class SharedStationSpawningSystem : EntitySystem
                     InventorySystem.TryGetSlotEntity(entity, slotName, out var slotEnt, inventoryComponent: inventoryComp) &&
                     _storageQuery.TryComp(slotEnt, out var storage))
                 {
-
                     foreach (var entProto in entProtos)
                     {
                         var spawnedEntity = Spawn(entProto, coords);
+                        SetInitialColorableSelection(spawnedEntity, initialColors, initialVariants);
 
                         _storage.Insert(slotEnt.Value, spawnedEntity, out _, storageComp: storage, playSound: false);
                     }
@@ -212,6 +230,45 @@ public abstract class SharedStationSpawningSystem : EntitySystem
             var ev = new StartingGearEquippedEvent(entity);
             RaiseLocalEvent(entity, ref ev);
         }
+    }
+
+    private void SetInitialColorableSelection(EntityUid uid, IReadOnlyDictionary<string, Color>? colors,
+        IReadOnlyDictionary<string, string>? variants)
+    {
+        if ((colors == null || colors.Count == 0) && (variants == null || variants.Count == 0))
+            return;
+
+        if (!HasComp<ColorableClothingComponent>(uid))
+            return;
+
+        if (TryComp<ColorableClothingInitialColorsComponent>(uid, out var initialColors))
+        {
+            if (colors != null)
+            {
+                foreach (var (key, color) in colors)
+                    initialColors.MappedColors[key] = color;
+            }
+
+            if (variants != null)
+            {
+                foreach (var (layer, state) in variants)
+                    initialColors.SelectedVariants[layer] = state;
+            }
+
+            var ev = new ColorableClothingInitialColorsChangedEvent();
+            RaiseLocalEvent(uid, ev);
+            return;
+        }
+
+        EntityManager.AddComponent(uid, new ColorableClothingInitialColorsComponent
+        {
+            MappedColors = colors == null
+                ? new Dictionary<string, Color>()
+                : new Dictionary<string, Color>(colors),
+            SelectedVariants = variants == null
+                ? new Dictionary<string, string>()
+                : new Dictionary<string, string>(variants),
+        });
     }
 
     /// <summary>

@@ -963,6 +963,18 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("profile_loadout_id");
 
+                    b.Property<string>("Colors")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValue("{}")
+                        .HasColumnName("colors");
+
+                    b.Property<string>("Variants")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValue("{}")
+                        .HasColumnName("variants");
+
                     b.Property<string>("LoadoutName")
                         .IsRequired()
                         .HasColumnType("TEXT")

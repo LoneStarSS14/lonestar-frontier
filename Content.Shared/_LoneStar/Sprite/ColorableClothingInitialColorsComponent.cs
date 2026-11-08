@@ -8,4 +8,11 @@ public sealed partial class ColorableClothingInitialColorsComponent : Component
     /// </summary>
     [DataField("mappedColors")]
     public Dictionary<string, Color> MappedColors = new();
+
+    [DataField("selectedVariants")]
+    public Dictionary<string, string> SelectedVariants = new();
+}
+
+public sealed class ColorableClothingInitialColorsChangedEvent : EntityEventArgs
+{
 }

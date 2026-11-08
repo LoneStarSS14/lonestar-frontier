@@ -130,6 +130,58 @@ public sealed class ColorableClothingSystem : SharedColorableClothingSystem
         return true;
     }
 
+    public bool SetVariant(EntityUid uid, ColorableClothingComponentT component, string layer, string state)
+    {
+        string? paletteKey = null;
+        var found = false;
+        foreach (var group in component.Available)
+        {
+            if (!group.TryGetValue(layer, out var states) || !states.TryGetValue(state, out paletteKey))
+                continue;
+
+            found = true;
+            break;
+        }
+
+        if (!found)
+            return false;
+
+        var color = default(Color?);
+        if (component.Selected.TryGetValue(layer, out var selected))
+        {
+            string? previousPaletteKey = null;
+            foreach (var group in component.Available)
+            {
+                if (!group.TryGetValue(layer, out var states) ||
+                    !states.TryGetValue(selected.State, out previousPaletteKey))
+                    continue;
+
+                break;
+            }
+
+            if (previousPaletteKey == paletteKey)
+            {
+                color = selected.Color;
+            }
+        }
+
+        if (color == null && !string.IsNullOrEmpty(paletteKey))
+        {
+            var paletteId = component.MappedColors.TryGetValue(paletteKey, out var mappedPaletteId)
+                ? mappedPaletteId
+                : paletteKey;
+            if (_prototype.TryIndex<ColorPalettePrototype>(paletteId, out var palette) &&
+                palette.Colors.Count > 0)
+            {
+                color = palette.Colors.Values.First();
+            }
+        }
+
+        component.Selected[layer] = (state, color);
+        Dirty(uid, component);
+        return true;
+    }
+
     private void OnGetState(EntityUid uid, ColorableClothingComponentT component, ref ComponentGetState args)
     {
         args.State = new ColorableClothingColorComponentState()

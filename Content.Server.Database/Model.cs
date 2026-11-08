@@ -94,6 +94,14 @@ namespace Content.Server.Database
                 .HasForeignKey(e => e.ProfileLoadoutGroupId)
                 .IsRequired();
 
+            modelBuilder.Entity<ProfileLoadout>()
+                .Property(e => e.Colors)
+                .HasDefaultValue("{}");
+
+            modelBuilder.Entity<ProfileLoadout>()
+                .Property(e => e.Variants)
+                .HasDefaultValue("{}");
+
             modelBuilder.Entity<Job>()
                 .HasIndex(j => j.ProfileId);
 
@@ -575,6 +583,16 @@ namespace Content.Server.Database
         /// Corresponding loadout prototype.
         /// </summary>
         public string LoadoutName { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Selected mapped colors encoded as a JSON object of color keys to hex values.
+        /// </summary>
+        public string Colors { get; set; } = "{}";
+
+        /// <summary>
+        /// Selected colorable clothing layer states encoded as a JSON object.
+        /// </summary>
+        public string Variants { get; set; } = "{}";
 
         /*
          * Insert extra data here like custom descriptions or colors or whatever.

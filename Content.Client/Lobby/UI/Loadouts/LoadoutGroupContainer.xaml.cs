@@ -22,9 +22,11 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
     private Dictionary<string, bool> _openedGroups = new();
 
     private readonly LoadoutGroupPrototype _groupProto;
+    public List<LoadoutContainer> SelectedColorableLoadouts { get; } = new();
 
     public event Action<ProtoId<LoadoutPrototype>>? OnLoadoutPressed;
     public event Action<ProtoId<LoadoutPrototype>>? OnLoadoutUnpressed;
+    public event Action<Loadout>? OnLoadoutColorsChanged;
 
     public LoadoutGroupContainer(HumanoidCharacterProfile profile, RoleLoadout loadout, LoadoutGroupPrototype groupProto, ICommonSession session, IDependencyCollection collection)
     {
@@ -42,6 +44,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
     {
         var protoMan = collection.Resolve<IPrototypeManager>();
         var loadoutSystem = collection.Resolve<IEntityManager>().System<LoadoutSystem>();
+        SelectedColorableLoadouts.Clear();
         RestrictionsContainer.DisposeAllChildren();
 
         if (_groupProto.MinLimit > 0)
@@ -240,7 +243,14 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         var enabled = loadout.IsValid(profile, session, proto.ID, collection, out var reason);
 
-        var cont = new LoadoutContainer(proto, !enabled, reason);
+        var selectedLoadout = selected.FirstOrDefault(e => e.Prototype == proto.ID);
+        var cont = new LoadoutContainer(proto, !enabled, reason, selectedLoadout, () =>
+        {
+            if (selectedLoadout != null)
+                OnLoadoutColorsChanged?.Invoke(selectedLoadout);
+        });
+        if (cont.CanColorize)
+            SelectedColorableLoadouts.Add(cont);
 
         cont.Text = string.IsNullOrEmpty(proto.Name) ? loadoutSystem.GetName(proto) : proto.Name; // Frontier: allow overriding loadout names
 

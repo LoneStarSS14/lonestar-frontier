@@ -46,7 +46,12 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
 
         foreach (var selected in SelectedLoadouts)
         {
-            weh.SelectedLoadouts.Add(selected.Key, new List<Loadout>(selected.Value));
+            weh.SelectedLoadouts.Add(selected.Key, selected.Value.Select(loadout => new Loadout
+            {
+                Prototype = loadout.Prototype,
+                InitialColors = new Dictionary<string, Color>(loadout.InitialColors),
+                InitialVariants = new Dictionary<string, string>(loadout.InitialVariants),
+            }).ToList());
         }
 
         weh.EntityName = EntityName;

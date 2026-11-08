@@ -1324,6 +1324,16 @@ namespace Content.Client.Lobby.UI
                 ReloadPreview();
             };
 
+            _loadoutWindow.OnLoadoutColorsChanged += _ =>
+            {
+                if (Profile == null)
+                    return;
+
+                Profile = Profile.WithLoadout(roleLoadout);
+                SetDirty();
+                ReloadPreview();
+            };
+
             JobOverride = jobProto;
             ReloadPreview();
 

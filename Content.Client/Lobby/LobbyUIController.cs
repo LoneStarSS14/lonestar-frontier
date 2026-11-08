@@ -382,7 +382,8 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
                 if (!_prototypeManager.TryIndex(loadout.Prototype, out var loadoutProto))
                     continue;
 
-                _spawn.EquipStartingGear(uid, loadoutProto);
+                _spawn.EquipStartingGear(uid, loadoutProto, raiseEvent: true, selectedColors: loadout.InitialColors,
+                    selectedVariants: loadout.InitialVariants);
             }
         }
     }

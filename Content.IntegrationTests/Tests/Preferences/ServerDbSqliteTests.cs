@@ -450,6 +450,53 @@ namespace Content.IntegrationTests.Tests.Preferences
         }
 
         [Test]
+        public async Task TestLoadoutColorsPersist()
+        {
+            var pair = await PoolManager.GetServerClient();
+            var db = GetDb(pair.Server);
+            var username = NewUserId();
+            var roleLoadout = new RoleLoadout("ColorTestRole");
+            roleLoadout.SelectedLoadouts["ColorTestGroup"] =
+            [
+                new Loadout
+                {
+                    Prototype = "ColorTestLoadout",
+                    InitialColors = new Dictionary<string, Color>
+                    {
+                        ["Shirt"] = Color.FromHex("#123456"),
+                        ["Ribbon"] = Color.FromHex("#abcdef"),
+                    },
+                    InitialVariants = new Dictionary<string, string>
+                    {
+                        ["uniform-equipped"] = "equipped-alt",
+                    },
+                },
+            ];
+            var profile = CharlieCharlieson().WithLoadout(roleLoadout);
+
+            var changedRoleLoadout = roleLoadout.Clone();
+            changedRoleLoadout.SelectedLoadouts["ColorTestGroup"][0].InitialColors["Shirt"] = Color.FromHex("#654321");
+            Assert.That(profile.MemberwiseEquals(profile.WithLoadout(changedRoleLoadout)), Is.False);
+            var changedVariantRoleLoadout = roleLoadout.Clone();
+            changedVariantRoleLoadout.SelectedLoadouts["ColorTestGroup"][0].InitialVariants["uniform-equipped"] = "equipped-other";
+            Assert.That(profile.MemberwiseEquals(profile.WithLoadout(changedVariantRoleLoadout)), Is.False);
+
+            await db.InitPrefsAsync(username, profile);
+            var saved = await db.GetPlayerPreferencesAsync(username);
+            var savedLoadout = ((HumanoidCharacterProfile) saved!.SelectedCharacter)
+                .Loadouts["ColorTestRole"].SelectedLoadouts["ColorTestGroup"][0];
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(savedLoadout.InitialColors["Shirt"], Is.EqualTo(Color.FromHex("#123456")));
+                Assert.That(savedLoadout.InitialColors["Ribbon"], Is.EqualTo(Color.FromHex("#abcdef")));
+                Assert.That(savedLoadout.InitialVariants["uniform-equipped"], Is.EqualTo("equipped-alt"));
+            });
+
+            await pair.CleanReturnAsync();
+        }
+
+        [Test]
         public async Task TestDeleteCharacter()
         {
             var pair = await PoolManager.GetServerClient();
