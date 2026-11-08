@@ -21,10 +21,6 @@ shuttle-console-service-flag-InterdictionsDisabled-label = Disable
 shuttle-console-service-flag-Services-shortform = ♫
 shuttle-console-service-flag-Trade-shortform = $
 shuttle-console-service-flag-Social-shortform = ☺
-# LoneStar start: Assorted UI Fixes
-shuttle-console-service-flag-InterdictionsEnabled-shortform = ⚔
-shuttle-console-service-flag-InterdictionsDisabled-shortform = ☮
-# LoneStar end
 
 shuttle-console-service-flag-Services-description = Services (e.g. medical, dining, engineering) offered onboard.
 shuttle-console-service-flag-Trade-description = Goods sold onboard.
