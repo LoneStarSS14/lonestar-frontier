@@ -11,14 +11,12 @@
   displayWeight: 10
   startingGear: LSClerkGear
   icon: "JobIconLSClerk"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Common v
   accessGroups:
-  - GeneralAccess
-  - GeneralNfsdAccess
+  - LsrdGeneralAccess
   special:
+  # Common v
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

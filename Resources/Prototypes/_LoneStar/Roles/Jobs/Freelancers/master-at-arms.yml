@@ -17,16 +17,14 @@
   displayWeight: 60
   startingGear: LSMasterAtArmsGear
   icon: "JobIconLSMasterAtArms"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Common v
-  access: # TODO: Add special 'war leader access', use command? unsure.
-  - Pirate
-  - BlackMarket
   accessGroups:
-  - GeneralAccess
+  - FreelancerGeneralAccess
+  - FreelancerCombatantAccess
+  - FreelancerCommandAccess
   special:
+  # Common v
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

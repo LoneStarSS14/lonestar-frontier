@@ -15,15 +15,15 @@
   displayWeight: 20
   startingGear: LSCorpsmanGear
   icon: "JobIconLSCorpsman"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Common v
   access:
-  - Brigmedic
+  - Brigmedic # TODO: Make this into a 'medic' access shared by both factions medical players
   accessGroups:
-  - GeneralNfsdAccess
+  - LsrdGeneralAccess
+  - LsrdCombatantAccess # TODO: remove this after corpsman arent considered combat anymore
   special:
+  # Common v
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
