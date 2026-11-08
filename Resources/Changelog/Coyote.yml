@@ -4690,3 +4690,16 @@ Entries:
   id: 513
   time: '2026-11-08T12:08:50.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/312
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        3 new maid dresses, gorkas jumpsuit, overalls jumpsuit/skirt, cardigan
+        dress, wedding dress, seifuku, plaid pencil skirt, 'primal' dress.
+    - type: Tweak
+      message: some maid dresses have been renamed for discernability.
+    - type: Remove
+      message: removed schoolskirt colored variants from the clothes mate.
+  id: 514
+  time: '2026-11-08T12:10:41.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/306
