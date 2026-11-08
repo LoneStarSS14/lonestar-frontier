@@ -6,7 +6,7 @@
   price: 24220
   category: Small
   group: Security
-  access: Security
+  access: LsrdShipyard # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/templar.yml
   guidebookPage: Null
   class:

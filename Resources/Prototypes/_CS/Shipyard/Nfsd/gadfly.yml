@@ -13,7 +13,7 @@
   price: 39000 # 26180 apppraised, LL2 50% markup
   category: Medium
   group: Security
-  access: Brigmedic
+  access: LsrdShipyard
   shuttlePath: /Maps/_CS/Shuttles/Nfsd/gadfly.yml
   guidebookPage: Null
   class:
