@@ -11,15 +11,12 @@
   displayWeight: 10
   startingGear: LSEscortGear
   icon: "JobIconLSEscort"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Common v
-  access:
-  - Pirate
   accessGroups:
-  - GeneralAccess
+  - FreelancerGeneralAccess
   special:
+  # Common v
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

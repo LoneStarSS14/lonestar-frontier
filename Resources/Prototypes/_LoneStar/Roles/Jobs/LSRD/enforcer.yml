@@ -13,13 +13,13 @@
   displayWeight: 50
   startingGear: LSEnforcerGear
   icon: "JobIconLSEnforcer"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Common v
   accessGroups:
-  - GeneralNfsdAccess
+  - LsrdGeneralAccess
+  - LsrdCombatantAccess
   special:
+  # Common v
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

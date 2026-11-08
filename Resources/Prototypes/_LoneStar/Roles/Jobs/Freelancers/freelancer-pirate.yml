@@ -13,16 +13,13 @@
   displayWeight: 50
   startingGear: LSFreelancerPirateGear
   icon: "JobIconLSFreelancerPirate"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Common v
-  access:
-  - Pirate
-  - BlackMarket
   accessGroups:
-  - GeneralAccess
+  - FreelancerGeneralAccess
+  - FreelancerCombatantAccess
   special:
+  # Common v
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

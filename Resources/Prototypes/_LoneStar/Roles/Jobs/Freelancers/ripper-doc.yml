@@ -15,15 +15,12 @@
   displayWeight: 20
   startingGear: LSRipperDocGear
   icon: "JobIconLSRipperDoc"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Common v
-  access:
-  - Pirate
   accessGroups:
-  - GeneralAccess
+  - FreelancerGeneralAccess
   special:
+  # Common v
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

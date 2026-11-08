@@ -13,15 +13,15 @@
   displayWeight: 30
   startingGear: LSDetectiveGear
   icon: "JobIconLSDetective"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Common v
   access:
   - Detective
   accessGroups:
-  - GeneralNfsdAccess
+  - LsrdGeneralAccess
+  - LsrdCombatantAccess
   special:
+  # Common v
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

@@ -17,12 +17,13 @@
   displayWeight: 60
   startingGear: LSChiefRanger
   icon: "JobIconLSChiefRanger"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
+  accessGroups:
+  - LsrdGeneralAccess
+  - LsrdCombatantAccess
+  - LsrdCommandAccess
   # Common v
-  accessGroups: # TODO: Not AA
-  - AllAccess
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday

@@ -13,16 +13,13 @@
   displayWeight: 30
   startingGear: LSSpyGear
   icon: "JobIconLSSpy"
-  # Frontier's fields
   hideConsoleVisibility: true
   newPlayerMessage: false
-  # Common v
-  access:
-  - Pirate
-  - BlackMarket # TODO: Consider if spys should get 'combat' vessels
   accessGroups:
-  - GeneralAccess
+  - FreelancerGeneralAccess
+  - FreelancerCombatantAccess
   special:
+  # Common v
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
