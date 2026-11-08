@@ -4681,3 +4681,12 @@ Entries:
   id: 512
   time: '2026-11-06T09:14:11.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/304
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Construction boxes and Treasure chests can now hold large items like
+        dinosaur heads and flatpacks.
+  id: 513
+  time: '2026-11-08T12:08:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/312
