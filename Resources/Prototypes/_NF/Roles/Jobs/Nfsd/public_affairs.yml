@@ -32,7 +32,7 @@
   - !type:AddComponentSpecial
     components:
     - type: CommandStaff
-    - type: IsNfsd
+    - type: IsLsrd
       worth: 2
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday

@@ -29,7 +29,7 @@
     prototype: FrontierBirthdayGift
   - !type:AddComponentSpecial
     components:
-    - type: IsNfsd
+    - type: IsLsrd
 
 - type: startingGear
   abstract: true

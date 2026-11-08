@@ -26,7 +26,7 @@
   #freelancer specific
   - !type:AddComponentSpecial
     components:
-    - type: IsPirate # TODO: Rename this to IsFreelancer
+    - type: IsFreelancer
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   #RPI

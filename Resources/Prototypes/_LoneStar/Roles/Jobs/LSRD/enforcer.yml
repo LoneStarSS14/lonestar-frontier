@@ -26,7 +26,7 @@
   #lsrd specific
   - !type:AddComponentSpecial
     components:
-    - type: IsNfsd
+    - type: IsLsrd
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
   #RPI

@@ -30,7 +30,7 @@
   #freelancer specific
   - !type:AddComponentSpecial
     components:
-    - type: IsPirate
+    - type: IsFreelancer
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   #RPI

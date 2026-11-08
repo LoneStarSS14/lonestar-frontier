@@ -25,7 +25,7 @@
   #lsrd specific
   - !type:AddComponentSpecial
     components:
-    - type: IsNfsd # TODO: Rename this to IsLsrd
+    - type: IsLsrd
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   #RPI
