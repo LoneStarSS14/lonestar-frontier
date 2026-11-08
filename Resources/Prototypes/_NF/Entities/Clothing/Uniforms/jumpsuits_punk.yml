@@ -132,6 +132,10 @@
         map: [ "jumpsuit_decor" ]
   - type: ColorableClothing # LoneStar
     denyReroll: false
+    mappedColors:
+      Primary: Cyberpunk
+      Secondary: Cyberpunk
+      Tertiary: Cyberpunk
     available:
       - jumpsuit_top:
           base_torso_croptop_armless: Primary
@@ -190,6 +194,9 @@
         map: [ "jumpsuit_decor" ]
   - type: ColorableClothing # LoneStar
     denyReroll: false
+    mappedColors:
+      Secondary: Cyberpunk
+      Tertiary: Cyberpunk
     available:
       - jumpsuit_bottom:
           base_leg_standard: Secondary
@@ -221,6 +228,9 @@
         map: [ "jumpsuit_decor" ]
   - type: ColorableClothing # LoneStar
     denyReroll: false
+    mappedColors:
+      Secondary: Cyberpunk
+      Tertiary: Cyberpunk
     available:
       - jumpsuit_bottom:
           base_leg_short: Secondary
