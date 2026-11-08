@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Content.Server.Database.Migrations.Sqlite;
 
+// LoneStar: Persist user-selected colorable layer variants for loadout items.
 [DbContext(typeof(SqliteServerDbContext))]
 [Migration("20261108024000_LoadoutSelectedVariants")]
 public sealed class LoadoutSelectedVariants : Migration

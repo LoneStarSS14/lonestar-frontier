@@ -94,6 +94,7 @@ namespace Content.Server.Database
                 .HasForeignKey(e => e.ProfileLoadoutGroupId)
                 .IsRequired();
 
+            // LoneStar start, configure persisted loadout appearance selections.
             modelBuilder.Entity<ProfileLoadout>()
                 .Property(e => e.Colors)
                 .HasDefaultValue("{}");
@@ -101,6 +102,7 @@ namespace Content.Server.Database
             modelBuilder.Entity<ProfileLoadout>()
                 .Property(e => e.Variants)
                 .HasDefaultValue("{}");
+            // LoneStar end
 
             modelBuilder.Entity<Job>()
                 .HasIndex(j => j.ProfileId);
@@ -584,6 +586,7 @@ namespace Content.Server.Database
         /// </summary>
         public string LoadoutName { get; set; } = string.Empty;
 
+        // LoneStar start, store the selected color and layer state for each loadout.
         /// <summary>
         /// Selected mapped colors encoded as a JSON object of color keys to hex values.
         /// </summary>

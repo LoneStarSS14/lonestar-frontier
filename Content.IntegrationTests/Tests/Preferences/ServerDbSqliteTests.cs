@@ -449,6 +449,7 @@ namespace Content.IntegrationTests.Tests.Preferences
             await pair.CleanReturnAsync();
         }
 
+        // LoneStar start, verify color and variant preference persistence.
         [Test]
         public async Task TestLoadoutColorsPersist()
         {
@@ -495,6 +496,7 @@ namespace Content.IntegrationTests.Tests.Preferences
 
             await pair.CleanReturnAsync();
         }
+        // LoneStar end
 
         [Test]
         public async Task TestDeleteCharacter()

@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using Content.Server.Station.Systems;
-using Content.Shared._LoneStar.Sprite;
+using Content.Shared._LoneStar.Sprite; // LoneStar
 using Content.Shared.Inventory;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
 using Robust.Shared.GameObjects;
-using Robust.Shared.Maths;
+using Robust.Shared.Maths; // LoneStar
 using Robust.Shared.Prototypes;
 
 namespace Content.IntegrationTests.Tests.Preferences;
@@ -18,14 +18,17 @@ public sealed class LoadoutTests
 - type: playTimeTracker
   id: PlayTimeLoadoutTester
 
+# LoneStar start
 - type: playTimeTracker
   id: PlayTimeColorLoadoutTester
+# LoneStar end
 
 - type: loadout
   id: TestJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorGrey
 
+# LoneStar start
 - type: loadout
   id: TestColorableJumpsuit
   tags: [Colorable]
@@ -43,6 +46,7 @@ public sealed class LoadoutTests
   tags: [Colorable]
   equipment:
     jumpsuit: ClothingUniformRandomPunkCroptop
+# LoneStar end
 
 - type: loadoutGroup
   id: LoadoutTesterJumpsuit
@@ -55,6 +59,7 @@ public sealed class LoadoutTests
   groups:
   - LoadoutTesterJumpsuit
 
+# LoneStar start
 - type: loadoutGroup
   id: LoadoutTesterColorableJumpsuit
   name: generic-unknown
@@ -67,14 +72,17 @@ public sealed class LoadoutTests
   id: JobLoadoutColorTester
   groups:
   - LoadoutTesterColorableJumpsuit
+# LoneStar end
 
 - type: job
   id: LoadoutTester
   playTimeTracker: PlayTimeLoadoutTester
 
+# LoneStar start
 - type: job
   id: LoadoutColorTester
   playTimeTracker: PlayTimeColorLoadoutTester
+# LoneStar end
 ";
 
     private readonly Dictionary<string, EntProtoId> _expectedEquipment = new()
@@ -131,6 +139,7 @@ public sealed class LoadoutTests
         await pair.CleanReturnAsync();
     }
 
+    // LoneStar start, verify color and variant selection in loadout spawning.
     [Test]
     public async Task TestColorableLoadoutSelectedColors()
     {
@@ -311,4 +320,5 @@ public sealed class LoadoutTests
 
         await pair.CleanReturnAsync();
     }
+    // LoneStar end
 }

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Content.Server.Database.Migrations.Postgres;
 
+// LoneStar: Persist user-selected colorizer colors for loadout items.
 [DbContext(typeof(PostgresServerDbContext))]
 [Migration("20261107145005_LoadoutSelectedColors")]
 public sealed class LoadoutSelectedColors : Migration

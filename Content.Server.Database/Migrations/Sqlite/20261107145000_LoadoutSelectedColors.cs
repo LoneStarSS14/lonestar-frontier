@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Content.Server.Database.Migrations.Sqlite;
 
+// LoneStar: Persist user-selected colorizer colors for loadout items.
 [DbContext(typeof(SqliteServerDbContext))]
 [Migration("20261107145000_LoadoutSelectedColors")]
 public sealed class LoadoutSelectedColors : Migration

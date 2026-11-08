@@ -1018,6 +1018,7 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    // LoneStar start, persist loadout colorizer selections.
                     b.Property<string>("Colors")
                         .IsRequired()
                         .HasColumnType("text")
@@ -1029,6 +1030,7 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasDefaultValue("{}")
                         .HasColumnName("variants");
+                    // LoneStar end
 
                     b.Property<string>("LoadoutName")
                         .IsRequired()

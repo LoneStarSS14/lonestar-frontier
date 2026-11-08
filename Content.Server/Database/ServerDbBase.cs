@@ -294,6 +294,7 @@ namespace Content.Server.Database
                     var groupLoadouts = loadout.SelectedLoadouts.GetOrNew(group.GroupName);
                     foreach (var profLoadout in group.Loadouts)
                     {
+                        // LoneStar start, restore the saved appearance selections.
                         var colors = JsonSerializer.Deserialize<Dictionary<string, string>>(profLoadout.Colors) ?? new();
                         groupLoadouts.Add(new Loadout()
                         {
@@ -301,6 +302,7 @@ namespace Content.Server.Database
                             InitialColors = colors.ToDictionary(color => color.Key, color => Color.FromHex(color.Value)),
                             InitialVariants = JsonSerializer.Deserialize<Dictionary<string, string>>(profLoadout.Variants) ?? new(),
                         });
+                        // LoneStar end
                     }
                 }
 
@@ -428,10 +430,12 @@ namespace Content.Server.Database
                         profileGroup.Loadouts.Add(new ProfileLoadout()
                         {
                             LoadoutName = loadout.Prototype,
+                            // LoneStar start, save the selected color and variant maps.
                             Colors = JsonSerializer.Serialize(loadout.InitialColors.ToDictionary(
                                 color => color.Key,
                                 color => color.Value.ToHex())),
                             Variants = JsonSerializer.Serialize(loadout.InitialVariants),
+                            // LoneStar end
                         });
                     }
 

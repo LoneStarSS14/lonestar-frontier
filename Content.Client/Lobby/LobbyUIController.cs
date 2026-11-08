@@ -382,8 +382,7 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
                 if (!_prototypeManager.TryIndex(loadout.Prototype, out var loadoutProto))
                     continue;
 
-                _spawn.EquipStartingGear(uid, loadoutProto, raiseEvent: true, selectedColors: loadout.InitialColors,
-                    selectedVariants: loadout.InitialVariants);
+                _spawn.EquipStartingGear(uid, loadoutProto, raiseEvent: true, selectedColors: loadout.InitialColors, selectedVariants: loadout.InitialVariants); // LoneStar: Apply saved colorizer selections to the lobby preview.
             }
         }
     }

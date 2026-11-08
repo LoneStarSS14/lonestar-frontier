@@ -1324,6 +1324,7 @@ namespace Content.Client.Lobby.UI
                 ReloadPreview();
             };
 
+            // LoneStar start, persist colorizer edits to the active profile.
             _loadoutWindow.OnLoadoutColorsChanged += _ =>
             {
                 if (Profile == null)
@@ -1333,6 +1334,7 @@ namespace Content.Client.Lobby.UI
                 SetDirty();
                 ReloadPreview();
             };
+            // LoneStar end
 
             JobOverride = jobProto;
             ReloadPreview();

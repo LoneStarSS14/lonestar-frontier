@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Shared._LoneStar.Sprite;
+using Content.Shared._LoneStar.Sprite; // LoneStar
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
@@ -10,7 +10,7 @@ using Content.Shared.Roles;
 using Content.Shared.Storage;
 using Content.Shared.Storage.EntitySystems;
 using Robust.Shared.Collections;
-using Robust.Shared.Maths;
+using Robust.Shared.Maths; // LoneStar
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
@@ -62,6 +62,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
                     continue;
                 }
 
+                // LoneStar: Pass saved appearance selections to the spawned loadout gear.
                 EquipStartingGear(entity, loadoutProto, raiseEvent: false, selectedColors: items.InitialColors,
                     selectedVariants: items.InitialVariants);
                 equippedItems.Add(loadoutProto.ID); // Frontier
@@ -121,6 +122,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
         }
     }
 
+    // LoneStar: Pass saved appearance selections through equipment loadout spawning.
     public void EquipStartingGear(EntityUid entity, LoadoutPrototype loadout, bool raiseEvent = true)
     {
         EquipStartingGear(entity, loadout, raiseEvent, null, null);
@@ -134,6 +136,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
         EquipStartingGear(entity, (IEquipmentLoadout)loadout, raiseEvent, selectedColors, selectedVariants);
     }
 
+    // LoneStar: Pass saved appearance selections through the starting gear prototype overload.
     /// <summary>
     /// <see cref="EquipStartingGear(Robust.Shared.GameObjects.EntityUid,System.Nullable{Robust.Shared.Prototypes.ProtoId{Content.Shared.Roles.StartingGearPrototype}},bool)"/>
     /// </summary>
@@ -145,6 +148,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
         EquipStartingGear(entity, gearProto, raiseEvent, initialColors, initialVariants);
     }
 
+    // LoneStar: Pass saved appearance selections through the starting gear overload.
     /// <summary>
     /// <see cref="EquipStartingGear(Robust.Shared.GameObjects.EntityUid,System.Nullable{Robust.Shared.Prototypes.ProtoId{Content.Shared.Roles.StartingGearPrototype}},bool)"/>
     /// </summary>
@@ -155,6 +159,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
         EquipStartingGear(entity, (IEquipmentLoadout?)startingGear, raiseEvent, initialColors, initialVariants);
     }
 
+    // LoneStar: Apply saved appearance selections to each spawned equipment item.
     /// <summary>
     /// Equips starting gear onto the given entity.
     /// </summary>
@@ -178,7 +183,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
                 if (!string.IsNullOrEmpty(equipmentStr))
                 {
                     var equipmentEntity = EntityManager.SpawnEntity(equipmentStr, xform.Coordinates);
-                    SetInitialColorableSelection(equipmentEntity, initialColors, initialVariants);
+                    SetInitialColorableSelection(equipmentEntity, initialColors, initialVariants); // LoneStar
                     InventorySystem.TryEquip(entity, equipmentEntity, slot.Name, silent: true, force: true);
                 }
             }
@@ -191,7 +196,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
             foreach (var prototype in inhand)
             {
                 var inhandEntity = EntityManager.SpawnEntity(prototype, coords);
-                SetInitialColorableSelection(inhandEntity, initialColors, initialVariants);
+                SetInitialColorableSelection(inhandEntity, initialColors, initialVariants); // LoneStar
 
                 if (_handsSystem.TryGetEmptyHand(entity, out var emptyHand, handsComponent))
                 {
@@ -217,7 +222,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
                     foreach (var entProto in entProtos)
                     {
                         var spawnedEntity = Spawn(entProto, coords);
-                        SetInitialColorableSelection(spawnedEntity, initialColors, initialVariants);
+                        SetInitialColorableSelection(spawnedEntity, initialColors, initialVariants); // LoneStar
 
                         _storage.Insert(slotEnt.Value, spawnedEntity, out _, storageComp: storage, playSound: false);
                     }
@@ -232,6 +237,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
         }
     }
 
+    // LoneStar: Attach the selected appearance data before the spawned item is initialized.
     private void SetInitialColorableSelection(EntityUid uid, IReadOnlyDictionary<string, Color>? colors,
         IReadOnlyDictionary<string, string>? variants)
     {
