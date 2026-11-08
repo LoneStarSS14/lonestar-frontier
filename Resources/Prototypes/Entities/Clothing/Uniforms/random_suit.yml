@@ -33,7 +33,7 @@
       - state: mask_null
         map: [ "overlay" ]
   - type: ColorableClothing # LoneStar
-    mappedColors:
+    mappedColors: # TODO: loadouts show all mapped colors even when they are not used. fix.
       Torso: NTInteriorDesign
       Leg: NTInteriorDesign
       Decor: NTInteriorDesign

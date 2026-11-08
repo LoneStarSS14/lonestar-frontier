@@ -1,3 +1,5 @@
+## LoneStar changes: all entries now use mapped colors defined by the ClothingUniformRandom parent
+
 #region base
 - type: entity
   id: ClothingUniformRandomPunkBase

@@ -24,7 +24,7 @@
   - ContractorClothingUniformJumpskirtMedicalDoctor
   - ContractorClothingUniformJumpsuitScientist
   - ContractorClothingUniformJumpskirtScientist
-  # - ContractorClothingUniformJumpsuitColorWhite
+  # - ContractorClothingUniformJumpsuitColorWhite # LoneStar
   # - ContractorClothingUniformJumpskirtColorWhite
   # - ContractorClothingUniformJumpsuitColorBlack
   # - ContractorClothingUniformJumpskirtColorBlack
@@ -61,9 +61,9 @@
   - ContractorClothingUniformJumpsuitHawaiRed
   - ContractorClothingUniformJumpsuitHawaiYellow
   - ContractorClothingUniformJumpsuitFlannel
-  - ContractorClothingUniformJumpsuitCasual
-  - ContractorClothingUniformJumpskirtCasual
-  # - ContractorClothingUniformJumpsuitCasualBlue
+  - ContractorClothingUniformJumpsuitCasual # LoneStar
+  - ContractorClothingUniformJumpskirtCasual # LoneStar
+  # - ContractorClothingUniformJumpsuitCasualBlue # LoneStar
   # - ContractorClothingUniformJumpskirtCasualBlue
   # - ContractorClothingUniformJumpsuitCasualPurple
   # - ContractorClothingUniformJumpskirtCasualPurple
@@ -218,7 +218,7 @@
   - ContractorClothingUniformJumpskirtBlueTurtleneckDress
   - ContractorClothingUniformJumpskirtYellowTurtleneckDress
   - ContractorClothingUniformJumpskirtYellowOldDress
-  - LSClothingUniformJumpskirtSchool
+  - LSClothingUniformJumpskirtSchool # LoneStar
   fallbacks:
   - ContractorClothingUniformJumpsuitColorGrey
   - ContractorClothingUniformJumpskirtColorGrey
