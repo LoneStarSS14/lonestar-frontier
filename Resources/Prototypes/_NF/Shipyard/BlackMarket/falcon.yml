@@ -29,11 +29,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Kestrel {1}' # Very fake name
+          mapNameTemplate: 'Falcon {1}' # LoneStar
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            NFPirate: [ 0, 0 ]
-#            Escort: [ 0, 0 ]
+        - type: StationJobs # LoneStar
+          availableJobs:
+            Escort: [ 0, 0 ]

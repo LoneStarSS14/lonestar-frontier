@@ -32,11 +32,10 @@
       stationProto: StandardFrontierAntagExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Pathfinder {1}'
+          mapNameTemplate: 'Findsman {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            NFPirate: [ 0, 0 ]
-#            Escort: [ 0, 0 ]
+        - type: StationJobs
+          availableJobs:
+            Escort: [ 0, 0 ]

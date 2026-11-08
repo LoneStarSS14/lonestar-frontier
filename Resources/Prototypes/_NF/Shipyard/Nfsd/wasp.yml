@@ -30,6 +30,6 @@
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            Prisoner: [ 0, 0 ]
+        - type: StationJobs
+          availableJobs:
+            Clerk: [ 0, 0 ]

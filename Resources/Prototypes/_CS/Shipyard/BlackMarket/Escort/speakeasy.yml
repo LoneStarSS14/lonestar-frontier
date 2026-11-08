@@ -30,10 +30,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Kilderkin  {1}'
+          mapNameTemplate: 'Speakeasy {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            Escort: [ 0, 0 ]
+        - type: StationJobs
+          availableJobs:
+            Escort: [ 0, 0 ]

@@ -13,6 +13,7 @@
   price: 47500 # Coyote: pricing GridAppraisal 22640.36 + LL1 x1.15 + TileCost 21250(170x125) = 47286.414
   category: Small
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_CS/Shuttles/BlackMarket/Ripper/bonesaw.yml
   guidebookPage: Null
   class:
@@ -31,7 +32,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Searchlight {1}' # Very fake name
+          mapNameTemplate: 'Bonesaw {1}' # Very fake name
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Escort: [ 0, 0 ]

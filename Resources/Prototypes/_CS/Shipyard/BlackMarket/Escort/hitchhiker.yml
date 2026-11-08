@@ -30,10 +30,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Camper {1}' # Very fake name
+          mapNameTemplate: 'Hitch-hiker {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            Escort: [ 0, 0 ]
+        - type: StationJobs
+          availableJobs:
+            Escort: [ 0, 0 ]
