@@ -31,10 +31,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Hotdog {1}'
+          mapNameTemplate: 'Glizzy {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            Escort: [ 0, 0 ]
+        - type: StationJobs
+          availableJobs:
+            Escort: [ 0, 0 ]

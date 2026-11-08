@@ -39,4 +39,5 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          availableJobs: {}
+          availableJobs:
+            Clerk: [ 0, 0 ]
