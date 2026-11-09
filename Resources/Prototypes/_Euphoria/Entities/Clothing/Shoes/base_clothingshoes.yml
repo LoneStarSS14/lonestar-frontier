@@ -3,6 +3,7 @@
   id: ClothingShoesBaseHeelsNoisy
   parent: ClothingShoesBase
   components:
+  - type: ImbalancingClothing # LoneStar
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepHighHeels

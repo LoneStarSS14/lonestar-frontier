@@ -1,0 +1,8 @@
+
+- type: trait
+  id: SureFooted
+  name: trait-sure-footed-name
+  description: trait-sure-footed-desc
+  category: Disabilities
+  components:
+    - type: BalanceImmunity

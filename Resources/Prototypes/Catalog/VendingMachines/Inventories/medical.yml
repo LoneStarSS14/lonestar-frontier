@@ -12,6 +12,7 @@
     ClothingEyesHudMedical: 2
     ClothingEyesEyepatchHudMedical: 2
     MedicalTrackingImplanter: 4294967295 # Frontier - infinite
+    BalanceImplanter: 10 # LoneStar
     SadTromboneImplanter: 10 # Frontier
     BikeHornImplanter: 10 # Frontier
     LightImplanter: 10 # Frontier

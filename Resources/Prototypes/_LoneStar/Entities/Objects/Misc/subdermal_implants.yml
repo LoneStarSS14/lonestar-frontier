@@ -1,0 +1,12 @@
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: BalanceImplant
+  name: balance implant
+  description: This implant stabilizes the wearer's balance while wearing imbalancing clothing.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+  - type: AddComponentsImplant
+    componentsToAdd:
+    - type: BalanceImmunity
