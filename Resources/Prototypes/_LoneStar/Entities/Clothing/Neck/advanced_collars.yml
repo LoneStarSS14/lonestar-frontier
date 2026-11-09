@@ -20,14 +20,14 @@
 
 - type: entity
   abstract: true
-  parent: [ ClothingNeckCollarBase, BaseAdvancedCollar ]
+  parent: [ BaseAdvancedCollar, ClothingNeckCollarBase ]
   id: ClothingNeckAdvancedCollarBase
   name: advanced collar
   description: A modular collar that can have various functional modules installed.
 
 - type: entity
   abstract: true
-  parent: [ ClothingNeckCollarBaseFoldable, BaseAdvancedCollar ]
+  parent: [ BaseAdvancedCollar, ClothingNeckCollarBaseFoldable ]
   id: ClothingNeckAdvancedCollarFoldableBase
   name: advanced collar
   description: A modular collar that can have various functional modules installed.
