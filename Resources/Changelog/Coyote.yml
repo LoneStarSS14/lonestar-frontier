@@ -4720,3 +4720,18 @@ Entries:
   id: 515
   time: '2026-11-09T10:39:34.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/313
+- author: lexiwitch
+  changes:
+    - type: Fix
+      message: >-
+        Shipyard console made somewhat fancier. Now no more repeatedly buying
+        and selling ships!
+    - type: Tweak
+      message: IFF Console overhauled to look snazzier!
+    - type: Tweak
+      message: >-
+        Pirate Bounty Exchange, Plunder Exchange, Contraband Exchange given room
+        to breathe.
+  id: 516
+  time: '2026-11-09T11:43:38.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/308
