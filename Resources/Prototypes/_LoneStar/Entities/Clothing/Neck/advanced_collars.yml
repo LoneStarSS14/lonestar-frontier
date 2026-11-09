@@ -1,6 +1,103 @@
-#region collars
+#region Base
 - type: entity
-  parent: ClothingNeckCollarBaseFoldable
+  abstract: true
+  id: BaseAdvancedCollar
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
+    equipDelay: 1
+    unequipDelay: 5
+  - type: AdvancedCollar
+    maxModules: 7
+  - type: ContainerContainer
+    containers:
+      collar_module_container: !type:Container
+  - type: Tag # These are all duplicates, shouldnt be chameleon options.
+    tags:
+    - Recyclable
+
+- type: entity
+  abstract: true
+  parent: [ ClothingNeckCollarBase, BaseAdvancedCollar ]
+  id: ClothingNeckAdvancedCollarBase
+  name: advanced collar
+  description: A modular collar that can have various functional modules installed.
+
+- type: entity
+  abstract: true
+  parent: [ ClothingNeckCollarBaseFoldable, BaseAdvancedCollar ]
+  id: ClothingNeckAdvancedCollarFoldableBase
+  name: advanced collar
+  description: A modular collar that can have various functional modules installed.
+
+#region Adv. Collars
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarBlack
+  name: advanced black collar
+  description: A modular black collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarBlue
+  name: advanced blue collar
+  description: A modular blue collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_blue.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_blue.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarPink
+  name: advanced pink collar
+  description: A modular pink collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_pink.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_pink.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarShock
+  name: advanced shock collar
+  description: A modular shock collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_shock.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_shock.rsi
+  - type: ContainerFill
+    containers:
+      collar_module_container:
+        - AdvCollarModuleShock
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarBell
+  name: advanced bell collar
+  description: A modular bell collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_bell.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_bell.rsi
+  - type: ContainerFill
+    containers:
+      collar_module_container:
+        - AdvCollarModuleJingling
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
   id: ClothingNeckAdvancedCollarCowBell
   name: advanced cowbell collar
   description: A way to inform others about the presence of livestock, or just to annoy everyone around you! Can be unfolded to appear thicker.
@@ -9,7 +106,99 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_cowbell.rsi
   - type: Clothing
     sprite: _DEN/Clothing/Neck/Collars/collar_cowbell.rsi
+  - type: ContainerFill
+    containers:
+      collar_module_container:
+        - AdvCollarModuleCowbell
 
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarEpi
+  name: advanced epistemics collar
+  description: A modular epistemics collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_epi.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_epi.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarEngi
+  name: advanced engineering collar
+  description: A modular engineering collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_engi.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_engi.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarLogi
+  name: advanced logistics collar
+  description: A modular logistics collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_logi.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_logi.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarMed
+  name: advanced medical collar
+  description: A modular medical collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_med.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_med.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarSec
+  name: advanced security collar
+  description: A modular security collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_sec.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_sec.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarCmd
+  name: advanced captains collar
+  description: A modular captains collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_cmd.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_cmd.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarCC
+  name: advanced CentCom collar
+  description: A modular CentCom collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_cc.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_cc.rsi
+
+- type: entity
+  parent: ClothingNeckAdvancedCollarFoldableBase
+  id: ClothingNeckAdvancedCollarSyndi
+  name: advanced blood-red collar
+  description: A modular blood-red collar that can have various functional modules installed.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Collars/collar_syndi.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Collars/collar_syndi.rsi
+      
 - type: entity
   parent: ClothingNeckAdvancedCollarBase
   id: ClothingNeckAdvancedCollarChameleon
@@ -20,9 +209,9 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
   - type: Clothing
     sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
-    equipDelay: 5 # Longer to 'hint' that its not a regular whatever its looking like
-  - type: Tag
-    tags: [] # ignore "WhitelistChameleon" tag
+    equipDelay: 5
+  - type: StaticPrice
+    vendPrice: 5000
   - type: ChameleonClothing
     requireTag: WhitelistChameleonAdvancedCollar
     slot: [NECK]
@@ -31,114 +220,4 @@
     interfaces:
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
-  - type: StaticPrice # Luxury item, gives reason to all the others existing.
-    vendPrice: 5000
-#endregion
-
-# region Modules
-- type: entity
-  parent: BaseAdvCollarModule
-  id: AdvCollarModulePsychicClothingLockPlus
-  name: collar module (psychic clothing lock+)
-  description: An advanced module that locks specific clothing slots, preventing removal by the wearer only.
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/module.rsi
-      state: radio_mini
-    - type: AdvancedCollarModule
-      componentToAdd: ClothingLock
-      moduleDescription: Prevents wearer tampering with almost all of their clothing
-    - type: ClothingLock
-      lockedSlots:
-        - head
-        - shoes
-        - jumpsuit
-        - gloves
-        - eyes
-        - mask
-        - ears
-        - outerClothing
-        - back
-        - belt
-      blockOthers: false
-
-- type: entity
-  parent: BaseAdvCollarModule
-  id: AdvCollarModuleWaddle
-  name: collar module (waddle)
-  description: A module that makes the wearer waddle.
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/module.rsi
-      state: cpu_adv
-    - type: AdvancedCollarModule
-      componentToAdd: WaddleWhenWorn
-      moduleDescription: Waddles when moving
-    - type: WaddleWhenWorn
-      tumbleIntensity: 10
-
-- type: entity
-  parent: BaseAdvCollarModule
-  id: AdvCollarModuleStealth
-  name: collar module (stealth)
-  description: A module that makes the collar invisible when worn.
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/module.rsi
-      state: card_mini
-    - type: AdvancedCollarModule
-      componentToAdd: HideClothingLayerClothing # TODO: Fix this not initializing on insertion while collars already worn
-      moduleDescription: Invisible collar
-    - type: HideClothingLayerClothing # Goob
-      hiddenSlots:
-      - neck
-
-- type: entity
-  parent: BaseAdvCollarModule
-  id: AdvCollarModuleVulnerability
-  name: collar module (vulnerability)
-  description: A module that makes the wearer keel over to any stamina loss.
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/module.rsi
-      state: secmodschematic
-    - type: AdvancedCollarModule
-      componentsToAdd:
-        - StaminaResistance
-        - GroupExamine
-      moduleDescription: Stamina vulnerability
-    - type: StaminaResistance
-      damageCoefficient: 4
-
-- type: entity
-  parent: BaseAdvCollarModule
-  id: AdvCollarModulePsychicShackle
-  name: collar module (psychic walking)
-  description: A module that inhibits its wearer to walk.
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/module.rsi
-      state: beaker_holder
-    - type: AdvancedCollarModule
-      componentsToAdd:
-        - ClothingSpeedModifier
-        - GroupExamine
-      moduleDescription: Forced walking
-    - type: ClothingSpeedModifier # TODO: implement this in a better way.
-      walkModifier: 1.0
-      sprintModifier: 0.7
-
-- type: entity
-  parent: BaseAdvCollarModule
-  id: AdvCollarModulePacifism
-  name: collar module (pacifism)
-  description: A module that inhibits violence.
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/module.rsi
-      state: cart_connector
-    - type: AdvancedCollarModule
-      componentToAdd: WornPacifism
-      moduleDescription: Inhibits violence
-    - type: WornPacifism
 #endregion
