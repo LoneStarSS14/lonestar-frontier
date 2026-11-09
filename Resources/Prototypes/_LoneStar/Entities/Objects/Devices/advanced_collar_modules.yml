@@ -1,3 +1,5 @@
+## Collar modules, originally ported from _WF (Wayfarer).
+
 # Bases
 - type: entity
   abstract: true

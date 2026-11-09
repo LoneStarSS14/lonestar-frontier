@@ -1,3 +1,5 @@
+## Advanced Collars, originally ported from _WF (Wayfarer).
+
 #region Base
 - type: entity
   abstract: true
