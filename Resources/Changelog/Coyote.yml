@@ -4735,3 +4735,10 @@ Entries:
   id: 516
   time: '2026-11-09T11:43:38.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/308
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: removed laser/holoflare from merc lathes
+  id: 517
+  time: '2026-11-09T12:32:02.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/315
