@@ -2,6 +2,8 @@ using Content.Shared.Clothing.Components;
 using Content.Shared.Examine;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
+using Content.Shared.Tag; // LoneStar
+using Robust.Shared.Prototypes; // LoneStar
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Clothing.EntitySystems;
@@ -14,6 +16,9 @@ namespace Content.Shared.Clothing.EntitySystems;
 public sealed class ClothingLockSystem : EntitySystem
 {
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
+    [Dependency] private readonly TagSystem _tag = default!; // LoneStar
+
+    private static readonly ProtoId<TagPrototype> CigaretteTag = "Cigarette"; // LoneStar: See lower note in OnUnequipAttempt
 
     public override void Initialize()
     {
@@ -31,6 +36,9 @@ public sealed class ClothingLockSystem : EntitySystem
 
     private void OnUnequipAttempt(Entity<ClothingLockComponent> ent, ref InventoryRelayedEvent<IsUnequippingTargetAttemptEvent> args)
     {
+        if ((args.Args.SlotFlags & SlotFlags.MASK) != 0 && _tag.HasTag(args.Args.Equipment, CigaretteTag)) // LoneStar: yes this is lazy, but i think cigarettes are the only thing we currently have that make no sense, so until shown otherwise we'll just do this.
+            return;
+
         // Allow the collar itself to be removed, but prevent other clothing removal based on configuration
         if (args.Args.Equipment == ent.Owner)
             return;
