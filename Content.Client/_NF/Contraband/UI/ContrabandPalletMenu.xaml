@@ -1,22 +1,23 @@
+<!-- LoneStar: Assorted UI Fixes -->
 <controls:FancyWindow xmlns="https://spacestation14.io"
             xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
             xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-            SetSize="300 196"
-            MinSize="300 196">
-    <BoxContainer Orientation="Vertical">
-        <BoxContainer Orientation="Horizontal" SetHeight="24">
+            SetSize="300 215"
+            MinSize="300 215">
+    <BoxContainer Orientation="Vertical" Margin="5">
+        <BoxContainer Orientation="Horizontal">
             <Label Name="AppraisalLabelLeft" Text="{Loc 'contraband-pallet-menu-appraisal-label'}"
                    StyleClasses="LabelKeyText" />
             <Label Name="AppraisalLabel"
                    Text="{Loc 'contraband-pallet-menu-no-goods-text'}" />
         </BoxContainer>
-        <BoxContainer Orientation="Horizontal" SetHeight="24">
+        <BoxContainer Orientation="Horizontal">
             <Label Name="CountLabelLeft" Text="{Loc 'contraband-pallet-menu-count-label'}"
                    StyleClasses="LabelKeyText" />
             <Label Name="CountLabel"
                    Text="{Loc 'contraband-pallet-menu-no-goods-text'}" />
         </BoxContainer>
-        <BoxContainer Orientation = "Horizontal" VerticalExpand = "False" SetHeight="58">
+        <BoxContainer Orientation = "Horizontal" Margin="0 6 5 6">
             <RichTextLabel Name="Disclaimer" Access="Public" StyleClasses="LabelSubText"/>
         </BoxContainer>
         <Button Name="AppraiseButton"

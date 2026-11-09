@@ -4,15 +4,15 @@
                            SetSize="640 500"
                            MinSize="640 300">
     <BoxContainer Orientation="Vertical" Margin="5 0 5 0">
-        <BoxContainer Orientation="Vertical">
+        <!-- LoneStar start: Assorted UI Fixes -->
+        <BoxContainer Orientation="Vertical" Margin="0 2 0 5">
             <BoxContainer Orientation="Horizontal">
                 <Label Text="{Loc 'bank-atm-menu-balance-label'}"
                     StyleClasses="LabelKeyText" />
                 <Label Name="BalanceLabel"
                     Text="{Loc 'shipyard-console-no-bank'}" />
             </BoxContainer>
-        </BoxContainer>
-        <BoxContainer Orientation="Vertical">
+        <!-- LoneStar end -->
             <BoxContainer Orientation="Horizontal">
                 <Label Text="{Loc 'shipyard-console-appraisal-label'}"
                     StyleClasses="LabelKeyText" />
@@ -20,22 +20,29 @@
                     Text="{Loc 'shipyard-console-no-deed'}" />
             </BoxContainer>
         </BoxContainer>
+
         <BoxContainer Orientation="Horizontal">
             <LineEdit Name="SearchBar"
                       PlaceHolder="{Loc 'cargo-console-menu-search-bar-placeholder'}"
                       HorizontalExpand="True" />
         </BoxContainer>
+        <!-- LoneStar start: Assorted UI Fixes -->
         <BoxContainer Orientation="Horizontal">
             <OptionButton Name="Categories"
                           Prefix="{Loc 'shipyard-console-menu-size-label'}"
-                          HorizontalExpand="True" />
+                          HorizontalExpand="True"
+                          StyleClasses="OpenRight" />
             <OptionButton Name="Classes"
                           Prefix="{Loc 'shipyard-console-menu-class-label'}"
-                          HorizontalExpand="True" />
+                          HorizontalExpand="True"
+                          StyleClasses="OpenBoth" />
             <OptionButton Name="Engines"
                           Prefix="{Loc 'shipyard-console-menu-engine-label'}"
-                          HorizontalExpand="True" />
+                          HorizontalExpand="True"
+                          StyleClasses="OpenLeft" />
         </BoxContainer>
+	<PanelContainer StyleClasses="LowDivider" Margin="0 2" />
+        <!-- LoneStar end -->
         <ScrollContainer HorizontalExpand="True"
                          VerticalExpand="True"
                          SizeFlagsStretchRatio="6">
@@ -46,26 +53,47 @@
                 <!-- Vessels get added here by code -->
             </BoxContainer>
         </ScrollContainer>
-        <GridContainer Columns="3" HorizontalExpand="True" Margin="0 8 0 2">
-            <Button Name="TargetIdButton" Access="Public"/>
-            <Button Name="SellShipButton"
-                Text="Sell"
-                Disabled="True" />
-            <BoxContainer Orientation="Vertical">
-                <Label Text="{Loc 'shipyard-console-deed-label'}" />
-                <Label Name="DeedTitle"
-                    Text=""/>
+	<!-- LoneStar start: Assorted UI Fixes -->
+	<PanelContainer StyleClasses="LowDivider" />
+        <BoxContainer Orientation="Vertical" Margin="0 6 0 6">
+	    <BoxContainer Orientation="Horizontal" Margin="0 2">
+                <Button Name="TargetIdButton" Access="Public" HorizontalAlignment="Left"/>
+                <BoxContainer Orientation="Vertical"
+                              HorizontalAlignment="Left"
+                              HorizontalExpand="True"
+                              Margin="4 0">
+                    <Label Text="{Loc 'shipyard-console-deed-label'}" />
+                    <Label Name="DeedTitle"
+                        Text=""/>
+                </BoxContainer>
+                <Button Name="SellShipButton"
+                    Text="Sell"
+                    Disabled="True"
+                    HorizontalAlignment="Right"
+                    StyleClasses="ButtonColorRed" />
+	    </BoxContainer>
+	    <!-- LoneStar start: Ship Renaming -->
+            <BoxContainer Orientation="Horizontal" Margin="0 2" Name="RenameContainer" Visible="False">
+                <LineEdit Name="RenameLineEdit"
+                          PlaceHolder="Name"
+                          MinWidth="140"
+                          Editable="False" />
+                <Button Name="RenameButton"
+                        Text="Rename"
+                        StyleClasses="OpenLeft"
+                        Disabled="True" />
             </BoxContainer>
-        </GridContainer>
-        <!-- LoneStar start, added -->
-        <BoxContainer Orientation="Horizontal" Margin="0 2 0 2" Name="RenameContainer" Visible="False">
-            <LineEdit Name="RenameLineEdit"
-                      PlaceHolder="Name"
-                      MinWidth="140"
-                      Editable="False" />
-            <Button Name="RenameButton"
-                    Text="Rename"
-                    Disabled="True" />
+            <!-- LoneStar end -->
+        </BoxContainer>
+        <BoxContainer Orientation="Vertical">
+            <PanelContainer StyleClasses="LowDivider" />
+            <BoxContainer Orientation="Horizontal" Margin="10 2 5 0" VerticalAlignment="Bottom">
+                <Label Text="{Loc 'shipyard-console-flavor-left'}" StyleClasses="WindowFooterText" />
+                <Label Text="{Loc 'shipyard-console-flavor-right'}" StyleClasses="WindowFooterText"
+                        HorizontalAlignment="Right" HorizontalExpand="True"  Margin="0 0 5 0" />
+                <TextureRect StyleClasses="NTLogoDark" Stretch="KeepAspectCentered"
+                        VerticalAlignment="Center" HorizontalAlignment="Right" SetSize="19 19"/>
+            </BoxContainer>
         </BoxContainer>
         <!-- LoneStar end -->
     </BoxContainer>
