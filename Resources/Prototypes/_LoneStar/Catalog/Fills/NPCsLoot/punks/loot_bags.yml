@@ -29,7 +29,7 @@
     table: !type:AllSelector
       children:
       - !type:NestedSelector # Weapon
-        tableId: LSTableGeneralWeaponRangedT1
+        tableId: LSTableGeneralWeaponRangedT2
         prob: 0.7
       - id: SpawnDungeonLootNpcPunksOuterClothes # Armor
         prob: 0.3
@@ -132,7 +132,7 @@
     table: !type:AllSelector
       children:
       - !type:NestedSelector # Weapons
-        tableId: LSTableGeneralWeaponRangedT3
+        tableId: LSTableGeneralWeaponRangedUncommon
         prob: 0.7
       - !type:GroupSelector # Armor
         children:

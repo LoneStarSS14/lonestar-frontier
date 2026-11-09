@@ -1,20 +1,9 @@
-uplink-t1loot = Exped Loot
-uplink-t1loot-desc = Salvaged Loot from the easiest of expos
 
-uplink-t2loot = Exped Loot
-uplink-t2loot-desc = Salvaged Loot from the average expos
+uplink-random-gun-name = Random Firearm Case
+uplink-random-gun-desc = Call in a random rare-legendary firearm.
 
-uplink-t3loot = Exped Loot
-uplink-t3loot-desc = Salvaged Loot from the hard expos
-
-uplink-t4loot = Exped Loot
-uplink-t4loot-desc = Salvaged Loot from the difficult expos
-
-uplink-t5loot = Exped Loot
-uplink-t5loot-desc = Salvaged Loot from the extreme expos
-
-uplink-contracrate = Contraband Crate
-uplink-contracrate-desc = Random Contraband Crate, deliver to it's destination asap.
+uplink-random-melee-name = Random Melee Weapon
+uplink-random-melee-desc = Call in a random rare-legendary melee weapon.
 
 uplink-pirate-rcd-name = Pirate RCD
 uplink-pirate-rcd-desc = A blackmarket construction device which can place/remove walls, floors, and airlocks quickly. It has a slot to swipe ID cards.
@@ -95,8 +84,8 @@ uplink-syndiedrobe-desc = A flatpack used for deploying a SyndieDrobe
 uplink-smuggler-id-name = Smuggler PDA and ID
 uplink-smuggler-id-desc = A spare PDA and ID, for yourself or someone else
 
-uplink-hypospray-name = One of 3 random Hyposprays
-uplink-hypospray-desc = A commercial hypospray designed by Nanotrasen Chemical Supply
+uplink-hypospray-name = Brigmedic Hypospray
+uplink-hypospray-desc = A commercial hypospray for injecting chemicals
 
 uplink-ammo-techfab-name = Ammo Techfab
 uplink-ammo-techfab-desc = A flatpack used for constructing an ammo techfab

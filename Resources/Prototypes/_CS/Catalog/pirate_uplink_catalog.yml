@@ -1,87 +1,11 @@
-- type: listing # Coyote
-  id: UplinkT1RandomLoot
-  name:  uplink-t1loot
-  description: uplink-t1loot-desc
-  productEntity: SpawnUplinkLootT1
-  icon: { sprite: _NF/Objects/Storage/Cases/guncaseshort.rsi, state: icon }
-  cost:
-    Doubloon: 2
-  categories:
-  - UplinkPirateLoot
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-  - !type:BuyerJobCondition
-    whitelist:
-    - Smuggler
-
-- type: listing # Coyote
-  id: UplinkT2RandomLoot
-  name:  uplink-t2loot
-  description: uplink-t2loot-desc
-  productEntity: SpawnUplinkLootT2
-  icon: { sprite: _NF/Objects/Storage/Cases/guncaseshort.rsi, state: icon }
-  cost:
-    Doubloon: 5
-  categories:
-  - UplinkPirateLoot
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-  - !type:BuyerJobCondition
-    whitelist:
-    - Smuggler
-
-- type: listing # Coyote
-  id: UplinkT3RandomLoot
-  name:  uplink-t3loot
-  description: uplink-t3loot-desc
-  productEntity: SpawnUplinkLootT3
-  icon: { sprite: _NF/Objects/Storage/Cases/guncaselong.rsi, state: icon }
-  cost:
-    Doubloon: 10
-  categories:
-  - UplinkPirateLoot
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-  - !type:BuyerJobCondition
-    whitelist:
-    - Smuggler
-
-- type: listing # Coyote
-  id: UplinkT4RandomLoot
-  name:  uplink-t4loot
-  description: uplink-t4loot-desc
-  productEntity: SpawnUplinkLootT4
-  icon: { sprite: _NF/Objects/Storage/Cases/guncaselong.rsi, state: icon }
-  cost:
-    Doubloon: 20
-  categories:
-  - UplinkPirateLoot
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-  - !type:BuyerJobCondition
-    whitelist:
-    - Smuggler
-
-- type: listing # Coyote
-  id: UplinkT5RandomLoot
-  name:  uplink-t5loot
-  description: uplink-t5loot-desc
-  productEntity: SpawnUplinkLootT5
+- type: listing
+  id: UplinkRandomGun
+  name: uplink-random-gun-name
+  description: uplink-random-gun-desc
+  productEntity: LSLootboxRangedRare
   icon: { sprite: _NF/Objects/Storage/Cases/guncaseheavy.rsi, state: icon }
   cost:
-    Doubloon: 30
+    Doubloon: 12
   categories:
   - UplinkPirateLoot
   conditions:
@@ -93,28 +17,28 @@
     whitelist:
     - Smuggler
 
-#- type: listing # Coyote
-#  id: UplinkContraCrate
-#  name:  uplink-contracrate
-#  description: uplink-contracrate-desc
-#  productEntity: SpawnUplinkContrabandCrate
-#  icon: { sprite: Structures/Storage/Crates/generic.rsi, state: icon }
-#  cost:
-#    Doubloon: 3
-#  categories:
-#  - UplinkPirateUtility
-#  conditions:
-#  - !type:StoreWhitelistCondition
-#    whitelist:
-#      tags:
-#      - PirateUplink
-#  - !type:BuyerJobCondition
-#    whitelist:
-#    - Smuggler
+- type: listing
+  id: UplinkRandomMelee
+  name: uplink-random-melee-name
+  description: uplink-random-melee-desc
+  productEntity: LSLootboxMeleeRare
+  icon: { sprite: _NF/Objects/Storage/Cases/guncaseheavy.rsi, state: icon }
+  cost:
+    Doubloon: 12
+  categories:
+  - UplinkPirateLoot
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+  - !type:BuyerJobCondition
+    whitelist:
+    - Smuggler
 
-- type: listing # Coyote
+- type: listing
   id: UplinkPirateRCD
-  name:  uplink-pirate-rcd-name
+  name: uplink-pirate-rcd-name
   description: uplink-pirate-rcd-desc
   productEntity: PirateRCD
   icon: { sprite: _NF/Objects/Tools/rcd.rsi, state: icon }
@@ -128,9 +52,9 @@
       tags:
       - PirateUplink
 
-- type: listing # Coyote
+- type: listing
   id: UplinkPirateShipCannon
-  name:  uplink-pirate-ship-cannon-name
+  name: uplink-pirate-ship-cannon-name
   description: uplink-pirate-ship-cannon-desc
   productEntity: ShuttleGunPirateCannonFlatpack
   icon: { sprite: Objects/Weapons/Guns/Shuttles/pirate_cannon.rsi, state: base }
@@ -149,9 +73,9 @@
     - NFPirateFirstMate
     - NFPirateCaptain
 
-- type: listing # Coyote
+- type: listing
   id: UplinkSvalinnMachineGun
-  name:  uplink-svalinn-machinegun-name
+  name: uplink-svalinn-machinegun-name
   description: uplink-svalinn-machinegun-desc
   productEntity: ShuttleGunSvalinnMachineGunFlatpack
   icon: { sprite: Objects/Weapons/Guns/Shuttles/laser.rsi, state: lse-400c }
@@ -168,9 +92,9 @@
     whitelist:
     - Smuggler
 
-- type: listing # Coyote
+- type: listing
   id: UplinkChemicalsCrateD
-  name:  uplink-chemicals-crate-d-name
+  name: uplink-chemicals-crate-d-name
   description: uplink-chemicals-crate-d-name
   productEntity: CrateChemistryD
   icon: { sprite: Structures/Storage/Crates/medicalcrate_secure.rsi, state: base }
@@ -187,9 +111,9 @@
     whitelist:
     - RipperDoc
 
-- type: listing # Coyote
+- type: listing
   id: UplinkChemicalsCrateP
-  name:  uplink-chemicals-crate-p-name
+  name: uplink-chemicals-crate-p-name
   description: uplink-chemicals-crate-p-name
   productEntity: CrateChemistryP
   icon: { sprite: Structures/Storage/Crates/medicalcrate_secure.rsi, state: base }
@@ -206,9 +130,9 @@
     whitelist:
     - RipperDoc
 
-- type: listing # Coyote
+- type: listing
   id: UplinkChemicalsCrateS
-  name:  uplink-chemicals-crate-s-name
+  name: uplink-chemicals-crate-s-name
   description: uplink-chemicals-crate-s-name
   productEntity: CrateChemistryS
   icon: { sprite: Structures/Storage/Crates/medicalcrate_secure.rsi, state: base }
@@ -227,7 +151,7 @@
 
 - type: listing
   id: UplinkFreelancerHardsuit
-  name:  uplink-freelancer-hardsuit-name
+  name: uplink-freelancer-hardsuit-name
   description: uplink-freelancer-hardsuit-desc
   productEntity: ClothingOuterEVASuitFsa
   icon: { sprite: _NF/Clothing/OuterClothing/Suits/fsa_voidsuit.rsi, state: icon }
@@ -240,7 +164,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Smuggler
     - Escort
@@ -248,7 +172,7 @@
 
 - type: listing
   id: UplinkFreelancerHardsuitGoliath
-  name:  uplink-goliath-hardsuit-name
+  name: uplink-goliath-hardsuit-name
   description: uplink-goliath-hardsuit-desc
   productEntity: ClothingOuterHardsuitGoliath
   icon: { sprite: Clothing/OuterClothing/Hardsuits/goliath.rsi, state: icon }
@@ -261,13 +185,13 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Smuggler
 
 - type: listing
   id: UplinkFreelancerHardsuitMaxim
-  name:  uplink-maxim-hardsuit-name
+  name: uplink-maxim-hardsuit-name
   description: uplink-maxim-hardsuit-desc
   productEntity: ClothingOuterHardsuitMaxim
   icon: { sprite: Clothing/OuterClothing/Hardsuits/maxim.rsi, state: icon }
@@ -280,13 +204,13 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Smuggler
 
 - type: listing
   id: UplinkEscortHardsuit
-  name:  uplink-escort-hardsuit-name
+  name: uplink-escort-hardsuit-name
   description: uplink-escort-hardsuit-desc
   productEntity: ClothingOuterEVASuitFsc
   icon: { sprite: _NF/Clothing/OuterClothing/Suits/fsc_voidsuit.rsi, state: icon }
@@ -299,13 +223,13 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Escort
 
 - type: listing
   id: UplinkRipperDocHardsuit
-  name:  uplink-ripperdoc-hardsuit-name
+  name: uplink-ripperdoc-hardsuit-name
   description: uplink-ripperdoc-hardsuit-desc
   productEntity: ClothingOuterEVASuitFsb
   icon: { sprite: _NF/Clothing/OuterClothing/Suits/fsb_voidsuit.rsi, state: icon }
@@ -318,13 +242,13 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
 - type: listing
   id: UplinkMaidHardsuit
-  name:  uplink-maid-hardsuit-name
+  name: uplink-maid-hardsuit-name
   description: uplink-maid-hardsuit-desc
   productEntity: ClothingOuterHardsuitTacticalMaid
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/tactical_hardsuit.rsi, state: icon }
@@ -337,28 +261,9 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Escort
-
-- type: listing
-  id: UplinkMachineLiberator
-  name: uplink-pirate-pmag-name
-  description: uplink-pirate-pmag-desc
-  productEntity: Pmag
-  icon: { sprite: _NF/Objects/Tools/pmag.rsi, state: icon }
-  cost:
-    Doubloon: 10
-  categories:
-  - UplinkPirateDeception
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-  - !type:BuyerJobCondition # Coyote
-    whitelist:
-    - Smuggler
 
 - type: listing
   id: UplinkFreelancerAccessBreaker
@@ -419,7 +324,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Escort
 
@@ -437,7 +342,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Escort
 
@@ -485,7 +390,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Smuggler
 
@@ -503,7 +408,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
@@ -596,7 +501,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
     - Smuggler
@@ -615,7 +520,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
     - Smuggler
@@ -634,7 +539,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
@@ -652,7 +557,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
@@ -671,7 +576,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
@@ -690,7 +595,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
@@ -699,9 +604,9 @@
   name: uplink-hypospray-name
   description: uplink-hypospray-desc
   icon: { sprite: Objects/Specific/Medical/hypospray.rsi, state: hypo }
-  productEntity: SpawnUplinkHypospray
+  productEntity: HypoBrigmedic
   cost:
-    Doubloon: 8
+    Doubloon: 6
   categories:
   - UplinkPirateMedical
   conditions:
@@ -709,7 +614,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
@@ -744,7 +649,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Escort
 
@@ -763,7 +668,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
     - Escort
@@ -783,7 +688,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
@@ -802,7 +707,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
@@ -821,7 +726,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - RipperDoc
 
@@ -840,7 +745,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Smuggler
 
@@ -876,7 +781,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Smuggler
 
@@ -925,7 +830,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Escort
 
@@ -943,7 +848,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Escort
 
@@ -961,7 +866,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Escort
 
@@ -994,7 +899,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - NFPirate
     - NFPirateFirstMate
@@ -1044,7 +949,7 @@
     whitelist:
       tags:
       - PirateUplink
-  - !type:BuyerJobCondition # Coyote
+  - !type:BuyerJobCondition
     whitelist:
     - Smuggler
 
@@ -1063,9 +968,9 @@
       tags:
       - PirateUplink
 
-- type: listing # Coyote
+- type: listing
   id: UplinkElectricRange
-  name:  uplink-electric-range-name
+  name: uplink-electric-range-name
   description: uplink-electric-range-desc
   productEntity: SyndicateElectricRangeFlatpack
   cost:
@@ -1082,9 +987,9 @@
     - Smuggler
     - Escort
 
-- type: listing # Coyote
+- type: listing
   id: UplinkMicrowave
-  name:  uplink-microwave-name
+  name: uplink-microwave-name
   description: uplink-microwave-desc
   productEntity: SyndicateMicrowaveFlatpack
   cost:
@@ -1101,9 +1006,9 @@
     - Smuggler
     - Escort
 
-- type: listing # Coyote
+- type: listing
   id: UplinkAssembler
-  name:  uplink-assembler-name
+  name: uplink-assembler-name
   description: uplink-assembler-desc
   productEntity: DonkCoAssemblerFlatpack
   cost:
@@ -1120,9 +1025,9 @@
     - Smuggler
     - Escort
 
-- type: listing # Coyote
+- type: listing
   id: UplinkBoozeFlatpack
-  name:  uplink-booze-flatpack-name
+  name: uplink-booze-flatpack-name
   description: uplink-booze-flatpack-desc
   productEntity: SyndicateBoozeFlatpack
   cost:
@@ -1138,9 +1043,9 @@
     whitelist:
     - Escort
 
-- type: listing # Coyote
+- type: listing
   id: UplinkSyndieDrobeFlatpack
-  name:  uplink-syndiedrobe-name
+  name: uplink-syndiedrobe-name
   description: uplink-syndiedrobe-desc
   productEntity: SyndieDrobeFlatpack
   cost:
@@ -1156,9 +1061,9 @@
     whitelist:
     - Escort
 
-- type: listing # Coyote
+- type: listing
   id: UplinkAmmoTechfabFlatpack
-  name:  uplink-ammo-techfab-name
+  name: uplink-ammo-techfab-name
   description: uplink-ammo-techfab-desc
   productEntity: AmmoTechFabFlatpack
   cost:
@@ -1177,9 +1082,9 @@
     - NFPirateCaptain
     - Smuggler
 
-- type: listing # Coyote
+- type: listing
   id: UplinkMercTechfabFlatpack
-  name:  uplink-merc-techfab-name
+  name: uplink-merc-techfab-name
   description: uplink-merc-techfab-desc
   productEntity: MercenaryTechFabFlatpack
   cost:
@@ -1198,9 +1103,9 @@
     - NFPirateCaptain
     - Smuggler
 
-- type: listing # Coyote
+- type: listing
   id: UplinkMedicalTechfabFlatpack
-  name:  uplink-med-techfab-name
+  name: uplink-med-techfab-name
   description: uplink-med-techfab-desc
   productEntity: MedicalTechFabFlatpack
   cost:
@@ -1216,9 +1121,9 @@
     whitelist:
     - RipperDoc
 
-- type: listing # Coyote
+- type: listing
   id: UplinkUniformPrinterFlatpack
-  name:  uplink-uniform-printer-name
+  name: uplink-uniform-printer-name
   description: uplink-uniform-printer-desc
   productEntity: UniformPrinterFlatpack
   cost:
@@ -1231,9 +1136,9 @@
       tags:
       - PirateUplink
 
-- type: listing # Coyote
+- type: listing
   id: UplinkServiceTechFabFlatpack
-  name:  uplink-service-techfab-name
+  name: uplink-service-techfab-name
   description: uplink-service-techfab-desc
   productEntity: ServiceTechFabFlatpack
   cost:
@@ -1249,9 +1154,9 @@
     whitelist:
     - Escort
 
-- type: listing # Coyote
+- type: listing
   id: UplinkVendingMachineClothingPunkFlatpack
-  name:  uplink-clothing-punk-name
+  name: uplink-clothing-punk-name
   description: uplink-clothing-punk-desc
   productEntity: VendingMachineClothingPunkFlatpack
   cost:
@@ -1269,9 +1174,9 @@
     - NFPirateFirstMate
     - NFPirateCaptain
 
-- type: listing # Coyote
+- type: listing
   id: UplinkVendingMachineBountyVendPunkFlatpack
-  name:  uplink-bounty-punk-name
+  name: uplink-bounty-punk-name
   description: uplink-bounty-punk-desc
   productEntity: VendingMachineBountyVendPunkFlatpack
   cost:
@@ -1289,9 +1194,9 @@
     - NFPirateFirstMate
     - NFPirateCaptain
 
-- type: listing # Coyote
+- type: listing
   id: UplinkStunKnuckles
-  name:  uplink-stun-knuckles-name
+  name: uplink-stun-knuckles-name
   description: uplink-stun-knuckles-desc
   icon: { sprite: Clothing/Hands/Gloves/KnuckleDusters/electricknuckleduster.rsi, state: knuckleduster_off }
   productEntity: ClothingHandsKnuckleDustersStun
@@ -1310,7 +1215,7 @@
 
 - type: listing
   id: UplinkPirateShotgunAmmoUranium
-  name:  uplink-pirate-shotgunammo-uranium-name
+  name: uplink-pirate-shotgunammo-uranium-name
   description: uplink-pirate-shotgunammo-uranium-desc
   productEntity: NFAmmunitionBoxShellShotgunUranium
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi, state: decal-shell-uranium, color: "#00ff00" }
@@ -1329,7 +1234,7 @@
 
 - type: listing
   id: UplinkPirateRevolverAmmoUranium
-  name:  uplink-pirate-revolverammo-uranium-name
+  name: uplink-pirate-revolverammo-uranium-name
   description: uplink-pirate-revolverammo-uranium-desc
   productEntity: NFAmmunitionBoxPistol45Uranium
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi, state: decal-calibre-45, color: "#00ff00" }
@@ -1348,7 +1253,7 @@
 
 - type: listing
   id: UplinkPirate20AmmoUranium
-  name:  uplink-pirate-20ammo-uranium-name
+  name: uplink-pirate-20ammo-uranium-name
   description: uplink-pirate-20ammo-uranium-desc
   productEntity: NFAmmunitionBoxRifle20Uranium
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: decal-calibre-20, color: "#00ff00" }
@@ -1367,7 +1272,7 @@
 
 - type: listing
   id: UplinkPirate25AmmoUranium
-  name:  uplink-pirate-25ammo-uranium-name
+  name: uplink-pirate-25ammo-uranium-name
   description: uplink-pirate-25ammo-uranium-desc
   productEntity: NFAmmunitionBoxRifle25Uranium
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: decal-calibre-25, color: "#00ff00" }
@@ -1386,7 +1291,7 @@
 
 - type: listing
   id: UplinkPirate30AmmoUranium
-  name:  uplink-pirate-30ammo-uranium-name
+  name: uplink-pirate-30ammo-uranium-name
   description: uplink-pirate-30ammo-uranium-desc
   productEntity: NFAmmunitionBoxRifle30Uranium
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: decal-calibre-30, color: "#00ff00" }
@@ -1405,7 +1310,7 @@
 
 - type: listing
   id: UplinkPirate35AmmoUranium
-  name:  uplink-pirate-35ammo-uranium-name
+  name: uplink-pirate-35ammo-uranium-name
   description: uplink-pirate-35ammo-uranium-desc
   productEntity: NFAmmunitionBoxPistol35Uranium
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi, state: decal-calibre-35, color: "#00ff00" }
@@ -1424,7 +1329,7 @@
 
 - type: listing
   id: UplinkPirate40AmmoUranium
-  name:  uplink-pirate-40ammo-uranium-name
+  name: uplink-pirate-40ammo-uranium-name
   description: uplink-pirate-40ammo-uranium-desc
   productEntity: CSAmmunitionBoxPistol40Uranium
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi, state: decal-calibre-40, color: "#00ff00" }
@@ -1443,7 +1348,7 @@
 
 - type: listing
   id: UplinkPirateShotgunAmmoIncendiary
-  name:  uplink-pirate-shotgunammo-fire-name
+  name: uplink-pirate-shotgunammo-fire-name
   description: uplink-pirate-shotgunammo-fire-desc
   productEntity: NFAmmunitionBoxShellShotgunIncendiary
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi, state: decal-shell-incendiary, color: "#ff0000" }
@@ -1463,7 +1368,7 @@
 
 - type: listing
   id: UplinkPirateRevolverAmmoIncendiary
-  name:  uplink-pirate-revolverammo-fire-name
+  name: uplink-pirate-revolverammo-fire-name
   description: uplink-pirate-revolverammo-fire-desc
   productEntity: NFAmmunitionBoxPistol45Incendiary
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi, state: decal-calibre-45, color: "#ff0000" }
@@ -1483,7 +1388,7 @@
 
 - type: listing
   id: UplinkPirate20AmmoIncendiary
-  name:  uplink-pirate-20ammo-fire-name
+  name: uplink-pirate-20ammo-fire-name
   description: uplink-pirate-20ammo-fire-desc
   productEntity: NFAmmunitionBoxRifle20Incendiary
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: decal-calibre-20, color: "#ff0000" }
@@ -1503,7 +1408,7 @@
 
 - type: listing
   id: UplinkPirate25AmmoIncendiary
-  name:  uplink-pirate-25ammo-fire-name
+  name: uplink-pirate-25ammo-fire-name
   description: uplink-pirate-25ammo-fire-desc
   productEntity: NFAmmunitionBoxRifle25Incendiary
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: decal-calibre-25, color: "#ff0000" }
@@ -1523,7 +1428,7 @@
 
 - type: listing
   id: UplinkPirate30AmmoIncendiary
-  name:  uplink-pirate-30ammo-fire-name
+  name: uplink-pirate-30ammo-fire-name
   description: uplink-pirate-30ammo-fire-desc
   productEntity: NFAmmunitionBoxRifle30Incendiary
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: decal-calibre-30, color: "#ff0000" }
@@ -1543,7 +1448,7 @@
 
 - type: listing
   id: UplinkPirate35AmmoIncendiary
-  name:  uplink-pirate-35ammo-fire-name
+  name: uplink-pirate-35ammo-fire-name
   description: uplink-pirate-35ammo-fire-desc
   productEntity: NFAmmunitionBoxPistol35Incendiary
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi, state: decal-calibre-35, color: "#ff0000" }
@@ -1563,7 +1468,7 @@
 
 - type: listing
   id: UplinkPirate40AmmoIncendiary
-  name:  uplink-pirate-40ammo-fire-name
+  name: uplink-pirate-40ammo-fire-name
   description: uplink-pirate-40ammo-fire-desc
   productEntity: CSAmmunitionBoxPistol40Incendiary
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi, state: decal-calibre-40, color: "#ff0000" }
@@ -1620,7 +1525,7 @@
 
 - type: listing
   id:  UplinkPirateAmmunitionBoxRifle60Rubber
-  name:  uplink-pirate-60ammo-rubber-name
+  name: uplink-pirate-60ammo-rubber-name
   description: uplink-pirate-60ammo-rubber-desc
   productEntity:  NFAmmunitionBoxRifle60Rubber
   icon: { sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: icon-60}
@@ -1639,7 +1544,7 @@
 
 - type: listing
   id: PirateUplinkChameleonProjector
-  name:  uplink-chameleon-projector-name
+  name: uplink-chameleon-projector-name
   description: uplink-chameleon-projector-desc
   productEntity: ChameleonProjector
   icon: { sprite: Objects/Devices/chameleon_projector.rsi, state: icon }
@@ -1658,7 +1563,7 @@
 
 - type: listing
   id: PirateUplinkStealthBox
-  name:  uplink-stealth-box-name
+  name: uplink-stealth-box-name
   description: uplink-stealth-box-desc
   productEntity: StealthBox
   cost:
