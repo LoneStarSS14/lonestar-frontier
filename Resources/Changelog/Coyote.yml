@@ -4703,3 +4703,20 @@ Entries:
   id: 514
   time: '2026-11-08T12:10:41.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/306
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Expedition lootbags can no longer can drop tier 1 or trash weapon rolls
+    - type: Remove
+      message: The P-mag is no longer buyable by freelancers of any position.
+    - type: Tweak
+      message: >-
+        The Smuggler uplink's tiered loot drops have been replaced with 'rare
+        weapon' loot bags which are sealed and can be opened later.
+    - type: Tweak
+      message: >-
+        Ripper docs now buy the brigmedic hypospray directly instead of a
+        randomized loot roll of one.
+  id: 515
+  time: '2026-11-09T10:39:34.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/313
