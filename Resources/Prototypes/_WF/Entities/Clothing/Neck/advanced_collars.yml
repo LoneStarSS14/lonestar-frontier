@@ -196,7 +196,6 @@
       componentToAdd: SelfUnremovableClothing
       moduleDescription: Prevents collar's self-removal # LoneStar
 
-# Shock Module - electrocutes wearer when remotely triggered
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModuleShock
@@ -214,7 +213,6 @@
         - WirelessNetworkConnection
         - DeviceLinkSink
       moduleDescription: Shocks wearer on wireless signal
-    # Store the component configurations that will be added to the collar
     - type: ShockOnTrigger
       damage: 1
       duration: 2.5
@@ -228,7 +226,6 @@
       ports:
         - Trigger
 
-# Clothing Lock Module - prevents specific clothing slots from removal while worn
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModulePsychicClothingLock
@@ -254,7 +251,6 @@
         - ears
       blockOthers: false
 
-# Speech Modifier Module - forces the wearer to speak a certain way
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModuleSpeechModifier
@@ -267,12 +263,9 @@
     - type: AdvancedCollarModule
       componentToAdd: CollarSpeechModifier
       moduleDescription: Modifies the wearer's speech
-    # Store the component configuration that will be added to the collar
     - type: CollarSpeechModifier
       selectedType: Off
-# WF end
 
-# Jingling Module - makes jingle sounds when the wearer moves
 - type: entity
   parent: BaseAdvCollarModule
   id: AdvCollarModuleJingling
@@ -288,7 +281,6 @@
     - type: AdvancedCollarModule
       componentToAdd: EmitsSoundOnMove
       moduleDescription: Jingles when moving
-    # Store the component configuration that will be added to the collar
     - type: EmitsSoundOnMove
       soundCollection:
         collection: FootstepJester

@@ -33,6 +33,7 @@
         type: ChameleonBoundUserInterface
   - type: StaticPrice # Luxury item, gives reason to all the others existing.
     vendPrice: 5000
+#endregion
 
 # region Modules
 - type: entity
@@ -140,3 +141,4 @@
       componentToAdd: WornPacifism
       moduleDescription: Inhibits violence
     - type: WornPacifism
+#endregion
