@@ -40,3 +40,9 @@
   components:
   - type: Sprite
     sprite: _Impstation/Clothing/Neck/Misc/ruffle.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+    - WhitelistChameleonAdvancedCollar

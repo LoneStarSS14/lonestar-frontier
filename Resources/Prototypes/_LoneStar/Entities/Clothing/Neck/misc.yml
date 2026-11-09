@@ -42,4 +42,5 @@
     sprite: _Impstation/Clothing/Neck/Misc/sailorascot.rsi
   - type: Tag
     tags:
-    - WhitelistChameleon
+    - ClothMade
+    - Recyclable
