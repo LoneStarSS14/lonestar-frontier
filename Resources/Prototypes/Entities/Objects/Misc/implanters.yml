@@ -47,6 +47,7 @@
       - FakeMindShieldImplant
       - RadioImplant
       - RadioImplantFreelance # Frontier
+      - BalanceImplant # LoneStar
       deimplantFailureDamage:
         types:
           Cellular: 50
