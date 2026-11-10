@@ -46,7 +46,11 @@
       tags:
       - Screwdriver
       - Crowbar
+      - Wrench
+      - Wirecutter
       - JawsOfLife
+      - JawsOfDeath
+      - Powerdrill
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Machine
