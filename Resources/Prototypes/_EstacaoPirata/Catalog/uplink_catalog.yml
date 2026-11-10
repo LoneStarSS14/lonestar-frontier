@@ -4,6 +4,6 @@
   description: uplink-syndicate-deck-desc
   productEntity: CardBoxSyndicate
   cost:
-    Telecrystal: 2 # LoneStar cost reduction
+    Telecrystal: 1 # LoneStar cost reduction
   categories:
   - UplinkPointless

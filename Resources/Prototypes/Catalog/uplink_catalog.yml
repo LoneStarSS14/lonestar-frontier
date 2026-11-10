@@ -186,7 +186,7 @@
   # discountDownTo:
   #   Telecrystal: 10
   cost:
-    Telecrystal: 5 # LoneStar No one is paying 17TC for a weapon easily found on expeditions
+    Telecrystal: 6 # LoneStar No one is paying 17TC for a weapon easily found on expeditions
   categories:
   - UplinkWeaponry
 
@@ -214,7 +214,7 @@
   # discountDownTo:
   #   Telecrystal: 12
   cost:
-    Telecrystal: 5 # LoneStar No one is paying 20TC for this
+    Telecrystal: 6 # LoneStar No one is paying 20TC for this
   categories:
   - UplinkWeaponry
 
@@ -735,7 +735,7 @@
   description: uplink-cigarettes-desc
   productEntity: CigPackSyndicate
   cost:
-    Telecrystal: 1
+    Telecrystal: 3
   categories:
   - UplinkChemicals
 
@@ -893,7 +893,7 @@
   # discountDownTo:
   #   Telecrystal: 3
   cost:
-    Telecrystal: 3 #LoneStar Cost reduction from 6
+    Telecrystal: 4 #LoneStar Cost reduction from 6
   categories:
   - UplinkDeception
 

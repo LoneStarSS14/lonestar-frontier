@@ -7,7 +7,7 @@
   productEntity: NFWeaponPistolViper
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 1 # LoneStar No one is paying 3TC
+    Telecrystal: 2 # LoneStar No one is paying 3TC
   categories:
   - UplinkWeaponry
 
@@ -18,7 +18,7 @@
   productEntity: NFWeaponRevolverRitland45
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 1 # LoneStar No one is paying 4TC
+    Telecrystal: 2 # LoneStar No one is paying 4TC
   categories:
   - UplinkWeaponry
 
@@ -29,7 +29,7 @@
   productEntity: NFWeaponPistolCobra
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 1 # LoneStar No one is paying 4TC
+    Telecrystal: 2 # LoneStar No one is paying 4TC
   categories:
   - UplinkWeaponry
 
@@ -125,7 +125,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncher
   cost:
-    Telecrystal: 12 # LoneStar No one is paying 25TC
+    Telecrystal: 16 # LoneStar No one is paying 25TC
   categories:
   - UplinkWeaponry
 
@@ -160,6 +160,6 @@
   productEntity: NFCrateFunSyndicateSegway
   icon: { sprite: Objects/Vehicles/syndicatesegway.rsi, state: vehicle }
   cost:
-    Telecrystal: 8 # LoneStar No one is paying 25TC
+    Telecrystal: 4 # LoneStar No one is paying 25TC
   categories:
     - UplinkPointless
