@@ -23,6 +23,8 @@
       availableModes:
       - SemiAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+    - type: Stamina
+      critThreshold: 200 # Increased stamina to prevent easy stuns and theft of the shield
 
 - type: entity
   parent: MobSyndicateNavalBase
@@ -53,3 +55,6 @@
       availableModes:
       - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/smg.ogg
+    - type: Stamina
+      critThreshold: 200 # Increased stamina to prevent easy stuns and theft of the shield
+

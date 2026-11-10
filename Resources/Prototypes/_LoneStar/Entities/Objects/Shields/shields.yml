@@ -2,7 +2,7 @@
   name: enforcer energy shield
   parent: [BaseShield, BaseC2Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: EnergyShieldEnforcer
-  description: Exotic energy shield, when folded, can even fit in your pocket.
+  description: An experimental mass produced energy shield, unlike the original it does not fold or repair itself. 
   components:
     - type: Sprite
       sprite: _LoneStar/Objects/Weapons/Melee/enforcer_shield.rsi
@@ -79,10 +79,11 @@
                   pitch: 0.8
     - type: StaticPrice
       price: 350
-    - type: PassiveDamage
-      damage:
-        types:
-          Heat: -0.5
-          Cold: -0.5
-        groups:
-          Brute: -3
+    # - type: PassiveDamage No longer fixes itself
+    #   damage:
+    #     types:
+    #       Heat: -0.5
+    #       Cold: -0.5
+    #     groups:
+    #       Brute: -3
+    - type: DisarmMalus
