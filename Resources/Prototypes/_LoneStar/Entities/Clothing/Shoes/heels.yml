@@ -1,6 +1,6 @@
 #region Kitten
 - type: entity
-  parent: [ ClothingShoesBaseButcherableHeelsNoisy, ClothingShoesColorableBaseColorInhand ]
+  parent: [ ClothingShoesBaseButcherableHeelsNoisyVisibleFeet, ClothingShoesColorableBaseColorInhand ]
   id: ClothingShoesHeelsKittenColorable
   name: kitten-heels
   description: A pair of cute kitten heels with a dainty ankle strap.
