@@ -13,3 +13,15 @@
         GlassBeaker:
           amount: 1
           defaultPrototype: Beaker
+
+- type: entity
+  id: LSPunkSmartFridgeCircuitboard
+  parent: SmartFridgeCircuitboard
+  name: Bang Wiz machine board
+  description: A totally nova circuit board for a Bang Wiz. Big boomba for choombas.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/module.rsi
+    state: hacked-merc-fab-board
+  - type: MachineBoard
+    prototype: LSPunkSmartFridge
