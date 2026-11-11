@@ -12,6 +12,9 @@
     sprite: _Starlight/Clothing/Shoes/Boots/highheelshoes.rsi
   - type: Clothing
     sprite: _Starlight/Clothing/Shoes/Boots/highheelshoes.rsi
+  - type: ImbalancingClothing # LoneStar
+    balanceDrain: 2
+    balanceShoveMultiplier: 1
 
 - type: entity
   parent: ClothingShoesBaseButcherable

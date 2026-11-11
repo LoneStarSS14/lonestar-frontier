@@ -22,3 +22,6 @@
     damage:
       types:
         Piercing: 6 # Euphoria 6<8 for consistency with Combat High Heels
+  - type: ImbalancingClothing # LoneStar
+    balanceDrain: 2
+    balanceShoveMultiplier: 1

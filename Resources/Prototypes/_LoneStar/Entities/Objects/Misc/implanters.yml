@@ -1,0 +1,7 @@
+- type: entity
+  id: BalanceImplanter
+  name: balance implanter
+  parent: BaseImplantOnlyImplanter
+  components:
+  - type: Implanter
+    implant: BalanceImplant

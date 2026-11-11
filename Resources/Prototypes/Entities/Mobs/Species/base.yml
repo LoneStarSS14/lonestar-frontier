@@ -229,7 +229,8 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
-  - type: ModifyUndies  # FLOOF Add
+  - type: ModifyUndies # Floof
+  - type: Balance # LoneStar
 
 - type: entity
   save: false
