@@ -4782,3 +4782,17 @@ Entries:
   id: 520
   time: '2026-11-11T12:39:00.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/319
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Heels now properly look heeled and dont use grey pixels to cover up the
+        feet underneath.
+    - type: Fix
+      message: >-
+        clothing like helmets can now hide layers other than just the toplevel
+        of hair, such as hairtop and hairside. report any weird cases found
+        regarding what gets hidden.
+  id: 521
+  time: '2026-11-11T15:14:30.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/320
