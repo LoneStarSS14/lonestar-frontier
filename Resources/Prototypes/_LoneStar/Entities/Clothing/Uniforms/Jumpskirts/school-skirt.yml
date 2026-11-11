@@ -67,7 +67,7 @@
 
 #region Randomized
 - type: entity
-  parent: ClothingUniformJumpskirtBaseSchool
+  parent: ClothingUniformBaseJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolRandom
   components:
   - type: ColorableClothing
@@ -75,7 +75,7 @@
 
 # region Presets (unused currently)
 - type: entity
-  parent: ClothingUniformJumpskirtBaseSchool
+  parent: ClothingUniformBaseJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolBlue
   name: school skirt (blue)
   components:
@@ -116,7 +116,7 @@
           color: "#96bbe5"
 
 - type: entity
-  parent: ClothingUniformJumpskirtBaseSchool
+  parent: ClothingUniformBaseJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolOrange
   name: school skirt (nectarine)
   components:
@@ -157,7 +157,7 @@
           color: "#ff9100"
 
 - type: entity
-  parent: ClothingUniformJumpskirtBaseSchool
+  parent: ClothingUniformBaseJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolRed
   name: school skirt (strawberry)
   components:
@@ -198,7 +198,7 @@
           color: "#9E2020"
 
 - type: entity
-  parent: ClothingUniformJumpskirtBaseSchool
+  parent: ClothingUniformBaseJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolWhite
   name: school skirt (ghost white)
   components:
@@ -239,7 +239,7 @@
           color: "#eff9ff"
 
 - type: entity
-  parent: ClothingUniformJumpskirtBaseSchool
+  parent: ClothingUniformBaseJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolBlack
   name: school skirt (licorice)
   components:
@@ -280,7 +280,7 @@
           color: "#353535"
 
 - type: entity
-  parent: ClothingUniformJumpskirtBaseSchool
+  parent: ClothingUniformBaseJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolPink
   name: school skirt (lavender)
   components:
@@ -321,7 +321,7 @@
           color: "#ff8ef9"
 
 - type: entity
-  parent: ClothingUniformJumpskirtBaseSchool
+  parent: ClothingUniformBaseJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolGreen
   name: school skirt (jade)
   components:
@@ -362,7 +362,7 @@
           color: "#49ff95"
 
 - type: entity
-  parent: ClothingUniformJumpskirtBaseSchool
+  parent: ClothingUniformBaseJumpskirtSchool
   id: ClothingUniformJumpskirtSchoolYellow
   name: school skirt (lemon)
   components:
