@@ -5,6 +5,7 @@ using Content.Shared.CombatMode;
 using Content.Shared.Conveyor;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Drunk;
+using Content.Shared.Gravity;
 using Content.Shared.Inventory;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Pulling.Components;
@@ -24,6 +25,7 @@ public abstract class SharedBalanceSystem : EntitySystem
     private const float RecoveryMultiplierPerSecond = 1.2f;
 
     [Dependency] private readonly AlertsSystem _alerts = default!;
+    [Dependency] private readonly SharedGravitySystem _gravity = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedStaminaSystem _stamina = default!;
@@ -247,6 +249,9 @@ public abstract class SharedBalanceSystem : EntitySystem
 
     private void ApplyBalanceLoss(EntityUid uid, BalanceComponent component, float amount)
     {
+        if (_gravity.IsWeightless(uid))
+            return;
+
         var previousBalance = component.Balance;
         component.Balance = MathF.Max(0f, component.Balance - amount);
 
