@@ -17,7 +17,7 @@
     - WhitelistChameleonAdvancedCollar
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarBlue
   name: blue collar
   description: A cute blue collar.
@@ -28,7 +28,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_blue.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarBlack
   name: black collar
   description: A cute black collar.
@@ -39,7 +39,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_black.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarPink
   name: pink collar
   description: A cute pink collar.
@@ -50,7 +50,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_pink.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarEpi
   name: epistemics collar
   description: A collar showing how loyal you are to science!
@@ -61,7 +61,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_epi.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarEngi
   name: engineering collar
   description: A collar showing your deft skill utilizing your hands!
@@ -72,7 +72,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_engi.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarLogi
   name: logistics collar
   description: Who's a good courier?
@@ -83,7 +83,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_logi.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarMed
   name: medical collar
   description: Put your patients at ease by letting them know you're here to help.
@@ -94,7 +94,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_med.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarSec
   name: security collar
   description: Be the best guard dog on the station!
@@ -105,7 +105,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_sec.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarCmd
   name: Captain's collar
   description: The top dog (or cat) around.
@@ -116,7 +116,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_cmd.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarCC
   name: CentCom collar
   description: All bark with a whole lotta bite.
@@ -127,7 +127,7 @@
     sprite: _DEN/Clothing/Neck/Collars/collar_cc.rsi
 
 - type: entity
-  parent: ClothingNeckCollarBase
+  parent: ClothingNeckCollarBaseFoldable
   id: ClothingNeckCollarSyndi
   name: Blood-Red collar
   description: Sometimes you gotta be naughty.
