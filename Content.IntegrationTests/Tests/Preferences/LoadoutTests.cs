@@ -33,7 +33,7 @@ public sealed class LoadoutTests
   id: TestColorableJumpsuit
   tags: [Colorable]
   equipment:
-    jumpsuit: ClothingUniformJumpskirtSchoolColorable
+    jumpsuit: ClothingUniformBaseJumpskirtSchool
 
 - type: loadout
   id: TestGreyColorableJumpsuit
