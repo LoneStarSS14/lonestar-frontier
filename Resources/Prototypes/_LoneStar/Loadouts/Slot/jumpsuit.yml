@@ -24,4 +24,4 @@
   tags: [Colorable]
   price: 0
   equipment:
-    jumpsuit: ClothingUniformJumpskirtSchoolColorable
+    jumpsuit: BaseClothingUniformJumpskirtSchool
