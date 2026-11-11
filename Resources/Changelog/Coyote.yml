@@ -4742,3 +4742,15 @@ Entries:
   id: 517
   time: '2026-11-09T12:32:02.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/315
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Heels are now considered imbalancing and will make you fall over from
+        running about too much, this can be circumvented via a new trait
+        Sure-Footed, balance implanter, or by taking the heels off/standing
+        still. Different factors can impact balance more or less such as being
+        drunk or dragged by another player.
+  id: 518
+  time: '2026-11-11T06:59:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/316
