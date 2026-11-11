@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingShoesBaseButcherable, ClothingShoesBaseHeelsNoisy ]
+  parent: ClothingShoesBaseButcherableHeelsNoisy
   id: ClothingShoesHighheelShoes
   name: high-heels
   description: Snazzy shoes for when you want to be stylish and noticed.
