@@ -4754,3 +4754,22 @@ Entries:
   id: 518
   time: '2026-11-11T06:59:50.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/316
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Adv. Bell/Cowbell/Shock collars now come with their respective modules
+        prefilled.
+    - type: Add
+      message: Cowbell modules can now be bought and added to any adv. collar.
+    - type: Tweak
+      message: Adv. collar clothing locks no longer affect cigarettes.
+    - type: Fix
+      message: Basic collars are now foldable.
+    - type: Fix
+      message: chameleon collars can no longer be folded to become invisible.
+    - type: Fix
+      message: chameleon collar's chameleon options no longer offers duplicate styles.
+  id: 519
+  time: '2026-11-11T07:01:19.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/317
