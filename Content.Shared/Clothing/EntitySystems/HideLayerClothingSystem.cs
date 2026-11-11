@@ -66,8 +66,8 @@ public sealed class HideLayerClothingSystem : EntitySystem
         // the clothing is (or was)equipped in a matching slot.
         foreach (var (layer, validSlots) in clothing.Comp1.Layers)
         {
-            if (!hideable.Contains(layer))
-                continue;
+            // if (!hideable.Contains(layer)) // LoneStar, lazy removal, better solution is to fix the defaults for the component to be 'all'
+            //     continue;
 
             // Only update this layer if we are currently equipped to the relevant slot.
             if (validSlots.HasFlag(inSlot))
