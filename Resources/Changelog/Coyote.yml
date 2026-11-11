@@ -4773,3 +4773,12 @@ Entries:
   id: 519
   time: '2026-11-11T07:01:19.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/317
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Being weightless prevents you losing your balance from imbalanced
+        clothing.
+  id: 520
+  time: '2026-11-11T12:39:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/319
