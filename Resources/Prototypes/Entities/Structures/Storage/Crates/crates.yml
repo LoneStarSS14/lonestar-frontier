@@ -214,7 +214,7 @@
   - type: Sprite
     sprite: Structures/Storage/Crates/engicrate_secure.rsi
   - type: AccessReader
-#    access: [["Engineering"]]
+    access: [["Engineering"]] # LoneStar
 
 - type: entity
   parent: CrateBaseSecure
@@ -226,7 +226,7 @@
   - type: Sprite
     sprite: Structures/Storage/Crates/medicalcrate_secure.rsi
   - type: AccessReader
-#    access: [["Medical"]]
+    access: [["Medical"]] # LoneStar
 
 - type: entity
   parent: CrateBaseSecure
@@ -238,7 +238,7 @@
     - type: Sprite
       sprite: Structures/Storage/Crates/chemcrate_secure.rsi
     - type: AccessReader
-#      access: [["Chemistry"]]
+      access: [["Chemistry"]] # LoneStar
 
 - type: entity
   parent: CrateBaseSecure
@@ -260,7 +260,7 @@
   - type: Sprite
     sprite: Structures/Storage/Crates/scicrate_secure.rsi
   - type: AccessReader
-#    access: [["Research"]]
+    access: [["Research"]] # LoneStar
 
 - type: entity
   parent: CrateBaseSecure
@@ -294,7 +294,7 @@
   - type: Sprite
     sprite: Structures/Storage/Crates/hydro_secure.rsi
   - type: AccessReader
-#    access: [["Hydroponics"]]
+    access: [["Hydroponics"]] # LoneStar
 
 - type: entity
   parent: CrateBaseSecure
