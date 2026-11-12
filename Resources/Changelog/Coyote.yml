@@ -4803,3 +4803,12 @@ Entries:
   id: 522
   time: '2026-11-12T15:40:37.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/321
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        The dragoon has been updated to be exped capable along with some minor
+        redecorating.
+  id: 523
+  time: '2026-11-12T17:43:59.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/322
