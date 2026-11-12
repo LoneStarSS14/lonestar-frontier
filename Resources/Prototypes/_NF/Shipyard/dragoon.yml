@@ -8,38 +8,39 @@
 
 # Shuttle Notes:
 #
-- type: vessel
-  id: Dragoon
-  parent: BaseVessel
-  name: FSA Dragoon
-  description: The Dragoon is the explorer of choice for adventures that are more guns and explosives themed.
-  price: 46000 # LoneStar
-  category: Medium
-  group: Shipyard
-  shuttlePath: /Maps/_NF/Shuttles/dragoon.yml
-  guidebookPage: ShipyardDragoon
-  class:
-  - Civilian
-  engine:
-  - Uranium
+# - type: vessel
+#   id: Dragoon
+#   parent: BaseVessel
+#   name: FSA Dragoon
+#   description: The Dragoon is the explorer of choice for adventures that are more guns and explosives themed.
+#   price: 97000 # LoneStar, i eyeballed this.
+#   category: Medium
+#   group: Expedition
+#   shuttlePath: /Maps/_NF/Shuttles/dragoon.yml
+#   guidebookPage: ShipyardDragoon
+#   class:
+#   - Expedition
+#   - Civilian
+#   engine:
+#   - AME
 
-- type: gameMap
-  id: Dragoon
-  mapName: 'FSA Dragoon'
-  mapPath: /Maps/_NF/Shuttles/dragoon.yml
-  minPlayers: 0
-  stations:
-    Dragoon:
-      stationProto: StandardFrontierVessel
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Dragoon {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
-        - type: StationJobs
-          availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+# - type: gameMap
+#   id: Dragoon
+#   mapName: 'FSA Dragoon'
+#   mapPath: /Maps/_NF/Shuttles/dragoon.yml
+#   minPlayers: 0
+#   stations:
+#     Dragoon:
+#       stationProto: StandardFrontierVessel
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: 'Dragoon {1}'
+#           nameGenerator:
+#             !type:NanotrasenNameGenerator
+#             prefixCreator: '14'
+#         - type: StationJobs
+#           availableJobs:
+#             ContractorInterview: [ 2, 2 ]
+#             CompanionInterview: [ 2, 2 ]
+#             PilotInterview: [ 2, 2 ]
+#             MercenaryInterview: [ 2, 2 ]
