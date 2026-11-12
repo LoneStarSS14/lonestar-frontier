@@ -177,8 +177,8 @@
   # LoneStar end
 
 - type: entity
-  parent: ClothingHeadHatHardhatBase
-  id: [ ClothingHeadHatHardhatArmored, ClothingHeadHelmetArmoredBase ]
+  parent: [ ClothingHeadHatHardhatBase, ClothingHeadHelmetArmoredBase ]
+  id: ClothingHeadHatHardhatArmored
   name: armored hard hat
   description: An armored hard hat. Provides the best of both worlds in both protection & utility - perfect for the engineer on the frontlines.
   components:
