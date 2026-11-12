@@ -4796,3 +4796,10 @@ Entries:
   id: 521
   time: '2026-11-11T15:14:30.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/320
+- author: archee1
+  changes:
+    - type: Fix
+      message: Balance is no longer drained when piloting a shuttle
+  id: 522
+  time: '2026-11-12T15:40:37.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/321
