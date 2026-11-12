@@ -11,6 +11,9 @@ namespace Content.Shared.Preferences.Loadouts;
 [Prototype]
 public sealed partial class LoadoutPrototype : IPrototype, IEquipmentLoadout
 {
+    // LoneStar: Mark prototypes that expose loadout colorizer controls.
+    public const string ColorableTag = "Colorable";
+
     [IdDataField]
     public string ID { get; private set; } = string.Empty;
 
@@ -67,6 +70,14 @@ public sealed partial class LoadoutPrototype : IPrototype, IEquipmentLoadout
     [AlwaysPushInheritance]
     public List<EntProtoId> Cartridges { get; set; } = new();
     // End Frontier: extra fields
+
+    // LoneStar start, declare optional loadout feature tags.
+    /// <summary>
+    /// Tags describing optional loadout features.
+    /// </summary>
+    [DataField]
+    public List<string> Tags = new();
+    // LoneStar end
 
     /// <summary>
     /// Frontier - the cost of the item simple as

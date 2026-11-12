@@ -50,8 +50,8 @@
     ClothingUniformJumpsuitHawaiRed: 4294967295
     ClothingUniformJumpsuitHawaiYellow: 4294967295
     ClothingUniformJumpsuitFlannelColorable: 4294967295
-    ClothingUniformJumpsuitCasualWhite: 4294967295
-    ClothingUniformJumpskirtCasualWhite: 4294967295
+    ClothingUniformJumpsuitCasual: 4294967295
+    ClothingUniformJumpskirtCasual: 4294967295
     # ClothingUniformJumpsuitCasualBlue: 4294967295 # LoneStar, redudant due to colorizer stuff.
     # ClothingUniformJumpskirtCasualBlue: 4294967295
     # ClothingUniformJumpsuitCasualPurple: 4294967295
@@ -248,11 +248,7 @@
     ClothingUniformJumpskirtPresent: 4294967295
     ClothingUniformJumpsuitAthleticShorts: 4294967295
     # Euphoria
-    ClothingShoesHeelsKittenColorable: 4294967295
     ClothingShoesHeelsKitten: 4294967295
-    ClothingShoesHeelsKittenBlack: 4294967295
-    ClothingShoesHeelsKittenCrimson: 4294967295
-    ClothingShoesHeelsKittenRose: 4294967295
     ClothingShoesHeelsBallet: 4294967295
     # Funky
     ClothingShoesHighheelBootsNanotrasen: 4294967295

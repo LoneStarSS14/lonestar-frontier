@@ -10,6 +10,8 @@ colorizer-denyreroll-restitch = You cant restitch this.
 
 ## Mapped color reroll window
 colorizer-window-title = Colorizer Menu
+loadouts-colorizer-open-tooltip = Edit clothing colors and styles
+loadouts-colorizer-wipe-tooltip = Reset clothing colors and styles
 colorizer-window-randomize = Randomize All
 colorizer-active-color = Active color
 colorizer-color-preview = Color preview

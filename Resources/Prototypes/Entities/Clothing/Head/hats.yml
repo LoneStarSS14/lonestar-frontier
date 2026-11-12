@@ -12,10 +12,10 @@
 - type: entity
   parent: [ ClothingHeadBase, ClothingHeadColorableMonoInhand ] # LoneStar, added colorable
   id: ClothingHeadHatBeret
-  name: beret (colorable) # LoneStar
+  name: beret
   description: A beret, an artists favorite headwear.
   components:
-  # LoneStar start, colrability
+  # LoneStar start, colorability
   - type: Sprite
     sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi
     layers:
@@ -39,6 +39,9 @@
       - state: inhand-right
         color: "#9E2020"
         map: [ "hr-color" ]
+  - type: ColorableClothingInitialColors
+    mappedColors:
+      Base: "#9E2020"
   - type: ColorableClothing
     randomOnCreation: false
   # LoneStar end

@@ -605,6 +605,7 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatHyenhSweater
+  tags: [Colorable] # LoneStar
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -846,7 +847,8 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatBomberRandomized
-  name: punk jacket (random)
+  tags: [Colorable] # LoneStar
+  name: punk jacket
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -859,7 +861,8 @@
 
 - type: loadout
   id: ContractorClothingOuterCoatRandomized
-  name: punk coat (random)
+  tags: [Colorable] # LoneStar
+  name: punk coat
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2

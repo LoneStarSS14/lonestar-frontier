@@ -1,3 +1,5 @@
+## LoneStar changes: all entries now use mapped colors defined by the ClothingUniformRandom parent
+
 #region base
 - type: entity
   id: ClothingUniformRandomPunkBase
@@ -36,20 +38,24 @@
         map: [ "jumpsuit_decor" ]
   - type: ColorableClothing # LoneStar
     denyReroll: false # LoneStar
+    mappedColors:
+      Primary: Cyberpunk
+      Secondary: Cyberpunk
+      Tertiary: Cyberpunk
     available:
       - jumpsuit_top:
-          base_torso_croptop_armless: Cyberpunk # Alt palettes: ChatNames
+          base_torso_croptop_armless: Primary
         jumpsuit_bottom:
-          base_leg_standard: Cyberpunk
+          base_leg_standard: Secondary
         jumpsuit_decor:
-          decor_base_torso_croptop_armless_01: Cyberpunk
-          decor_base_torso_croptop_armless_02: Cyberpunk
-          decor_base_torso_croptop_armless_03: Cyberpunk
-          decor_base_leg_standard_01: Cyberpunk
-          decor_base_leg_standard_02: Cyberpunk
-          decor_base_leg_standard_03: Cyberpunk
-          decor_base_leg_standard_04: Cyberpunk
-          decor_base_leg_standard_05: Cyberpunk
+          decor_base_torso_croptop_armless_01: Tertiary
+          decor_base_torso_croptop_armless_02: Tertiary
+          decor_base_torso_croptop_armless_03: Tertiary
+          decor_base_leg_standard_01: Tertiary
+          decor_base_leg_standard_02: Tertiary
+          decor_base_leg_standard_03: Tertiary
+          decor_base_leg_standard_04: Tertiary
+          decor_base_leg_standard_05: Tertiary
           mask_null: ""
 
 - type: entity
@@ -58,21 +64,21 @@
   name: punk tanktop jumpsuit
   components:
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
     available:
       - jumpsuit_top:
-          base_torso_armless: Cyberpunk
+          base_torso_armless: Primary
         jumpsuit_bottom:
-          base_leg_standard: Cyberpunk
+          base_leg_standard: Secondary
         jumpsuit_decor:
-          decor_base_torso_croptop_armless_01: Cyberpunk
-          decor_base_torso_croptop_armless_02: Cyberpunk
-          decor_base_torso_croptop_armless_03: Cyberpunk
-          decor_base_leg_standard_01: Cyberpunk
-          decor_base_leg_standard_02: Cyberpunk
-          decor_base_leg_standard_03: Cyberpunk
-          decor_base_leg_standard_04: Cyberpunk
-          decor_base_leg_standard_05: Cyberpunk
+          decor_base_torso_croptop_armless_01: Tertiary
+          decor_base_torso_croptop_armless_02: Tertiary
+          decor_base_torso_croptop_armless_03: Tertiary
+          decor_base_leg_standard_01: Tertiary
+          decor_base_leg_standard_02: Tertiary
+          decor_base_leg_standard_03: Tertiary
+          decor_base_leg_standard_04: Tertiary
+          decor_base_leg_standard_05: Tertiary
           mask_null: ""
 
 - type: entity
@@ -85,20 +91,20 @@
   - type: Clothing
     sprite: Clothing/Uniforms/procedural.rsi
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
     available:
       - jumpsuit_top:
-          base_torso_armless: Cyberpunk
+          base_torso_armless: Primary
         jumpsuit_bottom:
-          base_leg_standard: Cyberpunk
+          base_leg_standard: Secondary
         jumpsuit_decor:
-          decor_torso_armless1: Cyberpunk
-          decor_torso_armless2: Cyberpunk
-          decor_torso_armless3: Cyberpunk
-          decor_torso_armless4: Cyberpunk
-          decor_torso_armless5: Cyberpunk
-          decor_torso_armless9: Cyberpunk
-          decor_torso_armless10: Cyberpunk
+          decor_torso_armless1: Tertiary
+          decor_torso_armless2: Tertiary
+          decor_torso_armless3: Tertiary
+          decor_torso_armless4: Tertiary
+          decor_torso_armless5: Tertiary
+          decor_torso_armless9: Tertiary
+          decor_torso_armless10: Tertiary
           mask_null: ""
 
 #region top w/ shorts
@@ -125,20 +131,24 @@
       - state: mask_null
         map: [ "jumpsuit_decor" ]
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
+    mappedColors:
+      Primary: Cyberpunk
+      Secondary: Cyberpunk
+      Tertiary: Cyberpunk
     available:
       - jumpsuit_top:
-          base_torso_croptop_armless: Cyberpunk # Alt palettes: ChatNames
+          base_torso_croptop_armless: Primary
         jumpsuit_bottom:
-          base_leg_short: Cyberpunk
+          base_leg_short: Secondary
         jumpsuit_decor:
-          decor_base_torso_croptop_armless_01: Cyberpunk
-          decor_base_torso_croptop_armless_02: Cyberpunk
-          decor_base_torso_croptop_armless_03: Cyberpunk
-          decor_base_leg_short_01: Cyberpunk
-          decor_base_leg_short_02: Cyberpunk
-          decor_base_leg_short_03: Cyberpunk
-          decor_base_leg_short_04: Cyberpunk
+          decor_base_torso_croptop_armless_01: Tertiary
+          decor_base_torso_croptop_armless_02: Tertiary
+          decor_base_torso_croptop_armless_03: Tertiary
+          decor_base_leg_short_01: Tertiary
+          decor_base_leg_short_02: Tertiary
+          decor_base_leg_short_03: Tertiary
+          decor_base_leg_short_04: Tertiary
           mask_null: ""
 
 - type: entity
@@ -147,20 +157,20 @@
   name: punk tanktop short jumpsuit
   components:
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
     available:
       - jumpsuit_top:
-          base_torso_armless: Cyberpunk
+          base_torso_armless: Primary
         jumpsuit_bottom:
-          base_leg_short: Cyberpunk
+          base_leg_short: Secondary
         jumpsuit_decor:
-          decor_base_torso_croptop_armless_01: Cyberpunk
-          decor_base_torso_croptop_armless_02: Cyberpunk
-          decor_base_torso_croptop_armless_03: Cyberpunk
-          decor_base_leg_short_01: Cyberpunk
-          decor_base_leg_short_02: Cyberpunk
-          decor_base_leg_short_03: Cyberpunk
-          decor_base_leg_short_04: Cyberpunk
+          decor_base_torso_croptop_armless_01: Tertiary
+          decor_base_torso_croptop_armless_02: Tertiary
+          decor_base_torso_croptop_armless_03: Tertiary
+          decor_base_leg_short_01: Tertiary
+          decor_base_leg_short_02: Tertiary
+          decor_base_leg_short_03: Tertiary
+          decor_base_leg_short_04: Tertiary
           mask_null: ""
 
 #region no top
@@ -183,16 +193,19 @@
       - state: mask_null
         map: [ "jumpsuit_decor" ]
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
+    mappedColors:
+      Secondary: Cyberpunk
+      Tertiary: Cyberpunk
     available:
       - jumpsuit_bottom:
-          base_leg_standard: Cyberpunk
+          base_leg_standard: Secondary
         jumpsuit_decor:
-          decor_base_leg_standard_01: Cyberpunk
-          decor_base_leg_standard_02: Cyberpunk
-          decor_base_leg_standard_03: Cyberpunk
-          decor_base_leg_standard_04: Cyberpunk
-          decor_base_leg_standard_05: Cyberpunk
+          decor_base_leg_standard_01: Tertiary
+          decor_base_leg_standard_02: Tertiary
+          decor_base_leg_standard_03: Tertiary
+          decor_base_leg_standard_04: Tertiary
+          decor_base_leg_standard_05: Tertiary
           mask_null: ""
 
 - type: entity
@@ -214,13 +227,16 @@
       - state: mask_null
         map: [ "jumpsuit_decor" ]
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
+    mappedColors:
+      Secondary: Cyberpunk
+      Tertiary: Cyberpunk
     available:
       - jumpsuit_bottom:
-          base_leg_short: Cyberpunk
+          base_leg_short: Secondary
         jumpsuit_decor:
-          decor_base_leg_short_01: Cyberpunk
-          decor_base_leg_short_02: Cyberpunk
-          decor_base_leg_short_03: Cyberpunk
-          decor_base_leg_short_04: Cyberpunk
+          decor_base_leg_short_01: Tertiary
+          decor_base_leg_short_02: Tertiary
+          decor_base_leg_short_03: Tertiary
+          decor_base_leg_short_04: Tertiary
           mask_null: ""

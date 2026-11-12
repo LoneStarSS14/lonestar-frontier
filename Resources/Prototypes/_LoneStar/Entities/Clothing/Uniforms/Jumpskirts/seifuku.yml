@@ -1,7 +1,7 @@
 #region Base
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: BaseClothingUniformJumpskirtSeifuku
+  id: ClothingUniformBaseJumpskirtSeifuku
   abstract: true
   name: seifuku
   description: An old terran styled outfit, bread not included.
@@ -75,7 +75,7 @@
 
 #region Randomized
 - type: entity
-  parent: BaseClothingUniformJumpskirtSeifuku
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtSeifukuRandom
   components:
   - type: ColorableClothing
@@ -83,7 +83,7 @@
 
 # region Presets (unused currently)
 - type: entity
-  parent: BaseClothingUniformJumpskirtSeifuku
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtSeifukuBlue
   components:
   - type: Sprite
@@ -129,7 +129,7 @@
           color: "#A93A1C"
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtSeifuku
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtSeifukuOrange
   components:
   - type: Sprite
@@ -175,7 +175,7 @@
           color: "#6567ff"
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtSeifuku
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtSeifukuRed
   components:
   - type: Sprite
@@ -221,7 +221,7 @@
           color: "#5C9630"
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtSeifuku
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtSeifukuWhite
   components:
   - type: Sprite
@@ -267,7 +267,7 @@
           color: "#94d1c1"
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtSeifuku
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtSeifukuBlack
   components:
   - type: Sprite
@@ -313,7 +313,7 @@
           color: "#ff0000"
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtSeifuku
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtSeifukuPink
   components:
   - type: Sprite
@@ -359,7 +359,7 @@
           color: "#8000ff"
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtSeifuku
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtSeifukuGreen
   components:
   - type: Sprite
@@ -405,7 +405,7 @@
           color: "#0062ff"
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtSeifuku
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtSeifukuYellow
   components:
   - type: Sprite
