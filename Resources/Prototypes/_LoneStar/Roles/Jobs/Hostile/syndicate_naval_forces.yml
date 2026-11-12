@@ -27,3 +27,13 @@
     wallet: ClothingWalletSyndicateT4
   inhand:
     - EnergyShieldEnforcer
+
+# Syndicate Operative (Alt) 
+- type: startingGear
+  id: SyndicateNavalGearT3OperatorAlt
+  equipment:
+    mask: ClothingMaskGasSyndicate
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlackEsword
+    back: ClothingBackpackSyndicateT3Operative
+    wallet: ClothingWalletSyndicateT3
