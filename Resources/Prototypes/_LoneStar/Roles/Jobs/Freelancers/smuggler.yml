@@ -38,7 +38,7 @@
     - type: PaywardProximityShuttleConsole # TODO: Look into how useful this even is.
 
 - type: entity
-  id: SpawnPointLSSmuggler # TODO: mapping migrations.
+  id: SpawnPointLSSmuggler
   parent: SpawnPointJobBase
   name: smuggler spawn point
   suffix: LoneStar

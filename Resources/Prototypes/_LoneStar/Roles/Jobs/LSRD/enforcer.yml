@@ -33,7 +33,7 @@
   # TODO: Add rpis
 
 - type: entity
-  id: SpawnPointLSEnforcer # TODO: mapping migrations.
+  id: SpawnPointLSEnforcer
   parent: SpawnPointJobBase
   name: enforcer spawn point
   suffix: LoneStar

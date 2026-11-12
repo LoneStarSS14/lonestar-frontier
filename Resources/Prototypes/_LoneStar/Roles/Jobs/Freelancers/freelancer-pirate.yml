@@ -35,7 +35,7 @@
     - rpiJobModifierPirate
 
 - type: entity
-  id: SpawnPointLSFreelancerPirate # TODO: mapping migrations.
+  id: SpawnPointLSFreelancerPirate
   parent: SpawnPointJobBase
   name: freelancer pirate spawn point
   suffix: LoneStar
