@@ -42,3 +42,14 @@
   - type: ColorableClothing
     mappedColors:
       Base: LSSilks
+
+- type: entity
+  parent: [ ClothingHeadBase ]
+  id: ClothingHeadHatBeretTSF
+  name: TSF Marines beret
+  description: An Orange beret. The badge depicts the emblem of the Solarian Marine Corps.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/tsf_beret.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/tsf_beret.rsi

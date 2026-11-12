@@ -37,3 +37,43 @@
     - NanoChatCartridge # DeltaV
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
+
+- type: entity
+  parent: [CentcomPDA, BaseC4Contraband]
+  id: TSFMCPDA
+  name: TSF Marine Corps PDA
+  description: A PDA for someone in the Solarian Marines.
+  components:
+  - type: Pda
+    id: TSFMCIDCard
+    penSlot:
+      startingItem: Pen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#717059"
+    accentVColor: "#A32D26"
+    accentHColor: "#447987"
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-tsfn
+  - type: Icon
+    sprite: _NF/Objects/Devices/pda.rsi
+    state: pda-tsfn
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - LedgerCartridge
+    - MedTekCartridge
+    - NanoChatCartridge # DeltaV
+  - type: BlipCartridge
+    defaultPreset: BlipPresetCommand
