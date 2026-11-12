@@ -1,0 +1,39 @@
+# Original Author
+# dustylens (github)
+
+- type: vessel
+  id: Dragoon
+  parent: BaseVessel
+  name: FSA Dragoon
+  description: The Dragoon is the explorer of choice for adventures on a budget while wanting basic creature comforts.
+  price: 77600 # Appraised @ 20,600 + 50k(exped) * 1.1(Mercfab)
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_LoneStar/Shuttles/Expedition/dragoon.yml
+  guidebookPage: ShipyardDragoon
+  class:
+  - Expedition
+  - Civilian
+  engine:
+  - AME
+
+- type: gameMap
+  id: Dragoon
+  mapName: 'FSA Dragoon'
+  mapPath: /Maps/_LoneStar/Shuttles/Expedition/dragoon.yml
+  minPlayers: 0
+  stations:
+    Dragoon:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Dragoon {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 2, 2 ]
+            CompanionInterview: [ 2, 2 ]
+            PilotInterview: [ 2, 2 ]
+            MercenaryInterview: [ 2, 2 ]
