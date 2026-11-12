@@ -6,7 +6,7 @@
   price: 28220
   category: Small
   group: Security
-  access: Brigmedic
+  access: Security # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/hospitaller.yml
   guidebookPage: Null
   class:
