@@ -57,6 +57,6 @@
     sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
   - type: Sprite
     sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
-    layers: # TODO: make unique one
+    layers:
     - state: crypt_lsrd
     - state: label_lsrd

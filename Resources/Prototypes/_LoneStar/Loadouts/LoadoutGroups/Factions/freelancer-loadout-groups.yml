@@ -164,7 +164,7 @@
   - ContractorMedicalTrackingImplanter
 #endregion
 
-#region Combatant Additions # TODO: Make these subgroup the merc specific groups
+#region Combatant Additions
 - type: loadoutGroup
   id: LSFreelancersFactionCombatantJumpsuit
   name: loadout-group-jumpsuit

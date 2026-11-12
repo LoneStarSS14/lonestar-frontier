@@ -63,7 +63,7 @@
     sprite: _LoneStar/Objects/Devices/pda.rsi
     state: pda-freelancer
   - type: BlipCartridge
-    defaultPreset: BlipPresetPirate # TODO: make unique one
+    defaultPreset: BlipPresetPirate
 
 - type: entity
   parent: BaseLSFreelancerPDA
@@ -179,7 +179,7 @@
     sprite: _LoneStar/Objects/Devices/pda.rsi
     state: pda-lsrd
   - type: BlipCartridge
-    defaultPreset: BlipPresetSecurity # TODO: make unique one
+    defaultPreset: BlipPresetSecurity
 
 - type: entity
   parent: BaseLSLSRDPDA

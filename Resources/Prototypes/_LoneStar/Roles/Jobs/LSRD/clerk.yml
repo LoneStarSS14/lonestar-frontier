@@ -38,7 +38,7 @@
     - rpiChatJudgementModifierMassageTherapist # TODO: replace this
 
 - type: entity
-  id: SpawnPointLSClerk # TODO: mapping migrations.
+  id: SpawnPointLSClerk
   parent: SpawnPointJobBase
   name: clerk spawn point
   suffix: LoneStar

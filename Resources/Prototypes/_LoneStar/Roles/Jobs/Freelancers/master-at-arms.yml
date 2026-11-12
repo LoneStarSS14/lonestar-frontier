@@ -40,7 +40,7 @@
     - rpiJobModifierPirate
 
 - type: entity
-  id: SpawnPointLSMasterAtArms # TODO: mapping migrations.
+  id: SpawnPointLSMasterAtArms
   parent: SpawnPointJobBase
   name: master at arms spawn point
   suffix: LoneStar
