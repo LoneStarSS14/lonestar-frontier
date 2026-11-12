@@ -21,7 +21,7 @@
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
-  id: LSHeadlamp
+  id: ClothingHeadHeadlamp
   name: headlamp
   description: A lightweight headlamp for strapping to your head. When worn and lit, it will light wherever your head's pointed, which is usually wherever you're looking! How convenient.
   components:

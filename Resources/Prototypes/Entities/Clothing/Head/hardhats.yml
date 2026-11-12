@@ -84,7 +84,7 @@
     sprite: Clothing/Head/Hardhats/blue.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/blue.rsi
-  # LoneStar below
+  # LoneStar start
   - type: Armor
     modifiers:
       flatReductions:
@@ -101,7 +101,7 @@
     sprite: Clothing/Head/Hardhats/orange.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/orange.rsi
-  # LoneStar below
+  # LoneStar start
   - type: Armor
     modifiers:
       flatReductions:
@@ -118,7 +118,7 @@
     sprite: Clothing/Head/Hardhats/red.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/red.rsi
-  # LoneStar below
+  # LoneStar start
   - type: Armor
     modifiers:
       flatReductions:
@@ -135,7 +135,7 @@
     sprite: Clothing/Head/Hardhats/white.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/white.rsi
-  # LoneStar below
+  # LoneStar start
   - type: Armor
     modifiers:
       flatReductions:
@@ -152,7 +152,7 @@
     sprite: Clothing/Head/Hardhats/yellow.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/yellow.rsi
-  # LoneStar below
+  # LoneStar start
   - type: Armor
     modifiers:
       flatReductions:
@@ -169,7 +169,7 @@
     sprite: Clothing/Head/Hardhats/dark_yellow.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/dark_yellow.rsi
-  # LoneStar below
+  # LoneStar start
   - type: Armor
     modifiers:
       flatReductions:
@@ -178,18 +178,18 @@
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
-  id: ClothingHeadHatHardhatArmored
+  id: [ ClothingHeadHatHardhatArmored, ClothingHeadHelmetArmoredBase ]
   name: armored hard hat
-  description: An armored hard hat. Provides the best of both worlds in both protection & utility - perfect for the miner or engineer out in the frontiers. # LoneStar
+  description: An armored hard hat. Provides the best of both worlds in both protection & utility - perfect for the engineer on the frontlines.
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardhats/armored.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardhats/armored.rsi
-  - type: Armor #Copied from the sec helmet, as it's hard to give these sane values without locational damage existing.
-    modifiers:
-      coefficients:
-        Blunt: 0.9 # LoneStar
-        Slash: 0.9 # LoneStar
-        Piercing: 0.9
-        Heat: 0.9 # LoneStar
+#  - type: Armor #Copied from the sec helmet, as it's hard to give these sane values without locational damage existing. # LoneStar below
+#    modifiers:
+#      coefficients:
+#        Blunt: 0.8
+#        Slash: 0.8
+#        Piercing: 0.9
+#        Heat: 0.8

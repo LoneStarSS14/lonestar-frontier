@@ -26,10 +26,8 @@
   result: ClothingHeadHatHardhatWhite
   completetime: 3
   materials:
+    Plastic: 300
     Steel: 100
-    Cloth: 100
-    Glass: 100
-    Plastic: 500
 
 - type: latheRecipe
   id: ClothingHeadHatHardhatBlue
@@ -58,17 +56,15 @@
 
 - type: latheRecipe
   id: ClothingHeadHatHardhatArmored
-  parent: NFBaseArmorRecipe
+  parent: NFBaseHelmetRecipe
   result: ClothingHeadHatHardhatArmored
-  completetime: 3
+  completetime: 6
   materials:
     Cloth: 100
     Durathread: 100
-    Steel: 500
+    Steel: 600
     Plasteel: 500
-    Glass: 100
-    Plastic: 500
-    
+
 - type: latheRecipe
   id: ClothingOuterArmorBasicCompact
   parent: NFBaseArmorRecipe

@@ -29,7 +29,7 @@
   - ClothingHeadHatHardhatYellow # LoneStar
   - ClothingHeadHatHardhatYellowDark # LoneStar
   - ClothingHeadHatHardhatArmored # LoneStar
-  - LSHeadlamp # LoneStar
+  - ClothingHeadHeadlamp # LoneStar
 
 - type: latheRecipePack
   id: CargoBoards
