@@ -85,6 +85,9 @@
   - type: ContainerContainer
     containers:
       paper_label: !type:ContainerSlot
+  - type: Tag # LoneStar
+    tags: # LoneStar
+    - DrinkBottle # LoneStar
 
 - type: entity
   parent: DrinkKegBase
