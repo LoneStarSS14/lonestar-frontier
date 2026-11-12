@@ -1,0 +1,59 @@
+#region Interview variants
+- type: job
+  id: InterviewLSEscort
+  name: job-name-ls-interview
+  description: job-description-ls-escort
+  playTimeTracker: JobLSInterviewEscort
+  startingGear: LSInterviewHologramGear
+  icon: "JobIconLSEscort"
+  supervisors: job-supervisors-hire
+  accessGroups:
+  - GeneralAccess
+  jobEntity: InterviewHologramLSEscort
+  newPlayerMessage: false
+
+- type: job
+  id: InterviewLSClerk
+  name: job-name-ls-interview
+  description: job-description-ls-clerk
+  playTimeTracker: JobLSInterviewClerk
+  startingGear: LSInterviewHologramGear
+  icon: "JobIconLSClerk"
+  supervisors: job-supervisors-hire
+  accessGroups:
+  - GeneralAccess
+  jobEntity: InterviewHologramLSClerk
+  newPlayerMessage: false
+#endregion
+
+#region Misc pieces
+# jobEntity entities
+- type: entity
+  id: InterviewHologramLSEscort
+  parent: InterviewHologram
+  categories: [ HideSpawnMenu, DoNotMap ]
+  components:
+  - type: InterviewHologram
+    job: LSEscort
+
+- type: entity
+  id: InterviewHologramLSClerk
+  parent: InterviewHologram
+  categories: [ HideSpawnMenu, DoNotMap ]
+  components:
+  - type: InterviewHologram
+    job: LSClerk
+
+# Hologram Gear
+- type: startingGear
+  id: LSInterviewHologramGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGrey
+    shoes: ClothingShoesColorBlack
+
+# Time Tracker
+- type: playTimeTracker
+  id: JobLSInterviewEscort
+- type: playTimeTracker
+  id: JobLSInterviewClerk
+#endregion
