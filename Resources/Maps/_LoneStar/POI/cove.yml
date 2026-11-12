@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/12/2026 18:44:37
-  entityCount: 3638
+  time: 11/12/2026 19:32:43
+  entityCount: 3640
 maps: []
 grids:
 - 1
@@ -11307,7 +11307,7 @@ entities:
       pos: -46.5,0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -854.1442
+      secondsUntilStateChange: -945.0485
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 2510.5641581
@@ -18450,7 +18450,7 @@ entities:
       pos: -48.5,20.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -4304.607
+      secondsUntilStateChange: -4395.511
       state: Closing
   - uid: 559
     components:
@@ -20270,6 +20270,18 @@ entities:
     components:
     - type: Transform
       pos: -53.5,28.5
+      parent: 1
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 1223
+    components:
+    - type: Transform
+      pos: -52.5,7.5
+      parent: 1
+  - uid: 1356
+    components:
+    - type: Transform
+      pos: -53.5,7.5
       parent: 1
 - proto: SpawnPointLSEscort
   entities:
