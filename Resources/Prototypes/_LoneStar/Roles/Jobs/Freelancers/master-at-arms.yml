@@ -17,6 +17,7 @@
   displayWeight: 60
   startingGear: LSMasterAtArmsGear
   icon: "JobIconLSMasterAtArms"
+  alwaysUseSpawner: true
   hideConsoleVisibility: true
   newPlayerMessage: false
   accessGroups:
