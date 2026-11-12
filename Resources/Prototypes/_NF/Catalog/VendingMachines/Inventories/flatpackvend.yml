@@ -2,47 +2,48 @@
   id: FlatpackVendInventory
   startingInventory:
     # General
-    AutolatheFlatpack: 4294967295 # Infinite
-    WeaponCapacitorRechargerFlatpack: 4294967295 # Infinite
-    BorgChargerFlatpack: 4294967295 # Infinite
-    NFHolopadShipFlatpack: 4294967295 # Infinite
+    AutolatheFlatpack: 4294967295
+    WeaponCapacitorRechargerFlatpack: 4294967295
+    BorgChargerFlatpack: 4294967295
+    NFHolopadShipFlatpack: 4294967295
+    StationRecordsConsoleFlatpack: 4294967295 # LoneStar
     # Salvage
-    #SalvageTechfabNFFlatpack: 4294967295 # Infinite
-    OreProcessorFlatpack: 4294967295 # Infinite
-    MaterialReclaimerFlatpack: 4294967295 # Infinite
-    ScrapProcessorFlatpack: 4294967295 # Infinite
-    ShuttleGunKineticFlatpack: 4294967295 # Infinite
+    #SalvageTechfabNFFlatpack: 4294967295
+    OreProcessorFlatpack: 4294967295
+    MaterialReclaimerFlatpack: 4294967295
+    ScrapProcessorFlatpack: 4294967295
+    ShuttleGunKineticFlatpack: 4294967295
     # Service
-    #ServiceTechFabFlatpack: 4294967295 # Infinite
-    CutterMachineFlatpack: 4294967295 # Infinite
-    ComputerWithdrawBankATMFlatpack: 4294967295 # Infinite
-    TelevisionFlatpack: 4294967295 # Infinite
+    #ServiceTechFabFlatpack: 4294967295
+    CutterMachineFlatpack: 4294967295
+    ComputerWithdrawBankATMFlatpack: 4294967295
+    TelevisionFlatpack: 4294967295
 #    UniformPrinterFlatpack: 6 # Loadouts are a thing
     # Engineering
-    #EngineeringTechFabFlatpack: 4294967295 # Infinite
-    MaterialSiloFlatpack: 4294967295 # Infinite
-    MachineFlatpackerFlatpack: 4294967295 # Infinite
-    ExosuitFabricatorFlatpack: 4294967295 # Infinite
-    CircuitImprinterFlatpack: 4294967295 # Infinite
-    GasThermoMachineFreezerFlatpack: 4294967295 # Infinite
-    PortableGeneratorJrPacmanFlatpack: 4294967295 # Infinite
-    PortableGeneratorPacmanFlatpack: 4294967295 # Infinite
-    PortableGeneratorSuperPacmanFlatpack: 4294967295 # Infinite
-    SolarAssemblyFlatpack: 4294967295 # Infinite
-    ComputerSolarControlFlatpack: 4294967295 # Infinite
-    GravityGeneratorMiniFlatpack: 4294967295 # Infinite
-    ThrusterFlatpack: 4294967295 # Infinite
-    GyroscopeFlatpack: 4294967295 # Infinite
-    SmallGyroscopeFlatpack: 4294967295 # Infinite
-    SmallThrusterFlatpack: 4294967295 # Infinite
-    SpaceHeaterFlatpack: 4294967295 # Infinite
-    AirlockFlatpack: 4294967295 # Infinite
-    AirlockGlassFlatpack: 4294967295 # Infinite
-    AirlockShuttleFlatpack: 4294967295 # Infinite
-    AirlockGlassShuttleFlatpack: 4294967295 # Infinite
+    #EngineeringTechFabFlatpack: 4294967295
+    MaterialSiloFlatpack: 4294967295
+    MachineFlatpackerFlatpack: 4294967295
+    ExosuitFabricatorFlatpack: 4294967295
+    CircuitImprinterFlatpack: 4294967295
+    GasThermoMachineFreezerFlatpack: 4294967295
+    PortableGeneratorJrPacmanFlatpack: 4294967295
+    PortableGeneratorPacmanFlatpack: 4294967295
+    PortableGeneratorSuperPacmanFlatpack: 4294967295
+    SolarAssemblyFlatpack: 4294967295
+    ComputerSolarControlFlatpack: 4294967295
+    GravityGeneratorMiniFlatpack: 4294967295
+    ThrusterFlatpack: 4294967295
+    GyroscopeFlatpack: 4294967295
+    SmallGyroscopeFlatpack: 4294967295
+    SmallThrusterFlatpack: 4294967295
+    SpaceHeaterFlatpack: 4294967295
+    AirlockFlatpack: 4294967295
+    AirlockGlassFlatpack: 4294967295
+    AirlockShuttleFlatpack: 4294967295
+    AirlockGlassShuttleFlatpack: 4294967295
     # Science
-    MachineArtifactAnalyzerFlatpack: 4294967295 # Infinite
-    ResearchAndDevelopmentServerFlatpack: 4294967295 # Infinite
-    BlueprintLithographFlatpack: 4294967295 # Infinite
-    TeslaGroundingRodFlatpack: 4294967295 # Infinite
-    ResearchComputerFlatpack: 4294967295 # Infinite
+    MachineArtifactAnalyzerFlatpack: 4294967295
+    ResearchAndDevelopmentServerFlatpack: 4294967295
+    BlueprintLithographFlatpack: 4294967295
+    TeslaGroundingRodFlatpack: 4294967295
+    ResearchComputerFlatpack: 4294967295
