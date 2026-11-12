@@ -23,7 +23,7 @@
 - type: accessGroup
   id: FreelancerCommandAccess
   tags:
-  [] # TODO: later when freelancers have a factional bank this will be used.
+    [] # TODO: later when freelancers have a factional bank this will be used.
 #endregion
 
 #region LSRD

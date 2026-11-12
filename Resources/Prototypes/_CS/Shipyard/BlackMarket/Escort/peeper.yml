@@ -40,4 +40,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Escort: [ 0, 0 ]
+            InterviewLSEscort: [ 0, 0 ]
