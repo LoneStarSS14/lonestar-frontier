@@ -6,7 +6,7 @@
   description: uplink-anaconda-desc
   productEntity: WeaponPistolAnaconda
   cost:
-    Telecrystal: 16 # Coyote: 40<16
+    Telecrystal: 4 # Lonestar
   categories:
   - UplinkWeaponry
 
@@ -28,7 +28,7 @@
   description: uplink-lollypop-bundle-desc
   productEntity: SyndicateLollypopBundle
   cost:
-    Telecrystal: 8 # Coyote: 15<8
+    Telecrystal: 6 # LoneStar
   categories:
   - UplinkChemicals
 
@@ -38,6 +38,6 @@
   description: uplink-lollypop-bundle-big-desc
   productEntity: ClothingBackpackDuffelSyndicateFilledCandy
   cost:
-    Telecrystal: 16 # Coyote: 100<16
+    Telecrystal: 8 # LoneStar
   categories:
   - UplinkChemicals
