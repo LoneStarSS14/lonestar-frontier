@@ -174,12 +174,12 @@ public abstract class SharedBalanceSystem : EntitySystem
             return false;
         }
 
-        var position = _transform.GetWorldPosition(xform);
-        var mapId = xform.MapID;
-        if (!component.HasLastPosition || component.LastMapId != mapId)
+        var surface = xform.GridUid ?? xform.MapUid;
+        var position = GetSurfacePosition(xform, surface);
+        if (!component.HasLastPosition || component.LastSurface != surface)
         {
             component.LastPosition = position;
-            component.LastMapId = mapId;
+            component.LastSurface = surface ?? EntityUid.Invalid;
             component.HasLastPosition = true;
             return false;
         }
@@ -197,9 +197,18 @@ public abstract class SharedBalanceSystem : EntitySystem
             return;
         }
 
-        component.LastPosition = _transform.GetWorldPosition(xform);
-        component.LastMapId = xform.MapID;
+        var surface = xform.GridUid ?? xform.MapUid;
+        component.LastPosition = GetSurfacePosition(xform, surface);
+        component.LastSurface = surface ?? EntityUid.Invalid;
         component.HasLastPosition = true;
+    }
+
+    private Vector2 GetSurfacePosition(TransformComponent xform, EntityUid? surface)
+    {
+        var worldPosition = _transform.GetWorldPosition(xform);
+        return surface is { } surfaceUid
+            ? Vector2.Transform(worldPosition, _transform.GetInvWorldMatrix(surfaceUid))
+            : worldPosition;
     }
 
     private void OnDisarmed(EntityUid uid, BalanceComponent balance, ref DisarmedEvent args)

@@ -1,7 +1,6 @@
 using System.Numerics;
 using Content.Shared.Alert;
 using Robust.Shared.GameStates;
-using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Timing;
@@ -56,7 +55,7 @@ public sealed partial class BalanceComponent : Component
     public short AlertSeverity = -1;
 
     public Vector2 LastPosition;
-    public MapId LastMapId;
+    public EntityUid LastSurface;
     public bool HasLastPosition;
 }
 
