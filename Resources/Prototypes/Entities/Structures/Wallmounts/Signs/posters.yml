@@ -915,7 +915,7 @@
   parent: PosterBase
   id: PosterLegit12Gauge
   name: "12 gauge"
-  description: "A poster boasting about the superiority of 12 gauge shotgun shells."
+  description: "A poster boasting about the superiority of 12 gauge shotgun shells. Funny, you've never seen a 12 gauge shell." # LoneStar
   components:
   - type: Sprite
     state: poster31_legit
