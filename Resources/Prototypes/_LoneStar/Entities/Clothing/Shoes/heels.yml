@@ -1,6 +1,6 @@
 #region Kitten
 - type: entity
-  parent: [ ClothingShoesBaseButcherableHeelsNoisy, ClothingShoesColorableBaseColorInhand ]
+  parent: [ ClothingShoesBaseButcherableHeelsNoisyVisibleFeet, ClothingShoesColorableBaseColorInhand ]
   id: ClothingShoesHeelsKittenColorable
   name: kitten-heels
   description: A pair of cute kitten heels with a dainty ankle strap.
@@ -9,6 +9,9 @@
     sprite: _LoneStar/Clothing/Shoes/Heels/kitten-heels-colorable.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Shoes/Heels/kitten-heels-colorable.rsi
+  - type: ImbalancingClothing # LoneStar
+    balanceDrain: 2
+    balanceShoveMultiplier: 1
 
 - type: entity
   parent: ClothingShoesHeelsKittenColorable

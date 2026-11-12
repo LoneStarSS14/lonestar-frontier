@@ -1,25 +1,26 @@
 - type: vendingMachineInventory
   id: CiviMedVendInventory
   startingInventory:
-    HandheldHealthAnalyzer: 4294967295 # Infinite
-    Brutepack: 4294967295 # Infinite
-    Ointment: 4294967295 # Infinite
-    Bloodpack: 4294967295 # Infinite
-    Gauze: 4294967295 # Infinite
-    EmergencyMedipen: 4294967295 # Infinite
-    BodyBagFolded: 4294967295 # Infinite
-    ClothingEyesHudMedical: 4294967295 # Infinite
-    ClothingEyesEyepatchHudMedical: 4294967295 # Infinite
-    MedicalTrackingImplanter: 4294967295 # Infinite
-    SadTromboneImplanter: 4294967295 # Infinite
-    BikeHornImplanter: 4294967295 # Infinite
-    LightImplanter: 4294967295 # Infinite
-    MedTekCartridge: 4294967295 # Infinite
-    BoxFolderMedicalDoctor: 4294967295 # Infinite
+    HandheldHealthAnalyzer: 4294967295
+    Brutepack: 4294967295
+    Ointment: 4294967295
+    Bloodpack: 4294967295
+    Gauze: 4294967295
+    EmergencyMedipen: 4294967295
+    BodyBagFolded: 4294967295
+    ClothingEyesHudMedical: 4294967295
+    ClothingEyesEyepatchHudMedical: 4294967295
+    MedicalTrackingImplanter: 4294967295
+    SadTromboneImplanter: 4294967295
+    BikeHornImplanter: 4294967295
+    LightImplanter: 4294967295
+    BalanceImplanter: 4294967295 # LoneStar
+    MedTekCartridge: 4294967295
+    BoxFolderMedicalDoctor: 4294967295
     # START COYOTE
-    WheelchairFlatpack: 4294967295 # Infinite
-    Cane: 4294967295 # Infinite
-    RepairPatch: 4294967295 # Infinite
-    RepairSpray: 4294967295 # Infinite
-    RepairAutoinjector: 4294967295 # Infinite
+    WheelchairFlatpack: 4294967295
+    Cane: 4294967295
+    RepairPatch: 4294967295
+    RepairSpray: 4294967295
+    RepairAutoinjector: 4294967295
     # End Coyote

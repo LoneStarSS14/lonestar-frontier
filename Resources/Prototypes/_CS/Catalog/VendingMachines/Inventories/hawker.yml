@@ -24,6 +24,7 @@
     AdvCollarModuleSealing: 4294967295
     AdvCollarModuleShock: 4294967295
     AdvCollarModuleJingling: 4294967295
+    AdvCollarModuleCowbell: 4294967295
     AdvCollarModuleSpeechModifier: 4294967295
     AdvCollarModulePsychicClothingLock: 4294967295
     AdvCollarModuleWaddle: 4294967295
@@ -70,6 +71,8 @@
     # Size Manipulation
     WeaponSizeManipulator: 4294967295
     RemoteSignaller: 4294967295
+    # Masks
+    ClothingMaskGasDroneHoodless: 4294967295
   contrabandInventory:
     # Adv Collars
     ClothingNeckAdvancedCollarCC: 4294967295

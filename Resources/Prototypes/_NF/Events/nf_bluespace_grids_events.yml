@@ -166,8 +166,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        # minCount: 1 # Coyote: make it vary from one
-        # maxCount: 3 # Coyote: to three instances
+        minCount: 2 # Lonestar: make it 
+        maxCount: 2 # Lonestar: three instances
         minimumDistance: 2500 # Coyote: add: 1500 -> 2500m
         maximumDistance: 3500 # Coyote: add: 2500 -> 3500m
         addComponents:
@@ -208,8 +208,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        # minCount: 1 # Coyote: make it vary from one
-        # maxCount: 3 # Coyote: to three instances
+        minCount: 2 # Lonestar: make it 
+        maxCount: 2 # Lonestar: three instances
         minimumDistance: 2500 # Coyote: 1500<2500
         maximumDistance: 3500 # Coyote: 2500<3500
         addComponents:
@@ -250,8 +250,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        # minCount: 1 # Coyote: make it vary from one
-        # maxCount: 3 # Coyote: to three instances
+        minCount: 2 # Lonestar: make it 
+        maxCount: 2 # Lonestar: three instances
         minimumDistance: 2500 # Coyote: 1500<2500
         maximumDistance: 3500 # Coyote: 2500<3500
         addComponents:
@@ -292,8 +292,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-Cave
-        # minCount: 1 # Coyote: make it vary from one
-        # maxCount: 3 # Coyote: to three instances
+        minCount: 2 # Lonestar: make it 
+        maxCount: 2 # Lonestar: three instances
         minimumDistance: 2500 # Coyote: 1500<2500
         maximumDistance: 3500 # Coyote: 2500<3500
         addComponents:

@@ -1,0 +1,88 @@
+- type: entity
+  id: HCD
+  parent: BaseItem
+  name: HCD
+  description: The Holy Construction Device. Clearly not a widespread manufacture and more the product of religious fanatics modifying technology.
+  components:
+  - type: RCD
+    isShipyardRCD: true
+    availablePrototypes:
+    - Deconstruct
+    # Stained Glass
+    - ChristianStainedGlassSmall1
+    - ChristianStainedGlassSmall2
+    - ChristianStainedGlassSmall2Alt
+    - DruidismStainedGlassSmall1
+    - DruidismStainedGlassSmall2
+    - SatanismStainedGlassSmall1
+    - SatanismStainedGlassSmall2
+    - PinkCatStainedGlassSmall
+    - OracleStainedGlassLarge
+    - NarsieStainedGlassSmall1
+    - NarsieStainedGlassSmall2
+    - NarsieStainedGlassSmall3
+    - NarsieStainedGlassLarge
+    - RatvarStainedGlassSmall1
+    - RatvarStainedGlassSmall2
+    - RatvarStainedGlassSmall3
+    - RatvarStainedGlassLarge
+    # Altars
+    - ChaosAltar
+    - AltarSpaceChristian
+    - AltarDruid
+    - AltarFangs
+    - AltarHeaven
+    - AltarNanotrasen
+    - AltarSatana
+    - AltarTechnology
+    - AltarToolbox
+    # Water and Waterfalls
+    - FloorWaterEntity
+    - FloorWaterfallEntity
+    - FloorWaterfallEntityOccluded
+    - FloorWaterfallEntityPool
+    - PoolWaterfallSpout
+    - PoolWaterfallSpoutDark
+  - type: LimitedCharges
+    maxCharges: 30
+  - type: Sprite
+    sprite: _Everdream/Objects/Tools/hcd.rsi
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
+  - type: Item
+    size: Normal
+    sprite: _Everdream/Objects/Tools/hcd.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-unshaded
+        shader: unshaded
+      right:
+      - state: inhand-right
+      - state: inhand-right-unshaded
+        shader: unshaded
+  - type: Clothing
+    sprite: _Everdream/Objects/Tools/hcd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: PointLight
+    color: "#e39c40"
+    radius: 2.5
+    power: 10
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 500
+      Plastic: 100
+  - type: StaticPrice
+    price: 55
+    vendPrice: 5000
+  - type: UserInterface
+    interfaces:
+      enum.RcdUiKey.Key:
+        type: RCDMenuBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.RcdUiKey.Key

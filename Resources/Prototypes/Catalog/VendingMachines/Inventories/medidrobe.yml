@@ -48,6 +48,8 @@
     ClothingOuterWinterPara: 2
     ClothingShoesBootsWinterParamedic: 2
     ClothingOuterCoatParamedicWB: 2
+    ClothingHeadHatParamedicSiren: 2 # LoneStar
+    ClothingHeadHatParamedicSirenBeret: 2 # LoneStar
     ClothingHeadHatParamedicsoft: 2
     ClothingBeltMedicalEMT: 4 # Frontier, empty
     ClothingOuterHardsuitVoidParamed: 1

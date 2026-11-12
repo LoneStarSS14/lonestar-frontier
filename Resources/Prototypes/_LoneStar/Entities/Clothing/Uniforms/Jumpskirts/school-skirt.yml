@@ -1,0 +1,403 @@
+#region Base
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: BaseClothingUniformJumpskirtSchool
+  abstract: true
+  name: school skirt
+  description: A stylish and comfortable school skirt.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/school-skirt.rsi
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+    - state: icon-tertiary
+      map: [ "i-tertiary" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/school-skirt.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-primary
+        map: [ "uniform-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+      - state: equipped-INNERCLOTHING-tertiary
+        map: [ "uniform-tertiary" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left-primary
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          map: [ "hl-secondary" ]
+      right:
+        - state: inhand-right-primary
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Shirt: LSSilks
+      Dress: NTInteriorDesign
+      Ribbon: NTInteriorDesign
+    available:
+      - i-primary:
+          icon-primary: Shirt
+        i-secondary:
+          icon-secondary: Dress
+        i-tertiary:
+          icon-tertiary: Ribbon
+        uniform-primary:
+          equipped-INNERCLOTHING-primary: Shirt
+        uniform-secondary:
+          equipped-INNERCLOTHING-secondary: Dress
+        uniform-tertiary:
+          equipped-INNERCLOTHING-tertiary: Ribbon
+        hl-primary:
+          inhand-left-primary: Shirt
+        hl-secondary:
+          inhand-left-secondary: Dress
+        hr-primary:
+          inhand-right-primary: Shirt
+        hr-secondary:
+          inhand-right-secondary: Dress
+
+#region Randomized
+- type: entity
+  parent: BaseClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtSchoolRandom
+  components:
+  - type: ColorableClothing
+    randomOnCreation: true
+
+# region Presets (unused currently)
+- type: entity
+  parent: BaseClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtSchoolBlue
+  name: school skirt (blue)
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+      color: "#96bbe5"
+    - state: icon-tertiary
+      map: [ "i-tertiary" ]
+      color: "#A93A1C"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+        color: "#96bbe5"
+      - state: equipped-INNERCLOTHING-tertiary
+        map: [ "uniform-tertiary" ]
+        color: "#A93A1C"
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          map: [ "hl-secondary" ]
+          color: "#96bbe5"
+      right:
+        - state: inhand-right
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          map: [ "hr-secondary" ]
+          color: "#96bbe5"
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtSchoolOrange
+  name: school skirt (nectarine)
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+      color: "#ff9100"
+    - state: icon-tertiary
+      map: [ "i-tertiary" ]
+      color: "#6567ff"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+        color: "#ff9100"
+      - state: equipped-INNERCLOTHING-tertiary
+        map: [ "uniform-tertiary" ]
+        color: "#6567ff"
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          map: [ "hl-secondary" ]
+          color: "#ff9100"
+      right:
+        - state: inhand-right
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          map: [ "hr-secondary" ]
+          color: "#ff9100"
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtSchoolRed
+  name: school skirt (strawberry)
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+      color: "#9E2020"
+    - state: icon-tertiary
+      map: [ "i-tertiary" ]
+      color: "#5C9630"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+        color: "#9E2020"
+      - state: equipped-INNERCLOTHING-tertiary
+        map: [ "uniform-tertiary" ]
+        color: "#5C9630"
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          map: [ "hl-secondary" ]
+          color: "#9E2020"
+      right:
+        - state: inhand-right
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          map: [ "hr-secondary" ]
+          color: "#9E2020"
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtSchoolWhite
+  name: school skirt (ghost white)
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+      color: "#eff9ff"
+    - state: icon-tertiary
+      map: [ "i-tertiary" ]
+      color: "#94d1c1"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+        color: "#eff9ff"
+      - state: equipped-INNERCLOTHING-tertiary
+        map: [ "uniform-tertiary" ]
+        color: "#94d1c1"
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          map: [ "hl-secondary" ]
+          color: "#eff9ff"
+      right:
+        - state: inhand-right
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          map: [ "hr-secondary" ]
+          color: "#eff9ff"
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtSchoolBlack
+  name: school skirt (licorice)
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+      color: "#353535"
+    - state: icon-tertiary
+      map: [ "i-tertiary" ]
+      color: "#ff0000"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+        color: "#353535"
+      - state: equipped-INNERCLOTHING-tertiary
+        map: [ "uniform-tertiary" ]
+        color: "#ff0000"
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          map: [ "hl-secondary" ]
+          color: "#353535"
+      right:
+        - state: inhand-right
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          map: [ "hr-secondary" ]
+          color: "#353535"
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtSchoolPink
+  name: school skirt (lavender)
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+      color: "#ff8ef9"
+    - state: icon-tertiary
+      map: [ "i-tertiary" ]
+      color: "#8000ff"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+        color: "#ff8ef9"
+      - state: equipped-INNERCLOTHING-tertiary
+        map: [ "uniform-tertiary" ]
+        color: "#8000ff"
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          map: [ "hl-secondary" ]
+          color: "#ff8ef9"
+      right:
+        - state: inhand-right
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          map: [ "hr-secondary" ]
+          color: "#ff8ef9"
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtSchoolGreen
+  name: school skirt (jade)
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+      color: "#49ff95"
+    - state: icon-tertiary
+      map: [ "i-tertiary" ]
+      color: "#0062ff"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+        color: "#49ff95"
+      - state: equipped-INNERCLOTHING-tertiary
+        map: [ "uniform-tertiary" ]
+        color: "#0062ff"
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          map: [ "hl-secondary" ]
+          color: "#49ff95"
+      right:
+        - state: inhand-right
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          map: [ "hr-secondary" ]
+          color: "#49ff95"
+
+- type: entity
+  parent: BaseClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtSchoolYellow
+  name: school skirt (lemon)
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-primary
+      map: [ "i-primary" ]
+    - state: icon-secondary
+      map: [ "i-secondary" ]
+      color: "#fffb00"
+    - state: icon-tertiary
+      map: [ "i-tertiary" ]
+      color: "#555555"
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-primary" ]
+      - state: equipped-INNERCLOTHING-secondary
+        map: [ "uniform-secondary" ]
+        color: "#fffb00"
+      - state: equipped-INNERCLOTHING-tertiary
+        map: [ "uniform-tertiary" ]
+        color: "#555555"
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-primary" ]
+        - state: inhand-left-secondary
+          map: [ "hl-secondary" ]
+          color: "#fffb00"
+      right:
+        - state: inhand-right
+          map: [ "hr-primary" ]
+        - state: inhand-right-secondary
+          map: [ "hr-secondary" ]
+          color: "#fffb00"

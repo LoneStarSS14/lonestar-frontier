@@ -4577,3 +4577,238 @@ Entries:
   id: 501
   time: '2026-10-28T02:35:04.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/287
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: >-
+        Caduceus Cap, Salvation Shako, Compact Armor Vest, Security Ballistic
+        Mask, Rubber gas mask
+    - type: Tweak
+      message: Better accessibility for merc helmets
+  id: 502
+  time: '2026-10-28T17:00:19.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/289
+- author: Rellu225
+  changes:
+    - type: Tweak
+      message: Replaced St. Micheals
+  id: 503
+  time: '2026-10-31T12:15:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/288
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: 3 "new" hairstyles, Eve, Remilia, Impish (Short)
+  id: 504
+  time: '2026-10-31T12:16:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/293
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Portable Recharger now wearable in suitstorage
+  id: 505
+  time: '2026-11-02T20:33:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/296
+- author: archee1
+  changes:
+    - type: Remove
+      message: Removed titan thrusters.
+    - type: Tweak
+      message: Vesper thrusters now take 3 capacitors, down from 6
+  id: 506
+  time: '2026-11-02T20:57:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/292
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Ballet Heels tweak
+  id: 507
+  time: '2026-11-02T20:57:53.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/297
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: Port of Bubber's armored cnc maid outfit.
+  id: 508
+  time: '2026-11-02T21:01:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/298
+- author: archee1
+  changes:
+    - type: Add
+      message: Adds 2 staff plushies of Archee and Eveningkind
+  id: 509
+  time: '2026-11-05T07:20:24.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/300
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: 'New item: HCD'
+  id: 510
+  time: '2026-11-05T07:22:04.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/286
+- author: tenmillimaster
+  changes:
+    - type: Add
+      message: >-
+        Added Laser/Holoflare pistol as an upgrade to the laser pistol/
+        holoflare.
+  id: 511
+  time: '2026-11-05T15:26:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/262
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        2 new colors can be selected among the regular set of colorable clothing
+        options
+    - type: Tweak
+      message: The regular colors set has been re-ordered to be more hue ordered
+    - type: Tweak
+      message: >-
+        All base game 'jester' costume related clothing has been made colorable
+        (2 suits, 2 hats, shoes)
+    - type: Tweak
+      message: Jester shoes now have visible bells on them
+    - type: Tweak
+      message: >-
+        The following now support colorability: Evending Dress (red and blue),
+        Athletic shorts (no longer a loadout option (for now)), Comfy sweater
+    - type: Tweak
+      message: >-
+        Base jumpsuits, casual jumpsuits, and shoes (including skirt
+        alternatives) are now colorable, and are no longer offered by the
+        clothesmate aside their default grey/white variants.
+  id: 512
+  time: '2026-11-06T09:14:11.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/304
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Construction boxes and Treasure chests can now hold large items like
+        dinosaur heads and flatpacks.
+  id: 513
+  time: '2026-11-08T12:08:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/312
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        3 new maid dresses, gorkas jumpsuit, overalls jumpsuit/skirt, cardigan
+        dress, wedding dress, seifuku, plaid pencil skirt, 'primal' dress.
+    - type: Tweak
+      message: some maid dresses have been renamed for discernability.
+    - type: Remove
+      message: removed schoolskirt colored variants from the clothes mate.
+  id: 514
+  time: '2026-11-08T12:10:41.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/306
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Expedition lootbags can no longer can drop tier 1 or trash weapon rolls
+    - type: Remove
+      message: The P-mag is no longer buyable by freelancers of any position.
+    - type: Tweak
+      message: >-
+        The Smuggler uplink's tiered loot drops have been replaced with 'rare
+        weapon' loot bags which are sealed and can be opened later.
+    - type: Tweak
+      message: >-
+        Ripper docs now buy the brigmedic hypospray directly instead of a
+        randomized loot roll of one.
+  id: 515
+  time: '2026-11-09T10:39:34.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/313
+- author: lexiwitch
+  changes:
+    - type: Fix
+      message: >-
+        Shipyard console made somewhat fancier. Now no more repeatedly buying
+        and selling ships!
+    - type: Tweak
+      message: IFF Console overhauled to look snazzier!
+    - type: Tweak
+      message: >-
+        Pirate Bounty Exchange, Plunder Exchange, Contraband Exchange given room
+        to breathe.
+  id: 516
+  time: '2026-11-09T11:43:38.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/308
+- author: tenmillimaster
+  changes:
+    - type: Fix
+      message: removed laser/holoflare from merc lathes
+  id: 517
+  time: '2026-11-09T12:32:02.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/315
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Heels are now considered imbalancing and will make you fall over from
+        running about too much, this can be circumvented via a new trait
+        Sure-Footed, balance implanter, or by taking the heels off/standing
+        still. Different factors can impact balance more or less such as being
+        drunk or dragged by another player.
+  id: 518
+  time: '2026-11-11T06:59:50.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/316
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Adv. Bell/Cowbell/Shock collars now come with their respective modules
+        prefilled.
+    - type: Add
+      message: Cowbell modules can now be bought and added to any adv. collar.
+    - type: Tweak
+      message: Adv. collar clothing locks no longer affect cigarettes.
+    - type: Fix
+      message: Basic collars are now foldable.
+    - type: Fix
+      message: chameleon collars can no longer be folded to become invisible.
+    - type: Fix
+      message: chameleon collar's chameleon options no longer offers duplicate styles.
+  id: 519
+  time: '2026-11-11T07:01:19.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/317
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Being weightless prevents you losing your balance from imbalanced
+        clothing.
+  id: 520
+  time: '2026-11-11T12:39:00.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/319
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Heels now properly look heeled and dont use grey pixels to cover up the
+        feet underneath.
+    - type: Fix
+      message: >-
+        clothing like helmets can now hide layers other than just the toplevel
+        of hair, such as hairtop and hairside. report any weird cases found
+        regarding what gets hidden.
+  id: 521
+  time: '2026-11-11T15:14:30.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/320
+- author: archee1
+  changes:
+    - type: Fix
+      message: Balance is no longer drained when piloting a shuttle
+  id: 522
+  time: '2026-11-12T15:40:37.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/321
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        The dragoon has been updated to be exped capable along with some minor
+        redecorating.
+  id: 523
+  time: '2026-11-12T17:43:59.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/322

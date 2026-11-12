@@ -2,3 +2,8 @@
   id: LSMercenaryStatic
   recipes:
   - GauzeMerc
+  - ClothingHeadHelmetMercenaryBlack
+  - ClothingMaskGasSecurityBallistic
+  - ClothingOuterArmorBasicCompact
+  - ClothingOuterArmorTacticalMaid
+  - ClothingHeadHelmetTacticalMaid

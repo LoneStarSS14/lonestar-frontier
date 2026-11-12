@@ -66,8 +66,8 @@ public sealed class HideLayerClothingSystem : EntitySystem
         // the clothing is (or was)equipped in a matching slot.
         foreach (var (layer, validSlots) in clothing.Comp1.Layers)
         {
-            if (!hideable.Contains(layer))
-                continue;
+            // if (!hideable.Contains(layer)) // LoneStar, lazy removal, better solution is to fix the defaults for the component to be 'all'
+            //     continue;
 
             // Only update this layer if we are currently equipped to the relevant slot.
             if (validSlots.HasFlag(inSlot))
@@ -80,11 +80,15 @@ public sealed class HideLayerClothingSystem : EntitySystem
         if (clothing.Comp1.Slots is { } slots && clothing.Comp2.Slots.HasFlag(inSlot))
 #pragma warning restore CS0618 // Type or member is obsolete
         {
+            // LoneStar start, stops _humanoid needing specified layers for each species.
+            // this shouldnt cause problems since we have omni markings, its on players to not having bad looking characters.
             foreach (var layer in slots)
             {
-                if (hideable.Contains(layer))
-                    _humanoid.SetLayerVisibility(user!, layer, !hideLayers, inSlot, ref dirty);
+                // if (hideable.Contains(layer))
+                //     _humanoid.SetLayerVisibility(user!, layer, !hideLayers, inSlot, ref dirty);
+                _humanoid.SetLayerVisibility(user!, layer, !hideLayers, inSlot, ref dirty);
             }
+            // LoneStar end
         }
 
         if (dirty)

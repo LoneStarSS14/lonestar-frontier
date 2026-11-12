@@ -22,7 +22,7 @@
     layers:
     - state: law_space
   - type: HyperlinkBook
-    url: https://discord.com/channels/1387276222639378627/1453504901752819863/1455118467882815529
+    url: https://discord.com/channels/1525972268423971066/1525980762606665821/1526003477179007077
   - type: Tag
     tags:
     - Book
@@ -39,7 +39,7 @@
     layers:
     - state: nfsd_sop
   - type: HyperlinkBook
-    url: https://discord.com/channels/1387276222639378627/1461583572510183609/1461595258596098190
+    url: https://docs.google.com/spreadsheets/d/1-EwM2XJp4KU8B66UJN2IX6xAKFMv4bOZCWaN_IPKxpo/edit?gid=596755860#gid=596755860
   - type: Tag
     tags:
     - Book

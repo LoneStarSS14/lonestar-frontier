@@ -1,0 +1,113 @@
+- type: entity
+  abstract: true
+  parent: NFBaseNpcLootBackpack
+  id: LSBaseLootbox
+  name: non-descript loot-bag
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Back/Duffels/color.rsi
+    layers:
+    - state: icon-base
+      color: "#424242"
+    - state: icon-decal-straps
+      color: "#c3c3c3"
+    - state: icon-zipper
+      color: "#ffdb0f"
+      shader: unshaded
+  - type: Item
+    size: Normal
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#424242"
+      - state: inhand-left-decal-straps
+        color: "#c3c3c3"
+      - state: inhand-left-zipper
+        color: "#ffdb0f"
+        shader: unshaded
+      right:
+      - state: inhand-right-base
+        color: "#424242"
+      - state: inhand-right-decal-straps
+        color: "#c3c3c3"
+      - state: inhand-right-zipper
+        color: "#ffdb0f"
+        shader: unshaded
+  - type: NFTreasure
+  - type: SpawnItemsOnUse
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: LSBaseLootbox
+  id: LSLootboxRangedRare
+  name: rare gun loot box
+  description: Contains a random rare ranged weapon.
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-base
+      color: "#424242"
+    - state: icon-decal-straps
+      color: "#d36060"
+    - state: icon-zipper
+      color: "#ffdb0f"
+      shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#424242"
+      - state: inhand-left-decal-straps
+        color: "#d36060"
+      - state: inhand-left-zipper
+        color: "#ffdb0f"
+        shader: unshaded
+      right:
+      - state: inhand-right-base
+        color: "#424242"
+      - state: inhand-right-decal-straps
+        color: "#d36060"
+      - state: inhand-right-zipper
+        color: "#ffdb0f"
+        shader: unshaded
+  - type: SpawnItemsOnUse
+    items:
+    - id: LSSpawnLootboxRangedRare
+
+- type: entity
+  parent: LSBaseLootbox
+  id: LSLootboxMeleeRare
+  name: rare gun loot box
+  description: Contains a random rare melee weapon.
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-base
+      color: "#424242"
+    - state: icon-decal-straps
+      color: "#60a5d3"
+    - state: icon-zipper
+      color: "#ffdb0f"
+      shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#424242"
+      - state: inhand-left-decal-straps
+        color: "#60a5d3"
+      - state: inhand-left-zipper
+        color: "#ffdb0f"
+        shader: unshaded
+      right:
+      - state: inhand-right-base
+        color: "#424242"
+      - state: inhand-right-decal-straps
+        color: "#60a5d3"
+      - state: inhand-right-zipper
+        color: "#ffdb0f"
+        shader: unshaded
+  - type: SpawnItemsOnUse
+    items:
+    - id: LSSpawnLootboxMeleeRare

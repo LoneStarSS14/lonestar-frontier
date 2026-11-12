@@ -1,0 +1,61 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetTacticalMaid
+  name: mercenary maid headband
+  description: A highly durable mercenary maid headband.
+  components:
+  - type: Sprite
+    sprite: _Bubber/Clothing/Head/tacticalmaid.rsi
+    layers:
+    - state: icon
+      map: [ "head-icon-base" ]
+    - state: icon-accent
+      shader: unshaded
+      map: [ "head-icon-accent" ]
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        map: [ "head-equipped-base" ]
+      - state: equipped-HELMET-accent
+        shader: unshaded
+        map: [ "head-equipped-accent" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          map: [ "hl-base" ]
+        - state: inhand-left-accent
+          shader: unshaded
+          map: [ "hl-accent" ]
+      right:
+        - state: inhand-right
+          map: [ "hr-base" ]
+        - state: inhand-right-accent
+          shader: unshaded
+          map: [ "hr-accent" ]
+  - type: ColorableClothing
+    denyReroll: false
+    mappedColors:
+      Frills: LSSilks
+      Embroidery: TechniColors
+    available:
+      - head-icon-base:
+          icon: Frills
+        head-icon-accent:
+          icon-accent: Embroidery
+        head-equipped-base:
+          equipped-HELMET: Frills
+        head-equipped-accent:
+          equipped-HELMET-accent: Embroidery
+        hl-base:
+          inhand-left: Frills
+        hl-accent:
+          inhand-left-accent: Embroidery
+        hr-base:
+          inhand-right: Frills
+        hr-accent:
+          inhand-right-accent: Embroidery
+  - type: Tag
+    tags:
+    - WhitelistChameleon

@@ -2,6 +2,10 @@
 shipyard-console-invalid-vessel = Cannot purchase vessel:
 shipyard-console-menu-title = Shipyard Menu
 shipyard-console-menu-listing-free = Free
+# LoneStar start: Assorted UI Fixes
+shipyard-console-flavor-left = Contact your friendly Station Representative for questions.
+shipyard-console-flavor-right = v1.2b
+# LoneStar end: Assorted UI Fixes
 shipyard-console-docking = {$owner} shuttle {$vessel} en route.
 shipyard-console-leaving = {$owner} shuttle {$vessel} sold by {$player}.
 shipyard-console-docking-secret = Unregistered vessel detected entering your sector.

@@ -1426,7 +1426,6 @@
   - FastWeakThrusterMachineCircuitboard
   - FastStrongThrusterMachineCircuitboard
   - FasterWeakThrusterMachineCircuitboard
-  - FasterStrongThrusterMachineCircuitboard
   technologyPrerequisites:
   - NFShuttlecraftThrust
   position: 2, 32
@@ -1633,6 +1632,7 @@
   tier: 1
   cost: 2500
   recipeUnlocks:
+  - LSWeaponComboLaserPistol # LoneStar
   - NFWeaponPka
   - WeaponCrusher
   - WeaponCrusherDagger

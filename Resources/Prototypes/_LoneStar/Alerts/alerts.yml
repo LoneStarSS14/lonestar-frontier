@@ -1,0 +1,23 @@
+
+- type: alert
+  id: Balance
+  category: Balance
+  icons:
+  - sprite: /Textures/_LoneStar/Interface/Alerts/balance.rsi
+    state: balance0
+  - sprite: /Textures/_LoneStar/Interface/Alerts/balance.rsi
+    state: balance1
+  - sprite: /Textures/_LoneStar/Interface/Alerts/balance.rsi
+    state: balance2
+  - sprite: /Textures/_LoneStar/Interface/Alerts/balance.rsi
+    state: balance3
+  - sprite: /Textures/_LoneStar/Interface/Alerts/balance.rsi
+    state: balance4
+  - sprite: /Textures/_LoneStar/Interface/Alerts/balance.rsi
+    state: balance5
+  - sprite: /Textures/_LoneStar/Interface/Alerts/balance.rsi
+    state: balance6
+  name: alerts-balance-name
+  description: alerts-balance-desc
+  minSeverity: 0
+  maxSeverity: 6

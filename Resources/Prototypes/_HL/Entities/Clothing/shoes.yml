@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingShoesHighheelShoes
+  parent: [ ClothingShoesBaseButcherable, ClothingShoesBaseHeelsNoisy ]
   id: DominantHeels
   name: dominant heels
   components:
@@ -7,6 +7,9 @@
     sprite: _HL/Clothing/Shoes/dominant_heels.rsi
   - type: Clothing
     sprite: _HL/Clothing/Shoes/dominant_heels.rsi
+  - type: ImbalancingClothing # LoneStar
+    balanceDrain: 2.5
+    balanceShoveMultiplier: 2
 
 - type: entity
   parent: ClothingShoesBase
@@ -19,7 +22,7 @@
     sprite: _HL/Clothing/Shoes/knee_boots.rsi
 
 - type: entity
-  parent: ClothingShoesHighheelShoes
+  parent: [ ClothingShoesBaseButcherable, ClothingShoesBaseHeelsNoisy ]
   id: LatexHeels
   name: latex heels
   components:
@@ -27,6 +30,9 @@
     sprite: _HL/Clothing/Shoes/latex_heels.rsi
   - type: Clothing
     sprite: _HL/Clothing/Shoes/latex_heels.rsi
+  - type: ImbalancingClothing # LoneStar
+    balanceDrain: 4
+    balanceShoveMultiplier: 3
 
 - type: entity
   parent: ClothingShoesBase

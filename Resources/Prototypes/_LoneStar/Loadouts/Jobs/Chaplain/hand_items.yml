@@ -7,3 +7,15 @@
   storage:
     back:
     - DivineThurible
+
+# LoneStar - chaplain backpack items
+
+- type: loadout
+  id: LoadoutChaplainHCD
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 5000
+  storage:
+    back:
+    - HCD

@@ -1,0 +1,6 @@
+- type: loadoutGroup
+  id: DenMiscFace
+  name: loadout-group-contractor-face
+  minLimit: 0
+  loadouts:
+  - LoadoutItemDroneMaskHoodless

@@ -580,6 +580,8 @@
   - ContractorClothingHeadHatCone
   - ContractorClothingHeadBandGold
   - ContractorClothingHeadHatTophat
+  subgroups:
+  - DenParamedicHead # LoneStar
 
 - type: loadoutGroup
   id: ContractorEars
@@ -860,6 +862,8 @@
   - ContractorRubberStampTrader
   - ContractorRubberStampClown
   - ContractorRubberStampMime
+  subgroups:
+  - ChaplainBackpackItems # LoneStar
 
 - type: loadoutGroup
   id: ContractorHandItems
@@ -917,6 +921,8 @@
   - ContractorClothingMaskSadMime
   - ContractorClothingMaskClown
   - ContractorClothingMaskClownBald
+  subgroups:
+  - DenMiscFace # LoneStar
   fallbacks:
   - ContractorClothingMaskBreath
 

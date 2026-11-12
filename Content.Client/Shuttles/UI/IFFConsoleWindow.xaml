@@ -1,20 +1,60 @@
+<!-- LoneStar start: Assorted UI Fixes -->
 <controls:FancyWindow xmlns="https://spacestation14.io"
                            xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                            Title="{Loc 'iff-console-window-title'}"
-                           MinSize="200 200">
-    <BoxContainer Orientation="Vertical" HorizontalExpand="True">
-        <GridContainer Margin="4 0 0 0" Columns="2">
-            <Label Name="ShowIFFLabel" Text="{Loc 'iff-console-show-iff-label'}" HorizontalExpand="True" StyleClasses="StatusFieldTitle" />
-            <BoxContainer Orientation="Horizontal" MinWidth="120">
-                <Button Name="ShowIFFOnButton" Text="{Loc 'iff-console-on'}" StyleClasses="OpenRight" />
-                <Button Name="ShowIFFOffButton" Text="{Loc 'iff-console-off'}" StyleClasses="OpenLeft" />
-            </BoxContainer>
+                           Resizable="False"
+                           MinSize="200 140">
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True" Margin="4 0">
+        <Label Name="ShowIFFLabel"
+               Text="{Loc 'iff-console-show-iff-label'}"
+               HorizontalExpand="True"
+               HorizontalAlignment="Center"
+               StyleClasses="StatusFieldTitle" />
 
-            <Label Name="ShowVesselLabel" Text="{Loc 'iff-console-show-vessel-label'}" HorizontalExpand="True" StyleClasses="StatusFieldTitle" />
-            <BoxContainer Orientation="Horizontal" MinWidth="120">
-                <Button Name="ShowVesselOnButton" Text="{Loc 'iff-console-on'}" StyleClasses="OpenRight" />
-                <Button Name="ShowVesselOffButton" Text="{Loc 'iff-console-off'}" StyleClasses="OpenLeft" />
+	<BoxContainer Orientation="Horizontal"
+                      HorizontalAlignment="Stretch"
+                      HorizontalExpand="True">
+            <Button Name="ShowIFFOnButton"
+                    Text="{Loc 'iff-console-on'}"
+                    HorizontalExpand="True"
+                    StyleClasses="OpenRight"
+                    TextAlign="Center" />
+            <Button Name="ShowIFFOffButton"
+                    Text="{Loc 'iff-console-off'}"
+                    HorizontalExpand="True"
+                    StyleClasses="OpenLeft"
+                    TextAlign="Center" />
+        </BoxContainer>
+        <Label Name="ShowVesselLabel"
+               Text="{Loc 'iff-console-show-vessel-label'}"
+               HorizontalExpand="True"
+               HorizontalAlignment="Center"
+               StyleClasses="StatusFieldTitle" />
+	<BoxContainer Orientation="Horizontal"
+                      HorizontalAlignment="Stretch"
+                      HorizontalExpand="True"
+                      Align="Center">
+            <Button Name="ShowVesselOnButton"
+                    Text="{Loc 'iff-console-on'}"
+                    HorizontalExpand="True"
+                    StyleClasses="OpenRight"
+                    TextAlign="Center" />
+            <Button Name="ShowVesselOffButton"
+                    Text="{Loc 'iff-console-off'}"
+                    HorizontalExpand="True"
+                    StyleClasses="OpenLeft"
+                    TextAlign="Center" />
+        </BoxContainer>
+        <!-- Footer -->
+        <BoxContainer Orientation="Vertical" Margin="0 5">
+            <PanelContainer StyleClasses="LowDivider" />
+            <BoxContainer Orientation="Horizontal" Margin="5 2 0 0" VerticalAlignment="Bottom">
+                <Label Text="{Loc 'iff-console-flavor-left'}" StyleClasses="WindowFooterText"
+                       HorizontalAlignment="Left" HorizontalExpand="True" />
+                <TextureRect StyleClasses="PirateLogoDark" Stretch="KeepAspectCentered"
+                             VerticalAlignment="Center" HorizontalAlignment="Right" SetSize="24 24"/>
             </BoxContainer>
-        </GridContainer>
+        </BoxContainer>
     </BoxContainer>
+<!-- LoneStar end -->
 </controls:FancyWindow>

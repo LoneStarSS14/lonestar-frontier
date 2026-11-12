@@ -8,8 +8,9 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootNpcMercenariesPistols # Weapon
-        prob: 0.4
+      - !type:NestedSelector # Weapon
+        tableId: LSTableGeneralWeaponRangedUncommon
+        prob: 0.5
       - id: ClothingOuterVestWebMercenary # Armor
         prob: 0.4
       - !type:NestedSelector # Blueprints
@@ -35,8 +36,9 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootNpcMercenariesRifles # Weapon
-        prob: 0.4
+      - !type:NestedSelector # Weapon
+        tableId: LSTableGeneralWeaponRangedUncommon
+        prob: 0.5
       - id: ClothingOuterVestWebMercenary # Armor
         prob: 0.4
       - !type:NestedSelector # Blueprints
@@ -64,7 +66,8 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootMeleeT3 # Weapons
+      - !type:NestedSelector # Weapon
+        tableId: LSTableGeneralWeaponRangedUncommon
         prob: 0.5
       - !type:GroupSelector # Armor
         children:
@@ -97,8 +100,9 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootNpcMercenariesShotguns # Weapon
-        prob: 0.6
+      - !type:NestedSelector # Weapon
+        tableId: LSTableGeneralWeaponRangedUncommon
+        prob: 0.5
       - id: ClothingOuterArmorBasicSlim # Armor
         prob: 0.4
       - !type:NestedSelector # Blueprints
@@ -126,13 +130,9 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - !type:GroupSelector # Weapon
-        children:
-        - id: NFWeaponRevolverArgentiExpedition
-          weight: 0.7
-        - id: NFWeaponRevolverArgentiExpedition
-          weight: 0.3
-          amount: 2
+      - !type:NestedSelector # Weapon
+        tableId: LSTableGeneralWeaponRangedUncommon
+        prob: 0.5
       - !type:GroupSelector # Armor
         children:
         - id: ClothingOuterCoatBHTrench
@@ -164,12 +164,9 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - !type:GroupSelector # Weapon
-        children:
-        - id: SpawnDungeonLootNpcMercenariesEnergy
-          weight: 0.6
-        - id: SawElectric
-          weight: 0.4
+      - !type:NestedSelector # Weapon
+        tableId: LSTableGeneralWeaponRangedUncommon
+        prob: 0.75
       - id: ClothingOuterArmorBasicSlim # Armor
       - !type:NestedSelector # Blueprints
         tableId: LSTableMercenaryBlueprint
@@ -201,8 +198,9 @@
     offset: 0.25
     table: !type:AllSelector
       children:
-      - id: SpawnDungeonLootGunT2 # Weapon
-        prob: 0.4
+      - !type:NestedSelector # Weapon
+        tableId: LSTableGeneralWeaponRangedUncommon
+        prob: 0.75
       - id: ClothingOuterArmorBasicSlim # Armor
         prob: 0.4
       - !type:NestedSelector # Blueprints
@@ -254,23 +252,13 @@
           - !type:GroupSelector
             children:
             - !type:NestedSelector
-              weight: 22
-              tableId: LSTableGeneralWeaponRangedT3
-            - !type:NestedSelector
-              weight: 7
-              tableId: LSTableGeneralWeaponRangedT4
+              tableId: LSTableGeneralWeaponRangedRare
           - !type:NestedSelector
             tableId: LSTableGeneralWeaponAmmoOverpressureAny
             rolls: !type:RangeNumberSelector
               range: 2, 3
-        - !type:GroupSelector
-          children:
-          - !type:NestedSelector
-            weight: 22
-            tableId: LSTableGeneralWeaponMeleeT3
-          - !type:NestedSelector
-            weight: 7
-            tableId: LSTableGeneralWeaponMeleeT4
+        - !type:NestedSelector
+          tableId: LSTableGeneralWeaponMeleeRare
       - id: ClothingOuterHardsuitScaf # Armor
         prob: 0.4
       - !type:AllSelector # Blueprints

@@ -80,6 +80,9 @@
 #        volume: -6
 #        variation: 0.09
 # Euphoria end
+  - type: ImbalancingClothing # LoneStar
+    balanceDrain: 4
+    balanceShoveMultiplier: 3
 
 - type: entity
   parent: [ ClothingShoesMilitaryBase ] # Frontier: removed BaseRestrictedContraband

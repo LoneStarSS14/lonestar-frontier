@@ -1,14 +1,32 @@
 - type: entity
   abstract: true
-  id: ClothingShoesBaseHeelsNoisy
+  id: ClothingShoesBaseHeelsNoisyVisibleFeet
   parent: ClothingShoesBase
   components:
+  - type: ImbalancingClothing # LoneStar
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepHighHeels
       params:
         volume: -6
         variation: 0.09
+
+- type: entity
+  abstract: true
+  id: ClothingShoesBaseHeelsNoisy
+  parent: ClothingShoesBaseHeelsNoisyVisibleFeet
+  components:
+  - type: HideLayerClothing
+    layers:
+      LFoot: feet
+      RFoot: feet
+      LFootBehind: feet
+      RFootBehind: feet
+
+- type: entity
+  abstract: true
+  id: ClothingShoesBaseButcherableHeelsNoisyVisibleFeet
+  parent: [ClothingShoesBaseButcherable, ClothingShoesBaseHeelsNoisyVisibleFeet]
 
 - type: entity
   abstract: true

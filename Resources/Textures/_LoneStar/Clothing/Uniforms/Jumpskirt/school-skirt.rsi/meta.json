@@ -1,0 +1,48 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprited by github:DreamlyJack(624946166152298517), seperated into layers for recolouring by Archee",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon-primary"
+        },
+        {
+            "name": "icon-secondary"
+        },
+        {
+            "name": "icon-tertiary"
+        },
+        {
+            "name": "equipped-INNERCLOTHING-primary",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-secondary",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-tertiary",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left-primary",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left-secondary",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right-primary",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right-secondary",
+            "directions": 4
+        }
+    ]
+}

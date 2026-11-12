@@ -27,6 +27,34 @@
     - ClothMade
     - Recyclable
 
+#region Colorable Bases
+- type: entity # for sprites with a single colored layer
+  abstract: true
+  parent: ClothingShoesColorableMono
+  id: ClothingShoesColorableMonoInHand
+  suffix: Colorable
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    available:
+      - shoes-icon:
+          icon-primary: Base
+        shoes-equipped:
+          equipped-FEET: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
 - type: entity # for sprites with a 2 colored layers
   abstract: true
   id: ClothingShoesColorableDualColor
@@ -34,27 +62,27 @@
   components:
   - type: Sprite
     layers:
-    - state: icon
+    - state: icon-primary
       map: [ "shoes-icon-primary" ]
-    - state: icon-color
+    - state: icon-secondary
       map: [ "shoes-icon-secondary" ]
   - type: Clothing
     clothingVisuals:
       shoes:
-      - state: equipped-FEET
+      - state: equipped-FEET-primary
         map: [ "shoes-equipped-primary" ]
-      - state: equipped-FEET-color
+      - state: equipped-FEET-secondary
         map: [ "shoes-equipped-secondary" ]
   - type: ColorableClothing
     available:
       - shoes-icon-primary:
-          icon: Primary
+          icon-primary: Primary
         shoes-icon-secondary:
-          icon-color: Secondary
+          icon-secondary: Secondary
         shoes-equipped-primary:
-          equipped-FEET: Primary
+          equipped-FEET-primary: Primary
         shoes-equipped-secondary:
-          equipped-FEET-color: Secondary
+          equipped-FEET-secondary: Secondary
     mappedColors:
       Primary: LSSilks
       Secondary: NTInteriorDesign
@@ -72,33 +100,33 @@
   - type: Item
     inhandVisuals:
       left:
-      - state: inhand-left
+      - state: inhand-left-primary
         map: [ "hl-primary" ]
-      - state: inhand-left-color
+      - state: inhand-left-secondary
         map: [ "hl-secondary" ]
       right:
-      - state: inhand-right
+      - state: inhand-right-primary
         map: [ "hr-primary" ]
-      - state: inhand-right-color
+      - state: inhand-right-secondary
         map: [ "hr-secondary" ]
   - type: ColorableClothing
     available:
       - shoes-icon-primary:
-          icon: Primary
+          icon-primary: Primary
         shoes-icon-secondary:
-          icon-color: Secondary
+          icon-secondary: Secondary
         shoes-equipped-primary:
-          equipped-FEET: Primary
+          equipped-FEET-primary: Primary
         shoes-equipped-secondary:
-          equipped-FEET-color: Secondary
+          equipped-FEET-secondary: Secondary
         hl-primary:
-          inhand-left: Primary
+          inhand-left-primary: Primary
         hl-secondary:
-          inhand-left-color: Secondary
+          inhand-left-secondary: Secondary
         hr-primary:
-          inhand-right: Primary
+          inhand-right-primary: Primary
         hr-secondary:
-          inhand-right-color: Secondary
+          inhand-right-secondary: Secondary
     mappedColors:
       Primary: LSSilks
       Secondary: NTInteriorDesign
