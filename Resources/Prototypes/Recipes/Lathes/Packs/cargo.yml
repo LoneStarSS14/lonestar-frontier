@@ -22,6 +22,16 @@
   - MineralScannerEmpty
   - AdvancedMineralScannerEmpty
   - OreBagOfHolding
+  # LoneStar start
+  - ClothingHeadHatHardhatBlue
+  - ClothingHeadHatHardhatOrange
+  - ClothingHeadHatHardhatRed
+  - ClothingHeadHatHardhatWhite
+  - ClothingHeadHatHardhatYellow
+  - ClothingHeadHatHardhatYellowDark
+  - ClothingHeadHatHardhatArmored
+  - ClothingHeadHeadlamp
+  # LoneStar end
 
 - type: latheRecipePack
   id: CargoBoards
