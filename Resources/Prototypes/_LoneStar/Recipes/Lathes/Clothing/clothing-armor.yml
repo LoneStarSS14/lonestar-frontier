@@ -56,7 +56,6 @@
 
 - type: latheRecipe
   id: ClothingHeadHatHardhatArmored
-  parent: NFBaseHelmetRecipe
   result: ClothingHeadHatHardhatArmored
   completetime: 6
   materials:
