@@ -1,43 +1,69 @@
 {
-  "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e | Resprited for mercenary, pilot and ert_mailcarrier by erhardsteinhauer (discord) and edited by Whatstone (discord), nfsd by GhostPrince and GentleButter(discord).  pirate cards and icons, idnfsddetective/contractor/plant* by Whatstone (Discord), edited to the LSRD versions by JustAWaffle",
-  "size": {
-    "x": 32,
-    "y": 32
-  },
-  "states": [
-    {
-      "name": "idlsrdarmorer"
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e | made by Archee",
+    "size": {
+        "x": 32,
+        "y": 32
     },
-    {
-      "name": "idlsrdcorpsman"
-    },
-    {
-      "name": "idlsrdjunior"
-    },
-    {
-      "name": "idlsrdranger"
-    },
-    {
-      "name": "idlsrddetective"
-    },
-    {
-      "name": "idlsrdsenior"
-    },
-    {
-      "name": "idlsrdchief"
-    },
-    {
-      "name": "lsrd"
-    },
-    {
-      "name": "lsrd-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "lsrd-inhand-right",
-      "directions": 4
-    }
-  ]
+    "states": [
+        {
+            "name": "lsrd"
+        },
+        {
+            "name": "id-lsrd-clerk"
+        },
+        {
+            "name": "id-lsrd-corpsman"
+        },
+        {
+            "name": "id-lsrd-detective"
+        },
+        {
+            "name": "id-lsrd-retrieval-officer"
+        },
+        {
+            "name": "id-lsrd-enforcer"
+        },
+        {
+            "name": "id-lsrd-chief-ranger"
+        },
+        {
+            "name": "lsrd-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "lsrd-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "freelancer"
+        },
+        {
+            "name": "id-freelancer-escort"
+        },
+        {
+            "name": "id-freelancer-ripper-doc"
+        },
+        {
+            "name": "id-freelancer-spy"
+        },
+        {
+            "name": "id-freelancer-smuggler"
+        },
+        {
+            "name": "id-freelancer-freelancer-pirate"
+        },
+        {
+            "name": "id-freelancer-master-at-arms"
+        },
+        {
+            "name": "freelancer-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "freelancer-inhand-right",
+            "directions": 4
+        }
+    ]
 }

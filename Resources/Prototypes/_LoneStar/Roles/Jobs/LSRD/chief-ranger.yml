@@ -1,0 +1,121 @@
+- type: job
+  id: LSChiefRanger
+  name: job-name-ls-chief-ranger
+  description: job-description-ls-chief-ranger
+  supervisors: job-supervisors-ls-tsf-war-director
+  playTimeTracker: JobLSChiefRanger
+  requireAdminNotify: true
+  whitelisted: false
+  requirements:
+  # Departments
+  - !type:DepartmentTimeRequirement
+    department: LSLSRD
+    time: 360000 # 100 hours
+  - !type:DepartmentTimeRequirement
+    department: LSFreelancers
+    time: 86400 # 24 hours
+  # Jobs
+  - !type:RoleTimeRequirement
+    role: JobLSEnforcer
+    time: 144000 # 40 hours
+  weight: 60
+  displayWeight: 60
+  startingGear: LSChiefRanger
+  icon: "JobIconLSChiefRanger"
+  alwaysUseSpawner: true
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  accessGroups:
+  - LsrdGeneralAccess
+  - LsrdCombatantAccess
+  - LsrdCommandAccess
+  # Common v
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #lsrd specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsLsrd
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  #RPI TODO: Add SR-like RPI modifiers.
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierSheriff
+
+- type: entity
+  id: SpawnPointLSChiefRanger
+  parent: SpawnPointJobBase
+  name: chief ranger spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSChiefRanger
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear # TODO: sort out their inventory parity with MAA
+  id: LSChiefRanger
+  equipment:
+    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket2: NFWeaponEnergyPistolLaserX01Multiphase
+  storage:
+    back:
+    - NfsdTechFabFlatpack
+    - Multitool
+    - HoloprojectorNfsd
+    - DoorRemoteNfsd
+    - BaseSecurityUplinkRadioSheriff
+    - RubberStampSheriff
+    - ShipVoucherNfsdBailiff
+
+- type: roleLoadout
+  id: JobLSChiefRanger
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSLSRDChiefRangerPDA
+  # LSRD v
+  - LSLSRDFactionLeaderJumpsuit
+  - LSLSRDFactionLeaderOuterClothing
+  - LSLSRDFactionForcedOuterClothing
+  - LSLSRDFactionLeaderShoes
+  - LSLSRDFactionLeaderGloves
+  - LSLSRDFactionLeaderHead
+  - LSLSRDFactionLeaderMask
+  - LSLSRDFactionLeaderEyes
+  - LSLSRDFactionLeaderNeck
+  - LSLSRDFactionLeaderEars
+  - LSLSRDFactionLeaderBackpack
+  - LSLSRDFactionLeaderBelt
+  - LSLSRDFactionLeaderWallet
+  - LSLSRDFactionLeaderEncryptionKey
+  - LSLSRDFactionLeaderImplanter
+  # Common v
+  # - ContractorBoxSurvival
+  - ContractorCartridge
+  # - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  # - NFSpeciesSpecific
+  # Temporary / TODO: replace
+  - NfsdBoxSurvival
+  - SeniorOfficerBackpackItems
+  - NfsdSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSChiefRangerChameleonOutfit
+  job: LSChiefRanger
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdCampaignFilled
+    mask: ClothingMaskGasSheriff
+    eyes: ClothingEyesGlassesNfsd
+    outerClothing: ClothingOuterCoatNfsdFormalSheriff
+    neck: ClothingNeckNfsdBadgeSheriff
+    belt: ClothingBeltNfsdFilled
+    gloves: ClothingHandsGlovesCombatNfsdBrown
+    shoes: ClothingShoesBootsNfsdBrown

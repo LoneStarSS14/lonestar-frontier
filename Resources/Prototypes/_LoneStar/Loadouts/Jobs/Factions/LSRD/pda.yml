@@ -1,0 +1,29 @@
+- type: loadout
+  id: LSLSRDClerkPDA
+  equipment:
+    id: LSLSRDClerkPDA
+
+- type: loadout
+  id: LSLSRDCorpsmanPDA
+  equipment:
+    id: LSLSRDCorpsmanPDA
+
+- type: loadout
+  id: LSLSRDDetectivePDA
+  equipment:
+    id: LSLSRDDetectivePDA
+
+- type: loadout
+  id: LSLSRDRetrievalOfficerPDA
+  equipment:
+    id: LSLSRDRetrievalOfficerPDA
+
+- type: loadout
+  id: LSLSRDEnforcerPDA
+  equipment:
+    id: LSLSRDEnforcerPDA
+
+- type: loadout
+  id: LSLSRDChiefRangerPDA
+  equipment:
+    id: LSLSRDChiefRangerPDA

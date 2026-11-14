@@ -1,0 +1,93 @@
+- type: job
+  id: LSFreelancerPirate
+  name: job-name-ls-freelancer-pirate
+  description: job-description-ls-freelancer-pirate
+  supervisors: job-supervisors-ls-master-at-arms
+  playTimeTracker: JobLSFreelancerPirate
+  whitelisted: true
+  requirements:
+  # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+  #   department: LSFreelancers
+  #   time: 57600 # 16 hours
+  weight: 50
+  displayWeight: 50
+  startingGear: LSFreelancerPirateGear
+  icon: "JobIconLSFreelancerPirate"
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  accessGroups:
+  - FreelancerGeneralAccess
+  - FreelancerCombatantAccess
+  special:
+  # Common v
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #freelancer specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsFreelancer
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirate
+
+- type: entity
+  id: SpawnPointLSFreelancerPirate
+  parent: SpawnPointJobBase
+  name: freelancer pirate spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSFreelancerPirate
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear
+  id: LSFreelancerPirateGear
+  equipment: # TODO: add PDA
+    pocket1: BasePirateUplinkPirateCrew
+    pocket2: ContrabandAppraisalToolPirate
+
+- type: roleLoadout
+  id: JobLSFreelancerPirate
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSFreelancerFreelancerPiratePDA
+  # Freelancer v
+  - LSFreelancersFactionCombatantJumpsuit
+  - LSFreelancersFactionCombatantOuterClothing
+  - LSFreelancersFactionForcedOuterClothing
+  - LSFreelancersFactionCombatantShoes
+  - LSFreelancersFactionCombatantGloves
+  - LSFreelancersFactionCombatantHead
+  - LSFreelancersFactionCombatantMask
+  - LSFreelancersFactionCombatantEyes
+  - LSFreelancersFactionCombatantNeck
+  - LSFreelancersFactionCombatantEars
+  - LSFreelancersFactionCombatantBackpack
+  - LSFreelancersFactionCombatantBelt
+  - LSFreelancersFactionCombatantWallet
+  - LSFreelancersFactionCombatantEncryptionKey
+  - LSFreelancersFactionCombatantImplanter
+  # Common v
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - PirateBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSFreelancerPirateChameleonOutfit
+  job: LSFreelancerPirate
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    outerClothing: ClothingOuterEVASuitPirate
+    shoes: ClothingShoesColorBlack
+    back: NFClothingBackpack
+    ears: ClothingHeadsetGreyCommon

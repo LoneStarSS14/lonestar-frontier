@@ -1,0 +1,8 @@
+- type: loadout
+  id: LSFreelancerForcedClothingOuterEVASuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NFOuterSuitRequired
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterEVASuitPirate

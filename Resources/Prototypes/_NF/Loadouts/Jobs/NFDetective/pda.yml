@@ -1,5 +1,6 @@
 - type: loadout
   id: NFDetectiveNFDetectivePDA
+  abstract: true # LoneStar
   equipment:
     id: NFDetectivePDA
     

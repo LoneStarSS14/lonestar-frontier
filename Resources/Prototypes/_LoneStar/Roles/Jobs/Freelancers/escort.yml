@@ -1,0 +1,96 @@
+- type: job
+  id: LSEscort
+  name: job-name-ls-escort
+  description: job-description-ls-escort
+  supervisors: job-supervisors-ls-faction-resident
+  playTimeTracker: JobLSEscort
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 43200 # 6 hours
+  weight: 10
+  displayWeight: 10
+  startingGear: LSEscortGear
+  icon: "JobIconLSEscort"
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  accessGroups:
+  - FreelancerGeneralAccess
+  special:
+  # Common v
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #freelancer specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsFreelancer
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirate
+  - !type:AddRpiAuraSpecial
+    aurasToAdd:
+    - rpiAuraMassageTherapist # TODO: replace this
+  - !type:RpiChatJudgementModifierSpecial
+    modsToAdd:
+    - rpiChatJudgementModifierMassageTherapist # TODO: replace this
+
+- type: entity
+  id: SpawnPointLSEscort
+  parent: SpawnPointJobBase
+  name: escort spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSEscort
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear
+  id: LSEscortGear
+  equipment:
+    pocket1: ContrabandAppraisalToolPirate
+
+- type: roleLoadout
+  id: JobLSEscort
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSFreelancerEscortPDA
+  # Freelancer v
+  - LSFreelancersFactionJumpsuit
+  - LSFreelancersFactionOuterClothing
+  - LSFreelancersFactionForcedOuterClothing
+  - LSFreelancersFactionShoes
+  - LSFreelancersFactionGloves
+  - LSFreelancersFactionHead
+  - LSFreelancersFactionMask
+  - LSFreelancersFactionEyes
+  - LSFreelancersFactionNeck
+  - LSFreelancersFactionEars
+  - LSFreelancersFactionBackpack
+  - LSFreelancersFactionBelt
+  - LSFreelancersFactionWallet
+  - LSFreelancersFactionEncryptionKey
+  - LSFreelancersFactionImplanter
+  # Common v
+  - ContractorBoxSurvival
+  - ContractorCartridge
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSEscortChameleonOutfit
+  job: LSEscort
+  equipment:
+    head: ClothingHeadNurseHat
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatLab
+    gloves: ClothingHandsGlovesLatex

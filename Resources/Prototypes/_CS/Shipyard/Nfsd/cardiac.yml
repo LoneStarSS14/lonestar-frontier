@@ -13,7 +13,7 @@
   price: 73250 #45782, LL2 +60% = 73251
   category: Medium
   group: Security
-  access: Brigmedic
+  access: LsrdShipyard
   shuttlePath: /Maps/_CS/Shuttles/Nfsd/cardiac.yml
   class:
   - Pursuit
@@ -36,4 +36,5 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          availableJobs: {}
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

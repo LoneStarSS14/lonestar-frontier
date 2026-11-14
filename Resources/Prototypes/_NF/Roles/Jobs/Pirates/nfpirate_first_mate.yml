@@ -1,5 +1,6 @@
 - type: job
   id: NFPirateFirstMate
+  abstract: true # LoneStar
   name: job-name-nf-pirate-first-mate
   description: job-description-nf-pirate-first-mate
   playTimeTracker: JobPirateFirstMate
@@ -35,7 +36,7 @@
     - type: SpecialSectorStationRecord # must be given on spawn
       recordGeneration: FalseRecord
     - type: DisableSuitSensors
-    - type: IsPirate
+    - type: IsFreelancer # LoneStar
   - !type:AddRpiJobModifierSpecial
     modifiersToAdd:
     - rpiJobModifierPirateFirstMate

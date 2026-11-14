@@ -12,6 +12,7 @@
   price: 14750 #appraised 13421, LL0 10% markup.
   category: Small
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_CS/Shuttles/BlackMarket/Escort/glizzy.yml
   guidebookPage: ShipyardGlizzy
   class:
@@ -30,10 +31,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Hotdog {1}'
+          mapNameTemplate: 'Glizzy {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            Escort: [ 0, 0 ]
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

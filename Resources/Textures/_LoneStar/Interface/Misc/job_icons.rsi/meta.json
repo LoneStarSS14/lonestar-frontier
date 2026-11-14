@@ -9,6 +9,42 @@
     "states": [
         {
             "name": "guildleader"
+        },
+        {
+            "name": "chief-ranger"
+        },
+        {
+            "name": "enforcer"
+        },
+        {
+            "name": "retrieval-officer"
+        },
+        {
+            "name": "detective"
+        },
+        {
+            "name": "corpsman"
+        },
+        {
+            "name": "clerk"
+        },
+        {
+            "name": "master-at-arms"
+        },
+        {
+            "name": "freelancer-pirate"
+        },
+        {
+            "name": "smuggler"
+        },
+        {
+            "name": "spy"
+        },
+        {
+            "name": "ripper-doc"
+        },
+        {
+            "name": "escort"
         }
     ]
 }

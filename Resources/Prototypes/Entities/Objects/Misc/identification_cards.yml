@@ -464,6 +464,7 @@
     job: Visitor
 
 - type: entity
+  abstract: true # LoneStar
   parent: IDCardStandard
   id: BrigmedicIDCard
   name: brigmedic ID card

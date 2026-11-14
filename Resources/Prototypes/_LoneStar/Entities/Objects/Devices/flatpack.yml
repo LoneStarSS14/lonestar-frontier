@@ -74,6 +74,7 @@
     shape:
     - 0,0,1,1
 
+#region Generic
 - type: entity
   parent: BaseFlatpack
   id: PunkSmartFridgeFlatpack
@@ -82,3 +83,15 @@
   components:
   - type: Flatpack
     entity: LSPunkSmartFridge
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: StationRecordsConsoleFlatpack
+  name: station records console flatpack
+  description: A flatpack used for constructing an station records console.
+  components:
+  - type: Flatpack
+    entity: ComputerStationRecords
+  - type: Sprite
+    layers:
+    - state: command_server

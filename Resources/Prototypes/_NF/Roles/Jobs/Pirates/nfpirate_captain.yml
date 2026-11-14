@@ -1,5 +1,6 @@
 - type: job
   id: NFPirateCaptain
+  abstract: true # LoneStar
   name: job-name-nf-pirate-captain
   description: job-description-nf-pirate-captain
   playTimeTracker: JobPirateCaptain
@@ -29,7 +30,7 @@
     - type: SpecialSectorStationRecord # must be given on spawn
       recordGeneration: FalseRecord
     - type: DisableSuitSensors
-    - type: IsPirate
+    - type: IsFreelancer # LoneStar
   - !type:AddRpiJobModifierSpecial
     modifiersToAdd:
     - rpiJobModifierPirateCaptain

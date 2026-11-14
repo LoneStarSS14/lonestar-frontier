@@ -31,10 +31,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Bailiff
-        - SeniorOfficer
-        - NFDetective
+        - LSChiefRanger
+        - LSDetective
 
 #region hardsuits
 - type: listing
@@ -86,9 +84,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - LSChiefRanger
 
 - type: listing
   id: UplinkSecurityHardsuitTsfMarineMedic
@@ -107,7 +103,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Brigmedic
+        - LSCorpsman
 
 - type: listing # Coyote: making it possible to get more dusters via sheriff, bailiff, and sergeants
   id: UplinkSecurityDusterMachineboard
@@ -126,6 +122,4 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Bailiff
-        - SeniorOfficer
+        - LSChiefRanger

@@ -46,7 +46,7 @@
       volume: 3
       rolloffFactor: 4.5
       pitch: 0.7
-  - type: IsPirate
+  - type: IsFreelancer
 
 - type: ghostRole
   id: CatFlarpy

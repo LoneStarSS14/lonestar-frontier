@@ -1,3 +1,4 @@
+#region Command
 - type: entity
   parent: IDCardStandard
   id: GuildLeaderIDCard
@@ -14,3 +15,182 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
   - type: Item
     heldPrefix: silver
+#endregion
+
+#region Freelancers
+- type: entity
+  parent: IDCardStandard
+  id: BaseLSFreelancerIDCard
+  name: freelancer ID card
+  components:
+  - type: PresetIdCard
+    job: LSEscort
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
+    layers:
+    - state: freelancer
+    - state: id-freelancer-escort
+  - type: Item
+    heldPrefix: freelancer
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerEscortIDCard
+  name: escort ID card
+  components:
+  - type: PresetIdCard
+    job: LSEscort
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-escort
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerRipperDocIDCard
+  name: ripper doc ID card
+  components:
+  - type: PresetIdCard
+    job: LSRipperDoc
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-ripper-doc
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerSpyIDCard
+  name: spy ID card
+  components:
+  - type: PresetIdCard
+    job: LSSpy
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-spy
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerSmugglerIDCard
+  name: smuggler ID card
+  components:
+  - type: PresetIdCard
+    job: LSSmuggler
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-smuggler
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerFreelancerPirateIDCard
+  name: freelancer pirate ID card
+  components:
+  - type: PresetIdCard
+    job: LSFreelancerPirate
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-freelancer-pirate
+
+- type: entity
+  parent: BaseLSFreelancerIDCard
+  id: LSFreelancerMasterAtArmsIDCard
+  name: master at arms ID card
+  components:
+  - type: PresetIdCard
+    job: LSMasterAtArms
+  - type: Sprite
+    layers:
+    - state: freelancer
+    - state: id-freelancer-master-at-arms
+#endregion
+
+#region LSRD
+- type: entity
+  parent: IDCardStandard
+  id: BaseLSLSRDIDCard
+  name: LSRD ID card
+  components:
+  - type: PresetIdCard
+    job: LSClerk
+  - type: Sprite
+    sprite: _LoneStar/Objects/Misc/id_cards.rsi
+    layers:
+    - state: lsrd
+    - state: id-lsrd-clerk
+  - type: Item
+    heldPrefix: lsrd
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDClerkIDCard
+  name: clerk ID card
+  components:
+  - type: PresetIdCard
+    job: LSClerk
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-clerk
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDCorpsmanIDCard
+  name: corpsman ID card
+  components:
+  - type: PresetIdCard
+    job: LSCorpsman
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-corpsman
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDDetectiveIDCard
+  name: detective ID card
+  components:
+  - type: PresetIdCard
+    job: LSDetective
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-detective
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDRetrievalOfficerIDCard
+  name: retrieval officer ID card
+  components:
+  - type: PresetIdCard
+    job: LSRetrievalOfficer
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-retrieval-officer
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDEnforcerIDCard
+  name: enforcer ID card
+  components:
+  - type: PresetIdCard
+    job: LSEnforcer
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-enforcer
+
+- type: entity
+  parent: BaseLSLSRDIDCard
+  id: LSLSRDChiefRangerIDCard
+  name: chief ranger ID card
+  components:
+  - type: PresetIdCard
+    job: LSChiefRanger
+  - type: Sprite
+    layers:
+    - state: lsrd
+    - state: id-lsrd-chief-ranger
+#endregion

@@ -1,0 +1,9 @@
+- type: loadoutGroup
+  id: LSLSRDFactionDetectiveNeck
+  name: loadout-group-neck
+  minLimit: 0
+  loadouts:
+  - CoyoteDetectiveClothingHorrificNecktie
+  subgroups:
+  - LSLSRDFactionNeck
+  - ContractorNeck
