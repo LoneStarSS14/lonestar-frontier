@@ -105,3 +105,17 @@
   - NfsdBoxSurvival
   - SeniorOfficerBackpackItems
   - NfsdSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSChiefRangerChameleonOutfit
+  job: LSChiefRanger
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdCampaignFilled
+    mask: ClothingMaskGasSheriff
+    eyes: ClothingEyesGlassesNfsd
+    outerClothing: ClothingOuterCoatNfsdFormalSheriff
+    neck: ClothingNeckNfsdBadgeSheriff
+    belt: ClothingBeltNfsdFilled
+    gloves: ClothingHandsGlovesCombatNfsdBrown
+    shoes: ClothingShoesBootsNfsdBrown

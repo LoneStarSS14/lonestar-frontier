@@ -76,3 +76,13 @@
   - ContractorHandItems
   - ContractorInstruments
   - NFSpeciesSpecific
+
+- type: chameleonOutfit
+  id: GuildLeaderChameleonOutfit
+  job: GuildLeader
+  hasMindShield: true
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    shoes: ClothingShoesBootsMercenary
+    back: ClothingBackpackMercenary
+    ears: ClothingHeadsetGuildLeader

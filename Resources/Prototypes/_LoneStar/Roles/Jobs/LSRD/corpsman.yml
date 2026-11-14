@@ -101,3 +101,17 @@
   - NfsdBoxSurvival
   - SeniorOfficerBackpackItems
   - NfsdSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSCorpsmanChameleonOutfit
+  job: LSCorpsman
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretCream
+    mask: ClothingMaskBreathMedicalSecurity
+    eyes: ClothingEyesHudNfsdMed
+    outerClothing: ClothingOuterCoatNfsdBomberBrigmed
+    neck: ClothingNeckNfsdBadgeSecurityBrigmedic
+    belt: ClothingBeltNfsdWebbingFilledBrigmedic
+    gloves: ClothingHandsGlovesNitrile
+    shoes: ClothingShoesBootsNfsdBrownFilled

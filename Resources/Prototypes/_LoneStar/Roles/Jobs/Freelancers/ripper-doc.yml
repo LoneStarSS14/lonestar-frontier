@@ -92,3 +92,13 @@
   - ContractorHandItems
   - ContractorInstruments
   - NFSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSRipperDocChameleonOutfit
+  job: LSRipperDoc
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    outerClothing: ClothingOuterEVASuitPirate
+    shoes: ClothingShoesColorBlack
+    back: NFClothingBackpack
+    ears: ClothingHeadsetGreyCommon

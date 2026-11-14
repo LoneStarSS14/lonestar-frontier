@@ -90,3 +90,13 @@
   - ContractorHandItems
   - ContractorInstruments
   - NFSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSSpyChameleonOutfit
+  job: LSSpy
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    outerClothing: ClothingOuterEVASuitPirate
+    shoes: ClothingShoesColorBlack
+    back: NFClothingBackpack
+    ears: ClothingHeadsetGreyCommon

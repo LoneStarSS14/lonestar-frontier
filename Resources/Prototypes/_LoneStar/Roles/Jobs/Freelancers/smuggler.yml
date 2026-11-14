@@ -84,3 +84,13 @@
   - ContractorHandItems
   - ContractorInstruments
   - NFSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSSmugglerChameleonOutfit
+  job: LSSmuggler
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    outerClothing: ClothingOuterEVASuitPirate
+    shoes: ClothingShoesColorBlack
+    back: NFClothingBackpack
+    ears: ClothingHeadsetGreyCommon
