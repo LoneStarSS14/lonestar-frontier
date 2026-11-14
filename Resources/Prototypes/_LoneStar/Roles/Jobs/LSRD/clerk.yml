@@ -5,8 +5,8 @@
   supervisors: job-supervisors-ls-faction-resident
   playTimeTracker: JobLSClerk
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 43200 # 6 hours
+  - !type:OverallPlaytimeRequirement
+    time: 43200 # 6 hours
   weight: 10
   displayWeight: 10
   startingGear: LSClerkGear

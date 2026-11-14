@@ -6,9 +6,9 @@
   playTimeTracker: JobLSEnforcer
   whitelisted: true
   requirements:
-    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
-    #   department: LSLSRD
-    #   time: 57600 # 16 hours
+  # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+  #   department: LSLSRD
+  #   time: 57600 # 16 hours
   weight: 50
   displayWeight: 50
   startingGear: LSEnforcerGear

@@ -5,12 +5,12 @@
   supervisors: job-supervisors-ls-chief-ranger # TODO: update after corpsman is demilitarized
   playTimeTracker: JobLSCorpsman
   requirements:
-    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
-    #   department: LSLSRD
-    #   time: 57600 # 16 hours
-    - !type:RoleTimeRequirement
-      role: JobMedicalNurse
-      time: 57600 # 16 hours
+  # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
+  #   department: LSLSRD
+  #   time: 57600 # 16 hours
+  - !type:RoleTimeRequirement
+    role: JobMedicalNurse
+    time: 57600 # 16 hours
   weight: 20
   displayWeight: 20
   startingGear: LSCorpsmanGear

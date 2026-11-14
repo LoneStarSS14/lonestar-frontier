@@ -5,14 +5,19 @@
   supervisors: job-supervisors-ls-tsf-war-director
   playTimeTracker: JobLSChiefRanger
   requireAdminNotify: true
-  whitelisted: true
+  whitelisted: false
   requirements:
-    # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
-    #   department: LSLSRD
-    #   time: 360000 # 100 hours
-    # - !type:RoleTimeRequirement
-    #   role: JobLSEnforcer
-    #   time: 144000 # 40 hours
+  # Departments
+  - !type:DepartmentTimeRequirement
+    department: LSLSRD
+    time: 360000 # 100 hours
+  - !type:DepartmentTimeRequirement
+    department: LSFreelancers
+    time: 86400 # 24 hours
+  # Jobs
+  - !type:RoleTimeRequirement
+    role: JobLSEnforcer
+    time: 144000 # 40 hours
   weight: 60
   displayWeight: 60
   startingGear: LSChiefRanger
