@@ -4,11 +4,11 @@
   description: job-description-guild-leader
   playTimeTracker: JobGuildLeader
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 72000 # 20 hrs
-    - !type:RoleTimeRequirement
-      role: JobMercenary
-      time: 28800 # 8 hrs
+  - !type:OverallPlaytimeRequirement
+    time: 72000 # 20 hrs
+  - !type:RoleTimeRequirement
+    role: JobMercenary
+    time: 28800 # 8 hrs
   overrideRequirement:
   - !type:RoleTimeRequirement
     role: JobGuildLeader
