@@ -87,3 +87,12 @@
   - NfsdBoxSurvival
   - SeniorOfficerBackpackItems
   - NfsdSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSClerkChameleonOutfit
+  job: LSClerk
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPublicAffairsLiaison
+    shoes: ClothingShoesColorBlack
+    back: NFClothingBackpack
+    ears: ClothingHeadsetGreyCommon

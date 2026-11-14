@@ -98,3 +98,17 @@
   - NfsdBoxSurvival
   - SeniorOfficerBackpackItems
   - NfsdSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSDetectiveChameleonOutfit
+  job: LSDetective
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatFedoraBrown
+    mask: ClothingMaskGasSecurity
+    eyes: ClothingEyesGlassesNfsd
+    neck: ClothingNeckNfsdBadgeDetective
+    gloves: ClothingHandsGlovesForensic
+    shoes: ClothingShoesBootsNfsdBrownFilled
+    belt: ClothingBeltNfsdFilled
+    outerClothing: ClothingOuterCoatTrench

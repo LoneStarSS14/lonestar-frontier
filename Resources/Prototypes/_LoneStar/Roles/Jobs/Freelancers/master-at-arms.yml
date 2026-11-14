@@ -92,3 +92,14 @@
   - ContractorHandItems
   - ContractorInstruments
   - NFSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSMasterAtArmsChameleonOutfit
+  job: LSMasterAtArms
+  hasMindShield: true
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    outerClothing: ClothingOuterEVASuitPirate
+    shoes: ClothingShoesColorBlack
+    back: NFClothingBackpack
+    ears: ClothingHeadsetLSMasterAtArms
