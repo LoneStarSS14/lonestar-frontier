@@ -1,5 +1,5 @@
 - type: job
-  abstract: true
+  abstract: true # LoneStar
   id: PublicAffairsLiaison
   name: job-name-pal
   description: job-description-public-affairs-liaison
@@ -32,14 +32,14 @@
   - !type:AddComponentSpecial
     components:
     - type: CommandStaff
-    - type: IsLsrd
+    - type: IsLsrd # LoneStar
       worth: 2
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  abstract: true
+  abstract: true # LoneStar
   id: PublicAffairGear
   equipment:
     pocket1: NFHyperlinkBookSpaceLaw
@@ -56,7 +56,7 @@
     - EncryptionKeyCommand
 
 - type: chameleonOutfit
-  abstract: true
+  abstract: true # LoneStar
   id: PublicAffairsLiaisonChameleonOutfit
   job: PublicAffairsLiaison
   hasMindShield: true

@@ -1,5 +1,5 @@
 - type: job
-  abstract: true
+  abstract: true # LoneStar
   id: Sheriff
   name: job-name-sheriff
   description: job-description-sheriff
@@ -28,14 +28,14 @@
   - !type:AddComponentSpecial
     components:
     - type: CommandStaff
-    - type: IsLsrd
+    - type: IsLsrd # LoneStar
       worth: 5
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  abstract: true
+  abstract: true # LoneStar
   id: SheriffGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
@@ -53,7 +53,7 @@
     - FrontierUplinkCoin5 # Coyote: added 5 uplink coins to Sheriff
 
 - type: chameleonOutfit
-  abstract: true
+  abstract: true # LoneStar
   id: SheriffChameleonOutfit
   job: Sheriff
   hasMindShield: true

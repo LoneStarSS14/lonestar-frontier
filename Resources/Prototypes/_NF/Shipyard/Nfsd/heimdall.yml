@@ -40,4 +40,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            InterviewLSClerk: [ 0, 0 ]
+            InterviewLSClerk: [ 0, 0 ] # LoneStar

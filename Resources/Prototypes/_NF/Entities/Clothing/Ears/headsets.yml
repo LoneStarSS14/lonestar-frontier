@@ -23,6 +23,7 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
+      # - EncryptionKeyNfsd # LoneStar
 
 - type: entity
   parent: ClothingHeadsetNfsdBrown

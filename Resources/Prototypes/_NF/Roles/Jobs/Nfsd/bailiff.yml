@@ -1,5 +1,5 @@
 - type: job
-  abstract: true
+  abstract: true # LoneStar
   id: Bailiff
   name: job-name-bailiff
   description: job-description-bailiff
@@ -38,7 +38,7 @@
   - !type:AddComponentSpecial
     components:
     - type: CommandStaff
-    - type: IsLsrd
+    - type: IsLsrd # LoneStar
       worth: 2
 
 
@@ -60,7 +60,7 @@
     - EncryptionKeyCommand
 
 - type: chameleonOutfit
-  abstract: true
+  abstract: true # LoneStar
   id: BailiffChameleonOutfit
   job: Bailiff
   hasMindShield: true

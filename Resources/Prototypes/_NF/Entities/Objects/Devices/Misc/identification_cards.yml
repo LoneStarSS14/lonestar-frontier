@@ -337,7 +337,7 @@
     name: Clippy
 
 - type: entity
-  parent: BaseLSFreelancerIDCard # LoneStar, TODO: Check these are ok after rest of id stuff is done
+  parent: BaseLSFreelancerIDCard # LoneStar
   id: ClarpyIDCard
   name: clarpy ID card
   components:
@@ -345,7 +345,7 @@
     name: Clarpy
 
 - type: entity
-  parent: BaseLSLSRDIDCard # LoneStar, TODO: Check these are ok after rest of id stuff is done
+  parent: BaseLSLSRDIDCard # LoneStar
   id: CappyIDCard
   name: cappy ID card
   components:
