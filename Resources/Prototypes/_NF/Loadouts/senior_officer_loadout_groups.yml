@@ -38,6 +38,7 @@
   - SeniorOfficerClothingNeckBadgeSeniorOfficer
 
 - type: loadoutGroup
+  abstract: true # LoneStar
   id: SeniorOfficerPDA
   name: loadout-group-contractor-pda
   hidden: true # No point in showing this, it gets auto-selected.

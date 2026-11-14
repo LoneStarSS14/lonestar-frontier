@@ -1506,6 +1506,7 @@
 
 - type: entity
   parent: BaseSecurityPDA
+  abstract: true # LoneStar
   id: SeniorOfficerPDA
   name: senior officer PDA
   description: Beaten, battered and broken, but just barely useable.

@@ -501,7 +501,7 @@
   - NfsdBelt
   - NfsdEarsAltBrown
   - NfsdBoxSurvival
-  - SeniorOfficerPDA
+  # - SeniorOfficerPDA # LoneStar
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter

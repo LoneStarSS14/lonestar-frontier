@@ -152,6 +152,7 @@
     id: SecurityPDA
 
 - type: loadout
+  abstract: true # LoneStar
   id: SeniorOfficerPDA
   effects:
   - !type:GroupLoadoutEffect
