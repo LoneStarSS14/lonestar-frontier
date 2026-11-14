@@ -12,8 +12,8 @@
   id: Nfsd
   parent: BasePOI
   name: 'LSRD Outpost' # Lonestar changes NFSD -> LSRD
-  minimumDistance: 2500 # LoneStar
-  maximumDistance: 3500 # LoneStar
+  minimumDistance: 3500 # LoneStar
+  maximumDistance: 4500 # LoneStar
   spawnGroup: Required
   gridPath: /Maps/_LoneStar/POI/lsrd.yml # LoneStar
   addComponents:

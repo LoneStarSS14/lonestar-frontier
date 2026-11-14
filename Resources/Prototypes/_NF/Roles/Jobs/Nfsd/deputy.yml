@@ -1,5 +1,5 @@
 - type: job
-  abstract: true
+  abstract: true # LoneStar
   id: Deputy
   name: job-name-deputy
   description: job-description-deputy
@@ -30,10 +30,10 @@
     - rpiJobModifierDeputy
   - !type:AddComponentSpecial
     components:
-    - type: IsLsrd
+    - type: IsLsrd # LoneStar
 
 - type: startingGear
-  abstract: true
+  abstract: true # LoneStar
   id: DeputyGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
@@ -45,7 +45,7 @@
     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink for deputies, removed their starting uplink coins
 
 - type: chameleonOutfit
-  abstract: true
+  abstract: true # LoneStar
   id: DeputyChameleonOutfit
   job: Deputy
   hasMindShield: true

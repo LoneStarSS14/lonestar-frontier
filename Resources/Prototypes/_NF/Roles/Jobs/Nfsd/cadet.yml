@@ -1,5 +1,5 @@
 - type: job
-  abstract: true
+  abstract: true # LoneStar
   id: Cadet
   name: job-name-cadet-nf
   description: job-description-cadet-nf
@@ -27,10 +27,10 @@
     - rpiJobModifierCadet
   - !type:AddComponentSpecial
     components:
-    - type: IsLsrd
+    - type: IsLsrd # LoneStar
 
 - type: startingGear
-  abstract: true
+  abstract: true # LoneStar
   id: CadetGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
@@ -44,7 +44,7 @@
     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink for chunguses, removed their starting uplink coins
 
 - type: chameleonOutfit
-  abstract: true
+  abstract: true # LoneStar
   id: CadetChameleonOutfit
   job: Cadet
   hasMindShield: true

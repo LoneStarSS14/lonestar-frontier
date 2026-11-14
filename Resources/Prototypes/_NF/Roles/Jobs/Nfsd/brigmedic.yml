@@ -1,5 +1,5 @@
 - type: job
-  abstract: true
+  abstract: true # LoneStar
   id: Brigmedic
   name: job-name-brigmedic
   description: job-description-brigmedic-nf
@@ -32,10 +32,10 @@
     - rpiJobModifierBrigMedic
   - !type:AddComponentSpecial
     components:
-    - type: IsLsrd
+    - type: IsLsrd # LoneStar
 
 - type: startingGear
-  abstract: true
+  abstract: true # LoneStar
   id: BrigmedicGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
@@ -48,7 +48,7 @@
     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink to brigmedics and removed starting FUCs
 
 - type: chameleonOutfit
-  abstract: true
+  abstract: true # LoneStar
   id: BrigmedicChameleonOutfit
   job: Brigmedic
   hasMindShield: true

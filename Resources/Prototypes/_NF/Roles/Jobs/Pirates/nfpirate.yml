@@ -28,7 +28,7 @@
     - type: SpecialSectorStationRecord # must be given on spawn
       recordGeneration: FalseRecord
     - type: DisableSuitSensors
-    - type: IsFreelancer
+    - type: IsFreelancer # LoneStar
   - !type:AddRpiJobModifierSpecial
     modifiersToAdd:
     - rpiJobModifierPirate
@@ -52,7 +52,7 @@
   job: NFPirate
 
 - type: roleLoadout
-  abstract: true
+  abstract: true # LoneStar
   id: JobNFPirate
   groups:
   - FreelancerFactionHead # LoneStar
