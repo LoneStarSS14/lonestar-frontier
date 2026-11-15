@@ -14,3 +14,19 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
   - type: Item
     heldPrefix: silver
+
+- type: entity
+  parent: CentcomIDCardDeathsquad
+  id: TSFMCIDCard
+  name: TSF Marine Corps ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: tsfnbase
+    - state: tsfnmarine
+  - type: Item
+    heldPrefix: lsrd
+  - type: PresetIdCard
+    job: TSFMC
+  - type: NanoChatCard # DeltaV
+    listNumber: false
