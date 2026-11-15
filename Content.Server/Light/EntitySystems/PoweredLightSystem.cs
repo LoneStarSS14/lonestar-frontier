@@ -111,7 +111,7 @@ namespace Content.Server.Light.EntitySystems
 
             var userUid = args.User;
             //removing a broken/burned bulb, so allow instant removal
-            if(TryComp<LightBulbComponent>(bulbUid.Value, out var bulb) && bulb.State != LightBulbState.Normal)
+            if (TryComp<LightBulbComponent>(bulbUid.Value, out var bulb) && bulb.State != LightBulbState.Normal)
             {
                 args.Handled = EjectBulb(uid, userUid, light) != null;
                 return;
@@ -354,10 +354,12 @@ namespace Content.Server.Light.EntitySystems
             ApcPowerReceiverComponent? powerReceiver = null,
             AppearanceComponent? appearance = null)
         {
-            if (!Resolve(uid, ref light, ref powerReceiver, false))
+            // LoneStar start: adds support for unpowered lights to update.
+            if (!Resolve(uid, ref light, false))
                 return;
 
             // Optional component.
+            Resolve(uid, ref powerReceiver, false);
             Resolve(uid, ref appearance, false);
 
             // check if light has bulb
@@ -365,7 +367,8 @@ namespace Content.Server.Light.EntitySystems
             if (bulbUid == null || !EntityManager.TryGetComponent(bulbUid.Value, out LightBulbComponent? lightBulb))
             {
                 SetLight(uid, false, light: light);
-                powerReceiver.Load = 0;
+                if (powerReceiver != null)
+                    powerReceiver.Load = 0;
                 _appearance.SetData(uid, PoweredLightVisuals.BulbState, PoweredLightState.Empty, appearance);
                 return;
             }
@@ -373,7 +376,7 @@ namespace Content.Server.Light.EntitySystems
             switch (lightBulb.State)
             {
                 case LightBulbState.Normal:
-                    if (powerReceiver.Powered && light.On)
+                    if ((powerReceiver?.Powered ?? true) && light.On)
                     {
                         SetLight(uid, true, lightBulb.Color, light, lightBulb.LightRadius, lightBulb.LightEnergy, lightBulb.LightSoftness);
                         _appearance.SetData(uid, PoweredLightVisuals.BulbState, PoweredLightState.On, appearance);
@@ -400,7 +403,9 @@ namespace Content.Server.Light.EntitySystems
                     break;
             }
 
-            powerReceiver.Load = (light.On && lightBulb.State == LightBulbState.Normal) ? lightBulb.PowerUse : 0;
+            if (powerReceiver != null)
+                powerReceiver.Load = (light.On && lightBulb.State == LightBulbState.Normal) ? lightBulb.PowerUse : 0;
+            // LoneStar end: adds support for unpowered lights to update.
         }
 
         /// <summary>
@@ -501,11 +506,11 @@ namespace Content.Server.Light.EntitySystems
                 if (color != null)
                     _pointLight.SetColor(uid, color.Value, pointLight);
                 if (radius != null)
-                    _pointLight.SetRadius(uid, (float) radius, pointLight);
+                    _pointLight.SetRadius(uid, (float)radius, pointLight);
                 if (energy != null)
-                    _pointLight.SetEnergy(uid, (float) energy, pointLight);
+                    _pointLight.SetEnergy(uid, (float)energy, pointLight);
                 if (softness != null)
-                    _pointLight.SetSoftness(uid, (float) softness, pointLight);
+                    _pointLight.SetSoftness(uid, (float)softness, pointLight);
             }
 
             // light bulbs burn your hands!
