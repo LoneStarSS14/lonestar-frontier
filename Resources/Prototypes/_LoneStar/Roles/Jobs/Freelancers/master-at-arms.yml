@@ -1,0 +1,105 @@
+- type: job
+  id: LSMasterAtArms
+  name: job-name-ls-master-at-arms
+  description: job-description-ls-master-at-arms
+  supervisors: job-supervisors-ls-tsf-war-director
+  playTimeTracker: JobLSMasterAtArms
+  requireAdminNotify: true
+  whitelisted: false
+  requirements:
+  # Departments
+  - !type:DepartmentTimeRequirement
+    department: LSFreelancers
+    time: 360000 # 100 hours
+  - !type:DepartmentTimeRequirement
+    department: LSLSRD
+    time: 86400 # 24 hours
+  # Jobs
+  - !type:RoleTimeRequirement
+    role: JobLSFreelancerPirate
+    time: 144000 # 40 hours
+  weight: 60
+  displayWeight: 60
+  startingGear: LSMasterAtArmsGear
+  icon: "JobIconLSMasterAtArms"
+  alwaysUseSpawner: true
+  hideConsoleVisibility: true
+  newPlayerMessage: false
+  accessGroups:
+  - FreelancerGeneralAccess
+  - FreelancerCombatantAccess
+  - FreelancerCommandAccess
+  special:
+  # Common v
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+  #freelancer specific
+  - !type:AddComponentSpecial
+    components:
+    - type: IsFreelancer
+  - !type:AddImplantSpecial
+    implants: [ FreelanceTrackingImplant ]
+  #RPI TODO: Add SR-like RPI modifiers.
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirate
+
+- type: entity
+  id: SpawnPointLSMasterAtArms
+  parent: SpawnPointJobBase
+  name: master at arms spawn point
+  suffix: LoneStar
+  components:
+  - type: SpawnPoint
+    job_id: LSMasterAtArms
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-red
+
+- type: startingGear # TODO: Give them some unique starter thing like the EG-4a on guild leader
+  id: LSMasterAtArmsGear
+  equipment:
+    pocket1: BasePirateUplinkRadioPirateCaptain
+    pocket2: ContrabandAppraisalToolPirate
+
+- type: roleLoadout
+  id: JobLSMasterAtArms
+  canCustomizeName: true
+  groups:
+  # Unique v
+  - LSFreelancerMasterAtArmsPDA
+  # Freelancer v
+  - LSFreelancersFactionLeaderJumpsuit
+  - LSFreelancersFactionLeaderOuterClothing
+  - LSFreelancersFactionForcedOuterClothing
+  - LSFreelancersFactionLeaderShoes
+  - LSFreelancersFactionLeaderGloves
+  - LSFreelancersFactionLeaderHead
+  - LSFreelancersFactionLeaderMask
+  - LSFreelancersFactionLeaderEyes
+  - LSFreelancersFactionLeaderNeck
+  - LSFreelancersFactionLeaderEars
+  - LSFreelancersFactionLeaderBackpack
+  - LSFreelancersFactionLeaderBelt
+  - LSFreelancersFactionLeaderWallet
+  - LSFreelancersFactionLeaderEncryptionKey
+  - LSFreelancersFactionLeaderImplanter
+  # Common v
+  - ContractorBoxSurvival
+  - ContractorCartridge
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - ContractorInstruments
+  - NFSpeciesSpecific
+
+- type: chameleonOutfit
+  id: LSMasterAtArmsChameleonOutfit
+  job: LSMasterAtArms
+  hasMindShield: true
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    outerClothing: ClothingOuterEVASuitPirate
+    shoes: ClothingShoesColorBlack
+    back: NFClothingBackpack
+    ears: ClothingHeadsetLSMasterAtArms

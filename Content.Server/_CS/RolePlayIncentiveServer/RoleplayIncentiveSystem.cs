@@ -1141,7 +1141,7 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
             return; // too soon to check again
         rpic.NextProxySync = _timing.CurTime + rpic.ProxySyncInterval;
         // first, if pirate, not have capturebait
-        if (HasComp<IsPirateComponent>(uid))
+        if (HasComp<IsFreelancerComponent>(uid))
         {
             RemComp<CaptureBaitComponent>(uid); // shrimple as
         }
@@ -1560,8 +1560,8 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
 
         if (flarpiProto.FreelancerCountMode != FlarpiCountMode.Nope)
         {
-            var entityQuery = EntityQueryEnumerator<IsPirateComponent>();
-            while (entityQuery.MoveNext(out EntityUid otherUid, out IsPirateComponent? _))
+            var entityQuery = EntityQueryEnumerator<IsFreelancerComponent>();
+            while (entityQuery.MoveNext(out EntityUid otherUid, out IsFreelancerComponent? _))
             {
                 if (otherUid == uid)
                     continue; // dont check ourselves, we kinda already did
@@ -1593,8 +1593,8 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
         // once more, now for Nfsd
         if (flarpiProto.NfsdCountMode != FlarpiCountMode.Nope)
         {
-            var entityQuery = EntityQueryEnumerator<IsNfsdComponent>();
-            while (entityQuery.MoveNext(out EntityUid otherUid, out IsNfsdComponent? n))
+            var entityQuery = EntityQueryEnumerator<IsLsrdComponent>();
+            while (entityQuery.MoveNext(out EntityUid otherUid, out IsLsrdComponent? n))
             {
                 if (otherUid == uid)
                     continue; // dont check ourselves, we kinda already did
@@ -1626,7 +1626,7 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
         // now we have our flarpi per hour! floor at minimum 1, cus youre there, right?
         if (flarpiPerHour < 1m)
             flarpiPerHour = 1m;
-        if (TryComp<IsNfsdComponent>(uid, out var nfsdComp) && flarpiPerHour < nfsdComp.Worth)
+        if (TryComp<IsLsrdComponent>(uid, out var nfsdComp) && flarpiPerHour < nfsdComp.Worth)
             flarpiPerHour = nfsdComp.Worth; // nfsd get at least their worth in flarpies
 
         decimal flarpiPointsPerHour  = flarpiPerHour * flarpiProto.PointsPerFlarpi;
@@ -1767,9 +1767,9 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
         RoleplayIncentiveComponent rpic
         )
     {
-        if (HasComp<IsPirateComponent>(uid))
+        if (HasComp<IsFreelancerComponent>(uid))
             return true; // only pirates care about flarpies
-        if (HasComp<IsNfsdComponent>(uid))
+        if (HasComp<IsLsrdComponent>(uid))
             return true; // nfsd too
         return false;
     }
@@ -1781,13 +1781,13 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
     {
         // set the right prototype if needed
         FlarpiDatacore myFlarpy = rpic.FlarpiDatacore;
-        if (HasComp<IsPirateComponent>(uid)
-            && !HasComp<IsNfsdComponent>(uid))
+        if (HasComp<IsFreelancerComponent>(uid)
+            && !HasComp<IsLsrdComponent>(uid))
         {
             myFlarpy.DatacoreType = "FlarpiSettings_Default";
         }
-        else if (HasComp<IsNfsdComponent>(uid)
-            && !HasComp<IsPirateComponent>(uid))
+        else if (HasComp<IsLsrdComponent>(uid)
+            && !HasComp<IsFreelancerComponent>(uid))
         {
             myFlarpy.DatacoreType = "FlarpiSettings_NFSD";
         }

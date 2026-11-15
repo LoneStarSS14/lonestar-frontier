@@ -1,16 +1,3 @@
-- type: quickPhrase
-  parent: BaseJobPhrase
-  id: BasePiratePhrase
-  group: Pirate
-  styleClass: PirateButton
-  abstract: true
-
-- type: quickPhrase
-  parent: BaseJobPhrase
-  id: BaseNFSDPhrase
-  group: NFSD
-  styleClass: NFSDButton
-  abstract: true
 
 - type: quickPhrase
   id: BaseStationPhrase

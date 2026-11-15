@@ -1,0 +1,16 @@
+
+# LSRD / Freelancers overhaul part 1
+SpawnPointNFPirateCaptain: SpawnPointLSMasterAtArms
+SpawnPointNFPirate: SpawnPointLSFreelancerPirate
+SpawnPointSmuggler: SpawnPointLSSmuggler
+SpawnPointRipper: SpawnPointLSRipperDoc
+SpawnPointEscort: SpawnPointLSEscort
+SpawnPointSheriff: SpawnPointLSChiefRanger
+SpawnPointBailiff: SpawnPointLSEnforcer
+SpawnPointDeputy: SpawnPointLSEnforcer
+SpawnPointCadet: SpawnPointLSEnforcer
+NFSpawnPointSeniorOfficer: SpawnPointLSRetrievalOfficer
+NFSpawnPointDetective: SpawnPointLSDetective
+SpawnPointBrigmedic: SpawnPointLSCorpsman
+SpawnPointPublicAffairsLiaison: SpawnPointLSClerk
+ShriffIDCard: LSLSRDChiefRangerIDCard

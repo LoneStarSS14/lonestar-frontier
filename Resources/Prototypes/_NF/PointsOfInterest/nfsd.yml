@@ -12,10 +12,10 @@
   id: Nfsd
   parent: BasePOI
   name: 'LSRD Outpost' # Lonestar changes NFSD -> LSRD
-  minimumDistance: 750
-  maximumDistance: 1000
+  minimumDistance: 3500 # LoneStar
+  maximumDistance: 4500 # LoneStar
   spawnGroup: Required
-  gridPath: /Maps/_NF/POI/nfsd.yml
+  gridPath: /Maps/_LoneStar/POI/lsrd.yml # LoneStar
   addComponents:
   - type: IFF
     color: "#ae7d57"
@@ -26,7 +26,7 @@
 - type: gameMap
   id: Nfsd
   mapName: 'NFSD Outpost'
-  mapPath: /Maps/_NF/POI/nfsd.yml
+  mapPath: /Maps/_LoneStar/POI/lsrd.yml # LoneStar
   minPlayers: 0
   stations:
     Nfsd:
@@ -40,18 +40,13 @@
           stationDescription: 'frontier-lobby-nfsd-description'
           lobbySortOrder: 2
         - type: StationJobs
-          availableJobs:
-            Sheriff: [ 2, 2 ]
-            Bailiff: [ 2, 2 ]
-            PublicAffairsLiaison: [ 2, 2 ]
-            SeniorOfficer: [ 2, 2 ]
-            Brigmedic: [ 2, 2 ]
-            NFDetective: [ 2, 2 ]
-            Deputy: [ 5, 5 ]
-            Cadet: [ 3, 3 ]
-          tags:
-          - HeadOfPersonnel
-          - HeadOfSecurity
+          availableJobs: # LoneStar v
+            LSChiefRanger: [ 2, 2 ]
+            LSEnforcer: [ 5, 5 ]
+            LSRetrievalOfficer: [ 5, 5 ]
+            LSDetective: [ 5, 5 ]
+            LSCorpsman: [ 5, 5 ]
+            LSClerk: [ -1, -1 ]
         - type: StationDeadDropReporting
           messageSet: Nfsd
         - type: StationDeadDropHintExempt

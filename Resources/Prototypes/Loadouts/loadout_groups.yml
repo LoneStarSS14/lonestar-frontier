@@ -1092,6 +1092,7 @@
   - SecurityWinterBoots
 
 - type: loadoutGroup
+  abstract: true # LoneStar
   id: SecurityPDA
   name: loadout-group-security-id
   loadouts:

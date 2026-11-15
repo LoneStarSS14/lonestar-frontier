@@ -1,0 +1,13 @@
+- type: quickPhrase
+  parent: BaseJobPhrase
+  id: BaseFreelancerPhrase
+  group: Freelancer
+  styleClass: FreelancerButton
+  abstract: true
+
+- type: quickPhrase
+  parent: BaseJobPhrase
+  id: BaseLSRDPhrase
+  group: LSRD
+  styleClass: LSRDButton
+  abstract: true
