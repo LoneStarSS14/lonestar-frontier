@@ -55,3 +55,8 @@ PoweredStrobePink: LSStrobeLightPink
 PoweredStrobeOrange: LSStrobeLightOrange
 PoweredStrobeRed: LSStrobeLightRed
 PoweredStrobeGreen: LSStrobeLightGreen
+#- /nf_migration.yml
+PoweredlightBlueInterior: LSLightBlue
+PoweredlightColoredRed: LSLightRed
+PoweredlightColoredFrostyBlue: LSLightCyan
+PoweredlightColoredBlack: LSLightUltraviolet
