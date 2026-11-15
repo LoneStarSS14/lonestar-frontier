@@ -4812,3 +4812,10 @@ Entries:
   id: 523
   time: '2026-11-12T17:43:59.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/322
+- author: archee1
+  changes:
+    - type: Fix
+      message: Expedition enemies no longer give epic tier drops 2/3.
+  id: 524
+  time: '2026-11-15T19:07:16.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/326
