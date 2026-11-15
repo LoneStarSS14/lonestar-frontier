@@ -1,0 +1,249 @@
+﻿#region Regular
+- type: entity
+  id: LSHardenedLightFluorescent
+  suffix: Fluorescent
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FFE4CE"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTube
+
+- type: entity
+  id: LSHardenedLightLED
+  suffix: LED
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#EEEEFF"
+  - type: PoweredLight
+    hasLampOnSpawn: LedLightTube
+
+- type: entity
+  id: LSHardenedLightDim
+  suffix: Dim
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ba473f"
+  - type: PoweredLight
+    hasLampOnSpawn: DimLightTube
+
+- type: entity
+  id: LSHardenedLightWarm
+  suffix: Warm
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ff9833"
+  - type: PoweredLight
+    hasLampOnSpawn: WarmLightTube
+
+- type: entity
+  id: LSHardenedLightSodium
+  suffix: Sodium
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FFAF38"
+  - type: PoweredLight
+    hasLampOnSpawn: SodiumLightTube
+
+- type: entity
+  id: LSHardenedLightExterior
+  suffix: Exterior
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#B4FCF0"
+  - type: PoweredLight
+    hasLampOnSpawn: ExteriorLightTube
+#engregion
+
+#region Crystal-Colored
+- type: entity
+  id: LSHardenedLightCyan
+  suffix: Cyan
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#47f8ff"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalCyan
+
+- type: entity
+  id: LSHardenedLightBlue
+  suffix: Blue
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#39a1ff"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalBlue
+
+- type: entity
+  id: LSHardenedLightYellow
+  suffix: Yellow
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ffde46"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalYellow
+
+- type: entity
+  id: LSHardenedLightPink
+  suffix: Pink
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ff66cc"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalPink
+
+- type: entity
+  id: LSHardenedLightOrange
+  suffix: Orange
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ff8227"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalOrange
+
+- type: entity
+  id: LSHardenedLightBlack
+  suffix: Black
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#363636"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalBlack
+
+- type: entity
+  id: LSHardenedLightRed
+  suffix: Red
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#fb4747"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalRed
+
+- type: entity
+  id: LSHardenedLightGreen
+  suffix: Green
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#52ff39"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalGreen
+#endregion
+
+#region Noble-Temperature
+- type: entity
+  id: LSHardenedLightXenon
+  suffix: Xenon
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ADD8E6"
+  - type: PoweredLight
+    hasLampOnSpawn: XenonLightTube
+
+- type: entity
+  id: LSHardenedLightKrypton
+  suffix: Krypton
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#CCCCCC"
+  - type: PoweredLight
+    hasLampOnSpawn: KryptonLightTube
+
+- type: entity
+  id: LSHardenedLightArgon
+  suffix: Argon
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#9999FF"
+  - type: PoweredLight
+    hasLampOnSpawn: ArgonLightTube
+
+- type: entity
+  id: LSHardenedLightNeon
+  suffix: Neon
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FF4000"
+  - type: PoweredLight
+    hasLampOnSpawn: NeonLightTube
+
+- type: entity
+  id: LSHardenedLightHelium
+  suffix: Helium
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FFB8C2"
+  - type: PoweredLight
+    hasLampOnSpawn: HeliumLightTube
+#endregion
+
+#region Other
+- type: entity
+  id: LSHardenedLightUltraviolet
+  suffix: UV
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#5D0CED"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeUltraviolet
+
+- type: entity
+  id: LSHardenedLightExteriorGreen
+  suffix: Exterior Green
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#00FF00"
+  - type: PoweredLight
+    hasLampOnSpawn: ExteriorLightTubeGreen
+
+- type: entity
+  id: LSHardenedLightExteriorMagenta
+  suffix: Exterior Magenta
+  parent: LSHardenedLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FF00FF"
+  - type: PoweredLight
+    hasLampOnSpawn: ExteriorLightTubeMagenta
+#endregion
