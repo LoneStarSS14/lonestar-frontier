@@ -24,19 +24,18 @@
         map: [ "clothing_glasses_decor" ]
         shader: unshaded
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    mappedColors:
+      Base: CyberpunkDark
+      Glow: CyberpunkNeon
     available:
       - glasses_main:
           icon_base_glasses_01: Base
         clothing_glasses_main:
           base_glasses_01: Base
         glasses_decor:
-          icon_decor_base_glasses_01: Decor
+          icon_decor_base_glasses_01: Glow
         clothing_glasses_decor:
-          decor_base_glasses_01: Decor
-    mappedColors:
-      Base: CyberpunkDark
-      Decor: CyberpunkDark
+          decor_base_glasses_01: Glow
   - type: ShowHealthBars
     damageContainers:
     - Inorganic
@@ -74,19 +73,18 @@
         map: [ "clothing_infoshades_decor" ]
         shader: unshaded
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    mappedColors:
+      Base: Cyberpunk
+      Glow: CyberpunkNeon
     available:
       - infoshades_main:
           icon_base_glasses_02: Base
         clothing_infoshades_main:
           base_glasses_02: Base
         infoshades_decor:
-          icon_decor_base_glasses_02: Decor
+          icon_decor_base_glasses_02: Glow
         clothing_infoshades_decor:
-          decor_base_glasses_02: Decor
-    mappedColors:
-      Base: CyberpunkNeon
-      Decor: CyberpunkNeon
+          decor_base_glasses_02: Glow
   - type: ShowHealthBars
     damageContainers:
     - Inorganic

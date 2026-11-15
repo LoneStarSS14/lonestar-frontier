@@ -2,7 +2,7 @@
 #region Base
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: BaseClothingUniformJumpskirtMaidUniform2Tone
+  id: ClothingUniformBaseJumpskirtMaidUniform2Tone
   abstract: true
   name: maid uniform
   components:
@@ -65,7 +65,7 @@
 
 #region Colorable (Starts black/white)
 - type: entity
-  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtMaidVictorian
   name: victorian maid dress
   components:
@@ -75,7 +75,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-victorian.rsi
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtMaidPoofy
   name: poofy maid uniform
   components:
@@ -87,7 +87,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-poofy.rsi
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtMaidTavern
   name: tavern maid uniform
   components:
@@ -97,7 +97,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-tavern.rsi
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtMaidVintage
   name: vintage maid uniform
   components:
@@ -107,7 +107,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-vintage.rsi
 
 - type: entity
-  parent: BaseClothingUniformJumpskirtMaidUniform2Tone
+  parent: ClothingUniformBaseJumpskirtMaidUniform2Tone
   id: ClothingUniformJumpskirtMaidVintageAlt
   name: vintage maid uniform
   components:

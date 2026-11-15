@@ -22,9 +22,13 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
     private Dictionary<string, bool> _openedGroups = new();
 
     private readonly LoadoutGroupPrototype _groupProto;
+    // LoneStar: Expose selected colorable entries to the parent colorizer controls.
+    public List<LoadoutContainer> SelectedColorableLoadouts { get; } = new();
 
     public event Action<ProtoId<LoadoutPrototype>>? OnLoadoutPressed;
     public event Action<ProtoId<LoadoutPrototype>>? OnLoadoutUnpressed;
+    // LoneStar: Forward color changes to the profile editor.
+    public event Action<Loadout>? OnLoadoutColorsChanged;
 
     public LoadoutGroupContainer(HumanoidCharacterProfile profile, RoleLoadout loadout, LoadoutGroupPrototype groupProto, ICommonSession session, IDependencyCollection collection)
     {
@@ -42,6 +46,8 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
     {
         var protoMan = collection.Resolve<IPrototypeManager>();
         var loadoutSystem = collection.Resolve<IEntityManager>().System<LoadoutSystem>();
+        // LoneStar: Rebuild the colorizer's selected-entry list with the loadouts.
+        SelectedColorableLoadouts.Clear();
         RestrictionsContainer.DisposeAllChildren();
 
         if (_groupProto.MinLimit > 0)
@@ -240,7 +246,16 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         var enabled = loadout.IsValid(profile, session, proto.ID, collection, out var reason);
 
-        var cont = new LoadoutContainer(proto, !enabled, reason);
+        // LoneStar start, pass the selected entry through for colorizer editing.
+        var selectedLoadout = selected.FirstOrDefault(e => e.Prototype == proto.ID);
+        var cont = new LoadoutContainer(proto, !enabled, reason, selectedLoadout, () =>
+        {
+            if (selectedLoadout != null)
+                OnLoadoutColorsChanged?.Invoke(selectedLoadout);
+        });
+        if (cont.CanColorize)
+            SelectedColorableLoadouts.Add(cont);
+        // LoneStar end
 
         cont.Text = string.IsNullOrEmpty(proto.Name) ? loadoutSystem.GetName(proto) : proto.Name; // Frontier: allow overriding loadout names
 

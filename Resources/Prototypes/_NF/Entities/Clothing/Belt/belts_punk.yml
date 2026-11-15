@@ -24,22 +24,22 @@
       - state: mask_null
         map: [ "clothing_belt_overlay" ]
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    mappedColors:
+      Primary: CyberpunkDark
+      Secondary: CyberpunkDark
+      Tertiary: CyberpunkDark
     available:
       - belt_main:
-          icon_belt_01: Base
+          icon_belt_01: Primary
         clothing_belt_main:
-          base_belt_01: Base
+          base_belt_01: Primary
         belt_decor:
-          icon_decor_base_belt_01: Decor
+          icon_decor_base_belt_01: Secondary
         clothing_belt_decor:
-          decor_base_belt_01: Decor
+          decor_base_belt_01: Secondary
         clothing_belt_overlay:
-          decor_base_belt_02: CyberpunkDark
-          decor_base_belt_03: CyberpunkDark
-          decor_base_belt_04: CyberpunkDark
-          decor_base_belt_05: CyberpunkDark
+          decor_base_belt_02: Tertiary
+          decor_base_belt_03: Tertiary
+          decor_base_belt_04: Tertiary
+          decor_base_belt_05: Tertiary
           mask_null: ""
-    mappedColors:
-      Base: CyberpunkDark
-      Decor: CyberpunkDark

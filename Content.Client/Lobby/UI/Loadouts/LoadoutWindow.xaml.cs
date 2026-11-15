@@ -1,4 +1,5 @@
 // _CS Start
+using System.Linq; // LoneStar
 using System.Numerics;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.CCVar;
@@ -23,8 +24,13 @@ public sealed partial class LoadoutWindow : FancyWindow
     public event Action<string>? OnNameChanged;
     public event Action<ProtoId<LoadoutGroupPrototype>, ProtoId<LoadoutPrototype>>? OnLoadoutPressed;
     public event Action<ProtoId<LoadoutGroupPrototype>, ProtoId<LoadoutPrototype>>? OnLoadoutUnpressed;
+    // LoneStar: Notify the profile editor when a loadout's appearance changes.
+    public event Action<Loadout>? OnLoadoutColorsChanged;
 
     private List<LoadoutGroupContainer> _groups = new();
+    // LoneStar: Keep the selected colorable loadout synchronized with the selector.
+    private List<LoadoutContainer> _selectedColorableLoadouts = new();
+    private LoadoutContainer? _selectedColorableLoadout;
 
     public HumanoidCharacterProfile Profile;
 
@@ -40,6 +46,18 @@ public sealed partial class LoadoutWindow : FancyWindow
 
         _maxLoadoutNameLength = configManager.GetCVar(CCVars.MaxLoadoutNameLength);
         RoleNameEdit.IsValid = text => text.Length <= _maxLoadoutNameLength;
+        // LoneStar start, wire the selector and colorizer actions.
+        ColorableLoadoutSelector.OnItemSelected += args =>
+        {
+            if (args.Id < 0 || args.Id >= _selectedColorableLoadouts.Count)
+                return;
+
+            ColorableLoadoutSelector.SelectId(args.Id);
+            _selectedColorableLoadout = _selectedColorableLoadouts[args.Id];
+        };
+        ColorizeButton.OnPressed += _ => _selectedColorableLoadout?.OpenColorEditor();
+        WipeColorsButton.OnPressed += _ => _selectedColorableLoadout?.WipeColors();
+        // LoneStar end
 
         // Hide if we can't edit the name.
         if (!proto.CanCustomizeName)
@@ -90,8 +108,16 @@ public sealed partial class LoadoutWindow : FancyWindow
                 {
                     OnLoadoutUnpressed?.Invoke(group, args);
                 };
+
+                // LoneStar: Bubble appearance edits to the owning profile editor.
+                container.OnLoadoutColorsChanged += selectedLoadout =>
+                {
+                    OnLoadoutColorsChanged?.Invoke(selectedLoadout);
+                };
             }
         }
+        // LoneStar: Initialize colorizer controls from the selected entries.
+        UpdateColorizerButtons();
         //Frontier - we inject our label here but it needs recalculating every time a new item is selected,
         //so we add a new method and call it there too.
         CalculateLoadoutCost(loadout, collection);
@@ -107,8 +133,34 @@ public sealed partial class LoadoutWindow : FancyWindow
             group.RefreshLoadouts(Profile, loadout, session, collection);
         }
 
+        // LoneStar: Refresh colorizer controls after loadout selection changes.
+        UpdateColorizerButtons();
         CalculateLoadoutCost(loadout, collection); //Frontier
     }
+
+    // LoneStar start, populate available colorable entries and button state.
+    private void UpdateColorizerButtons()
+    {
+        _selectedColorableLoadouts = _groups
+            .SelectMany(group => group.SelectedColorableLoadouts)
+            .ToList();
+        _selectedColorableLoadout = _selectedColorableLoadouts.FirstOrDefault();
+
+        ColorableLoadoutSelector.Clear();
+        for (var index = 0; index < _selectedColorableLoadouts.Count; index++)
+        {
+            var loadout = _selectedColorableLoadouts[index];
+            ColorableLoadoutSelector.AddItem(loadout.Text ?? string.Empty, index);
+        }
+
+        var hasColorableLoadouts = _selectedColorableLoadout != null;
+        ColorizeButton.Disabled = !hasColorableLoadouts;
+        WipeColorsButton.Disabled = !hasColorableLoadouts;
+        ColorizeButton.ModulateSelfOverride = hasColorableLoadouts ? Color.White : Color.FromHex("#666666");
+        WipeColorsButton.ModulateSelfOverride = hasColorableLoadouts ? Color.White : Color.FromHex("#666666");
+        ColorableLoadoutSelector.Visible = _selectedColorableLoadouts.Count > 1;
+    }
+    // LoneStar end
 
     /// <summary>
     /// Frontier function to calculate and update the label.

@@ -963,6 +963,20 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("profile_loadout_id");
 
+                    // LoneStar start, persist loadout colorizer selections.
+                    b.Property<string>("Colors")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValue("{}")
+                        .HasColumnName("colors");
+
+                    b.Property<string>("Variants")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValue("{}")
+                        .HasColumnName("variants");
+                    // LoneStar end
+
                     b.Property<string>("LoadoutName")
                         .IsRequired()
                         .HasColumnType("TEXT")

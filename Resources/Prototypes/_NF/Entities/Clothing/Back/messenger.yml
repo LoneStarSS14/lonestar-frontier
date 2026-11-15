@@ -1424,7 +1424,10 @@
         map: [ "rightMessengerBase" ]
         shader: unshaded
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    mappedColors:
+      Base: Cyberpunk
+      Sling: Cyberpunk
+      Clasp: CyberpunkNeon
     available:
     # icon
     - iconMessengerBase:
@@ -1450,7 +1453,3 @@
         base-inhand-right: Base
       rightgMessengerBase:
         clasp-inhand-right: Clasp
-    mappedColors:
-      Base: Cyberpunk
-      Sling: Cyberpunk
-      Clasp: CyberpunkNeon
