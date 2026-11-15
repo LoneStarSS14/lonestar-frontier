@@ -70,7 +70,7 @@
 - entity: LSLightFluorescent # LoneStar
   assignments:
   - 2: 6
-- entity: EmergencyLight
+- entity: LSEmergencyLight
   assignments:
   - 2: 7
 - entity: SMESBasic
