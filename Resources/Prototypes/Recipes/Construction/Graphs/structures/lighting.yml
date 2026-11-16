@@ -50,8 +50,18 @@
               amount: 2
               doAfter: 2.0
         # End Frontier: shielded lights
+        # LoneStar start
+        - to: strobeLightShielded
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1.0
+            - material: Plasteel
+              amount: 1
+              doAfter: 1.0
+        # LoneStar end
     - node: tubeLight
-      entity: PoweredlightEmpty
+      entity: LSLightEmpty # LoneStar
       edges:
         - to: start
           conditions:
@@ -76,7 +86,7 @@
               doAfter: 1.0
         # End Frontier: shielded lights
     - node: bulbLight
-      entity: PoweredSmallLightEmpty
+      entity: LSSmallLightEmpty # LoneStar
       edges:
         - to: start
           conditions:
@@ -116,7 +126,7 @@
               amount: 5
             - !type:DeleteEntity {}
     - node: strobeLight
-      entity: PoweredStrobeLightEmpty
+      entity: LSStrobeLightEmpty # LoneStar
       edges:
         - to: start
           conditions:
@@ -130,8 +140,18 @@
               prototype: SheetSteel1
               amount: 1
             - !type:DeleteEntity {}
+        # LoneStar start
+        - to: strobeLightShielded
+          conditions:
+            - !type:ContainerEmpty
+              container: "light_bulb"
+          steps:
+            - material: Plasteel
+              amount: 1
+              doAfter: 1.0
+        # LoneStar end
     - node: emergencyLight
-      entity: EmergencyLight
+      entity: LSEmergencyLight # LoneStar
       edges:
         - to: start
           steps:
@@ -147,7 +167,7 @@
             - !type:DeleteEntity {}
     # Frontier: shielded lights
     - node: tubeLightShielded
-      entity: NFPoweredlightShieldedEmpty
+      entity: LSShieldedLightEmpty # LoneStar
       edges:
         - to: start
           conditions:
@@ -165,7 +185,7 @@
               amount: 2
             - !type:DeleteEntity {}
     - node: bulbLightShielded
-      entity: NFPoweredSmallLightShieldedEmpty
+      entity: LSShieldedSmallLightEmpty # LoneStar
       edges:
         - to: start
           conditions:
@@ -183,3 +203,77 @@
               amount: 1
             - !type:DeleteEntity {}
     # End Frontier: shielded lights
+    # LoneStar start, shielded strobe, and hardened lights
+    - node: strobeLightShielded
+      entity: LSShieldedStrobeLightEmpty
+      edges:
+        - to: start
+          conditions:
+            - !type:ContainerEmpty
+              container: "light_bulb"
+          steps:
+            - tool: Screwing
+              doAfter: 2.0
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 1
+            - !type:DeleteEntity {}
+    - node: tubeLightHardened
+      entity: LSHardenedLightEmpty
+      edges:
+        - to: start
+          conditions:
+            - !type:ContainerEmpty
+              container: "light_bulb"
+          steps:
+            - tool: Screwing
+              doAfter: 3.0
+          completed:
+            - !type:SpawnPrototype
+              prototype: IngotSilver1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 2
+            - !type:DeleteEntity {}
+    - node: bulbLightHardened
+      entity: LSHardenedSmallLightEmpty
+      edges:
+        - to: start
+          conditions:
+            - !type:ContainerEmpty
+              container: "light_bulb"
+          steps:
+            - tool: Screwing
+              doAfter: 3.0
+          completed:
+            - !type:SpawnPrototype
+              prototype: IngotSilver1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 1
+            - !type:DeleteEntity {}
+    - node: strobeLightHardened
+      entity: LSHardenedStrobeLightEmpty
+      edges:
+        - to: start
+          conditions:
+            - !type:ContainerEmpty
+              container: "light_bulb"
+          steps:
+            - tool: Screwing
+              doAfter: 3.0
+          completed:
+            - !type:SpawnPrototype
+              prototype: IngotSilver1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 1
+            - !type:DeleteEntity {}
+    # LoneStar end

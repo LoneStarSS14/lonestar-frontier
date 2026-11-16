@@ -1,0 +1,45 @@
+# Upstream lightbulbs that arent changed, but we dont plan to need to use
+
+- type: entity
+  id: LSStrobeLightService
+  parent: LSStrobeLightEmpty
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    enabled: true
+  - type: PoweredLight
+    hasLampOnSpawn: ServiceLightBulb
+
+- type: entity
+  id: LSStrobeLightPolice
+  suffix: "Empty, police"
+  parent: LSStrobeLightEmpty
+  categories: [ HideSpawnMenu ] # LoneStar
+  components:
+  - type: AmbientSound
+    volume: 0
+    range: 10
+    sound:
+      path: "/Audio/Effects/Lightning/strobe.ogg"
+
+- type: entity
+  id: LSStrobeLightSiren
+  parent: LSStrobeLightEmpty
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AmbientSound
+    volume: 0
+    range: 10
+    sound:
+      path: "/Audio/Misc/gamma.ogg"
+
+- type: entity
+  id: LSStrobeLightEpsilon
+  parent: LSStrobeLightEmpty
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AmbientSound
+    volume: 0
+    range: 10
+    sound:
+      path: "/Audio/Effects/Lightning/strobeepsilon.ogg"
