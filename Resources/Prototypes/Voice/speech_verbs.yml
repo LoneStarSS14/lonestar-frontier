@@ -182,7 +182,7 @@
   - chat-speech-verb-wawa-3
   - chat-speech-verb-wawa-4
 
-- type: speechVerb
+- type: speechVerb # LoneStar TODO: move this out
   id: Resomi
   name: chat-speech-verb-name-resomi
   speechVerbStrings:

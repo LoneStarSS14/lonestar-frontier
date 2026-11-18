@@ -29,6 +29,11 @@
     - /Audio/_NF/Voice/Goblin/goblin_scream_2.ogg # Frontier
     - /Audio/_NF/Voice/Goblin/goblin_scream_3.ogg # Frontier
     - /Audio/_NF/Voice/Goblin/goblin_scream_4.ogg # Frontier
+    - /Audio/Floof/Voice/Vulpkanin/vulpscream1.ogg # Floofstation
+    - /Audio/Floof/Voice/Vulpkanin/vulpscream2.ogg # Floofstation
+    - /Audio/Floof/Voice/Vulpkanin/vulpscream3.ogg # Floofstation
+    - /Audio/Floof/Voice/Vulpkanin/vulpscream4.ogg # Floofstation
+
 - type: soundCollection
   id: HarpyLaugh
   files:
@@ -46,6 +51,7 @@
     - /Audio/_NF/Voice/Sheleg/sheleg_laugh_2.ogg # Frontier
     - /Audio/_NF/Voice/Goblin/goblin_cackle_1.ogg # Frontier
     - /Audio/_NF/Voice/Goblin/goblin_cackle_2.ogg # Frontier
+
 - type: soundCollection
   id: HarpyHisses
   files:
@@ -66,12 +72,14 @@
     - /Audio/Machines/windoor_open.ogg
     - /Audio/Effects/spray.ogg
     - /Audio/Effects/spray2.ogg
+
 - type: soundCollection
   id: HarpySigh
   files:
     - /Audio/Voice/Human/male_sigh.ogg
     - /Audio/Voice/Human/female_sigh.ogg
     - /Audio/_NF/Voice/Sheleg/sheleg_sigh_1.ogg # Frontier
+
 - type: soundCollection
   id: HarpyCry
   files:
@@ -86,6 +94,7 @@
     - /Audio/_NF/Voice/Sheleg/sheleg_cry_1.ogg # Frontier
     - /Audio/_NF/Voice/Sheleg/sheleg_cry_2.ogg # Frontier
     - /Audio/_NF/Voice/Sheleg/sheleg_cry_3.ogg # Frontier
+
 - type: soundCollection
   id: HarpyMeows
   files:
@@ -94,11 +103,13 @@
     - /Audio/Nyanotrasen/Voice/Felinid/cat_meow3.ogg
     - /Audio/Items/Toys/meow1.ogg
     - /Audio/Animals/cat_meow.ogg
+
 - type: soundCollection
   id: HarpyMews
   files:
     - /Audio/Nyanotrasen/Voice/Felinid/cat_mew1.ogg
     - /Audio/Nyanotrasen/Voice/Felinid/cat_mew2.ogg
+
 - type: soundCollection
   id: HarpyGrowls
   files:
@@ -110,11 +121,13 @@
     - /Audio/_DV/Voice/Vulpkanin/dog_growl4.ogg
     - /Audio/_DV/Voice/Vulpkanin/dog_growl5.ogg
     - /Audio/_DV/Voice/Vulpkanin/dog_growl6.ogg
+
 - type: soundCollection
   id: HarpyPurrs
   files:
     - /Audio/Nyanotrasen/Voice/Felinid/cat_purr1.ogg
     # - /Audio/Mecha/sound_mecha_hydraulic.ogg # LoneStar, why...
+
 - type: soundCollection
   id: HarpyRings
   files:
@@ -123,12 +136,14 @@
     - /Audio/Machines/ding.ogg # Frontier
     - /Audio/Machines/warning_buzzer.ogg # Frontier
     - /Audio/Machines/double_ring.ogg # Frontier
+
 - type: soundCollection
   id: HarpyHonks
   files:
     - /Audio/Items/bikehorn.ogg
     - /Audio/Items/brokenbikehorn.ogg
     - /Audio/Animals/goose_honk.ogg # Frontier
+
 - type: soundCollection
   id: HarpyPews
   files:
@@ -146,6 +161,7 @@
     - /Audio/Magic/staff_chaos.ogg # Frontier
     - /Audio/Magic/staff_door.ogg # Frontier
     - /Audio/Magic/staff_healing.ogg # Frontier
+
 - type: soundCollection
   id: HarpyBangs
   files:
@@ -161,6 +177,7 @@
     - /Audio/Magic/fireball.ogg # Frontier
     - /Audio/Magic/forcewall.ogg # Frontier
     - /Audio/Magic/knock.ogg # Frontier
+
 - type: soundCollection
   id: HarpyBeeps
   files:
@@ -198,6 +215,7 @@
     - /Audio/Machines/microwave_done_beep.ogg # Frontier
     - /Audio/Machines/scan_finish.ogg
     - /Audio/Machines/vending_jingle.ogg
+
 - type: soundCollection
   id: HarpyRevs
   files:
@@ -205,6 +223,7 @@
     - /Audio/Machines/blender.ogg # Frontier
     - /Audio/Machines/juicer.ogg # Frontier
     - /Audio/Machines/reclaimer_startup.ogg # Frontier
+
 - type: soundCollection
   id: HarpyClicks
   files:
@@ -220,6 +239,7 @@
     - /Audio/Machines/id_swipe.ogg
     - /Audio/Machines/machine_switch.ogg
     - /Audio/Machines/screwdriveropen.ogg
+
 - type: soundCollection
   id: HarpyChitter
   files:
@@ -228,15 +248,18 @@
     - /Audio/Machines/diagnoser_printing.ogg # Frontier
     - /Audio/Machines/uniformprinter.ogg # Frontier
     - /Audio/Machines/vaccinator_running.ogg # Frontier
+
 - type: soundCollection
   id: HarpySqueak
   files:
     - /Audio/Voice/Moth/moth_squeak.ogg
     - /Audio/Animals/mouse_squeak.ogg
+
 - type: soundCollection
   id: HarpyCaws
   files:
     - /Audio/_DV/Voice/Harpy/caw1.ogg
+
 - type: soundCollection
   id: HarpyChirps
   files:

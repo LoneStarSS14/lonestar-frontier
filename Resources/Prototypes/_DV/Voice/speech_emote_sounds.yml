@@ -84,8 +84,11 @@
       collection: Bubbles # Imp
     Pop: # Imp
       collection: Pops # Imp
+    Gnash: # Flooftier
+      collection: FeroxiGnashes # Flooftier
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
+
 - type: emoteSounds
   id: MaleVulpkanin
   params:
@@ -143,6 +146,7 @@
       collection: VulpkaninGekkers
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: FemaleVulpkanin
   params:
@@ -200,6 +204,7 @@
       collection: VulpkaninGekkers
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: MobDog
   params:
@@ -219,13 +224,14 @@
       collection: VulpkaninHowls
     Awoo:
       collection: VulpkaninHowls
+
 - type: emoteSounds
   id: MaleRodentia
   params:
     variation: 0.125
   sounds:
     Scream:
-      collection: RodentiaScreams
+      collection: RodentiaScreams # Floof
     Laugh:
       collection: MaleLaugh
     Sneeze:
@@ -256,13 +262,14 @@
       collection: Belch
     Gulp:
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: FemaleRodentia
   params:
     variation: 0.125
   sounds:
     Scream:
-      collection: RodentiaScreams
+      collection: RodentiaScreams # Floof
     Laugh:
       collection: FemaleLaugh
     Sneeze:
@@ -293,6 +300,7 @@
       collection: Belch
     Gulp:
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: MaleFeroxi
   params:
@@ -324,6 +332,7 @@
       collection: FeroxiGnashes
     Gulp:
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: FemaleFeroxi
   params:
@@ -355,6 +364,7 @@
       collection: FeroxiGnashes
     Gulp:
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: UnisexChitinid
   params:
