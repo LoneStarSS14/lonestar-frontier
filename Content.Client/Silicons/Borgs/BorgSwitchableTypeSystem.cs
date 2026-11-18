@@ -1,7 +1,9 @@
 ﻿using Content.Shared.Movement.Components;
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
+using Content.Shared.Standing;
 using Robust.Client.GameObjects;
+using Robust.Shared.Utility;
 
 namespace Content.Client.Silicons.Borgs;
 
@@ -12,6 +14,7 @@ namespace Content.Client.Silicons.Borgs;
 /// <seealso cref="BorgSwitchableTypeComponent"/>
 public sealed class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeSystem
 {
+    [Dependency] private readonly BorgVisualPoseSystem _borgVisualPose = default!;
     [Dependency] private readonly BorgSystem _borgSystem = default!;
     [Dependency] private readonly AppearanceSystem _appearance = default!;
     [Dependency] private readonly SpriteSystem _sprite = default!;
@@ -40,6 +43,10 @@ public sealed class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeSystem
     {
         if (TryComp(entity, out SpriteComponent? sprite))
         {
+            var rsiPath = new ResPath(prototype.SpriteRsiPath);
+            _sprite.LayerSetRsi((entity, sprite), BorgVisualLayers.Body, rsiPath);
+            _sprite.LayerSetRsi((entity, sprite), BorgVisualLayers.Light, rsiPath);
+            _sprite.LayerSetRsi((entity, sprite), BorgVisualLayers.LightStatus, rsiPath);
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.Body, prototype.SpriteBodyState);
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.LightStatus, prototype.SpriteToggleLightState);
         }
@@ -60,21 +67,56 @@ public sealed class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeSystem
 
         if (prototype.SpriteBodyMovementState is { } movementState)
         {
-            var spriteMovement = EnsureComp<SpriteMovementComponent>(entity);
-            spriteMovement.NoMovementLayers.Clear();
-            spriteMovement.NoMovementLayers["movement"] = new PrototypeLayerData
+            if (prototype.SpriteBodyRestState != null
+                || prototype.SpriteBodyLyingState != null
+                || prototype.SpriteBodyDeadState != null)
             {
-                State = prototype.SpriteBodyState,
-            };
-            spriteMovement.MovementLayers.Clear();
-            spriteMovement.MovementLayers["movement"] = new PrototypeLayerData
+                _borgVisualPose.Configure(entity, prototype);
+
+                // Pose resolver still depends on IsMoving, but body state is driven here instead of SpriteMovement layers.
+                var spriteMovement = EnsureComp<SpriteMovementComponent>(entity);
+                spriteMovement.NoMovementLayers.Clear();
+                spriteMovement.MovementLayers.Clear();
+            }
+            else
             {
-                State = movementState,
-            };
+                RemComp<BorgVisualPoseComponent>(entity);
+
+                var spriteMovement = EnsureComp<SpriteMovementComponent>(entity);
+                spriteMovement.NoMovementLayers.Clear();
+                spriteMovement.NoMovementLayers["movement"] = new PrototypeLayerData
+                {
+                    State = prototype.SpriteBodyState,
+                };
+                spriteMovement.MovementLayers.Clear();
+                spriteMovement.MovementLayers["movement"] = new PrototypeLayerData
+                {
+                    State = movementState,
+                };
+            }
         }
         else
         {
             RemComp<SpriteMovementComponent>(entity);
+
+            if (prototype.SpriteBodyRestState != null
+                || prototype.SpriteBodyLyingState != null
+                || prototype.SpriteBodyDeadState != null)
+            {
+                _borgVisualPose.Configure(entity, prototype);
+            }
+            else
+            {
+                RemComp<BorgVisualPoseComponent>(entity);
+            }
+        }
+
+        if ((prototype.SpriteBodyRestState != null
+            || prototype.SpriteBodyLyingState != null
+            || prototype.SpriteBodyDeadState != null)
+            && !HasComp<LayingDownComponent>(entity))
+        {
+            EnsureComp<LayingDownComponent>(entity);
         }
 
         base.UpdateEntityAppearance(entity, prototype);

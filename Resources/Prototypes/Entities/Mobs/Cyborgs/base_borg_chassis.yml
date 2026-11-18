@@ -2,7 +2,7 @@
   parent: [BaseMob, StripableInventoryBase]
   id: BaseBorgChassisNotIonStormable
   name: cyborg
-  description: A man-machine hybrid that assists in station activity. They love being asked to state their laws over and over.
+  description: A synthetic that assists in station activity. They love being asked to state their laws over and over. # Coyote CHANGE: was A man-machine hybrid that assists in station activity. They love being asked to state their laws over and over.
   save: false
   abstract: true
   components:
@@ -17,6 +17,7 @@
       collection: MetalThud
   - type: CombatMode
   - type: NoSlip
+  - type: Stripping # Coyote
   - type: StaticPrice
     price: 1250
   - type: Fixtures
@@ -82,7 +83,7 @@
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
-    laws: Crewsimov
+    laws: Free # Coyote CHANGE: was Crewsimov
   - type: Inventory
     templateId: borg
   - type: Hands
@@ -93,23 +94,23 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
-    - Common
-    - Science
+    - Traffic #LS Edit. Gives them traffic perms without headsets. Will be removed if misused.
+    - Binary #LS Edit. Kills all-non binary channels from borgs by default.
   - type: ActiveRadio
     channels:
-    - Binary
-    - Common
-    - Science
+    - Traffic #LS Edit. Gives them traffic perms without headsets. Will be removed if misused.
+    - Binary #LS Edit. Kills all-non binary channels from borgs by default.
   - type: ZombieImmune
   - type: Repairable
     doAfterDelay: 10
-    allowSelfRepair: false
+    allowSelfRepair: true # Coyote CHANGE: Was false, but we don't want to torture our cyborg players
   - type: BorgChassis
   - type: LockingWhitelist
     blacklist:
       components:
-      - BorgChassis
+      # Coyote TWEAK: We want borgs to be able to fix eachother and themselves
+      #- BorgChassis
+      # End Coyote
       - RoboticsConsole
   - type: WiresPanel
     openingTool: Prying
@@ -141,6 +142,10 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
   - type: Body
+# Coyote: This allows borgs to use one singular hand, to be able to interact with the world effectively. Also lets them have incentive pay
+    prototype: Borg
+  - type: RoleplayIncentive
+# End Coyote
   - type: StatusEffects
     allowed:
     - Flashed
@@ -184,7 +189,7 @@
             volume: 5
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1600 #LS Edit. Prevent gibbing below 1600 damage due to bugs.
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -235,7 +240,7 @@
     - FootstepSound
     - CanPilot
     - SiliconEmotes
-    - Unimplantable
+    # LoneStar Edit. Borgs can now hold implants.
   - type: Emoting
   - type: GuideHelp
     guides:
@@ -247,6 +252,7 @@
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   - type: PreventDropOnDowned # Frontier: borgs don't drop items when falling (e.g. critical/dead)
+  - type: Vore # Floofstation - Vore
 
 - type: entity
   abstract: true

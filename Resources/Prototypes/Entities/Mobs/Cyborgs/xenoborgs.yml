@@ -46,6 +46,7 @@
     damageContainers:
     - Inorganic
     - Silicon
+    - IPC # Coyote: Add IPC damage container
   - type: ItemSlots
     slots:
       cell_slot:
