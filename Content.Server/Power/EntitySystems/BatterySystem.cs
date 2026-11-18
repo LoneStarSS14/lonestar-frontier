@@ -1,3 +1,4 @@
+using Content.Server._EinsteinEngines.Silicon.Charge;
 using Content.Server.Emp;
 using Content.Shared.Emp; // Frontier: Upstream - #28984
 using Content.Server.Power.Components;
@@ -15,6 +16,7 @@ namespace Content.Server.Power.EntitySystems
     public sealed class BatterySystem : EntitySystem
     {
         [Dependency] private readonly IGameTiming _timing = default!;
+        [Dependency] private readonly SiliconChargeSystem _sillycharge = default!;
 
         public override void Initialize()
         {
@@ -91,7 +93,10 @@ namespace Content.Server.Power.EntitySystems
             var query = EntityQueryEnumerator<BatterySelfRechargerComponent, BatteryComponent>();
             while (query.MoveNext(out var uid, out var comp, out var batt))
             {
-                if (!comp.AutoRecharge || IsFull(uid, batt))
+                if (!comp.AutoRecharge
+                    || IsFull(uid, batt)
+                    // || IsInRobot(uid, batt)
+                    )
                     continue;
 
                 if (comp.AutoRechargePause)
@@ -276,6 +281,20 @@ namespace Content.Server.Power.EntitySystems
                 return false;
 
             return battery.CurrentCharge >= battery.MaxCharge;
+        }
+
+        /// <summary>
+        /// Checks if the battery is in a robot (or, really, any kind of mob)
+        /// </summary>
+        public bool IsInRobot(EntityUid uid, BatteryComponent? battery = null)
+        {
+            if (!Resolve(uid, ref battery))
+                return false;
+            var parent = Transform(uid).ParentUid;
+            if (parent == null)
+                return false;
+            _sillycharge.TryGetSiliconBattery(parent, out var siliconBattery);
+            return siliconBattery == battery; // ?? okay
         }
     }
 }

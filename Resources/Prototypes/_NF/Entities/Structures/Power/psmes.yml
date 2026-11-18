@@ -32,10 +32,10 @@
     startingCharge: 0
   - type: PowerNetworkBattery
     maxSupply: 15000
-    maxChargeRate: 40000 #about a 4 minute recharge time. 
+    maxChargeRate: 40000 #about a 4 minute recharge time.
     supplyRampTolerance: 5000
     supplyRampRate: 500
-    efficiency: 0.8 # take a loss when dumping in the juice.
+    efficiency: 1.0 # Coyote: 0.8 -> 1.0
   - type: NodeContainer
     examinable: true
     nodes:

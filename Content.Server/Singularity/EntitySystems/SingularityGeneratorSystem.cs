@@ -129,6 +129,15 @@ public sealed class SingularityGeneratorSystem : SharedSingularityGeneratorSyste
         }
         // End Frontier
 
+        // Frontier: check tether
+        if (generatorComp.RequiresTether && !_dangerTether.AnyTetherInRange(args.OtherEntity))
+        {
+            EntityManager.QueueDeleteEntity(uid);
+            PopupSystem.PopupEntity(Loc.GetString("comp-generator-tether", ("target", args.OtherEntity)), args.OtherEntity, PopupType.LargeCaution);
+            return;
+        }
+        // End Frontier
+
         var contained = true;
         if (!generatorComp.FailsafeDisabled)
         {
