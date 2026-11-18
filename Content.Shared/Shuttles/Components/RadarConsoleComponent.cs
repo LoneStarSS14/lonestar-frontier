@@ -5,7 +5,6 @@ using System.Numerics; // Frontier
 namespace Content.Shared.Shuttles.Components;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(SharedRadarConsoleSystem))]
 public sealed partial class RadarConsoleComponent : Component
 {
     [ViewVariables(VVAccess.ReadWrite)]
@@ -57,5 +56,11 @@ public sealed partial class RadarConsoleComponent : Component
     /// </summary>
     [DataField]
     public bool HideTarget = false;
+
+    /// <summary>
+    /// The name of the target entity, used for autopilot destination display
+    /// </summary>
+    [DataField]
+    public string? TargetEntityName;
     // End Frontier
 }

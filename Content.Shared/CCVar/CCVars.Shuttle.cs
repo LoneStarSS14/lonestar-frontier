@@ -174,7 +174,7 @@ public sealed partial class CCVars
     /// </summary>
     [CVarControl(AdminFlags.Server | AdminFlags.Mapping, min: 0, max: int.MaxValue)]
     public static readonly CVarDef<int> EmergencyShuttleAutoCallTime =
-        CVarDef.Create("shuttle.auto_call_time", 360, CVar.SERVERONLY); // Frontier: 90<360
+        CVarDef.Create("shuttle.auto_call_time", 4320, CVar.SERVERONLY); // Frontier: 90<360
 
     /// <summary>
     ///     Time in minutes after the round was extended (by recalling the shuttle) to call
@@ -223,7 +223,7 @@ public sealed partial class CCVars
     /// </summary>
     [CVarControl(AdminFlags.VarEdit)]
     public static readonly CVarDef<float> TileBreakEnergyMultiplier =
-        CVarDef.Create("shuttle.impact.tile_break_energy", 30000f, CVar.SERVERONLY); // Frontier 3000f<35000f
+        CVarDef.Create("shuttle.impact.tile_break_energy", 30000f, CVar.SERVERONLY); // Frontier 3000f<30000f
 
     /// <summary>
     /// Multiplier of damage done to entities on colliding areas

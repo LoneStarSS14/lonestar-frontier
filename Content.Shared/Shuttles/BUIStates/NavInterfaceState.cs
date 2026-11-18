@@ -93,8 +93,8 @@ public sealed class NavInterfaceState
         Vector2? target, // Frontier
         NetEntity? targetEntity, // Frontier
         bool hideTarget, // Frontier
-        bool proximityAlertEnabled, // Frontier
-        float proximityAlertRadius, // Frontier
+        bool proximityAlertEnabled = false, // Frontier
+        float proximityAlertRadius = 128f, // Frontier
         bool autopilotEnabled = false, // Wayfarer
         bool hasAutopilotServer = false) // Wayfarer
     {
