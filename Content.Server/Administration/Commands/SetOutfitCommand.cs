@@ -1,9 +1,13 @@
-using Content.Server.Administration.UI;
+﻿using Content.Server.Administration.UI;
 using Content.Server.Clothing.Systems;
 using Content.Server.EUI;
 using Content.Shared.Administration;
 using Content.Shared.Inventory;
 using Robust.Shared.Console;
+using Content.Server._EinsteinEngines.Silicon.IPC; // Goobstation
+using Content.Shared.Radio.Components; // Goobstation
+using Content.Shared.Roles;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.Administration.Commands
 {
@@ -58,7 +62,17 @@ namespace Content.Server.Administration.Commands
             }
 
             if (!_outfitSystem.SetOutfit(target.Value, args[1]))
+            {
                 shell.WriteLine(Loc.GetString("cmd-setoutfit-invalid-outfit-id-error"));
+                return;
+            }
+
+            if (EntityManager.HasComponent<EncryptionKeyHolderComponent>(target.Value) &&
+                IoCManager.Resolve<IPrototypeManager>().TryIndex<StartingGearPrototype>(args[1], out var startingGear))
+            {
+                var encryption = new InternalEncryptionKeySpawner();
+                encryption.TryInsertEncryptionKey(target.Value, startingGear, EntityManager);
+            }
         }
     }
 }
