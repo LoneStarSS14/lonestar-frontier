@@ -1,4 +1,5 @@
 # Frontier: all entries capitalized
+# LoneStar: all entries suffixed with 'Species Name'
 marking-TattooHiveChest-tattoo_hive_chest = Back Tattoo (Hive)
 marking-TattooHiveChest = Back Tattoo (Hive)
 

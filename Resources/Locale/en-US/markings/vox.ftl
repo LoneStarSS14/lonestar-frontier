@@ -1,5 +1,6 @@
-marking-TattooVoxHeartLeftArm-heart_l_arm = Vox Left Arm Tattoo (Heart)
-marking-TattooVoxHeartLeftArm = Vox Left Arm Tattoo (Heart)
+# LoneStar: all entries suffixed with 'Species Name'
+marking-TattooVoxNightlingHead-tattoo_nightling_head = Vox Head Tattoo (Vox, Nightling)
+marking-TattooVoxNightlingHead = Vox Head Tattoo (Vox, Nightling)
 
 marking-TattooVoxHeartRightArm-heart_r_arm = Vox Right Arm Tattoo (Heart)
 marking-TattooVoxHeartRightArm = Vox Right Arm Tattoo (Heart)

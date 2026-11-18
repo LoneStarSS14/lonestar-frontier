@@ -13,6 +13,7 @@ using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Clothing;
+using Content.Shared.Consent;
 using Content.Shared.GameTicking;
 using Content.Shared.Guidebook;
 using Content.Shared.Humanoid;
@@ -45,6 +46,7 @@ namespace Content.Client.Lobby.UI
     public sealed partial class HumanoidProfileEditor : BoxContainer
     {
         private readonly IClientPreferencesManager _preferencesManager;
+        private readonly IClientConsentManager _consentManager;
         private readonly IConfigurationManager _cfgManager;
         private readonly IEntityManager _entManager;
         private readonly IFileDialogManager _dialogManager;
@@ -130,7 +132,8 @@ namespace Content.Client.Lobby.UI
             IPrototypeManager prototypeManager,
             IResourceManager resManager,
             JobRequirementsManager requirements,
-            MarkingManager markings)
+            MarkingManager markings,
+            IClientConsentManager consentManager)
         {
             RobustXamlLoader.Load(this);
             _sawmill = logManager.GetSawmill("profile.editor");
@@ -143,6 +146,7 @@ namespace Content.Client.Lobby.UI
             _preferencesManager = preferencesManager;
             _resManager = resManager;
             _requirements = requirements;
+            _consentManager = consentManager;
             _controller = UserInterfaceManager.GetUIController<LobbyUIController>();
             _sprite = _entManager.System<SpriteSystem>();
 
@@ -518,7 +522,7 @@ namespace Content.Client.Lobby.UI
 
             Markings.OnMarkingAdded += OnMarkingChange;
             Markings.OnMarkingRemoved += OnMarkingChange;
-            Markings.OnMarkingColorChange += OnMarkingChange;
+            Markings.OnMarkingDataChanged += OnMarkingChange;
             Markings.OnMarkingRankChange += OnMarkingChange;
             Markings.OnLegStyleChanged += OnLegsChanged;
 
@@ -2035,10 +2039,18 @@ namespace Content.Client.Lobby.UI
 
             try
             {
-                var profile = _entManager.System<HumanoidAppearanceSystem>().FromStream(file, _playerManager.LocalSession!);
+                var (profile, consent) = _entManager.System<HumanoidAppearanceSystem>().FromStream(file, _playerManager.LocalSession!);
                 var oldProfile = Profile;
                 profile = profile.WithBankBalance(oldProfile.BankBalance); // Frontier: no free money (enforce import, don't care about import)
                 SetProfile(profile, CharacterSlot);
+
+                // Update consent settings if present in the import
+                if (consent != null && _consentManager.HasLoaded)
+                {
+                    // Validate the imported consent settings
+                    consent.EnsureValid(_cfgManager, _prototypeManager);
+                    _consentManager.UpdateConsent(consent);
+                }
 
                 IsDirty = !profile.MemberwiseEquals(oldProfile);
             }
@@ -2068,7 +2080,14 @@ namespace Content.Client.Lobby.UI
 
             try
             {
-                var dataNode = _entManager.System<HumanoidAppearanceSystem>().ToDataNode(Profile);
+                // Get current consent settings if available
+                PlayerConsentSettings? consentSettings = null;
+                if (_consentManager.HasLoaded)
+                {
+                    consentSettings = _consentManager.GetConsent();
+                }
+
+                var dataNode = _entManager.System<HumanoidAppearanceSystem>().ToDataNode(Profile, consentSettings);
                 await using var writer = new StreamWriter(file.Value.fileStream);
                 dataNode.Write(writer);
             }

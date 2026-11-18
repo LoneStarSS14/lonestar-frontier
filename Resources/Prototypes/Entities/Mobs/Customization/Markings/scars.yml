@@ -2,7 +2,8 @@
   id: ScarEyeRight
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, SlimePerson, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni, Rodentia, Feroxi, Rodentia, Tajaran] # Frontier: added Felinid, Oni, Goblin, Rodentia, EE: added Tajaran
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -12,7 +13,8 @@
   id: ScarEyeLeft
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, SlimePerson, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni, Rodentia, Feroxi, Rodentia, Tajaran] # Frontier: added Felinid, Oni, Goblin, Rodentia, EE: added Tajaran
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -22,7 +24,8 @@
   id: ScarTopSurgeryShort
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Moth, Arachnid, Diona, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni, Feroxi, Rodentia, Tajaran] # Frontier: added Felinid, Oni, Goblin, EE: added Tajaran
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   sexRestriction: [Male]
   followSkinColor: true
   sprites:
@@ -33,7 +36,8 @@
   id: ScarTopSurgeryLong
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Moth, Arachnid, Diona, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni, Feroxi, Rodentia, Tajaran] # Frontier: added Felinid, Oni, Goblin, EE: added Tajaran
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   sexRestriction: [Male]
   followSkinColor: true
   sprites:
@@ -44,7 +48,8 @@
   id: ScarChest
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Moth, Arachnid, Diona, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni, Feroxi, Rodentia, Tajaran] # Frontier: added Felinid, Oni, Goblin, EE: added Tajaran
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -54,7 +59,8 @@
   id: ScarNeck
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Rodentia] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -64,7 +70,8 @@
   id: ScarChestBullets
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Moth, Arachnid, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Rodentia] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -74,7 +81,8 @@
   id: ScarStomachBullets
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Moth, Arachnid, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Rodentia] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -84,7 +92,8 @@
   id: ScarFace1
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Moth, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Rodentia] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -94,7 +103,8 @@
   id: ScarFace2
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Moth, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin] # Frontier: added Goblin and afterwards
+  speciesRestriction: [Human, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Rodentia] # Frontier: added Goblin and afterwards
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi

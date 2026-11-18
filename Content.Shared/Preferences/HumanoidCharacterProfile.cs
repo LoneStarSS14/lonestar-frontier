@@ -1,3 +1,4 @@
+// _CS Start
 using System.Linq;
 using System.Text.RegularExpressions;
 using Content.Shared._NF.Bank;
@@ -27,10 +28,11 @@ namespace Content.Shared.Preferences
     [Serializable, NetSerializable]
     public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     {
-        private static readonly Regex RestrictedNameRegex = new(@"[^A-Za-z0-9 '\-]");
+
+        // private static readonly Regex RestrictedNameRegex = new(@"[a-zA-Z0-9!@#$%^&*()\-_=+\[\]{};:'"",.<>?/\\|`~]");
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
-        public const int DefaultBalance = 30000; // Frontier
+        public const int DefaultBalance = 50000; // Frontier: LoneStar default bank balance (Frontier is 30000)
 
         /// <summary>
         /// Job preferences for initial spawn.
@@ -55,6 +57,9 @@ namespace Content.Shared.Preferences
         [DataField]
         private HashSet<ProtoId<TraitPrototype>> _traitPreferences = new();
 
+        /// <summary>
+        /// Hidden emote categories for the radial emote wheel.
+        /// </summary>
         [DataField]
         private HashSet<EmoteCategory> _hiddenEmoteCategories = new();
 
@@ -84,12 +89,6 @@ namespace Content.Shared.Preferences
         [DataField]
         public string Customspeciesname { get; set; } = string.Empty;
 
-        [DataField("height")]
-        public float Height { get; set; } = 1f;
-
-        [DataField("width")]
-        public float Width { get; set; } = 1f;
-
         [DataField]
         public int Age { get; set; } = 18;
 
@@ -101,6 +100,12 @@ namespace Content.Shared.Preferences
 
         [DataField] // Frontier: Bank balance
         public int BankBalance { get; private set; } = DefaultBalance; // Frontier: Bank balance
+
+        [DataField("height")]
+        public float Height { get; set; } = 1f;
+
+        [DataField("width")]
+        public float Width { get; set; } = 1f;
 
         /// <summary>
         /// <see cref="Appearance"/>
@@ -134,6 +139,9 @@ namespace Content.Shared.Preferences
         /// </summary>
         public IReadOnlySet<ProtoId<TraitPrototype>> TraitPreferences => _traitPreferences;
 
+        /// <summary>
+        /// <see cref="_hiddenEmoteCategories"/>
+        /// </summary>
         public IReadOnlySet<EmoteCategory> HiddenEmoteCategories => _hiddenEmoteCategories;
 
         /// <summary>
@@ -147,27 +155,7 @@ namespace Content.Shared.Preferences
             string name,
             string flavortext,
             string species,
-            int age,
-            Sex sex,
-            Gender gender,
-            int bankBalance,
-            HumanoidCharacterAppearance appearance,
-            SpawnPriorityPreference spawnPriority,
-            Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
-            PreferenceUnavailableMode preferenceUnavailable,
-            HashSet<ProtoId<AntagPrototype>> antagPreferences,
-            HashSet<ProtoId<TraitPrototype>> traitPreferences,
-            Dictionary<string, RoleLoadout> loadouts)
-            : this(name, flavortext, species, string.Empty, 1f, 1f, age, sex, gender, bankBalance, appearance,
-                spawnPriority, jobPriorities, preferenceUnavailable, antagPreferences, traitPreferences, loadouts)
-        {
-        }
-
-        public HumanoidCharacterProfile(
-            string name,
-            string flavortext,
-            string species,
-            string customSpeciesName,
+            string customspeciesname,
             float height,
             float width,
             int age,
@@ -180,12 +168,13 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
+            HashSet<EmoteCategory> hiddenEmoteCategories,
             Dictionary<string, RoleLoadout> loadouts)
         {
             Name = name;
             FlavorText = flavortext;
-            Customspeciesname = customSpeciesName;
             Species = species;
+            Customspeciesname = customspeciesname;
             Height = height;
             Width = width;
             Age = age;
@@ -198,6 +187,7 @@ namespace Content.Shared.Preferences
             PreferenceUnavailable = preferenceUnavailable;
             _antagPreferences = antagPreferences;
             _traitPreferences = traitPreferences;
+            _hiddenEmoteCategories = hiddenEmoteCategories;
             _loadouts = loadouts;
         }
 
@@ -207,12 +197,27 @@ namespace Content.Shared.Preferences
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
+            HashSet<EmoteCategory> hiddenEmoteCategories,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(other.Name, other.FlavorText, other.Species, other.Customspeciesname, other.Height, other.Width, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
-                jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts)
+            : this(other.Name,
+                other.FlavorText,
+                other.Species,
+                other.Customspeciesname,
+                other.Height,
+                other.Width,
+                other.Age,
+                other.Sex,
+                other.Gender,
+                other.BankBalance,
+                other.Appearance,
+                other.SpawnPriority,
+                jobPriorities,
+                other.PreferenceUnavailable,
+                antagPreferences,
+                traitPreferences,
+                hiddenEmoteCategories,
+                loadouts)
         {
-            Customspeciesname = other.Customspeciesname;
-            _hiddenEmoteCategories = new HashSet<EmoteCategory>(other._hiddenEmoteCategories);
         }
 
         /// <summary>Copy constructor</summary>
@@ -220,9 +225,9 @@ namespace Content.Shared.Preferences
             : this(other.Name,
                 other.FlavorText,
                 other.Species,
-            other.Customspeciesname,
-            other.Height,
-            other.Width,
+                other.Customspeciesname,
+                other.Height,
+                other.Width,
                 other.Age,
                 other.Sex,
                 other.Gender,
@@ -233,6 +238,7 @@ namespace Content.Shared.Preferences
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
+                new HashSet<EmoteCategory>(other.HiddenEmoteCategories),
                 new Dictionary<string, RoleLoadout>(other.Loadouts))
         {
         }
@@ -285,10 +291,14 @@ namespace Content.Shared.Preferences
 
             var sex = Sex.Unsexed;
             var age = 18;
+            var height = 1f;
+            var width = 1f;
             if (prototypeManager.TryIndex<SpeciesPrototype>(species, out var speciesPrototype))
             {
                 sex = random.Pick(speciesPrototype.Sexes);
                 age = random.Next(speciesPrototype.MinAge, speciesPrototype.OldAge); // people don't look and keep making 119 year old characters with zero rp, cap it at middle aged
+                // height = random.NextFloat(speciesPrototype.MinHeight, speciesPrototype.MaxHeight);
+                // width = random.NextFloat(speciesPrototype.MinWidth, speciesPrototype.MaxWidth);
             }
 
             var gender = Gender.Epicene;
@@ -311,6 +321,8 @@ namespace Content.Shared.Preferences
                 Age = age,
                 Gender = gender,
                 Species = species,
+                Height = height,
+                Width = width,
                 Appearance = HumanoidCharacterAppearance.Random(species, sex),
             };
         }
@@ -328,45 +340,6 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithAge(int age)
         {
             return new(this) { Age = age };
-        }
-
-        public HumanoidCharacterProfile WithHeight(float height)
-        {
-            return new(this) { Height = height };
-        }
-
-        public HumanoidCharacterProfile WithWidth(float width)
-        {
-            return new(this) { Width = width };
-        }
-
-        public HumanoidCharacterProfile WithCustomSpeciesName(string customSpeciesName)
-        {
-            return new(this) { Customspeciesname = customSpeciesName };
-        }
-
-        public HumanoidCharacterProfile WithHiddenEmoteCategories(IEnumerable<EmoteCategory> hiddenEmoteCategories)
-        {
-            var categories = new HashSet<EmoteCategory>(hiddenEmoteCategories);
-            categories.Remove(EmoteCategory.Sex);
-            categories.Remove(EmoteCategory.Vocal);
-            categories.Remove(EmoteCategory.Invalid);
-
-            return new(this) { _hiddenEmoteCategories = categories };
-        }
-
-        public HumanoidCharacterProfile WithHiddenEmoteCategory(EmoteCategory category, bool hidden)
-        {
-            if (category is EmoteCategory.Sex or EmoteCategory.Vocal or EmoteCategory.Invalid)
-                return new(this);
-
-            var categories = new HashSet<EmoteCategory>(_hiddenEmoteCategories);
-            if (hidden)
-                categories.Add(category);
-            else
-                categories.Remove(category);
-
-            return new(this) { _hiddenEmoteCategories = categories };
         }
 
         public HumanoidCharacterProfile WithSex(Sex sex)
@@ -391,6 +364,19 @@ namespace Content.Shared.Preferences
             return new(this) { Species = species };
         }
 
+        public HumanoidCharacterProfile WithHeight(float height)
+        {
+            return new(this) { Height = height };
+        }
+
+        public HumanoidCharacterProfile WithWidth(float width)
+        {
+            return new(this) { Width = width };
+        }
+        public HumanoidCharacterProfile WithCustomSpeciesName(string customspeciename)
+        {
+            return new(this) { Customspeciesname = customspeciename };
+        }
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -465,6 +451,40 @@ namespace Content.Shared.Preferences
             return new(this)
             {
                 _antagPreferences = new (antagPreferences),
+            };
+        }
+
+        public HumanoidCharacterProfile WithHiddenEmoteCategories(IEnumerable<EmoteCategory> hiddenEmoteCategories)
+        {
+            var categories = new HashSet<EmoteCategory>(hiddenEmoteCategories)
+            {
+                EmoteCategory.Invalid,
+            };
+
+            categories.Remove(EmoteCategory.Sex);
+            categories.Remove(EmoteCategory.Vocal);
+            categories.Remove(EmoteCategory.Invalid);
+
+            return new(this)
+            {
+                _hiddenEmoteCategories = categories,
+            };
+        }
+
+        public HumanoidCharacterProfile WithHiddenEmoteCategory(EmoteCategory category, bool hidden)
+        {
+            if (category is EmoteCategory.Sex or EmoteCategory.Vocal or EmoteCategory.Invalid)
+                return new(this);
+
+            var categories = new HashSet<EmoteCategory>(_hiddenEmoteCategories);
+            if (hidden)
+                categories.Add(category);
+            else
+                categories.Remove(category);
+
+            return new(this)
+            {
+                _hiddenEmoteCategories = categories,
             };
         }
 
@@ -554,7 +574,7 @@ namespace Content.Shared.Preferences
             );
 
         // Frontier
-        public string BankBalanceText => BankSystemExtensions.ToSpesoString(BankBalance);
+        public string BankBalanceText => BankSystemExtensions.ToCreditString(BankBalance);
 
         public bool MemberwiseEquals(ICharacterProfile maybeOther)
         {
@@ -566,14 +586,13 @@ namespace Content.Shared.Preferences
             if (Sex != other.Sex) return false;
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
-            if (Customspeciesname != other.Customspeciesname) return false;
             if (BankBalance != other.BankBalance) return false; // Frontier
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
             if (!_antagPreferences.SequenceEqual(other._antagPreferences)) return false;
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
-            if (!_hiddenEmoteCategories.SetEquals(other._hiddenEmoteCategories)) return false;
+            if (!_hiddenEmoteCategories.SequenceEqual(other._hiddenEmoteCategories)) return false;
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
             if (FlavorText != other.FlavorText) return false;
             return Appearance.MemberwiseEquals(other.Appearance);
@@ -603,12 +622,6 @@ namespace Content.Shared.Preferences
                 sex = speciesPrototype.Sexes[0];
 
             var age = Math.Clamp(Age, speciesPrototype.MinAge, speciesPrototype.MaxAge);
-            var height = Math.Clamp(Height, speciesPrototype.MinHeight, speciesPrototype.MaxHeight);
-            var width = Math.Clamp(Width, speciesPrototype.MinWidth, speciesPrototype.MaxWidth);
-            var customSpeciesName = speciesPrototype.CustomName
-                ? FormattedMessage.RemoveMarkup(Customspeciesname ?? string.Empty)
-                : string.Empty;
-            customSpeciesName = customSpeciesName[..Math.Min(customSpeciesName.Length, configManager.GetCVar(CCVars.MaxNameLength))];
 
             var gender = Gender switch
             {
@@ -638,15 +651,7 @@ namespace Content.Shared.Preferences
 
             if (configManager.GetCVar(CCVars.RestrictedNames))
             {
-                name = Regex.Replace(name, @"[^\u0041-\u005A,\u0061-\u007A,\u00C0-\u00D6,\u00D8-\u00F6,\u00F8-\u00FF,\u0100-\u017F, -]", string.Empty);
-                /*
-                 * 0041-005A  Basic Latin: Uppercase Latin Alphabet
-                 * 0061-007A  Basic Latin: Lowercase Latin Alphabet
-                 * 00C0-00D6  Latin-1 Supplement: Letters I
-                 * 00D8-00F6  Latin-1 Supplement: Letters II
-                 * 00F8-00FF  Latin-1 Supplement: Letters III
-                 * 0100-017F  Latin Extended A: European Latin
-                 */
+                name = ICNameRegexifier(name);
             }
 
             if (configManager.GetCVar(CCVars.ICNameCase))
@@ -658,6 +663,17 @@ namespace Content.Shared.Preferences
             if (string.IsNullOrEmpty(name))
             {
                 name = GetName(Species, gender);
+            }
+
+            _hiddenEmoteCategories.Remove(EmoteCategory.Sex);
+            _hiddenEmoteCategories.Remove(EmoteCategory.Vocal);
+            _hiddenEmoteCategories.Remove(EmoteCategory.Invalid);
+
+            var customspeciename = "";
+            if (speciesPrototype.CustomName)
+            {
+                customspeciename = FormattedMessage.RemoveMarkup(Customspeciesname ?? "");
+                customspeciename = customspeciename[..Math.Min(customspeciename.Length, configManager.GetCVar(CCVars.MaxNameLength))];
             }
 
             string flavortext;
@@ -680,11 +696,15 @@ namespace Content.Shared.Preferences
             }
             // End Frontier
 
-            var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex);
+            var height = Height;
+            if (speciesPrototype != null)
+                height = Math.Clamp(Height, speciesPrototype.MinHeight, speciesPrototype.MaxHeight);
 
-            _hiddenEmoteCategories.Remove(EmoteCategory.Sex);
-            _hiddenEmoteCategories.Remove(EmoteCategory.Vocal);
-            _hiddenEmoteCategories.Remove(EmoteCategory.Invalid);
+            var width = Width;
+            if (speciesPrototype != null)
+                width = Math.Clamp(Width, speciesPrototype.MinWidth, speciesPrototype.MaxWidth);
+
+            var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex);
 
             var prefsUnavailableMode = PreferenceUnavailable switch
             {
@@ -776,6 +796,17 @@ namespace Content.Shared.Preferences
             }
         }
 
+        public static string ICNameRegexifier(string name)
+        {
+            // The regex pattern that will delete any character that isnt part of this set:
+            // a-z, A-Z, 0-9, !@#$%^&*()-_=+[]{};:'",.<>?/\\|`~
+            Regex coolRegex = new(@"[^\a-zA-Z0-9!@#$%^&*()\-_=+\[\]{};:'"",.<>?/\\|`~]");
+            // Replace all characters that match the regex with an empty string
+            name = coolRegex.Replace(name, string.Empty);
+            name = name.Trim();
+            return name;
+        }
+
         /// <summary>
         /// Takes in an IEnumerable of traits and returns a List of the valid traits.
         /// </summary>
@@ -841,15 +872,13 @@ namespace Content.Shared.Preferences
             hashCode.Add(_jobPriorities);
             hashCode.Add(_antagPreferences);
             hashCode.Add(_traitPreferences);
-            hashCode.Add(_hiddenEmoteCategories);
             hashCode.Add(_loadouts);
             hashCode.Add(Name);
             hashCode.Add(FlavorText);
             hashCode.Add(Species);
-            hashCode.Add(Customspeciesname);
-            hashCode.Add(Age);
             hashCode.Add(Height);
             hashCode.Add(Width);
+            hashCode.Add(Age);
             hashCode.Add((int)Sex);
             hashCode.Add((int)Gender);
             hashCode.Add(Appearance);
@@ -901,3 +930,4 @@ namespace Content.Shared.Preferences
         }
     }
 }
+// _CS End

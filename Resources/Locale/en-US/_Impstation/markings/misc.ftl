@@ -1,4 +1,5 @@
 # this file is subject to getting its shit moved to other files at a later date#
+# LoneStar: all entries suffixed with 'Species Name'
 
 # arachnids
 marking-SpiderMirror = Mirror (Spider)

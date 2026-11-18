@@ -3,6 +3,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
     state: vox_scar_eye_right
@@ -12,6 +13,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -22,6 +24,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -32,6 +35,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -42,6 +46,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -52,6 +57,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -62,6 +68,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -72,6 +79,7 @@
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -82,6 +90,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -92,6 +101,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -102,6 +112,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi
@@ -112,6 +123,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/vox_scars.rsi

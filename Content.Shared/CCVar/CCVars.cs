@@ -33,14 +33,27 @@ public sealed partial class CCVars : CVars
         CVarDef.Create("debug.option_visualizer_test", false, CVar.CLIENTONLY);
 
     /// <summary>
-    /// The amount of time between NPC silicon battery drain updates, in seconds.
-    /// </summary>
-    public static readonly CVarDef<float> SiliconNpcUpdateTime =
-        CVarDef.Create("silicon.npcupdatetime", 1.5f, CVar.SERVERONLY);
-
-    /// <summary>
     /// Set to true to disable parallel processing in the pow3r solver.
     /// </summary>
     public static readonly CVarDef<bool> DebugPow3rDisableParallel =
         CVarDef.Create("debug.pow3r_disable_parallel", false, CVar.SERVERONLY);
+
+
+    /// <summary>
+    ///     Whether height & width sliders adjust a character's Fixture Component
+    /// </summary>
+    public static readonly CVarDef<bool> HeightAdjustModifiesHitbox =
+        CVarDef.Create("heightadjust.modifies_hitbox", true, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Whether height & width sliders adjust a player's max view distance
+    /// </summary>
+    public static readonly CVarDef<bool> HeightAdjustModifiesZoom =
+        CVarDef.Create("heightadjust.modifies_zoom", true, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Goobstation: The amount of time between NPC Silicons draining their battery in seconds.
+    /// </summary>
+    public static readonly CVarDef<float> SiliconNpcUpdateTime =
+        CVarDef.Create("silicon.npcupdatetime", 1.5f, CVar.SERVERONLY);
 }
