@@ -30,6 +30,7 @@ public sealed partial class SprayPainterWindow : DefaultWindow
     public event Action<Color?>? OnDecalColorChanged;
     public event Action<int>? OnDecalAngleChanged;
     public event Action<bool>? OnDecalSnapChanged;
+    public event Action<bool>? OnDecalColorPickerToggled;
 
     // Pipe color data
     private ItemList _colorList = default!;
@@ -192,7 +193,11 @@ public sealed partial class SprayPainterWindow : DefaultWindow
                 _sprayPainterDecals = new SprayPainterDecals();
 
                 _sprayPainterDecals.OnDecalSelected += id => OnDecalChanged?.Invoke(id);
-                _sprayPainterDecals.OnColorChanged += color => OnDecalColorChanged?.Invoke(color);
+                _sprayPainterDecals.OnColorChanged += color =>
+                {
+                    OnDecalColorChanged?.Invoke(color);
+                    OnDecalColorPickerToggled?.Invoke(color.HasValue);
+                };
                 _sprayPainterDecals.OnAngleChanged += angle => OnDecalAngleChanged?.Invoke(angle);
                 _sprayPainterDecals.OnSnapChanged += snap => OnDecalSnapChanged?.Invoke(snap);
 
@@ -287,16 +292,26 @@ public sealed partial class SprayPainterWindow : DefaultWindow
             _sprayPainterDecals.SetAngle(angle);
     }
 
+    private Color? _decalColor;
+
     public void SetDecalColor(Color? color)
     {
-        if (_sprayPainterDecals != null)
-            _sprayPainterDecals.SetColor(color);
+        _decalColor = color;
+        _sprayPainterDecals?.SetColor(color);
     }
 
     public void SetDecalSnap(bool snap)
     {
         if (_sprayPainterDecals != null)
             _sprayPainterDecals.SetSnap(snap);
+    }
+
+    public void SetDecalColorPicker(bool colorPickerEnabled)
+    {
+        if (_sprayPainterDecals == null)
+            return;
+
+        _sprayPainterDecals.SetColor(colorPickerEnabled ? _decalColor ?? Color.White : null);
     }
     # endregion
 }
