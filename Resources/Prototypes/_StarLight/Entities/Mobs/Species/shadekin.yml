@@ -128,3 +128,5 @@
   - type: LayingDown
   - type: ModifyUndies
   - type: RoleplayIncentive
+  - type: Crawler
+  - type: StunVisuals

@@ -1,3 +1,4 @@
+using Content.Shared._CS.Needs;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Nutrition;
@@ -10,11 +11,11 @@ namespace Content.Shared.Animals;
 
 /// <summary>
 ///     Gives ability to produce fiber reagents;
-///     produces endlessly if the owner has no HungerComponent.
+///     produces endlessly if the owner has no NeedsComponent that supports Hunger.
 /// </summary>
 public sealed class WoolySystem : EntitySystem
 {
-    [Dependency] private readonly HungerSystem _hunger = default!;
+    [Dependency] private readonly SharedNeedsSystem _needs = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
@@ -65,13 +66,22 @@ public sealed class WoolySystem : EntitySystem
                 continue;
 
             // Actually there is food digestion so no problem with instant reagent generation "OnFeed"
-            if (TryComp(uid, out HungerComponent? hunger))
+            if (EntityManager.TryGetComponent(uid, out NeedsComponent? hunger))
             {
-                // Is there enough nutrition to produce reagent?
-                if (_hunger.GetHungerThreshold(hunger) < HungerThreshold.Okay)
-                    continue;
+                // is there enough nutrition to produce reagent?
+                if (_needs.UsesHunger(uid, hunger))
+                {
+                    if (_needs.HungerIsBelowThreshold(
+                            uid,
+                            NeedThreshold.Satisfied,
+                            hunger))
+                        continue;
+                }
 
-                _hunger.ModifyHunger(uid, -wooly.HungerUsage, hunger);
+                _needs.ModifyHunger(
+                    uid,
+                    -wooly.HungerUsage,
+                    hunger);
             }
 
             _solutionContainer.TryAddReagent(wooly.Solution.Value, wooly.ReagentId, wooly.Quantity, out _);

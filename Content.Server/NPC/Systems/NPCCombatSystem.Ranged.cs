@@ -1,11 +1,23 @@
+// SPDX-FileCopyrightText: 2022 metalgearsloth
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Aviu00
+// SPDX-FileCopyrightText: 2025 Ilya246
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Numerics;
 using Content.Server.NPC.Components;
 using Content.Shared.CombatMode;
+using Content.Shared.Damage.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Physics;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.Map;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Random; // Frontier
 
 namespace Content.Server.NPC.Systems;
 
@@ -19,6 +31,7 @@ public sealed partial class NPCCombatSystem
     private EntityQuery<RechargeBasicEntityAmmoComponent> _rechargeQuery;
     private EntityQuery<PhysicsComponent> _physicsQuery;
     private EntityQuery<TransformComponent> _xformQuery;
+    private EntityQuery<RequireProjectileTargetComponent> _requireTargetQuery; // Mono
 
     // TODO: Don't predict for hitscan
     private const float ShootSpeed = 20f;
@@ -35,6 +48,7 @@ public sealed partial class NPCCombatSystem
         _rechargeQuery = GetEntityQuery<RechargeBasicEntityAmmoComponent>();
         _steeringQuery = GetEntityQuery<NPCSteeringComponent>();
         _xformQuery = GetEntityQuery<TransformComponent>();
+        _requireTargetQuery = GetEntityQuery<RequireProjectileTargetComponent>(); // Mono
 
         SubscribeLocalEvent<NPCRangedCombatComponent, ComponentStartup>(OnRangedStartup);
         SubscribeLocalEvent<NPCRangedCombatComponent, ComponentShutdown>(OnRangedShutdown);
@@ -69,12 +83,8 @@ public sealed partial class NPCCombatSystem
             if (comp.Status == CombatStatus.Unspecified)
                 continue;
 
-            if (_steeringQuery.TryGetComponent(uid, out var steering) && steering.Status == SteeringStatus.NoPath)
-            {
-                comp.Status = CombatStatus.TargetUnreachable;
-                comp.ShootAccumulator = 0f;
-                continue;
-            }
+            NPCSteeringComponent? steering = null;
+            _steeringQuery.TryGetComponent(uid, out steering);
 
             if (!_xformQuery.TryGetComponent(comp.Target, out var targetXform) ||
                 !_physicsQuery.TryGetComponent(comp.Target, out var targetBody))
@@ -124,6 +134,13 @@ public sealed partial class NPCCombatSystem
             var worldPos = _transform.GetWorldPosition(xform);
             var targetPos = _transform.GetWorldPosition(targetXform);
 
+            // Frontier -- Ranged NPC miss chance
+            if (_random.Prob(comp.MissChance))
+            {
+                targetPos = targetPos + _random.NextVector2(1.0f, 2.0f);
+            }
+            // End Frontier
+
             // We'll work out the projected spot of the target and shoot there instead of where they are.
             var distance = (targetPos - worldPos).Length();
             var oldInLos = comp.TargetInLOS;
@@ -133,10 +150,8 @@ public sealed partial class NPCCombatSystem
             if (comp.LOSAccumulator < 0f)
             {
                 comp.LOSAccumulator += UnoccludedCooldown;
-
-                // For consistency with NPC steering.
-                var collisionGroup = comp.UseOpaqueForLOSChecks ? CollisionGroup.Opaque : (CollisionGroup.Impassable | CollisionGroup.InteractImpassable);
-                comp.TargetInLOS = _interaction.InRangeUnobstructed(uid, comp.Target, distance + 0.1f, collisionGroup);
+                // For consistency with NPC steering.                                                  // Mono
+                comp.TargetInLOS = HasDirectShotLos(uid, comp.Target, distance, comp);
             }
 
             if (!comp.TargetInLOS)
@@ -144,7 +159,7 @@ public sealed partial class NPCCombatSystem
                 comp.ShootAccumulator = 0f;
                 comp.Status = CombatStatus.NotInSight;
 
-                if (TryComp(uid, out steering))
+                if (steering != null)
                 {
                     steering.ForceMove = true;
                 }
@@ -187,6 +202,14 @@ public sealed partial class NPCCombatSystem
             if (!Enabled || !_gun.CanShoot(gun))
                 continue;
 
+            // Ensure we still have direct LOS right at fire time.
+            if (!HasDirectShotLos(uid, comp.Target, distance, comp))
+            {
+                comp.ShootAccumulator = 0f;
+                comp.Status = CombatStatus.NotInSight;
+                continue;
+            }
+
             EntityCoordinates targetCordinates;
 
             if (_mapManager.TryFindGridAt(xform.MapID, targetPos, out var gridUid, out var mapGrid))
@@ -208,4 +231,14 @@ public sealed partial class NPCCombatSystem
             _gun.AttemptShoot(uid, gunUid, gun, targetCordinates, comp.Target);
         }
     }
+
+    private bool HasDirectShotLos(EntityUid shooter, EntityUid target, float distance, NPCRangedCombatComponent component)
+    {
+        return _interaction.InRangeUnobstructed(shooter, target, distance + 0.1f, component.ObstructedMask, predicate: (EntityUid entity) =>
+        {
+            return _physicsQuery.TryGetComponent(entity, out var physics) && (physics.CollisionLayer & (int) component.BulletMask) == 0 // ignore if it can't collide with bullets
+                   || _requireTargetQuery.HasComponent(entity); // or if it requires targeting
+        });
+    }
+
 }

@@ -32,6 +32,7 @@ using Robust.Server.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Linq;
+using Content.Shared._CS.Needs;
 
 namespace Content.Server.NPC.Systems;
 
@@ -58,6 +59,7 @@ public sealed class NPCUtilitySystem : EntitySystem
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly MobThresholdSystem _thresholdSystem = default!;
     [Dependency] private readonly TurretTargetSettingsSystem _turretTargetSettings = default!;
+    [Dependency] private readonly SharedNeedsSystem _needs = default!;
 
     private EntityQuery<PuddleComponent> _puddleQuery;
     private EntityQuery<TransformComponent> _xformQuery;
@@ -186,15 +188,23 @@ public sealed class NPCUtilitySystem : EntitySystem
 
                 var avoidBadFood = !HasComp<IgnoreBadFoodComponent>(owner);
 
-                // only eat when hungry or if it will eat anything
-                if (TryComp<HungerComponent>(owner, out var hunger) && hunger.CurrentThreshold > HungerThreshold.Okay && avoidBadFood)
-                    return 0f;
-
-                // no mouse don't eat the uranium-235
-                if (avoidBadFood && HasComp<BadFoodComponent>(targetUid))
-                    return 0f;
-
-                return 1f;
+                // am hungry? go eat it!
+                if (TryComp<NeedsComponent>(owner, out var needs)
+                    && _needs.UsesHunger(owner, needs))
+                {
+                    // if we have needs and use hunger, only eat food that will satiate hunger
+                    if (_needs.HungerIsBelowThreshold(
+                        owner,
+                        NeedThreshold.ExtraSatisfied,
+                        needs))
+                    {
+                        // no mouse don't eat the uranium-235
+                        if (avoidBadFood && HasComp<BadFoodComponent>(targetUid))
+                            return 0f;
+                    }
+                    return 1f;
+                }
+                return 0.5f; // not hungry, but might as well eat it if it's good food
             }
             case DrinkValueCon:
             {
@@ -205,20 +215,27 @@ public sealed class NPCUtilitySystem : EntitySystem
                 if (_openable.IsClosed(targetUid))
                     return 0f;
 
-                // only drink when thirsty
-                if (TryComp<ThirstComponent>(owner, out var thirst) && thirst.CurrentThirstThreshold > ThirstThreshold.Okay)
-                    return 0f;
+                if (TryComp<NeedsComponent>(owner, out var needs)
+                    && _needs.UsesThirst(owner, needs))
+                {
+                    if (_needs.ThirstIsBelowThreshold(
+                            owner,
+                            NeedThreshold.ExtraSatisfied,
+                            needs))
+                    {
+                        if (HasComp<BadDrinkComponent>(targetUid))
+                            return 0f;
 
-                // no janicow don't drink the blood puddle
-                if (HasComp<BadDrinkComponent>(targetUid))
-                    return 0f;
+                        // Avoid drinking when the item cannot provide meaningful hydration.
+                        var hydration = _drink.TotalHydration(targetUid, drink);
+                        if (hydration <= 1.0f)
+                            return 0f;
+                    }
 
-                // needs to have something that will satiate thirst, mice wont try to drink 100% pure mutagen.
-                var hydration = _drink.TotalHydration(targetUid, drink);
-                if (hydration <= 1.0f)
-                    return 0f;
+                    return 1f;
+                }
 
-                return 1f;
+                return 0.5f;
             }
             case OrderedTargetCon:
             {

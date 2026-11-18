@@ -18,6 +18,7 @@
   # - LegsParalyzed (you get healed)
   - BlackAndWhiteOverlay
   - LightweightDrunk
+  - Monochromacy
   - Muted
   - Narcolepsy
   - Pacified
@@ -70,6 +71,7 @@
   - UltraVision # Frontier
   - DogVision # Frontier
   - StinkyTrait # Frontier
+  - BalanceImmunity # LoneStar
   - TallWhitelist # Frontier
   - ShortWhitelist # Frontier
   - SizeAttribute # Frontier

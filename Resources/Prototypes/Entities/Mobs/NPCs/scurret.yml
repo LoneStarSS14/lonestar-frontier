@@ -137,9 +137,15 @@
           state: hand
 
   - type: InventorySlots
-  - type: Food
-  - type: Hunger
-    baseDecayRate: 0.05 # They get a lil' hungy
+  # Coyote: Hunger change until upstream ports
+  # - type: Food
+  # - type: Hunger
+  #  baseDecayRate: 0.05 # They get a lil' hungy
+  - type: Needs
+    needs:
+    - NeedHungerDefault
+    - NeedThirstDefault
+  # End Coyote
   - type: BodyEmotes # Grants them clapping and so on.
     soundsId: Scurret
   - type: Deathgasp

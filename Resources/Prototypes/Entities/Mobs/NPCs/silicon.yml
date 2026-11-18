@@ -59,6 +59,7 @@
   parent: MobRobotic
   id: MobSiliconBase
   components:
+  - type: LeashAnchor # Floofstation
   - type: NpcFactionMember
     factions:
     - SimpleNeutral

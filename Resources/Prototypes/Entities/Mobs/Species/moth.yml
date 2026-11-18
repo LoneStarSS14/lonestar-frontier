@@ -9,8 +9,10 @@
     species: Moth
     hideLayersOnEquip:
     - HeadTop
-  - type: Hunger
-  - type: Thirst
+  - type: Needs
+    needs:
+    - NeedHungerDefault
+    - NeedThirstDefault
   - type: Carriable # Carrying system from nyanotrasen.
   - type: Icon
     sprite: Mobs/Species/Moth/parts.rsi
@@ -50,8 +52,8 @@
       Female: UnisexMoth
       Unsexed: UnisexMoth
   - type: MovementSpeedModifier
-    baseWeightlessAcceleration: 1.5 # Move around more easily in space.
-    baseWeightlessFriction: 1
+    baseWeightlessAcceleration: 1.5 # Move around more easily in space. # Frontier - change to base
+    baseWeightlessFriction: 1 # Frontier
     baseWeightlessModifier: 1
   - type: Flammable
     damage:
@@ -70,52 +72,65 @@
         Heat : 3 #per second, scales with temperature & other constants
   - type: TemperatureSpeed
     thresholds:
-      289: 0.9
-      275: 0.8
-      250: 0.7
+      289: 0.8
+      275: 0.6
+      250: 0.4
   - type: FluffyWhitelist # Frontier
   - type: Sprite # sprite again because we want different layer ordering
     noRot: true
     drawdepth: Mobs
     layers:
+      - map: [ "enum.HumanoidVisualLayers.TailBehind" ]
       - map: [ "enum.HumanoidVisualLayers.Chest" ]
       - map: [ "enum.HumanoidVisualLayers.Head" ]
       - map: [ "enum.HumanoidVisualLayers.Snout" ]
       - map: [ "enum.HumanoidVisualLayers.Eyes" ]
       - map: [ "enum.HumanoidVisualLayers.RArm" ]
       - map: [ "enum.HumanoidVisualLayers.LArm" ]
+      - map: [ "enum.HumanoidVisualLayers.RLegBehind" ]
+      - map: [ "enum.HumanoidVisualLayers.LLegBehind" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+      - map: ["enum.HumanoidVisualLayers.LFootBehind"]
+      - map: ["enum.HumanoidVisualLayers.RFootBehind"]
+      - map: [ "enum.HumanoidVisualLayers.LFoot" ]
+      - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+      # LoneStar changes start
       - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+      - map: [ "enum.HumanoidVisualLayers.Genital" ]
       - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+      - map: [ "shoesalt" ]
       - map: [ "jumpsuit" ]
       - map: [ "enum.HumanoidVisualLayers.LHand" ]
       - map: [ "enum.HumanoidVisualLayers.RHand" ]
-      - map: [ "enum.HumanoidVisualLayers.LFoot" ]
-      - map: [ "enum.HumanoidVisualLayers.RFoot" ]
-      - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
-        color: "#ffffff"
-        sprite: Objects/Misc/handcuffs.rsi
-        state: body-overlay-2
-        visible: false
-      - map: [ "gloves" ]
       - map: [ "shoes" ]
+      - map: [ "gloves" ]
+      # LoneStar changes end
       - map: [ "ears" ]
       - map: [ "eyes" ]
-      - map: [ "belt" ]
+      - map: [ "belt" ] # LoneStar
       - map: [ "id" ]
       - map: [ "outerClothing" ]
+      - map: [ "beltalt" ] # LoneStar
       - map: [ "enum.HumanoidVisualLayers.Tail" ] #in the utopian future we should probably have a wings enum inserted here so everyhting doesn't break
+      - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
       - map: [ "back" ]
       - map: [ "neck" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+      - map: [ "enum.HumanoidVisualLayers.HeadSide" ] # LoneStar
+      - map: [ "maskalt" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]
-      - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+      - map: [ "enum.HumanoidVisualLayers.NeckFluff" ]
       - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
       - map: [ "mask" ]
       - map: [ "head" ]
       - map: [ "pocket1" ]
       - map: [ "pocket2" ]
+      - map: [ "enum.HumanoidVisualLayers.Handcuffs" ] # LoneStar
+        color: "#ffffff"
+        sprite: Objects/Misc/handcuffs.rsi
+        state: body-overlay-2
+        visible: false
       - map: [ "clownedon" ] # Dynamically generated
         sprite: "Effects/creampie.rsi"
         state: "creampie_moth"

@@ -1,6 +1,8 @@
+using Content.Shared._CS.Needs;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.DoAfter;
+using Content.Shared.Ensnaring;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Nutrition.Components;
@@ -14,11 +16,11 @@ using Robust.Shared.Timing;
 namespace Content.Shared.Animals;
 /// <summary>
 ///     Gives the ability to produce milkable reagents;
-///     produces endlessly if the owner does not have a HungerComponent.
+///     produces endlessly if the owner does not have a NeedsComponent that supports Hunger.
 /// </summary>
 public sealed class UdderSystem : EntitySystem
 {
-    [Dependency] private readonly HungerSystem _hunger = default!;
+    [Dependency] private readonly SharedNeedsSystem _needs = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
@@ -71,13 +73,22 @@ public sealed class UdderSystem : EntitySystem
                 continue;
 
             // Actually there is food digestion so no problem with instant reagent generation "OnFeed"
-            if (TryComp(uid, out HungerComponent? hunger))
+            if (EntityManager.TryGetComponent(uid, out NeedsComponent? hunger))
             {
-                // Is there enough nutrition to produce reagent?
-                if (_hunger.GetHungerThreshold(hunger) < HungerThreshold.Okay)
-                    continue;
+                // is there enough nutrition to produce reagent?
+                if (_needs.UsesHunger(uid, hunger))
+                {
+                    if (_needs.HungerIsBelowThreshold(
+                            uid,
+                            NeedThreshold.Satisfied,
+                            hunger))
+                        continue;
+                }
 
-                _hunger.ModifyHunger(uid, -udder.HungerUsage, hunger);
+                _needs.ModifyHunger(
+                    uid,
+                    -udder.HungerUsage,
+                    hunger);
             }
 
             //TODO: toxins from bloodstream !?
