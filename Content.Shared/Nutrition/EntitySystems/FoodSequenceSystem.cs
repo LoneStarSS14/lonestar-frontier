@@ -1,5 +1,6 @@
 using System.Numerics;
 using System.Text;
+using Content.Shared._CS.AphroLacedVisibility;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs.Systems;
@@ -266,5 +267,11 @@ public sealed class FoodSequenceSystem : SharedFoodSequenceSystem
         if (HasComp<MothFoodComponent>(element))
             EnsureComp<MothFoodComponent>(start);
         // End Frontier
+
+        if (TryComp<AphroLacedVisibilityComponent>(element, out var elementComp))
+        {
+            var startComp = EnsureComp<AphroLacedVisibilityComponent>(start);
+            startComp.Laced = elementComp.Laced;
+        }
     }
 }

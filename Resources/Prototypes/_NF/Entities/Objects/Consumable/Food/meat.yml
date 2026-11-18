@@ -15,7 +15,6 @@
   name: raw sheleg meat
   description: A slab of cold.. meat?
   components:
-  - type: Food
   - type: Sprite
     sprite: _NF/Objects/Consumable/Food/frozen.rsi
     state: sheleg
@@ -39,6 +38,7 @@
   - type: Tag
     tags:
     - Raw
+    - HighRiskItem
     - Meat
   - type: Sprite
     state: corgi
@@ -335,6 +335,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 22
         reagents:
         - ReagentId: Nutriment
           Quantity: 10
@@ -360,6 +361,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 22
         reagents:
         - ReagentId: Nutriment
           Quantity: 10
@@ -386,6 +388,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 32
         reagents:
         - ReagentId: Nutriment
           Quantity: 15

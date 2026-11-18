@@ -61,7 +61,7 @@ public sealed partial class GatherableSystem : EntitySystem
         }
 
         // Complete the gathering process
-        _destructible.DestroyEntity(gatheredUid);
+        _destructible.DestroyEntity(gatheredUid, gatherer);
 
         // Spawn the loot!
         if (component.Loot == null)

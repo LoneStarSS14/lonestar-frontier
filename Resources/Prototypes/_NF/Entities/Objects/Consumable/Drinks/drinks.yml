@@ -14,6 +14,7 @@
   - type: Icon
     sprite: _NF/Objects/Consumable/Drinks/pumpkinspicelatte.rsi
     state: icon
+
 - type: entity
   parent: DrinkGlass
   id: TheMadgob
@@ -28,6 +29,56 @@
           Quantity: 30
   - type: Icon
     sprite: _NF/Objects/Consumable/Drinks/themadgob.rsi
+    state: icon
+
+# Nanocaf Drinks
+
+- type: entity
+  parent: DrinkGlass
+  id: NanoColdBrew
+  suffix: coldbrew
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: NanoColdBrew
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/coffee.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: Nanodepresso
+  suffix: depresso
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: NanoDepresso
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/coffee.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: NanoCoftea
+  suffix: coftea
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: NanoCoftea
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/coffee.rsi
     state: icon
 
 # Alcohol drinks
@@ -46,6 +97,7 @@
   - type: Icon
     sprite: _NF/Objects/Consumable/Drinks/ginandsonic.rsi
     state: icon
+
 - type: entity
   parent: DrinkGlass
   id: DrinkGoldenCat
@@ -61,6 +113,7 @@
   - type: Icon
     sprite: _NF/Objects/Consumable/Drinks/goldencat.rsi
     state: icon
+
 - type: entity
   parent: DrinkGlass
   id: DrinkPineappleBlast
@@ -76,6 +129,7 @@
   - type: Icon
     sprite: _NF/Objects/Consumable/Drinks/pineappleblast.rsi
     state: icon
+
 - type: entity
   parent: DrinkGlass
   id: DrinkTorpedoJuice
@@ -91,6 +145,7 @@
   - type: Icon
     sprite: _NF/Objects/Consumable/Drinks/torpedojuice.rsi
     state: icon
+
 - type: entity
   parent: DrinkGlass
   id: DrinkBeesKnees
@@ -155,6 +210,7 @@
     solutions:
       drink:
         maxVol: 30
+
 - type: entity
   parent: DrinkDisposableCup
   id: DrinkDisposableMcCup
@@ -180,53 +236,3 @@
     weightedRandomId: RandomFillStrangePill
   - type: PressurizedSolution
     solution: drink
-
-- type: entity
-  parent: DrinkGlass
-  id: NanoColdBrew
-  suffix: coldbrew
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: NanoColdBrew
-          Quantity: 30
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/coffee.rsi
-    state: icon
-
-- type: entity
-  parent: DrinkGlass
-  id: Nanodepresso
-  suffix: depresso
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: NanoDepresso
-          Quantity: 30
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/coffee.rsi
-    state: icon
-
-- type: entity
-  parent: DrinkGlass
-  id: NanoCoftea
-  suffix: coftea
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: NanoCoftea
-          Quantity: 30
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/coffee.rsi
-    state: icon
-
-# Alcohol drinks

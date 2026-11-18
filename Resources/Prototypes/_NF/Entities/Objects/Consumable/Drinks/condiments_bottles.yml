@@ -193,7 +193,7 @@
   id: JugWater
   name: water powder jug
   suffix: For Drinks, Full
-  description: A jug of water. Also probably microplastics. 
+  description: A jug of water. Also probably microplastics.
   components:
   - type: SolutionContainerManager
     solutions:

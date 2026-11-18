@@ -55,6 +55,7 @@
 #    entity: FoodMeatRotten
 #    # once it would say bloated, turn into the rotten prototype
 #    stage: 1
+
 - type: entity
   parent: FoodMeatBase
   id: FoodMeatRawBase
@@ -68,8 +69,10 @@
 # bruh
 - type: Tag
   id: Raw
+
 - type: Tag
   id: Cooked
+
 - type: Tag
   id: Cutlet
 
@@ -108,6 +111,7 @@
       - state: plain-inhand-left
       right:
       - state: plain-inhand-right
+
 - type: entity
   name: raw human meat
   parent: FoodMeatRawBase
@@ -131,6 +135,7 @@
       - state: plain-inhand-left
       right:
       - state: plain-inhand-right
+
 - type: entity
   name: raw carp fillet
   parent: FoodMeatBase
@@ -164,6 +169,7 @@
       - state: generic-pink-inhand-left
       right:
       - state: generic-pink-inhand-right
+
 - type: entity
   name: raw bacon
   # bacon is cured so not raw = cant rot
@@ -199,6 +205,7 @@
       - state: generic-pink-inhand-left
       right:
       - state: generic-pink-inhand-right
+
 - type: entity
   name: raw bear meat
   parent: FoodMeatRawBase
@@ -230,6 +237,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#934C64"
+
 - type: entity
   name: raw penguin meat
   parent: FoodMeatRawBase
@@ -260,6 +268,7 @@
       - state: generic-pink-inhand-left
       right:
       - state: generic-pink-inhand-right
+
 - type: entity
   name: raw chicken meat
   parent: FoodMeatRawBase
@@ -291,6 +300,7 @@
       - state: generic-pink-inhand-left
       right:
       - state: generic-pink-inhand-right
+
 - type: entity
   name: raw duck meat
   parent: FoodMeatRawBase
@@ -321,17 +331,17 @@
       - state: generic-pink-inhand-left
       right:
       - state: generic-pink-inhand-right
+
 - type: entity
   name: prime-cut corgi meat
   # can't rot since that would be very bad for syndies
-  parent: [FoodMeatBase, BaseC3Contraband] # Frontier: BaseGrandTheftContraband<BaseC3Contraband
+  parent: [FoodMeatBase, NotContraband] # Frontier: BaseGrandTheftContraband<BaseC3Contraband
   id: FoodMeatCorgi
   description: The tainted gift of an evil crime. The meat may be delicious, but at what cost?
   components:
   - type: Tag
     tags:
     - Raw
-    - HighRiskItem
     - Meat
   - type: Sprite
     state: corgi
@@ -351,6 +361,7 @@
       - state: corgi-inhand-left
       right:
       - state: corgi-inhand-right
+
 - type: entity
   name: raw crab meat
   parent: FoodMeatRawBase
@@ -374,6 +385,7 @@
     graph: CrabSteak
     node: start
     defaultTarget: cooked crab
+
 - type: entity
   name: raw goliath meat
   parent: FoodMeatRawBase
@@ -402,6 +414,7 @@
       - state: plain-inhand-left
       right:
       - state: plain-inhand-right
+
 - type: entity
   name: dragon flesh
   parent: FoodMeatBase
@@ -441,6 +454,7 @@
       - state: dragon-inhand-left
       right:
       - state: dragon-inhand-right
+
 - type: entity
   name: raw rat meat
   parent: FoodMeatRawBase
@@ -466,6 +480,7 @@
       - state: plain-inhand-left
       right:
       - state: plain-inhand-right
+
 - type: entity
   name: raw lizard meat
   parent: FoodMeatRawBase
@@ -497,6 +512,7 @@
       right:
       - state: plain-inhand-right
         color: "#6EFF41"
+
 - type: entity
   name: raw plant meat
   parent: FoodMeatBase
@@ -505,6 +521,7 @@
   components:
   - type: Sprite
     state: plant
+
 - type: entity
   name: rotten meat
   parent: FoodMeatBase
@@ -524,17 +541,10 @@
       food:
         reagents:
         - ReagentId: UncookedAnimalProteins
-          Quantity: 5
+          Quantity: 0.5
         - ReagentId: GastroToxin
           Quantity: 4
-        - ReagentId: Fat
-          Quantity: 4
-  - type: Item
-    inhandVisuals:
-      left:
-      - state: rotten-inhand-left
-      right:
-      - state: rotten-inhand-right
+
 - type: entity
   name: raw spider meat
   parent: FoodMeatRawBase
@@ -556,6 +566,7 @@
     slice: FoodMeatSpiderCutlet
   - type: Item
     heldPrefix: spider
+
 - type: entity
   name: raw spider leg
   parent: FoodMeatBase
@@ -580,6 +591,7 @@
       right:
       - state: snake-inhand-right
         color: "#333333"
+
 - type: entity
   name: meatwheat clump
   parent: FoodMeatBase
@@ -605,6 +617,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#934C64"
+
 - type: entity
   name: raw snake meat
   parent: FoodMeatBase
@@ -631,6 +644,7 @@
       - state: snake-inhand-left
       right:
       - state: snake-inhand-right
+
 - type: entity
   name: raw xeno meat
   # not raw since acid kills bacteria or something, same as xeno
@@ -665,6 +679,7 @@
       right:
       - state: plain-inhand-right
         color: "#6EFF41"
+
 - type: entity
   name: raw rouny meat
   # not raw since rouny best
@@ -699,6 +714,7 @@
       - state: plain-inhand-left
       right:
       - state: plain-inhand-right
+
 - type: entity
   name: killer tomato meat
   parent: FoodMeatBase
@@ -718,6 +734,7 @@
       - state: tomato-inhand-left
       right:
       - state: tomato-inhand-right
+
 - type: entity
   name: salami
   parent: FoodMeatBase
@@ -743,6 +760,7 @@
     damage:
       types:
         Blunt: 2
+
 - type: entity
   name: meat clown
   parent: FoodMeatBase
@@ -761,6 +779,7 @@
     state: clown
   - type: SliceableFood
     slice: FoodMeatSalamiSlice
+
 - type: entity
   name: meatball
   parent: FoodMeatBase
@@ -798,6 +817,7 @@
     defaultTarget: cooked meat patty
   - type: Item
     heldPrefix: generic-pink
+
 - type: entity
   name: slimeball
   parent: FoodMeatBase
@@ -824,6 +844,7 @@
       - state: slime-inhand-left
       right:
       - state: slime-inhand-right
+
 - type: entity
   name: raw snail meat
   parent: FoodMeatRawBase
@@ -851,6 +872,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#E2AE7C"
+
 - type: entity
   name: anomalous meat mass
   parent: FoodMeatRawBase
@@ -919,6 +941,7 @@
   - type: Tag
     tags:
     - Meat
+
 - type: entity
   name: steak
   parent: FoodMeatBase
@@ -957,6 +980,7 @@
       - state: plain-cooked-inhand-left
       right:
       - state: plain-cooked-inhand-right
+
 - type: entity
   name: bacon
   parent: FoodMeatBase
@@ -999,6 +1023,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#5B3E2A"
+
 - type: entity
   name: cooked bear
   parent: FoodMeatBase
@@ -1033,6 +1058,7 @@
       Taco: MeatBear
   - type: Item
     heldPrefix: meatball
+
 - type: entity
   name: penguin filet
   parent: FoodMeatBase
@@ -1072,6 +1098,7 @@
       right:
       - state: plain-cooked-inhand-right
         color: "#F7E3A3"
+
 - type: entity
   name: cooked chicken
   parent: FoodMeatBase
@@ -1111,6 +1138,7 @@
       right:
       - state: plain-cooked-inhand-right
         color: "#F7E3A3"
+
 - type: entity
   name: fried chicken
   parent: FoodMeatBase
@@ -1150,6 +1178,7 @@
       right:
       - state: plain-cooked-inhand-right
         color: "#F7E3A3"
+
 - type: entity
   name: cooked duck
   parent: FoodMeatBase
@@ -1189,6 +1218,7 @@
       right:
       - state: plain-cooked-inhand-right
         color: "#F7E3A3"
+
 - type: entity
   name: cooked crab
   parent: FoodMeatBase
@@ -1226,6 +1256,7 @@
       - state: plain-cooked-inhand-left
       right:
       - state: plain-cooked-inhand-right
+
 - type: entity
   name: goliath steak
   parent: FoodMeatBase
@@ -1261,6 +1292,7 @@
       - state: plain-cooked-inhand-left
       right:
       - state: plain-cooked-inhand-right
+
 - type: entity
   name: rouny steak
   parent: FoodMeatBase
@@ -1300,6 +1332,7 @@
       - state: plain-cooked-inhand-left
       right:
       - state: plain-cooked-inhand-right
+
 - type: entity
   name: lizard steak
   parent: FoodMeatBase
@@ -1338,6 +1371,7 @@
       - state: plain-cooked-inhand-left
       right:
       - state: plain-cooked-inhand-right
+
 - type: entity
   name: boiled spider leg
   parent: FoodMeatBase
@@ -1371,6 +1405,7 @@
       right:
       - state: snake-inhand-right
         color: "#44201A"
+
 - type: entity
   name: meatball
   parent: FoodMeatBase
@@ -1401,6 +1436,7 @@
     node: meatball cooked
   - type: Item
     heldPrefix: meatball
+
 - type: entity
   name: cooked meat patty
   parent: FoodMeatBase
@@ -1431,6 +1467,7 @@
       Taco: MeatPattyTaco # Frontier: add Taco
   - type: Item
     heldPrefix: meatball
+
 - type: entity
   name: boiled snail
   parent: FoodMeatBase
@@ -1467,6 +1504,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#5B3E2A"
+
 - type: entity
   name: anomalous steak
   parent: FoodMeatBase
@@ -1501,6 +1539,7 @@
       - state: plain-cooked-inhand-left
       right:
       - state: plain-cooked-inhand-right
+
 - type: entity
   name: dragon steak
   parent: FoodMeatBase
@@ -1576,6 +1615,7 @@
       - state: generic-pink-inhand-left
       right:
       - state: generic-pink-inhand-right
+
 - type: entity
   name: raw bear cutlet
   parent: FoodMeatBase
@@ -1612,6 +1652,7 @@
       right:
       - state: generic-pink-inhand-right
         color: brown
+
 - type: entity
   name: raw penguin cutlet
   parent: FoodMeatBase
@@ -1646,6 +1687,7 @@
       right:
       - state: generic-pink-inhand-right
         color: white
+
 - type: entity
   name: raw chicken cutlet
   parent: FoodMeatBase
@@ -1678,6 +1720,7 @@
       - state: generic-pink-inhand-left
       right:
       - state: generic-pink-inhand-right
+
 - type: entity
   name: raw duck cutlet
   parent: FoodMeatBase
@@ -1710,6 +1753,7 @@
       - state: generic-pink-inhand-left
       right:
       - state: generic-pink-inhand-right
+
 - type: entity
   name: raw lizard cutlet
   parent: FoodMeatBase
@@ -1747,6 +1791,7 @@
       right:
       - state: generic-pink-inhand-right
         color: green
+
 - type: entity
   name: raw spider cutlet
   parent: FoodMeatBase
@@ -1780,6 +1825,7 @@
       right:
       - state: generic-pink-inhand-right
         color: green
+
 - type: entity
   name: raw xeno cutlet
   parent: FoodMeatBase
@@ -1815,6 +1861,7 @@
       right:
       - state: generic-pink-inhand-right
         color: green
+
 - type: entity
   name: raw killer tomato cutlet
   parent: FoodMeatBase
@@ -1830,6 +1877,7 @@
     color: red
   - type: StaticPrice
     price: 30
+
 - type: entity
   name: salami slice
   parent: FoodMeatBase
@@ -1851,6 +1899,7 @@
           Quantity: 1
         - ReagentId: Protein
           Quantity: 1
+
 - type: entity
   name: raw dragon cutlet
   parent: FoodMeatBase
@@ -1923,6 +1972,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#5B3614"
+
 - type: entity
   name: bear cutlet
   parent: FoodMeatBase
@@ -1962,6 +2012,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#5B3614"
+
 - type: entity
   name: penguin cutlet
   parent: FoodMeatBase
@@ -1999,6 +2050,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#5B3614"
+
 - type: entity
   name: chicken cutlet
   parent: FoodMeatBase
@@ -2036,6 +2088,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#5B3614"
+
 - type: entity
   name: duck cutlet
   parent: FoodMeatBase
@@ -2073,6 +2126,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#5B3614"
+
 - type: entity
   name: lizard cutlet
   parent: FoodMeatBase
@@ -2111,6 +2165,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#153F06"
+
 - type: entity
   name: spider cutlet
   parent: FoodMeatBase
@@ -2147,6 +2202,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#153F06"
+
 - type: entity
   name: xeno cutlet
   parent: FoodMeatBase
@@ -2183,6 +2239,7 @@
       right:
       - state: generic-pink-inhand-right
         color: "#153F06"
+
 - type: entity
   name: dragon cutlet
   parent: FoodMeatBase

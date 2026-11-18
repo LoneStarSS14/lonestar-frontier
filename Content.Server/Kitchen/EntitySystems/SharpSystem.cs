@@ -1,10 +1,11 @@
-﻿using Content.Server.Body.Systems;
+using Content.Server.Body.Systems;
 using Content.Server.Kitchen.Components;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Components;
 using Content.Shared.Database;
 using Content.Shared.Destructible;
 using Content.Shared.DoAfter;
+using Content.Shared.Hands.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.Kitchen;
