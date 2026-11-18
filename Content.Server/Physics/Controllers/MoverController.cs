@@ -2,6 +2,9 @@ using System.Numerics;
 using System.Runtime.CompilerServices;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
+using Content.Server._WF.Shuttles.Components;
+using Content.Server._WF.Shuttles.Systems;
+using Content.Server.Chat.Managers; // Wayfarer
 using Content.Shared.Friction;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
@@ -25,8 +28,15 @@ public sealed class MoverController : SharedMoverController
 
     [Dependency] private readonly ThrusterSystem _thruster = default!;
     [Dependency] private readonly SharedTransformSystem _xformSystem = default!;
+    // Wayfarer: Shuttle autopilot
+    [Dependency] private readonly AutopilotSystem _autopilot = default!;
+    [Dependency] private readonly IChatManager _chatManager = default!;
+    // End Wayfarer
 
     private Dictionary<EntityUid, (ShuttleComponent, List<(EntityUid, PilotComponent, InputMoverComponent, TransformComponent)>)> _shuttlePilots = new();
+
+    private const float IdleShuttleLinearVelocityEpsilon = 0.05f;
+    private const float IdleShuttleAngularVelocityEpsilon = 0.01f;
 
     public override void Initialize()
     {
@@ -158,6 +168,21 @@ public sealed class MoverController : SharedMoverController
     {
         if (!TryComp<PilotComponent>(uid, out var pilot) || pilot.Console == null)
             return;
+
+        // Wayfarer: Disengage autopilot if player gives any navigational input
+        if (
+            state &&
+            pilot.Console != null &&
+            TryComp<TransformComponent>(pilot.Console.Value, out var consoleXform) &&
+            consoleXform.GridUid != null &&
+            TryComp<AutopilotComponent>(consoleXform.GridUid.Value, out var autopilot) &&
+            autopilot.Enabled
+        )
+        {
+            _autopilot.DisableAutopilotToDriveMode(consoleXform.GridUid.Value);
+            _autopilot.SendShuttleMessage(consoleXform.GridUid.Value, "Releasing manual control to pilot");
+        }
+        // End Wayfarer
 
         ResetSubtick(pilot);
 
@@ -561,6 +586,17 @@ public sealed class MoverController : SharedMoverController
                     PhysicsSystem.ApplyTorque(shuttleUid, torque, body: body);
                     _thruster.SetAngularThrust(shuttle, true);
                 }
+            }
+
+            if (linearInput == Vector2.Zero &&
+                MathHelper.CloseTo(angularInput, 0f) &&
+                MathHelper.CloseTo(brakeInput, 0f) &&
+                body.Awake &&
+                body.LinearVelocity.LengthSquared() <= IdleShuttleLinearVelocityEpsilon * IdleShuttleLinearVelocityEpsilon &&
+                MathF.Abs(body.AngularVelocity) <= IdleShuttleAngularVelocityEpsilon &&
+                (!TryComp<AutopilotComponent>(shuttleUid, out var autopilot) || !autopilot.Enabled))
+            {
+                PhysicsSystem.SetAwake(shuttleUid, body, false);
             }
         }
     }

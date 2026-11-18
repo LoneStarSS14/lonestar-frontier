@@ -555,7 +555,7 @@
   - VehicleHoverbikeMailcarrier
   - BaseC4ContrabandUnredeemable
   id: NFVehicleHoverbikeNfsd
-  name: LSRD hoverbike # Lonestar changes NFSD -> LSRD
+  name: LSRD hoverbike # LoneStar
   description: An LSRD issued turbine with bike handles. Very safe.
   components:
   - type: Vehicle

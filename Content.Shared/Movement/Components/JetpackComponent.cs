@@ -27,7 +27,7 @@ public sealed partial class JetpackComponent : Component
     public float WeightlessModifier = 1.2f;
 
     // Frontier: extra fields
-    [DataField, AutoNetworkedField]
+    [DataField, AutoNetworkedField] // Frontier: fix for magboot interaction on grids
     public bool AddedCanMoveInAir;
 
     [ViewVariables, DataField, AutoNetworkedField]

@@ -36,6 +36,8 @@ verb-common-open = Open
 verb-common-close-ui = Close UI
 verb-common-open-ui = Open UI
 verb-categories-interaction = Interact
+
+# Coyote: - Reorganized context menus
 verb-categories-examine-group = Examine
 verb-categories-actions = Actions
 verb-categories-interact-sfw = Interact SFW

@@ -10,6 +10,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands;
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Stunnable;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Verbs;
@@ -32,7 +33,7 @@ using Content.Shared.Storage;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
 using Robust.Server.GameObjects;
-using Content.Shared.Hands.EntitySystems; // Frontier
+using Robust.Shared.Player;
 
 namespace Content.Server.Carrying
 {
@@ -80,6 +81,11 @@ namespace Content.Server.Carrying
             SubscribeLocalEvent<CarriableComponent, CarryDoAfterEvent>(OnDoAfter);
         }
 
+        private void OnPlayerConnect(EntityUid uid, ActorComponent component, ComponentStartup args)
+        {
+            EnsureComp<CarriableComponent>(uid);
+        }
+
         private void AddCarryVerb(EntityUid uid, CarriableComponent component, GetVerbsEvent<AlternativeVerb> args)
         {
             if (!args.CanInteract || !args.CanAccess || !_mobStateSystem.IsAlive(args.User)
@@ -96,7 +102,8 @@ namespace Content.Server.Carrying
                     StartCarryDoAfter(args.User, uid, component);
                 },
                 Text = Loc.GetString("carry-verb"),
-                Priority = 2
+                Priority = 2,
+                Category = VerbCategory.Actions
             };
             args.Verbs.Add(verb);
         }
@@ -287,6 +294,7 @@ namespace Content.Server.Carrying
             if (TryComp<PullableComponent>(carried, out var pullable))
                 _pullingSystem.TryStopPull(carried, pullable);
 
+            EnsureComp<KnockedDownComponent>(carried); // Floof - moved this statement up because some systems can break carrying in response to knockdown
             _transform.AttachToGridOrMap(carrier);
             _transform.AttachToGridOrMap(carried);
             _transform.SetCoordinates(carried, Transform(carrier).Coordinates);
@@ -297,7 +305,6 @@ namespace Content.Server.Carrying
             var carryingComp = EnsureComp<CarryingComponent>(carrier);
             ApplyCarrySlowdown(carrier, carried);
             var carriedComp = EnsureComp<BeingCarriedComponent>(carried);
-            EnsureComp<KnockedDownComponent>(carried);
 
             carryingComp.Carried = carried;
             carriedComp.Carrier = carrier;
@@ -310,10 +317,10 @@ namespace Content.Server.Carrying
             if (!Resolve(toCarry, ref carriedComp, false)
                 || !CanCarry(carrier, toCarry, carriedComp)
                 || HasComp<BeingCarriedComponent>(carrier)
-                || HasComp<ItemComponent>(carrier)
-                || TryComp<PhysicsComponent>(carrier, out var carrierPhysics)
-                && TryComp<PhysicsComponent>(toCarry, out var toCarryPhysics)
-                && carrierPhysics.Mass < toCarryPhysics.Mass * 2f)
+                || HasComp<ItemComponent>(carrier))
+                // || TryComp<PhysicsComponent>(carrier, out var carrierPhysics)
+                // && TryComp<PhysicsComponent>(toCarry, out var toCarryPhysics)
+                // && carrierPhysics.Mass < toCarryPhysics.Mass * 2f)
                 return false;
 
             Carry(carrier, toCarry);

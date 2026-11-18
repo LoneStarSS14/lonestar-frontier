@@ -9,29 +9,29 @@ using Content.Shared.Hands;
 using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
+using Content.Shared.Stunnable;
+using Content.Shared.Throwing;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
-using Content.Shared._NF.Vehicle.Components; // _CS
-using Content.Shared.ActionBlocker; // _CS
-using Content.Shared.Actions.Components; // _CS
-using Content.Shared.Light.Components; // _CS
-using Content.Shared.Light.EntitySystems; // _CS
-using Content.Shared.Movement.Pulling.Components; // _CS
-using Content.Shared.Movement.Pulling.Events; // _CS
-using Content.Shared.Popups; // _CS
-using Robust.Shared.Network; // _CS
-using Robust.Shared.Physics.Components; // _CS
-using Robust.Shared.Physics.Events; // _CS
-using Robust.Shared.Physics.Systems; // _CS
-using Robust.Shared.Prototypes; // _CS
-using Content.Shared.Stunnable; // _CS
-using Robust.Shared.Timing; // _CS
-using Content.Shared.Throwing; // _CS
-using Content.Shared.Weapons.Melee.Events; // _CS
-using Content.Shared.Emag.Systems; // _CS
+using Robust.Shared.Physics.Components;
+using Robust.Shared.Physics.Events;
+using Robust.Shared.Physics.Systems;
+using Content.Shared._NF.Vehicle.Components; // Frontier
+using Content.Shared.ActionBlocker; // Frontier
+using Content.Shared.Actions.Components; // Frontier
+using Content.Shared.Light.Components; // Frontier
+using Content.Shared.Light.EntitySystems; // Frontier
+using Content.Shared.Movement.Pulling.Components; // Frontier
+using Content.Shared.Movement.Pulling.Events; // Frontier
+using Content.Shared.Popups; // Frontier
+using Robust.Shared.Network; // Frontier
+using Robust.Shared.Prototypes; // Frontier
+using Robust.Shared.Timing; // Frontier
+using Content.Shared.Weapons.Melee.Events; // Frontier
+using Content.Shared.Emag.Systems; // Frontier
 
-namespace Content.Shared._Goobstation.Vehicles; // _CS: migrate under _Goobstation
+namespace Content.Shared._Goobstation.Vehicles; // Frontier: migrate under _Goobstation
 
 public abstract partial class SharedVehicleSystem : EntitySystem
 {
@@ -43,17 +43,17 @@ public abstract partial class SharedVehicleSystem : EntitySystem
     [Dependency] private readonly SharedBuckleSystem _buckle = default!;
     [Dependency] private readonly SharedMoverController _mover = default!;
     [Dependency] private readonly SharedVirtualItemSystem _virtualItem = default!;
-    [Dependency] private readonly INetManager _net = default!; // _CS
-    [Dependency] private readonly UnpoweredFlashlightSystem _flashlight = default!; // _CS
-    [Dependency] private readonly SharedPopupSystem _popup = default!; // _CS
-    [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!; // _CS
-    [Dependency] private readonly ActionContainerSystem _actionContainer = default!; // _CS
-    [Dependency] private readonly IGameTiming _timing = default!; // _CS
-    [Dependency] private readonly EmagSystem _emag = default!; // _CS
-    [Dependency] private readonly MovementSpeedModifierSystem _movespeed = default!; // _CS
-    [Dependency] private readonly SharedStunSystem _stun = default!; // _CS
-    [Dependency] private readonly ThrowingSystem _throwing = default!; // _CS
-    [Dependency] private readonly SharedPhysicsSystem _physics = default!; // _CS
+    [Dependency] private readonly IGameTiming _timing = default!; // Frontier
+    [Dependency] private readonly INetManager _net = default!; // Frontier
+    [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!; // Frontier
+    [Dependency] private readonly ActionContainerSystem _actionContainer = default!; // Frontier
+    [Dependency] private readonly EmagSystem _emag = default!; // Frontier
+    [Dependency] private readonly SharedPopupSystem _popup = default!; // Frontier
+    [Dependency] private readonly UnpoweredFlashlightSystem _flashlight = default!; // Frontier
+    [Dependency] private readonly MovementSpeedModifierSystem _movespeed = default!;
+    [Dependency] private readonly SharedStunSystem _stun = default!;
+    [Dependency] private readonly ThrowingSystem _throwing = default!;
+    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
 
     public static readonly EntProtoId HornActionId = "ActionHorn";
     public static readonly EntProtoId SirenActionId = "ActionSiren";
@@ -62,82 +62,33 @@ public abstract partial class SharedVehicleSystem : EntitySystem
     {
         base.Initialize();
         SubscribeLocalEvent<VehicleComponent, ComponentInit>(OnInit);
-        SubscribeLocalEvent<VehicleComponent, MapInitEvent>(OnMapInit); // _CS
+        SubscribeLocalEvent<VehicleComponent, MapInitEvent>(OnMapInit); // Frontier
         SubscribeLocalEvent<VehicleComponent, ComponentRemove>(OnRemove);
         SubscribeLocalEvent<VehicleComponent, StrapAttemptEvent>(OnStrapAttempt);
         SubscribeLocalEvent<VehicleComponent, StrappedEvent>(OnStrapped);
         SubscribeLocalEvent<VehicleComponent, UnstrappedEvent>(OnUnstrapped);
         SubscribeLocalEvent<VehicleComponent, VirtualItemDeletedEvent>(OnDropped);
-        SubscribeLocalEvent<VehicleComponent, MeleeHitEvent>(OnMeleeHit); // _CS
+        SubscribeLocalEvent<VehicleComponent, MeleeHitEvent>(OnMeleeHit); // Frontier
+        SubscribeLocalEvent<VehicleComponent, GotEmaggedEvent>(OnGotEmagged, before: [typeof(UnpoweredFlashlightSystem)]); // Frontier
+        SubscribeLocalEvent<VehicleComponent, GotUnEmaggedEvent>(OnGotUnemagged, before: [typeof(UnpoweredFlashlightSystem)]); // Frontier
 
         SubscribeLocalEvent<VehicleComponent, EntInsertedIntoContainerMessage>(OnInsert);
         SubscribeLocalEvent<VehicleComponent, EntRemovedFromContainerMessage>(OnEject);
 
         SubscribeLocalEvent<VehicleComponent, HornActionEvent>(OnHorn);
         SubscribeLocalEvent<VehicleComponent, SirenActionEvent>(OnSiren);
-        SubscribeLocalEvent<VehicleComponent, StartCollideEvent>(OnStartCollide); // _CS
+        SubscribeLocalEvent<VehicleComponent, StartCollideEvent>(OnStartCollide);
 
-        SubscribeLocalEvent<VehicleRiderComponent, PullAttemptEvent>(OnRiderPull); // _CS
-        SubscribeLocalEvent<VehicleComponent, GotEmaggedEvent>        (OnVehicleEmagged, before: [typeof(UnpoweredFlashlightSystem)]); // _CS
-                SubscribeLocalEvent<VehicleComponent, GotUnEmaggedEvent>(OnVehicleUnemagged, before: [typeof(UnpoweredFlashlightSystem)]); // Frontier
+        SubscribeLocalEvent<VehicleRiderComponent, PullAttemptEvent>(OnRiderPull); // Frontier
     }
 
     private void OnInit(EntityUid uid, VehicleComponent component, ComponentInit args)
     {
-        _appearance.SetData(uid, VehicleState.Animated, component.EngineRunning && component.Driver != null); // _CS: add Driver != null
+        _appearance.SetData(uid, VehicleState.Animated, component.EngineRunning && component.Driver != null); // Frontier: add Driver != null
         _appearance.SetData(uid, VehicleState.DrawOver, false);
     }
 
-    // _CS: emag removes sprint speed cap, leaving movement bounded only by acceleration vs friction
-    private void OnVehicleEmagged(EntityUid uid, VehicleComponent component, ref GotEmaggedEvent args)
-    {
-        if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
-            return;
-
-        // Frontier: emag hides the vehicle radar blip
-        if (component.RadarBlip)
-        {
-            component.RadarBlip = false;
-            Dirty(uid, component);
-            HandleEmag((uid, component));
-            args.Handled = true;
-        }
-        // End Frontier
-
-        if (TryComp<MovementSpeedModifierComponent>(uid, out var moveComp))
-        {
-            // Preserve the same effective acceleration (accel * sprintSpeed product is constant).
-            const float newSprintSpeed = 9999f;
-            var compensatedAccel = moveComp.BaseAcceleration * moveComp.BaseSprintSpeed / newSprintSpeed;
-            _movespeed.ChangeBaseSpeed(uid, moveComp.BaseWalkSpeed, newSprintSpeed, compensatedAccel, moveComp);
-            args.Handled = true;
-        }
-
-        if (args.Handled)
-            args.Repeatable = true;
-    }
-    // _CS End
-
-    // Frontier: restore radar blip when un-emagged
-    private void OnVehicleUnemagged(Entity<VehicleComponent> ent, ref GotUnEmaggedEvent args)
-    {
-        if (args.Handled || !_emag.CompareFlag(args.Type, EmagType.Interaction))
-            return;
-
-        if (ent.Comp.RadarBlip)
-            return;
-
-        ent.Comp.RadarBlip = true;
-        Dirty(ent);
-        HandleUnemag(ent);
-        args.Handled = true;
-    }
-
-    protected abstract void HandleEmag(Entity<VehicleComponent> ent);
-    protected abstract void HandleUnemag(Entity<VehicleComponent> ent);
-    // End Frontier
-
-    // _CS
+    // Frontier
     private void OnMapInit(EntityUid uid, VehicleComponent component, MapInitEvent args)
     {
         bool actionsUpdated = false;
@@ -156,7 +107,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         if (actionsUpdated)
             Dirty(uid, component);
     }
-    // _CS End
+    // End Frontier
 
     private void OnRemove(EntityUid uid, VehicleComponent component, ComponentRemove args)
     {
@@ -173,12 +124,12 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         if (HasComp<InstantActionComponent>(args.Entity))
             return;
 
-        // _CS: check key slot
+        // Frontier: check key slot
         if (args.Container.ID != component.KeySlotId)
             return;
         if (!_timing.IsFirstTimePredicted)
             return;
-        // _CS End: check key slot
+        // End Frontier: check key slot
 
         component.EngineRunning = true;
         _appearance.SetData(uid, VehicleState.Animated, component.Driver != null);
@@ -193,12 +144,12 @@ public abstract partial class SharedVehicleSystem : EntitySystem
 
     private void OnEject(EntityUid uid, VehicleComponent component, ref EntRemovedFromContainerMessage args)
     {
-        // _CS: check key slot
+        // Frontier: check key slot
         if (args.Container.ID != component.KeySlotId)
             return;
         if (!_timing.IsFirstTimePredicted)
             return;
-        // _CS End: check key slot
+        // End Frontier: check key slot
 
         component.EngineRunning = false;
         _appearance.SetData(uid, VehicleState.Animated, false);
@@ -208,7 +159,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         if (component.Driver == null)
             return;
 
-        Dismount(component.Driver.Value, uid, removeDriver: false); // _CS: add removeDriver: false - the driver is still around.
+        Dismount(component.Driver.Value, uid, removeDriver: false); // Frontier: add removeDriver: false - the driver is still around.
     }
 
     private void OnHorn(EntityUid uid, VehicleComponent component, InstantActionEvent args)
@@ -216,29 +167,29 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         if (args.Handled == true || component.Driver != args.Performer || component.HornSound == null)
             return;
 
-        _audio.PlayPredicted(component.HornSound, uid, args.Performer); // _CS: PlayPvs<PlayPredicted, add args.Performer
+        _audio.PlayPredicted(component.HornSound, uid, args.Performer); // Frontier: PlayPvs<PlayPredicted, add args.Performer
         args.Handled = true;
     }
 
     private void OnSiren(EntityUid uid, VehicleComponent component, InstantActionEvent args)
     {
-        if (_net.IsClient) // _CS: _audio.Stop hates client-side entities, only create this serverside
-            return; // _CS
+        if (_net.IsClient) // Frontier: _audio.Stop hates client-side entities, only create this serverside
+            return; // Frontier
 
         if (args.Handled == true || component.Driver != args.Performer || component.SirenSound == null)
             return;
 
-        if (component.SirenStream != null) // _CS: SirenEnabled<SirenStream != null
+        if (component.SirenStream != null) // Frontier: SirenEnabled<SirenStream != null
         {
             component.SirenStream = _audio.Stop(component.SirenStream);
         }
         else
         {
-            var sirenParams = component.SirenSound.Params.WithLoop(true); // _CS: force loop
-            component.SirenStream = _audio.PlayPvs(component.SirenSound, uid, audioParams: sirenParams)?.Entity; // _CS: set params
+            var sirenParams = component.SirenSound.Params.WithLoop(true); // Frontier: force loop
+            component.SirenStream = _audio.PlayPvs(component.SirenSound, uid, audioParams: sirenParams)?.Entity; // Frontier: set params
         }
 
-        // component.SirenEnabled = component.SirenStream != null; // _CS: remove (unneeded state)
+        // component.SirenEnabled = component.SirenStream != null; // Frontier: remove (unneeded state)
         args.Handled = true;
     }
 
@@ -253,14 +204,14 @@ public abstract partial class SharedVehicleSystem : EntitySystem
             return;
         }
 
-        // _CS: no pulling when riding
+        // Frontier: no pulling when riding
         if (TryComp<PullerComponent>(args.Buckle, out var puller) && puller.Pulling != null)
         {
             _popup.PopupPredicted(Loc.GetString("vehicle-cannot-pull", ("object", puller.Pulling), ("vehicle", ent)), ent, args.Buckle);
             args.Cancelled = true;
             return;
         }
-        // _CS End
+        // End Frontier
 
         if (ent.Comp.RequiredHands != 0)
         {
@@ -275,10 +226,10 @@ public abstract partial class SharedVehicleSystem : EntitySystem
             }
         }
 
-        // AddHorns(driver, ent); // _CS: delay until mounted
+        // AddHorns(driver, ent); // Frontier: delay until mounted
     }
 
-    protected virtual void OnStrapped(Entity<VehicleComponent> ent, ref StrappedEvent args) // _CS: private<protected virtual
+    protected virtual void OnStrapped(Entity<VehicleComponent> ent, ref StrappedEvent args) // Frontier: private<protected virtual
     {
         var driver = args.Buckle.Owner;
 
@@ -286,11 +237,11 @@ public abstract partial class SharedVehicleSystem : EntitySystem
             return;
 
         ent.Comp.Driver = driver;
-        Dirty(ent); // _CS
+        Dirty(ent); // Frontier
         _appearance.SetData(ent.Owner, VehicleState.DrawOver, true);
-        _appearance.SetData(ent.Owner, VehicleState.Animated, ent.Comp.EngineRunning); // _CS
-        var rider = EnsureComp<VehicleRiderComponent>(driver); // _CS
-        Dirty(driver, rider); // _CS
+        _appearance.SetData(ent.Owner, VehicleState.Animated, ent.Comp.EngineRunning); // Frontier
+        var rider = EnsureComp<VehicleRiderComponent>(driver); // Frontier
+        Dirty(driver, rider); // Frontier
 
         if (!ent.Comp.EngineRunning)
             return;
@@ -298,15 +249,15 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         Mount(driver, ent.Owner);
     }
 
-    protected virtual void OnUnstrapped(Entity<VehicleComponent> ent, ref UnstrappedEvent args) // _CS: private<protected virtual
+    protected virtual void OnUnstrapped(Entity<VehicleComponent> ent, ref UnstrappedEvent args) // Frontier: private<protected virtual
     {
         if (ent.Comp.Driver != args.Buckle.Owner)
             return;
 
         Dismount(args.Buckle.Owner, ent);
         _appearance.SetData(ent.Owner, VehicleState.DrawOver, false);
-        _appearance.SetData(ent.Owner, VehicleState.Animated, false); // _CS
-        RemComp<VehicleRiderComponent>(args.Buckle.Owner); // _CS
+        _appearance.SetData(ent.Owner, VehicleState.Animated, false); // Frontier
+        RemComp<VehicleRiderComponent>(args.Buckle.Owner); // Frontier
     }
 
     private void OnDropped(EntityUid uid, VehicleComponent comp, VirtualItemDeletedEvent args)
@@ -318,30 +269,26 @@ public abstract partial class SharedVehicleSystem : EntitySystem
 
         Dismount(args.User, uid);
         _appearance.SetData(uid, VehicleState.DrawOver, false);
-        _appearance.SetData(uid, VehicleState.Animated, false); // _CS
-        RemComp<VehicleRiderComponent>(args.User); // _CS
+        _appearance.SetData(uid, VehicleState.Animated, false); // Frontier
+        RemComp<VehicleRiderComponent>(args.User); // Frontier
     }
 
-    // _CS: do not hit your own vehicle
+    // Frontier: do not hit your own vehicle
     private void OnMeleeHit(Entity<VehicleComponent> ent, ref MeleeHitEvent args)
     {
         if (args.User == ent.Comp.Driver) // Don't hit your own vehicle
             args.Handled = true;
     }
+    // End Frontier: do not hit your own vehicle
 
-    // _CS: high-speed collision ejects the rider.
     private void OnStartCollide(Entity<VehicleComponent> ent, ref StartCollideEvent args)
     {
-        if (_net.IsClient)
+        if (_net.IsClient || ent.Comp.Driver is not { } driver)
             return;
 
-        if (ent.Comp.Driver is not { } driver)
-            return;
-
-        if (!TryComp<VehicleImpactEjectComponent>(ent, out var ejectComp))
-            return;
-
-        if (!args.OurFixture.Hard || !args.OtherFixture.Hard)
+        if (!TryComp<VehicleImpactEjectComponent>(ent, out var ejectComp)
+            || !args.OurFixture.Hard
+            || !args.OtherFixture.Hard)
             return;
 
         var preImpactVelocity = args.OurBody.LinearVelocity;
@@ -350,23 +297,22 @@ public abstract partial class SharedVehicleSystem : EntitySystem
             return;
 
         _buckle.TryUnbuckle(driver, driver);
-        _stun.TryKnockdown(driver, TimeSpan.FromSeconds(ejectComp.KnockdownSeconds), true);
+        TryComp(driver, out CrawlerComponent? crawler);
+        _stun.TryKnockdown((driver, crawler), TimeSpan.FromSeconds(ejectComp.KnockdownSeconds), force: true);
 
         if (!TryComp<PhysicsComponent>(driver, out var driverBody))
             return;
 
-        // Clear any inherited movement before launching the rider in the pre-impact direction.
         _physics.SetLinearVelocity(driver, Vector2.Zero, body: driverBody);
         _throwing.TryThrow(driver, preImpactVelocity, speed, ent, recoil: false, doSpin: false);
     }
-    // _CS End: do not hit your own vehicle
 
     private void AddHorns(EntityUid driver, EntityUid vehicle)
     {
         if (!TryComp<VehicleComponent>(vehicle, out var vehicleComp))
             return;
 
-        // _CS: grant existing actions
+        // Frontier: grant existing actions
         List<EntityUid> grantedActions = new();
         if (vehicleComp.HornAction != null)
             grantedActions.Add(vehicleComp.HornAction.Value);
@@ -382,7 +328,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         // Only try to grant actions if the vehicle actually has them.
         if (grantedActions.Count > 0)
             _actions.GrantActions(driver, grantedActions, vehicle);
-        // _CS End
+        // End Frontier
     }
 
     private void Mount(EntityUid driver, EntityUid vehicle)
@@ -400,36 +346,86 @@ public abstract partial class SharedVehicleSystem : EntitySystem
 
         _mover.SetRelay(driver, vehicle);
 
-        AddHorns(driver, vehicle); // _CS
+        AddHorns(driver, vehicle); // Frontier
     }
 
-    private void Dismount(EntityUid driver, EntityUid vehicle, bool removeDriver = true) // _CS: add removeDriver
+    private void Dismount(EntityUid driver, EntityUid vehicle, bool removeDriver = true) // Frontier: add removeDriver
     {
         if (!TryComp<VehicleComponent>(vehicle, out var vehicleComp) || vehicleComp.Driver != driver)
             return;
 
         RemComp<RelayInputMoverComponent>(driver);
-        _actionBlocker.UpdateCanMove(driver); // _CS: bugfix, relay input mover only updates on shutdown, not remove
+        _actionBlocker.UpdateCanMove(driver); // Frontier: bugfix, relay input mover only updates on shutdown, not remove
 
-        if (removeDriver) // _CS
+        if (removeDriver) // Frontier
             vehicleComp.Driver = null;
 
-        _actions.RemoveProvidedActions(driver, vehicle); // _CS: don't remove actions, just provide/revoke them
+        _actions.RemoveProvidedActions(driver, vehicle); // Frontier: don't remove actions, just provide/revoke them
 
-        if (removeDriver) // _CS
+        if (removeDriver) // Frontier
             _virtualItem.DeleteInHandsMatching(driver, vehicle);
 
         if (TryComp<AccessComponent>(vehicle, out var accessComp))
             accessComp.Tags.Clear();
     }
 
-    // _CS: prevent drivers from pulling things
+    // Frontier: prevent drivers from pulling things, emag handlers
     private void OnRiderPull(Entity<VehicleRiderComponent> ent, ref PullAttemptEvent args)
     {
         if (args.PullerUid == ent.Owner)
             args.Cancelled = true;
     }
-    // _CS End
+
+    private void OnGotEmagged(Entity<VehicleComponent> ent, ref GotEmaggedEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
+            return;
+
+        if (ent.Comp.RadarBlip)
+        {
+            ent.Comp.RadarBlip = false;
+            Dirty(ent);
+
+            HandleEmag(ent);
+
+            if (TryComp<MovementSpeedModifierComponent>(ent, out var moveComp))
+            {
+                const float newSprintSpeed = 9999f;
+                var compensatedAccel = moveComp.BaseAcceleration * moveComp.BaseSprintSpeed / newSprintSpeed;
+                _movespeed.ChangeBaseSpeed(ent, moveComp.BaseWalkSpeed, newSprintSpeed, compensatedAccel, moveComp);
+            }
+
+            // Hack: assuming the only other emaggable component on the vehicle is a flashlight
+            args.Repeatable = HasComp<UnpoweredFlashlightComponent>(ent);
+            args.Handled = true;
+        }
+    }
+
+    private void OnGotUnemagged(Entity<VehicleComponent> ent, ref GotUnEmaggedEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
+            return;
+
+        if (!ent.Comp.RadarBlip)
+        {
+            ent.Comp.RadarBlip = true;
+            Dirty(ent);
+
+            HandleUnemag(ent);
+
+            args.Handled = true;
+        }
+    }
+
+    protected abstract void HandleEmag(Entity<VehicleComponent> ent);
+    protected abstract void HandleUnemag(Entity<VehicleComponent> ent);
+    // End Frontier
 }
 
 public sealed partial class HornActionEvent : InstantActionEvent;
