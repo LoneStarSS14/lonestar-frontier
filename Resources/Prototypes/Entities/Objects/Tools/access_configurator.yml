@@ -55,8 +55,8 @@
       - HeadOfPersonnel # Frontier: reordered for "Station Representative"
       - StationTrafficController # Frontier
       # - Theatre # Frontier
-      - GenpopEnter
-      - GenpopLeave
+      - GenpopEnter # Coyote: so turnstiles can be fixed
+      - GenpopLeave # Coyote: so turnstiles can be fixed
       privilegedIdSlot:
         name: id-card-console-privileged-id
         ejectSound: /Audio/Machines/id_swipe.ogg
@@ -85,7 +85,9 @@
         AccessOverrider-privilegedId: !type:ContainerSlot
 
 - type: entity
-  parent: AccessConfigurator
+  parent:
+  - AccessConfigurator
+  - BaseC4Contraband
   id: AccessConfiguratorUniversal
   name: universal access configurator
   suffix: Admin

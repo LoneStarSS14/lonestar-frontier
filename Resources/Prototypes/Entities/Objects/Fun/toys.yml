@@ -49,6 +49,7 @@
   - type: ContainerContainer
     containers:
       stash: !type:ContainerSlot {}
+
 - type: entity
   parent: BaseRubberToy
   id: ToyRubberDuck
@@ -83,6 +84,7 @@
   - type: Tag
     tags:
     - ToyRubberDuck
+
 - type: entity
   parent: BaseRubberToy
   id: RubberChicken
@@ -140,6 +142,7 @@
   - type: Tag
     tags:
     - Figurine
+
 - type: entity
   parent: BaseFigurineCheapo
   id: ToyAi
@@ -158,6 +161,7 @@
       head:
       - state: equipped-HELMET
         offset: "0, 0.06"
+
 - type: entity
   parent: BaseFigurineCheapo
   id: ToyNuke
@@ -199,6 +203,7 @@
       params:
         volume: -5
         maxDistance: 10
+
 - type: entity
   parent: BasePlushie
   id: ToyIan
@@ -255,6 +260,7 @@
   - type: Item
     size: Normal
   - type: PacifismAllowedGun
+
 - type: entity
   parent: FoamWeaponBase
   id: FoamCrossbow
@@ -285,6 +291,7 @@
     containers:
       ballistic-ammo: !type:Container
         ents: []
+
 - type: entity
   parent: BaseItem
   id: ToyGunBase
@@ -293,6 +300,7 @@
   abstract: true
   components:
   - type: Sprite
+
 - type: entity
   parent: ToyGunBase
   id: RevolverCapGun
@@ -335,8 +343,9 @@
   - type: ContainerContainer
     containers:
       revolver-ammo: !type:Container
+
 - type: entity
-  parent: [RevolverCapGun, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  parent: [RevolverCapGun, BaseC4Contraband] # Frontier: added BaseC4Contraband
   id: RevolverCapGunFake
   name: cap gun
   suffix: Fake
@@ -351,6 +360,7 @@
       - CartridgeMagnum
       - SpeedLoaderMagnum
   # proto: CartridgeMagnumAP # Frontier
+
 - type: entity
   parent: BaseItem
   id: FoamBlade
@@ -405,6 +415,7 @@
     sprite: Objects/Fun/Balls/basketball.rsi
   - type: TileFrictionModifier
     modifier: 0.5
+
 - type: entity
   parent: BaseItem
   id: Football
@@ -434,6 +445,7 @@
   - type: Item
     size: Small
     sprite: Objects/Fun/Balls/football.rsi
+
 - type: entity
   parent: BaseItem
   id: BeachBall
@@ -466,6 +478,7 @@
     sprite: Objects/Fun/Balls/beach_ball.rsi
   - type: TileFrictionModifier
     modifier: 0.05
+
 - type: entity
   parent: BaseItem
   id: BalloonSyn
@@ -485,6 +498,7 @@
     - Balloon
   - type: StaticPrice
     price: 5000 # Entertainment.
+
 - type: entity
   parent: BaseItem
   id: BalloonNT
@@ -502,6 +516,7 @@
   - type: Tag
     tags:
     - Balloon
+
 - type: entity
   parent: BaseItem
   id: BalloonCorgi
@@ -519,6 +534,7 @@
   - type: Tag
     tags:
     - Balloon
+
 - type: entity
   parent: BaseItem
   id: SingularityToy
@@ -543,6 +559,7 @@
       right:
       - state: singu-inhand-right
         shader: unshaded
+
 - type: entity
   parent: BaseItem
   id: TeslaToy
@@ -576,6 +593,7 @@
       params:
         variation: 0.65
         volume: -10
+
 - type: entity
   parent: BaseItem # Frontier: remove BaseMagicalContraband
   id: PonderingOrb
@@ -595,6 +613,7 @@
     sprite: Objects/Fun/pondering_orb.rsi
   - type: TileFrictionModifier
     modifier: 0.001
+
 - type: entity
   parent: [PonderingOrb, NotContraband] # Frontier: add NotContraband
   id: PonderingOrbWizard
@@ -616,74 +635,76 @@
     transmitFrequencyId: SurveillanceCamera
   - type: WiredNetworkConnection
   - type: SurveillanceCameraMonitor
+
 - type: entity
   parent: BaseItem
   id: ToySword
   name: toy sword
   description: New Sandy-Cat plastic sword! Comes with realistic sound and full color! Looks almost like the real thing!
   components:
-  - type: Sprite
-    sprite: Objects/Weapons/Melee/e_sword.rsi
-    layers:
-    - state: e_sword
-    - state: e_sword_blade
-      color: "#FFFFFF"
-      visible: false
-      shader: unshaded
-      map: [ "blade" ]
-  - type: EnergySword
-  - type: ItemToggle
-    soundActivate:
-      path: /Audio/Weapons/ebladeon.ogg
-    soundDeactivate:
-      path: /Audio/Weapons/ebladeoff.ogg
-  - type: ItemToggleActiveSound
-    activeSound:
-      path: /Audio/Weapons/ebladehum.ogg
-  - type: Item
-    size: Small
-    sprite: Objects/Weapons/Melee/e_sword-inhands.rsi
-  - type: UseDelay
-    delay: 1.0
-  - type: PointLight
-    enabled: false
-    radius: 2
-    energy: 2
-    color: white
-    netsync: false
-  - type: Appearance
-  - type: ToggleableVisuals
-    spriteLayer: blade
-    inhandVisuals:
-      left:
-      - state: inhand-left-blade
-        shader: unshaded
-      right:
-      - state: inhand-right-blade
-        shader: unshaded
-  - type: ItemTogglePointLight
-  - type: DisarmMalus
-    malus: 0
-  - type: StaminaDamageOnHit
-    damage: 8
-  - type: MeleeWeapon
-    wideAnimationRotation: -135
-    damage:
-      types:
-        Blunt: 0
-  - type: ItemToggleMeleeWeapon
-    activatedSoundOnHit:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        variation: 0.250
-    activatedSoundOnHitNoDamage:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        variation: 0.250
-    activatedSoundOnSwing:
-      path: /Audio/Weapons/eblademiss.ogg
-      params:
-        variation: 0.125
+    - type: EnergySword
+    - type: ItemToggle
+      soundActivate:
+        path: /Audio/Weapons/ebladeon.ogg
+      soundDeactivate:
+        path: /Audio/Weapons/ebladeoff.ogg
+    - type: ItemToggleActiveSound
+      activeSound:
+        path: /Audio/Weapons/ebladehum.ogg
+    - type: Sprite
+      sprite: Objects/Weapons/Melee/e_sword.rsi
+      layers:
+        - state: e_sword
+        - state: e_sword_blade
+          color: "#FFFFFF"
+          visible: false
+          shader: unshaded
+          map: [ "blade" ]
+    - type: Item
+      size: Small
+      sprite: Objects/Weapons/Melee/e_sword-inhands.rsi
+    - type: UseDelay
+      delay: 1.0
+    - type: PointLight
+      enabled: false
+      radius: 2
+      energy: 2
+      color: white
+      netsync: false
+    - type: Appearance
+    - type: ToggleableVisuals
+      spriteLayer: blade
+      inhandVisuals:
+        left:
+          - state: inhand-left-blade
+            shader: unshaded
+        right:
+          - state: inhand-right-blade
+            shader: unshaded
+    - type: ItemTogglePointLight
+    - type: DisarmMalus
+      malus: 0
+    - type: StaminaDamageOnHit
+      damage: 8
+    - type: MeleeWeapon
+      wideAnimationRotation: -135
+      damage:
+        types:
+          Blunt: 0
+    - type: ItemToggleMeleeWeapon
+      activatedSoundOnHit:
+        path: /Audio/Weapons/eblade1.ogg
+        params:
+          variation: 0.250
+      activatedSoundOnHitNoDamage:
+        path: /Audio/Weapons/eblade1.ogg
+        params:
+          variation: 0.250
+      activatedSoundOnSwing:
+        path: /Audio/Weapons/eblademiss.ogg
+        params:
+          variation: 0.125
+
 - type: entity
   parent: BasePlushie
   id: ToyAmongPequeno
@@ -719,6 +740,7 @@
 #  - type: FoodSequenceElement - does not work with randomized sprites
 #    entries:
 #      CottonBurger: AmongPequeno
+
 - type: entity
   parent: BaseItem
   id: FoamCutlass
@@ -742,6 +764,7 @@
       sprite: Objects/Weapons/Melee/cutlass.rsi
     shape:
     - 0,0,0,2
+
 - type: entity
   parent: BaseItem
   id: ClownRecorder
@@ -772,6 +795,7 @@
     tags:
     - ClownRecorder
     - Payload
+
 - type: entity
   parent: BaseItem
   id: ToyHammer
@@ -808,6 +832,7 @@
     damage:
       types:
         Blunt: 0
+
 - type: entity
   parent: BaseItem
   id: WhoopieCushion
@@ -886,6 +911,7 @@
         density: 30
         mask:
         - ItemMask
+
 - type: entity
   name: banana
   parent: FoodProduceBase
@@ -908,6 +934,7 @@
   - type: Tag
     tags:
     - Banana
+
 - type: entity
   parent: DrinkBase
   id: CrazyGlue
@@ -946,6 +973,7 @@
   - type: Tag
     tags:
     - DrinkSpaceGlue
+
 - type: entity
   parent: BaseItem
   id: NewtonCradle

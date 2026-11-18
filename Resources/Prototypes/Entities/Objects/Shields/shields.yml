@@ -61,6 +61,26 @@
             #       max: 2
     - type: StaticPrice
       price: 50 # Frontier: 100<50 - TODO: material value rework
+
+- type: entity
+  name: base repairable shield
+  parent: BaseShield
+  id: BaseRepairableShield
+  description: A repairable shield!
+  abstract: true
+  components:
+  - type: Repairable # Negative values represent healing
+    damage:
+      groups:
+        Brute: -60 # 20 of each Brute Type - 20% of a basic shield HP
+      types:
+        Heat: -20
+    fuelCost: 10 # 1/2 of a Welder for a full repair
+    doAfterDelay: 5
+    allowSelfRepair: false
+
+#Security Shields
+
 - type: entity
   name: riot shield
   parent: [ BaseRepairableShield, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
@@ -81,6 +101,7 @@
         flatReductions:
           Blunt: 1
           Slash: 1
+
 - type: entity
   name: laser shield
   parent: [ BaseRepairableShield, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
@@ -100,6 +121,7 @@
           Heat: 0.5
         flatReductions:
           Heat: 1
+
 - type: entity
   name: ballistic shield
   parent: [ BaseRepairableShield, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
@@ -121,6 +143,7 @@
           Piercing: 1
 
 #Craftable shields
+
 - type: entity
   name: wooden buckler
   parent: BaseShield
@@ -175,6 +198,7 @@
                   max: 5
     - type: StaticPrice
       price: 150
+
 - type: entity
   name: makeshift shield
   parent: BaseRepairableShield
@@ -228,6 +252,7 @@
                 SheetSteel:
                   min: 1
                   max: 2
+
 - type: entity
   name: web shield
   parent: BaseShield
@@ -310,6 +335,7 @@
           Slash: 1
           Piercing: 1
       #Have it break into brass when clock cult is in
+
 - type: entity
   name: mirror shield
   parent: [ BaseShield, BaseC3WizardContraband] # Frontier: BaseMagicalContraband<BaseC3WizardContraband
@@ -357,6 +383,7 @@
                 SheetGlass:
                   min: 5
                   max: 5
+
 - type: entity
   name: energy shield
   parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
@@ -431,6 +458,8 @@
     - type: Appearance
     - type: Damageable
       damageContainer: Shield
+    - type: ExaminableDamage
+      messages: EnergyShieldMessages
     - type: Destructible
       thresholds:
         - trigger:
@@ -453,8 +482,26 @@
                 BrokenEnergyShield:
                   min: 1
                   max: 1
+        - trigger:
+            !type:DamageTrigger
+            damage: 70
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/_CS/GasWarnings/airwarning_low.ogg
+                params:
+                  pitch: 0.8
     - type: StaticPrice
       price: 350
+    # LoneStar
+    - type: PassiveDamage
+      damage:
+        types:
+          Heat: -0.5
+          Cold: -0.5
+        groups:
+          Brute: -3
+
 - type: entity
   name: broken energy shield
   parent: BaseItem
@@ -470,9 +517,10 @@
       heldPrefix: eshield
     - type: StaticPrice
       price: 15
+
 - type: entity
   name: telescopic shield
-  parent: [BaseShield, BaseC2ContrabandUnredeemable] # Frontier: BaseC2ContrabandUnredeemable
+  parent: [BaseRepairableShield, BaseC2ContrabandUnredeemable] # Frontier: BaseC2ContrabandUnredeemable
   id: TelescopicShield
   description: An advanced riot shield made of lightweight materials that collapses for easy storage.
   components:
@@ -539,22 +587,3 @@
                   max: 2
     - type: StaticPrice
       price: 150
-
-- type: entity
-  name: base repairable shield
-  parent: BaseShield
-  id: BaseRepairableShield
-  description: A repairable shield!
-  abstract: true
-  components:
-  - type: Repairable # Negative values represent healing
-    damage:
-      groups:
-        Brute: -60 # 20 of each Brute Type - 20% of a basic shield HP
-      types:
-        Heat: -20
-    fuelCost: 10 # 1/2 of a Welder for a full repair
-    doAfterDelay: 5
-    allowSelfRepair: false
-
-#Security Shields

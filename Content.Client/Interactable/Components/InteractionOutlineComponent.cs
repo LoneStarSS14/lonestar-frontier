@@ -1,3 +1,4 @@
+using System;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Prototypes;
@@ -25,8 +26,15 @@ namespace Content.Client.Interactable.Components
             _inRange = inInteractionRange;
             if (_entMan.TryGetComponent(uid, out SpriteComponent? sprite) && sprite.PostShader == null)
             {
+                // Skip outline for very large sprites to avoid rendering artifacts
+                // The render target for post-shaders is only 1.25x sprite size, which isn't enough
+                // buffer space for outline sampling on 1.5x+ scaled sprites
+                var spriteScale = (sprite.Scale.X + sprite.Scale.Y) / 2.0f;
+                if (spriteScale > 1.3f)
+                    return;
+
                 // TODO why is this creating a new instance of the outline shader every time the mouse enters???
-                _shader = MakeNewShader(inInteractionRange, renderScale);
+                _shader = MakeNewShader(sprite, inInteractionRange, renderScale);
                 sprite.PostShader = _shader;
             }
         }
@@ -53,17 +61,23 @@ namespace Content.Client.Interactable.Components
                 _inRange = inInteractionRange;
                 _lastRenderScale = renderScale;
 
-                _shader = MakeNewShader(_inRange, _lastRenderScale);
+                _shader = MakeNewShader(sprite, _inRange, _lastRenderScale);
                 sprite.PostShader = _shader;
             }
         }
 
-        private ShaderInstance MakeNewShader(bool inRange, int renderScale)
+        private ShaderInstance MakeNewShader(SpriteComponent sprite, bool inRange, int renderScale)
         {
             var shaderName = inRange ? ShaderInRange : ShaderOutOfRange;
 
             var instance = _prototypeManager.Index(shaderName).InstanceUnique();
-            instance.SetParameter("outline_width", DefaultWidth * renderScale);
+            var spriteScale = (sprite.Scale.X + sprite.Scale.Y) / 2.0f;
+            var outlineWidth = spriteScale > 1.5f
+                ? 0.5f
+                : spriteScale > 1.2f
+                    ? 0.75f
+                    : DefaultWidth * renderScale;
+            instance.SetParameter("outline_width", outlineWidth);
             return instance;
         }
     }

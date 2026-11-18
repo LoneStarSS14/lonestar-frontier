@@ -9,6 +9,7 @@
   - type: NavMapBeacon
     defaultText: station-beacon-atm
     color: "#0077C1"
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierShipyard
@@ -17,6 +18,7 @@
   - type: NavMapBeacon
     defaultText: station-beacon-shipyard
     color: "#0077C1"
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierGasSale
@@ -25,6 +27,7 @@
   - type: NavMapBeacon
     defaultText: station-beacon-gas-sale
     color: "#0077C1"
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierCryosleep
@@ -42,6 +45,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-sr-office
+
 - type: entity
   parent: DefaultStationBeaconCommand
   id: DefaultStationBeaconFrontierSRQuarters
@@ -49,6 +53,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-sr-quarters
+
 - type: entity
   parent: DefaultStationBeaconCommand
   id: DefaultStationBeaconFrontierManagersOffice
@@ -56,6 +61,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-managers-office
+
 - type: entity
   parent: DefaultStationBeaconCommand
   id: DefaultStationBeaconFrontierManagersQuarters
@@ -72,6 +78,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-cargobay-one
+
 - type: entity
   parent: DefaultStationBeaconSupply
   id: DefaultStationBeaconFrontierCargobayTwo
@@ -79,6 +86,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-cargobay-two
+
 - type: entity
   parent: DefaultStationBeaconSupply
   id: DefaultStationBeaconFrontierCargobayThree
@@ -86,6 +94,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-cargobay-three
+
 - type: entity
   parent: DefaultStationBeaconSupply
   id: DefaultStationBeaconFrontierCargobayFour
@@ -102,6 +111,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-shops
+
 - type: entity
   parent: DefaultStationBeaconService
   id: DefaultStationBeaconFrontierVend
@@ -109,6 +119,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-vending-machines
+
 - type: entity
   parent: DefaultStationBeaconService
   id: DefaultStationBeaconFrontierCafe
@@ -116,6 +127,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-cafe
+
 - type: entity
   parent: DefaultStationBeaconService
   id: DefaultStationBeaconFrontierMess
@@ -123,6 +135,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-mess
+
 - type: entity
   parent: DefaultStationBeaconService
   id: DefaultStationBeaconFrontierHead
@@ -130,6 +143,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-head
+
 - type: entity
   parent: DefaultStationBeaconService
   id: DefaultStationBeaconFrontierServiceLobby
@@ -137,6 +151,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-lobby
+
 - type: entity
   parent: DefaultStationBeaconService
   id: DefaultStationBeaconFrontierBreakRoom
@@ -154,10 +169,11 @@
   - type: NavMapBeacon
     defaultText: station-beacon-nfsd
     color: "#f1b223"
+
 - type: entity
   parent: DefaultStationBeaconFrontierNfsd
   id: DefaultStationBeaconFrontierNfsdBrig
-  suffix: NFSD Brig
+  suffix: LSRD Brig # Lonestar changes NFSD -> LSRD
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-nfsd-brig
@@ -170,6 +186,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-transit-shuttle
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDock
@@ -177,6 +194,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-dock
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierConference
@@ -194,6 +212,7 @@
   components:
   - type: NavMapBeacon
     color: "#b8b873"
+
 - type: entity
   parent: DefaultStationBeaconFrontierMercenary
   id: DefaultStationBeaconFrontierOfficeMercenary
@@ -201,6 +220,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-office-mercenary
+
 - type: entity
   parent: DefaultStationBeaconFrontierMercenary
   id: DefaultStationBeaconFrontierShootingRangeMercenary
@@ -208,6 +228,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-shooting-range-mercenary
+
 - type: entity
   parent: DefaultStationBeaconFrontierMercenary
   id: DefaultStationBeaconFrontierArmoryMercenary
@@ -225,6 +246,7 @@
   - type: NavMapBeacon
     defaultText: station-beacon-atmos-nf
     color: "#3eb38896"
+
 - type: entity
   parent: DefaultStationBeaconFrontierAtmos
   id: DefaultStationBeaconFrontierAtmosAux
@@ -232,6 +254,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-aux-chamber
+
 - type: entity
   parent: DefaultStationBeaconFrontierAtmos
   id: DefaultStationBeaconFrontierAtmosBurn
@@ -239,6 +262,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-atmos-burn
+
 - type: entity
   parent: DefaultStationBeaconFrontierAtmos
   id: DefaultStationBeaconFrontierAtmosCollector
@@ -246,6 +270,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-atmos-collector
+
 - type: entity
   parent: DefaultStationBeaconFrontierAtmos
   id: DefaultStationBeaconFrontierAtmosSupplies
@@ -253,6 +278,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-supplies
+
 - type: entity
   parent: DefaultStationBeaconFrontierAtmos
   id: DefaultStationBeaconFrontierAtmosTeg
@@ -269,6 +295,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-supplies
+
 - type: entity
   parent: DefaultStationBeaconEngineering
   id: DefaultStationBeaconFrontierEngiPowerNexus
@@ -276,6 +303,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-power-nexus
+
 - type: entity
   parent: DefaultStationBeaconEngineering
   id: DefaultStationBeaconFrontierDecommissionedSpace
@@ -283,6 +311,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-decommissioned-reactor
+
 - type: entity
   parent: DefaultStationBeaconEngineering
   id: DefaultStationBeaconFrontierEngiVend
@@ -300,6 +329,7 @@
   - type: NavMapBeacon
     defaultText: station-beacon-lobby
     color: "#add8e6"
+
 - type: entity
   parent: DefaultStationBeaconFrontierSROffice
   id: DefaultStationBeaconFrontierDoCOffice
@@ -317,6 +347,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-eva-access
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDockOne
@@ -324,6 +355,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-dock-one
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDockTwo
@@ -331,6 +363,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-dock-two
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDockThree
@@ -338,6 +371,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-dock-three
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDockFour
@@ -345,6 +379,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-dock-four
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDockFive
@@ -352,6 +387,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-dock-five
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDockSix
@@ -359,6 +395,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-dock-six
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDockSixA
@@ -366,6 +403,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-dock-six-a
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDockSixB
@@ -373,6 +411,7 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-dock-six-b
+
 - type: entity
   parent: DefaultStationBeacon
   id: DefaultStationBeaconFrontierDockSixC

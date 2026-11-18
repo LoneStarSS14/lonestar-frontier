@@ -59,12 +59,6 @@
   - type: ItemToggleHot
   - type: Sprite
     sprite: _LoneStar/Objects/Tools/divinethurible.rsi
-    state: icon
-    inhandVisuals:
-      left:
-      - state: inhand-left
-      right:
-      - state: inhand-right
     layers:
     - state: icon
     - state: flame

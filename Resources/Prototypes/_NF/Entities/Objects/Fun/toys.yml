@@ -29,6 +29,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: JesterPlushie
+
 - type: entity
   parent: PlushieLizard
   id: NFPlushieBotanist #Weh!
@@ -41,6 +42,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: NFPlushieBotanist
+
 - type: entity
   parent: PlushieLizard
   id: NFPlushieEngineer #Weh!
@@ -53,6 +55,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: NFPlushieEngineer
+
 - type: entity
   parent: PlushieLizard
   id: NFPlushieConstruction #Weh!
@@ -65,6 +68,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: NFPlushieConstruction
+
 - type: entity
   parent: PlushieLizard
   id: NFPlushieCmo #Weh!
@@ -77,6 +81,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: NFPlushieCmo
+
 - type: entity
   parent: PlushieCarp
   id: NFPlushieSharkMinnow
@@ -97,6 +102,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: NFPlushieSharkMinnow
+
 - type: entity
   parent: BasePlushie
   id: PlushieJanitor
@@ -155,6 +161,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieJanitor
+
 - type: entity
   id: PetRockCarrier
   parent: HappyHonk
@@ -178,6 +185,7 @@
       - id: PetRockRoxie
         prob: 0.1
         orGroup: Rock
+
 - type: entity
   parent: [BaseItem, MrChips]
   id: BasePetRock
@@ -226,6 +234,7 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+
 - type: entity
   parent: BasePetRock
   id: PetRock
@@ -234,6 +243,7 @@
     sprite: _NF/Objects/Fun/petrock.rsi
     layers:
     - state: rock
+
 - type: entity
   parent: BasePetRock
   id: PetRockFred
@@ -243,6 +253,7 @@
     sprite: _NF/Objects/Fun/petrock.rsi
     layers:
     - state: fred
+
 - type: entity
   parent: BasePetRock
   id: PetRockRoxie
@@ -252,6 +263,7 @@
     sprite: _NF/Objects/Fun/petrock.rsi
     layers:
     - state: roxie
+
 - type: entity
   parent: BasePlushie
   id: PlushieGnome
@@ -264,6 +276,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieGnome
+
 - type: entity
   parent: BasePlushie
   id: PlushieLoveable
@@ -276,6 +289,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: NFPlushieLoveable
+
 - type: entity
   parent: BasePlushie
   id: PlushieDeer
@@ -288,6 +302,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieDeer
+
 - type: entity
   parent: BasePlushie
   id: PlushieIpc
@@ -300,6 +315,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieIpc
+
 - type: entity
   parent: BasePlushie
   id: PlushieGrey
@@ -312,6 +328,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieGrey
+
 - type: entity
   parent: BasePlushie
   id: PlushieAbductor
@@ -324,6 +341,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieAbductor
+
 - type: entity
   parent: BasePlushie
   id: PlushieAbductorAgent
@@ -336,6 +354,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieAbductorAgent
+
 - type: entity
   parent: BasePlushie
   id: PlushieRedFox
@@ -348,6 +367,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieRedFox
+
 - type: entity
   parent: BasePlushie
   id: PlushiePurpleFox
@@ -360,6 +380,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushiePurpleFox
+
 - type: entity
   parent: BasePlushie
   id: PlushiePinkFox
@@ -372,6 +393,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushiePinkFox
+
 - type: entity
   parent: BasePlushie
   id: PlushieOrangeFox
@@ -384,6 +406,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieOrangeFox
+
 - type: entity
   parent: BasePlushie
   id: PlushieMarbleFox
@@ -396,6 +419,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMarbleFox
+
 - type: entity
   parent: BasePlushie
   id: PlushieCrimsonFox
@@ -408,6 +432,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCrimsonFox
+
 - type: entity
   parent: BasePlushie
   id: PlushieCoffeeFox
@@ -420,6 +445,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCoffeeFox
+
 - type: entity
   parent: BasePlushie
   id: PlushieBlueFox
@@ -432,6 +458,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieBlueFox
+
 - type: entity
   parent: BasePlushie
   id: PlushieBlackFox
@@ -444,6 +471,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieBlackFox
+
 - type: entity
   parent: BasePlushie
   id: BasePlushieVulp
@@ -468,6 +496,7 @@
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/_DV/Voice/Vulpkanin/dog_bark1.ogg
+
 - type: entity
   parent: BasePlushieVulp
   id: PlushieVulp
@@ -478,6 +507,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieVulp
+
 - type: entity
   parent: BasePlushieVulp
   id: PlushieMailVulp
@@ -490,18 +520,42 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMailVulp
-- type: entity
+
+- type: entity # lone star: Start
   parent: PlushieMoth
   id: PlushieYarrMoth
-  name: yarr moth plushie
-  description: It's dastardly and has a dashing cloak. It chitters when you squeeze it!
+  name: evil moth plushie
+  description: You look at the cute moth plushie with your eyes, and it stares back at you with its evil eyes. It is a plushie, but it is also very evil.
   components:
   - type: Sprite
-    sprite: _NF/Objects/Fun/Plushies/yarrmoth.rsi
-    state: plushie_yarrmoth
+    sprite: _LoneStar/Objects/Fun/evilmoffplushie.rsi 
+    state: evilmoffplushie
+  - type: EmitSoundOnUse 
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Moth/moth_scream.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg 
   - type: FoodSequenceElement
     entries:
-      CottonBurger: PlushieYarrMoth
+      CottonBurger: PlushieYarrMoth # lone star: End
+
 - type: entity
   parent: BasePlushieVulp
   id: PlushieCorgi
@@ -514,6 +568,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCorgi
+
 - type: entity
   parent: BasePlushieVulp
   id: PlushieGirlyCorgi
@@ -525,6 +580,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieGirlyCorgi
+
 - type: entity
   parent: BasePlushieVulp
   id: PlushieRobotCorgi
@@ -536,6 +592,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieRobotCorgi
+
 - type: entity
   parent: BasePlushie
   id: BasePlushieCat
@@ -558,6 +615,7 @@
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/Nyanotrasen/Voice/Felinid/cat_meow1.ogg
+
 - type: entity
   parent: BasePlushieCat
   id: PlushieCatBlack
@@ -570,6 +628,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCatBlack
+
 - type: entity
   parent: BasePlushieCat
   id: PlushieCatGrey
@@ -581,6 +640,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCatGrey
+
 - type: entity
   parent: BasePlushieCat
   id: PlushieCatOrange
@@ -592,6 +652,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCatOrange
+
 - type: entity
   parent: BasePlushieCat
   id: PlushieCatSiames
@@ -603,6 +664,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCatSiamese
+
 - type: entity
   parent: BasePlushieCat
   id: PlushieCatTabby
@@ -614,6 +676,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCatTabby
+
 - type: entity
   parent: BasePlushieCat
   id: PlushieCatTuxedo
@@ -625,6 +688,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCatTuxedo
+
 - type: entity
   parent: BasePlushieCat
   id: PlushieCatWhite
@@ -636,6 +700,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCatWhite
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth1
@@ -647,6 +712,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth1
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth2
@@ -658,6 +724,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth2
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth3
@@ -669,6 +736,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth3
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth4
@@ -680,6 +748,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth4
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth5
@@ -691,6 +760,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth5
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth6
@@ -702,6 +772,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth6
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth7
@@ -713,6 +784,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth7
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth8
@@ -724,6 +796,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth8
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth9
@@ -735,6 +808,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth9
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth10
@@ -746,6 +820,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth10
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth11
@@ -757,6 +832,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth11
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth12
@@ -768,6 +844,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth12
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth13
@@ -779,6 +856,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth13
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoth14
@@ -790,6 +868,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoth14
+
 - type: entity
   parent: MarkerBasePlaceFree
   id: PlushieMoffRandom
@@ -819,6 +898,7 @@
     - PlushieMoth12
     - PlushieMoth13
     - PlushieMoth14
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoffsician
@@ -831,6 +911,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoffsician
+
 - type: entity
   parent: PlushieMoth
   id: PlushieMoffbar
@@ -846,6 +927,7 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieMoffbar
+
 - type: entity
   parent: BasePlushie
   id: PlushieGoblin
@@ -926,6 +1008,7 @@
     containers:
       stash: !type:ContainerSlot {}
       ballistic-ammo: !type:Container {}
+
 - type: entity
   id: BulletFoamRPG
   description: Looks like the REAL THING... if you squint. I hope your target's wearing face protection.
@@ -946,6 +1029,7 @@
        path: /Audio/Weapons/rubberhammer.ogg
     - type: StaminaDamageOnCollide
       damage: 20
+
 - type: entity
   parent: [BaseClearContraband, NFBaseWeaponFrameRevolverFoamForce, NFBaseWeaponRevolverChamberCap]
   id: NFRevolverCapGun
@@ -960,8 +1044,9 @@
       map: ["enum.GunVisualLayers.Base"]
   - type: Gun
     clumsyProof: true
+
 - type: entity
-  parent: [BaseC3SyndicateContraband, NFBaseWeaponFrameRevolverFoamForce, NFBaseWeaponRevolverChamber45Cap]
+  parent: [BaseC1Contraband, NFBaseWeaponFrameRevolverFoamForce, NFBaseWeaponRevolverChamber45Cap]
   id: NFRevolverCapGunFake
   suffix: Fake, Frontier
   name: cap gun
@@ -984,6 +1069,7 @@
   id: NFRevolverCapGunFakeGrown
   categories: [ HideSpawnMenu ]
   suffix: Fake, Grown
+
 - type: entity
   parent: BasePlushie
   id: PlushieDave
