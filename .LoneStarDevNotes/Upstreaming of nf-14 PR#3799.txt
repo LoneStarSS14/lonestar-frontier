@@ -1,0 +1,95 @@
+
+==============================================================================================================================================
+==Areas to Look Thorugh=======================================================================================================================
+Low Priority
+-Resources/Locale/ Im probably just gonna trust copilot and the yaml linter that theres nothing broken here.
+
+AI Resolved and unchecked for comment marking:
+-Content.Server/ Reapply over hard merge of original PR to see differences and ensure changes are documented properly
+-Content.Shared/ Reapply over hard merge of original PR to see differences and ensure changes are documented properly
+-Content.Client/ Reapply over hard merge of original PR to see differences and ensure changes are documented properly
+
+Medium Priority
+-Resources/Textures/ IN PROGRESS
+
+==============================================================================================================================================
+==Arbitrage===================================================================================================================================
+Bugs
+- unknown origin
+
+- known future fix
+    - low risk
+        using hypos spams "nothing to inject" 12 times.
+        bananapeel bug, line 453 of Objects/Consumable/Food/produce.yml
+
+==============================================================================================================================================
+==Actionable Work=============================================================================================================================
+Comments:
+Clothing/Belt/belts.yml, my god frontier please sort your commenting indentation out... you're killing me here
+i swear to god this corgi wearable shit is the dumbest .yml bloat ever.
+the technology -NFShuttlecraftThrustSmall seems to be hijacked by us? unsure.
+we lose the chort and lsrd hristy from lsrd uplinks, dont care.- its getting reworked soon anyway.
+i believe frontier skipped wizdens vulp dash, which is ok.
+undid all changes to gas deposits aside from removing air deposits
+
+Future Considerations:
+PoweredStrobeSodiumSiren will conflict with the lights PR i was doing.
+we have stamina resistance working now. probably nerf the fuck out of it on stuff.
+cat ears are 15k now, probably revert this, idk.
+Clothing/Head/hardsuit-helmets.yml specifies avali overrides for the light, idk if thats even needed.
+we may need to add components like isLSRD isPirate and balanceImmuniuty to the clone components copy settings proto, unsure, low priority
+Bruiz/Lace/Punct now have wizdens balance changes, consider reverting or seeing what frontier did later on.
+bicaridine + t2brutes -> razorium is gone, t2brute + t2brute is unchanged.
+both upstreams fucking with contravend options. consider ignoring files and rebuilding entire suite of entries to manage ourselves.
+Fix up lumi's O2N2EqualFilled PR commenting to be better.
+andy sounds updated, consider removing entire system in future, fuck andy. (do not let community voice, use AI'robotic' voice or just flat out remove.)
+new encryptionKeys field for starting gear, likely can fix a lot of our key jank.
+Swap frontier weapon sprites out for wizdens, such as cobra wt550 and c20r
+
+Considerations:
+Somehow a load of frontiers gun balance values are coming in with this, consider reverting and commenting, compare against modern frontier.
+ScrapPlastic randomly added, probably unlinked to our loot tables, refer to Frontiers repo.
+bluespace orestorage module for borgs is gone from techtree
+stam recovery iframes brought back
+lost biscuit tags from monolith barista vend, likely unimpactful and were probably used as a storage filter.
+removed RubberStampSergeant
+borgs cant be stunned knocked or slowed
+borgs cant lay down
+Resources/Prototypes/Entities/Mobs/Customization/Markings/ largely unchecked.
+Resources/Prototypes/Entities/NPCs/space.yml had health threshold changes, the changes we made on frontiers copies may not be needed anymore.
+Resources/Prototypes/Entities/NPCs/animals.yml MobMouse has some thrist and hunger components. & some other spots
+deleted ClosetFstEva, it kinda came out of nowhere.
+We have arti glue now...
+I reverted the breaching hammer to frontiers values.
+Plastic via recipe appears to be fifth'd to wizdens values.
+removed capacitor tag, may fuck up wallsubstation craft, frontier tackled this later after 3799, while we did it independantly, prefer thiers, move to tasks if breaking, move to future considersations otherwise.
+salvage fab cant make drill/pka/cannon/grapple anymore, but can make bluespace tanks??? (unchecked, code implies)
+copypasted modern Lathes/Packs/engineering.yml into itself and fixed our missing changes, may feature missing defintions.
+ambition may be changed.
+
+Tasks:
+check NF Esword textures, missing it seems.
+check if gaslight exists in current master branch.
+remove DEN's jet injector, we will get wizdens soon after this undertaking from more upstreaming.
+replace new cases of TankO2N2EqualFilled, copy paste lumi's PR's replacement verbatim for now.
+check bible loadout options
+check shield damage state inspect messages work, their formatting changed.
+check if new pirate PDA options are selectable (Shantyman)
+check out the scrap sparrow salvage wreck
+check on romulan and estoc spawning, estoc should be in T5 weapon spawns, and romulan unspawning.
+check what GaslockBigFrameMachineCircuitboard was, a lot of isntances of this being gone, unsure what it was.
+figure out what i meant by "check on components of all 3 kinds" (I have completely forgot what this was a note for, this was under the -Resources/Prototypes/ header between reactions and recipes)
+check monochromacy disability
+check on APC wires
+jani golden plunger sprite on the jani trolley is out of place due to alt textures we use.
+make the H.A.R.M pack blacklisted for borgs, or ensure it hides when worn by them.
+see about spiders losing sericulture (web spinning)
+Double check sprite layer orderings for species/mobs changes.
+LSSmartFridge DVSmartFridgeMedical, theres a load of shit with smart fridges, take what frontier did and adapt.
+we now have xeno wall sets, re-importing aegis and voltage, they had floor tiles swapped out.
+All new entires in Mobs/Customization/Markings/ should support the kindAllowance to get around species restrictions, along with proper naming for what species each is for.
+Sort out _NF's facepaint markings, they need species unlimiting and suffixing for intended species.
+slip-dropping brought back (make this only be for slipping, not stam or crit related falls, we dont want people losing stuff on expeds after dying)
+
+Agent Tasks:
+Add nanochat back to wizden and frontier(_NF) PDAs, ensure additions feature a `# LoneStar` note on the end of the lines
