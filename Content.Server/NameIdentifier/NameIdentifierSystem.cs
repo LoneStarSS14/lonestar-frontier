@@ -1,6 +1,7 @@
-﻿using Content.Shared.GameTicking;
+using Content.Shared.GameTicking;
 using Content.Shared.NameIdentifier;
 using Content.Shared.NameModifier.EntitySystems;
+using Content.Shared.Silicons.Borgs.Components;
 using Robust.Shared.Collections;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -132,6 +133,11 @@ public sealed class NameIdentifierSystem : EntitySystem
             return;
 
         if (!_prototypeManager.TryIndex(ent.Comp.Group, out var group))
+            return;
+
+        // Borg chassis entities keep their FullIdentifier for internal UI (BorgMenu) but
+        // do not append it to the displayed name in chat, examine, emotes, etc.
+        if (HasComp<BorgChassisComponent>(ent))
             return;
 
         var format = group.FullName ? "name-identifier-format-full" : "name-identifier-format-append";

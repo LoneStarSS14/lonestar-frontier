@@ -46,6 +46,7 @@
       - FakeMindShieldImplant
       - RadioImplant
       - RadioImplantFreelance # Frontier
+      - BalanceImplant # LoneStar
       - ChameleonControllerImplant
       deimplantFailureDamage:
         types:
@@ -83,6 +84,7 @@
     - type: StaticPrice # Frontier
       price: 35 # Frontier
     - type: GoblinPreciousTrash # Frontier
+
 - type: entity
   id: Implanter
   parent: BaseImplanter
@@ -91,6 +93,7 @@
     - type: Tag
       tags:
         - Trash
+
 - type: entity
   parent: Implanter
   id: ImplanterAdmeme
@@ -102,6 +105,7 @@
     blacklist: null
     implantTime: 5
     drawTime: 5
+
 - type: entity
   id: BaseImplantOnlyImplanter
   parent: Implanter
@@ -121,6 +125,7 @@
       currentMode: Inject
       implantOnly: true
     - type: GoblinPreciousTrash # Frontier
+
 - type: entity
   id: BaseImplantOnlyImplanterSyndi
   parent: [BaseImplantOnlyImplanter, BaseC3Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband # Coyote: BaseC4Contraband<BaseC3Contraband
@@ -162,6 +167,7 @@
   components:
     - type: Implanter
       implant: SadTromboneImplant
+
 - type: entity
   id: LightImplanter
   name: light implanter
@@ -169,6 +175,7 @@
   components:
     - type: Implanter
       implant: LightImplant
+
 - type: entity
   id: BikeHornImplanter
   name: bike horn implanter
@@ -196,6 +203,7 @@
   components:
     - type: Implanter
       implant: StorageImplant
+
 - type: entity
   id: FreedomImplanter
   name: freedomimplanter
@@ -205,6 +213,7 @@
   components:
     - type: Implanter
       implant: FreedomImplant
+
 - type: entity
   id: RadioImplanter
   name: syndicate radio implanter
@@ -214,6 +223,7 @@
   components:
   - type: Implanter
     implant: RadioImplant
+
 - type: entity
   id: UplinkImplanter
   name: uplink implanter
@@ -223,6 +233,7 @@
   components:
   - type: Implanter
     implant: UplinkImplant
+
 - type: entity
   id: EmpImplanter
   name: EMP implanter
@@ -232,6 +243,7 @@
   components:
     - type: Implanter
       implant: EmpImplant
+
 - type: entity
   id: ScramImplanter
   name: scram implanter
@@ -241,13 +253,17 @@
   components:
     - type: Implanter
       implant: ScramImplant
+
 - type: entity
   id: DnaScramblerImplanter
   name: DNA scrambler implanter
-  parent: BaseImplantOnlyImplanterSyndi
+  parent:
+  - BaseImplantOnlyImplanterSyndi
+  - BaseC4Contraband
   components:
     - type: Implanter
       implant: DnaScramblerImplant
+
 - type: entity
   id: ChameleonControllerImplanter
   name: chameleon controller implanter
@@ -266,6 +282,7 @@
   components:
     - type: Implanter
       implant: MicroBombImplant
+
 - type: entity
   id: MacroBombImplanter
   name: macro-bomb implanter
@@ -275,6 +292,7 @@
   components:
     - type: Implanter
       implant: MacroBombImplant
+
 - type: entity
   id: DeathRattleImplanter
   name: death rattle implanter
@@ -284,6 +302,7 @@
   components:
     - type: Implanter
       implant: DeathRattleImplant
+
 - type: entity
   id: DeathAcidifierImplanter
   name: death acidifier implanter
@@ -293,6 +312,7 @@
   components:
   - type: Implanter
     implant: DeathAcidifierImplant
+
 - type: entity
   id: FakeMindShieldImplanter
   name: fake mindshield implanter
@@ -323,6 +343,7 @@
   components:
   - type: Implanter
     implant: RadioImplantCentcomm
+
 - type: entity
   id: DeathRattleImplanterCentcomm
   name: centcomm death rattle implanter
