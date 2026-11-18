@@ -20,6 +20,9 @@ public sealed partial class HyposprayComponent : Component
     public float MaxPressure = float.MaxValue;
 
     [DataField]
+    public float InjectTime = 0f;
+
+    [DataField]
     public float DoAfterTime = 0f;
 
     [DataField]

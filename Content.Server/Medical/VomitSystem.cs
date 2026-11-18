@@ -1,19 +1,22 @@
 using Content.Server.Body.Systems;
+using Content.Shared.Body.Systems;
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.Forensics;
 using Content.Server.Popups;
-using Content.Shared.Body.Components;
-using Content.Shared.Body.Systems;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.IdentityManagement;
+using Content.Shared._CS.Needs;
+using Content.Shared.Body.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Nutrition.Components;
 using Content.Shared.Nutrition.EntitySystems;
 using Robust.Server.Audio;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
+using Content.Shared.FloofStation;
+using Robust.Shared.Containers;
 
 namespace Content.Server.Medical
 {
@@ -22,12 +25,11 @@ namespace Content.Server.Medical
         [Dependency] private readonly IPrototypeManager _proto = default!;
         [Dependency] private readonly AudioSystem _audio = default!;
         [Dependency] private readonly BodySystem _body = default!;
-        [Dependency] private readonly HungerSystem _hunger = default!;
+        [Dependency] private readonly SharedNeedsSystem _needs = default!;
         [Dependency] private readonly PopupSystem _popup = default!;
         [Dependency] private readonly PuddleSystem _puddle = default!;
         [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
         [Dependency] private readonly MovementModStatusSystem _movementMod = default!;
-        [Dependency] private readonly ThirstSystem _thirst = default!;
         [Dependency] private readonly ForensicsSystem _forensics = default!;
         [Dependency] private readonly BloodstreamSystem _bloodstream = default!;
 
@@ -35,23 +37,39 @@ namespace Content.Server.Medical
 
         private readonly SoundSpecifier _vomitSound = new SoundCollectionSpecifier(VomitCollection,
             AudioParams.Default.WithVariation(0.2f).WithVolume(-4f));
+        [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
 
         /// <summary>
         /// Make an entity vomit, if they have a stomach.
         /// </summary>
         public void Vomit(EntityUid uid, float thirstAdded = -40f, float hungerAdded = -40f)
         {
+            // Floofstation - Vore
+            if (TryComp<VoreComponent>(uid, out var vore))
+                _containerSystem.EmptyContainer(vore.Stomach);
+
             // Main requirement: You have a stomach
             var stomachList = _body.GetBodyOrganEntityComps<StomachComponent>(uid);
             if (stomachList.Count == 0)
                 return;
 
-            // Vomiting makes you hungrier and thirstier
-            if (TryComp<HungerComponent>(uid, out var hunger))
-                _hunger.ModifyHunger(uid, hungerAdded, hunger);
-
-            if (TryComp<ThirstComponent>(uid, out var thirst))
-                _thirst.ModifyThirst(uid, thirst, thirstAdded);
+            if (TryComp<NeedsComponent>(uid, out var needy))
+            {
+                if (_needs.UsesHunger(uid, needy))
+                {
+                    _needs.ModifyHunger(
+                        uid,
+                        hungerAdded,
+                        needy);
+                }
+                if (_needs.UsesThirst(uid, needy))
+                {
+                    _needs.ModifyThirst(
+                        uid,
+                        thirstAdded,
+                        needy);
+                }
+            }
 
             // It fully empties the stomach, this amount from the chem stream is relatively small
             var solutionSize = (MathF.Abs(thirstAdded) + MathF.Abs(hungerAdded)) / 6;

@@ -3,8 +3,6 @@ using System.Linq;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Text;
-using Content.Shared._CS.AphroLacedVisibility;
-using Content.Shared._CS.Helpers;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.Reaction;
@@ -14,8 +12,6 @@ using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
-using Content.Shared.Mind.Components;
-using Content.Shared.Tag;
 using Content.Shared.Verbs;
 using JetBrains.Annotations;
 using Robust.Shared.Containers;
@@ -24,6 +20,10 @@ using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Dependency = Robust.Shared.IoC.DependencyAttribute;
+using Content.Shared._CS.Helpers; // Coyote
+using Content.Shared._CS.AphroLacedVisibility;
+using Content.Shared.Mind.Components;
+using Content.Shared.Tag; // Coyote
 
 namespace Content.Shared.Chemistry.EntitySystems;
 
@@ -75,7 +75,8 @@ public abstract partial class SharedSolutionContainerSystem : EntitySystem
     [Robust.Shared.IoC.Dependency] protected readonly INetManager NetManager = default!;
     [Robust.Shared.IoC.Dependency] protected readonly TagSystem _tag = default!;
 
-    private readonly SharedAphrodisiacChecker _aphrodisiacChecker = new();
+    private SharedAphrodisiacChecker _helper = new(); // Coyote
+
     public override void Initialize()
     {
         base.Initialize();
@@ -330,16 +331,18 @@ public abstract partial class SharedSolutionContainerSystem : EntitySystem
             RaiseLocalEvent(uid, ref overflowEv);
         }
 
-        if (_aphrodisiacChecker.CheckForAphrodisiacs(PrototypeManager, solution)
-            && TryComp<ContainedSolutionComponent>(soln.Owner, out var containedSolution)
-            && !HasComp<MindContainerComponent>(containedSolution.Container)
-            && TryComp<TagComponent>(containedSolution.Container, out var tagComp)
-            && !_tag.HasTag(tagComp, _aphrodisiacChecker.HideTag))
+        // Coyote: Ensure component on container if there is aphrodisiacs on the solution
+        if (_helper.CheckForAphrodisiacs(PrototypeManager, solution)
+        && TryComp<ContainedSolutionComponent>(soln.Owner, out var containedSolution)
+        && !HasComp<MindContainerComponent>(containedSolution.Container) // Filter out (most) mobs
+        && TryComp<TagComponent>(containedSolution.Container, out var tagComp)
+        && !_tag.HasTag(tagComp, _helper.HideTag))
         {
             var lacedComp = EnsureComp<AphroLacedVisibilityComponent>(containedSolution.Container);
             lacedComp.Laced = true;
             lacedComp.Solution = solution.Name ?? "";
         }
+        // Coyote End
 
         UpdateAppearance((uid, comp, null));
 

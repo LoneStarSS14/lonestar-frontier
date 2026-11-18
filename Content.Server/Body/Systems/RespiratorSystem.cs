@@ -17,11 +17,12 @@ using Content.Shared.EntityEffects;
 using Content.Shared.EntityEffects.EffectConditions;
 using Content.Shared.EntityEffects.Effects;
 using Content.Shared.Mobs.Systems;
-using Content.Shared.Mind.Components;
-using Content.Shared.SSDIndicator;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+
+using Content.Shared.SSDIndicator; // Coyote
+using Content.Shared.Mind.Components; // Coyote
 
 namespace Content.Server.Body.Systems;
 
@@ -80,15 +81,14 @@ public sealed class RespiratorSystem : EntitySystem
             if (_mobState.IsDead(uid))
                 continue;
 
-            if (TryComp<SSDIndicatorComponent>(uid, out var ssd)
-                && ssd.IsSSD
-                && TryComp<MindContainerComponent>(uid, out var mindContainer)
-                && mindContainer.HasMind)
-            {
+            // Coyote: Prevents SSD clients that have a mind associated to them from breathing to prevent offline asphyx deaths.
+            if (TryComp<SSDIndicatorComponent>(uid, out var ssd) && ssd.IsSSD
+             && TryComp<MindContainerComponent>(uid, out var mindContComp)
+              && mindContComp.HasMind)
                 continue;
-            }
+            // Coyote End
 
-            UpdateSaturation(uid, -(float)respirator.UpdateInterval.TotalSeconds, respirator);
+            UpdateSaturation(uid, -(float) respirator.UpdateInterval.TotalSeconds, respirator);
 
             if (!_mobState.IsIncapacitated(uid)) // cannot breathe in crit.
             {
@@ -204,7 +204,7 @@ public sealed class RespiratorSystem : EntitySystem
     /// <returns>Returns true only if the air is not toxic, and it wouldn't suffocate.</returns>
     public bool CanMetabolizeInhaledAir(Entity<RespiratorComponent?> ent)
     {
-        if (!Resolve(ent, ref ent.Comp))
+        if (!Resolve(ent, ref ent.Comp, logMissing: false)) // Wayfarer: Add logMissing: false
             return false;
 
         // Get the gas at our location but don't actually remove it from the gas mixture.
@@ -228,7 +228,7 @@ public sealed class RespiratorSystem : EntitySystem
     /// <returns>Returns true only if the gas mixture is not toxic, and it wouldn't suffocate.</returns>
     public bool CanMetabolizeInhaledAir(Entity<RespiratorComponent?> ent, GasMixture gas)
     {
-        if (!Resolve(ent, ref ent.Comp))
+        if (!Resolve(ent, ref ent.Comp, logMissing: false)) // Wayfarer: Add logMissing: false
             return false;
 
         var ev = new CanMetabolizeGasEvent(gas);

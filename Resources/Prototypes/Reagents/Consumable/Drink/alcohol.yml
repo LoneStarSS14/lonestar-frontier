@@ -26,6 +26,15 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.05
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 5
+        refresh: false
       - !type:ModifyStatusEffect
         effectProto: StatusEffectSeeingRainbow
         conditions:
@@ -43,6 +52,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 10
+
 - type: reagent
   id: Ale
   name: reagent-name-ale
@@ -59,6 +69,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   fizziness: 0.6
+
 - type: reagent
   id: Beer
   name: reagent-name-beer
@@ -75,6 +86,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   fizziness: 0.6
+
 - type: reagent
   id: BlueCuracao
   name: reagent-name-blue-curacao
@@ -97,6 +109,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.1
+
 - type: reagent
   id: Cognac
   name: reagent-name-cognac
@@ -120,6 +133,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: DeadRum
   name: reagent-name-dead-rum
@@ -142,6 +156,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Ethanol
   name: reagent-name-ethanol
@@ -227,6 +242,7 @@
           types:
             Radiation: -0.1
       # LoneStar end
+
 - type: reagent
   id: Gin
   name: reagent-name-gin
@@ -250,6 +266,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: CoffeeLiqueur
   name: reagent-name-coffeeliqueur
@@ -264,6 +281,7 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: MelonLiquor
   name: reagent-name-melon-liquor
@@ -278,6 +296,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: NTCahors
   name: reagent-name-n-t-cahors
@@ -292,6 +311,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: PoisonWine
   name: reagent-name-poison-wine
@@ -320,6 +340,7 @@
         damage:
           types:
             Poison: 1
+
 - type: reagent
   id: Rum
   name: reagent-name-rum
@@ -343,6 +364,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Sake
   name: reagent-name-sake
@@ -365,6 +387,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Tequila
   name: reagent-name-tequila
@@ -387,6 +410,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Vermouth
   name: reagent-name-vermouth
@@ -401,6 +425,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Vodka
   name: reagent-name-vodka
@@ -424,6 +449,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Whiskey
   name: reagent-name-whiskey
@@ -447,6 +473,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Wine
   name: reagent-name-wine
@@ -462,6 +489,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: Champagne
   name: reagent-name-champagne
@@ -502,6 +530,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: AlienBrainHemorrhage
   name: reagent-name-alien-brain-hemorrhage
@@ -516,6 +545,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: AlliesCocktail
   name: reagent-name-allies-cocktail
@@ -530,6 +560,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Aloe
   name: reagent-name-aloe
@@ -544,6 +575,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Amasec
   name: reagent-name-amasec
@@ -558,6 +590,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Andalusia
   name: reagent-name-andalusia
@@ -597,6 +630,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: AtomicBomb
   name: reagent-name-atomic-bomb
@@ -622,6 +656,7 @@
       - !type:AdjustReagent
         reagent: Uranium
         amount: 0.05
+
 - type: reagent
   id: B52
   name: reagent-name-b52
@@ -644,6 +679,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: BahamaMama
   name: reagent-name-bahama-mama
@@ -658,6 +694,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: BananaHonk
   name: reagent-name-banana-honk
@@ -672,6 +709,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Barefoot
   name: reagent-name-barefoot
@@ -686,6 +724,7 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: BeepskySmash
   name: reagent-name-beepsky-smash
@@ -709,6 +748,7 @@
         reagent: Ethanol
         amount: 0.15
   fizziness: 0.3
+
 - type: reagent
   id: BlackRussian
   name: reagent-name-black-russian
@@ -731,6 +771,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: BloodyMary
   name: reagent-name-bloody-mary
@@ -745,6 +786,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id:  Booger
   name: reagent-name-booger
@@ -759,6 +801,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: BraveBull
   name: reagent-name-brave-bull
@@ -781,6 +824,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Bronx
   name: reagent-name-bronx
@@ -795,6 +839,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: CoconutRum
   name: reagent-name-coconut-rum
@@ -817,6 +862,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Cosmopolitan
   name: reagent-name-cosmopolitan
@@ -839,6 +885,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: CrushDepth
   name: reagent-name-crush-depth
@@ -853,6 +900,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: CubaLibre
   name: reagent-name-cuba-libre
@@ -876,6 +924,7 @@
         reagent: Ethanol
         amount: 0.07
   fizziness: 0.2
+
 - type: reagent
   id: DarkandStormy
   name: reagent-name-dark-and-stormy
@@ -890,6 +939,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: DemonsBlood
   name: reagent-name-demons-blood
@@ -905,6 +955,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   fizziness: 0.3
+
 - type: reagent
   id: DevilsKiss
   name: reagent-name-devils-kiss
@@ -919,6 +970,7 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: DoctorsDelight
   name: reagent-name-doctors-delight
@@ -950,6 +1002,7 @@
             Brute: -1
             Airloss: -1
             Toxin: -1
+
 - type: reagent
   id: DriestMartini
   name: reagent-name-driest-martini
@@ -1005,6 +1058,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: ErikaSurprise
   name: reagent-name-erika-surprise
@@ -1020,6 +1074,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   fizziness: 0.15
+
 - type: reagent
   id: GargleBlaster
   name: reagent-name-gargle-blaster
@@ -1042,6 +1097,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: GinFizz
   name: reagent-name-gin-fizz
@@ -1065,6 +1121,7 @@
         reagent: Ethanol
         amount: 0.07
   fizziness: 0.4 # A little high, but it has fizz in the name
+
 - type: reagent
   id: GinTonic
   name: reagent-name-gin-tonic
@@ -1088,6 +1145,7 @@
         reagent: Ethanol
         amount: 0.07
   fizziness: 0.4
+
 - type: reagent
   id: Gildlager
   name: reagent-name-gildlager
@@ -1110,6 +1168,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Grog
   name: reagent-name-grog
@@ -1124,6 +1183,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: HippiesDelight
   name: reagent-name-hippies-delight
@@ -1138,6 +1198,7 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Hooch
   name: reagent-name-hooch
@@ -1146,6 +1207,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: hooch
   color: "#664e00"
+
 - type: reagent
   id: IcedBeer
   name: reagent-name-iced-beer
@@ -1161,6 +1223,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   fizziness: 0.6
+
 - type: reagent
   id: IrishSlammer
   name: reagent-name-irish-slammer
@@ -1183,6 +1246,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: IrishCream
   name: reagent-name-irish-cream
@@ -1205,6 +1269,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: IrishCoffee
   name: reagent-name-irish-coffee
@@ -1237,6 +1302,7 @@
           max: 60 # Frontier
         reagent: Caffeine # Frontier
         amount: 1 # Frontier
+
 - type: reagent
   id: JackRose
   name: reagent-name-jack-rose
@@ -1251,6 +1317,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: JungleBird
   name: reagent-name-jungle-bird
@@ -1265,6 +1332,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Kalimotxo
   name: reagent-name-kalimotxo
@@ -1279,6 +1347,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: LongIslandIcedTea
   name: reagent-name-long-island-iced-tea
@@ -1301,6 +1370,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: Manhattan
   name: reagent-name-manhattan
@@ -1315,6 +1385,7 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: ManhattanProject
   name: reagent-name-manhattan-project
@@ -1329,6 +1400,7 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: ManlyDorf
   name: reagent-name-manly-dorf
@@ -1344,6 +1416,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   fizziness: 0.7
+
 - type: reagent
   id: Margarita
   name: reagent-name-margarita
@@ -1358,6 +1431,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: Martini
   name: reagent-name-martini
@@ -1380,6 +1454,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: Mead
   name: reagent-name-mead
@@ -1395,6 +1470,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   fizziness: 0.4
+
 - type: reagent
   id: Mojito
   name: reagent-name-mojito
@@ -1410,6 +1486,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   fizziness: 0.3
+
 - type: reagent
   id: MonkeyBusiness
   name: reagent-name-monkey-business
@@ -1424,6 +1501,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Moonshine
   name: reagent-name-moonshine
@@ -1446,6 +1524,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.25
+
 - type: reagent
   id: Neurotoxin
   name: reagent-name-neurotoxin
@@ -1474,6 +1553,7 @@
         damage:
           types:
             Poison: 1
+
 - type: reagent
   id: Painkiller
   name: reagent-name-painkiller
@@ -1496,6 +1576,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Patron
   name: reagent-name-patron
@@ -1518,6 +1599,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: RedMead
   name: reagent-name-red-mead
@@ -1540,6 +1622,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: PinaColada
   name: reagent-name-pina-colada
@@ -1562,6 +1645,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Radler
   name: reagent-name-radler
@@ -1576,6 +1660,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Sbiten
   name: reagent-name-sbiten
@@ -1590,6 +1675,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
 - type: reagent
   id: ScrewdriverCocktail
   name: reagent-name-screwdriver-cocktail
@@ -1612,6 +1698,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+
 - type: reagent
   id: CogChamp
   name: reagent-name-cogchamp
@@ -1637,6 +1724,7 @@
         - !type:AdjustReagent
           reagent: Ethanol
           amount: 0.15
+
 - type: reagent
   id: Silencer
   name: reagent-name-silencer
@@ -1659,6 +1747,7 @@
         component: Muted
       - !type:SatiateThirst
         factor: 2
+
 - type: reagent
   id: Singulo
   name: reagent-name-singulo
@@ -1673,6 +1762,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: SnowWhite
   name: reagent-name-snow-white
@@ -1688,6 +1778,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   fizziness: 0.3
+
 - type: reagent
   id: SuiDream
   name: reagent-name-sui-dream
@@ -1703,6 +1794,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   fizziness: 0.2
+
 - type: reagent
   id: SyndicateBomb
   name: reagent-name-syndicate-bomb
@@ -1718,6 +1810,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   fizziness: 0.6
+
 - type: reagent
   id: TequilaSunrise
   name: reagent-name-tequila-sunrise
@@ -1740,6 +1833,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: TheMartinez
   name: reagent-name-the-martinez
@@ -1755,6 +1849,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   fizziness: 0.2
+
 - type: reagent
   id: ThreeMileIsland
   name: reagent-name-three-mile-island
@@ -1780,6 +1875,7 @@
       - !type:AdjustReagent
         reagent: Uranium
         amount: 0.05
+
 - type: reagent
   id: ToxinsSpecial
   name: reagent-name-toxins-special
@@ -1794,6 +1890,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: Vampiro
   name: reagent-name-vampiro
@@ -1808,6 +1905,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
 - type: reagent
   id: VodkaMartini
   name: reagent-name-vodka-martini
@@ -1830,6 +1928,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: VodkaTonic
   name: reagent-name-vodka-tonic
@@ -1853,6 +1952,7 @@
         reagent: Ethanol
         amount: 0.07
   fizziness: 0.4
+
 - type: reagent
   id: WhiskeyCola
   name: reagent-name-whiskey-cola
@@ -1876,6 +1976,7 @@
         reagent: Ethanol
         amount: 0.07
   fizziness: 0.3
+
 - type: reagent
   id: WhiskeySoda
   name: reagent-name-whiskey-soda
@@ -1899,6 +2000,7 @@
         reagent: Ethanol
         amount: 0.07
   fizziness: 0.4
+
 - type: reagent
   id: WhiteGilgamesh
   name: reagent-name-white-gilgamesh
@@ -1916,6 +2018,7 @@
           reagent: Ethanol
           amount: 0.15
   fizziness: 0.5
+
 - type: reagent
   id: WhiteRussian
   name: reagent-name-white-russian
@@ -1938,6 +2041,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: VodkaRedBool
   name: reagent-name-vodka-red-bool
@@ -1968,6 +2072,7 @@
           time: 1
           type: Remove
   fizziness: 0.25
+
 - type: reagent
   id: XenoBasher
   name: reagent-name-xeno-basher
@@ -1998,6 +2103,7 @@
           time: 1
           type: Remove
   fizziness: 0.15
+
 - type: reagent
   id: IrishBool
   name: reagent-name-irish-bool
@@ -2028,6 +2134,7 @@
           time: 1
           type: Remove
   fizziness: 0.15
+
 - type: reagent
   id: BudgetInsulsDrink
   name: reagent-name-budget-insuls
@@ -2058,6 +2165,7 @@
           time: 1
           type: Remove
   fizziness: 0.25
+
 - type: reagent
   id: WatermelonWakeup
   name: reagent-name-watermelon-wakeup
@@ -2088,6 +2196,7 @@
           time: 1
           type: Remove
   fizziness: 0.15
+
 - type: reagent
   id: Rubberneck
   name: reagent-name-rubberneck
@@ -2118,6 +2227,7 @@
           time: 1
           type: Remove
   fizziness: 0.25
+
 - type: reagent
   id: BlueHawaiian
   name: reagent-name-blue-hawaiian
@@ -2140,6 +2250,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: Caipirinha
   name: reagent-name-caipirinha
@@ -2162,6 +2273,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.1
+
 - type: reagent
   id: MoscowMule
   name: reagent-name-moscow-mule
@@ -2187,6 +2299,7 @@
       - !type:AdjustReagent
         reagent: Copper
         amount: 0.05
+
 - type: reagent
   id: Mimeosa
   name: reagent-name-mimeosa
@@ -2212,6 +2325,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+
 - type: reagent
   id: Mimosa
   name: reagent-name-mimosa
@@ -2234,6 +2348,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+
 - type: reagent
   id: Mayojito
   name: reagent-name-mayojito
@@ -2265,6 +2380,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+
 - type: reagent
   id: DeathInTheAfternoon
   name: reagent-name-death-in-the-afternoon
@@ -2287,6 +2403,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.3
+
 - type: reagent
   id: Empress75
   name: reagent-name-empress-75
@@ -2309,6 +2426,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.3
+
 - type: reagent
   id: EspressoMartini
   name: reagent-name-espresso-martini
@@ -2341,6 +2459,7 @@
           max: 60 # Frontier
         reagent: Caffeine # Frontier
         amount: 1 # Frontier
+
 - type: reagent
   id: Daiquiri
   name: reagent-name-daiquiri
@@ -2363,6 +2482,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.1
+
 - type: reagent
   id: TheSunAlsoRises
   name: reagent-name-the-sun-also-rises
@@ -2385,6 +2505,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.3
+
 - type: reagent
   id: WhiskeySour
   name: reagent-name-whiskey-sour
@@ -2407,6 +2528,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
+
 - type: reagent
   id: ZombieCocktail
   name: reagent-name-zombiecocktail
@@ -2429,6 +2551,7 @@
         - !type:AdjustReagent
           reagent: Ethanol
           amount: 0.25
+
 - type: reagent
   id: BacchusBlessing
   name: reagent-name-bacchus-blessing

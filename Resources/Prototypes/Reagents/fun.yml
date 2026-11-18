@@ -26,6 +26,7 @@
           min: 1
         reagent: CarpoToxin
         amount: -3
+
 - type: reagent
   id: Fiber
   name: reagent-name-fiber
@@ -41,6 +42,7 @@
         conditions:
         - !type:OrganType
           type: Moth
+
 - type: reagent
   id: BuzzochloricBees
   name: reagent-name-buzzochloric-bees
@@ -134,6 +136,7 @@
         - !type:HasTag
           invert: true
           tag: Bee
+
 - type: reagent
   id: GroundBee
   name: reagent-name-ground-bee
@@ -141,6 +144,7 @@
   physicalDesc: reagent-physical-desc-bee-guts
   flavor: bee
   color: "#86530E"
+
 - type: reagent
   id: Saxoite
   name: reagent-name-saxoite
@@ -148,6 +152,7 @@
   physicalDesc: reagent-physical-desc-ground-brass
   flavor: sax
   color: "#B8A603"
+
 - type: reagent
   id: Licoxide
   name: reagent-name-licoxide
@@ -183,6 +188,7 @@
         - !type:ReagentThreshold
           max: 12
     # LoneStar: end
+
 - type: reagent
   id: Razorium
   name: reagent-name-razorium
@@ -222,6 +228,7 @@
       - !type:Emote
         emote: Scream
         probability: 0.3
+
 - type: reagent
   id: Fresium
   name: reagent-name-fresium
@@ -314,6 +321,7 @@
         visualType: LargeCaution
         messages: [ "fresium-effect-frozen"]
         probability: 0.4
+
 - type: reagent
   id: Laughter
   name: reagent-name-laughter
@@ -336,6 +344,7 @@
         visualType: Large
         messages: [ "laughter-effect-control-laughter" ]
         probability: 0.2
+
 - type: reagent
   id: JuiceThatMakesYouWeh
   name: reagent-name-weh
@@ -354,21 +363,22 @@
         showInGuidebook: true
         force: true
         probability: 0.5
-      - !type:Polymorph
-        prototype: ArtifactLizard # Does the same thing as the original YML I made for this reagent.
-        conditions:
-        # - !type:OrganType # Frontier
-        #   type: Animal # Frontier
-        #   shouldHave: false # Frontier
-        - !type:NFIsHumanoid # Frontier
-        - !type:ReagentThreshold
-          min: 50
-      - !type:AdjustReagent
-        reagent: JuiceThatMakesYouWeh
-        amount: -20
-        conditions:
-        - !type:ReagentThreshold
-          min: 50
+#      - !type:Polymorph  # Coyote edit: no forced TF
+#        prototype: ArtifactLizard # Does the same thing as the original YML I made for this reagent.
+#        conditions:
+#        # - !type:OrganType # Frontier
+#        #   type: Animal # Frontier
+#        #   shouldHave: false # Frontier
+#        - !type:NFIsHumanoid # Frontier
+#        - !type:ReagentThreshold
+#          min: 50
+#      - !type:AdjustReagent
+#        reagent: JuiceThatMakesYouWeh
+#        amount: -20
+#        conditions:
+#        - !type:ReagentThreshold
+#          min: 50
+
 - type: reagent
   id: JuiceThatMakesYouHew
   name: reagent-name-hew
@@ -387,48 +397,18 @@
         showInGuidebook: true
         force: true
         probability: 0.5
-      - !type:Polymorph
-        prototype: ArtifactLizard
-        conditions:
-        # - !type:OrganType # Frontier
-        #   type: Animal # Frontier
-        #   shouldHave: false # Frontier
-        - !type:NFIsHumanoid # Frontier
-        - !type:ReagentThreshold
-          min: 50
-      - !type:AdjustReagent
-        reagent: JuiceThatMakesYouHew
-        amount: -20
-        conditions:
-        - !type:ReagentThreshold
-          min: 50
-- type: reagent
-  id: CorgiJuice
-  name: reagent-name-corgiessence
-  group: Toxins
-  desc: reagent-desc-corgiessence
-  physicalDesc: reagent-physical-desc-fluffy
-  flavor: dogfood
-  color: "#ed9715"
-  metabolisms:
-    Poison:
-      metabolismRate: 0.2
-      effects:
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
-          min: 15
-        damage:
-          types:
-            Cellular: 0.5
-      - !type:Polymorph
-        prototype: SmartCorgiMorph
-        conditions:
-        - !type:ReagentThreshold
-          min: 50
-      - !type:AdjustReagent
-        reagent: CorgiJuice
-        amount: -20
-        conditions:
-        - !type:ReagentThreshold
-          min: 50
+#      - !type:Polymorph  # Coyote edit: no forced TF
+#        prototype: ArtifactLizard
+#        conditions:
+#        # - !type:OrganType # Frontier
+#        #   type: Animal # Frontier
+#        #   shouldHave: false # Frontier
+#        - !type:NFIsHumanoid # Frontier
+#        - !type:ReagentThreshold
+#          min: 50
+#      - !type:AdjustReagent
+#        reagent: JuiceThatMakesYouHew
+#        amount: -20
+#        conditions:
+#        - !type:ReagentThreshold
+#          min: 50

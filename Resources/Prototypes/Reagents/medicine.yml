@@ -15,6 +15,7 @@
       - !type:Drunk
         slurSpeech: false
         boozePower: 20
+
 - type: reagent
   id: Dylovene
   name: reagent-name-dylovene
@@ -63,6 +64,7 @@
     amount: -10
   - !type:PlantAdjustHealth
     amount: 1
+
 - type: reagent
   id: Diphenhydramine
   name: reagent-name-diphenhydramine
@@ -90,6 +92,7 @@
         damage:
           types:
             Poison: -3
+
 - type: reagent
   id: Ethylredoxrazine
   name: reagent-name-ethylredoxrazine
@@ -122,6 +125,7 @@
           reagent: Ethanol # Frontier
           min: 1 # Frontier
         cleanseRate: 3 # Frontier
+
 - type: reagent
   id: Arithrazine
   name: reagent-name-arithrazine
@@ -139,6 +143,7 @@
             Radiation: -3
           groups:
             Brute: 1.5
+
 - type: reagent
   id: Bicaridine
   name: reagent-name-bicaridine
@@ -150,13 +155,14 @@
   metabolisms:
     Medicine:
       effects:
-      - !type:EvenHealthChange
+      - !type:HealthChange
         damage:
-          Brute: -1.5
+          groups:
+            Brute: -3
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
-          min: 15
+          min: 21 # Coyote: Allows for a larger quantity of it to be used before OD, giving it a pretty nice buff overall
         damage:
           types:
             Asphyxiation: 0.5
@@ -169,8 +175,9 @@
       - !type:Jitter
         conditions:
         - !type:ReagentThreshold
-          min: 15
+          min: 21 # Ditto
       - !type:Drunk
+
 - type: reagent
   id: Cryoxadone
   name: reagent-name-cryoxadone
@@ -201,6 +208,7 @@
               # Brute: -4 # Frontier
               # Burn: -6 # Frontier
               # Toxin: -4 # Frontier
+
 - type: reagent
   id: Doxarubixadone
   name: reagent-name-doxarubixadone
@@ -228,6 +236,7 @@
           - !type:Temperature # Frontier
             max: 213.0 # Frontier
           amount: -0.5 # Frontier
+
 - type: reagent
   id: Dermaline
   name: reagent-name-dermaline
@@ -259,6 +268,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 10
+
 - type: reagent
   id: Dexalin
   name: reagent-name-dexalin
@@ -300,6 +310,7 @@
             Asphyxiation: 1
             Bloodloss: 1
       # End Coyote
+
 - type: reagent
   id: DexalinPlus
   name: reagent-name-dexalin-plus
@@ -421,6 +432,7 @@
         key: Adrenaline # Guess what epinephrine is...
         component: IgnoreSlowOnDamage
         time: 5 # lingers less than hivemind reagent to give it a niche
+
 - type: reagent
   id: Hyronalin
   name: reagent-name-hyronalin
@@ -449,6 +461,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 30
+
 - type: reagent
   id: Ipecac
   name: reagent-name-ipecac
@@ -465,6 +478,7 @@
         - !type:ReagentThreshold
           min: 4
         probability: 0.3
+
 - type: reagent
   id: Inaprovaline
   name: reagent-name-inaprovaline
@@ -487,6 +501,7 @@
             Asphyxiation: -2
       - !type:ModifyBleedAmount
         amount: -0.25
+
 - type: reagent
   id: Kelotane
   name: reagent-name-kelotane
@@ -520,6 +535,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 25
+
 - type: reagent
   id: Leporazine
   name: reagent-name-leporazine
@@ -553,6 +569,7 @@
       - !type:AdjustReagent
         reagent: Fresium
         amount: -5
+
 - type: reagent
   id: Barozine
   name: reagent-name-barozine
@@ -596,6 +613,7 @@
         visualType: Large
         messages: [ "barozine-effect-skin-burning", "barozine-effect-muscle-contract" ]
         probability: 0.1
+
 - type: reagent
   id: Phalanximine
   name: reagent-name-phalanximine
@@ -636,6 +654,7 @@
         damage:
           types:
             Caustic: 0.3
+
 - type: reagent
   id: PolypyryliumOligomers
   name: reagent-name-polypyrylium-oligomers
@@ -662,6 +681,7 @@
             Asphyxiation: 3.5
       - !type:ModifyBleedAmount
         amount: -0.25
+
 - type: reagent
   id: Ambuzol
   name: reagent-name-ambuzol
@@ -677,6 +697,7 @@
           conditions:
             - !type:ReagentThreshold
               min: 10
+
 - type: reagent
   id: AmbuzolPlus
   name: reagent-name-ambuzol-plus
@@ -693,6 +714,7 @@
           conditions:
             - !type:ReagentThreshold
               min: 5
+
 - type: reagent
   id: PulpedBananaPeel
   name: reagent-name-pulped-banana-peel
@@ -706,6 +728,7 @@
       effects:
       - !type:ModifyBleedAmount
         amount: -0.5
+
 - type: reagent
   id: Saline
   name: reagent-name-saline
@@ -746,6 +769,7 @@
               Caustic: 2 # 30 damage per unit was ridiculous, but I'm leaving some damage to punish mistakes without risking round removal. Adding salt to water shouldn't suddenly make it the strongest toxin in the game by far.
               Heat: 2
         # End Coyote
+
 - type: reagent
   id: Siderlac
   name: reagent-name-siderlac
@@ -761,6 +785,7 @@
         damage:
           types:
             Caustic: -5
+
 - type: reagent
   id: Stellibinin
   name: reagent-name-stellibinin
@@ -783,6 +808,7 @@
           min: 1
         reagent: Amatoxin
         amount: -3
+
 - type: reagent
   id: Synaptizine
   name: reagent-name-synaptizine
@@ -810,6 +836,7 @@
         effectProto: StatusEffectSeeingRainbow
         time: 15.0
         type: Remove
+
 - type: reagent
   id: TranexamicAcid
   name: reagent-name-tranexamic-acid
@@ -832,6 +859,7 @@
         damage:
           types:
             Bloodloss: 3
+
 - type: reagent
   id: Tricordrazine
   name: reagent-name-tricordrazine
@@ -864,6 +892,7 @@
           types:
             Radiation: -0.1
       # LoneStar end
+
 - type: reagent
   id: Lipozine
   name: reagent-name-lipozine
@@ -890,13 +919,26 @@
   color: "#fcf7f9"
   metabolisms:
     Medicine:
+      metabolismRate : 0.1 # Coyote: Slower
       effects:
       - !type:EvenHealthChange
+        damage: # Coyote: Same amount overall, just slower.
+          Burn: -0.4
+          Toxin: -0.4
+          Airloss: -0.4
+          Brute: -0.4
+      - !type:HealthChange # Coyote: OD.
+        conditions:
+        - !type:ReagentThreshold
+          min: 40
         damage:
-          Burn: -2
-          Toxin: -2
-          Airloss: -2
-          Brute: -2
+          groups:
+            Burn: 0.8
+            Airloss: 0.8
+            Brute: 0.8
+          types:
+            Poison: 0.8
+
 - type: reagent
   id: Ultravasculine
   name: reagent-name-ultravasculine
@@ -940,6 +982,7 @@
           min: 1
         reagent: Ultravasculine
         amount: 0.5
+
 - type: reagent
   id: Oculine
   name: reagent-name-oculine
@@ -955,6 +998,7 @@
     Sheleg: # Frontier
       effects: # Frontier
       - !type:ChemHealEyeDamage # Frontier
+
 - type: reagent
   id: Cognizine
   name: reagent-name-cognizine
@@ -970,6 +1014,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 5
+
 - type: reagent
   id: Ethyloxyephedrine
   name: reagent-name-ethyloxyephedrine
@@ -998,6 +1043,7 @@
         messages: ["ethyloxyephedrine-effect-feeling-awake", "ethyloxyephedrine-effect-clear-mind"]
         type: Local
         probability: 0.1
+
 - type: reagent
   id: Diphenylmethylamine
   name: reagent-name-diphenylmethylamine
@@ -1008,6 +1054,7 @@
   color: "#b0abaa"
   metabolisms:
     Medicine:
+      metabolismRate: 0.01 # Coyote add: narcoleptics only need a 15u injection every 25 minutes to maintain the effect, but they do block a reagent channel to treat their disability this way.
       effects:
       - !type:ModifyStatusEffect
         effectProto: StatusEffectDrowsiness
@@ -1017,11 +1064,16 @@
         conditions:
         - !type:ReagentThreshold
           min: 5
-      - !type:PopupMessage
-        visualType: Medium
-        messages: ["ethyloxyephedrine-effect-feeling-awake", "ethyloxyephedrine-effect-clear-mind"]
+      - !type:PopupMessage # Coyote change start: tell people when the reagent is leaving their body instead of spamming their screen while it's in effect
         type: Local
-        probability: 0.1
+        visualType: Small
+        probability: 1
+        messages:
+          - "ethyloxyephedrine-reagent-fade"
+        conditions:
+          - !type:ReagentThreshold
+            max: 0.01 # Coyote change end
+
 - type: reagent
   id: Sigynate
   name: reagent-name-sigynate
@@ -1077,6 +1129,7 @@
         visualType: Medium
         messages: [ "generic-reagent-effect-nauseous" ]
         probability: 0.2
+
 - type: reagent
   id: Lacerinol
   name: reagent-name-lacerinol
@@ -1100,6 +1153,7 @@
         damage:
           types:
             Cold: 1.5 #15 per u
+
 - type: reagent
   id: Puncturase
   name: reagent-name-puncturase
@@ -1124,6 +1178,7 @@
         damage:
           types:
             Blunt: 1 # 10 per u plus base effect
+
 - type: reagent
   id: Bruizine
   name: reagent-name-bruizine
@@ -1147,6 +1202,7 @@
         damage:
           types:
             Poison: 1.5 # 15 per u
+
 - type: reagent
   id: Holywater
   name: reagent-name-holywater
@@ -1156,6 +1212,7 @@
   physicalDesc: reagent-physical-desc-holy
   flavor: holy
   color: "#91C3F7"
+  absorbent: true # LoneStar
   metabolisms:
     Drink:
       effects:
@@ -1207,6 +1264,7 @@
     amount: 1
   tileReactions:
   - !type:ExtinguishTileReaction { }
+
 - type: reagent
   id: Pyrazine
   name: reagent-name-pyrazine
@@ -1243,6 +1301,7 @@
           min: 20
         emote: Scream
         probability: 0.2
+
 - type: reagent
   id: Insuzine
   name: reagent-name-insuzine
@@ -1286,6 +1345,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 12
+
 - type: reagent
   id: Opporozidone #Name based of an altered version of the startreck chem "Opporozine"
   name: reagent-name-opporozidone
@@ -1306,6 +1366,7 @@
             max: 150.0
           - !type:MobStateCondition
             mobstate: Dead
+
 - type: reagent
   id: Necrosol
   name: reagent-name-necrosol
@@ -1375,6 +1436,7 @@
         visualType: Medium
         messages: [ "mannitol-effect-enlightened" ]
         probability: 0.2
+
 - type: reagent
   id: Psicodine
   name: reagent-name-psicodine
@@ -1420,6 +1482,7 @@
         - "psicodine-effect-nf-no-stress" # Frontier
         - "psicodine-effect-nf-everything-is-fine" # Frontier
         probability: 0.1 # Frontier: 0.2<0.1
+
 - type: reagent
   id: PotassiumIodide
   name: reagent-name-potassium-iodide
@@ -1444,6 +1507,7 @@
         damage:
           types:
             Poison: 1
+
 - type: reagent
   id: Haloperidol
   name: reagent-name-haloperidol

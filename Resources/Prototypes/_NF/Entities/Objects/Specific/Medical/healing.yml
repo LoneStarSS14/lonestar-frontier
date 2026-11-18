@@ -1,21 +1,4 @@
-- type: entity
-  id: Suture10Lingering
-  parent: MedicatedSuture
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
-
-- type: entity
-  id: Mesh10Lingering
-  parent: RegenerativeMesh
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
-
+# region pills
 - type: entity
   parent: PillCanister
   id: NFPillCanisterMannitol
@@ -69,10 +52,10 @@
         reagents:
         - ReagentId: Cryoxadone
           Quantity: 3
-        - ReagentId: Stellibinin
+        - ReagentId: Stelloxadone
           Quantity: 2
         - ReagentId: Traumoxadone
-          Quantity: 1
+          Quantity: 3
         - ReagentId: Aloxadone
           Quantity: 1
 
@@ -143,8 +126,18 @@
   - type: Pill
     random: true
 
-# region Normal Vial Fills
+- type: entity
+  parent: PillCanister
+  id: NFPillPartyCanister
+  suffix: Party pills, Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFPillParty
+      maxAmount: 10
+      orGroup: RandomPill
 
+# region Normal Vial Fills
 - type: entity
   parent: BaseChemistryEmptyVial
   suffix: Bruizine 30u
@@ -584,14 +577,3 @@
           reagents:
             - ReagentId: Stimulants
               Quantity: 300
-
-- type: entity
-  parent: PillCanister
-  id: NFPillPartyCanister
-  suffix: Party pills, Filled
-  components:
-  - type: StorageFill
-    contents:
-    - id: NFPillParty
-      maxAmount: 10
-      orGroup: RandomPill

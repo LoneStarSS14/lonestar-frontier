@@ -54,6 +54,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 20
+
 - type: reagent
   id: Ephedrine
   name: reagent-name-ephedrine
@@ -106,6 +107,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 30
+
 - type: reagent
   id: Stimulants
   name: reagent-name-stimulants
@@ -178,6 +180,7 @@
             groups:
               Burn: -1
               Brute: -1
+
 - type: reagent
   id: THC
   name: reagent-name-thc
@@ -200,6 +203,7 @@
         time: 16
         type: Add
         refresh: false
+
 - type: reagent
   id: Nicotine
   name: reagent-name-nicotine
@@ -252,6 +256,7 @@
         probability: 0.05
       - !type:Drunk # Headaches and slurring are major symptoms of brain damage, this is close enough
         boozePower: 5
+
 - type: reagent
   id: SpaceDrugs
   name: reagent-name-space-drugs
@@ -268,6 +273,7 @@
         type: Add
         time: 5
         refresh: false
+
 - type: reagent
   id: Bananadine
   name: reagent-name-bananadine
@@ -285,7 +291,6 @@
         time: 5
         refresh: false
 
-# Probably replace this one with sleeping chem when putting someone in a comatose state is easier
 - type: reagent
   id: Nocturine
   name: reagent-name-nocturine
@@ -298,6 +303,13 @@
   metabolisms:
     Narcotic:
       effects:
+      - !type:Emote
+        emote: Yawn
+        showInChat: true
+        probability: 0.1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.65
       - !type:ModifyStatusEffect
         conditions:
         - !type:ReagentThreshold
@@ -306,6 +318,7 @@
         effectProto: StatusEffectForcedSleeping
         time: 3
         type: Add
+
 - type: reagent
   id: MuteToxin
   name: reagent-name-mute-toxin
@@ -324,6 +337,7 @@
         type: Add
         time: 10
         refresh: false
+
 - type: reagent
   id: NorepinephricAcid
   name: reagent-name-norepinephric-acid
@@ -367,6 +381,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 20
+
 - type: reagent
   id: TearGas
   name: reagent-name-tear-gas
@@ -422,6 +437,7 @@
         conditions: # because of the remainding after effect, threshold is given so the effects ends simultaniously
         - !type:ReagentThreshold
           min: 4
+
 - type: reagent
   id: Happiness
   name: reagent-name-happiness

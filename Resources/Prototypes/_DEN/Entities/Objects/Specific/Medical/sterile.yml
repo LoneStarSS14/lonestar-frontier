@@ -32,10 +32,9 @@
     solution: hypospray
   - type: Hypospray
     onlyAffectsMobs: false
-    injectTime: 2.5
     injectMaxCapacity: true
     bypassBlockInjection: false
   - type: UseDelay
-    delay: 0.5
+    delay: 2.5
   - type: StaticPrice
     price: 750

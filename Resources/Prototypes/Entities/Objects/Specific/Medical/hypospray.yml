@@ -163,7 +163,7 @@
     onlyAffectsMobs: false
     injectOnly: true
     preventCombatInjection: true # Frontier
-    doAfterTime: 2 # Coyote
+    injectTime: 2 # Coyote
     instantSelfInject: true # Coyote
   - type: Appearance
   - type: SolutionContainerVisuals

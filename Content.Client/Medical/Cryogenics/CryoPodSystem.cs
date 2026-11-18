@@ -20,10 +20,6 @@ public sealed class CryoPodSystem : SharedCryoPodSystem
         SubscribeLocalEvent<InsideCryoPodComponent, ComponentRemove>(OnCryoPodRemoval);
     }
 
-    protected override void UpdateUi(Entity<CryoPodComponent> cryoPod)
-    {
-    }
-
     private void OnCryoPodInsertion(EntityUid uid, InsideCryoPodComponent component, ComponentStartup args)
     {
         if (!TryComp<SpriteComponent>(uid, out var spriteComponent))
@@ -69,6 +65,11 @@ public sealed class CryoPodSystem : SharedCryoPodSystem
             _sprite.LayerSetRsiState((uid, args.Sprite), CryoPodVisualLayers.Cover, isOn ? "cover-on" : "cover-off");
             _sprite.LayerSetVisible((uid, args.Sprite), CryoPodVisualLayers.Cover, true);
         }
+    }
+
+    protected override void UpdateUi(Entity<CryoPodComponent> cryoPod)
+    {
+        // Atmos and health scanner aren't predicted currently...
     }
 }
 

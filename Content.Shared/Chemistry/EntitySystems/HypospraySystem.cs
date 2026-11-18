@@ -95,7 +95,8 @@ public sealed class HypospraySystem : EntitySystem
 
 
         // Frontier - Upstream: #30704 - MIT
-        if (entity.Comp.DoAfterTime > 0 && target != user)
+        // Coyote: Preserve half-duration self-injections across the DoAfterTime refactor.
+        if (entity.Comp.DoAfterTime > 0 && (target != user || !entity.Comp.InstantSelfInject))
         {
             // Is the target a mob? If yes, use a do-after to give them time to respond.
             if (HasComp<MobStateComponent>(target) || HasComp<BloodstreamComponent>(target))
@@ -103,7 +104,11 @@ public sealed class HypospraySystem : EntitySystem
                 //If the injection would fail the doAfter can be skipped at this step
                 if (InjectionFailureCheck(entity, target, user, out _, out _, out _, out _))
                 {
-                    _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, entity.Comp.DoAfterTime, new HyposprayDoAfterEvent(), entity.Owner, target: target, used: entity.Owner)
+                    var doAfterTime = entity.Comp.DoAfterTime;
+                    if (target == user)
+                        doAfterTime /= 2f;
+
+                    _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, doAfterTime, new HyposprayDoAfterEvent(), entity.Owner, target: target, used: entity.Owner)
                     {
                         BreakOnMove = true,
                         BreakOnWeightlessMove = false,
@@ -125,6 +130,9 @@ public sealed class HypospraySystem : EntitySystem
     {
         var (uid, component) = entity;
 
+        if (IsInjectionBlocked(entity, target, user))
+            return false;
+
         if (!EligibleEntity(target, component))
             return false;
 
@@ -133,14 +141,6 @@ public sealed class HypospraySystem : EntitySystem
             if (_useDelay.IsDelayed((uid, delayComp)))
                 return false;
         }
-
-        // Frontier: Block hypospray injections
-        if (TryComp<BlockInjectionComponent>(target, out var blockInjection) && blockInjection.BlockHypospray)
-        {
-            _popup.PopupEntity(Loc.GetString("injector-component-deny-user"), target, user);
-            return false;
-        }
-        // End Frontier
 
         string? msgFormat = null;
 
@@ -297,6 +297,9 @@ public sealed class HypospraySystem : EntitySystem
         targetSolution = null;
         returnValue = false;
 
+        if (IsInjectionBlocked(entity, target, user))
+            return false;
+
         if (!_solutionContainers.TryGetSolution(entity.Owner, entity.Comp.SolutionName, out hypoSpraySoln, out var hypoSpraySolution) || hypoSpraySolution.Volume == 0)
         {
             _popup.PopupEntity(Loc.GetString("hypospray-component-empty-message"), target, user);
@@ -311,6 +314,18 @@ public sealed class HypospraySystem : EntitySystem
             return false;
         }
 
+        return true;
+    }
+
+    private bool IsInjectionBlocked(Entity<HyposprayComponent> entity, EntityUid target, EntityUid user)
+    {
+        if (entity.Comp.BypassBlockInjection
+            || !TryComp<BlockInjectionComponent>(target, out var blockInjection)
+            || !blockInjection.BlockHypospray)
+            return false;
+
+        _popup.PopupEntity(Loc.GetString("injector-component-deny-user",
+            ("target", Identity.Entity(target, EntityManager))), target, user);
         return true;
     }
     // End Frontier

@@ -1,25 +1,14 @@
-using Content.Server.Administration.Logs;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Atmos.Piping.Components;
 using Content.Server.Atmos.Piping.Unary.EntitySystems;
-using Content.Server.Body.Systems;
 using Content.Server.Medical.Components;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NodeContainer.NodeGroups;
 using Content.Server.NodeContainer.Nodes;
-using Content.Server.Temperature.Components;
 using Content.Shared.Atmos;
-using Content.Shared.Body.Components;
 using Content.Shared.Chemistry;
-using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
-using Content.Shared.Climbing.Systems;
 using Content.Shared.Containers.ItemSlots;
-using Content.Shared.Database;
-using Content.Shared.DoAfter;
-using Content.Shared.DragDrop;
-using Content.Shared.Emag.Systems;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Medical.Cryogenics;
@@ -28,7 +17,6 @@ using Content.Shared.Power;
 using Content.Shared.Tools;
 using Content.Shared.Tools.Systems;
 using Content.Shared.UserInterface;
-using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
@@ -39,20 +27,20 @@ namespace Content.Server.Medical;
 public sealed partial class CryoPodSystem : SharedCryoPodSystem
 {
     [Dependency] private readonly AtmosphereSystem _atmosphereSystem = default!;
-    [Dependency] private readonly GasAnalyzerSystem _gasAnalyzerSystem = default!;
     [Dependency] private readonly GasCanisterSystem _gasCanisterSystem = default!;
     [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly SharedToolSystem _toolSystem = default!;
     [Dependency] private readonly NodeContainerSystem _nodeContainer = default!;
+    [Dependency] private readonly GasAnalyzerSystem _gasAnalyzerSystem = default!;
+    [Dependency] private readonly HealthAnalyzerSystem _healthAnalyzerSystem = default!;
 
     private static readonly ProtoId<ToolQualityPrototype> PryingQuality = "Prying";
 
     public override void Initialize()
     {
         base.Initialize();
-
         SubscribeLocalEvent<CryoPodComponent, AtmosDeviceUpdateEvent>(OnCryoPodUpdateAtmosphere);
         SubscribeLocalEvent<CryoPodComponent, GasAnalyzerScanEvent>(OnGasAnalyzed);
     }
@@ -74,11 +62,9 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
         }
     }
 
-    #region Interaction
-
     protected override void UpdateUi(Entity<CryoPodComponent> entity)
     {
-        if (!_uiSystem.IsUiOpen(entity.Owner, CryoPodUiKey.Key)
+        if (!UI.IsUiOpen(entity.Owner, CryoPodUiKey.Key)
             || !TryComp(entity, out CryoPodAirComponent? air))
             return;
 
@@ -86,28 +72,14 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
         var gasMix = _gasAnalyzerSystem.GenerateGasMixEntry("Cryo pod", air.Air);
         var (beakerCapacity, beaker) = GetBeakerInfo(entity);
         var injecting = GetInjectingReagents(entity);
+        var health = _healthAnalyzerSystem.GetHealthAnalyzerUiState(entity.Owner, patient);
+        health.ScanMode = true;
 
-        TryComp<TemperatureComponent>(patient, out var temperature);
-        TryComp<BloodstreamComponent>(patient, out var bloodstream);
-        var bloodLevel = patient is { } patientUid
-                         && bloodstream != null
-                         && _solutionContainerSystem.ResolveSolution(patientUid,
-                             bloodstream.BloodSolutionName, ref bloodstream.BloodSolution, out var bloodSolution)
-            ? bloodSolution.FillFraction
-            : 0;
-        var health = new HealthAnalyzerScannedUserMessage(
-            GetNetEntity(patient),
-            temperature?.CurrentTemperature ?? 0,
-            bloodLevel,
-            true,
-            null,
-            null,
-            null);
-
-        _uiSystem.ServerSendUiMessage(
+        UI.ServerSendUiMessage(
             entity.Owner,
             CryoPodUiKey.Key,
-            new CryoPodUserMessage(gasMix, health, beakerCapacity, beaker, injecting));
+            new CryoPodUserMessage(gasMix, health, beakerCapacity, beaker, injecting)
+        );
     }
 
     private void OnInteractUsing(Entity<CryoPodComponent> entity, ref InteractUsingEvent args)
@@ -154,10 +126,6 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
         UpdateAppearance(entity.Owner, entity.Comp);
     }
 
-    #endregion
-
-    #region Atmos handler
-
     private void OnCryoPodUpdateAtmosphere(Entity<CryoPodComponent> entity, ref AtmosDeviceUpdateEvent args)
     {
         if (!_nodeContainer.TryGetNode(entity.Owner, entity.Comp.PortName, out PortablePipeNode? portNode))
@@ -191,6 +159,4 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
             args.GasMixtures.Add((entity.Comp.PortName, portAirLocal));
         }
     }
-
-    #endregion
 }

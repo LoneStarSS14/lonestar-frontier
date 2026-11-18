@@ -27,6 +27,7 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Events;
 using Content.Shared.PDA;
 using Content.Shared.Popups;
+using Content.Shared.SSDIndicator;
 using Content.Shared.Storage;
 using Content.Shared.Store.Components;
 using Content.Shared.Verbs;
@@ -78,6 +79,7 @@ public sealed partial class CryoSleepSystem : EntitySystem
         SubscribeLocalEvent<CryoSleepComponent, DestructionEventArgs>((e, c, _) => EjectBody(e, c));
         SubscribeLocalEvent<CryoSleepComponent, CryoStoreDoAfterEvent>(OnAutoCryoSleep);
         SubscribeLocalEvent<CryoSleepComponent, DragDropTargetEvent>(OnEntityDragDropped);
+        SubscribeLocalEvent<CryoSleepComponent, ForceCryoSleepEvent>(ForceCryoSleep);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
 
         InitReturning();
@@ -215,6 +217,12 @@ public sealed partial class CryoSleepSystem : EntitySystem
     {
         args.Handled |= InsertBody(args.Dragged, ent, false);
     }
+
+    private void ForceCryoSleep(Entity<CryoSleepComponent> cryoComp, ref ForceCryoSleepEvent args)
+    {
+        args.Handled |= InsertBody(args.User, cryoComp, true);
+    }
+
 
     public bool InsertBody(EntityUid? toInsert, Entity<CryoSleepComponent> cryopod, bool force)
     {
@@ -414,18 +422,18 @@ public sealed partial class CryoSleepSystem : EntitySystem
         if (_mind.TryGetMind(bodyId, out var mindEntity, out var mind) && mind.CurrentEntity is { Valid: true } body)
         {
             var argMind = mind;
-            var ev = new CryosleepBeforeMindRemovedEvent(cryopod, argMind?.UserId);
-            RaiseLocalEvent(bodyId, ev, true);
-            deleteEntity = ev.DeleteEntity;
+            // var ev = new CryosleepBeforeMindRemovedEvent(cryopod, argMind?.UserId);
+            // RaiseLocalEvent(bodyId, ev, true);
+            // deleteEntity = ev.DeleteEntity;
 
             // Note: must update stored bodies before ghosting to ensure cryo state is accurate.
             id = mind.UserId;
             if (id != null)
             {
-                if (deleteEntity)
-                    _storedBodies.Remove(id.Value);
-                else
-                    _storedBodies[id.Value] = new StoredBody() { Body = body, Cryopod = cryopod };
+                // if (deleteEntity)
+                //     _storedBodies.Remove(id.Value);
+                // else
+                _storedBodies[id.Value] = new StoredBody() { Body = body, Cryopod = cryopod };
             }
 
             _ghost.OnGhostAttempt(mindEntity, false, true, mind: mind);
@@ -442,9 +450,30 @@ public sealed partial class CryoSleepSystem : EntitySystem
         if (cryo.CryosleepDoAfter != null && _doAfter.GetStatus(cryo.CryosleepDoAfter) == DoAfterStatus.Running)
             _doAfter.Cancel(cryo.CryosleepDoAfter);
 
-        // Coyote: Cryosleeped bodies do not expire.
+        // set the mindcontainer's isInCryosleep to true
+        if (TryComp<MindContainerComponent>(bodyId, out var mindContainer))
+        {
+            mindContainer.IsInCryosleep = true;
+            Dirty(bodyId, mindContainer);
+        }
+
         if (deleteEntity)
+        {
             QueueDel(bodyId);
+        }
+        // Coyote: Disabled cryo expiration for now.
+        // else
+        // {
+        //     // Start a timer. When it ends, the body needs to be deleted.
+        //     Timer.Spawn(TimeSpan.FromSeconds(_configurationManager.GetCVar(NFCCVars.CryoExpirationTime)), () =>
+        //     {
+        //         if (id != null)
+        //             ResetCryosleepState(id.Value);
+        //
+        //         if (!Deleted(bodyId) && Transform(bodyId).ParentUid == _storageMap)
+        //             QueueDel(bodyId);
+        //     });
+        // }
     }
 
     /// <param name="body">If not null, will not eject if the stored body is different from that parameter.</param>
@@ -464,6 +493,13 @@ public sealed partial class CryoSleepSystem : EntitySystem
 
         if (component.CryosleepDoAfter != null && _doAfter.GetStatus(component.CryosleepDoAfter) == DoAfterStatus.Running)
             _doAfter.Cancel(component.CryosleepDoAfter);
+
+        // set the mindcontainer's isInCryosleep to false
+        if (TryComp<MindContainerComponent>(toEject.Value, out var mindContainer))
+        {
+            mindContainer.IsInCryosleep = false;
+            Dirty(toEject.Value, mindContainer);
+        }
 
         return true;
     }
