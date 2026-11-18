@@ -25,11 +25,11 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
         SubscribeLocalEvent<SurveillanceCameraMicrophoneComponent, ListenAttemptEvent>(CanListen);
         SubscribeLocalEvent<ExpandICChatRecipientsEvent>(OnExpandRecipients);
         SubscribeLocalEvent<SurveillanceCameraEmoteMessageEvent>(OnEmoteMessage);
-        SubscribeLocalEvent<InstrumentSystem.InstrumentMidiPlayedEvent>(OnInstrumentMidiPlayed);
-        SubscribeLocalEvent<InstrumentSystem.InstrumentChannelFilterChangedEvent>(OnInstrumentChannelFilterChanged);
+        SubscribeLocalEvent<InstrumentMidiPlayedEvent>(OnInstrumentMidiPlayed);
+        SubscribeLocalEvent<InstrumentChannelFilterChangedEvent>(OnInstrumentChannelFilterChanged);
     }
 
-    private void OnInstrumentChannelFilterChanged(InstrumentSystem.InstrumentChannelFilterChangedEvent args)
+    private void OnInstrumentChannelFilterChanged(InstrumentChannelFilterChangedEvent args)
     {
         if (args.Channel < 0 || args.Channel >= RobustMidiEvent.MaxChannels)
             return;
@@ -65,7 +65,7 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
         }
     }
 
-    private void OnInstrumentMidiPlayed(InstrumentSystem.InstrumentMidiPlayedEvent args)
+    private void OnInstrumentMidiPlayed(InstrumentMidiPlayedEvent args)
     {
         if (args.MidiEvents.Length == 0)
             return;
