@@ -338,8 +338,9 @@ namespace Content.Server.Database
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
+                hiddenEmoteCategories,
                 loadouts
-            ).WithHiddenEmoteCategories(hiddenEmoteCategories);
+            );
         }
 
         private static Profile ConvertProfiles(HumanoidCharacterProfile humanoid, int slot, Profile? profile = null)
