@@ -1,4 +1,3 @@
-# METATAGS: UpdateMarkingPoints, UpdateSpeciesBaseSprites
 - type: species
   id: Sheleg
   name: species-name-sheleg
@@ -16,10 +15,6 @@
   youngAge: 80
   oldAge: 400
   maxAge: 800
-  kind:
-  - BasicHumanlike
-  - BasicFurry
-
 - type: speciesBaseSprites
   id: MobShelegSprites
   sprites:
@@ -52,7 +47,6 @@
     TailOversuit: MobHumanoidAnyMarking
     UndershirtUnderclothes: MobHumanoidAnyMarking
     UndershirtOverclothes: MobHumanoidAnyMarking
-
 - type: markingPoints
   id: MobShelegMarkingLimits
   points:
@@ -156,29 +150,24 @@
 #- type: humanoidBaseSprite
 #  id: MobShelegMarkingMatchSkin
 #  markingsMatchSkin: true
-
 - type: humanoidBaseSprite
   id: MobShelegHair
   forcedColoring: true
-
 - type: humanoidBaseSprite
   id: MobShelegHead
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
     state: head_m
-
 - type: humanoidBaseSprite
   id: MobShelegHeadMale
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
     state: head_m
-
 - type: humanoidBaseSprite
   id: MobShelegHeadFemale
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
     state: head_f
-
 - type: humanoidBaseSprite
   id: MobShelegTorso
   baseSprite:
@@ -186,7 +175,6 @@
     state: torso_m
   altSprites:
     Digitigrade: DigilegHumanTorsoMale
-
 - type: humanoidBaseSprite
   id: MobShelegTorsoMale
   baseSprite:
@@ -194,7 +182,6 @@
     state: torso_m
   altSprites:
     Digitigrade: DigilegHumanTorsoMale
-
 - type: humanoidBaseSprite
   id: MobShelegTorsoFemale
   baseSprite:
@@ -202,7 +189,6 @@
     state: torso_f
   altSprites:
     Digitigrade: DigilegHumanTorsoFemale
-
 - type: humanoidBaseSprite
   id: MobShelegLLeg
   baseSprite:
@@ -210,7 +196,16 @@
     state: l_leg
   altSprites:
     Digitigrade: DigilegPawLegLeft
-
+- type: humanoidBaseSprite
+  id: MobShelegLArm
+  baseSprite:
+    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
+    state: l_arm
+- type: humanoidBaseSprite
+  id: MobShelegLHand
+  baseSprite:
+    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
+    state: l_hand
 - type: humanoidBaseSprite
   id: MobShelegLFoot
   baseSprite:
@@ -218,7 +213,6 @@
     state: l_foot
   altSprites:
     Digitigrade: DigilegPawFootLeft
-
 - type: humanoidBaseSprite
   id: MobShelegRLeg
   baseSprite:
@@ -226,7 +220,16 @@
     state: r_leg
   altSprites:
     Digitigrade: DigilegPawLegRight
-
+- type: humanoidBaseSprite
+  id: MobShelegRArm
+  baseSprite:
+    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
+    state: r_arm
+- type: humanoidBaseSprite
+  id: MobShelegRHand
+  baseSprite:
+    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
+    state: r_hand
 - type: humanoidBaseSprite
   id: MobShelegRFoot
   baseSprite:
@@ -234,27 +237,3 @@
     state: r_foot
   altSprites:
     Digitigrade: DigilegPawFootRight
-
-- type: humanoidBaseSprite
-  id: MobShelegLArm
-  baseSprite:
-    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobShelegLHand
-  baseSprite:
-    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobShelegRArm
-  baseSprite:
-    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobShelegRHand
-  baseSprite:
-    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
-    state: r_hand

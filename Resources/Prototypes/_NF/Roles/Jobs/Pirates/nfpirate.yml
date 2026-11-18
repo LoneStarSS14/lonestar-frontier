@@ -3,12 +3,16 @@
   name: job-name-nf-pirate
   description: job-description-nf-pirate
   playTimeTracker: JobPirate
-  whitelisted: true
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 86400 # 24 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10800 # 3 hrs
   startingGear: NFPirateGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
   canBeAntag: true
-  consoleAdjustable: false
   icon: "JobIconNFPirate"
   supervisors: job-supervisors-nf-pirate
   weight: 20
@@ -17,26 +21,20 @@
   newPlayerMessage: false
   access:
   - Pirate
-  - BlackMarket
   accessGroups:
   - GeneralAccess
   special:
   - !type:AddComponentSpecial
     components:
-#    - type: AutoPirate
+    - type: AutoPirate
     - type: SpecialSectorStationRecord # must be given on spawn
       recordGeneration: FalseRecord
     - type: DisableSuitSensors
-    - type: IsPirate
-  - !type:AddRpiJobModifierSpecial
-    modifiersToAdd:
-    - rpiJobModifierPirate
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
-
 - type: startingGear
   id: NFPirateGear
   equipment:
@@ -45,7 +43,6 @@
     back:
     - ContrabandAppraisalToolPirate
     - ComputerIFFFlatpack
-
 - type: chameleonOutfit
   id: NFPirateChameleonOutfit
   job: NFPirate

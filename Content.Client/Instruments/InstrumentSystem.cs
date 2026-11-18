@@ -294,6 +294,7 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
         SetMaster(uid, null);
         TrySetChannels(uid, data);
 
+        instrument.MidiEventBuffer.Clear();
         instrument.Renderer.OnMidiEvent += instrument.MidiEventBuffer.Add;
         return true;
     }
@@ -364,34 +365,18 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
             return;
         }
 
-        // _CS Start: Stabilize relay tick anchoring to prevent MIDI schedule drift/backlog spikes.
-        var minTick = midiEv.MidiEvent.Min(x => x.Tick);
-
-        var sqrtLag = MathF.Sqrt((_netManager.ServerChannel?.Ping ?? 0) / 1000f);
-        var networkDelay = (uint) (renderer.SequencerTimeScale * (.2 + sqrtLag));
-        var targetLocalTick = renderer.SequencerTick + networkDelay;
-
-        if (instrument.SequenceStartTick == 0)
+        if (instrument.SequenceStartTick <= 0)
         {
-            // Source tick anchor for this stream.
-            instrument.SequenceStartTick = minTick;
-            // Local sequencer tick that maps to SequenceStartTick.
-            instrument.SequenceDelay = targetLocalTick;
+            instrument.SequenceStartTick = midiEv.MidiEvent.Min(x => x.Tick) - 1;
         }
-        else
-        {
-            // If we're behind, slide the local anchor forward so new batches can catch up.
-            var relativeMin = (long) minTick - instrument.SequenceStartTick;
-            var predicted = (long) instrument.SequenceDelay + relativeMin;
 
-            if (predicted < targetLocalTick)
-            {
-                instrument.SequenceDelay = (uint) (instrument.SequenceDelay + (targetLocalTick - predicted));
-            }
-        }
+        var sqrtLag = MathF.Sqrt((_netManager.ServerChannel?.Ping ?? 0)/ 1000f);
+        var delay = (uint) (renderer.SequencerTimeScale * (.2 + sqrtLag));
+        var delta = delay - instrument.SequenceStartTick;
+
+        instrument.SequenceDelay = Math.Max(instrument.SequenceDelay, delta);
 
         SendMidiEvents(midiEv.MidiEvent, instrument);
-        // _CS End: Stabilize relay tick anchoring to prevent MIDI schedule drift/backlog spikes.
     }
 
     private void SendMidiEvents(IReadOnlyList<RobustMidiEvent> midiEvents, InstrumentComponent instrument)
@@ -410,21 +395,17 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
             // I am surprised this doesn't take uint...
             var ev = midiEvents[(int)i];
 
-            // _CS Start: Clamp late relay events to near-future ticks instead of replaying in the past.
-            var relativeTick = (long) ev.Tick - instrument.SequenceStartTick;
-            var scheduled = (long) instrument.SequenceDelay + relativeTick;
+            var scheduled = ev.Tick + instrument.SequenceDelay;
 
-            if (scheduled <= currentTick)
+            if (scheduled < currentTick)
             {
-                scheduled = currentTick + 1;
+                instrument.SequenceDelay += currentTick - ev.Tick;
+                scheduled = ev.Tick + instrument.SequenceDelay;
             }
-
-            var scheduledTick = (uint) scheduled;
 
             // The order of events with the same timestamp is undefined in Fluidsynth's sequencer...
             // Therefore we add the event index to the scheduled time to ensure every event has an unique timestamp.
-            instrument.Renderer?.ScheduleMidiEvent(ev, scheduledTick + i, true);
-            // _CS End: Clamp late relay events to near-future ticks instead of replaying in the past.
+            instrument.Renderer?.ScheduleMidiEvent(ev, scheduled+i, true);
         }
     }
 

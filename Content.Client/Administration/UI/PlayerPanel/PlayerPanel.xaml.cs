@@ -18,8 +18,9 @@ public sealed partial class PlayerPanel : FancyWindow
     public event Action<NetUserId?>? OnOpenBans;
     public event Action<NetUserId?>? OnAhelp;
     public event Action<string?>? OnKick;
+    public event Action<string?>? OnCamera;
     public event Action<NetUserId?>? OnOpenBanPanel;
-    // public event Action<NetUserId?, bool>? OnWhitelistToggle; // LoneStar, removed
+    public event Action<NetUserId?, bool>? OnWhitelistToggle;
     public event Action? OnFollow;
     public event Action? OnFreezeAndMuteToggle;
     public event Action? OnFreeze;
@@ -30,7 +31,7 @@ public sealed partial class PlayerPanel : FancyWindow
 
     public NetUserId? TargetPlayer;
     public string? TargetUsername;
-    // private bool _isWhitelisted; // LoneStar, removed
+    private bool _isWhitelisted;
 
     public PlayerPanel(IClientAdminManager adminManager)
     {
@@ -40,23 +41,21 @@ public sealed partial class PlayerPanel : FancyWindow
         UsernameCopyButton.OnPressed += _ => OnUsernameCopy?.Invoke(TargetUsername ?? "");
         BanButton.OnPressed += _ => OnOpenBanPanel?.Invoke(TargetPlayer);
         KickButton.OnPressed += _ => OnKick?.Invoke(TargetUsername);
+        CameraButton.OnPressed += _ => OnCamera?.Invoke(TargetUsername);
         NotesButton.OnPressed += _ => OnOpenNotes?.Invoke(TargetPlayer);
         ShowBansButton.OnPressed += _ => OnOpenBans?.Invoke(TargetPlayer);
         AhelpButton.OnPressed += _ => OnAhelp?.Invoke(TargetPlayer);
-        // LoneStar, removed
-        // WhitelistToggle.OnPressed += _ =>
-        // {
-        //     OnWhitelistToggle?.Invoke(TargetPlayer, _isWhitelisted);
-        //     SetWhitelisted(!_isWhitelisted);
-        // };
+        WhitelistToggle.OnPressed += _ =>
+        {
+            OnWhitelistToggle?.Invoke(TargetPlayer, _isWhitelisted);
+            SetWhitelisted(!_isWhitelisted);
+        };
         FollowButton.OnPressed += _ => OnFollow?.Invoke();
         FreezeButton.OnPressed += _ => OnFreeze?.Invoke();
         FreezeAndMuteToggleButton.OnPressed += _ => OnFreezeAndMuteToggle?.Invoke();
         LogsButton.OnPressed += _ => OnLogs?.Invoke();
         DeleteButton.OnPressed += _ => OnDelete?.Invoke();
         RejuvenateButton.OnPressed += _ => OnRejuvenate?.Invoke();
-
-        JobWhitelistsButton.OnPressed += _ => OnOpenJobWhitelists?.Invoke(TargetPlayer); // DeltaV: Job whitelists
     }
 
     public void SetUsername(string player)
@@ -65,22 +64,21 @@ public sealed partial class PlayerPanel : FancyWindow
         PlayerName.Text = Loc.GetString("player-panel-username", ("player", player));
     }
 
-    // LoneStar, removed
-    // public void SetWhitelisted(bool? whitelisted)
-    // {
-    //     if (whitelisted == null)
-    //     {
-    //         Whitelisted.Text = null;
-    //         WhitelistToggle.Visible = false;
-    //     }
-    //     else
-    //     {
-    //         Whitelisted.Text = Loc.GetString("player-panel-whitelisted");
-    //         WhitelistToggle.Text = whitelisted.Value ? Loc.GetString("player-panel-true") : Loc.GetString("player-panel-false");
-    //         WhitelistToggle.Visible = true;
-    //         _isWhitelisted = whitelisted.Value;
-    //     }
-    // }
+    public void SetWhitelisted(bool? whitelisted)
+    {
+        if (whitelisted == null)
+        {
+            Whitelisted.Text = null;
+            WhitelistToggle.Visible = false;
+        }
+        else
+        {
+            Whitelisted.Text = Loc.GetString("player-panel-whitelisted");
+            WhitelistToggle.Text = whitelisted.Value ? Loc.GetString("player-panel-true") : Loc.GetString("player-panel-false");
+            WhitelistToggle.Visible = true;
+            _isWhitelisted = whitelisted.Value;
+        }
+    }
 
     public void SetBans(int? totalBans, int? totalRoleBans)
     {
@@ -127,10 +125,11 @@ public sealed partial class PlayerPanel : FancyWindow
     {
         BanButton.Disabled = !_adminManager.CanCommand("banpanel");
         KickButton.Disabled = !_adminManager.CanCommand("kick");
+        CameraButton.Disabled = !_adminManager.CanCommand("camera");
         NotesButton.Disabled = !_adminManager.CanCommand("adminnotes");
         ShowBansButton.Disabled = !_adminManager.CanCommand("banlist");
-        // WhitelistToggle.Disabled = // LoneStar, removed
-        //     !(_adminManager.CanCommand("whitelistadd") && _adminManager.CanCommand("whitelistremove"));
+        WhitelistToggle.Disabled =
+            !(_adminManager.CanCommand("whitelistadd") && _adminManager.CanCommand("whitelistremove"));
         LogsButton.Disabled = !_adminManager.CanCommand("adminlogs");
         RejuvenateButton.Disabled = !_adminManager.HasFlag(AdminFlags.Debug);
         DeleteButton.Disabled = !_adminManager.HasFlag(AdminFlags.Debug);

@@ -74,12 +74,21 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
         LoadoutsContainer.DisposeAllChildren();
 
         // Get all loadout prototypes for this group.
-        // Frontier: skip missing/hidden loadouts before grouping
-        var validProtos = _groupProto.Loadouts
-            .Where(id => protoMan.HasIndex(id) && !loadout.IsHidden(profile, session, id, collection))
-            .Select(id => protoMan.Index(id));
-        // End Frontier
+        // Frontier: hide loadout effects, support for subgroups
+        var validProtos = _groupProto.Loadouts.Select(id => protoMan.Index(id))
+            .Where(p => !loadout.IsHidden(profile, session, p, collection));
 
+        foreach (var subgroup in _groupProto.Subgroups)
+        {
+            if (!protoMan.TryIndex(subgroup, out var loadoutGroupProto))
+                continue;
+
+            var subgroupProtos = loadoutGroupProto.Loadouts.Select(id => protoMan.Index(id))
+            .Where(p => !loadout.IsHidden(profile, session, p, collection));
+
+            validProtos = (validProtos ?? Enumerable.Empty<LoadoutPrototype>()).Concat(subgroupProtos ?? Enumerable.Empty<LoadoutPrototype>());
+        }
+        // End Frontier: hide loadout effects, support for subgroups
         /*
          * Group the prototypes based on their GroupBy field.
          * - If GroupBy is null or empty, fallback to grouping by the prototype ID itself.
@@ -116,14 +125,14 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                     })
                     .ToList();
 
-                /* 
-                * Determine which element should be displayed first: 
-                * - If any element is currently selected (its button is pressed), use it. 
-                * - Otherwise, fallback to the first element in the list. 
-                * 
-                * This moves the selected item outside of the sublist for better usability, 
-                * making it easier for players to quickly toggle loadout options (e.g. clothing, accessories) 
-                * without having to search inside expanded subgroups. 
+                /*
+                * Determine which element should be displayed first:
+                * - If any element is currently selected (its button is pressed), use it.
+                * - Otherwise, fallback to the first element in the list.
+                *
+                * This moves the selected item outside of the sublist for better usability,
+                * making it easier for players to quickly toggle loadout options (e.g. clothing, accessories)
+                * without having to search inside expanded subgroups.
                 */
                 var firstElement = uiElements.FirstOrDefault(e => e.Select.Pressed) ?? uiElements[0];
 
@@ -148,8 +157,8 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                 {
                     subList.AddChild(proto);
                 }
-
-                UpdateToggleColor(toggle, subList);
+                var itemName = firstElement.Text ?? "";
+                UpdateSubGroupSelectedInfo(firstElement, itemName, subList);
             }
             else
             {
@@ -158,25 +167,6 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                 );
             }
         }
-
-        // Frontier: loadoutGroup subgroups
-        foreach (var subgroupProto in _groupProto.Subgroups)
-        {
-            if (!protoMan.TryIndex(subgroupProto, out var loadoutGroupProto))
-                continue;
-
-            foreach (var loadoutProto in loadoutGroupProto.Loadouts)
-            {
-                if (!protoMan.TryIndex(loadoutProto, out var loadProto))
-                    continue;
-
-                if (loadout.IsHidden(profile, session, loadoutProto, collection))
-                    continue;
-
-                LoadoutsContainer.AddChild(CreateLoadoutUI(loadProto, profile, loadout, session, collection, loadoutSystem));
-            }
-        }
-        // End Frontier
     }
 
     private ToggleLoadoutButton CreateToggleButton(KeyValuePair<string, List<LoadoutPrototype>> kvp, LoadoutContainer firstElement, SubLoadoutContainer subContainer)
@@ -187,12 +177,14 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
         };
 
         toggle.Text = subContainer.Visible ? OpenedGroupMark : ClosedGroupMark;
+        toggle.Pressed = subContainer.Visible;
 
         toggle.OnPressed += _ =>
         {
             var willOpen = !subContainer.Visible;
             subContainer.Visible = willOpen;
             toggle.Text = willOpen ? OpenedGroupMark : ClosedGroupMark;
+            toggle.Pressed = willOpen;
             _openedGroups[kvp.Key] = willOpen;
         };
 
@@ -201,22 +193,23 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
         return toggle;
     }
 
-    private void UpdateToggleColor(Button toggle, BoxContainer subList)
+    private void UpdateSubGroupSelectedInfo(LoadoutContainer loadout, string itemName, BoxContainer subList)
     {
-        var anyActive = subList.Children
+        var countSubSelected = subList.Children
             .OfType<LoadoutContainer>()
-            .Any(c => c.Select.Pressed);
+            .Count(c => c.Select.Pressed);
 
-        toggle.Modulate = anyActive
-            ? Color.Green
-            : Color.White;
+        if (countSubSelected > 0)
+        {
+            loadout.Text = Loc.GetString("loadouts-count-items-in-group", ("item", itemName), ("count", countSubSelected));
+        }
     }
 
     /// <summary>
     /// Creates a UI container for a single Loadout item.
     ///
-    /// This method was extracted from RefreshLoadouts because the logic for creating 
-    /// individual loadout items is used multiple times inside that method, and duplicating 
+    /// This method was extracted from RefreshLoadouts because the logic for creating
+    /// individual loadout items is used multiple times inside that method, and duplicating
     /// the code made it harder to maintain.
     ///
     /// Logic:
@@ -242,7 +235,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         var cont = new LoadoutContainer(proto, !enabled, reason);
 
-        cont.Text = string.IsNullOrEmpty(proto.Name) ? loadoutSystem.GetName(proto) : proto.Name; // Frontier: allow overriding loadout names
+        cont.Text = loadoutSystem.GetName(proto);
 
         cont.Select.Pressed = pressed;
 

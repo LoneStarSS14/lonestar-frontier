@@ -33,23 +33,21 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
-
 - type: startingGear
   id: SecurityGuardGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity # Coyote: ClothingEyesGlassesSunglasses < ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesSunglasses #ClothingEyesGlassesSecurity
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
-    pocket2: CSMagazinePistol40 # Coyote: NFMagazineHighCapacityPistol35 < CSMagazinePistol40
+    pocket2: NFMagazineHighCapacityPistol35
   storage:
     back:
-    - EncryptionKeyService
-    - EncryptionKeySecurity
-    - EncryptionKeyNfsd
     - Flash
-    - CSMagazinePistol40 # Coyote: NFMagazineHighCapacityPistol35 < CSMagazinePistol40
-    - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
+    - NFMagazineHighCapacityPistol35
+    - NFMagazineHighCapacityPistol35Rubber
     - ShipVoucherFrontierGuard
-
+  encryptionKeys:
+  - EncryptionKeyService
+  - EncryptionKeySecurity
 - type: chameleonOutfit
   id: SecurityGuardChameleonOutfit
   job: SecurityGuard

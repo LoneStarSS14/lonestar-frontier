@@ -1,7 +1,15 @@
+# Special gun cases that will randomize the stats of their spawned weapon
+- type: entity
+  id: RareWeaponCase
+  abstract: true
+  components:
+  - type: RareWeaponSpawnerCase
+    randomRarity: true
+
 # Gun cases with contraband (unregistered) guns for expeditions
 #region Pistols
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortMk58Expedition
   suffix: Dungeon, Mk58
   categories: [ HideSpawnMenu ]
@@ -12,9 +20,8 @@
       amount: 1
     - id: NFMagazineHighCapacityPistol35
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortN1984Expedition
   suffix: Dungeon, N1984
   categories: [ HideSpawnMenu ]
@@ -25,9 +32,8 @@
       amount: 1
     - id: NFMagazinePistol45
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortViper
   suffix: Dungeon, Viper
   categories: [ HideSpawnMenu ]
@@ -36,11 +42,10 @@
     contents:
     - id: NFWeaponPistolViperExpedition
       amount: 1
-    - id: CSMagazinePistol40 # Coyote: .40 Conversion
+    - id: NFMagazineHighCapacityPistol35
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortCobra
   suffix: Dungeon, Cobra
   categories: [ HideSpawnMenu ]
@@ -51,9 +56,8 @@
       amount: 1
     - id: NFMagazinePistol45
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortUniversalExpedition
   suffix: Dungeon, Universal
   categories: [ HideSpawnMenu ]
@@ -62,11 +66,10 @@
     contents:
     - id: NFWeaponPistolUniversalExpedition
       amount: 1
-    - id: CSMagazinePistol40 # Coyote: .40 Conversion
+    - id: NFMagazineHighCapacityPistol35
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortPollockExpedition
   suffix: Dungeon, Pollock
   categories: [ HideSpawnMenu ]
@@ -80,7 +83,7 @@
 
 #region Revolvers
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortArgentiExpedition
   suffix: Dungeon, Argenti
   categories: [ HideSpawnMenu ]
@@ -91,9 +94,8 @@
       amount: 1
     - id: NFSpeedLoaderPistol35
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortDeckardExpedition
   suffix: Dungeon, Deckard
   categories: [ HideSpawnMenu ]
@@ -104,9 +106,8 @@
       amount: 1
     - id: NFSpeedLoaderPistol45
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortRitland45Expedition
   suffix: Dungeon, Ritland-45
   categories: [ HideSpawnMenu ]
@@ -117,9 +118,8 @@
       amount: 1
     - id: NFSpeedLoaderPistol45
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortWard45Expedition
   suffix: Dungeon, Ward-45
   categories: [ HideSpawnMenu ]
@@ -130,9 +130,8 @@
       amount: 1
     - id: NFSpeedLoaderPistol45
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortFitzExpedition
   suffix: Dungeon, Fitz
   categories: [ HideSpawnMenu ]
@@ -143,9 +142,8 @@
       amount: 1
     - id: NFSpeedLoaderPistol45
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortFaithExpedition
   suffix: Dungeon, Faith
   categories: [ HideSpawnMenu ]
@@ -156,9 +154,8 @@
       amount: 1
     - id: NFSpeedLoaderPistol45
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortLuckyExpedition
   suffix: Dungeon, Lucky 37
   categories: [ HideSpawnMenu ]
@@ -169,9 +166,8 @@
       amount: 1
     - id: NFSpeedLoaderPistol45
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortRevolverPirate
   suffix: Dungeon, Pirate Revolver
   categories: [ HideSpawnMenu ]
@@ -185,7 +181,7 @@
 
 #region Shotguns
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongKammererExpedition
   suffix: Dungeon, Kammerer
   categories: [ HideSpawnMenu ]
@@ -196,9 +192,8 @@
       amount: 1
     - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongEnforcerExpedition
   suffix: Dungeon, Enforcer
   categories: [ HideSpawnMenu ]
@@ -209,9 +204,8 @@
       amount: 1
     - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongBulldog
   suffix: Dungeon, Bulldog
   categories: [ HideSpawnMenu ]
@@ -225,7 +219,7 @@
 
 #region SMGs
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongWT550Expedition
   suffix: Dungeon, WT550
   categories: [ HideSpawnMenu ]
@@ -236,9 +230,8 @@
       amount: 1
     - id: NFMagazineSubMachineGunTopMounted35
       amount: 3
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongAtreidesExpedition
   suffix: Dungeon, Atreides
   categories: [ HideSpawnMenu ]
@@ -249,9 +242,8 @@
       amount: 1
     - id: NFMagazineSubMachineGun35
       amount: 3
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongDrozdExpedition
   suffix: Dungeon, Drozd
   categories: [ HideSpawnMenu ]
@@ -260,11 +252,10 @@
     contents:
     - id: NFWeaponSubMachineGunDrozdExpedition
       amount: 1
-    - id: CSMagazineSubMachineGun40 # Coyote: .40 Conversion
+    - id: NFMagazineSubMachineGun35
       amount: 3
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongC20r
   suffix: Dungeon, C20r
   categories: [ HideSpawnMenu ]
@@ -273,11 +264,10 @@
     contents:
     - id: NFWeaponSubMachineGunC20rExpedition
       amount: 1
-    - id: CSMagazineSubMachineGun40 # Coyote: .40 Conversion
+    - id: NFMagazineSubMachineGun35
       amount: 3
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongTypewriterExpedition
   suffix: Dungeon, Typewriter
   categories: [ HideSpawnMenu ]
@@ -286,12 +276,12 @@
     contents:
     - id: NFWeaponSubMachineGunTypewriterExpedition
       amount: 1
-    - id: CSMagazineSubMachineGun40 # Coyote: .40 Conversion
+    - id: NFMagazineSubMachineGun35
       amount: 3
 
 #region Rifles
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongGestioExpedition
   suffix: Dungeon, Gestio
   categories: [ HideSpawnMenu ]
@@ -302,9 +292,8 @@
       amount: 1
     - id: NFMagazineLowCapacityRifle30
       amount: 3
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongWeaponRifleNovaliteC1Expedition
   suffix: Dungeon, NovaliteC1
   categories: [ HideSpawnMenu ]
@@ -315,9 +304,8 @@
       amount: 1
     - id: NFMagazineClipRifle20
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongLecterExpedition
   suffix: Dungeon, Lecter
   categories: [ HideSpawnMenu ]
@@ -328,22 +316,8 @@
       amount: 1
     - id: NFMagazineRifle20
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
-  id: WeaponCaseLongEstocExpedition
-  suffix: Dungeon, Estoc
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-    - id: NFWeaponRifleAssaultEstocExpedition
-      amount: 1
-    - id: NFMagazineRifle20
-      amount: 2
-
-- type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongSm
   suffix: Dungeon, Soland-Moss AR
   categories: [ HideSpawnMenu ]
@@ -354,9 +328,8 @@
       amount: 1
     - id: NFMagazineRifle30
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongM90Expedition
   suffix: Dungeon, M-90gl
   categories: [ HideSpawnMenu ]
@@ -367,9 +340,8 @@
       amount: 1
     - id: NFMagazineRifle20
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongSVSExpedition
   suffix: Dungeon, SVS
   categories: [ HideSpawnMenu ]
@@ -380,9 +352,8 @@
       amount: 1
     - id: NFMagazineLowCapacityRifle30
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongVulcanExpedition
   suffix: Dungeon, Vulcan
   categories: [ HideSpawnMenu ]
@@ -393,9 +364,8 @@
       amount: 1
     - id: NFMagazineRifle30
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongJackdaw
   suffix: Dungeon, Jackdaw
   categories: [ HideSpawnMenu ]
@@ -409,7 +379,7 @@
 
 #region Energy
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortLaserGunExpedition
   suffix: Dungeon, Laser Pistol
   categories: [ HideSpawnMenu ]
@@ -418,9 +388,8 @@
     contents:
     - id: NFWeaponEnergyPistolLaserExpedition
       amount: 2
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortSvalinnExpedition
   suffix: Dungeon, Svalinn
   categories: [ HideSpawnMenu ]
@@ -431,9 +400,8 @@
       amount: 1
     - id: PowerCellHigh
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongLaserCarbineExpedition
   suffix: Dungeon, Laser Carbine
   categories: [ HideSpawnMenu ]
@@ -442,9 +410,8 @@
     contents:
     - id: NFWeaponEnergyRifleCarbineExpedition
       amount: 1
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongEnergyGunExpedition
   suffix: Dungeon, Energy Gun
   categories: [ HideSpawnMenu ]
@@ -453,9 +420,8 @@
     contents:
     - id: NFWeaponEnergySubMachineGunDeltaVExpedition
       amount: 1
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortAntiqueLaserExpedition
   suffix: Dungeon, Antique Laser
   categories: [ HideSpawnMenu ]
@@ -464,9 +430,8 @@
     contents:
     - id: NFWeaponEnergyPistolLaserAntiqueExpedition
       amount: 1
-
 - type: entity
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, RareWeaponCase]
   id: WeaponCaseShortAdvancedLaserExpedition
   suffix: Dungeon, Advanced Laser
   categories: [ HideSpawnMenu ]
@@ -475,9 +440,8 @@
     contents:
     - id: NFWeaponEnergyPistolLaserAdvancedExpedition
       amount: 1
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongLaserCannonExpedition
   suffix: Dungeon, Laser Cannon
   categories: [ HideSpawnMenu ]
@@ -486,9 +450,8 @@
     contents:
     - id: NFWeaponEnergyRifleSniperCannonExpedition
       amount: 1
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongXrayCannonExpedition
   suffix: Dungeon, Xray Cannon
   categories: [ HideSpawnMenu ]
@@ -497,9 +460,8 @@
     contents:
     - id: NFWeaponEnergyRifleSniperXrayCannonExpedition
       amount: 1
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongTemperatureGunExpedition
   suffix: Dungeon, Temperature Gun
   categories: [ HideSpawnMenu ]
@@ -511,7 +473,7 @@
 
 #region Sniper
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongBarlowsBoltExpedition
   suffix: Dungeon, Mosin
   categories: [ HideSpawnMenu ]
@@ -522,9 +484,8 @@
       amount: 1
     - id: NFAmmunitionBoxRifle30
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongHristovExpedition
   suffix: Dungeon, Hristov
   categories: [ HideSpawnMenu ]
@@ -535,9 +496,8 @@
       amount: 1
     - id: NFAmmunitionBoxRifle60
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongRepeaterExpedition
   suffix: Dungeon, Repeater
   categories: [ HideSpawnMenu ]
@@ -548,9 +508,8 @@
       amount: 1
     - id: NFAmmunitionBoxRifle20
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongMusketExpedition
   suffix: Dungeon, Musket
   categories: [ HideSpawnMenu ]
@@ -559,11 +518,10 @@
     contents:
     - id: NFWeaponRifleMusketExpedition
       amount: 1
-    - id: NFAmmunitionBoxRifle30 # LoneStar
+    - id: NFAmmunitionBoxRifle60
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongSniperCeremonialExpedition
   suffix: Dungeon, Ceremonial Rifle
   categories: [ HideSpawnMenu ]
@@ -572,12 +530,12 @@
     contents:
     - id: NFWeaponRifleCeremonialExpedition
       amount: 1
-    - id: NFAmmunitionBoxRifle20 # Coyote: Align ammotype with weapon from this fill
+    - id: NFAmmunitionBoxRifle20
       amount: 2
 
 #region Launchers
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongLauncherRocketExpedition
   suffix: Dungeon, Rocket Launcher
   categories: [ HideSpawnMenu ]
@@ -588,9 +546,8 @@
       amount: 1
     - id: NFCartridgeRocket
       amount: 2
-
 - type: entity
-  parent: WeaponCaseLong
+  parent: [WeaponCaseLong, RareWeaponCase]
   id: WeaponCaseLongLauncherChinaLake
   suffix: Dungeon, China Lake
   categories: [ HideSpawnMenu ]
@@ -604,7 +561,7 @@
 
 #region LMG
 - type: entity
-  parent: WeaponCaseHeavy
+  parent: [WeaponCaseHeavy, RareWeaponCase]
   id: WeaponCaseHeavyLightMachineGunL6
   suffix: Dungeon, L6
   categories: [ HideSpawnMenu ]
@@ -614,7 +571,7 @@
     - id: NFWeaponLightMachineGunL6Expedition
       amount: 1
     - id: NFMagazineBoxRifle20
-      amount: 2 # LoneStar
+      amount: 4
 
 #region Melee
 - type: entity
@@ -627,7 +584,6 @@
     contents:
     - id: EnergyShield
       amount: 1
-
 - type: entity
   parent: WeaponCaseShort
   id: WeaponCaseShortEnergySwordExpedition
@@ -638,7 +594,6 @@
     contents:
     - id: EnergySword
       amount: 1
-
 - type: entity
   parent: WeaponCaseShort
   id: WeaponCaseShortEnergyDaggerExpedition
@@ -649,7 +604,6 @@
     contents:
     - id: EnergyDagger
       amount: 1
-
 - type: entity
   parent: WeaponCaseShort
   id: WeaponCaseShortEnergyCutlassExpedition
@@ -660,7 +614,6 @@
     contents:
     - id: EnergyCutlass
       amount: 1
-
 - type: entity
   parent: WeaponCaseShort
   id: WeaponCaseShortEnergySwordDoubleExpedition
@@ -683,7 +636,6 @@
     contents:
     - id: FireBomb
       amount: 4
-
 - type: entity
   parent: WeaponCaseShortExplosives
   id: WeaponCaseShortPipeBomb
@@ -694,7 +646,6 @@
     contents:
     - id: PipeBomb
       amount: 4
-
 - type: entity
   parent: WeaponCaseShortExplosives
   id: WeaponCaseShortSeismicCharge
@@ -705,7 +656,6 @@
     contents:
     - id: SeismicCharge
       amount: 4
-
 - type: entity
   parent: WeaponCaseShortExplosives
   id: WeaponCaseShortExGrenade
@@ -716,7 +666,6 @@
     contents:
     - id: ExGrenade
       amount: 4
-
 - type: entity
   parent: WeaponCaseShortExplosives
   id: WeaponCaseShortC4
@@ -750,42 +699,36 @@
   - StorageFillAmmoBoxLethal20
   id: WeaponCaseShortAmmoBoxLethal20
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxBigLethal20
   id: WeaponCaseShortAmmoBoxBigLethal20
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxRubber20
   id: WeaponCaseShortAmmoBoxRubber20
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxBigRubber20
   id: WeaponCaseShortAmmoBoxBigRubber20
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxPractice20
   id: WeaponCaseShortAmmoBoxPractice20
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxIncendiary20
   id: WeaponCaseShortAmmoBoxIncendiary20
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -800,35 +743,30 @@
   - StorageFillAmmoBoxLethal30
   id: WeaponCaseShortAmmoBoxLethal30
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxBigLethal30
   id: WeaponCaseShortAmmoBoxBigLethal30
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxRubber30
   id: WeaponCaseShortAmmoBoxRubber30
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxPractice30
   id: WeaponCaseShortAmmoBoxPractice30
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxIncendiary30
   id: WeaponCaseShortAmmoBoxIncendiary30
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -843,78 +781,60 @@
   - StorageFillAmmoBoxLethal35
   id: WeaponCaseShortAmmoBoxLethal35
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxRubber35
   id: WeaponCaseShortAmmoBoxRubber35
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxPractice35
   id: WeaponCaseShortAmmoBoxPractice35
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxIncendiary35
   id: WeaponCaseShortAmmoBoxIncendiary35
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxUranium35
   id: WeaponCaseShortAmmoBoxUranium35
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxEmp35
   id: WeaponCaseShortAmmoBoxEmp35
   categories: [ HideSpawnMenu ]
-
-- type: entity
-  parent:
-  - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxBigLethal35
-  id: WeaponCaseShortAmmoBoxBigLethal35
-  categories: [ HideSpawnMenu ]
-
-## .25 caseless
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxLethal25
   id: WeaponCaseShortAmmoBoxLethal25
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxBigLethal25
   id: WeaponCaseShortAmmoBoxBigLethal25
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxRubber25
   id: WeaponCaseShortAmmoBoxRubber25
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxBigRubber25
   id: WeaponCaseShortAmmoBoxBigRubber25
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -929,92 +849,96 @@
   - StorageFillAmmoBoxLethalShotgun
   id: WeaponCaseShortAmmoBoxLethalShotgun
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxRubberShotgun
   id: WeaponCaseShortAmmoBoxRubberShotgun
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxPracticeShotgun
   id: WeaponCaseShortAmmoBoxPracticeShotgun
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxIncendiaryShotgun
   id: WeaponCaseShortAmmoBoxIncendiaryShotgun
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxUraniumShotgun
   id: WeaponCaseShortAmmoBoxUraniumShotgun
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxSlugShotgun
   id: WeaponCaseShortAmmoBoxSlugShotgun
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxFlareShotgun
   id: WeaponCaseShortAmmoBoxFlareShotgun
   categories: [ HideSpawnMenu ]
-
-- type: entity
-  parent:
-  - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxBigLethalShotgun
-  id: WeaponCaseShortAmmoBoxBigLethalShotgun
-  categories: [ HideSpawnMenu ]
-
-## .45 ammo
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxLethal45
   id: WeaponCaseShortAmmoBoxLethal45
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxRubber45
   id: WeaponCaseShortAmmoBoxRubber45
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxPractice45
   id: WeaponCaseShortAmmoBoxPractice45
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxIncendiary45
   id: WeaponCaseShortAmmoBoxIncendiary45
   categories: [ HideSpawnMenu ]
-
 - type: entity
   parent:
   - WeaponCaseShortAmmo
   - StorageFillAmmoBoxUranium45
   id: WeaponCaseShortAmmoBoxUranium45
   categories: [ HideSpawnMenu ]
-
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongEstocExpedition
+  suffix: Dungeon, Estoc
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRifleAssaultEstocExpedition
+      amount: 1
+    - id: NFMagazineRifle20
+      amount: 2
+- type: entity
+  parent:
+  - WeaponCaseShortAmmo
+  - StorageFillAmmoBoxBigLethal35
+  id: WeaponCaseShortAmmoBoxBigLethal35
+  categories: [ HideSpawnMenu ]
+- type: entity
+  parent:
+  - WeaponCaseShortAmmo
+  - StorageFillAmmoBoxBigLethalShotgun
+  id: WeaponCaseShortAmmoBoxBigLethalShotgun
+  categories: [ HideSpawnMenu ]
 - type: entity
   parent:
   - WeaponCaseShortAmmo

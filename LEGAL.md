@@ -14,15 +14,19 @@ This means they remain at liberty to contribute their work anywhere they please.
 
 ## Code license
 
-The project as a whole is licensed under the terms of the [AGPLv3](https://github.com/new-frontiers-14/frontier-station-14/blob/master/LICENSE-AGPLv3.txt) and must be followed regardless of parent licenses.
+The project as a whole is licensed under the terms of the [AGPLv3](LICENSE-AGPLv3.txt) and must be followed regardless of parent licenses.
 
-Where code from other authors is used, you must follow the terms of both the AGPLv3 and their license as given in the Attributions table below. Copyright information for all AGPLv3-licensed code is listed in [COPYRIGHT-AGPLv3.txt](https://github.com/new-frontiers-14/frontier-station-14/blob/master/COPYRIGHT-AGPLv3.txt).
+Where code from other authors is used, you must follow the terms of both the AGPLv3 and their license as given in the Attributions table below. Copyright information for all AGPLv3-licensed code is listed in [COPYRIGHT-AGPLv3.txt](COPYRIGHT-AGPLv3.txt).
 
 For code taken under the MIT license, this means you must not remove the copy of the MIT license from any distribution.
 
 Code created by LoneStar contributors is primarily found in _LoneStar / _LS Namespaces.
 
+Code created by Frontier contributors is found in _NF Namespaces.
+
 Upstream code from [Frontier Station 14](https://github.com/new-frontiers-14/frontier-station-14) was taken under [the AGPLv3 license](https://github.com/new-frontiers-14/frontier-station-14/blob/master/LICENSE-AGPLv3.txt). Any code not in a specific Namespace, excluding Nyanotrasen subdirectories, is sublicensed as MIT plus AGPLv3 from Frontier Station.
+
+Upstream code from [Space Station 14](https://github.com/space-wizards/space-station-14) was taken under [the MIT license](LICENSE-MIT.txt).
 
 Assets have distinct licenses in attributions.yml and meta.json files which must be followed individually.
 
@@ -53,6 +57,7 @@ The table below lists Namespaces in the repository that map to a single known up
 | `_HL` | HardLight | https://github.com/HardLightSector/HardLight/ | AGPL 3.0 |
 | `_Impstation` | Impstation | https://github.com/impstation/imp-station-14 | AGPL 3.0 |
 | `_NC` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
+| `_NC14` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
 | `_WF` | Wayfarer 14 | https://github.com/project-wayfarer/wayfarer-14 | AGPL 3.0 |
 | `_White` | White Dream | https://github.com/WWhiteDreamProject/wwdpublic | AGPL 3.0 |
 | `_white` | White Dream | https://github.com/WWhiteDreamProject/wwdpublic | AGPL 3.0 |
@@ -63,9 +68,13 @@ Additional repositories with ported code without Namespaces (denoted by comments
 | Fork Name | Source Repository | Original License |
 |-----------|-------------------|------------------|
 | Monolith | https://github.com/Monolith-Station/Monolith | AGPL 3.0 |
-| Space Station 14 ("Wizden") | https://github.com/space-wizards/space-station-14 | MIT |
+| Space Station 14 ("Wizden"/"Upstream") | https://github.com/space-wizards/space-station-14 | MIT |
 | White Dream | https://github.com/WWhiteDreamProject/wwdpublic | AGPL 3.0 |
 
 ## Warranty
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Legacy code
+
+If you do not agree to the terms of these software licenses you may use legacy code from before [this commit](https://github.com/new-frontiers-14/frontier-station-14/commit/2fca06eaba205ae6fe3aceb8ae2a0594f0effee0) which may be used under the MIT license.

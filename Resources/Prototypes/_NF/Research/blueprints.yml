@@ -1,5 +1,4 @@
 - type: blueprint
-  abstract: true
   id: NFAllResearchable
   name: nf-research-discipline-all
   blueprint: NFBlueprintGeneral
@@ -40,7 +39,6 @@
   - NFBlueprintsMercenary
   - NFBlueprintsMercenaryNfsd
   - NFBlueprintsCommon
-  - LSSalvageWeapons # LoneStar
 
 - type: blueprint
   id: NFArsenalNfsd
@@ -50,7 +48,6 @@
   - NFBlueprintsNfsd
   - NFBlueprintsMercenaryNfsd
   - NFBlueprintsCommon
-  - LSSalvageWeapons # LoneStar
 
 - type: blueprint
   id: NFSalvage
@@ -59,7 +56,6 @@
   packs:
   - NFBlueprintsSalvage
   - NFBlueprintsCommon
-  - LSSalvageWeapons # LoneStar
 
 - type: blueprint
   id: NFScience

@@ -1,4 +1,3 @@
-# _CS Start
 - type: entity
   parent: CrateBaseWeldable
   id: CratePlasticBiodegradable
@@ -15,10 +14,9 @@
     containers:
     - entity_storage
   - type: StaticPrice
-    price: 15 # 12 credits at 0.75x, proportional to the plastic crate if deconstructable for 1 sheet
+    price: 15 # 12 spesos at 0.75x, proportional to the plastic crate if deconstructable for 1 sheet
   - type: Paintable
     group: CratePlastic
-
 - type: entity
   parent: CrateBaseSecure
   id: CrateUranium
@@ -28,7 +26,6 @@
     sprite: _NF/Structures/Storage/Crates/radiation_secure.rsi
   - type: Sprite
     sprite: _NF/Structures/Storage/Crates/radiation_secure.rsi
-
 - type: entity
   parent: CrateSecgear
   id: CrateNfsdBrigmedic
@@ -40,7 +37,6 @@
     sprite: _NF/Structures/Storage/Crates/nfsd_brigmed.rsi
   - type: AccessReader
     access: [["Security"]]
-
 - type: entity
   parent: CrateSecgear
   id: CrateNfsdSecure1
@@ -52,7 +48,6 @@
     sprite: _NF/Structures/Storage/Crates/nfsd_secure1.rsi
   - type: AccessReader
     access: [["Security"]]
-
 - type: entity
   parent: CrateSecgear
   id: CrateNfsdSecure2
@@ -64,7 +59,6 @@
     sprite: _NF/Structures/Storage/Crates/nfsd_secure2.rsi
   - type: AccessReader
     access: [["Security"]]
-
 - type: entity
   parent: CrateGenericSteel
   id: CrateAmmoGeneric
@@ -74,7 +68,6 @@
     sprite: _NF/Structures/Storage/Crates/ammo.rsi
   - type: Sprite
     sprite: _NF/Structures/Storage/Crates/ammo.rsi
-
 - type: entity
   parent: CratePirate
   id: CratePirateGrey
@@ -85,7 +78,6 @@
     sprite: _NF/Structures/Storage/Crates/piratechestgrey.rsi
   - type: Icon
     sprite: _NF/Structures/Storage/Crates/piratechestgrey.rsi
-
 - type: entity
   parent: CratePirate
   id: CratePirateBounty
@@ -97,7 +89,6 @@
   - type: Icon
     sprite: _NF/Structures/Storage/Crates/pirate_bounty.rsi
   - type: PirateBountyLabel # Needs to be filled out.
-
 - type: entity
   parent: CrateFreezer
   id: CrateFreezerMcCargo
@@ -120,7 +111,6 @@
     sprite: _NF/Structures/Storage/Crates/secure_mercenary.rsi
   - type: AccessReader
     access: [["Mercenary"]]
-
 - type: entity
   parent: CrateBaseSecure
   id: CrateSecureMercenaryPrivateSec
@@ -132,7 +122,6 @@
     sprite: _NF/Structures/Storage/Crates/secure_privatesec.rsi
   - type: AccessReader
     access: [["Mercenary"]]
-
 - type: entity
   parent: CrateBaseSecure
   id: CrateAmmoSecureMercenary
@@ -144,7 +133,6 @@
     sprite: _NF/Structures/Storage/Crates/secure_ammo.rsi
   - type: AccessReader
     access: [["Mercenary"]]
-
 - type: entity
   parent: CrateWeaponSecure
   id: CrateFirearmsSecure
@@ -154,7 +142,6 @@
     sprite: _NF/Structures/Storage/Crates/secure_firearms.rsi
   - type: Sprite
     sprite: _NF/Structures/Storage/Crates/secure_firearms.rsi
-
 - type: entity
   parent: CrateLivestock
   id: CrateWoodCage
@@ -172,11 +159,9 @@
   - type: Icon
     sprite: _NF/Structures/Storage/Crates/woodcage.rsi
     state: base
-
 - type: entity
   parent: CrateEngineeringSecure
   id: CrateEngineeringSecureEngineering # abysmal
   components:
   - type: AccessReader
     access: [["Engineering"]]
-# _CS End

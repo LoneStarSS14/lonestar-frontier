@@ -118,7 +118,6 @@
       - id: BalloonCorgi
       - id: MysteryFigureBox
       - id: RubberChicken
-      # - id: FoodSnackLollypopWrappedMysteryNeutral # Goobstation - Lollypops!
       # Cult
       - !type:AllSelector
         children:
@@ -175,8 +174,6 @@
       - id: RubberStampGreytide
       - id: MysteryLighterBox
       - id: GoldenPersonalAI
-      # - id: FoodSnackLollypopWrappedMysteryEvil # Goobstation - Lollypops!
-
 - type: entity
   name: Maint Loot Spawner
   suffix: Fluff+Clothes
@@ -192,7 +189,6 @@
     table: !type:NestedSelector
       tableId: MaintFluffTable
       prob: 0.6
-
 - type: entityTable
   id: MaintToolsTable
   table: !type:GroupSelector
@@ -213,12 +209,6 @@
         - id: DoubleEmergencyNitrogenTankFilled
       # - id: EmergencyFunnyOxygenTankFilled # Frontier
       #   weight: 0.5 # Frontier
-      - !type:GroupSelector # DeltaV - Random water vapor tanks spawn too
-        children:
-        - !type:EntSelector
-          id: WaterVaporTankFilled
-        - !type:EntSelector
-          id: DoubleEmergencyWaterVaporTankFilled
       - !type:GroupSelector
         weight: 3
         children:
@@ -310,7 +300,6 @@
       - id: SpectralLocator
       - id: LidSalami
         weight: 0.05
-
 - type: entity
   name: Maint Loot Spawner
   suffix: Tools+Cells+Mats
@@ -326,7 +315,6 @@
     table: !type:NestedSelector
       tableId: MaintToolsTable
       prob: 0.6
-
 - type: entityTable
   id: MaintWeaponTable
   table: !type:GroupSelector
@@ -368,7 +356,6 @@
       - id: SawImprov
       - id: HydroponicsToolMiniHoe
       - id: ClothingHandsKnuckleDusters
-
 - type: entity
   name: Maint Loot Spawner
   suffix: Scrap+Weapons
@@ -384,7 +371,6 @@
     table: !type:NestedSelector
       tableId: MaintWeaponTable
       prob: 0.6
-
 - type: entity
   name: Maint Loot Spawner
   suffix: Plants
@@ -402,8 +388,6 @@
         - NFGlowshroom # Frontier
       chance: 0.6
       offset: 0.0
-
-
 - type: entityTable
   id: InsulsTable
   table: !type:GroupSelector
@@ -416,7 +400,6 @@
       weight: 4
     - id: ClothingHandsGlovesConducting # conducting
       weight: 1
-
 - type: entity
   name: Maint Loot Spawner
   id: MaintenanceInsulsSpawner

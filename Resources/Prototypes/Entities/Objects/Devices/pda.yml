@@ -151,7 +151,6 @@
   - type: DeletionCensusExempt
   # End Frontier: extra components
   - type: BlipCartridge # Coyote: Blip
-
 - type: entity
   parent: BasePDA
   id: BaseWidePDA
@@ -170,7 +169,6 @@
       map: [ "enum.PdaVisualLayers.IdLight" ]
       shader: "unshaded"
       visible: false
-
 - type: entity
   parent: BasePDA
   id: BaseSecurityPDA
@@ -188,7 +186,6 @@
     - NanoChatCartridge # DeltaV
   - type: BlipCartridge
     defaultPreset: BlipPresetSecurity
-
 - type: entity
   parent: BasePDA
   id: BaseMedicalPDA
@@ -207,7 +204,6 @@
   #     - NewsReaderCartridge
   #     - MedTekCartridge
   # End Frontier
-
 - type: entity
   parent: BasePDA
   id: PassengerPDA
@@ -219,7 +215,6 @@
     id: PassengerIDCard
   - type: PdaBorderColor
     borderColor: "#717059"
-
 - type: entity
   parent: BasePDA
   id: TechnicalAssistantPDA
@@ -240,7 +235,6 @@
     state: pda-interntech
   - type: BlipCartridge
     defaultPreset: BlipPresetEngineering
-
 - type: entity
   parent: BaseMedicalPDA
   id: MedicalInternPDA
@@ -262,7 +256,6 @@
   - type: GuideHelp
     guides:
     - MedicalDoctor
-
 - type: entity
   parent: BaseSecurityPDA
   id: SecurityCadetPDA
@@ -281,7 +274,6 @@
     accentVColor: "#A32D26"
   - type: Icon
     state: pda-interncadet
-
 - type: entity
   parent: BasePDA
   id: ResearchAssistantPDA
@@ -302,7 +294,6 @@
     state: pda-internsci
   - type: BlipCartridge
     defaultPreset: BlipPresetScience
-
 - type: entity
   parent: BasePDA
   id: ServiceWorkerPDA
@@ -321,7 +312,6 @@
     accentVColor: "#00cc35"
   - type: Icon
     state: pda-internservice
-
 - type: entity
   parent: BasePDA
   id: ChefPDA
@@ -341,7 +331,6 @@
     state: pda-cook
   - type: ReplacementAccent # for random sentience event
     accent: italian
-
 - type: entity
   parent: BasePDA
   id: BotanistPDA
@@ -360,7 +349,6 @@
     accentVColor: "#00cc35"
   - type: Icon
     state: pda-hydro
-
 - type: entity
   parent: BasePDA
   id: ClownPDA
@@ -409,7 +397,6 @@
         density: 5
         mask:
         - ItemMask
-
 - type: entity
   parent: ClownPDA
   id: VisitorClownPDA
@@ -420,7 +407,6 @@
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
-
 - type: entity
   parent: BasePDA
   id: MimePDA
@@ -480,7 +466,6 @@
   - type: Icon
     state: pda-mime
   - type: Muted # for random sentience event
-
 - type: entity
   name: chaplain PDA
   parent: BasePDA
@@ -498,7 +483,6 @@
     borderColor: "#333333"
   - type: Icon
     state: pda-chaplain
-
 - type: entity
   parent: ChaplainPDA
   id: VisitorChaplainPDA
@@ -509,7 +493,6 @@
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
-
 - type: entity
   name: quartermaster PDA
   parent: BasePDA
@@ -528,9 +511,13 @@
     accentVColor: "#a23e3e"
   - type: Icon
     state: pda-qm
-  - type: BlipCartridge
-    defaultPreset: BlipPresetCommand
-
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - AstroNavCartridge
 - type: entity
   parent: BasePDA
   id: CargoPDA
@@ -550,7 +537,6 @@
     state: pda-cargo
   - type: BlipCartridge
     defaultPreset: BlipPresetEngineering
-
 - type: entity
   parent: BasePDA
   id: SalvagePDA
@@ -581,7 +567,6 @@
   #     - NewsReaderCartridge
   #     - AstroNavCartridge
   # End Frontier
-
 - type: entity
   parent: BasePDA
   id: BartenderPDA
@@ -599,7 +584,6 @@
     borderColor: "#333333"
   - type: Icon
     state: pda-bartender
-
 - type: entity
   parent: BaseWidePDA
   id: LibrarianPDA
@@ -623,7 +607,6 @@
     borderColor: "#858585"
   - type: Icon
     state: pda-library
-
 - type: entity
   parent: LibrarianPDA
   id: VisitorLibrarianPDA
@@ -634,7 +617,6 @@
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
-
 - type: entity
   parent: BaseSecurityPDA
   id: LawyerPDA
@@ -658,7 +640,6 @@
     borderColor: "#6f6192"
   - type: Icon
     state: pda-lawyer
-
 - type: entity
   parent: LawyerPDA
   id: VisitorLawyerPDA
@@ -669,7 +650,6 @@
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
-
 - type: entity
   parent: BasePDA
   id: JanitorPDA
@@ -688,7 +668,6 @@
     borderColor: "#5D2D56"
   - type: Icon
     state: pda-janitor
-
 - type: entity
   parent: BasePDA
   id: CaptainPDA
@@ -714,7 +693,6 @@
     state: pda-captain
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
-
 - type: entity
   parent: BasePDA
   id: HoPPDA
@@ -741,7 +719,6 @@
     state: pda-hop
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
-
 - type: entity
   parent: BasePDA
   id: CEPDA
@@ -762,7 +739,6 @@
     state: pda-ce
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
-
 - type: entity
   parent: BasePDA
   id: EngineerPDA
@@ -783,7 +759,6 @@
     state: pda-engineer
   - type: BlipCartridge
     defaultPreset: BlipPresetEngineering
-
 - type: entity
   parent: BaseMedicalPDA
   id: CMOPDA
@@ -805,7 +780,6 @@
     state: pda-cmo
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
-
 - type: entity
   parent: BaseMedicalPDA
   id: MedicalPDA
@@ -827,7 +801,6 @@
   - type: GuideHelp
     guides:
     - MedicalDoctor
-
 - type: entity
   parent: MedicalPDA
   id: VisitorMedicalPDA
@@ -838,7 +811,6 @@
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
-
 - type: entity
   parent: BaseMedicalPDA
   id: ParamedicPDA
@@ -857,7 +829,6 @@
     accentVColor: "#2a4b5b"
   - type: Icon
     state: pda-paramedic
-
 - type: entity
   parent: BaseMedicalPDA
   id: ChemistryPDA
@@ -876,7 +847,6 @@
     accentVColor: "#B34200"
   - type: Icon
     state: pda-chemistry
-
 - type: entity
   parent: BasePDA
   id: RnDPDA
@@ -898,7 +868,6 @@
     state: pda-rd
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
-
 - type: entity
   parent: BasePDA
   id: SciencePDA
@@ -919,7 +888,6 @@
     state: pda-science
   - type: BlipCartridge
     defaultPreset: BlipPresetScience
-
 - type: entity
   parent: BaseSecurityPDA
   id: HoSPDA
@@ -949,7 +917,6 @@
     - NanoChatCartridge # DeltaV
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
-
 - type: entity
   parent: BaseSecurityPDA
   id: WardenPDA
@@ -968,7 +935,6 @@
     accentVColor: "#949137"
   - type: Icon
     state: pda-warden
-
 - type: entity
   parent: BaseSecurityPDA
   id: SecurityPDA
@@ -986,7 +952,6 @@
     borderColor: "#A32D26"
   - type: Icon
     state: pda-security
-
 - type: entity
   parent: BaseSecurityPDA
   id: CentcomPDA
@@ -997,6 +962,7 @@
     id: CentcomIDCard
     penSlot:
       startingItem: PenCentcom
+      priority: -1
       whitelist:
         tags:
         - Write
@@ -1020,10 +986,6 @@
       - WantedListCartridge
       - LogProbeCartridge
       - AstroNavCartridge
-      - NanoChatCartridge # DeltaV
-  - type: BlipCartridge
-    defaultPreset: BlipPresetCommand
-
 - type: entity
   parent: CentcomPDA
   id: AdminPDA
@@ -1056,7 +1018,6 @@
     - DoorBumpOpener
   - type: BlipCartridge
     enabled: false # Frontier: Admin PDA does not have blips
-
 - type: entity
   parent: CentcomPDA
   id: DeathsquadPDA
@@ -1067,7 +1028,6 @@
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
-
 - type: entity
   parent: BasePDA
   id: MusicianPDA
@@ -1090,7 +1050,6 @@
     handheld: true
     bank: 1
     program: 2
-
 - type: entity
   parent: MusicianPDA
   id: VisitorMusicianPDA
@@ -1101,7 +1060,6 @@
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
-
 - type: entity
   parent: BasePDA
   id: AtmosPDA
@@ -1122,7 +1080,6 @@
     state: pda-atmos
   - type: BlipCartridge
     defaultPreset: BlipPresetEngineering
-
 - type: entity
   parent: BasePDA
   id: ClearPDA
@@ -1141,7 +1098,6 @@
     borderColor: "#288e4d"
   - type: Icon
     state: pda-clear
-
 - type: entity
   parent: ClearPDA
   id: VisitorPDA
@@ -1151,7 +1107,6 @@
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
-
 - type: entity
   parent: [ BasePDA, BaseC1Contraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: SyndiPDA
@@ -1178,7 +1133,6 @@
       - AstroNavCartridge # Frontier
   - type: BlipCartridge
     defaultPreset: BlipPresetPirate
-
 - type: entity
   parent: BaseSecurityPDA
   id: ERTLeaderPDA
@@ -1212,7 +1166,6 @@
       - AstroNavCartridge
       - MailMetricsCartridge # Frontier
       - NanoChatCartridge # DeltaV
-
 - type: entity
   parent: ERTLeaderPDA
   id: ERTChaplainPDA
@@ -1222,7 +1175,6 @@
   components:
   - type: Pda
     id: ERTChaplainIDCard
-
 - type: entity
   parent: ERTLeaderPDA
   id: ERTEngineerPDA
@@ -1232,7 +1184,6 @@
   components:
   - type: Pda
     id: ERTEngineerIDCard
-
 - type: entity
   parent: ERTLeaderPDA
   id: ERTJanitorPDA
@@ -1242,7 +1193,6 @@
   components:
   - type: Pda
     id: ERTJanitorIDCard
-
 - type: entity
   parent: ERTLeaderPDA
   id: ERTMedicPDA
@@ -1252,7 +1202,6 @@
   components:
   - type: Pda
     id: ERTMedicIDCard
-
 - type: entity
   parent: ERTLeaderPDA
   id: ERTSecurityPDA
@@ -1262,7 +1211,6 @@
   components:
   - type: Pda
     id: ERTSecurityIDCard
-
 - type: entity
   parent: ERTLeaderPDA
   id: CBURNPDA
@@ -1275,7 +1223,6 @@
     borderColor: "#A32D26"
     accentHColor: "#447987"
     accentVColor: "#447987"
-
 - type: entity
   parent: BasePDA
   id: PsychologistPDA
@@ -1294,7 +1241,6 @@
     accentVColor: "#447987"
   - type: Icon
     state: pda-medical
-
 - type: entity
   parent: BasePDA
   id: ReporterPDA
@@ -1318,7 +1264,6 @@
     borderColor: "#3f3f74"
   - type: Icon
     state: pda-reporter
-
 - type: entity
   parent: BasePDA
   id: ZookeeperPDA
@@ -1336,7 +1281,6 @@
     borderColor: "#ffe685"
   - type: Icon
     state: pda-zookeeper
-
 - type: entity
   parent: BasePDA
   id: BoxerPDA
@@ -1355,7 +1299,6 @@
     accentVColor: "#390504"
   - type: Icon
     state: pda-boxer
-
 - type: entity
   parent: BaseSecurityPDA
   id: DetectivePDA
@@ -1383,7 +1326,6 @@
     - WantedListCartridge
     - LogProbeCartridge
     - NanoChatCartridge # DeltaV
-
 - type: entity
   parent: BaseMedicalPDA
   id: BrigmedicPDA
@@ -1412,7 +1354,6 @@
     - WantedListCartridge
     - MedTekCartridge
     - NanoChatCartridge # DeltaV
-
 - type: entity
   parent: ClownPDA
   id: CluwnePDA
@@ -1439,7 +1380,6 @@
   - type: Icon
     state: pda-cluwne
   - type: Unremoveable
-
 - type: entity
   parent: BasePDA
   id: SeniorEngineerPDA
@@ -1460,7 +1400,6 @@
     state: pda-seniorengineer
   - type: BlipCartridge
     defaultPreset: BlipPresetEngineering
-
 - type: entity
   parent: BasePDA
   id: SeniorResearcherPDA
@@ -1482,7 +1421,6 @@
     state: pda-seniorresearcher
   - type: BlipCartridge
     defaultPreset: BlipPresetScience
-
 - type: entity
   parent: BaseMedicalPDA
   id: SeniorPhysicianPDA
@@ -1502,7 +1440,6 @@
     accentVColor: "#B34200"
   - type: Icon
     state: pda-seniorphysician
-
 - type: entity
   parent: BaseSecurityPDA
   id: SeniorOfficerPDA
@@ -1521,7 +1458,6 @@
     accentVColor: "#DFDFDF"
   - type: Icon
     state: pda-seniorofficer
-
 - type: entity
   parent: [ SyndiPDA, NotContraband ] # Frontier: BaseMajorContraband<BaseC3ContrabandNoValue # Coyote: BaseC3ContrabandNoValue -> BaseC3MetaPirate
   id: PiratePDA
@@ -1542,7 +1478,6 @@
     state: pda-pirate
   - type: BlipCartridge
     defaultPreset: BlipPresetPirate
-
 - type: entity
   parent: [ BaseMedicalPDA, BaseC1Contraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: SyndiAgentPDA
@@ -1567,7 +1502,6 @@
       - NanoTaskCartridge
       - MedTekCartridge
       - NanoChatCartridge # DeltaV
-
 - type: entity
   parent: BasePDA
   id: ChameleonPDA
@@ -1598,7 +1532,6 @@
         type: HealthAnalyzerBoundUserInterface
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
-
 - type: entity
   parent: BaseWidePDA
   id: WizardPDA
@@ -1624,7 +1557,6 @@
     state: pda-wizard
   - type: BlipCartridge
     defaultPreset: BlipPresetPirate
-
 - type: entity
   parent: ClearPDA
   id: ScurretPDA

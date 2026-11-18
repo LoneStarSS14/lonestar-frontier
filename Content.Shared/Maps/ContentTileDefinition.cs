@@ -1,10 +1,12 @@
 using System.Numerics; // Monolith
 using Content.Shared.Atmos;
+using Content.Shared.Light.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Tools;
 using Robust.Shared.Audio;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 using Robust.Shared.Utility;
@@ -14,9 +16,8 @@ namespace Content.Shared.Maps
     [Prototype("tile")]
     public sealed partial class ContentTileDefinition : IPrototype, IInheritingPrototype, ITileDefinition
     {
-        [ValidatePrototypeId<ToolQualityPrototype>]
-        public const string PryingToolQuality = "Prying";
-        public const string DiggingToolQuality = "Digging"; // Frontier
+        public static readonly ProtoId<ToolQualityPrototype> PryingToolQuality = "Prying";
+        public static readonly ProtoId<ToolQualityPrototype> DiggingToolQuality = "Digging"; // Frontier
 
         public const string SpaceID = "Space";
 

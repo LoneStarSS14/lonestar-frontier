@@ -156,6 +156,15 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
             return;
         }
 
+
+        foreach (var t in msg.Tracks)
+        {
+            // Remove any control characters that may be part of the midi file so they don't end up in the admin logs.
+            t?.SanitizeFields();
+            // Truncate any track names too long.
+            t?.TruncateFields(_cfg.GetCVar(CCVars.MidiMaxChannelNameLength));
+        }
+
         var tracksString = string.Join("\n",
             msg.Tracks
             .Where(t => t != null)
@@ -165,12 +174,6 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
             LogType.Instrument,
             LogImpact.Low,
             $"{ToPrettyString(args.SenderSession.AttachedEntity)} set the midi channels for {ToPrettyString(uid)} to {tracksString}");
-
-        // Truncate any track names too long.
-        foreach (var t in msg.Tracks)
-        {
-            t?.TruncateFields(_cfg.GetCVar(CCVars.MidiMaxChannelNameLength));
-        }
 
         activeInstrument.Tracks = msg.Tracks;
 
@@ -223,14 +226,7 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
         if (args.SenderSession.AttachedEntity != instrument.InstrumentPlayer)
             return;
 
-        if (msg.Channel < 0 || msg.Channel >= instrument.FilteredChannels.Length)
-            return;
-
         if (msg.Channel == RobustMidiEvent.PercussionChannel && !instrument.AllowPercussion)
-            return;
-
-        var changed = instrument.FilteredChannels[msg.Channel] != msg.Value;
-        if (!changed)
             return;
 
         instrument.FilteredChannels[msg.Channel] = msg.Value;
@@ -240,14 +236,10 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
             // Prevent stuck notes when turning off a channel... Shrimple.
             var allNotesOff = new[] { RobustMidiEvent.AllNotesOff((byte) msg.Channel, 0) };
             RaiseNetworkEvent(new InstrumentMidiEventEvent(msg.Uid, allNotesOff));
-
-            // Mirror channel-filter note cutoff into the local relay event path so
-            // surveillance camera relays (TVs) receive the same update as clients.
             RaiseLocalEvent(uid, new InstrumentMidiPlayedEvent(uid, allNotesOff), true);
         }
 
         RaiseLocalEvent(uid, new InstrumentChannelFilterChangedEvent(uid, msg.Channel, msg.Value), true);
-
         Dirty(uid, instrument);
     }
 
@@ -282,20 +274,20 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
 
     public (NetEntity, string)[] GetBands(EntityUid uid)
     {
-        var metadataQuery = EntityManager.GetEntityQuery<MetaDataComponent>();
+        var metadataQuery = GetEntityQuery<MetaDataComponent>();
 
         if (Deleted(uid))
             return Array.Empty<(NetEntity, string)>();
 
         var list = new ValueList<(NetEntity, string)>();
-        var instrumentQuery = EntityManager.GetEntityQuery<InstrumentComponent>();
+        var instrumentQuery = GetEntityQuery<InstrumentComponent>();
 
         if (!TryComp(uid, out InstrumentComponent? originInstrument)
             || originInstrument.InstrumentPlayer is not {} originPlayer)
             return Array.Empty<(NetEntity, string)>();
 
         // It's probably faster to get all possible active instruments than all entities in range
-        var activeEnumerator = EntityManager.EntityQueryEnumerator<ActiveInstrumentComponent>();
+        var activeEnumerator = EntityQueryEnumerator<ActiveInstrumentComponent>();
         while (activeEnumerator.MoveNext(out var entity, out _))
         {
             if (entity == uid)
@@ -322,6 +314,40 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
         }
 
         return list.ToArray();
+    }
+
+    public void StartRelayPlayback(EntityUid uid, InstrumentComponent? instrument = null)
+    {
+        if (!Resolve(uid, ref instrument))
+            return;
+
+        instrument.AllowPercussion = true;
+        instrument.AllowProgramChange = true;
+        instrument.RespectMidiLimits = false;
+
+        if (!instrument.Playing)
+        {
+            instrument.Playing = true;
+            Dirty(uid, instrument);
+            RaiseNetworkEvent(new InstrumentStartMidiEvent(GetNetEntity(uid)));
+        }
+    }
+
+    public void StopRelayPlayback(EntityUid uid, InstrumentComponent? instrument = null)
+    {
+        if (!Resolve(uid, ref instrument) || !instrument.Playing)
+            return;
+
+        Clean(uid, instrument);
+    }
+
+    public void RelayMidiEvents(EntityUid uid, RobustMidiEvent[] midiEvents, InstrumentComponent? instrument = null)
+    {
+        if (midiEvents.Length == 0 || !Resolve(uid, ref instrument))
+            return;
+
+        StartRelayPlayback(uid, instrument);
+        RaiseNetworkEvent(new InstrumentMidiEventEvent(GetNetEntity(uid), midiEvents));
     }
 
     public void Clean(EntityUid uid, InstrumentComponent? instrument = null)
@@ -415,44 +441,35 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
 
         if (send || !instrument.RespectMidiLimits)
         {
-            var midiPlayedEv = new InstrumentMidiPlayedEvent(uid, msg.MidiEvent);
-            RaiseLocalEvent(uid, midiPlayedEv, true);
+            RaiseLocalEvent(uid, new InstrumentMidiPlayedEvent(uid, msg.MidiEvent), true);
             RaiseNetworkEvent(msg);
         }
     }
 
-    public void StartRelayPlayback(EntityUid uid, InstrumentComponent? instrument = null)
+    public sealed class InstrumentMidiPlayedEvent : EntityEventArgs
     {
-        if (!Resolve(uid, ref instrument))
-            return;
+        public EntityUid Source { get; }
+        public RobustMidiEvent[] MidiEvents { get; }
 
-        instrument.AllowPercussion = true;
-        instrument.AllowProgramChange = true;
-        instrument.RespectMidiLimits = false;
-
-        if (!instrument.Playing)
+        public InstrumentMidiPlayedEvent(EntityUid source, RobustMidiEvent[] midiEvents)
         {
-            instrument.Playing = true;
-            Dirty(uid, instrument);
-            RaiseNetworkEvent(new InstrumentStartMidiEvent(GetNetEntity(uid)));
+            Source = source;
+            MidiEvents = midiEvents;
         }
     }
 
-    public void StopRelayPlayback(EntityUid uid, InstrumentComponent? instrument = null)
+    public sealed class InstrumentChannelFilterChangedEvent : EntityEventArgs
     {
-        if (!Resolve(uid, ref instrument) || !instrument.Playing)
-            return;
+        public EntityUid Source { get; }
+        public int Channel { get; }
+        public bool Filtered { get; }
 
-        Clean(uid, instrument);
-    }
-
-    public void RelayMidiEvents(EntityUid uid, RobustMidiEvent[] midiEvents, InstrumentComponent? instrument = null)
-    {
-        if (midiEvents.Length == 0 || !Resolve(uid, ref instrument))
-            return;
-
-        StartRelayPlayback(uid, instrument);
-        RaiseNetworkEvent(new InstrumentMidiEventEvent(GetNetEntity(uid), midiEvents));
+        public InstrumentChannelFilterChangedEvent(EntityUid source, int channel, bool filtered)
+        {
+            Source = source;
+            Channel = channel;
+            Filtered = filtered;
+        }
     }
 
     public override void Update(float frameTime)
@@ -474,8 +491,8 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
             _bandRequestQueue.Clear();
         }
 
-        var activeQuery = EntityManager.GetEntityQuery<ActiveInstrumentComponent>();
-        var transformQuery = EntityManager.GetEntityQuery<TransformComponent>();
+        var activeQuery = GetEntityQuery<ActiveInstrumentComponent>();
+        var transformQuery = GetEntityQuery<TransformComponent>();
 
         var query = AllEntityQuery<ActiveInstrumentComponent, InstrumentComponent>();
         while (query.MoveNext(out var uid, out _, out var instrument))
@@ -508,7 +525,7 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
             {
                 if (instrument.InstrumentPlayer is {Valid: true} mob)
                 {
-                    _stuns.TryParalyze(mob, TimeSpan.FromSeconds(1), true);
+                    _stuns.TryUpdateParalyzeDuration(mob, TimeSpan.FromSeconds(1));
 
                     _popup.PopupEntity(Loc.GetString("instrument-component-finger-cramps-max-message"),
                         uid, mob, PopupType.LargeCaution);
@@ -546,31 +563,5 @@ public sealed partial class InstrumentSystem : SharedInstrumentSystem
         TryComp<InstrumentComponent>(uid, out var localComp);
         component = localComp;
         return component != null;
-    }
-}
-
-public sealed class InstrumentMidiPlayedEvent : EntityEventArgs
-{
-    public EntityUid Source { get; }
-    public RobustMidiEvent[] MidiEvents { get; }
-
-    public InstrumentMidiPlayedEvent(EntityUid source, RobustMidiEvent[] midiEvents)
-    {
-        Source = source;
-        MidiEvents = midiEvents;
-    }
-}
-
-public sealed class InstrumentChannelFilterChangedEvent : EntityEventArgs
-{
-    public EntityUid Source { get; }
-    public int Channel { get; }
-    public bool Filtered { get; }
-
-    public InstrumentChannelFilterChangedEvent(EntityUid source, int channel, bool filtered)
-    {
-        Source = source;
-        Channel = channel;
-        Filtered = filtered;
     }
 }

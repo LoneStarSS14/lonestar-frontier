@@ -25,11 +25,11 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
         SubscribeLocalEvent<SurveillanceCameraMicrophoneComponent, ListenAttemptEvent>(CanListen);
         SubscribeLocalEvent<ExpandICChatRecipientsEvent>(OnExpandRecipients);
         SubscribeLocalEvent<SurveillanceCameraEmoteMessageEvent>(OnEmoteMessage);
-        SubscribeLocalEvent<InstrumentMidiPlayedEvent>(OnInstrumentMidiPlayed);
-        SubscribeLocalEvent<InstrumentChannelFilterChangedEvent>(OnInstrumentChannelFilterChanged);
+        SubscribeLocalEvent<InstrumentSystem.InstrumentMidiPlayedEvent>(OnInstrumentMidiPlayed);
+        SubscribeLocalEvent<InstrumentSystem.InstrumentChannelFilterChangedEvent>(OnInstrumentChannelFilterChanged);
     }
 
-    private void OnInstrumentChannelFilterChanged(InstrumentChannelFilterChangedEvent args)
+    private void OnInstrumentChannelFilterChanged(InstrumentSystem.InstrumentChannelFilterChangedEvent args)
     {
         if (args.Channel < 0 || args.Channel >= RobustMidiEvent.MaxChannels)
             return;
@@ -65,7 +65,7 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
         }
     }
 
-    private void OnInstrumentMidiPlayed(InstrumentMidiPlayedEvent args)
+    private void OnInstrumentMidiPlayed(InstrumentSystem.InstrumentMidiPlayedEvent args)
     {
         if (args.MidiEvents.Length == 0)
             return;
@@ -115,7 +115,7 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
 
         var xformQuery = GetEntityQuery<TransformComponent>();
 
-        foreach (var (camera, xform) in EntityQuery<SurveillanceCameraComponent, TransformComponent>())
+        foreach (var (microphone, camera, xform) in EntityQuery<SurveillanceCameraMicrophoneComponent, SurveillanceCameraComponent, TransformComponent>())
         {
             if (camera.ActiveMonitors.Count == 0)
                 continue;
@@ -126,7 +126,7 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
             var cameraPos = _xforms.GetWorldPosition(xform, xformQuery);
             var sourcePos = _xforms.GetWorldPosition(uid, xformQuery);
 
-            if ((sourcePos - cameraPos).Length() > EmoteRange)
+            if ((sourcePos - cameraPos).Length() > microphone.Range)
                 continue;
 
             var ev = new SurveillanceCameraSpeechSendEvent(uid, args.Message, InGameICChatType.Emote);

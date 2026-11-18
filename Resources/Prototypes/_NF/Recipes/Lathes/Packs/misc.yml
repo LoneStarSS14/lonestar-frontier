@@ -16,10 +16,6 @@
   - ExteriorLightTube
   - LedLightBulb
   - LedLightTube
-  - DimLightBulb # Coyote
-  - WarmLightBulb # Coyote
-  - DimLightTube # LoneStar
-  - WarmLightTube # LoneStar
 
 - type: latheRecipePack
   id: NFBasicToolsStatic
@@ -81,7 +77,7 @@
   recipes:
   - CableStack
   - CableMVStack
-  - CableHVStack
+  - CableHVStack  
   - PowerCellSmall
   - PowerCellMedium
   - Beaker

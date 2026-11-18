@@ -12,39 +12,35 @@
   id: Edison
   parent: BasePOI
   name: 'Edison Power Plant'
-  minimumDistance: 2000
-  maximumDistance: 2250
+  minimumDistance: 3650
+  maximumDistance: 5400
   minimumClearance: 1000
   spawnGroup: Required
-  gridPath: /Maps/_CS/POI/edison.yml # Coyote: Changed to new Edison Map
+  gridPath: /Maps/_NF/POI/edison.yml
   addComponents:
   - type: IFF
     color: "#3737F8"
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
-  - type: StationTransit
-    routes:
-      SpawnPoints: 40
 
 - type: gameMap
   id: Edison
   mapName: 'Edison Power Plant'
-  mapPath: /Maps/_CS/POI/edison.yml # Coyote: Changed to new Edison map
+  mapPath: /Maps/_NF/POI/edison.yml
   minPlayers: 0
   stations:
     Edison:
-      stationProto: StandardFrontierDepot
+      stationProto: RecordsFrontierOutpost
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Edison Power Plant'
         - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Interface/StationIcons/banner_engineering.png
+          iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/banner_engineering.png
           stationSubtext: frontier-lobby-edison-subtext
           stationDescription: frontier-lobby-edison-description
           lobbySortOrder: 5
         - type: StationJobs
           availableJobs:
             PlantManager: [ 1, 1 ]
-            PlantTechnician: [ -1, -1 ]
-
+            PlantTechnician: [ 0, 0 ]

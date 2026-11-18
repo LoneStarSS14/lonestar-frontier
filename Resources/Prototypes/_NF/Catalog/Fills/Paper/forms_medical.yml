@@ -92,7 +92,6 @@
 
 
       [color=#AAAAAA]This Form is void without the signature and stamp of a medical specialist.[/color]
-
 - type: entity
   id: PaperWrittenMedicalFormPrescription
   name: medical prescription
@@ -120,7 +119,6 @@
 
 
       [color=#AAAAAA]This Form is void without the signature and stamp of a medical specialist.[/color]
-
 - type: entity # Based on form made by Radiantflash (Lykaon Rahmer)
   id: PaperWrittenMedicalFormHealthInsurance
   name: health insurance contract
@@ -154,7 +152,6 @@
 
 
       [color=#AAAAAA]This Form is void without the signatures of both Parties and the stamp of a medical specialist.[/color]
-
 - type: entity
   id: PaperWrittenMedicalFormServiceInvoice
   name: medical service invoice
@@ -192,7 +189,6 @@
 
 
       [color=#AAAAAA]This Form is void without the signature and stamp of a medical specialist.[/color]
-
 - type: entity
   id: PaperWrittenMedicalFormReceiptInvoice
   name: medical dispatch payment
@@ -221,7 +217,6 @@
       [bold]Total Value: $XXX,XXX[/bold]
 
       [color=#AAAAAA]This Form is void without the signature and stamp of the Frontier Civil Command. This form does not constitute a contract. Compensation for services provided is at the discretion of the Frontier Civil Command.[/color]
-
 - type: entity
   id: PaperWrittenMedicalFormRelease
   name: medical release form
@@ -257,8 +252,6 @@
 
 
       [color=#AAAAAA]This Form is only acknowledged with the signature and stamp of Frontier Civil Command. This form does not constitute a contract. Compensation for services provided is at the discretion of Frontier Civil Command.[/color]
-
-
 - type: entity
   id: PaperWrittenMedicalMedtekPatientRecord
   parent: Paper
@@ -304,5 +297,3 @@
 
       [head=3]Injuries[/head]
       {damageList}
-
-

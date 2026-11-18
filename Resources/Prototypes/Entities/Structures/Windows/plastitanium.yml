@@ -48,7 +48,6 @@
         layer:
         - WallLayer
         density: 120 # Coyote: 4000<120
-
 - type: entity
   id: PlastitaniumWindowSquareBase
   abstract: true
@@ -74,7 +73,6 @@
         - FullTileMask
         layer:
         - GlassLayer
-
 - type: entity
   id: PlastitaniumWindowIndestructible
   name: plastitanium window
@@ -86,7 +84,8 @@
   - type: Sprite
     color: "#cdf3cd"
   # End Frontier
-
+  - type: ExaminableDamage
+    messages: null
 - type: entity
   id: PlastitaniumWindow
   name: plastitanium window
@@ -134,7 +133,6 @@
   - type: Construction # Frontier - Harder to break into
     graph: Plastitanium # Frontier - Harder to break into
     node: plastitaniumWindow # Frontier - Harder to break into
-
 - type: entity
   id: PlastitaniumWindowDiagonalBase
   abstract: true
@@ -175,7 +173,6 @@
     airBlockedDirection:
     - South
     - East
-
 - type: entity
   id: PlastitaniumWindowDiagonalIndestructible
   name: plastitanium window
@@ -187,7 +184,8 @@
   - type: Sprite
     color: "#cdf3cd"
   # End Frontier
-
+  - type: ExaminableDamage
+    messages: null
 - type: entity
   id: PlastitaniumWindowDiagonal
   name: plastitanium window

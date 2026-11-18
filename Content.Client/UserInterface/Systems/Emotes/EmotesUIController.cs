@@ -266,8 +266,8 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
         // check the supplemental sounds for vocal emotes
         if (!EntityManager.TryGetComponent<VocalComponent>(player, out var vocal))
             return false; // no vocal component, no vocal emotes
-        if (!_prototypeManager.TryIndex<EmoteSoundsPrototype>(vocal.SupplementalSounds, out var esp))
-            return false; // no supplemental sounds, no vocal emotes
+        if (vocal.EmoteSounds is not { } sounds || !_prototypeManager.TryIndex(sounds, out var esp))
+            return false; // no configured sounds, no vocal emotes
         return esp.Sounds.ContainsKey(emote.ID); // only allow if we have sounds for them
     }
 

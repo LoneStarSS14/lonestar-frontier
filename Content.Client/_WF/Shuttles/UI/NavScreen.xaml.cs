@@ -24,27 +24,15 @@ public sealed partial class NavScreen
             return;
         }
 
+        _autopilotEnabled = true;
+        AutopilotButton.Pressed = true;
         _entManager.TryGetNetEntity(_shuttleEntity, out var shuttle);
         OnAutopilotToggled?.Invoke(shuttle);
     }
 
     private void WfUpdateState(NavInterfaceState state)
     {
-        _autopilotEnabled = state.AutopilotEnabled;
-
-        // Always show autopilot button, but disable it if no autopilot server is available
+        // The current navigation state no longer carries autopilot status.
         AutopilotButton.Visible = true;
-        AutopilotButton.Disabled = !state.HasAutopilotServer;
-
-        // Update button pressed state
-        AutopilotButton.Pressed = state.AutopilotEnabled;
-
-        // When autopilot is active, unpress the dampener mode buttons
-        if (state.AutopilotEnabled)
-        {
-            DampenerOff.Pressed = false;
-            DampenerOn.Pressed = false;
-            AnchorOn.Pressed = false;
-        }
     }
 }

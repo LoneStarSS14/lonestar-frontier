@@ -10,7 +10,6 @@
     Telecrystal: 2 # LoneStar 
   categories:
   - UplinkWeaponry
-
 - type: listing
   id: UplinkNFRevolverRitland
   name: uplink-revolver-ritland-name
@@ -21,7 +20,6 @@
     Telecrystal: 2 # LoneStar 
   categories:
   - UplinkWeaponry
-
 - type: listing
   id: UplinkNFPistolCobra
   name: uplink-pistol-cobra-name
@@ -32,7 +30,6 @@
     Telecrystal: 2 # LoneStar 
   categories:
   - UplinkWeaponry
-
 - type: listing
   id: UplinkNFRifleBarlows
   name: uplink-rifle-barlows-name
@@ -50,7 +47,6 @@
 # Ammo
 
 # LoneStar Vend change
-
 - type: listing
   abstract: true
   id: UplinkNFPistol9mmMagazine
@@ -62,7 +58,6 @@
     Telecrystal: 1
   categories:
   - UplinkAmmo
-
 - type: listing
   abstract: true
   id: UplinkNFMagazinePistolSubMachineGun
@@ -74,7 +69,26 @@
     Telecrystal: 1 # LoneStar
   categories:
   - UplinkAmmo
-
+- type: listing
+  id: UplinkNFMagazineShotgunPellet
+  name: uplink-magazine-bulldog-pellet-name
+  description: uplink-magazine-bulldog-pellet-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: pellets }
+  productEntity: NFMagazineShotgunDrum
+  cost:
+    Telecrystal: 2
+  categories:
+    - UplinkAmmo
+- type: listing
+  id: UplinkNFMagazineShotgunSlug
+  name: uplink-magazine-bulldog-slug-name
+  description: uplink-magazine-bulldog-slug-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: slug }
+  productEntity: NFMagazineShotgunDrumSlug
+  cost:
+    Telecrystal: 3
+  categories:
+    - UplinkAmmo
 - type: listing
   abstract: true
   id: UplinkNFMagazinePistolCaselessRifle
@@ -86,7 +100,6 @@
     Telecrystal: 1
   categories:
   - UplinkAmmo
-
 - type: listing
   id: UplinkNFSpeedLoaderMagnum
   abstract: true
@@ -98,7 +111,6 @@
     Telecrystal: 1 # LoneStar
   categories:
   - UplinkAmmo
-
 - type: listing
   id: UplinkNFMosinAmmo
   abstract: true
@@ -110,7 +122,6 @@
     Telecrystal: 1
   categories:
   - UplinkAmmo
-
 - type: listing
   id: UplinkNFHristovAmmo
   name: uplink-sniper-ammo-name
@@ -133,7 +144,6 @@
     Telecrystal: 16 # LoneStar 
   categories:
   - UplinkWeaponry
-
 - type: listing
   id: UplinkSecuritySpaceBladeSyndicate
   name: uplink-spaceblade-syndicate-name
@@ -144,7 +154,6 @@
     Telecrystal: 1
   categories:
     - UplinkPointless
-
 - type: listing
   id: UplinkEmagPass
   name: uplink-emag-pass-name
@@ -157,7 +166,6 @@
     Telecrystal: 4
   categories:
   - UplinkDisruption
-
 - type: listing
   id: UplinkSecuritySyndicateSegway
   name: uplink-syndicate-segway-name

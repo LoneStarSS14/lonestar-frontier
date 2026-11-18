@@ -14,7 +14,6 @@ namespace Content.Shared._DV.Storage.EntitySystems;
 
 public abstract class SharedMouthStorageSystem : EntitySystem
 {
-    [Dependency] private readonly DumpableSystem _dumpableSystem = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
 
@@ -56,10 +55,11 @@ public abstract class SharedMouthStorageSystem : EntitySystem
 
     private void DropAllContents(EntityUid uid, MouthStorageComponent component, EntityEventArgs args)
     {
-        if (component.MouthId == null)
+        if (component.MouthId is not { } mouthId
+            || !TryComp<StorageComponent>(mouthId, out var storage))
             return;
 
-        _dumpableSystem.DumpContents(component.MouthId.Value, uid, uid);
+        _containerSystem.EmptyContainer(storage.Container, true, Transform(uid).Coordinates);
     }
 
     private void OnDamageModified(EntityUid uid, MouthStorageComponent component, DamageChangedEvent args)

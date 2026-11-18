@@ -9,19 +9,15 @@ using Content.Shared.Radio;
 using Content.Shared.Salvage.Magnet;
 using Robust.Shared.Exceptions;
 using Robust.Shared.Map;
-using Robust.Shared.Map.Components;
-using Robust.Shared.Physics;
-using Robust.Shared.Physics.Components;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.Salvage;
 
 public sealed partial class SalvageSystem
 {
-    private const float IdleDebrisLinearVelocityEpsilon = 0.05f;
-    private const float IdleDebrisAngularVelocityEpsilon = 0.01f;
+    [Dependency] private readonly IRuntimeLog _runtimeLog = default!;
 
-    [ValidatePrototypeId<RadioChannelPrototype>]
-    private const string MagnetChannel = "Supply";
+    private static readonly ProtoId<RadioChannelPrototype> MagnetChannel = "Supply";
 
     private EntityQuery<SalvageMobRestrictionsComponent> _salvMobQuery;
     private EntityQuery<MobStateComponent> _mobStateQuery;
@@ -383,7 +379,6 @@ public sealed partial class SalvageSystem
 
             _transform.SetParent(mapChild, salvXForm, spawnUid.Value);
             _transform.SetWorldPositionRotation(mapChild, spawnLocation.Position + localPos, spawnAngle, salvXForm);
-            TrySleepPlacedDebris(mapChild);
 
             data.Comp.ActiveEntities ??= new List<EntityUid>();
             data.Comp.ActiveEntities?.Add(mapChild);
@@ -411,24 +406,6 @@ public sealed partial class SalvageSystem
         };
 
         RaiseLocalEvent(ref active);
-    }
-
-    private void TrySleepPlacedDebris(EntityUid uid)
-    {
-        if (!TryComp<PhysicsComponent>(uid, out var body))
-            return;
-
-        if (body.BodyType != BodyType.Dynamic)
-            return;
-
-        _physics.SetSleepingAllowed(uid, body, true);
-
-        if (body.Awake &&
-            body.LinearVelocity.LengthSquared() <= IdleDebrisLinearVelocityEpsilon * IdleDebrisLinearVelocityEpsilon &&
-            MathF.Abs(body.AngularVelocity) <= IdleDebrisAngularVelocityEpsilon)
-        {
-            _physics.SetAwake(uid, body, false);
-        }
     }
 
     private bool TryGetSalvagePlacementLocation(Entity<SalvageMagnetComponent> magnet, MapId mapId, Box2Rotated attachedBounds, Box2 bounds, Angle worldAngle, out MapCoordinates coords, out Angle angle)

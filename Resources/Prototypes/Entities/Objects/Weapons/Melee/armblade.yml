@@ -17,12 +17,12 @@
     attackRate: 1
     damage:
       types: # Same as energy sword, but slash/pierce instead of slash/heat
-        Slash: 25 # Coyote: 15 < 25
+        Slash: 15
         Piercing: 15
         Structural: 20
   - type: Item
     size: Normal
     sprite: Objects/Weapons/Melee/armblade.rsi
   - type: Prying
-  - type: UseDelay # Goobstation - For insta prying
-    delay: 1
+    speedModifier: 1.5 # Jaws of life speed
+    pryPowered: true

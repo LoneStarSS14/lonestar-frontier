@@ -10,7 +10,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: ReinforcedGirder
   graph: Girder
@@ -23,7 +22,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: ClockworkGirder
   graph: ClockworkGirder
@@ -36,7 +34,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: Wall
   graph: Girder
@@ -49,7 +46,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: ReinforcedWall
   graph: Girder
@@ -65,21 +61,6 @@
 
 # Lonestar - Diagonal Wall
 - type: construction
-  id: WallReinforcedDiagonal
-  name: construction-ghost-reinforced-wall-diagonal
-  graph: Girder
-  startNode: start
-  targetNode: reinforceddiagonalWall
-  category: construction-category-structures
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: true
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-# Lonestar - End
-
-- type: construction
   id: WallClock
   graph: ClockworkGirder
   startNode: start
@@ -91,7 +72,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: WoodWall
   graph: Barricade
@@ -104,7 +84,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: UraniumWall
   graph: Girder
@@ -117,7 +96,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: SilverWall
   graph: Girder
@@ -130,7 +108,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: PlasticWall
   graph: Girder
@@ -143,7 +120,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: PlasmaWall
   graph: Girder
@@ -156,7 +132,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: GoldWall
   graph: Girder
@@ -169,7 +144,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: ShuttleWall
   graph: Girder
@@ -182,10 +156,9 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: DiagonalShuttleWall
-  name: construction-ghost-shuttle-wall-diagonal # LoneStar
+  name: construction-recipe-diagonal-shuttle-wall
   graph: Girder
   startNode: start
   targetNode: diagonalshuttleWall
@@ -196,7 +169,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: ClownWall
   graph: Girder
@@ -209,7 +181,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: MeatWall
   graph: Girder
@@ -222,7 +193,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: Grille
   graph: Grille
@@ -235,7 +205,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: ClockGrille
   graph: ClockGrille
@@ -248,7 +217,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: GrilleDiagonal
   name: construction-ghost-grille-diagonal # LoneStar
@@ -261,7 +229,6 @@
       failIfSpace: false
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: ClockworkGrilleDiagonal
   name: construction-ghost-clockwork-grille-diagonal # LoneStar
@@ -274,7 +241,6 @@
       failIfSpace: false
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: Window
   graph: Window
@@ -288,10 +254,9 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: WindowDiagonal
-  name: construction-ghost-window-diagonal # LoneStar
+  name: construction-window-diagonal
   graph: WindowDiagonal
   startNode: start
   targetNode: windowDiagonal
@@ -302,7 +267,6 @@
     - !type:NoWindowsInTile
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: ReinforcedWindow
   graph: Window
@@ -316,10 +280,9 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: ReinforcedWindowDiagonal
-  name: construction-ghost-reinforced-window-diagonal # LoneStar
+  name: construction-recipe-reinforced-window-diagonal
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedWindowDiagonal
@@ -330,7 +293,6 @@
     - !type:NoWindowsInTile
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: TintedWindow
   graph: Window
@@ -344,7 +306,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: ClockworkWindow
   graph: Window
@@ -358,10 +319,9 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: ClockworkWindowDiagonal
-  name: construction-ghost-clockwork-window-diagonal # LoneStar
+  name: construction-recipe-clockwork-window-diagonal
   graph: WindowDiagonal
   startNode: start
   targetNode: clockworkWindowDiagonal
@@ -372,7 +332,6 @@
     - !type:NoWindowsInTile
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: PlasmaWindow
   graph: Window
@@ -386,7 +345,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: ReinforcedPlasmaWindow
   graph: Window
@@ -400,7 +358,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: ShuttleWindow
   graph: Window
@@ -414,10 +371,9 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: PlasmaWindowDiagonal
-  name: construction-ghost-plasma-window-diagonal # LoneStar
+  name: construction-recipe-plasma-window-diagonal
   graph: WindowDiagonal
   startNode: start
   targetNode: plasmaWindowDiagonal
@@ -428,10 +384,9 @@
     - !type:NoWindowsInTile
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: ReinforcedPlasmaWindowDiagonal
-  name: construction-ghost-reinforced-plasma-window-diagonal # LoneStar
+  name: construction-recipe-reinforced-plasma-window-diagonal
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedPlasmaWindowDiagonal
@@ -442,7 +397,6 @@
     - !type:NoWindowsInTile
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: WindowDirectional
   graph: WindowDirectional
@@ -456,7 +410,6 @@
     - !type:NoBlockingOrSameFacingWindowDirectional # LoneStar
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: WindowReinforcedDirectional
   graph: WindowDirectional
@@ -470,7 +423,6 @@
     - !type:NoBlockingOrSameFacingWindowDirectional # LoneStar
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: WindowClockworkDirectional
   graph: WindowDirectional
@@ -484,7 +436,6 @@
     - !type:NoBlockingOrSameFacingWindowDirectional # LoneStar
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: PlasmaWindowDirectional
   graph: WindowDirectional
@@ -498,7 +449,6 @@
     - !type:NoBlockingOrSameFacingWindowDirectional # LoneStar
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: PlasmaReinforcedWindowDirectional
   graph: WindowDirectional
@@ -512,7 +462,6 @@
     - !type:NoBlockingOrSameFacingWindowDirectional # LoneStar
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: UraniumWindow
   graph: Window
@@ -526,7 +475,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: ReinforcedUraniumWindow
   graph: Window
@@ -540,10 +488,9 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-
 - type: construction
   id: UraniumWindowDiagonal
-  name: construction-ghost-uranium-window-diagonal # LoneStar
+  name: construction-recipe-uranium-window-diagonal
   graph: WindowDiagonal
   startNode: start
   targetNode: uraniumWindowDiagonal
@@ -554,10 +501,9 @@
     - !type:NoWindowsInTile
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: ReinforcedUraniumWindowDiagonal
-  name: construction-ghost-reinforced-uranium-window-diagonal # LoneStar
+  name: construction-recipe-reinforced-uranium-window-diagonal
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedUraniumWindowDiagonal
@@ -568,7 +514,6 @@
     - !type:NoWindowsInTile
   objectType: Structure
   placementMode: SnapgridCenter
-
 - type: construction
   id: Firelock
   graph: Firelock
@@ -581,7 +526,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: FirelockGlass
   graph: Firelock
@@ -594,9 +538,9 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: FirelockEdge
+  name: construction-recipe-firelock-edge
   graph: Firelock
   startNode: start
   targetNode: FirelockEdge
@@ -606,7 +550,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: Turnstile
   graph: Turnstile
@@ -618,7 +561,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: Shutters
   graph: Shutters
@@ -628,7 +570,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-
 - type: construction
   id: ShuttersWindow
   graph: Shutters
@@ -638,7 +579,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-
 - type: construction
   id: ShuttersRadiation
   graph: Shutters
@@ -648,7 +588,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-
 - type: construction
   id: BlastDoor
   graph: BlastDoor
@@ -658,7 +597,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-
 - type: construction
   id: Catwalk
   graph: Catwalk
@@ -680,7 +618,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-
 - type: construction
   id: FloorBananium
   graph: FloorBananium
@@ -696,7 +633,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-
 - type: construction
   id: Barricade
   graph: Barricade
@@ -708,9 +644,9 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: BarricadeDirectional
+  name: construction-recipe-barricade-directional
   graph: BarricadeDirectional
   startNode: start
   targetNode: barricadefull
@@ -720,7 +656,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: Railing
   graph: Railing
@@ -732,9 +667,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: RailingCorner
+  name: construction-recipe-railing-corner
   graph: Railing
   startNode: start
   targetNode: railingCorner
@@ -744,9 +679,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: RailingCornerSmall
+  name: construction-recipe-railing-corner-small
   graph: Railing
   startNode: start
   targetNode: railingCornerSmall
@@ -756,9 +691,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: RailingRound
+  name: construction-recipe-railing-round
   graph: Railing
   startNode: start
   targetNode: railingRound
@@ -781,9 +716,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceMetalCorner
+  name: construction-recipe-fence-metal-corner
   graph: FenceMetal
   startNode: start
   targetNode: corner
@@ -793,9 +728,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceMetalEnd
+  name: construction-recipe-fence-metal-end
   graph: FenceMetal
   startNode: start
   targetNode: end
@@ -805,7 +740,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceMetalGate
   graph: FenceMetal
@@ -830,9 +764,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceWoodEnd
+  name: construction-recipe-fence-wood-end
   graph: FenceWood
   startNode: start
   targetNode: end
@@ -842,9 +776,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceWoodCorner
+  name: construction-recipe-fence-wood-corner
   graph: FenceWood
   startNode: start
   targetNode: corner
@@ -854,9 +788,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceWoodTJunction
+  name: construction-recipe-fence-wood-t-junction
   graph: FenceWood
   startNode: start
   targetNode: tjunction
@@ -866,7 +800,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceWoodGate
   graph: FenceWood
@@ -891,9 +824,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceWoodEndSmall
+  name: construction-recipe-fence-wood-end-small
   graph: FenceWood
   startNode: start
   targetNode: end_small
@@ -903,9 +836,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceWoodCornerSmall
+  name: construction-recipe-fence-wood-corner-small
   graph: FenceWood
   startNode: start
   targetNode: corner_small
@@ -915,9 +848,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceWoodTJunctionSmall
+  name: construction-recipe-fence-wood-t-junction-small
   graph: FenceWood
   startNode: start
   targetNode: tjunction_small
@@ -927,9 +860,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: FenceWoodGateSmall
+  name: construction-recipe-fence-wood-gate-small
   graph: FenceWood
   startNode: start
   targetNode: gate_small
@@ -952,7 +885,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: AirlockGlass
   graph: Airlock
@@ -964,9 +896,9 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: PinionAirlock
+  name: construction-recipe-pinion-airlock
   graph: PinionAirlock
   startNode: start
   targetNode: airlock
@@ -976,9 +908,9 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: PinionAirlockGlass
+  name: construction-recipe-pinion-airlock-glass
   graph: PinionAirlock
   startNode: start
   targetNode: glassAirlock
@@ -988,7 +920,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: AirlockShuttle
   graph: AirlockShuttle
@@ -1001,9 +932,9 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: AirlockGlassShuttle
+  name: construction-recipe-airlock-glass-shuttle
   graph: AirlockShuttle
   startNode: start
   targetNode: airlockGlass
@@ -1014,7 +945,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: Windoor
   graph: Windoor
@@ -1026,7 +956,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: SecureWindoor
   graph: Windoor
@@ -1038,7 +967,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: ClockworkWindoor
   graph: Windoor
@@ -1066,7 +994,6 @@
   # Need an *additional* condition here that forces there to be a wall in the opposite direction to the one used for placement.
   # Also see below. Didn't add it b/c construction ECS work going on. Cheers, - 20kdc
     - !type:TileNotBlocked
-
 - type: construction
   id: LightSmallFixture
   graph: LightFixture
@@ -1080,7 +1007,6 @@
   conditions:
   # Same here. - 20kdc
     - !type:TileNotBlocked
-
 - type: construction
   id: EmergencyLightFixture
   graph: LightFixture
@@ -1093,7 +1019,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: LightGroundFixture
   graph: LightFixture
@@ -1106,7 +1031,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: LightStrobeFixture
   graph: LightFixture
@@ -1132,7 +1056,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: MetalDoor
   graph: DoorGraph
@@ -1144,7 +1067,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: WoodDoor
   graph: DoorGraph
@@ -1156,7 +1078,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: PlasmaDoor
   graph: DoorGraph
@@ -1168,7 +1089,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: GoldDoor
   graph: DoorGraph
@@ -1180,7 +1100,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: SilverDoor
   graph: DoorGraph
@@ -1192,7 +1111,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: PaperDoor
   graph: DoorGraph
@@ -1202,9 +1120,9 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-
 - type: construction
   id: PlasticFlapsClear
+  name: construction-recipe-plastic-flaps-clear
   graph: PlasticFlapsGraph
   startNode: start
   targetNode: plasticFlaps
@@ -1214,9 +1132,9 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: PlasticFlapsOpaque
+  name: construction-recipe-plastic-flaps-opaque
   graph: PlasticFlapsGraph
   startNode: start
   targetNode: opaqueFlaps
@@ -1226,7 +1144,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: CarpStatue
   graph: CarpStatue
@@ -1238,7 +1155,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-
 - type: construction
   id: BananiumClownStatue
   graph: BananiumStatueClown
@@ -1250,7 +1166,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: BananiumDoor
   graph: DoorGraph
@@ -1262,7 +1177,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: BananiumAltar
   graph: BananiumAltarGraph
@@ -1275,7 +1189,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: SolidSecretDoor
   name: recipes-secret-door-name
@@ -1289,7 +1202,6 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
 - type: construction
   id: FungalSoil
   graph: Soil
@@ -1301,3 +1213,18 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+- type: construction
+  id: WallReinforcedDiagonal
+  name: construction-ghost-reinforced-wall-diagonal
+  graph: Girder
+  startNode: start
+  targetNode: reinforceddiagonalWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+# Lonestar - End

@@ -30,7 +30,6 @@
 #    - type: PaywardActionMailOpenedByOwners # Coyote
 #    - type: PaywardAuraMailCarrier # Coyote
 #    - type: PaywardModifierMailStats # Coyote
-
 - type: startingGear
   id: MailCarrierGear
   equipment:
@@ -41,11 +40,12 @@
     belt: NFMailBag
   storage:
     back:
-    - EncryptionKeyService # Frontier
     - HandheldCrewMonitor # Frontier
     - ShipVoucherFrontierMailCarrier # Frontier
-    - MailMetricsCartridge # Frontier
-
+  encryptionKeys:
+  - EncryptionKeyService
+  cartridges:
+  - MailMetricsCartridge
 - type: chameleonOutfit
   id: MailCarrierChameleonOutfit
   job: MailCarrier

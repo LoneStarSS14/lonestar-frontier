@@ -1,12 +1,12 @@
 job-supervisors-sr = the Station Representative
-job-supervisors-guard = LSRD, and the Nash Station administration
 job-supervisors-bailiff = the Armorer
 job-supervisors-cadet = all higher ranking LSRD personnel
 job-supervisors-freebooters-union = the Freebooters' Union
 job-supervisors-nf-pirate = the call of troublemaking
 job-supervisors-nf-pirate-captain = the Captain
 job-supervisors-nfsd = Deputies, the Armorer, and the Chief Ranger
-job-supervisors-plant-manager = Nash Command, which includes the Plant Manager, Station Representative, and such
+job-supervisors-plant-manager = the Plant Manager
 job-supervisors-prisoner = all LSRD personnel
 job-supervisors-sergeant = the Senior Ranger
 job-supervisors-sheriff = the Chief Ranger
+job-supervisors-guard = LSRD, and the Nash Station administration

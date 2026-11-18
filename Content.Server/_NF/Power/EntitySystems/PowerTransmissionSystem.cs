@@ -1,4 +1,3 @@
-// _CS Start
 using Content.Server._NF.Bank;
 using Content.Server._NF.Power.Components;
 using Content.Server.Audio;
@@ -99,9 +98,9 @@ public sealed partial class PowerTransmissionSystem : EntitySystem
                 float depositValue = GetPowerPayRate((uid, xmit), xmit.AccumulatedEnergy / totalPeriodSeconds) * totalPeriodSeconds;
 
                 xmit.AccumulatedEnergy = 0.0f;
-                var depositCredits = (int)depositValue;
-                if (depositCredits > 0)
-                    _bank.TrySectorDeposit(xmit.Account, depositCredits, LedgerEntryType.PowerTransmission);
+                var depositSpesos = (int)depositValue;
+                if (depositSpesos > 0)
+                    _bank.TrySectorDeposit(xmit.Account, depositSpesos, LedgerEntryType.PowerTransmission);
             }
 
             bool powered = power.NetworkLoad.Enabled && power.NetworkLoad.ReceivingPower > 0;
@@ -116,10 +115,10 @@ public sealed partial class PowerTransmissionSystem : EntitySystem
     }
 
     /// <summary>
-    /// Gets the expected pay rate, in credits per second.
+    /// Gets the expected pay rate, in spesos per second.
     /// </summary>
     /// <param name="power">Input power level, in watts</param>
-    /// <returns>Expected power sale value in credits per second</returns>
+    /// <returns>Expected power sale value in spesos per second</returns>
     public float GetPowerPayRate(Entity<PowerTransmissionComponent> ent, float power)
     {
         if (!float.IsFinite(power) || !float.IsPositive(power))
@@ -186,8 +185,7 @@ public sealed partial class PowerTransmissionSystem : EntitySystem
             {
                 On = nodeEnabled,
                 Load = power.DrawRate,
-                Text = Loc.GetString("power-transmission-estimated-value", ("value", BankSystemExtensions.ToCreditString((int)GetPowerPayRate(ent, power.DrawRate))))
+                Text = Loc.GetString("power-transmission-estimated-value", ("value", BankSystemExtensions.ToSpesoString((int)GetPowerPayRate(ent, power.DrawRate))))
             });
     }
 }
-// _CS End

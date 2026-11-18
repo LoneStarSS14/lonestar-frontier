@@ -11,30 +11,6 @@
   - Trinkets
   - GroupSpeciesBreathTool
   - CaptainGear
-
-- type: roleLoadout # Move this to _HL later
-  id: JobStationCaptain
-  groups:
-  - CaptainHead
-  - CaptainNeck
-  - CaptainJumpsuit
-  - CaptainBackpack
-  - CaptainOuterClothing
-  - StationRepGloves
-  - StationRepForcedOuterClothing
-  - ContractorShoes
-  - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorBoxSurvival
-  - ContractorWallet
-  - ContractorCartridge
-  - ContractorImplanter
-  - StationRepBackpackItems
-  - ContractorHandItems
-  - NFSpeciesSpecific
-  - CaptainGear
-
 - type: roleLoadout
   id: JobHeadOfPersonnel
   groups:
@@ -55,7 +31,6 @@
   id: JobBorg
   nameDataset: NFNamesBorg # Frontier: use NF variant
   canCustomizeName: true
-
 - type: roleLoadout
   id: JobStationAi
   nameDataset: NamesAI
@@ -77,7 +52,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobBartender
   groups:
@@ -90,7 +64,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobServiceWorker
   groups:
@@ -101,7 +74,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobChef
   groups:
@@ -115,7 +87,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobLibrarian
   groups:
@@ -126,7 +97,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobLawyer
   groups:
@@ -154,7 +124,6 @@
 #  - Survival
 #  - Trinkets
 #  - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobJanitor
   groups:
@@ -169,7 +138,6 @@
   - Trinkets
   - JanitorPlunger
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobBotanist
   groups:
@@ -182,7 +150,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobClown
   canCustomizeName: true
@@ -196,7 +163,6 @@
   - Glasses
   - SurvivalClown
   - Trinkets
-
 - type: roleLoadout
   id: JobMime
   canCustomizeName: true
@@ -211,7 +177,6 @@
   - Glasses
   - SurvivalMime
   - Trinkets
-
 - type: roleLoadout
   id: JobMusician
   groups:
@@ -240,7 +205,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobCargoTechnician
   groups:
@@ -254,7 +218,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobSalvageSpecialist
   groups:
@@ -281,7 +244,6 @@
   - SurvivalExtended
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobTechnicalAssistant
   groups:
@@ -291,7 +253,6 @@
   - SurvivalExtended
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobStationEngineer
   groups:
@@ -305,7 +266,6 @@
   - SurvivalExtended
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobAtmosphericTechnician
   groups:
@@ -334,7 +294,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobScientist
   groups:
@@ -351,7 +310,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobResearchAssistant
   groups:
@@ -378,7 +336,6 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
-
 - type: roleLoadout
   id: JobWarden
   groups:
@@ -392,7 +349,6 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
-
 - type: roleLoadout
   id: JobSecurityOfficer
   groups:
@@ -407,7 +363,6 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
-
 - type: roleLoadout
   id: JobDetective
   groups:
@@ -421,7 +376,6 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
-
 - type: roleLoadout
   id: JobSecurityCadet
   groups:
@@ -448,7 +402,6 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
-
 - type: roleLoadout
   id: JobMedicalDoctor
   groups:
@@ -465,7 +418,6 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
-
 - type: roleLoadout
   id: JobMedicalIntern
   groups:
@@ -476,7 +428,6 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
-
 - type: roleLoadout
   id: JobChemist
   groups:
@@ -490,7 +441,6 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
-
 - type: roleLoadout
   id: JobParamedic
   groups:
@@ -517,7 +467,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobReporter
   groups:
@@ -528,7 +477,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobPsychologist
   groups:
@@ -539,7 +487,6 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-
 - type: roleLoadout
   id: JobBoxer
   groups:
@@ -569,57 +516,72 @@
   id: RoleSurvivalVoxTank
   groups:
   - GroupEVATankVox
-
 - type: roleLoadout
   id: RoleSurvivalStandard
   groups:
   - Survival
   - GroupSpeciesBreathTool
   - GroupTankHarness
-
 - type: roleLoadout
   id: RoleSurvivalClown
   groups:
   - SurvivalClown
   - GroupTankHarness
-
 - type: roleLoadout
   id: RoleSurvivalExtended
   groups:
   - SurvivalExtended
   - GroupSpeciesBreathTool
   - GroupTankHarness
-
 - type: roleLoadout
   id: RoleSurvivalMedical
   groups:
   - SurvivalMedical
   - GroupSpeciesBreathToolMedical
   - GroupTankHarness
-
 - type: roleLoadout
   id: RoleSurvivalSecurity
   groups:
   - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
   - GroupTankHarness
-
 - type: roleLoadout
   id: RoleSurvivalSyndicate
   groups:
   - SurvivalSyndicate
   - GroupSpeciesBreathTool
   - GroupTankHarness
-
 - type: roleLoadout
   id: RoleSurvivalNukie
   groups:
   - SurvivalSyndicate
   - GroupSpeciesBreathTool
   - GroupPocketTankDouble
-
 - type: roleLoadout
   id: RoleSurvivalEVA
   groups:
   - GroupEVATank
   - SurvivalExtended
+
+- type: roleLoadout # Move this to _HL later
+  id: JobStationCaptain
+  groups:
+  - CaptainHead
+  - CaptainNeck
+  - CaptainJumpsuit
+  - CaptainBackpack
+  - CaptainOuterClothing
+  - StationRepGloves
+  - StationRepForcedOuterClothing
+  - ContractorShoes
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorBelt
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - StationRepBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+  - CaptainGear

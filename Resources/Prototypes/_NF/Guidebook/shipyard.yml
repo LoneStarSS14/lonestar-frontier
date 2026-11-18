@@ -35,6 +35,7 @@
   - ShipyardEagle
   - ShipyardGarden
   - ShipyardGasbender
+  - ShipyardGaslight
   - ShipyardGeode
   # - ShipyardGourd
   - ShipyardHammer
@@ -231,6 +232,11 @@
   id: ShipyardGasbender
   name: guide-entry-shipyard-gasbender
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Gasbender.xml"
+
+- type: guideEntry
+  id: ShipyardGaslight
+  name: guide-entry-shipyard-gaslight
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Gaslight.xml"
 
 - type: guideEntry
   id: ShipyardGeode

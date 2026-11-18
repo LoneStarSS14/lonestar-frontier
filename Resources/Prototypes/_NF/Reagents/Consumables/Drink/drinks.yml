@@ -1,5 +1,29 @@
 # Drinks
-
+- type: reagent
+  id: PumpkinSpiceLatte
+  name: reagent-name-pumpkin-spice-latte
+  parent: BaseDrink
+  desc: reagent-desc-pumpkin-spice-latte
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: basic
+  color: "#a45c08"
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Theobromine
+        amount: 0.05
+      - !type:AdjustReagent
+        reagent: Sugar
+        amount: 0.2
+  metamorphicSprite:
+    sprite: _NF/Objects/Consumable/Drinks/pumpkinspicelatte.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 2
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
 - type: reagent
   id: CucumberWater
   name: reagent-name-cucumber-water
@@ -19,7 +43,6 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: HoneyIcedTea
   name: reagent-name-honey-iced-tea
@@ -46,7 +69,6 @@
   metamorphicSprite:
     sprite: _NF/Objects/Consumable/Drinks/honeyicedtea.rsi
     state: icon
-
 - type: reagent
   id: WassailMulledAle
   name: reagent-name-wassail
@@ -70,7 +92,6 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: TheMadgob
   name: reagent-name-the-madgob
@@ -132,7 +153,6 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: GoldenCat
   name: reagent-name-golden-cat
@@ -155,7 +175,6 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: PineappleBlast
   name: reagent-name-pineapple-blast
@@ -185,7 +204,6 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: TorpedoJuice
   name: reagent-name-torpedo-juice
@@ -208,7 +226,6 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: BeesKnees
   name: reagent-name-bees-knees
@@ -244,7 +261,6 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: Eggnog
   name: reagent-name-eggnog
@@ -261,7 +277,6 @@
   metamorphicChangeColor: false
 
 # Nanocaf drinks
-
 - type: reagent
   parent: BaseDrink
   id: NFBaseDrinkNanocaf
@@ -279,7 +294,6 @@
   metamorphicSprite:
     sprite: _NF/Objects/Consumable/Drinks/genericcoffeecup.rsi
     state: icon
-
 - type: reagent
   id: Nanocaf
   name: reagent-name-nanocaf
@@ -317,29 +331,3 @@
   color: "#353E2E"
 
   # Coffee drinks
-
-- type: reagent
-  id: PumpkinSpiceLatte
-  name: reagent-name-pumpkin-spice-latte
-  parent: BaseDrink
-  desc: reagent-desc-pumpkin-spice-latte
-  physicalDesc: reagent-physical-desc-aromatic
-  flavor: basic
-  color: "#a45c08"
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Theobromine
-        amount: 0.05
-      - !type:AdjustReagent
-        reagent: Sugar
-        amount: 0.2
-  metamorphicSprite:
-    sprite: _NF/Objects/Consumable/Drinks/pumpkinspicelatte.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 2
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false

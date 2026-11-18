@@ -103,7 +103,6 @@
         - LowImpassable
   - type: BindToStation
     enabled: false # should be draggable between stations
-
 - type: entity
   parent: [ BaseStructureIndestructible, BaseStructureDisableToolUse, BaseMachinePowered ]
   id: GasSalePoint
@@ -155,7 +154,6 @@
         occludes: True
         ents: []
   - type: AtmosDevice
-
 - type: entity
   parent: [ GasSalePoint, BaseGaslock ]
   id: GasSalePort
@@ -199,8 +197,8 @@
 - type: entity
   parent: [ BaseStructureDisableToolUse, BaseStructureIndestructible, BaseMachine ]
   id: EnergyAirConverter
-  name: energy-to-plasma converter
-  description: An enormous machine that converts huge amounts of power into superheated plasma.
+  name: energy-to-air converter
+  description: An enormous machine that converts huge amounts of power into superheated air.
   placement:
     mode: SnapgridCenter
   components:
@@ -294,16 +292,9 @@
   - type: GasSpawnPowerConsumer
     spawnMixture:
       moles:
-      - 0 # oxygen
-      - 0 # nitrogen
-      - 0 # CO2
-      - 1 # Plasma 
-      - 0 # Tritium
-      - 0 # Water vapor
-      - 0 # Ammonia
-      - 0 # N2O
-      - 0 # Frezon
-      temperature: 5273
+      - 0.22 # Oxygen
+      - 0.78 # Nitrogen
+      temperature: 5273 # ~ 5000 deg C, roughly when plasma turns back into gas
   - type: GasCanister
     gasMixture:
       volume: 10000 # big tank to store backup

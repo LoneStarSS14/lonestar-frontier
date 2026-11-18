@@ -32,8 +32,7 @@ public sealed partial class CrawlUnderObjectsSystem : SharedCrawlUnderObjectsSys
     private bool IsOnCollidingTile(EntityUid uid)
     {
         var xform = Transform(uid);
-        var tile = xform.Coordinates.GetTileRef();
-        if (tile == null)
+        if (!_turf.TryGetTileRef(xform.Coordinates, out var tile))
             return false;
 
         return _turf.IsTileBlocked(tile.Value, CollisionGroup.MobMask);

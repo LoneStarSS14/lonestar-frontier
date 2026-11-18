@@ -12,7 +12,6 @@
       - id: Cautery
       - id: Retractor
       - id: Scalpel
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateMedicalBundle
   id: ClothingBackpackDuffelSyndicateFilledMedical
@@ -29,7 +28,6 @@
       - id: ScalpelAdvanced
       - id: ClothingHandsGlovesNitrile
       - id: EmergencyRollerBedSpawnFolded
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledShotgun
@@ -43,7 +41,6 @@
         amount: 3
       - id: NFMagazineShotgunDrumSlug # Frontier: MagazineShotgunSlug<NFMagazineShotgunDrumSlug
 #     - id: ThermalImagingGoggles
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledSMG
@@ -53,22 +50,22 @@
   - type: StorageFill
     contents:
       - id: NFWeaponSubMachineGunC20r # Frontier: WeaponSubMachineGunC20r<NFWeaponSubMachineGunC20r
-      - id: CSMagazineSubMachineGun40 # Coyote: .40 conversion
+      - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
         amount: 2
 #     - id: SMGSuppressor
 
-- type: entity
-  parent: ClothingBackpackDuffelSyndicateBundle
-  id: ClothingBackpackDuffelSyndicateFilledRifle
-  name: Estoc DMR bundle
-  description: "For medium-range sharpshooting, the Estoc DMR. Bundled with three magazines."
-  components:
-  - type: StorageFill
-    contents:
-    - id: NFWeaponRifleAssaultEstoc # Frontier: WeaponRifleEstoc<NFWeaponRifleAssaultEstoc
-    - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
-      amount: 2
-
+# Frontier TODO: Balance this and readd
+#- type: entity
+#  parent: ClothingBackpackDuffelSyndicateBundle
+#  id: ClothingBackpackDuffelSyndicateFilledRifle
+#  name: Estoc DMR bundle
+#  description: "For medium-range sharpshooting, the Estoc DMR. Bundled with three magazines."
+#  components:
+#  - type: StorageFill
+#    contents:
+#    - id: WeaponRifleEstoc
+#    - id: MagazineRifle
+#      amount: 2
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledRevolver
@@ -80,7 +77,6 @@
       - id: NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPythonAP<NFWeaponRevolverRitland45
       - id: NFSpeedLoaderPistol45 # Frontier: SpeedLoaderMagnumAP<NFSpeedLoaderPistol45
         amount: 2
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledLMG
@@ -91,7 +87,6 @@
     contents:
       - id: NFWeaponLightMachineGunL6 # Frontier: WeaponLightMachineGunL6<NFWeaponLightMachineGunL6
       - id: NFMagazineBoxRifle20 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledGrenadeLauncher
@@ -105,7 +100,6 @@
         amount: 4
       - id: NFGrenadeFrag # Frontier: GrenadeFrag<NFGrenadeFrag
         amount: 4
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledCarbine
@@ -125,7 +119,6 @@
   #     - id: NFGrenadeFrag
   #       amount: 2
   # LoneStar end
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateAmmo
   id: ClothingBackpackDuffelSyndicateAmmoFilled
@@ -134,7 +127,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: CSMagazineSubMachineGun40 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35 # Coyote: .40 conversion
+      - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
         amount: 4
       - id: NFMagazineShotgunDrum # Frontier: MagazineShotgun<NFMagazineShotgunDrum
         amount: 4
@@ -144,7 +137,6 @@
         amount: 1
       - id: NFMagazineBoxRifle20 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
         amount: 2
-
 - type: entity
   parent: ClothingBackpackDuffelClown
   id: ClothingBackpackDuffelSyndicateCostumeClown
@@ -160,7 +152,6 @@
       - id: BikeHorn
       - id: ClownPDA
 #      - id: ClothingHeadsetService # Frontier
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateCarpSuit
@@ -172,7 +163,6 @@
     - id: ClothingOuterSuitCarp
     - id: PlushieCarp
       amount: 6
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicatePyjamaBundle
@@ -198,7 +188,6 @@
       - id: PlushieNuke
       - id: PlushieLizard
       - id: PlushieSharkBlue
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateC4tBundle
@@ -209,7 +198,6 @@
       contents:
         - id: C4
           amount: 8
-
 - type: entity
   parent: ClothingBackpackChameleon
   id: ClothingBackpackChameleonFill
@@ -228,7 +216,6 @@
         - id: ClothingHeadsetChameleon
         - id: ClothingShoesChameleon
         - id: ChameleonControllerImplanter
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateEVABundle
@@ -243,7 +230,6 @@
       - id: ClothingHandsGlovesColorYellowBudget
       - id: DoubleEmergencyOxygenTankFilled
       - id: DoubleEmergencyNitrogenTankFilled
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateHardsuitBundle
@@ -257,7 +243,6 @@
       - id: ClothingHandsGlovesCombat
       - id: DoubleEmergencyOxygenTankFilled
       - id: DoubleEmergencyNitrogenTankFilled
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateEliteHardsuitBundle
@@ -271,7 +256,6 @@
       - id: ClothingHandsGlovesCombat
       - id: DoubleEmergencyOxygenTankFilled
       - id: DoubleEmergencyNitrogenTankFilled
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateHardsuitExtrasBundle
@@ -284,7 +268,6 @@
       - id: ClothingHandsGlovesCombat
       - id: DoubleEmergencyOxygenTankFilled
       - id: DoubleEmergencyNitrogenTankFilled
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelZombieBundle
@@ -299,7 +282,6 @@
       - id: PillAmbuzolPlus
       - id: PillAmbuzol
         amount: 3
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateMedicalBundle
   id: ClothingBackpackDuffelSyndicateMedicalBundleFilled
@@ -321,7 +303,6 @@
         amount: 3 # Frontier: 4<3
       - id: AirlossAutoInjector
         amount: 3 # Frontier: 4<3
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateDecoyKitFilled
@@ -340,7 +321,18 @@
         amount: 2
       - id: SyndieTrickyBomb
         amount: 2
-
+- type: entity
+  parent: [ ClothingBackpackDuffelBundle, BaseC3Contraband ] # Frontier BaseMajorContraband<BaseC3Contraband
+  id: ClothingBackpackDuffelAcolyteBundle
+  name: acolyte armor bundle
+  description: "Contains the Acolyte Armor, the must have of any cult leader."
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterArmorCult
+    - id: ClothingHeadHelmetCult
+    - id: ClothingShoesCult
+    - id: BedsheetCult
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledStarterKit
@@ -350,9 +342,9 @@
   - type: StorageFill
     contents:
       - id: NFWeaponSubMachineGunC20r # Frontier: WeaponSubMachineGunC20r<NFWeaponSubMachineGunC20r
-      - id: CSMagazineSubMachineGun40 # Coyote: .40 conversion
+      - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
         amount: 2 # Frontier: 3<2
-      - id: CSMagazinePistol40 # Coyote: .40 conversion
+      - id: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
       - id: SyndicateJawsOfLife
       - id: C4
         amount: 2
@@ -360,3 +352,15 @@
       - id: EmpImplanter
       - id: ClothingShoesBootsMagSyndie
       - id: AgentIDCard
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledRifle
+  name: Estoc DMR bundle
+  description: "For medium-range sharpshooting, the Estoc DMR. Bundled with three magazines."
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRifleAssaultEstoc # Frontier: WeaponRifleEstoc<NFWeaponRifleAssaultEstoc
+    - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+      amount: 2

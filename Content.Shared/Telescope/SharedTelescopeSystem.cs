@@ -2,6 +2,7 @@ using System.Numerics;
 using Content.Shared.Camera;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Item;
 using Robust.Shared.Serialization;
 
@@ -10,6 +11,7 @@ namespace Content.Shared.Telescope;
 public abstract class SharedTelescopeSystem : EntitySystem
 {
     [Dependency] private readonly SharedEyeSystem _eye = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
 
     public override void Initialize()
     {
@@ -49,16 +51,15 @@ public abstract class SharedTelescopeSystem : EntitySystem
 
     public TelescopeComponent? GetRightTelescope(EntityUid? ent)
     {
-        TelescopeComponent? telescope = null;
+        if (ent is not { } uid)
+            return null;
 
-        if (TryComp<HandsComponent>(ent, out var hands)
-            && hands.ActiveHandEntity.HasValue
-            && TryComp<TelescopeComponent>(hands.ActiveHandEntity, out var handTelescope))
-            telescope = handTelescope;
-        else if (TryComp<TelescopeComponent>(ent, out var entityTelescope))
-            telescope = entityTelescope;
+        if (TryComp<HandsComponent>(uid, out var hands)
+            && _hands.GetActiveItem((uid, hands)) is { } held
+            && TryComp<TelescopeComponent>(held, out var handTelescope))
+            return handTelescope;
 
-        return telescope;
+        return TryComp<TelescopeComponent>(uid, out var entityTelescope) ? entityTelescope : null;
     }
 
     private void OnEyeOffsetChanged(EyeOffsetChangedEvent msg, EntitySessionEventArgs args)

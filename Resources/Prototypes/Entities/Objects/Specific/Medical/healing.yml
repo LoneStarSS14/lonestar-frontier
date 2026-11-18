@@ -12,7 +12,6 @@
   # Inherited
   - type: StaticPrice
     price: 0
-
 - type: entity
   name: ointment
   description: Used to treat those nasty burns. Less effective on caustic burns.
@@ -51,7 +50,6 @@
     count: 10
   - type: StackPrice
     price: 5
-
 - type: entity
   id: Ointment1
   parent: Ointment
@@ -60,7 +58,6 @@
   - type: Stack
     stackType: Ointment
     count: 1
-
 - type: entity
   id: Ointment10Lingering
   parent: Ointment
@@ -69,7 +66,6 @@
   - type: Stack
     lingering: true
     count: 10
-
 - type: entity
   name: regenerative mesh
   description: Used to treat even the nastiest burns. Also effective against caustic burns.
@@ -110,7 +106,6 @@
     count: 10
   - type: StackPrice
     price: 20
-
 - type: entity
   id: OintmentAdvanced1
   parent: RegenerativeMesh
@@ -119,7 +114,6 @@
   - type: Stack
     stackType: RegenerativeMesh
     count: 1
-
 - type: entity
   parent: RegenerativeMesh
   id: RegenerativeMeshLingering0
@@ -128,7 +122,6 @@
   - type: Stack
     lingering: true
     count: 0
-
 - type: entity
   name: bruise pack
   description: A therapeutic gel pack and bandages designed to treat blunt-force trauma.
@@ -164,7 +157,6 @@
     count: 10
   - type: StackPrice
     price: 5
-
 - type: entity
   id: Brutepack1
   parent: Brutepack
@@ -173,7 +165,6 @@
   - type: Stack
     stackType: Brutepack
     count: 1
-
 - type: entity
   id: Brutepack10Lingering
   parent: Brutepack
@@ -182,7 +173,6 @@
   - type: Stack
     lingering: true
     count: 10
-
 - type: entity
   name: medicated suture
   description: A suture soaked in medicine, treats blunt-force trauma effectively and closes wounds.
@@ -222,7 +212,6 @@
     count: 10
   - type: StackPrice
     price: 20
-
 - type: entity
   id: BrutepackAdvanced1
   parent: MedicatedSuture
@@ -231,7 +220,6 @@
   - type: Stack
     stackType: MedicatedSuture
     count: 1
-
 - type: entity
   parent: MedicatedSuture
   id: MedicatedSutureLingering0
@@ -240,7 +228,6 @@
   - type: Stack
     lingering: true
     count: 0
-
 - type: entity
   name: blood pack
   description: Contains a groundbreaking universal blood replacement created by Nanotrasen's advanced medical science.
@@ -260,7 +247,7 @@
       - Biological
     damage:
       types:
-        Bloodloss: -2 # LoneStar
+        Bloodloss: -0.5 #lowers bloodloss damage
     modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
@@ -277,7 +264,6 @@
     count: 10
   - type: StackPrice
     price: 5 # Frontier 10<5
-
 - type: entity
   parent: Bloodpack
   id: Bloodpack1
@@ -286,7 +272,6 @@
   - type: Stack
     stackType: Bloodpack
     count: 1
-
 - type: entity
   parent: Bloodpack
   id: Bloodpack10Lingering
@@ -295,7 +280,6 @@
   - type: Stack
     lingering: true
     count: 10
-
 - type: entity
   parent: BaseHealingItem
   id: Tourniquet
@@ -329,7 +313,6 @@
         params:
           volume: 1.0
           variation: 0.125
-
 - type: entity
   name: roll of gauze
   description: Some sterile gauze to wrap around bloody stumps.
@@ -371,7 +354,6 @@
     count: 10
   - type: StackPrice
     price: 5 # Frontier 10<5
-
 - type: entity
   id: Gauze1
   parent: Gauze
@@ -379,7 +361,6 @@
   components:
   - type: Stack
     count: 1
-
 - type: entity
   id: Gauze10Lingering
   parent: Gauze
@@ -388,7 +369,6 @@
   - type: Stack
     lingering: true
     count: 10
-
 - type: entity
   name: aloe cream
   description: A topical cream for burns.
@@ -404,7 +384,6 @@
   - type: Healing # LoneStar, Faster but still ointment
     delay: 1.5
     selfHealPenaltyMultiplier: 3
-
 - type: entity
   parent: BaseHealingItem
   id: HealingToolbox
@@ -457,7 +436,6 @@
         reagents:
         - ReagentId: Dexalin
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -470,7 +448,6 @@
     contents:
     - id: PillDexalin
       amount: 10 # LoneStar
-
 - type: entity
   name: pill
   suffix: Dylovene 10u
@@ -490,7 +467,6 @@
         reagents:
         - ReagentId: Dylovene
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -503,7 +479,6 @@
     contents:
     - id: PillDylovene
       amount: 10 # LoneStar
-
 - type: entity
   name: pill
   suffix: Hyronalin 10u
@@ -523,7 +498,6 @@
         reagents:
         - ReagentId: Hyronalin
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -536,7 +510,6 @@
     contents:
     - id: PillHyronalin
       amount: 10 # LoneStar
-
 - type: entity
   name: pill
   suffix: Potassium iodide 10u
@@ -556,7 +529,6 @@
         reagents:
         - ReagentId: PotassiumIodide
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -569,7 +541,6 @@
     contents:
     - id: PillPotassiumIodide
       amount: 10 # LoneStar
-
 - type: entity
   name: pill
   suffix: Iron 10u
@@ -589,7 +560,6 @@
         reagents:
         - ReagentId: Iron
           Quantity: 10
-
 - type: entity
   name: pill
   suffix: Copper 10u
@@ -609,7 +579,6 @@
         reagents:
         - ReagentId: Copper
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -622,7 +591,6 @@
     contents:
     - id: PillIron
       amount: 10 # LoneStar
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -635,7 +603,6 @@
     contents:
     - id: PillCopper
       amount: 10 # LoneStar
-
 - type: entity
   name: pill
   suffix: Kelotane 10u
@@ -655,7 +622,6 @@
         reagents:
         - ReagentId: Kelotane
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -668,7 +634,6 @@
     contents:
     - id: PillKelotane
       amount: 10 # LoneStar
-
 - type: entity
   name: pill
   suffix: Dermaline 10u
@@ -688,7 +653,6 @@
         reagents:
         - ReagentId: Dermaline
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -701,7 +665,6 @@
     contents:
     - id: PillDermaline
       amount: 10 # LoneStar
-
 - type: entity
   name: space mirage
   parent: Pill
@@ -714,7 +677,6 @@
         reagents:
         - ReagentId: SpaceDrugs
           Quantity: 15
-
 - type: entity
   name: pill
   suffix: Tricordrazine 10u
@@ -734,7 +696,6 @@
         reagents:
         - ReagentId: Tricordrazine
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -747,7 +708,6 @@
     contents:
     - id: PillTricordrazine
       amount: 10 # LoneStar
-
 - type: entity
   name: pill
   suffix: Bicaridine 10u
@@ -767,7 +727,6 @@
         reagents:
         - ReagentId: Bicaridine
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -780,7 +739,6 @@
     contents:
     - id: PillBicaridine
       amount: 10 # LoneStar
-
 - type: entity
   name: pill
   suffix: Charcoal 10u
@@ -800,7 +758,6 @@
         reagents:
         - ReagentId: Charcoal
           Quantity: 10
-
 - type: entity
   name: pill canister
   parent: PillCanister
@@ -813,7 +770,6 @@
     contents:
     - id: PillCharcoal
       amount: 10 # LoneStar
-
 - type: entity
   name: romerol pill
   parent: Pill
@@ -826,7 +782,6 @@
         reagents:
         - ReagentId: Romerol
           Quantity: 10
-
 - type: entity
   name: ambuzol pill
   parent: Pill
@@ -839,7 +794,6 @@
           reagents:
             - ReagentId: Ambuzol
               Quantity: 10
-
 - type: entity
   name: ambuzol plus pill
   parent: Pill
@@ -856,7 +810,6 @@
           reagents:
             - ReagentId: AmbuzolPlus
               Quantity: 5
-
 - type: entity
   parent: PillCanister
   id: PillCanisterRandom
@@ -940,7 +893,6 @@
         reagents:
         - ReagentId: Ephedrine
           Quantity: 15
-
 - type: entity
   suffix: inaprovaline
   parent: PrefilledSyringe
@@ -955,7 +907,6 @@
         reagents:
         - ReagentId: Inaprovaline
           Quantity: 15
-
 - type: entity
   suffix: tranexamic acid
   parent: PrefilledSyringe
@@ -970,7 +921,6 @@
         reagents:
         - ReagentId: TranexamicAcid
           Quantity: 15
-
 - type: entity
   suffix: bicaridine
   parent: PrefilledSyringe
@@ -985,7 +935,6 @@
         reagents:
         - ReagentId: Bicaridine
           Quantity: 15
-
 - type: entity
   suffix: dermaline
   parent: PrefilledSyringe
@@ -1000,7 +949,6 @@
         reagents:
         - ReagentId: Dermaline
           Quantity: 15
-
 - type: entity
   suffix: hyronalin
   parent: PrefilledSyringe
@@ -1015,7 +963,6 @@
         reagents:
         - ReagentId: Hyronalin
           Quantity: 15
-
 - type: entity
   suffix: ipecac
   parent: PrefilledSyringe
@@ -1030,7 +977,6 @@
         reagents:
         - ReagentId: Ipecac
           Quantity: 15
-
 - type: entity
   suffix: ambuzol
   parent: PrefilledSyringe
@@ -1045,7 +991,6 @@
         reagents:
           - ReagentId: Ambuzol
             Quantity: 15
-
 - type: entity
   suffix: sigynate
   parent: PrefilledSyringe
@@ -1060,7 +1005,6 @@
         reagents:
           - ReagentId: Sigynate
             Quantity: 15
-
 - type: entity
   suffix: ethylredoxrazine
   parent: PrefilledSyringe
@@ -1075,7 +1019,6 @@
         reagents:
           - ReagentId: Ethylredoxrazine
             Quantity: 15
-
 - type: entity
   suffix: phalanximine
   parent: PrefilledSyringe
@@ -1090,7 +1033,6 @@
         reagents:
           - ReagentId: Phalanximine
             Quantity: 15
-
 - type: entity
   suffix: saline
   parent: PrefilledSyringe
@@ -1121,7 +1063,6 @@
         reagents:
         - ReagentId: Romerol
           Quantity: 15
-
 - type: entity
   parent: [PrefilledSyringe, BaseC4Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   suffix: hyperzine
@@ -1154,7 +1095,6 @@
     - id: PillPotassiumIodide
     - id: PillTricordrazine
     - id: StrangePill
-
 - type: entityTable
   id: RandomSafeSyringeTable
   table: !type:GroupSelector

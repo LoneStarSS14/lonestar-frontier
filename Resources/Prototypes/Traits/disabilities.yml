@@ -1,5 +1,4 @@
 # If you add a new trait, make sure to add the corresponding component to the whitelist in \Resources\Prototypes\Entities\Mobs\Player\clone.yml so it gets copied to clones correctly!
-
 - type: trait
   id: Blindness
   name: trait-blindness-name
@@ -11,7 +10,6 @@
       - Blindable
   components:
     - type: PermanentBlindness
-
 - type: trait
   id: PoorVision
   name: trait-poor-vision-name
@@ -24,7 +22,6 @@
   components:
     - type: PermanentBlindness
       blindness: 3 # Frontier: 4->3
-
 - type: trait
   id: Narcolepsy
   name: trait-narcolepsy-name
@@ -34,7 +31,6 @@
     - type: Narcolepsy
       timeBetweenIncidents: 300, 600
       durationOfIncident: 10, 30
-
 - type: trait
   id: Unrevivable
   name: trait-unrevivable-name
@@ -43,15 +39,13 @@
   components:
     - type: Unrevivable
       cloneable: true
-
 - type: trait
-  id: Monochromancy
-  name: trait-monochromancy-name
-  description: trait-monochromancy-desc
+  id: Monochromacy
+  name: trait-monochromacy-name
+  description: trait-monochromacy-desc
   category: Disabilities
   components:
   - type: BlackAndWhiteOverlay
-
 - type: trait
   id: Muted
   name: trait-muted-name
@@ -62,7 +56,6 @@
       - BorgChassis
   components:
     - type: Muted
-
 - type: trait
   id: Paracusia
   name: trait-paracusia-name
@@ -75,7 +68,6 @@
       maxSoundDistance: 7
       sounds:
         collection: Paracusia
-
 - type: trait
   id: PainNumbness
   name: trait-painnumbness-name
@@ -83,3 +75,11 @@
   category: Disabilities
   components:
   - type: PainNumbness
+
+- type: trait
+  id: Monochromancy
+  name: trait-monochromancy-name
+  description: trait-monochromancy-desc
+  category: Disabilities
+  components:
+  - type: BlackAndWhiteOverlay

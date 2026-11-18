@@ -4,6 +4,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Floofstation.Leash.Components;
 using Content.Shared.Hands.Components;
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Input;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Movement.Pulling.Systems;
@@ -28,6 +29,7 @@ public sealed class LeashSystem : EntitySystem
 {
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfters = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedJointSystem _joints = default!;
     [Dependency] private readonly INetManager _net = default!;
@@ -289,7 +291,7 @@ public sealed class LeashSystem : EntitySystem
             || session?.AttachedEntity is not { } player
             || !player.IsValid()
             || !TryComp<HandsComponent>(player, out var hands)
-            || hands.ActiveHandEntity is not {} leash
+            || _hands.GetActiveItem((player, hands)) is not { } leash
             || !TryComp<LeashComponent>(leash, out var leashComp)
             || leashComp.NextPull > _timing.CurTime)
             return false;

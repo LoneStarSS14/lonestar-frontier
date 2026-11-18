@@ -28,7 +28,6 @@
     color: "#4b93ad"
   - type: MarketModifier
     mod: 15
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineAstroVend
@@ -57,7 +56,6 @@
     radius: 1.5
     energy: 1.6
     color: "#4b93ad"
-
 - type: entity
   parent: VendingMachineAstroVend
   id: VendingMachineAstroVendPOI
@@ -65,7 +63,6 @@
   components:
   - type: VendingMachine
     pack: AstroVendPOIInventory
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineFlatpackVend
@@ -79,8 +76,8 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-  # - type: DatasetVocalizer
-  #   dataset: FlatpackVendAds
+#  - type: DatasetVocalizer
+#    dataset: FlatpackVendAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/flatpackvend.rsi
     layers:
@@ -97,7 +94,6 @@
     color: "#4b93ad"
   - type: MarketModifier
     mod: 25
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachineFlatpackVend]
   id: VendingMachineExpeditionaryFlatpackVend
@@ -113,7 +109,6 @@
       Guild: 0.3
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/expeditionaryflatpackvend.rsi
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, StorePresetUplink, VendingMachine]
   id: VendingMachineSyndieContraband
@@ -158,7 +153,6 @@
       Telecrystal: 4 # Small initial balance
   - type: AccessReader
     access: [["NuclearOperative"], ["SyndicateAgent"]]
-
 - type: entity
   parent: VendingMachine
   id: VendingMachineBountyVend
@@ -171,13 +165,8 @@
     brokenState: broken
     normalState: normal-unshaded
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
-    taxAccounts: # LoneStar
-      Frontier: 0.1
-      Nfsd: 0.05
-      Medical: 0.05
-      Guild: 0.3
-  # - type: DatasetVocalizer
-  #   dataset: BountyVendAds
+#  - type: DatasetVocalizer
+#    dataset: BountyVendAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/bountyvend.rsi
     layers:
@@ -192,7 +181,6 @@
     radius: 1.5
     energy: 1.6
     color: "#4b93ad"
-
 - type: entity
   parent: [ BaseStructureDisableAnchoring, VendingMachineBountyVend ]
   id: VendingMachineBountyVendPOI
@@ -200,11 +188,10 @@
   components:
   - type: VendingMachine
     pack: BountyVendPOIInventory
-
 - type: entity
   id: VendingMachineArcadia
   name: ArcadiaDrobe
-  parent: [ VendingMachine, BaseC1Contraband ]
+  parent: [ VendingMachine, BaseC3Contraband ]
   description: Selling clothes from another reality for cheap prices!
   components:
     - type: VendingMachine
@@ -233,7 +220,6 @@
       radius: 1.5
       energy: 1.6
       color: "#ff033e"
-
 - type: entity
   parent: VendingMachine
   id: LessLethalVendingMachine
@@ -250,10 +236,6 @@
       ejectState: eject-unshaded
       denyState: deny-unshaded
       ejectDelay: 3
-      taxAccounts: # LoneStar
-        Frontier: 0.2
-        Nfsd: 0.2
-        Guild: 0.1
     - type: DatasetVocalizer
       dataset: LessLethalVendAds
     - type: Sprite
@@ -270,7 +252,6 @@
       radius: 1.5
       energy: 1.6
       color: "#ff033e"
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, LessLethalVendingMachine]
   id: LessLethalVendingMachinePOI
@@ -278,7 +259,6 @@
   components:
     - type: VendingMachine
       pack: LessLethalVendPOIInventory
-
 - type: entity
   parent: VendingMachine
   id: NonLethalVendingMachine
@@ -295,10 +275,6 @@
       ejectState: eject-unshaded
       denyState: deny-unshaded
       ejectDelay: 3
-      taxAccounts: # LoneStar
-        Frontier: 0.2
-        Nfsd: 0.2
-        Guild: 0.1
     - type: DatasetVocalizer
       dataset: LessLethalVendAds
     - type: Sprite
@@ -315,7 +291,6 @@
       radius: 1.5
       energy: 1.6
       color: "#ff033e"
-
 - type: entity
   parent: VendingMachine
   id: VendingMachineAutoTuneVend
@@ -329,8 +304,8 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-  # - type: DatasetVocalizer
-  #   dataset: AutoTuneVendAds
+#  - type: DatasetVocalizer
+#    dataset: AutoTuneVendAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/autotunevend.rsi
     layers:
@@ -364,7 +339,6 @@
     # makeSentient: true
     # allowSpeech: true
   # - type: GhostTakeoverAvailable
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachinePottedPlantVend
@@ -396,12 +370,11 @@
     softness: 0.9
     offset: "0, -0.6"
     color: "#EEEEFF"
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineNfsdDrobe
-  name: LSRDDrobe # Lonestar changes NFSD -> LSRD
-  description: A vending machine for LSRD and LSRD clothing!
+  name: NFSDDrobe
+  description: A vending machine for NFSD and NFSD clothing!
   components:
   - type: VendingMachine
     pack: NfsdDrobeInventory
@@ -411,7 +384,7 @@
   - type: DatasetVocalizer
     dataset: NfsdDrobeAds
   - type: Sprite
-    sprite: _LoneStar/Structures/Machines/VendingMachines/lsrddrobe.rsi
+    sprite: _NF/Structures/Machines/VendingMachines/nfsddrobe.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -422,7 +395,6 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
     access: [["Security"]]
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineYarrrDrobe
@@ -446,12 +418,11 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineNfsdTech
-  name: LSRDTech # Lonestar changes NFSD -> LSRD
-  description: A vending machine for LSRD and LSRD tech!
+  name: NFSDTech
+  description: A vending machine for NFSD and NFSD tech!
   components:
   - type: VendingMachine
     pack: NfsdTechInventory
@@ -461,7 +432,7 @@
   - type: DatasetVocalizer
     dataset: NfsdDrobeAds
   - type: Sprite
-    sprite: _LoneStar/Structures/Machines/VendingMachines/lsrdtech.rsi
+    sprite: _NF/Structures/Machines/VendingMachines/nfsdtech.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -472,7 +443,6 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
     access: [["Security"]]
-
 - type: entity
   parent: [BaseStructureDisableScrewing, BaseStructureIndestructible, BaseStructureAccessReaderImmuneToEmag, VendingMachineCart]
   id: NFVendingMachineCart
@@ -484,7 +454,6 @@
     access: [["HeadOfPersonnel"]]
   - type: MarketModifier
     mod: 5
-
 - type: entity
   parent: NFVendingMachineCart
   id: NFVendingMachineCartNfsd
@@ -534,7 +503,6 @@
     softness: 0.9
     offset: "0, -0.6"
     color: "#f96363"
-
 - type: entity
   parent:
   - VendingMachine
@@ -573,7 +541,6 @@
     softness: 0.9
     offset: "0, -0.6"
     color: "#85daeb"
-
 - type: entity
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, VendingMachine]
   id: VendingMachineFuelVend
@@ -602,7 +569,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-
 - type: entity
   id: BaseCiviMedVend
   abstract: true
@@ -611,7 +577,6 @@
     pack: CiviMedVendInventory
     taxAccounts:
       Medical: 0.4
-      Guild: 0.1
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -636,13 +601,11 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-
 - type: entity
   parent: [BaseCiviMedVend, BaseStructureDisableAnchoring, BaseStructureIndestructible, VendingMachine]
   id: VendingMachineCiviMedPlus
   name: CiviMed Plus
   description: CiviMed Plus, distributing lifesaving meds harder than the rocks you break! Miners, DON'T DIE!
-
 - type: entity
   parent: [BaseCiviMedVend, BaseStructureDisableAnchoring, BaseStructureIndestructible, VendingMachineWallmount]
   id: VendingMachineCiviMed
@@ -651,7 +614,9 @@
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/wallcivimed.rsi
-
+  - type: Physics
+    bodyType: Static
+    canCollide: false
 - type: entity
   parent: VendingMachine
   id: VendingMachineValetDrobe
@@ -684,7 +649,6 @@
     color: "#4b93ad"
   - type: AccessReader
     access: [["Service"]] # Mail Carrier and Janitor teaming up to loot the machine dry.
-
 - type: entity
   parent: VendingMachine
   id: VendingMachineMailVend
@@ -717,7 +681,6 @@
     radius: 1.5
     energy: 1.6
     color: "#4b93ad"
-
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachinePickNPack
@@ -731,10 +694,6 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    taxAccounts: # LoneStar
-      Frontier: 0.2
-      Nfsd: 0.05
-      Guild: 0.25
   - type: DatasetVocalizer
     dataset: VandalizedBountyVendAds
   - type: Sprite
@@ -755,7 +714,6 @@
     color: "#EEEEFF"
 
 #region POI versions of upstream machines
-
 - type: entity
   parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
   id: VendingMachineAmmoPOI
@@ -763,7 +721,6 @@
   components:
   - type: VendingMachine
     pack: WeaponryWorksVendPOIInventory
-
 - type: entity
   parent: [VendingMachineEngivend, BaseStructureDisableAnchoring]
   id: VendingMachineEngivendPOI
@@ -771,7 +728,6 @@
   components:
   - type: VendingMachine
     pack: EngiVendPOIInventory
-
 - type: entity
   parent: [VendingMachineVendomat, BaseStructureDisableAnchoring]
   id: VendingMachineVendomatPOI
@@ -779,7 +735,6 @@
   components:
   - type: VendingMachine
     pack: VendomatPOIInventory
-
 - type: entity
   parent: [VendingMachineYouTool, BaseStructureDisableAnchoring]
   id: VendingMachineYouToolPOI
@@ -787,7 +742,6 @@
   components:
   - type: VendingMachine
     pack: YouToolPOIInventory
-
 - type: entity
   parent: [VendingMachineSalvage, BaseStructureDisableAnchoring]
   id: VendingMachineSalvagePOI
@@ -795,7 +749,6 @@
   components:
   - type: VendingMachine
     pack: NFSalvageEquipmentPOIInventory
-
 - type: entity
   parent: [VendingMachineMediDrobe, BaseStructureDisableAnchoring]
   id: VendingMachineMediDrobePOI
@@ -803,7 +756,6 @@
   components:
   - type: VendingMachine
     pack: MediDrobeInventory
-
 - type: entity
   parent: [VendingMachinePottedPlantVend, BaseStructureDisableAnchoring]
   id: VendingMachinePottedPlantVendPOI
@@ -811,7 +763,6 @@
   components:
   - type: VendingMachine
     pack: PottedPlantVendInventory
-
 - type: entity
   parent: [VendingMachineGames, BaseStructureDisableAnchoring]
   id: VendingMachineGamesPOI
@@ -819,7 +770,6 @@
   components:
   - type: VendingMachine
     pack: GoodCleanFunInventory
-
 - type: entity
   parent: [VendingMachineCigs, BaseStructureDisableAnchoring]
   id: VendingMachineCigsPOI
@@ -827,7 +777,6 @@
   components:
   - type: VendingMachine
     pack: CigaretteMachineInventory
-
 - type: entity
   parent: [VendingMachineBooze, BaseStructureDisableAnchoring]
   id: VendingMachineBoozePOI
@@ -835,19 +784,16 @@
   components:
   - type: VendingMachine
     pack: BoozeOMatInventory
-
 - type: entity
   parent: [VendingMachineCuddlyCritterVend, BaseStructureDisableAnchoring]
   id: VendingMachineCuddlyCritterVendPOI
   suffix: POI
-
 - type: entity
   parent: [VendingMachineAutoTuneVend, BaseStructureDisableAnchoring]
   id: VendingMachineAutoTuneVendPOI
   suffix: POI
 
 # Gas Tank Dispenser
-
 - type: entity
   parent: [VendingMachineTankDispenserEVA, BaseStructureDisableAnchoring] #This one is flagged as POI
   id: VendingMachineTankDispenserEVAPOI
@@ -855,7 +801,6 @@
   components:
   - type: VendingMachine
     pack: TankDispenserEVAPOIInventory
-
 - type: entity
   parent: [VendingMachinePickNPack, BaseStructureDisableAnchoring] # Coyote: no more hacking, contractors!
   id: VendingMachinePickNPackPOI
@@ -868,30 +813,6 @@
 #  - type: ActivatableUIRequiresAccess
 
 #region conjured MagiVend
-- type: entity
-  parent: [ BaseC3WizardContraband, VendingMachineMagivend ]
-  id: NFVendingMachineMagivend
-  suffix: Frontier
-  components:
-  - type: VendingMachine
-    pack: MagivendConjuredInventory
-    offState: off
-    brokenState: broken
-    normalState: normal-unshaded
-
-- type: entity
-  parent: [ VendingMachineMagivend, ConjuredObject180 ]
-  id: VendingMachineMagivendConjured
-  name: conjured MagiVend
-  description: A conjured magic vending machine. It will disappear shortly.
-  components:
-  - type: VendingMachine
-    pack: MagivendConjuredInventory
-    offState: off
-    brokenState: broken
-    normalState: normal-unshaded
-
-#region DEBUG
 - type: entity
   categories: [ DoNotMap ]
   parent: VendingMachineBountyVendPunk
@@ -912,7 +833,6 @@
         - TabletopMachineLayer
   - type: VendingMachine
     pack: DEBUGVendingMachineInventoryRangedWeapons
-
 - type: entity
   categories: [ DoNotMap ]
   parent: VendingMachineClothingPunk
@@ -933,7 +853,6 @@
         - TabletopMachineLayer
   - type: VendingMachine
     pack: DEBUGVendingMachineInventoryMagazines
-
 - type: entity
   categories: [ DoNotMap ]
   parent: VendingMachineClothingPunk
@@ -954,3 +873,25 @@
         - TabletopMachineLayer
   - type: VendingMachine
     pack: DEBUGVendingMachineInventoryAmmoBoxes
+- type: entity
+  parent: [ VendingMachineMagivend, ConjuredObject180 ]
+  id: VendingMachineMagivendConjured
+  name: conjured MagiVend
+  description: A conjured magic vending machine. It will disappear shortly.
+  components:
+  - type: VendingMachine
+    pack: MagivendConjuredInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+
+- type: entity
+  parent: [ BaseC3WizardContraband, VendingMachineMagivend ]
+  id: NFVendingMachineMagivend
+  suffix: Frontier
+  components:
+  - type: VendingMachine
+    pack: MagivendConjuredInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded

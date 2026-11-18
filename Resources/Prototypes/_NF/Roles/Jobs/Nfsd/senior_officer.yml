@@ -1,5 +1,3 @@
-# Sergeant
-
 - type: job
   id: SeniorOfficer
   name: job-name-senior-officer
@@ -37,7 +35,6 @@
     components:
     - type: IsNfsd
       worth: 2
-
 - type: startingGear
   id: SeniorOfficerGear
   equipment:
@@ -52,7 +49,6 @@
     - ShipVoucherNfsdSergeant
     - RubberStampSergeant
     - EncryptionKeyCommand
-
 - type: chameleonOutfit
   id: SeniorOfficerChameleonOutfit
   job: SeniorOfficer

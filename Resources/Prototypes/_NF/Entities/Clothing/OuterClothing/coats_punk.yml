@@ -16,7 +16,6 @@
         Caustic: 0.4
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodAcidRaincoat
-
 - type: entity
   parent: ClothingOuterCoatAcidRaincoat
   id: ClothingOuterCoatAcidRaincoatBlue
@@ -28,7 +27,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/acid_raincoat_blue.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodAcidRaincoatBlue
-
 - type: entity
   parent: ClothingOuterCoatAcidRaincoat
   id: ClothingOuterCoatAcidRaincoatGreen
@@ -40,7 +38,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/acid_raincoat_green.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodAcidRaincoatGreen
-
 - type: entity
   parent: ClothingOuterCoatAcidRaincoat
   id: ClothingOuterCoatAcidRaincoatMagenta
@@ -52,7 +49,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/acid_raincoat_magenta.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodAcidRaincoatMagenta
-
 - type: entity
   parent: ClothingOuterCoatAcidRaincoat
   id: ClothingOuterCoatAcidRaincoatYellow
@@ -76,7 +72,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/bomber_punk_red.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Coats/bomber_punk_red.rsi
-
 - type: entity
   id: ClothingOuterCoatJacketLeather
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -87,7 +82,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_leather.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_leather.rsi
-
 - type: entity
   id: ClothingOuterCoatJacketBiker
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -98,7 +92,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_biker.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_biker.rsi
-
 - type: entity
   id: ClothingOuterCoatJacketJamrock
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -109,7 +102,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/blazer_jamrock.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Coats/blazer_jamrock.rsi
-
 - type: entity
   id: ClothingOuterCoatBomberAerostatic
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -120,7 +112,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/bomber_aerostatic.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Coats/bomber_aerostatic.rsi
-
 - type: entity
   id: ClothingOuterCoatJacketLettermanBlue
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -131,7 +122,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_letterman_blue.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_letterman_blue.rsi
-
 - type: entity
   id: ClothingOuterCoatJacketLettermanBrown
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -142,7 +132,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_letterman_brown.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_letterman_brown.rsi
-
 - type: entity
   id: ClothingOuterCoatJacketLettermanRed
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -153,7 +142,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_letterman_red.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_letterman_red.rsi
-
 - type: entity
   id: ClothingOuterCoatJacketLettermanMagenta
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -164,7 +152,6 @@
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_letterman_magenta.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Coats/jacket_letterman_magenta.rsi
-
 - type: entity
   id: ClothingOuterCoatBomberPinkSleeves
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -205,8 +192,7 @@
       - state: mask_null
         map: [ "jacket_overlay" ]
         shader: unshaded
-  - type: ColorableClothing #LoneStar
-    denyReroll: false # LoneStar
+  - type: RandomSprite
     available:
     - jacket_main:
         base_OuterClothing_jacket_01: Cyberpunk
@@ -239,7 +225,6 @@
         overlay_base_OuterClothing_jacket_16: CyberpunkNeon
         overlay_base_OuterClothing_jacket_17: CyberpunkNeon
         mask_null: ""
-
 - type: entity
   id: ClothingOuterCoatLettermanRandomized
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -269,7 +254,6 @@
         base_OuterClothing_letterman: Cyberpunk
       jacket_decor:
         decor_base_OuterClothing_letterman: Cyberpunk
-
 - type: entity
   id: ClothingOuterCoatRandomized
   parent: [ ClothingOuterStorageBase, RecyclableItemClothDurable ]
@@ -298,8 +282,7 @@
       - state: mask_null
         map: [ "jacket_overlay" ]
         shader: unshaded
-  - type: ColorableClothing #LoneStar
-    denyReroll: false #LoneStar
+  - type: RandomSprite
     available:
     - jacket_main:
         base_OuterClothing_jacket_03: Cyberpunk

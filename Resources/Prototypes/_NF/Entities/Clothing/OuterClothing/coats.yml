@@ -17,7 +17,6 @@
         Heat: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.80
-
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatBishop
@@ -28,7 +27,6 @@
     sprite: _NF/Clothing/OuterClothing/Misc/bishop_robe.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Misc/bishop_robe.rsi
-
 - type: entity
   parent:  ClothingOuterBaseToggleable
   id: ClothingOuterCoatWitchHunter
@@ -41,7 +39,6 @@
     sprite: _NF/Clothing/OuterClothing/Misc/witch_hunter_coat.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodChaplainHood
-
 - type: entity
   parent:  ClothingOuterBaseToggleable
   id: ClothingOuterCoatCardinal
@@ -54,7 +51,6 @@
     sprite: _NF/Clothing/OuterClothing/Misc/cardinal_robe.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodCardinalHood
-
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdBomber
@@ -65,7 +61,6 @@
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_bomber.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_bomber.rsi
-
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdBomberBrigmed
@@ -76,7 +71,6 @@
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_brigmed_bomber.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_brigmed_bomber.rsi
-
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdFormal
@@ -87,7 +81,6 @@
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_formal.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_formal.rsi
-
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdFormalSheriff
@@ -98,7 +91,6 @@
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_sheriff_formal.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_sheriff_formal.rsi
-
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ] # Coyote: BaseC2ContrabandUnredeemable -> BaseC4ContrabandUnredeemable
   id: ClothingOuterCoatNfsdLongCoat
@@ -109,7 +101,6 @@
     sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrd_long.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/OuterClothing/Misc/lsrd_long.rsi
-
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC4ContrabandUnredeemable ]
   id: ClothingOuterJacketSr
@@ -125,7 +116,6 @@
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
-
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC1ContrabandUnredeemable ]
   id: ClothingOuterCoatPirateCaptain
@@ -136,7 +126,6 @@
     sprite: _NF/Clothing/OuterClothing/Misc/pirate_captain.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Misc/pirate_captain.rsi
-
 - type: entity
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterCoatArcadiaTrench
@@ -157,7 +146,6 @@
         Caustic: 0.75
   - type: ExplosionResistance
     damageCoefficient: 0.50 # buffed 0.80<0.50
-
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatArcadiaTrench]
   id: ClothingOuterCoatArcadiaTrenchOpened
@@ -173,9 +161,8 @@
         Caustic: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.60
-
 - type: entity
-  parent: [ ClothingOuterStorageBase, NotContraband ]
+  parent: [ ClothingOuterStorageBase, BaseC3WizardContraband ]
   id: ClothingOuterWizardBrick
   name: brick wizard coat
   description: ClothingOuterWizardBrick
@@ -193,11 +180,10 @@
         Heat: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.80
-
 - type: entity
   parent: [ ClothingOuterStorageBase ]
   id: ClothingOuterFakeWizard
-  name: fake wizard robe
+  name: wizard robe
   description: A rather dull, blue robe meant to mimick real wizard robes.
   components:
   - type: Sprite

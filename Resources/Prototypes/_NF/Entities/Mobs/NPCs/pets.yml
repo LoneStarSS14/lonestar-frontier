@@ -5,7 +5,9 @@
   - type: GhostRole
   - type: IntrinsicRadioReceiver
   - type: CargoSellBlacklist
-
+  - type: ShipyardSellCondition # The SR can no longer sell Clippy
+    blockSale: true
+    reason: shipyard-console-cute-pets
 - type: entity
   id: MobCatClippy
   parent: [NFMobPet, MobCatGhost]
@@ -42,7 +44,6 @@
       - Cat
       - PetsNT
   - type: ShowJobIcons
-
 - type: entity
   id: MobCatClarpy
   parent: [NFMobPet, MobCatGhost]
@@ -95,7 +96,6 @@
       pitch: 0.7
 #  - type: AutoPirate
 #    applyFaction: false
-
 - type: entity
   id: MobCatCappy
   parent: [NFMobPet, MobCatGhost, ShowSecurityIcons]
@@ -160,7 +160,6 @@
   - type: PirateBountyItem
     id: Cappy
   - type: SouthernAccent
-
 - type: entity
   id: MobCatElCapo
   parent: [NFMobPet, MobBingusGhost]
@@ -190,7 +189,6 @@
   - type: NpcFactionMember
     factions:
     - Cat
-
 - type: entity
   id: MobCatCurie
   parent: [NFMobPet, MobAdultSlimes, MobCatGhost]
@@ -202,19 +200,25 @@
     sprite: _NF/Mobs/Pets/cat.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: mistakecat
+      state: slimecat
   - type: DamageStateVisuals
     states:
       Alive:
-        Base: mistakecat
-#  - type: GhostRole
-#    name: ghost-role-information-curie-name
-#    description: ghost-role-information-curie-description
-#    rules: ghost-role-information-nonantagonist-rules
-#    prototype: CatCurie
-#    mindRoles: [ MindRoleGhostRoleNeutral ]
-#  - type: Loadout
-#    prototypes: [ MobCurieGear ]
+        Base: slimecat
+  - type: Temperature
+    heatDamageThreshold: 423
+    coldDamageThreshold: -40
+  - type: MovementAlwaysTouching
+  - type: PressureImmunity
+  - type: Insulated
+  - type: GhostRole
+    name: ghost-role-information-curie-name
+    description: ghost-role-information-curie-description
+    rules: ghost-role-information-nonantagonist-rules
+    prototype: CatCurie
+    mindRoles: [ MindRoleGhostRoleNeutral ]
+  - type: Loadout
+    prototypes: [ MobCurieGear ]
   - type: RandomMetadata
     nameSegments: null
   - type: AutoImplant
@@ -238,7 +242,6 @@
       Female: Cat
       Unsexed: Cat
   - type: RussianAccent
-
 - type: entity
   id: MobCatClugg
   parent: [NFMobPet, MobCatCaracalGhost]
@@ -270,7 +273,6 @@
     addComponentsOnDeath: []
     removeComponentsOnDeath: []
   - type: CavemanAccent
-
 - type: entity
   id: MobCatMistake
   parent: MobCatGhost
@@ -321,7 +323,6 @@
       types: {}
     damageRecovery:
       types: {}
-
 - type: entity
   id: MobCatBloodCult
   parent: [NFMobPet, MobCatMistake]
@@ -378,7 +379,6 @@
   - type: ActionGun
     action: ActionEldritchPush
     gunProto: EldritchPushGun
-
 - type: entity
   id: EldritchPushGun
   name: eldritch hand gun
@@ -398,7 +398,6 @@
       path: /Audio/Effects/teleport_arrival.ogg
     soundEmpty: null
     projectileSpeed: 3
-
 - type: entity
   id: ActionEldritchPush
   parent: BaseAction

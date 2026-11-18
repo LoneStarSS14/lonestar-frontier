@@ -14,7 +14,6 @@ using Content.Server.Salvage.Expeditions;
 using Content.Server.Salvage.Expeditions.Structure;
 using Content.Shared.Atmos;
 using Content.Shared.Construction.EntitySystems;
-using Content.Shared.Dataset;
 using Content.Shared.Gravity;
 using Content.Shared.Parallax.Biomes;
 using Content.Shared.Physics;
@@ -60,8 +59,6 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
     // _CS End: shared cluster placement retries
     private const int SharedObjectiveMultiplier = 2;
     private static readonly float SharedLandingBufferTiles = SalvageExpeditionReservation.MinimumLandingClearanceTiles;
-
-    private static readonly ProtoId<LocalizedDatasetPrototype> NamesDataset = "NamesBorer";
 
     private readonly IEntityManager _entManager;
     private readonly IGameTiming _timing;
@@ -134,24 +131,20 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
     protected override async Task<bool> Process()
     {
         // _CS: gracefully handle expedition failures
-        bool success = true;
-        string? errorStackTrace = null;
+        var success = false;
         try
         {
-            await InternalProcess();
+            success = await InternalProcess();
         }
-        catch (Exception e)
+        catch (Exception exception)
         {
-            success = false;
-            errorStackTrace = e.ToString();
+            _sawmill.Error("salvage", $"Expedition generation failed with exception: {exception}");
         }
         finally
         {
-            ExpeditionSpawnCompleteEvent ev = new(Station, success, _missionParams.Index, mapUid, _economyId);
+            ExpeditionSpawnCompleteEvent ev = new(Station, success, _missionParams.Index, mapUid, _economyId, _missionParams.OpenContract);
             _entManager.EventBus.RaiseEvent(EventSource.Local, ev);
-            if (errorStackTrace != null)
-                _sawmill.Error("salvage", $"Expedition generation failed with exception: {errorStackTrace}!");
-            if (!success)
+            if (!success && mapUid.IsValid())
             {
                 // Invalidate station, expedition cancellation will be handled by task handler
                 if (_entManager.TryGetComponent<SalvageExpeditionComponent>(mapUid, out var salvage))
@@ -177,7 +170,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         destComp.Enabled = true;
         _metaData.SetEntityName(
             mapUid,
-            _entManager.System<SharedSalvageSystem>().GetFTLName(_prototypeManager.Index(NamesDataset), _missionParams.Seed));
+            _entManager.System<SharedSalvageSystem>().GetFTLName(_prototypeManager.Index(SalvageSystem.PlanetNames), _missionParams.Seed));
         _entManager.AddComponent<FTLBeaconComponent>(mapUid);
 
         // Saving the mission mapUid to a CD is made optional, in case one is somehow made in a process without a CD entity

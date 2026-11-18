@@ -258,7 +258,6 @@
       - id: DeepFryerMachineCircuitboard
       - id: PortableScrubberMachineCircuitBoard
       - id: GaslockFrameMachineCircuitboard
-#      - id: GaslockBigFrameMachineCircuitboard
       - id: ResearchAndDevelopmentServerMachineCircuitboard
     # T3: cool machine boards
     - !type:GroupSelector
@@ -288,8 +287,7 @@
       - id: MercenaryTechFabCircuitboardNF
       - id: MercenaryTechFabCircuitboardHackedNF
       - id: PortableGeneratorDKMachineCircuitboard
-      - id: MedicalTechFabCircuitboard # LoneStar
-        weight: 0.35
+      - id: MedicalTechFabCircuitboard
       - id: MedicalAssemblerMachineCircuitboard
       - id: McServiceTechFabCircuitboard
 

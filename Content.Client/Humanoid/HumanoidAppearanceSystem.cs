@@ -1,9 +1,6 @@
-using System.Diagnostics.CodeAnalysis;
+using System.Numerics;
 using Content.Client.DisplacementMap;
 using Content.Shared.CCVar;
-using System.Numerics;
-using Content.Shared._CS;
-using Content.Shared.DisplacementMap;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -11,6 +8,7 @@ using Content.Shared.Inventory;
 using Content.Shared.Preferences;
 using Robust.Client.GameObjects;
 using Robust.Shared.Configuration;
+using Robust.Shared.Maths;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -22,6 +20,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly DisplacementMapSystem _displacement = default!;
+    [Dependency] private readonly SpriteSystem _sprite = default!;
 
     public ProfilePreviewSettings? ProfilePreviewSettings = null;
 
@@ -36,45 +35,39 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
     private void OnHandleState(EntityUid uid, HumanoidAppearanceComponent component, ref AfterAutoHandleStateEvent args)
     {
-        UpdateSprite(uid, component, Comp<SpriteComponent>(uid));
+        UpdateSprite((uid, component, Comp<SpriteComponent>(uid)));
     }
 
     private void OnCvarChanged(bool value)
     {
-        var humanoidQuery = EntityManager.AllEntityQueryEnumerator<HumanoidAppearanceComponent, SpriteComponent>();
+        var humanoidQuery = AllEntityQuery<HumanoidAppearanceComponent, SpriteComponent>();
         while (humanoidQuery.MoveNext(out var uid, out var humanoidComp, out var spriteComp))
         {
-            UpdateSprite(uid, humanoidComp, spriteComp);
+            UpdateSprite((uid, humanoidComp, spriteComp));
         }
     }
 
-    private void UpdateSprite(EntityUid uid, HumanoidAppearanceComponent component, SpriteComponent sprite)
+    private void UpdateSprite(Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
     {
+        UpdateLayers(entity);
+        ApplyMarkingSet(entity);
+        UpdateLayersAgain(entity);
 
-        UpdateLayers(component, sprite);
-        ApplyMarkingSet(uid, component, sprite);
-        // TODO: make this thing a more versatulate proc // todo: figure out what I meant by this
-        var speciesPrototype = _prototypeManager.Index(component.Species);
+        var humanoidAppearance = entity.Comp1;
+        var sprite = entity.Comp2;
 
-        // Don't clamp height/width on client - the server already handles limits
-        // Clamping here prevents temporary size effects (size gun, clothing, buffs) from displaying properly
-        var height = component.Height;
-        var width = component.Width;
-
-        // Directly set sprite scale - this is the original approach that worked
-        // Using SpriteSystem.SetScale() was causing issues with outline shader rendering
-        sprite.Scale = new Vector2(width, height);
-
-        UpdateLayersAgain(component, sprite); // cool
-
-        sprite[sprite.LayerMapReserveBlank(HumanoidVisualLayers.Eyes)].Color = component.EyeColor;
+        sprite.Scale = new Vector2(humanoidAppearance.Width, humanoidAppearance.Height);
+        sprite[_sprite.LayerMapReserve((entity.Owner, sprite), HumanoidVisualLayers.Eyes)].Color = humanoidAppearance.EyeColor;
     }
 
     private static bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer)
         => humanoid.HiddenLayers.ContainsKey(layer) || humanoid.PermanentlyHidden.Contains(layer);
 
-    private void UpdateLayers(HumanoidAppearanceComponent component, SpriteComponent sprite)
+    private void UpdateLayers(Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
     {
+        var component = entity.Comp1;
+        var sprite = entity.Comp2;
+
         var oldLayers = new HashSet<HumanoidVisualLayers>(component.BaseLayers.Keys);
         component.BaseLayers.Clear();
         component.HiddenBaseLayers.Clear();
@@ -86,68 +79,72 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         {
             oldLayers.Remove(key);
             if (!component.CustomBaseLayers.ContainsKey(key))
-            {
-                SetLayerData(
-                    component,
-                    sprite,
-                    key,
-                    id,
-                    sexMorph: true);
-            }
+                SetLayerData(entity, key, id, sexMorph: true);
         }
 
         // add custom layers
         foreach (var (key, info) in component.CustomBaseLayers)
         {
             oldLayers.Remove(key);
-            SetLayerData(
-                component,
-                sprite,
-                key,
-                info.Id,
-                sexMorph: false,
-                color: info.Color);
+            SetLayerData(entity, key, info.Id, sexMorph: false, color: info.Color);
         }
 
         // hide old layers
         // TODO maybe just remove them altogether?
         foreach (var key in oldLayers)
         {
-            if (sprite.LayerMapTryGet(key, out var index))
+            if (_sprite.LayerMapTryGet((entity.Owner, sprite), key, out var index, false))
                 sprite[index].Visible = false;
         }
     }
 
-    /// <summary>
-    /// Goes through the layers again and hides them if they are hidden by the comp's HiddenBaseLayers.
-    /// Bite me
-    /// </summary>
-    private void UpdateLayersAgain(
-        HumanoidAppearanceComponent component,
-        SpriteComponent sprite)
+    private void UpdateLayersAgain(Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
     {
+        var component = entity.Comp1;
+        var sprite = entity.Comp2;
+
         foreach (var layer in component.HiddenBaseLayers)
         {
-            if (sprite.LayerMapTryGet(layer, out var index))
-            {
+            if (_sprite.LayerMapTryGet((entity.Owner, sprite), layer, out var index, false))
                 sprite[index].Visible = false;
-            }
         }
     }
 
-    /// <summary>
-    /// Sets the data for a specific layer on the sprite component.
-    /// This is for the base layers only, so like, arms, legs, torso, head, etc.
-    /// </summary>
+    public void HideBaseLayers(
+        EntityUid uid,
+        HumanoidAppearanceComponent? humanoid,
+        IEnumerable<HumanoidVisualLayers> layersToHide)
+    {
+        if (!Resolve(uid, ref humanoid))
+            return;
+
+        var sprite = Comp<SpriteComponent>(uid);
+        var species = _prototypeManager.Index(humanoid.Species);
+        var baseSprites = _prototypeManager.Index(species.SpriteSet);
+
+        foreach (var layer in layersToHide)
+        {
+            if (!baseSprites.Sprites.ContainsKey(layer)
+                || !humanoid.BaseLayers.ContainsKey(layer)
+                || !_sprite.LayerMapTryGet((uid, sprite), layer, out var index, false))
+                continue;
+
+            sprite[index].Visible = false;
+            humanoid.PermanentlyHidden.Add(layer);
+        }
+    }
+
     private void SetLayerData(
-        HumanoidAppearanceComponent component,
-        SpriteComponent sprite,
+        Entity<HumanoidAppearanceComponent, SpriteComponent> entity,
         HumanoidVisualLayers key,
         string? protoId,
         bool sexMorph = false,
         Color? color = null)
     {
-        var layerIndex = sprite.LayerMapReserveBlank(key);
+        var component = entity.Comp1;
+        var sprite = entity.Comp2;
+
+        var layerIndex = _sprite.LayerMapReserve((entity.Owner, sprite), key);
         var layer = sprite[layerIndex];
         layer.Visible = !IsHidden(component, key);
 
@@ -168,67 +165,27 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         if (proto.BaseSprite != null)
         {
-            SpriteSpecifier appropriateSprite = proto.BaseSprite;
-            // Coyote: add support for cute digitigrade legs
-            if (component.LegStyle != HumanoidLegStyle.Plantigrade
-                && proto.AltSprites.Count > 0)
+            var appropriateSprite = proto.BaseSprite;
+            if (component.LegStyle != HumanoidLegStyle.Plantigrade && proto.AltSprites.Count > 0)
             {
                 ProtoId<MarkingPrototype>? altMarkingProtoId = null;
-                // we have to do two things: check if the leg style is supported, and if not, check if Digitigrade
-                // is supported. At least one needs to be true!
-                if (proto.AltSprites.TryGetValue(component.LegStyle, out ProtoId<MarkingPrototype> altSprite)
+                if (proto.AltSprites.TryGetValue(component.LegStyle, out var altSprite)
                     || proto.AltSprites.TryGetValue(HumanoidLegStyle.Digitigrade, out altSprite))
                 {
                     altMarkingProtoId = altSprite;
                 }
+
                 if (altMarkingProtoId is not null
                     && _prototypeManager.TryIndex(altMarkingProtoId, out MarkingPrototype? altMarkingProto))
                 {
-                    // just use the first sprite, as base layers only have one sprite
-                    // the markings should only have one sprite anyway
                     if (altMarkingProto.BaseLayerSprite is SpriteSpecifier.Rsi)
-                    {
                         appropriateSprite = altMarkingProto.BaseLayerSprite;
-                    }
                     else if (altMarkingProto.Sprites.Count > 0)
-                    {
                         appropriateSprite = altMarkingProto.Sprites[0];
-                    }
                 }
-                // shader will be appliesed lader
             }
-            // Coyote End
-            sprite.LayerSetSprite(layerIndex, appropriateSprite);
-        }
-    }
 
-    /// <summary>
-    /// Finds this list of keys in the <see cref="HumanoidAppearanceComponent.BaseLayers"/> and
-    /// Hides them if they are present. To be used after markings are applied, to hide the base
-    /// layer if something is set on the marking base layer. g
-    /// </summary>
-    public void HideBaseLayers(
-        EntityUid uid,
-        HumanoidAppearanceComponent? humanoid,
-        IEnumerable<HumanoidVisualLayers> layers2Hide)
-    {
-        if (!Resolve(uid, ref humanoid))
-            return;
-
-        var sprite = Comp<SpriteComponent>(uid);
-        var speciesProto = _prototypeManager.Index(humanoid.Species);
-        var baseSprites = _prototypeManager.Index(speciesProto.SpriteSet);
-
-        foreach (var layer in layers2Hide)
-        {
-            if (!baseSprites.Sprites.TryGetValue(layer, out var id))
-                continue;
-            if (humanoid.BaseLayers.TryGetValue(layer, out var baseLayer)
-                && sprite.LayerMapTryGet(layer, out var index))
-            {
-                sprite[index].Visible = false;
-                humanoid.PermanentlyHidden.Add(layer);
-            }
+            _sprite.LayerSetSprite((entity.Owner, sprite), layerIndex, appropriateSprite);
         }
     }
 
@@ -242,11 +199,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
     ///     This should not be used if the entity is owned by the server. The server will otherwise
     ///     override this with the appearance data it sends over.
     /// </remarks>
-    public override void LoadProfile(
-        EntityUid uid,
-        HumanoidCharacterProfile? profile,
-        HumanoidAppearanceComponent? humanoid = null
-        )
+    public override void LoadProfile(EntityUid uid, HumanoidCharacterProfile? profile, HumanoidAppearanceComponent? humanoid = null)
     {
         if (profile == null)
             return;
@@ -329,16 +282,8 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             markings.AddBack(prototype.MarkingCategory, new Marking(marking, markingColors));
         }
 
-        markings.EnsureSpecies(
-            profile.Species,
-            profile.Appearance.SkinColor,
-            _markingManager,
-            _prototypeManager);
-
-        markings.EnsureSexes(
-            profile.Sex,
-            _markingManager);
-
+        markings.EnsureSpecies(profile.Species, profile.Appearance.SkinColor, _markingManager, _prototypeManager);
+        markings.EnsureSexes(profile.Sex, _markingManager);
         markings.EnsureDefault(
             profile.Appearance.SkinColor,
             profile.Appearance.EyeColor,
@@ -356,20 +301,19 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                     humanoid.HiddenMarkings.Add(marking.MarkingId);
             }
         }
+
         humanoid.PermanentlyHidden = new HashSet<HumanoidVisualLayers>();
         humanoid.HiddenLayers = new Dictionary<HumanoidVisualLayers, SlotFlags>();
         humanoid.CustomBaseLayers = customBaseLayers;
         humanoid.Sex = profile.Sex;
+        humanoid.LegStyle = profile.Appearance.LegStyle;
         humanoid.Gender = profile.Gender;
         humanoid.Age = profile.Age;
+        humanoid.CustomSpecieName = profile.Customspeciesname;
         humanoid.Species = profile.Species;
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;
-        humanoid.Height = profile.Height;
-        humanoid.Width = profile.Width;
-        humanoid.LegStyle = profile.Appearance.LegStyle;
 
-        // Apply profile preview settings if they exist
         if (ProfilePreviewSettings != null)
         {
             if (!ProfilePreviewSettings.ShowUndies)
@@ -377,7 +321,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 humanoid.PermanentlyHidden.Add(HumanoidVisualLayers.UndergarmentBottom);
                 humanoid.PermanentlyHidden.Add(HumanoidVisualLayers.UndergarmentTop);
             }
-            // Coyote Start
+
             if (!ProfilePreviewSettings.ShowGenitals)
             {
                 humanoid.PermanentlyHidden.Add(HumanoidVisualLayers.Genital);
@@ -389,100 +333,75 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                     humanoid.HiddenMarkings.Remove(genitalMarking.MarkingId);
                 }
             }
-            // Coyote End
         }
 
-        UpdateSprite(uid, humanoid, Comp<SpriteComponent>(uid));
+        UpdateSprite((uid, humanoid, Comp<SpriteComponent>(uid)));
     }
 
-    private void ApplyMarkingSet(EntityUid uid, HumanoidAppearanceComponent humanoid, SpriteComponent sprite)
+    public void HideUndies(EntityUid uid, HumanoidAppearanceComponent? humanoid = null)
     {
-        // Only nuke and rebuild sprite layers when the marking set actually changed.
-        // Skipping ClearAllMarkings when markings are unchanged avoids expensive AddLayer/RemoveLayer churn.
-        var markingsUnchanged =
-            humanoid.MarkingSet.Markings.Count == humanoid.ClientOldMarkings.Markings.Count
-            && humanoid.MarkingSet.Equals(humanoid.ClientOldMarkings);
+        if (!Resolve(uid, ref humanoid))
+            return;
 
-        if (!markingsUnchanged)
-            ClearAllMarkings(humanoid, sprite);
+        humanoid.PermanentlyHidden.Add(HumanoidVisualLayers.UndergarmentBottom);
+        humanoid.PermanentlyHidden.Add(HumanoidVisualLayers.UndergarmentTop);
+        UpdateSprite((uid, humanoid, Comp<SpriteComponent>(uid)));
+    }
 
-        // var censorNudity = _configurationManager.GetCVar(CCVars.AccessibilityClientCensorNudity) ||
-        //                    _configurationManager.GetCVar(CCVars.AccessibilityServerCensorNudity);
+    public void HideGenitals(EntityUid uid, HumanoidAppearanceComponent? humanoid = null)
+    {
+        if (!Resolve(uid, ref humanoid))
+            return;
+
+        humanoid.PermanentlyHidden.Add(HumanoidVisualLayers.Genital);
+        UpdateSprite((uid, humanoid, Comp<SpriteComponent>(uid)));
+    }
+
+    private void ApplyMarkingSet(Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
+    {
+        var humanoid = entity.Comp1;
+        var sprite = entity.Comp2;
+
+        // I am lazy and I CBF resolving the previous mess, so I'm just going to nuke the markings.
+        // Really, markings should probably be a separate component altogether.
+        ClearAllMarkings(entity);
+
+        var censorNudity = _configurationManager.GetCVar(CCVars.AccessibilityClientCensorNudity) ||
+                           _configurationManager.GetCVar(CCVars.AccessibilityServerCensorNudity);
         // The reason we're splitting this up is in case the character already has undergarment equipped in that slot.
-        // var applyUndergarmentTop = censorNudity;
-        // var applyUndergarmentBottom = censorNudity;
+        var applyUndergarmentTop = censorNudity;
+        var applyUndergarmentBottom = censorNudity;
 
-        // Coyote Start
-        var facingDirection = sprite.EnableDirectionOverride
-            ? sprite.DirectionOverride
-            : Transform(uid).LocalRotation.GetCardinalDir();
-        // Coyote End
-
-        foreach (List<Marking> markingList in humanoid.MarkingSet.Markings.Values)
+        foreach (var markingList in humanoid.MarkingSet.Markings.Values)
         {
-            foreach (Marking marking in markingList)
+            foreach (var marking in markingList)
             {
-                if (!_markingManager.TryGetMarking(marking, out MarkingPrototype? markingPrototype))
-                    continue;
-                PreModifyMarking(
-                    humanoid,
-                    markingPrototype,
-                    marking,
-                    out Marking newMarking,
-                    out MarkingPrototype newMarkingPrototype);
-                ApplyMarking(
-                    newMarkingPrototype,
-                    newMarking.MarkingColors,
-                    newMarking.MarkingGlow,
-                    newMarking.Visible,
-                    newMarking.RenderOverClothing,
-                    humanoid,
-                    sprite,
-                    // Coyote Start
-                    newMarking.MarkingScale,
-                    newMarking.GetOffset(facingDirection));
-                // Coyote End
+                if (_markingManager.TryGetMarking(marking, out var markingPrototype))
+                {
+                    ApplyMarking(markingPrototype, marking, entity);
+                    if (markingPrototype.BodyPart == HumanoidVisualLayers.UndergarmentTop)
+                        applyUndergarmentTop = false;
+                    else if (markingPrototype.BodyPart == HumanoidVisualLayers.UndergarmentBottom)
+                        applyUndergarmentBottom = false;
+                }
             }
         }
 
         humanoid.ClientOldMarkings = new MarkingSet(humanoid.MarkingSet);
 
-        // AddUndergarments(humanoid, sprite, applyUndergarmentTop, applyUndergarmentBottom);
+        AddUndergarments(entity, applyUndergarmentTop, applyUndergarmentBottom);
     }
 
-    /// <summary>
-    /// Takes in the marking about to be applied, and allows modification of it before application.
-    /// </summary>
-    private void PreModifyMarking(
-        HumanoidAppearanceComponent humanoid,
-        MarkingPrototype markingPrototype,
-        Marking marking,
-        out Marking newMarking,
-        out MarkingPrototype newPrototype
-        )
+    private void ClearAllMarkings(Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
     {
-        newMarking = marking;
-        newPrototype = markingPrototype;
-        if (humanoid.LegStyle == HumanoidLegStyle.Plantigrade)
-            return; // No need to modify anything for plantigrade legs.
-        // Check if the marking has alternate sprites for the current leg style,
-        // Or if they dont have that specific leg style, check if they have digitigrade paw instead
-        // if neither are present, we just use the normal marking and proot
-        if (markingPrototype.AlternateSprites.TryGetValue(humanoid.LegStyle, out var altMarkingProtoId)
-            || (humanoid.LegStyle != HumanoidLegStyle.Digitigrade
-                && markingPrototype.AlternateSprites.TryGetValue(HumanoidLegStyle.Digitigrade, out altMarkingProtoId)))
-        {
-            newPrototype = _prototypeManager.Index<MarkingPrototype>(altMarkingProtoId);
-        }
-    }
+        var humanoid = entity.Comp1;
+        var sprite = entity.Comp2;
 
-    private void ClearAllMarkings(HumanoidAppearanceComponent humanoid, SpriteComponent sprite)
-    {
         foreach (var markingList in humanoid.ClientOldMarkings.Markings.Values)
         {
             foreach (var marking in markingList)
             {
-                RemoveMarking(marking, sprite);
+                RemoveMarking(marking, (entity, sprite));
             }
         }
 
@@ -492,23 +411,12 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         {
             foreach (var marking in markingList)
             {
-                RemoveMarking(marking, sprite);
+                RemoveMarking(marking, (entity, sprite));
             }
         }
-
-        // then we do it my way!
-        foreach (var layid in humanoid.ClientElderMarkings)
-        {
-            if (sprite.LayerMapTryGet(layid, out var index))
-            {
-                sprite.LayerMapRemove(layid);
-                sprite.RemoveLayer(index);
-            }
-        }
-        humanoid.ClientElderMarkings.Clear();
     }
 
-    private void RemoveMarking(Marking marking, SpriteComponent spriteComp)
+    private void RemoveMarking(Marking marking, Entity<SpriteComponent> spriteEnt)
     {
         if (!_markingManager.TryGetMarking(marking, out var prototype))
         {
@@ -523,184 +431,155 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             }
 
             var layerId = $"{marking.MarkingId}-{rsi.RsiState}";
-            if (!spriteComp.LayerMapTryGet(layerId, out var index))
+            if (_sprite.LayerMapTryGet(spriteEnt.AsNullable(), layerId, out var index, false))
             {
-                continue;
+                _sprite.LayerMapRemove(spriteEnt.AsNullable(), layerId);
+                _sprite.RemoveLayer(spriteEnt.AsNullable(), index);
             }
 
-            spriteComp.LayerMapRemove(layerId);
-            spriteComp.RemoveLayer(index);
-
             var glowLayerId = $"{layerId}-glow";
-            if (!spriteComp.LayerMapTryGet(glowLayerId, out var glowIndex))
-                continue;
+            if (_sprite.LayerMapTryGet(spriteEnt.AsNullable(), glowLayerId, out var glowIndex, false))
+            {
+                _sprite.LayerMapRemove(spriteEnt.AsNullable(), glowLayerId);
+                _sprite.RemoveLayer(spriteEnt.AsNullable(), glowIndex);
+            }
+        }
+    }
 
-            spriteComp.LayerMapRemove(glowLayerId);
-            spriteComp.RemoveLayer(glowIndex);
+    private void AddUndergarments(Entity<HumanoidAppearanceComponent, SpriteComponent> entity, bool undergarmentTop, bool undergarmentBottom)
+    {
+        var humanoid = entity.Comp1;
+
+        if (undergarmentTop && humanoid.UndergarmentTop != null)
+        {
+            var marking = new Marking(humanoid.UndergarmentTop, new List<Color> { new Color() });
+            if (_markingManager.TryGetMarking(marking, out var prototype))
+            {
+                // Markings are added to ClientOldMarkings because otherwise it causes issues when toggling the feature on/off.
+                humanoid.ClientOldMarkings.Markings.Add(MarkingCategories.UndergarmentTop, new List<Marking> { marking });
+                ApplyMarking(prototype, marking, entity);
+            }
+        }
+
+        if (undergarmentBottom && humanoid.UndergarmentBottom != null)
+        {
+            var marking = new Marking(humanoid.UndergarmentBottom, new List<Color> { new Color() });
+            if (_markingManager.TryGetMarking(marking, out var prototype))
+            {
+                humanoid.ClientOldMarkings.Markings.Add(MarkingCategories.UndergarmentBottom, new List<Marking> { marking });
+                ApplyMarking(prototype, marking, entity);
+            }
         }
     }
 
     private void ApplyMarking(
         MarkingPrototype markingPrototype,
-        IReadOnlyList<Color>? colors,
-        IReadOnlyList<float>? glowLevels,
-        bool visible,
-        bool renderOverClothing,
-        HumanoidAppearanceComponent humanoid,
-        SpriteComponent sprite,
-        // Coyote Start
-        float scale = 1.0f,
-        Vector2? offset = null)
-        // Coyote End
+        Marking marking,
+        Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
     {
-        // Coyote Start
-        var markingOffset = offset ?? Vector2.Zero;
-        // Coyote End
-        // FLOOF ADD START
-        // make a handy dict of filename -> colors
-        // cus we might need to access it by filename to link
-        // one sprite's colors to another
-        var colorDict = new Dictionary<string, Color>();
-        var glowDict = new Dictionary<string, float>();
+        var humanoid = entity.Comp1;
+        var sprite = entity.Comp2;
+        var facingDirection = sprite.EnableDirectionOverride
+            ? sprite.DirectionOverride
+            : Transform(entity.Owner).LocalRotation.GetCardinalDir();
+        var markingOffset = marking.GetOffset(facingDirection);
+        var layerOrder = new Dictionary<HumanoidVisualLayers, int>();
+        var colors = new Dictionary<string, Color>();
+        var glowLevels = new Dictionary<string, float>();
+
         for (var i = 0; i < markingPrototype.Sprites.Count; i++)
         {
-            var spriteName = markingPrototype.Sprites[i] switch
+            var state = markingPrototype.Sprites[i] switch
             {
                 SpriteSpecifier.Rsi rsi => rsi.RsiState,
                 SpriteSpecifier.Texture texture => texture.TexturePath.Filename,
                 _ => null
             };
 
-            if (spriteName != null)
-            {
-                if (colors != null && i < colors.Count)
-                    colorDict.Add(spriteName, colors[i]);
-                else
-                    colorDict.Add(spriteName, Color.White);
+            if (state == null)
+                continue;
 
-                if (glowLevels != null && i < glowLevels.Count)
-                    glowDict.Add(spriteName, Math.Clamp(glowLevels[i], 0f, 1f));
-                else
-                    glowDict.Add(spriteName, 0f);
-            }
+            colors[state] = i < marking.MarkingColors.Count ? marking.MarkingColors[i] : Color.White;
+            glowLevels[state] = i < marking.MarkingGlow.Count
+                ? Math.Clamp(marking.MarkingGlow[i], 0f, 1f)
+                : 0f;
         }
-        // now, rearrange them, copying any parented colors to children set to
-        // inherit them
+
         if (markingPrototype.ColorLinks != null)
         {
             foreach (var (child, parent) in markingPrototype.ColorLinks)
             {
-                if (colorDict.TryGetValue(parent, out var color))
-                {
-                    colorDict[child] = color;
-                }
+                if (colors.TryGetValue(parent, out var color))
+                    colors[child] = color;
 
-                if (glowDict.TryGetValue(parent, out var glow))
-                {
-                    glowDict[child] = glow;
-                }
+                if (glowLevels.TryGetValue(parent, out var glow))
+                    glowLevels[child] = glow;
             }
         }
-        // and, since we can't rely on the iterator knowing where the heck to put
-        // each sprite when we have one marking setting multiple layers,
-        // lets just kinda sorta do that ourselves
-        var layerDict = new Dictionary<string, int>();
 
-        visible &= !humanoid.HiddenMarkings.Contains(markingPrototype.ID); // FLOOF ADD
-        // FLOOF ADD END
+        var visible = marking.Visible && !humanoid.HiddenMarkings.Contains(markingPrototype.ID);
 
         for (var j = 0; j < markingPrototype.Sprites.Count; j++)
         {
-            // FLOOF CHANGE START
             var markingSprite = markingPrototype.Sprites[j];
+
             if (markingSprite is not SpriteSpecifier.Rsi rsi)
             {
                 continue;
             }
 
             var layerSlot = markingPrototype.BodyPart;
-            // first, try to see if there are any custom layers for this marking
-            if (markingPrototype.Layering != null)
-            {
-                var name = rsi.RsiState;
-                if (markingPrototype.Layering.TryGetValue(name, out var layerName))
-                {
-                    layerSlot = Enum.Parse<HumanoidVisualLayers>(layerName);
-                }
-            }
+            if (markingPrototype.Layering?.TryGetValue(rsi.RsiState, out var layerName) == true)
+                layerSlot = Enum.Parse<HumanoidVisualLayers>(layerName);
 
-            // _CS Start: preserve explicit behind/front genital layering
             if ((markingPrototype.MarkingCategory == MarkingCategories.Genital
                     || markingPrototype.BodyPart == HumanoidVisualLayers.Genital)
                 && layerSlot == HumanoidVisualLayers.Genital)
             {
-                layerSlot = renderOverClothing
+                layerSlot = marking.RenderOverClothing
                     ? HumanoidVisualLayers.TailOversuit
                     : HumanoidVisualLayers.Genital;
             }
-            else if (renderOverClothing && layerSlot == HumanoidVisualLayers.Genital)
+            else if (marking.RenderOverClothing && layerSlot == HumanoidVisualLayers.Genital)
             {
                 layerSlot = HumanoidVisualLayers.TailOversuit;
             }
-            // _CS End: preserve explicit behind/front genital layering
-            // update the layerDict
-            // if it doesnt have this, add it at 0, otherwise increment it
-            if (layerDict.TryGetValue(layerSlot.ToString(), out var layerIndex))
-            {
-                layerDict[layerSlot.ToString()] = layerIndex + 1;
-            }
-            else
-            {
-                layerDict.Add(layerSlot.ToString(), 0);
-            }
 
-            if (!sprite.LayerMapTryGet(layerSlot, out var targetLayer))
-            {
+            var offset = layerOrder.GetValueOrDefault(layerSlot);
+            layerOrder[layerSlot] = offset + 1;
+
+            if (!_sprite.LayerMapTryGet((entity.Owner, sprite), layerSlot, out var targetLayer, false))
                 continue;
-            }
 
-            // _CS Start: genital layer compatibility for species without an explicit Genital base-layer mapping
-            var allowsLayerMarkings = humanoid.BaseLayers.TryGetValue(layerSlot, out var setting)
+            var layerVisible = visible && !IsHidden(humanoid, layerSlot);
+            layerVisible &= humanoid.BaseLayers.TryGetValue(layerSlot, out var setting)
                 ? setting.AllowsMarkings
                 : layerSlot == HumanoidVisualLayers.Genital;
 
-            visible &= !IsHidden(humanoid, layerSlot);
-            visible &= allowsLayerMarkings;
-            // _CS End: genital layer compatibility for species without an explicit Genital base-layer mapping
-
-            var layerId = $"{markingPrototype.ID}-{rsi.RsiState}";
-            var glowLayerId = $"{layerId}-glow";
-            // FLOOF CHANGE END
-            var targLayerAdj = targetLayer + layerDict[layerSlot.ToString()] + 1;
-
-            // Keep genital markings beneath clothing when render-over-clothing is disabled.
-            // Multi-state markings can otherwise increment past nearby clothing anchors.
-            if (!renderOverClothing
+            var targetIndex = targetLayer + offset + 1;
+            if (!marking.RenderOverClothing
                 && (markingPrototype.MarkingCategory == MarkingCategories.Genital
                     || markingPrototype.BodyPart == HumanoidVisualLayers.Genital))
             {
-                if (sprite.LayerMapTryGet("jumpsuit", out var jumpsuitLayer))
-                    targLayerAdj = Math.Min(targLayerAdj, jumpsuitLayer - 1);
+                if (_sprite.LayerMapTryGet((entity.Owner, sprite), "jumpsuit", out var jumpsuitLayer, false))
+                    targetIndex = Math.Min(targetIndex, jumpsuitLayer - 1);
 
-                if (sprite.LayerMapTryGet("outerClothing", out var outerClothingLayer))
-                    targLayerAdj = Math.Min(targLayerAdj, outerClothingLayer - 1);
+                if (_sprite.LayerMapTryGet((entity.Owner, sprite), "outerClothing", out var outerClothingLayer, false))
+                    targetIndex = Math.Min(targetIndex, outerClothingLayer - 1);
 
-                if (targLayerAdj < 0)
-                    targLayerAdj = 0;
+                targetIndex = Math.Max(targetIndex, 0);
             }
 
+            var layerId = $"{markingPrototype.ID}-{rsi.RsiState}";
+            var glowLayerId = $"{layerId}-glow";
 
-            if (!sprite.LayerMapTryGet(layerId, out _))
+            if (!_sprite.LayerMapTryGet((entity.Owner, sprite), layerId, out _, false))
             {
-                // for layers that are supposed to be behind everything,
-                // adding 1 to the layer index makes it not be behind
-                // everything. fun! FLOOF ADD =3
-                // var targLayerAdj = targetLayer == 0 ? 0 + j : targetLayer + j + 1;
-                var layer = sprite.AddLayer(markingSprite, targLayerAdj);
-                sprite.LayerMapSet(layerId, layer);
-                sprite.LayerSetSprite(layerId, rsi);
+                var layer = _sprite.AddLayer((entity.Owner, sprite), markingSprite, targetIndex);
+                _sprite.LayerMapSet((entity.Owner, sprite), layerId, layer);
+                _sprite.LayerSetSprite((entity.Owner, sprite), layerId, rsi);
             }
-            humanoid.ClientElderMarkings.Add(layerId);
+
             // impstation edit begin - check if there's a shader defined in the markingPrototype's shader datafield, and if there is...
             if (markingPrototype.Shader != null)
             {
@@ -708,90 +587,66 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 sprite.LayerSetShader(layerId, markingPrototype.Shader);
             }
             // impstation edit end
-            sprite.LayerSetVisible(layerId, visible);
-            // Coyote Start
-            sprite.LayerSetScale(layerId, new Vector2(scale, scale));
-            sprite.LayerSetOffset(layerId, markingOffset);
-            // Coyote End
 
-            if (!visible)
+            _sprite.LayerSetVisible((entity.Owner, sprite), layerId, layerVisible);
+            _sprite.LayerSetScale((entity.Owner, sprite), layerId, new Vector2(marking.MarkingScale));
+            _sprite.LayerSetOffset((entity.Owner, sprite), layerId, markingOffset);
+
+            if (!layerVisible)
             {
-                if (sprite.LayerMapTryGet(glowLayerId, out var hiddenGlowIndex))
+                if (_sprite.LayerMapTryGet((entity.Owner, sprite), glowLayerId, out var hiddenGlowIndex, false))
                 {
-                    sprite.LayerMapRemove(glowLayerId);
-                    sprite.RemoveLayer(hiddenGlowIndex);
+                    _sprite.LayerMapRemove((entity.Owner, sprite), glowLayerId);
+                    _sprite.RemoveLayer((entity.Owner, sprite), hiddenGlowIndex);
                 }
                 continue;
             }
 
-            // Okay so if the marking prototype is modified but we load old marking data this may no longer be valid
-            // and we need to check the index is correct.
-            // So if that happens just default to white?
-            // FLOOF ADD =3
-            var color = colorDict.TryGetValue(rsi.RsiState, out var targetColor) ? targetColor : Color.White;
-            var glowFactor = glowDict.TryGetValue(rsi.RsiState, out var targetGlow) ? targetGlow : 0f;
-
-            var clampedGlow = Math.Clamp(glowFactor, 0f, 1f);
-            var baseAlpha = color.A;
-            var glowAlpha = baseAlpha * clampedGlow;
-
-            // Keep the final composed alpha stable while splitting between base + glow layers.
-            // With standard alpha compositing: total = base + glow * (1 - base).
-            // Solve for base so total remains equal to the original alpha.
-            var denom = 1f - glowAlpha;
-            var baseLayerAlpha = denom > 0f ? (baseAlpha - glowAlpha) / denom : 0f;
+            var color = colors.GetValueOrDefault(rsi.RsiState, Color.White);
+            var glow = glowLevels.GetValueOrDefault(rsi.RsiState);
+            var glowAlpha = color.A * glow;
+            var denominator = 1f - glowAlpha;
+            var baseLayerAlpha = denominator > 0f ? (color.A - glowAlpha) / denominator : 0f;
             baseLayerAlpha = Math.Clamp(baseLayerAlpha, 0f, 1f);
+            _sprite.LayerSetColor((entity.Owner, sprite), layerId, color.WithAlpha(baseLayerAlpha));
 
-            sprite.LayerSetColor(layerId, color.WithAlpha(baseLayerAlpha));
-
-            if (clampedGlow > 0f)
+            if (glow > 0f)
             {
-                if (!sprite.LayerMapTryGet(glowLayerId, out _))
+                if (!_sprite.LayerMapTryGet((entity.Owner, sprite), glowLayerId, out _, false))
                 {
-                    var glowLayer = sprite.AddLayer(markingSprite, targLayerAdj + 1);
-                    sprite.LayerMapSet(glowLayerId, glowLayer);
-                    sprite.LayerSetSprite(glowLayerId, rsi);
+                    var glowLayer = _sprite.AddLayer((entity.Owner, sprite), markingSprite, targetIndex + 1);
+                    _sprite.LayerMapSet((entity.Owner, sprite), glowLayerId, glowLayer);
+                    _sprite.LayerSetSprite((entity.Owner, sprite), glowLayerId, rsi);
                 }
 
                 sprite.LayerSetShader(glowLayerId, "unshaded");
-                sprite.LayerSetVisible(glowLayerId, visible);
-                sprite.LayerSetColor(glowLayerId, color.WithAlpha(glowAlpha));
-                // Coyote Start
-                sprite.LayerSetScale(glowLayerId, new Vector2(scale, scale));
-                sprite.LayerSetOffset(glowLayerId, markingOffset);
-                // Coyote End
+                _sprite.LayerSetVisible((entity.Owner, sprite), glowLayerId, layerVisible);
+                _sprite.LayerSetColor((entity.Owner, sprite), glowLayerId, color.WithAlpha(glowAlpha));
+                _sprite.LayerSetScale((entity.Owner, sprite), glowLayerId, new Vector2(marking.MarkingScale));
+                _sprite.LayerSetOffset((entity.Owner, sprite), glowLayerId, markingOffset);
                 humanoid.ClientElderMarkings.Add(glowLayerId);
             }
-            else if (sprite.LayerMapTryGet(glowLayerId, out var glowIndex))
+            else if (_sprite.LayerMapTryGet((entity.Owner, sprite), glowLayerId, out var glowIndex, false))
             {
-                sprite.LayerMapRemove(glowLayerId);
-                sprite.RemoveLayer(glowIndex);
+                _sprite.LayerMapRemove((entity.Owner, sprite), glowLayerId);
+                _sprite.RemoveLayer((entity.Owner, sprite), glowIndex);
             }
 
-            if (humanoid.MarkingsDisplacement.TryGetValue(markingPrototype.BodyPart, out DisplacementData? displacementData)
-                && markingPrototype.CanBeDisplaced)
+            if (humanoid.MarkingsDisplacement.TryGetValue(layerSlot, out var displacementData) && markingPrototype.CanBeDisplaced)
             {
-                _displacement.TryAddDisplacement(
-                    displacementData,
-                    sprite,
-                    targetLayer + j + 1,
-                    layerId,
-                    out _);
+                _displacement.TryAddDisplacement(displacementData, (entity.Owner, sprite), targetIndex, layerId, out _);
             }
         }
 
         if (MarkingCategoriesConversion.Category2Layer(
                 markingPrototype.MarkingCategory,
                 markingPrototype.BodyPart,
-                out var whichCat))
+                out var hiddenBaseLayer)
+            && !humanoid.HiddenBaseLayers.Contains(hiddenBaseLayer))
         {
-            // WEEOO WEEOO set the base layer to be hidden on the comp
-            // but only if it is not already hidden
-            if (!humanoid.HiddenBaseLayers.Contains(whichCat))
-            {
-                humanoid.HiddenBaseLayers.Add(whichCat);
-            }
+            humanoid.HiddenBaseLayers.Add(hiddenBaseLayer);
         }
+
     }
 
     public override void SetSkinColor(EntityUid uid, Color skinColor, bool sync = true, bool verify = true, HumanoidAppearanceComponent? humanoid = null)
@@ -809,7 +664,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             if (!spriteInfo.MatchSkin)
                 continue;
 
-            var index = sprite.LayerMapReserveBlank(layer);
+            var index = _sprite.LayerMapReserve((uid, sprite), layer);
             sprite[index].Color = skinColor.WithAlpha(spriteInfo.LayerAlpha);
         }
     }
@@ -824,11 +679,11 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         base.SetLayerVisibility(ent, layer, visible, slot, ref dirty);
 
         var sprite = Comp<SpriteComponent>(ent);
-        if (!sprite.LayerMapTryGet(layer, out var index))
+        if (!_sprite.LayerMapTryGet((ent.Owner, sprite), layer, out var index, false))
         {
             if (!visible)
                 return;
-            index = sprite.LayerMapReserveBlank(layer);
+            index = _sprite.LayerMapReserve((ent.Owner, sprite), layer);
         }
 
         var spriteLayer = sprite[index];
@@ -842,93 +697,21 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         foreach (var markingList in ent.Comp.MarkingSet.Markings.Values)
         {
-            // Coyote Start
-            var facingDirection = sprite.EnableDirectionOverride
-                ? sprite.DirectionOverride
-                : Transform(ent).LocalRotation.GetCardinalDir();
-            // Coyote End
             foreach (var marking in markingList)
             {
                 if (_markingManager.TryGetMarking(marking, out var markingPrototype) && markingPrototype.BodyPart == layer)
-                {
-                    // Coyote Start
-                    ApplyMarking(markingPrototype, marking.MarkingColors, marking.MarkingGlow, marking.Visible, marking.RenderOverClothing, ent, sprite, marking.MarkingScale, marking.GetOffset(facingDirection));
-                    // Coyote End
-                }
+                    ApplyMarking(markingPrototype, marking, (ent, ent.Comp, sprite));
             }
         }
-    }
 
-    public override void HideUndies(EntityUid ent, HumanoidAppearanceComponent? humanoid = null)
-    {
-        if (!Resolve(ent, ref humanoid))
-            return;
-        humanoid.PermanentlyHidden.Add(HumanoidVisualLayers.UndergarmentBottom);
-        humanoid.PermanentlyHidden.Add(HumanoidVisualLayers.UndergarmentTop);
-        base.HideUndies(ent, humanoid);
-        UpdateSprite(ent, humanoid, Comp<SpriteComponent>(ent));
-    }
-
-    public override void HideGenitals(EntityUid ent, HumanoidAppearanceComponent? humanoid = null)
-    {
-        if (!Resolve(ent, ref humanoid))
-            return;
-        humanoid.PermanentlyHidden.Add(HumanoidVisualLayers.Genital);
-        base.HideGenitals(ent, humanoid);
-        UpdateSprite(ent, humanoid, Comp<SpriteComponent>(ent));
-    }
-
-    // displacementData = _humanoidSystem.GetDisplacementForLegStyle(
-    //     slot,
-    //     humanoidAppearance.LegStyle,
-    //     inventory,
-    //     displacementData);
-
-    public void GetDisplacementForLegStyle(
-        EntityUid uid,
-        string slot,
-        HumanoidAppearanceComponent? humanoidAppearance,
-        DisplacementData? baseDisplacementDataIn,
-        DisplacementData? maleDisplacementDataIn,
-        DisplacementData? femaleDisplacementDataIn,
-        out DisplacementData? baseDisplacementData,
-        out DisplacementData? maleDisplacementData,
-        out DisplacementData? femaleDisplacementData
-        )
-    {
-        baseDisplacementData = baseDisplacementDataIn;
-        maleDisplacementData = maleDisplacementDataIn;
-        femaleDisplacementData = femaleDisplacementDataIn;
-        if (!Resolve(uid, ref humanoidAppearance))
-            return;
-        if (!_prototypeManager.TryIndex(humanoidAppearance.Species, out SpeciesPrototype? sp)
-            || !sp.AllowDigilegDisplacement)
-        {
-            return;
-        }
-
-        if (!humanoidAppearance.LegDisplacements.TryGetValue(
-            humanoidAppearance.LegStyle,
-            out ProtoId<LegDisplacementPrototype> displacement))
-        {
-            return;
-        }
-
-        if (!_prototypeManager.TryIndex(displacement, out LegDisplacementPrototype? ldp))
-        {
-            return;
-        }
-
-        baseDisplacementData = ldp.Displacements!.GetValueOrDefault(slot, baseDisplacementDataIn);
-        maleDisplacementData = ldp.MaleDisplacements!.GetValueOrDefault(slot, maleDisplacementDataIn);
-        femaleDisplacementData = ldp.FemaleDisplacements!.GetValueOrDefault(slot, femaleDisplacementDataIn);
+        UpdateLayersAgain((ent, ent.Comp, sprite));
     }
 }
 
 public sealed class ProfilePreviewSettings(
     bool showUndies = true,
     bool showGenitals = true
-    )
+)
 {
     public bool ShowUndies = showUndies;
     public bool ShowGenitals = showGenitals;

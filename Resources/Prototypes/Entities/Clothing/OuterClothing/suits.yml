@@ -30,7 +30,6 @@
   - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
-
 - type: entity
   parent: ClothingOuterSuitBomb
   id: ClothingOuterSuitJanitorBomb
@@ -42,7 +41,6 @@
     sprite: Clothing/OuterClothing/Suits/janitor_bombsuit.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/janitor_bombsuit.rsi
-
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
   id: ClothingOuterSuitFire
@@ -67,16 +65,12 @@
         Heat: 0.8
         Cold: 0.8
   - type: ClothingSpeedModifier
-    walkModifier: 0.8
+    walkModifier: 0.7
     sprintModifier: 0.7
   - type: HeldSpeedModifier
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goob
-    hiddenSlots:
-    - jumpsuit
-
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
   id: ClothingOuterSuitAtmosFire
@@ -108,10 +102,10 @@
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goob
-    hiddenSlots:
-    - jumpsuit
-
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 - type: entity
   parent: [ClothingOuterBaseLarge, GeigerCounterClothing, AllowSuitStorageClothing]
   id: ClothingOuterSuitRad
@@ -136,10 +130,7 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goob
-    hiddenSlots:
-    - jumpsuit
-
+  - type: CatWearable # Frontier
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseToggleClothing, BaseC4Contraband, ContrabandClothing] # Frontier: BaseMajorContraband<BaseC3Contraband, added ContrabandClothing as parent
   id: ClothingOuterSuitSpaceNinja
@@ -206,7 +197,6 @@
   - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
-
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterSuitChicken
@@ -222,7 +212,6 @@
   - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
-
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterSuitShrineMaiden
@@ -233,7 +222,6 @@
     sprite: Clothing/OuterClothing/Suits/shrine-maiden.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/shrine-maiden.rsi
-
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterSuitWitchRobes
@@ -244,7 +232,6 @@
     sprite: Clothing/OuterClothing/Suits/witchrobe.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/witchrobe.rsi
-
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterSuitMonkey
@@ -263,7 +250,6 @@
   - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
-
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterSuitIan
@@ -286,10 +272,10 @@
     node: suit
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
-  - type: HideClothingLayerClothing # Goob
-    hiddenSlots:
-    - jumpsuit
-
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterSuitCarp
@@ -312,7 +298,6 @@
   - type: HideClothingLayerClothing # Goob
     hiddenSlots:
     - jumpsuit
-
 - type: entity
   parent: ClothingOuterSuitCarp
   id: ClothingOuterHardsuitCarp
@@ -327,6 +312,5 @@
     coolingCoefficient: 0.01
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCarp
-  - type: HideClothingLayerClothing # Goob
-    hiddenSlots:
-    - jumpsuit
+  - type: StaticPrice
+    price: 1500

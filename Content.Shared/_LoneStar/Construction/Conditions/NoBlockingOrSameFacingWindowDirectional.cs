@@ -25,7 +25,8 @@ namespace Content.Shared._LoneStar.Construction.Conditions
             var tagSystem = sysMan.GetEntitySystem<TagSystem>();
             var lookupSys = sysMan.GetEntitySystem<EntityLookupSystem>();
 
-            if (!location.TryGetTileRef(out var tile))
+            if (!entManager.TrySystem<TurfSystem>(out var turfSystem) ||
+                !turfSystem.TryGetTileRef(location, out var tile))
                 return false;
 
             var fixtureQuery = entManager.GetEntityQuery<FixturesComponent>();

@@ -172,6 +172,42 @@
 
 - type: entity
   parent: DrinkBottlePlasticBaseFull
+  id: JugCocoa
+  name: cocoa powder jug
+  suffix: For Drinks, Full
+  description: A jug of cocoa powder.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: CocoaPowder
+          Quantity: 50
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-cocoapowder
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: JugWater
+  name: water powder jug
+  suffix: For Drinks, Full
+  description: A jug of water. Also probably microplastics. 
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: Water
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-water
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
   id: JugNanocaf
   name: nanocaf jug
   suffix: For Drinks, Full
@@ -187,21 +223,3 @@
   - type: Drink
   - type: Label
     currentLabel: reagent-name-nanocaf
-
-- type: entity
-  parent: DrinkBottlePlasticBaseFull
-  id: JugWater
-  name: water powder jug
-  suffix: For Drinks, Full
-  description: A jug of water. Also probably microplastics.
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 300
-        reagents:
-        - ReagentId: Water
-          Quantity: 300
-  - type: Drink
-  - type: Label
-    currentLabel: reagent-name-water

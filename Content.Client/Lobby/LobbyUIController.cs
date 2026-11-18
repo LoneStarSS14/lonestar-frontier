@@ -279,8 +279,7 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
             _prototypeManager,
             _resourceCache,
             _requirements,
-            _markings,
-            _consentManager);
+            _markings);
 
         _profileEditor.OnOpenGuidebook += _guide.OpenHelp;
 

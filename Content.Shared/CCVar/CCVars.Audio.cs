@@ -1,4 +1,6 @@
-﻿using Robust.Shared.Configuration;
+using Content.Shared.Administration;
+using Content.Shared.CCVar.CVarAccess;
+using Robust.Shared.Configuration;
 
 namespace Content.Shared.CCVar;
 
@@ -58,24 +60,19 @@ public sealed partial class CCVars
         public static readonly CVarDef<float> InterfaceVolume =
             CVarDef.Create("audio.interface_volume", 0.50f, CVar.ARCHIVE | CVar.CLIENTONLY);
 
-        // _CS Start: weather effects volume CVar
-        /// <summary>
-        ///     Weather effects volume.
-        /// </summary>
-        public static readonly CVarDef<float> WeatherEffectsVolume =
-            CVarDef.Create("audio.weather_effects_volume", 1.0f, CVar.ARCHIVE | CVar.CLIENTONLY);
-        // _CS End
+    /// <summary>
+    ///     Lobby music collection string
+    /// </summary>
+    [CVarControl(AdminFlags.VarEdit)]
+    public static readonly CVarDef<string> LobbyMusicCollection =
+        CVarDef.Create("audio.lobby_music_collection", "NFLobbyMusic", CVar.REPLICATED | CVar.SERVER); // Frontier: LobbyMusic<NFLobbyMusic
 
-        /// <summary>
-        ///     Pocket Sized Andy announcement volume.
-        /// </summary>
-        public static readonly CVarDef<float> AndyAnnouncementVolume =
-            CVarDef.Create("audio.andy_announcement_volume", 1f, CVar.ARCHIVE | CVar.CLIENTONLY);
+    public static readonly CVarDef<float> WeatherEffectsVolume =
+        CVarDef.Create("audio.weather_effects_volume", 1.0f, CVar.ARCHIVE | CVar.CLIENTONLY);
 
-        /// <summary>
-        ///     Whether Pocket Sized Andy announcements are played client-side.
-        /// </summary>
-        public static readonly CVarDef<bool> AndyAnnouncementsEnabled =
-            CVarDef.Create("audio.andy_announcements_enabled", true, CVar.ARCHIVE | CVar.CLIENTONLY);
+    public static readonly CVarDef<float> AndyAnnouncementVolume =
+        CVarDef.Create("audio.andy_announcement_volume", 1f, CVar.ARCHIVE | CVar.CLIENTONLY);
 
+    public static readonly CVarDef<bool> AndyAnnouncementsEnabled =
+        CVarDef.Create("audio.andy_announcements_enabled", true, CVar.ARCHIVE | CVar.CLIENTONLY);
 }

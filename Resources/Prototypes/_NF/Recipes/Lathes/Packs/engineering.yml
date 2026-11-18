@@ -9,7 +9,6 @@
   - ClothingOuterEVASuitEngineer
   - ClothingOuterEVASuitAtmosTech
   - NFFlash
-
 - type: latheRecipePack
   id: NFEngineeringStructureBoardsStatic
   recipes:
@@ -26,8 +25,6 @@
   - PortableSMESMachineCircuitboard
   - StationMapElectronics
   - WallmountSubstationElectronics
-  - SMESAdvancedMachineCircuitboard
-
 - type: latheRecipePack
   id: NFEngineeringBoardsStatic
   recipes:
@@ -49,8 +46,6 @@
   - PortableScrubberMachineCircuitBoard
   - ThermomachineFreezerMachineCircuitBoard
   - CondenserMachineCircuitBoard
-  - PowerComputerCircuitboard # Coyote
-
 - type: latheRecipePack
   id: NFEngineeringMaterialsStatic
   recipes:
@@ -60,7 +55,6 @@
   - NFSheetPlasteel1Processed
   - NFSheetUGlass1Processed
   - NFSheetRUGlass1Processed
-
 - type: latheRecipePack
   id: NFEngineeringArchetypeStatic
   recipes:
@@ -74,25 +68,10 @@
   - JawsOfLife
   - BorgModuleRCD
   - BorgModuleAdvancedTool
-
 - type: latheRecipePack
   id: NFEngineeringBoards
   recipes:
   - PortableGeneratorDKJrMachineCircuitboard
-  - GasMiningDrillMachineCircuitboard
-  - GaslockFrameMachineCircuitboard
-  - SlowWeakThrusterMachineCircuitboard
-  - SlowStrongThrusterMachineCircuitboard
-  - FastWeakThrusterMachineCircuitboard
-  - FastStrongThrusterMachineCircuitboard
-  - FasterWeakThrusterMachineCircuitboard
-
-- type: latheRecipePack
-  id: NFEngineeringBoardsCircuitImprinter
-  recipes:
-  - GasMiningDrillMachineCircuitboard
-  - GaslockFrameMachineCircuitboard
-
 - type: latheRecipePack
   id: NFEngineering
   recipes:
@@ -105,4 +84,10 @@
   - SuperCapacitorStockPart
   - SuperMatterBinStockPart
   - PicoManipulatorStockPart
-#  - NFWeaponParticleDecelerator
+  - NFWeaponParticleDecelerator
+
+- type: latheRecipePack
+  id: NFEngineeringBoardsCircuitImprinter
+  recipes:
+  - GasMiningDrillMachineCircuitboard
+  - GaslockFrameMachineCircuitboard

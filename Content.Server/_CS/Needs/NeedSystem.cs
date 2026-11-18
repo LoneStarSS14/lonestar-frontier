@@ -42,7 +42,9 @@ public sealed class NeedSystem : SharedNeedsSystem
         var species = "Critter"; // default fallback
         if (_entMan.TryGetComponent(args.Target, out HumanoidAppearanceComponent? humanoid))
         {
-            species = _humanoid.GetSpeciesRepresentation(humanoid.Species, humanoid.CustomSpecieName);
+            species = string.IsNullOrWhiteSpace(humanoid.CustomSpecieName)
+                ? _humanoid.GetSpeciesRepresentation(humanoid.Species)
+                : humanoid.CustomSpecieName;
         }
         foreach (var need in needy.Needs.Values)
         {

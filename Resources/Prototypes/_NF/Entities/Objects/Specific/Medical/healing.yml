@@ -1,4 +1,3 @@
-# region pills
 - type: entity
   id: Suture10Lingering
   parent: MedicatedSuture
@@ -144,18 +143,8 @@
   - type: Pill
     random: true
 
-- type: entity
-  parent: PillCanister
-  id: NFPillPartyCanister
-  suffix: Party pills, Filled
-  components:
-  - type: StorageFill
-    contents:
-    - id: NFPillParty
-      maxAmount: 10
-      orGroup: RandomPill
-
 # region Normal Vial Fills
+
 - type: entity
   parent: BaseChemistryEmptyVial
   suffix: Bruizine 30u
@@ -595,3 +584,14 @@
           reagents:
             - ReagentId: Stimulants
               Quantity: 300
+
+- type: entity
+  parent: PillCanister
+  id: NFPillPartyCanister
+  suffix: Party pills, Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFPillParty
+      maxAmount: 10
+      orGroup: RandomPill

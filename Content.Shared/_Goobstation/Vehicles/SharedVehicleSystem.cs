@@ -78,7 +78,8 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         SubscribeLocalEvent<VehicleComponent, StartCollideEvent>(OnStartCollide); // _CS
 
         SubscribeLocalEvent<VehicleRiderComponent, PullAttemptEvent>(OnRiderPull); // _CS
-        SubscribeLocalEvent<VehicleComponent, GotEmaggedEvent>(OnVehicleEmagged); // _CS
+        SubscribeLocalEvent<VehicleComponent, GotEmaggedEvent>        (OnVehicleEmagged, before: [typeof(UnpoweredFlashlightSystem)]); // _CS
+                SubscribeLocalEvent<VehicleComponent, GotUnEmaggedEvent>(OnVehicleUnemagged, before: [typeof(UnpoweredFlashlightSystem)]); // Frontier
     }
 
     private void OnInit(EntityUid uid, VehicleComponent component, ComponentInit args)
@@ -93,17 +94,48 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
             return;
 
-        if (!TryComp<MovementSpeedModifierComponent>(uid, out var moveComp))
-            return;
+        // Frontier: emag hides the vehicle radar blip
+        if (component.RadarBlip)
+        {
+            component.RadarBlip = false;
+            Dirty(uid, component);
+            HandleEmag((uid, component));
+            args.Handled = true;
+        }
+        // End Frontier
 
-        // Preserve the same effective acceleration (accel * sprintSpeed product is constant).
-        const float newSprintSpeed = 9999f;
-        var compensatedAccel = moveComp.BaseAcceleration * moveComp.BaseSprintSpeed / newSprintSpeed;
-        _movespeed.ChangeBaseSpeed(uid, moveComp.BaseWalkSpeed, newSprintSpeed, compensatedAccel, moveComp);
-        args.Repeatable = true;
-        args.Handled = true;
+        if (TryComp<MovementSpeedModifierComponent>(uid, out var moveComp))
+        {
+            // Preserve the same effective acceleration (accel * sprintSpeed product is constant).
+            const float newSprintSpeed = 9999f;
+            var compensatedAccel = moveComp.BaseAcceleration * moveComp.BaseSprintSpeed / newSprintSpeed;
+            _movespeed.ChangeBaseSpeed(uid, moveComp.BaseWalkSpeed, newSprintSpeed, compensatedAccel, moveComp);
+            args.Handled = true;
+        }
+
+        if (args.Handled)
+            args.Repeatable = true;
     }
     // _CS End
+
+    // Frontier: restore radar blip when un-emagged
+    private void OnVehicleUnemagged(Entity<VehicleComponent> ent, ref GotUnEmaggedEvent args)
+    {
+        if (args.Handled || !_emag.CompareFlag(args.Type, EmagType.Interaction))
+            return;
+
+        if (ent.Comp.RadarBlip)
+            return;
+
+        ent.Comp.RadarBlip = true;
+        Dirty(ent);
+        HandleUnemag(ent);
+        args.Handled = true;
+    }
+
+    protected abstract void HandleEmag(Entity<VehicleComponent> ent);
+    protected abstract void HandleUnemag(Entity<VehicleComponent> ent);
+    // End Frontier
 
     // _CS
     private void OnMapInit(EntityUid uid, VehicleComponent component, MapInitEvent args)

@@ -45,10 +45,9 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
     [Dependency] private readonly IGameTiming          _timing = null!;
     [Dependency] private readonly BankSystem           _bank = null!;
     [Dependency] private readonly PopupSystem          _popupSystem = null!;
-    [Dependency] private readonly ChatSystem           _chatsys = null!;
+    [Dependency] private readonly Content.Shared.Whitelist.EntityWhitelistSystem _emoteWhitelist = default!;
     [Dependency] private readonly IChatManager         _chatManager = null!;
     [Dependency] private readonly IPlayerManager       _playerManager = null!;
-    [Dependency] private readonly SSDIndicatorSystem   _ssdThing = null!;
     [Dependency] private readonly IPrototypeManager    _prototype = default!;
     [Dependency] private readonly TagSystem            _tagSystem = default!;
     [Dependency] private readonly MobStateSystem       _mobStateSystem = default!;
@@ -267,8 +266,9 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
         RoleplayIncentiveComponent component,
         ref GetRpiModifier args)
     {
-        if (TryComp<SSDIndicatorComponent>(uid, out var ssd)
-            && _ssdThing.IsInNashStation(uid))
+        if (HasComp<SSDIndicatorComponent>(uid)
+            && Transform(uid).GridUid is { } grid
+            && HasComp<Content.Shared._CS.CryoBraindeadsComponent>(grid))
         {
             args.Modify(1.5f, 0f); // 'double' pay if youre in nash!
         }
@@ -2313,10 +2313,18 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
         string message
     )
     {
-        return _chatsys.TryEmoteChatInput(
-            source,
-            message,
-            false)
+        var start = 0;
+        var end = message.Length;
+        while (start < end && char.IsPunctuation(message[start]))
+            start++;
+        while (end > start && char.IsPunctuation(message[end - 1]))
+            end--;
+        var trimmed = message[start..end];
+        return _prototype.EnumeratePrototypes<Content.Shared.Chat.Prototypes.EmotePrototype>()
+            .Any(emote => emote.ChatTriggers.Any(trigger => string.Equals(trigger, trimmed, StringComparison.OrdinalIgnoreCase))
+                && ((TryComp<Content.Shared.Speech.SpeechComponent>(source, out var speech) && speech.AllowedEmotes.Contains(emote.ID))
+                    || (emote.Available && !_emoteWhitelist.IsWhitelistFail(emote.Whitelist, source)
+                        && !_emoteWhitelist.IsBlacklistPass(emote.Blacklist, source))))
             ? RpiChatActionCategory.QuickEmoting // if the message is a valid emote, then its a quick emote
             : RpiChatActionCategory.Emoting;
 

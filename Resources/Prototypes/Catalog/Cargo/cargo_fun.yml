@@ -8,7 +8,6 @@
   cost: 2000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunInstrumentsBrass
   abstract: true # Frontier - Moved to AutoTune
@@ -19,7 +18,6 @@
   cost: 2000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunInstrumentsString
   abstract: true # Frontier - Moved to AutoTune
@@ -30,7 +28,6 @@
   cost: 2500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunInstrumentsWoodwind
   abstract: true # Frontier - Moved to AutoTune
@@ -41,7 +38,6 @@
   cost: 3000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunInstrumentsKeyedPercussion
   abstract: true # Frontier - Moved to AutoTune
@@ -52,7 +48,6 @@
   cost: 2500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunInstrumentsSpecial
   abstract: true # Frontier - Moved to AutoTune
@@ -63,7 +58,6 @@
   cost: 10000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunArtSupplies
   abstract: true # Frontier
@@ -74,7 +68,6 @@
   cost: 500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunParty
   abstract: true # Frontier
@@ -85,7 +78,6 @@
   cost: 1000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: CrateFunWaterGuns
   abstract: true # Frontier
@@ -96,51 +88,46 @@
   cost: 750
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: CrateFunFoamGuns
   abstract: true # Frontier
   icon:
-    sprite: Objects/Weapons/Guns/Rifles/foam_rifle.rsi
+    sprite: Objects/Fun/Foam/foam_rifle.rsi
     state: icon
   product: CrateFunFoamGuns
   cost: 3000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunPlushies
   abstract: true # Frontier
   icon:
-    sprite: Objects/Fun/toys.rsi
-    state: plushie_h
+    sprite: Objects/Fun/Plushies/human.rsi
+    state: icon
   product: CrateFunPlushie
   cost: 1000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunLizardPlushies
   abstract: true # Frontier
   icon:
-    sprite: Objects/Fun/toys.rsi
-    state: plushie_lizard
+    sprite: Objects/Fun/Plushies/lizard.rsi
+    state: icon
   product: CrateFunLizardPlushieBulk
   cost: 500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunSharkPlushies
   abstract: true # Frontier
   icon:
-    sprite: Objects/Fun/sharkplush.rsi
+    sprite: Objects/Fun/Plushies/shark.rsi
     state: blue
   product: CrateFunSharkPlushieBulk
   cost: 500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunBoardGames
   abstract: true # Frontier - Moved to vending machine
@@ -151,7 +138,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunSadTromboneImplants
   abstract: true # Frontier - Moved to vending machine
@@ -162,7 +148,6 @@
   cost: 1000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunLightImplants
   abstract: true # Frontier - Moved to vending machine
@@ -173,7 +158,6 @@
   cost: 1000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunBoxing
   abstract: true # Frontier
@@ -184,7 +168,6 @@
   cost: 500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunPirate
   abstract: true # Frontier
@@ -195,7 +178,6 @@
   cost: 400
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunToyBox
   abstract: true # Frontier
@@ -206,7 +188,6 @@
   cost: 900
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunBikeHornImplants
   abstract: true # Frontier
@@ -229,7 +210,6 @@
 #  category: cargoproduct-category-name-fun
 #  group: market
 #End Coyote
-
 - type: cargoProduct
   id: FunMysteryFigurines
   abstract: true # Frontier
@@ -240,7 +220,6 @@
   cost: 4000
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunDartsSet
   abstract: true # Frontier
@@ -251,7 +230,6 @@
   cost: 900
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: FunATV
   icon:
@@ -261,7 +239,15 @@
   cost: 25000 # Frontier: 1500<5000 CS: 5000<25000
   category: cargoproduct-category-name-fun
   group: market
-
+- type: cargoProduct
+  id: HydratedScurret
+  icon:
+    sprite: Structures/Wallmounts/posters.rsi
+    state: poster55_legit
+  product: CrateFunScurret
+  cost: 25000 # You will surely not regret buying this
+  category: cargoproduct-category-name-fun
+  group: market
 - type: cargoProduct
   id: FunCrateGambling
   abstract: true # Frontier
@@ -272,7 +258,6 @@
   cost: 1000000 # Frontier 10000<1000000 in the case this is added again by mistake.
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: ChurchOrganInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -283,7 +268,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: PianoInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -294,7 +278,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: UprightPianoInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -305,7 +288,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: VibraphoneInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -316,7 +298,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: MarimbaInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -327,7 +308,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: TubaInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -338,7 +318,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: HarpInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -349,7 +328,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: TimpaniInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -360,7 +338,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: TaikoInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -371,7 +348,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: ContrabassInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -382,7 +358,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: MinimoogInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -393,7 +368,6 @@
   cost: 1500
   category: cargoproduct-category-name-fun
   group: market
-
 - type: cargoProduct
   id: TomDrumsInstrument
   abstract: true # Frontier - Moved to AutoTune
@@ -402,6 +376,15 @@
     state: toms
   product: TomDrumsInstrument
   cost: 1500
+  category: cargoproduct-category-name-fun
+  group: market
+- type: cargoProduct
+  id: FunPlants
+  icon:
+    sprite: Structures/Furniture/potted_plants.rsi
+    state: random
+  product: CratePlants
+  cost: 1000
   category: cargoproduct-category-name-fun
   group: market
 

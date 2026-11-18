@@ -1,5 +1,4 @@
 # this file is subject to getting its shit moved to other files at a later date#
-# LoneStar: all entries suffixed with 'Species Name'
 
 # arachnids
 marking-SpiderMirror = Mirror (Spider)
@@ -210,11 +209,12 @@ marking-VoxBelly = Belly (Vox)
 marking-VoxBelly-voxbelly = Belly (Vox)
 marking-VoxTailBalled = Thrasher (Vox)
 marking-VoxTailBalled-voxtailballed = Thrasher (Vox)
-marking-ImpVoxTailSplit = Twinned (Vox)
-marking-ImpVoxTailSplit-voxtailsplit = Twinned (Vox)
+marking-VoxTailSplit = Twinned
+marking-VoxTailSplit-voxtailsplit = Twinned
 
 # upstream vox markings dont have localized names. lmfao
 # these are just straight up broken and shouldnt be visible from the markings menu period but ALAS im not skilled enough to remove them so you get this stupid botch job instead
+marking-VoxBeak = Default Beak [DO NOT USE]
 marking-VoxLArmScales = Default Arm (Vox) [DO NOT USE]
 marking-VoxLHandScales = Default Left Hand (Vox) [DO NOT USE]
 marking-VoxRArmScales = Default Right Arm (Vox) [DO NOT USE]
@@ -223,3 +223,5 @@ marking-VoxLFootScales = Default Left Foot (Vox) [DO NOT USE]
 marking-VoxLLegScales = Default Left Leg (Vox) [DO NOT USE]
 marking-VoxRFootScales = Default Right Foot (Vox) [DO NOT USE]
 marking-VoxRLegScales = Default Right Leg (Vox) [DO NOT USE]
+marking-ImpVoxTailSplit = Twinned (Vox)
+marking-ImpVoxTailSplit-voxtailsplit = Twinned (Vox)

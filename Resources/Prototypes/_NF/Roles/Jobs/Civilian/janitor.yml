@@ -31,7 +31,6 @@
   - !type:AddComponentSpecial
     components:
     - type: PaywardActionMaintenance
-
 - type: startingGear
   id: NFJanitorGear
   equipment:
@@ -40,10 +39,9 @@
     belt: ClothingBeltJanitorFilled
   storage:
     back:
-    - EncryptionKeyService
     - ShipVoucherFrontierJanitor
-    - TrashBag
-
+  encryptionKeys:
+  - EncryptionKeyService
 - type: chameleonOutfit
   id: NFJanitorChameleonOutfit
   job: NFJanitor

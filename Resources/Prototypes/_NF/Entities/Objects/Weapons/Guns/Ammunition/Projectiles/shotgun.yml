@@ -9,7 +9,6 @@
     damage:
       types:
         Piercing: 11
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunOverpressure
@@ -19,8 +18,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 13
-
+        Piercing: 5
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunIncendiary
@@ -30,9 +28,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 8.8 # LoneStar
-        Heat: 2.2 # LoneStar
-
+        Blunt: 2.4
+        Heat: 1.6
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunPractice
@@ -42,8 +39,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 0
-
+        Blunt: 0.1
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunUranium
@@ -53,9 +49,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 8.8 # LoneStar
-        Radiation: 4.4 # LoneStar
-
+        Piercing: 3.5
+        Radiation: 3.5
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunImprovised
@@ -75,7 +70,6 @@
       types:
         Piercing: 5
         Slash: 4
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunGlass
@@ -85,8 +79,7 @@
   - type: Projectile
     damage:
       types:
-        Slash: 5
-
+        Slash: 3.5
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunGrapeshot
@@ -96,8 +89,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 11
-        Structural: 14
+        Piercing: 4
+        Structural: 5
 
 #region PelletsSpread
 - type: entity
@@ -106,8 +99,7 @@
   components:
   - type: ProjectileSpread
     count: 7 # eight(?) total, includes the spread as a bullet
-    spread: 25
-
+    spread: 7.5
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunSpread
@@ -115,7 +107,6 @@
   components:
   - type: ProjectileSpread
     proto: NFPelletShotgun
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunOverpressureSpread
@@ -123,7 +114,6 @@
   components:
   - type: ProjectileSpread
     proto: NFPelletShotgunOverpressure
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunIncendiarySpread
@@ -131,7 +121,6 @@
   components:
   - type: ProjectileSpread
     proto: NFPelletShotgunIncendiary
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunPracticeSpread
@@ -139,7 +128,6 @@
   components:
   - type: ProjectileSpread
     proto: NFPelletShotgunPractice
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunUraniumSpread
@@ -147,7 +135,6 @@
   components:
   - type: ProjectileSpread
     proto: NFPelletShotgunUranium
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunImprovisedSpread
@@ -155,7 +142,6 @@
   components:
   - type: ProjectileSpread
     proto: NFPelletShotgunImprovised
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunGlassSpread
@@ -163,7 +149,6 @@
   components:
   - type: ProjectileSpread
     proto: NFPelletShotgunGlass
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunGrapeshotSpread
@@ -182,9 +167,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35 # LoneStar
-        Blunt: 20 # LoneStar
-
+        Piercing: 20
+        Blunt: 5
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlugBeanbag
@@ -194,10 +178,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 0
+        Blunt: 10
   - type: StaminaDamageOnCollide
-    damage: 55 # LoneStar
-
+    damage: 30 # 4 hits to stun
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlugFlare
@@ -217,7 +200,6 @@
   - type: Tracer
     color: "#ff0000FF"
     length: 2
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlugTranquilizer

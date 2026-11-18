@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 BlueHNT
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: reagent
   id: Coffee
   name: reagent-name-coffee
@@ -16,27 +12,19 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
       - !type:AdjustReagent
         reagent: Theobromine
         amount: 0.05
-      - !type:AdjustReagent # Frontier
-        conditions: # Frontier
-        - !type:ReagentThreshold # Frontier
-          reagent: Caffeine # Frontier
-          max: 60 # Frontier
-        reagent: Caffeine # Frontier
-        amount: 1 # Frontier
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/coffeeglass.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: HotCocoa
   name: reagent-name-hot-cocoa
@@ -54,7 +42,6 @@
       - !type:AdjustReagent
         reagent: Theobromine
         amount: 0.05
-
 - type: reagent
   id: Cream
   name: reagent-name-cream
@@ -68,7 +55,6 @@
       effects:
       - !type:SatiateThirst
         factor: 1
-
 - type: reagent
   id: CoconutWater
   name: reagent-name-coconut-water
@@ -82,7 +68,6 @@
       effects:
       - !type:SatiateThirst
         factor: 4 # Coconut water is 94% water
-
 - type: reagent
   id: CreamOfCoconut
   name: reagent-name-cream-of-coconut
@@ -96,7 +81,6 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-
 - type: reagent
   id: CafeLatte
   name: reagent-name-cafe-latte
@@ -116,21 +100,10 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
-      - !type:AdjustReagent # Frontier
-        reagent: Theobromine # Frontier
-        amount: 0.05 # Frontier
-      - !type:AdjustReagent # Frontier
-        conditions: # Frontier
-        - !type:ReagentThreshold # Frontier
-          reagent: Caffeine # Frontier
-          max: 60 # Frontier
-        reagent: Caffeine # Frontier
-        amount: 1 # Frontier
-
 - type: reagent
   id: GreenTea
   name: reagent-name-green-tea
@@ -145,14 +118,13 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: Grenadine
   name: reagent-name-grenadine
   parent: BaseDrink
   desc: reagent-desc-grenadine
   physicalDesc: reagent-physical-desc-dark-red
-  flavor: sweet # Coyote: changed from bitter to sweet
+  flavor: bitter
   color: "#EA1D26"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/grenadineglass.rsi
@@ -162,7 +134,6 @@
   metamorphicChangeColor: true
   footstepSound:
     collection: FootstepSlime
-
 - type: reagent
   id: IcedCoffee
   name: reagent-name-iced-coffee
@@ -182,21 +153,10 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
-      - !type:AdjustReagent # Frontier
-        reagent: Theobromine # Frontier
-        amount: 0.05 # Frontier
-      - !type:AdjustReagent # Frontier
-        conditions: # Frontier
-        - !type:ReagentThreshold # Frontier
-          reagent: Caffeine # Frontier
-          max: 60 # Frontier
-        reagent: Caffeine # Frontier
-        amount: 1 # Frontier
-
 - type: reagent
   id: IcedGreenTea
   name: reagent-name-iced-green-tea
@@ -211,7 +171,6 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: IcedTea
   name: reagent-name-iced-tea
@@ -241,7 +200,6 @@
           max: 60 # Frontier
         reagent: Caffeine # Frontier
         amount: 1 # Frontier
-
 - type: reagent
   id: JuiceBerryPoison
   parent: BaseJuice
@@ -261,7 +219,6 @@
         damage:
           types:
             Poison: 1
-
 - type: reagent
   id: Lemonade
   parent: BaseJuice
@@ -282,7 +239,6 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-
 - type: reagent
   id: Milk
   name: reagent-name-milk
@@ -302,13 +258,11 @@
       effects:
       - !type:SatiateThirst
         factor: 4
-
 - type: reagent
   id: MilkGoat
   parent: Milk
   name: reagent-name-milk-goat
   desc: reagent-desc-milk-goat
-
 - type: reagent
   id: MilkOat
   name: reagent-name-milk-oat
@@ -335,7 +289,6 @@
         damage:
           types:
             Heat: 3
-
 - type: reagent
   id: MilkSoy
   parent: MilkOat
@@ -344,7 +297,6 @@
   physicalDesc: reagent-physical-desc-refreshing
   flavor: soy
   color: "#D2C29D"
-
 - type: reagent
   id: MilkSpoiled
   name: reagent-name-milk-spoiled
@@ -358,7 +310,6 @@
       effects:
       - !type:SatiateThirst
         factor: -2
-
 - type: reagent
   id: Nothing
   name: reagent-name-nothing
@@ -371,7 +322,6 @@
       - !type:SatiateThirst
         factor: 2
         # TODO heal mimes
-
 - type: reagent
   id: NuclearCola
   parent: BaseSoda
@@ -392,9 +342,9 @@
       effects:
       - !type:SatiateThirst
         factor: 6
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 3.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 3
         type: Remove
     Poison:
       effects:
@@ -403,7 +353,6 @@
           types:
             Poison: 1
   fizziness: 0.5
-
 - type: reagent
   id: SodaWater
   name: reagent-name-soda-water
@@ -413,7 +362,6 @@
   flavor: fizzy
   color: "#619494"
   fizziness: 0.8
-
 - type: reagent
   id: SoyLatte
   name: reagent-name-soy-latte
@@ -433,21 +381,10 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
-      - !type:AdjustReagent # Frontier
-        reagent: Theobromine # Frontier
-        amount: 0.05 # Frontier
-      - !type:AdjustReagent # Frontier
-        conditions: # Frontier
-        - !type:ReagentThreshold # Frontier
-          reagent: Caffeine # Frontier
-          max: 60 # Frontier
-        reagent: Caffeine # Frontier
-        amount: 1 # Frontier
-
 - type: reagent
   id: Tea # Mono edit
   name: reagent-name-tea
@@ -482,7 +419,6 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: TonicWater
   name: reagent-name-tonic-water
@@ -498,7 +434,6 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: Water
   name: reagent-name-water
@@ -518,42 +453,18 @@
       effects:
       - !type:SatiateThirst
         factor: 4
-    Gas: # DeltaV - Feroxi get to breathe with this too!
+    Gas:
       effects:
-      - !type:Oxygenate
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: true
         conditions:
         - !type:OrganType
-          type: Feroxi
-      - !type:SatiateThirst
-        conditions:
-        - !type:OrganType
-          type: Feroxi
-        factor: 2
-      - !type:Oxygenate
-        conditions:
-        - !type:OrganType
-          type: FeroxiDehydrated
-      - !type:SatiateThirst
-        conditions:
-        - !type:OrganType
-          type: FeroxiDehydrated
-        factor: 2
-      # DeltaV Converts H2O into CO2 for Feroxi
-      - !type:ModifyLungGas
-        conditions:
-        - !type:OrganType
-          type: Feroxi
-        ratios: # DeltaV no duplicating O2 >:3
-          CarbonDioxide: 0.5
-          WaterVapor: -1.0
-      - !type:ModifyLungGas
-        conditions:
-        - !type:OrganType
-          type: FeroxiDehydrated
-        ratios: # DeltaV no duplicating O2 >:3
-          CarbonDioxide: 0.5
-          WaterVapor: -1.0
-
+          type: Slime
+          shouldHave: true
+        damage:
+          types:
+            Heat: 3
 - type: reagent
   id: Ice
   name: reagent-name-ice
@@ -576,7 +487,6 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
-
 - type: reagent
   id: DryRamen
   name: reagent-name-dry-ramen
@@ -590,7 +500,6 @@
       effects:
       - !type:SatiateHunger
         factor: 1
-
 - type: reagent
   id: HotRamen
   name: reagent-name-hot-ramen
@@ -604,7 +513,6 @@
       effects:
       - !type:SatiateHunger
         factor: 4
-
 - type: reagent
   id: ArnoldPalmer
   name: reagent-name-arnold-palmer
@@ -634,7 +542,6 @@
           max: 60 # Frontier
         reagent: Caffeine # Frontier
         amount: 1 # Frontier
-
 - type: reagent
   id: Pilk
   name: reagent-name-pilk
@@ -649,7 +556,6 @@
         - !type:SatiateThirst
           factor: 1
   fizziness: 0.3
-
 - type: reagent
   id: Posca
   name: reagent-name-posca
@@ -658,7 +564,6 @@
   physicalDesc: reagent-physical-desc-sour
   flavor: bitter
   color: "#B3B599"
-
 - type: reagent
   id: KiraSpecial
   name: reagent-name-kira-special
@@ -674,7 +579,6 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   fizziness: 0.3
-
 - type: reagent
   id: Rewriter
   name: reagent-name-rewriter
@@ -705,7 +609,6 @@
           max: 60 # Frontier
         reagent: Caffeine # Frontier
         amount: 1 # Frontier
-
 - type: reagent
   id: Mopwata
   name: reagent-name-mopwata
@@ -719,7 +622,6 @@
       effects:
       - !type:SatiateThirst
         factor: 0.6
-
 - type: reagent
   id: Tortuga
   name: reagent-name-tortuga

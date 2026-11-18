@@ -7,7 +7,6 @@
     allowProgramChange: true
     respectMidiLimits: false
     handheld: true
-
 - type: entity
   parent: [MusicBasePDA, AdminPDA]
   id: NFAdminPDA
@@ -30,7 +29,6 @@
       - NanoChatCartridge # DeltaV
   - type: BlipCartridge
     enabled: false
-
 - type: entity
   parent: BasePDA
   id: MercenaryPDA
@@ -51,7 +49,6 @@
     state: pda-mercenary
   - type: BlipCartridge
     defaultPreset: BlipPresetMercenary
-
 - type: entity
   parent: BasePDA
   id: PilotPDA
@@ -72,7 +69,6 @@
     state: pda-pilot
   - type: BlipCartridge
     defaultPreset: BlipPresetPilot
-
 - type: entity
   parent: BaseSecurityPDA
   id: StcPDA
@@ -91,7 +87,6 @@
     accentVColor: "#FE4900"
   - type: Icon
     state: pda-stc
-
 - type: entity
   parent: BaseSecurityPDA
   id: SecurityGuardPDA
@@ -109,7 +104,6 @@
     borderColor: "#A32D26"
   - type: Icon
     state: pda-security
-
 - type: entity
   parent: ERTLeaderPDA
   id: ERTMailCarrierPDA
@@ -123,7 +117,6 @@
       whitelist:
         tags:
         - Write
-
 - type: entity
   parent: [BaseSecurityPDA, BaseC4Contraband]
   id: SheriffPDA
@@ -166,7 +159,6 @@
     - WantedListCartridge
     - LedgerCartridge
     - NanoChatCartridge # DeltaV
-
 - type: entity
   parent: BaseSecurityPDA
   id: CadetPDA
@@ -192,7 +184,6 @@
     accentHColor: "#896b49"
   - type: Icon
     state: pda-cadet
-
 - type: entity
   parent: BaseSecurityPDA
   id: DeputyPDA
@@ -218,7 +209,6 @@
     accentHColor: "#896b49"
   - type: Icon
     state: pda-deputy
-
 - type: entity
   parent: BaseSecurityPDA
   id: BrigmedicNFPDA
@@ -244,7 +234,6 @@
     accentHColor: "#896b49"
   - type: Icon
     state: pda-brigmed
-
 - type: entity
   parent: BaseSecurityPDA
   id: SergeantPDA
@@ -270,7 +259,6 @@
     accentHColor: "#896b49"
   - type: Icon
     state: pda-sergeant
-
 - type: entity
   parent: BaseSecurityPDA
   id: BailiffPDA
@@ -296,7 +284,6 @@
     accentHColor: "#896b49"
   - type: Icon
     state: pda-bailiff
-
 - type: entity
   parent: BaseSecurityPDA
   id: NFDetectivePDA
@@ -321,7 +308,6 @@
     borderColor: "#774705"
   - type: Icon
     state: pda-nfdetective
-
 - type: entity
   parent: BaseSecurityPDA
   id: PublicAffairsLiaisonPDA
@@ -353,7 +339,6 @@
     accentHColor: "#896b49"
   - type: Icon
     state: pda-pal
-
 - type: entity
   parent: [BaseSecurityPDA, BaseC4Contraband]
   id: SrPDA
@@ -391,7 +376,6 @@
     - NanoChatCartridge # DeltaV
   - type: BlipCartridge
     defaultPreset: BlipPresetCommand
-
 - type: entity
   parent: PiratePDA
   id: NFPiratePDA
@@ -407,7 +391,6 @@
         pda-pirate
   - type: BlipCartridge
     defaultPreset: BlipPresetPirate
-
 - type: entity
   parent: PiratePDA
   id: NFPirateCaptainPDA
@@ -421,7 +404,6 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-pirate
-
 - type: entity
   parent: PiratePDA
   id: NFPirateFirstMatePDA
@@ -435,7 +417,44 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-pirate
-
+- type: entity
+  parent: PiratePDA
+  id: NFShantymanPDA
+  name: shantyman PDA
+  description: It's pirate party time!
+  suffix: Frontier
+  components:
+  - type: Pda
+    id: NFPirateIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-shantyman
+  - type: Instrument
+    allowPercussion: false
+    handheld: true
+    bank: 1
+    program: 2
+  - type: SwappableInstrument
+    instrumentList:
+      "Default": {2: 1}
+      "Accordion": {21: 0}
+      "Fiddle": {110: 0}
+      "Guitar": {24: 0}
+      "Lyre": {46: 0}
+- type: entity
+  parent: NFShantymanPDA
+  id: NFCaptainShantymanPDA
+  components:
+  - type: Pda
+    id: NFPirateCaptainIDCard
+- type: entity
+  parent: NFShantymanPDA
+  id: NFFirstMateShantymanPDA
+  components:
+  - type: Pda
+    id: NFPirateFirstMateIDCard
 - type: entity
   parent: PassengerPDA
   id: ContractorPDA
@@ -448,7 +467,6 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda
-
 - type: entity
   parent: ClearPDA
   id: ClearNFPDA
@@ -460,7 +478,6 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-clear
-
 - type: entity
   parent: JanitorPDA
   id: NFJanitorPDA
@@ -472,9 +489,8 @@
       enum.PdaVisuals.PdaType:
         !type:String
         pda-janitor
-
 - type: entity
-  parent: [CMOPDA, BaseC4Contraband]
+  parent: [CMOPDA, BaseCommandContraband]
   id: DocPDA
   name: director of care PDA
   description: It smells like disinfectant.
@@ -508,8 +524,6 @@
     - AstroNavCartridge
     - LedgerCartridge
     - MedTekCartridge
-    - NanoChatCartridge # DeltaV
-
 - type: entity
   parent: BasePDA
   id: PlantTechnicianPDA
@@ -528,7 +542,6 @@
     accentVColor: "#A32D26"
   - type: Icon
     state: pda-planttechnician
-
 - type: entity
   parent: BasePDA
   id: PlantManagerPDA
@@ -555,6 +568,3 @@
     - BountyContractsCartridge
     - AstroNavCartridge
     - LedgerCartridge
-    - NanoChatCartridge # DeltaV
-  - type: BlipCartridge
-    defaultPreset: BlipPresetCommand

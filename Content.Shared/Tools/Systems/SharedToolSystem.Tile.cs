@@ -92,7 +92,7 @@ public abstract partial class SharedToolSystem
             return false;
 
         var args = new TileToolDoAfterEvent(GetNetEntity(gridUid), tileRef.GridIndices);
-        UseTool(ent, user, ent, comp.Delay * tileDef.DeconstructTimeMultiplier, tool.Qualities, args, out _, toolComponent: tool); // Goob edit
+        UseTool(ent, user, ent, comp.Delay, tool.Qualities, args, out _, toolComponent: tool);
         return true;
     }
 

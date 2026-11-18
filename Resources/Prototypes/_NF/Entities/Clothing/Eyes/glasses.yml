@@ -12,7 +12,6 @@
   - type: EyeProtection
   - type: VisionCorrection
   - type: IdentityBlocker
-
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesPilot
@@ -25,7 +24,6 @@
     sprite: _NF/Clothing/Eyes/Glasses/pilot.rsi
   - type: HandheldGPS
   - type: VisionCorrection
-
 - type: entity
   parent:
   - ClothingEyesGlassesSecurity
@@ -38,9 +36,8 @@
     sprite: _NF/Clothing/Eyes/Glasses/nfsd_glasses.rsi
   - type: Clothing
     sprite: _NF/Clothing/Eyes/Glasses/nfsd_glasses.rsi
-
 - type: entity
-  parent: [ClothingEyesGlassesMeson, BaseC4Contraband]
+  parent: [ClothingEyesGlassesMeson, BaseCommandContraband]
   id: ClothingEyesGlassesMesonPlantManager
   name: plant manager's goggles
   description: Green-tinted protective goggles with an integrated HUD for crew identification.

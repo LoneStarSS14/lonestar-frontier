@@ -11,9 +11,9 @@
 - type: vessel
   id: Stringer
   parent: BaseVessel
-  name: LL0 Stringer
+  name: LVHI Stringer
   description: A small shuttle with low operational costs for reporters who want to be first on a scene. Manufactured by Langstad-Voigt Heavy Industries.
-  price: 36500
+  price: 27000 # $25200 [on mapinit] + ~$1600 [6% markup]
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/stringer.yml
@@ -39,7 +39,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

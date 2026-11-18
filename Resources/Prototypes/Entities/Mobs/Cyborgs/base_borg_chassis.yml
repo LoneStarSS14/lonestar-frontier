@@ -2,7 +2,7 @@
   parent: [BaseMob, StripableInventoryBase]
   id: BaseBorgChassisNotIonStormable
   name: cyborg
-  description: A synthetic that assists in station activity. They love being asked to state their laws over and over. # Coyote CHANGE: was A man-machine hybrid that assists in station activity. They love being asked to state their laws over and over.
+  description: A man-machine hybrid that assists in station activity. They love being asked to state their laws over and over.
   save: false
   abstract: true
   components:
@@ -17,7 +17,6 @@
       collection: MetalThud
   - type: CombatMode
   - type: NoSlip
-  - type: Stripping # Coyote: Let borgs strip people
   - type: StaticPrice
     price: 1250
   - type: Fixtures
@@ -26,7 +25,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.35
-        density: 150
+        density: 300
         mask:
         - MobMask
         layer:
@@ -83,7 +82,7 @@
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
-    laws: Free # Coyote CHANGE: was Crewsimov
+    laws: Crewsimov
   - type: Inventory
     templateId: borg
   - type: Hands
@@ -94,23 +93,23 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Traffic #LS Edit. Gives them traffic perms without headsets. Will be removed if misused.
-    - Binary #LS Edit. Kills all-non binary channels from borgs by default.
+    - Binary
+    - Common
+    - Science
   - type: ActiveRadio
     channels:
-    - Traffic #LS Edit. Gives them traffic perms without headsets. Will be removed if misused.
-    - Binary #LS Edit. Kills all-non binary channels from borgs by default.
+    - Binary
+    - Common
+    - Science
   - type: ZombieImmune
   - type: Repairable
     doAfterDelay: 10
-    allowSelfRepair: true # Coyote CHANGE: Was false, but we don't want to torture our cyborg players
+    allowSelfRepair: false
   - type: BorgChassis
   - type: LockingWhitelist
     blacklist:
       components:
-      # Coyote TWEAK: We want borgs to be able to fix eachother and themselves
-      #- BorgChassis
-      # End Coyote
+      - BorgChassis
       - RoboticsConsole
   - type: WiresPanel
     openingTool: Prying
@@ -142,15 +141,8 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
   - type: Body
-# Coyote: This allows borgs to use one singular hand, to be able to interact with the world effectively. Also lets them have incentive pay
-    prototype: Borg
-  - type: RoleplayIncentive
-# End Coyote
   - type: StatusEffects
     allowed:
-    - Stun
-    - KnockedDown
-    - SlowedDown
     - Flashed
   - type: TypingIndicator
     proto: robot
@@ -192,7 +184,7 @@
             volume: 5
     - trigger:
         !type:DamageTrigger
-        damage: 1600 #LS Edit. Prevent gibbing below 1600 damage due to bugs.
+        damage: 300
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -222,8 +214,8 @@
       id: blinking
       interpolate: Nearest
       maxDuration: 1.0
-      startValue: 0.1 # Wizden#37444
-      endValue: 2.0 # Wizden#37444
+      startValue: 0.1
+      endValue: 2.0
       isLooped: true
   - type: ToggleableVisuals
     spriteLayer: light
@@ -236,7 +228,6 @@
   - type: Pullable
   - type: Puller
     needsHands: false
-  - type: LayingDown
   - type: StandingState
   - type: Tag
     tags:
@@ -244,7 +235,7 @@
     - FootstepSound
     - CanPilot
     - SiliconEmotes
-    # LoneStar Edit. Borgs can now hold implants.
+    - Unimplantable
   - type: Emoting
   - type: GuideHelp
     guides:
@@ -256,7 +247,6 @@
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   - type: PreventDropOnDowned # Frontier: borgs don't drop items when falling (e.g. critical/dead)
-  - type: Vore # Floofstation - Vore
 
 - type: entity
   abstract: true
@@ -328,7 +318,8 @@
   - type: Access
     enabled: false
     groups:
-    - AllAccess
+    #- AllAccess # Frontier
+    - GeneralAccess # Frontier
     tags:
     - Borg
 #  - type: AccessReader
@@ -385,7 +376,8 @@
   - type: Access
     enabled: false
     groups:
-    - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it..
+  #  - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it.. # Frontier
+    - GeneralAccess # Frontier
   # - type: AccessReader # Frontier
   #   access: [["Command"], ["Research"]] # Frontier
   - type: StartIonStormed

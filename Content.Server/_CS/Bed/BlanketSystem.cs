@@ -50,7 +50,7 @@ public sealed class BlanketSystem : EntitySystem
             return;
 
         // Drop the bedsheet from the user's active hand.
-        if (!_hands.TryDrop(user, used, checkActionBlocker: false, doDropInteraction: false, handsComp: hands))
+        if (!_hands.TryDrop((user, hands), used, checkActionBlocker: false, doDropInteraction: false))
             return;
 
         // Place the dropped sheet onto the target's tile.

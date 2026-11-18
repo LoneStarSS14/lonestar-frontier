@@ -91,7 +91,6 @@
         color: "#6b4600"
       - state: equipped-head-visor
         color: "#adcfd5"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetMailman
@@ -179,7 +178,6 @@
   - type: PointLight
     radius: 5
     energy: 2
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetStc
@@ -208,7 +206,6 @@
   - type: PointLight
     radius: 5
     energy: 2
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetCaptain
@@ -284,7 +281,6 @@
     mask: /Textures/Effects/LightMasks/double_cone.png
   - type: RotatingLight
     speed: 360
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetAtmosTech
@@ -339,7 +335,6 @@
         color: "#3e3e48"
       - state: equipped-head-visor
         color: "#adcfd5"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetSalvage
@@ -396,7 +391,6 @@
         color: "#adcfd5"
   - type: PointLight
     color: "#adf1ff"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetParamedic
@@ -496,7 +490,6 @@
         color: "#bb5cc9"
   - type: PointLight
     color: "#d6adff"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetValet
@@ -522,7 +515,6 @@
         color: "#606275"
       - state: equipped-head-visor
         color: "#adcfd5"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetServiceWorker
@@ -548,7 +540,6 @@
         color: "#606275"
       - state: equipped-head-visor
         color: "#adcfd5"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetChaplain
@@ -576,7 +567,6 @@
         color: "#ffce5b"
   - type: PointLight
     color: "#ffce5b"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerRed
@@ -602,7 +592,6 @@
         color: "#606275"
       - state: equipped-head-visor
         color: "#adcfd5"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerGreen
@@ -628,7 +617,6 @@
         color: "#606275"
       - state: equipped-head-visor
         color: "#adcfd5"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerBlue
@@ -654,7 +642,6 @@
         color: "#606275"
       - state: equipped-head-visor
         color: "#adcfd5"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerYellow
@@ -680,7 +667,6 @@
         color: "#606275"
       - state: equipped-head-visor
         color: "#adcfd5"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerRandom
@@ -737,7 +723,6 @@
         color: "#784f1e"
       - state: equipped-head-visor
         color: "#adcfd5"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetMercenary
@@ -763,7 +748,6 @@
         color: "#27272e"
       - state: equipped-head-visor
         color: "#f5fc95"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetPrivateSec
@@ -794,7 +778,7 @@
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetNfsd
-  name: LSRD EVA helmet # Lonestar changes NFSD -> LSRD
+  name: NFSD EVA helmet
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -928,7 +912,6 @@
         color: "#3e3e48"
       - state: equipped-head-visor
         color: "#283846"
-
 - type: entity
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetArcadia
@@ -959,7 +942,7 @@
 - type: entity
   parent: [ ClothingHeadSuitWithLightBase, NFClothingHeadClearEVAHelmetBase ]
   id: ClothingHeadHelmetHardsuitFSB
-  name: far star biotech voidsuit helmet
+  name: Far Star Biotech voidsuit helmet
   description: A lightweight suit helmet that doesn't restrict your head movements. It has a light!
   categories: [ HideSpawnMenu ]
   components:
@@ -984,16 +967,14 @@
     - Hair
     - HeadTop
     - HeadSide
-
 - type: entity
   parent: ClothingHeadHelmetHardsuitFSB
   id: ClothingHeadHelmetHardsuitFSC
-  name: far star corporation voidsuit helmet
+  name: Far Star Commerce voidsuit helmet
   description: A lightweight suit helmet that doesn't restrict your head movements. It has a light!
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/fsc_eva_helmet.rsi
-
 - type: entity
   parent: ClothingHeadHelmetHardsuitFSB
   id: ClothingHeadHelmetHardsuitFSA

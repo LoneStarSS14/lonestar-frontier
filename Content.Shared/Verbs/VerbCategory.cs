@@ -9,10 +9,7 @@ namespace Content.Shared.Verbs
     [Serializable, NetSerializable]
     public sealed class VerbCategory
     {
-        private readonly string _textKey;
-        private string? _cachedText;
-
-        public string Text => _cachedText ??= Loc.GetString(_textKey);
+        public readonly string Text;
 
         public readonly SpriteSpecifier? Icon;
 
@@ -33,7 +30,7 @@ namespace Content.Shared.Verbs
 
         public VerbCategory(string text, string? icon, bool iconsOnly = false)
         {
-            _textKey = text;
+            Text = Loc.GetString(text);
             Icon = icon == null ? null : new SpriteSpecifier.Texture(new(icon));
             IconsOnly = iconsOnly;
         }
@@ -95,12 +92,10 @@ namespace Content.Shared.Verbs
         public static readonly VerbCategory Pen = // Frontier
             new("verb-categories-pen", "/Textures/Interface/pencil.png"); // Frontier
 
-        // EE interaction system
         public static readonly VerbCategory Interaction = new("verb-categories-interaction", null);
 
         public static readonly VerbCategory Vore = new("verb-categories-vore", null); // Floofstation
 
-        // Coyote: Reorganized context menus
         public static readonly VerbCategory ExamineGroup =
             new("verb-categories-examine-group", "/Textures/Interface/VerbIcons/examine.svg.192dpi.png");
 

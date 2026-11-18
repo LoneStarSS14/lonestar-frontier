@@ -10,7 +10,6 @@
     protected: True
   - type: Sprite
     state: stamp-hop
-
 - type: entity
   name: station traffic controller's rubber stamp
   parent: RubberStampBase
@@ -24,7 +23,6 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-stc
-
 - type: entity
   name: chief ranger's rubber stamp # Lone Star changes NFSD -> LSRD
   parent: [RubberStampBase, BaseC4Contraband]
@@ -39,7 +37,6 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-sheriff
-
 - type: entity
   name: doctor's rubber stamp
   parent: RubberStampBase
@@ -52,7 +49,6 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-doctor
-
 - type: entity
   name: engineer's rubber stamp
   parent: RubberStampBase
@@ -65,7 +61,6 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-engineer
-
 - type: entity
   name: public affairs liaison's rubber stamp
   parent: RubberStampBase
@@ -79,7 +74,6 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-pal
-
 - type: entity
   name: director of care's rubber stamp
   parent: [RubberStampBase, BaseC4Contraband]
@@ -93,7 +87,6 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-doc
-
 - type: entity
   name: armorer's rubber stamp # Lonestar changes NFSD -> LSRD
   parent: RubberStampBase
@@ -107,6 +100,19 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-bailiff
+- type: entity
+  name: plant manager's rubber stamp
+  parent: [RubberStampBase, BaseCommandContraband]
+  id: RubberStampPlantManager
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-plant-manager
+    stampedColor: "#d4760b"
+    stampState: "paper_stamp-nf-plant-manager"
+  - type: Sprite
+    sprite: _NF/Objects/Misc/stamps.rsi
+    state: stamp-plant-manager
 
 - type: entity
   name: senior ranger's rubber stamp # Lonestar changes NFSD -> LSRD
@@ -121,17 +127,3 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-bailiff
-
-- type: entity
-  name: plant manager's rubber stamp
-  parent: [RubberStampBase, BaseC4Contraband]
-  id: RubberStampPlantManager
-  categories: [ DoNotMap ]
-  components:
-  - type: Stamp
-    stampedName: stamp-component-stamped-name-plant-manager
-    stampedColor: "#d4760b"
-    stampState: "paper_stamp-nf-plant-manager"
-  - type: Sprite
-    sprite: _NF/Objects/Misc/stamps.rsi
-    state: stamp-plant-manager

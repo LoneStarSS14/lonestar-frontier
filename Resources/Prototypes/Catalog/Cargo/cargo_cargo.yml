@@ -7,7 +7,6 @@
   # cost: 250
   # category: Cargo
   # group: market
-
 - type: cargoProduct
   id: CargoOreBox
   icon:
@@ -17,7 +16,6 @@
   cost: 5000 # Coyote: 500<5000
   category: cargoproduct-category-name-cargo
   group: market
-
 - type: cargoProduct
   id: CargoLuxuryHardsuit
   abstract: true # Frontier - Moved to cargo locker
@@ -28,7 +26,6 @@
   cost: 15000
   category: cargoproduct-category-name-cargo
   group: market
-
 - type: cargoProduct
   id: CargoParcelWrap
   abstract: true # Frontier - Moved to mail vend
@@ -39,7 +36,6 @@
   cost: 750
   category: cargoproduct-category-name-cargo
   group: market
-
 # frontier: Unused
 # - type: cargoProduct
 #   id: CargoCrusherDagger

@@ -10,7 +10,6 @@
     damage:
       types:
         Piercing: 20 # LoneStar
-
 - type: entity
   id: NFBulletPistol35Overpressure
   name: bullet (.35 pistol, overpressure)
@@ -21,7 +20,6 @@
     damage:
       types:
         Piercing: 22 # LoneStar
-
 - type: entity
   id: NFBulletPistol35Incendiary
   name: bullet (.35 pistol, incendiary)
@@ -31,9 +29,10 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 16 # LoneStar
-        Heat: 4 # LoneStar
-
+        Blunt: 4.8 # 0.6 * base total dmg
+        Heat: 3.2 # 0.4 * base total dmg
+  - type: StaminaDamageOnCollide
+    damage: 4 # 15 hits to slowdown
 - type: entity
   id: NFBulletPistol35Uranium
   parent: NFBaseBulletUranium
@@ -43,9 +42,10 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 16 # LoneStar
-        Radiation: 8 # LoneStar
-
+        Blunt: 6.6 # 0.6 * (1.4 * base total dmg)
+        Radiation: 4.4 # 0.4 * (1.4 * base total dmg)
+  - type: StaminaDamageOnCollide
+    damage: 4 # 15 hits to slowdown
 - type: entity
   id: NFBulletPistol35Practice
   name: bullet (.35 pistol, practice)
@@ -55,7 +55,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 0
+        Blunt: 0.5
 
 # Frontier
 # .35 pistol
@@ -68,9 +68,10 @@
   - type: Projectile
     damage:
       types:
-        Shock: 8 # LoneStar
-        Blunt: 16 # LoneStar
-
+        Shock: 4
+        Blunt: 4
+  - type: StaminaDamageOnCollide
+    damage: 4 # 15 hits to slowdown
 - type: entity
   id: NFBulletPistol35Rubber
   name: bullet (.35 pistol, rubber)
@@ -80,9 +81,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 0.2 # LoneStar
+        Blunt: 1
   - type: StaminaDamageOnCollide
-    damage: 20 # LoneStar
+    damage: 13 # ~8 hits to stun sounds reasonable
 
 #region .45 pistol
 - type: entity
@@ -94,7 +95,10 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35 # LoneStar
+        Piercing: 6
+        Blunt: 6
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
 - type: entity
   id: NFBulletPistol45Overpressure
   name: bullet (.45 pistol, overpressure)
@@ -104,8 +108,10 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 37 # LoneStar
-
+        Piercing: 6
+        Blunt: 7
+  - type: StaminaDamageOnCollide
+    damage: 7 # ~9 hits to slowdown
 - type: entity
   id: NFBulletPistol45Incendiary
   name: bullet (.45 pistol, incendiary)
@@ -115,9 +121,10 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 28 # LoneStar
-        Heat: 7 # LoneStar
-
+        Blunt: 7.2 # 0.6 * base total dmg
+        Heat: 4.8 # 0.4 * base total dmg
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
 - type: entity
   id: NFBulletPistol45Uranium
   parent: NFBaseBulletUranium
@@ -127,9 +134,10 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 28 # LoneStar
-        Radiation: 14 # LoneStar
-
+        Blunt: 9.6 # 0.6 * (1.4 * base total dmg)
+        Radiation: 6.4 # 0.6 * (1.4 * base total dmg)
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
 - type: entity
   id: NFBulletPistol45Practice
   name: bullet (.45 pistol, practice)
@@ -139,7 +147,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 0 # LoneStar
+        Blunt: 1
 
 # Frontier
 # .45 pistol
@@ -152,9 +160,10 @@
   - type: Projectile
     damage:
       types:
-        Shock: 8 # LoneStar
-        Blunt: 27 # LoneStar
-
+        Shock: 6
+        Blunt: 6
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
 - type: entity
   id: NFBulletPistol45Rubber
   name: bullet (.45 pistol, rubber)
@@ -164,6 +173,6 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 0
+        Blunt: 2
   - type: StaminaDamageOnCollide
-    damage: 35 # LoneStar
+    damage: 18 # ~6 hits to stun sounds reasonable

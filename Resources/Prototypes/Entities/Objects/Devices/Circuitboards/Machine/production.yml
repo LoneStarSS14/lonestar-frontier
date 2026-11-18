@@ -1073,7 +1073,7 @@
   - type: Sprite
     state: service
   - type: MachineBoard
-    prototype: DVSmartFridge
+    prototype: LSSmartFridge
     requirements:
       Manipulator: 1
       Capacitor: 3

@@ -7,7 +7,6 @@
     back:
     - CigPackBlue
   groupBy: "smokeables"
-
 - type: loadout
   id: ContractorCigPackRed
   price: 150
@@ -15,7 +14,6 @@
     back:
     - CigPackRed
   groupBy: "smokeables"
-
 - type: loadout
   id: ContractorCigPackBlack
   price: 150
@@ -23,7 +21,6 @@
     back:
     - CigPackBlack
   groupBy: "smokeables"
-
 - type: loadout
   id: ContractorCigPackGreen
   price: 150
@@ -43,7 +40,6 @@
     back:
     - CigarCase
   groupBy: "smokeables"
-
 - type: loadout
   id: ContractorNFAshtray
   effects:
@@ -54,7 +50,6 @@
     back:
     - NFAshtray
   groupBy: "smokeables"
-
 - type: loadout
   id: ContractorTapeRecorder
   effects:
@@ -76,8 +71,6 @@
     back:
     - SmokingPipeFilledTobacco
   groupBy: "smokeables"
-
-
 - type: loadout
   id: ContractorTobaccoPouchBrownFilled
   effects:
@@ -88,7 +81,6 @@
     back:
     - TobaccoPouchBrownFilled
   groupBy: "smokeables"
-
 - type: loadout
   id: ContractorTobaccoPouchBlueFilled
   effects:
@@ -99,7 +91,6 @@
     back:
     - TobaccoPouchBlueFilled
   groupBy: "smokeables"
-
 - type: loadout
   id: ContractorTobaccoPouchRedFilled
   effects:
@@ -110,7 +101,6 @@
     back:
     - TobaccoPouchRedFilled
   groupBy: "smokeables"
-
 - type: loadout
   id: ContractorTobaccoPouchPurpleFilled
   effects:
@@ -121,7 +111,6 @@
     back:
     - TobaccoPouchPurpleFilled
   groupBy: "smokeables"
-
 - type: loadout
   id: ContractorVape
   effects:
@@ -241,20 +230,18 @@
   storage:
     back:
     - FlashlightLantern
-
 - type: loadout
   id: ContractorWristwatch
   price: 500
   storage:
     back:
     - Wristwatch
-
 - type: loadout
-  id: ContractorAACTablet
+  id: ContractorUrnMortuary
   price: 500
   storage:
     back:
-    - AACTablet
+    - UrnMortuary
 
 #T1
 - type: loadout
@@ -266,7 +253,6 @@
   storage:
     back:
     - Basketball
-
 - type: loadout
   id: ContractorFootball
   effects:
@@ -276,7 +262,6 @@
   storage:
     back:
     - Football
-
 - type: loadout
   id: ContractorBeachBall
   effects:
@@ -297,7 +282,6 @@
   storage:
     back:
     - CrayonBox
-
 - type: loadout
   id: ContractorSoapNT
   effects:
@@ -307,7 +291,6 @@
   storage:
     back:
     - SoapNT
-
 - type: loadout
   id: ContractorCardBoxBlack
   effects:
@@ -328,7 +311,6 @@
   storage:
     back:
     - WristwatchGold
-
 - type: loadout
   id: ContractorSilverRing
   effects:
@@ -338,7 +320,6 @@
   storage:
     back:
     - SilverRing
-
 - type: loadout
   id: ContractorGoldRing
   effects:
@@ -359,7 +340,6 @@
   storage:
     back:
     - MonkeyCubeWrapped
-
 - type: loadout
   id: ContractorKoboldCubeWrapped
   effects:
@@ -381,7 +361,6 @@
   storage:
     back:
     - PlushieSharkGrey
-
 - type: loadout
   id: ContractorPlushieSharkBlue
   effects:
@@ -391,7 +370,6 @@
   storage:
     back:
     - PlushieSharkBlue
-
 - type: loadout
   id: ContractorPlushieSharkPink
   effects:
@@ -401,7 +379,6 @@
   storage:
     back:
     - PlushieSharkPink
-
 - type: loadout
   id: ContractorHarmonicaInstrument
   effects:
@@ -412,8 +389,6 @@
     back:
     - HarmonicaInstrument
   groupBy: "Instruments"
-
-
 - type: loadout
   id: ContractorSaxophoneInstrument
   effects:
@@ -424,7 +399,6 @@
     back:
     - SaxophoneInstrument
   groupBy: "Instruments"
-
 - type: loadout
   id: ContractorAcousticGuitarInstrument
   effects:
@@ -457,7 +431,6 @@
   storage:
     back:
     - PlushieRGBee
-
 - type: loadout
   id: ContractorMysterySpaceBladeBox
   effects:
@@ -467,7 +440,6 @@
   storage:
     back:
     - MysterySpaceBladeBox
-
 - type: loadout
   id: ContractorHoloGraffitiProjector
   effects:
@@ -477,7 +449,6 @@
   storage:
     back:
     - HoloGraffitiProjector
-
 - type: loadout
   id: ContractorCrayonMagic
   effects:
@@ -487,7 +458,6 @@
   storage:
     back:
     - CrayonMagic
-
 - type: loadout
   id: ContractorSprayPainterMagic
   effects:
@@ -506,21 +476,18 @@
   storage:
     back:
     - BoxFolderMedicalDoctor
-
 - type: loadout
   id: ContractorBrbSign
   price: 500
   storage:
     back:
     - BrbSign
-
 - type: loadout
   id: ContractorHandLabeler
   price: 500
   storage:
     back:
     - HandLabeler
-
 - type: loadout
   id: ContractorStampsApprovedDenied
   price: 1000
@@ -532,7 +499,6 @@
     - RubberStampApproved
     - RubberStampDenied
   groupBy: "Stamps"
-
 - type: loadout
   id: ContractorRubberStampClown
   price: 1500
@@ -540,7 +506,6 @@
     back:
     - RubberStampClown
   groupBy: "Stamps"
-
 - type: loadout
   id: ContractorRubberStampMime
   price: 1500
@@ -548,7 +513,6 @@
     back:
     - RubberStampMime
   groupBy: "Stamps"
-
 - type: loadout
   id: ContractorRubberStampTrader
   price: 500
@@ -556,7 +520,6 @@
     back:
     - RubberStampTrader
   groupBy: "Stamps"
-
 - type: loadout
   id: ContractorRubberStampChaplain
   price: 500
@@ -564,7 +527,6 @@
     back:
     - RubberStampChaplain
   groupBy: "Stamps"
-
 - type: loadout
   id: ContractorRubberStampCaptain
   price: 500
@@ -572,7 +534,6 @@
     back:
     - RubberStampCaptain
   groupBy: "Stamps"
-
 - type: loadout
   id: ContractorRubberStampLawyer
   price: 500
@@ -580,7 +541,6 @@
     back:
     - RubberStampLawyer
   groupBy: "Stamps"
-
 - type: loadout
   id: ContractorRubberStampPsychologist
   price: 500
@@ -588,7 +548,6 @@
     back:
     - RubberStampPsychologist
   groupBy: "Stamps"
-
 - type: loadout
   id: ContractorRubberStampDoctor
   price: 500
@@ -596,7 +555,6 @@
     back:
     - RubberStampDoctor
   groupBy: "Stamps"
-
 - type: loadout
   id: ContractorRubberStampEngineer
   price: 500
@@ -604,6 +562,15 @@
     back:
     - RubberStampEngineer
   groupBy: "Stamps"
+
+- type: loadout
+  id: ContractorAACTablet
+  price: 500
+  storage:
+    back:
+    - AACTablet
+
+#T1
 
 - type: loadout
   id: ContractorClicker

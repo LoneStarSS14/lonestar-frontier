@@ -11,7 +11,6 @@
   - NFWeaponHoloflareGun
   - NFMetalShield
   - Signaller
-  - ArmorPlateSteel # Mono
 
 - type: latheRecipePack
   id: NFSalvageBoardsStatic
@@ -30,10 +29,8 @@
 - type: latheRecipePack
   id: NFSalvage
   recipes:
-  - MiningDrill
-  - NFWeaponPka
-  - NFWeaponPkaCannon
-  - WeaponGrapplingGun
+  - BluespaceAirTank
+  - SmallBluespaceAirTank
 
 - type: latheRecipePack
   id: NFSalvageTechfabEmag
@@ -45,5 +42,3 @@
     - NFAmmunitionBoxRifle30
 #       - GrenadeBlast
     - ClothingHeadHelmetCosmonaut
-    - BluespaceAirTank
-    - SmallBluespaceAirTank

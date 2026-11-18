@@ -1,4 +1,3 @@
-// _CS Start
 using Content.Server.Administration;
 using Content.Server.Body.Systems;
 using Content.Server.Cargo.Components;
@@ -28,7 +27,7 @@ namespace Content.Server.Cargo.Systems;
 /// <summary>
 /// This handles calculating the price of items, and implements two basic methods of pricing materials.
 /// </summary>
-public sealed partial class PricingSystem : EntitySystem // Coyote: Add Partial
+public sealed partial class PricingSystem : EntitySystem
 {
     [Dependency] private readonly IConsoleHost _consoleHost = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -40,13 +39,13 @@ public sealed partial class PricingSystem : EntitySystem // Coyote: Add Partial
     /// <inheritdoc/>
     public override void Initialize()
     {
+        CSInitialize();
+
         SubscribeLocalEvent<MobPriceComponent, PriceCalculationEvent>(CalculateMobPrice); // Frontier
 
         _consoleHost.RegisterCommand("appraisegrid",
             "Calculates the total value of the given grids.",
             "appraisegrid <grid Ids>", AppraiseGridCommand);
-
-        CSInitialize(); // Coyote Initialization for the Pricing System Additions
     }
 
     [AdminCommand(AdminFlags.Debug)]
@@ -82,11 +81,11 @@ public sealed partial class PricingSystem : EntitySystem // Coyote: Add Partial
                     mostValuable.Pop();
             });
 
-            shell.WriteLine($"Grid {gid} appraised to {value} credits.");
+            shell.WriteLine($"Grid {gid} appraised to {value} spesos.");
             shell.WriteLine($"The top most valuable items were:");
             foreach (var (price, ent) in mostValuable)
             {
-                shell.WriteLine($"- {ToPrettyString(ent)} @ {price} credits");
+                shell.WriteLine($"- {ToPrettyString(ent)} @ {price} spesos");
             }
         }
     }
@@ -455,4 +454,3 @@ public sealed partial class PricingSystem : EntitySystem // Coyote: Add Partial
         return price;
     }
 }
-// _CS End

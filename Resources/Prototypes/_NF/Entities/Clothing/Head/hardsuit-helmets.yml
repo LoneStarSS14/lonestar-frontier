@@ -28,7 +28,6 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
-
 - type: entity
   parent: ClothingHeadHelmetHardsuitMercenary
   id: ClothingHeadHelmetHardsuitPrivateSecurity
@@ -116,7 +115,6 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
-
 - type: entity
   parent: ClothingHeadHelmetHardsuitNfsdBronze
   id: ClothingHeadHelmetHardsuitNfsdSilver
@@ -126,7 +124,6 @@
     sprite: _NF/Clothing/Head/Hardsuits/nfsd.rsi
   - type: Clothing
     sprite: _NF/Clothing/Head/Hardsuits/nfsd.rsi
-
 - type: entity
   parent: ClothingHeadHelmetHardsuitNfsdBronze
   id: ClothingHeadHelmetHardsuitNfsdGold
@@ -136,7 +133,6 @@
     sprite: _NF/Clothing/Head/Hardsuits/nfsd.rsi
   - type: Clothing
     sprite: _NF/Clothing/Head/Hardsuits/nfsd.rsi
-
 - type: entity
   parent: ClothingHeadHelmetHardsuitNfsdBronze
   id: ClothingHeadHelmetHardsuitNfsdBrigmedic
@@ -146,7 +142,6 @@
     sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_corps.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Head/Hardsuits/lsrd_corps.rsi
-
 - type: entity
   parent: ClothingHeadHelmetHardsuitNfsdBronze
   id: ClothingHeadHelmetHardsuitNfsdSheriff
@@ -156,7 +151,6 @@
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_sheriff.rsi
   - type: Clothing
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_sheriff.rsi
-
 - type: entity
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdExperimental
@@ -281,7 +275,6 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.8
-
 - type: entity
   parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitPirateElite
@@ -382,7 +375,7 @@
   - type: PointLight
     enabled: true
     color: "#A60000"
-    energy: 5
+    soft: true
     castShadows: false
   - type: Armor
     modifiers:

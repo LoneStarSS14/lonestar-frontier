@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -9,8 +10,6 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Client.Utility;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using System.Numerics;
-using System.Linq;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
 
 namespace Content.Client.Humanoid;
@@ -26,17 +25,11 @@ public sealed partial class MarkingPicker : Control
 
     public Action<MarkingSet>? OnMarkingAdded;
     public Action<MarkingSet>? OnMarkingRemoved;
-    public Action<MarkingSet>? OnMarkingDataChanged;
+    public Action<MarkingSet>? OnMarkingColorChange;
     public Action<MarkingSet>? OnMarkingRankChange;
     public Action<HumanoidLegStyle>? OnLegStyleChanged;
 
     private List<Color> _currentMarkingColors = new();
-    private List<float> _currentMarkingGlow = new();
-    // Coyote Start
-    private float _currentMarkingScale = 1.0f;
-    private float _currentMarkingOffsetX;
-    private float _currentMarkingOffsetY;
-    // Coyote End
 
     private ItemList.Item? _selectedMarking;
     private ItemList.Item? _selectedUnusedMarking;
@@ -48,23 +41,22 @@ public sealed partial class MarkingPicker : Control
 
     private string _currentSpecies = SharedHumanoidAppearanceSystem.DefaultSpecies;
     private Sex _currentSex = Sex.Unsexed;
+    public HumanoidLegStyle CurrentLegStyle = HumanoidLegStyle.Plantigrade;
     public Color CurrentSkinColor = Color.White;
     public Color CurrentEyeColor = Color.Black;
     public Marking? HairMarking;
     public Marking? FacialHairMarking;
-    public HumanoidLegStyle CurrentLegStyle = HumanoidLegStyle.Plantigrade;
 
+    private readonly HashSet<MarkingCategories> _ignoreCategories = new();
     private readonly HashSet<HumanoidLegStyle> _availableLegStyles = new()
     {
         HumanoidLegStyle.Plantigrade,
         HumanoidLegStyle.Digitigrade,
     };
 
-    private readonly HashSet<MarkingCategories> _ignoreCategories = new();
-
     public string IgnoreCategories
     {
-        get => string.Join(',', _ignoreCategories);
+        get => string.Join(',',  _ignoreCategories);
         set
         {
             _ignoreCategories.Clear();
@@ -103,8 +95,7 @@ public sealed partial class MarkingPicker : Control
         Sex sex,
         Color skinColor,
         Color eyeColor,
-        HumanoidLegStyle legStyle
-    )
+        HumanoidLegStyle legStyle = HumanoidLegStyle.Plantigrade)
     {
         var pointsProto = _prototypeManager
             .Index<SpeciesPrototype>(species).MarkingPoints;
@@ -119,11 +110,7 @@ public sealed partial class MarkingPicker : Control
         _currentSex = sex;
         CurrentSkinColor = skinColor;
         CurrentEyeColor = eyeColor;
-
-        CMarkingLegStyle.Clear();
-        CurrentLegStyle = legStyle;
-        if (!_availableLegStyles.Contains(legStyle))
-            CurrentLegStyle = HumanoidLegStyle.Plantigrade;
+        CurrentLegStyle = _availableLegStyles.Contains(legStyle) ? legStyle : HumanoidLegStyle.Plantigrade;
 
         Populate(CMarkingSearch.Text);
         PopulateUsed();
@@ -157,8 +144,8 @@ public sealed partial class MarkingPicker : Control
 
         _sprite = _entityManager.System<SpriteSystem>();
 
-        // Subscribe to consent changes to refresh categories
-        CMarkingCategoryButton.OnItemSelected += OnCategoryChange;
+        CMarkingCategoryButton.OnItemSelected +=  OnCategoryChange;
+        CMarkingLegStyle.OnItemSelected += OnChangedLegStyle;
         CMarkingsUnused.OnItemSelected += item =>
             _selectedUnusedMarking = CMarkingsUnused[item.ItemIndex];
 
@@ -167,26 +154,23 @@ public sealed partial class MarkingPicker : Control
 
         CMarkingsUsed.OnItemSelected += OnUsedMarkingSelected;
 
-        CMarkingLegStyle.OnItemSelected += OnChangedLegStyle;
-
         CMarkingRemove.OnPressed += _ =>
             MarkingRemove();
 
         CMarkingRankUp.OnPressed += _ => SwapMarkingUp();
         CMarkingRankDown.OnPressed += _ => SwapMarkingDown();
 
-        CanPutOnToggle.OnToggled += x => SetCanToggle(x.Pressed);
-        CanPutOnByOtherToggle.OnToggled += x => SetOtherCanToggle(x.Pressed);
-        HideTogglePopupToggle.OnToggled += x => SetHideTogglePopup(x.Pressed);
-        RenderOverClothingToggle.OnToggled += x => SetRenderOverClothing(x.Pressed);
-        StartVisibleToggle.OnToggled += x => SetVisible(x.Pressed);
+        CanPutOnToggle.OnToggled += args => SetCanToggle(args.Pressed);
+        CanPutOnByOtherToggle.OnToggled += args => SetOtherCanToggle(args.Pressed);
+        HideTogglePopupToggle.OnToggled += args => SetHideTogglePopup(args.Pressed);
+        RenderOverClothingToggle.OnToggled += args => SetRenderOverClothing(args.Pressed);
+        StartVisibleToggle.OnToggled += args => SetVisible(args.Pressed);
 
-        CustomNameTextEdit.OnTextChanged += x => SetCustomText();
-        PutOnTextEdit.OnTextChanged += x => SetCustomText();
-        TakeOffTextEdit.OnTextChanged += x => SetCustomText();
-        PutOnOtherTextEdit.OnTextChanged += x => SetCustomText();
-        TakeOffOtherTextEdit.OnTextChanged += x => SetCustomText();
-
+        CustomNameTextEdit.OnTextChanged += _ => SetCustomText();
+        PutOnTextEdit.OnTextChanged += _ => SetCustomText();
+        TakeOffTextEdit.OnTextChanged += _ => SetCustomText();
+        PutOnOtherTextEdit.OnTextChanged += _ => SetCustomText();
+        TakeOffOtherTextEdit.OnTextChanged += _ => SetCustomText();
         SampleButton.OnPressed += _ => ToggleSample();
 
         CMarkingSearch.OnTextChanged += args => Populate(args.Text);
@@ -201,9 +185,8 @@ public sealed partial class MarkingPicker : Control
         {
             var category = _markingCategories[i];
             var markings = GetMarkings(category);
-
-            // Check if the category should be ignored
-            if (_ignoreCategories.Contains(category) || markings.Count == 0)
+            if (_ignoreCategories.Contains(category) ||
+                markings.Count == 0)
             {
                 continue;
             }
@@ -231,11 +214,9 @@ public sealed partial class MarkingPicker : Control
         CMarkingLegStyle.Clear();
 
         foreach (var legStyle in _availableLegStyles)
-        {
-            CMarkingLegStyle.AddItem(Loc.GetString($"humanoid-leg-style-{legStyle.ToString()}"), (int)legStyle);
-        }
+            CMarkingLegStyle.AddItem(Loc.GetString($"humanoid-leg-style-{legStyle}"), (int) legStyle);
 
-        CMarkingLegStyle.SelectId((int)CurrentLegStyle);
+        CMarkingLegStyle.SelectId((int) CurrentLegStyle);
     }
 
     private string GetMarkingName(MarkingPrototype marking) => Loc.GetString($"marking-{marking.ID}");
@@ -274,15 +255,10 @@ public sealed partial class MarkingPicker : Control
         CMarkingsUnused.Clear();
         _selectedUnusedMarking = null;
 
-        IOrderedEnumerable<MarkingPrototype> sortedMarkings = GetMarkings(_selectedMarkingCategory)
-            .Values.Where(m =>
-                !m.Hidden
-                && (m.ID.ToLower()
-                        .Contains(filter.ToLower())
-                    || GetMarkingName(m)
-                        .ToLower()
-                        .Contains(filter.ToLower())))
-            .OrderBy(p => Loc.GetString(GetMarkingName(p)));
+        var sortedMarkings = GetMarkings(_selectedMarkingCategory).Values.Where(m =>
+            m.ID.ToLower().Contains(filter.ToLower()) ||
+            GetMarkingName(m).ToLower().Contains(filter.ToLower())
+        ).OrderBy(p => Loc.GetString(GetMarkingName(p)));
 
         foreach (var marking in sortedMarkings)
         {
@@ -303,13 +279,11 @@ public sealed partial class MarkingPicker : Control
     public void PopulateUsed()
     {
         CMarkingsUsed.Clear();
-        MarkingData.Visible = false;
         CMarkingColors.Visible = false;
-        _selectedMarking = null;
-
-        SampleBox.Visible = false;
+        MarkingData.Visible = false;
         SampleButton.Visible = false;
-        SampleButton.Text = Loc.GetString("marking-show-sample-text");
+        SampleBox.Visible = false;
+        _selectedMarking = null;
 
         if (!IgnoreSpecies)
         {
@@ -327,7 +301,7 @@ public sealed partial class MarkingPicker : Control
             var text = Loc.GetString(marking.Forced ? "marking-used-forced" : "marking-used", ("marking-name", $"{GetMarkingName(newMarking)}"),
                 ("marking-category", Loc.GetString($"markings-category-{newMarking.MarkingCategory}")));
 
-            var item = new ItemList.Item(CMarkingsUsed)
+            var _item = new ItemList.Item(CMarkingsUsed)
             {
                 Text = text,
                 Icon = _sprite.Frame0(newMarking.Sprites[0]),
@@ -336,7 +310,7 @@ public sealed partial class MarkingPicker : Control
                 IconModulate = marking.MarkingColors[0]
             };
 
-            CMarkingsUsed.Add(item);
+            CMarkingsUsed.Add(_item);
         }
 
         // since all the points have been processed, update the points visually
@@ -457,80 +431,56 @@ public sealed partial class MarkingPicker : Control
         UpdatePoints();
     }
 
+    private void OnChangedLegStyle(OptionButton.ItemSelectedEventArgs legs)
+    {
+        CurrentLegStyle = (HumanoidLegStyle) legs.Id;
+        OnLegStyleChanged?.Invoke(CurrentLegStyle);
+    }
+
     // TODO: This should be using ColorSelectorSliders once that's merged, so
     private void OnUsedMarkingSelected(ItemList.ItemListSelectedEventArgs item)
     {
         _selectedMarking = CMarkingsUsed[item.ItemIndex];
-        var prototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, prototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = _currentMarkings.Markings[_selectedMarkingCategory][markingIndex];
+        var prototype = (MarkingPrototype) _selectedMarking.Metadata!;
+        var currentMarking = _currentMarkings.Markings[_selectedMarkingCategory]
+            [_currentMarkings.Markings[_selectedMarkingCategory].Count - 1 - item.ItemIndex];
 
         if (prototype.ForcedColoring)
         {
             CMarkingColors.Visible = false;
+            MarkingData.Visible = false;
+            SampleButton.Visible = false;
 
             return;
         }
 
         var stateNames = GetMarkingStateNames(prototype);
         _currentMarkingColors.Clear();
-        _currentMarkingGlow.Clear();
+        var currentMarkingCopy = new Marking(currentMarking);
         CMarkingColors.DisposeAllChildren();
         for (int i = 0; i < prototype.Sprites.Count; i++)
         {
-            // first, check if the coloration is parented to another marking
-            // and if so, just kinda sorta dont display it
-            var skipdraw = false;
-            if (prototype.ColorLinks?.Count > 0)
-            {
-                var name = prototype.Sprites[i] switch
-                {
-                    SpriteSpecifier.Rsi rsi => rsi.RsiState,
-                    SpriteSpecifier.Texture texture => texture.TexturePath.Filename,
-                    _ => null
-                };
-
-                if (name != null && prototype.ColorLinks.ContainsKey(name))
-                {
-                    // dont show it, cus its parented to another marking
-                    skipdraw = true;
-                }
-            }
             var colorContainer = new BoxContainer
             {
                 Orientation = LayoutOrientation.Vertical,
             };
-            // so.
-            // the color selector sliders decide which destination color to modify
-            // based on its index in the list of color selectors.
-            // this is a problem if we, say, want to *not* show a certain slider
-            // cus then it'll modify the wrong color, unless the color happened to
-            // be in index 0.
-            if (!skipdraw)
-                CMarkingColors.AddChild(colorContainer);
+
+            CMarkingColors.AddChild(colorContainer);
 
             ColorSelectorSliders colorSelector = new ColorSelectorSliders();
-            colorSelector.IsAlphaVisible = true;
+            colorSelector.SelectorType = ColorSelectorSliders.ColorSelectorType.Hsv; // defaults color selector to HSV
 
             colorContainer.AddChild(new Label { Text = $"{stateNames[i]} color:" });
             colorContainer.AddChild(colorSelector);
 
-            var listing = _currentMarkings.Markings[_selectedMarkingCategory];
-
-            var color = listing[listing.Count - 1 - item.ItemIndex].MarkingColors[i];
+            var color = currentMarking.MarkingColors[i];
             var currentColor = new Color(
                 color.RByte,
                 color.GByte,
-                color.BByte,
-                color.AByte
+                color.BByte
             );
             colorSelector.Color = currentColor;
             _currentMarkingColors.Add(currentColor);
-            var currentGlow = i < marking.MarkingGlow.Count ? marking.MarkingGlow[i] : 0f;
-            _currentMarkingGlow.Add(Math.Clamp(currentGlow, 0f, 1f));
             var colorIndex = _currentMarkingColors.Count - 1;
 
             Action<Color> colorChanged = _ =>
@@ -541,18 +491,6 @@ public sealed partial class MarkingPicker : Control
             };
             colorSelector.OnColorChanged += colorChanged;
 
-            if (skipdraw)
-                continue;
-
-            var glowRow = new BoxContainer
-            {
-                Orientation = LayoutOrientation.Horizontal,
-                SeparationOverride = 8,
-            };
-            var glowLabel = new Label
-            {
-                Text = Loc.GetString("marking-glow-label"),
-            };
             var glowSlider = new Slider
             {
                 HorizontalExpand = true,
@@ -560,302 +498,182 @@ public sealed partial class MarkingPicker : Control
                 MaxValue = 1f,
                 Rounded = false,
             };
-            // Coyote Start
-            var glowValueBox = new SpinBox
-            {
-                MinSize = new Vector2(56f, 0f),
-                IsValid = value => value is >= 0 and <= 100,
-            };
-            glowValueBox.InitDefaultButtons();
-
-            var settingGlowFromInput = false;
-            var settingGlowFromSlider = false;
-            var initialGlow = Math.Clamp(_currentMarkingGlow[colorIndex], 0f, 1f);
-            glowSlider.SetValueWithoutEvent(initialGlow);
-            glowValueBox.Value = (int)MathF.Round(initialGlow * 100f);
-
-            glowSlider.OnValueChanged += _ =>
-            {
-                if (settingGlowFromInput)
-                    return;
-
-                settingGlowFromSlider = true;
-                var normalizedGlow = Math.Clamp(glowSlider.Value, 0f, 1f);
-                _currentMarkingGlow[colorIndex] = normalizedGlow;
-                glowValueBox.Value = (int)MathF.Round(normalizedGlow * 100f);
-                GlowChanged(colorIndex);
-                settingGlowFromSlider = false;
-            };
-
-            glowValueBox.ValueChanged += _ =>
-            {
-                if (settingGlowFromSlider)
-                    return;
-
-                settingGlowFromInput = true;
-                var clampedPercent = Math.Clamp(glowValueBox.Value, 0, 100);
-                var normalizedGlow = clampedPercent / 100f;
-                _currentMarkingGlow[colorIndex] = normalizedGlow;
-                glowSlider.SetValueWithoutEvent(normalizedGlow);
-                GlowChanged(colorIndex);
-                settingGlowFromInput = false;
-            };
-            // Coyote End
-
-            glowRow.AddChild(glowLabel);
-            glowRow.AddChild(glowSlider);
-            glowRow.AddChild(glowValueBox);
-            colorContainer.AddChild(glowRow);
+            var glow = i < currentMarkingCopy.MarkingGlow.Count ? currentMarkingCopy.MarkingGlow[i] : 0f;
+            glowSlider.SetValueWithoutEvent(glow);
+            colorContainer.AddChild(new Label { Text = Loc.GetString("marking-glow-label") });
+            colorContainer.AddChild(glowSlider);
+            var glowIndex = i;
+            glowSlider.OnValueChanged += _ => UpdateSelectedMarking(marking => marking.SetGlow(glowIndex, glowSlider.Value));
         }
 
-        CustomNameTextEdit.Text = marking.CustomName ?? "";
-
-        // Coyote Start
-        _currentMarkingScale = marking.MarkingScale;
-        _currentMarkingOffsetX = marking.MarkingOffset.X;
-        _currentMarkingOffsetY = marking.MarkingOffset.Y;
         if (_selectedMarkingCategory == MarkingCategories.Genital)
         {
-            var scaleButton = new Button
-            {
-                Text = Loc.GetString("marking-adjust-scale-text"),
-            };
-            var scaleBox = new BoxContainer
-            {
-                Orientation = LayoutOrientation.Vertical,
-                Visible = false,
-            };
-            var scaleRow = new BoxContainer
-            {
-                Orientation = LayoutOrientation.Horizontal,
-                SeparationOverride = 8,
-            };
-            var offsetXRow = new BoxContainer
-            {
-                Orientation = LayoutOrientation.Horizontal,
-                SeparationOverride = 8,
-            };
-            var offsetYRow = new BoxContainer
-            {
-                Orientation = LayoutOrientation.Horizontal,
-                SeparationOverride = 8,
-            };
-            var scaleLabel = new Label
-            {
-                Text = Loc.GetString("marking-scale-label"),
-            };
+            var scaleButton = new Button { Text = Loc.GetString("marking-adjust-scale-text") };
+            var scaleControls = new BoxContainer { Orientation = LayoutOrientation.Vertical, Visible = false };
+            scaleButton.OnPressed += _ => scaleControls.Visible = !scaleControls.Visible;
+
             var scaleSlider = new Slider
             {
                 HorizontalExpand = true,
                 MinValue = 0.25f,
-                MaxValue = 3.0f,
+                MaxValue = 3f,
                 Rounded = false,
             };
-            var offsetXSlider = new Slider
+            scaleSlider.SetValueWithoutEvent(Math.Clamp(currentMarkingCopy.MarkingScale, 0.25f, 3f));
+            scaleControls.AddChild(new Label { Text = Loc.GetString("marking-scale-label") });
+            scaleControls.AddChild(scaleSlider);
+            scaleSlider.OnValueChanged += _ => UpdateSelectedMarking(marking => marking.SetScale(scaleSlider.Value));
+
+            var offsetX = new Slider
             {
                 HorizontalExpand = true,
-                MinValue = -1.0f,
-                MaxValue = 1.0f,
+                MinValue = -1f,
+                MaxValue = 1f,
                 Rounded = false,
             };
-            var offsetYSlider = new Slider
+            var offsetY = new Slider
             {
                 HorizontalExpand = true,
-                MinValue = -1.0f,
-                MaxValue = 1.0f,
+                MinValue = -1f,
+                MaxValue = 1f,
                 Rounded = false,
             };
-            var scaleValueBox = new SpinBox
-            {
-                MinSize = new Vector2(56f, 0f),
-                IsValid = value => value is >= 25 and <= 300,
-            };
-            var offsetXValueBox = new SpinBox
-            {
-                MinSize = new Vector2(56f, 0f),
-                IsValid = value => value is >= -100 and <= 100,
-            };
-            var offsetYValueBox = new SpinBox
-            {
-                MinSize = new Vector2(56f, 0f),
-                IsValid = value => value is >= -100 and <= 100,
-            };
-            scaleValueBox.InitDefaultButtons();
-            offsetXValueBox.InitDefaultButtons();
-            offsetYValueBox.InitDefaultButtons();
+            offsetX.SetValueWithoutEvent(Math.Clamp(currentMarkingCopy.MarkingOffset.X, -1f, 1f));
+            offsetY.SetValueWithoutEvent(Math.Clamp(currentMarkingCopy.MarkingOffset.Y, -1f, 1f));
+            scaleControls.AddChild(new Label { Text = Loc.GetString("marking-offset-x-label") });
+            scaleControls.AddChild(offsetX);
+            scaleControls.AddChild(new Label { Text = Loc.GetString("marking-offset-y-label") });
+            scaleControls.AddChild(offsetY);
+            offsetX.OnValueChanged += _ => UpdateSelectedMarking(marking => marking.SetOffset(offsetX.Value, offsetY.Value));
+            offsetY.OnValueChanged += _ => UpdateSelectedMarking(marking => marking.SetOffset(offsetX.Value, offsetY.Value));
 
-            var settingScaleFromInput = false;
-            var settingScaleFromSlider = false;
-            var initialScale = Math.Clamp(_currentMarkingScale, 0.25f, 3.0f);
-            scaleSlider.SetValueWithoutEvent(initialScale);
-            scaleValueBox.Value = (int)MathF.Round(initialScale * 100f);
-
-            var settingOffsetFromInput = false;
-            var settingOffsetFromSlider = false;
-
-            var initialOffsetX = Math.Clamp(_currentMarkingOffsetX, -1.0f, 1.0f);
-            var initialOffsetY = Math.Clamp(_currentMarkingOffsetY, -1.0f, 1.0f);
-
-            offsetXSlider.SetValueWithoutEvent(initialOffsetX);
-            offsetYSlider.SetValueWithoutEvent(initialOffsetY);
-
-            offsetXValueBox.Value = (int)MathF.Round(initialOffsetX * 100f);
-            offsetYValueBox.Value = (int)MathF.Round(initialOffsetY * 100f);
-
-            scaleSlider.OnValueChanged += _ =>
-            {
-                if (settingScaleFromInput)
-                    return;
-
-                settingScaleFromSlider = true;
-                _currentMarkingScale = Math.Clamp(scaleSlider.Value, 0.25f, 3.0f);
-                scaleValueBox.Value = (int)MathF.Round(_currentMarkingScale * 100f);
-                ScaleChanged();
-                settingScaleFromSlider = false;
-            };
-
-            scaleValueBox.ValueChanged += _ =>
-            {
-                if (settingScaleFromSlider)
-                    return;
-
-                settingScaleFromInput = true;
-                var clampedPercent = Math.Clamp(scaleValueBox.Value, 25, 300);
-                _currentMarkingScale = clampedPercent / 100f;
-                scaleSlider.SetValueWithoutEvent(_currentMarkingScale);
-                ScaleChanged();
-                settingScaleFromInput = false;
-            };
-
-            void UpdateOffsetsFromInputs()
-            {
-                if (settingOffsetFromInput)
-                    return;
-
-                settingOffsetFromSlider = true;
-                _currentMarkingOffsetX = Math.Clamp(offsetXSlider.Value, -1.0f, 1.0f);
-                _currentMarkingOffsetY = Math.Clamp(offsetYSlider.Value, -1.0f, 1.0f);
-
-                offsetXValueBox.Value = (int)MathF.Round(_currentMarkingOffsetX * 100f);
-                offsetYValueBox.Value = (int)MathF.Round(_currentMarkingOffsetY * 100f);
-
-                OffsetChanged();
-                settingOffsetFromSlider = false;
-            }
-
-            void UpdateOffsetsFromBoxes()
-            {
-                if (settingOffsetFromSlider)
-                    return;
-
-                settingOffsetFromInput = true;
-
-                _currentMarkingOffsetX = Math.Clamp(offsetXValueBox.Value, -100, 100) / 100f;
-                _currentMarkingOffsetY = Math.Clamp(offsetYValueBox.Value, -100, 100) / 100f;
-
-                offsetXSlider.SetValueWithoutEvent(_currentMarkingOffsetX);
-                offsetYSlider.SetValueWithoutEvent(_currentMarkingOffsetY);
-
-                OffsetChanged();
-                settingOffsetFromInput = false;
-            }
-
-            offsetXSlider.OnValueChanged += _ => UpdateOffsetsFromInputs();
-            offsetYSlider.OnValueChanged += _ => UpdateOffsetsFromInputs();
-
-            offsetXValueBox.ValueChanged += _ => UpdateOffsetsFromBoxes();
-            offsetYValueBox.ValueChanged += _ => UpdateOffsetsFromBoxes();
-
-            scaleButton.OnPressed += _ =>
-            {
-                scaleBox.Visible = !scaleBox.Visible;
-            };
-
-            scaleRow.AddChild(scaleLabel);
-            scaleRow.AddChild(scaleSlider);
-            scaleRow.AddChild(scaleValueBox);
-            offsetXRow.AddChild(new Label { Text = Loc.GetString("marking-offset-x-label") });
-            offsetXRow.AddChild(offsetXSlider);
-            offsetXRow.AddChild(offsetXValueBox);
-            offsetYRow.AddChild(new Label { Text = Loc.GetString("marking-offset-y-label") });
-            offsetYRow.AddChild(offsetYSlider);
-            offsetYRow.AddChild(offsetYValueBox);
-
-            scaleBox.AddChild(scaleRow);
-            scaleBox.AddChild(offsetXRow);
-            scaleBox.AddChild(offsetYRow);
             CMarkingColors.AddChild(scaleButton);
-            CMarkingColors.AddChild(scaleBox);
+            CMarkingColors.AddChild(scaleControls);
         }
-        // Coyote End
-        StartVisibleToggle.Pressed = marking.ShowAtStart;
-        CanPutOnToggle.Pressed = marking.CanToggleVisible;
-        CanPutOnByOtherToggle.Pressed = marking.OtherCanToggleVisible;
-        HideTogglePopupToggle.Pressed = marking.HideTogglePopup;
-        RenderOverClothingToggle.Pressed = marking.RenderOverClothing;
-        PutOnTextEdit.Text = marking.PutOnVerb ?? Loc.GetString("marking-toggle-self-default-verb-on");
-        TakeOffTextEdit.Text = marking.TakeOffVerb ?? Loc.GetString("marking-toggle-self-default-verb-off");
-        PutOnOtherTextEdit.Text = marking.PutOnVerb2p ?? Loc.GetString("marking-toggle-other-default-verb-on");
-        TakeOffOtherTextEdit.Text = marking.TakeOffVerb2p ?? Loc.GetString("marking-toggle-other-default-verb-off");
 
+        CustomNameTextEdit.Text = currentMarking.CustomName ?? "";
+        StartVisibleToggle.Pressed = currentMarking.ShowAtStart;
+        CanPutOnToggle.Pressed = currentMarking.CanToggleVisible;
+        CanPutOnByOtherToggle.Pressed = currentMarking.OtherCanToggleVisible;
+        HideTogglePopupToggle.Pressed = currentMarking.HideTogglePopup;
+        RenderOverClothingToggle.Pressed = currentMarking.RenderOverClothing;
+        PutOnTextEdit.Text = currentMarking.PutOnVerb ?? Loc.GetString("marking-toggle-self-default-verb-on");
+        TakeOffTextEdit.Text = currentMarking.TakeOffVerb ?? Loc.GetString("marking-toggle-self-default-verb-off");
+        PutOnOtherTextEdit.Text = currentMarking.PutOnVerb2p ?? Loc.GetString("marking-toggle-other-default-verb-on");
+        TakeOffOtherTextEdit.Text = currentMarking.TakeOffVerb2p ?? Loc.GetString("marking-toggle-other-default-verb-off");
+        SampleText.Text = GetSampleText(currentMarking, prototype);
+        SampleButton.Text = Loc.GetString("marking-show-sample-text");
+        SetCheckboxVisibility();
         MarkingData.Visible = true;
-        CMarkingColors.Visible = true;
         SampleButton.Visible = true;
+        CMarkingColors.Visible = true;
+    }
+
+    private void UpdateSelectedMarking(Action<Marking> update)
+    {
+        if (_selectedMarking is null)
+            return;
+
+        var prototype = (MarkingPrototype) _selectedMarking.Metadata!;
+        var index = _currentMarkings.FindIndexOf(_selectedMarkingCategory, prototype.ID);
+        if (index < 0)
+            return;
+
+        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][index]);
+        update(marking);
+        _currentMarkings.Replace(_selectedMarkingCategory, index, marking);
+        OnMarkingColorChange?.Invoke(_currentMarkings);
+    }
+
+    private void SetCanToggle(bool canToggle)
+    {
+        UpdateSelectedMarking(marking => marking.CanToggleVisible = canToggle);
         SetCheckboxVisibility();
     }
 
-    private void OnChangedLegStyle(OptionButton.ItemSelectedEventArgs legs)
+    private void SetOtherCanToggle(bool canToggle)
     {
-        CMarkingLegStyle.SelectId(legs.Id);
-        CurrentLegStyle = (HumanoidLegStyle)legs.Id;
-        OnLegStyleChanged?.Invoke(CurrentLegStyle);
+        UpdateSelectedMarking(marking => marking.OtherCanToggleVisible = canToggle);
+        SetCheckboxVisibility();
+    }
+
+    private void SetHideTogglePopup(bool hide) => UpdateSelectedMarking(marking => marking.HideTogglePopup = hide);
+    private void SetRenderOverClothing(bool renderOver) => UpdateSelectedMarking(marking => marking.RenderOverClothing = renderOver);
+    private void SetVisible(bool visible) => UpdateSelectedMarking(marking => marking.ShowAtStart = visible);
+
+    private void SetCustomText()
+    {
+        UpdateSelectedMarking(marking =>
+        {
+            marking.CustomName = CustomNameTextEdit.Text;
+            marking.PutOnVerb = PutOnTextEdit.Text;
+            marking.TakeOffVerb = TakeOffTextEdit.Text;
+            marking.PutOnVerb2p = PutOnOtherTextEdit.Text;
+            marking.TakeOffVerb2p = TakeOffOtherTextEdit.Text;
+        });
+
+        if (_selectedMarking is not null)
+        {
+            var prototype = (MarkingPrototype) _selectedMarking.Metadata!;
+            var index = _currentMarkings.FindIndexOf(_selectedMarkingCategory, prototype.ID);
+            if (index >= 0)
+                SampleText.Text = GetSampleText(_currentMarkings.Markings[_selectedMarkingCategory][index], prototype);
+        }
+    }
+
+    private string GetSampleText(Marking marking, MarkingPrototype prototype)
+    {
+        if (marking.HideTogglePopup)
+            return Loc.GetString("marking-toggle-popup-hidden-sample");
+
+        var name = string.IsNullOrEmpty(marking.CustomName) ? prototype.ID : marking.CustomName;
+        var putOn = string.IsNullOrEmpty(marking.PutOnVerb)
+            ? Loc.GetString("marking-toggle-self-default-verb-on")
+            : marking.PutOnVerb;
+        var putOnOther = string.IsNullOrEmpty(marking.PutOnVerb2p)
+            ? Loc.GetString("marking-toggle-other-default-verb-on")
+            : marking.PutOnVerb2p;
+        var takeOff = string.IsNullOrEmpty(marking.TakeOffVerb)
+            ? Loc.GetString("marking-toggle-self-default-verb-off")
+            : marking.TakeOffVerb;
+        var takeOffOther = string.IsNullOrEmpty(marking.TakeOffVerb2p)
+            ? Loc.GetString("marking-toggle-other-default-verb-off")
+            : marking.TakeOffVerb2p;
+
+        return Loc.GetString("marking-toggle-self-start", ("marking-name", name), ("verb", putOn))
+               + "\n" + Loc.GetString("marking-toggle-self", ("marking-name", name), ("verb", putOn))
+               + "\n" + Loc.GetString("marking-toggle-other-start", ("marking-name", name), ("verb", putOn))
+               + "\n" + Loc.GetString("marking-toggle-other", ("marking-name", name), ("verb", putOn))
+               + "\n" + Loc.GetString("marking-toggle-by-other-start", ("other", "Someone"), ("marking-name", name), ("verb", putOn))
+               + "\n" + Loc.GetString("marking-toggle-by-other", ("other", "Someone"), ("marking-name", name), ("verb", putOnOther))
+               + "\n" + Loc.GetString("marking-toggle-self-start", ("marking-name", name), ("verb", takeOff))
+               + "\n" + Loc.GetString("marking-toggle-self", ("marking-name", name), ("verb", takeOff))
+               + "\n" + Loc.GetString("marking-toggle-by-other", ("other", "Someone"), ("marking-name", name), ("verb", takeOffOther));
+    }
+
+    private void ToggleSample()
+    {
+        SampleBox.Visible = !SampleBox.Visible;
+        SampleButton.Text = Loc.GetString(SampleBox.Visible ? "marking-hide-sample-text" : "marking-show-sample-text");
+        SetCustomText();
     }
 
     private void SetCheckboxVisibility()
     {
-        var togglePopupVisible = CanPutOnToggle.Pressed || CanPutOnByOtherToggle.Pressed;
+        var selfToggle = CanPutOnToggle.Pressed;
+        var otherToggle = CanPutOnByOtherToggle.Pressed;
+        var popupVisible = selfToggle || otherToggle;
 
-        if (CanPutOnToggle.Pressed)
-        {
-            PutOnTextEdit.Visible = true;
-            TakeOffTextEdit.Visible = true;
-            PutOnTextEditLabel.Visible = true;
-            TakeOffTextEditLabel.Visible = true;
-        }
-        else
-        {
-            PutOnTextEdit.Visible = false;
-            TakeOffTextEdit.Visible = false;
-            PutOnTextEditLabel.Visible = false;
-            TakeOffTextEditLabel.Visible = false;
-        }
-        if (CanPutOnByOtherToggle.Pressed)
-        {
-            PutOnOtherTextEdit.Visible = true;
-            TakeOffOtherTextEdit.Visible = true;
-            PutOnOtherTextEditLabel.Visible = true;
-            TakeOffOtherTextEditLabel.Visible = true;
-        }
-        else
-        {
-            PutOnOtherTextEdit.Visible = false;
-            TakeOffOtherTextEdit.Visible = false;
-            PutOnOtherTextEditLabel.Visible = false;
-            TakeOffOtherTextEditLabel.Visible = false;
-        }
-
-        HideTogglePopupLabel.Visible = togglePopupVisible;
-        HideTogglePopupToggle.Visible = togglePopupVisible;
-
-        // Show render over clothing toggle only for genital markings
-        RenderOverClothingLabel.Visible = _selectedMarkingCategory == MarkingCategories.Genital;
-        RenderOverClothingToggle.Visible = _selectedMarkingCategory == MarkingCategories.Genital;
+        PutOnTextEdit.Visible = TakeOffTextEdit.Visible = PutOnTextEditLabel.Visible = TakeOffTextEditLabel.Visible = selfToggle;
+        PutOnOtherTextEdit.Visible = TakeOffOtherTextEdit.Visible = PutOnOtherTextEditLabel.Visible = TakeOffOtherTextEditLabel.Visible = otherToggle;
+        HideTogglePopupLabel.Visible = HideTogglePopupToggle.Visible = popupVisible;
+        RenderOverClothingLabel.Visible = RenderOverClothingToggle.Visible = _selectedMarkingCategory == MarkingCategories.Genital;
     }
 
     private void ColorChanged(int colorIndex)
     {
         if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
+        var markingPrototype = (MarkingPrototype) _selectedMarking.Metadata!;
         int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
 
         if (markingIndex < 0) return;
@@ -866,206 +684,7 @@ public sealed partial class MarkingPicker : Control
         marking.SetColor(colorIndex, _currentMarkingColors[colorIndex]);
         _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
 
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    private void GlowChanged(int glowIndex)
-    {
-        if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
-        marking.SetGlow(glowIndex, _currentMarkingGlow[glowIndex]);
-        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
-
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    // Coyote Start
-    private void ScaleChanged()
-    {
-        if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
-        marking.SetScale(_currentMarkingScale);
-        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
-
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    private void OffsetChanged()
-    {
-        if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
-        marking.SetOffset(_currentMarkingOffsetX, _currentMarkingOffsetY);
-        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
-
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    // Coyote End
-
-    private void SetCanToggle(bool canToggle)
-    {
-        if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
-        marking.CanToggleVisible = canToggle;
-        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
-        SetCheckboxVisibility();
-
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    private void SetOtherCanToggle(bool canToggle)
-    {
-        if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
-        marking.OtherCanToggleVisible = canToggle;
-        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
-        SetCheckboxVisibility();
-
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    private void SetVisible(bool visible)
-    {
-        if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
-        marking.ShowAtStart = visible;
-        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
-
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    private void SetHideTogglePopup(bool hide)
-    {
-        if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
-        marking.HideTogglePopup = hide;
-        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
-
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    private void SetRenderOverClothing(bool renderOver)
-    {
-        if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
-        marking.RenderOverClothing = renderOver;
-        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
-
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    private void SetCustomText()
-    {
-        if (_selectedMarking is null) return;
-        var markingPrototype = (MarkingPrototype)_selectedMarking.Metadata!;
-        int markingIndex = _currentMarkings.FindIndexOf(_selectedMarkingCategory, markingPrototype.ID);
-
-        if (markingIndex < 0) return;
-
-        var marking = new Marking(_currentMarkings.Markings[_selectedMarkingCategory][markingIndex]);
-
-        marking.CustomName = CustomNameTextEdit.Text;
-        marking.PutOnVerb = PutOnTextEdit.Text;
-        marking.PutOnVerb2p = PutOnOtherTextEdit.Text;
-        marking.TakeOffVerb = TakeOffTextEdit.Text;
-        marking.TakeOffVerb2p = TakeOffOtherTextEdit.Text;
-
-        if (marking.HideTogglePopup)
-        {
-            SampleText.Text = Loc.GetString("marking-toggle-popup-hidden-sample");
-        }
-        else
-        {
-            SampleText.Text = GetSampleText((string.IsNullOrEmpty(marking.CustomName) ? markingPrototype.ID : marking.CustomName),
-            (string.IsNullOrEmpty(marking.PutOnVerb) ? Loc.GetString("marking-toggle-self-default-verb-on") : marking.PutOnVerb),
-            (string.IsNullOrEmpty(marking.PutOnVerb2p) ? Loc.GetString("marking-toggle-other-default-verb-on") : marking.PutOnVerb2p))
-                + "\n" + GetSampleText((string.IsNullOrEmpty(marking.CustomName) ? markingPrototype.ID : marking.CustomName),
-            (string.IsNullOrEmpty(marking.TakeOffVerb) ? Loc.GetString("marking-toggle-self-default-verb-off") : marking.TakeOffVerb),
-            (string.IsNullOrEmpty(marking.TakeOffVerb2p) ? Loc.GetString("marking-toggle-other-default-verb-off") : marking.TakeOffVerb2p));
-        }
-
-        _currentMarkings.Replace(_selectedMarkingCategory, markingIndex, marking);
-
-        OnMarkingDataChanged?.Invoke(_currentMarkings);
-    }
-
-    private void ToggleSample()
-    {
-        if (SampleBox.Visible)
-        {
-            SampleBox.Visible = false;
-            SampleButton.Text = Loc.GetString("marking-show-sample-text");
-        }
-        else
-        {
-            SetCustomText();
-            SampleBox.Visible = true;
-            SampleButton.Text = Loc.GetString("marking-hide-sample-text");
-        }
-    }
-
-    private string GetSampleText(string name, string verb, string verb2p)
-    {
-        return Loc.GetString("marking-toggle-self-start",
-            ("marking-name", name),
-            ("verb", verb))
-            + "\n" + Loc.GetString("marking-toggle-self",
-            ("marking-name", name),
-            ("verb", verb))
-            + "\n" + Loc.GetString("marking-toggle-other-start",
-            ("marking-name", name),
-            ("verb", verb))
-            + "\n" + Loc.GetString("marking-toggle-other",
-            ("marking-name", name),
-            ("verb", verb))
-            + "\n" + Loc.GetString("marking-toggle-by-other-start",
-            ("other", "Someone"),
-            ("marking-name", name),
-            ("verb", verb))
-            + "\n" + Loc.GetString("marking-toggle-by-other",
-            ("other", "Someone"),
-            ("marking-name", name),
-            ("verb", verb2p));
+        OnMarkingColorChange?.Invoke(_currentMarkings);
     }
 
     private void MarkingAdd()
@@ -1077,7 +696,7 @@ public sealed partial class MarkingPicker : Control
             return;
         }
 
-        var marking = (MarkingPrototype)_selectedUnusedMarking.Metadata!;
+        var marking = (MarkingPrototype) _selectedUnusedMarking.Metadata!;
         var markingObject = marking.AsMarking();
 
         // We need add hair markings in cloned set manually because _currentMarkings doesn't have it
@@ -1140,8 +759,6 @@ public sealed partial class MarkingPicker : Control
             Metadata = marking,
         };
         CMarkingsUsed.Insert(0, item);
-        // Select the newly added marking
-        OnUsedMarkingSelected(new ItemList.ItemListSelectedEventArgs(0, CMarkingsUsed));
 
         _selectedUnusedMarking = null;
         OnMarkingAdded?.Invoke(_currentMarkings);
@@ -1151,7 +768,7 @@ public sealed partial class MarkingPicker : Control
     {
         if (_selectedMarking is null) return;
 
-        var marking = (MarkingPrototype)_selectedMarking.Metadata!;
+        var marking = (MarkingPrototype) _selectedMarking.Metadata!;
 
         _currentMarkings.Remove(_selectedMarkingCategory, marking.ID);
 
@@ -1165,7 +782,6 @@ public sealed partial class MarkingPicker : Control
             item.Metadata = marking;
         }
         _selectedMarking = null;
-        MarkingData.Visible = false;
         CMarkingColors.Visible = false;
         OnMarkingRemoved?.Invoke(_currentMarkings);
     }

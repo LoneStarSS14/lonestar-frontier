@@ -52,7 +52,6 @@
     guides:
     - AtmosphericAlertsComputer
     - DeviceMonitoringAndControl
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerAtmosMonitoring
@@ -89,7 +88,6 @@
     guides:
     - AtmosphericNetworkMonitor
     - DeviceMonitoringAndControl
-
 - type: entity
   parent: BaseComputer
   id: ComputerEmergencyShuttle
@@ -113,7 +111,6 @@
     radius: 1.5
     energy: 4.0
     color: "#43ccb5"
-
 - type: entity
   parent: BaseComputer
   id: BaseComputerShuttle
@@ -157,7 +154,6 @@
     guides:
     - ShuttleCraft
   - type: NoSignalOnLink
-
 - type: entity
   parent: [BaseComputerShuttle, BaseShuttleIntercom] # Frontier - BaseShuttleIntercom
   id: ComputerShuttle
@@ -198,7 +194,6 @@
       key_slots:
       - EncryptionKeyTraffic
   # End Frontier
-
 - type: entity
   parent: BaseComputerShuttle
   id: ComputerShuttleSyndie
@@ -231,7 +226,6 @@
     color: "#c94242"
   - type: Computer
     board: SyndicateShuttleConsoleCircuitboard
-
 - type: entity
   parent: BaseComputerShuttle
   id: ComputerShuttleCargo
@@ -264,7 +258,6 @@
     board: CargoShuttleConsoleCircuitboard
   - type: StealTarget
     stealGroup: CargoShuttleConsoleCircuitboard
-
 - type: entity
   parent: [BaseComputerAiAccess, NotContraband]
   id: ComputerIFF
@@ -295,7 +288,6 @@
           type: WiresBoundUserInterface
   - type: Computer
     board: ComputerIFFCircuitboard
-
 - type: entity
   parent: [ComputerIFF, BaseC4Contraband]
   id: ComputerIFFSyndicate
@@ -317,7 +309,6 @@
           type: WiresBoundUserInterface
   - type: Computer
     board: ComputerIFFSyndicateCircuitboard
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerPowerMonitoring
@@ -359,7 +350,6 @@
         type: PowerMonitoringConsoleBoundUserInterface
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerMedicalRecords
@@ -384,7 +374,6 @@
     color: "#1f8c28"
   - type: Computer
     board: MedicalRecordsComputerCircuitboard
-
 - type: entity
   parent: [BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: added BaseStructureIndestructible
   id: ComputerCriminalRecords
@@ -423,7 +412,6 @@
   - type: GuideHelp
     guides:
     - CriminalRecords
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerStationRecords
@@ -448,7 +436,6 @@
   - type: GuideHelp
     guides:
     - Forensics
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerCrewMonitoring
@@ -487,7 +474,6 @@
     receiveFrequencyId: CrewMonitor
 #  - type: WirelessNetworkConnection
 #    range: 1200
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerResearchAndDevelopment
@@ -535,7 +521,6 @@
   - type: GuideHelp
     guides:
     - Science
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerAnalysisConsole
@@ -584,7 +569,6 @@
   - type: GuideHelp
     guides:
     - Xenoarchaeology
-
 - type: entity
   parent: [BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: added BaseStructureIndestructible
   id: ComputerId
@@ -650,7 +634,6 @@
       board: !type:Container
       IdCardConsole-privilegedId: !type:ContainerSlot
       IdCardConsole-targetId: !type:ContainerSlot
-
 - type: entity
   parent: BaseComputerAiAccess
   id: computerBodyScanner
@@ -665,7 +648,6 @@
     radius: 1.5
     energy: 4.0
     color: "#1f8c28"
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerComms
@@ -690,7 +672,7 @@
     title: comms-console-announcement-title-station
     global: true #SR WILL NOT BE IGNORED
   - type: DeviceNetwork
-    deviceNetId: Wireless # Frontier
+    deviceNetId: Wireless
     transmitFrequencyId: ShuttleTimer
   - type: ActivatableUI
     key: enum.CommunicationsConsoleUiKey.Key
@@ -709,7 +691,6 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
-
 - type: entity # Coyote: added by fuzzy_fuzzy
   parent: ComputerComms
   id: SyndicateComputerComms
@@ -743,40 +724,6 @@
     radius: 1.5
     energy: 4.0
     color: "#f71713"
-
-- type: entity
-  parent: ComputerComms
-  id: FreelancerComputerComms
-  name: Freelancer communications computer
-  description: A computer made to conveniently broadcast all your plans and shenanigans.
-  components:
-  - type: Sprite
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: comm_syndie
-    - map: ["computerLayerKeys"]
-      state: syndie_key
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
-  - type: AccessReader
-    access: [[ "Pirate" ]]
-  - type: CommunicationsConsole
-    title: comms-console-announcement-title-free
-    color: "#ff0000"
-    canShuttle: false
-    canAlert: false
-    global: true
-  - type: Computer
-    board: FreelancerCommsComputerCircuitboard
-  - type: PointLight
-    radius: 1.5
-    energy: 1.6
-    color: "#f71713"
-
 - type: entity
   parent: ComputerComms
   id: WizardComputerComms
@@ -810,7 +757,6 @@
     radius: 1.5
     energy: 4.0
     color: "#F317F3"
-
 - type: entity
   parent: ComputerComms
   id: CentcommComputerComms
@@ -842,7 +788,6 @@
     radius: 1.5
     energy: 4.0
     color: "#00FF00"
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerSolarControl
@@ -881,7 +826,6 @@
     guides:
     - SolarPanels
     - Power
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerRadar
@@ -917,7 +861,6 @@
     radius: 1.5
     energy: 4.0
     color: "#e6e227"
-
 - type: entity
   id: ComputerCargoOrders
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: add BaseStructureDisableToolUse, BaseStructureIndestructible
@@ -998,7 +941,7 @@
     account: Engineering
     announcementChannel: Engineering
     removeLimitAccess: [ "ChiefEngineer" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Engineering
@@ -1008,7 +951,6 @@
     color: "#c9c042"
   - type: AccessReader
     access: [["Engineering"]]
-
 - type: entity
   id: ComputerCargoOrdersMedical
   parent: ComputerCargoOrders
@@ -1032,7 +974,7 @@
     account: Medical
     announcementChannel: Medical
     removeLimitAccess: [ "ChiefMedicalOfficer" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Medical
@@ -1042,7 +984,6 @@
     color: "#41e0fc"
   - type: AccessReader
     access: [["Medical"]]
-
 - type: entity
   id: ComputerCargoOrdersScience
   parent: ComputerCargoOrders
@@ -1066,7 +1007,7 @@
     account: Science
     announcementChannel: Science
     removeLimitAccess: [ "ResearchDirector" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Science
@@ -1076,7 +1017,6 @@
     color: "#b53ca1"
   - type: AccessReader
     access: [["Research"]]
-
 - type: entity
   id: ComputerCargoOrdersSecurity
   parent: ComputerCargoOrders
@@ -1100,7 +1040,7 @@
     account: Security
     announcementChannel: Security
     removeLimitAccess: [ "HeadOfSecurity" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Security
@@ -1110,7 +1050,6 @@
     color: "#d11d00"
   - type: AccessReader
     access: [["Security"]]
-
 - type: entity
   id: ComputerCargoOrdersService
   parent: ComputerCargoOrders
@@ -1134,7 +1073,7 @@
     account: Service
     announcementChannel: Service
     removeLimitAccess: [ "HeadOfPersonnel" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Service
@@ -1144,7 +1083,6 @@
     color: "#afe837"
   - type: AccessReader
     access: [["Service"], ["Theatre"]]
-
 - type: entity
   id: ComputerCargoBounty
   parent: BaseComputerAiAccess
@@ -1185,7 +1123,6 @@
   #   guides: # Frontier
   #   - CargoBounties # Frontier
   #   - Cargo # Frontier
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerFundingAllocation
@@ -1223,7 +1160,6 @@
     radius: 1.5
     energy: 4.0
     color: "#3c5eb5"
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerCloningConsole
@@ -1276,7 +1212,6 @@
   - type: GuideHelp
     guides:
     - Cloning
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerSalvageJobBoard
@@ -1310,9 +1245,8 @@
     board: SalvageJobBoardComputerCircuitboard
   - type: PointLight
     radius: 1.5
-    energy: 4.0
+    energy: 1.6
     color: "#b89f25"
-
 - type: entity
   id: ComputerSalvageExpedition
   parent: BaseComputerAiAccess
@@ -1365,7 +1299,6 @@
 #      access: [["Salvage"]]
     - type: StealTarget
       stealGroup: SalvageExpeditionsComputerCircuitboard
-
 - type: entity
   parent: BaseComputer
   id: ComputerSurveillanceCameraMonitor
@@ -1404,7 +1337,6 @@
           type: SurveillanceCameraMonitorBoundUserInterface
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
-
 - type: entity
   parent: BaseComputer
   id: ComputerSurveillanceWirelessCameraMonitor
@@ -1450,7 +1382,6 @@
           type: SurveillanceCameraMonitorBoundUserInterface
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
-
 - type: entity
   id: ComputerPalletConsole
   parent: BaseComputerAiAccess
@@ -1493,7 +1424,6 @@
   # - type: GuideHelp # Frontier: guidebook removed
   #   guides: # Frontier: guidebook removed
   #   - Cargo # Frontier: guidebook removed
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerMassMedia
@@ -1529,7 +1459,6 @@
           type: NewsWriterBoundUserInterface
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
-
 - type: entity
   parent: BaseComputer
   id: ComputerSensorMonitoring
@@ -1577,7 +1506,6 @@
     - type: WiredNetworkConnection
     - type: DeviceList
     - type: AtmosDevice
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerRoboticsControl
@@ -1620,7 +1548,6 @@
     access: [["ResearchDirector"]]
   - type: Lock
     unlockOnClick: false
-
 - type: entity
   id: StationAiUploadComputer
   parent: BaseComputer
@@ -1668,3 +1595,36 @@
     containers:
       circuit_holder: !type:ContainerSlot
       board: !type:Container
+
+- type: entity
+  parent: ComputerComms
+  id: FreelancerComputerComms
+  name: Freelancer communications computer
+  description: A computer made to conveniently broadcast all your plans and shenanigans.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: comm_syndie
+    - map: ["computerLayerKeys"]
+      state: syndie_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: AccessReader
+    access: [[ "Pirate" ]]
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-free
+    color: "#ff0000"
+    canShuttle: false
+    canAlert: false
+    global: true
+  - type: Computer
+    board: FreelancerCommsComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#f71713"

@@ -8,7 +8,6 @@
   cost: 7000 # TODO: Lower the cost back when possible
   category: cargoproduct-category-name-materials
   group: market
-
 - type: cargoProduct
   id: MaterialWood
   abstract: true
@@ -19,7 +18,6 @@
   cost: 7000 # Wood cost alot to import to space, also allow people to still grow and sell it.
   category: cargoproduct-category-name-materials
   group: market
-
 - type: cargoProduct
   id: MaterialFuelTankHighCapacity
   abstract: true
@@ -30,7 +28,6 @@
   cost: 5000
   category: cargoproduct-category-name-materials
   group: market
-
 - type: cargoProduct
   id: MaterialWaterTankHighCapacity
   abstract: true
@@ -41,7 +38,6 @@
   cost: 3300
   category: cargoproduct-category-name-materials
   group: market
-
 - type: cargoProduct
   id: CargoConstructionBox
   icon:
@@ -51,13 +47,21 @@
   cost: 1000
   category: cargoproduct-category-name-materials
   group: market
-
 - type: cargoProduct
   id: CargoRubbishBox
   icon:
     sprite:  /Textures/_NF/Structures/Storage/magnetbox.rsi
     state: rubbishbox
   product: NFMagnetBoxRubbish
+  cost: 1000
+  category: cargoproduct-category-name-materials
+  group: market
+- type: cargoProduct
+  id: CargoTreasureBox
+  icon:
+    sprite:  /Textures/_NF/Structures/Storage/magnetbox.rsi
+    state: treasurebox-closed
+  product: NFMagnetBoxTreasure
   cost: 1000
   category: cargoproduct-category-name-materials
   group: market
@@ -89,15 +93,5 @@
     state: plastic_2
   product: CrateMaterialsBasicFilled
   cost: 7500
-  category: cargoproduct-category-name-materials
-  group: market
-
-- type: cargoProduct
-  id: CargoTreasureBox
-  icon:
-    sprite:  /Textures/_NF/Structures/Storage/magnetbox.rsi
-    state: treasurebox-closed
-  product: NFMagnetBoxTreasure
-  cost: 1000
   category: cargoproduct-category-name-materials
   group: market

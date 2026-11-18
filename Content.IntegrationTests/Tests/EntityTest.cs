@@ -1,4 +1,3 @@
-#nullable enable // Mono change
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -42,9 +41,9 @@ namespace Content.IntegrationTests.Tests
                     .EnumeratePrototypes<EntityPrototype>()
                     .Where(p => !p.Abstract)
                     .Where(p => !pair.IsTestPrototype(p))
+                    .Where(p => p.Categories.All(x => x.ID != SpawnerCategory))
                     .Where(p => !p.Components.ContainsKey("MapGrid")) // This will smash stuff otherwise.
                     .Where(p => !p.Components.ContainsKey("RoomFill")) // This comp can delete all entities, and spawn others
-                    .Where(p => p.Categories.All(x => x.ID != SpawnerCategory)) // Coyote: Prevent spawning spawners.
                     .Select(p => p.ID)
                     .ToList();
 
@@ -55,8 +54,7 @@ namespace Content.IntegrationTests.Tests
                     // TODO: Fix this better in engine.
                     mapSystem.SetTile(grid.Owner, grid.Comp, Vector2i.Zero, new Tile(1));
                     var coord = new EntityCoordinates(grid.Owner, 0, 0);
-                    //entityMan.SpawnEntity(protoId, coord);
-                    SpawnEntity(entityMan, protoId, coord); // Replacement from Monolith.
+                    entityMan.SpawnEntity(protoId, coord);
                 }
             });
 
@@ -107,15 +105,14 @@ namespace Content.IntegrationTests.Tests
                     .EnumeratePrototypes<EntityPrototype>()
                     .Where(p => !p.Abstract)
                     .Where(p => !pair.IsTestPrototype(p))
+                    .Where(p => p.Categories.All(x => x.ID != SpawnerCategory))
                     .Where(p => !p.Components.ContainsKey("MapGrid")) // This will smash stuff otherwise.
                     .Where(p => !p.Components.ContainsKey("RoomFill")) // This comp can delete all entities, and spawn others
-                    .Where(p => p.Categories.All(x => x.ID != SpawnerCategory)) // Coyote: Prevent spawning spawners.
                     .Select(p => p.ID)
                     .ToList();
                 foreach (var protoId in protoIds)
                 {
-                    //entityMan.SpawnEntity(protoId, map.GridCoords);
-                    SpawnEntity(entityMan, protoId, map.GridCoords); // Replacement from Monolith.
+                    entityMan.SpawnEntity(protoId, map.GridCoords);
                 }
             });
             await server.WaitRunTicks(450); // 15 seconds, enough to trigger most update loops
@@ -171,8 +168,8 @@ namespace Content.IntegrationTests.Tests
                 .EnumeratePrototypes<EntityPrototype>()
                 .Where(p => !p.Abstract)
                 .Where(p => !pair.IsTestPrototype(p))
+                .Where(p => p.Categories.All(x => x.ID != SpawnerCategory))
                 .Where(p => !p.Components.ContainsKey("MapGrid")) // This will smash stuff otherwise.
-                .Where(p => p.Categories.All(x => x.ID != SpawnerCategory)) // Coyote: Prevent spawning spawners.
                 .Select(p => p.ID)
                 .ToList();
 
@@ -182,8 +179,7 @@ namespace Content.IntegrationTests.Tests
                 {
                     mapSys.CreateMap(out var mapId);
                     var grid = mapManager.CreateGridEntity(mapId);
-                    //var ent = sEntMan.SpawnEntity(protoId, new EntityCoordinates(grid.Owner, 0.5f, 0.5f));
-                    var ent = SpawnEntity(sEntMan, protoId, new EntityCoordinates(grid.Owner, 0.5f, 0.5f)); // Replacement from Monolith.
+                    var ent = sEntMan.SpawnEntity(protoId, new EntityCoordinates(grid.Owner, 0.5f, 0.5f));
                     foreach (var (_, component) in sEntMan.GetNetComponents(ent))
                     {
                         sEntMan.Dirty(ent, component);
@@ -282,7 +278,7 @@ namespace Content.IntegrationTests.Tests
 
             // We consider only non-audio entities, as some entities will just play sounds when they spawn.
             int Count(IEntityManager ent) => ent.EntityCount - ent.Count<AudioComponent>();
-            IEnumerable<EntityUid> Entities(IEntityManager entMan) => entMan.GetEntities().Where(e => !entMan.HasComponent<AudioComponent>(e));
+            IEnumerable<EntityUid> Entities(IEntityManager entMan) => entMan.GetEntities().Where(entMan.HasComponent<AudioComponent>);
 
             await Assert.MultipleAsync(async () =>
             {
@@ -293,8 +289,7 @@ namespace Content.IntegrationTests.Tests
                     var serverEntities = new HashSet<EntityUid>(Entities(server.EntMan));
                     var clientEntities = new HashSet<EntityUid>(Entities(client.EntMan));
                     EntityUid uid = default;
-                    //await server.WaitPost(() => uid = server.EntMan.SpawnEntity(protoId, coords));
-                    await server.WaitPost(() => uid = SpawnEntity(server.EntMan, protoId, coords)); // Replacement from Monolith.
+                    await server.WaitPost(() => uid = server.EntMan.SpawnEntity(protoId, coords));
                     await pair.RunTicksSync(3);
 
                     // If the entity deleted itself, check that it didn't spawn other entities
@@ -323,8 +318,8 @@ namespace Content.IntegrationTests.Tests
                     // Check that the number of entities has gone back to the original value.
                     Assert.That(Count(server.EntMan), Is.EqualTo(count), $"Server prototype {protoId} failed on deletion: count didn't reset properly\n" +
                         BuildDiffString(serverEntities, Entities(server.EntMan), server.EntMan));
-                    Assert.That(Count(client.EntMan), Is.EqualTo(clientCount), $"Client prototype {protoId} failed on deletion: count didn't reset properly:\n" +
-                        $"Expected {clientCount} and found {Count(client.EntMan)}.\n" +
+                    Assert.That(client.EntMan.EntityCount, Is.EqualTo(clientCount), $"Client prototype {protoId} failed on deletion: count didn't reset properly:\n" +
+                        $"Expected {clientCount} and found {client.EntMan.EntityCount}.\n" +
                         $"Server count was {count}.\n" +
                         BuildDiffString(clientEntities, Entities(client.EntMan), client.EntMan));
                 }
@@ -404,8 +399,6 @@ namespace Content.IntegrationTests.Tests
                 "ActivatableUI", // Frontier: Requires enum key
                 "AlertLevel", // Frontier: requires alert set
                 "BluespaceErrorRule", // Frontier
-                "RadarConsoleComponent", // idfk
-                "ShuttleConsoleComponent", // idfk
             };
 
             await using var pair = await PoolManager.GetServerClient();
@@ -437,8 +430,7 @@ namespace Content.IntegrationTests.Tests
                             continue;
                         }
 
-                        //var entity = entityManager.SpawnEntity(null, testLocation);
-                        var entity = SpawnEntity(entityManager, null, testLocation); // Replacement from Monolith.
+                        var entity = entityManager.SpawnEntity(null, testLocation);
 
                         Assert.That(entityManager.GetComponent<MetaDataComponent>(entity).EntityInitialized);
 
@@ -452,11 +444,11 @@ namespace Content.IntegrationTests.Tests
 
                         logmill.Debug($"Adding component: {name}");
 
-                        // Assert.DoesNotThrow(() =>
-                        //     {
-                        //         entityManager.AddComponent(entity, component);
-                        //     }, "Component '{0}' threw an exception.",
-                        //     name);
+                        Assert.DoesNotThrow(() =>
+                            {
+                                entityManager.AddComponent(entity, component);
+                            }, "Component '{0}' threw an exception.",
+                            name);
 
                         entityManager.DeleteEntity(entity);
                     }
@@ -465,44 +457,5 @@ namespace Content.IntegrationTests.Tests
 
             await pair.CleanReturnAsync();
         }
-        //Monolith Start
-        private EntityUid SpawnEntity(
-            IEntityManager entManager,
-            string? protoName,
-            MapCoordinates coordinates,
-            ComponentRegistry? registry = null)
-        {
-            try
-            {
-                return entManager.SpawnEntity(protoName, coordinates, registry);
-            }
-            catch (Exception e)
-            {
-                // hey look, it tells you specifically what entity now!
-                Assert.Fail($"Failed to spawn entity {protoName}\n{e}");
-            }
-
-            return EntityUid.Invalid;
-        }
-
-        private EntityUid SpawnEntity(
-            IEntityManager entManager,
-            string? protoName,
-            EntityCoordinates coordinates,
-            ComponentRegistry? registry = null)
-        {
-            try
-            {
-                return entManager.SpawnEntity(protoName, coordinates, registry);
-            }
-            catch (Exception e)
-            {
-                // hey look, it tells you specifically what entity now!
-                Assert.Fail($"Failed to spawn entity {protoName}\n{e}");
-            }
-
-            return EntityUid.Invalid;
-        }
-        //Monolith End
     }
 }

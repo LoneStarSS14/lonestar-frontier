@@ -12,7 +12,6 @@
   - CraftMedicalBag
   - CraftClothingEyesHudMedical
   - CraftClothingEyesEyepatchHudMedical
-
 - type: latheRecipePack
   id: NFTopicalsStatic
   recipes:
@@ -20,10 +19,9 @@
   - Ointment
   - Gauze
   - Tourniquet
-
 - type: latheRecipePack
   id: NFMedicalClothingStatic
-  recipes:
+  recipes: 
   - UniformScrubsColorBlue
   - UniformScrubsColorGreen
   - UniformScrubsColorPurple
@@ -32,10 +30,9 @@
   - ClothingHandsGlovesLatex
   - ClothingHandsGlovesNitrile
   - ClothingMaskSterile
-
 - type: latheRecipePack
   id: NFChemistryBasicStatic
-  recipes:
+  recipes: 
   - Jug
   - ChemistryEmptyBottle01
   - ClothingEyesGlassesChemical
@@ -43,7 +40,6 @@
   - Syringe
   - PillCanister
   - BaseChemistryEmptyVial
-
 - type: latheRecipePack
   id: NFMedicalMobilityStatic
   recipes:
@@ -52,7 +48,6 @@
   - CheapRollerBedSpawnFolded
   - EmergencyRollerBedSpawnFolded
   - WhiteCane
-
 - type: latheRecipePack
   id: NFSurgeryBasicStatic
   recipes:
@@ -62,7 +57,6 @@
   - Drill
   - Saw
   - Hemostat
-
 - type: latheRecipePack
   id: NFSurgeryMedicalToolsStatic
   recipes:
@@ -71,7 +65,6 @@
   - HandheldHealthAnalyzer
   - DiseaseSwab
   - BodyBag
-
 - type: latheRecipePack
   id: NFEmptyMedkitsStatic
   recipes:
@@ -83,7 +76,6 @@
   - MedkitAdvanced
   - MedkitRadiation
   - MedkitCombat
-
 - type: latheRecipePack
   id: NFMedicalArchetypeStatic
   recipes:
@@ -94,17 +86,12 @@
   - ReinforcedJug
   - BorgModuleAdvancedParamedic
   - MedicalPouch
-
 - type: latheRecipePack
   id: NFMedical
   recipes:
   - JugBluespace
   - VialBluespace
   - ClothingOuterHardsuitMedical
-  # LoneStar
-  - ClothingOuterHardsuitResponseRed
-  - ClothingOuterHardsuitResponseBlue
-
 - type: latheRecipePack
   id: NFMedicalBoards
   recipes:

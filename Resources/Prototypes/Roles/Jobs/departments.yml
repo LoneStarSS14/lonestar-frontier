@@ -6,7 +6,6 @@
   weight: -90
   primary: false
   editorHidden: true # Frontier
-
 - type: department
   id: Civilian
   name: department-Civilian
@@ -40,7 +39,6 @@
   - Companion # Frontier
   - Chaplain # Frontier
   - Curator # Frontier
-
 - type: department
   abstract: true
   id: CentralCommand
@@ -60,7 +58,6 @@
   - ERTMailCarrier # Frontier
   editorHidden: true
   weight: 120
-
 - type: department
   id: Command
   name: department-Command
@@ -84,13 +81,12 @@
   # - ERTEngineer # Frontier
   # - DeathSquad # Frontier
   - StationRepresentative # Frontier
-  # - Sheriff # LoneStar
+  - Sheriff # Frontier
   - PlantManager # Frontier
   - StationTrafficController # Frontier
   primary: false
   weight: 100
   editorHidden: true # Frontier
-
 - type: department
   id: Engineering
   name: department-Engineering
@@ -105,7 +101,6 @@
   # - TechnicalAssistant # Frontier
   - PlantManager # Frontier
   - PlantTechnician # Frontier
-
 - type: department
   id: Medical
   name: department-Medical
@@ -114,7 +109,6 @@
   weight: -93
   primary: false
   editorHidden: true # Frontier
-
 - type: department
   id: Security
   name: department-Security
@@ -137,7 +131,6 @@
   - Sheriff # Frontier
   - SeniorOfficer # Frontier
   - PublicAffairsLiaison # Frontier
-
 - type: department
   id: Science
   name: department-Science
@@ -146,7 +139,6 @@
   weight: -92
   primary: false
   editorHidden: true # Frontier
-
 - type: department
   id: Silicon
   name: department-Silicon
@@ -157,7 +149,6 @@
   - StationAi
   editorHidden: true # Frontier
   primary: false # Frontier
-
 - type: department
   id: Specific
   name: department-Specific

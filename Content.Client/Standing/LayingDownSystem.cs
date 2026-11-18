@@ -33,7 +33,7 @@ public sealed class LayingDownSystem : SharedLayingDownSystem
             if (sprite.DrawDepth != layingDown.NormalDrawDepth && sprite.DrawDepth != layingDown.CrawlingUnderDrawDepth)
                 continue;
 
-            sprite.DrawDepth = standing.CurrentState is StandingState.Lying && layingDown.IsCrawlingUnder
+            sprite.DrawDepth = !standing.Standing && layingDown.IsCrawlingUnder
                 ? layingDown.CrawlingUnderDrawDepth
                 : layingDown.NormalDrawDepth;
         }

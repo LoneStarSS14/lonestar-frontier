@@ -10,7 +10,6 @@
           amount: 3
         - id: EmpImplanter
           amount: 1
-
 - type: entity
   parent: [BoxVial, BaseC4Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: ChemicalSynthesisKit
@@ -31,7 +30,6 @@
         amount: 2
       - id: BaseChemistryEmptyVial
       - id: SyringeStimulants
-
 - type: entity
   parent: [BoxCardboard, NotContraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: ThrowingKnivesKit
@@ -49,7 +47,6 @@
     layers:
       - state: box_of_doom
       - state: throwing_knives
-
 - type: entity
   name: deathrattle implant box
   parent: [BoxCardboard, NotContraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
@@ -67,17 +64,12 @@
     contents:
       - id: DeathRattleImplanter
         amount: 6
-
 - type: entity
-  parent: [BoxCardboard, BaseC1Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
+  parent: [BoxCardboard, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: CombatBakeryKit
   name: combat bakery kit
   description: A kit of clandestine baked weapons.
   components:
-  - type: Storage
-    maxItemSize: Normal
-    grid:
-    - 0,0,4,4
   - type: Sprite
     layers:
       - state: box_of_doom
@@ -90,4 +82,3 @@
       - id: SyndicateMicrowaveMachineCircuitboard
       - id: PaperWrittenCombatBakeryKit
       - id: SyndicateElectricRangeMachineCircuitboard # Frontier
-      - id: DonkcoKitchenAssemblerMachineCircuitboard # Coyote
