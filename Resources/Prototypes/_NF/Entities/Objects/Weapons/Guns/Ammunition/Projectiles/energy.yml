@@ -28,6 +28,7 @@
     damage:
       types:
         Heat: 0.1 # LoneStar
+
 - type: entity
   id: NFBulletLaserMedium
   parent: NFBaseBulletLaser
@@ -66,6 +67,7 @@
     soundHit:
       collection: WeakHit
     forceSound: true
+
 - type: entity
   id: NFBulletDisabler
   name: disabler bolt
@@ -76,12 +78,13 @@
     impactEffect: BulletImpactEffectDisabler
     damage:
       types:
-        Shock: 2
+        Heat: 0
     soundHit:
       collection: WeakHit
     forceSound: true
   - type: StaminaDamageOnCollide
-    damage: 18
+    damage: 24 # LoneStar
+
 - type: entity
   id: NFBulletDisablerLow
   name: disabler bolt
@@ -92,12 +95,12 @@
     impactEffect: BulletImpactEffectDisabler
     damage:
       types:
-        Shock: 1
+        Heat: 0
     soundHit:
       collection: WeakHit
     forceSound: true
   - type: StaminaDamageOnCollide
-    damage: 14
+    damage: 20 # LoneStar
 
 #region Kinetic bolts
 - type: entity
@@ -122,6 +125,7 @@
     energy: 0.5
   - type: GatheringProjectile
   - type: MiningGatheringSoft
+
 - type: entity
   id: NFBulletKineticMediumPower
   name: kinetic bolt
@@ -134,6 +138,7 @@
       types:
         Blunt: 25
         Structural: 30
+
 - type: entity
   id: NFBulletKineticHighPower
   name: kinetic bolt

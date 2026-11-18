@@ -861,10 +861,11 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 150 # a ~2 tile radius
-    intensitySlope: 5
-    maxIntensity: 10
-    canCreateVacuum: false
+    # LoneStar start
+    totalIntensity: 64 # a ~2 tile radius
+    intensitySlope: 3
+    maxIntensity: 4 # LoneStar, 150 -> 75 Max damage
+    # LoneStar end
 
 - type: entity
   id: BulletGrenadeFlash
@@ -897,16 +898,11 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 50
-    intensitySlope: 1
-    maxIntensity: 5
-    canCreateVacuum: false
-  - type: ContainerContainer
-    containers:
-      cluster-payload: !type:Container
-  - type: ProjectileGrenade
-    fillPrototype: NFPelletClusterLessLethal # Frontier: use NF variant
-    capacity: 30
+    # LoneStar start
+    totalIntensity: 185
+    intensitySlope: 2
+    maxIntensity: 2.5
+    # LoneStar end
 
 - type: entity
   parent: BaseBulletTrigger

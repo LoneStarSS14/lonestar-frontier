@@ -2,7 +2,7 @@
 - type: entity
   id: NFWeaponShotgunBulldog
   parent:
-  - BaseC3SyndicateContraband
+  - BaseC3Contraband
   - NFBaseWeaponShotgunChamber50Magazine
   - NFBaseWeaponFrameShotgunWieldable
   name: Bulldog
@@ -21,9 +21,10 @@
     - FullAuto
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
+
 - type: entity
   id: NFWeaponShotgunDoubleBarreled
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ BaseC1Contraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
   name: double-barreled shotgun
   description: |-
     An immortal classic. A civilian grade shotgun.
@@ -43,6 +44,7 @@
     node: start
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-frontier-gunsmith-consortium
+
 - type: entity
   id: NFWeaponShotgunEnforcer
   parent: [ BaseC1ContrabandUnredeemable, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ] # Coyote: Add BaseC2ContrabandUnredeemable
@@ -58,9 +60,10 @@
     sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+
 - type: entity
   id: NFWeaponShotgunKammerer
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ BaseC1Contraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
   name: Kammerer
   description: |-
     An old yet faithful design, and a favorite among irregular forces on many worlds.
@@ -77,9 +80,10 @@
     capacity: 5
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+
 - type: entity
   id: NFWeaponShotgunSawn
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgun ]
+  parent: [ BaseC1Contraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgun ]
   name: sawn-off shotgun
   description: |-
     Groovy!
@@ -91,13 +95,12 @@
   - type: Item
     size: Normal
     shape:
-      - 0,0,2,1
-  - type: GunSpreadModifier
-    spread: 1.4
+    - 0,0,3,1
   - type: BallisticAmmoProvider
     capacity: 2
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-custom-made
+
 - type: entity
   id: NFWeaponShotgunSawnEmpty
   parent: NFWeaponShotgunSawn
@@ -107,9 +110,10 @@
   - type: Construction
     graph: NFShotgunSawn
     node: shotgunsawn
+
 - type: entity
   id: NFWeaponShotgunHandmade
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgun ]
+  parent: [ BaseC1Contraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgun ]
   name: handmade pistol
   description: |-
     Looks unreliable, but legal.
@@ -120,12 +124,13 @@
     sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
   - type: Item
     size: Small
-  - type: GunSpreadModifier
-    spread: 1.5
+    shape:
+    - 0,0,2,1
   - type: BallisticAmmoProvider
     capacity: 1
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-custom-made
+
 - type: entity
   id: NFWeaponShotgunHandmadeEmpty
   parent: NFWeaponShotgunHandmade
@@ -137,9 +142,10 @@
     graph: NFShotgunSawn
     node: handmadepistol
     deconstructionTarget: null
+
 - type: entity
   id: NFWeaponShotgunBlunderbuss
-  parent: [ BaseC3PirateContraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ BaseC1Contraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
   name: blunderbuss
   description: |-
     Deadly at close range, an illegal shotgun often found at the side of a pirate.
@@ -156,9 +162,10 @@
     capacity: 1
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-steelbolt-tool-forge
+
 - type: entity
   id: NFWeaponShotgunImprovised
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ BaseC1Contraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
   name: improvised shotgun
   description: |-
     A shitty, but legal, hand-made shotgun. It can only hold one round in the chamber.
@@ -188,6 +195,7 @@
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunBeanbag
+
 - type: entity
   id: NFWeaponShotgunKammererLessLethal
   parent: NFWeaponShotgunKammerer
@@ -195,6 +203,7 @@
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunBeanbag
+
 - type: entity
   id: NFWeaponShotgunEnforcerLessLethal
   parent: NFWeaponShotgunEnforcer

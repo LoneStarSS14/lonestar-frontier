@@ -51,10 +51,11 @@
       gun_chamber: !type:ContainerSlot
   - type: StaticPrice
     price: 500
+
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: AKMS
-  parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
+  parent: [BaseWeaponRifle, BaseC4Contraband] # Frontier: BaseSecurityContraband<BaseC4Contraband
   id: WeaponRifleAk
   description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from .30 rifle magazines.
   components:
@@ -99,6 +100,7 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: M-90gl
@@ -143,6 +145,7 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: Lecter
@@ -190,6 +193,7 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: Estoc DMR
@@ -255,6 +259,7 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: Foam Force Astro Ace
