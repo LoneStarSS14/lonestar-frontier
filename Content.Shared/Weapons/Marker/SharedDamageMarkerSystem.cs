@@ -1,5 +1,6 @@
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
+using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Melee.Events;
@@ -9,8 +10,6 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Timing;
-using Content.Shared.Mobs.Components; // Frontier
-using Content.Shared.Mobs.Systems; // Frontier
 
 namespace Content.Shared.Weapons.Marker;
 
@@ -20,8 +19,8 @@ public abstract class SharedDamageMarkerSystem : EntitySystem
     [Dependency] private readonly INetManager _netManager = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly MobStateSystem _mobStateSystem = default!; // Frontier
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
 
     public override void Initialize()
     {
@@ -43,19 +42,14 @@ public abstract class SharedDamageMarkerSystem : EntitySystem
             args.User);
 
         if (TryComp<LeechOnMarkerComponent>(args.Used, out var leech)
-            && TryComp<MobStateComponent>(uid, out var state) // Frontier
-            && !_mobStateSystem.IsDead(uid, state)) // Frontier
+            && TryComp<MobStateComponent>(uid, out var state)
+            && !_mobState.IsDead(uid, state))
         {
             DamageSpecifier what2Heal = leech.Leech;
-            // is the target dead?
-            if (_mobStateSystem.IsDead(uid))
-            {
-                return; // no healing from dead people
-            }
             // RULES OF FLEECHING
             // If target is in crit, halve the healing.
             var damMult = FixedPoint2.New(1.0f);
-            if (_mobStateSystem.IsCritical(uid))
+            if (_mobState.IsCritical(uid, state))
             {
                 damMult *= FixedPoint2.New(0.5f);
             }

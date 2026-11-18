@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+using Content.Server._CS;
 using Content.Server.Administration.Logs;
 using Content.Server.CartridgeLoader.Cartridges;
 using Content.Server.CartridgeLoader;
@@ -25,7 +27,6 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Maths;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -243,6 +244,12 @@ public sealed class NewsSystem : SharedNewsSystem
                 LogType.Chat,
                 LogImpact.Medium,
                 $"Created news article {article.Value.Title} by {article.Value.Author}: {article.Value.Content}");
+        }
+
+        if (actor is { } doer)
+        {
+            var rpiEvent = new RpiNewsArticleCreatedEvent(article.Value, doer);
+            RaiseLocalEvent(doer, rpiEvent);
         }
 
         var args = new NewsArticlePublishedEvent(article.Value);
