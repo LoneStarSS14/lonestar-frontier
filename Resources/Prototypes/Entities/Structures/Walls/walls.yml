@@ -43,7 +43,7 @@
         - FullTileMask
         layer:
         - WallLayer
-        density: 1000
+        density: 400 # Coyote
   - type: Airtight
   - type: StaticPrice
     price: 25 # Frontier 75<25
@@ -518,6 +518,7 @@
       damageModifierSet: StructuralMetallicStrong
     - type: RadiationBlocker
       resistance: 5
+
 - type: entity
   parent: WallPlastitaniumIndestructible
   id: WallPlastitanium
@@ -545,6 +546,7 @@
       cost: 6
       delay: 8
       fx: EffectRCDDeconstruct8
+
 - type: entity
   parent: WallDiagonalBase
   id: WallPlastitaniumDiagonalIndestructible
@@ -602,6 +604,7 @@
     cost: 6
     delay: 8
     fx: EffectRCDDeconstruct8
+
 - type: entity
   parent: BaseWall
   id: WallReinforced
@@ -1114,6 +1117,7 @@
     delay: 8
     fx: EffectRCDDeconstruct8
   # Lonestar - End
+
 - type: entity
   parent: WallSolid
   id: WallSolidRust
@@ -1463,6 +1467,7 @@
     cost: 6
     delay: 8
     fx: EffectRCDDeconstruct8
+
 - type: entity
   parent: WallDiagonalBase
   id: WallMiningDiagonal

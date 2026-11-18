@@ -8,10 +8,11 @@
     sprite: _NF/Structures/Doors/Airlocks/Standard/mercenary.rsi
   - type: Wires
     layoutId: AirlockSecurity
+
 - type: entity
   parent: Airlock
   id: AirlockNfsd
-  suffix: LSRD # Lonestar changes NFSD -> LSRD
+  suffix: LSRD # LoneStar
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Airlocks/Standard/lsrd.rsi
@@ -27,15 +28,17 @@
     sprite: _NF/Structures/Doors/Airlocks/Glass/mercenary.rsi
   - type: Wires
     layoutId: AirlockSecurity
+
 - type: entity
   parent: AirlockGlass
   id: AirlockNfsdGlass
-  suffix: NFSD
+  suffix: LSRD # LoneStar
   components:
   - type: Sprite
-    sprite: _NF/Structures/Doors/Airlocks/Glass/nfsd.rsi
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/lsrd.rsi
   - type: Wires
     layoutId: AirlockSecurity
+
 - type: entity
   parent: AirlockMedicalGlass
   id: AirlockMedicalGlassLockedSecurity
@@ -46,10 +49,11 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsSecurity ]
+
 - type: entity
   parent: AirlockMedicalGlassLockedSecurity
   id: AirlockBrigmedicGlassLocked
-  suffix: Locked, Corpsman # Lone Star Changes NFSD - LSRD
+  suffix: Locked, Corpsman # LoneStar
   components:
   - type: ContainerFill
     containers:
@@ -64,13 +68,15 @@
   components:
   - type: PriorityDock
     tag: DockTransit
+
 - type: entity
   parent: AirlockGlassShuttle
   id: AirlockExternalGlassShuttleTransitTradeExpress
-  suffix: Ext, Bus (R2), LSRD, Glass, Docking # Lonestar changes NFSD -> LSRD
+  suffix: Ext, Bus (R2), LSRD, Glass, Docking # LoneStar
   components:
   - type: PriorityDock
     tag: DockTransitTradeExpress
+
 - type: entity
   parent: AirlockGlassShuttle
   id: AirlockExternalGlassShuttleTransitMinorPOI
@@ -78,13 +84,15 @@
   components:
   - type: PriorityDock
     tag: DockTransitMinorPOIs
+
 - type: entity
   parent: AirlockGlassShuttleNfsd
   id: AirlockExternalGlassShuttleNfsdTransitMinorPOI
-  suffix: Ext, Route (R3), LSRD, Glass, Docking # Lonestar changes NFSD -> LSRD
+  suffix: Ext, Route (R3), LSRD, Glass, Docking # LoneStar
   components:
   - type: PriorityDock
     tag: DockTransitMinorPOIs
+
 - type: entity
   parent: AirlockGlassShuttle
   id: AirlockExternalGlassShuttleMcCargo

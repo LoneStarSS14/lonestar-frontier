@@ -21,6 +21,7 @@
       chemicalComposition:
         Silicon: 20
     - type: BindToStation # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: AlertsComputerCircuitboard
@@ -33,6 +34,7 @@
       prototype: ComputerAlert
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopAlert # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: AtmosMonitoringComputerCircuitboard
@@ -43,6 +45,7 @@
       state: cpu_engineering
     - type: ComputerBoard
       prototype: ComputerAtmosMonitoring
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: PowerComputerCircuitboard
@@ -55,6 +58,7 @@
       prototype: ComputerPowerMonitoring
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopPowerMonitoring # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: MedicalRecordsComputerCircuitboard
@@ -67,6 +71,7 @@
       prototype: ComputerMedicalRecords
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopMedicalRecords # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CriminalRecordsComputerCircuitboard
@@ -79,6 +84,7 @@
       prototype: ComputerCriminalRecords
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopCriminalRecords # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: StationRecordsComputerCircuitboard
@@ -93,6 +99,7 @@
       prototype: ComputerTabletopStationRecords # Frontier
     - type: ComputerWallmountBoard # Frontier
       prototype: ComputerWallmountStationRecords # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CargoRequestComputerCircuitboard
@@ -110,6 +117,7 @@
       - DroneUsable
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopCargoOrders # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CargoRequestEngineeringComputerCircuitboard
@@ -122,6 +130,7 @@
     prototype: ComputerCargoOrdersEngineering
   - type: StaticPrice
     price: 750
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CargoRequestMedicalComputerCircuitboard
@@ -134,6 +143,7 @@
     prototype: ComputerCargoOrdersMedical
   - type: StaticPrice
     price: 750
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CargoRequestScienceComputerCircuitboard
@@ -146,6 +156,7 @@
     prototype: ComputerCargoOrdersScience
   - type: StaticPrice
     price: 750
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CargoRequestSecurityComputerCircuitboard
@@ -158,6 +169,7 @@
     prototype: ComputerCargoOrdersSecurity
   - type: StaticPrice
     price: 750
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CargoRequestServiceComputerCircuitboard
@@ -170,6 +182,7 @@
     prototype: ComputerCargoOrdersService
   - type: StaticPrice
     price: 750
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: FundingAllocationComputerCircuitboard
@@ -182,6 +195,7 @@
     prototype: ComputerFundingAllocation
   - type: StaticPrice
     price: 750
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CargoSaleComputerCircuitboard
@@ -192,6 +206,7 @@
       state: cpu_supply
     - type: ComputerBoard
       prototype: ComputerPalletConsole
+
 - type: entity
   id: CargoBountyComputerCircuitboard
   parent: BaseComputerCircuitboard
@@ -208,6 +223,7 @@
     - DroneUsable
   - type: ComputerTabletopBoard # Frontier
     prototype: ComputerTabletopCargoBounty # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: SalvageJobBoardComputerCircuitboard
@@ -218,6 +234,7 @@
     state: cpu_supply
   - type: ComputerBoard
     prototype: ComputerSalvageJobBoard
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: SalvageExpeditionsComputerCircuitboard
@@ -232,6 +249,7 @@
       stealGroup: SalvageExpeditionsComputerCircuitboard
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopSalvageExpedition # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CargoShuttleConsoleCircuitboard
@@ -245,6 +263,7 @@
     prototype: ComputerShuttleCargo
   - type: StealTarget
     stealGroup: CargoShuttleConsoleCircuitboard
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: SurveillanceCameraMonitorCircuitboard
@@ -261,6 +280,7 @@
         - SurveillanceCameraMonitorCircuitboard
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopSurveillanceCameraMonitor # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: SurveillanceWirelessCameraMonitorCircuitboard
@@ -273,6 +293,7 @@
     prototype: ComputerSurveillanceWirelessCameraMonitor
   - type: ComputerTabletopBoard # Frontier
     prototype: ComputerTabletopSurveillanceWirelessCameraMonitor # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: ComputerTelevisionCircuitboard
@@ -287,6 +308,7 @@
         - ComputerTelevisionCircuitboard
 #    - type: ComputerTabletopBoard # Frontier
 #      prototype: ComputerTabletopTelevision # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: ResearchComputerCircuitboard
@@ -299,6 +321,7 @@
       prototype: ComputerResearchAndDevelopment
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopResearchAndDevelopment # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: AnalysisComputerCircuitboard
@@ -311,6 +334,7 @@
       prototype: ComputerAnalysisConsole
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopAnalysisConsole # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: TechDiskComputerCircuitboard
@@ -324,6 +348,7 @@
     prototype: ComputerTechnologyDiskTerminal
 #  - type: ComputerTabletopBoard # Frontier
 #    prototype: ComputerTabletopTechnologyDiskTerminal # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CrewMonitoringComputerCircuitboard
@@ -338,6 +363,7 @@
       prototype: ComputerTabletopCrewMonitoring # Frontier
     - type: ComputerWallmountBoard # Frontier
       prototype: ComputerWallmountCrewMonitoring # Frontier
+
 - type: entity
   parent: [BaseComputerCircuitboard, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
   id: IDComputerCircuitboard
@@ -356,6 +382,7 @@
       - HighRiskItem
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopId # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: BodyScannerComputerCircuitboard
@@ -368,6 +395,7 @@
       prototype: computerBodyScanner
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopBodyScanner # Frontier
+
 - type: entity
   parent: [BaseComputerCircuitboard, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
   id: CommsComputerCircuitboard
@@ -380,6 +408,7 @@
       prototype: ComputerComms
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopComms # Frontier
+
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseC4Contraband ] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   id: SyndicateCommsComputerCircuitboard
@@ -392,6 +421,7 @@
       prototype: SyndicateComputerComms
     - type: ComputerTabletopBoard # Frontier
       prototype: SyndicateComputerTabletopComms # Frontier
+
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseC3Contraband ] # Frontier: BaseSyndicateContraband<NotContraband
   id: WizardCommsComputerCircuitboard
@@ -402,6 +432,7 @@
     state: cpu_wizard
   - type: ComputerBoard
     prototype: WizardComputerComms
+
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseC4Contraband ]
   id: CentcommCommsComputerCircuitboard
@@ -412,6 +443,7 @@
     state: cpu_centcomm
   - type: ComputerBoard
     prototype: CentcommComputerComms
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: RadarConsoleCircuitboard
@@ -425,6 +457,7 @@
     prototype: ComputerTabletopRadar # Frontier
   - type: ComputerWallmountBoard # Frontier
     prototype: ComputerWallmountRadar # Frontier
+
 - type: entity
   parent: [BaseComputerCircuitboard, BaseC2ContrabandUnredeemable] # Coyote: Add BaseC2ContrabandUnredeemable
   id: AdvancedRadarConsoleCircuitboard # Frontier
@@ -438,6 +471,7 @@
     prototype: ComputerTabletopAdvancedRadar # Frontier
   - type: ComputerWallmountBoard # Frontier
     prototype: ComputerWallmountAdvancedRadar # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: SolarControlComputerCircuitboard
@@ -450,6 +484,7 @@
       prototype: ComputerSolarControl
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopSolarControl # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: SpaceVillainArcadeComputerCircuitboard
@@ -460,6 +495,7 @@
       prototype: SpaceVillainArcade
 #    - type: ComputerTabletopBoard # Frontier
 #      prototype: TabletopSpaceVillainArcade # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: BlockGameArcadeComputerCircuitboard
@@ -470,6 +506,7 @@
       prototype: BlockGameArcade
 #    - type: ComputerTabletopBoard # Frontier
 #      prototype: TabletopBlockGameArcade # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: ParticleAcceleratorComputerCircuitboard
@@ -482,6 +519,7 @@
       prototype: ParticleAcceleratorControlBoxUnfinished
 #    - type: ComputerTabletopBoard # Frontier
 #      prototype: ParticleAcceleratorControlBoxTabletopUnfinished # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: ShuttleConsoleCircuitboard
@@ -494,6 +532,7 @@
       prototype: ComputerShuttle
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopShuttle # Frontier
+
 - type: entity
   parent: [ BaseComputerCircuitboard, NotContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: SyndicateShuttleConsoleCircuitboard
@@ -505,6 +544,7 @@
     state: cpu_syndicate
   - type: ComputerBoard
     prototype: ComputerShuttleSyndie
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: CloningConsoleComputerCircuitboard
@@ -517,6 +557,7 @@
       prototype: ComputerCloningConsole
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopCloningConsole # Frontier
+
 - type: entity
   parent: [BaseComputerCircuitboard, NotContraband]
   id: ComputerIFFCircuitboard
@@ -529,6 +570,7 @@
       prototype: ComputerIFF
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopIFF # Frontier
+
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseC4Contraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: ComputerIFFSyndicateCircuitboard
@@ -541,6 +583,7 @@
       prototype: ComputerIFFSyndicate
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopIFFSyndicate # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: ComputerMassMediaCircuitboard
@@ -555,6 +598,7 @@
       prototype: ComputerMassMedia
     - type: ComputerTabletopBoard # Frontier
       prototype: ComputerTabletopMassMedia # Frontier
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: SensorConsoleCircuitboard
@@ -565,6 +609,7 @@
       state: cpu_engineering
     - type: ComputerBoard
       prototype: ComputerSensorMonitoring
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: RoboticsConsoleCircuitboard
@@ -575,6 +620,7 @@
       state: cpu_science
     - type: ComputerBoard
       prototype: ComputerRoboticsControl
+
 - type: entity
   parent: BaseComputerCircuitboard
   id: StationAiUploadCircuitboard
@@ -586,8 +632,8 @@
     - type: ComputerBoard
       prototype: StationAiUploadComputer
 
-- type: entity
-  parent: [ BaseComputerCircuitboard, BaseC4Contraband ] # Frontier: BaseSyndicateContraband<BaseC4Contraband
+- type: entity # LoneStar TODO: move this out
+  parent: [ BaseComputerCircuitboard, BaseC4Contraband ]
   id: FreelancerCommsComputerCircuitboard
   name: freelancer communications computer board
   description: A computer printed circuit board for a freelancer communications console.

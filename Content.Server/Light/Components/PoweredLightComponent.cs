@@ -90,12 +90,21 @@ namespace Content.Server.Light.Components
         public float SolarFlareShieldingCoefficient = 1.0f;
         // End Frontier: shielded lights
 
+        /// <summary>
+        /// Time it was broken
+        /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]
         public TimeSpan BrokenTime = TimeSpan.Zero;
 
+        /// <summary>
+        /// Give a reward for fixing the light
+        /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]
         public bool GiveFixReward;
 
+        /// <summary>
+        /// Debug always make it reward
+        /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]
         public bool DebugAlwaysReward = false;
     }

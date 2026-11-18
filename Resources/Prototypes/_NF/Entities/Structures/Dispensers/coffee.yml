@@ -29,7 +29,7 @@
   - type: StealTarget
     stealGroup: BoozeDispenser
   - type: StaticPrice
-    price: 150
+    price: 250
 
 - type: entity
   id: ImpCoffeeMachine
@@ -40,11 +40,8 @@
   components:
   - type: StorageFill
     contents:
-    - id: DrinkCoffeeJug
+    - id: JugNanocaf
     - id: DrinkAstrotameJug
     - id: DrinkIceJug
-    - id: DrinkMilkCarton
-    - id: DrinkSoyMilkCarton
-    - id: JugCaramexinin
-    - id: JugCocoa
     - id: JugWater
+    - id: DrinkGreenTeaJug

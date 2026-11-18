@@ -18,7 +18,7 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
 
         public static HashSet<Gas> DefaultFilterGases = new()
         {
-            Gas.Nitrogen,
+            Gas.Nitrogen, // Limited by the filter limits below, will only scrub if above 80%
             Gas.CarbonDioxide,
             Gas.Plasma,
             Gas.Tritium,

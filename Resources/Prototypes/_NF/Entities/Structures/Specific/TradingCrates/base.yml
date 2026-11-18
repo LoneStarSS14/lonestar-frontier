@@ -97,7 +97,7 @@
 - type: entity
   parent:
   - CrateTradeBaseSecure
-  - BaseC3SyndicateContraband
+  - BaseC4Contraband
   id: CrateTradeBaseSecureContraband
   name: Syndicate contraband crate
   description: Contains goods made in the Spinward sector, ready to be smuggled to a cargo depot for profit. MAKE SURE THE CRATE IS INTACT.
@@ -128,4 +128,4 @@
     id: ContrabandCrate
   - type: AdditionalPalletCurrency
     currency: Telecrystal
-    prob: 0.134
+    prob: 0.30

@@ -87,7 +87,6 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Adder
     - Prospector
     - Chisel
 
@@ -102,7 +101,6 @@
     - Bocadillo
     - PTS
     - Construct
-    - Adder
     - Loader
     - Stringer
     - Liquidator
@@ -123,3 +121,4 @@
     - Ambition
     - Hammer
     - Gaslight
+    - Firefighter
