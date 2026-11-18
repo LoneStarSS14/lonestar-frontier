@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NT Comet
   description: A mining and construction vessel intended to help build or repair quickly.
-  price: 62000 # 47022 0.3 61128.6 
+  price: 62000 # 47721 0.3 62037.3
   category: Medium
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/comet.yml
@@ -23,12 +23,13 @@
   - Engineering
   engine:
   - Uranium
+
 - type: gameMap
   id: Comet
   mapName: 'NT Comet'
   mapPath: /Maps/_NF/Shuttles/comet.yml
   minPlayers: 0
-  stations: 
+  stations:
     Comet:
       stationProto: StandardFrontierVessel
       components:
@@ -39,7 +40,7 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ] # LoneStar
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

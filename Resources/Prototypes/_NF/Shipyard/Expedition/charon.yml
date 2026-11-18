@@ -11,9 +11,9 @@
 - type: vessel
   id: Charon
   parent: BaseVessel
-  name: EIS Charon
+  name: LL3 Charon
   description: Originally built as a roll-on, roll-off transport for heavy terraforming equipment. Since its obsolescence and appearance on the secondary market, the Charon has become a favorite of upfitters for the broad possibilities afforded by its open equipment bay. A product of Endurance Industrial Shipyards.
-  price: 82000 #67630 0.2 81156  
+  price: 267300 #71511, +50k(exped) LL3 x2.2 = 267324
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/charon.yml
@@ -22,6 +22,7 @@
   - Expedition
   engine:
   - AME
+
 - type: gameMap
   id: Charon
   mapName: 'Charon'
@@ -38,7 +39,7 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ] # LoneStar
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

@@ -12,9 +12,9 @@
 - type: vessel
   id: Camper
   parent: BaseVessel
-  name: SSF Camper
-  description: A personal mobile home for nomadic spacers, equipped with a small kitchen, toilet and bedroom.
-  price: 13000 # ~11800 0.1 ~12980
+  name: SSS Camper
+  description: A personal camper shuttle for those who prefer to live in emptiness of space.
+  price: 12000 # 10481 0.05 11005.05
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/camper.yml
@@ -41,5 +41,6 @@
         - type: StationJobs
           availableJobs:
             ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ] # LoneStar
             PilotInterview: [ 0, 0 ]
             MercenaryInterview: [ 0, 0 ]

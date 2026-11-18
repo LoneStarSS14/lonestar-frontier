@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: BB Bodkin
   description: The smaller sibling to the Broadhead, the BB Bodkin is designed for rockhopping and salvage recovery.
-  price: 42000 #36657 0.15 42155.6
+  price: 40000 #35506 0.1 39056.6
   category: Medium
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/bodkin.yml
@@ -22,6 +22,7 @@
   - Salvage
   engine:
   - Uranium
+
 - type: gameMap
   id: Bodkin
   mapName: 'BB Bodkin'
@@ -37,7 +38,7 @@
           prefixCreator: '14'
       - type: StationJobs
         availableJobs:
-          ContractorInterview: [ 2, 2 ]
-          CompanionInterview: [ 2, 2 ]
-          PilotInterview: [ 2, 2 ]
-          MercenaryInterview: [ 2, 2 ]
+          ContractorInterview: [ 0, 0 ]
+          CompanionInterview: [ 0, 0 ] # LoneStar
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

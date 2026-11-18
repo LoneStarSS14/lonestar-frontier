@@ -11,8 +11,8 @@
 - type: vessel
   id: Retort
   parent: BaseVessel
-  name: FSC Retort
-  description: A medium gas mining and engineering vessel designed and deployed by the Far Star Corporation to provide infrastructure support for deep space operations.
+  name: FSB Retort
+  description: A medium gas mining and engineering vessel designed and deployed by the Far Star Biotech corporation to provide infrastructure support for deep space operations.
   price: 59000 # 53500 0.1 58850
   category: Medium
   group: Shipyard
@@ -40,5 +40,6 @@
         - type: StationJobs
           availableJobs:
             ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ] # LoneStar
             PilotInterview: [ 0, 0 ]
             MercenaryInterview: [ 0, 0 ]

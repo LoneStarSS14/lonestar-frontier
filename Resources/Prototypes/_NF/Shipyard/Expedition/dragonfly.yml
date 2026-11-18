@@ -7,13 +7,13 @@
 # Discord: ???
 
 # Shuttle Notes:
-# 
+#
 - type: vessel
   id: Dragonfly
   parent: BaseVessel
-  name: DYS Dragonfly
+  name: LL1 Dragonfly
   description: Highly modular salvaging vessel welded together from smaller re-purposed hulls.
-  price: 84000 # 69747 0.2 83696.4
+  price: 146750 #72423, +50k(exped) LL1 x1.2 = 146907
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/dragonfly.yml
@@ -22,6 +22,7 @@
   - Expedition
   engine:
   - AME
+
 - type: gameMap
   id: Dragonfly
   mapName: 'Dragonfly'
@@ -38,7 +39,7 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ] # LoneStar
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: SSF Izakaya
   description: A medium-size, japanese-inspired restaurant/pub ship with a large dining area, and equally large kitchen.
-  price: 74000 # ~67250 0.1 ~73975
+  price: 65000 # ~57808 0.1 63588.8
   category: Medium
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/izakaya.yml
@@ -40,5 +40,6 @@
         - type: StationJobs
           availableJobs:
             ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ] # LoneStar
             PilotInterview: [ 0, 0 ]
             MercenaryInterview: [ 0, 0 ]
