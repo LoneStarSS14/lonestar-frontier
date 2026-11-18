@@ -96,8 +96,6 @@ public abstract class SharedLayingDownSystem : EntitySystem
             || !TryComp(uid, out LayingDownComponent? layingDown))
             return;
 
-        RaiseNetworkEvent(new CheckAutoGetUpEvent(GetNetEntity(uid)));
-
         if (HasComp<KnockedDownComponent>(uid)
             || !_mobState.IsAlive(uid))
             return;

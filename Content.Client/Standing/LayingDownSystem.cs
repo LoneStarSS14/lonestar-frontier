@@ -3,7 +3,6 @@ using Content.Shared.Rotation;
 using Content.Shared.Standing;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
-using Robust.Shared.Configuration;
 using Robust.Shared.Timing;
 
 namespace Content.Client.Standing;
