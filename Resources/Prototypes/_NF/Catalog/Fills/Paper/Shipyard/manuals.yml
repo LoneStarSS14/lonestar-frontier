@@ -111,6 +111,15 @@
 
 - type: entity
   parent: ShipyardInfoBase
+  id: ShipyardLegmanInfo
+  name: Legman user manual
+  components:
+  - type: GuideHelp
+    guides:
+    - ShipyardLegman
+
+- type: entity
+  parent: ShipyardInfoBase
   id: ShipyardLiquidatorInfo
   name: Liquidator user manual
   components:

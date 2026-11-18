@@ -13,6 +13,7 @@
     Telecrystal: 3
   categories:
   - UplinkWeaponry
+
 - type: listing
   abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkRevolverPython
@@ -53,6 +54,7 @@
     Telecrystal: 1
   categories:
   - UplinkWeaponry
+
 - type: listing
   id: UplinkEsword
   name: uplink-esword-name
@@ -66,6 +68,7 @@
     Telecrystal: 8
   categories:
   - UplinkWeaponry
+
 - type: listing
   id: UplinkEnergyDagger
   name: uplink-edagger-name
@@ -79,6 +82,7 @@
     Telecrystal: 2
   categories:
   - UplinkWeaponry
+
 - type: listing
   id: UplinkThrowingKnivesKit
   name: uplink-knives-kit-name
@@ -92,6 +96,7 @@
     Telecrystal: 6
   categories:
     - UplinkWeaponry
+
 - type: listing
   id: UplinkGlovesNorthStar
   name: uplink-gloves-north-star-name
@@ -104,6 +109,7 @@
     Telecrystal: 8
   categories:
   - UplinkWeaponry
+
 - type: listing
   id: UplinkGlovesKnuckleDusters
   name: uplink-gloves-knuckleduster-name
@@ -153,6 +159,7 @@
   #   whitelist:
   #     tags:
   #     - NukeOpsUplink
+
 - type: listing
   id: UplinkSniperBundle
   name: uplink-sniper-bundle-name
@@ -166,17 +173,18 @@
     Telecrystal: 8 # LoneStar
   categories:
   - UplinkWeaponry
+
 - type: listing
   id: UplinkC20RBundle
   name: uplink-c20r-bundle-name
   description: uplink-c20r-bundle-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/SMGs/c20r.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledSMG
-  discountCategory: veryRareDiscounts
-  discountDownTo:
-    Telecrystal: 10
+  # discountCategory: veryRareDiscounts
+  # discountDownTo:
+  #   Telecrystal: 10
   cost:
-    Telecrystal: 17
+    Telecrystal: 6 # LoneStar
   categories:
   - UplinkWeaponry
 
@@ -221,6 +229,7 @@
     # Telecrystal: 25
   # categories:
   # - UplinkWeaponry
+
 - type: listing
   id: UplinkL6SawBundle
   name: uplink-l6-saw-bundle-name
@@ -249,6 +258,7 @@
     # Telecrystal: 4
   # categories:
   # - UplinkExplosives
+
 - type: listing
   id: UplinkExplosiveGrenadeFlash
   name: uplink-flash-grenade-name
@@ -258,6 +268,7 @@
     Telecrystal: 1
   categories:
   - UplinkExplosives
+
 - type: listing
   id: UplinkSmokeGrenade
   name: uplink-smoke-grenade-name
@@ -368,6 +379,7 @@
     # Telecrystal: 12 #you're buying bulk so its a 25% discount, so no additional random discount over it
   # categories:
   # - UplinkExplosives
+
 - type: listing
   id: UplinkEmpGrenade
   name: uplink-emp-grenade-name
@@ -438,6 +450,7 @@
     # Telecrystal: 8
   # categories:
   # - UplinkExplosives
+
 - type: listing
   id: UplinkGrenadeShrapnel
   name: uplink-shrapnel-grenade-name
@@ -450,6 +463,7 @@
     Telecrystal: 2 # LoneStar 
   categories:
   - UplinkExplosives
+
 - type: listing
   id: UplinkGrenadeIncendiary
   name: uplink-incendiary-grenade-name
@@ -462,6 +476,7 @@
     Telecrystal: 2 # LoneStar
   categories:
   - UplinkExplosives
+
 - type: listing
   id: UplinkEmpKit
   name: uplink-emp-kit-name
@@ -513,6 +528,7 @@
     Telecrystal: 2
   categories:
   - UplinkAmmo
+
 - type: listing
   abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkMagazineShotgunSlug
@@ -586,6 +602,7 @@
     Telecrystal: 2
   categories:
   - UplinkAmmo
+
 - type: listing
   id: UplinkAmmoBundle
   name: uplink-ammo-bundle-name
@@ -619,6 +636,7 @@
     Telecrystal: 6
   categories:
   - UplinkChemicals
+
 - type: listing
   id: UplinkHypoDart
   name: uplink-hypodart-name
@@ -632,6 +650,7 @@
     Telecrystal: 2
   categories:
   - UplinkChemicals
+
 - type: listing
   id: UplinkChemistryKitBundle
   name: uplink-chemistry-kit-name
@@ -665,6 +684,7 @@
     # blacklist:
       # components:
       # - SurplusBundle
+
 - type: listing
   id: UplinkNocturineChemistryBottle
   name: uplink-nocturine-chemistry-bottle-name
@@ -677,6 +697,7 @@
     Telecrystal: 6
   categories:
   - UplinkChemicals
+
 - type: listing
   id: UplinkCombatMedkit
   name: uplink-combat-medkit-name
@@ -689,6 +710,7 @@
     Telecrystal: 2 # LoneStar
   categories:
   - UplinkChemicals
+
 - type: listing
   id: UplinkCombatMedipen
   name: uplink-combat-medipen-name
@@ -701,6 +723,7 @@
     Telecrystal: 2 # LoneStar
   categories:
   - UplinkChemicals
+
 - type: listing
   id: UplinkStimpack
   name: uplink-stimpack-name
@@ -713,6 +736,7 @@
     Telecrystal: 2 # LoneStar
   categories:
   - UplinkChemicals
+
 - type: listing
   id: UplinkStimkit
   name: uplink-stimkit-name
@@ -725,6 +749,7 @@
     Telecrystal: 6 # LoneStar
   categories:
   - UplinkChemicals
+
 - type: listing
   id: UplinkCigarettes
   name: uplink-cigarettes-name
@@ -734,6 +759,7 @@
     Telecrystal: 3 # LoneStar
   categories:
   - UplinkChemicals
+
 - type: listing
   id: UplinkMedsBundle
   name: uplink-meds-bundle-name
@@ -769,6 +795,7 @@
     Telecrystal: 3
   categories:
   - UplinkDeception
+
 - type: listing
   id: UplinkStealthBox
   name: uplink-stealth-box-name
@@ -781,6 +808,7 @@
     Telecrystal: 5
   categories:
   - UplinkDeception
+
 - type: listing
   id: UplinkChameleonProjector
   name: uplink-chameleon-projector-name
@@ -793,6 +821,7 @@
     Telecrystal: 6 # LoneStar
   categories:
   - UplinkDeception
+
 - type: listing
   id: UplinkHeadsetEncryptionKey
   name: uplink-encryption-key-name
@@ -806,6 +835,7 @@
     Telecrystal: 2
   categories:
   - UplinkDeception
+
 - type: listing
   id: UplinkBinaryTranslatorKey
   name: uplink-binary-translator-key-name
@@ -816,6 +846,7 @@
     Telecrystal: 1
   categories:
   - UplinkDeception
+
 - type: listing
   id: UplinkCyberpen
   name: uplink-cyberpen-name
@@ -825,6 +856,7 @@
     Telecrystal: 1
   categories:
   - UplinkDeception
+
 - type: listing
   id: UplinkDecoyDisk
   name: uplink-decoy-disk-name
@@ -834,6 +866,7 @@
     Telecrystal: 1
   categories:
   - UplinkDeception
+
 - type: listing
   id: UplinkUltrabrightLantern
   name: uplink-ultrabright-lantern-name
@@ -846,6 +879,7 @@
     Telecrystal: 1 #LoneStar
   categories:
   - UplinkDeception
+
 - type: listing
   id: UplinkBribe
   name: uplink-bribe-name
@@ -921,6 +955,7 @@
     # Telecrystal: 5
   # categories:
   # - UplinkDisruption
+
 - type: listing
   id: UplinkRadioJammer
   name: uplink-radio-jammer-name
@@ -933,6 +968,7 @@
     Telecrystal: 3
   categories:
   - UplinkDisruption
+
 - type: listing
   id: UplinkSoapSyndie
   name: uplink-soap-name
@@ -942,6 +978,7 @@
     Telecrystal: 1
   categories:
   - UplinkDisruption
+
 - type: listing
   id: UplinkSlipocalypseClusterSoap
   name: uplink-slipocalypse-clustersoap-name
@@ -954,6 +991,7 @@
     Telecrystal: 2
   categories:
   - UplinkDisruption
+
 - type: listing
   id: UplinkToolbox
   name: uplink-toolbox-name
@@ -966,6 +1004,7 @@
     Telecrystal: 2
   categories:
   - UplinkDisruption
+
 - type: listing
   id: UplinkSyndicateJawsOfLife
   name: uplink-syndicate-jaws-of-life-name
@@ -1046,13 +1085,15 @@
     # whitelist:
       # tags:
       # - NukeOpsUplink
+
 - type: listing
+  abstract: true # LoneStar
   id: UplinkSurplusBundle
   name: uplink-surplus-bundle-name
   description: uplink-surplus-bundle-desc
   productEntity: CrateSyndicateSurplusBundle
   cost:
-    Telecrystal: 35 # Frontier: 20<35
+    Telecrystal: 35
   categories:
   - UplinkDisruption
   conditions:
@@ -1106,6 +1147,27 @@
 #         - SurplusBundle
 
 # End Frontier
+
+# - type: listing
+#   id: UplinkStarterKit
+#   name: uplink-starter-kit-name
+#   description: uplink-starter-kit-desc
+#   productEntity: ClothingBackpackDuffelSyndicateFilledStarterKit
+#   cost:
+#     Telecrystal: 40
+#   categories:
+#   - UplinkDisruption
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#         - NukeOpsUplink
+#     - !type:BuyerWhitelistCondition
+#       blacklist:
+#         components:
+#         - SurplusBundle
+
+# End Frontier
 - type: listing
   id: UplinkSingarityBeacon
   name: uplink-singularity-beacon-name
@@ -1118,6 +1180,7 @@
     Telecrystal: 12
   categories:
     - UplinkDisruption
+
 - type: listing
   id: UplinkCameraBug
   name: uplink-cameraBug-name
@@ -1239,6 +1302,7 @@
       # whitelist:
         # tags:
           # - NukeOpsUplink
+
 - type: listing
   id: UplinkCarpDehydrated
   name: uplink-carp-dehydrated-name
@@ -1270,6 +1334,7 @@
     # Telecrystal: 6
   # categories:
     # - UplinkAllies
+
 - type: listing
   id: UplinkSyndicatePersonalAI
   name: uplink-syndicate-pai-name
@@ -1303,6 +1368,7 @@
       blacklist:
         tags:
           - NukeOpsUplink
+
 - type: listing
   id: UplinkFreedomImplanter
   name: uplink-freedom-implanter-name
@@ -1330,6 +1396,7 @@
     # Telecrystal: 6 # it's a gamble that may kill you easily so 6 TC per 2 uses, second one more of a backup
   # categories:
     # - UplinkImplants
+
 - type: listing
   id: UplinkDnaScramblerImplant
   name: uplink-dna-scrambler-implanter-name
@@ -1343,6 +1410,7 @@
     Telecrystal: 4 #LoneStar
   categories:
     - UplinkImplants
+
 - type: listing
   id: UplinkEmpImplanter
   name: uplink-emp-implanter-name
@@ -1356,6 +1424,7 @@
     Telecrystal: 2
   categories:
     - UplinkImplants
+
 - type: listing
   id: UplinkRadioImplanter
   name: uplink-radio-implanter-name
@@ -1444,6 +1513,7 @@
       # blacklist:
         # tags:
           # - NukeOpsUplink
+
 - type: listing
   id: UplinkDeathRattle
   name: uplink-deathrattle-implant-name
@@ -1462,6 +1532,7 @@
       blacklist:
         components:
           - SurplusBundle
+
 - type: listing
   id: UplinkFakeMindshield
   name: uplink-fake-mindshield-name
@@ -1489,6 +1560,7 @@
     Telecrystal: 1 #LoneStar
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkVoiceMask
   name: uplink-voice-mask-name
@@ -1501,6 +1573,7 @@
     Telecrystal: 2
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkHolster
   name: uplink-holster-name
@@ -1510,6 +1583,7 @@
     Telecrystal: 1
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkChestRig
   name: uplink-chest-rig-name
@@ -1519,6 +1593,7 @@
     Telecrystal: 1
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkChameleon
   name: uplink-chameleon-name
@@ -1532,6 +1607,7 @@
     Telecrystal: 4
   categories:
     - UplinkWearables
+
 - type: listing
   id: UplinkClothingNoSlipsShoes
   name: uplink-clothing-no-slips-shoes-name
@@ -1544,6 +1620,7 @@
     Telecrystal: 2
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkClothingOuterVestWeb
   name: uplink-clothing-outer-vest-web-name
@@ -1556,6 +1633,7 @@
     Telecrystal: 3
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkClothingOuterVestWebElite
   name: uplink-clothing-outer-vest-web-elite-name
@@ -1568,6 +1646,7 @@
     Telecrystal: 4 #LoneStar
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkClothingShoesBootsMagSyndie
   name: uplink-clothing-shoes-boots-mag-syndie-name
@@ -1580,6 +1659,7 @@
     Telecrystal: 2 #LoneStar 
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkEVASyndie
   name: uplink-eva-syndie-name
@@ -1593,6 +1673,7 @@
     Telecrystal: 1 #LoneStar
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkHardsuitCarp
   name: uplink-hardsuit-carp-name
@@ -1606,6 +1687,7 @@
     Telecrystal: 2 #LoneStar
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkHardsuitSyndie
   name: uplink-hardsuit-syndie-name
@@ -1619,6 +1701,7 @@
     Telecrystal: 8
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkClothingOuterArmorRaid
   name: uplink-syndie-raid-name
@@ -1634,6 +1717,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+
 - type: listing
   id: UplinkHardsuitSyndieElite
   name: uplink-hardsuit-syndieelite-name
@@ -1649,6 +1733,7 @@
   #   whitelist:
   #     tags:
   #     - NukeOpsUplink
+
 - type: listing
   id: UplinkClothingOuterHardsuitJuggernaut
   name: uplink-clothing-outer-hardsuit-juggernaut-name
@@ -1664,6 +1749,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+
 - type: listing
   id: UplinkClothingEyesHudSyndicate
   name: uplink-clothing-eyes-hud-syndicate-name
@@ -1678,6 +1764,7 @@
       whitelist:
         tags:
           - NukeOpsUplink
+
 - type: listing
   id: UplinkClothingConductingGloves
   name: uplink-clothing-conducting-gloves-name
@@ -1687,6 +1774,7 @@
     Telecrystal: 2
   categories:
   - UplinkWearables
+
 - type: listing
   id: UplinkBackpackSyndicate
   name: uplink-backpack-syndicate-name
@@ -1698,6 +1786,7 @@
     - UplinkWearables
 
  # Pointless
+
 - type: listing
   id: UplinkBarberScissors
   name: uplink-barber-scissors-name
@@ -1717,6 +1806,7 @@
     # Telecrystal: 1
   # categories:
   # - UplinkPointless
+
 - type: listing
   id: UplinkRevolverCapGun
   name: uplink-revolver-cap-gun-name
@@ -1729,6 +1819,7 @@
     Telecrystal: 2 #LoneStar
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkSyndicateStamp
   name: uplink-syndicate-stamp-name
@@ -1741,6 +1832,7 @@
     Telecrystal: 2
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkCatEars
   name: uplink-cat-ears-name
@@ -1750,6 +1842,7 @@
     Telecrystal: 5 # Coyote: 26 to 5
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkOutlawHat
   name: uplink-outlaw-hat-name
@@ -1759,6 +1852,7 @@
     Telecrystal: 1
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkOutlawGlasses
   name: uplink-outlaw-glasses-name
@@ -1768,6 +1862,7 @@
     Telecrystal: 1
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkCostumePyjama
   name: uplink-costume-pyjama-name
@@ -1787,6 +1882,7 @@
     # Telecrystal: 2
   # categories:
   # - UplinkPointless
+
 - type: listing
   id: UplinkCarpSuitBundle
   name: uplink-carp-suit-bundle-name
@@ -1796,6 +1892,7 @@
     Telecrystal: 2 #LoneStar
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkOperativeSuit
   name: uplink-operative-suit-name
@@ -1805,6 +1902,7 @@
     Telecrystal: 1
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkOperativeSkirt
   name: uplink-operative-skirt-name
@@ -1814,6 +1912,7 @@
     Telecrystal: 1
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkBalloon
   name: uplink-balloon-name
@@ -1823,6 +1922,7 @@
     Telecrystal: 1 # Coyote: 20 to 1
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkScarfSyndieRed
   name: uplink-scarf-syndie-red-name
@@ -1832,6 +1932,7 @@
     Telecrystal: 1
   categories:
   - UplinkPointless
+
 - type: listing
   id: UplinkScarfSyndieGreen
   name: uplink-scarf-syndie-green-name
@@ -1841,6 +1942,7 @@
     Telecrystal: 1
   categories:
     - UplinkPointless
+
 - type: listing
   id: UplinkSyndicateBusinessCard
   name: uplink-business-card-name
@@ -1869,6 +1971,7 @@
   # - !type:BuyerJobCondition
   #   whitelist:
   #   - Botanist
+
 - type: listing
   id: uplinkRiggedBoxingGlovesPassenger
   name: uplink-rigged-boxing-gloves-name
@@ -1940,6 +2043,7 @@
   # - !type:BuyerJobCondition
     # whitelist:
     # - Chaplain
+
 - type: listing
   id: uplinkRevolverCapGunFake
   name: uplink-revolver-cap-gun-fake-name
@@ -2109,6 +2213,7 @@
     blacklist:
       components:
       - SurplusBundle
+
 - type: listing
   id: UplinkCombatBakery
   name: uplink-combat-bakery-name
@@ -2127,6 +2232,7 @@
   #   whitelist:
   #   - Chef
   #   - Mime
+
 - type: listing
   id: UplinkContrabandLighter
   name: uplink-contraband-lighter-name
@@ -2167,6 +2273,7 @@
   - !type:BuyerJobCondition
     whitelist:
     - Chaplain
+
 - type: listing
   id: UplinkSawAdvanced
   name: uplink-saw-advanced-name

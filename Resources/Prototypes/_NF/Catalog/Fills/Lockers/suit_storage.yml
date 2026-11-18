@@ -5,18 +5,21 @@
   suffix: EVA, Goblin
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitContractor ]
   id: SuitStorageEVAContractor
   suffix: EVA, Resident
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitPilot ]
   id: SuitStorageEVAPilot
   suffix: EVA, Pilot
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitSr ]
   id: SuitStorageEVASr
@@ -24,6 +27,7 @@
   components:
   - type: AccessReader
     access: [["HeadOfPersonnel"]]
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitStc ]
   id: SuitStorageEVAStc
@@ -31,142 +35,165 @@
   components:
   - type: AccessReader
     access: [["StationTrafficController"]]
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitCaptain ]
   id: SuitStorageEVACaptain
   suffix: EVA, Captain
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitEngineer ]
   id: SuitStorageEVAEngineer
   suffix: EVA, Engineer
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitAtmosTech ]
   id: SuitStorageEVAAtmosTech
   suffix: EVA, Atmospherics Technician
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitCargo ]
   id: SuitStorageEVACargo
   suffix: EVA, Cargo Technician
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitSalvage ]
   id: SuitStorageEVASalvage
   suffix: EVA, Salvage Specialist
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitMedic ]
   id: SuitStorageEVAMedical
   suffix: EVA, Medical Doctor
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ LockerSalvageSpecialistFilled, StorageFillEVASuitSalvage ]
   id: SuitStorageEVASalvageFilled
   suffix: EVA, Salvage Specialist, Filled
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitParamedic ]
   id: SuitStorageParamedic
   suffix: Voidsuit, Paramedic
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitParamedicAlt ]
   id: SuitStorageParamedicAlt
   suffix: EVA, Paramedic
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitScientist ]
   id: SuitStorageEVAScientist
   suffix: EVA, Scientist
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitJanitor ]
   id: SuitStorageEVAJanitor
   suffix: EVA, Janitor
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitServiceWorker ]
   id: SuitStorageEVAServiceWorker
   suffix: EVA, Service Worker
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitChaplain ]
   id: SuitStorageEVAChaplain
   suffix: EVA, Chaplain
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitBoxerRed ]
   id: SuitStorageEVABoxerRed
   suffix: EVA, Boxer, Red
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitBoxerGreen ]
   id: SuitStorageEVABoxerGreen
   suffix: EVA, Boxer, Green
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitBoxerBlue ]
   id: SuitStorageEVABoxerBlue
   suffix: EVA, Boxer, Blue
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitBoxerYellow ]
   id: SuitStorageEVABoxerYellow
   suffix: EVA, Boxer, Yellow
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitBoxerRandom ]
   id: SuitStorageEVABoxerRandom
   suffix: EVA, Boxer, Random
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitHydro ]
   id: SuitStorageEVAHydro
   suffix: EVA, Hydroponics
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitMail ]
   id: SuitStorageEVAMail
   suffix: EVA, Mail Carrier
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitMercenary ]
   id: SuitStorageEVAMercenary
   suffix: EVA, Mercenary
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitPrivateSec ]
   id: SuitStorageEVAPrivateSec
   suffix: EVA, Private Security
   components:
   - type: AccessReader
+
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitNfsd ]
   id: SuitStorageEVANfsd
-  suffix: EVA, LSRD # Lonestar change NFSD -> LSRD
+  suffix: EVA, LSRD # LoneStar change NFSD -> LSRD
   components:
   - type: AccessReader
     access: [["Security"]]
@@ -180,9 +207,9 @@
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingShoesBootsMag
         - id: ClothingOuterHardsuitLuxury
         - id: ClothingMaskGasExplorer
@@ -197,9 +224,9 @@
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingShoesBootsMag
         - id: ClothingOuterHardsuitSalvage
         - id: ClothingMaskGasExplorer
@@ -214,15 +241,16 @@
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitMercenary
         - id: ClothingMaskGasMercenary
         - id: JetpackMiniFilled
         - id: ClothingShoesBootsMagMercenaryFilled
   - type: AccessReader
     access: [["Captain"], ["Mercenary"]]
+
 - type: entity
   id: SuitStoragePrivateSecurity
   parent: SuitStorageBase
@@ -230,9 +258,9 @@
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitPrivateSecurity
         - id: ClothingMaskGasSecurity
         - id: JetpackMiniFilled
@@ -248,7 +276,9 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitScaf
         - id: ClothingMaskGasMercenary
         - id: JetpackMiniFilled
@@ -264,7 +294,9 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitSurplus
         - id: ClothingMaskGasSecurity
         - id: JetpackMiniFilled
@@ -280,7 +312,9 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitNoble
         - id: ClothingMaskGasSecurity
         - id: JetpackMiniFilled
@@ -296,9 +330,9 @@
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitPilot
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled
@@ -312,9 +346,9 @@
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitClown
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled
@@ -324,13 +358,13 @@
 - type: entity
   id: SuitStorageCadet
   parent: SuitStorageBase
-  suffix: LSRD Junior # Lonestar change NFSD -> LSRD
+  suffix: LSRD Junior # LoneStar change NFSD -> LSRD
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitNfsdBronze
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
@@ -342,13 +376,13 @@
 - type: entity
   id: SuitStorageDeputy
   parent: SuitStorageBase
-  suffix: LSRD Ranger # Lonestar change NFSD -> LSRD
+  suffix: LSRD Ranger # LoneStar change NFSD -> LSRD
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitNfsdSilver
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
@@ -360,13 +394,13 @@
 - type: entity
   id: SuitStorageBrigmedic
   parent: SuitStorageBase
-  suffix: LSRD Corpsman # Lonestar change NFSD -> LSRD
+  suffix: LSRD Corpsman # LoneStar change NFSD -> LSRD
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitNfsdBrigmedic
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
@@ -378,13 +412,13 @@
 - type: entity
   id: SuitStorageSergeant
   parent: SuitStorageBase
-  suffix: LSRD Senior # Lonestar change NFSD -> LSRD
+  suffix: LSRD Senior # LoneStar change NFSD -> LSRD
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitNfsdGold
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
@@ -396,13 +430,13 @@
 - type: entity
   id: SuitStorageBailiff
   parent: SuitStorageBase
-  suffix: LSRD Armorer # Lonestar change NFSD -> LSRD
+  suffix: LSRD Armorer # LoneStar change NFSD -> LSRD
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitNfsdGold
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
@@ -414,13 +448,13 @@
 - type: entity
   id: SuitStorageSheriff
   parent: SuitStorageBase
-  suffix: LSRD Chief Ranger # Lonestar change NFSD -> LSRD
+  suffix: LSRD Chief Ranger # LoneStar change NFSD -> LSRD
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitNfsdSheriff
         - id: ClothingMaskGasSheriff
         - id: JetpackNfsdFilled
@@ -432,13 +466,13 @@
 - type: entity
   id: SuitStorageNfsdCombat
   parent: SuitStorageBase
-  suffix: LSRD Combat # Lonestar change NFSD -> LSRD
+  suffix: LSRD Combat # LoneStar change NFSD -> LSRD
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitNfsdCombat
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
@@ -450,13 +484,13 @@
 - type: entity
   id: SuitStorageNfsdCommand
   parent: SuitStorageBase
-  suffix: LSRD Command # Lonestar change NFSD -> LSRD
+  suffix: LSRD Command # LoneStar change NFSD -> LSRD
   components:
   - type: StorageFill
     contents:
-        # - id: NFTankO2N2EqualFilled # Lonestar: Kill
-        - id: NitrogenTankFilled # Lonestar: Brought this back
-        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # LoneStar: Kill
+        - id: NitrogenTankFilled # LoneStar: Brought this back
+        - id: OxygenTankFilled # LoneStar: Brought this back
         - id: ClothingOuterHardsuitNfsdCommand
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled

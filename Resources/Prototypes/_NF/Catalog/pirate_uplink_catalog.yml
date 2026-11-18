@@ -18,6 +18,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateHardsuitCaptain
   name:  uplink-pirate-hardsuit-captain-name
@@ -38,6 +39,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateHardsuitElite
   name:  uplink-pirate-hardsuit-elite-name
@@ -58,6 +60,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateCaptainCrateFilled
   name:  uplink-pirate-crate-captain-name
@@ -78,6 +81,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateCrateFilled
   name:  uplink-pirate-crate-name
@@ -98,6 +102,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateSatchelFilled
   name:  uplink-pirate-satchel-name
@@ -118,6 +123,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateMagboots
   name:  uplink-pirate-magboots-name
@@ -138,6 +144,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateHoverbike
   name:  uplink-pirate-hoverbike-name
@@ -158,6 +165,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateBlunderbuss
   name:  uplink-pirate-blunderbuss-name
@@ -178,6 +186,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateRevolver
   name:  uplink-pirate-revolver-name
@@ -198,6 +207,23 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
+- type: listing
+  id: UplinkPirateRomulan
+  name: uplink-pirate-romulan-name
+  description: uplink-pirate-romulan-desc
+  productEntity: NFWeaponRifleAssaultRomulan
+  icon: { sprite: _NF/Objects/Weapons/Guns/Rifles/romulan.rsi, state: icon }
+  cost:
+    Doubloon: 5
+  categories:
+    - UplinkPirateWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
 - type: listing
   id: UplinkPirateCannon
   name:  uplink-pirate-cannon-name
@@ -218,6 +244,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkFlintlock
   name:  uplink-pirate-flintlock-name
@@ -233,6 +260,7 @@
       whitelist:
         tags:
           - PirateUplink
+
 - type: listing
   id: UplinkEnergyCutlass
   name:  uplink-pirate-ecutlass-name
@@ -253,6 +281,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateAnchor
   name:  uplink-pirate-anchor-name
@@ -273,6 +302,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateRedGrenade
   name:  uplink-pirate-redgrenade-name
@@ -293,6 +323,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateGreenGrenade
   name:  uplink-pirate-greengrenade-name
@@ -313,6 +344,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateGrayGrenade
   name:  uplink-pirate-graygrenade-name
@@ -333,6 +365,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateShotgunAmmo
   name:  uplink-pirate-shotgunammo-name
@@ -348,6 +381,7 @@
       whitelist:
         tags:
           - PirateUplink
+
 - type: listing
   id: UplinkPirateRevolverAmmo
   name:  uplink-pirate-revolverammo-name
@@ -363,6 +397,7 @@
       whitelist:
         tags:
           - PirateUplink
+
 - type: listing
   id: UplinkPirateFlintlockAmmo
   name:  uplink-pirate-flintlockammo-name
@@ -378,6 +413,7 @@
       whitelist:
         tags:
           - PirateUplink
+
 - type: listing
   id: UplinkPirateCannonball
   name:  uplink-pirate-cannonball-name
@@ -398,6 +434,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateNFCannonBallEmp
   name:  uplink-pirate-cannonball-emp-name
@@ -418,6 +455,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateGrapeshot
   name:  uplink-pirate-grapeshot-name
@@ -438,6 +476,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateGlassshot
   name:  uplink-pirate-glassshot-name
@@ -458,6 +497,7 @@
       - NFPirate
       - NFPirateFirstMate
       - NFPirateCaptain
+
 - type: listing
   id: UplinkPirateAccessConfigurator
   name:  uplink-pirate-accessconfigurator-captain-name
@@ -473,6 +513,7 @@
       whitelist:
         tags:
           - PirateUplink
+
 - type: listing
   id: UplinkRadioImplanterFreelance
   name: uplink-pirate-radio-implanter-name
@@ -488,6 +529,7 @@
           - PirateUplink
   categories:
   - UplinkPirateMedical # Coyote
+
 - type: listing
   id: UplinkPirateRepairKit
   name: uplink-pirate-repair-kit-name
@@ -504,38 +546,8 @@
   categories:
   - UplinkPirateUtility
 
-#- type: listing
-#  id: UplinkPirateIonizedBluespaceDustBag
-#  name: uplink-pirate-ionized-dust-bag-name
-#  description: uplink-pirate-ionized-dust-bag-desc
-#  productEntity: IonizedBluespaceDustBag
-#  icon: { sprite: _NF/Objects/Specific/Pirate/bluespace_dust.rsi, state: icon }
-#  cost:
-#    Doubloon: 2
-#  conditions:
-#    - !type:StoreWhitelistCondition
-#      whitelist:
-#        tags:
-#          - PirateUplink
-#  categories:
-#  - UplinkPirateUtility
-#
-#- type: listing
-#  id: UplinkPiratePinpointerScanner
-#  name: uplink-pirate-pinpointer-target-scanner-name
-#  description: uplink-pirate-pinpointer-target-scanner-desc
-#  productEntity: PinpointerScanner
-#  icon: { sprite: _NF/Objects/Specific/Pirate/pinpointer_scanner.rsi, state: icon }
-#  cost:
-#    Doubloon: 2
-#  conditions:
-#    - !type:StoreWhitelistCondition
-#      whitelist:
-#        tags:
-#          - PirateUplink
-#  categories:
-#  - UplinkPirateUtility
 - type: listing
+  abstract: true # LoneStar
   id: UplinkPirateIonizedBluespaceDustBag
   name: uplink-pirate-ionized-dust-bag-name
   description: uplink-pirate-ionized-dust-bag-desc
@@ -550,7 +562,9 @@
           - PirateUplink
   categories:
   - UplinkPirateUtility
+
 - type: listing
+  abstract: true # LoneStar
   id: UplinkPiratePinpointerScanner
   name: uplink-pirate-pinpointer-target-scanner-name
   description: uplink-pirate-pinpointer-target-scanner-desc
@@ -565,6 +579,7 @@
           - PirateUplink
   categories:
   - UplinkPirateUtility
+
 - type: listing
   id: UplinkPiratePirateStitcher
   name: uplink-pirate-pirate-stitcher-name
@@ -580,6 +595,7 @@
           - PirateUplink
   categories:
   - UplinkPirateMachines # Coyote
+
 - type: listing
   id: UplinkNFPouchPirateCaptain
   name: uplink-pirate-pouch-captain-name
@@ -600,6 +616,7 @@
         - NFPirateCaptain
   categories:
   - UplinkPirateUtility
+
 - type: listing
   id: UplinkNFPouchPirate
   name: uplink-pirate-pouch-name
@@ -620,6 +637,7 @@
         - NFPirateCaptain
   categories:
   - UplinkPirateUtility
+
 - type: listing
   id: UplinkPirateJetpack
   name:  uplink-pirate-jetpack-name
@@ -636,18 +654,18 @@
         tags:
           - PirateUplink
 
-- type: listing
-  id: UplinkPirateRomulan
-  name: uplink-pirate-romulan-name
-  description: uplink-pirate-romulan-desc
-  productEntity: NFWeaponRifleAssaultRomulan
-  icon: { sprite: _NF/Objects/Weapons/Guns/Rifles/romulan.rsi, state: icon }
-  cost:
-    Doubloon: 5
-  categories:
-    - UplinkPirateWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - PirateUplink
+#- type: listing # Coyote
+#  id: UplinkTeleCrystal
+#  name:  uplink-Telecrystal
+#  description: uplink-Telecrystal-desc
+#  productEntity: Telecrystal1
+#  icon: { sprite: Objects/Specific/Syndicate/telecrystal.rsi, state: telecrystal }
+#  cost:
+#    Doubloon: 3
+#  categories:
+#    - UplinkPirateUtility
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#       whitelist:
+#          tags:
+#            - PirateUplink

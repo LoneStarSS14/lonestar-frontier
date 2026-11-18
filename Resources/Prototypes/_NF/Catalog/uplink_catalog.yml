@@ -7,9 +7,10 @@
   productEntity: NFWeaponPistolViper
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 2 # LoneStar 
+    Telecrystal: 2 # LoneStar
   categories:
   - UplinkWeaponry
+
 - type: listing
   id: UplinkNFRevolverRitland
   name: uplink-revolver-ritland-name
@@ -17,9 +18,10 @@
   productEntity: NFWeaponRevolverRitland45
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 2 # LoneStar 
+    Telecrystal: 2 # LoneStar
   categories:
   - UplinkWeaponry
+
 - type: listing
   id: UplinkNFPistolCobra
   name: uplink-pistol-cobra-name
@@ -27,9 +29,10 @@
   productEntity: NFWeaponPistolCobra
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 2 # LoneStar 
+    Telecrystal: 2 # LoneStar
   categories:
   - UplinkWeaponry
+
 - type: listing
   id: UplinkNFRifleBarlows
   name: uplink-rifle-barlows-name
@@ -58,6 +61,7 @@
     Telecrystal: 1
   categories:
   - UplinkAmmo
+
 - type: listing
   abstract: true
   id: UplinkNFMagazinePistolSubMachineGun
@@ -69,7 +73,9 @@
     Telecrystal: 1 # LoneStar
   categories:
   - UplinkAmmo
+
 - type: listing
+  abstract: true # LoneStar
   id: UplinkNFMagazineShotgunPellet
   name: uplink-magazine-bulldog-pellet-name
   description: uplink-magazine-bulldog-pellet-desc
@@ -79,7 +85,9 @@
     Telecrystal: 2
   categories:
     - UplinkAmmo
+
 - type: listing
+  abstract: true # LoneStar
   id: UplinkNFMagazineShotgunSlug
   name: uplink-magazine-bulldog-slug-name
   description: uplink-magazine-bulldog-slug-desc
@@ -89,6 +97,7 @@
     Telecrystal: 3
   categories:
     - UplinkAmmo
+
 - type: listing
   abstract: true
   id: UplinkNFMagazinePistolCaselessRifle
@@ -100,6 +109,7 @@
     Telecrystal: 1
   categories:
   - UplinkAmmo
+
 - type: listing
   id: UplinkNFSpeedLoaderMagnum
   abstract: true
@@ -111,6 +121,7 @@
     Telecrystal: 1 # LoneStar
   categories:
   - UplinkAmmo
+
 - type: listing
   id: UplinkNFMosinAmmo
   abstract: true
@@ -122,6 +133,7 @@
     Telecrystal: 1
   categories:
   - UplinkAmmo
+
 - type: listing
   id: UplinkNFHristovAmmo
   name: uplink-sniper-ammo-name
@@ -141,9 +153,10 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncher
   cost:
-    Telecrystal: 16 # LoneStar 
+    Telecrystal: 16 # LoneStar
   categories:
   - UplinkWeaponry
+
 - type: listing
   id: UplinkSecuritySpaceBladeSyndicate
   name: uplink-spaceblade-syndicate-name
@@ -154,6 +167,7 @@
     Telecrystal: 1
   categories:
     - UplinkPointless
+
 - type: listing
   id: UplinkEmagPass
   name: uplink-emag-pass-name
@@ -166,6 +180,7 @@
     Telecrystal: 4
   categories:
   - UplinkDisruption
+
 - type: listing
   id: UplinkSecuritySyndicateSegway
   name: uplink-syndicate-segway-name

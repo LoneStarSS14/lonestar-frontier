@@ -1,20 +1,20 @@
+## LoneStar, removed all #infinite notes.
+
 - type: vendingMachineInventory
   id: ExpeditionaryFlatpackVendInventory
   startingInventory:
-    ComputerCrewMonitoringFlatpack: 4294967295 # Infinite
-    TelecomServerFlatpack: 4294967295 # Infinite
-    WeaponCapacitorRechargerFlatpack: 4294967295 # Infinite
-    BorgChargerFlatpack: 4294967295 # Infinite
-    #MercenaryTechFabFlatpack: 4294967295 # Infinite
-    NFHolopadShipFlatpack: 4294967295 # Infinite
-    GeneratorCoolRTGFlatpack: 4294967295 # Infinite
-    EngineeringTechFabFlatpack: 4294967295 # Infinite
-    MedicalTechFabFlatpack: 4294967295 # Infinite
-    ServiceTechFabFlatpack: 4294967295 # Infinite
-    AmmoTechFabFlatpack: 4294967295 # Infinite
-    ProtolatheFlatpack: 4294967295 # Infinite
-    SalvageTechfabNFFlatpack: 4294967295 # Infinite
-    CargoTechfabNFFlatpack: 4294967295 # Infinite, CS: Add CargoTech fab to the others
-
-  contrabandInventory:
-    ComputerIFFFlatpack: 3
+    ComputerCrewMonitoringFlatpack: 4294967295
+    TelecomServerFlatpack: 4294967295
+    WeaponCapacitorRechargerFlatpack: 4294967295
+    BorgChargerFlatpack: 4294967295
+    MercenaryTechFabFlatpack: 4294967295 # LoneStar, restored
+    NFHolopadShipFlatpack: 4294967295
+    # LoneStar v
+    GeneratorCoolRTGFlatpack: 4294967295
+    EngineeringTechFabFlatpack: 4294967295
+    MedicalTechFabFlatpack: 4294967295
+    ServiceTechFabFlatpack: 4294967295
+    AmmoTechFabFlatpack: 4294967295
+    ProtolatheFlatpack: 4294967295
+  contrabandInventory: # LoneStar
+    ComputerIFFFlatpack: 4294967295 # LoneStar, moved to contrabandInventory

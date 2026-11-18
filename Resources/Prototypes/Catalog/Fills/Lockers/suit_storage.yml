@@ -5,10 +5,15 @@
   parent: SuitStorageBase
   suffix: EVA
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageEVA
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterHardsuitEVA
+        - id: ClothingHeadHelmetEVA
+        - id: ClothingMaskBreath
+        - id: JetpackMiniFilled # Frontier
 
 - type: entityTable
   id: FillSuitStorageEVA
@@ -26,10 +31,15 @@
   parent: SuitStorageBase
   suffix: EVA, Large Helmet
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageEVAAlternate
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterHardsuitEVA
+        - id: ClothingHeadHelmetEVALarge
+        - id: ClothingMaskBreath
+        - id: JetpackMiniFilled # Frontier
 
 - type: entityTable
   id: FillSuitStorageEVAAlternate
@@ -47,10 +57,14 @@
   parent: SuitStorageBase
   suffix: Emergency EVA
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageEVAEmergency
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterSuitEmergency
+        - id: ClothingMaskBreath
+        - id: JetpackMiniFilled # Frontier
 
 - type: entityTable
   id: FillSuitStorageEVAEmergency
@@ -67,10 +81,13 @@
   parent: SuitStorageBase
   suffix: Prisoner EVA
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageEVAPrisoner
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled # Lonestar: Brought this back # Frontier
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterEVASuitPrisoner # Frontier ClothingOuterHardsuitEVAPrisoner<ClothingOuterEVASuitPrisoner
+        - id: ClothingHeadHelmetEVALarge
+        - id: ClothingMaskBreath
 
 - type: entityTable
   id: FillSuitStorageEVAPrisoner
@@ -87,10 +104,15 @@
   parent: SuitStorageBase
   suffix: Syndicate EVA
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageEVASyndicate
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterEVASuitSyndicate
+        - id: ClothingHeadHelmetSyndicate
+        - id: ClothingMaskGasSyndicate
+        - id: JetpackBlackFilled # Frontier
 
 - type: entityTable
   id: FillSuitStorageEVASyndicate
@@ -108,10 +130,15 @@
   parent: SuitStorageBase
   suffix: Pirate EVA
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageEVAPirate
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterEVASuitPirate # Frontier ClothingOuterHardsuitPirateEVA<ClothingOuterEVASuitPirate
+        - id: ClothingMaskGas
+        - id: JetpackPirateFilled # Frontier
+        - id: ClothingShoesBootsMagPirateFilled # Frontier
 
 - type: entityTable
   id: FillSuitStorageEVAPirate
@@ -129,11 +156,19 @@
   parent: SuitStorageBase
   suffix: Ancient EVA
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageEVANTSRA
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+#        - id: JetpackVoidFilled # Frontier
+        - id: ClothingOuterHardsuitAncientEVA
+        - id: ClothingHeadHelmetAncient
+        - id: ClothingMaskBreath
+        - id: JetpackMiniFilled # Frontier
 
+#HARDSUITS
+#Engineering hardsuit
 - type: entityTable
   id: FillSuitStorageEVANTSRA
   table: !type:AllSelector
@@ -178,10 +213,15 @@
   parent: SuitStorageBase
   suffix: Security
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageSecurity
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterHardsuitSecurity
+        - id: ClothingMaskBreath
+        - id: JetpackSecurityFilled # Frontier
+        - id: ClothingShoesBootsMagSecurityFilled # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -253,10 +293,15 @@
   parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, BaseStructureDisableToolUse, SuitStorageBase] # Frontier: added BaseStructureDisableToolUse
   suffix: Warden
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillLockerWardenHarduit
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterHardsuitWarden
+        - id: ClothingMaskBreath
+        - id: JetpackSecurityFilled # Frontier
+        - id: ClothingShoesBootsMagSecurityFilled # Frontier
   - type: AccessReader
     access: [["Armory"]]
 
@@ -292,10 +337,15 @@
   parent: SuitStorageBase
   suffix: Syndicate Hardsuit
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageSyndie
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterHardsuitSyndie
+        - id: ClothingShoesBootsMagSyndie
+        - id: ClothingMaskGasSyndicate
+        - id: JetpackBlackFilled # Frontier
 
 - type: entityTable
   id: FillSuitStorageSyndie
@@ -313,10 +363,16 @@
   parent: SuitStorageBase
   suffix: Pirate Captain
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStoragePirateCap
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled # Lonestar: Brought this back
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        - id: ClothingOuterHardsuitPirateCap
+        - id: ClothingMaskGas
+        - id: ClothingNeckCloakPirateCap # Frontier
+        - id: JetpackPirateFilled # Frontier
+        - id: ClothingShoesBootsMagPirateFilled # Frontier
 
 - type: entityTable
   id: FillSuitStoragePirateCap
@@ -335,10 +391,14 @@
   parent: SuitStorageBase
   suffix: Wizard
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageWizard
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled # Lonestar: Brought this back
+        # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+        # TODO: Gone until reworked to have no space protection
+        #- id: ClothingOuterHardsuitWizard
+        - id: ClothingMaskBreath
+        - id: JetpackBlackFilled # Frontier: JetpackVoidFilled<JetpackBlackFilled
 
 - type: entityTable
   id: FillSuitStorageWizard

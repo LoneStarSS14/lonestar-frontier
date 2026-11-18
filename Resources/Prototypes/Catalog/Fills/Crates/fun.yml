@@ -42,6 +42,7 @@
     - id: PlushieMoth
     - id: PlushieArachind
     - id: PlushiePenguin
+
 - type: entityTable
   id: AllPottedPlantsTable
   table: !type:GroupSelector
@@ -71,6 +72,7 @@
     - id: PottedPlant23
     - id: PottedPlant24
     - id: PottedPlant26
+
 - type: entity
   id: CratePlants
   parent: CrateGenericSteel
@@ -83,6 +85,7 @@
         tableId: AllPottedPlantsTable
         rolls: !type:ConstantNumberSelector
           value: 5
+
 - type: entity
   id: CrateFunPlushie
   parent: CrateGenericSteel
@@ -95,6 +98,7 @@
         tableId: AllPlushiesTable
         rolls: !type:ConstantNumberSelector
           value: 10
+
 - type: entity
   id: CrateFunLizardPlushieBulk
   parent: CrateGenericSteel
@@ -111,6 +115,7 @@
         - id: PlushieSpaceLizard
           amount: !type:ConstantNumberSelector
             value: 3
+
 - type: entity
   id: CrateFunSharkPlushieBulk
   parent: CrateGenericSteel
@@ -130,6 +135,7 @@
         - id: PlushieSharkGrey
           amount: !type:ConstantNumberSelector
             value: 2
+
 - type: entity
   id: CrateFunInstrumentsVariety
   parent: CrateGenericSteel
@@ -145,6 +151,7 @@
       - id: HarmonicaInstrument
       - id: RecorderInstrument
       - id: GlockenspielInstrument
+
 - type: entity
   id: CrateFunInstrumentsBrass
   parent: CrateGenericSteel
@@ -161,6 +168,7 @@
         amount: 2
       - id: EuphoniumInstrument
       - id: TubaInstrument
+
 - type: entity
   id: CrateFunInstrumentsString
   parent: CrateGenericSteel
@@ -178,6 +186,7 @@
       - id: CelloInstrument
       - id: ViolaInstrument
       - id: HarpInstrument
+
 - type: entity
   id: CrateFunInstrumentsWoodwind
   parent: CrateGenericSteel
@@ -197,6 +206,7 @@
         amount: 2
       - id: OcarinaInstrument
       - id: PanFluteInstrument
+
 - type: entity
   id: CrateFunInstrumentsKeyedPercussion
   parent: CrateGenericSteel
@@ -215,6 +225,7 @@
       - id: GlockenspielInstrument
         amount: 2
       - id: VibraphoneInstrument
+
 - type: entity
   id: CrateFunInstrumentsSpecial
   parent: CrateGenericSteel
@@ -233,6 +244,7 @@
       - id: BirdToyInstrument
       - id: MusicalLungInstrument
       - id: ReverseCymbalsInstrument
+
 - type: entity
   id: CrateFunArtSupplies
   parent: CrateGenericSteel
@@ -242,6 +254,7 @@
   - type: StorageFill
     contents:
       - id: CrayonBox
+
 - type: entity
   id: CrateFunBoardGames
   parent: CrateGenericSteel
@@ -263,6 +276,7 @@
         amount: 6
       - id: PaperCNCSheet
         amount: 6
+
 - type: entity
   id: CrateFunATV
   parent: CrateLivestock
@@ -273,6 +287,7 @@
     contents:
       - id: NFVehicleATV # Frontier
       - id: VehicleKeyATV
+
 - type: entity
   id: CrateFunSadTromboneImplants
   parent: CrateGenericSteel
@@ -283,6 +298,7 @@
     contents:
       - id: SadTromboneImplanter
         amount: 3
+
 - type: entity
   id: CrateFunLightImplants
   parent: CrateGenericSteel
@@ -293,6 +309,7 @@
     contents:
       - id: LightImplanter
         amount: 3
+
 - type: entity
   id: CrateFunParty
   parent: CrateGenericSteel
@@ -323,6 +340,7 @@
         amount: 2
       - id: ClothingHeadHatPartyBlue
         amount: 2
+
 - type: entity
   id: CrateFunWaterGuns
   parent: CratePlasticBiodegradable # Frontier: CratePlastic<CratePlasticBiodegradable
@@ -335,6 +353,7 @@
         amount: 2
       - id: WeaponWaterPistol
         amount: 4
+
 - type: entity
   id: CrateFunFoamGuns
   parent: CratePlasticBiodegradable # Frontier: CratePlastic<CratePlasticBiodegradable
@@ -349,6 +368,7 @@
       amount: 2
     - id: GrenadeFoamDart
       amount: 4
+
 - type: entity
   id: CrateFunBoxing
   parent: CrateGenericSteel
@@ -365,6 +385,7 @@
         amount: 3
       - id: UniformShortsRedWithTop
         amount: 3
+
 - type: entity
   id: CrateFunPirate
   parent: CratePirate
@@ -383,6 +404,7 @@
         amount: 2
       - id: ClothingEyesEyepatch
         amount: 2
+
 - type: entity
   id: CrateFunToyBox
   parent: CrateToyBox
@@ -408,6 +430,7 @@
       - id: BeachBall
       - id: ClothingShoesSkates
       - id: RubberChicken
+
 - type: entity
   id: CrateFunBikeHornImplants
   parent: CrateGenericSteel
@@ -418,6 +441,7 @@
     contents:
       - id: BikeHornImplanter
         amount: 3
+
 - type: entity
   id: CrateFunMysteryFigurines
   parent: CratePlasticBiodegradable # Frontier: CratePlastic<CratePlasticBiodegradable
@@ -431,6 +455,7 @@
       - id: MysteryFigureBox
         amount: 15
         prob: 0.05
+
 - type: entity
   name: dartboard box set
   description: A box with everything you need for a fun game of darts.
@@ -447,27 +472,8 @@
         amount: 1
         prob: 0.05
 
-# Coyote
-#- type: entity
-#  name: hydrated scurret
-#  description: Wait, what?
-#  id: CrateFunScurret
-#  parent: CratePlastic
-#  components:
-#  - type: StorageFill
-#    contents:
-#    - id: MobEmotionalSupportScurret # How? Why?
-#    - id: DrinkVodkaBottleFull
-#    - id: DrinkWhiskeyBottleFull
-#    - id: DrinkTequilaBottleFull # ...that explains it.
-#    - id: DrinkShotGlass
-#      amount: 2
-#    - id: Spear # self defence
-#    - id: ClothingHeadHatHardhatYellow
-#    - id: ClothingNeckMantleQM
-#    - id: ClothingHeadsetCargo
-#End Coyote
 - type: entity
+  abstract: true # LoneStar
   name: hydrated scurret
   description: Wait, what?
   id: CrateFunScurret

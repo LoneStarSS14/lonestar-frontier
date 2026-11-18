@@ -1,31 +1,34 @@
+## LoneStar, removed all #infinite notes.
+
 - type: vendingMachineInventory
   id: NFPTechInventory
   startingInventory:
-    ClearNFPDA: 4294967295 #infinite
-    ContractorPDA: 4294967295 #infinite
-    PilotPDA: 4294967295 #infinite
-    MercenaryPDA: 4294967295 #infinite
-    ContractorIDCard: 4294967295 #infinite
-    ClothingHeadsetGrey: 4294967295 #infinite
-    RubberStampSecretary: 3
-    RubberStampCaptain: 4294967295 #Infinite
-    RubberStampApproved: 4294967295 #Infinite
-    RubberStampDenied: 4294967295 #Infinite
+    ClearNFPDA: 4294967295
+    ContractorPDA: 4294967295
+    PilotPDA: 4294967295
+    MercenaryPDA: 4294967295
+    ContractorIDCard: 4294967295
+    ClothingHeadsetGrey: 4294967295
+    RubberStampSecretary: 4294967295 # LoneStar
+    RubberStampCaptain: 4294967295
+    RubberStampApproved: 4294967295
+    RubberStampDenied: 4294967295
     BoxPaper: 4
     BoxPaperOffice: 4
     BoxPaperCaptainsThoughts: 4
     BoxEnvelope: 4
     BoxFolderClipboard: 3
     BoxFolderSr: 3
+    # BoxFolderStc: 3 # LoneStar
     BoxFolderBlue: 3
     BoxFolderRed: 3
     BoxFolderYellow: 3
-    HandLabeler: 4294967295 #Infinite
-    BrbSign: 4294967295 #Infinite
-    DeskBell: 4294967295 #Infinite
-    EncryptionKeyGreeting: 4294967295 #Infinite
-    EncryptionKeySecurity: 4294967295 #Infinite
-    EncryptionKeyService: 4294967295 #Infinite
+    HandLabeler: 4294967295
+    BrbSign: 4294967295
+    DeskBell: 4294967295
+    EncryptionKeyGreeting: 4294967295
+    EncryptionKeySecurity: 4294967295
+    EncryptionKeyService: 4294967295
     EncryptionKeyNfsd: 5
     EncryptionKeyCommand: 5
     AccessConfigurator: 2
@@ -42,16 +45,17 @@
     NFDetectivePDA: 10
     SergeantPDA: 10
     BailiffPDA: 10
-    ClothingHeadsetNfsdBrownCommon: 4294967295 #infinite
-    ClothingHeadsetNfsdCreamCommon: 4294967295 #infinite
-    ClothingHeadsetNfsdGreenCommon: 4294967295 #infinite
-    NFPrisonerPDA: 4294967295 #infinite
-    NFPrisonerIDCard: 4294967295 #infinite
-    ClothingHeadsetPrison: 4294967295 #infinite
+    ClothingHeadsetNfsdBrownCommon: 4294967295
+    ClothingHeadsetNfsdCreamCommon: 4294967295
+    ClothingHeadsetNfsdGreenCommon: 4294967295
+    NFPrisonerPDA: 4294967295
+    NFPrisonerIDCard: 4294967295
+    ClothingHeadsetPrison: 4294967295
     RubberStampPal: 3
-    RubberStampApproved: 4294967295 #Infinite
-    RubberStampDenied: 4294967295 #Infinite
-    Pen: 4294967295 #Infinite
+    RubberStampSheriff: 1
+    RubberStampApproved: 4294967295
+    RubberStampDenied: 4294967295
+    Pen: 4294967295
     BoxPaper: 4
     BoxPaperOffice: 4
     BoxPaperCaptainsThoughts: 4
@@ -60,8 +64,8 @@
     BoxFolderNfsdFormsBrown: 3
     BoxFolderGreen: 3
     BoxFolderRed: 3
-    HandLabeler: 4294967295 #Infinite
-    EncryptionKeyNfsd: 4294967295 #Infinite
+    HandLabeler: 4294967295
+    EncryptionKeyNfsd: 4294967295
     EncryptionKeyCommand: 5
     ClothingOuterCoatNfsdFormal: 3
     ClothingOuterCoatNfsdFormalSheriff: 3
