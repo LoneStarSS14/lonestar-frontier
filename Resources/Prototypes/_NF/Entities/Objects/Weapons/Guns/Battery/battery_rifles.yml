@@ -12,6 +12,7 @@
     sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+
 - type: entity
   id: NFWeaponEnergyRifleCarbinePractice
   parent: [ NFBaseWeaponEnergyGunPractice, NFBaseWeaponFrameEnergyRifleNanotrasen ]
@@ -75,6 +76,7 @@
     range: 2
     energyConsumption: 2700000
     disableDuration: 30
+
 - type: entity
   name: portable particle decelerator
   parent: [BaseC2ContrabandEngineeringUnredeemable, NFBaseWeaponEnergyRifleParticle, BaseWeaponBattery ]

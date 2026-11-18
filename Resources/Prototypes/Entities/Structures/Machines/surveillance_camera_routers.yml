@@ -43,6 +43,7 @@
         path: /Audio/Ambience/Objects/server_fans.ogg
     - type: WiresVisuals
     - type: WiresPanel
+
 - type: entity
   parent: SurveillanceCameraRouterBase
   id: SurveillanceCameraRouterConstructed
@@ -177,6 +178,7 @@
         path: /Audio/Ambience/Objects/server_fans.ogg
     - type: WiresVisuals
     - type: WiresPanel
+
 - type: entity
   parent: SurveillanceCameraWirelessRouterBase
   id: SurveillanceCameraWirelessRouterConstructed

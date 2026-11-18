@@ -44,6 +44,7 @@
       collection: Belch # Frontier
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
+
 - type: emoteSounds
   id: FemaleHuman
   params:
@@ -89,6 +90,7 @@
       collection: Belch # Frontier
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
+
 - type: emoteSounds
   id: MaleReptilian
   params:
@@ -126,6 +128,7 @@
       collection: Belch # Frontier
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: FemaleReptilian
   params:
@@ -163,6 +166,7 @@
       collection: Belch # Frontier
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: MaleSlime
   sounds:
@@ -214,6 +218,7 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
   params:
     variation: 0.125
+
 - type: emoteSounds
   id: FemaleSlime
   sounds:
@@ -265,6 +270,7 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
   params:
     variation: 0.125
+
 - type: emoteSounds
   id: UnisexVox
   sounds:
@@ -287,6 +293,7 @@
   params:
     variation: 0.125
     # We need vox sounds for the other emotes
+
 - type: emoteSounds
   id: UnisexDiona
   sounds:
@@ -314,6 +321,7 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
   params:
     variation: 0.125
+
 - type: emoteSounds
   id: UnisexArachnid
   params:
@@ -343,6 +351,7 @@
       collection: Belch # Frontier
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: UnisexDwarf
   sounds:
@@ -389,6 +398,7 @@
   params:
     variation: 0.125
     pitch: 0.75
+
 - type: emoteSounds
   id: FemaleDwarf
   sounds:
@@ -435,6 +445,7 @@
   params:
     variation: 0.125
     pitch: 0.75
+
 - type: emoteSounds
   id: UnisexMoth
   params:
@@ -466,6 +477,7 @@
       collection: Belch # Frontier
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+
 - type: emoteSounds
   id: UnisexSilicon
   params:
@@ -485,6 +497,7 @@
       path: /Audio/Items/bikehorn.ogg
     Ping:
       path: /Audio/Effects/Cargo/ping.ogg
+
 - type: emoteSounds
   id: UnisexSiliconSyndicate
   params:
@@ -506,6 +519,7 @@
       path: /Audio/Items/bikehorn.ogg
     Ping:
       path: /Audio/Effects/Cargo/ping.ogg
+
 - type: emoteSounds
   id: UnisexSiliconXenoborg
   params:
@@ -544,6 +558,7 @@
       collection: Cracks # Imp
     Blink: # Imp addition
       collection: Blinks
+
 - type: emoteSounds
   id: DionaBodyEmotes
   sounds:
@@ -564,6 +579,7 @@
       collection: Cracks # Imp
     Blink: # Imp addition
       collection: Blinks
+
 - type: emoteSounds
   id: ReptilianBodyEmotes
   sounds:
@@ -593,59 +609,69 @@
     collection: ZombieScreams
     params:
       variation: 0.125
+
 - type: emoteSounds
   id: Skeleton
   sound:
     path: /Audio/Voice/Skeleton/skeleton_scream.ogg
     params:
       variation: 0.125
+
 - type: emoteSounds
   id: Mouse
   sound:
     path: /Audio/Animals/mouse_squeak.ogg
     params:
       variation: 0.125
+
 - type: emoteSounds
   id: Cluwne
   sound:
     collection: CluwneScreams
     params:
       variation: 0.125
+
 - type: emoteSounds
   id: Bear
   sound:
     path: /Audio/Animals/bear.ogg
     params:
       variation: 0.125
+
 - type: emoteSounds
   id: Cerberus
   sound:
     path: /Audio/Animals/cerberus.ogg
     params:
       variation: 0.125
+
 - type: emoteSounds
   id: Kangaroo
   sound:
     path: /Audio/Animals/kangaroo_grunt.ogg
     params:
       variation: 0.125
+
 - type: emoteSounds
   id: Nymph
   sounds:
     Chirp:
       path: /Audio/Animals/nymph_chirp.ogg
+
 - type: emoteSounds
   id: Parrot
   sound:
     path: /Audio/Animals/parrot_raught.ogg
     params:
       variation: 0.125
+
 - type: emoteSounds
   id: Goat
   sound:
     path: /Audio/Animals/goat_bah.ogg
     params:
       variation: 0.125
+
 - type: emoteSounds
   id: Scurret
   params:

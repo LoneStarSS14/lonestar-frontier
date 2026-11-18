@@ -78,6 +78,7 @@
     solution: lube
   - type: ExaminableSolution
     solution: lube
+
 - type: entity
   abstract: true
   id: BaseHyperlathe
@@ -90,6 +91,7 @@
     modifiers:
       SpaceLube: 0.5 # Frontier: 0.8<0.5
       SpaceGlue: 5 # no change from normal lathe, overheat!!!
+
 - type: entity
   id: Autolathe
   parent: BaseLatheLube
@@ -171,6 +173,7 @@
     - blueprint
   - type: PirateBountyItem # Frontier
     id: Autolathe # Frontier
+
 - type: entity
   id: AutolatheHyperConvection
   parent: [Autolathe, BaseHyperlathe]
@@ -181,6 +184,7 @@
     sprite: Structures/Machines/autolathe_hypercon.rsi
   - type: Machine
     board: AutolatheHyperConvectionMachineCircuitboard
+
 - type: entity
   id: Protolathe
   parent: [BaseLatheLube, NFBlueprintReceiverBase] # Frontier: Add BlueprintRecieverBase as parent
@@ -259,6 +263,7 @@
       machine_parts: !type:Container
       blueprint: !type:Container
   # End Frontier: accept blueprints
+
 - type: entity
   id: ProtolatheHyperConvection
   parent: [Protolathe, BaseHyperlathe]
@@ -269,6 +274,7 @@
     sprite: Structures/Machines/protolathe_hypercon.rsi
   - type: Machine
     board: ProtolatheHyperConvectionMachineCircuitboard
+
 - type: entity
   id: CircuitImprinter
   parent: BaseLatheLube
@@ -326,6 +332,7 @@
         - Ingot
   - type: OreSiloClient
   - type: RequireProjectileTarget
+
 - type: entity
   id: CircuitImprinterHyperConvection
   parent: [CircuitImprinter, BaseHyperlathe]
@@ -336,6 +343,7 @@
     sprite: Structures/Machines/circuit_imprinter_hypercon.rsi
   - type: Machine
     board: CircuitImprinterHyperConvectionMachineCircuitboard
+
 - type: entity
   id: ExosuitFabricator
   parent: BaseLatheLube
@@ -377,6 +385,7 @@
   - type: GuideHelp
     guides:
     - Robotics
+
 - type: entity
   id: Biofabricator
   parent: BaseLathe
@@ -416,6 +425,7 @@
   - type: EmagLatheRecipes
     emagStaticPacks:
     - HostileCubesStatic
+
 - type: entity
   id: SecurityTechFab
   parent: BaseLatheLube
@@ -466,6 +476,7 @@
   - type: OreSiloClient
   # - type: LatheAnnouncing # Frontier: spammy
   #   channels: [Security] # Frontier
+
 - type: entity
   id: AmmoTechFab
   parent: [NFBlueprintReceiverBase, BaseLatheLube] # Frontier: added NFBlueprintReceiverBase
@@ -507,6 +518,7 @@
         tags: # Frontier
         - NFBlueprintMercenaryTechfab # Frontier
         - NFBlueprintAdvanced # Frontier
+
 - type: entity
   id: MedicalTechFab
   parent: [ NFBlueprintReceiverBase, BaseLatheLube ] # Frontier: added NFBlueprintReceiverBase
@@ -574,6 +586,7 @@
       tags: # Frontier
       - NFBlueprintMedicalTechfab # Frontier
       - NFBlueprintAdvanced # Frontier
+
 - type: entity
   parent: BaseLathe
   id: UniformPrinter
@@ -633,6 +646,7 @@
         - RawMaterial
         - Ingot
   - type: OreSiloClient
+
 - type: entity
   id: Biogenerator
   parent: [ BaseLathe, BaseLatheMagnet ]
@@ -700,6 +714,7 @@
     spriteLayers:
     - beaker
   - type: OreSiloClient # LoneStar
+
 - type: entity
   parent: [ BaseLathe, BaseLatheMagnet ]
   id: OreProcessor
@@ -737,6 +752,7 @@
     - type: PlaceableSurface # DeltaV: Allow ore bags to dump into it directly
       isPlaceable: false # but not place on it if you just click it with a random item
     - type: OreSiloClient # Frontier
+
 - type: entity
   parent: OreProcessor
   id: OreProcessorIndustrial
@@ -754,6 +770,7 @@
     - OreSmelting
     - RGlassSmelting
     - AdvancedSmelting
+
 - type: entity
   parent: BaseLathe
   id: Sheetifier
@@ -787,6 +804,7 @@
     staticPacks:
     - SheetifierStatic
   - type: OreSiloClient # Frontier
+
 - type: entity
   parent: BaseLathe
   id: CutterMachine

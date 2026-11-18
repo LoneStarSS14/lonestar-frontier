@@ -228,6 +228,7 @@
   - type: Battery
     maxCharge: 2880000
     startingCharge: 2880000
+
 - type: entity
   parent: SubstationBasic
   id: SubstationBasicEmpty
@@ -235,6 +236,7 @@
   components:
   - type: Battery
     startingCharge: 0
+
 - type: entity
   parent: BaseSubstationWall
   id: SubstationWallBasic

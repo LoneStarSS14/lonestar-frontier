@@ -49,6 +49,7 @@
       - ShuttleCraft
   placement:
     mode: SnapgridCenter
+
 - type: entity
   id: Thruster
   name: SpacePutt Mule thruster
@@ -104,6 +105,7 @@
   - type: PirateBountyItem
     id: Thruster
   # End Frontier
+
 - type: entity
   id: ThrusterUnanchored
   parent: Thruster
@@ -113,6 +115,7 @@
       anchored: false
     - type: Physics
       bodyType: Dynamic
+
 - type: entity
   id: DebugThruster
   parent: BaseThruster
@@ -137,6 +140,7 @@
       shader: unshaded
       visible: false
       offset: 0, 1
+
 - type: entity
   id: Gyroscope
   parent: [ BaseThruster, ConstructibleMachine ]
@@ -219,6 +223,7 @@
       - Off
       - Toggle
   ## LoneStar end Toggleable Gryoscopes
+
 - type: entity
   id: GyroscopeUnanchored
   parent: Gyroscope
@@ -228,6 +233,7 @@
       anchored: false
     - type: Physics
       bodyType: Dynamic
+
 - type: entity
   id: DebugGyroscope
   parent: BaseThruster
@@ -255,6 +261,7 @@
       map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
       shader: unshaded
       visible: false
+
 - type: entity
   id: RustedThruster
   parent: BaseStructureDynamic

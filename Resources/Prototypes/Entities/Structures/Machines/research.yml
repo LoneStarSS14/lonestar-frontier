@@ -90,6 +90,7 @@
   - type: GuideHelp
     guides:
     - Science
+
 - type: entity
   id: BaseResearchAndDevelopmentPointSource
   parent: BaseMachinePowered

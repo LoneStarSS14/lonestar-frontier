@@ -9,6 +9,7 @@
       amount: 5
   products:
     Coffee: 20
+
 - type: reaction
   id: PumpkinSpiceLatte
   reactants:
@@ -35,6 +36,7 @@
       amount: 1
   products:
     TheMadgob: 5
+
 - type: reaction
   id: HoneyIcedTea
   reactants:
@@ -60,6 +62,7 @@
       amount: 1
   products:
     WassailMulledAle : 4
+
 - type: reaction
   id: Eggnog
   requiredMixerCategories:
@@ -88,6 +91,7 @@
       amount: 1
   products:
     GinAndSonic: 2
+
 - type: reaction
   id: GoldenCat
   requiredMixerCategories:
@@ -101,6 +105,7 @@
       amount: 2
   products:
     GoldenCat: 5
+
 - type: reaction
   id: PineappleBlast
   reactants:
@@ -112,6 +117,7 @@
       amount: 1
   products:
     PineappleBlast: 5
+
 - type: reaction
   id: TorpedoJuice
   requiredMixerCategories:
@@ -125,6 +131,7 @@
       amount: 1
   products:
     TorpedoJuice: 5
+
 - type: reaction
   id: BeesKnees
   reactants:

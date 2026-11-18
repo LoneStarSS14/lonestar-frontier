@@ -10,6 +10,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitPilot
@@ -21,6 +22,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitSr
@@ -32,6 +34,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitCaptain
@@ -43,6 +46,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitEngineer
@@ -54,6 +58,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitAtmosTech
@@ -65,6 +70,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitCargo
@@ -76,6 +82,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitSalvage
@@ -87,6 +94,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitMedic
@@ -98,6 +106,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitParamedic
@@ -109,6 +118,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitParamedicAlt
@@ -120,6 +130,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitScientist
@@ -131,6 +142,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitJanitor
@@ -142,6 +154,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitServiceWorker
@@ -153,6 +166,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitChaplain
@@ -165,6 +179,7 @@
     - id: Lantern
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitBoxerRed
@@ -177,6 +192,7 @@
     - id: ClothingHandsGlovesBoxingRed
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitBoxerGreen
@@ -189,6 +205,7 @@
     - id: ClothingHandsGlovesBoxingGreen
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitBoxerBlue
@@ -201,6 +218,7 @@
     - id: ClothingHandsGlovesBoxingBlue
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitBoxerYellow
@@ -213,6 +231,7 @@
     - id: ClothingHandsGlovesBoxingYellow
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitBoxerRandom
@@ -225,6 +244,7 @@
     - id: ClothingHandsGlovesBoxingBlue
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitHydro
@@ -236,6 +256,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitMail
@@ -247,6 +268,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitMercenary
@@ -258,6 +280,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitPrivateSec
@@ -269,6 +292,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitNfsd
@@ -320,6 +344,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitFsa
@@ -331,6 +356,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMagSecurity
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitFsb
@@ -342,6 +368,7 @@
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
+
 - type: entity
   abstract: true
   id: StorageFillEVASuitFsc

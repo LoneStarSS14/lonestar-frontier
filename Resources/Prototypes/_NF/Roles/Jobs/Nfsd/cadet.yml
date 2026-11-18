@@ -27,6 +27,7 @@
   - !type:AddComponentSpecial
     components:
     - type: IsNfsd
+
 - type: startingGear
   id: CadetGear
   equipment:
@@ -39,6 +40,7 @@
     - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
     - FrontierUplinkCoin10
     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink for chunguses, removed their starting uplink coins
+
 - type: chameleonOutfit
   id: CadetChameleonOutfit
   job: Cadet

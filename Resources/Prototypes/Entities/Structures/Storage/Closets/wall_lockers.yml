@@ -161,6 +161,7 @@
     stateDoorClosed: med_door
   - type: AccessReader
 #    access: [["Medical"]] # Frontier
+
 - type: entity
   parent: BaseWallLocker
   id: LockerWallEvacRepair

@@ -6,6 +6,7 @@
     species:
     - SlimePerson
     - Vox
+
 - type: loadoutEffectGroup
   id: NFOxygenBreather
   effects:
@@ -15,12 +16,14 @@
     - Vox
     - Sheleg # Different meds
     inverted: true
+
 - type: loadoutEffectGroup
   id: NFSheleg
   effects:
   - !type:SpeciesLoadoutEffect
     species:
     - Sheleg
+
 - type: loadoutEffectGroup
   id: ShoesCapableNF
   effects:
@@ -28,6 +31,7 @@
     species:
     - Diona
     inverted: true
+
 - type: loadoutEffectGroup
   id: NFHeadwearCapable
   effects:
@@ -35,6 +39,7 @@
     species:
     - Sheleg
     inverted: true
+
 - type: loadoutEffectGroup
   id: NFCoatCapable
   effects:
@@ -42,12 +47,14 @@
     species:
     - Sheleg
     inverted: true
+
 - type: loadoutEffectGroup
   id: NFOuterSuitRequired
   effects:
   - !type:SpeciesLoadoutEffect
     species:
     - Sheleg
+
 - type: loadoutEffectGroup
   id: NFNotDocOrStc
   effects:
@@ -56,12 +63,14 @@
     - JobStationTrafficController
     - JobSecretary
     - JobDirectorOfCare
+
 - type: loadoutEffectGroup
   id: NFNotDoc
   effects:
   - !type:RoleBlacklistLoadoutEffect
     blacklist:
     - JobDirectorOfCare
+
 - type: loadoutEffectGroup
   id: NFNotEngineering
   effects:
@@ -69,6 +78,7 @@
     blacklist:
     - JobPlantManager
     - JobPlantTechnician
+
 - type: loadoutEffectGroup
   id: NFNotStationRep
   effects:

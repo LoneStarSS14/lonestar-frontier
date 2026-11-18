@@ -12,6 +12,7 @@
     - state: idmercenary
   - type: Clothing
     sprite: _NF/Objects/Misc/id_cards.rsi
+
 - type: entity
   parent: IDCardStandard
   id: PilotIDCard
@@ -26,6 +27,7 @@
     - state: idpilot
   - type: Clothing
     sprite: _NF/Objects/Misc/id_cards.rsi
+
 - type: entity
   parent: IDCardStandard
   id: StcIDCard
@@ -42,6 +44,7 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
   - type: Item
     heldPrefix: silver
+
 - type: entity
   parent: IDCardStandard
   id: PublicAffairsIDCard
@@ -54,6 +57,7 @@
     layers:
     - state: nfsd
     - state: idpublicaffairsliaison
+
 - type: entity
   parent: IDCardStandard
   id: CadetIDCard
@@ -70,6 +74,7 @@
     sprite: _LoneStar/Objects/Misc/id_cards.rsi
   - type: Item
     heldPrefix: lsrd
+
 - type: entity
   parent: CadetIDCard
   id: DeputyIDCard
@@ -82,6 +87,7 @@
     layers:
     - state: lsrd
     - state: idlsrdranger
+
 - type: entity
   parent: CadetIDCard
   id: BrigmedicNFIDCard
@@ -94,6 +100,7 @@
     layers:
     - state: lsrd
     - state: idlsrdcorpsman
+
 - type: entity
   parent: CadetIDCard
   id: SergeantIDCard
@@ -106,6 +113,7 @@
     layers:
     - state: lsrd
     - state: idlsrdsenior
+
 - type: entity
   parent: CadetIDCard
   id: BailiffIDCard
@@ -118,6 +126,7 @@
     layers:
     - state: lsrd
     - state: idlsrdarmorer
+
 - type: entity
   parent: [CadetIDCard, BaseC4Contraband]
   id: ShriffIDCard
@@ -130,6 +139,7 @@
     layers:
     - state: lsrd
     - state: idlsrdchief
+
 - type: entity
   parent: CadetIDCard
   id: NFDetectiveIDCard
@@ -142,6 +152,7 @@
     layers:
     - state: lsrd
     - state: idlsrddetective
+
 - type: entity
   parent: SecurityIDCard
   id: SecurityGuardIDCard
@@ -149,6 +160,7 @@
   components:
   - type: PresetIdCard
     job: SecurityGuard
+
 - type: entity
   parent: ERTChaplainIDCard
   id: ERTMailCarrierIDCard
@@ -161,6 +173,7 @@
     layers:
     - state: gold
     - state: ert_mailcarrier
+
 - type: entity
   parent: [HoPIDCard, BaseC4Contraband]
   id: SrIDCard
@@ -168,6 +181,7 @@
   components:
   - type: PresetIdCard
     job: StationRepresentative
+
 - type: entity
   parent: ValetIDCard
   id: ValetNFIDCard
@@ -180,12 +194,14 @@
     layers:
     - state: default
     - state: idvalet
+
 - type: entity
   parent: JanitorIDCard
   id: NFJanitorIDCard
   components:
   - type: PresetIdCard
     job: NFJanitor
+
 - type: entity
   parent: PassengerIDCard
   id: ContractorIDCard
@@ -198,6 +214,7 @@
     layers:
     - state: default
     - state: idcontractor
+
 - type: entity
   parent: PirateIDCard
   id: NFPirateIDCard
@@ -214,6 +231,7 @@
     - state: idpirate
   - type: Item
     heldPrefix: pirate
+
 - type: entity
   parent: NFPirateIDCard
   id: NFPirateCaptainIDCard
@@ -227,6 +245,7 @@
     layers:
     - state: pirate
     - state: idpiratecaptain
+
 - type: entity
   parent: NFPirateIDCard
   id: NFPirateFirstMateIDCard
@@ -239,6 +258,7 @@
     layers:
     - state: pirate
     - state: idpiratefirstmate
+
 - type: entity
   parent: PunPunIDCard
   id: YipYipIDCard
@@ -246,6 +266,7 @@
   components:
   - type: PresetIdCard
     name: Yip Yip
+
 - type: entity
   parent: [IDCardStandard, BaseCommandContraband]
   id: DocIDCard
@@ -262,6 +283,7 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
   - type: Item
     heldPrefix: silver
+
 - type: entity
   parent: IDCardStandard
   id: PlantTechnicianIDCard
@@ -276,6 +298,7 @@
     - state: idplanttechnician
   - type: Clothing
     sprite: _NF/Objects/Misc/id_cards.rsi
+
 - type: entity
   parent: [IDCardStandard, BaseCommandContraband]
   id: PlantManagerIDCard
@@ -301,6 +324,7 @@
   components:
   - type: PresetIdCard
     name: Clippy
+
 - type: entity
   parent: PlantTechnicianIDCard
   id: CurieIDCard
@@ -308,6 +332,7 @@
   components:
   - type: PresetIdCard
     name: Curie
+
 - type: entity
   parent: NFPirateFirstMateIDCard
   id: ClarpyIDCard
@@ -315,6 +340,7 @@
   components:
   - type: PresetIdCard
     name: Clarpy
+
 - type: entity
   parent: DeputyIDCard
   id: CappyIDCard

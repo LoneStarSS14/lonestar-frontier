@@ -11,6 +11,7 @@
     FoodMeatCat: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeRosyMothRoachburger
   name: rosy mothroachburger recipe
@@ -22,6 +23,7 @@
     MobRosyMothroach: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerRed
   name: red pretty burger recipe
@@ -34,6 +36,7 @@
     CrayonRed: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerOrange
   name: orange pretty burger recipe
@@ -46,6 +49,7 @@
     CrayonOrange: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerYellow
   name: yellow pretty burger recipe
@@ -58,6 +62,7 @@
     CrayonYellow: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerGreen
   name: green pretty burger recipe
@@ -70,6 +75,7 @@
     CrayonGreen: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerBlue
   name: blue pretty burger recipe
@@ -82,6 +88,7 @@
     CrayonBlue: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerPurple
   name: purple pretty burger recipe
@@ -94,6 +101,7 @@
     CrayonPurple: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerWhite
   name: white pretty burger recipe
@@ -106,6 +114,7 @@
     CrayonWhite: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerBlack
   name: black pretty burger recipe
@@ -131,6 +140,7 @@
     FoodAvocadoSlice: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBreakfastBagel
   name: breakfast bagel recipe
@@ -145,6 +155,7 @@
     FoodCheeseSlice: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBreakfastBagelPoppy
   name: poppyseed breakfast bagel recipe
@@ -159,6 +170,7 @@
     FoodCheeseSlice: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeCucumberSandwich
   name: cucumber sandwich recipe
@@ -173,6 +185,7 @@
     Mayo: 5
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeFoodBakedChevreChaudCotton
   name: cotton chevre chaud recipe
@@ -214,6 +227,7 @@
     FoodGarlic: 4
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeFoodBakedTexasToast
   name: texas toast recipe
@@ -228,6 +242,7 @@
   - Oven
 
  # Cured Meat - Future category for sausages/transformative meat and now consumption friendly.
+
 - type: microwaveMealRecipe
   id: RecipeCuredCarp
   name: cured carp
@@ -240,6 +255,7 @@
     Stellibinin: 10
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSausageRaw
   name: raw sausage recipe
@@ -253,6 +269,7 @@
     UncookedAnimalProteins: 9
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSausageRawStomachRat
   name: raw stomach sausage recipe
@@ -266,6 +283,7 @@
     UncookedAnimalProteins: 9
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSausageRawStomachHuman
   name: raw stomach sausage recipe
@@ -279,6 +297,7 @@
     UncookedAnimalProteins: 9
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSausageCooked
   name: cooked sausage recipe
@@ -290,6 +309,7 @@
   recipeType:
   - Oven
   - Microwave
+
 - type: microwaveMealRecipe
   id: RecipeHotdog
   name: hotdog recipe
@@ -313,6 +333,7 @@
     FoodMeatWholeChicken: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeFoodBakedWholeDuck
   name: whole baked duck
@@ -323,6 +344,7 @@
     FoodMeatWholeDuck: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeFoodBakedWholePenguin
   name: whole baked penguin
@@ -333,6 +355,7 @@
     FoodMeatWholePenguin: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeChickenParmesan
   name: Chicken Parmesan
@@ -363,6 +386,7 @@
     Water: 10
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeCarpSushi
   name: carp sushi recipe
@@ -378,6 +402,7 @@
     Water: 10
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeCuredCarpSushi
   name: fresh fish sushi recipe
@@ -410,6 +435,7 @@
     FoodChevreSlice: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeAvocadoSalad
   name: avocado salad recipe
@@ -426,6 +452,7 @@
     FoodTomato: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeCottonSalad
   name: cotton salad recipe
@@ -456,6 +483,7 @@
     FoodMeatChicken: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeBatteredChickenCutlet
   name: battered chicken cutlet recipe
@@ -469,6 +497,7 @@
     FoodMeatChickenCutlet: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeBatteredCuredCarp
   name: battered fish recipe
@@ -482,6 +511,7 @@
     FoodCuredCarp: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeBatteredOnionRings
   name: battered onion rings recipe
@@ -494,6 +524,7 @@
     FoodOnionSlice: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeFoodTofuSliceBattered
   name: battered tofu slice recipe
@@ -521,6 +552,7 @@
     FoodDonutUncooked: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutHomer
   name: donut recipe
@@ -534,6 +566,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutChaos
   name: chaos donut recipe
@@ -545,6 +578,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutMeat
   name: meat donut recipe
@@ -556,6 +590,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutPink
   name: pink donut recipe
@@ -568,6 +603,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutSpacemen
   name: spaceman's donut recipe
@@ -581,6 +617,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutApple
   name: apple donut recipe
@@ -593,6 +630,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutCaramel
   name: caramel donut recipe
@@ -606,6 +644,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutChocolate
   name: chocolate donut recipe
@@ -619,6 +658,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutBluePumpkin
   name: blue pumpkin donut recipe
@@ -631,6 +671,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutBungo
   name: bungo donut recipe
@@ -643,6 +684,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutMatcha
   name: matcha donut recipe
@@ -656,6 +698,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutSweetpea
   name: sweet pea donut recipe
@@ -668,6 +711,7 @@
     FoodDonutPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellyHomer
   name: jelly-donut recipe
@@ -681,6 +725,7 @@
     FoodDonutJellyPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellyPink
   name: pink jelly-donut recipe
@@ -693,6 +738,7 @@
     FoodDonutJellyPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellySpaceman
   name: spaceman's jelly-donut recipe
@@ -705,6 +751,7 @@
     FoodDonutJellyPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellyApple
   name: apple jelly-donut recipe
@@ -717,6 +764,7 @@
     FoodDonutJellyPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellyCaramel
   name: caramel jelly-donut recipe
@@ -730,6 +778,7 @@
     FoodDonutJellyPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellyChocolate
   name: chocolate jelly-donut recipe
@@ -743,6 +792,7 @@
     FoodDonutJellyPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellyBluePumpkin
   name: blue pumpkin jelly-donut
@@ -755,6 +805,7 @@
     FoodDonutJellyPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellyBungo
   name: bungo jelly-donut
@@ -767,6 +818,7 @@
     FoodDonutJellyPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellyMatcha
   name: matcha jelly-donut
@@ -780,6 +832,7 @@
     FoodDonutJellyPlain: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDonutJellySweetpea
   name: sweet pea jelly-donut
@@ -824,6 +877,7 @@
     OrganAnimalHeart: 1
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeDragonOmelette
   name: dragon omelette recipe
@@ -840,6 +894,7 @@
   recipeType:
   - Oven
   - Microwave
+
 - type: microwaveMealRecipe
   id: RecipeRaisins
   name: raisins recipe
@@ -851,6 +906,7 @@
   recipeType:
   - Oven
   - Microwave
+
 - type: microwaveMealRecipe
   id: RecipePickle
   name: pickle recipe
@@ -863,6 +919,7 @@
     Saline: 10
   recipeType:
   - Microwave
+
 - type: microwaveMealRecipe
   id: RecipePoachedPears
   name: poached pears recipe
@@ -877,6 +934,7 @@
     Wine: 10
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipePearsBelleHelene
   name: pears belle helene recipe
@@ -892,6 +950,7 @@
     Cream: 5
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipePearMuffin
   name: pear muffin recipe
@@ -907,6 +966,7 @@
     Sugar: 5
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipePearCheeseTart
   name: pear and cheese tart recipe
@@ -920,6 +980,7 @@
     FoodChevre: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeHoneyBun
   name: honey bun recipe
@@ -932,6 +993,7 @@
     Honey: 5
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeHoneyChallah
   name: honey challah recipe
@@ -945,6 +1007,7 @@
     Honey: 10
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeGlazedHam
   name: honey glazed ham recipe
@@ -958,6 +1021,7 @@
     TableSalt: 5
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeAppleHoneyDutchBaby
   name: honey apple streusel pie
@@ -973,6 +1037,7 @@
     Oats: 10
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeAppleStrudelBite
   name: apple strudel bite
@@ -987,6 +1052,7 @@
     Honey: 5
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeCinnamonRoll
   name: cinnamon roll
@@ -1014,6 +1080,7 @@
     TableSalt: 10
     Cornoil: 10
   recipeType: Assembler
+
 - type: microwaveMealRecipe
   id: RecipeBasicNoodles
   name: basic noodles
@@ -1028,6 +1095,7 @@
     Water: 15
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeMisoNoodles
   name: miso noodles
@@ -1044,6 +1112,7 @@
     Egg: 6
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeShioNoodles
   name: shio noodles
@@ -1059,6 +1128,7 @@
     Water: 15
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeShoyuNoodles
   name: shoyu noodles
@@ -1076,6 +1146,7 @@
     Egg: 6
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeSpicyNoodles
   name: spicy noodles
@@ -1092,6 +1163,7 @@
     Water: 15
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeTonkotsuNoodles
   name: tonkotsu noodles
@@ -1108,6 +1180,7 @@
     Water: 15
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerPlainCotton
   name: plain cotton burger recipe
@@ -1119,6 +1192,7 @@
     CottonBol: 1
   recipeType:
   - Oven
+
 - type: microwaveMealRecipe
   id: RecipeBurgerCottonCheese
   name: cotton cheeseburger recipe
@@ -1145,6 +1219,7 @@
     IceCream: 10
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeIceCreamSandwichStrawberry
   name: strawberry ice-cream sandwich
@@ -1158,6 +1233,7 @@
     JuiceBerry: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipePopsicleOrange
   name: orange creamsicle
@@ -1171,6 +1247,7 @@
     JuiceOrange: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipePopsicleBerry
   name: berry creamsicle
@@ -1184,6 +1261,7 @@
     JuiceBerry: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipePopsicleLicorice
   name: licorice creamsicle
@@ -1197,6 +1275,7 @@
     Everyspice: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipePopsicleJumbo
   name: jumbo popsicle
@@ -1210,6 +1289,7 @@
     IceCream: 8
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSnowconeBase
   name: sweet snowcone
@@ -1223,6 +1303,7 @@
     Sugar: 4
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSnowconePlain
   name: flavorless snowcone
@@ -1235,6 +1316,7 @@
     Ice: 10
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSnowconeBerry
   name: berry snowcone
@@ -1248,6 +1330,7 @@
     JuiceBerry: 4
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSnowconeFruit
   name: fruit salad snowcone
@@ -1263,6 +1346,7 @@
     JuiceOrange: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSnowconeClown
   name: clowncone
@@ -1276,6 +1360,7 @@
     Laughter: 4
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSnowconeMime
   name: mime snowcone
@@ -1289,6 +1374,7 @@
     Nothing: 4 # the sound of silence
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSnowconeRainbow
   name: rainbow snowcone
@@ -1303,6 +1389,7 @@
     Sugar: 4 # because it's sweet
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeSundae
   name: ice cream sundae
@@ -1316,6 +1403,7 @@
     IceCream: 10
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeFreezy
   name: space freezy
@@ -1329,6 +1417,7 @@
     JuiceBerry: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeCornuto
   name: choco horn
@@ -1342,6 +1431,7 @@
     IceCream: 8
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeMochi
   name: mochi
@@ -1354,6 +1444,7 @@
     IceCream: 5
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeMochiCherry
   name: cherry mochi
@@ -1366,6 +1457,7 @@
     JuiceCherry: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeMochiBungo
   name: bungo mochi
@@ -1378,6 +1470,7 @@
     JuiceBungo: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeMochiChocolate
   name: chocolate mochi
@@ -1390,6 +1483,7 @@
     CocoaPowder: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeMochiFiber
   name: fiber mochi
@@ -1402,6 +1496,7 @@
     Fiber: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeMochiMoth
   name: rosy mochi
@@ -1414,6 +1509,7 @@
     PinkDrink: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeMochiSpice
   name: spice mochi
@@ -1426,6 +1522,7 @@
     Everyspice: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeMochiTea
   name: tea mochi
@@ -1438,6 +1535,7 @@
     Tea: 2
   recipeType:
   - Assembler
+
 - type: microwaveMealRecipe
   id: RecipeMochiUbe
   name: ube mochi
@@ -1450,6 +1548,7 @@
     PolypyryliumOligomers: 2
   recipeType:
   - Assembler
+
 # NOT ACTUAL FOOD
 - type: microwaveMealRecipe
   id: RecipeDriedShrooms

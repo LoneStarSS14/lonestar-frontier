@@ -12,6 +12,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: heart_l_arm
+
 - type: marking
   id: TattooVoxHeartRightArm
   bodyPart: RArm
@@ -26,6 +27,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: heart_r_arm
+
 - type: marking
   id: TattooVoxHiveChest
   bodyPart: Chest
@@ -40,6 +42,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: hive_s
+
 - type: marking
   id: TattooVoxNightlingChest
   bodyPart: Chest
@@ -54,6 +57,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: nightling_s
+
 - type: marking
   id: TattooVoxTailRing
   bodyPart: Tail
@@ -67,6 +71,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: tail_ring
+
 - type: marking
   id: TattooEyeVoxRight
   bodyPart: Eyes
@@ -80,6 +85,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: tattoo_eye_vox_r
+
 - type: marking
   id: TattooEyeVoxLeft
   bodyPart: Eyes
@@ -93,6 +99,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: tattoo_eye_vox_l
+
 - type: marking
   id: TattooEyeshadowVoxSmall
   # there are a lot of deliberate limitations with this marking that should be pointed out. some of them may seem overly restrictive on the surface, but most of them are fully intentional.
@@ -107,6 +114,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: eyeshadow_small
+
 - type: marking
   id: TattooEyeshadowVoxMedium
   bodyPart: Eyes
@@ -116,6 +124,7 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: eyeshadow_medium
+
 - type: marking
   id: TattooEyeshadowVoxLarge
   bodyPart: Eyes

@@ -103,6 +103,7 @@
         - LowImpassable
   - type: BindToStation
     enabled: false # should be draggable between stations
+
 - type: entity
   parent: [ BaseStructureIndestructible, BaseStructureDisableToolUse, BaseMachinePowered ]
   id: GasSalePoint
@@ -154,6 +155,7 @@
         occludes: True
         ents: []
   - type: AtmosDevice
+
 - type: entity
   parent: [ GasSalePoint, BaseGaslock ]
   id: GasSalePort

@@ -36,6 +36,7 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+
 - type: startingGear
   id: PublicAffairGear
   equipment:
@@ -51,6 +52,7 @@
     - FrontierUplinkCoin5 # Coyote: added 5 FUCs to Sergeants
     - ShipVoucherNfsdSergeant
     - EncryptionKeyCommand
+
 - type: chameleonOutfit
   id: PublicAffairsLiaisonChameleonOutfit
   job: PublicAffairsLiaison

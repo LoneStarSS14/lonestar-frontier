@@ -10,6 +10,7 @@
     sprite: _NF/Clothing/Head/Hoods/Coat/arcadia.rsi
   - type: Clothing
     sprite: _NF/Clothing/Head/Hoods/Coat/arcadia.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHoodRosyCloak
@@ -48,6 +49,7 @@
     - Hair
   - type: TypingIndicatorClothing
     proto: goblin
+
 - type: entity
   parent: ClothingHeadBase
   id: NFGoblinMadeClothingHeadHatHoodTrashCloak

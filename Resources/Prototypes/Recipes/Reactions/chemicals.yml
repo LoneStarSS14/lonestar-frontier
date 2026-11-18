@@ -7,6 +7,7 @@
       amount: 1
   products:
     Ammonia: 4
+
 - type: reaction
   id: CelluloseBreakdown
   source: true
@@ -18,6 +19,7 @@
   products:
     Sugar: 2
     Carbon: 1
+
 - type: reaction
   id: Diethylamine
   reactants:
@@ -27,6 +29,7 @@
       amount: 1
   products:
     Diethylamine: 2
+
 - type: reaction
   id: Phenol
   reactants:
@@ -36,6 +39,7 @@
       amount: 1
   products:
     Phenol: 2
+
 - type: reaction
   id: Acetone
   reactants:
@@ -47,6 +51,7 @@
       amount: 1
   products:
     Acetone: 2
+
 - type: reaction
   id: FoamingAgent
   reactants:
@@ -56,6 +61,7 @@
       amount: 1
   products:
     FoamingAgent: 2
+
 - type: reaction
   id: PolytrinicAcid
   reactants:
@@ -67,6 +73,7 @@
       amount: 1
   products:
     PolytrinicAcid: 3
+
 - type: reaction
   id: SulfuricAcid
   reactants:
@@ -78,6 +85,7 @@
       amount: 2
   products:
     SulfuricAcid: 3
+
 - type: reaction
   id: FluorosulfuricAcid
   reactants:
@@ -91,6 +99,7 @@
       amount: 1
   products:
     FluorosulfuricAcid: 4
+
 - type: reaction
   id: PotassiumExplosion
   impact: High
@@ -108,6 +117,7 @@
       maxTotalIntensity: 100
       intensitySlope: 4
       maxIntensity: 7
+
 - type: reaction
   id: Smoke
   priority: -10
@@ -126,6 +136,7 @@
       prototypeId: Smoke
       sound:
         path: /Audio/Effects/smoke.ogg
+
 - type: reaction
   id: Foam
   priority: -10
@@ -142,6 +153,7 @@
       prototypeId: Foam
       sound:
         path: /Audio/Effects/extinguish.ogg
+
 - type: reaction
   id: IronMetalFoam
   impact: High
@@ -160,6 +172,7 @@
       prototypeId: IronMetalFoam
       sound:
         path: /Audio/Effects/extinguish.ogg
+
 - type: reaction
   id: AluminiumMetalFoam
   impact: High
@@ -178,6 +191,7 @@
       prototypeId: AluminiumMetalFoam
       sound:
         path: /Audio/Effects/extinguish.ogg
+
 - type: reaction
   id: UraniumEmpExplosion
   impact: High
@@ -196,6 +210,7 @@
       maxRange: 6
       energyConsumption: 675000 # Frontier: 12.5kJ<675kJ
       duration: 15
+
 - type: reaction
   id: Flash
   impact: High
@@ -210,6 +225,7 @@
       amount: 1
   effects:
     - !type:FlashReactionEffect
+
 - type: reaction
   id: TableSalt
   minTemp: 370
@@ -220,6 +236,7 @@
       amount: 1
   products:
     TableSalt: 2
+
 - type: reaction
   id: TableSaltBreakdown
   source: true
@@ -231,6 +248,7 @@
   products:
     Chlorine: 1
     Sodium: 1
+
 - type: reaction
   id: Thermite
   impact: Medium
@@ -243,6 +261,7 @@
       amount: 1
   products:
     Thermite: 3
+
 - type: reaction
   id: UnstableMutagen
   reactants:
@@ -254,6 +273,7 @@
       amount: 1
   products:
     UnstableMutagen: 3
+
 - type: reaction
   id: Oil
   reactants:
@@ -265,6 +285,7 @@
       amount: 1
   products:
     Oil: 3
+
 - type: reaction
   id: Fluorosurfactant
   impact: Medium
@@ -277,6 +298,7 @@
       amount: 1
   products:
     Fluorosurfactant: 5
+
 - type: reaction
   id: Desoxyephedrine
   impact: Medium
@@ -292,6 +314,7 @@
      amount: 1
   products:
     Desoxyephedrine: 4 #I kinda remember having to heat this up, and if you heated it up too much, it went boom, I can't remember the specific values tho.
+
 - type: reaction
   id: Stimulants
   impact: Medium
@@ -305,6 +328,7 @@
       amount: 2
   products:
     Stimulants: 2
+
 - type: reaction
   id: Ephedrine
   impact: Medium
@@ -319,6 +343,7 @@
      amount: 1
   products:
     Ephedrine: 4
+
 - type: reaction
   id: MuteToxin
   impact: Medium
@@ -332,6 +357,7 @@
       amount: 2
   products:
     MuteToxin: 2
+
 - type: reaction
   id: ChloralHydrate
   impact: Medium
@@ -344,6 +370,7 @@
       amount: 1
   products:
     ChloralHydrate: 1
+
 - type: reaction
   id: Pax
   impact: Medium
@@ -356,6 +383,7 @@
       amount: 1
   products:
     Pax: 3
+
 - type: reaction
   id: Charcoal
   reactants:
@@ -365,6 +393,7 @@
       amount: 1
   products:
     Charcoal: 1
+
 - type: reaction
   id: NorepinephricAcid
   impact: Medium
@@ -375,6 +404,7 @@
       amount: 1
   products:
     NorepinephricAcid: 2
+
 - type: reaction
   id: Ethyloxyephedrine
   impact: Medium
@@ -385,6 +415,7 @@
       amount: 1
   products:
     Ethyloxyephedrine: 2
+
 - type: reaction
   id: Diphenylmethylamine
   impact: Medium
@@ -397,6 +428,7 @@
       amount: 1
   products:
     Diphenylmethylamine: 3
+
 - type: reaction
   id: SodiumCarbonate
   impact: Medium
@@ -411,6 +443,7 @@
       amount: 1
   products:
     SodiumCarbonate: 4
+
 - type: reaction
   id: Benzene
   minTemp: 310
@@ -421,6 +454,7 @@
       amount: 1
   products:
     Benzene: 1
+
 - type: reaction
   minTemp: 310
   id: Hydroxide
@@ -432,6 +466,7 @@
       amount: 1
   products:
     Hydroxide: 2
+
 - type: reaction
   id: SodiumHydroxide
   reactants:
@@ -441,6 +476,7 @@
       amount: 1
   products:
     SodiumHydroxide: 2
+
 - type: reaction
   minTemp: 310
   id: Fersilicite
@@ -451,6 +487,7 @@
       amount: 1
   products:
     Fersilicite: 2
+
 - type: reaction
   id: SodiumPolyacrylate
   impact: Medium
@@ -463,6 +500,7 @@
       amount: 1
   products:
     SodiumPolyacrylate: 4
+
 - type: reaction
   id: Nocturine
   impact: High
@@ -473,6 +511,7 @@
       amount: 1
   products:
     Nocturine: 1
+
 - type: reaction
   id: Tazinide
   impact: Medium
@@ -483,6 +522,7 @@
       amount: 1
   products:
     Tazinide: 1
+
 - type: reaction
   id: ArtifactGlue
   reactants:

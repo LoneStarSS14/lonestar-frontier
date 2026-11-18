@@ -30,6 +30,7 @@
       - Drinks
   - type: StaticPrice
     price: 30
+
 - type: entity
   name: bluespace vial
   parent: BaseChemistryEmptyVial # LoneStar
@@ -64,6 +65,7 @@
   - type: StaticPrice
     price: 100
     vendPrice: 100
+
 - type: entity
   name: medical pouch
   id: MedicalPouch
@@ -92,6 +94,7 @@
       - Syringe
       components:
       - Hypospray
+
 - type: entity
   name: corpsman's medical pouch
   id: CorpsmanMedicalPouch

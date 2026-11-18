@@ -225,6 +225,7 @@
             sprite: Objects/Misc/Lights/lamp.rsi
             state: christmaslamp-on
 # _CS End
+
 - type: entity
   name: interrogator lamp
   id: LampInterrogator

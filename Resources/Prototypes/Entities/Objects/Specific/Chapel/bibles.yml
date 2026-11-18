@@ -54,6 +54,7 @@
     - Book
   - type: StealTarget
     stealGroup: Bible
+
 - type: entity
   parent: [Bible, BaseC4Contraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
   name: necronomicon
@@ -81,6 +82,7 @@
     sprite: Objects/Specific/Chapel/necronomicon.rsi
   - type: Item
     sprite: Objects/Specific/Chapel/necronomicon.rsi
+
 - type: entity
   parent: BaseAction
   id: ActionBibleSummon
@@ -92,6 +94,7 @@
     useDelay: 1
   - type: InstantAction
     event: !type:SummonActionEvent
+
 - type: entity
   parent: Bible
   name: tanakh
@@ -102,6 +105,7 @@
     sprite: Objects/Specific/Chapel/tanakh.rsi
   - type: Item
     sprite: Objects/Specific/Chapel/tanakh.rsi
+
 - type: entity
   parent: Bible
   name: druidic tablet
@@ -112,6 +116,7 @@
     sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
   - type: Item
     sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
+
 - type: entity
   parent: Bible
   name: communist manifesto
@@ -122,6 +127,7 @@
     sprite: Objects/Specific/Chapel/communistmanifesto.rsi
   - type: Item
     sprite: Objects/Specific/Chapel/communistmanifesto.rsi
+
 - type: entity
   parent: Bible
   name: satanic bible
@@ -132,6 +138,7 @@
     sprite: Objects/Specific/Chapel/satanicbible.rsi
   - type: Item
     sprite: Objects/Specific/Chapel/satanicbible.rsi
+
 - type: entity
   parent: Bible
   name: codex nanotrasimus
