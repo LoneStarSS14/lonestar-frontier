@@ -54,7 +54,8 @@ public sealed class VocalSystem : EntitySystem
 
     private void OnEmote(EntityUid uid, VocalComponent component, ref EmoteEvent args)
     {
-        if (args.Handled || !args.Emote.Category.HasFlag(EmoteCategory.Vocal))
+        // Coyote: Vocal sound packs can define sounds for non-vocal emotes.
+        if (args.Handled)
             return;
 
         // snowflake case for wilhelm scream easter egg
@@ -68,7 +69,11 @@ public sealed class VocalSystem : EntitySystem
             return;
 
         // just play regular sound based on emote proto
-        args.Handled = _chat.TryPlayEmoteSound(uid, _proto.Index(sounds), args.Emote);
+        args.Handled = _chat.TryPlayEmoteSound(
+            uid,
+            _proto.Index(sounds),
+            component.SupplementalSounds,
+            args.Emote);
     }
 
     private void OnScreamAction(EntityUid uid, VocalComponent component, ScreamActionEvent args)
@@ -91,7 +96,11 @@ public sealed class VocalSystem : EntitySystem
         if (component.EmoteSounds is not { } sounds)
             return false;
 
-        return _chat.TryPlayEmoteSound(uid, _proto.Index(sounds), component.ScreamId);
+        return _chat.TryPlayEmoteSound(
+            uid,
+            _proto.Index(sounds),
+            component.SupplementalSounds,
+            component.ScreamId);
     }
 
     private void LoadSounds(EntityUid uid, VocalComponent component, Sex? sex = null)

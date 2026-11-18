@@ -1,6 +1,7 @@
 using System.Collections.Frozen;
 using System.Collections.Immutable; // DeltaV
 using Content.Server.Popups;
+using Content.Shared.Chat;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Emoting;
 using Content.Shared.Speech;
@@ -142,7 +143,12 @@ public partial class ChatSystem
     /// <returns>True if emote sound was played.</returns>
     public bool TryPlayEmoteSound(EntityUid uid, EmoteSoundsPrototype? proto, EmotePrototype emote, AudioParams? audioParams = null)
     {
-        return TryPlayEmoteSound(uid, proto, emote.ID, audioParams);
+        return TryPlayEmoteSound(uid, proto, null, emote.ID, audioParams);
+    }
+
+    public bool TryPlayEmoteSound(EntityUid uid, EmoteSoundsPrototype? proto, ProtoId<EmoteSoundsPrototype>? supplement, EmotePrototype emote, AudioParams? audioParams = null)
+    {
+        return TryPlayEmoteSound(uid, proto, supplement, emote.ID, audioParams);
     }
 
     /// <summary>
@@ -151,20 +157,50 @@ public partial class ChatSystem
     /// <returns>True if emote sound was played.</returns>
     public bool TryPlayEmoteSound(EntityUid uid, EmoteSoundsPrototype? proto, string emoteId, AudioParams? audioParams = null)
     {
-        if (proto == null)
-            return false;
+        return TryPlayEmoteSound(uid, proto, null, emoteId, audioParams);
+    }
 
-        // try to get specific sound for this emote
-        if (!proto.Sounds.TryGetValue(emoteId, out var sound))
+    /// <summary>
+    ///     Tries to find and play relevant emote sound in emote sounds collection, falling back to a supplemental collection.
+    /// </summary>
+    /// <returns>True if emote sound was played.</returns>
+    public bool TryPlayEmoteSound(EntityUid uid, EmoteSoundsPrototype? proto, ProtoId<EmoteSoundsPrototype>? supplement, string emoteId, AudioParams? audioParams = null)
+    {
+        SoundSpecifier? sound = null;
+        SoundSpecifier? fallbackSound = null;
+        if (proto != null)
         {
-            // no specific sound - check fallback
-            sound = proto.FallbackSound;
-            if (sound == null)
-                return false;
+            if (!proto.Sounds.TryGetValue(emoteId, out sound))
+            {
+                // no specific sound - check fallback
+                fallbackSound = proto.FallbackSound;
+            }
         }
 
+        if (sound == null
+            && supplement != null
+            && _prototypeManager.TryIndex(supplement, out var supProto))
+        {
+            // try to get specific sound for this emote from Supplemental prototype second
+            supProto.Sounds.TryGetValue(emoteId, out sound);
+            if (sound == null)
+            {
+                // no specific sound - check fallback
+                fallbackSound = supProto.FallbackSound;
+            }
+        }
+
+        if (sound == null
+            && fallbackSound != null)
+        {
+            sound = fallbackSound;
+        }
+
+        if (sound == null)
+            return false;
+
         // optional override params > general params for all sounds in set > individual sound params
-        var param = audioParams ?? proto.GeneralParams ?? sound.Params;
+        var param = audioParams ?? proto?.GeneralParams ?? sound.Params;
         _audio.PlayPvs(sound, uid, param);
         return true;
     }
@@ -173,8 +209,9 @@ public partial class ChatSystem
     /// </summary>
     /// <param name="uid"></param>
     /// <param name="textInput"></param>
+    /// <param name="actuallyEmote">If true, will invoke the emote event and play sounds. If false, will only check if the emote is valid.</param>
     /// <returns>True if the chat message should be displayed (because the emote was explicitly cancelled), false if it should not be.</returns>
-    private bool TryEmoteChatInput(EntityUid uid, string textInput)
+    public bool TryEmoteChatInput(EntityUid uid, string textInput, bool actuallyEmote = true) // Frontier: void<bool
     {
         var actionTrimmedLower = TrimPunctuation(textInput.ToLower());
         if (!_wordEmoteDict.TryGetValue(actionTrimmedLower, out var emotes)) // DeltaV, renames to emotes
@@ -186,7 +223,7 @@ public partial class ChatSystem
             if (!AllowedToUseEmote(uid, emote))
                 continue;
 
-            if (TryInvokeEmoteEvent(uid, emote))
+            if (!actuallyEmote || TryInvokeEmoteEvent(uid, emote))
             {
                 validEmote = true; // DeltaV
                 break; // Frontier: break on first emote (avoid playing multiple sounds at once)
@@ -222,24 +259,24 @@ public partial class ChatSystem
     private bool AllowedToUseEmote(EntityUid source, EmotePrototype emote)
     {
         // If emote is in AllowedEmotes, it will bypass whitelist and blacklist
-        if (TryComp<SpeechComponent>(source, out var speech) &&
-            speech.AllowedEmotes.Contains(emote.ID))
-        {
-            return true;
-        }
-
-        // Check the whitelist and blacklist
-        if (_whitelistSystem.IsWhitelistFail(emote.Whitelist, source) ||
-            _whitelistSystem.IsBlacklistPass(emote.Blacklist, source))
-        {
-            return false;
-        }
-
-        // Check if the emote is available for all
-        if (!emote.Available)
-        {
-            return false;
-        }
+        // if (TryComp<SpeechComponent>(source, out var speech) &&
+        //     speech.AllowedEmotes.Contains(emote.ID))
+        // {
+        //     return true;
+        // }
+        //
+        // // Check the whitelist and blacklist
+        // if (_whitelistSystem.IsWhitelistFail(emote.Whitelist, source) ||
+        //     _whitelistSystem.IsBlacklistPass(emote.Blacklist, source))
+        // {
+        //     return false;
+        // }
+        //
+        // // Check if the emote is available for all
+        // if (!emote.Available)
+        // {
+        //     return false;
+        // } // Coyote SECTOR -- lemme squeak as a vulpkanin dammit
 
         return true;
     }
