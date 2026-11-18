@@ -25,11 +25,7 @@
   - !type:GiveItemOnHolidaySpecial # Frontier
     holiday: FrontierBirthday # Frontier
     prototype: FrontierBirthdayGift # Frontier
-#  - !type:AddComponentSpecial # Frottage - soon
-#    components:
-#    - type: PaywardActionMailOpenedByOwners # Coyote
-#    - type: PaywardAuraMailCarrier # Coyote
-#    - type: PaywardModifierMailStats # Coyote
+
 - type: startingGear
   id: MailCarrierGear
   equipment:
@@ -46,6 +42,7 @@
   - EncryptionKeyService
   cartridges:
   - MailMetricsCartridge
+
 - type: chameleonOutfit
   id: MailCarrierChameleonOutfit
   job: MailCarrier

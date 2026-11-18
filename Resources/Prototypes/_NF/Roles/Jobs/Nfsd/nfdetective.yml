@@ -28,10 +28,13 @@
   - GeneralNfsdAccess
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant ]
+    implants: [ MindShieldImplant, NFSDTrackingImplant ]
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  - !type:AddComponentSpecial # Coyote: v
+    components:
+    - type: IsNfsd
 
 - type: startingGear
   id: NFDetectiveGear
@@ -45,7 +48,8 @@
     - NFSpeedLoaderPistol45Rubber
     - ForensicPad
     - ForensicScanner
-    - FrontierUplinkCoin10
+    - BaseSecurityUplinkRadioOfficer # Coyote: added uplink to detectives and removed starting FUCs
+    # - FrontierUplinkCoin10 # Coyote: ^
     - RubberStampDetective
     - ContrabandForensicsModule
   cartridges:

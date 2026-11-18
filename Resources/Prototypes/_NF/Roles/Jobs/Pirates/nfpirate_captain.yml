@@ -22,6 +22,7 @@
   newPlayerMessage: false
   access:
   - Pirate
+  - BlackMarket # Coyote
   accessGroups:
   - GeneralAccess
   special:
@@ -31,6 +32,10 @@
     - type: SpecialSectorStationRecord # must be given on spawn
       recordGeneration: FalseRecord
     - type: DisableSuitSensors
+    - type: IsPirate # Coyote
+  - !type:AddRpiJobModifierSpecial # Coyote v
+    modifiersToAdd:
+    - rpiJobModifierPirateCaptain
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.
@@ -46,7 +51,7 @@
   storage:
     back:
     - AppraisalTool
-    - PirateTechFabFlatpack
+    # - PirateTechFabFlatpack # Coyote: Disable pending piratefab rework/change
     - Multitool
 
 - type: chameleonOutfit

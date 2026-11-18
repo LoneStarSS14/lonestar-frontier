@@ -1,6 +1,7 @@
 - type: loadoutGroup
   id: ContractorJumpsuit
   name: loadout-group-contractor-jumpsuit
+  minLimit: 0 # Coyote
   loadouts:
   - ContractorClothingUniformJumpsuitColorGrey
   - ContractorClothingUniformJumpskirtColorGrey
@@ -218,6 +219,9 @@
   fallbacks:
   - ContractorClothingUniformJumpsuitColorGrey
   - ContractorClothingUniformJumpskirtColorGrey
+  subgroups:
+  - CoyoteJumpsuit
+
 - type: loadoutGroup
   id: ContractorBackpack
   name: loadout-group-contractor-backpack
@@ -307,6 +311,7 @@
   - ContractorClothingBackpackMessengerMime
   fallbacks:
   - ContractorClothingBackpack
+
 - type: loadoutGroup
   id: ContractorOuterClothing
   name: loadout-group-contractor-outerclothing
@@ -390,10 +395,12 @@
   - ContractorClothingOuterCoatBishop
   - ContractorClothingOuterCoatWitchHunter
   - ContractorClothingOuterCoatCardinal
+  - ContractorClothingOuterEpiChaplainMantle # Coyote
   - ContractorClothingOuterPlagueSuit
   - ContractorWetFloorSign
   - ContractorClothingOuterCoatExpensive
   - ContractorClothingOuterCoatSpaceAsshole
+
 - type: loadoutGroup
   id: ContractorBelt
   name: loadout-group-contractor-belt
@@ -429,6 +436,7 @@
   - ContractorClothingBeltPunkRandomizedFilled # Punkish (Randomized visuals)
   - ContractorClothingBeltSheathFilledHilt
   - ContractorClothingBeltChampion
+
 - type: loadoutGroup
   id: ContractorShoes
   name: loadout-group-contractor-shoes
@@ -494,6 +502,7 @@
   subgroups:
   - CoyoteShoes
   - MercenaryShoes # LoneStar
+
 - type: loadoutGroup
   id: ContractorHead
   name: loadout-group-contractor-head
@@ -573,6 +582,7 @@
   - ContractorClothingHeadHatTophat
   subgroups:
   - DenParamedicHead # LoneStar
+
 - type: loadoutGroup
   id: ContractorEars
   name: loadout-group-contractor-ears
@@ -598,6 +608,7 @@
   - ContractorClothingHeadsetGreyCommon
   subgroups:
   - PsionicMantisEars # LoneStar
+
 - type: loadoutGroup
   id: ContractorGloves
   name: loadout-group-contractor-gloves
@@ -624,6 +635,7 @@
   - ContractorClothingHandsGlovesBoxingYellow
   - ContractorClothingHandsGlovesCaptain
   - ContractorClothingHandsGlovesColorWhite
+
 - type: loadoutGroup
   id: ContractorNeck
   name: loadout-group-contractor-neck
@@ -658,6 +670,7 @@
   - ContractorClothingNeckCloakPan
   - ContractorClothingNeckCloakGay
   - ContractorClothingNeckCloakLesbian
+  - ContractorClothingNeckCloakPoly # LoneStar
   - ContractorBedsheetRainbow
   - ClothingNeckLGBTPin
   - ClothingNeckAllyPin
@@ -677,6 +690,7 @@
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
+  - ClothingNeckPolyamoryPin # LoneStar
   - ContractorClothingNeckIFFNeutral
   - ContractorClothingNeckIFFGreen
   - ContractorClothingNeckIFFRed
@@ -684,6 +698,8 @@
   - ContractorClothingNeckIFFCyan
   - ContractorClothingNeckIFFOrange
   - ContractorClothingNeckIFFPurple
+  - ContractorClothingNeckMantle # Coyote
+  - ContractorClothingNeckTieGeoffroyblack12 # Coyote
   - ContractorClothingNeckMantleCap
   - ContractorClothingNeckCloakCap
   - ContractorClothingNeckCloakCapFormal
@@ -697,6 +713,20 @@
   - ContractorClothingNeckMantleCE
   - ContractorClothingNeckCloakVoid
   - ContractorClothingNeckBling
+  # Flooftier collars start
+  - FloofClothingCollarBlue
+  - FloofClothingCollarBlack
+  - FloofClothingCollarPink
+  - FloofClothingCollarEpi
+  - FloofClothingCollarEngi
+  - FloofClothingCollarLogi
+  - FloofClothingCollarCmd
+  - FloofClothingShockCollar
+  # Flooftier collars end
+  # Everdream Collars
+  - LoadoutClothingNeckChaplainCollar
+  - LoadoutClothingNeckKeepsakeCollar
+
 - type: loadoutGroup
   id: ContractorPDA
   name: loadout-group-contractor-pda
@@ -737,6 +767,9 @@
   - ContractorMimePDA
   fallbacks:
   - ContractorContractorPDA
+  subgroups:
+  - PsionicMantisPDA # LoneStar
+
 - type: loadoutGroup
   id: ContractorGlasses
   name: loadout-group-contractor-glasses
@@ -755,6 +788,7 @@
   - ContractorClothingEyesPunkInfoShades # Punkish (Randomized visuals)
   - ContractorClothingEyesEyepatchHudDiag
   - ContractorClothingEyesEyepatchHudMedical
+
 - type: loadoutGroup
   id: ContractorBackpackItems
   name: loadout-group-contractor-backpack-items
@@ -784,6 +818,8 @@
   - ContractorDrinkFlaskOld
   - ContractorDrinkShinyFlask
   - ContractorDrinkFlask
+  - ContractorDrinkMREFlask # Coyote
+  - ContractorDrinkFlaskBar # Coyote
   - ContractorDrinkVacuumFlask
   - ContractorFlashlightLantern
   - ContractorCardBoxBlack
@@ -791,16 +827,21 @@
   - ContractorWristwatchGold
   - ContractorSilverRing
   - ContractorGoldRing
+  - ContractorAACTablet # Coyote
   - ContractorUrnMortuary
   - ContractorBasketball
+  - ContractorTennisball # Coyote
   - ContractorFootball
   - ContractorBeachBall
   - ContractorCrayonBox
+  - ContractorClicker # Coyote
   - ContractorSoapNT
   - PlushieLizard
+  - PlushieExperiment # Coyote: Add Expie plushie to loadout
   - ContractorPlushieSharkGrey
   - ContractorPlushieSharkBlue
   - ContractorPlushieSharkPink
+  - ContractorPlushieYarrMoth # LoneStar
   - ContractorHarmonicaInstrument
   - ContractorSaxophoneInstrument
   - ContractorAcousticGuitarInstrument
@@ -810,6 +851,7 @@
   - ContractorHoloGraffitiProjector # Punkish (might be annoying)
   - ContractorCrayonMagic
   - ContractorSprayPainterMagic
+  - ContractorAccessConfigurator # Coyote: Add Civilian Access Configurator
     # Bureaucracy
   - ContractorBoxFolderMedicalDoctor
   - ContractorBrbSign
@@ -824,6 +866,9 @@
   - ContractorRubberStampTrader
   - ContractorRubberStampClown
   - ContractorRubberStampMime
+  subgroups:
+  - ChaplainBackpackItems # LoneStar
+
 - type: loadoutGroup
   id: ContractorHandItems
   name: loadout-group-contractor-hand-items
@@ -860,6 +905,7 @@
   - ContractorBibleDruid # Coyote
   subgroups:
   - ChaplainBackpackItems # LoneStar
+
 - type: loadoutGroup
   id: ContractorFace
   name: loadout-group-contractor-face
@@ -883,6 +929,7 @@
   - DenMiscFace # LoneStar
   fallbacks:
   - ContractorClothingMaskBreath
+
 - type: loadoutGroup
   id: ContractorBoxSurvival
   name: loadout-group-contractor-survival-box
@@ -916,6 +963,7 @@
   - ContractorNFBoxSurvivalDonkBerry
   - ContractorNFBoxSurvivalDonkMoth
   - ContractorNFBoxSurvivalDonkDink
+
 - type: loadoutGroup
   id: ContractorEncryptionKey
   name: loadout-group-contractor-encryption-key
@@ -929,6 +977,7 @@
   - ContractorEncryptionKeyScience
   fallbacks:
   - ContractorEncryptionKeyTraffic
+
 - type: loadoutGroup
   id: ContractorWallet
   name: loadout-group-contractor-wallet
@@ -940,6 +989,7 @@
   - ContractorClothingWalletLeatherGreen
   fallbacks:
   - ContractorClothingWalletLeatherBrown
+
 - type: loadoutGroup
   id: ContractorCartridge
   name: loadout-group-contractor-cartridge
@@ -950,6 +1000,7 @@
   - ContractorMedTekCartridge
   - ContractorNetProbeCartridge
   - ContractorLogProbeCartridge
+
 - type: loadoutGroup
   id: ContractorImplanter
   name: loadout-group-contractor-implanter

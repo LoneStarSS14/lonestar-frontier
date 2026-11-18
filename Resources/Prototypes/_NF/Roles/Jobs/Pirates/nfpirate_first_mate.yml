@@ -5,11 +5,14 @@
   playTimeTracker: JobPirateFirstMate
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 129600 # 36 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 10800 # 3 hours
-  whitelisted: true
+      time: 86400 # Coyote: 24 hrs / 4 shifts
+    - !type:RoleTimeRequirement
+      role: JobPirate
+      time: 108000 # Coyote: 30 hours
+#    - !type:DepartmentTimeRequirement
+#      department: Security
+#      time: 10800 # 3 hours
+  whitelisted: false
   startingGear: NFPirateFirstMateGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
@@ -18,19 +21,24 @@
   supervisors: job-supervisors-captain
   weight: 30
   displayWeight: 30
-  setPreference: true
+  setPreference: false
   newPlayerMessage: false
   access:
   - Pirate
+  - BlackMarket
   accessGroups:
   - GeneralAccess
   special:
   - !type:AddComponentSpecial
     components:
-    - type: AutoPirateFirstMate
+#    - type: AutoPirateFirstMate
     - type: SpecialSectorStationRecord # must be given on spawn
       recordGeneration: FalseRecord
     - type: DisableSuitSensors
+    - type: IsPirate
+  - !type:AddRpiJobModifierSpecial
+    modifiersToAdd:
+    - rpiJobModifierPirateFirstMate
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.

@@ -16,14 +16,21 @@
   fallbacks:
   - NFPirateJumpsuit
   - NFPirateJumpskirt
+
 - type: loadoutGroup
   id: NFPiratePDA
   name: loadout-group-contractor-pda
+  hidden: false # No point in showing this, it gets auto-selected. # Coyote: But what if...
   loadouts:
   - NFPirateNFPiratePDA
   - NFPirateNFShantymanPDA
+  subgroups:
+  - MercenaryPDA
+  - PilotPDA
+  - ContractorPDA
   fallbacks:
   - NFPirateNFPiratePDA
+
 - type: loadoutGroup
   id: NFPirateFace
   name: loadout-group-contractor-face
@@ -37,6 +44,7 @@
   - PilotFace
   fallbacks:
   - ContractorClothingMaskBreath
+
 - type: loadoutGroup
   id: NFPirateEars
   name: loadout-group-contractor-ears
@@ -44,6 +52,7 @@
   - NFPirateEarsClothingHeadsetFreelance
   fallbacks:
   - NFPirateEarsClothingHeadsetFreelance
+
 - type: loadoutGroup
   id: NFPirateShoes
   name: loadout-group-contractor-shoes
@@ -58,6 +67,7 @@
   - CoyoteShoes
   fallbacks:
   - NFPirateClothingShoesBootsLaceup
+
 - type: loadoutGroup
   id: NFPirateHead
   name: loadout-group-contractor-head
@@ -72,6 +82,7 @@
   - ContractorHead
   fallbacks:
   - NFPirateClothingHeadBandBlack
+
 - type: loadoutGroup
   id: PirateBackpackItems
   name: loadout-group-contractor-backpack-items
@@ -96,23 +107,37 @@
   - ContractorHead
   fallbacks:
   - NFPirateClothingHeadHatPirate
+
 - type: loadoutGroup
   id: NFPirateCaptainOuterClothing
   name: loadout-group-contractor-outerclothing
+  minLimit: 0 # Coyote
+  hidden: false # No point in showing this, it gets auto-selected.
   loadouts:
   - NFPirateCaptainClothingOuterCoatPirate
   - NFPirateClothingOuterCoatVictorian
   - NFPirateClothingOuterCoatVictorianRed
+  subgroups:
+    - MercenaryOuterClothing
+    - PilotOuterClothing
+    - ContractorOuterClothing
   fallbacks:
   - NFPirateCaptainClothingOuterCoatPirate
+
 - type: loadoutGroup
   id: NFPirateCaptainPDA
   name: loadout-group-contractor-pda
+  hidden: false # No point in showing this, it gets auto-selected.
   loadouts:
   - NFPirateCaptainNFPirateCaptainPDA
   - NFPirateCaptainNFShantymanPDA
+  subgroups:
+  - MercenaryPDA
+  - PilotPDA
+  - ContractorPDA
   fallbacks:
   - NFPirateCaptainNFPirateCaptainPDA
+
 - type: loadoutGroup
   id: PirateCaptainWallet
   name: loadout-group-contractor-wallet
@@ -121,6 +146,7 @@
   - PirateCaptainClothingWalletLeatherPirate
   fallbacks:
   - PirateCaptainClothingWalletLeatherPirate
+
 - type: loadoutGroup
   id: NFPirateCaptainEars
   name: loadout-group-contractor-ears
@@ -128,6 +154,7 @@
   - NFPirateCaptainEarsClothingHeadsetAltFreelancer
   fallbacks:
   - NFPirateCaptainEarsClothingHeadsetAltFreelancer
+
 - type: loadoutGroup
   id: PirateCaptainBackpackItems
   name: loadout-group-contractor-backpack-items
@@ -152,20 +179,32 @@
   - ContractorHead
   fallbacks:
   - NFPirateClothingHeadHatPirateTricord
+
 - type: loadoutGroup
   id: NFPirateFirstMateOuterClothing
   name: loadout-group-contractor-outerclothing
+  minLimit: 0 # Coyote
   loadouts:
   - NFPirateFirstMateClothingOuterCoatGentle
   - NFPirateClothingOuterCoatVictorian
   - NFPirateClothingOuterCoatVictorianRed
+  subgroups:
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
   fallbacks:
   - NFPirateFirstMateClothingOuterCoatGentle
+
 - type: loadoutGroup
   id: NFPirateFirstMatePDA
   name: loadout-group-contractor-pda
+  hidden: false # No point in showing this, it gets auto-selected.
   loadouts:
   - NFPirateFirstMateNFPirateFirstMatePDA
   - NFPirateFirstMateNFShantymanPDA
+  subgroups:
+  - MercenaryPDA
+  - PilotPDA
+  - ContractorPDA
   fallbacks:
   - NFPirateFirstMateNFPirateFirstMatePDA

@@ -33,6 +33,7 @@
   - !type:AddComponentSpecial
     components:
     - type: CommandStaff
+
 - type: startingGear
   id: StcGear
   equipment:
@@ -44,7 +45,9 @@
     - BoxFolderStc
     - ShipVoucherFrontierStc
   encryptionKeys:
+  - BoxFolderStc
   - EncryptionKeyStationMaster
+
 - type: chameleonOutfit
   id: StationTrafficControllerChameleonOutfit
   job: StationTrafficController

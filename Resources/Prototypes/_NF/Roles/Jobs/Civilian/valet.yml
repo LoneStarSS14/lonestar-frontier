@@ -1,5 +1,6 @@
-﻿- type: job
+- type: job
   id: Valet
+  setPreference: false # LoneStar, they do nothing. dead role.
   name: job-name-valet
   description: job-description-valet
   playTimeTracker: JobValet
