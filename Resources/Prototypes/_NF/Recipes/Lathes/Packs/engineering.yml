@@ -9,6 +9,7 @@
   - ClothingOuterEVASuitEngineer
   - ClothingOuterEVASuitAtmosTech
   - NFFlash
+
 - type: latheRecipePack
   id: NFEngineeringStructureBoardsStatic
   recipes:
@@ -25,6 +26,10 @@
   - PortableSMESMachineCircuitboard
   - StationMapElectronics
   - WallmountSubstationElectronics
+  - SMESAdvancedMachineCircuitboard
+  - NFScreenTimerElectronics
+  - IntercomElectronics
+
 - type: latheRecipePack
   id: NFEngineeringBoardsStatic
   recipes:
@@ -46,15 +51,22 @@
   - PortableScrubberMachineCircuitBoard
   - ThermomachineFreezerMachineCircuitBoard
   - CondenserMachineCircuitBoard
+  - PowerComputerCircuitboard # LoneStar
+
 - type: latheRecipePack
   id: NFEngineeringMaterialsStatic
   recipes:
   #- NFSheetRGlassProcessed
+  - NFSheetPaperFromWood
+  - NFSheetPaperFromCardboard
+  - NFMaterialCardboard1Processed
+  - PaperFromSheetPaper
   - NFSheetPGlass1Processed
   - NFSheetRPGlass1Processed
   - NFSheetPlasteel1Processed
   - NFSheetUGlass1Processed
   - NFSheetRUGlass1Processed
+
 - type: latheRecipePack
   id: NFEngineeringArchetypeStatic
   recipes:
@@ -68,10 +80,41 @@
   - JawsOfLife
   - BorgModuleRCD
   - BorgModuleAdvancedTool
+  - ShipyardRCD
+  - ShipyardRCDAmmo
+  - ClothingHandsGlovesColorYellow
+  - NFClothingEyesGlassesMeson
+  - NFClothingEyesGlassesMesonScanner
+
 - type: latheRecipePack
   id: NFEngineeringBoards
   recipes:
   - PortableGeneratorDKJrMachineCircuitboard
+  # LoneStar v
+  - GasMiningDrillMachineCircuitboard
+  - GaslockFrameMachineCircuitboard
+  - SlowWeakThrusterMachineCircuitboard
+  - SlowStrongThrusterMachineCircuitboard
+  - FastWeakThrusterMachineCircuitboard
+  - FastStrongThrusterMachineCircuitboard
+  - FasterWeakThrusterMachineCircuitboard
+
+- type: latheRecipePack
+  id: NFEngineeringBoardsCircuitImprinter
+  recipes:
+  - AlertsComputerCircuitboard
+  - AtmosMonitoringComputerCircuitboard
+  - GasMiningDrillMachineCircuitboard
+  - GaslockFrameMachineCircuitboard
+  - MaterialSiloMachineCircuitboard
+  - MiniStationAnchorCircuitboard
+  - NFHolopadGridMachineCircuitboard
+  - NFHolopadShipMachineCircuitboard
+  - PowerComputerCircuitboard
+  - SmallGyroscopeMachineCircuitboard
+  - SmallThrusterMachineCircuitboard
+  - SolarAssemblyFlatpack
+
 - type: latheRecipePack
   id: NFEngineering
   recipes:
@@ -80,14 +123,9 @@
   - ConstructionBagOfHolding
   - ClothingBeltChiefEngineer
   - ClothingShoesBootsMag
+  - NFClothingEyesGlassesMesonScanner
   # - FireExtinguisherBluespace # Delta-V
   - SuperCapacitorStockPart
   - SuperMatterBinStockPart
   - PicoManipulatorStockPart
   - NFWeaponParticleDecelerator
-
-- type: latheRecipePack
-  id: NFEngineeringBoardsCircuitImprinter
-  recipes:
-  - GasMiningDrillMachineCircuitboard
-  - GaslockFrameMachineCircuitboard

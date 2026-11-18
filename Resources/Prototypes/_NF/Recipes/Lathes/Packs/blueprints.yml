@@ -23,6 +23,7 @@
   # AudioVisualCommunication
   - TelecomServerCircuitboard
   - NFHolopadShipMachineCircuitboard
+  - NFHolopadGridMachineCircuitboard
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
@@ -35,6 +36,8 @@
   # RoboticCleanliness
   - BorgModuleAdvancedCleaning
   - PortablePumpMachineCircuitBoard
+  # IndustrialCutter
+  - CutterMachineCircuitboard
   # FauxAstroTiles
   - FauxTileAstroGrass
   - FauxTileMowedAstroGrass
@@ -71,6 +74,12 @@
   - CircuitImprinterHyperConvectionMachineCircuitboard
   - SheetifierMachineCircuitboard
   - MaterialSiloMachineCircuitboard
+  - SlowWeakThrusterMachineCircuitboard # LoneStar
+  - SlowStrongThrusterMachineCircuitboard # LoneStar
+  - FastWeakThrusterMachineCircuitboard # LoneStar
+  - FastStrongThrusterMachineCircuitboard # LoneStar
+  - FasterWeakThrusterMachineCircuitboard # LoneStar
+  - ImpCoffeeMachineCircuitboard # LoneStar
   # PowerGeneration
   - PortableGeneratorPacmanMachineCircuitboard
   - PortableGeneratorSuperPacmanMachineCircuitboard
@@ -99,6 +108,7 @@
   - MiniStationAnchorCircuitboard
   - SmallThrusterMachineCircuitboard
   - SmallGyroscopeMachineCircuitboard
+  - AutopilotServerCircuitboard # LoneStar
   # AdvancedAtmospherics
   - HellfireFreezerMachineCircuitBoard
   - PortableScrubberMachineCircuitBoard
@@ -122,10 +132,11 @@
   # AtmosphericDrilling
   - GasMiningDrillMachineCircuitboard
   - GaslockFrameMachineCircuitboard
+  - GaslockBigFrameMachineCircuitboard # LoneStar
   # HardsuitsAdvanced
   - ClothingOuterHardsuitEngineeringWhite
   # PortableParticleEmission
-  - NFWeaponParticleDecelerator
+  # - NFWeaponParticleDecelerator # LoneStar
   # MatterEnergyConversion
   - BorgModuleRCD
   # MagnetsTech
@@ -140,12 +151,15 @@
   recipes:
   # MeatManipulation
   - BiomassReclaimerMachineCircuitboard
+  # SmartStorageRefrigeration
+  - SmartFridgeCircuitboard # Coyote sector
   # BiochemicalStasis
   - StasisBedMachineCircuitboard
   - CryoPodMachineCircuitboard
   - CryostasisBeaker
   - SyringeCryostasis
   # MechanizedTreatment
+  - BorgModuleAdvancedChemical
   - BorgModuleAdvancedParamedic
   # RoboticCleanliness
   - PortablePumpMachineCircuitBoard
@@ -167,6 +181,8 @@
   # IndustrialMedicine
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
+  - ElectrolysisUnitMachineCircuitboard
+  - CentrifugeMachineCircuitboard
   - DefibrillatorCompact
   # SyringeGun
   - LauncherSyringe
@@ -176,6 +192,13 @@
   # PersonalPropulsion
   - JetpackBlue
   - JetpackCaptain
+  - ImpCoffeeMachineCircuitboard #imp
+  # GravityResistantTech
+  - HoverBedHoloSpawnFolded # Coyote
+  - JetInjector # Coyote
+  # AdvancedMedicalHardsuits
+  - ClothingOuterHardsuitResponseRed
+  - ClothingOuterHardsuitResponseBlue
 
 # region Mercenary
 - type: latheRecipePack
@@ -192,6 +215,7 @@
   # ArsenalStyle
   - ClothingEyesPunkInfoShades
   - ClothingOuterArmorPunkRandomized
+  - ClothingOuterArmoredJacketPMCPunkRandomized # LoneStar - added PMC armored jacket
   - ClothingOuterArmorPunkRed
   - ClothingOuterArmorPunkGreen
   - ClothingOuterArmorPunkOrange
@@ -235,6 +259,7 @@
   - NFGrenadeEMP
   # PersonalPropulsion
   - JetpackNfsd
+  - ImpCoffeeMachineCircuitboard # LoneStar
 
 # region Salvage
 - type: latheRecipePack
@@ -280,6 +305,7 @@
   - ClothingOuterHardsuitSalvage
   # HardsuitsAdvanced
   - ClothingOuterHardsuitLuxury
+  - ImpCoffeeMachineCircuitboard # LoneStar
 
 # region Science
 - type: latheRecipePack
@@ -355,6 +381,8 @@
   # MeatManipulation
   - FatExtractorMachineCircuitboard
   - BiogeneratorMachineCircuitboard
+  # IndustrialCutter
+  - CutterMachineCircuitboard
   # FauxAstroTiles
   - FauxTileAstroGrass
   - FauxTileMowedAstroGrass
@@ -363,6 +391,7 @@
   - FauxTileAstroSnow
   - FauxTileAstroAsteroidSand
   # AdvancedCleaning
+  - BluespaceTrashBag # LoneStar
   - AdvMopItem
   - MegaSprayBottle
   - ReinforcedJug
@@ -415,6 +444,7 @@
   - ClothingOuterHardsuitClown
   - ClothingOuterHardsuitMime
   - ClothingOuterHardsuitPilot
+  - ImpCoffeeMachineCircuitboard # LoneStar
 
 #################
 #               #
@@ -455,6 +485,7 @@
   - ClothingOuterCoatBHTrench
   - PinpointerUniversalNF
   - ClothingEyesHudBountyHunter
+  - ClothingEyesHudBountyHunterPatch # LoneStar
   - NFForensicPad
   # ImprovedPistolAmmo
   - NFAmmunitionBoxPistol35Overpressure
@@ -470,12 +501,22 @@
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
   - NFMagazineDrumRifle20Empty
+  - LSMagazineBoxRifle20Empty # LoneStar
+  - NFMagazineShotgunDrumEmpty # LoneStar
   - MagazineAsmgtUniversalEmpty
   # BulkRifleAmmo
+  - NFAmmunitionBoxBigPistol35
+  - NFAmmunitionBoxBigPistol35Overpressure
+  - CSAmmunitionBoxBigPistol40 # LoneStar
+  - CSAmmunitionBoxBigPistol40Overpressure # LoneStar
+  - NFAmmunitionBoxBigPistol45
+  - NFAmmunitionBoxBigPistol45Overpressure
   - NFAmmunitionBoxBigRifle20
   - NFAmmunitionBoxBigRifle20Overpressure
   - NFAmmunitionBoxBigRifle30
   - NFAmmunitionBoxBigRifle30Overpressure
+  - NFAmmunitionBoxBigShellShotgunBuckshot
+  - NFAmmunitionBoxBigShellShotgunOverpressure
   # NFAdvancedRiotControl
   - NFTelescopicShield
   # NFExplosiveTechnology
@@ -493,6 +534,18 @@
   - NFMagazineGrenadeEmpty
   # NFPortableMicrofusionWeaponry
   - NFPortableRecharger
+  # Coyote
+  - CSAmmunitionBoxPistol40
+  - CSAmmunitionBoxPistol40Rubber
+  - CSAmmunitionBoxPistol40Overpressure
+  - CSAmmunitionBoxBigPistol40
+  - CSAmmunitionBoxBigPistol40Overpressure
+  - CSMagazinePistol40Empty
+  - CSMagazineSubMachineGun40Empty
+  # Monolith
+  - ArmorPlateMedium
+  - ArmorPlateTactical
+  - ArmorPlateRefractive
 
 # region Engineering & Science
 - type: latheRecipePack
@@ -517,10 +570,10 @@
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
   # BluespaceStorage
-  - ClothingBackpackHolding
-  - ClothingBackpackSatchelHolding
-  - ClothingBackpackDuffelHolding
-  - ClothingBackpackMessengerHolding
+  - ClothingBackpackHolding # Coyote: Unify into single chameleon item
+  # - ClothingBackpackSatchelHolding
+  # - ClothingBackpackDuffelHolding
+  # - ClothingBackpackMessengerHolding
   # PortableFission
   - PowerCellMicroreactor
   # HardsuitsBasic
@@ -528,3 +581,4 @@
   - ClothingOuterHardsuitPilot
   # HardsuitsAdvanced
   - ClothingOuterHardsuitCap
+  - ImpCoffeeMachineCircuitboard # LoneStar

@@ -42,7 +42,7 @@ using Content.Shared._NF.Lathe; // Frontier
 namespace Content.Server.Lathe
 {
     [UsedImplicitly]
-    public sealed partial class LatheSystem : SharedLatheSystem
+    public sealed partial class LatheSystem : SharedLatheSystem // Coyote: add partial
     {
         [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] private readonly IPrototypeManager _proto = default!;
@@ -108,8 +108,23 @@ namespace Content.Server.Lathe
                 if (lathe.CurrentRecipe == null)
                     continue;
 
-                if (_timing.CurTime - comp.StartTime >= comp.ProductionLength * ProductionTimeMultiplier) // Frontier: increase production time
+                var timeToSpend = _timing.CurTime - comp.StartTime;
+                var productionLength = comp.ProductionLength * ProductionTimeMultiplier;
+                var itemProduced = false;
+
+                while (lathe.CurrentRecipe != null && productionLength > TimeSpan.Zero && timeToSpend >= productionLength)
+                {
+                    timeToSpend -= productionLength;
                     FinishProducing(uid, lathe);
+                    itemProduced = true;
+
+                    if (lathe.CurrentRecipe != null)
+                        productionLength = comp.ProductionLength * ProductionTimeMultiplier;
+                }
+
+                // Carry leftover time into the next batch rather than wasting it.
+                if (lathe.CurrentRecipe != null && itemProduced)
+                    comp.StartTime -= timeToSpend;
             }
 
             var heatQuery = EntityQueryEnumerator<LatheHeatProducingComponent, LatheProducingComponent, TransformComponent>();
@@ -196,13 +211,27 @@ namespace Content.Server.Lathe
                 return false;
             quantity = int.Min(quantity, MaxItemsPerRequest);
             // Frontier: argument check
+            //if (!CanProduce(uid, recipe, quantity, component)) // Frontier: 1<quantity
+            //    return false;
 
-            if (!HasRecipe(uid, recipe, component)
-                || !CheckMaterialAvailability(uid, component, recipe, quantity))
+            // Coyote
+            if (!CheckMaterialAvailability(uid, component, recipe, quantity)) // Coyote: Check material availability (including buffer)
                 return false;
 
-            if (!DeductMaterials(uid, component, recipe, quantity))
+            /*
+            foreach (var (mat, amount) in recipe.Materials)
+            {
+                var adjustedAmount = recipe.ApplyMaterialDiscount
+                    ? (int)(-amount * component.FinalMaterialUseMultiplier) // Frontier: MaterialUseMultiplier<FinalMaterialUseMultiplier
+                    : -amount;
+                adjustedAmount *= quantity; // Frontier
+
+                _materialStorage.TryChangeMaterialAmount(uid, mat, adjustedAmount);
+            }
+            */
+            if (!DeductMaterials(uid, component, recipe, quantity)) // Coyote: deduct materials (buffer first, then storage)
                 return false;
+            // Coyote End
 
             // Frontier: queue up a batch
             if (component.Queue.Count > 0 && component.Queue[^1].Recipe == recipe.ID)
@@ -319,9 +348,9 @@ namespace Content.Server.Lathe
             if (producing == null && component.Queue.Count != 0 && component.Queue.First() is { } node) // Frontier - add extra checks since we're still using a list
                 producing = node.Recipe; // Frontier, remove .Value.
 
-            int? bufferAmount = null;
-            OnGetBufferAmount?.Invoke(uid, component, ref bufferAmount);
-            var state = new LatheUpdateState(GetAvailableRecipes(uid, component), component.Queue, producing, bufferAmount);
+            int? bufferAmount = null; // Coyote: Biomass buffer
+            OnGetBufferAmount?.Invoke(uid, component, ref bufferAmount);  // Coyote: event to get buffer
+            var state = new LatheUpdateState(GetAvailableRecipes(uid, component), component.Queue, producing, bufferAmount); // Coyote: add bufferAmount
             _uiSys.SetUiState(uid, LatheUiKey.Key, state);
         }
 

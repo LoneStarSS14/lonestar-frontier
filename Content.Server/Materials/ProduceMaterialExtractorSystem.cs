@@ -6,6 +6,7 @@ using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Storage;
 using Content.Shared.Storage.Components;
+using Content.Shared.Storage.EntitySystems;
 using Content.Shared.Popups;
 using Robust.Server.Audio;
 
@@ -22,62 +23,52 @@ public sealed class ProduceMaterialExtractorSystem : EntitySystem
     public override void Initialize()
     {
         SubscribeLocalEvent<ProduceMaterialExtractorComponent, AfterInteractUsingEvent>(OnInteractUsing);
+        SubscribeLocalEvent<ProduceMaterialExtractorComponent, FeedProduceEvent>(OnFeedProduce);
     }
 
     // BEGIN Frontier - Cherry pick wizden#32663
     private void OnInteractUsing(Entity<ProduceMaterialExtractorComponent> ent, ref AfterInteractUsingEvent args)
     {
+        if (args.Handled || !args.CanReach || !this.IsPowered(ent, EntityManager))
+            return;
+
+        var success = ExtractFromStorage(ent, args.Used, ref args);
+        success |= ExtractFromProduce(ent, args.Used, ref args);
+
+        if (!success)
+            return;
+
+        _audio.PlayPvs(ent.Comp.ExtractSound, ent);
+        args.Handled = true;
+    }
+
+    private void OnFeedProduce(Entity<ProduceMaterialExtractorComponent> ent, ref FeedProduceEvent args)
+    {
         if (args.Handled)
             return;
 
-        if (!this.IsPowered(ent, EntityManager))
-            return;
-
-        bool success = false;
-
-        // Handle using bags (mainly plant bags)
-        if (ExtractFromStorage(ent, args.Used, ref args))
-            success = true;
-
-        // Handle using produce directly
-        if (ExtractFromProduce(ent, args.Used, ref args))
-            success = true;
-
-        // TODO: What if a bag is also a plant?
-
-        if (success)
-        {
-            _audio.PlayPvs(ent.Comp.ExtractSound, ent);
-            args.Handled = true;
-        }
+        args.Handled = EatTheProduce(ent, args.Used);
     }
 
     private bool ExtractFromProduce(Entity<ProduceMaterialExtractorComponent> ent, EntityUid used, ref AfterInteractUsingEvent args)
     {
-        if (!TryComp<ProduceComponent>(used, out var produce))
+        if (!TryComp<ProduceComponent>(used, out var produce)
+            || !_solutionContainer.TryGetSolution(used, produce.SolutionName, out var solution))
             return false;
 
-        if (!_solutionContainer.TryGetSolution(used, produce.SolutionName, out var solution))
-            return false;
-
-        // Can produce even have fractional amounts? Does it matter if they do?
-        // Questions man was never meant to answer.
-        var matAmount = solution.Value.Comp.Solution.Contents
+        var amount = solution.Value.Comp.Solution.Contents
             .Where(r => ent.Comp.ExtractionReagents.Contains(r.Reagent.Prototype))
             .Sum(r => r.Quantity.Float());
-
-        var changed = (int)matAmount;
+        var changed = (int) amount;
 
         if (changed == 0)
         {
-            _popup.PopupEntity(Loc.GetString("material-extractor-comp-wrongreagent", ("used", args.Used)), args.User, args.User);
-            return false; // Frontier TODO: Nuke this file and replace with upstream one once Wizden#32663 gets merged
+            _popup.PopupEntity(Loc.GetString("material-extractor-comp-wrongreagent", ("used", used)), args.User, args.User);
+            return false;
         }
 
         _materialStorage.TryChangeMaterialAmount(ent, ent.Comp.ExtractedMaterial, changed);
-
         QueueDel(used);
-
         return true;
     }
 
@@ -86,13 +77,27 @@ public sealed class ProduceMaterialExtractorSystem : EntitySystem
         if (!TryComp<StorageComponent>(used, out var storage))
             return false;
 
-        bool success = false;
-
-        foreach (var (item, _location) in storage.StoredItems)
-            if (ExtractFromProduce(ent, item, ref args))
-                success = true;
+        var success = false;
+        foreach (var (item, _) in storage.StoredItems)
+            success |= ExtractFromProduce(ent, item, ref args);
 
         return success;
+    }
+
+    private bool EatTheProduce(Entity<ProduceMaterialExtractorComponent> ent, EntityUid used)
+    {
+        if (!this.IsPowered(ent, EntityManager)
+            || !TryComp<ProduceComponent>(used, out var produce)
+            || !_solutionContainer.TryGetSolution(used, produce.SolutionName, out var solution))
+            return false;
+
+        var amount = solution.Value.Comp.Solution.Contents
+            .Where(r => ent.Comp.ExtractionReagents.Contains(r.Reagent.Prototype))
+            .Sum(r => r.Quantity.Float());
+        _materialStorage.TryChangeMaterialAmount(ent, ent.Comp.ExtractedMaterial, (int) amount);
+        _audio.PlayPvs(ent.Comp.ExtractSound, ent);
+        QueueDel(used);
+        return true;
     }
     // END Frontier
 }

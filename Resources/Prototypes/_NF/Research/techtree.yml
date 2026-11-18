@@ -377,6 +377,9 @@
   cost: 5000
   recipeUnlocks:
   - ClothingOuterHardsuitSalvage
+  # LoneStar, merged Field&Engineering
+  - ClothingOuterHardsuitAtmos
+  - ClothingOuterHardsuitEngineering
   technologyPrerequisites:
   - NFHardsuitsBasic
   position: 1, 8
@@ -397,6 +400,7 @@
   position: 1, 9
 
 - type: technology
+  abstract: true # LoneStar, merged Field&Engineering
   id: NFHardsuitsEngineering
   name: nf-research-technology-hardsuits-engineering
   entityIcon: ClothingOuterHardsuitEngineering
@@ -423,8 +427,8 @@
   - ClothingOuterHardsuitLuxury
 
   technologyPrerequisites:
-  - NFHardsuitsEngineering
-  position: 3, 8
+  - NFHardsuitsField # LoneStar, merged Field&Engineering
+  position: 3, 8 # LoneStar, merged Field&Engineering
 
 - type: technology # LoneStar
   id: NFHardsuitsAdvancedMedical
@@ -599,7 +603,10 @@
   recipeUnlocks:
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
+  - ElectrolysisUnitMachineCircuitboard
+  - CentrifugeMachineCircuitboard
   - DefibrillatorCompact
+  - JetInjector # Coyote: - Port in Jet Injectors from Den
   technologyPrerequisites:
   - NFBasicMedicine
   position: 2, 11
@@ -651,10 +658,12 @@
   name: nf-research-technology-anti-gravitational-fields
   entityIcon: NFClothingShoesBootsMoon
   discipline: NFScience
+  secondaryDiscipline: NFMedical # Coyote: Adds a secondary discipline now that this also has the holo hoverbed.
   tier: 1
   cost: 5000
   recipeUnlocks:
   - NFClothingShoesBootsMoon
+  - HoverBedHoloSpawnFolded # LoneStar
   technologyPrerequisites:
   - NFBasicMagnetsTech
   position: 0, 14
@@ -890,6 +899,7 @@
   cost: 2500
   recipeUnlocks:
   - NFHolopadShipMachineCircuitboard
+  - NFHolopadGridMachineCircuitboard
   technologyPrerequisites:
   - NFAudioVisualCommunication
   position: 0, 20
@@ -1078,6 +1088,7 @@
   cost: 2500
   recipeUnlocks:
   - PlantBagOfHolding
+  - BluespaceTrashBag # Coyote
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFAdvancedHydroponicsEquipment
@@ -1305,6 +1316,7 @@
   position: 2, 28
 
 - type: technology
+  abstract: true # LoneStar
   id: NFParticleDecelerator
   name: nf-research-technology-portable-particle-emission
   entityIcon: NFWeaponParticleDecelerator
@@ -1394,27 +1406,32 @@
   recipeUnlocks:
   - ThrusterMachineCircuitboard
   - GyroscopeMachineCircuitboard
+  - SlowWeakThrusterMachineCircuitboard # LoneStar
+  - SlowStrongThrusterMachineCircuitboard # LoneStar
+  - SmallThrusterMachineCircuitboard # LoneStar
+  - SmallGyroscopeMachineCircuitboard # LoneStar
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFSpaceScanning
   position: 1, 32
 
-- type: technology
+- type: technology # LoneStar TODO: I think someone hijacked this and didnt do it properly. look into this later.
   id: NFShuttlecraftThrustSmall
   name: nf-research-technology-shuttlecraft-thrust-small
   entityIcon: SmallThruster
   discipline: NFEngineering
   tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - SmallThrusterMachineCircuitboard
-  - SmallGyroscopeMachineCircuitboard
+  cost: 5000 # LoneStar
+  recipeUnlocks: # LoneStar
+  - FastWeakThrusterMachineCircuitboard
+  - FastStrongThrusterMachineCircuitboard
+  - FasterWeakThrusterMachineCircuitboard
   technologyPrerequisites:
   - NFShuttlecraftThrust
   position: 2, 32
 
 # Wayfarer Autopilot: start
-- type: technology
+- type: technology # LoneStar TODO: Move this out.
   id: WFAutopilotServer
   name: wf-research-technology-autopilot-server
   entityIcon: AutopilotServer
@@ -1614,6 +1631,7 @@
   tier: 1
   cost: 2500
   recipeUnlocks:
+  - LSWeaponComboLaserPistol # LoneStar
   - NFWeaponPka
   - WeaponCrusher
   - WeaponCrusherDagger
@@ -1722,6 +1740,7 @@
   - NFMagazineClipRifle20Empty
   - MagazineLightRifleLowCapacityEmpty
   - NFMagazinePistol35Empty
+  - CSAmmunitionBoxPistol40 # LoneStar
   position: 0, 43
 
 - type: technology
@@ -1738,6 +1757,7 @@
   - ClothingOuterCoatBHTrench
   - PinpointerUniversalNF
   - ClothingEyesHudBountyHunter
+  - ClothingEyesHudBountyHunterPatch # LoneStar
   - NFForensicPad
   - FlashlightSecliteNF
   technologyPrerequisites:
@@ -1758,6 +1778,9 @@
   - NFMagazineSubMachineGun35Empty
   - NFMagazineSubMachineGunTopMounted35Empty
   - NFMagazinePistol45Empty
+  - CSAmmunitionBoxPistol40Overpressure # LoneStar
+  - CSMagazinePistol40Empty # LoneStar
+  - CSMagazineSubMachineGun40Empty # LoneStar
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFBasicAmmunitionProduction
@@ -1777,6 +1800,7 @@
   - NFAmmunitionBoxPistol35Rubber
   - NFAmmunitionBoxPistol45Rubber
   - NFAmmunitionBoxShellShotgunTranquilizer
+  - CSAmmunitionBoxPistol40Rubber # LoneStar
   technologyPrerequisites:
   - NFBasicAmmunitionProduction
   position: 1, 45
@@ -1804,6 +1828,7 @@
   recipeUnlocks:
   - ClothingEyesPunkInfoShades
   - ClothingOuterArmorPunkRandomized
+  - ClothingOuterArmoredJacketPMCPunkRandomized # LoneStar - added PMC armored jacket
   - ClothingOuterArmorPunkRed
   - ClothingOuterArmorPunkGreen
   - ClothingOuterArmorPunkOrange
@@ -1838,6 +1863,8 @@
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
   - NFMagazineDrumRifle20Empty
+  - LSMagazineBoxRifle20Empty # LoneStar
+  - NFMagazineShotgunDrumEmpty # LoneStar
   - MagazineAsmgtUniversalEmpty
   technologyPrerequisites:
   - NFImprovedPistolAmmo
@@ -1917,11 +1944,15 @@
   - CSAmmunitionBoxBigPistol40Overpressure
   - NFAmmunitionBoxBigPistol45
   - NFAmmunitionBoxBigPistol45Overpressure
+  - NFAmmunitionBoxBigRifle20
+  - NFAmmunitionBoxBigRifle20Overpressure
+  - NFAmmunitionBoxBigRifle30
+  - NFAmmunitionBoxBigRifle30Overpressure
   - NFAmmunitionBoxBigShellShotgunBuckshot
   - NFAmmunitionBoxBigShellShotgunOverpressure
   technologyPrerequisites:
-  - NFBulkRifleAmmo
-  position: 3, 45
+  - NFImprovedRifleAmmo
+  position: 3, 44
 
 - type: technology
   id: NFBasicShuttleArmament
