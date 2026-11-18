@@ -42,6 +42,7 @@
   - type: WaddleWhenWorn
     waddlingAlert: Waddling
   #end imp edit
+
 - type: entity
   parent: ClothingShoesClownBase
   id: ClothingShoesClown
@@ -62,6 +63,7 @@
     tags:
     - ClownShoes
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingShoesClown
   id: ClothingShoesClownBanana
@@ -84,6 +86,7 @@
   - type: Skates
     minimumSpeed: 20
     acceleration: 5
+
 - type: entity
   parent: ClothingShoesClownBase
   id: ClothingShoesBling
@@ -105,6 +108,7 @@
     energy: 2
     color: "#FFD800"
     netsync: false
+
 - type: entity
   parent: [ClothingShoesGaloshes, BaseC1Contraband, ContrabandClothing ] # Frontier: added BaseC3Contraband, ContrabandClothing, # LoneStar: parented to galoshes
   id: ClothingShoesCult
@@ -122,6 +126,7 @@
         whitelist:
           tags:
           - Knife
+
 - type: entity
   parent: ClothingShoesBase # Frontier: remove BaseJanitorContraband
   id: ClothingShoesGaloshes
@@ -138,8 +143,9 @@
   - type: SpeedModifierContactCapClothing
     maxContactSprintSlowdown: 0.7
     maxContactWalkSlowdown: 0.7
+
 - type: entity
-  parent: [ClothingShoesBaseButcherable, BaseC3Contraband, ContrabandClothing ] # Frontier: BaseMajorContraband<BaseC3Contraband, added ContrabandClothing
+  parent: [ClothingShoesBaseButcherable, BaseC1ContrabandUnredeemable, ContrabandClothing ] # Frontier: BaseMajorContraband<BaseC3Contraband, added ContrabandClothing
   id: ClothingShoesSpaceNinja
   name: space ninja shoes
   description: A pair of nano-enhanced boots with built-in magnetic suction cups.
@@ -156,6 +162,7 @@
     sprintModifier: 1.3
   - type: FootstepModifier
     footstepSoundCollection: null
+
 - type: entity
   parent: [ClothingShoesBaseButcherable, BaseC1ContrabandUnredeemable] # Frontier: BaseMajorContraband<BaseC2ContrabandUnredeemable
   id: ClothingShoesSwat
@@ -166,6 +173,7 @@
     sprite: Clothing/Shoes/Specific/swat.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Specific/swat.rsi
+
 - type: entity
   parent: [ClothingShoesBaseButcherable, NotContraband] # Frontier: added NotContraband
   id: ClothingShoesWizard
@@ -176,6 +184,7 @@
     sprite: Clothing/Shoes/Specific/wizard.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Specific/wizard.rsi
+
 - type: entity
   parent: ClothingShoesBase
   id: ClothingShoesChameleon
@@ -215,6 +224,7 @@
       interfaces:
         enum.ChameleonUiKey.Key:
           type: ChameleonBoundUserInterface
+
 - type: entity
   parent: [ClothingShoesChameleon, BaseC4Contraband] # Frontier: add BaseC4Contraband
   id: ClothingShoesChameleonNoSlips
@@ -228,27 +238,65 @@
 
 # LoneStar start, colorability support
 - type: entity
-  parent: ClothingShoesClown
+  parent: [ ClothingShoesClown, ClothingShoesColorableDualColorInhand ]
   id: ClothingShoesJester
   name: jester shoes
   description: A court jester's shoes, updated with modern squeaking technology.
   components:
-    - type: Sprite
-      sprite: Clothing/Shoes/Specific/jester.rsi
-    - type: Clothing
-      sprite: Clothing/Shoes/Specific/jester.rsi
-    - type: FootstepModifier
-      footstepSoundCollection:
-        collection: FootstepJester
-        params:
-          variation: 0.07
-    #start imp edit
-    - type: ItemToggle
-      soundActivate:
-        path: /Audio/Effects/Footsteps/jesterstep1.ogg
-      soundDeactivate:
-        path: /Audio/Effects/Footsteps/jesterstep2.ogg
-    #end imp edit
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Shoes/Specific/jester.rsi
+    layers:
+    - state: icon
+    - state: icon-primary
+      color: "#9E2020"
+      map: [ "shoes-icon-primary" ]
+    - state: icon-secondary
+      color: "#FFD878"
+      map: [ "shoes-icon-secondary" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Shoes/Specific/jester.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+      - state: equipped-FEET-primary
+        color: "#9E2020"
+        map: [ "shoes-equipped-primary" ]
+      - state: equipped-FEET-secondary
+        color: "#FFD878"
+        map: [ "shoes-equipped-secondary" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-primary
+        color: "#9E2020"
+        map: [ "hl-primary" ]
+      - state: inhand-left-secondary
+        color: "#FFD878"
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right-primary
+        color: "#9E2020"
+        map: [ "hr-primary" ]
+      - state: inhand-right-secondary
+        color: "#FFD878"
+        map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepJester
+      params:
+        variation: 0.07
+  - type: ItemToggle # Imp added
+    soundActivate:
+      path: /Audio/Effects/Footsteps/jesterstep1.ogg
+    soundDeactivate:
+      path: /Audio/Effects/Footsteps/jesterstep2.ogg
+# LoneStar end
+
 - type: entity
   parent: ClothingShoesClown
   id: ClothingShoesCluwne
@@ -261,6 +309,7 @@
   - type: Clothing
     sprite: Clothing/Shoes/Specific/cluwne.rsi
   - type: Unremoveable
+
 - type: entity
   parent: ClothingShoesClown
   id: ClothingShoesClownLarge
@@ -282,6 +331,7 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
+
 - type: entity
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesSkates

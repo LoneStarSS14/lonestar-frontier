@@ -37,7 +37,7 @@
   - type: Appearance
   - type: ToggleableVisuals
     spriteLayer: null # Swinging it only changes the inhand sprites # LoneStar - this is broken. Revisit.
-    replaceMode: true # The original inhand sprites won't remain visible when toggled
+    # replaceMode: true # The original inhand sprites won't remain visible when toggled # LoneStar, TODO: disabled, check later.
     inhandVisuals:
       left:
       - state: swinging-inhand-left

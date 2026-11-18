@@ -380,7 +380,7 @@
         Slash: 0.8
         Piercing: 0.8
         Heat: 0.4
-        Radiation: 0.05 # Frontier - 0<0.05
+        Radiation: 0.01 # Lonestar - 0.05 > 0.01
         Caustic: 0.7
   - type: ClothingSpeedModifier
     walkModifier: 0.8
@@ -558,15 +558,15 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.75
+  #- type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere # Coyote: we removed stam resistance from most hardsuits.
+  #  damageCoefficient: 0.75
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
-        Slash: 0.5
-        Piercing: 0.5
-        Heat: 0.5
+        Blunt: 0.55 # Coyote: 0.5 < 0.55
+        Slash: 0.55 # Coyote: 0.5 < 0.55
+        Piercing: 0.55 # Coyote: 0.5 < 0.55
+        Heat: 0.55 # Coyote: 0.5 < 0.55
         Radiation: 0.5
         Caustic: 0.5
   - type: ClothingSpeedModifier
@@ -624,8 +624,8 @@
     damageCoefficient: 0.2
   - type: FireProtection
     reduction: 0.8
-  - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.6
+  #- type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere # Coyote: we removed stam resistance from most hardsuits.
+  #  damageCoefficient: 0.6
   - type: Armor
     modifiers:
       coefficients:
@@ -665,8 +665,8 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.6
+  #- type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere # Coyote: we removed stam resistance from most hardsuits.
+  #  damageCoefficient: 0.6
   - type: Armor
     modifiers:
       coefficients:

@@ -8,16 +8,40 @@
     sprite: Clothing/Head/Hats/beaver_hat.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/beaver_hat.rsi
+
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, ClothingHeadColorableMonoInhand ] # LoneStar, added colorable
   id: ClothingHeadHatBeret
-  name: beret
-  description: An artist's favorite headwear.
+  name: beret (colorable) # LoneStar
+  description: A beret, an artists favorite headwear.
   components:
+  # LoneStar start, colrability
   - type: Sprite
-    sprite: Clothing/Head/Hats/beret.rsi
+    sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi
+    layers:
+    - state: icon
+      color: "#9E2020"
+      map: [ "head-icon" ]
   - type: Clothing
-    sprite: Clothing/Head/Hats/beret.rsi
+    sprite: _DEN/Clothing/Head/Hats/beret_colorable.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#9E2020"
+        map: [ "head-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#9E2020"
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        color: "#9E2020"
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+  # LoneStar end
   - type: Tag
     tags:
     - PetWearable
@@ -26,6 +50,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretFrench
@@ -45,6 +70,7 @@
     - ClothMade
     - Recyclable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretSecurity
@@ -63,8 +89,9 @@
     - CorgiWearable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
-  parent: [ClothingHeadBase, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
+  parent: [ClothingHeadBase, BaseC1ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: ClothingHeadHatSecurityTrooper
   name: trooper hat
   description: A campaign hat for the Nanotrasen Troopers. It's supposed to come with a case, too...
@@ -77,6 +104,7 @@
     tags:
     - ClothMade
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatCasa
@@ -91,6 +119,7 @@
       tags:
       - PetWearable
       - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretRND
@@ -109,6 +138,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretEngineering
@@ -127,6 +157,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretQM
@@ -145,6 +176,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretHoS
@@ -163,6 +195,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretWarden
@@ -177,6 +210,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretSeniorPhysician
@@ -191,6 +225,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretBrigmedic
@@ -205,6 +240,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: [ ClothingHeadBase ]
   id: ClothingHeadHatBeretMercenary # Frontier: Merc to Mercenary
@@ -219,6 +255,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretCommand
@@ -236,6 +273,7 @@
     - WhitelistChameleon
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBowlerHat
@@ -250,8 +288,9 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
-  parent: ClothingHeadBase # Frontier: removed BaseCommandContraband
+  parent: ClothingHeadBase # Frontier: removed BaseC4Contraband
   id: ClothingHeadHatCaptain
   name: captain's hardhat
   description: Feels good being the king.
@@ -268,6 +307,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatCardborg
@@ -282,8 +322,9 @@
     proto: robot
   - type: IdentityBlocker
   - type: IngestionBlocker
+
 - type: entity
-  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  parent: [ ClothingHeadBase, BaseC4Contraband ]
   id: ClothingHeadHatCentcom
   name: CentComm brand hat
   description: Feels good being the king's boss.
@@ -296,6 +337,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatChef
@@ -329,6 +371,7 @@
     - HamsterWearable
     - WhitelistChameleon
   - type: CatWearable # Frontier
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatFedoraBrown
@@ -347,6 +390,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatFedoraGrey
@@ -361,6 +405,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatFez
@@ -375,8 +420,9 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
-  parent: ClothingHeadBase # Frontier: removed BaseCommandContraband
+  parent: ClothingHeadBase # Frontier: removed BaseC4Contraband
   id: ClothingHeadHatHopcap
   name: head of personnel's cap
   description: A stylish cap worn by the Head of Personnel. Shows paperwork who's in charge.
@@ -393,8 +439,9 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
-  parent: [ClothingHeadBase, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingHeadBase, BaseC1ContrabandUnredeemable] # Frontier: BaseC4Contraband<BaseC2ContrabandUnredeemable
   id: ClothingHeadHatHoshat
   name: head of security cap
   description: A stylish cap worn by the Head of Security. Shows the officers who's in charge.
@@ -411,6 +458,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatOutlawHat
@@ -427,6 +475,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatWitch1
@@ -441,6 +490,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatPaper
@@ -455,6 +505,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatPirate
@@ -470,6 +521,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatPlaguedoctor
@@ -490,6 +542,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: ClothingHeadHatWizardBase
   id: ClothingHeadHatRedwizard
@@ -506,6 +559,7 @@
     - CorgiWearable
     - ClothMade
     - WhitelistChameleon
+
 - type: entity
   parent: [ClothingHeadBase, BaseFoldable]
   id: ClothingHeadHatSantahat
@@ -538,6 +592,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatSombrero
@@ -554,6 +609,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatSurgcapBlue
@@ -575,6 +631,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatSurgcapGreen
@@ -590,6 +647,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatSurgcapPurple
@@ -605,6 +663,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatTophat
@@ -623,6 +682,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: [ClothingHeadBase, BaseFoldable]
   id: ClothingHeadHatUshanka
@@ -647,6 +707,7 @@
     - state: icon-up
       map: ["foldedLayer"]
       visible: false
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatCanadaBeanie
@@ -684,6 +745,7 @@
         color: "#a60b0b"
       - state: pompom-equipped-HELMET
         color: "#a60b0b"
+
 - type: entity
   parent: ClothingHeadHatWizardBase
   id: ClothingHeadHatVioletwizard
@@ -700,6 +762,7 @@
     - CorgiWearable
     - ClothMade
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatWarden
@@ -716,6 +779,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatWitch
@@ -737,6 +801,7 @@
   - type: HideLayerClothing
     slots:
     - Hair
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatWizardFake
@@ -752,12 +817,14 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   abstract: true
   parent: [ ClothingHeadBase, NotContraband ] # Frontier: BaseMagicalContraband<NotContraband
   id: ClothingHeadHatWizardBase
   components:
   - type: WizardClothes
+
 - type: entity
   parent: ClothingHeadHatWizardBase
   id: ClothingHeadHatWizard
@@ -776,6 +843,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatXmasCrown
@@ -786,6 +854,7 @@
     sprite: Clothing/Head/Hats/xmascrown.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/xmascrown.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatTrucker
@@ -796,6 +865,7 @@
     sprite: Clothing/Head/Hats/truckershat.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/truckershat.rsi
+
 - type: entity
   parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
   id: ClothingHeadPyjamaSyndicateBlack
@@ -811,6 +881,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
   id: ClothingHeadPyjamaSyndicatePink
@@ -826,6 +897,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
   id: ClothingHeadPyjamaSyndicateRed
@@ -841,6 +913,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadPaperSack
@@ -857,6 +930,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadPaperSackSmile
@@ -873,6 +947,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadFishCap
@@ -883,6 +958,7 @@
     sprite: Clothing/Head/Hats/fishcap.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/fishcap.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadWehcellentCap
@@ -893,6 +969,7 @@
     sprite: Clothing/Head/Hats/wehcellentcap.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/wehcellentcap.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadNurseHat
@@ -909,6 +986,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadRastaHat
@@ -924,6 +1002,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadSafari
@@ -937,30 +1016,111 @@
 
 # LoneStar start, colorability support
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, ClothingHeadColorableDualColorInhand ]
   id: ClothingHeadHatJester
   name: jester hat
   description: A hat with bells, to add some merriness to your head.
   components:
-    - type: Sprite
-      sprite: Clothing/Head/Hats/jester.rsi
-    - type: Clothing
-      sprite: Clothing/Head/Hats/jester.rsi
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Head/Hat/jester.rsi
+    layers:
+    - state: icon
+    - state: icon-primary
+      color: "#9E2020"
+      map: [ "head-icon-primary" ]
+    - state: icon-secondary
+      color: "#5C9630"
+      map: [ "head-icon-secondary" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Head/Hat/jester.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-primary
+        color: "#9E2020"
+        map: [ "head-equipped-primary" ]
+      - state: equipped-HELMET-secondary
+        color: "#5C9630"
+        map: [ "head-equipped-secondary" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-primary
+        color: "#9E2020"
+        map: [ "hl-primary" ]
+      - state: inhand-left-secondary
+        color: "#5C9630"
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right
+      - state: inhand-right-primary
+        color: "#9E2020"
+        map: [ "hr-primary" ]
+      - state: inhand-right-secondary
+        color: "#5C9630"
+        map: [ "hr-secondary" ]
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
+
 - type: entity
-  parent: ClothingHeadHatJester
+  parent: [ ClothingHeadBase, ClothingHeadColorableDualColorInhand ]
   id: ClothingHeadHatJesterAlt
+  name: jester hat
+  description: A silly hat, to add some merriness to the suit.
   components:
-    - type: Sprite
-      sprite: Clothing/Head/Hats/jester2.rsi
-    - type: Clothing
-      sprite: Clothing/Head/Hats/jester2.rsi
-    - type: HideLayerClothing
-      layers:
-        Hair: HEAD
-        HeadTop : HEAD
-        HeadSide : HEAD
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Head/Hat/jester2.rsi
+    layers:
+    - state: icon-primary
+      color: "#9E2020"
+      map: [ "head-icon-primary" ]
+    - state: icon-secondary
+      color: "#FFD878"
+      map: [ "head-icon-secondary" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Head/Hat/jester2.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET-primary
+        color: "#9E2020"
+        map: [ "head-equipped-primary" ]
+      - state: equipped-HELMET-secondary
+        color: "#FFD878"
+        map: [ "head-equipped-secondary" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-primary
+        color: "#9E2020"
+        map: [ "hl-primary" ]
+      - state: inhand-left-secondary
+        color: "#FFD878"
+        map: [ "hl-secondary" ]
+      right:
+      - state: inhand-right-primary
+        color: "#9E2020"
+        map: [ "hr-primary" ]
+      - state: inhand-right-secondary
+        color: "#FFD878"
+        map: [ "hr-secondary" ]
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
+  - type: ColorableClothing
+    randomOnCreation: false
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
+# LoneStar end
+
 - type: entity
-  parent: ClothingHeadBase # Frontier: removed BaseCommandContraband
+  parent: ClothingHeadBase # Frontier: removed BaseC4Contraband
   id: ClothingHeadHatBeretCmo
   name: chief medical officer's beret
   description: A turquoise beret with a cross on the front. The sight of it calms you down and makes it clear that you will be cured.
@@ -977,6 +1137,7 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatPirateTricord
@@ -987,6 +1148,7 @@
     sprite: Clothing/Head/Hats/piratetricord.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/piratetricord.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatWatermelon
@@ -1001,6 +1163,7 @@
     modifiers:
       coefficients:
         Blunt: 0.95
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHolyWatermelon
@@ -1015,6 +1178,7 @@
     modifiers:
       coefficients:
         Caustic: 0.95
+
 - type: entity
   parent: [ClothingHeadBase] # Frontier: BaseSyndicateContraband<BaseC4Contraband added ContrabandClothing as parent # Coyote: de contra'd it
   id: ClothingHeadHatSyndie
@@ -1025,6 +1189,7 @@
     sprite: Clothing/Head/Hats/syndiecap.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/syndiecap.rsi
+
 - type: entity
   parent: [ClothingHeadBase] # Frontier: added ContrabandClothing as parent # Coyote: de conra'd
   id: ClothingHeadHatSyndieMAA
@@ -1035,6 +1200,7 @@
     sprite: Clothing/Head/Hats/syndiecap_maa.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/syndiecap_maa.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatTacticalMaidHeadband
@@ -1045,6 +1211,7 @@
     sprite: Clothing/Head/Hats/tacticalmaidheadband.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/tacticalmaidheadband.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHetmanHat
@@ -1055,6 +1222,7 @@
     sprite: Clothing/Head/Hats/hetman_hat.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/hetman_hat.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatMagician
@@ -1091,6 +1259,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatCapcap
@@ -1115,8 +1284,9 @@
     flavorKind: station-event-random-sentience-flavor-inanimate
     weight: 0.0002 # 5,000 times less likely than 1 regular animal
   - type: BlockMovement
+
 - type: entity
-  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  parent: [ ClothingHeadBase, BaseC4Contraband ]
   id: ClothingHeadHatCentcomcap
   name: CentComm cap
   description: An extravagant, stylish cap worn by CentComm officials. Shows the Captain who's in charge.
@@ -1135,6 +1305,7 @@
     - Recyclable
     - WhitelistChameleon
     - HamsterWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatGladiator
@@ -1150,6 +1321,7 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatPartyRed
@@ -1166,6 +1338,7 @@
     - CorgiWearable
     - WhitelistChameleon
     - HamsterWearable
+
 - type: entity
   parent: ClothingHeadHatPartyRed
   id: ClothingHeadHatPartyYellow
@@ -1181,6 +1354,7 @@
     - CorgiWearable
     - WhitelistChameleon
     - HamsterWearable
+
 - type: entity
   parent: ClothingHeadHatPartyRed
   id: ClothingHeadHatPartyGreen
@@ -1196,6 +1370,7 @@
     - CorgiWearable
     - WhitelistChameleon
     - HamsterWearable
+
 - type: entity
   parent: ClothingHeadHatPartyRed
   id: ClothingHeadHatPartyBlue
@@ -1211,6 +1386,7 @@
     - CorgiWearable
     - WhitelistChameleon
     - HamsterWearable
+
 - type: entity
   parent: ClothingHeadHatPartyRed
   id: ClothingHeadHatPartyWaterCup
@@ -1227,6 +1403,7 @@
     - CorgiWearable
     - WhitelistChameleon
     - HamsterWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatGreyFlatcap
@@ -1240,6 +1417,7 @@
     sprite: Clothing/Head/Hats/greyflatcap.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/greyflatcap.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBrownFlatcap
@@ -1253,6 +1431,7 @@
     sprite: Clothing/Head/Hats/brownflatcap.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/brownflatcap.rsi
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatCowboyBrown
@@ -1272,6 +1451,7 @@
       - CorgiWearable
       - WhitelistChameleon
       - HamsterWearable
+
 - type: entity
   parent: ClothingHeadHatCowboyBrown
   id: ClothingHeadHatCowboyBlack
@@ -1287,6 +1467,7 @@
       - CorgiWearable
       - WhitelistChameleon
       - HamsterWearable
+
 - type: entity
   parent: ClothingHeadHatCowboyBrown
   id: ClothingHeadHatCowboyGrey
@@ -1302,6 +1483,7 @@
       - CorgiWearable
       - WhitelistChameleon
       - HamsterWearable
+
 - type: entity
   parent: ClothingHeadHatCowboyBrown
   id: ClothingHeadHatCowboyRed
@@ -1317,6 +1499,7 @@
       - CorgiWearable
       - WhitelistChameleon
       - HamsterWearable
+
 - type: entity
   parent: ClothingHeadHatCowboyBrown
   id: ClothingHeadHatCowboyWhite
@@ -1332,6 +1515,7 @@
       - CorgiWearable
       - WhitelistChameleon
       - HamsterWearable
+
 - type: entity
   parent: ClothingHeadHatCowboyBrown
   id: ClothingHeadHatCowboyBountyHunter
@@ -1347,6 +1531,7 @@
       - CorgiWearable
       - WhitelistChameleon
       - HamsterWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatStrawHat
@@ -1392,6 +1577,7 @@
               max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretMedic
@@ -1406,6 +1592,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatSolidHeadband
@@ -1420,6 +1607,7 @@
     tags:
     - PetWearable
     - CorgiWearable
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadPropellerHat

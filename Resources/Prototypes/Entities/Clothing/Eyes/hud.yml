@@ -7,6 +7,7 @@
   - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons
   - type: ShowContrabandDetails
+
 - type: entity
   id: ShowMedicalIcons
   abstract: true
@@ -17,6 +18,7 @@
     - Biological # Coyote: Biological container as a base
     - IPC # Coyote: Add IPC damage container
   - type: ShowHealthIcons
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesHudDiagnostic
@@ -32,6 +34,7 @@
     - Inorganic
     - Silicon
     - IPC # Coyote: Add IPC damage container
+
 - type: entity
   parent: [ClothingEyesBase, ShowMedicalIcons]
   id: ClothingEyesHudMedical
@@ -49,6 +52,7 @@
     - WhitelistChameleon
   - type: StaticPrice # Frontier
     price: 30 # Frontier
+
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: ClothingEyesHudSecurity
@@ -62,10 +66,10 @@
   - type: Tag
     tags:
     - HudSecurity
-    - PetWearable
     - WhitelistChameleon
+
 - type: entity
-  parent: [ClothingEyesBase, BaseCommandContraband]
+  parent: [ClothingEyesBase, BaseC4Contraband]
   id: ClothingEyesHudCommand
   name: administration hud
   description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
@@ -79,6 +83,7 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesHudBeer
@@ -97,6 +102,7 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesHudFriedOnion
@@ -120,6 +126,7 @@
     flavors:
       - onion
       - greasey
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesHudOnionBeer
@@ -132,6 +139,7 @@
     sprite: Clothing/Eyes/Hud/onionbeer.rsi
   - type: ShowHungerIcons
   - type: ShowThirstIcons
+
 - type: entity
   parent: [ClothingEyesBase, ShowMedicalIcons]
   id: ClothingEyesHudMedOnion
@@ -143,6 +151,7 @@
   - type: Clothing
     sprite: Clothing/Eyes/Hud/medonion.rsi
   - type: ShowHungerIcons
+
 - type: entity
   parent: [ClothingEyesBase, ShowMedicalIcons]
   id: ClothingEyesHudMedOnionBeer
@@ -155,6 +164,7 @@
     sprite: Clothing/Eyes/Hud/medonionbeer.rsi
   - type: ShowHungerIcons
   - type: ShowThirstIcons
+
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons, NotContraband] # Frontier: BaseSecurityCommandContraband<BaseC2ContrabandUnredeemable
   id: ClothingEyesHudMedSec
@@ -168,6 +178,7 @@
   - type: Construction
     graph: HudMedSec
     node: medsecHud
+
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons]
   id: ClothingEyesHudMultiversal
@@ -184,6 +195,7 @@
     - Inorganic
     - IPC # Coyote: Add IPC damage container
   - type: ShowSyndicateIcons
+
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons]
   id: ClothingEyesHudOmni
@@ -202,8 +214,9 @@
   - type: ShowHungerIcons
   - type: ShowThirstIcons
   - type: ShowSyndicateIcons
+
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingEyesBase, ShowSecurityIcons, BaseC1Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC4Contraband, added ContrabandClothing as parent
   id: ClothingEyesHudSyndicate
   name: syndicate visor
   description: The syndicate's professional head-up display, designed for better detection of humanoids and their subsequent elimination.
@@ -217,8 +230,9 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingEyesBase, ShowSecurityIcons, BaseC1Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC4Contraband, added ContrabandClothing as parent
   id: ClothingEyesHudSyndicateAgent
   name: syndicate medical visor
   description: The Syndicate Corpsman's professional heads-up display, designed for quick diagnosis of their team's status.
@@ -228,15 +242,18 @@
   - type: Clothing
     sprite: Clothing/Eyes/Hud/syndagent.rsi
   - type: ShowSyndicateIcons
+  - type: SolutionScanner # LoneStar
   - type: ShowHealthBars
   - type: Tag
     tags:
     - PetWearable
     - WhitelistChameleon
+
 - type: entity
   parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons, ContrabandClothing] # Frontier: added ContrabandClothing as parent
   id: ClothingEyesGlassesHiddenSecurity
   suffix: Syndicate
+
 - type: entity
   parent: [ClothingEyesHudMedical, ClothingHeadEyeBaseFlippable]
   id: ClothingEyesEyepatchHudMedical
@@ -252,10 +269,12 @@
     - PetWearable
     - WhitelistChameleon
     - HudMedical
+
 - type: entity
   parent: [ClothingEyesEyepatchHudMedical, ClothingHeadEyeBaseFlipped]
   id: ClothingEyesEyepatchHudMedicalFlipped
   name: medical hud eyepatch
+
 - type: entity
   parent: [ClothingEyesHudSecurity, ClothingHeadEyeBaseFlippable]
   id: ClothingEyesEyepatchHudSecurity
@@ -271,10 +290,12 @@
     - PetWearable
     - WhitelistChameleon
     - HudSecurity
+
 - type: entity
   parent: [ClothingEyesEyepatchHudSecurity,  ClothingHeadEyeBaseFlipped]
   id: ClothingEyesEyepatchHudSecurityFlipped
   name: security hud eyepatch
+
 - type: entity
   parent: [ClothingEyesHudBeer, ClothingHeadEyeBaseFlippable]
   id: ClothingEyesEyepatchHudBeer
@@ -285,10 +306,12 @@
     sprite: Clothing/Eyes/Hud/beerpatch.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/beerpatch.rsi
+
 - type: entity
   parent: [ClothingEyesEyepatchHudBeer, ClothingHeadEyeBaseFlipped]
   id: ClothingEyesEyepatchHudBeerFlipped
   name: beer hud eyepatch
+
 - type: entity
   parent: [ClothingEyesHudDiagnostic, ClothingHeadEyeBaseFlippable]
   id: ClothingEyesEyepatchHudDiag
@@ -299,6 +322,7 @@
     sprite: Clothing/Eyes/Hud/diagpatch.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/diagpatch.rsi
+
 - type: entity
   parent: [ClothingEyesEyepatchHudDiag, ClothingHeadEyeBaseFlipped]
   id: ClothingEyesEyepatchHudDiagFlipped

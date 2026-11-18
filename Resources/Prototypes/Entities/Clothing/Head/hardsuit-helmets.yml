@@ -33,6 +33,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-avali
+      - state: equipped-head-unshaded-avali
+        shader: unshaded
+      # Starlight - End
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -46,6 +52,11 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-light-avali
+        shader: unshaded
+      # Starlight - End
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
@@ -93,6 +104,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-avali
+      - state: equipped-head-unshaded-avali
+        shader: unshaded
+      # Starlight - End
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -106,6 +123,12 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-avali
+      - state: equipped-head-unshaded-avali
+        shader: unshaded
+      # Starlight - End
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
@@ -147,6 +170,11 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-light-avali
+        shader: unshaded
+      # Starlight - End
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -160,6 +188,11 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-light-avali
+        shader: unshaded
+      # Starlight - End
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
@@ -195,6 +228,7 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitGoliath
@@ -221,6 +255,11 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-light-avali
+        shader: unshaded
+      # Starlight - End
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -234,6 +273,11 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-light-avali
+        shader: unshaded
+      # Starlight - End
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
@@ -247,6 +291,7 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+
 - type: entity
   parent: [ ClothingHeadHardsuitBase, NFClothingHeadHardsuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitMaxim
@@ -373,8 +418,8 @@
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitEngineeringWhite
-  name: chief engineer's hardsuit helmet
-  description: Special hardsuit helmet, made for the chief engineer of the station.
+  name: advanced engineering hardsuit helmet
+  description: A special hardsuit helmet custom made to protect the user from enviromental hazards while doing engineering work. Its white coating a special protection from being consumed by the supermatter.
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/engineering-white.rsi
@@ -397,9 +442,11 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
-      head-dog:
-      - state: equipped-head-light-dog
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-light-avali
         shader: unshaded
+      # Starlight - End
   - type: Clothing
     clothingVisuals:
       head:
@@ -410,10 +457,11 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
-      head-dog:
-      - state: equipped-head-dog
-      - state: equipped-head-unshaded-dog
+      # Starlight - Start
+      head-avali:
+      - state: equipped-head-light-avali
         shader: unshaded
+      # Starlight - End
   - type: PointLight
     color: "#daffad"
   - type: PressureProtection

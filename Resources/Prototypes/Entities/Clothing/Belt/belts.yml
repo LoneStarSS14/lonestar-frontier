@@ -70,6 +70,10 @@
         whitelist:
           tags:
           - JawsOfLife
+      jaws_syn: # LoneStar, added
+        whitelist:
+          tags:
+          - JawsOfDeath
       screwdriver_nuke:
         whitelist:
           tags:
@@ -88,6 +92,7 @@
     tags:
     - UtilityBelt
     - WhitelistChameleon
+
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltChiefEngineer
@@ -156,6 +161,10 @@
         whitelist:
           tags:
           - JawsOfLife
+      jaws_syn: # LoneStar, added
+        whitelist:
+          tags:
+          - JawsOfDeath
       screwdriver_nuke:
         whitelist:
           tags:
@@ -170,6 +179,7 @@
           - Wrench
     sprite: Clothing/Belt/belt_overlay.rsi
   - type: Appearance
+
 - type: entity
   parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageHolsterBase
   id: ClothingBeltAssault
@@ -211,6 +221,7 @@
   #   sprite: Clothing/Belt/belt_overlay.rsi
   # End Frontier: inherits ItemMapper from NFClothingBeltStorageHolsterBase
   - type: Appearance
+
 - type: entity
   parent: NFClothingBeltStorageBase
   id: ClothingBeltJanitor
@@ -257,6 +268,7 @@
           - Wrench
     sprite: Clothing/Belt/belt_overlay.rsi
   - type: Appearance
+
 - type: entity
   parent: [NFClothingSBeltStorageMedkitBase] # Frontier: ClothingBeltStorageBase<NFClothingSBeltStorageMedkitBase
   id: ClothingBeltMedical
@@ -324,6 +336,7 @@
   #   sprite: Clothing/Belt/belt_overlay.rsi
   # End Frontier: inherits ItemMapper from NFClothingSBeltStorageMedkitBase
   - type: Appearance
+
 - type: entity
   parent: ClothingBeltMedical
   id: ClothingBeltMedicalEMT
@@ -334,6 +347,7 @@
     sprite: Clothing/Belt/emt.rsi
   - type: Clothing
     sprite: Clothing/Belt/emt.rsi
+
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltPlant
@@ -390,6 +404,7 @@
           - Bottle
     sprite: Clothing/Belt/belt_overlay.rsi
   - type: Appearance
+
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltChef
@@ -466,6 +481,7 @@
           - PepperShaker
     sprite: Clothing/Belt/belt_overlay.rsi
   - type: Appearance
+
 - type: entity
   parent: [NFClothingBeltStorageHolsterBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageHolsterBase BaseSecurityContraband<BaseC1Contraband
   id: ClothingBeltSecurity
@@ -522,6 +538,7 @@
   #   sprite: Clothing/Belt/belt_overlay.rsi
   # End Frontier: inherits ItemMapper from NFClothingBeltStorageHolsterBase
   - type: Appearance
+
 - type: entity
   parent: [ClothingBeltBase, ClothingSlotBase, BaseC1Contraband] # Frontier: BaseC4Contraband<BaseC1Contraband
   id: ClothingBeltSheath
@@ -572,6 +589,7 @@
       tags:
         - ShellShotgun
     capacity: 14
+
 - type: entity
   parent: ClothingBeltBase
   id: ClothingBeltChampion
@@ -586,6 +604,7 @@
   - type: Tag
     tags:
     - Kangaroo
+
 - type: entity
   parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltHolster
@@ -599,8 +618,9 @@
   # - type: Storage # Frontier: commented out
     # grid: # Frontier: commented out
     # - 0,0,3,1 # Frontier: commented out
+
 - type: entity
-  parent: [NFClothingBeltStorageBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [NFClothingBeltStorageHolsterBase, NotContraband, ContrabandClothing] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageHolsterBase, BaseSyndicateContraband<BaseC4Contraband, added ContrabandClothing as parent
   id: ClothingBeltSyndieHolster
   name: syndicate shoulder holster
   description: A deep shoulder holster capable of holding many types of ballistics.
@@ -622,6 +642,7 @@
         # - CartridgeAmmo
   - type: StaticPrice
     price: 500
+
 - type: entity
   parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageHolsterBase
   id: ClothingBeltSecurityWebbing
@@ -632,6 +653,7 @@
     sprite: Clothing/Belt/securitywebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/securitywebbing.rsi
+
 - type: entity
   parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageHolsterBase, remove BaseSecurityCargoContraband
   id: ClothingBeltMercenaryWebbing # Frontier: Merc to Mercenary
@@ -642,6 +664,7 @@
     sprite: Clothing/Belt/mercwebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/mercwebbing.rsi
+
 - type: entity
   parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageHolsterBase
   id: ClothingBeltSalvageWebbing
@@ -652,8 +675,9 @@
     sprite: Clothing/Belt/salvagewebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/salvagewebbing.rsi
+
 - type: entity
-  parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC1Contraband
+  parent: [NFClothingBeltStorageHolsterBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageHolsterBase, BaseSyndicateContraband<BaseC1Contraband
   id: ClothingBeltMilitaryWebbing
   name: chest rig
   description: A set of tactical webbing worn by boarding parties. # Frontier
@@ -666,6 +690,7 @@
     damageCoefficient: 0.1
   - type: StaticPrice
     price: 500
+
 - type: entity
   parent: [ClothingBeltMilitaryWebbing]
   id: ClothingBeltMilitaryWebbingMed
@@ -680,6 +705,7 @@
     #size: Huge # Frontier
   - type: ExplosionResistance
     damageCoefficient: 0.1
+
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltSuspendersRed
@@ -695,6 +721,7 @@
   - type: Clothing
     sprite: Clothing/Belt/suspenders_red.rsi
     quickEquip: true
+
 - type: entity
   parent: ClothingBeltSuspendersRed
   id: ClothingBeltSuspendersBlack
@@ -704,6 +731,7 @@
     sprite: Clothing/Belt/suspenders_black.rsi
   - type: Clothing
     sprite: Clothing/Belt/suspenders_black.rsi
+
 - type: entity
   parent: [NFClothingBeltStorageBase, NotContraband, ContrabandClothing] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseMagicalContraband<NotContraband, ContrabandClothing as parent
   id: ClothingBeltWand
@@ -720,6 +748,7 @@
     # whitelist: # Frontier: commented out whitelist
       # tags:
       # - WizardWand
+
 - type: entity
   parent: ClothingBeltSuspendersRed
   id: ClothingPirateBaddieSuspenders

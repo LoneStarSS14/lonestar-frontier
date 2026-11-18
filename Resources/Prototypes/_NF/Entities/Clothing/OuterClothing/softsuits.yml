@@ -49,6 +49,9 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitFSA
     slot: head
+  - type: Item # Coyote: Made it where they fit in like normal EVAs, despite having the stats of a hardsuit.
+    shape:
+    - 0,0,3,2
 
 - type: entity
   parent: NFClothingOuterEVASuitBase

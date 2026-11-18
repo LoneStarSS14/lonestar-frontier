@@ -13,6 +13,7 @@
     damage:
       types:
         Blunt: 7
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesGarOrange
@@ -31,6 +32,7 @@
     damage:
       types:
         Blunt: 10
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesGarGiga
@@ -49,6 +51,7 @@
     damage:
       types:
         Blunt: 10
+
 - type: entity
   parent: ClothingEyesBase # Frontier: removed BaseEngineeringContraband
   id: ClothingEyesGlassesMeson
@@ -68,6 +71,7 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlasses
@@ -83,6 +87,7 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesJensen
@@ -96,6 +101,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesJamjar
@@ -111,6 +117,7 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesOutlawGlasses
@@ -125,6 +132,7 @@
   - type: IdentityBlocker
   - type: StaticPrice
     price: 500
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesCheapSunglasses
@@ -142,6 +150,7 @@
     - WhitelistChameleon
   - type: IdentityBlocker
     coverage: EYES
+
 - type: entity
   parent: ClothingEyesGlassesCheapSunglasses
   id: ClothingEyesGlassesSunglasses
@@ -157,8 +166,9 @@
     - PetWearable
     - HamsterWearable
     - WhitelistChameleon
+
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingEyesBase, ShowSecurityIcons, BaseC1ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: ClothingEyesGlassesSecurity
   name: security glasses
   description: Upgraded sunglasses that provide flash immunity and a security HUD.
@@ -184,8 +194,9 @@
     # - Antagonists # Frontier: guidebook entry removed
   - type: IdentityBlocker
     coverage: EYES
+
 - type: entity
-  parent: [ClothingEyesBase, BaseCommandContraband ]
+  parent: [ClothingEyesBase ]
   id: ClothingEyesGlassesCommand
   name: administration glasses
   description: Upgraded sunglasses that provide flash immunity and show ID card status.
@@ -205,6 +216,7 @@
   - type: IdentityBlocker
     coverage: EYES
   - type: ShowJobIcons
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesMercenary
@@ -239,6 +251,7 @@
   - type: GroupExamine
   - type: IdentityBlocker
     coverage: EYES
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesChemical
@@ -254,8 +267,10 @@
       coverage: EYES
     - type: Tag
       tags:
+      - HudChemistry
       - PetWearable
       - WhitelistChameleon
+
 - type: entity
   parent: [ClothingEyesBase, NotContraband, ContrabandClothing] # Frontier: BaseMajorContraband<BaseC3Contraband added ContrabandClothing as parent
   id: ClothingEyesVisorNinja
@@ -267,6 +282,7 @@
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
   - type: FlashImmunity
+
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesNoir
