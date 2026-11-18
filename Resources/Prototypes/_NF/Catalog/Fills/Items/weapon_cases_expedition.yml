@@ -2,9 +2,10 @@
 - type: entity
   id: RareWeaponCase
   abstract: true
-  components:
-  - type: RareWeaponSpawnerCase
-    randomRarity: true
+  # components:
+  # - type: RareWeaponSpawnerCase # LoneStar, yeah na.
+  #   rarity: Epic
+  #   randomRarity: true
 
 # Gun cases with contraband (unregistered) guns for expeditions
 #region Pistols
