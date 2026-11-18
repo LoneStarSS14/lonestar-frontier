@@ -37,5 +37,7 @@ public enum SectorBankAccount : byte
     Nfsd,
     Medical,
     Edison,
+
     Guild,
+
 }

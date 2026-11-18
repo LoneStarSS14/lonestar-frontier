@@ -18,13 +18,13 @@ public sealed class NFCCVars
     /// Respawn time, how long the player has to wait in seconds after going into cryosleep. Should be small, misclicks happen.
     /// </summary>
     public static readonly CVarDef<float> RespawnCryoFirstTime =
-        CVarDef.Create("nf14.respawn.cryo_first_time", 20.0f, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("nf14.respawn.cryo_first_time", 10.0f, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     /// Respawn time, how long the player has to wait in seconds after death, or on subsequent cryo attempts.
     /// </summary>
     public static readonly CVarDef<float> RespawnTime =
-        CVarDef.Create("nf14.respawn.time", 1200.0f, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("nf14.respawn.time", 10.0f, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     /// Whether or not returning from cryosleep is enabled.
@@ -36,7 +36,7 @@ public sealed class NFCCVars
     /// The time in seconds after which a cryosleeping body is considered expired and can be deleted from the storage map.
     /// </summary>
     public static readonly CVarDef<float> CryoExpirationTime =
-        CVarDef.Create("nf14.uncryo.maxtime", 180 * 60f, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("nf14.uncryo.maxtime", 259200f, CVar.SERVER | CVar.REPLICATED);
 
     /*
      *  Game
@@ -104,6 +104,14 @@ public sealed class NFCCVars
     public static readonly CVarDef<float> ShipyardSellRate =
         CVarDef.Create("shuttle.shipyard_base_sell_rate", 0.95f, CVar.SERVERONLY);
 
+
+    /// <summary>
+    /// Whether bluespace docking (shuttle storage/retrieval) is enabled in shuttle records consoles.
+    /// </summary>
+    public static readonly CVarDef<bool> BluespaceDockingEnabled =
+        CVarDef.Create("nf14.shuttle.bluespace_docking_enabled", true, CVar.SERVER | CVar.REPLICATED);
+
+
     /*
      * Salvage
      */
@@ -149,7 +157,7 @@ public sealed class NFCCVars
     /// The minimum number of FUCs to spawn for anti-smuggling work.
     /// </summary>
     public static readonly CVarDef<int> SmugglingMinFucPayout =
-        CVarDef.Create("nf14.smuggling.min_fuc_payout", 1, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.min_fuc_payout", 20, CVar.REPLICATED);
     /// <summary>
     /// The shortest time to wait before a dead drop spawns a new smuggling note.
     /// </summary>
@@ -266,6 +274,34 @@ public sealed class NFCCVars
         CVarDef.Create("nf14.xenoarch.single_use_nodes", true, CVar.REPLICATED);
 
     /*
+     * Garbage Collection
+     */
+
+    /// <summary>
+    /// If true, garbage collection will be run.
+    /// </summary>
+    public static readonly CVarDef<bool> GarbageCollectionEnabled =
+        CVarDef.Create("nf14.gc.enabled", true, CVar.SERVER | CVar.ARCHIVE);
+
+    /// <summary>
+    /// The period to run garbage collection at, in seconds.
+    /// </summary>
+    public static readonly CVarDef<int> GarbageCollectionPeriod =
+        CVarDef.Create("nf14.gc.period", 1800, CVar.SERVER | CVar.ARCHIVE); // Coyote: Instead of every 15 minutes, run every 30 minutes.
+
+    /// <summary>
+    /// The number of entities to check per tick.
+    /// </summary>
+    public static readonly CVarDef<int> GarbageCollectionEntitiesPerTick =
+        CVarDef.Create("nf14.gc.entities_per_tick", 64, CVar.SERVER | CVar.ARCHIVE);
+
+    /// <summary>
+    /// The number of times an object must be seen as idle before being garbage collected.
+    /// </summary>
+    public static readonly CVarDef<int> GarbageCollectionTally =
+        CVarDef.Create("nf14.gc.idle_count", 4, CVar.SERVER | CVar.ARCHIVE); // Coyote: With the above change, this means an offender will be deleted in 2 hours.
+
+    /*
      * Greeting
      */
 
@@ -286,34 +322,4 @@ public sealed class NFCCVars
     /// </summary>
     public static readonly CVarDef<string> NewPlayerRadioGreetingChannel =
         CVarDef.Create("nf14.greeting.channel", "Service", CVar.REPLICATED);
-
-    /// <summary>
-    /// Whether bluespace docking is available in shuttle records consoles.
-    /// </summary>
-    public static readonly CVarDef<bool> BluespaceDockingEnabled =
-        CVarDef.Create("nf14.shuttle.bluespace_docking_enabled", true, CVar.SERVER | CVar.REPLICATED);
-
-    /// <summary>
-    /// If true, garbage collection is enabled.
-    /// </summary>
-    public static readonly CVarDef<bool> GarbageCollectionEnabled =
-        CVarDef.Create("nf14.gc.enabled", true, CVar.SERVER | CVar.ARCHIVE);
-
-    /// <summary>
-    /// The period between garbage collection passes, in seconds.
-    /// </summary>
-    public static readonly CVarDef<int> GarbageCollectionPeriod =
-        CVarDef.Create("nf14.gc.period", 1800, CVar.SERVER | CVar.ARCHIVE);
-
-    /// <summary>
-    /// The number of entities checked per tick during garbage collection.
-    /// </summary>
-    public static readonly CVarDef<int> GarbageCollectionEntitiesPerTick =
-        CVarDef.Create("nf14.gc.entities_per_tick", 64, CVar.SERVER | CVar.ARCHIVE);
-
-    /// <summary>
-    /// The number of idle checks required before an entity is collected.
-    /// </summary>
-    public static readonly CVarDef<int> GarbageCollectionTally =
-        CVarDef.Create("nf14.gc.idle_count", 4, CVar.SERVER | CVar.ARCHIVE);
 }
