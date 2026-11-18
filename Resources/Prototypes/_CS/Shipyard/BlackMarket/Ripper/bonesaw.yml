@@ -37,4 +37,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            RipperDoc: [ 0, 0 ]
+            RipperDoc: [ 0, 0 ] # LoneStar
