@@ -14,6 +14,7 @@ using Content.Server.Salvage.Expeditions;
 using Content.Server.Salvage.Expeditions.Structure;
 using Content.Shared.Atmos;
 using Content.Shared.Construction.EntitySystems;
+using Content.Shared.Dataset;
 using Content.Shared.Gravity;
 using Content.Shared.Parallax.Biomes;
 using Content.Shared.Physics;
@@ -131,20 +132,24 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
     protected override async Task<bool> Process()
     {
         // _CS: gracefully handle expedition failures
-        var success = false;
+        bool success = true;
+        string? errorStackTrace = null;
         try
         {
-            success = await InternalProcess();
+            await InternalProcess();
         }
-        catch (Exception exception)
+        catch (Exception e)
         {
-            _sawmill.Error("salvage", $"Expedition generation failed with exception: {exception}");
+            success = false;
+            errorStackTrace = e.ToString();
         }
         finally
         {
             ExpeditionSpawnCompleteEvent ev = new(Station, success, _missionParams.Index, mapUid, _economyId, _missionParams.OpenContract);
             _entManager.EventBus.RaiseEvent(EventSource.Local, ev);
-            if (!success && mapUid.IsValid())
+            if (errorStackTrace != null)
+                _sawmill.Error("salvage", $"Expedition generation failed with exception: {errorStackTrace}!");
+            if (!success)
             {
                 // Invalidate station, expedition cancellation will be handled by task handler
                 if (_entManager.TryGetComponent<SalvageExpeditionComponent>(mapUid, out var salvage))

@@ -45,8 +45,8 @@
           orGroup: deposit
         - id: GasDepositPlasma
           orGroup: deposit
-        #- id: GasDepositAir # Coyote: Disable air deposits
-        #  orGroup: deposit
+        # - id: GasDepositAir # Coyote
+        #   orGroup: deposit
         - id: GasDepositMuddleEven
           orGroup: deposit
         - id: GasDepositMuddlePlasma
@@ -90,22 +90,18 @@
           max: 4
           canBeAirSealed: true
         entries:
-        # Coyote: changes start
         - id: GasDepositOxygen
           orGroup: deposit
         - id: GasDepositOxygenLarge
           orGroup: deposit
-        - id: GasDepositOxygenVeryLarge
-          orGroup: deposit
-           # Coyote: changes end
         - id: GasDepositNitrogen
           orGroup: deposit
         - id: GasDepositNitrogenLarge
           orGroup: deposit
-        #- id: GasDepositAir # Coyote: Disable air deposits
-        #  orGroup: deposit
-        #- id: GasDepositAirLarge # Coyote: Disable air deposits
-        #  orGroup: deposit
+        # - id: GasDepositAir # Coyote
+        #   orGroup: deposit
+        # - id: GasDepositAirLarge
+        #   orGroup: deposit
         - id: GasDepositWaterVaporVeryLarge
           orGroup: deposit
         - id: GasDepositWaterVaporLarge
@@ -198,18 +194,10 @@
           max: 6
           canBeAirSealed: true
         entries:
-         # Coyote: changes start
         - id: GasDepositPlasmaVerySmall
-          orGroup: deposit
-        - id: GasDepositPlasmaSmall
-          orGroup: deposit
-        - id: GasDepositPlasmaLarge
-          orGroup: deposit
-        - id: GasDepositPlasmaVeryLarge
           orGroup: deposit
         - id: GasDepositMuddlePlasmaVerySmall
           orGroup: deposit
-           # Coyote: changes end
         - id: GasDepositMuddleEvenVerySmall
           orGroup: deposit
         - id: GasDepositHelium
@@ -306,8 +294,8 @@
           orGroup: deposit
         - id: GasDepositNitrogenVeryLarge
           orGroup: deposit
-        #- id: GasDepositAirVeryLarge # Coyote: Disable air deposits
-        #  orGroup: deposit
+        # - id: GasDepositAirVeryLarge # Coyote
+        #   orGroup: deposit
 # endregion Chromite Table
 
 # region AsteroidRock Table
@@ -353,10 +341,8 @@
           orGroup: deposit
         - id: GasDepositCarbonDioxideSmall
           orGroup: deposit
-        #- id: GasDepositAirSmall # Coyote: Disable air deposits
-        #  orGroup: deposit
-        - id: GasDepositHelium
-          orGroup: deposit
+        # - id: GasDepositAirSmall # Coyote
+        #   orGroup: deposit
         - id: GasDepositHelium
           orGroup: deposit
 # endregion AsteroidRock Table

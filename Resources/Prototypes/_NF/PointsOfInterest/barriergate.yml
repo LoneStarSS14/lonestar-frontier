@@ -3,8 +3,8 @@
 # Discord: dustylens
 
 # Maintainer Info
-# GitHub: dustylens
-# Discord: dustylens
+# GitHub:
+# Discord:
 
 # Notes:
 # Deep player interest point POI.
@@ -29,7 +29,7 @@
   minPlayers: 0
   stations:
     BarrierGate:
-      stationProto: StandardFrontierOutpost
+      stationProto: StandardFrontierDepot # LoneStar
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Barrier Gate'

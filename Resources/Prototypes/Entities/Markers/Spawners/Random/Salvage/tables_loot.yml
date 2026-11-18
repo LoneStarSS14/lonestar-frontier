@@ -38,6 +38,7 @@
       weight: 0.01 # Frontier
     - id: CrayonMagic # Frontier
       weight: 0.0001 # Frontier
+
 - type: entityTable
   id: SalvageScrapHighValue
   table: !type:GroupSelector
@@ -65,6 +66,7 @@
       weight: 0.05
     - id: NFScrapSilver # Frontier
       weight: 2 # Frontier
+
 - type: entityTable
   id: SalvageScrapLarge
   table: !type:GroupSelector
@@ -116,6 +118,7 @@
         range: 1, 2
     - !type:NestedSelector
       tableId: RandomInstrumentTable
+
 - type: entityTable
   id: SalvageTreasureUncommon
   table: !type:GroupSelector
@@ -140,6 +143,7 @@
     - id: WristwatchGold
     - !type:NestedSelector
       tableId: RingTableCommon
+
 - type: entityTable
   id: SalvageTreasureRare
   table: !type:GroupSelector
@@ -184,6 +188,13 @@
       weight: 0.25 # Frontier
     - id: ScrapGenericMachineAncient # Frontier
       weight: 0.1 # Frontier
+    - id: CrateChemistryP # Frontier
+      weight: 0.1 # Frontier
+    - id: CrateChemistryD # Frontier
+      weight: 0.1 # Frontier
+    - id: CrateChemistryS # Frontier
+      weight: 0.1 # Frontier
+
 - type: entityTable
   id: SalvageTreasureLegendary
   table: !type:GroupSelector
@@ -231,6 +242,7 @@
       - id: BoxLightbulb # Frontier
       - id: BoxColoredLighttube # Frontier
       - id: BoxColoredLightbulb # Frontier
+
 - type: entityTable
   id: SalvageEquipmentUncommon
   table: !type:GroupSelector
@@ -257,6 +269,7 @@
         weight: 0.1
     - id: ClothingBeltQuiverCrossbowFilledBolt # Frontier
     - id: NFGlowshroom # Frontier
+
 - type: entityTable
   id: SalvageEquipmentRare
   table: !type:GroupSelector
@@ -283,6 +296,7 @@
     - id: MysterySpaceBladeBox # Frontier
     - id: CrossbowModernHand # Frontier
     - id: NFWeaponHoloflareGun # Frontier
+
 - type: entityTable
   id: SalvageEquipmentLegendary
   table: !type:GroupSelector
@@ -305,6 +319,7 @@
     #   - id: PKAUpgradeFireRate # Frontier
     - id: PowerCellAntiqueProto # Frontier
     - id: NFShovel # Frontier
+
 - type: entityTable
   id: RandomGeneratorTable
   table: !type:GroupSelector

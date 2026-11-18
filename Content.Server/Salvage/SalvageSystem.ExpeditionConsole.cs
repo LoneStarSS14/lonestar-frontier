@@ -36,17 +36,42 @@ public sealed partial class SalvageSystem
             return;
 
         var board = EnsureBoard(component.EconomyId);
-        if (!data.Missions.TryGetValue(args.Index, out var missionparams))
-            return;
 
-        var isOpenContract = missionparams.OpenContract;
-        if (isOpenContract)
+        var isOpenContract = false;
+        SalvageMissionParams? missionparams = null;
+        if (data.Missions.TryGetValue(args.Index, out var stationMission) && stationMission.OpenContract)
         {
-            var sharedIndex = missionparams.SharedMissionIndex != 0 ? missionparams.SharedMissionIndex : args.Index;
-            if (board.Cooldown || (board.ActiveMission != 0 && board.ActiveMission != sharedIndex)
-                || !board.Missions.TryGetValue(sharedIndex, out missionparams))
+            var sharedMissionIndex = stationMission.SharedMissionIndex != 0
+                ? stationMission.SharedMissionIndex
+                : args.Index;
+
+            if (!board.Missions.TryGetValue(sharedMissionIndex, out var sharedMission))
                 return;
+
+            missionparams = sharedMission;
+
+            isOpenContract = true;
+
+            if (board.ActiveMission != 0 && board.ActiveMission != sharedMissionIndex)
+                return;
+
+                // Frontier: server-side cooldown guard — board.Cooldown is the authoritative lock.
+                // Missions remain in board.Missions during cooldown (for display), so we must
+                // explicitly reject claims while the shared board is cooling down.
+                if (board.Cooldown)
+                    return;
         }
+        else if (!data.Missions.TryGetValue(args.Index, out var localMission))
+        {
+            return;
+        }
+        else
+        {
+            missionparams = localMission;
+        }
+
+        if (missionparams == null)
+            return;
 
         // Frontier: prevent expeditions if there are too many out already.
         var activeExpeditionCount = 0;
@@ -82,7 +107,7 @@ public sealed partial class SalvageSystem
             {
                 PlayDenySound((uid, component));
                 _popupSystem.PopupEntity(Loc.GetString("shuttle-ftl-invalid"), uid, PopupType.MediumCaution);
-                UpdateConsoles((station.Value, data));
+                UpdateStationConsoles(station.Value);
                 return;
             }
 
@@ -90,7 +115,7 @@ public sealed partial class SalvageSystem
             {
                 PlayDenySound((uid, component));
                 _popupSystem.PopupEntity(Loc.GetString("shuttle-ftl-recharge"), uid, PopupType.MediumCaution);
-                UpdateConsoles((station.Value, data));
+                UpdateStationConsoles(station.Value);
                 return;
             }
 
@@ -110,59 +135,67 @@ public sealed partial class SalvageSystem
 
                 PlayDenySound((uid, component));
                 _popupSystem.PopupEntity(Loc.GetString("shuttle-ftl-proximity"), uid, PopupType.MediumCaution);
-                UpdateConsoles((station.Value, data));
+                UpdateStationConsoles(station.Value);
                 return;
             }
         }
-        if (isOpenContract)
+
+        if (!isOpenContract)
         {
-            if (board.ActiveMission == 0)
-            {
-                board.ActiveMission = missionparams.Index;
-                data.ActiveMission = args.Index;
-                SpawnMission(missionparams with { OpenContract = true }, station.Value, null, component.EconomyId);
-                UpdateStationConsoles(station.Value);
-                UpdateEconomyConsoles(component.EconomyId);
-                return;
-            }
+            SpawnMission(missionparams, station.Value, null, component.EconomyId);
 
-            if (board.JoinableExpedition is not { Valid: true } expeditionMap
-                || !TryComp<SalvageExpeditionComponent>(expeditionMap, out var expedition))
-            {
-                if (!board.PendingClaims.Exists(pending => pending.Station == station.Value))
-                    board.PendingClaims.Add(new PendingExpeditionClaim(station.Value, uid, args.Index));
-                data.ActiveMission = args.Index;
-                UpdateStationConsoles(station.Value);
-                UpdateEconomyConsoles(component.EconomyId);
-                return;
-            }
+            data.ActiveMission = args.Index;
+            var mission = GetMission(missionparams.MissionType, _prototypeManager.Index<SalvageDifficultyPrototype>(missionparams.Difficulty), missionparams.Seed); // Frontier: add MissionType
+            data.NextOffer = _timing.CurTime + mission.Duration + TimeSpan.FromSeconds(1);
+            data.CooldownTime = mission.Duration + TimeSpan.FromSeconds(1); // Frontier
 
-            if (!TryJoinExistingExpedition(board, station.Value, uid, args.Index, expeditionMap, expedition))
-            {
-                PlayDenySound((uid, component));
-                _popupSystem.PopupEntity(Loc.GetString("salvage-expedition-no-valid-landing-zone"), uid, PopupType.MediumCaution);
-                UpdateStationConsoles(station.Value);
-                return;
-            }
+            UpdateStationConsoles(station.Value);
+            return;
+        }
 
+        if (board.ActiveMission == 0)
+        {
+            board.ActiveMission = missionparams.Index;
+            data.ActiveMission = args.Index;
+            SpawnMission(missionparams with { OpenContract = true }, station.Value, null, component.EconomyId);
+            UpdateStationConsoles(station.Value);
             UpdateEconomyConsoles(component.EconomyId);
             return;
         }
 
-        SpawnMission(missionparams, station.Value, null, component.EconomyId);
+        if (board.JoinableExpedition is not { Valid: true } expeditionMap ||
+            !TryComp<SalvageExpeditionComponent>(expeditionMap, out var expedition))
+        {
+            var hasPendingClaim = false;
+            foreach (var pending in board.PendingClaims)
+            {
+                if (pending.Station != station.Value)
+                    continue;
+
+                hasPendingClaim = true;
+                break;
+            }
+
+            if (!hasPendingClaim)
+                board.PendingClaims.Add(new PendingExpeditionClaim(station.Value, uid, args.Index));
+
+            data.ActiveMission = args.Index;
+            UpdateStationConsoles(station.Value);
+            UpdateEconomyConsoles(component.EconomyId);
+            return;
+        }
+
+        if (!TryJoinExistingExpedition(board, station.Value, uid, args.Index, expeditionMap, expedition))
+        {
+            PlayDenySound((uid, component));
+            _popupSystem.PopupEntity(Loc.GetString("salvage-expedition-no-valid-landing-zone"), uid, PopupType.MediumCaution);
+            UpdateStationConsoles(station.Value);
+            return;
+        }
+
+        UpdateEconomyConsoles(component.EconomyId);
         #endregion Frontier FTL changes
         // End Frontier
-
-        data.ActiveMission = args.Index;
-        var mission = GetMission(missionparams.MissionType, _prototypeManager.Index<SalvageDifficultyPrototype>(missionparams.Difficulty), missionparams.Seed); // Frontier: add MissionType
-        // Frontier - TODO: move this to progression for secondary window timer
-        data.NextOffer = _timing.CurTime + mission.Duration + TimeSpan.FromSeconds(1);
-        data.CooldownTime = mission.Duration + TimeSpan.FromSeconds(1); // Frontier
-
-        // _labelSystem.Label(cdUid, GetFTLName(_prototypeManager.Index(PlanetNames), missionparams.Seed)); // Frontier: no disc
-        // _audio.PlayPvs(component.PrintSound, uid); // Frontier: no disc
-
-        UpdateConsoles((station.Value, data));
     }
 
     // Frontier: early expedition end
@@ -223,17 +256,27 @@ public sealed partial class SalvageSystem
         if (!TryComp<SalvageExpeditionComponent>(map, out var expedition))
             return;
 
-        const int departTime = 20;
-        var newEndTime = _timing.CurTime + TimeSpan.FromSeconds(departTime);
-
-        if (expedition.EndTime <= newEndTime)
+        if (xform.GridUid is not { Valid: true } initiatingShuttle)
             return;
 
-        expedition.Stage = ExpeditionStage.FinalCountdown;
-        expedition.EndTime = newEndTime;
+        // Don't allow early finish if expedition is already in final countdown (≤ 45s remaining).
+        var shuttleRemaining = expedition.ShuttleEndTimes.TryGetValue(initiatingShuttle, out var existingEnd)
+            ? existingEnd - _timing.CurTime
+            : GetDefaultShipExpeditionDuration(expedition);
+        if (shuttleRemaining <= TimeSpan.FromSeconds(45))
+            return;
+
+        const int departTime = 20;
+        var newShuttleEndTime = _timing.CurTime + TimeSpan.FromSeconds(departTime);
+
+        expedition.ShuttleEndTimes[initiatingShuttle] = newShuttleEndTime;
+        expedition.ForcedDepartureShuttles.Add(initiatingShuttle);
+        _pausedShuttleExpeditionRemaining[initiatingShuttle] = TimeSpan.FromSeconds(departTime);
+
         Dirty(map.Value, expedition);
 
-        Announce(map.Value, Loc.GetString("salvage-expedition-announcement-early-finish", ("departTime", departTime)));
+        Announce(map.Value, Loc.GetString("salvage-expedition-announcement-early-finish"));
+        Announce(map.Value, Loc.GetString("salvage-expedition-announcement-shuttle-leave-seconds", ("departTime", departTime)));
     }
     // End Frontier: early expedition end
 
@@ -256,6 +299,7 @@ public sealed partial class SalvageSystem
     {
         if (!TryComp<UserInterfaceComponent>(component.Owner, out var uiComp))
             return;
+
         UpdateConsole(component, uiComp);
     }
 
@@ -266,11 +310,12 @@ public sealed partial class SalvageSystem
         var state = GetState(component, station, dataComponent);
 
         // Frontier: if we have a lingering FTL component, we cannot start a new mission
-        if (!TryComp<StationDataComponent>(station, out var stationData) ||
+        if (station is not { Valid: true } ||
+                !TryComp<StationDataComponent>(station.Value, out var stationData) ||
                 _station.GetLargestGrid(stationData) is not { Valid: true } grid ||
                 HasComp<FTLComponent>(grid))
         {
-            state.FtlLocked = true;
+            state.FtlLocked = true; // Frontier: keep timer state intact while still locking claims during FTL recharge
         }
         // End Frontier
 

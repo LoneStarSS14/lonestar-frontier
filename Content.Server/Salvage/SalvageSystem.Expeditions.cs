@@ -19,7 +19,6 @@ using Content.Shared.Procedural; // _CS
 using Content.Shared.Salvage; // _CS
 using Robust.Shared.Prototypes; // _CS
 using Content.Shared._NF.CCVar; // _CS
-using Content.Shared.Shuttles.Components; // _CS
 using Robust.Shared.Configuration;
 using Content.Shared.Ghost;
 using System.Numerics; // _CS
@@ -110,6 +109,7 @@ public sealed partial class SalvageSystem
 
     private void OnExpeditionMapInit(EntityUid uid, SalvageExpeditionComponent component, MapInitEvent args)
     {
+        // Ensure any old shuttle pause cache for a reused map UID cannot affect a fresh expedition.
         ClearPausedShuttleCacheForMap(uid);
         component.SelectedSong = _audio.ResolveSound(component.Sound);
         InitExpeditionWeather(uid, component);
@@ -117,6 +117,7 @@ public sealed partial class SalvageSystem
 
     private void OnExpeditionShutdown(EntityUid uid, SalvageExpeditionComponent component, ComponentShutdown args)
     {
+        // Drop shuttle pause cache when expedition map is shutting down.
         ClearPausedShuttleCacheForMap(uid);
         StopExpeditionWeather(uid, component);
 
@@ -124,11 +125,9 @@ public sealed partial class SalvageSystem
 
         // First wipe any disks referencing us
         var disks = AllEntityQuery<ShuttleDestinationCoordinatesComponent>();
-        while (disks.MoveNext(out var disk, out var diskComp))
+        while (disks.MoveNext(out var disk, out var diskComp)
+               && diskComp.Destination == uid)
         {
-            if (diskComp.Destination != uid)
-                continue;
-
             diskComp.Destination = null;
             Dirty(disk, diskComp);
         }
@@ -248,8 +247,8 @@ public sealed partial class SalvageSystem
                 board.ActiveMission = 0;
 
             board.Cooldown = true;
-                // Frontier: Missions are intentionally NOT cleared here — they remain visible (disabled) during
-                // cooldown and are replaced with fresh missions when the cooldown timer expires.
+            // Frontier: Missions are intentionally NOT cleared here — they remain visible (disabled) during
+            // cooldown and are replaced with fresh missions when the cooldown timer expires.
             board.NextOffer = _timing.CurTime + TimeSpan.FromSeconds(SharedExpeditionCooldown);
             board.CooldownTime = TimeSpan.FromSeconds(SharedExpeditionCooldown);
             ClearPendingClaims(board);
@@ -393,26 +392,23 @@ public sealed partial class SalvageSystem
     // Handle exped spawn job failures gracefully - reset the console
     private void OnExpeditionSpawnComplete(ExpeditionSpawnCompleteEvent ev)
     {
+        if (!_sharedExpeditionBoards.TryGetValue(ev.EconomyId, out var board))
+            return;
+
         if (!ev.Success)
         {
-            if (ev.OpenContract && _sharedExpeditionBoards.TryGetValue(ev.EconomyId, out var failedBoard))
-            {
-                failedBoard.ActiveMission = 0;
-                failedBoard.JoinableExpedition = null;
-                ClearPendingClaims(failedBoard);
-                UpdateEconomyConsoles(failedBoard.EconomyId);
-            }
+            board.ActiveMission = 0;
+            board.JoinableExpedition = null;
+            ClearPendingClaims(board);
             if (TryComp<SalvageExpeditionDataComponent>(ev.Station, out var stationData))
             {
                 stationData.ActiveMission = 0;
                 stationData.Cooldown = false;
                 UpdateConsoles((ev.Station, stationData));
             }
+            UpdateEconomyConsoles(board.EconomyId);
             return;
         }
-
-        if (!ev.OpenContract || !_sharedExpeditionBoards.TryGetValue(ev.EconomyId, out var board))
-            return;
 
         if (board.ActiveMission != ev.MissionIndex || !ev.MapUid.IsValid())
             return;
