@@ -623,6 +623,7 @@
     #     - Sheriff
 
 - type: listing
+  abstract: true # LoneStar, we're missing this.
   id: UplinkSecurityMagazineSubMachineGunTopMounted35Overpressure
   name:  uplink-security-wt550magazine-name
   description: uplink-security-wt550magazine-desc
@@ -829,21 +830,21 @@
     #     - SeniorOfficer
     #     - Sheriff
 
-- type: listing
-  id: UplinkEnergySwordNfsd
-  name:  uplink-security-esword-name
-  description: uplink-security-esword-desc
+- type: listing # LoneStar, upstream has their own e-sword here, im just fixing stuff for the upstreaming.
+  id: UplinkSecurityEnergySword
+  name:  uplink-security-energysword-name
+  description: uplink-security-energysword-desc
   productEntity: EnergySwordNfsd
-  icon: { sprite: _NF/Objects/Weapons/Melee/e_nfsd.rsi, state: icon }
+  icon: { sprite: Objects/Weapons/Melee/e_sword.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 8 # LoneStar
+    FrontierUplinkCoin: 8
   categories:
-  - UplinkSecurityMelee # LoneStar
+    - UplinkSecurityMelee # Lonestar
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - SecurityUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
   # - !type:BuyerJobCondition # Coyote
   #   whitelist:
   #   - Sheriff

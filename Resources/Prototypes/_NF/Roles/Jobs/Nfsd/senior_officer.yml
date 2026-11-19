@@ -43,12 +43,11 @@
   storage:
     back:
     - Flash
-    - CSMagazinePistol40Overpressure # Coyote: NFMagazineHighCapacityPistol35Overpressure < CSMagazinePistol40Overpressure
-    - CSMagazinePistol40Rubber # Coyote: NFMagazineHighCapacityPistol35Rubber < CSMagazinePistol40Rubber
+    - CSMagazinePistol40Overpressure # Coyote
+    - CSMagazinePistol40Rubber # Coyote
     - BaseSecurityUplinkRadioOfficer
-    - FrontierUplinkCoin5 # Coyote: added 5 FUCs to Sergeants
+    - FrontierUplinkCoin5 # Coyote
     - ShipVoucherNfsdSergeant
-    - RubberStampSergeant
     - EncryptionKeyCommand
 
 - type: chameleonOutfit
