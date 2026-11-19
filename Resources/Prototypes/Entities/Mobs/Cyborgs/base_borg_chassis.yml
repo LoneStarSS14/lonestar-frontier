@@ -148,6 +148,8 @@
 # End Coyote
   - type: StatusEffects
     allowed:
+    - Stun # LoneStar
+    - KnockedDown # LoneStar
     - Flashed
   - type: TypingIndicator
     proto: robot
@@ -233,6 +235,7 @@
   - type: Pullable
   - type: Puller
     needsHands: false
+  - type: LayingDown # LoneStar
   - type: StandingState
   - type: Tag
     tags:
