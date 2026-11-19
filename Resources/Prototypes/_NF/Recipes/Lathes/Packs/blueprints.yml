@@ -132,7 +132,6 @@
   # AtmosphericDrilling
   - GasMiningDrillMachineCircuitboard
   - GaslockFrameMachineCircuitboard
-  - GaslockBigFrameMachineCircuitboard # LoneStar
   # HardsuitsAdvanced
   - ClothingOuterHardsuitEngineeringWhite
   # PortableParticleEmission

@@ -82,9 +82,6 @@
   - BorgModuleAdvancedTool
   - ShipyardRCD
   - ShipyardRCDAmmo
-  - ClothingHandsGlovesColorYellow
-  - NFClothingEyesGlassesMeson
-  - NFClothingEyesGlassesMesonScanner
 
 - type: latheRecipePack
   id: NFEngineeringBoards
@@ -102,8 +99,6 @@
 - type: latheRecipePack
   id: NFEngineeringBoardsCircuitImprinter
   recipes:
-  - AlertsComputerCircuitboard
-  - AtmosMonitoringComputerCircuitboard
   - GasMiningDrillMachineCircuitboard
   - GaslockFrameMachineCircuitboard
   - MaterialSiloMachineCircuitboard
@@ -123,7 +118,6 @@
   - ConstructionBagOfHolding
   - ClothingBeltChiefEngineer
   - ClothingShoesBootsMag
-  - NFClothingEyesGlassesMesonScanner
   # - FireExtinguisherBluespace # Delta-V
   - SuperCapacitorStockPart
   - SuperMatterBinStockPart
