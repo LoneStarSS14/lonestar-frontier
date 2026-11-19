@@ -1675,6 +1675,7 @@
   cost: 5000
   recipeUnlocks:
   - OreBagOfHolding
+  - BorgModuleAdvancedMining # LoneStar
   technologyPrerequisites:
   - NFMassExcavation
   position: 3, 38
