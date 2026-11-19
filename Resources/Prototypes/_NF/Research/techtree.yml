@@ -1915,22 +1915,6 @@
   position: 3, 43
 
 - type: technology
-  id: NFBulkRifleAmmo
-  name: nf-research-technology-rifle-ammo-bulk
-  entityIcon: NFAmmunitionBoxBigRifle20
-  discipline: NFArsenalMercenary
-  tier: 1
-  cost: 10000
-  recipeUnlocks:
-  - NFAmmunitionBoxBigRifle20
-  - NFAmmunitionBoxBigRifle20Overpressure
-  - NFAmmunitionBoxBigRifle30
-  - NFAmmunitionBoxBigRifle30Overpressure
-  technologyPrerequisites:
-  - NFImprovedRifleAmmo
-  position: 3, 44
-
-- type: technology
   id: NFBulkAmmo
   name: nf-research-technology-ammo-bulk
   entityIcon: NFAmmunitionBoxBigPistol45
@@ -1940,8 +1924,8 @@
   recipeUnlocks:
   - NFAmmunitionBoxBigPistol35
   - NFAmmunitionBoxBigPistol35Overpressure
-  - CSAmmunitionBoxBigPistol40
-  - CSAmmunitionBoxBigPistol40Overpressure
+  - CSAmmunitionBoxBigPistol40 # LoneStar
+  - CSAmmunitionBoxBigPistol40Overpressure # LoneStar
   - NFAmmunitionBoxBigPistol45
   - NFAmmunitionBoxBigPistol45Overpressure
   - NFAmmunitionBoxBigRifle20
