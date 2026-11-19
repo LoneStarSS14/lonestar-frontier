@@ -62,13 +62,3 @@
     accentHColor: "#8c1c54"
   - type: Icon
     sprite: _DEN/Objects/Devices/pda.rsi
-  # - type: CartridgeLoader
-  #   preinstalled:
-  #    - CrewManifestCartridge
-  #    - NotekeeperCartridge
-  #    - NewsReaderCartridge
-  #    - GlimmerMonitorCartridge
-  #    - NanoChatCartridge
-  #    - PsiWatchCartridge
-  # - type: GuideHelp
-  #   guides: [ MantisGuide ]

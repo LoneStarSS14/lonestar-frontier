@@ -96,6 +96,7 @@
       - NewsReaderCartridge
       - BountyContractsCartridge # Frontier
       - AstroNavCartridge # Frontier
+      - NanoChatCartridge # LoneStar
     cartridgeSlot:
       priority: -1
       name: device-pda-slot-component-slot-name-cartridge
@@ -144,6 +145,8 @@
     mindRoles: [] # Frontier: no default value here
   - type: ShipyardSellCondition # Frontier: Teleport to shipyard console on sale
     preserveOnSale: true
+  # LoneStar v
+  - type: BlipCartridge
 
 - type: entity
   parent: BasePDA
@@ -178,6 +181,9 @@
     - BountyContractsCartridge # Frontier
     - AstroNavCartridge # Frontier
     - WantedListCartridge
+    - NanoChatCartridge # LoneStar
+  - type: BlipCartridge # LoneStar
+    defaultPreset: BlipPresetSecurity
 
 - type: entity
   parent: BasePDA
@@ -519,6 +525,7 @@
     - NewsReaderCartridge
     - BountyContractsCartridge # Frontier
     - AstroNavCartridge
+    - NanoChatCartridge # LoneStar
 
 - type: entity
   parent: BasePDA
@@ -990,6 +997,7 @@
       - LogProbeCartridge
       - BountyContractsCartridge # Frontier
       - AstroNavCartridge
+      - NanoChatCartridge # LoneStar
 
 - type: entity
   parent: CentcomPDA
@@ -1017,6 +1025,7 @@
       - WantedListCartridge
       - MedTekCartridge
       - AstroNavCartridge
+      - NanoChatCartridge # LoneStar
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
@@ -1139,6 +1148,7 @@
       - NewsReaderCartridge # Frontier
       - BountyContractsCartridge # Frontier
       - AstroNavCartridge # Frontier
+      - NanoChatCartridge # LoneStar
 
 - type: entity
   parent: BaseSecurityPDA
@@ -1172,6 +1182,7 @@
       - LogProbeCartridge
       - AstroNavCartridge
       - MailMetricsCartridge # Frontier
+      - NanoChatCartridge # LoneStar
 
 - type: entity
   parent: ERTLeaderPDA
@@ -1342,6 +1353,7 @@
     - NewsReaderCartridge
     - WantedListCartridge
     - LogProbeCartridge
+    - NanoChatCartridge # LoneStar
 
 - type: entity
   parent: BaseMedicalPDA
@@ -1370,6 +1382,7 @@
     - NewsReaderCartridge
     - WantedListCartridge
     - MedTekCartridge
+    - NanoChatCartridge # LoneStar
 
 - type: entity
   parent: ClownPDA
@@ -1549,6 +1562,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - MedTekCartridge
+      - NanoChatCartridge # LoneStar
 
 - type: entity
   parent: BaseWidePDA
