@@ -1016,9 +1016,6 @@
   id: NukeOpsUplink
 
 - type: Tag
-  id: OatmealBiscuit
-
-- type: Tag
   id: Ointment
 
 - type: Tag
@@ -1281,9 +1278,6 @@
   id: Sidearm
 
 - type: Tag
-  id: SimpleBiscuit
-
-- type: Tag
   id: SignalTrigger
 
 - type: Tag
@@ -1372,9 +1366,6 @@
 
 - type: Tag
   id: SubdermalImplant
-
-- type: Tag
-  id: SugarBiscuit
 
 - type: Tag
   id: SuitEVA
