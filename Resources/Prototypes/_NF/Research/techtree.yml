@@ -606,7 +606,6 @@
   - ElectrolysisUnitMachineCircuitboard
   - CentrifugeMachineCircuitboard
   - DefibrillatorCompact
-  - JetInjector # Coyote: - Port in Jet Injectors from Den
   technologyPrerequisites:
   - NFBasicMedicine
   position: 2, 11
