@@ -17,12 +17,12 @@ Medium Priority
 Bugs
 - unknown origin
     - critical
-        Removing hair from a vox causes the game to blackscreen unrecoverably, present on live.
+        Removing hair from a vox causes the game to blackscreen unrecoverably, presnet on live, tracked issue on github, known solution.
 
 - known future fix
     - low risk
         using hypos spams "nothing to inject" 12 times.
-        bananapeel bug, line 453 of Objects/Consumable/Food/produce.yml
+        bananapeel bug, line 453 of Objects/Consumable/Food/produce.yml, it appears on as clothing on head from pocket slots
 
 ==============================================================================================================================================
 ==Actionable Work=============================================================================================================================
@@ -43,6 +43,8 @@ cat ears are 15k$ now
 bicaridine + t2brutes -> razorium is gone, t2brute + t2brute is unchanged.
 Wizden's T2 brute effects, changed slightly, taking modern frontiers excluding hunger from bruizine
 Plastic via recipe appears to be fifth'd to wizdens values.
+reparents and resolves old SmartFridge construction support from coyote that was handled poorly
+AI Freezing with no nearby player is back, unsure of full rammifications.
 
 Future Considerations:
 Frontier Major Upstreaming PRs:
@@ -65,22 +67,10 @@ provide shantyman PDA to freelancers
 remove h.a.r.m pack || make the H.A.R.M pack blacklisted for borgs, or ensure it hides when worn by them.
 frontier's lowered gun-wield movement speeds.
 import frontiers fix for wallmount substations, revert our solution
+borgs cant lay down and lost a few changes to their status inccurance (stam etc), fix later, we need to sort out borg sub types still.
 
 Considerations:
-we seem to have a lot of AI upgrades as in mob AI, might be worth checking how much neen-code was overwritten
-bluespace orestorage module for borgs is gone from techtree
-borgs cant be stunned knocked or slowed
-borgs cant lay down
-Resources/Prototypes    /Entities/Mobs/Customization/Markings/ largely unchecked.
-Resources/Prototypes/Entities/NPCs/space.yml had health threshold changes, the changes we made on frontiers copies may not be needed anymore.
-Resources/Prototypes/Entities/NPCs/animals.yml MobMouse has some thrist and hunger components. & some other spots
-figure out what i meant by "check on components of all 3 kinds" (I have completely forgot what this was a note for, this was under the -Resources/Prototypes/ header between reactions and recipes)
-
 
 Tasks:
-LSSmartFridge DVSmartFridgeMedical, theres a load of shit with smart fridges, take what frontier did and adapt.
-All new entires in Mobs/Customization/Markings/ should support the kindAllowance to get around species restrictions, along with proper naming for what species each is for.
 
 Agent Tasks: (when making edits refer to CONTRIBUTION.md on how to make and comment changes.)
-Add nanochat back to wizden and frontier(_NF) PDAs, ensure additions feature a `# LoneStar` note on the end of the lines modified, refer to contribution.md
-Ensure the CVAR for entity collisions are off by default.
