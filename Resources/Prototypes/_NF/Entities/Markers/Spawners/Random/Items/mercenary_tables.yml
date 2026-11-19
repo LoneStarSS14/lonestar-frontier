@@ -491,7 +491,7 @@
       weight: 0.05
     - id: VendingMachineSyndieContraband
       weight: 0.05
-    - id: BangWizFridge # LoneStar
+    - id: BangWiz # LoneStar
       weight: 0.1 # LoneStar
     - !type:NestedSelector
       tableId: TableDungeonLootGeneralFrameMachine
