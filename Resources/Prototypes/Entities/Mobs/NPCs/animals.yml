@@ -1855,23 +1855,23 @@
     needs:
     - NeedHungerRat
     - NeedThirstRat
-  - type: Thirst
-    startingThirst: 25  # spawn with Okay thirst state
-    thresholds:
-      OverHydrated: 35
-      Okay: 25
-      Thirsty: 15
-      Parched: 10
-      Dead: 0
-    baseDecayRate: 0.04
-  - type: Hunger
-    thresholds:
-      Overfed: 35
-      Okay: 25
-      Peckish: 15
-      Starving: 10
-      Dead: 0
-    baseDecayRate: 0.5 # I'm very hungry! Give me. The cheese.
+  # - type: Thirst # LoneStar removal
+  #   startingThirst: 25  # spawn with Okay thirst state
+  #   thresholds:
+  #     OverHydrated: 35
+  #     Okay: 25
+  #     Thirsty: 15
+  #     Parched: 10
+  #     Dead: 0
+  #   baseDecayRate: 0.04
+  # - type: Hunger
+  #   thresholds:
+  #     Overfed: 35
+  #     Okay: 25
+  #     Peckish: 15
+  #     Starving: 10
+  #     Dead: 0
+  #   baseDecayRate: 0.5 # I'm very hungry! Give me. The cheese.
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -3576,8 +3576,8 @@
     needs:
     - NeedHungerRat
     - NeedThirstRat
-  - type: Hunger
-    baseDecayRate: 0.3
+  # - type: Hunger # LoneStar removal
+  #   baseDecayRate: 0.3
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
