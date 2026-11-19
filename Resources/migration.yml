@@ -99,7 +99,7 @@ SpawnPointSeniorPhysician: null
 ClothingOuterHardsuitMedic: ClothingOuterHardsuitSyndieMedic
 
 # 2023-12-13
-VendingMachineSmartFridge: SmartFridge
+# VendingMachineSmartFridge: SmartFridge # LoneStar
 
 # 2023-12-18
 ReagentContainerMilk: DrinkMilkCarton

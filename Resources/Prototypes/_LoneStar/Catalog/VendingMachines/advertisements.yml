@@ -5,7 +5,7 @@
     count: 6
 
 - type: localizedDataset
-  id: PunkSmartFridgeAds
+  id: BangWizAds
   values:
-    prefix: advertisement-punkfridge-
+    prefix: advertisement-bangwiz-
     count: 11

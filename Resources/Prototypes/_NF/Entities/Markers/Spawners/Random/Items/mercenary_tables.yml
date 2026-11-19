@@ -491,7 +491,7 @@
       weight: 0.05
     - id: VendingMachineSyndieContraband
       weight: 0.05
-    - id: LSPunkSmartFridge # LoneStar
+    - id: BangWizFridge # LoneStar
       weight: 0.1 # LoneStar
     - !type:NestedSelector
       tableId: TableDungeonLootGeneralFrameMachine
@@ -508,7 +508,7 @@
       weight: 0.3
     - id: MercenaryTechFabHackedFlatpack
       weight: 0.1
-    - id: PunkSmartFridgeFlatpack # LoneStar
+    - id: BangWizFlatpack # LoneStar
       weight: 0.1 # LoneStar
 
 # region Circuit Boards
@@ -522,7 +522,7 @@
       weight: 0.3
     - id: MercenaryTechFabCircuitboardHackedNF
       weight: 0.1
-    - id: LSPunkSmartFridgeCircuitboard # LoneStar
+    - id: BangWizCircuitboard # LoneStar
       weight: 0.1 # LoneStar
     - id: ComputerIFFCircuitboard
       weight: 0.1

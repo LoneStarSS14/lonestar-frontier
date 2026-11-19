@@ -189,7 +189,7 @@
         children:
         - id: VendingMachineClothingPunkFlatpack
         - id: VendingMachineBountyVendPunkFlatpack
-        - id: PunkSmartFridgeFlatpack # LoneStar
+        - id: BangWizFlatpack # LoneStar
 
 # region blueprints
 - type: entity

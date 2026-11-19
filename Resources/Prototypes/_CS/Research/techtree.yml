@@ -4,12 +4,12 @@
 - type: technology
   id: CSSmartStorageRefrigeration
   name: cs-research-technology-smart-storage-refrigeration
-  entityIcon: SmartFridge
+  entityIcon: LSSmartFridge
   discipline: NFService
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - SmartFridgeCircuitboard
+  - LSSmartFridgeCircuitboard
   technologyPrerequisites:
   - NFAdvancedFoodService
   position: 3,24

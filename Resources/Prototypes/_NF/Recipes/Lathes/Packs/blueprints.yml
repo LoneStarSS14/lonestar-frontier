@@ -150,8 +150,6 @@
   recipes:
   # MeatManipulation
   - BiomassReclaimerMachineCircuitboard
-  # SmartStorageRefrigeration
-  - SmartFridgeCircuitboard # Coyote sector
   # BiochemicalStasis
   - StasisBedMachineCircuitboard
   - CryoPodMachineCircuitboard
@@ -197,6 +195,8 @@
   # AdvancedMedicalHardsuits
   - ClothingOuterHardsuitResponseRed
   - ClothingOuterHardsuitResponseBlue
+  # LoneStar v
+  - LSSmartFridgeCircuitboard
 
 # region Mercenary
 - type: latheRecipePack

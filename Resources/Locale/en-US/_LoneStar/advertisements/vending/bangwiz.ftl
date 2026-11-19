@@ -1,0 +1,11 @@
+advertisement-bangwiz-1 = I'll bash your head in, I swear on me fookin' mum!
+advertisement-bangwiz-2 = When I am king you will be first against the wall.
+advertisement-bangwiz-3 = You wanna piece of this?
+advertisement-bangwiz-4 = Stay strapped or get clapped!
+advertisement-bangwiz-5 = The trees can't be harmed if the Lorax is armed!
+advertisement-bangwiz-6 = BORN TO DIE. WORLD IS A FUCK.
+advertisement-bangwiz-7 = SLAP IT WITH YOUR LEFT. SLAP IT WITH YOUR RIGHT. SLAP IT IN THE DAY AND SLAP IT IN THE NIGHT!
+advertisement-bangwiz-8 = When they kick at your front door, how you gonna come?
+advertisement-bangwiz-9 = Réalisant mon espoir, je me lance vers la gloire, okay?
+advertisement-bangwiz-10 = A clip of ammunition for your little Novalite!
+advertisement-bangwiz-11 = FEED ME A CAT.

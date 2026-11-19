@@ -3,6 +3,7 @@
   id: SmartFridge
   name: SmartFridge
   description: A refrigerated storage unit for keeping items cold and fresh.
+  suffix: Undeconstructable # LoneStar
   components:
   - type: StationAiWhitelist
   - type: Vocalizer

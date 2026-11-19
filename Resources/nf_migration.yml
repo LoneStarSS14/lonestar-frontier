@@ -1,3 +1,8 @@
+# LoneStar Temporary, adapt these into ls_migrations when other PR adds it.
+DVSmartFridge: LSSmartFridge
+VendingMachineSmartFridge: LSSmartFridge
+SmartFridge: LSSmartFridge
+
 # 2023-09-10
 ClothingUniformMailCarrier: ClothingUniformJumpsuitMailCarrier
 ClothingUniformSkirtMailCarrier: ClothingUniformJumpskirtMailCarrier
@@ -612,7 +617,7 @@ CellRechargerCircuitboard: WeaponCapacitorRechargerCircuitboard
 SuitStorageWallmountBasic: SuitStorageWallmountEVA
 
 # 2025-08-21 Wizden smartfridge
-DVSmartFridge: SmartFridge
+# DVSmartFridge: SmartFridge # LoneStar
 
 # 2025-10-10 Inflatable structures
 InflatableWall: NFInflatableWall
