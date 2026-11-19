@@ -63,6 +63,7 @@
   bodyPart: Tail
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -77,6 +78,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -91,6 +93,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   coloring:
     default:
       type:
@@ -110,6 +113,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
@@ -120,6 +124,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
@@ -130,6 +135,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi

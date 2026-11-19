@@ -115,6 +115,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -125,6 +126,7 @@
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi

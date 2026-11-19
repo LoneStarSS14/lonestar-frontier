@@ -158,6 +158,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
@@ -168,6 +169,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi

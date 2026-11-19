@@ -1586,6 +1586,7 @@
   id: HumanHairLongWithBangs
   bodyPart: Hair
   markingCategory: Hair
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   sprites:
   - sprite: Mobs/Customization/human_hair.rsi
     state: longwithbangs
