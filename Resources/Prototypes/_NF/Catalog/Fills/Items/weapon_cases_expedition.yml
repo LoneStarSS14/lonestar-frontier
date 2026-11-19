@@ -346,7 +346,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRifleAssaultRomulanExpedition
+    - id: NFWeaponRifleAssaultRomulan
       amount: 1
     - id: NFMagazineRifle20
       amount: 2

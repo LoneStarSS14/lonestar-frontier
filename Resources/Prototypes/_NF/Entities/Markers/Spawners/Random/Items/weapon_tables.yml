@@ -329,7 +329,7 @@
       # - id: WeaponCaseLongLaserCannonExpedition # LoneStar, blueprint only
       - id: WeaponCaseHeavyAsmgtExpeditions
       # LoneStar v
-      - id: WeaponCaseLongEstocExpedition
+      - id: WeaponCaseLongEstoc
       - id: WeaponCaseLongHristovExpedition
       - id: WeaponCaseLongC19r
       - id: WeaponCaseLongPrototypePulseRifleExpedition
