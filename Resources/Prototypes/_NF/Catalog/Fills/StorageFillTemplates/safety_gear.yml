@@ -10,7 +10,9 @@
     - id: FireExtinguisher
     - id: ClothingMaskGas
     - id: CrowbarRed
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: DoubleEmergencyOxygenTankFilled # Lonestar
+    - id: DoubleEmergencyNitrogenTankFilled # Lonestar
+    # - id: DoubleEmergencyTankO2N2EqualFilled # Lonestar: Kill
 
 - type: entity
   abstract: true
@@ -29,7 +31,9 @@
     contents:
     - id: ClothingOuterBioGeneral
     - id: ClothingHeadHatHoodBioGeneral
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: DoubleEmergencyOxygenTankFilled # Lonestar
+    - id: DoubleEmergencyNitrogenTankFilled # Lonestar
+    # - id: DoubleEmergencyTankO2N2EqualFilled # Lonestar: Kill
 
 - type: entity
   abstract: true
