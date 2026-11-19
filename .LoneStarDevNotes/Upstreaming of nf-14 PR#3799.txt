@@ -45,6 +45,8 @@ Wizden's T2 brute effects, changed slightly, taking modern frontiers excluding h
 Plastic via recipe appears to be fifth'd to wizdens values.
 reparents and resolves old SmartFridge construction support from coyote that was handled poorly
 AI Freezing with no nearby player is back, unsure of full rammifications.
+frontier's lowered gun-wield movement speeds.
+removed DEN's jet injectors, we'll get wizdens soon enough.
 
 Future Considerations:
 Frontier Major Upstreaming PRs:
@@ -61,11 +63,9 @@ Swap frontier weapon sprites out for wizdens, such as cobra wt550 and c20r
 we now have xeno wall sets, re-importing aegis and voltage, they had floor tiles swapped out.
 frontiers NFSD esword with hilt, idk if we skipped it or not.
 we gained the gaslight ship, check if we're missing any posters or guide entry related things.
-look into when we get wizden's jet injectors to replace DEN's
 bible loadout variance (bible selector case?)
 provide shantyman PDA to freelancers
 remove h.a.r.m pack || make the H.A.R.M pack blacklisted for borgs, or ensure it hides when worn by them.
-frontier's lowered gun-wield movement speeds.
 import frontiers fix for wallmount substations, revert our solution
 borgs cant lay down and lost a few changes to their status inccurance (stam etc), fix later, we need to sort out borg sub types still.
 
