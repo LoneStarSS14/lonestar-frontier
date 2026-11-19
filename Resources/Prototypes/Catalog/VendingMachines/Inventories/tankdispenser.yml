@@ -1,20 +1,22 @@
+## LoneStar: assume file is modified heavily.
+
 - type: vendingMachineInventory
   id: TankDispenserEVAInventory
   startingInventory:
-#    EmergencyOxygenTankFilled: 5 # Frontier
-#    ExtendedEmergencyOxygenTankFilled: 5 # Frontier
-#    AirTankFilled: 10 # Frontier
-#    DoubleEmergencyAirTankFilled: 10 # Frontier
-    NFTankO2N2EqualFilled: 10 # Frontier
-    DoubleEmergencyTankO2N2EqualFilled: 10 # Frontier
+    EmergencyOxygenTankFilled: 5
+    ExtendedEmergencyOxygenTankFilled: 5
+    AirTankFilled: 10
+    DoubleEmergencyAirTankFilled: 10
+    # NFTankO2N2EqualFilled: 10 # LoneStar, we dont want these.
+    # DoubleEmergencyTankO2N2EqualFilled: 10
     OxygenTankFilled: 10
     DoubleEmergencyOxygenTankFilled: 10
-#    EmergencyNitrogenTankFilled: 5 # Frontier
-#    ExtendedEmergencyNitrogenTankFilled: 5 # Frontier
+    EmergencyNitrogenTankFilled: 5
+    ExtendedEmergencyNitrogenTankFilled: 5
     NitrogenTankFilled: 10
     DoubleEmergencyNitrogenTankFilled: 10
-    WaterVaporTankFilled: 10 # Floof - Feroxi Port
-    DoubleEmergencyWaterVaporTankFilled: 10 # Flooftier
+    WaterVaporTankFilled: 10
+    DoubleEmergencyWaterVaporTankFilled: 10
 
 - type: vendingMachineInventory
   id: TankDispenserEngineeringInventory

@@ -54,7 +54,9 @@
   table: !type:AllSelector
     children:
     - id: ClothingOuterHardsuitWarden
-    - id: NFTankO2N2EqualFilled # Frontier OxygenTankFilled>NFTankO2N2EqualFilled
+    - id: OxygenTankFilled # Lonestar
+    - id: NitrogenTankFilled # Lonestar
+    # - id: NFTankO2N2EqualFilled # Lonestar: Kill
     - id: ClothingMaskBreath
     - id: JetpackSecurityFilled # Frontier
     - id: ClothingShoesBootsMagSecurityFilled # Frontier
