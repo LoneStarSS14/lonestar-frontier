@@ -134,7 +134,7 @@ public sealed class SlipperySystem : EntitySystem
         }
 
         // Slippery is so tied to knockdown that we really just need to force it here.
-        _stun.TryKnockdown(other, component.SlipData.KnockdownTime, force: true);
+        _stun.TryKnockdown(other, component.SlipData.KnockdownTime, force: true, drop: false); // LoneStar; no dropping items from slipping.
 
         _adminLogger.Add(LogType.Slip, LogImpact.Low, $"{ToPrettyString(other):mob} slipped on collision with {ToPrettyString(uid):entity}");
     }
