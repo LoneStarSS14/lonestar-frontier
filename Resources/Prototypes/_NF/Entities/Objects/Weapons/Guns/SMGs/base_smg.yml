@@ -7,20 +7,22 @@
   components:
   - type: Wieldable
     unwieldOnUse: false
+  # LoneStar start
   - type: GunWieldBonus
-    minAngle: -0.7
-    maxAngle: -3
+    minAngle: -0.8
+    maxAngle: -4
   - type: Gun
-    projectileSpeed: 22.5
-    minAngle: 3.1
-    maxAngle: 15.5
-    angleIncrease: 0.7
-    angleDecay: 3.5
+    projectileSpeed: 30
+    minAngle: 3.7
+    maxAngle: 18.5
+    angleIncrease: 1
+    angleDecay: 5
     fireRate: 6
     selectedMode: FullAuto
     availableModes:
     - SemiAuto
     - FullAuto
+  # LoneStar end
   - type: StaticPrice
     price: 350
   - type: NFWeaponDetails
@@ -32,12 +34,14 @@
   parent: NFBaseWeaponFrameSubMachineGun
   abstract: true
   components:
+  # LoneStar start
   - type: Gun
-    minAngle: 3.6
-    maxAngle: 18
-    angleIncrease: 1
-    angleDecay: 3.4
+    minAngle: 4.3
+    maxAngle: 21.5
+    angleIncrease: 1.4
+    angleDecay: 4.8
     fireRate: 5.1
+  # LoneStar end
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 
@@ -46,10 +50,12 @@
   parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
+  # LoneStar start
   - type: Gun
-    angleIncrease: 0.7
-    angleDecay: 5
+    angleIncrease: 1.1
+    angleDecay: 7.7
     fireRate: 4.8
+  # LoneStar end
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-cybersun-industries
 
@@ -58,11 +64,13 @@
   parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
+  # LoneStar start
   - type: Gun
-    minAngle: 3.4
-    maxAngle: 17
-    angleIncrease: 1.2
-    angleDecay: 4.3
+    minAngle: 4.1
+    maxAngle: 20.5
+    angleIncrease: 1.8
+    angleDecay: 6.5
+  # LoneStar end
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
 
@@ -71,12 +79,14 @@
   parent: [ NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
+  # LoneStar start
   - type: Gun
-    minAngle: 3.7
-    maxAngle: 15
-    angleIncrease: 1.4
-    angleDecay: 4.5
+    minAngle: 4.4
+    maxAngle: 22
+    angleIncrease: 2.1
+    angleDecay: 6.7
     fireRate: 4.8
+  # LoneStar end
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-frontier-gunsmith-consortium
 

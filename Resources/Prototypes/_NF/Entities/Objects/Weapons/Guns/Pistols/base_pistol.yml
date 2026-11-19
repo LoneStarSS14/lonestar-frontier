@@ -5,16 +5,18 @@
   name: pistol
   abstract: true
   components:
+  # LoneStar start
   - type: Gun
-    projectileSpeed: 22.5
-    minAngle: 2.7
-    maxAngle: 13.5
-    angleIncrease: 0.7
-    angleDecay: 3.5
+    projectileSpeed: 30
+    minAngle: 3.1
+    maxAngle: 15.5
+    angleIncrease: 0.8
+    angleDecay: 4
     fireRate: 4
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
+  # LoneStar end
   - type: StaticPrice
     price: 250
   - type: NFWeaponDetails
@@ -27,12 +29,14 @@
   parent: NFBaseWeaponFramePistol
   abstract: true
   components:
+  # LoneStar start
   - type: Gun
-    minAngle: 3.1
-    maxAngle: 15.5
-    angleIncrease: 1
-    angleDecay: 3.4
+    minAngle: 3.6
+    maxAngle: 18
+    angleIncrease: 1.1
+    angleDecay: 3.7
     fireRate: 3.4
+  # LoneStar end
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 
@@ -41,10 +45,12 @@
   parent: [ BaseC3SyndicateContraband, NFBaseWeaponFramePistol ]
   abstract: true
   components:
+  # LoneStar start
   - type: Gun
-    angleIncrease: 0.8
-    angleDecay: 5.6
+    angleIncrease: 0.9
+    angleDecay: 6.3
     fireRate: 3.2
+  # LoneStar end
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-cybersun-industries
 
