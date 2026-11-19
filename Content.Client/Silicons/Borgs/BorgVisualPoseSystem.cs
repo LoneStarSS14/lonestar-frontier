@@ -193,7 +193,7 @@ public sealed class BorgVisualPoseSystem : EntitySystem
         }
 
         if (TryComp<StandingStateComponent>(uid, out var standing)
-            && standing.CurrentState is StandingState.Lying or StandingState.GettingUp
+            && !standing.Standing
             && pose.LyingState != null)
         {
             return pose.LyingState;

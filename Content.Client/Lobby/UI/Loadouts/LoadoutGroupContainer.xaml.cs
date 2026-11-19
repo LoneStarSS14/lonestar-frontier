@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Clothing;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
@@ -6,7 +7,6 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using System.Linq;
 
 namespace Content.Client.Lobby.UI.Loadouts;
 
@@ -16,11 +16,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
     private const string ClosedGroupMark = "▶";
     private const string OpenedGroupMark = "▼";
 
-    /// <summary>
-    /// A dictionary that stores open groups
-    /// </summary>
-    private Dictionary<string, bool> _openedGroups = new();
-
+    private readonly Dictionary<string, bool> _openedGroups = new();
     private readonly LoadoutGroupPrototype _groupProto;
 
     public event Action<ProtoId<LoadoutPrototype>>? OnLoadoutPressed;
@@ -35,9 +31,6 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
         RefreshLoadouts(profile, loadout, session, collection);
     }
 
-    /// <summary>
-    /// Updates button availabilities and buttons.
-    /// </summary>
     public void RefreshLoadouts(HumanoidCharacterProfile profile, RoleLoadout loadout, ICommonSession session, IDependencyCollection collection)
     {
         var protoMan = collection.Resolve<IPrototypeManager>();
@@ -46,7 +39,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         if (_groupProto.MinLimit > 0)
         {
-            RestrictionsContainer.AddChild(new Label()
+            RestrictionsContainer.AddChild(new Label
             {
                 Text = Loc.GetString("loadouts-min-limit", ("count", _groupProto.MinLimit)),
                 Margin = new Thickness(5, 0, 5, 5),
@@ -55,7 +48,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         if (_groupProto.MaxLimit > 0)
         {
-            RestrictionsContainer.AddChild(new Label()
+            RestrictionsContainer.AddChild(new Label
             {
                 Text = Loc.GetString("loadouts-max-limit", ("count", _groupProto.MaxLimit)),
                 Margin = new Thickness(5, 0, 5, 5),
@@ -64,7 +57,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         if (protoMan.TryIndex(loadout.Role, out var roleProto) && roleProto.Points != null && loadout.Points != null)
         {
-            RestrictionsContainer.AddChild(new Label()
+            RestrictionsContainer.AddChild(new Label
             {
                 Text = Loc.GetString("loadouts-points-limit", ("count", loadout.Points.Value), ("max", roleProto.Points.Value)),
                 Margin = new Thickness(5, 0, 5, 5),
@@ -73,127 +66,78 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         LoadoutsContainer.DisposeAllChildren();
 
-        // Get all loadout prototypes for this group.
-        // Frontier: skip missing/hidden loadouts before grouping
-        var validProtos = _groupProto.Loadouts
-            .Where(id => protoMan.HasIndex(id) && !loadout.IsHidden(profile, session, id, collection))
-            .Select(id => protoMan.Index(id));
-        // End Frontier
-
-        /*
-         * Group the prototypes based on their GroupBy field.
-         * - If GroupBy is null or empty, fallback to grouping by the prototype ID itself.
-         * - The result is a dictionary where:
-         *   - The key is either GroupBy or ID (if GroupBy is not set).
-         *   - The value is the list of prototypes that belong to that group.
-         *
-         * This allows grouping loadouts into sub-categories within the group.
-         */
-        var groups = validProtos
-        .GroupBy(p => string.IsNullOrEmpty(p.GroupBy)
-                         ? p.ID
-                         : p.GroupBy)
-        .ToDictionary(g => g.Key, g => g.ToList());
-
-        foreach (var kvp in groups)
+        var loadoutIds = new HashSet<ProtoId<LoadoutPrototype>>(_groupProto.Loadouts);
+        foreach (var subgroupId in _groupProto.Subgroups)
         {
-            var protos = kvp.Value;
-
-            if (protos.Count > 1)
-            {
-                /*
-                 * Build the list of UI elements for each loadout prototype:
-                 * - For each prototype, create its corresponding LoadoutContainer UI element.
-                 * - Set HorizontalExpand to true so elements properly stretch in layout.
-                 * - Collect all UI elements into a list for further processing.
-                 */
-                var uiElements = protos
-                    .Select(proto =>
-                    {
-                        var elem = CreateLoadoutUI(proto, profile, loadout, session, collection, loadoutSystem);
-                        elem.HorizontalExpand = true;
-                        return elem;
-                    })
-                    .ToList();
-
-                /* 
-                * Determine which element should be displayed first: 
-                * - If any element is currently selected (its button is pressed), use it. 
-                * - Otherwise, fallback to the first element in the list. 
-                * 
-                * This moves the selected item outside of the sublist for better usability, 
-                * making it easier for players to quickly toggle loadout options (e.g. clothing, accessories) 
-                * without having to search inside expanded subgroups. 
-                */
-                var firstElement = uiElements.FirstOrDefault(e => e.Select.Pressed) ?? uiElements[0];
-
-                /*
-                 * Get all remaining elements except the first one:
-                 * - Use ReferenceEquals to ensure we exclude the exact instance used as firstElement.
-                 */
-                var otherElements = uiElements.Where(e => !ReferenceEquals(e, firstElement)).ToList();
-
-                firstElement.HorizontalExpand = true;
-                var subContainer = new SubLoadoutContainer()
-                {
-                    Visible = _openedGroups.GetValueOrDefault(kvp.Key, false)
-                };
-                var toggle = CreateToggleButton(kvp, firstElement, subContainer);
-
-                LoadoutsContainer.AddChild(firstElement);
-                LoadoutsContainer.AddChild(subContainer);
-
-                var subList = subContainer.Grid;
-                foreach (var proto in otherElements)
-                {
-                    subList.AddChild(proto);
-                }
-
-                UpdateToggleColor(toggle, subList);
-            }
-            else
-            {
-                LoadoutsContainer.AddChild(
-                    CreateLoadoutUI(protos[0], profile, loadout, session, collection, loadoutSystem)
-                );
-            }
-        }
-
-        // Frontier: loadoutGroup subgroups
-        foreach (var subgroupProto in _groupProto.Subgroups)
-        {
-            if (!protoMan.TryIndex(subgroupProto, out var loadoutGroupProto))
+            if (!protoMan.TryIndex(subgroupId, out var subgroup))
                 continue;
 
-            foreach (var loadoutProto in loadoutGroupProto.Loadouts)
-            {
-                if (!protoMan.TryIndex(loadoutProto, out var loadProto))
-                    continue;
-
-                if (loadout.IsHidden(profile, session, loadoutProto, collection))
-                    continue;
-
-                LoadoutsContainer.AddChild(CreateLoadoutUI(loadProto, profile, loadout, session, collection, loadoutSystem));
-            }
+            foreach (var loadoutId in subgroup.Loadouts)
+                loadoutIds.Add(loadoutId);
         }
-        // End Frontier
+
+        // Skip missing or hidden loadouts before grouping.
+        var validProtos = loadoutIds
+            .Where(id => protoMan.HasIndex(id) && !loadout.IsHidden(profile, session, id, collection))
+            .Select(id => protoMan.Index(id));
+
+        var groups = validProtos
+            .GroupBy(proto => string.IsNullOrEmpty(proto.GroupBy) ? proto.ID : proto.GroupBy)
+            .ToDictionary(group => group.Key, group => group.ToList());
+
+        foreach (var (groupKey, protos) in groups)
+        {
+            if (protos.Count <= 1)
+            {
+                if (protos.Count == 1)
+                    LoadoutsContainer.AddChild(CreateLoadoutUI(protos[0], profile, loadout, session, collection, loadoutSystem));
+                continue;
+            }
+
+            var uiElements = protos
+                .Select(proto =>
+                {
+                    var element = CreateLoadoutUI(proto, profile, loadout, session, collection, loadoutSystem);
+                    element.HorizontalExpand = true;
+                    return element;
+                })
+                .ToList();
+
+            var firstElement = uiElements.FirstOrDefault(element => element.Select.Pressed) ?? uiElements[0];
+            var otherElements = uiElements.Where(element => !ReferenceEquals(element, firstElement)).ToList();
+            var subContainer = new SubLoadoutContainer
+            {
+                Visible = _openedGroups.GetValueOrDefault(groupKey, false),
+            };
+            var toggle = CreateToggleButton(groupKey, firstElement, subContainer);
+
+            LoadoutsContainer.AddChild(firstElement);
+            LoadoutsContainer.AddChild(subContainer);
+
+            var subList = subContainer.Grid;
+            foreach (var element in otherElements)
+                subList.AddChild(element);
+
+            UpdateToggleColor(toggle, subList);
+            UpdateSubGroupSelectedInfo(firstElement, firstElement.Text ?? string.Empty, subList);
+        }
     }
 
-    private ToggleLoadoutButton CreateToggleButton(KeyValuePair<string, List<LoadoutPrototype>> kvp, LoadoutContainer firstElement, SubLoadoutContainer subContainer)
+    private ToggleLoadoutButton CreateToggleButton(string groupKey, LoadoutContainer firstElement, SubLoadoutContainer subContainer)
     {
         var toggle = new ToggleLoadoutButton
         {
-            Text = ClosedGroupMark
+            Text = subContainer.Visible ? OpenedGroupMark : ClosedGroupMark,
+            Pressed = subContainer.Visible,
         };
-
-        toggle.Text = subContainer.Visible ? OpenedGroupMark : ClosedGroupMark;
 
         toggle.OnPressed += _ =>
         {
             var willOpen = !subContainer.Visible;
             subContainer.Visible = willOpen;
             toggle.Text = willOpen ? OpenedGroupMark : ClosedGroupMark;
-            _openedGroups[kvp.Key] = willOpen;
+            toggle.Pressed = willOpen;
+            _openedGroups[groupKey] = willOpen;
         };
 
         firstElement.AddChild(toggle);
@@ -201,52 +145,31 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
         return toggle;
     }
 
-    private void UpdateToggleColor(Button toggle, BoxContainer subList)
+    private static void UpdateToggleColor(Button toggle, BoxContainer subList)
     {
-        var anyActive = subList.Children
-            .OfType<LoadoutContainer>()
-            .Any(c => c.Select.Pressed);
-
-        toggle.Modulate = anyActive
-            ? Color.Green
-            : Color.White;
+        var anyActive = subList.Children.OfType<LoadoutContainer>().Any(container => container.Select.Pressed);
+        toggle.Modulate = anyActive ? Color.Green : Color.White;
     }
 
-    /// <summary>
-    /// Creates a UI container for a single Loadout item.
-    ///
-    /// This method was extracted from RefreshLoadouts because the logic for creating 
-    /// individual loadout items is used multiple times inside that method, and duplicating 
-    /// the code made it harder to maintain.
-    ///
-    /// Logic:
-    /// - Checks if the item is currently selected in the loadout.
-    /// - Checks if the item is valid for selection (IsValid).
-    /// - Creates a LoadoutContainer with the appropriate status (disabled / active).
-    /// - Subscribes to button press events to handle selection and deselection.
-    /// </summary>
-    /// <param name="proto">The loadout item prototype.</param>
-    /// <param name="profile">The humanoid character profile.</param>
-    /// <param name="loadout">The current role loadout for the user.</param>
-    /// <param name="session">The user's session.</param>
-    /// <param name="collection">The dependency injection container.</param>
-    /// <param name="loadoutSystem">The loadout system instance.</param>
-    /// <returns>A fully initialized LoadoutContainer for UI display.</returns>
+    private static void UpdateSubGroupSelectedInfo(LoadoutContainer loadout, string itemName, BoxContainer subList)
+    {
+        var countSubSelected = subList.Children.OfType<LoadoutContainer>().Count(container => container.Select.Pressed);
+        if (countSubSelected > 0)
+            loadout.Text = Loc.GetString("loadouts-count-items-in-group", ("item", itemName), ("count", countSubSelected));
+    }
+
     private LoadoutContainer CreateLoadoutUI(LoadoutPrototype proto, HumanoidCharacterProfile profile, RoleLoadout loadout, ICommonSession session, IDependencyCollection collection, LoadoutSystem loadoutSystem)
     {
         var selected = loadout.SelectedLoadouts[_groupProto.ID];
-
-        var pressed = selected.Any(e => e.Prototype == proto.ID);
-
+        var pressed = selected.Any(entry => entry.Prototype == proto.ID);
         var enabled = loadout.IsValid(profile, session, proto.ID, collection, out var reason);
+        var container = new LoadoutContainer(proto, !enabled, reason)
+        {
+            Text = string.IsNullOrEmpty(proto.Name) ? loadoutSystem.GetName(proto) : proto.Name,
+        };
 
-        var cont = new LoadoutContainer(proto, !enabled, reason);
-
-        cont.Text = string.IsNullOrEmpty(proto.Name) ? loadoutSystem.GetName(proto) : proto.Name; // Frontier: allow overriding loadout names
-
-        cont.Select.Pressed = pressed;
-
-        cont.Select.OnPressed += args =>
+        container.Select.Pressed = pressed;
+        container.Select.OnPressed += args =>
         {
             if (args.Button.Pressed)
                 OnLoadoutPressed?.Invoke(proto.ID);
@@ -254,6 +177,6 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
                 OnLoadoutUnpressed?.Invoke(proto.ID);
         };
 
-        return cont;
+        return container;
     }
 }

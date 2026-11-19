@@ -258,7 +258,6 @@
 
       [color=#AAAAAA]This Form is only acknowledged with the signature and stamp of Frontier Civil Command. This form does not constitute a contract. Compensation for services provided is at the discretion of Frontier Civil Command.[/color]
 
-
 - type: entity
   id: PaperWrittenMedicalMedtekPatientRecord
   parent: Paper
@@ -304,5 +303,3 @@
 
       [head=3]Injuries[/head]
       {damageList}
-
-

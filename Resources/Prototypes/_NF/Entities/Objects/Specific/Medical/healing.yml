@@ -1,23 +1,5 @@
 # region pills
 - type: entity
-  id: Suture10Lingering
-  parent: MedicatedSuture
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
-
-- type: entity
-  id: Mesh10Lingering
-  parent: RegenerativeMesh
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
-
-- type: entity
   parent: PillCanister
   id: NFPillCanisterMannitol
   suffix: Mannitol 10u, 10, Clarpy
@@ -70,10 +52,10 @@
         reagents:
         - ReagentId: Cryoxadone
           Quantity: 3
-        - ReagentId: Stellibinin
+        - ReagentId: Stelloxadone
           Quantity: 2
         - ReagentId: Traumoxadone
-          Quantity: 1
+          Quantity: 3
         - ReagentId: Aloxadone
           Quantity: 1
 

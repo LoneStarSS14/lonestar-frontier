@@ -47,4 +47,3 @@
           availableJobs:
             PlantManager: [ 1, 1 ]
             PlantTechnician: [ -1, -1 ]
-

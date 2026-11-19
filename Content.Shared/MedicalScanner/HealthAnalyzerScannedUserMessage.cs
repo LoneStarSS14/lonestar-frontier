@@ -10,10 +10,21 @@ public sealed class HealthAnalyzerScannedUserMessage : BoundUserInterfaceMessage
 {
     public HealthAnalyzerUiState State;
 
+    public NetEntity? TargetEntity => State.TargetEntity;
+    public float Temperature => State.Temperature;
+    public float BloodLevel => State.BloodLevel;
+    public bool? ScanMode => State.ScanMode;
+    public bool? Bleeding => State.Bleeding;
+    public bool? Unrevivable => State.Unrevivable;
+    public bool? Unclonable => State.Unclonable;
+    public bool Printable => State.Printable;
+
     public HealthAnalyzerScannedUserMessage(HealthAnalyzerUiState state)
     {
         State = state;
     }
+
+    public static implicit operator HealthAnalyzerScannedUserMessage(HealthAnalyzerUiState state) => new(state);
 }
 
 /// <summary>

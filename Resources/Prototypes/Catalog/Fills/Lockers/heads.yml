@@ -44,7 +44,7 @@
 #    - id: ClothingHeadsetAltCommand # Frontier
     - id: ClothingOuterArmorCaptainCarapace
 #    - id: CommsComputerCircuitboard # Frontier
-#    - id: DoorRemoteCommand # Frontier
+#    - id: DoorRemoteCustom # Frontier
 #    - id: MedalCase # Frontier
 #    - id: NukeDisk # Frontier
 #    - id: PinpointerNuclear # Frontier
@@ -76,9 +76,9 @@
     - id: ClothingOuterHardsuitCap
     - id: ClothingMaskGasCaptain
 #    - id: JetpackCaptainFilled # Frontier
-    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: OxygenTankFilled # Lonestar
     - id: NitrogenTankFilled # Lonestar
-    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+    # - id: NFTankO2N2EqualFilled # Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No laser locker, used when the antique laser is placed in the special display crate
@@ -190,9 +190,9 @@
 #    - id: ClothingShoesBootsMagAdv # Frontier
     - id: ClothingShoesBootsMag # Frontier
 #    - id: JetpackVoidFilled # Frontier
-    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: OxygenTankFilled # Lonestar
     - id: NitrogenTankFilled # Lonestar
-    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+    # - id: NFTankO2N2EqualFilled # Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -253,9 +253,9 @@
     children:
     - id: ClothingMaskBreathMedical
     - id: ClothingOuterHardsuitMedical
-    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: OxygenTankFilled # Lonestar
     - id: NitrogenTankFilled # Lonestar
-    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+    # - id: NFTankO2N2EqualFilled # Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -308,9 +308,9 @@
     children:
     - id: ClothingMaskBreath
     - id: ClothingOuterHardsuitRd
-    - id: OxygenTankFilled # Frontier ## Lonestar: Brought this back
+    - id: OxygenTankFilled # Lonestar
     - id: NitrogenTankFilled # Lonestar
-    # - id: NFTankO2N2EqualFilled # Frontier ## Lonestar: Kill
+    # - id: NFTankO2N2EqualFilled # Lonestar: Kill
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker

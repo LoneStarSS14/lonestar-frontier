@@ -125,7 +125,7 @@ public sealed partial class MedicalBountySystem : EntitySystem
             Solution soln = new Solution();
             var reagentQuantity = _random.Next(reagentValue.MinQuantity, reagentValue.MaxQuantity + 1);
             soln.AddReagent(reagentType, reagentQuantity);
-            if (_bloodstream.TryAddToChemicals((entity, bloodstream), soln))
+            if (_bloodstream.TryAddToChemicals(entity, soln))
                 bountyValueAccum += reagentQuantity * reagentValue.ValuePerPoint;
         }
 

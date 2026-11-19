@@ -1,6 +1,111 @@
 - type: entity
-  parent: [ DVSmartFridge, PunkHoloGraffitiOverlay ]
-  id: LSPunkSmartFridge
+  parent: [BaseMachinePowered, ConstructibleMachine]
+  id: LSSmartFridge
+  name: SmartFridge
+  description: A refrigerated storage unit for keeping items cold and fresh.
+  components:
+  - type: StationAiWhitelist
+  - type: DatasetVocalizer
+    dataset: SmartFridgeAds
+  - type: Speech
+  - type: Sprite
+    sprite: Structures/Machines/smartfridge.rsi
+    snapCardinals: true
+    layers:
+    - state: smartfridge
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: smartfridge_door
+      map: ["enum.StorageVisualLayers.Door"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      visible: false
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+  - type: Machine
+    board: LSSmartFridgeCircuitboard
+  - type: ContainerContainer
+    containers:
+      smart_fridge_inventory: !type:Container
+      smart_fridge_insertion: !type:ContainerSlot
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+    - smart_fridge_inventory
+  - type: WiresPanel
+  - type: WiresVisuals
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: SmartFridge
+    whitelist:
+      components:
+      - FitsInDispenser
+      - Pill
+      - Produce
+      - Seed
+      - Hypospray
+      - Food
+      - Healing
+      tags:
+      - PillCanister
+      - Bottle
+      - Syringe
+      - ChemDispensable
+  - type: ActivatableUI
+    key: enum.SmartFridgeUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.SmartFridgeUiKey.Key:
+        type: SmartFridgeBoundUserInterface
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        density: 200
+  - type: Anchorable
+    delay: 2
+  - type: InteractionOutline
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Dumpable
+  - type: AccessReader
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: AntiRottingContainer
+
+- type: entity
+  parent: [ LSSmartFridge, PunkHoloGraffitiOverlay ]
+  id: BangWiz
   name: Bang Wiz
   description: Keeps ya iron cold and fresh, choom!
   components:
@@ -54,4 +159,4 @@
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Machine
-    board: LSPunkSmartFridgeCircuitboard
+    board: BangWizCircuitboard

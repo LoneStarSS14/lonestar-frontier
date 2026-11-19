@@ -220,7 +220,6 @@
   - type: WallMount
 
 # Substations in use
-
 - type: entity
   parent: BaseSubstation
   id: SubstationBasic

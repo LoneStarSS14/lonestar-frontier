@@ -514,6 +514,7 @@ public sealed partial class MarkingPicker : Control
 
             ColorSelectorSliders colorSelector = new ColorSelectorSliders();
             colorSelector.IsAlphaVisible = true;
+            colorSelector.SelectorType = ColorSelectorSliders.ColorSelectorType.Hsv; // defaults color selector to HSV
 
             colorContainer.AddChild(new Label { Text = $"{stateNames[i]} color:" });
             colorContainer.AddChild(colorSelector);

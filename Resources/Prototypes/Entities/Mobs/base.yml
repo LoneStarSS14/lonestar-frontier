@@ -8,6 +8,8 @@
   - type: Sprite
     noRot: true
     drawdepth: Mobs
+  - type: MobCollision
+  - type: GravityAffected
   - type: Physics
     bodyType: KinematicController
   - type: Fixtures
@@ -47,6 +49,7 @@
   - type: OwnInteractionVerbs # EE interaction system
     allowedVerbs: [] # TODO: define something here, or don't.
   - type: AnimatedEmotes # goob edit - animated emotes
+  - type: StunVisuals
 
 - type: entity
   save: false
@@ -110,6 +113,8 @@
     - Shock
     - Cold
     - Caustic
+    - Asphyxiation
+    - Radiation
   - type: DamageOnHighSpeedImpact
     damage:
       types:

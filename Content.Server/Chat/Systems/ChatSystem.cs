@@ -7,9 +7,8 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
-using Content.Server.Players.RateLimiting;
-using Content.Server.Speech.Prototypes;
 using Content.Server.Speech.EntitySystems;
+using Content.Server.Speech.Prototypes;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Shared._CS;
@@ -521,7 +520,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             return;
         }
 
-        if (!EntityManager.TryGetComponent<StationDataComponent>(station, out var stationDataComp)) return;
+        if (!TryComp<StationDataComponent>(station, out var stationDataComp)) return;
 
         var filter = _stationSystem.GetInStation(stationDataComp);
 
@@ -704,8 +703,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             if (MessageRangeCheck(session, data, range) != MessageRangeCheckResult.Full)
                 continue; // Won't get logged to chat, and ghosts are too far away to see the pop-up, so we just won't send it to them.
 
-            if (data.Range <= WhisperClearRange
-                || data.Observer)
+            if (data.Range <= WhisperClearRange || data.Observer)
                 _chatManager.ChatMessageToOne(ChatChannel.Whisper, message, wrappedMessage, source, false, session.Channel);
             //If listener is too far, they only hear fragments of the message
             else if (_examineSystem.InRangeUnOccluded(source, listener, WhisperMuffledRange))
@@ -770,15 +768,12 @@ public sealed partial class ChatSystem : SharedChatSystem
                 ("message", FormattedMessage.RemoveMarkupOrThrow(action)),
                 ("chatColor", chatColor ?? Color.White.ToHex())); // Coyote: makes the your name color right
 
-        bool soundEmoteSent = true; // Frontier: if check emote is false, assume somebody's sending an emote
-        if (checkEmote)
-            soundEmoteSent = TryEmoteChatInput(source, action); // Frontier: assign value to soundEmoteSent
-
-        // Frontier: send emote message
-        if (!soundEmoteSent)
+        if (checkEmote &&
+            !TryEmoteChatInput(source, action))
         {
-            var ev = new NFEntityEmotedEvent(source, action);
-            RaiseLocalEvent(source, ev, true);
+            var ev = new NFEntityEmotedEvent(source, action); // Frontier
+            RaiseLocalEvent(source, ev, true); // Frontier
+            return;
         }
 
         var surveillanceEmoteEv = new SurveillanceCameraEmoteMessageEvent(source, action);
@@ -801,7 +796,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Emote from {ToPrettyString(source):user}: {action}");
     }
 
-        private void SendEntitySubtle(
+    private void SendEntitySubtle(
         EntityUid source,
         string action,
         ChatTransmitRange range,
@@ -829,7 +824,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                      SubtleRange,
                      blockedByOcclusion: !SubtleGoesThroughWalls, noGhosts: true))
         {
-            if (session.AttachedEntity is not { Valid: true } listener)
+            if (session.AttachedEntity is not { Valid: true })
                 continue;
             if (MessageRangeCheck(session, data, range) == MessageRangeCheckResult.Disallowed)
                 continue;
@@ -1051,7 +1046,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             case ChatTransmitRange.GhostRangeLimitNoAdminCheck:
                 initialResult = (data.Observer && data.Range < 0) ? MessageRangeCheckResult.HideChat : MessageRangeCheckResult.Full;
                 break;
-            // End Frontier
+                // End Frontier
         }
         var insistHideChat = data.HideChatOverride ?? false;
         var insistNoHideChat = !(data.HideChatOverride ?? true);
@@ -1215,8 +1210,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         return message;
     }
 
-    [ValidatePrototypeId<ReplacementAccentPrototype>]
-    public const string ChatSanitize_Accent = "chatsanitize";
+    public static readonly ProtoId<ReplacementAccentPrototype> ChatSanitize_Accent = "chatsanitize";
 
     public string SanitizeMessageReplaceWords(string message)
     {

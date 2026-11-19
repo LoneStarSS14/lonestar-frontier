@@ -89,6 +89,7 @@
   parent:
   - MobCleanBot
   - BaseC1Contraband
+  - BaseC3SyndicateContrabandNoValue
   - NFBaseMobRestrictions
   id: MobCleanBotSyndie
   name: syndicate cleanbot

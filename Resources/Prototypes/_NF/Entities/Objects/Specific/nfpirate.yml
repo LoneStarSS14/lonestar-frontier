@@ -6,6 +6,7 @@
   suffix: 20 DB
   description: A minted gold coin used to depart from government backed currencies. # LoneStar
   components:
+  - type: WarnOnCryoSleep
   - type: Sprite
     sprite: _NF/Objects/Specific/Pirate/pirate_doubloon.rsi
     state: doubloon

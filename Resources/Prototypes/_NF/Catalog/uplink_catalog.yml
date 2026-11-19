@@ -7,7 +7,7 @@
   productEntity: NFWeaponPistolViper
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 2 # LoneStar 
+    Telecrystal: 2 # LoneStar
   categories:
   - UplinkWeaponry
 
@@ -18,7 +18,7 @@
   productEntity: NFWeaponRevolverRitland45
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 2 # LoneStar 
+    Telecrystal: 2 # LoneStar
   categories:
   - UplinkWeaponry
 
@@ -29,7 +29,7 @@
   productEntity: NFWeaponPistolCobra
   discountCategory: rareDiscounts
   cost:
-    Telecrystal: 2 # LoneStar 
+    Telecrystal: 2 # LoneStar
   categories:
   - UplinkWeaponry
 
@@ -50,7 +50,6 @@
 # Ammo
 
 # LoneStar Vend change
-
 - type: listing
   abstract: true
   id: UplinkNFPistol9mmMagazine
@@ -74,6 +73,30 @@
     Telecrystal: 1 # LoneStar
   categories:
   - UplinkAmmo
+
+- type: listing
+  abstract: true # LoneStar
+  id: UplinkNFMagazineShotgunPellet
+  name: uplink-magazine-bulldog-pellet-name
+  description: uplink-magazine-bulldog-pellet-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: pellets }
+  productEntity: NFMagazineShotgunDrum
+  cost:
+    Telecrystal: 2
+  categories:
+    - UplinkAmmo
+
+- type: listing
+  abstract: true # LoneStar
+  id: UplinkNFMagazineShotgunSlug
+  name: uplink-magazine-bulldog-slug-name
+  description: uplink-magazine-bulldog-slug-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: slug }
+  productEntity: NFMagazineShotgunDrumSlug
+  cost:
+    Telecrystal: 3
+  categories:
+    - UplinkAmmo
 
 - type: listing
   abstract: true
@@ -130,7 +153,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncher
   cost:
-    Telecrystal: 16 # LoneStar 
+    Telecrystal: 16 # LoneStar
   categories:
   - UplinkWeaponry
 

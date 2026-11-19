@@ -141,7 +141,6 @@
   - ContractorClothingUniformJumpskirtResearchDirector
   - ContractorClothingUniformJumpsuitSeniorEngineer
   - ContractorClothingUniformJumpskirtSeniorEngineer
-  - ContractorClothingUniformJumpsuitChiefEngineerNT
   - ContractorClothingUniformJumpsuitChiefEngineer
   - ContractorClothingUniformJumpskirtChiefEngineer
   - ContractorClothingUniformJumpsuitChiefEngineerTurtle
@@ -670,7 +669,7 @@
   - ContractorClothingNeckCloakPan
   - ContractorClothingNeckCloakGay
   - ContractorClothingNeckCloakLesbian
-  - ContractorClothingNeckCloakPoly
+  - ContractorClothingNeckCloakPoly # LoneStar
   - ContractorBedsheetRainbow
   - ClothingNeckLGBTPin
   - ClothingNeckAllyPin
@@ -690,7 +689,7 @@
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
-  - ClothingNeckPolyamoryPin
+  - ClothingNeckPolyamoryPin # LoneStar
   - ContractorClothingNeckIFFNeutral
   - ContractorClothingNeckIFFGreen
   - ContractorClothingNeckIFFRed
@@ -818,8 +817,8 @@
   - ContractorDrinkFlaskOld
   - ContractorDrinkShinyFlask
   - ContractorDrinkFlask
-  - ContractorDrinkMREFlask # Coyote.
-  - ContractorDrinkFlaskBar # Coyote.
+  - ContractorDrinkMREFlask # Coyote
+  - ContractorDrinkFlaskBar # Coyote
   - ContractorDrinkVacuumFlask
   - ContractorFlashlightLantern
   - ContractorCardBoxBlack
@@ -827,20 +826,24 @@
   - ContractorWristwatchGold
   - ContractorSilverRing
   - ContractorGoldRing
-  - ContractorAACTablet
+  - ContractorAACTablet # Coyote
+  - ContractorUrnMortuary
   - ContractorBasketball
-  - ContractorTennisball # Coyote. Woof.
+  - ContractorTennisball # Coyote
   - ContractorFootball
   - ContractorBeachBall
   - ContractorCrayonBox
-  - ContractorClicker
+  - ContractorClicker # Coyote
   - ContractorSoapNT
   - PlushieLizard
   - PlushieExperiment # Coyote: Add Expie plushie to loadout
   - ContractorPlushieSharkGrey
   - ContractorPlushieSharkBlue
   - ContractorPlushieSharkPink
-  - ContractorPlushieYarrMoth # Lone Star
+  - ContractorPlushieYarrMoth # LoneStar
+  - ContractorHarmonicaInstrument
+  - ContractorSaxophoneInstrument
+  - ContractorAcousticGuitarInstrument
   - ContractorPonderingOrb
   - ContractorPlushieRGBee
   - ContractorMysterySpaceBladeBox

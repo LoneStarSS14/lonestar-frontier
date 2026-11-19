@@ -8,9 +8,6 @@
   description: A basic capacitor used in the construction of a variety of devices.
   suffix: Rating 1, Single
   components:
-    - type: Tag
-      tags:
-        - Capacitor
     - type: Sprite
       state: capacitor
     - type: MachinePart

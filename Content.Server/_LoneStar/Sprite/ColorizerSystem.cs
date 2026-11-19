@@ -9,6 +9,7 @@ using ColorableClothingComponentT = Content.Shared._LoneStar.Sprite.ColorableClo
 using Content.Shared.Decals;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.UserInterface;
 using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
@@ -29,6 +30,7 @@ public sealed class ColorizerSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
 
     public override void Initialize()
     {
@@ -378,7 +380,7 @@ public sealed class ColorizerSystem : EntitySystem
     private bool IsInPrimaryHand(EntityUid tool, EntityUid actor)
     {
         if (!TryComp<HandsComponent>(actor, out var hands) ||
-            hands.ActiveHand?.HeldEntity != tool)
+            _hands.GetActiveItem((actor, hands)) != tool)
             return false;
 
         return true;

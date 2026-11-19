@@ -45,7 +45,7 @@
 #region Other
 - type: entity
   name: emp emitter
-  parent: [BaseC1ContrabandUnredeemable, NFBaseWeaponEnergyRifleEmp, NFBaseWeaponFrameEnergyRifleNanotrasen ]
+  parent: [BaseC2ContrabandUnredeemable, NFBaseWeaponEnergyRifleEmp, NFBaseWeaponFrameEnergyRifleNanotrasen ]
   id: WeaponEmpEmitter
   description: |-
     Releases electromagnetic pulses that disrupt or damage many electronic devices or drain power cells, has a slow self charging nuclear powered battery.
@@ -79,7 +79,7 @@
 
 - type: entity
   name: portable particle decelerator
-  parent: [BaseC1ContrabandUnredeemable, NFBaseWeaponEnergyRifleParticle, BaseWeaponBattery ]
+  parent: [BaseC2ContrabandEngineeringUnredeemable, NFBaseWeaponEnergyRifleParticle, BaseWeaponBattery ]
   id: NFWeaponParticleDecelerator
   description: A portable particle decelerator capable of decomposing a tesla or singularity.
   components:

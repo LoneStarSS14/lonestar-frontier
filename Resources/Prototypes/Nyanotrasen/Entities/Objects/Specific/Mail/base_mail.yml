@@ -2,10 +2,10 @@
   parent: BaseItem
   abstract: true
   id: BaseMail
-  name: mail-item-name-unaddressed
+  # name: mail-item-name-unaddressed # Frontier
   components:
   - type: Item
-#    size: Normal # Frontier
+    # size: Normal # Frontier
     storedRotation: -90
   - type: Mail
   - type: AccessReader

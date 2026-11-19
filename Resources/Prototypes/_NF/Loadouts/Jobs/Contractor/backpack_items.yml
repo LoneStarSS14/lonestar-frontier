@@ -77,7 +77,6 @@
     - SmokingPipeFilledTobacco
   groupBy: "smokeables"
 
-
 - type: loadout
   id: ContractorTobaccoPouchBrownFilled
   effects:
@@ -250,11 +249,11 @@
     - Wristwatch
 
 - type: loadout
-  id: ContractorAACTablet
+  id: ContractorUrnMortuary
   price: 500
   storage:
     back:
-    - AACTablet
+    - UrnMortuary
 
 #T1
 - type: loadout
@@ -412,7 +411,6 @@
     back:
     - HarmonicaInstrument
   groupBy: "Instruments"
-
 
 - type: loadout
   id: ContractorSaxophoneInstrument
@@ -605,6 +603,14 @@
     - RubberStampEngineer
   groupBy: "Stamps"
 
+# Coyote start # LoneStar TODO: Move these out
+- type: loadout
+  id: ContractorAACTablet
+  price: 500
+  storage:
+    back:
+    - AACTablet
+
 - type: loadout
   id: ContractorClicker
   price: 500
@@ -612,7 +618,7 @@
     back:
     - Clicker
 
-- type: loadout # Lone Star: start
+- type: loadout
   id: ContractorPlushieYarrMoth
   effects:
   - !type:GroupLoadoutEffect
@@ -621,3 +627,4 @@
   storage:
     back:
     - PlushieYarrMoth # Lone Star: end
+# Coyote end

@@ -58,10 +58,13 @@
         <BoxContainer Orientation="Vertical" Margin="0 6 0 6">
 	    <BoxContainer Orientation="Horizontal" Margin="0 2">
                 <Button Name="TargetIdButton" Access="Public" HorizontalAlignment="Left"/>
-                <BoxContainer Orientation="Vertical"
-                              HorizontalAlignment="Left"
-                              HorizontalExpand="True"
-                              Margin="4 0">
+                <BoxContainer Orientation="Vertical" Name="NoDeedHelperContainer" Visible="True"
+                              HorizontalAlignment="Left" HorizontalExpand="True" Margin="4 0">
+                    <Label Text="{Loc 'shipyard-console-no-idcard-helper-line1'}"/>
+                    <Label Text="{Loc 'shipyard-console-no-idcard-helper-line2'}"/>
+                </BoxContainer>
+                <BoxContainer Orientation="Vertical" Name="DeedContainer" Visible="False"
+                              HorizontalAlignment="Left" HorizontalExpand="True" Margin="4 0">
                     <Label Text="{Loc 'shipyard-console-deed-label'}" />
                     <Label Name="DeedTitle"
                         Text=""/>

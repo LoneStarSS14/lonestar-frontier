@@ -88,8 +88,6 @@
       collection: FeroxiGnashes # Flooftier
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
-    Gulp: # Goob
-      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: MaleVulpkanin
@@ -207,7 +205,6 @@
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
-
 - type: emoteSounds
   id: MobDog
   params:
@@ -261,9 +258,9 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
-    Belch: # Frontier
-      collection: Belch # Frontier
-    Gulp: # Goob
+    Belch:
+      collection: Belch
+    Gulp:
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
@@ -299,10 +296,10 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
-    Belch: # Frontier
-      collection: Belch # Frontier
-    Gulp: # Goob
-      path: /Audio/_Goobstation/Voice/gulpexotic.ogg 
+    Belch:
+      collection: Belch
+    Gulp:
+      path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
   id: MaleFeroxi
@@ -333,7 +330,7 @@
       collection: MaleYawn
     Gnash:
       collection: FeroxiGnashes
-    Gulp: # Goob
+    Gulp:
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
@@ -365,7 +362,7 @@
       collection: Weh
     Gnash:
       collection: FeroxiGnashes
-    Gulp: # Goob
+    Gulp:
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
 
 - type: emoteSounds
@@ -401,7 +398,7 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MothDeathGasp
-    Belch: # Frontier
-      collection: Belch # Frontier
-    Gulp: # Goob
+    Belch:
+      collection: Belch
+    Gulp:
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg

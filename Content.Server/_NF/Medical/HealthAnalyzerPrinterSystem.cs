@@ -141,7 +141,7 @@ public sealed class HealthAnalyzerPrinterSystem : EntitySystem
             { "patient.name", () => GetEntityName(patient) },
             { "patient.species", () => GetEntitySpecies(patient) },
             { "responder.name", () => GetEntityName(responder) },
-            { "roundTime", () => FormatShiftTime(_gameTiming.CurTime - _gameTicker.RoundStartTimeSpan) },
+            { "roundTime", () => FormatShiftTime(_gameTiming.CurTime - _gameTicker.RoundStartTimeSpan) }, // LoneStar
             { "damageList", () => ComposeDamageList(damageable) },
         };
 
@@ -224,7 +224,7 @@ public sealed class HealthAnalyzerPrinterSystem : EntitySystem
                 : "health-analyzer-window-entity-unknown-species-text"
         );
     }
-
+    // LoneStar start
     private string FormatShiftTime(TimeSpan time)
     {
         // Format time to show days if the shift is longer than 24 hours
@@ -234,4 +234,5 @@ public sealed class HealthAnalyzerPrinterSystem : EntitySystem
         }
         return time.ToString(@"hh\:mm");
     }
+    // LoneStar end
 }

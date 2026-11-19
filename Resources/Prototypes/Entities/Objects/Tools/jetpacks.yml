@@ -117,7 +117,7 @@
 #Empty black
 - type: entity
   id: JetpackBlack
-  parent: [BaseJetpack, NotContraband] # Frontier: BaseSyndicateContraband<BaseC4Contraband
+  parent: [BaseJetpack, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   name: jetpack
   suffix: Empty
   components:
@@ -204,6 +204,8 @@
   components:
     - type: Item
       sprite: Objects/Tanks/Jetpacks/mini.rsi
+      shape: # Frontier
+      - 0,0,3,2 # Frontier
     - type: Sprite
       sprite: Objects/Tanks/Jetpacks/mini.rsi
     - type: Clothing

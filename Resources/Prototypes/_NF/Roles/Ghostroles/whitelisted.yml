@@ -1,3 +1,5 @@
+## LoneStar: All whitelisted true->false
+
 - type: ghostRole
   id: BabyDragon
   name: ghost-role-information-baby-dragon-name
@@ -38,6 +40,14 @@
   description: ghost-role-information-clippy-description
   rules: ghost-role-information-emotional-support-rules
   entityPrototype: MobCatClippy
+  whitelisted: false
+
+- type: ghostRole
+  id: CatCurie
+  name: ghost-role-information-curie-name
+  description: ghost-role-information-curie-description
+  rules: ghost-role-information-emotional-support-rules
+  entityPrototype: MobCatCurie
   whitelisted: false
 
 - type: ghostRole

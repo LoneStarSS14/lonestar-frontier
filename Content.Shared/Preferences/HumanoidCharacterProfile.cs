@@ -32,15 +32,7 @@ namespace Content.Shared.Preferences
         // private static readonly Regex RestrictedNameRegex = new(@"[a-zA-Z0-9!@#$%^&*()\-_=+\[\]{};:'"",.<>?/\\|`~]");
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
-        public const int MaxNameLength = 32;
-        public const int MaxLoadoutNameLength = 32;
-        public const int MaxDescLength = 4000; //maximum discord message length, without nitro
-
-        public const int DefaultBalance = 50000; // Frontier's Default bank balance = 30000
-
-        //private readonly Dictionary<string, JobPriority> _jobPriorities; // Frontier: commented out during merge.
-        //private readonly List<string> _antagPreferences; // Frontier: commented out during merge.
-        //private readonly List<string> _traitPreferences; // Frontier: commented out during merge.
+        public const int DefaultBalance = 50000; // Frontier: LoneStar default bank balance (Frontier is 30000)
 
         /// <summary>
         /// Job preferences for initial spawn.
@@ -265,8 +257,10 @@ namespace Content.Shared.Preferences
         /// </summary>
         /// <param name="species">The species to use in this default profile. The default species is <see cref="SharedHumanoidAppearanceSystem.DefaultSpecies"/>.</param>
         /// <returns>Humanoid character profile with default settings.</returns>
-        public static HumanoidCharacterProfile DefaultWithSpecies(string species = SharedHumanoidAppearanceSystem.DefaultSpecies)
+        public static HumanoidCharacterProfile DefaultWithSpecies(string? species = null)
         {
+            species ??= SharedHumanoidAppearanceSystem.DefaultSpecies;
+
             return new()
             {
                 Species = species,
@@ -288,8 +282,10 @@ namespace Content.Shared.Preferences
             return RandomWithSpecies(species: species, balance: balance);
         }
 
-        public static HumanoidCharacterProfile RandomWithSpecies(string species = SharedHumanoidAppearanceSystem.DefaultSpecies, int balance = DefaultBalance)
+        public static HumanoidCharacterProfile RandomWithSpecies(string? species = null, int balance = DefaultBalance) // Frontier: add balance arg
         {
+            species ??= SharedHumanoidAppearanceSystem.DefaultSpecies;
+
             var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
             var random = IoCManager.Resolve<IRobustRandom>();
 
@@ -637,13 +633,14 @@ namespace Content.Shared.Preferences
             };
 
             string name;
+            var maxNameLength = configManager.GetCVar(CCVars.MaxNameLength);
             if (string.IsNullOrEmpty(Name))
             {
                 name = GetName(Species, gender);
             }
-            else if (Name.Length > MaxNameLength)
+            else if (Name.Length > maxNameLength)
             {
-                name = Name[..MaxNameLength];
+                name = Name[..maxNameLength];
             }
             else
             {
@@ -672,14 +669,18 @@ namespace Content.Shared.Preferences
             _hiddenEmoteCategories.Remove(EmoteCategory.Vocal);
             _hiddenEmoteCategories.Remove(EmoteCategory.Invalid);
 
-            var customspeciename = speciesPrototype.CustomName
-                ? FormattedMessage.RemoveMarkup(Customspeciesname ?? "")[..MaxNameLength]
-                : "";
+            var customspeciename = "";
+            if (speciesPrototype.CustomName)
+            {
+                customspeciename = FormattedMessage.RemoveMarkup(Customspeciesname ?? "");
+                customspeciename = customspeciename[..Math.Min(customspeciename.Length, configManager.GetCVar(CCVars.MaxNameLength))];
+            }
 
             string flavortext;
-            if (FlavorText.Length > MaxDescLength)
+            var maxFlavorTextLength = configManager.GetCVar(CCVars.MaxFlavorTextLength);
+            if (FlavorText.Length > maxFlavorTextLength)
             {
-                flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText)[..MaxDescLength];
+                flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText)[..maxFlavorTextLength];
             }
             else
             {

@@ -25,6 +25,7 @@
   - MopItem
   - Holoprojector
   - WetFloorSign
+  - WireBrush
 
 - type: latheRecipePack
   id: ServiceBoardsStatic
@@ -64,4 +65,5 @@
   - ReagentGrinderIndustrialMachineCircuitboard
   - JukeboxCircuitBoard
   - DawInstrumentMachineCircuitboard
-  - SmartFridgeCircuitboard
+  # LoneStar v
+  - LSSmartFridgeCircuitboard

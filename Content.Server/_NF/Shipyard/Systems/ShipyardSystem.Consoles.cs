@@ -219,11 +219,12 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttleUid);
         AssignShuttleDeedProperties((shuttleUid, deedShuttle), shuttleUid, name, shuttleOwner, voucherUsed);
 
-        // if (!voucherUsed && component.NewJobTitle != null &&
-        //     !HasComp<PreventShipyardTitleOverwriteComponent>(args.Actor))
+        // LoneStar start; dont update job titles on buying ships
+        // if (!voucherUsed && component.NewJobTitle != null && !HasComp<PreventShipyardTitleOverwriteComponent>(args.Actor))
         // {
         //     _idSystem.TryChangeJobTitle(targetId, Loc.GetString(component.NewJobTitle), idCard, player);
         // }
+        // LoneStar end
 
         EnsureComp<DeletionCensusExemptComponent>(shuttleUid); // Ensure ship doesn't get deleted, though chunks should be.
 
@@ -690,7 +691,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     ///   Returns all shuttle prototype IDs the given shipyard console can offer.
     /// </summary>
     public (List<string> available, List<string> unavailable) GetAvailableShuttles(EntityUid uid, ShipyardConsoleUiKey? key = null,
-	ShipyardListingComponent? listing = null, EntityUid? targetId = null)
+    ShipyardListingComponent? listing = null, EntityUid? targetId = null)
     {
         var available = new List<string>();
         var unavailable = new List<string>();

@@ -49,7 +49,7 @@ public sealed class SolarFlareRule : StationEventSystem<SolarFlareRuleComponent>
                 // Frontier: shielded lights
                 var prob = component.LightBreakChancePerSecond * light.SolarFlareShieldingCoefficient;
                 if (RobustRandom.Prob(prob))
-                    _poweredLight.TryDestroyBulb(lightEnt, light, true);
+                    _poweredLight.TryDestroyBulb(lightEnt, light);
                 // End Frontier: shielded lights
             }
             var airlockQuery = EntityQueryEnumerator<AirlockComponent, DoorComponent>();

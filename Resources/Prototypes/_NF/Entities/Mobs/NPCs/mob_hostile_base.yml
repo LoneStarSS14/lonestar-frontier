@@ -307,7 +307,6 @@
   id: MobStaminaFodder
   abstract: true
   components:
-  - type: MobThrowableOnHit
   - type: Stamina
     critThreshold: 80
 
@@ -315,7 +314,6 @@
   id: MobStaminaSpecial
   abstract: true
   components:
-  - type: MobThrowableOnHit
   - type: Stamina
     critThreshold: 200
 
@@ -453,7 +451,6 @@
       0: Alive
       80: Critical
       120: Dead
-    allowRevives: false
   - type: SlowOnDamage
     speedModifierThresholds:
       40: 0.7
@@ -469,7 +466,6 @@
     - SimpleHostile
   - type: Carriable # Carrying system from nyanotrasen.
   - type: Vocalizer
-    hideChat: true
     minVocalizeInterval: 120
     maxVocalizeInterval: 240
   - type: DatasetVocalizer
@@ -543,7 +539,6 @@
       0: Alive
       65: Critical
       100: Dead
-    allowRevives: false
   - type: NpcFactionMember
     factions:
     - SimpleHostile

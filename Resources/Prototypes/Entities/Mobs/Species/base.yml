@@ -133,24 +133,18 @@
       - !type:WashCreamPieReaction
   - type: StatusEffects
     allowed:
-    - Stun
-    - KnockedDown
-    - SlowedDown
     - Stutter
-    - SeeingRainbows
     - Electrocution
     - Drunk
     - SlurredSpeech
     - RatvarianLanguage
     - PressureImmunity
     - Muted
-    - ForcedSleep
     - TemporaryBlindness
     - Pacified
     - StaminaModifier
     - Flashed
     - RadiationProtection
-    - Drowsiness
     - Adrenaline
   - type: Body
     prototype: Human
@@ -182,6 +176,7 @@
   - type: SleepEmitSound
   - type: SSDIndicator
   - type: StandingState
+  - type: Crawler
   - type: Dna
   - type: MindContainer
     showExamineInfo: true
@@ -299,9 +294,10 @@
         Asphyxiation: -1.0
   - type: FireVisuals
     alternateState: Standing
+  - type: StunVisuals
   - type: LayingDown
-  - type: ModifyUndies  # FLOOF Add
-  - type: RoleplayIncentive  # Coyote: Add
+  - type: ModifyUndies # Coyote
+  - type: RoleplayIncentive # Coyote
   # LoneStar Note: Keep parity with BaseMobShadekin
 
 - type: entity

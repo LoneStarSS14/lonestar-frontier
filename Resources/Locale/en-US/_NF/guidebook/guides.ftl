@@ -1,9 +1,7 @@
 # Base entries
 guide-entry-nf14 = Frontier Guide
 guide-entry-bank = NT Galactic Bank
-guide-entry-shifts-and-persistence = Shifts and Persistence
 guide-entry-piloting = Piloting
-guide-entry-autopilot = Autopilot
 guide-entry-startinggear = Starting Equipment
 guide-entry-hiring = Hiring Crew
 guide-entry-interviews = Interviews
@@ -12,6 +10,8 @@ guide-entry-sector-topology = Sector Topology
 guide-entry-cargo-hauling = Cargo Hauling
 guide-entry-shipyard = Shipyard
 guide-entry-frontier-rules = Server Rules
+guide-entry-frontier-definitions = Definitions
+guide-entry-preflightchecklist = Preflight Checklist
 
 # Engineering entries
 guide-entry-offshore-gas-mining = Offshore Gas Mining
@@ -43,6 +43,7 @@ guide-entry-expedition-xenos = Xenos
 
 # Shipyard entries
 guide-entry-shipyard-adder = Adder
+guide-entry-shipyard-aegis = Aegis
 guide-entry-shipyard-akupara = Akupara
 guide-entry-shipyard-albatross = Albatross
 guide-entry-shipyard-ambition = Ambition
@@ -53,31 +54,38 @@ guide-entry-shipyard-bazaar = Bazaar
 guide-entry-shipyard-bocadillo = Bocadillo
 guide-entry-shipyard-bodkin = Bodkin
 guide-entry-shipyard-bookworm = Bookworm
+guide-entry-shipyard-brigand = Brigand
 guide-entry-shipyard-bulker = Bulker
 guide-entry-shipyard-caladrius = Caladrius
 guide-entry-shipyard-camper = Camper
 guide-entry-shipyard-ceres = Ceres
+guide-entry-shipyard-charon = Charon
 guide-entry-shipyard-chisel = Chisel
 guide-entry-shipyard-comet = Comet
 guide-entry-shipyard-courier = Courier
+guide-entry-shipyard-construct = Construct
 guide-entry-shipyard-copperhead = Copperhead
 guide-entry-shipyard-crescent = Crescent
 guide-entry-shipyard-crossroads = Crossroads
+guide-entry-shipyard-dragonfly = Dragonfly
 guide-entry-shipyard-dragoon = Dragoon
 guide-entry-shipyard-druid = Druid
 guide-entry-shipyard-eagle = Eagle
 guide-entry-shipyard-garden = Garden
 guide-entry-shipyard-gasbender = Gasbender
+guide-entry-shipyard-gaslight = Gaslight
+guide-entry-shipyard-geode = Geode
 guide-entry-shipyard-hammer = Hammer
 guide-entry-shipyard-hauler = Hauler
+guide-entry-shipyard-harbormaster = Harbormaster
 guide-entry-shipyard-honker = Honker
 guide-entry-shipyard-investigator = Investigator
+guide-entry-shipyard-legman = Legman
 guide-entry-shipyard-izakaya = Izakaya
 guide-entry-shipyard-kestrel = Kestrel
 guide-entry-shipyard-kilderkin = Kilderkin
 guide-entry-shipyard-lantern = Lantern
-guide-entry-shipyard-legman = Legman
-guide-entry-shipyard-stronghold = Stronghold
+guide-entry-shipyard-stringer = Stringer
 guide-entry-shipyard-liquidator = Liquidator
 guide-entry-shipyard-loader = Loader
 guide-entry-shipyard-lyrae = Lyrae
@@ -85,6 +93,7 @@ guide-entry-shipyard-mccargo = McCargo
 guide-entry-shipyard-mcdelivery = McDelivery
 guide-entry-shipyard-nightlight = Nightlight
 guide-entry-shipyard-nook = Nook
+guide-entry-shipyard-pathfinder = Pathfinder
 guide-entry-shipyard-petrel = Petrel
 guide-entry-shipyard-phoenix = Phoenix
 guide-entry-shipyard-pioneer = Pioneer
@@ -97,34 +106,13 @@ guide-entry-shipyard-sparrow = Sparrow
 guide-entry-shipyard-skipper = Skipper
 guide-entry-shipyard-spirit = Spirit
 guide-entry-shipyard-stasis = Stasis
-guide-entry-shipyard-tyne = Tyne
-guide-entry-shipyard-voltage = Voltage
-
-# Frontier Staff Shipyard entries
-guide-entry-shipyard-broom = Broom
-guide-entry-shipyard-harbormaster = Harbormaster
-guide-entry-shipyard-hound = Hound
-
-# Expedition Shipyard entries
-guide-entry-shipyard-aegis = Aegis
-guide-entry-shipyard-anchor = Anchor
-guide-entry-shipyard-brigand = Brigand
-guide-entry-shipyard-charon = Charon
-guide-entry-shipyard-dove = Dove
-guide-entry-shipyard-dragonfly = Dragonfly
-guide-entry-shipyard-pathfinder = Pathfinder
-
-# Scrap Shipyard entries
-guide-entry-shipyard-construct = Construct
-guide-entry-shipyard-geode = Geode
-guide-entry-shipyard-rusty = Rusty
-guide-entry-shipyard-stringer = Stringer
+guide-entry-shipyard-stronghold = Stronghold
 guide-entry-shipyard-surveyor = Surveyor
 guide-entry-shipyard-tide = Tide
 guide-entry-shipyard-vagabond = Vagabond
 guide-entry-shipyard-vitalis = Vitalis
+guide-entry-shipyard-voltage = Voltage
 guide-entry-shipyard-yegorov = Yegorov
-guide-entry-shipyard-gourd = Gourd
 
 # Rules entries
 guide-entry-frontier-rule-zero-tolerance = Zero Tolerance
@@ -134,10 +122,19 @@ guide-entry-frontier-rule-3 = 3. Escalation
 guide-entry-frontier-rule-4 = 4. Chat
 guide-entry-frontier-rule-5 = 5. Roleplay
 guide-entry-frontier-rule-6 = 6. Safezone
-guide-entry-frontier-rule-7 = 7. Antag
-guide-entry-frontier-rule-8 = 8. Safe Zone
-guide-entry-frontier-rule-9 = 9. Security
-guide-entry-frontier-rule-10 = 10. Command
-guide-entry-frontier-rule-11 = 11. Escalation
-guide-entry-frontier-rule-12 = 12. PVP
+guide-entry-frontier-rule-7 = 7. Antagonism
+guide-entry-frontier-rule-8 = 8. PVP
+guide-entry-frontier-rule-9 = 9. Piracy
+guide-entry-frontier-rule-10 = 10. Crimes
+guide-entry-frontier-rule-11 = 11. Silicons
+guide-entry-frontier-rule-12 = 12. Security
 guide-entry-frontier-rule-13 = 13. Command
+guide-entry-shifts-and-persistence = Shifts and Persistence
+guide-entry-autopilot = Autopilot
+guide-entry-shipyard-tyne = Tyne
+guide-entry-shipyard-broom = Broom
+guide-entry-shipyard-hound = Hound
+guide-entry-shipyard-anchor = Anchor
+guide-entry-shipyard-dove = Dove
+guide-entry-shipyard-rusty = Rusty
+guide-entry-shipyard-gourd = Gourd

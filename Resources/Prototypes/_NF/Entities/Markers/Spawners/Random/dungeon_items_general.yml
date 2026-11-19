@@ -1,0 +1,45 @@
+# An assortment of randomised dungeon loot spawners to be used instead of static spawns
+# Base
+- type: entity
+  parent: MarkerBase
+  id: MarkerBasePlaceFree
+  abstract: true
+  placement:
+    mode: PlaceFree # So one had an option to scatter loot around in more natural fashion
+  components:
+  - type: Transform
+    anchored: false
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: random spesos
+  id: SpawnDungeonLootSpesos
+  parent: MarkerBasePlaceFree
+  suffix: Dungeon
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+        scale: 0.7, 0.7
+      - sprite: Objects/Economy/cash.rsi
+        state: cash_500
+      - sprite: _NF/Markers/general.rsi
+        state: questionmark
+        color: red
+  - type: RandomSpawner
+    prototypes:
+    - SpaceCash10
+    - SpaceCash100
+    - SpaceCash500
+    - SpaceCash1000
+    - SpaceCash1000
+    - SpaceCash2500
+    chance: 0.95
+    offset: 0.0
+    rarePrototypes:
+    - SpaceCash5000
+    - SpaceCash10000
+    - SpaceCash20000
+    - SpaceCash30000
+    rareChance: 0.05

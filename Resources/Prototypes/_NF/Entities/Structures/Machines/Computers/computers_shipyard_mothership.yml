@@ -87,7 +87,6 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Adder
     - Prospector
     - Chisel
 
@@ -102,9 +101,23 @@
     - Bocadillo
     - PTS
     - Construct
-    - Adder
     - Loader
     - Stringer
-    - Legman
     - Liquidator
     - Honker
+
+# The Edison Console
+
+- type: entity
+  id: EdisonMothershipComputer
+  parent: BaseMothershipComputer
+  name: edison shipyard console
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Construct
+    - Retort
+    - Gasbender
+    - Ambition
+    - Hammer
+    - Gaslight

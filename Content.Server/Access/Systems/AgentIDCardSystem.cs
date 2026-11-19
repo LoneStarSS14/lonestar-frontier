@@ -1,4 +1,4 @@
-using Content.Server.Access.Components;
+﻿using Content.Server.Access.Components;
 using Content.Server.Popups;
 using Content.Shared.UserInterface;
 using Content.Shared.Access.Components;
@@ -148,8 +148,6 @@ namespace Content.Server.Access.Systems
             }
 
             _popupSystem.PopupEntity(Loc.GetString("agent-id-new", ("number", addedLength), ("card", args.Target)), args.Target.Value, args.User);
-            if (addedLength > 0)
-                Dirty(uid, access);
         }
 
         private void AfterUIOpen(EntityUid uid, AgentIDCardComponent component, AfterActivatableUIOpenEvent args)

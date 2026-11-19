@@ -4,6 +4,7 @@ using Content.Server.Vocalization.Components;
 using Content.Shared.ActionBlocker;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Robust.Shared.Player; // Frontier
 
 namespace Content.Server.Vocalization.Systems;
 
@@ -25,6 +26,8 @@ public sealed partial class VocalizationSystem : EntitySystem
 
         SubscribeLocalEvent<VocalizerComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<VocalizerRequiresPowerComponent, TryVocalizeEvent>(OnRequiresPowerTryVocalize);
+        SubscribeLocalEvent<ActorComponent, TryVocalizeEvent>(OnActorTryVocalize);
+
     }
 
     private void OnMapInit(Entity<VocalizerComponent> ent, ref MapInitEvent args)
@@ -39,6 +42,13 @@ public sealed partial class VocalizationSystem : EntitySystem
 
         args.Cancelled |= !receiver.Powered;
     }
+
+    // Frontier: no player advertisements
+    private static void OnActorTryVocalize(EntityUid uid, ActorComponent actor, ref TryVocalizeEvent args)
+    {
+        args.Cancelled = true;
+    }
+    // End Frontier
 
     /// <summary>
     /// Try speaking by raising a TryVocalizeEvent

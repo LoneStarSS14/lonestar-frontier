@@ -414,7 +414,6 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: []
-  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_large_wagging

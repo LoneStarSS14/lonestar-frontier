@@ -1,5 +1,4 @@
 # Pirate loadouts
-
 - type: loadoutGroup
   id: NFPirateJumpsuit
   name: loadout-group-contractor-jumpsuit
@@ -24,6 +23,7 @@
   hidden: false # No point in showing this, it gets auto-selected. # Coyote: But what if...
   loadouts:
   - NFPirateNFPiratePDA
+  - NFPirateNFShantymanPDA
   subgroups:
   - MercenaryPDA
   - PilotPDA
@@ -94,7 +94,6 @@
   - ContractorBackpackItems
 
 # Pirate Captain loadouts
-
 - type: loadoutGroup
   id: NFPirateCaptainHead
   name: loadout-group-contractor-head
@@ -116,6 +115,8 @@
   hidden: false # No point in showing this, it gets auto-selected.
   loadouts:
   - NFPirateCaptainClothingOuterCoatPirate
+  - NFPirateClothingOuterCoatVictorian
+  - NFPirateClothingOuterCoatVictorianRed
   subgroups:
     - MercenaryOuterClothing
     - PilotOuterClothing
@@ -129,6 +130,7 @@
   hidden: false # No point in showing this, it gets auto-selected.
   loadouts:
   - NFPirateCaptainNFPirateCaptainPDA
+  - NFPirateCaptainNFShantymanPDA
   subgroups:
   - MercenaryPDA
   - PilotPDA
@@ -164,7 +166,6 @@
   - ContractorBackpackItems
 
 # Pirate First Mate loadouts
-
 - type: loadoutGroup
   id: NFPirateFirstMateHead
   name: loadout-group-contractor-head
@@ -185,6 +186,8 @@
   minLimit: 0 # Coyote
   loadouts:
   - NFPirateFirstMateClothingOuterCoatGentle
+  - NFPirateClothingOuterCoatVictorian
+  - NFPirateClothingOuterCoatVictorianRed
   subgroups:
   - MercenaryOuterClothing
   - PilotOuterClothing
@@ -198,6 +201,7 @@
   hidden: false # No point in showing this, it gets auto-selected.
   loadouts:
   - NFPirateFirstMateNFPirateFirstMatePDA
+  - NFPirateFirstMateNFShantymanPDA
   subgroups:
   - MercenaryPDA
   - PilotPDA

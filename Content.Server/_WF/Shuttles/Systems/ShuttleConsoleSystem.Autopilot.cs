@@ -82,7 +82,7 @@ public sealed partial class ShuttleConsoleSystem
         )
         {
             var targetCoords = _transform.GetMapCoordinates(targetXform);
-            var destinationName = radarConsoleComponent.TargetEntityName ?? "Unknown Target";
+            var destinationName = MetaData(targetEntity.Value).EntityName;
             EnableAutopilot(user, shuttleUid, targetCoords, destinationName);
             return;
         }

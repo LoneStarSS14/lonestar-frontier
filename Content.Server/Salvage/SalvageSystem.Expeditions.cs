@@ -7,6 +7,7 @@ using Content.Shared.Popups;
 using Content.Shared.Examine;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Salvage.Expeditions;
+using Content.Shared.Shuttles.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.CPUJob.JobQueues;
 using Robust.Shared.CPUJob.JobQueues.Queues;
@@ -18,7 +19,6 @@ using Content.Shared.Procedural; // _CS
 using Content.Shared.Salvage; // _CS
 using Robust.Shared.Prototypes; // _CS
 using Content.Shared._NF.CCVar; // _CS
-using Content.Shared.Shuttles.Components; // _CS
 using Robust.Shared.Configuration;
 using Content.Shared.Ghost;
 using System.Numerics; // _CS
@@ -121,7 +121,18 @@ public sealed partial class SalvageSystem
         ClearPausedShuttleCacheForMap(uid);
         StopExpeditionWeather(uid, component);
 
-        // component.Stream = _audio.Stop(component.Stream); // _CS: moved to client
+        // component.Stream = _audio.Stop(component.Stream); // Frontier: moved to client
+
+        // First wipe any disks referencing us
+        var disks = AllEntityQuery<ShuttleDestinationCoordinatesComponent>();
+        while (disks.MoveNext(out var disk, out var diskComp))
+        {
+            if (diskComp.Destination != uid) // LoneStar add: test fail related
+                continue;
+
+            diskComp.Destination = null;
+            Dirty(disk, diskComp);
+        }
 
         foreach (var (job, cancelToken) in _salvageJobs.ToArray())
         {
@@ -138,7 +149,7 @@ public sealed partial class SalvageSystem
         // Finish mission
         if (TryComp<SalvageExpeditionDataComponent>(component.Station, out var data))
         {
-            FinishExpedition((component.Station, data), component, uid); // _CS: add component
+            FinishExpedition((component.Station, data), component, uid); // Frontier: add component
         }
     }
 
@@ -238,8 +249,8 @@ public sealed partial class SalvageSystem
                 board.ActiveMission = 0;
 
             board.Cooldown = true;
-                // Frontier: Missions are intentionally NOT cleared here — they remain visible (disabled) during
-                // cooldown and are replaced with fresh missions when the cooldown timer expires.
+            // Frontier: Missions are intentionally NOT cleared here — they remain visible (disabled) during
+            // cooldown and are replaced with fresh missions when the cooldown timer expires.
             board.NextOffer = _timing.CurTime + TimeSpan.FromSeconds(SharedExpeditionCooldown);
             board.CooldownTime = TimeSpan.FromSeconds(SharedExpeditionCooldown);
             ClearPendingClaims(board);

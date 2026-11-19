@@ -1023,3 +1023,7 @@
 - type: latheRecipe
   parent: PortableRecharger
   id: NFPortableRecharger
+
+- type: latheRecipe
+  parent: ClothingBackpackHarmpack
+  id: NFClothingBackpackHarmpack

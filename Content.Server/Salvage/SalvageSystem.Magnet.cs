@@ -12,6 +12,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.Salvage;
 
@@ -20,8 +21,9 @@ public sealed partial class SalvageSystem
     private const float IdleDebrisLinearVelocityEpsilon = 0.05f;
     private const float IdleDebrisAngularVelocityEpsilon = 0.01f;
 
-    [ValidatePrototypeId<RadioChannelPrototype>]
-    private const string MagnetChannel = "Supply";
+    [Dependency] private readonly IRuntimeLog _runtimeLog = default!;
+
+    private static readonly ProtoId<RadioChannelPrototype> MagnetChannel = "Supply";
 
     private EntityQuery<SalvageMobRestrictionsComponent> _salvMobQuery;
     private EntityQuery<MobStateComponent> _mobStateQuery;

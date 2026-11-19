@@ -46,7 +46,7 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
         PrintRecordButton.OnPressed += (_) => OnPrintPatientRecord?.Invoke(); // Frontier
     }
 
-    public void Populate(HealthAnalyzerUiState state)
+    public void Populate(HealthAnalyzerScannedUserMessage state)
     {
         var target = _entityManager.GetEntity(state.TargetEntity);
 

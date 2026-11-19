@@ -1,6 +1,6 @@
 - type: entity
   name: station representative's rubber stamp
-  parent: [RubberStampHop, BaseC4Contraband]
+  parent: [RubberStampHop, BaseCommandContraband]
   id: RubberStampSr
   components:
   - type: Stamp
@@ -10,6 +10,8 @@
     protected: True
   - type: Sprite
     state: stamp-hop
+  - type: PirateBountyItem
+    id: CommandStamp
 
 - type: entity
   name: station traffic controller's rubber stamp
@@ -26,8 +28,8 @@
     state: stamp-stc
 
 - type: entity
-  name: chief ranger's rubber stamp # Lone Star changes NFSD -> LSRD
-  parent: [RubberStampBase, BaseC4Contraband]
+  name: chief ranger's rubber stamp # LoneStar
+  parent: [RubberStampBase, BaseCommandContraband]
   id: RubberStampSheriff
   categories: [ DoNotMap ]
   components:
@@ -39,6 +41,8 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-sheriff
+  - type: PirateBountyItem
+    id: CommandStamp
 
 - type: entity
   name: doctor's rubber stamp
@@ -82,7 +86,7 @@
 
 - type: entity
   name: director of care's rubber stamp
-  parent: [RubberStampBase, BaseC4Contraband]
+  parent: [RubberStampBase, BaseCommandContraband]
   id: RubberStampDoc
   categories: [ DoNotMap ]
   components:
@@ -93,9 +97,11 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-doc
+  - type: PirateBountyItem
+    id: CommandStamp
 
 - type: entity
-  name: armorer's rubber stamp # Lonestar changes NFSD -> LSRD
+  name: bailiff's rubber stamp
   parent: RubberStampBase
   id: RubberStampBailiff
   categories: [ DoNotMap ]
@@ -109,22 +115,8 @@
     state: stamp-bailiff
 
 - type: entity
-  name: senior ranger's rubber stamp # Lonestar changes NFSD -> LSRD
-  parent: RubberStampBase
-  id: RubberStampSergeant
-  categories: [ DoNotMap ]
-  components:
-  - type: Stamp
-    stampedName: stamp-component-stamped-name-sergeant
-    stampedColor: "#51703b"
-    stampState: "paper_stamp-nf-bailiff"
-  - type: Sprite
-    sprite: _NF/Objects/Misc/stamps.rsi
-    state: stamp-bailiff
-
-- type: entity
   name: plant manager's rubber stamp
-  parent: [RubberStampBase, BaseC4Contraband]
+  parent: [RubberStampBase, BaseCommandContraband]
   id: RubberStampPlantManager
   categories: [ DoNotMap ]
   components:
@@ -135,3 +127,5 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-plant-manager
+  - type: PirateBountyItem
+    id: CommandStamp

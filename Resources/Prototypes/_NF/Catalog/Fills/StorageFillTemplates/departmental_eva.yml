@@ -9,7 +9,7 @@
     - id: ClothingOuterEVASuitContractor
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -20,8 +20,7 @@
     contents:
     - id: ClothingOuterEVASuitPilot
     - id: JetpackMiniFilled
-    - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -33,7 +32,7 @@
     - id: ClothingOuterEVASuitSr
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -45,7 +44,7 @@
     - id: ClothingOuterEVASuitCaptain
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -57,7 +56,7 @@
     - id: ClothingOuterEVASuitEngineer
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -69,7 +68,7 @@
     - id: ClothingOuterEVASuitAtmosTech
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -81,7 +80,7 @@
     - id: ClothingOuterEVASuitCargo
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -93,7 +92,7 @@
     - id: ClothingOuterEVASuitSalvage
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -105,7 +104,7 @@
     - id: ClothingOuterEVASuitMedic
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -117,7 +116,7 @@
     - id: ClothingOuterHardsuitVoidParamed
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -129,7 +128,7 @@
     - id: ClothingOuterEVASuitParamedic
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -141,7 +140,7 @@
     - id: ClothingOuterEVASuitScientist
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -153,7 +152,7 @@
     - id: ClothingOuterEVASuitJanitor
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -165,7 +164,7 @@
     - id: ClothingOuterEVASuitServiceWorker
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -178,7 +177,7 @@
     - id: JetpackMiniFilled
     - id: Lantern
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -191,7 +190,7 @@
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingRed
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -204,7 +203,7 @@
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingGreen
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -217,7 +216,7 @@
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingBlue
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -230,7 +229,7 @@
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingYellow
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -243,7 +242,7 @@
     - id: JetpackMiniFilled
     - id: ClothingHandsGlovesBoxingBlue
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -255,7 +254,7 @@
     - id: ClothingOuterEVASuitHydro
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -267,7 +266,7 @@
     - id: ClothingOuterEVASuitMailman
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled # Lonestar: Kill
 
 - type: entity
   abstract: true
@@ -279,7 +278,7 @@
     - id: ClothingOuterEVASuitMercenary
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -291,7 +290,7 @@
     - id: ClothingOuterEVASuitPrivateSec
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -303,7 +302,7 @@
     - id: ClothingOuterEVASuitNfsd
     - id: JetpackNfsdFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 # Other EVA Suits
 - type: entity
@@ -317,7 +316,7 @@
     - id: JetpackMiniFilled
     - id: Lantern
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 # Emergency
 - type: entity
@@ -330,7 +329,7 @@
     - id: ClothingOuterSuitEmergency
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 # Player factions
 - type: entity
@@ -343,7 +342,7 @@
     - id: ClothingOuterEVASuitLvhi
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -355,7 +354,7 @@
     - id: ClothingOuterEVASuitFsa
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMagSecurity
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
@@ -367,19 +366,19 @@
     - id: ClothingOuterEVASuitFsb
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 - type: entity
   abstract: true
   id: StorageFillEVASuitFsc
-  description: Contains a standard issue Far Star Corporation (FSC) EVA suit.
+  description: Contains a standard issue Far Star Commerce (FSC) EVA suit.
   components:
   - type: StorageFill
     contents:
     - id: ClothingOuterEVASuitFsc
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled
 
 # Stc
 - type: entity
@@ -392,4 +391,4 @@
     - id: ClothingOuterEVASuitStc
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
+    - id: NFTankO2N2EqualFilled

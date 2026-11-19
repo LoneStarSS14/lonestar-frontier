@@ -71,7 +71,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
             return;
 
         var newState = !layingDown.IsCrawlingUnder;
-        if (standingState.CurrentState is StandingState.Standing)
+        if (standingState.Standing)
             newState = false; // If the entity is already standing, this function only serves a fallback method to fix its draw depth
 
         // Do not allow to begin crawling under if it's disabled in config. We still, however, allow to stop it, as a failsafe.
@@ -96,13 +96,11 @@ public abstract class SharedLayingDownSystem : EntitySystem
             || !TryComp(uid, out LayingDownComponent? layingDown))
             return;
 
-        RaiseNetworkEvent(new CheckAutoGetUpEvent(GetNetEntity(uid)));
-
         if (HasComp<KnockedDownComponent>(uid)
             || !_mobState.IsAlive(uid))
             return;
 
-        if (_standing.IsDown(uid, standing))
+        if (_standing.IsDown((uid, standing)))
             TryStandUp(uid, layingDown, standing);
         else
             TryLieDown(uid, layingDown, standing);
@@ -112,11 +110,10 @@ public abstract class SharedLayingDownSystem : EntitySystem
     {
         if (args.Handled || args.Cancelled
             || HasComp<KnockedDownComponent>(uid)
-            || _mobState.IsIncapacitated(uid)
-            || !_standing.Stand(uid))
-            component.CurrentState = StandingState.Lying;
+            || _mobState.IsIncapacitated(uid))
+            return;
 
-        component.CurrentState = StandingState.Standing;
+        _standing.Stand(uid, component);
     }
 
     private void OnRefreshMovementSpeed(EntityUid uid, LayingDownComponent component, RefreshMovementSpeedModifiersEvent args)
@@ -132,7 +129,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
     {
         // If the entity is not on a grid, try to make it stand up to avoid issues
         if (!TryComp<StandingStateComponent>(uid, out var standingState)
-            || standingState.CurrentState is StandingState.Standing
+            || standingState.Standing
             || Transform(uid).GridUid != null)
             return;
 
@@ -143,7 +140,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
     {
         if (!Resolve(uid, ref standingState, false)
             || !Resolve(uid, ref layingDown, false)
-            || standingState.CurrentState is not StandingState.Lying
+            || standingState.Standing
             || !_mobState.IsAlive(uid)
             || TerminatingOrDeleted(uid)
             || !_actionBlocker.CanConsciouslyPerformAction(uid)) // Floof - check for consciousness instead of a no-brain DeBrainedComponent check (pun intended)
@@ -164,7 +161,6 @@ public abstract class SharedLayingDownSystem : EntitySystem
         if (!_doAfter.TryStartDoAfter(args))
             return false;
 
-        standingState.CurrentState = StandingState.GettingUp;
         layingDown.IsCrawlingUnder = false;
         Dirty(uid, layingDown);
         return true;
@@ -174,10 +170,13 @@ public abstract class SharedLayingDownSystem : EntitySystem
     {
         if (!Resolve(uid, ref standingState, false)
             || !Resolve(uid, ref layingDown, false)
-            || standingState.CurrentState is not StandingState.Standing)
+            || !standingState.Standing)
         {
             if (behavior == DropHeldItemsBehavior.AlwaysDrop)
-                RaiseLocalEvent(uid, new DropHandItemsEvent());
+            {
+                var dropEvent = new DropHandItemsEvent();
+                RaiseLocalEvent(uid, ref dropEvent);
+            }
 
             return false;
         }

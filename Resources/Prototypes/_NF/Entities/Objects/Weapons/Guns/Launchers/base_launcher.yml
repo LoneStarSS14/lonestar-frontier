@@ -46,20 +46,22 @@
 
 - type: entity
   id: NFBaseWeaponFrameLauncherGorlex
-  parent: [ BaseC4Contraband, NFBaseWeaponFrameLauncher ]
+  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameLauncher ]
   abstract: true
   components:
+  # LoneStar start
   - type: Gun
     minAngle: 1.8
     maxAngle: 9
     angleIncrease: 6
     angleDecay: 2
+  # LoneStar end
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
 
 - type: entity
   id: NFBaseWeaponFrameLauncherSteelbolt
-  parent: [ BaseC3Contraband, NFBaseWeaponFrameLauncher ]
+  parent: [ BaseC3PirateContraband, NFBaseWeaponFrameLauncher ]
   abstract: true
   components:
   - type: Gun

@@ -1,4 +1,3 @@
-<!-- _CS Start -->
 <Document>
   # Salvage
 
@@ -8,7 +7,7 @@
 
   ## Preparations
 
-  Before leaving the station, ensure you are prepared with all the required equipment. Otherwise, you will die before seeing any profits!
+  Before leaving the station, ensure you are prepared with all the required equipment. Otherwise, you will likely die before seeing any profits!
 
   <Box>
     <GuideEntityEmbed Entity="SuitStorageSalv"/>
@@ -16,7 +15,7 @@
     <GuideEntityEmbed Entity="VendingMachineSalvage"/>
   </Box>
 
-  Everything needed before leaving the station is provided inside Salvage's starting room. While Science can research better weapons and equipment, it is best to be equipped with something rather than nothing.
+  Everything needed before leaving the station is provided inside Salvage's starting room. While Science can research better weapons and equipment, it is best to be equipped with your starting gear rather than nothing.
 
   <Box>
     <GuideEntityEmbed Entity="ClothingOuterHardsuitSpatio"/>
@@ -45,7 +44,7 @@
 
   While you can technically mine and gather ore with just a PKA and a Backpack, Salvagers start with more specialized gear for the task.
 
-  - [color=cyan]Pickaxe[/color]: This is required for mining at any reasonable speed when wielded. Also, it works as a melee weapon!
+  - [color=cyan]Pickaxe[/color]: This is required for mining at any reasonable speed when wielded. It also works as a handy melee weapon!
   - [color=cyan]Ore Bag[/color]: When equipped in your belt slot, this magnetizes nearby ore and automatically picks it up for you.
 
   <Box>
@@ -110,7 +109,7 @@
     <GuideEntityEmbed Entity="Recycler"/>
   </Box>
 
-  [color=cyan]Space Debris[/color] is a versatile option, providing vital basic materials (such as steel, glass, etc) in short supply at the start of the shift. Items and scrap are scattered across the debris, and must be collected. Consider dragging along one of the lockers or crates aboard the debris for easier storage.
+  [color=cyan]Space Debris[/color] is a versatile option, providing vital basic materials (such as steel, glass, etc.) in short supply at the start of the shift. Items and scrap are scattered across the debris, and must be collected. Consider dragging along one of the lockers or crates aboard the debris for easier storage.
 
   Debris is sprinkled with numerous threats. Bloodthirsty [color=red]Space Carp[/color] and [color=red]Sharkminnows[/color] infest them, eager to rush any Salvagers that come nearby. [color=red]Landmines[/color] are also rarely found aboard debris, capable of incapacitating the unwary explorer.
 
@@ -136,9 +135,9 @@
     <GuideEntityEmbed Entity="ComputerSalvageJobBoard"/>
   </Box>
 
-  The [color=cyan]Salvage Job Board[/color] is a computer located in the Salvage Bay. It serves as Salvage's version of the [color=cyan]Cargo Bounty Computer[/color], allowing Salvagers to fulfill specific jobs with Salvage-specific materials in order to earn Credits and unlock [color=yellow]Advanced Salvage Gear[/color].
+  The [color=cyan]Salvage Job Board[/color] is a computer located in the Salvage Bay. It serves as Salvage's version of the [color=cyan]Cargo Bounty Computer[/color], allowing Salvagers to fulfill specific jobs with Salvage-specific materials in order to earn Spesos and unlock [color=yellow]Advanced Salvage Gear[/color].
 
-  Once you gather the supplies necessary to complete a job, print out a [color=cyan]Salvage Job Shipment Label[/color] and attach it to the crate or locker containing the goods. You can use your [color=cyan]Appraisal Tool[/color] to double-check that it's ready for sale. The prepared bounty can then be brought to the [color=cyan]Automated Trade Station[/color] to earn Cargo Credits and to unlock new Salvage-specific crates in the [color=cyan]Cargo Request Computer[/color].
+  Once you gather the supplies necessary to complete a job, print out a [color=cyan]Salvage Job Shipment Label[/color] and attach it to the crate or locker containing the goods. You can use your [color=cyan]Appraisal Tool[/color] to double-check that it's ready for sale. The prepared bounty can then be brought to the [color=cyan]Automated Trade Station[/color] to earn Cargo Spesos and to unlock new Salvage-specific crates in the [color=cyan]Cargo Request Computer[/color].
 
   <Box>
     <GuideEntityEmbed Entity="Fulton1"/>
@@ -161,7 +160,7 @@
 
   The [color=purple]Science Department[/color] is a crucial partner for Salvage. Science depends on Salvage for both basic materials (steel, plastic, glass) and advanced materials (silver, gold, plasma, and uranium), and Salvage relies on Science for the upgraded equipment that makes their work easier.
 
-  Whenever possible, communicate with Science and try to prioritize their requests. While Science will need large quantities of basic materials, they rely entirely on you for their supply of [color=yellow]Gold, Silver and Uranium,[/color] all of which are required for your advanced gear. If you want Science to help you, you have to help them - and vice-versa.
+  Whenever possible, communicate with Science and try to prioritize their requests. While Science will need large quantities of basic materials, they rely entirely on you for their supply of [color=yellow]Gold, Silver and Uranium,[/color] all of which are required for your advanced gear. If you want Science to help you, you have to help them - and vice versa.
 
   <Box>
     <GuideEntityEmbed Entity="MiningDrill"/>
@@ -193,4 +192,3 @@
   - [color=cyan]Hivelords[/color]: Fast moving and erratic anomalies. They prefer to keep their distance in combat, spewing out small [color=cyan]Hivelord Brood[/color] to swarm Salvagers. They're not especially tough, so ambush them quickly before they can summon a horde to drown you in. They can be butchered for the quick-rotting [color=cyan]Hivelord Cores,[/color] which are used to complete Salvage Jobs and can also be eaten raw for quick healing.
   - [color=cyan]Basilisks[/color]: An ice-encrusted terror that lurks in the shadows. Basilisks can fire freezing energy bolts which damage and slow their targets, and will often use them to soften up a target before moving in for the kill. Once defeated, they can be butchered for invaluable [color=cyan]Diamond Ore[/color].
 </Document>
-<!-- _CS End -->

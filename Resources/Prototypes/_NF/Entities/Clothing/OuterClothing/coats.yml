@@ -175,7 +175,7 @@
     damageCoefficient: 0.60
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, NotContraband ]
+  parent: [ ClothingOuterStorageBase, BaseC3WizardContraband ]
   id: ClothingOuterWizardBrick
   name: brick wizard coat
   description: ClothingOuterWizardBrick
@@ -197,7 +197,7 @@
 - type: entity
   parent: [ ClothingOuterStorageBase ]
   id: ClothingOuterFakeWizard
-  name: fake wizard robe
+  name: wizard robe
   description: A rather dull, blue robe meant to mimick real wizard robes.
   components:
   - type: Sprite

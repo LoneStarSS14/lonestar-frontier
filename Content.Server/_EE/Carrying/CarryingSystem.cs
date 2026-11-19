@@ -10,6 +10,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands;
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Stunnable;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Verbs;
@@ -51,6 +52,7 @@ namespace Content.Server.Carrying
         [Dependency] private readonly PseudoItemSystem _pseudoItem = default!;
         [Dependency] private readonly ContestsSystem _contests = default!;
         [Dependency] private readonly TransformSystem _transform = default!;
+        [Dependency] private readonly SharedHandsSystem _hands = default!; // Frontier
 
         public const float BaseDistanceCoeff = 0.5f; // Frontier: default throwing speed reduction
         public const float MaxDistanceCoeff = 1.0f; // Frontier: default throwing speed reduction
@@ -358,7 +360,7 @@ namespace Content.Server.Carrying
                 || HasComp<BeingCarriedComponent>(carrier)
                 || HasComp<BeingCarriedComponent>(carried)
                 || !TryComp<HandsComponent>(carrier, out var hands)
-                || hands.CountFreeHands() < carriedComp.FreeHandsRequired)
+                || _hands.CountFreeHands(carrier) < carriedComp.FreeHandsRequired) // Frontier - hand refactor compliance (wizden #38438)
                 return false;
 
             return true;

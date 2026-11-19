@@ -40,9 +40,10 @@
     belt: ClothingBeltJanitorFilled
   storage:
     back:
-    - EncryptionKeyService
     - ShipVoucherFrontierJanitor
     - TrashBag
+  encryptionKeys:
+  - EncryptionKeyService
 
 - type: chameleonOutfit
   id: NFJanitorChameleonOutfit

@@ -137,21 +137,6 @@
     - type: BindToStation
       enabled: false # should be draggable between stations
 
-#- type: entity
-#  id: GaslockBigFrameMachineCircuitboard
-#  parent: BaseMachineCircuitboard
-#  name: full-sized gaslock machine board
-#  description: A machine printed circuit board for a full-on wall gaslock. Perfect for pumping a ship up full of gas like a Sonic OC.
-#  components:
-#    - type: Sprite
-#      state: engineering
-#    - type: MachineBoard
-#      prototype: Gaslock
-#      stackRequirements:
-#        Steel: 1
-#    - type: BindToStation
-#      enabled: false # should be draggable between stations
-
 # TechFab
 - type: entity
   id: NfsdTechFabCircuitboard

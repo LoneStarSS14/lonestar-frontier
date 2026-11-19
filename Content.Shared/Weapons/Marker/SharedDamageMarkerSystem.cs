@@ -1,5 +1,6 @@
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
+using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Melee.Events;
@@ -40,18 +41,15 @@ public abstract class SharedDamageMarkerSystem : EntitySystem
             uid,
             args.User);
 
-        if (TryComp<LeechOnMarkerComponent>(args.Used, out var leech))
+        if (TryComp<LeechOnMarkerComponent>(args.Used, out var leech)
+            && TryComp<MobStateComponent>(uid, out var state)
+            && !_mobState.IsDead(uid, state))
         {
             DamageSpecifier what2Heal = leech.Leech;
-            // is the target dead?
-            if (_mobState.IsDead(uid))
-            {
-                return; // no healing from dead people
-            }
             // RULES OF FLEECHING
             // If target is in crit, halve the healing.
             var damMult = FixedPoint2.New(1.0f);
-            if (_mobState.IsCritical(uid))
+            if (_mobState.IsCritical(uid, state))
             {
                 damMult *= FixedPoint2.New(0.5f);
             }

@@ -38,10 +38,7 @@ namespace Content.Server.Lathe
         {
             foreach (var (mat, amount) in recipe.Materials)
             {
-                var adjustedAmount = recipe.ApplyMaterialDiscount
-                    ? (int)(-amount * component.FinalMaterialUseMultiplier)
-                    : -amount;
-                adjustedAmount *= quantity;
+                var adjustedAmount = -AdjustMaterial(amount, recipe.ApplyMaterialDiscount, component.FinalMaterialUseMultiplier) * quantity;
 
                 int toDeduct = -adjustedAmount; // positive amount to deduct
                 OnDeductMaterial?.Invoke(uid, component, mat, ref toDeduct);

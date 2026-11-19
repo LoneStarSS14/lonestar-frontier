@@ -99,6 +99,21 @@ public sealed class DoAfterCancellationTests : InteractionTest
     }
 
     [Test]
+    public async Task PlatingDeconstructionUsesLongerDelay()
+    {
+        await SetTile(Plating);
+        await InteractUsing("FireAxe", awaitDoAfters: false);
+        await RunTicks((int) Math.Ceiling(4 / TickPeriod));
+
+        Assert.That(ActiveDoAfters.Count(), Is.EqualTo(1));
+        await AssertTile(Plating);
+
+        await RunTicks((int) Math.Ceiling(1.5 / TickPeriod));
+        Assert.That(ActiveDoAfters.Count(), Is.EqualTo(0));
+        await AssertTile("Lattice");
+    }
+
+    [Test]
     public async Task CancelRepeatedWeld()
     {
         await SpawnTarget(WeldableTests.Locker);

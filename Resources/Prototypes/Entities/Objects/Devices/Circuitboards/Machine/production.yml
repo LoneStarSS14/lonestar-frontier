@@ -42,8 +42,10 @@
   - type: MachineBoard
     prototype: Protolathe
     requirements: # Frontier
-      MatterBin: 2 # Frontier
-      Manipulator: 4 # Frontier
+      MatterBin: 2 # Frontier stackRequirements<requirements
+      Manipulator: 2 # Frontier stackRequirements<requirements
+   # stackRequirements: # Frontier
+      # Manipulator: 4 # Frontier
     tagRequirements:
       GlassBeaker:
         amount: 2
@@ -1063,27 +1065,6 @@
       # Manipulator: 4 # Frontier
       Glass: 2
       Cable: 5
-
-- type: entity # Coyote Sector
-  id: SmartFridgeCircuitboard
-  parent: BaseMachineCircuitboard
-  name: SmartFridge machine board
-  description: A machine printed circuit board for a SmartFridge.
-  components:
-  - type: Sprite
-    state: service
-  - type: MachineBoard
-    prototype: DVSmartFridge
-    requirements:
-      Manipulator: 1
-      Capacitor: 3
-      MatterBin: 1
-    stackRequirements:
-      Glass: 5
-    tagRequirements:
-      GlassBeaker:
-        amount: 2
-        defaultPrototype: Beaker
 
 - type: entity
   id: StasisBedMachineCircuitboard

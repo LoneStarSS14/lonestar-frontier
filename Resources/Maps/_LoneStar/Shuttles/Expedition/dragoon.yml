@@ -462,7 +462,7 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: BecomesStation
-      id: Dragoon
+      id: LSDragoon
     - type: NavMap
 - proto: AirAlarm
   entities:

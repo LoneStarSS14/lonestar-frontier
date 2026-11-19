@@ -102,9 +102,17 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 
     private void OnHeadsetReceive(EntityUid uid, HeadsetComponent component, ref RadioReceiveEvent args)
     {
-        EntityUid wearer = Transform(uid).ParentUid;
+        // Receiving on a wearer without ActiveRadioComponent requires relaying this event.
+        var wearer = Transform(uid).ParentUid;
+        if (wearer.IsValid())
+        {
+            var relayEvent = new HeadsetRadioReceiveRelayEvent(args);
+            RaiseLocalEvent(wearer, ref relayEvent);
+        }
+
         if (!TryComp(wearer, out ActorComponent? actor))
             return;
+
         if (HasComp<GhostHearingComponent>(wearer))
         {
             _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);

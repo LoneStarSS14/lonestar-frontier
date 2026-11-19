@@ -3,7 +3,6 @@ using Content.Shared.Rotation;
 using Content.Shared.Standing;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
-using Robust.Shared.Configuration;
 using Robust.Shared.Timing;
 
 namespace Content.Client.Standing;
@@ -33,7 +32,7 @@ public sealed class LayingDownSystem : SharedLayingDownSystem
             if (sprite.DrawDepth != layingDown.NormalDrawDepth && sprite.DrawDepth != layingDown.CrawlingUnderDrawDepth)
                 continue;
 
-            sprite.DrawDepth = standing.CurrentState is StandingState.Lying && layingDown.IsCrawlingUnder
+            sprite.DrawDepth = !standing.Standing && layingDown.IsCrawlingUnder
                 ? layingDown.CrawlingUnderDrawDepth
                 : layingDown.NormalDrawDepth;
         }

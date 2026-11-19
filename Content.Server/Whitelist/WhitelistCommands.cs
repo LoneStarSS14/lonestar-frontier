@@ -1,9 +1,7 @@
 using Content.Server.Administration;
 using Content.Server.Database;
-using Content.Server.Players.PlayTimeTracking; // LoneStar
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
-using Content.Shared.Players; // LoneStar
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
@@ -14,7 +12,8 @@ namespace Content.Server.Whitelist;
 [AdminCommand(AdminFlags.Whitelist)] // DeltaV - Custom permission for whitelist
 public sealed class AddWhitelistCommand : LocalizedCommands
 {
-    // [Dependency] private readonly JobWhitelistManager _jobWhitelist = default!; // LoneStar, removed
+    [Dependency] private readonly IPlayerLocator _locator = default!;
+    [Dependency] private readonly IServerDbManager _dbManager = default!;
     public override string Command => "whitelistadd";
 
     public override async void Execute(IConsoleShell shell, string argStr, string[] args)
@@ -26,36 +25,21 @@ public sealed class AddWhitelistCommand : LocalizedCommands
             return;
         }
 
-        var db = IoCManager.Resolve<IServerDbManager>();
-        var loc = IoCManager.Resolve<IPlayerLocator>();
-        var player = IoCManager.Resolve<IPlayerManager>(); // LoneStar
-        var playtime = IoCManager.Resolve<PlayTimeTrackingManager>(); // LoneStar
-
         var name = string.Join(' ', args).Trim();
-        var data = await loc.LookupIdByNameOrIdAsync(name);
+        var data = await _locator.LookupIdByNameOrIdAsync(name);
 
         if (data != null)
         {
             var guid = data.UserId;
-            var isWhitelisted = await db.GetWhitelistStatusAsync(guid);
+            var isWhitelisted = await _dbManager.GetWhitelistStatusAsync(guid);
             if (isWhitelisted)
             {
                 shell.WriteLine(Loc.GetString("cmd-whitelistadd-existing", ("username", data.Username)));
                 return;
             }
 
-            // LoneStar, start
-            await db.AddToWhitelistAsync(guid);
-
-            // Nyanotrasen - Update whitelist status in player data.
-            if (player.TryGetPlayerDataByUsername(name, out var playerData) &&
-                player.TryGetSessionByUsername(name, out var session))
-            {
-                playerData.ContentData()!.Whitelisted = true;
-            }
-            // LoneStar, end
-
-            shell.WriteLine(Loc.GetString("command-whitelistadd-added", ("username", data.Username)));
+            await _dbManager.AddToWhitelistAsync(guid);
+            shell.WriteLine(Loc.GetString("cmd-whitelistadd-added", ("username", data.Username)));
             return;
         }
 
@@ -76,7 +60,9 @@ public sealed class AddWhitelistCommand : LocalizedCommands
 [AdminCommand(AdminFlags.Ban)]
 public sealed class RemoveWhitelistCommand : LocalizedCommands
 {
-    // [Dependency] private readonly JobWhitelistManager _jobWhitelist = default!; // LoneStar, removed
+    [Dependency] private readonly IPlayerLocator _locator = default!;
+    [Dependency] private readonly IServerDbManager _dbManager = default!;
+
     public override string Command => "whitelistremove";
 
     public override async void Execute(IConsoleShell shell, string argStr, string[] args)
@@ -88,25 +74,21 @@ public sealed class RemoveWhitelistCommand : LocalizedCommands
             return;
         }
 
-        var db = IoCManager.Resolve<IServerDbManager>();
-        var loc = IoCManager.Resolve<IPlayerLocator>();
-
         var name = string.Join(' ', args).Trim();
-        var data = await loc.LookupIdByNameOrIdAsync(name);
+        var data = await _locator.LookupIdByNameOrIdAsync(name);
 
         if (data != null)
         {
             var guid = data.UserId;
-            var isWhitelisted = await db.GetWhitelistStatusAsync(guid);
+            var isWhitelisted = await _dbManager.GetWhitelistStatusAsync(guid);
             if (!isWhitelisted)
             {
                 shell.WriteLine(Loc.GetString("cmd-whitelistremove-existing", ("username", data.Username)));
                 return;
             }
 
-            await db.RemoveFromWhitelistAsync(guid); // LoneStar
-
-            shell.WriteLine(Loc.GetString("command-whitelistremove-removed", ("username", data.Username)));
+            await _dbManager.RemoveFromWhitelistAsync(guid);
+            shell.WriteLine(Loc.GetString("cmd-whitelistremove-removed", ("username", data.Username)));
             return;
         }
 
@@ -127,7 +109,11 @@ public sealed class RemoveWhitelistCommand : LocalizedCommands
 [AdminCommand(AdminFlags.Ban)]
 public sealed class KickNonWhitelistedCommand : LocalizedCommands
 {
-    // [Dependency] private readonly JobWhitelistManager _jobWhitelist = default!; // LoneStar, removed
+    [Dependency] private readonly IConfigurationManager _configManager = default!;
+    [Dependency] private readonly IServerNetManager _netManager = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly IServerDbManager _dbManager = default!;
+
     public override string Command => "kicknonwhitelisted";
 
     public override async void Execute(IConsoleShell shell, string argStr, string[] args)
@@ -139,24 +125,16 @@ public sealed class KickNonWhitelistedCommand : LocalizedCommands
             return;
         }
 
-        var cfg = IoCManager.Resolve<IConfigurationManager>();
-
-        if (!cfg.GetCVar(CCVars.WhitelistEnabled))
+        if (!_configManager.GetCVar(CCVars.WhitelistEnabled))
             return;
 
-        var player = IoCManager.Resolve<IPlayerManager>();
-        var db = IoCManager.Resolve<IServerDbManager>();
-        var net = IoCManager.Resolve<IServerNetManager>();
-
-        foreach (var session in player.NetworkedSessions)
+        foreach (var session in _playerManager.NetworkedSessions)
         {
-            if (await db.GetAdminDataForAsync(session.UserId) is not null)
+            if (await _dbManager.GetAdminDataForAsync(session.UserId) is not null)
                 continue;
 
-            if (!await db.GetWhitelistStatusAsync(session.UserId)) // LoneStar
-            {
-                net.DisconnectChannel(session.Channel, Loc.GetString("whitelist-not-whitelisted"));
-            }
+            if (!await _dbManager.GetWhitelistStatusAsync(session.UserId))
+                _netManager.DisconnectChannel(session.Channel, Loc.GetString("whitelist-not-whitelisted"));
         }
     }
 }

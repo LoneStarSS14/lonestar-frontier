@@ -1,0 +1,14 @@
+- type: entityTable
+  id: TableHardsuitMerc
+  table: !type:GroupSelector
+    children:
+    - id: ClothingOuterHardsuitMercenary
+      weight: 0.35
+    - id: ClothingOuterHardsuitPrivateSecurity
+      weight: 0.30
+    - id: ClothingOuterHardsuitSurplus
+      weight: 0.20
+    - id: ClothingOuterHardsuitScaf
+      weight: 0.10
+    - id: ClothingOuterHardsuitNoble
+      weight: 0.05

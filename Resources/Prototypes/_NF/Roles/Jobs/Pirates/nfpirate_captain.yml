@@ -6,6 +6,9 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 172800 # 48 hours
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 10800 # 3 hours
   whitelisted: true
   startingGear: NFPirateCaptainGear
   alwaysUseSpawner: true
@@ -15,22 +18,22 @@
   supervisors: job-supervisors-freebooters-union
   weight: 40
   displayWeight: 40
-  setPreference: false
+  setPreference: true
   newPlayerMessage: false
   access:
   - Pirate
-  - BlackMarket
+  - BlackMarket # Coyote
   accessGroups:
   - GeneralAccess
   special:
   - !type:AddComponentSpecial
     components:
-#    - type: AutoPirateCaptain
+    - type: AutoPirateCaptain
     - type: SpecialSectorStationRecord # must be given on spawn
       recordGeneration: FalseRecord
     - type: DisableSuitSensors
-    - type: IsPirate
-  - !type:AddRpiJobModifierSpecial
+    - type: IsPirate # Coyote
+  - !type:AddRpiJobModifierSpecial # Coyote v
     modifiersToAdd:
     - rpiJobModifierPirateCaptain
   - !type:AddImplantSpecial

@@ -17,7 +17,7 @@
       collection: MetalThud
   - type: CombatMode
   - type: NoSlip
-  - type: Stripping # Coyote: Let borgs strip people
+  - type: Stripping # Coyote
   - type: StaticPrice
     price: 1250
   - type: Fixtures
@@ -26,7 +26,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.35
-        density: 150
+        density: 300
         mask:
         - MobMask
         layer:
@@ -148,9 +148,6 @@
 # End Coyote
   - type: StatusEffects
     allowed:
-    - Stun
-    - KnockedDown
-    - SlowedDown
     - Flashed
   - type: TypingIndicator
     proto: robot
@@ -222,8 +219,8 @@
       id: blinking
       interpolate: Nearest
       maxDuration: 1.0
-      startValue: 0.1 # Wizden#37444
-      endValue: 2.0 # Wizden#37444
+      startValue: 0.1
+      endValue: 2.0
       isLooped: true
   - type: ToggleableVisuals
     spriteLayer: light
@@ -236,7 +233,6 @@
   - type: Pullable
   - type: Puller
     needsHands: false
-  - type: LayingDown
   - type: StandingState
   - type: Tag
     tags:
@@ -328,7 +324,8 @@
   - type: Access
     enabled: false
     groups:
-    - AllAccess
+    #- AllAccess # Frontier
+    - GeneralAccess # Frontier
     tags:
     - Borg
 #  - type: AccessReader
@@ -385,7 +382,8 @@
   - type: Access
     enabled: false
     groups:
-    - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it..
+  #  - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it.. # Frontier
+    - GeneralAccess # Frontier
   # - type: AccessReader # Frontier
   #   access: [["Command"], ["Research"]] # Frontier
   - type: StartIonStormed

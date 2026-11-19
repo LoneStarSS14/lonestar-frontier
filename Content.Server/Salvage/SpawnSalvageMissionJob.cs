@@ -61,8 +61,6 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
     private const int SharedObjectiveMultiplier = 2;
     private static readonly float SharedLandingBufferTiles = SalvageExpeditionReservation.MinimumLandingClearanceTiles;
 
-    private static readonly ProtoId<LocalizedDatasetPrototype> NamesDataset = "NamesBorer";
-
     private readonly IEntityManager _entManager;
     private readonly IGameTiming _timing;
     private readonly IPrototypeManager _prototypeManager;
@@ -147,7 +145,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         }
         finally
         {
-            ExpeditionSpawnCompleteEvent ev = new(Station, success, _missionParams.Index, mapUid, _economyId);
+            ExpeditionSpawnCompleteEvent ev = new(Station, success, _missionParams.Index, mapUid, _economyId, _missionParams.OpenContract);
             _entManager.EventBus.RaiseEvent(EventSource.Local, ev);
             if (errorStackTrace != null)
                 _sawmill.Error("salvage", $"Expedition generation failed with exception: {errorStackTrace}!");
@@ -177,7 +175,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         destComp.Enabled = true;
         _metaData.SetEntityName(
             mapUid,
-            _entManager.System<SharedSalvageSystem>().GetFTLName(_prototypeManager.Index(NamesDataset), _missionParams.Seed));
+            _entManager.System<SharedSalvageSystem>().GetFTLName(_prototypeManager.Index(SalvageSystem.PlanetNames), _missionParams.Seed));
         _entManager.AddComponent<FTLBeaconComponent>(mapUid);
 
         // Saving the mission mapUid to a CD is made optional, in case one is somehow made in a process without a CD entity

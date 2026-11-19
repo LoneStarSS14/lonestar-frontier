@@ -3,6 +3,8 @@ using Content.Server.Parallax;
 using Content.Server.Salvage.Expeditions;
 using Content.Shared.Parallax.Biomes;
 using Content.Shared.Parallax.Biomes.Markers;
+using Content.Shared.Shuttles.Components;
+using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Maths;
 using Robust.Shared.Prototypes;
@@ -63,6 +65,44 @@ public sealed class SalvageExpeditionReservationTest
         Assert.That(markerTiles.Count, Is.GreaterThan(0));
         Assert.That(markerTiles.Contains(new Vector2i(1, 1)), Is.False);
         Assert.That(markerTiles.Contains(new Vector2i(3, 3)), Is.False);
+
+        await pair.CleanReturnAsync();
+    }
+
+    [Test]
+    public async Task ExpeditionShutdownClearsOnlyMatchingDestinationDisks()
+    {
+        await using var pair = await PoolManager.GetServerClient();
+        var server = pair.Server;
+        var entities = server.EntMan;
+
+        await server.WaitAssertion(() =>
+        {
+            var expedition = entities.SpawnEntity(null, MapCoordinates.Nullspace);
+            var otherDestination = entities.SpawnEntity(null, MapCoordinates.Nullspace);
+            var unrelatedDisk = entities.SpawnEntity(null, MapCoordinates.Nullspace);
+            var firstDisk = entities.SpawnEntity(null, MapCoordinates.Nullspace);
+            var secondDisk = entities.SpawnEntity(null, MapCoordinates.Nullspace);
+            entities.AddComponent<SalvageExpeditionComponent>(expedition);
+            var unrelated = entities.AddComponent<ShuttleDestinationCoordinatesComponent>(unrelatedDisk);
+            var first = entities.AddComponent<ShuttleDestinationCoordinatesComponent>(firstDisk);
+            var second = entities.AddComponent<ShuttleDestinationCoordinatesComponent>(secondDisk);
+            unrelated.Destination = otherDestination;
+            first.Destination = expedition;
+            second.Destination = expedition;
+
+            entities.RemoveComponent<SalvageExpeditionComponent>(expedition);
+
+            Assert.That(unrelated.Destination, Is.EqualTo(otherDestination));
+            Assert.That(first.Destination, Is.Null);
+            Assert.That(second.Destination, Is.Null);
+
+            entities.DeleteEntity(unrelatedDisk);
+            entities.DeleteEntity(firstDisk);
+            entities.DeleteEntity(secondDisk);
+            entities.DeleteEntity(otherDestination);
+            entities.DeleteEntity(expedition);
+        });
 
         await pair.CleanReturnAsync();
     }

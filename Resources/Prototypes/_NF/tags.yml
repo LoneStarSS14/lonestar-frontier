@@ -162,6 +162,9 @@
   id: NFPaperStampProtected
 
 - type: Tag
+  id: DemagImmune
+
+- type: Tag
   id: NFGlowshroomSpores
 
 - type: Tag

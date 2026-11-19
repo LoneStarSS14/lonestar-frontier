@@ -38,6 +38,7 @@ public sealed partial class CCVars : CVars
     public static readonly CVarDef<bool> DebugPow3rDisableParallel =
         CVarDef.Create("debug.pow3r_disable_parallel", false, CVar.SERVERONLY);
 
+
     /// <summary>
     ///     Whether height & width sliders adjust a character's Fixture Component
     /// </summary>

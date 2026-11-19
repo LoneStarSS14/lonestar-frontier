@@ -8,9 +8,12 @@ namespace Content.Client.HealthAnalyzer.UI;
 [GenerateTypedNameReferences]
 public sealed partial class HealthAnalyzerWindow : FancyWindow
 {
+    public event Action? OnPrintPatientRecord; // Frontier: Allow printing hardcopy of patient information
+
     public HealthAnalyzerWindow()
     {
         RobustXamlLoader.Load(this);
+        HealthAnalyzer.OnPrintPatientRecord += () => OnPrintPatientRecord?.Invoke();
     }
 
     public void Populate(HealthAnalyzerScannedUserMessage msg)

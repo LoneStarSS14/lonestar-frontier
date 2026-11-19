@@ -1,5 +1,5 @@
 - type: blueprint
-  abstract: true
+  abstract: true # LoneStar
   id: NFAllResearchable
   name: nf-research-discipline-all
   blueprint: NFBlueprintGeneral

@@ -2,13 +2,13 @@ using Content.Server.Consent;
 using Content.Server.DoAfter;
 using Content.Server.EUI;
 using Content.Server.Popups;
-using Content.Server.Stunnable;
 using Content.Shared._HL.Brainwashing;
 using Content.Shared.Clothing;
 using Content.Shared.DoAfter;
 using Content.Shared.Flash;
 using Content.Shared.Flash.Components;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Movement.Systems;
 using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.StatusEffect;
 using Robust.Server.Audio;
@@ -27,7 +27,7 @@ public sealed class BrainwasherSystem : SharedBrainwasherSystem
     [Dependency] private readonly AudioSystem _audioSystem = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!;
     [Dependency] private readonly SharedFlashSystem _flashSystem = default!;
-    [Dependency] private readonly StunSystem _stun = default!;
+    [Dependency] private readonly MovementModStatusSystem _movement = default!;
     [Dependency] private readonly ConsentSystem _consentSystem = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     public override void Initialize()
@@ -66,7 +66,7 @@ public sealed class BrainwasherSystem : SharedBrainwasherSystem
             TimeSpan.FromSeconds(5),
             true);
 
-        _stun.TrySlowdown(user, TimeSpan.FromSeconds(5), true, 0, 0);
+        _movement.TryUpdateMovementSpeedModDuration(user, MovementModStatusSystem.FlashSlowdown, TimeSpan.FromSeconds(5), 0, 0);
         EnsureComp<BrainwashedComponent>(user, out var newBrainwashedComponent);
         _sharedBrainwashedSystem.SetCompulsions(user, newBrainwashedComponent, component.Compulsions);
         var brainwashedEvent = new BrainwashedEvent();

@@ -95,6 +95,7 @@
     damage:
       types:
         Piercing: 35 # LoneStar
+
 - type: entity
   id: NFBulletPistol45Overpressure
   name: bullet (.45 pistol, overpressure)

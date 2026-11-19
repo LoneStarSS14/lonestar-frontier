@@ -330,3 +330,33 @@
   - type: Construction
     graph: Cutlet
     node: casing
+
+- type: entity
+  name: medium roasted coffee beans
+  parent: FoodCoffeeBeansRoastedLight
+  id: FoodCoffeeBeansRoastedMedium
+  description: City roast coffee beans. Smooth and nutty.
+  components:
+  - type: Sprite
+    state: produce-beans-medium
+  - type: Item
+    heldPrefix: produce-beans-medium
+  - type: Construction
+    graph: Coffee
+    node: medium roasted coffee
+    defaultTarget: dark roasted coffee
+
+- type: entity
+  name: dark roasted coffee beans
+  parent: FoodCoffeeBeansRoastedLight
+  id: FoodCoffeeBeansRoastedDark
+  description: Viennese roast coffee beans. Smoky and spicy.
+  components:
+  - type: Sprite
+    state: produce-beans-dark
+  - type: Item
+    heldPrefix: produce-beans-dark
+  - type: Construction
+    graph: Coffee
+    node: dark roasted coffee
+    defaultTarget: Null

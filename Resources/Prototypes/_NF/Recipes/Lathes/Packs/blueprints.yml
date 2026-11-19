@@ -74,12 +74,12 @@
   - CircuitImprinterHyperConvectionMachineCircuitboard
   - SheetifierMachineCircuitboard
   - MaterialSiloMachineCircuitboard
-  - SlowWeakThrusterMachineCircuitboard
-  - SlowStrongThrusterMachineCircuitboard
-  - FastWeakThrusterMachineCircuitboard
-  - FastStrongThrusterMachineCircuitboard
-  - FasterWeakThrusterMachineCircuitboard
-  - ImpCoffeeMachineCircuitboard #imp
+  - SlowWeakThrusterMachineCircuitboard # LoneStar
+  - SlowStrongThrusterMachineCircuitboard # LoneStar
+  - FastWeakThrusterMachineCircuitboard # LoneStar
+  - FastStrongThrusterMachineCircuitboard # LoneStar
+  - FasterWeakThrusterMachineCircuitboard # LoneStar
+  - ImpCoffeeMachineCircuitboard # LoneStar
   # PowerGeneration
   - PortableGeneratorPacmanMachineCircuitboard
   - PortableGeneratorSuperPacmanMachineCircuitboard
@@ -108,7 +108,7 @@
   - MiniStationAnchorCircuitboard
   - SmallThrusterMachineCircuitboard
   - SmallGyroscopeMachineCircuitboard
-  - AutopilotServerCircuitboard # Wayfarer
+  - AutopilotServerCircuitboard # LoneStar
   # AdvancedAtmospherics
   - HellfireFreezerMachineCircuitBoard
   - PortableScrubberMachineCircuitBoard
@@ -132,11 +132,10 @@
   # AtmosphericDrilling
   - GasMiningDrillMachineCircuitboard
   - GaslockFrameMachineCircuitboard
-#  - GaslockBigFrameMachineCircuitboard
   # HardsuitsAdvanced
   - ClothingOuterHardsuitEngineeringWhite
   # PortableParticleEmission
-#  - NFWeaponParticleDecelerator
+  # - NFWeaponParticleDecelerator # LoneStar
   # MatterEnergyConversion
   - BorgModuleRCD
   # MagnetsTech
@@ -151,8 +150,6 @@
   recipes:
   # MeatManipulation
   - BiomassReclaimerMachineCircuitboard
-  # SmartStorageRefrigeration
-  - SmartFridgeCircuitboard # Coyote sector
   # BiochemicalStasis
   - StasisBedMachineCircuitboard
   - CryoPodMachineCircuitboard
@@ -195,10 +192,11 @@
   - ImpCoffeeMachineCircuitboard #imp
   # GravityResistantTech
   - HoverBedHoloSpawnFolded # Coyote
-  - JetInjector # Coyote
   # AdvancedMedicalHardsuits
   - ClothingOuterHardsuitResponseRed
   - ClothingOuterHardsuitResponseBlue
+  # LoneStar v
+  - LSSmartFridgeCircuitboard
 
 # region Mercenary
 - type: latheRecipePack
@@ -259,7 +257,7 @@
   - NFGrenadeEMP
   # PersonalPropulsion
   - JetpackNfsd
-  - ImpCoffeeMachineCircuitboard #imp
+  - ImpCoffeeMachineCircuitboard # LoneStar
 
 # region Salvage
 - type: latheRecipePack
@@ -305,7 +303,7 @@
   - ClothingOuterHardsuitSalvage
   # HardsuitsAdvanced
   - ClothingOuterHardsuitLuxury
-  - ImpCoffeeMachineCircuitboard #imp
+  - ImpCoffeeMachineCircuitboard # LoneStar
 
 # region Science
 - type: latheRecipePack
@@ -381,8 +379,6 @@
   # MeatManipulation
   - FatExtractorMachineCircuitboard
   - BiogeneratorMachineCircuitboard
-  # SmartStorageRefrigeration
-  - SmartFridgeCircuitboard
   # IndustrialCutter
   - CutterMachineCircuitboard
   # FauxAstroTiles
@@ -393,7 +389,7 @@
   - FauxTileAstroSnow
   - FauxTileAstroAsteroidSand
   # AdvancedCleaning
-  - BluespaceTrashBag
+  - BluespaceTrashBag # LoneStar
   - AdvMopItem
   - MegaSprayBottle
   - ReinforcedJug
@@ -446,7 +442,8 @@
   - ClothingOuterHardsuitClown
   - ClothingOuterHardsuitMime
   - ClothingOuterHardsuitPilot
-  - ImpCoffeeMachineCircuitboard #imp
+  - ImpCoffeeMachineCircuitboard # LoneStar
+
 #################
 #               #
 #               #
@@ -486,7 +483,7 @@
   - ClothingOuterCoatBHTrench
   - PinpointerUniversalNF
   - ClothingEyesHudBountyHunter
-  - ClothingEyesHudBountyHunterPatch
+  - ClothingEyesHudBountyHunterPatch # LoneStar
   - NFForensicPad
   # ImprovedPistolAmmo
   - NFAmmunitionBoxPistol35Overpressure
@@ -505,11 +502,11 @@
   - LSMagazineBoxRifle20Empty # LoneStar
   - NFMagazineShotgunDrumEmpty # LoneStar
   - MagazineAsmgtUniversalEmpty
-  # BulkAmmo
+  # BulkRifleAmmo
   - NFAmmunitionBoxBigPistol35
   - NFAmmunitionBoxBigPistol35Overpressure
-  - CSAmmunitionBoxBigPistol40
-  - CSAmmunitionBoxBigPistol40Overpressure
+  - CSAmmunitionBoxBigPistol40 # LoneStar
+  - CSAmmunitionBoxBigPistol40Overpressure # LoneStar
   - NFAmmunitionBoxBigPistol45
   - NFAmmunitionBoxBigPistol45Overpressure
   - NFAmmunitionBoxBigRifle20
@@ -582,4 +579,4 @@
   - ClothingOuterHardsuitPilot
   # HardsuitsAdvanced
   - ClothingOuterHardsuitCap
-  - ImpCoffeeMachineCircuitboard #imp
+  - ImpCoffeeMachineCircuitboard # LoneStar

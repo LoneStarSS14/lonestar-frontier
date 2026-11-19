@@ -4,18 +4,24 @@
   description: job-description-nf-detective
   playTimeTracker: JobDetective
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 43200 # 12 hours
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 14400 # 4 hours
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 21600 # 6 hours
+  alternateRequirementSets:
+    longerPlaytimeLessSec:
+    - !type:OverallPlaytimeRequirement
+      time: 360000 # 100 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 10800 # 3 hours as deputy
   startingGear: NFDetectiveGear
   icon: JobIconNFDetective
   supervisors: job-supervisors-bailiff
   weight: 110
   displayWeight: 20
   canBeAntag: false
-  consoleAdjustable: false
   access:
   - Detective
   accessGroups:
@@ -26,7 +32,7 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
-  - !type:AddComponentSpecial
+  - !type:AddComponentSpecial # Coyote: v
     components:
     - type: IsNfsd
 
@@ -43,9 +49,11 @@
     - ForensicPad
     - ForensicScanner
     - BaseSecurityUplinkRadioOfficer # Coyote: added uplink to detectives and removed starting FUCs
-    - LogProbeCartridge
+    # - FrontierUplinkCoin10 # Coyote: ^
     - RubberStampDetective
     - ContrabandForensicsModule
+  cartridges:
+  - LogProbeCartridge
 
 - type: chameleonOutfit
   id: NFDetectiveChameleonOutfit

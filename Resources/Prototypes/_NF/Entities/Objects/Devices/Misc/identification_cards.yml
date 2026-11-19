@@ -268,7 +268,7 @@
     name: Yip Yip
 
 - type: entity
-  parent: [IDCardStandard, BaseC4Contraband]
+  parent: [IDCardStandard, BaseCommandContraband]
   id: DocIDCard
   name: director of care ID card
   components:
@@ -300,7 +300,7 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
 
 - type: entity
-  parent: [IDCardStandard, BaseC4Contraband]
+  parent: [IDCardStandard, BaseCommandContraband]
   id: PlantManagerIDCard
   name: plant manager ID card
   components:
@@ -324,6 +324,14 @@
   components:
   - type: PresetIdCard
     name: Clippy
+
+- type: entity
+  parent: PlantTechnicianIDCard
+  id: CurieIDCard
+  name: curie ID card
+  components:
+  - type: PresetIdCard
+    name: Curie
 
 - type: entity
   parent: NFPirateFirstMateIDCard

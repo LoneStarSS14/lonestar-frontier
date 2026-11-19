@@ -172,21 +172,21 @@
 
 - type: entity
   parent: DrinkBottlePlasticBaseFull
-  id: JugNanocaf
-  name: nanocaf jug
+  id: JugCocoa
+  name: cocoa powder jug
   suffix: For Drinks, Full
-  description: A jug of nanocaf. It has the word coffee* written on it followed by a LOT of small print.
+  description: A jug of cocoa powder.
   components:
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 300
+        maxVol: 50
         reagents:
-        - ReagentId: Nanocaf
-          Quantity: 300
+        - ReagentId: CocoaPowder
+          Quantity: 50
   - type: Drink
   - type: Label
-    currentLabel: reagent-name-nanocaf
+    currentLabel: reagent-name-cocoapowder
 
 - type: entity
   parent: DrinkBottlePlasticBaseFull
@@ -205,3 +205,21 @@
   - type: Drink
   - type: Label
     currentLabel: reagent-name-water
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: JugNanocaf
+  name: nanocaf jug
+  suffix: For Drinks, Full
+  description: A jug of nanocaf. It has the word coffee* written on it followed by a LOT of small print.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: Nanocaf
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-nanocaf

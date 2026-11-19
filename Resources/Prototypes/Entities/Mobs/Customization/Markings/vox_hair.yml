@@ -81,7 +81,6 @@
   markingCategory: Hair
   canBeDisplaced: false
   speciesRestriction: [Vox]
-  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   sprites:
     - sprite: Mobs/Customization/vox_hair.rsi
       state: hedgehog_s
@@ -147,7 +146,6 @@
   markingCategory: Hair
   canBeDisplaced: false
   speciesRestriction: [Vox]
-  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   sprites:
     - sprite: Mobs/Customization/vox_hair.rsi
       state: mad_scientist_s
@@ -246,7 +244,6 @@
   markingCategory: Hair
   canBeDisplaced: false
   speciesRestriction: [Vox]
-  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
   sprites:
     - sprite: Mobs/Customization/vox_hair.rsi
       state: slick_s

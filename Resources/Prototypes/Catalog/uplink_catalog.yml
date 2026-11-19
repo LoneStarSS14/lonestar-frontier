@@ -1,6 +1,5 @@
 # TODO: make more categories
 # Guns
-
 - type: listing
   abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkPistolViper
@@ -142,7 +141,6 @@
 #       blacklist:
 #         tags:
 #           - NukeOpsUplink
-
 - type: listing
   id: UplinkEshield
   name: uplink-eshield-name
@@ -190,20 +188,20 @@
   categories:
   - UplinkWeaponry
 
-- type: listing
-  id: UplinkEstocBundle
-  name: uplink-estoc-bundle-name
-  description: uplink-estoc-bundle-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Rifles/estoc.rsi, state: icon }
-  productEntity: ClothingBackpackDuffelSyndicateFilledRifle
-  discountCategory: veryRareDiscounts
-  discountDownTo:
-    Telecrystal: 11
-  cost:
-    Telecrystal: 12 # LoneStar
-  categories:
-  - UplinkWeaponry
-
+# Frontier TODO: Balance this and readd
+#- type: listing
+#  id: UplinkEstocBundle
+#  name: uplink-estoc-bundle-name
+#  description: uplink-estoc-bundle-desc
+#  icon: { sprite: /Textures/Objects/Weapons/Guns/Rifles/estoc.rsi, state: icon }
+#  productEntity: ClothingBackpackDuffelSyndicateFilledRifle
+#  discountCategory: veryRareDiscounts
+#  discountDownTo:
+#    Telecrystal: 11
+#  cost:
+#    Telecrystal: 18
+#  categories:
+#  - UplinkWeaponry
 - type: listing
   id: UplinkBulldogBundle
   name: uplink-buldog-bundle-name
@@ -493,7 +491,6 @@
     - UplinkExplosives
 
 # Ammo
-
 - type: listing
   abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkPistol9mmMagazine
@@ -516,6 +513,31 @@
   # productEntity: MagazinePistolSubMachineGun # Frontier
   cost:
     Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+# For the Bulldog
+- type: listing
+  abstract: true # Frontier: moved to _NF uplink catalog
+  id: UplinkMagazineShotgunPellet
+  name: uplink-magazine-bulldog-pellet-name
+  description: uplink-magazine-bulldog-pellet-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: pellets }
+  productEntity: MagazineShotgun
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  abstract: true # Frontier: moved to _NF uplink catalog
+  id: UplinkMagazineShotgunSlug
+  name: uplink-magazine-bulldog-slug-name
+  description: uplink-magazine-bulldog-slug-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: slug }
+  productEntity: MagazineShotgunSlug
+  cost:
+    Telecrystal: 3
   categories:
   - UplinkAmmo
 
@@ -559,11 +581,11 @@
 
 # For the Estoc
 - type: listing
-  abstract: true
+  abstract: true # Frontier: TODO: Balance and readd
   id: UplinkEstocAmmo
   name: uplink-estoc-ammo-name
   description: uplink-estoc-ammo-desc
-  productEntity: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+#  productEntity: MagazineRifle # Frontier
   cost:
     Telecrystal: 2
   categories:
@@ -601,7 +623,6 @@
           - SurplusBundle
 
 #Chemicals
-
 - type: listing
   id: UplinkHypopen
   name: uplink-hypopen-name
@@ -762,7 +783,6 @@
           - SurplusBundle
 
 # Deception
-
 - type: listing
   id: UplinkAgentIDCard
   name: uplink-agent-id-card-name
@@ -882,7 +902,6 @@
 #     Telecrystal: 5
 #   categories:
 #   - UplinkDeception
-
 - type: listing
   id: UplinkDecoyKit
   name: uplink-decoy-kit-name
@@ -911,7 +930,6 @@
   # - UplinkDeception
 
 # Disruption
-
 - type: listing
   id: UplinkAccessBreaker
   name: uplink-access-breaker-name
@@ -950,33 +968,6 @@
     Telecrystal: 3
   categories:
   - UplinkDisruption
-
-- type: listing # Lonestar
-  id: UplinkSyndicateWeaponModule
-  name: uplink-syndicate-weapon-module-name
-  description: uplink-syndicate-weapon-module-desc
-  productEntity: BorgModuleSyndicateWeapon
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 3
-  cost:
-    Telecrystal: 6
-  categories:
-  - UplinkWeaponry # LoneStar
-
-# - type: listing # Frontier
-  # id: UplinkSyndicateMartyrModule
-  # name: uplink-syndicate-martyr-module-name
-  # description: uplink-syndicate-martyr-module-desc
-  # productEntity: BorgModuleMartyr
-  # icon: { sprite: /Textures/Objects/Specific/Robotics/borgmodule.rsi, state: syndicateborgbomb }
-  # discountCategory: veryRareDiscounts
-  # discountDownTo:
-    # Telecrystal: 2
-  # cost:
-    # Telecrystal: 4
-  # categories:
-    # - UplinkDisruption
 
 - type: listing
   id: UplinkSoapSyndie
@@ -1095,7 +1086,6 @@
       # tags:
       # - NukeOpsUplink
 
-
 - type: listing
   abstract: true # LoneStar
   id: UplinkSurplusBundle
@@ -1158,6 +1148,26 @@
 
 # End Frontier
 
+# - type: listing
+#   id: UplinkStarterKit
+#   name: uplink-starter-kit-name
+#   description: uplink-starter-kit-desc
+#   productEntity: ClothingBackpackDuffelSyndicateFilledStarterKit
+#   cost:
+#     Telecrystal: 40
+#   categories:
+#   - UplinkDisruption
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#         - NukeOpsUplink
+#     - !type:BuyerWhitelistCondition
+#       blacklist:
+#         components:
+#         - SurplusBundle
+
+# End Frontier
 - type: listing
   id: UplinkSingarityBeacon
   name: uplink-singularity-beacon-name
@@ -1182,7 +1192,6 @@
   - UplinkDisruption
 
 # Allies
-
 - type: listing
   id: UplinkHoloparaKit
   abstract: true # LoneStar
@@ -1341,7 +1350,6 @@
     stock: 1
 
 # Implants
-
 - type: listing
   id: UplinkStorageImplanter
   name: uplink-storage-implanter-name
@@ -1540,7 +1548,6 @@
 
 
 # Wearables
-
 - type: listing
   id: UplinkJetpack
   name: uplink-black-jetpack-name
@@ -1611,20 +1618,6 @@
     Telecrystal: 1
   cost:
     Telecrystal: 2
-  categories:
-  - UplinkWearables
-
-# TODO: Revert back to normal thieving gloves when clothes dyeing is added
-- type: listing
-  id: UplinkgClothingThievingGloves
-  name: uplink-clothing-chameleon-thieving-gloves-name
-  description: uplink-clothing-chameleon-thieving-gloves-desc
-  productEntity: ClothingHandsChameleonThief
-  discountCategory: veryRareDiscounts
-  discountDownTo:
-    Telecrystal: 3
-  cost:
-    Telecrystal: 5
   categories:
   - UplinkWearables
 
@@ -1962,7 +1955,6 @@
     stock: 30 # Coyote
 
 # Job Specific
-
 - type: listing
   id: uplinkGatfruitSeeds
   name: uplink-gatfruit-seeds-name
@@ -2104,7 +2096,6 @@
 #   - !type:BuyerJobCondition
 #     whitelist:
 #     - Clown
-
 - type: listing
   id: UplinkHoloclownKit
   abstract: true # LoneStar
@@ -2143,7 +2134,6 @@
 #     - Botanist
 #     - Clown
 #     - Mime
-
 - type: listing
   id: UplinkChimpUpgradeKit
   name: uplink-chimp-upgrade-kit-name
@@ -2202,7 +2192,6 @@
 #     - Scientist
 #     - ResearchDirector
 #     - Chef
-
 - type: listing
   id: UplinkCaneBlade
   name: uplink-cane-blade-name
@@ -2267,6 +2256,23 @@
 #     Telecrystal: 2
 #   categories:
 #   - UplinkDeception
+- type: listing
+  id: UplinkAcolyteArmor
+  name: uplink-acolyte-armor-name
+  description: uplink-acolyte-armor-desc
+  icon: { sprite: Clothing/OuterClothing/Armor/cult_armour.rsi, state: icon}
+  productEntity: ClothingBackpackDuffelAcolyteBundle
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkJob
+  conditions:
+  - !type:BuyerJobCondition
+    whitelist:
+    - Chaplain
 
 - type: listing
   id: UplinkSawAdvanced
@@ -2285,3 +2291,44 @@
   # - !type:BuyerJobCondition # Frontier
   #   whitelist: # Frontier
   #   - MedicalDoctor # Frontier
+
+- type: listing
+  id: UplinkEstocBundle
+  name: uplink-estoc-bundle-name
+  description: uplink-estoc-bundle-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Rifles/estoc.rsi, state: icon }
+  productEntity: ClothingBackpackDuffelSyndicateFilledRifle
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 11
+  cost:
+    Telecrystal: 12 # LoneStar
+  categories:
+  - UplinkWeaponry
+
+- type: listing # Lonestar
+  id: UplinkSyndicateWeaponModule
+  name: uplink-syndicate-weapon-module-name
+  description: uplink-syndicate-weapon-module-desc
+  productEntity: BorgModuleSyndicateWeapon
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWeaponry # LoneStar
+
+# - type: listing # Frontier
+  # id: UplinkSyndicateMartyrModule
+  # name: uplink-syndicate-martyr-module-name
+  # description: uplink-syndicate-martyr-module-desc
+  # productEntity: BorgModuleMartyr
+  # icon: { sprite: /Textures/Objects/Specific/Robotics/borgmodule.rsi, state: syndicateborgbomb }
+  # discountCategory: veryRareDiscounts
+  # discountDownTo:
+    # Telecrystal: 2
+  # cost:
+    # Telecrystal: 4
+  # categories:
+    # - UplinkDisruption

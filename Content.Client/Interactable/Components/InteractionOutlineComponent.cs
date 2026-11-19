@@ -8,16 +8,13 @@ namespace Content.Client.Interactable.Components
     [RegisterComponent]
     public sealed partial class InteractionOutlineComponent : Component
     {
+        private static readonly ProtoId<ShaderPrototype> ShaderInRange = "SelectionOutlineInrange";
+        private static readonly ProtoId<ShaderPrototype> ShaderOutOfRange = "SelectionOutline";
+
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IEntityManager _entMan = default!;
 
         private const float DefaultWidth = 1;
-
-        [ValidatePrototypeId<ShaderPrototype>]
-        private const string ShaderInRange = "SelectionOutlineInrange";
-
-        [ValidatePrototypeId<ShaderPrototype>]
-        private const string ShaderOutOfRange = "SelectionOutline";
 
         private bool _inRange;
         private ShaderInstance? _shader;
@@ -73,29 +70,13 @@ namespace Content.Client.Interactable.Components
         {
             var shaderName = inRange ? ShaderInRange : ShaderOutOfRange;
 
-            var instance = _prototypeManager.Index<ShaderPrototype>(shaderName).InstanceUnique();
-
-            // The outline shader samples texture pixels at outline_width distance
-            // For scaled sprites, we need to reduce this to prevent sampling outside the
-            // render target (which is sized as sprite screen bounds * 1.25)
+            var instance = _prototypeManager.Index(shaderName).InstanceUnique();
             var spriteScale = (sprite.Scale.X + sprite.Scale.Y) / 2.0f;
-
-            // Clamp outline width to 0.5 pixels for heavily scaled sprites (>1.5x)
-            // This prevents the outline from sampling outside the render target bounds
-            float outlineWidth;
-            if (spriteScale > 1.5f)
-            {
-                outlineWidth = 0.5f;
-            }
-            else if (spriteScale > 1.2f)
-            {
-                outlineWidth = 0.75f;
-            }
-            else
-            {
-                outlineWidth = DefaultWidth * renderScale;
-            }
-
+            var outlineWidth = spriteScale > 1.5f
+                ? 0.5f
+                : spriteScale > 1.2f
+                    ? 0.75f
+                    : DefaultWidth * renderScale;
             instance.SetParameter("outline_width", outlineWidth);
             return instance;
         }

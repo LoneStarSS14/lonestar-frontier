@@ -155,6 +155,7 @@
     - CSFolderStatic # Coyote: - folders and clipboard
     - LSAccessibilityFlarePack #LoneStar accessibility flares
     - LSChemistryStatic # LoneStar
+
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
@@ -503,7 +504,7 @@
       runningState: icon
       staticPacks:
       - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
-      - NFMercenaryMagazineStatic
+      - NFMercenaryMagazineStatic 
       - CSMagazineStatic # Coyote: Add .40 mags
     - type: MaterialStorage
       whitelist:

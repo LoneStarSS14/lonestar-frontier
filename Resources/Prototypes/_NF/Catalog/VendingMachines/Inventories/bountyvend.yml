@@ -1,3 +1,6 @@
+## LoneStar, removed all #infinite notes.
+## LoneStar TODO: ensure no non POI bounty vends are mapped on POIs
+
 - type: vendingMachineInventory
   id: BountyVendInventory
   startingInventory:
@@ -24,8 +27,6 @@
 # Mercenary
     ClothingHeadBandMercenary: 3
     ClothingHeadHatBeretMercenary: 3
-    ClothingHeadHelmetMercenary: 3 # LoneStar
-    ClothingHeadHelmetMercenaryBlack: 3 # LoneStar
     ClothingEyesGlassesMercenary: 3
     ClothingUniformJumpsuitMercenary: 3
     ClothingUniformJumpskirtMercenary: 3
@@ -45,9 +46,6 @@
     ClothingUniformJumpsuitPrivateSec: 3
     ClothingUniformJumpskirtPrivateSec: 3
     ClothingOuterVestWebMercenaryBlack: 3
-    ClothingOuterArmoredJacketPMCBlue: 3
-    ClothingOuterArmoredJacketPMCGreen: 3
-    ClothingOuterArmoredJacketPMCOlive: 3
     ClothingOuterEVASuitPrivateSec: 4
     ClothingBeltSecurity: 3
     ClothingBeltMilitaryWebbing: 3
@@ -68,6 +66,17 @@
     ClothingUniformJumpskirtBHGrey: 2
     ClothingOuterCoatBHTrench: 3
     ClothingShoesBootsJack: 3
+    ClothingNeckMantleBH: 3
+    ClothingNeckTieBH: 2
+# Goofy detective stuff
+    ClothingHeadHatDetGadget: 1
+    ClothingEyesGlassesNoir: 1
+# LoneStar
+    ClothingShoesToelessJackboots: 3
+    ClothingMaskGasSecurityBallistic: 3
+    ClothingHeadHelmetTacticalMaid: 3
+    ClothingOuterArmorBasicCompact: 3
+    ClothingOuterArmorTacticalMaid: 3
     ClothingShoesBootsJackHeels: 3
     ClothingHandsMercWarmers: 3
     ClothingUnderSocksMerc: 3
@@ -78,17 +87,9 @@
     ClothingHandsPilotWarmers: 3
     ClothingUnderSocksPilot: 3
     ClothingUniformPilotThong: 3
-    ClothingNeckMantleBH: 3
-    ClothingNeckTieBH: 2
-# Goofy detective stuff
-    ClothingHeadHatDetGadget: 1
-    ClothingEyesGlassesNoir: 1
-# LoneStar
-    ClothingShoesToelessJackboots: 4294967295
-    ClothingMaskGasSecurityBallistic: 4294967295
-    ClothingHeadHelmetTacticalMaid: 4294967295
-    ClothingOuterArmorBasicCompact: 4294967295 # I think competing for limited stock for these is already quite dumb.
-    ClothingOuterArmorTacticalMaid: 4294967295
+    ClothingOuterArmoredJacketPMCBlue: 3
+    ClothingOuterArmoredJacketPMCGreen: 3
+    ClothingOuterArmoredJacketPMCOlive: 3
 
 - type: vendingMachineInventory
   id: BountyVendPOIInventory
@@ -116,30 +117,27 @@
 # Mercenary
     ClothingHeadBandMercenary: 4294967295
     ClothingHeadHatBeretMercenary: 4294967295
-    ClothingHeadHelmetMercenary: 3 # LoneStar
-    ClothingHeadHelmetMercenaryBlack: 3 # LoneStar
+    ClothingHeadHelmetMercenary: 4294967295 # LoneStar
+    ClothingHeadHelmetMercenaryBlack: 4294967295 # LoneStar
     ClothingEyesGlassesMercenary: 4294967295
     ClothingUniformJumpsuitMercenary: 4294967295
     ClothingUniformJumpskirtMercenary: 4294967295
-    ClothingOuterVestWebMercenary: 3
+    ClothingOuterVestWebMercenary: 4294967295
     ClothingOuterEVASuitMercenary: 4294967295
     ClothingBeltMercenaryWebbing: 4294967295
     ClothingShoesBootsMercenary: 4294967295
     ClothingOuterBioArmoredMercenary: 4294967295
     ClothingHeadHatHoodBioArmoredMercenray: 4294967295
-    ClothingBackpackMercenary: 3
-    ClothingBackpackDuffelMercenary: 3
-    ClothingBackpackSatchelMercenary: 3
-    ClothingBackpackMessengerMercenary: 3
+    ClothingBackpackMercenary: 4294967295
+    ClothingBackpackDuffelMercenary: 429496729
+    ClothingBackpackSatchelMercenary: 4294967295
+    ClothingBackpackMessengerMercenary: 4294967295
 # Private Security
     ClothingHeadHatBeretSecurity: 4294967295
     ClothingEyesGlassesSunglasses: 4294967295
     ClothingUniformJumpsuitPrivateSec: 4294967295
     ClothingUniformJumpskirtPrivateSec: 4294967295
-    ClothingOuterVestWebMercenaryBlack: 3
-    ClothingOuterArmoredJacketPMCBlue: 3
-    ClothingOuterArmoredJacketPMCGreen: 3
-    ClothingOuterArmoredJacketPMCOlive: 3
+    ClothingOuterVestWebMercenaryBlack: 4294967295
     ClothingOuterEVASuitPrivateSec: 4294967295
     ClothingBeltSecurity: 4294967295
     ClothingBeltMilitaryWebbing: 4294967295
@@ -169,5 +167,18 @@
     ClothingShoesToelessJackboots: 4294967295
     ClothingMaskGasSecurityBallistic: 4294967295
     ClothingHeadHelmetTacticalMaid: 4294967295
-    ClothingOuterArmorBasicCompact: 4294967295 # I think competing for limited stock for these is already quite dumb.
+    ClothingOuterArmorBasicCompact: 4294967295
     ClothingOuterArmorTacticalMaid: 4294967295
+    ClothingShoesBootsJackHeels: 429496729
+    ClothingHandsMercWarmers: 4294967295
+    ClothingUnderSocksMerc: 4294967295
+    ClothingUniformMercThong: 4294967295
+    ClothingHandsPrivSecWarmers: 4294967295
+    ClothingUnderSocksPrivSec: 4294967295
+    ClothingUniformPrivSecThong: 4294967295
+    ClothingHandsPilotWarmers: 4294967295
+    ClothingUnderSocksPilot: 4294967295
+    ClothingUniformPilotThong: 4294967295
+    ClothingOuterArmoredJacketPMCBlue: 4294967295
+    ClothingOuterArmoredJacketPMCGreen: 4294967295
+    ClothingOuterArmoredJacketPMCOlive: 4294967295

@@ -3,8 +3,8 @@
 # Discord: ???
 
 # Maintainer Info
-# GitHub: ???
-# Discord: ???
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
 
 # Shuttle Notes:
 #
@@ -22,14 +22,14 @@
   - Salvage
   - Engineering
   engine:
-  - AME
+  - Uranium
 
 - type: gameMap
   id: Comet
   mapName: 'NT Comet'
   mapPath: /Maps/_NF/Shuttles/comet.yml
   minPlayers: 0
-  stations: 
+  stations:
     Comet:
       stationProto: StandardFrontierVessel
       components:
@@ -40,7 +40,7 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ] # LoneStar
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

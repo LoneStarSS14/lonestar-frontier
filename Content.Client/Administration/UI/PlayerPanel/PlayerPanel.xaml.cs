@@ -18,6 +18,7 @@ public sealed partial class PlayerPanel : FancyWindow
     public event Action<NetUserId?>? OnOpenBans;
     public event Action<NetUserId?>? OnAhelp;
     public event Action<string?>? OnKick;
+    public event Action<string?>? OnCamera;
     public event Action<NetUserId?>? OnOpenBanPanel;
     // public event Action<NetUserId?, bool>? OnWhitelistToggle; // LoneStar, removed
     public event Action? OnFollow;
@@ -40,6 +41,7 @@ public sealed partial class PlayerPanel : FancyWindow
         UsernameCopyButton.OnPressed += _ => OnUsernameCopy?.Invoke(TargetUsername ?? "");
         BanButton.OnPressed += _ => OnOpenBanPanel?.Invoke(TargetPlayer);
         KickButton.OnPressed += _ => OnKick?.Invoke(TargetUsername);
+        CameraButton.OnPressed += _ => OnCamera?.Invoke(TargetUsername);
         NotesButton.OnPressed += _ => OnOpenNotes?.Invoke(TargetPlayer);
         ShowBansButton.OnPressed += _ => OnOpenBans?.Invoke(TargetPlayer);
         AhelpButton.OnPressed += _ => OnAhelp?.Invoke(TargetPlayer);
@@ -55,8 +57,6 @@ public sealed partial class PlayerPanel : FancyWindow
         LogsButton.OnPressed += _ => OnLogs?.Invoke();
         DeleteButton.OnPressed += _ => OnDelete?.Invoke();
         RejuvenateButton.OnPressed += _ => OnRejuvenate?.Invoke();
-
-        JobWhitelistsButton.OnPressed += _ => OnOpenJobWhitelists?.Invoke(TargetPlayer); // DeltaV: Job whitelists
     }
 
     public void SetUsername(string player)
@@ -127,6 +127,7 @@ public sealed partial class PlayerPanel : FancyWindow
     {
         BanButton.Disabled = !_adminManager.CanCommand("banpanel");
         KickButton.Disabled = !_adminManager.CanCommand("kick");
+        CameraButton.Disabled = !_adminManager.CanCommand("camera");
         NotesButton.Disabled = !_adminManager.CanCommand("adminnotes");
         ShowBansButton.Disabled = !_adminManager.CanCommand("banlist");
         // WhitelistToggle.Disabled = // LoneStar, removed

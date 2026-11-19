@@ -1,4 +1,6 @@
-﻿using Robust.Shared.Configuration;
+using Content.Shared.Administration;
+using Content.Shared.CCVar.CVarAccess;
+using Robust.Shared.Configuration;
 
 namespace Content.Shared.CCVar;
 
@@ -77,5 +79,12 @@ public sealed partial class CCVars
         /// </summary>
         public static readonly CVarDef<bool> AndyAnnouncementsEnabled =
             CVarDef.Create("audio.andy_announcements_enabled", true, CVar.ARCHIVE | CVar.CLIENTONLY);
+
+        /// <summary>
+        ///     Lobby music collection string
+        /// </summary>
+        [CVarControl(AdminFlags.VarEdit)]
+        public static readonly CVarDef<string> LobbyMusicCollection =
+            CVarDef.Create("audio.lobby_music_collection", "NFLobbyMusic", CVar.REPLICATED | CVar.SERVER); // Frontier: LobbyMusic<NFLobbyMusic
 
 }

@@ -193,10 +193,13 @@ public sealed partial class SprayPainterWindow : DefaultWindow
                 _sprayPainterDecals = new SprayPainterDecals();
 
                 _sprayPainterDecals.OnDecalSelected += id => OnDecalChanged?.Invoke(id);
-                _sprayPainterDecals.OnColorChanged += color => OnDecalColorChanged?.Invoke(color);
+                _sprayPainterDecals.OnColorChanged += color =>
+                {
+                    OnDecalColorChanged?.Invoke(color);
+                    OnDecalColorPickerToggled?.Invoke(color.HasValue);
+                };
                 _sprayPainterDecals.OnAngleChanged += angle => OnDecalAngleChanged?.Invoke(angle);
                 _sprayPainterDecals.OnSnapChanged += snap => OnDecalSnapChanged?.Invoke(snap);
-                _sprayPainterDecals.OnColorPickerToggled += toggle => OnDecalColorPickerToggled?.Invoke(toggle);
 
                 Tabs.AddChild(_sprayPainterDecals);
                 TabContainer.SetTabTitle(_sprayPainterDecals, Loc.GetString("spray-painter-tab-category-decals"));
@@ -289,10 +292,12 @@ public sealed partial class SprayPainterWindow : DefaultWindow
             _sprayPainterDecals.SetAngle(angle);
     }
 
+    private Color? _decalColor;
+
     public void SetDecalColor(Color? color)
     {
-        if (_sprayPainterDecals != null)
-            _sprayPainterDecals.SetColor(color);
+        _decalColor = color;
+        _sprayPainterDecals?.SetColor(color);
     }
 
     public void SetDecalSnap(bool snap)
@@ -303,9 +308,12 @@ public sealed partial class SprayPainterWindow : DefaultWindow
 
     public void SetDecalColorPicker(bool colorPickerEnabled)
     {
-        _sprayPainterDecals?.SetColorPicker(colorPickerEnabled);
+        if (_sprayPainterDecals == null)
+            return;
+
+        _sprayPainterDecals.SetColor(colorPickerEnabled ? _decalColor ?? Color.White : null);
     }
-    #endregion
+    # endregion
 }
 
 public record SpriteListData(string Group, string Style, EntProtoId Prototype, int SelectedIndex) : ListData;

@@ -3,13 +3,11 @@
 # Discord: ???
 
 # Maintainer Info
-# GitHub: none
-# Discord: none
+# GitHub: crystalHex (https://github.com/crystalHex)
+# Discord: ???
 
 # Shuttle Notes:
-# Archetypes = Salvage
-# Halftypes = Medical
-# Domestic Areas = minimal
+#
 - type: vessel
   id: Dragonfly
   parent: BaseVessel
@@ -41,7 +39,7 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ] # LoneStar
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

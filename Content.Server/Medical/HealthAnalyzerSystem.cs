@@ -220,7 +220,7 @@ public sealed class HealthAnalyzerSystem : EntitySystem
     }
 
     /// <summary>
-    /// Creates a HealthAnalyzerState based on the current state of an entity.
+    /// Creates a HealthAnalyzerUiState based on the current state of an entity.
     /// </summary>
     /// <param name="target">The entity being scanned</param>
     /// <returns></returns>
@@ -242,9 +242,9 @@ public sealed class HealthAnalyzerSystem : EntitySystem
 
         if (TryComp<BloodstreamComponent>(entity, out var bloodstream) &&
             _solutionContainerSystem.ResolveSolution(entity, bloodstream.BloodSolutionName,
-                ref bloodstream.BloodSolution, out var bloodSolution))
+                ref bloodstream.BloodSolution, out _))
         {
-            bloodAmount = _bloodstreamSystem.GetBloodLevelPercentage(entity);
+            bloodAmount = _bloodstreamSystem.GetBloodLevelPercentage((entity, bloodstream));
             bleeding = bloodstream.BleedAmount > 0;
         }
 
@@ -258,7 +258,7 @@ public sealed class HealthAnalyzerSystem : EntitySystem
 
         var printable = HasComp<HealthAnalyzerPrinterComponent>(healthAnalyzer); // Frontier
 
-        var state = new HealthAnalyzerUiState(
+        return new HealthAnalyzerUiState(
             GetNetEntity(entity),
             bodyTemperature,
             bloodAmount,
@@ -268,9 +268,5 @@ public sealed class HealthAnalyzerSystem : EntitySystem
             unclonable, // Frontier
             printable // Frontier
         );
-
-        _uiSystem.ServerSendUiMessage(healthAnalyzer, HealthAnalyzerUiKey.Key, new HealthAnalyzerScannedUserMessage(state));
-
-        return state;
     }
 }

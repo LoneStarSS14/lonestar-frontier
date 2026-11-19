@@ -1,6 +1,5 @@
 
 # Base Alcohol
-
 - type: reagent
   id: Absinthe
   name: reagent-name-absinthe
@@ -33,6 +32,14 @@
           min: 10
         key: SeeingRainbows
         component: SeeingRainbows
+        type: Add
+        time: 5
+        refresh: false
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
         type: Add
         time: 5
         refresh: false
@@ -509,7 +516,6 @@
   fizziness: 0.8
 
 # Mixed Alcohol
-
 - type: reagent
   id: AcidSpit
   name: reagent-name-acid-spit
@@ -602,7 +608,6 @@
 
 #Antifreeze as a drink is a bright blue color while it is an orangish red otherwise.
 #As a result this sprite doesn't need changing.
-
 - type: reagent
   id: Antifreeze
   name: reagent-name-antifreeze
@@ -1039,7 +1044,6 @@
 #   metamorphicChangeColor: false
 
 # End Frontier
-
 - type: reagent
   id: ElectricShark
   name: reagent-name-electric-shark
@@ -2063,9 +2067,9 @@
         - !type:AdjustReagent
           reagent: Theobromine
           amount: 0.05
-        - !type:GenericStatusEffect
-          key: Drowsiness
-          time: 1.0
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 1
           type: Remove
   fizziness: 0.25
 
@@ -2094,9 +2098,9 @@
         - !type:AdjustReagent
           reagent: Theobromine
           amount: 0.05
-        - !type:GenericStatusEffect
-          key: Drowsiness
-          time: 1.0
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 1
           type: Remove
   fizziness: 0.15
 
@@ -2125,9 +2129,9 @@
         - !type:AdjustReagent
           reagent: Theobromine
           amount: 0.05
-        - !type:GenericStatusEffect
-          key: Drowsiness
-          time: 1.0
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 1
           type: Remove
   fizziness: 0.15
 
@@ -2156,9 +2160,9 @@
         - !type:AdjustReagent
           reagent: Theobromine
           amount: 0.05
-        - !type:GenericStatusEffect
-          key: Drowsiness
-          time: 1.0
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 1
           type: Remove
   fizziness: 0.25
 
@@ -2187,9 +2191,9 @@
         - !type:AdjustReagent
           reagent: Theobromine
           amount: 0.05
-        - !type:GenericStatusEffect
-          key: Drowsiness
-          time: 1.0
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 1
           type: Remove
   fizziness: 0.15
 
@@ -2218,9 +2222,9 @@
         - !type:AdjustReagent
           reagent: Theobromine
           amount: 0.05
-        - !type:GenericStatusEffect
-          key: Drowsiness
-          time: 1.0
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 1
           type: Remove
   fizziness: 0.25
 

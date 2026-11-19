@@ -29,7 +29,6 @@ public sealed class ModifyUndiesSystem : EntitySystem
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
-    [Dependency] private readonly HumanoidAppearanceSystem _humanoid = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly SharedConsentSystem _consentSystem = default!;
 
@@ -201,12 +200,11 @@ public sealed class ModifyUndiesSystem : EntitySystem
         if (!TryComp<HumanoidAppearanceComponent>(args.Target, out var humApp))
             return;
 
-        _humanoid.SetMarkingVisibility(
-            uid,
-            humApp,
-            mProt.ID,
-            !args.IsVisible
-        );
+        if (args.IsVisible)
+            humApp.HiddenMarkings.Add(mProt.ID);
+        else
+            humApp.HiddenMarkings.Remove(mProt.ID);
+        Dirty(args.Target.Value, humApp);
         // then make a text bubble!
         // one for the doer, one for the target
         // and one if the doer is the target

@@ -10,13 +10,15 @@ public sealed class ExpeditionSpawnCompleteEvent : EntityEventArgs
     public ushort MissionIndex;
     public EntityUid MapUid;
     public string EconomyId;
+    public bool OpenContract; // LoneStar
 
-    public ExpeditionSpawnCompleteEvent(EntityUid station, bool success, ushort missionIndex, EntityUid mapUid, string economyId)
+    public ExpeditionSpawnCompleteEvent(EntityUid station, bool success, ushort missionIndex, EntityUid mapUid, string economyId, bool openContract)
     {
         Station = station;
         Success = success;
         MissionIndex = missionIndex;
         MapUid = mapUid;
         EconomyId = economyId;
+        OpenContract = openContract; // LoneStar
     }
 }

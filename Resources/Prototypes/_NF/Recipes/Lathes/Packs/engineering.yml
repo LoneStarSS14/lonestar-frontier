@@ -27,6 +27,8 @@
   - StationMapElectronics
   - WallmountSubstationElectronics
   - SMESAdvancedMachineCircuitboard
+  - NFScreenTimerElectronics
+  - IntercomElectronics
 
 - type: latheRecipePack
   id: NFEngineeringBoardsStatic
@@ -49,12 +51,16 @@
   - PortableScrubberMachineCircuitBoard
   - ThermomachineFreezerMachineCircuitBoard
   - CondenserMachineCircuitBoard
-  - PowerComputerCircuitboard # Coyote
+  - PowerComputerCircuitboard # LoneStar
 
 - type: latheRecipePack
   id: NFEngineeringMaterialsStatic
   recipes:
   #- NFSheetRGlassProcessed
+  - NFSheetPaperFromWood
+  - NFSheetPaperFromCardboard
+  - NFMaterialCardboard1Processed
+  - PaperFromSheetPaper
   - NFSheetPGlass1Processed
   - NFSheetRPGlass1Processed
   - NFSheetPlasteel1Processed
@@ -74,11 +80,14 @@
   - JawsOfLife
   - BorgModuleRCD
   - BorgModuleAdvancedTool
+  - ShipyardRCD
+  - ShipyardRCDAmmo
 
 - type: latheRecipePack
   id: NFEngineeringBoards
   recipes:
   - PortableGeneratorDKJrMachineCircuitboard
+  # LoneStar v
   - GasMiningDrillMachineCircuitboard
   - GaslockFrameMachineCircuitboard
   - SlowWeakThrusterMachineCircuitboard
@@ -92,6 +101,14 @@
   recipes:
   - GasMiningDrillMachineCircuitboard
   - GaslockFrameMachineCircuitboard
+  - MaterialSiloMachineCircuitboard
+  - MiniStationAnchorCircuitboard
+  - NFHolopadGridMachineCircuitboard
+  - NFHolopadShipMachineCircuitboard
+  - PowerComputerCircuitboard
+  - SmallGyroscopeMachineCircuitboard
+  - SmallThrusterMachineCircuitboard
+  - SolarAssemblyFlatpack
 
 - type: latheRecipePack
   id: NFEngineering
@@ -105,4 +122,4 @@
   - SuperCapacitorStockPart
   - SuperMatterBinStockPart
   - PicoManipulatorStockPart
-#  - NFWeaponParticleDecelerator
+  # - NFWeaponParticleDecelerator # LoneStar

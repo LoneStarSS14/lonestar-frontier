@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Content.IntegrationTests.Tests.Interaction;
 using Content.Shared.Movement.Components;
 using Content.Shared.Slippery;
+using Content.Shared.Standing;
 using Content.Shared.Stunnable;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Input;
@@ -26,11 +27,12 @@ public sealed class SlippingTest : MovementTest
         }
     }
 
-    [Test]
-    public async Task BananaSlipTest()
+    [TestCase("TrashBananaPeel")]
+    [TestCase("ClownPDA")]
+    public async Task SlipRecoveryTest(string prototype)
     {
         var sys = SEntMan.System<SlipTestSystem>();
-        await SpawnTarget("TrashBananaPeel");
+        await SpawnTarget(prototype);
 
         var modifier = Comp<MovementSpeedModifierComponent>(Player).SprintSpeedModifier;
         Assert.That(modifier, Is.EqualTo(1), "Player is not moving at full speed.");
@@ -51,6 +53,12 @@ public sealed class SlippingTest : MovementTest
         await Move(DirectionFlag.West, 1f);
         Assert.That(sys.Slipped, Does.Contain(SEntMan.GetEntity(Player)));
         AssertComp<KnockedDownComponent>(true, Player);
+
+        await RunSeconds(5);
+
+        AssertComp<KnockedDownComponent>(false, Player);
+        var player = SEntMan.GetEntity(Player);
+        Assert.That(SEntMan.GetComponent<StandingStateComponent>(player).Standing, Is.True);
     }
 }
 

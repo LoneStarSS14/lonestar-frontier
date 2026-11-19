@@ -170,12 +170,12 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
-    # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
     taxAccounts: # LoneStar
       Frontier: 0.1
       Nfsd: 0.05
       Medical: 0.05
       Guild: 0.3
+    # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
   # - type: DatasetVocalizer
   #   dataset: BountyVendAds
   - type: Sprite
@@ -651,6 +651,9 @@
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/wallcivimed.rsi
+  - type: Physics
+    bodyType: Static
+    canCollide: false
 
 - type: entity
   parent: VendingMachine
@@ -755,7 +758,6 @@
     color: "#EEEEFF"
 
 #region POI versions of upstream machines
-
 - type: entity
   parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
   id: VendingMachineAmmoPOI
@@ -847,7 +849,6 @@
   suffix: POI
 
 # Gas Tank Dispenser
-
 - type: entity
   parent: [VendingMachineTankDispenserEVA, BaseStructureDisableAnchoring] #This one is flagged as POI
   id: VendingMachineTankDispenserEVAPOI
@@ -868,30 +869,6 @@
 #  - type: ActivatableUIRequiresAccess
 
 #region conjured MagiVend
-- type: entity
-  parent: [ BaseC3WizardContraband, VendingMachineMagivend ]
-  id: NFVendingMachineMagivend
-  suffix: Frontier
-  components:
-  - type: VendingMachine
-    pack: MagivendConjuredInventory
-    offState: off
-    brokenState: broken
-    normalState: normal-unshaded
-
-- type: entity
-  parent: [ VendingMachineMagivend, ConjuredObject180 ]
-  id: VendingMachineMagivendConjured
-  name: conjured MagiVend
-  description: A conjured magic vending machine. It will disappear shortly.
-  components:
-  - type: VendingMachine
-    pack: MagivendConjuredInventory
-    offState: off
-    brokenState: broken
-    normalState: normal-unshaded
-
-#region DEBUG
 - type: entity
   categories: [ DoNotMap ]
   parent: VendingMachineBountyVendPunk
@@ -954,3 +931,26 @@
         - TabletopMachineLayer
   - type: VendingMachine
     pack: DEBUGVendingMachineInventoryAmmoBoxes
+
+- type: entity
+  parent: [ VendingMachineMagivend, ConjuredObject180 ]
+  id: VendingMachineMagivendConjured
+  name: conjured MagiVend
+  description: A conjured magic vending machine. It will disappear shortly.
+  components:
+  - type: VendingMachine
+    pack: MagivendConjuredInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+
+- type: entity
+  parent: [ BaseC3WizardContraband, VendingMachineMagivend ]
+  id: NFVendingMachineMagivend
+  suffix: Frontier
+  components:
+  - type: VendingMachine
+    pack: MagivendConjuredInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded

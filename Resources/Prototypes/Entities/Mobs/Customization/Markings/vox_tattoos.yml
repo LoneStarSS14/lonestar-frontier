@@ -59,55 +59,7 @@
     state: nightling_s
 
 - type: marking
-  id: TattooVoxNightbelt
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Vox]
-  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
-  coloring:
-    default:
-      type:
-        !type:TattooColoring
-      fallbackColor: "#666666"
-  sprites:
-  - sprite: Mobs/Customization/vox_tattoos.rsi
-    state: nightbelt
-
-- type: marking
-  id: TattooVoxChestV
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Vox]
-  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
-  coloring:
-    default:
-      type:
-        !type:TattooColoring
-      fallbackColor: "#666666"
-  sprites:
-  - sprite: Mobs/Customization/vox_tattoos.rsi
-    state: chest_v_1
-  - sprite: Mobs/Customization/vox_tattoos.rsi
-    state: chest_v_2
-
-- type: marking
-  id: TattooVoxUnderbelly
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Vox]
-  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
-  coloring:
-    default:
-      type:
-        !type:TattooColoring
-      fallbackColor: "#666666"
-  sprites:
-  - sprite: Mobs/Customization/vox_tattoos.rsi
-    state: underbelly
-
-- type: marking
   id: TattooVoxTailRing
-  # TODO // Looks off on some tails (i.e docked/amputated), if conditionals for markings ever get implemented this needs to be updated to account for those.
   bodyPart: Tail
   markingCategory: Overlay
   speciesRestriction: [Vox]
@@ -188,6 +140,53 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: eyeshadow_large
+
+- type: marking
+  id: TattooVoxNightbelt
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/vox_tattoos.rsi
+    state: nightbelt
+
+- type: marking
+  id: TattooVoxChestV
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/vox_tattoos.rsi
+    state: chest_v_1
+  - sprite: Mobs/Customization/vox_tattoos.rsi
+    state: chest_v_2
+
+- type: marking
+  id: TattooVoxUnderbelly
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Vox]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # LoneStar, Allow all markings
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/vox_tattoos.rsi
+    state: underbelly
 
 - type: marking
   id: VoxTattooEyeliner
@@ -318,4 +317,3 @@
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
     state: cheekblush
-

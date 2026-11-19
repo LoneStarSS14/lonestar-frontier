@@ -54,8 +54,7 @@ public sealed class VocalSystem : EntitySystem
 
     private void OnEmote(EntityUid uid, VocalComponent component, ref EmoteEvent args)
     {
-        // if (args.Handled || !args.Emote.Category.HasFlag(EmoteCategory.Vocal))
-        //     return;
+        // Coyote: Vocal sound packs can define sounds for non-vocal emotes.
         if (args.Handled)
             return;
 
@@ -66,10 +65,13 @@ public sealed class VocalSystem : EntitySystem
             return;
         }
 
+        if (component.EmoteSounds is not { } sounds)
+            return;
+
         // just play regular sound based on emote proto
         args.Handled = _chat.TryPlayEmoteSound(
             uid,
-            component.EmoteSounds,
+            _proto.Index(sounds),
             component.SupplementalSounds,
             args.Emote);
     }
@@ -91,9 +93,12 @@ public sealed class VocalSystem : EntitySystem
             return true;
         }
 
+        if (component.EmoteSounds is not { } sounds)
+            return false;
+
         return _chat.TryPlayEmoteSound(
             uid,
-            component.EmoteSounds,
+            _proto.Index(sounds),
             component.SupplementalSounds,
             component.ScreamId);
     }
@@ -107,6 +112,10 @@ public sealed class VocalSystem : EntitySystem
 
         if (!component.Sounds.TryGetValue(sex.Value, out var protoId))
             return;
-        _proto.TryIndex(protoId, out component.EmoteSounds);
+
+        if (!_proto.HasIndex(protoId))
+            return;
+
+        component.EmoteSounds = protoId;
     }
 }

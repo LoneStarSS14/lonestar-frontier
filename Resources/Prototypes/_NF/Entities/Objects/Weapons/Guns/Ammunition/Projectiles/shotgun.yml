@@ -8,7 +8,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 11
+        Piercing: 11 # LoneStar
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -19,7 +19,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 13
+        Piercing: 13 # LoneStar
 
 - type: entity
   categories: [ HideSpawnMenu ]

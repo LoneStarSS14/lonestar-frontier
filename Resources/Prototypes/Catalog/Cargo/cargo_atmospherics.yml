@@ -91,7 +91,6 @@
 #  cost: 2600
 #  category: cargoproduct-category-name-atmospherics
 #  group: market
-
 - type: cargoProduct
   id: AtmosphericsPlasma
   abstract: true # Frontier

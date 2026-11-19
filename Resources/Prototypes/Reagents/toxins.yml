@@ -63,9 +63,8 @@
       - !type:MovespeedModifier
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        component: Drowsiness
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
         time: 4
         type: Add
         refresh: false
@@ -344,9 +343,8 @@
   metabolisms:
     Poison:
       effects:
-      - !type:GenericStatusEffect
-        key: SeeingRainbows
-        component: SeeingRainbows
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 10
         refresh: false
@@ -410,6 +408,8 @@
           message: "TheobromineIntolerance"
           response: "Damage"
           guidebookHelpthing: "they have Theobromine Intolerance Trait"
+        - !type:OrganType
+          type: Animal # Applying damage to the mobs with lower metabolism capabilities
         damage:
           types:
             Poison: 0.3 # DeltaV - slightly reduced to account for slowed metabolism rate
@@ -420,6 +420,11 @@
             message: "TheobromineIntolerance"
             response: "Vomit"
             guidebookHelpthing: "they have Theobromine Intolerance Trait"
+          - !type:OrganType
+            type: Animal
+          - !type:ReagentThreshold # DeltaV - Readded this. No longer causes vomitting at the lightest whiff of coffee
+            reagent: Theobromine
+            min: 0.5
 
 - type: reagent
   id: Amatoxin
@@ -609,7 +614,6 @@
         damage:
           types:
             Poison: 0.06
-
 
 - type: reagent
   id: Lead

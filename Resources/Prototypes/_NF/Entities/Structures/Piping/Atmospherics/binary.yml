@@ -186,8 +186,7 @@
   - type: IconSmooth
     key: walls
     mode: NoSprite
-#  - type: Machine
-#    board: GaslockBigFrameMachineCircuitboard
+
   - type: Destructible
     thresholds:
     - trigger:

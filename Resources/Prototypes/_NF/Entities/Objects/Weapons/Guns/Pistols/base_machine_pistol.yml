@@ -39,7 +39,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameMachinePistolGorlex
-  parent: [ BaseC4Contraband, NFBaseWeaponFrameMachinePistol ]
+  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameMachinePistol ]
   abstract: true
   components:
   - type: Gun

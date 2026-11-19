@@ -2,7 +2,7 @@
 - type: entity
   id: SMESBig
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseSMES]
-  suffix: 100kWh
+  suffix: 100kWh # LoneStar
   name: BLES
   description: A bluespace-leveraged energy storage (BLES) unit.
   components:
@@ -31,14 +31,14 @@
         state: bles-open
   - type: UpgradeBattery
     maxChargeMultiplier: 1 # non-upgradeable
-    baseMaxCharge: 360000000
+    baseMaxCharge: 360000000 # LoneStar
   - type: BatteryInterface
     minChargeRate: 50000
     maxChargeRate: 1500000
     minSupply: 50000
     maxSupply: 1500000
   - type: Battery
-    maxCharge: 360000000
+    maxCharge: 360000000 # LoneStar
   - type: PowerNetworkBattery
     maxSupply: 1500000
     maxChargeRate: 50000
