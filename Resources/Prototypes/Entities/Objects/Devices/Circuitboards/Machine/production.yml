@@ -42,8 +42,10 @@
   - type: MachineBoard
     prototype: Protolathe
     requirements: # Frontier
-      MatterBin: 2 # Frontier
-      Manipulator: 4 # Frontier
+      MatterBin: 2 # Frontier stackRequirements<requirements
+      Manipulator: 2 # Frontier stackRequirements<requirements
+   # stackRequirements: # Frontier
+      # Manipulator: 4 # Frontier
     tagRequirements:
       GlassBeaker:
         amount: 2

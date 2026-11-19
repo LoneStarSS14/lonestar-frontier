@@ -36,6 +36,7 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 3
     fillBaseName: fill-
+    inHandsMaxFillLevels: 0 # LoneStar, test fail fix
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
   id: DrinkSyndicateEggnogBottleFull
@@ -56,3 +57,4 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 3
     fillBaseName: fill-
+    inHandsMaxFillLevels: 0 # LoneStar, test fail fix

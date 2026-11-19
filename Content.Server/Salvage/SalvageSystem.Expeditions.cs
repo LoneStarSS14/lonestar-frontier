@@ -121,13 +121,15 @@ public sealed partial class SalvageSystem
         ClearPausedShuttleCacheForMap(uid);
         StopExpeditionWeather(uid, component);
 
-        // component.Stream = _audio.Stop(component.Stream); // _CS: moved to client
+        // component.Stream = _audio.Stop(component.Stream); // Frontier: moved to client
 
         // First wipe any disks referencing us
         var disks = AllEntityQuery<ShuttleDestinationCoordinatesComponent>();
-        while (disks.MoveNext(out var disk, out var diskComp)
-               && diskComp.Destination == uid)
+        while (disks.MoveNext(out var disk, out var diskComp))
         {
+            if (diskComp.Destination != uid) // LoneStar add: test fail related
+                continue;
+
             diskComp.Destination = null;
             Dirty(disk, diskComp);
         }
@@ -147,7 +149,7 @@ public sealed partial class SalvageSystem
         // Finish mission
         if (TryComp<SalvageExpeditionDataComponent>(component.Station, out var data))
         {
-            FinishExpedition((component.Station, data), component, uid); // _CS: add component
+            FinishExpedition((component.Station, data), component, uid); // Frontier: add component
         }
     }
 

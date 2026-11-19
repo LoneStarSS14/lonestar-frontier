@@ -34,8 +34,10 @@ public sealed class SmartFridgeInteractionTest : InteractionTest
       amount: 5
 ";
 
-    [TestCase("LSSmartFridge", "SmartFridgeCircuitboard")]
-    [TestCase("LSPunkSmartFridge", "LSPunkSmartFridgeCircuitboard")]
+    // LoneStar start
+    [TestCase("LSSmartFridge", "LSSmartFridgeCircuitboard")]
+    [TestCase("BangWiz", "BangWizCircuitboard")]
+    // LoneStar end
     public async Task LoneStarFridgesRemainConstructible(string fridgePrototype, string boardPrototype)
     {
         await SpawnTarget(fridgePrototype);

@@ -84,13 +84,3 @@
       slotFlags: WALLET
       uiWindowPos: 2,0
       displayName: Wallet
-
-    - name: wallet
-      stripTime: 3
-      stripHidden: true
-      strippingWindowPos: 1,2
-      slotTexture: wallet
-      slotFlags: WALLET
-      uiWindowPos: 2,0
-      dependsOn: jumpsuit
-      displayName: Wallet
