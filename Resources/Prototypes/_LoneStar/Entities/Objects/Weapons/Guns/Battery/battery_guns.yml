@@ -245,9 +245,9 @@
     - Burst
     shotsPerBurst: 3
     burstCooldown: 0.9
-  - type: Battery # 15 shots
-    maxCharge: 900
-    startingCharge: 900
+  - type: Battery # 12 shots
+    maxCharge: 720
+    startingCharge: 720
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-jurry-rigged
     class: weapon-details-class-pistol
