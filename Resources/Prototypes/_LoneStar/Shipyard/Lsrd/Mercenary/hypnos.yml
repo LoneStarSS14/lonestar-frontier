@@ -5,7 +5,7 @@
 - type: vessel
   id: LSHypnos
   parent: BaseVessel
-  name: NSF Hypnos
+  name: LSR Hypnos
   description: A light medium ship with a recommended crew of 2 to 3 officers, the Hypnos is a dedicated interdiction vessel outfitted with a powerful EMP device for tackling escaping vessels.
   price: 34500
   category: Medium
@@ -19,7 +19,7 @@
 
 - type: gameMap
   id: LSHypnos
-  mapName: 'NSF Hypnos'
+  mapName: 'LSR-Hypnos'
   mapPath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml
   minPlayers: 0
   stations:
@@ -27,7 +27,7 @@
       stationProto: StandardFrontierSecurityVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Hypnos {1}'
+          mapNameTemplate: 'LSR-Hypnos {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

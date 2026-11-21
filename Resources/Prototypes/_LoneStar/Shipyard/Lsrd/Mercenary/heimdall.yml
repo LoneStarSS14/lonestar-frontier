@@ -4,7 +4,7 @@
 
 - type: vessel
   id: LSHeimdall
-  name: NSF Heimdall
+  name: LSR Heimdall
   parent: BaseVessel
   description: A small detective runabout for intelligence gathering and forensic work.
   price: 27000
@@ -20,7 +20,7 @@
 
 - type: gameMap
   id: LSHeimdall
-  mapName: 'NSF Heimdall'
+  mapName: 'LSR-Heimdall'
   mapPath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml
   minPlayers: 0
   stations:
@@ -28,7 +28,7 @@
       stationProto: StandardFrontierSecurityVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Heimdall {1}'
+          mapNameTemplate: 'LSR-Heimdall {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

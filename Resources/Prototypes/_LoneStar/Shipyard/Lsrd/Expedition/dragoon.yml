@@ -4,7 +4,7 @@
 - type: vessel
   id: LSDragoon
   parent: BaseVessel
-  name: Dragoon
+  name: LSR Dragoon
   description: The Dragoon is the explorer of choice for adventures on a budget, mass produced and reliable.
   price: 77600
   category: Medium

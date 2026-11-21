@@ -4,7 +4,7 @@
 - type: vessel
   id: Garrison
   parent: BaseVessel
-  name: Garrison
+  name: LSR Garrison
   description: The Garrison, expedition capable, heavy in safety features, light on livery.
   price: 130000
   category: Medium

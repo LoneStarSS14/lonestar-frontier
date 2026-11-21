@@ -4,7 +4,7 @@
 - type: vessel
   id: Malinois
   parent: BaseVessel
-  name: TSF Malinois
+  name: LSR Malinois
   description: A medium assault craft designed to facilitate prisoner rehabilitation through labour, equipped with an EXP-2100g mounted grenade launcher.
   price: 39500
   category: Medium
@@ -20,7 +20,7 @@
 
 - type: gameMap
   id: Malinois
-  mapName: 'Malinois'
+  mapName: 'LSR-Malinois'
   mapPath: /Maps/_LoneStar/Shuttles/Lsrd/Mercenary/malinois.yml
   minPlayers: 0
   stations:

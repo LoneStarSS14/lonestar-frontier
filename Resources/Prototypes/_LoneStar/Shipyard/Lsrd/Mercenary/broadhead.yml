@@ -5,7 +5,7 @@
 - type: vessel
   id: LSBroadhead
   parent: BaseVessel
-  name: NSF Broadhead
+  name: LSR Broadhead
   description: A medium size detective ship with facilities for autopsies, interrogations and detailed investigations.
   price: 60000
   category: Medium
@@ -20,7 +20,7 @@
 
 - type: gameMap
   id: LSBroadhead
-  mapName: 'NSF Broadhead'
+  mapName: 'LSR-Broadhead'
   mapPath: /Maps/_NF/Shuttles/Nfsd/broadhead.yml
   minPlayers: 0
   stations:
@@ -28,7 +28,7 @@
       stationProto: StandardFrontierSecurityVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Broadhead {1}'
+          mapNameTemplate: 'LSR-Broadhead {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

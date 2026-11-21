@@ -1,7 +1,7 @@
 - type: vessel
   id: LSTemplar
   parent: BaseVessel
-  name: NSF Templar
+  name: LSR Templar
   description: A small security assault craft designed for combat interdiction operations.
   price: 24220
   category: Small
@@ -16,7 +16,7 @@
 
 - type: gameMap
   id: LSTemplar
-  mapName: 'NSF Templar'
+  mapName: 'LSR-Templar'
   mapPath: /Maps/_NF/Shuttles/Nfsd/templar.yml
   minPlayers: 0
   stations:
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Templar {1}'
+          mapNameTemplate: 'LSR-Templar {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
