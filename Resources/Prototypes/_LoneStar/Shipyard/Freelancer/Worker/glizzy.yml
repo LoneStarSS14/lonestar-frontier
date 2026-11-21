@@ -16,7 +16,7 @@
 
 - type: gameMap
   id: Glizzy
-  mapName: 'Glizzy'
+  mapName: 'FLG-Glizzy'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/glizzy.yml
   minPlayers: 0
   stations:
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Glizzy {1}'
+          mapNameTemplate: 'FLG-Glizzy {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

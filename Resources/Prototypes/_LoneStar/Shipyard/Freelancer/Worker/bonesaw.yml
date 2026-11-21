@@ -16,7 +16,7 @@
 
 - type: gameMap
   id: Bonesaw
-  mapName: 'Bonesaw'
+  mapName: 'FLG-Bonesaw'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/bonesaw.yml
   minPlayers: 0
   stations:
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Bonesaw {1}' # Very fake name
+          mapNameTemplate: 'FLG-Bonesaw {1}' # Very fake name
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

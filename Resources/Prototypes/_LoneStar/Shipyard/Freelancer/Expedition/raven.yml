@@ -19,7 +19,7 @@
 
 - type: gameMap
   id: Raven
-  mapName: 'Raven'
+  mapName: 'FLG-Raven'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/raven.yml
   minPlayers: 0
   stations:
@@ -27,7 +27,7 @@
       stationProto: StandardFrontierAntagExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Raven {1}'
+          mapNameTemplate: 'FLG-Raven {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

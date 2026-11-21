@@ -16,7 +16,7 @@
 
 - type: gameMap
   id: Hitchhiker
-  mapName: 'Hitchhiker'
+  mapName: 'FLG-Hitchhiker'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/hitchhiker.yml
   minPlayers: 0
   stations:
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Hitch-hiker {1}'
+          mapNameTemplate: 'FLG-Hitchhiker {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

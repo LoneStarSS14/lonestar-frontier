@@ -16,7 +16,7 @@
 
 - type: gameMap
   id: Watcher
-  mapName: 'Watcher'
+  mapName: 'FLG-Watcher'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Mercenary/watcher.yml
   minPlayers: 0
   stations:
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Watcher {1}'
+          mapNameTemplate: 'FLG-Watcher {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

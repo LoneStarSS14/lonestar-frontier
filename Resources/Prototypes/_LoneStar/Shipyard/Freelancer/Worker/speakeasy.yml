@@ -16,7 +16,7 @@
 
 - type: gameMap
   id: Speakeasy
-  mapName: 'Speakeasy'
+  mapName: 'FLG-Speakeasy'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/speakeasy.yml
   minPlayers: 0
   stations:
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Speakeasy {1}'
+          mapNameTemplate: 'FLG-Speakeasy  {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

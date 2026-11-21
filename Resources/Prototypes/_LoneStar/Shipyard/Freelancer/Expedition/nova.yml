@@ -18,7 +18,7 @@
 
 - type: gameMap
   id: Nova
-  mapName: 'Nova'
+  mapName: 'FLG-Nova'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/nova.yml
   minPlayers: 0
   stations:
@@ -26,7 +26,7 @@
       stationProto: StandardFrontierAntagExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Nova {1}'
+          mapNameTemplate: 'FLG-Nova {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

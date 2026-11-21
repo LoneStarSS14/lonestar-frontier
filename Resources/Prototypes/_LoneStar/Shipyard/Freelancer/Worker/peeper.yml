@@ -16,7 +16,7 @@
 
 - type: gameMap
   id: Peeper
-  mapName: 'Peeper'
+  mapName: 'FLG-Peeper'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/peeper.yml
   minPlayers: 0
   stations:
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Peeper {1}'
+          mapNameTemplate: 'FLG-Peeper  {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

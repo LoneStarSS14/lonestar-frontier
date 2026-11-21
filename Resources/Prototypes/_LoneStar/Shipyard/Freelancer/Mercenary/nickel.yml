@@ -16,7 +16,7 @@
 
 - type: gameMap
   id: Nickel
-  mapName: 'Nickel'
+  mapName: 'FLG-Nickel'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Mercenary/nickel.yml
   minPlayers: 0
   stations:

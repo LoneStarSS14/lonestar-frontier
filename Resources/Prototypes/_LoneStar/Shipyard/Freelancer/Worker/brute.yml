@@ -16,7 +16,7 @@
 
 - type: gameMap
   id: Brute
-  mapName: 'Brute'
+  mapName: 'FLG-Brute'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/brute.yml
   minPlayers: 0
   stations:
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Brute {1}'
+          mapNameTemplate: 'FLG-Brute {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

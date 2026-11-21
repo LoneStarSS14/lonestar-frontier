@@ -17,7 +17,7 @@
 
 - type: gameMap
   id: Findsman
-  mapName: 'Findsman'
+  mapName: 'FLG-Findsman'
   mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/findsman.yml
   minPlayers: 0
   stations:
@@ -25,7 +25,7 @@
       stationProto: StandardFrontierAntagExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Pathfinder {1}'
+          mapNameTemplate: 'FLG-Findsman {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
