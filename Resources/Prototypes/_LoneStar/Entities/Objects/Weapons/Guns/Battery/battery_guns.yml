@@ -174,3 +174,98 @@
           Disabler: { state: mode-disabler }
           Lethal: { state: mode-lethal }
           Flare: { state: mode-flare }
+
+- type: entity
+  id: NFWeaponEnergyPistolLaserAdvancedRadioactive
+  parent: NFWeaponEnergyPistolLaserAdvanced
+  name: battered advanced laser pistol
+  description: |-
+    A battered experimental civilian-grade high-energy laser pistol with a self-charging nuclear battery and two settings: disable and kill. Its microreactor shielding is damaged as a singular crack is visible on its casing.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/battered_advanced_laser_pistol.rsi
+    layers: # firemode left shaded vs. parent
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mode-lethal
+      map: [ "Firemode" ]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/battered_advanced_laser_pistol.rsi
+  - type: RadiationHolder
+    intensity: 0.03
+    interval: 1
+  - type: BatterySelfRecharger # Recharges 1 shot per 5 seconds
+    autoRecharge: true
+    autoRechargeRate: 12
+
+- type: entity
+  id: NFWeaponEnergyPistolLaserAntiqueFaulty
+  parent: NFWeaponEnergyPistolLaserAntique
+  name: damaged antique laser pistol
+  description: |-
+    An antique laser pistol with two settings: disable and kill. Its craftsmanship was once of the highest quality, but now the mahogany is scratched and the chrome filigree is battered with cracks at the top and bottom. It flickers with energy as its damaged power cell holds fewer charges and recharges sluggishly. On the item is an image of a dead clown and a captain. The NanoTrasen’s logo and captain's face have been scratched out. 
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/damaged_antiquelasergun.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/damaged_antiquelasergun.rsi
+  - type: Battery # 13 shots
+    maxCharge: 780
+    startingCharge: 780
+  - type: BatterySelfRecharger # Recharges 1 shot per 3 seconds
+    autoRecharge: true
+    autoRechargeRate: 20
+
+- type: entity
+  id: NFWeaponEnergyPistolLaserModified
+  parent: NFWeaponEnergyPistolLaser
+  name: jury-rigged laser pistol
+  description: |-
+    A jury-rigged model of civilian-grade laser pistol. It fires in rapid three-projectile bursts. It's disabling option has been removed and two additional components were welded beneath the barrel and trigger assembly. The added weight and uneven weld beads make it harder to aim.
+  components:
+  - type: EnergyGun
+    fireModes:
+    - proto: NFBulletLaserLow
+      fireCost: 60
+  - type: Gun
+    examineCaliber: gun-examine-hitscan-low
+    minAngle: 6
+    maxAngle: 16
+    angleIncrease: 2
+    angleDecay: 1
+    fireRate: 1
+    burstFireRate: 10
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    shotsPerBurst: 3
+    burstCooldown: 0.9
+  - type: Battery # 15 shots
+    maxCharge: 900
+    startingCharge: 900
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-jurry-rigged
+    class: weapon-details-class-pistol
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/jury-rigged_laser_pistol.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Guns/Battery/jury-rigged_laser_pistol.rsi
+  - type: Item
+    size: Small
+    # shape:
+    # - 0,0,1,1
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-unshaded
+        shader: unshaded
+      right:
+      - state: inhand-right
+      - state: inhand-right-unshaded
+        shader: unshaded
+

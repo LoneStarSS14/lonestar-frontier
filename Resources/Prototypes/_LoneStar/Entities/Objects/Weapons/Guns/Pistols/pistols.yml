@@ -9,3 +9,24 @@
     sprite: _LoneStar/Objects/Weapons/Guns/Pistols/lsrdmk22.rsi
   - type: Clothing
     sprite: _LoneStar/Objects/Weapons/Guns/Pistols/lsrdmk22.rsi
+
+- type: entity
+  id: NFWeaponPistolMk58s
+  parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
+  name: mk58-S
+  description: A custom-made MK58 with a reforged barrel, integrated suppressor and optical sight. Unauthorized alterations to NanoTrasen-patented firearms are strictly prohibited, and possession of such a weapon carries severe legal consequences. Its rarity and exorbitant price do little to deter wealthy gun-enthusiast executives from commissioning one.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Guns/Pistols/mk58s.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Guns/Pistols/mk58s.rsi
+  - type: Gun
+    minAngle: 2.6
+    maxAngle: 12.6
+    angleIncrease: 0.9
+    angleDecay: 3.7
+    fireRate: 3.4
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
