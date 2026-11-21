@@ -1,0 +1,37 @@
+# Shuttle Notes:
+# is noted in the DNM whitelist because of its duster cannon
+
+- type: vessel
+  id: Malinois
+  parent: BaseVessel
+  name: TSF Malinois
+  description: A medium assault craft designed to facilitate prisoner rehabilitation through labour, equipped with an EXP-2100g mounted grenade launcher.
+  price: 39500
+  category: Medium
+  group: Security
+  access: LsrdShipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/Lsrd/Mercenary/malinois.yml
+  class:
+  - Fighter
+  - Salvage
+  engine:
+  - Plasma
+  - APU
+
+- type: gameMap
+  id: Malinois
+  mapName: 'Malinois'
+  mapPath: /Maps/_LoneStar/Shuttles/Lsrd/Mercenary/malinois.yml
+  minPlayers: 0
+  stations:
+    Malinois:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Malinois {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

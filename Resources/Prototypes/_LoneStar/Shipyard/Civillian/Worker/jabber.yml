@@ -1,0 +1,36 @@
+- type: vessel
+  id: Jabber
+  parent: BaseVessel
+  name: LL1 Jabber
+  description: A cargo shuttle focusing on comfort, has an advanced dragon thruster to help it get to voidports.
+  price: 31250
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Worker/jabber.yml
+  guidebookPage: ShipyardJabber
+  class:
+  - Civilian
+  - Cargo
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Jabber
+  mapName: 'Jabber'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Worker/jabber.yml
+  minPlayers: 0
+  stations:
+    Jabber:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Jabber {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

@@ -1,0 +1,36 @@
+- type: vessel
+  id: Schlog
+  parent: BaseVessel
+  name: LL0 Schlog
+  description: A slow solar sailboat for- wait are those express crates... oh dear.
+  price: 8550
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/_LoneStar/Shuttles/Scrap/schlog.yml
+  guidebookPage: Null
+  class:
+  - Cargo
+  engine:
+  - Solar
+  - Welding
+
+- type: gameMap
+  id: Schlog
+  mapName: 'Schlog'
+  mapPath: /Maps/_LoneStar/Shuttles/Scrap/schlog.yml
+  minPlayers: 0
+  stations:
+    Schlog:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Schlog {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

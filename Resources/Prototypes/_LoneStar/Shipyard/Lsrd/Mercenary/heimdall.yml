@@ -1,0 +1,37 @@
+# Author Info
+# GitHub: Tych0theSynth
+# Discord: Tych0
+
+- type: vessel
+  id: LSHeimdall
+  name: NSF Heimdall
+  parent: BaseVessel
+  description: A small detective runabout for intelligence gathering and forensic work.
+  price: 27000
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml
+  guidebookPage: Null
+  class:
+  - Detective
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: LSHeimdall
+  mapName: 'NSF Heimdall'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml
+  minPlayers: 0
+  stations:
+    Heimdall:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Heimdall {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            CSClerk: [ 0, 0 ]
