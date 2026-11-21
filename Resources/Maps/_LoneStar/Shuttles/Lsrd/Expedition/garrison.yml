@@ -490,7 +490,7 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: BecomesStation
-      id: Prowler
+      id: Garrison
     - type: ImplicitRoof
 - proto: AirAlarm
   entities:

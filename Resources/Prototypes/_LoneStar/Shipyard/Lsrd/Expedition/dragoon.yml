@@ -23,7 +23,7 @@
   mapPath: /Maps/_LoneStar/Shuttles/Lsrd/Expedition/dragoon.yml
   minPlayers: 0
   stations:
-    Dragoon:
+    LSDragoon:
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
@@ -33,4 +33,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            CSClerk: [ 0, 0 ]
+            InterviewLSClerk: [ 0, 0 ]

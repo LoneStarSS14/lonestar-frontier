@@ -4,7 +4,7 @@
 - type: vessel
   id: LSBarnacle
   parent: BaseVesselAntag
-  name: FLG-Barnacle
+  name: FLG Barnacle
   description: 'Nobody expects the lowly barnacle'
   price: 20000
   category: Small
@@ -33,4 +33,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            LSEscort: [ 0, 0 ]
+            InterviewLSEscort: [ 0, 0 ]

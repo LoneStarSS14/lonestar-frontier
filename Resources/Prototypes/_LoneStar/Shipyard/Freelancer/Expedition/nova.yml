@@ -1,7 +1,7 @@
 - type: vessel
   id: Nova
   parent: BaseVesselAntag
-  name: Nova
+  name: FLG Nova
   description: A Pulsar retrofitted for illegal salvage operations
   price: 146500 #41647$ +50$k(exped) LL2 x1.6 = 146,635$
   category: Medium

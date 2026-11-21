@@ -1,7 +1,7 @@
 - type: vessel
   id: Peeper
   parent: BaseVesselAntag
-  name: Peeper
+  name: FLG Peeper
   description: "Once the voice of Nash, now the voice of freedom. Just don't get caught being a peeping tom!"
   price: 18000
   category: Small

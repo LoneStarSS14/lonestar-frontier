@@ -5,7 +5,7 @@
 - type: vessel
   id: LSBocakillo
   parent: BaseVesselAntag
-  name: FLG-Bocakillo
+  name: FLG Bocakillo
   description: A tiny plastitanium vessel suited to a crew of 2 to 3 pirates. Has two broadside cannons and a rear-facing disposals launcher. Runs on plasma.
   price: 35000
   category: Small
@@ -34,4 +34,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            LSEscort: [ 0, 0 ]
+            InterviewLSEscort: [ 0, 0 ]

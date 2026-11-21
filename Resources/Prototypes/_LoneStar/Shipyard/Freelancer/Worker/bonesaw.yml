@@ -1,7 +1,7 @@
 - type: vessel
   id: Bonesaw
   parent: BaseVesselAntag
-  name: LL1 Bonesaw
+  name: FLG Bonesaw
   description: A Modified Searchlight for provide questionable medical assistance
   price: 47500
   category: Small

@@ -1,7 +1,7 @@
 - type: vessel
   id: Findsman
   parent: BaseVesselAntag
-  name: Findsman
+  name: FLG Findsman
   description: A Pathfinder modified to hunt down and capture people for ransom, Exped Capable
   price: 105500 #34413, +50$k(exped) LL2 x1.3 = 109,736
   category: Small
@@ -31,4 +31,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            LSEscort: [ 0, 0 ]
+            InterviewLSEscort: [ 0, 0 ]

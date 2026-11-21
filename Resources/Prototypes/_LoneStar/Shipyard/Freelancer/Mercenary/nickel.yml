@@ -1,7 +1,7 @@
 - type: vessel
   id: Nickel
   parent: BaseVesselAntag
-  name: Nickel
+  name: FLG Nickel
   description: A Bulker retrofitted into a proper tank. Ready to dish out some real damage
   price: 12500 # TODO: check this beats resale
   category: Medium
@@ -30,4 +30,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            LSEscort: [ 0, 0 ]
+            InterviewLSEscort: [ 0, 0 ]

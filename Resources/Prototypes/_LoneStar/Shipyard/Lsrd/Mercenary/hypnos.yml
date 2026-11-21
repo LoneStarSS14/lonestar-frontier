@@ -33,4 +33,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            CSClerk: [ 0, 0 ]
+            InterviewLSClerk: [ 0, 0 ]

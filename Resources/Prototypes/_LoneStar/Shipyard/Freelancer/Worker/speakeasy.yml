@@ -1,7 +1,7 @@
 - type: vessel
   id: Speakeasy
   parent: BaseVesselAntag
-  name: Speakeasy
+  name: FLG Speakeasy
   description: "A Modified Kildernkin for all your illicit meetings and dealings"
   price: 62500
   category: Medium

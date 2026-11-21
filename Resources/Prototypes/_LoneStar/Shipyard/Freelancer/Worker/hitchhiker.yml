@@ -1,7 +1,7 @@
 - type: vessel
   id: Hitchhiker
   parent: BaseVesselAntag
-  name: Hitchhiker
+  name: FLG Hitchhiker
   description: A Modified Camper to designed to sell companionship
   price: 20000
   category: Small

@@ -1,7 +1,7 @@
 - type: vessel
   id: LSSchooner
   parent: BaseVesselAntag
-  name: FLG-Schooner
+  name: FLG Schooner
   description: A small wooden ship with 2 central cargo bays.
   price: 40000
   category: Medium
@@ -30,4 +30,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            LSEscort: [ 0, 0 ]
+            InterviewLSEscort: [ 0, 0 ]

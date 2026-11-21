@@ -1,7 +1,7 @@
 - type: vessel
   id: Brute
   parent: BaseVesselAntag
-  name: Brute
+  name: FLG Brute
   description: A Bulker retrofitted into a proper tank. Ready to dish out some real damage
   price: 42500
   category: Medium

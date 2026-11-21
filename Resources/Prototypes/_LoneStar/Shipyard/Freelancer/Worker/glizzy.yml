@@ -1,7 +1,7 @@
 - type: vessel
   id: Glizzy
   parent: BaseVesselAntag
-  name: Glizzy
+  name: FLG Glizzy
   description: "Rebuilt on the basis off of one hot dog. The glizzy flies just as far into the mouthes of danger, ready to snag any and all contraband."
   price: 14750
   category: Small
