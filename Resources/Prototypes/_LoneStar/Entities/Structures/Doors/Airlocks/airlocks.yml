@@ -1,0 +1,452 @@
+#region SectorCommand Airlocks
+#MARK: Default
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, Airlock ]
+  id: LSAirlockSectorCommandLocked
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockMaint ]
+  id: LSAirlockSectorCommandLockedMaint
+  name: airlock # Neat... thanks wizden.
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockAtmospherics ]
+  id: LSAirlockSectorCommandLockedAtmospherics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockCommand ]
+  id: LSAirlockSectorCommandLockedCommand
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockChemistry ]
+  id: LSAirlockSectorCommandLockedChemistry
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockHydroponics ]
+  id: LSAirlockSectorCommandLockedHydroponics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockMedical ]
+  id: LSAirlockSectorCommandLockedMedical
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockMercenary ]
+  id: LSAirlockSectorCommandLockedMercenary
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockSalvage ]
+  id: LSAirlockSectorCommandLockedSalvage
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockSecurity ]
+  id: LSAirlockSectorCommandLockedSecurity
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockEngineering ]
+  id: LSAirlockSectorCommandLockedEngineering
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockCargo ]
+  id: LSAirlockSectorCommandLockedCargo
+
+#MARK: Glass
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockGlass ]
+  id: LSAirlockSectorCommandLockedGlass
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockMaintGlass ]
+  id: LSAirlockSectorCommandLockedGlassMaint
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockAtmosphericsGlass ]
+  id: LSAirlockSectorCommandLockedGlassAtmospherics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockCommandGlass ]
+  id: LSAirlockSectorCommandLockedGlassCommand
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockChemistryGlass ]
+  id: LSAirlockSectorCommandLockedGlassChemistry
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockHydroponicsGlass ]
+  id: LSAirlockSectorCommandLockedGlassHydroponics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockMedicalGlass ]
+  id: LSAirlockSectorCommandLockedGlassMedical
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockMercenaryGlass ]
+  id: LSAirlockSectorCommandLockedGlassMercenary
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockSalvageGlass ]
+  id: LSAirlockSectorCommandLockedGlassSalvage
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockSecurityGlass ]
+  id: LSAirlockSectorCommandLockedGlassSecurity
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockEngineeringGlass ]
+  id: LSAirlockSectorCommandLockedGlassEngineering
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockCargoGlass ]
+  id: LSAirlockSectorCommandLockedGlassCargo
+#endregion
+
+#region Nash(Staff) Airlocks
+#MARK: Default
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, Airlock ]
+  id: LSAirlockNashLocked
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockMaint ]
+  id: LSAirlockNashLockedMaint
+  name: airlock # Neat... thanks wizden.
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockAtmospherics ]
+  id: LSAirlockNashLockedAtmospherics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockCommand ]
+  id: LSAirlockNashLockedCommand
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockChemistry ]
+  id: LSAirlockNashLockedChemistry
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockHydroponics ]
+  id: LSAirlockNashLockedHydroponics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockMedical ]
+  id: LSAirlockNashLockedMedical
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockMercenary ]
+  id: LSAirlockNashLockedMercenary
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockSalvage ]
+  id: LSAirlockNashLockedSalvage
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockSecurity ]
+  id: LSAirlockNashLockedSecurity
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockEngineering ]
+  id: LSAirlockNashLockedEngineering
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockCargo ]
+  id: LSAirlockNashLockedCargo
+
+#MARK: Glass
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockGlass ]
+  id: LSAirlockNashLockedGlass
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockMaintGlass ]
+  id: LSAirlockNashLockedGlassMaint
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockAtmosphericsGlass ]
+  id: LSAirlockNashLockedGlassAtmospherics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockCommandGlass ]
+  id: LSAirlockNashLockedGlassCommand
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockChemistryGlass ]
+  id: LSAirlockNashLockedGlassChemistry
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockHydroponicsGlass ]
+  id: LSAirlockNashLockedGlassHydroponics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockMedicalGlass ]
+  id: LSAirlockNashLockedGlassMedical
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockMercenaryGlass ]
+  id: LSAirlockNashLockedGlassMercenary
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockSalvageGlass ]
+  id: LSAirlockNashLockedGlassSalvage
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockSecurityGlass ]
+  id: LSAirlockNashLockedGlassSecurity
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockEngineeringGlass ]
+  id: LSAirlockNashLockedGlassEngineering
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockCargoGlass ]
+  id: LSAirlockNashLockedGlassCargo
+#endregion
+
+#region Freelancer Airlocks
+- type: entity
+  parent: Airlock
+  id: LSAirlockFreelancer
+  suffix: Freelancer
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Standard/basic-freelancer.rsi
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, LSAirlockFreelancer ]
+  id: LSAirlockFreelancerLockedFreelancer
+
+- type: entity
+  parent: AirlockGlass
+  id: LSAirlockFreelancerGlass
+  suffix: Freelancer
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/basic-freelancer.rsi
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, LSAirlockFreelancerGlass ]
+  id: LSAirlockFreelancerLockedGlassFreelancer
+
+#MARK: Standard - Locked
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, Airlock ]
+  id: LSAirlockFreelancerLocked
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockMaint ]
+  id: LSAirlockFreelancerLockedMaint
+  name: airlock # Neat... thanks wizden.
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockAtmospherics ]
+  id: LSAirlockFreelancerLockedAtmospherics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockCommand ]
+  id: LSAirlockFreelancerLockedCommand
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockChemistry ]
+  id: LSAirlockFreelancerLockedChemistry
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockHydroponics ]
+  id: LSAirlockFreelancerLockedHydroponics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockMedical ]
+  id: LSAirlockFreelancerLockedMedical
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockMercenary ]
+  id: LSAirlockFreelancerLockedMercenary
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockSalvage ]
+  id: LSAirlockFreelancerLockedSalvage
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockSecurity ]
+  id: LSAirlockFreelancerLockedSecurity
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockEngineering ]
+  id: LSAirlockFreelancerLockedEngineering
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockCargo ]
+  id: LSAirlockFreelancerLockedCargo
+
+#MARK: Glass - Locked
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockGlass ]
+  id: LSAirlockFreelancerLockedGlass
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockMaintGlass ]
+  id: LSAirlockFreelancerLockedGlassMaint
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockAtmosphericsGlass ]
+  id: LSAirlockFreelancerLockedGlassAtmospherics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockCommandGlass ]
+  id: LSAirlockFreelancerLockedGlassCommand
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockChemistryGlass ]
+  id: LSAirlockFreelancerLockedGlassChemistry
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockHydroponicsGlass ]
+  id: LSAirlockFreelancerLockedGlassHydroponics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockMedicalGlass ]
+  id: LSAirlockFreelancerLockedGlassMedical
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockMercenaryGlass ]
+  id: LSAirlockFreelancerLockedGlassMercenary
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockSalvageGlass ]
+  id: LSAirlockFreelancerLockedGlassSalvage
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockSecurityGlass ]
+  id: LSAirlockFreelancerLockedGlassSecurity
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockEngineeringGlass ]
+  id: LSAirlockFreelancerLockedGlassEngineering
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockCargoGlass ]
+  id: LSAirlockFreelancerLockedGlassCargo
+#endregion
+
+#region Lsrd Airlocks
+- type: entity
+  parent: Airlock
+  id: LSAirlockLsrd
+  suffix: Lsrd
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Standard/basic-lsrd.rsi
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, LSAirlockLsrd ]
+  id: LSAirlockLsrdLockedLsrd
+
+- type: entity
+  parent: AirlockGlass
+  id: LSAirlockLsrdGlass
+  suffix: Lsrd
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/basic-lsrd.rsi
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, LSAirlockLsrdGlass ]
+  id: LSAirlockLsrdLockedGlassLsrd
+
+#MARK: Default
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, Airlock ]
+  id: LSAirlockLsrdLocked
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockMaint ]
+  id: LSAirlockLsrdLockedMaint
+  name: airlock # Neat... thanks wizden.
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockAtmospherics ]
+  id: LSAirlockLsrdLockedAtmospherics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockCommand ]
+  id: LSAirlockLsrdLockedCommand
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockChemistry ]
+  id: LSAirlockLsrdLockedChemistry
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockHydroponics ]
+  id: LSAirlockLsrdLockedHydroponics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockMedical ]
+  id: LSAirlockLsrdLockedMedical
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockMercenary ]
+  id: LSAirlockLsrdLockedMercenary
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockSalvage ]
+  id: LSAirlockLsrdLockedSalvage
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockSecurity ]
+  id: LSAirlockLsrdLockedSecurity
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockEngineering ]
+  id: LSAirlockLsrdLockedEngineering
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockCargo ]
+  id: LSAirlockLsrdLockedCargo
+
+#MARK: Glass
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockGlass ]
+  id: LSAirlockLsrdLockedGlass
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockMaintGlass ]
+  id: LSAirlockLsrdLockedGlassMaint
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockAtmosphericsGlass ]
+  id: LSAirlockLsrdLockedGlassAtmospherics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockCommandGlass ]
+  id: LSAirlockLsrdLockedGlassCommand
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockChemistryGlass ]
+  id: LSAirlockLsrdLockedGlassChemistry
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockHydroponicsGlass ]
+  id: LSAirlockLsrdLockedGlassHydroponics
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockMedicalGlass ]
+  id: LSAirlockLsrdLockedGlassMedical
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockMercenaryGlass ]
+  id: LSAirlockLsrdLockedGlassMercenary
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockSalvageGlass ]
+  id: LSAirlockLsrdLockedGlassSalvage
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockSecurityGlass ]
+  id: LSAirlockLsrdLockedGlassSecurity
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockEngineeringGlass ]
+  id: LSAirlockLsrdLockedGlassEngineering
+
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockCargoGlass ]
+  id: LSAirlockLsrdLockedGlassCargo
+#endregion
