@@ -44,3 +44,5 @@ jobs:
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
+        ROBUST_CDN_URL: https://cdn.lonestarss14.com/
+        FORK_ID: lonestar-staging
