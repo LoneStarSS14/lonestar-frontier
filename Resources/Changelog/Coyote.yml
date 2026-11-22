@@ -4819,3 +4819,12 @@ Entries:
   id: 524
   time: '2026-11-15T19:07:16.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/326
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Coin trees now die after a day and spawn their coins in higher
+        denominations less frequently.
+  id: 525
+  time: '2026-11-22T15:50:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/331
