@@ -1,3 +1,4 @@
+#region Base Constructed
 - type: entity
   id: WindoorF
   parent: Windoor
@@ -63,8 +64,9 @@
   - type: Construction
     graph: Windoor
     node: uwindoorSecure
-      
-# Locked Variants
+#endregion
+
+#region Locked Variants
 - type: entity
   parent: WindoorServiceLockedF
   id: WindoorBarLockedF
@@ -170,8 +172,7 @@
     containers:
       board: [ DoorElectronicsTheatre ]
 
-# Secure
-
+#MARK: Secure
 - type: entity
   parent: WindoorSecureF
   id: WindoorSecureArmoryLockedF
@@ -511,8 +512,7 @@
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
 
-# Syndicate
-
+#MARK: Syndicate
 - type: entity
   parent: WindoorF
   id: WindoorSyndicateLockedF
@@ -621,9 +621,7 @@
     containers:
       board: [ DoorElectronicsNukeop ]
 
-
-# DV Mail Variants
-
+#MARK: DV Mail
 - type: entity
   parent: WindoorF
   id: WindoorMailLockedF
@@ -641,5 +639,60 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsMailCarrier ]
+#endregion
 
-# End DV Mail Variants
+#region Frontier Variants
+- type: entity
+  parent: WindoorSecureF
+  id: WindoorSecureMercenaryLockedF
+  suffix: Mercenary, Locked, Flipped
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMercenary ]
+
+- type: entity
+  parent: WindoorSecureF
+  id: WindoorSecureFrontierLockedF
+  suffix: Frontier, Locked, Flipped
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontier ]
+
+- type: entity
+  parent: WindoorSecureF
+  id: WindoorSecureFrontierCommandLockedF
+  suffix: Frontier Command, Locked, Flipped
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierCommand ]
+
+- type: entity
+  parent: WindoorSecureF
+  id: WindoorSecureHeadOfSecurityLockedF
+  suffix: Chief Ranger, Locked, Flipped
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHeadOfSecurity ]
+
+- type: entity
+  parent: WindoorSecureF
+  id: WindoorSecureBrigmedicLockedF
+  suffix: Corpsman, Locked, Flipped
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBrigmedic ]
+
+- type: entity
+  parent: WindoorSecureF
+  id: WindoorSecurePirateLockedF
+  suffix: Pirate, Locked, Flipped
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPirate ]
+#endregion
