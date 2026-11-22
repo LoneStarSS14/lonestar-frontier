@@ -12,6 +12,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+    - name: Fail if we are attempting to run on anything but the staging branch.
+      if: ${{GITHUB.REF_NAME != 'staging'}}
+      run: exit 1
 
     steps:
     - uses: actions/checkout@v3.6.0
