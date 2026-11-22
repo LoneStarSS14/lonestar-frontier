@@ -13,10 +13,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Fail if we are attempting to run on anything but the staging branch.
-      if: ${{GITHUB.REF_NAME != 'staging'}}
-      run: exit 1
-
     - uses: actions/checkout@v3.6.0
       with:
         submodules: 'recursive'
@@ -24,6 +20,7 @@ jobs:
       uses: actions/setup-dotnet@v3.2.0
       with:
         dotnet-version: 9.0.x
+        ref: staging
 
     - name: Get Engine Tag
       run: |
@@ -46,6 +43,7 @@ jobs:
       run: Tools/publish_multi_request.py
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        PUBLISH_SHA: ${{ steps.checkout.outputs.commit }}
         GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
         ROBUST_CDN_URL: https://cdn.lonestarss14.com/
         FORK_ID: lonestar-staging
