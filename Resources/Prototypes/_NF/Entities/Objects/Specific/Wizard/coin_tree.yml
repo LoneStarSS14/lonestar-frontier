@@ -27,7 +27,7 @@
   - type: EntityTableSpawner
     offset: 0.0
     table: !type:NestedSelector
-      tableId: TableTreeCoin
+      tableId: LSTableTreeCoin # LoneStar
       prob: 1.00
 
 #region tree
@@ -60,10 +60,14 @@
         layer:
         - TableLayer
   - type: Timer
+  # LoneStar start
   - type: TimedSpawner
     prototypes:
     - SpawnTreeCoin
-    chance: 0.75
-    intervalSeconds: 120
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 2
+    chance: 1
+    intervalSeconds: 1200
+  - type: TimedDespawn
+    lifetime: 86400 # 24 hours
+  - type: SpawnOnDespawn
+    prototype: PottedPlantCoinTreeWilted
+  # LoneStar end
