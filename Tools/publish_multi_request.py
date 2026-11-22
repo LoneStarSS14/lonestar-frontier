@@ -7,16 +7,10 @@ import subprocess
 from typing import Iterable
 
 PUBLISH_TOKEN = os.environ["PUBLISH_TOKEN"]
-VERSION = os.environ["GITHUB_SHA"]
-
+VERSION = os.environ["PUBLISH_SHA"]
 RELEASE_DIR = "release"
-
-#
-# CONFIGURATION PARAMETERS
-# Forks should change these to publish to their own infrastructure.
-#
-ROBUST_CDN_URL =  "https://cdn.lonestarss14.com/"
-FORK_ID = "lonestar"
+ROBUST_CDN_URL = os.environ["ROBUST_CDN_URL"]
+FORK_ID = os.environ["FORK_ID"]
 
 def main():
     parser = argparse.ArgumentParser()
