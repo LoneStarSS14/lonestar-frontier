@@ -20351,13 +20351,6 @@ entities:
     - type: Transform
       pos: -15.5,-3.5
       parent: 1
-- proto: MachineCryoSleepPod
-  entities:
-  - uid: 2576
-    components:
-    - type: Transform
-      pos: -7.5,-26.5
-      parent: 1
   - uid: 2577
     components:
     - type: Transform

@@ -12823,28 +12823,6 @@ entities:
     - type: Transform
       pos: 2.5,-8.5
       parent: 1
-- proto: MachineCryoSleepPod
-  entities:
-  - uid: 294
-    components:
-    - type: Transform
-      pos: 6.5,-17.5
-      parent: 1
-  - uid: 797
-    components:
-    - type: Transform
-      pos: 5.5,-19.5
-      parent: 1
-  - uid: 1518
-    components:
-    - type: Transform
-      pos: 5.5,-17.5
-      parent: 1
-  - uid: 2417
-    components:
-    - type: Transform
-      pos: 6.5,-19.5
-      parent: 1
 - proto: MachineElectrolysisUnit
   entities:
   - uid: 859
