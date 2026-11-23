@@ -464,6 +464,7 @@
     job: Visitor
 
 - type: entity
+  abstract: true # LoneStar
   parent: IDCardStandard
   id: BrigmedicIDCard
   name: brigmedic ID card
@@ -860,6 +861,7 @@
 
 - type: entity
   parent: SecurityIDCard
+  abstract: true
   id: SeniorOfficerIDCard
   name: senior officer ID card
   components:

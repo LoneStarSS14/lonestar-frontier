@@ -32,8 +32,8 @@
   - type: Sprite
     sprite: _LoneStar/Objects/Devices/encryption_keys.rsi
     layers:
-    - state: lsrd_key
-    - state: lsrd_label
+    - state: crypt_lsrd # LoneStar
+    - state: label_lsrd # LoneStar
 
 - type: entity
   parent: EncryptionKey

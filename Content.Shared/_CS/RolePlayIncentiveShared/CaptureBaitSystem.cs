@@ -15,7 +15,7 @@ public sealed class CaptureBaitSystem : EntitySystem
 
     private void OnExamined(Entity<CaptureBaitComponent> ent, ref ExaminedEvent args)
     {
-        if (!HasComp<IsPirateComponent>(args.Examiner))
+        if (!HasComp<IsFreelancerComponent>(args.Examiner))
             return;
         var baiText = Loc.GetString("capture-bait-examine-text");
         args.PushMarkup(baiText);

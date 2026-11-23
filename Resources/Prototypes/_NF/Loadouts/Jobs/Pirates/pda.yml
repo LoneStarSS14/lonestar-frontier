@@ -1,17 +1,20 @@
 - type: loadout
   id: NFPirateNFPiratePDA
+  abstract: true # LoneStar
   price: 0
   equipment:
     id: NFPiratePDA
 
 - type: loadout
   id: NFPirateCaptainNFPirateCaptainPDA
+  abstract: true # LoneStar
   price: 0
   equipment:
     id: NFPirateCaptainPDA
 
 - type: loadout
   id: NFPirateFirstMateNFPirateFirstMatePDA
+  abstract: true # LoneStar
   price: 0
   equipment:
     id: NFPirateFirstMatePDA

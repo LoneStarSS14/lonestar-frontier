@@ -15,9 +15,8 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSMasterAtArms
+      - LSEnforcer
 
 - type: listing
   id: UplinkPirateKatanaMurasama
@@ -36,9 +35,8 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSMasterAtArms
+      - LSEnforcer
 
 - type: listing
   id: UplinkPirateKatanaPhaseblade
@@ -57,9 +55,8 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSMasterAtArms
+      - LSEnforcer
 
 - type: listing
   id: UplinkPirateRatvarianSpear
@@ -78,6 +75,5 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
-      - NFPirate
-      - NFPirateFirstMate
-      - NFPirateCaptain
+      - LSMasterAtArms
+      - LSEnforcer

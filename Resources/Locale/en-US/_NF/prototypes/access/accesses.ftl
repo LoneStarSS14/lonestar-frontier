@@ -7,4 +7,3 @@ id-card-access-level-sergeant = Senior Ranger
 id-card-access-level-bailiff = Armorer
 id-card-access-level-brigmedic = Corpsman
 id-card-access-level-pirate = Pirate
-id-card-access-level-blackmarket = BlackMarket

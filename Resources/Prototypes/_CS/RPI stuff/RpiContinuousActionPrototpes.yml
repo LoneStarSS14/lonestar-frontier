@@ -7,9 +7,9 @@
   optimalDistanceBonusMultiplier: 2.0
   examineTextKey: capturebait
   targetMustHaveTheseComponents:
-  - type: IsPirate
+  - type: IsFreelancer
   userMustNotHaveTheseComponents:
-  - type: IsPirate
+  - type: IsFreelancer
   maxTargets: 5
 
 - type: rpiContinuousProxyAction
@@ -23,7 +23,7 @@
   targetMustHaveTheseComponents:
   - type: CaptureBait
   userMustHaveTheseComponents:
-  - type: IsPirate
+  - type: IsFreelancer
   maxTargets: 5
 
 - type: rpiContinuousProxyAction
