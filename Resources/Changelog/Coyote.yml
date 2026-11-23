@@ -4828,3 +4828,10 @@ Entries:
   id: 525
   time: '2026-11-22T15:50:35.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/331
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Some Nash QOL and tweaks
+  id: 526
+  time: '2026-11-23T01:08:07.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/329
