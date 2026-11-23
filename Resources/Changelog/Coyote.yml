@@ -4844,3 +4844,43 @@ Entries:
   id: 527
   time: '2026-11-23T05:46:26.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/333
+- author: archee1
+  changes:
+    - type: Add
+      message: New freelancer command position "Master At Arms"
+    - type: Add
+      message: >-
+        New LSRD job, RO (retrieval officer) that functions similar to smugglers
+        in that they collect items for FUC converting.
+    - type: Add
+      message: >-
+        New LSRD non-combat job; Clerk, it is the counterpart to escorts in that
+        they have no in-round responsibility aside being considered 'a member'
+        of the faction.
+    - type: Tweak
+      message: >-
+        A lot of LSRD's jobs have been merged into 'Enforcer' or into Chief
+        ranger.
+    - type: Tweak
+      message: >-
+        Escort has been split into 2 jobs, Spy, and Escort, with spy being a
+        counterpart to detectives.
+    - type: Tweak
+      message: Den and LSRDO are now equally 3.5-4.5km away from nash each shift.
+    - type: Tweak
+      message: Both faction's medical roles now take medical nurse time to play.
+    - type: Tweak
+      message: >-
+        LSRD and Freelancers now have full loadout selection alike other roles
+        (merc specific items are limited to the combat inclined roles)
+    - type: Tweak
+      message: >-
+        Chief ranger is no longer a whitelisted role and will require 100h of
+        LSRD factional time, and 40 hours of enforcer.
+    - type: Tweak
+      message: SR, Secretaries, and Nash-Sec now start with freelancer comms
+    - type: Fix
+      message: Sheleg are now forced to spawn with EVA on as the guild leader
+  id: 528
+  time: '2026-11-23T22:10:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/285
