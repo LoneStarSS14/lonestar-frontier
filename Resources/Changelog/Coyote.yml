@@ -4884,3 +4884,10 @@ Entries:
   id: 528
   time: '2026-11-23T22:10:01.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/285
+- author: Wolfhauler
+  changes:
+    - type: Fix
+      message: Vulp Advanced Engi helm fix
+  id: 529
+  time: '2026-11-23T22:12:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/335
