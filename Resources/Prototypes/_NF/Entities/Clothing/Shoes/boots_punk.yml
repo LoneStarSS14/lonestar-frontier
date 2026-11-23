@@ -23,29 +23,22 @@
         map: [ "clothing_boots_decor" ]
       - state: mask_null
         map: [ "clothing_boots_overlay" ]
+        shader: unshaded # LoneStar
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
-    available:
-    # decor present
-    - boots_main: &bootsMain
-        icon_base_boots_01: Base
-      clothing_boots_main: &clothingBootsMain
-        base_boots_01: Base
-      boots_decor:
-        icon_decor_base_boots_01: Decor
-      clothing_boots_decor:
-        decor_base_boots_01: Decor
-      clothing_boots_overlay: &bootsOverlay
-        decor_base_boots_02: Cyberpunk
-        mask_null: ""
-    # decor absent
-    - boots_main: *bootsMain
-      clothing_boots_main: *clothingBootsMain
-      boots_decor:
-        mask_null: ""
-      clothing_boots_decor:
-        mask_null: ""
-      clothing_boots_overlay: *bootsOverlay
+    denyReroll: false
     mappedColors:
-      Base: Cyberpunk
-      Decor: Cyberpunk
+      Primary: Cyberpunk
+      Secondary: Cyberpunk
+      Tertiary: CyberpunkNeon
+    available:
+    - boots_main:
+        icon_base_boots_01: Primary
+      clothing_boots_main:
+        base_boots_01: Primary
+      boots_decor:
+        icon_decor_base_boots_01: Secondary
+      clothing_boots_decor:
+        decor_base_boots_01: Secondary
+      clothing_boots_overlay:
+        decor_base_boots_02: Tertiary
+        mask_null: ""

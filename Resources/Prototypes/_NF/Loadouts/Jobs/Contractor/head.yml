@@ -531,6 +531,7 @@
 
 - type: loadout
   id: ContractorClothingHeadHatJester
+  tags: [Colorable] # LoneStar
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -543,6 +544,7 @@
 
 - type: loadout
   id: ContractorClothingHeadHatJesterAlt
+  tags: [Colorable] # LoneStar
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -555,6 +557,7 @@
 
 - type: loadout
   id: ContractorClothingHeadHatBeret
+  tags: [Colorable] # LoneStar
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2

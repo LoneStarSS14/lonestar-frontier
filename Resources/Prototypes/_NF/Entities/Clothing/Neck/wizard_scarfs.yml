@@ -39,13 +39,15 @@
         shader: unshaded
         color: "#96A3B0"
   - type: ColorableClothing # LoneStar
+    mappedColors:
+      Base: WizardMagicColorsBlue
     available:
       - wizard_stole_base:
-          equipped-NECK: WizardMagicColorsBlue
+          equipped-NECK: Base
         wizard_stole_runes:
-          equipped-NECK-unshaded-01: WizardMagicColorsBlue
-          equipped-NECK-unshaded-02: WizardMagicColorsBlue
-          equipped-NECK-unshaded-03: WizardMagicColorsBlue
+          equipped-NECK-unshaded-01: Base
+          equipped-NECK-unshaded-02: Base
+          equipped-NECK-unshaded-03: Base
 
 #region red wizard
 - type: entity
@@ -85,13 +87,16 @@
         shader: unshaded
         color: "#7A3D00"
   - type: ColorableClothing # LoneStar
+    mappedColors:
+      Primary: WizardMagicColorsRed
+      Secondary: WizardMagicColorsRed
     available:
       - wizard_stole_base:
-          equipped-NECK: WizardMagicColorsRed
+          equipped-NECK: Primary
         wizard_stole_runes:
-          equipped-NECK-unshaded-01: WizardMagicColorsRed
-          equipped-NECK-unshaded-02: WizardMagicColorsRed
-          equipped-NECK-unshaded-03: WizardMagicColorsRed
+          equipped-NECK-unshaded-01: Secondary
+          equipped-NECK-unshaded-02: Secondary
+          equipped-NECK-unshaded-03: Secondary
 
 #region purple wizard
 - type: entity
@@ -131,13 +136,16 @@
         shader: unshaded
         color: "#AB769E"
   - type: ColorableClothing # LoneStar
+    mappedColors:
+      Primary: WizardMagicColorsRed
+      Secondary: WizardMagicColorsRed
     available:
       - wizard_stole_base:
-          equipped-NECK: WizardMagicColorsPurple
+          equipped-NECK: Primary
         wizard_stole_runes:
-          equipped-NECK-unshaded-01: WizardMagicColorsPurple
-          equipped-NECK-unshaded-02: WizardMagicColorsPurple
-          equipped-NECK-unshaded-03: WizardMagicColorsPurple
+          equipped-NECK-unshaded-01: Secondary
+          equipped-NECK-unshaded-02: Secondary
+          equipped-NECK-unshaded-03: Secondary
 
 #region blood cult
 - type: entity
@@ -177,13 +185,16 @@
         shader: unshaded
         color: "#6e3c3c"
   - type: ColorableClothing # LoneStar
+    mappedColors:
+      Primary: BloodCultMagicColors
+      Secondary: BloodCultMagicColors
     available:
       - wizard_stole_base:
-          equipped-NECK: BloodCultMagicColors
+          equipped-NECK: Primary
         wizard_stole_runes:
-          equipped-NECK-unshaded-01: BloodCultMagicColors
-          equipped-NECK-unshaded-02: BloodCultMagicColors
-          equipped-NECK-unshaded-03: BloodCultMagicColors
+          equipped-NECK-unshaded-01: Secondary
+          equipped-NECK-unshaded-02: Secondary
+          equipped-NECK-unshaded-03: Secondary
 
 #region scarf of warmth
 - type: entity
@@ -229,13 +240,16 @@
   - type: FireProtection
     reduction: 0.1
   - type: ColorableClothing # LoneStar
+    mappedColors:
+      Primary: WizardMagicColorsPurple
+      Secondary: WizardMagicColorsPurple
     available:
       - wizard_stole_base:
-          equipped-NECK: WizardMagicColorsPurple
+          equipped-NECK: Primary
         wizard_stole_runes:
-          equipped-NECK-unshaded-01: WizardMagicColorsPurple
-          equipped-NECK-unshaded-02: WizardMagicColorsPurple
-          equipped-NECK-unshaded-03: WizardMagicColorsPurple
+          equipped-NECK-unshaded-01: Secondary
+          equipped-NECK-unshaded-02: Secondary
+          equipped-NECK-unshaded-03: Secondary
 
 #region cloak of holding
 - type: entity

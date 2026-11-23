@@ -217,7 +217,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                     if (loadoutProto.Price <= bankBalance && (loadoutProto.Price <= 0 || hasBalance))
                     {
                         bankBalance -= int.Max(0, loadoutProto.Price); // Treat negatives as zero.
-                        EquipStartingGear(entity.Value, loadoutProto, raiseEvent: false);
+                        EquipStartingGear(entity.Value, loadoutProto, raiseEvent: false, selectedColors: items.InitialColors, selectedVariants: items.InitialVariants); // LoneStar: Apply the selected appearance when spawning loadout gear.
                         CollectLoadout(loadoutProto, ref loadoutLast);
                         equippedItems.Add(loadoutProto.ID);
                     }

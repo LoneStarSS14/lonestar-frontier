@@ -1,6 +1,8 @@
+using System.Linq;
 using Content.Client.Clothing;
 using Content.Shared._LoneStar.Sprite;
 using Content.Shared.Clothing.Components;
+using Content.Shared.Decals;
 using Content.Shared.Item;
 using Content.Shared.Sprite;
 using Robust.Client.GameObjects;
@@ -19,6 +21,26 @@ public sealed class ColorableClothingSystem : SharedColorableClothingSystem
     {
         base.Initialize();
         SubscribeLocalEvent<ColorableClothingComponent, ComponentHandleState>(OnHandleState);
+        SubscribeLocalEvent<ColorableClothingInitialColorsComponent, ComponentStartup>(OnInitialColorsStartup);
+        SubscribeLocalEvent<ColorableClothingInitialColorsComponent, ColorableClothingInitialColorsChangedEvent>(OnInitialColorsChanged);
+    }
+
+    private void OnInitialColorsStartup(EntityUid uid, ColorableClothingInitialColorsComponent component, ComponentStartup args)
+    {
+        if (TryComp<ColorableClothingComponent>(uid, out var colorable))
+        {
+            ApplyInitialVariants(uid, colorable, component.SelectedVariants);
+            ApplyInitialColors(uid, colorable, component.MappedColors);
+        }
+    }
+
+    private void OnInitialColorsChanged(EntityUid uid, ColorableClothingInitialColorsComponent component, ColorableClothingInitialColorsChangedEvent args)
+    {
+        if (TryComp<ColorableClothingComponent>(uid, out var colorable))
+        {
+            ApplyInitialVariants(uid, colorable, component.SelectedVariants);
+            ApplyInitialColors(uid, colorable, component.MappedColors);
+        }
     }
 
     private void OnHandleState(EntityUid uid, ColorableClothingComponent component, ref ComponentHandleState args)
@@ -40,6 +62,77 @@ public sealed class ColorableClothingSystem : SharedColorableClothingSystem
         UpdateSpriteComponentAppearance(uid, component);
         UpdateClothingComponentAppearance(uid, component);
         UpdateItemComponentAppearance(uid, component);
+    }
+
+    public void ApplyInitialColors(EntityUid uid, ColorableClothingComponent component, IReadOnlyDictionary<string, Color> colors)
+    {
+        var groups = component.GetAllGroups
+            ? component.Available
+            : component.Available.Take(1);
+
+        foreach (var (key, color) in colors)
+        {
+            foreach (var group in groups)
+            {
+                foreach (var (layer, states) in group)
+                {
+                    if (component.Selected.TryGetValue(layer, out var selected) &&
+                        states.TryGetValue(selected.State, out var selectedColorKey) &&
+                        selectedColorKey == key)
+                    {
+                        component.Selected[layer] = (selected.State, color);
+                        continue;
+                    }
+
+                    var state = states.FirstOrDefault(state => state.Value == key);
+                    if (state.Key != null)
+                        component.Selected[layer] = (state.Key, color);
+                }
+            }
+        }
+
+        UpdateSpriteComponentAppearance(uid, component);
+        UpdateClothingComponentAppearance(uid, component);
+        UpdateItemComponentAppearance(uid, component);
+    }
+
+    public void ApplyInitialVariants(EntityUid uid, ColorableClothingComponent component,
+        IReadOnlyDictionary<string, string> variants)
+    {
+        if (variants.Count == 0)
+            return;
+
+        foreach (var (layer, state) in variants)
+        {
+            if (!TryGetAvailablePalette(component, layer, state, out var paletteKey))
+                continue;
+
+            var color = component.Selected.TryGetValue(layer, out var selected) &&
+                        TryGetAvailablePalette(component, layer, selected.State, out var previousPaletteKey) &&
+                        previousPaletteKey == paletteKey
+                ? selected.Color
+                : null;
+            component.Selected[layer] = (state, color);
+        }
+
+        UpdateSpriteComponentAppearance(uid, component);
+        UpdateClothingComponentAppearance(uid, component);
+        UpdateItemComponentAppearance(uid, component);
+    }
+
+    private static bool TryGetAvailablePalette(ColorableClothingComponent component, string layer, string state,
+        out string? paletteKey)
+    {
+        foreach (var group in component.Available)
+        {
+            if (!group.TryGetValue(layer, out var states) || !states.TryGetValue(state, out paletteKey))
+                continue;
+
+            return true;
+        }
+
+        paletteKey = null;
+        return false;
     }
 
     private void UpdateClothingComponentAppearance(EntityUid uid, ColorableClothingComponent component, ClothingComponent? clothing = null)

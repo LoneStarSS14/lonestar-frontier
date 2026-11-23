@@ -1,4 +1,5 @@
 ## LoneStar changes: All references of 'Sixteen' -> 'NTInteriorDesign'
+## changes: adds mapped color definitions to all entries
 
 - type: entity
   parent: ClothingUniformBase
@@ -31,6 +32,12 @@
         map: [ "decor" ]
       - state: mask_null
         map: [ "overlay" ]
+  - type: ColorableClothing # LoneStar
+    mappedColors: # TODO: loadouts show all mapped colors even when they are not used. fix.
+      Torso: NTInteriorDesign
+      Leg: NTInteriorDesign
+      Decor: NTInteriorDesign
+      Overlay: NTInteriorDesign
 
 - type: entity
   parent: ClothingUniformRandom
@@ -55,23 +62,21 @@
     denyReroll: false # LoneStar
     available:
       - torso:
-          base_torso_armless: NTInteriorDesign
+          base_torso_armless: Torso
         leg:
-          base_leg_standard: NTInteriorDesign
-          base_leg_short: NTInteriorDesign
-          # base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
-          # base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
+          base_leg_standard: Leg
+          base_leg_short: Leg
         decor:
-          decor_torso_armless1: NTInteriorDesign
-          decor_torso_armless2: NTInteriorDesign
-          decor_torso_armless3: NTInteriorDesign
-          decor_torso_armless4: NTInteriorDesign
-          decor_torso_armless5: NTInteriorDesign
-          decor_torso_armless6: NTInteriorDesign
-          decor_torso_armless7: NTInteriorDesign
-          decor_torso_armless8: NTInteriorDesign
-          decor_torso_armless9: NTInteriorDesign
-          decor_torso_armless10: NTInteriorDesign
+          decor_torso_armless1: Decor
+          decor_torso_armless2: Decor
+          decor_torso_armless3: Decor
+          decor_torso_armless4: Decor
+          decor_torso_armless5: Decor
+          decor_torso_armless6: Decor
+          decor_torso_armless7: Decor
+          decor_torso_armless8: Decor
+          decor_torso_armless9: Decor
+          decor_torso_armless10: Decor
           mask_null: ""
 
 - type: entity
@@ -80,36 +85,34 @@
   name: colorful top and pants # Frontier: costume<top and pants
   components:
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
     available:
       - torso:
-          base_torso_standard: NTInteriorDesign
-          base_torso_standard2: NTInteriorDesign
+          base_torso_standard: Torso
+          base_torso_standard2: Torso
         leg:
-          base_leg_standard: NTInteriorDesign
-          base_leg_short: NTInteriorDesign
-          # base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
-          # base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
+          base_leg_standard: Leg
+          base_leg_short: Leg
         decor:
-          decor_torso_armless1: NTInteriorDesign
-          decor_torso_armless2: NTInteriorDesign
-          decor_torso_armless3: NTInteriorDesign
-          decor_torso_armless4: NTInteriorDesign
-          decor_torso_armless5: NTInteriorDesign
-          decor_torso_armless6: NTInteriorDesign
-          decor_torso_armless7: NTInteriorDesign
-          decor_torso_armless8: NTInteriorDesign
-          decor_torso_armless9: NTInteriorDesign
-          decor_torso_armless10: NTInteriorDesign
-          decor_torso_standard1: NTInteriorDesign
-          decor_torso_standard2: NTInteriorDesign
-          decor_torso_standard3: NTInteriorDesign
-          decor_torso_standard4: NTInteriorDesign
-          decor_torso_standard5: NTInteriorDesign
-          decor_torso_standard6: NTInteriorDesign
-          decor_torso_standard7: NTInteriorDesign
-          decor_torso_standard8: NTInteriorDesign
-          decor_torso_standard9: NTInteriorDesign
+          decor_torso_armless1: Decor
+          decor_torso_armless2: Decor
+          decor_torso_armless3: Decor
+          decor_torso_armless4: Decor
+          decor_torso_armless5: Decor
+          decor_torso_armless6: Decor
+          decor_torso_armless7: Decor
+          decor_torso_armless8: Decor
+          decor_torso_armless9: Decor
+          decor_torso_armless10: Decor
+          decor_torso_standard1: Decor
+          decor_torso_standard2: Decor
+          decor_torso_standard3: Decor
+          decor_torso_standard4: Decor
+          decor_torso_standard5: Decor
+          decor_torso_standard6: Decor
+          decor_torso_standard7: Decor
+          decor_torso_standard8: Decor
+          decor_torso_standard9: Decor
           mask_null: ""
 
 - type: entity
@@ -118,21 +121,19 @@
   name: colorful bra and pants # Frontier: and pants
   components:
   - type: ColorableClothing # LoneStar
-    denyReroll: false # LoneStar
+    denyReroll: false
     available:
       - torso:
-          base_torso_bra: NTInteriorDesign
+          base_torso_bra: Torso
         leg:
-          base_leg_standard: NTInteriorDesign
-          base_leg_short: NTInteriorDesign
-          # base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
-          # base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
+          base_leg_standard: Leg
+          base_leg_short: Leg
         decor:
-          decor_torso_bra1: NTInteriorDesign
-          decor_torso_bra2: NTInteriorDesign
-          decor_torso_bra3: NTInteriorDesign
-          decor_torso_bra4: NTInteriorDesign
-          decor_torso_bra5: NTInteriorDesign
+          decor_torso_bra1: Decor
+          decor_torso_bra2: Decor
+          decor_torso_bra3: Decor
+          decor_torso_bra4: Decor
+          decor_torso_bra5: Decor
           mask_null: ""
 
 - type: entity
@@ -146,10 +147,8 @@
       - torso:
           mask_null: ""
         leg:
-          base_leg_standard: NTInteriorDesign
-          base_leg_short: NTInteriorDesign
-          # base_leg_skirt: NTInteriorDesign # Frontier - Splited out for Harpy
-          # base_leg_skirt_long: NTInteriorDesign # Frontier - Splited out for Harpy
+          base_leg_standard: Leg
+          base_leg_short: Leg
 
 - type: entity
   parent: ClothingUniformRandom
@@ -160,14 +159,14 @@
     denyReroll: false # LoneStar
     available:
       - torso:
-          base_torso_armless: NTInteriorDesign
+          base_torso_armless: Torso
           mask_null: ""
         leg:
-          base_leg_standard: NTInteriorDesign
-          base_leg_short: NTInteriorDesign
+          base_leg_standard: Leg
+          base_leg_short: Leg
         decor:
-          base_torso_shirt: NTInteriorDesign
+          base_torso_shirt: Decor
         overlay:
-          decor_torso_shirt1: NTInteriorDesign
-          decor_torso_shirt2: NTInteriorDesign
-          decor_torso_shirt3: NTInteriorDesign
+          decor_torso_shirt1: Overlay
+          decor_torso_shirt2: Overlay
+          decor_torso_shirt3: Overlay
