@@ -1,0 +1,8 @@
+- type: entity
+  id: ClothingBackpackTSFMC
+  name: TSF Marine Corps backpack
+  parent: ClothingBackpackSyndicate
+  description: A backpack produced for the TSF Marine Corps. It's particularly hefty and explosive resistant.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Back/Backpacks/tsfmc.rsi

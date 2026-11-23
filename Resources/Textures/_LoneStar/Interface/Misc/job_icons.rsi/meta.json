@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "By Archee",
+    "copyright": "Guildleader By Archee TSFMarine by Chokovit"
     "size": {
         "x": 8,
         "y": 8
@@ -9,6 +9,9 @@
     "states": [
         {
             "name": "guildleader"
+        },
+        {
+            "name": "tsfmarine"
         }
     ]
 }
