@@ -8,6 +8,7 @@
       slotFlags: IDCARD
       slotGroup: SecondHotbar
       stripTime: 999999 # "Not strippable"
+      stripHidden: true # LoneStar
       uiWindowPos: 2,1
-      strippingWindowPos: 22,20
+      strippingWindowPos: 0,0 # LoneStar
       displayName: ID

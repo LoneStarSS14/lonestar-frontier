@@ -19,8 +19,9 @@
       slotTexture: suit
       slotFlags: OUTERCLOTHING
       stripTime: 999999
+      stripHidden: true # LoneStar
       uiWindowPos: 1,1
-      strippingWindowPos: 21,22
+      strippingWindowPos: 2,2 # LoneStar
       displayName: Suit
 
     - name: gloves
