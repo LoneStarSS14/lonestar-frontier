@@ -11,7 +11,9 @@ using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Standing;
 using Content.Shared.StatusEffect;
+using Content.Shared.Stunnable;
 using Robust.Shared.GameStates;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -25,6 +27,7 @@ public abstract class SharedBalanceSystem : EntitySystem
     private const float RecoveryMultiplierPerSecond = 1.2f;
 
     [Dependency] private readonly AlertsSystem _alerts = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedGravitySystem _gravity = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly INetManager _net = default!;
@@ -32,6 +35,7 @@ public abstract class SharedBalanceSystem : EntitySystem
     [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly StandingStateSystem _standing = default!;
+    [Dependency] private readonly SharedStunSystem _stun = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
 
     // Ideas for future changes;
@@ -264,9 +268,14 @@ public abstract class SharedBalanceSystem : EntitySystem
         var previousBalance = component.Balance;
         component.Balance = MathF.Max(0f, component.Balance - amount);
 
-        if (previousBalance > 0f && component.Balance <= 0f && !_standing.IsDown(uid) // If we should trigger falling over
-            && _standing.Down(uid, dropHeldItems: false))
+        if (previousBalance > 0f
+            && component.Balance <= 0f
+            && !_standing.IsDown(uid)
+            && _stun.TryKnockdown(uid, time: null, autoStand: false, drop: false))
         {
+            if (TryComp<StandingStateComponent>(uid, out var standingState))
+                _audio.PlayEntity(standingState.DownSound, uid, uid);
+
             _stamina.TakeStaminaDamage(uid, component.StaminaDamageOnFall);
             component.Balance = component.RecoveryRate;
             component.FallAlertUntil = _timing.CurTime + FallAlertDuration;
