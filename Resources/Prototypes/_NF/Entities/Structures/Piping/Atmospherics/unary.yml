@@ -196,11 +196,11 @@
           False: { visible: false }
 
 # When mapping this, ensure the middle square has HV cable and a connector port, it should work.
-- type: entity
+- type: entity # LoneStar TODO: Make this our own proto instead of hijacking from air mix maker into plasma maker
   parent: [ BaseStructureDisableToolUse, BaseStructureIndestructible, BaseMachine ]
   id: EnergyAirConverter
-  name: energy-to-air converter
-  description: An enormous machine that converts huge amounts of power into superheated air.
+  name: energy-to-plasma converter # LoneStar
+  description: An enormous machine that converts huge amounts of power into superheated plasma. # LoneStar
   placement:
     mode: SnapgridCenter
   components:
@@ -294,8 +294,12 @@
   - type: GasSpawnPowerConsumer
     spawnMixture:
       moles:
-      - 0.22 # Oxygen
-      - 0.78 # Nitrogen
+      # LoneStar start
+      - 0 # Oxygen
+      - 0 # Nitrogen
+      - 0 # CO2
+      - 1 # Plasma
+      # LoneStar end
       temperature: 5273 # ~ 5000 deg C, roughly when plasma turns back into gas
   - type: GasCanister
     gasMixture:

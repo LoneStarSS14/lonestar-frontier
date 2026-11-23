@@ -94,6 +94,10 @@
           orGroup: deposit
         - id: GasDepositOxygenLarge
           orGroup: deposit
+        # LoneStar start
+        - id: GasDepositOxygenVeryLarge
+          orGroup: deposit
+        # LoneStar end
         - id: GasDepositNitrogen
           orGroup: deposit
         - id: GasDepositNitrogenLarge
@@ -196,6 +200,14 @@
         entries:
         - id: GasDepositPlasmaVerySmall
           orGroup: deposit
+        # LoneStar start
+        - id: GasDepositPlasmaSmall
+          orGroup: deposit
+        - id: GasDepositPlasmaLarge
+          orGroup: deposit
+        - id: GasDepositPlasmaVeryLarge
+          orGroup: deposit
+        # LoneStar end
         - id: GasDepositMuddlePlasmaVerySmall
           orGroup: deposit
         - id: GasDepositMuddleEvenVerySmall
