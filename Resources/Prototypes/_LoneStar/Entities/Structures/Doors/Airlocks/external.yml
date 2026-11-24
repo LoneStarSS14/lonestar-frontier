@@ -1,0 +1,53 @@
+#region SectorCommand
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockExternal ]
+  id: LSExternalAirlockSectorCommandLocked
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Standard/external-command.rsi
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockExternalGlass ]
+  id: LSExternalAirlockSectorCommandLockedGlass
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/external-command.rsi
+#endregion
+
+#region Nash(Staff)
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockExternal ]
+  id: LSExternalAirlockNashLocked
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, AirlockExternalGlass ]
+  id: LSExternalAirlockNashLockedGlass
+#endregion
+
+#region Freelancer
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockExternal ]
+  id: LSExternalAirlockFreelancerLocked
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Standard/external-freelancer.rsi
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockExternalGlass ]
+  id: LSExternalAirlockFreelancerLockedGlass
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/external-freelancer.rsi
+#endregion
+
+#region Lsrd
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockExternal ]
+  id: LSExternalAirlockLsrdLocked
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Standard/external-lsrd.rsi
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockExternalGlass ]
+  id: LSExternalAirlockLsrdLockedGlass
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/external-lsrd.rsi
+#endregion
