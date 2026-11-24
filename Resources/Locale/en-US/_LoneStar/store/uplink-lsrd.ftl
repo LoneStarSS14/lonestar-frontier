@@ -1,3 +1,7 @@
+
+uplink-rcd-lsrd-name = LSRD RCD
+uplink-rcd-lsrd-desc = A rapid construction device which can place/remove walls, floors, and airlocks quickly. It must be linked to a ship via ID card.
+
 store-category-melee = Melee
 lizitar-base = A hefty sword, made in the image of a lizard.
 

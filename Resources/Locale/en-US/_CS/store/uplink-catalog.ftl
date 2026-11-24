@@ -5,12 +5,6 @@ uplink-random-gun-desc = Call in a random rare-legendary firearm.
 uplink-random-melee-name = Random Melee Weapon
 uplink-random-melee-desc = Call in a random rare-legendary melee weapon.
 
-uplink-pirate-rcd-name = Pirate RCD
-uplink-pirate-rcd-desc = A blackmarket construction device which can place/remove walls, floors, and airlocks quickly. It has a slot to swipe ID cards.
-
-uplink-nfsd-rcd-name = LSRD RCD
-uplink-nfsd-rcd-desc = A security construction device which can place/remove walls, floors, and airlocks quickly. It has a slot to swipe ID cards.
-
 uplink-advanced-radar-name = Advanced Radar Computer
 uplink-advanced-radar-desc = This advanced radar board lets you detect far away objects for an increased tactical advantage.
 
