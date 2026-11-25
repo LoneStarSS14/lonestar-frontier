@@ -96,10 +96,14 @@
   - type: Door
     bumpOpen: false
     clickOpen: true
+    # LoneStar start
     closeTimeOne: 0.2
-    closeTimeTwo: 1.0
+    closeTimeTwo: 1.3
     openTimeOne: 0.6
-    openTimeTwo: 0.6
+    openTimeTwo: 0.9
+    openingAnimationTime: 1.5
+    closingAnimationTime: 1.5
+    # LoneStar end
     openSound:
       path: /Audio/Effects/door_open.ogg
     closeSound:
@@ -218,12 +222,14 @@
     graph: DoorGraph
     node: bananiumDoor
   - type: Door
+    # LoneStar start, this one is literally too fast to even see...
     openTimeOne: 0.3
-    openTimeTwo: 0
+    openTimeTwo: 0.2
     closeTimeOne: 0.2
-    closeTimeTwo: 0.1
-    openingAnimationTime: 0.3
-    closingAnimationTime: 0.3
+    closeTimeTwo: 0.3
+    openingAnimationTime: 0.5
+    closingAnimationTime: 0.5
+    # LoneStar end
     openSound:
       path: /Audio/Items/bikehorn.ogg
     closeSound:
