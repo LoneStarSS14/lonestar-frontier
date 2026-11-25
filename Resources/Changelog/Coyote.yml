@@ -4891,3 +4891,12 @@ Entries:
   id: 529
   time: '2026-11-23T22:12:55.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/335
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        All Door related entities now correctly the entirety of their intended
+        animation.
+  id: 530
+  time: '2026-11-25T04:11:46.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/336
