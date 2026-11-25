@@ -7,7 +7,7 @@
 # Discord: dustylens
 
 # Shuttle Notes:
-# 
+#
 - type: vessel
   id: Barge
   parent: BaseVessel
@@ -41,7 +41,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]
