@@ -23,7 +23,7 @@
   mapPath: /Maps/_NF/Shuttles/BlackMarket/barnacle.yml
   minPlayers: 0
   stations:
-    Barnacle:
+    LSBarnacle:
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup

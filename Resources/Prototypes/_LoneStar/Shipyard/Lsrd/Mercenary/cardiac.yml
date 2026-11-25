@@ -6,7 +6,7 @@
   price: 73250
   category: Medium
   group: Security
-  access: LsrdShipyard
+  access: Security
   shuttlePath: /Maps/_LoneStar/Shuttles/Lsrd/Mercenary/cardiac.yml
   class:
   - Pursuit

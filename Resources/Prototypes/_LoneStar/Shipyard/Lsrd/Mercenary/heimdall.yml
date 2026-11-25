@@ -24,7 +24,7 @@
   mapPath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml
   minPlayers: 0
   stations:
-    Heimdall:
+    LSHeimdall:
       stationProto: StandardFrontierSecurityVessel
       components:
         - type: StationNameSetup

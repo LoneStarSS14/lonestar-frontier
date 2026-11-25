@@ -20,7 +20,7 @@
   mapPath: /Maps/_NF/Shuttles/Nfsd/templar.yml
   minPlayers: 0
   stations:
-    Templar:
+    LSTemplar:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup

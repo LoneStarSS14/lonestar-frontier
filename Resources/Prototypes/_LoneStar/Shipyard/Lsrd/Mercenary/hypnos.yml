@@ -23,7 +23,7 @@
   mapPath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml
   minPlayers: 0
   stations:
-    Hypnos:
+    LSHypnos:
       stationProto: StandardFrontierSecurityVessel
       components:
         - type: StationNameSetup

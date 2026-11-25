@@ -7,7 +7,7 @@
   category: Small
   group: BlackMarket
   access: Pirate
-  shuttlePath: /Maps/_CS/Shuttles/BlackMarket/Ripper/bonesaw.yml
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/bonesaw.yml
   guidebookPage: Null
   class:
   - Medical
@@ -24,7 +24,7 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'FLG-Bonesaw {1}' # Very fake name
+          mapNameTemplate: 'FLG-Bonesaw {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

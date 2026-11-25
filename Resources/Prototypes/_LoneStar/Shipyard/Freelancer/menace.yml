@@ -30,7 +30,7 @@
   mapPath: /Maps/_NF/Shuttles/BlackMarket/menace.yml
   minPlayers: 0
   stations:
-    Menace:
+    LSMenace:
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup

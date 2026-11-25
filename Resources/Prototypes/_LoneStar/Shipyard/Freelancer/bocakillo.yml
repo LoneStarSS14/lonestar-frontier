@@ -24,7 +24,7 @@
   mapPath: /Maps/_NF/Shuttles/BlackMarket/bocakillo.yml
   minPlayers: 0
   stations:
-    Bocakillo:
+    LSBocakillo:
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup

@@ -4870,6 +4870,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,10.5
       parent: 1
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 745
+    components:
+    - type: Transform
+      pos: 0.5,15.5
+      parent: 1
 - proto: StairDark
   entities:
   - uid: 104

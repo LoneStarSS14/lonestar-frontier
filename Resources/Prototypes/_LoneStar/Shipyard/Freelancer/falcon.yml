@@ -25,7 +25,7 @@
   mapPath: /Maps/_NF/Shuttles/BlackMarket/falcon.yml
   minPlayers: 0
   stations:
-    Falcon:
+    LSFalcon:
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup

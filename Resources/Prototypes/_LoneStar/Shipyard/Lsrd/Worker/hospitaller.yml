@@ -20,7 +20,7 @@
   mapPath: /Maps/_NF/Shuttles/Nfsd/hospitaller.yml
   minPlayers: 0
   stations:
-    Hospitaller:
+    LSHospitaller:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup

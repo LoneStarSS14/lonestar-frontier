@@ -20,7 +20,7 @@
   mapPath: /Maps/_NF/Shuttles/BlackMarket/schooner.yml
   minPlayers: 0
   stations:
-    Schooner:
+    LSSchooner:
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
