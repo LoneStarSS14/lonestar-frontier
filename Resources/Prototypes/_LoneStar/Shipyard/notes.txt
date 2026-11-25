@@ -58,7 +58,7 @@ Electrical Grids
 - If a shuttle has 2 SMES and still uses a wallmount substation, replace 1 for a regular substation instead.
 - Do not mess with default SMES/Substation settings.
 - LV Grids should be neat and concise, and not plastering the entire floor space.
-- LV Grids should ensure all interior tiles of the ship are covered with power.
+- LV Grids should aim to ensure all interior tiles of the ship are covered with power.
 - Ships should not use a single APC to power their entirety outside of the sensibilities of a micro ship.
 
 Blastdoors & Shutters
@@ -83,6 +83,10 @@ Air alarms & Firelocks
 - When using decorative 'stairs', ensure firelocks are not placed at the 'lower' end of the stairs, this also applies to airlocks.
 
 Lighting
+- AlwaysPowered lights may only be used for debug purposes.
+- Hardened lights may only be used on POIs in command areas, or for POIs with very little visiting purpose such as the court house.
+- Shielded lights should only be mapped on shuttle exteriors.
+- Regular light fixtures should be used in all situations outside of the prior mentioned cases.
 - Use red powered lights on the left-lower-exterior of the ship, and green on the right-lower-exterior of the ship.
 - Use atleast a single exterior light on the north or south end of the ship, any extra exterior lights must be exterior.
 - Post-lights must be put behind railings or on navigable external lattice
@@ -97,6 +101,7 @@ Thrusters
 - Thrusters should ideally be placed on lattice with catwalks under.
 
 Loot and providings
+- Ships may start with a basic materials crate (30 steel/plastic/glass), this should be the entirety of the ships provided material.
 - Avoid giving extrenuous supplies to shuttles that would not otherwise need it, such as topicals to a salvage ship, 'because they get hurt often' is not a reason.
 - Outside of 'resturants' or 'intermediate area' shuttles such as the crossroads, avoid giving shuttles any form of vending machines.
 - BioDjinns may only be mapped on shuttles that are solely presenting as resturant or botany shuttles.
@@ -174,7 +179,7 @@ What defines a ship
   - As ship size increases its recommened to add lounge space or a barracks for players to AFK/Log.
   - May have a bar, but not areas to cook food such as grills or ranges.
   - Should utilize its wall space as best it can for closets/posters/safety-devices
-  - Feature a defibrillator 'somewhere' even if not in a cabinet.
+  - Must feature a defibrillator 'somewhere' even if not in a cabinet, and it must be accessible without vaulting tables.
 
 Editor related tips & tricks:
 
