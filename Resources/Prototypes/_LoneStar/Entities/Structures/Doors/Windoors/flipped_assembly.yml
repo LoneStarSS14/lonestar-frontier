@@ -1,3 +1,4 @@
+#MARK: Glass
 - type: entity
   parent: WindoorAssembly
   id: WindoorAssemblyF
@@ -25,7 +26,7 @@
     graph: WindoorF
     node: assemblySecure
 
-#plasma windoor assemblies
+#MARK: Plasma
 - type: entity
   parent: WindoorAssemblyPlasma
   id: WindoorAssemblyPlasmaF
@@ -53,7 +54,7 @@
     graph: WindoorF
     node: pglassSecure
 
-#uranium windoor assemblies
+#MARK: Uranium
 - type: entity
   parent: WindoorAssemblyUranium
   id: WindoorAssemblyUraniumF
@@ -80,4 +81,4 @@
   - type: Construction
     graph: WindoorF
     node: uglassSecure
-
+#endregion

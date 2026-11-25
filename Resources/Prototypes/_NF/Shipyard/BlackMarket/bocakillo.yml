@@ -34,11 +34,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Bocadillo {1}' #Sneaky spoofed name
+          mapNameTemplate: 'Bocakillo {1}' # LoneStar
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            NFPirate: [ 0, 0 ]
-#            Escort: [ 0, 0 ]
+        - type: StationJobs # LoneStar
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

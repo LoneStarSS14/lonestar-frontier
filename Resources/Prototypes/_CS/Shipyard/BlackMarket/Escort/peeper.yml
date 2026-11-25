@@ -16,6 +16,7 @@
   price: 18000 #15583, LL1 115% (Bar and Solar equipment push it over LL0)
   category: Small
   group: BlackMarket
+  access: Pirate
   shuttlePath: /Maps/_CS/Shuttles/BlackMarket/Escort/peeper.yml
   guidebookPage: Null
   class:
@@ -33,10 +34,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Oculus  {1}'
+          mapNameTemplate: 'Peeper {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            Escort: [ 0, 0 ]
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

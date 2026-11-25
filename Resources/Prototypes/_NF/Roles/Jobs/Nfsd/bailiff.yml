@@ -1,4 +1,5 @@
 - type: job
+  abstract: true # LoneStar
   id: Bailiff
   name: job-name-bailiff
   description: job-description-bailiff
@@ -37,11 +38,12 @@
   - !type:AddComponentSpecial
     components:
     - type: CommandStaff
-    - type: IsNfsd
+    - type: IsLsrd # LoneStar
       worth: 2
 
 
 - type: startingGear
+  abstract: true
   id: BailiffGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
@@ -58,6 +60,7 @@
     - EncryptionKeyCommand
 
 - type: chameleonOutfit
+  abstract: true # LoneStar
   id: BailiffChameleonOutfit
   job: Bailiff
   hasMindShield: true

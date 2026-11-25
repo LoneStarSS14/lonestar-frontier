@@ -61,7 +61,7 @@
 
 - type: rcd
   id: Catwalk
-  category: Floors # Lonestar/HL
+  category: Electrical # LoneStar
   sprite: /Textures/Interface/Radial/RCD/catwalk.png
   mode: ConstructObject
   prototype: Catwalk
@@ -201,7 +201,7 @@
   category: Lighting
   sprite: /Textures/Interface/Radial/RCD/tube_light.png
   mode: ConstructObject
-  prototype: Poweredlight
+  prototype: LSLightFluorescent # LoneStar
   cost: 2
   delay: 1
   collisionMask: TabletopMachineMask
@@ -214,7 +214,7 @@
   category: Lighting
   sprite: /Textures/Interface/Radial/RCD/bulb_light.png
   mode: ConstructObject
-  prototype: PoweredSmallLight
+  prototype: LSSmallLightIncandescent # LoneStar
   cost: 2
   delay: 1
   collisionMask: TabletopMachineMask

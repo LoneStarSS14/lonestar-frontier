@@ -1,0 +1,238 @@
+﻿#region Regular
+- type: entity
+  id: LSAlwaysPoweredStrobeLightIncandescent
+  suffix: "Incandesent"
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FFD1A3"
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightLED
+  suffix: LED
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#EEEEFF"
+  - type: PoweredLight
+    hasLampOnSpawn: LedLightBulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightDim
+  suffix: Dim
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ba473f"
+  - type: PoweredLight
+    hasLampOnSpawn: DimLightBulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightWarm
+  suffix: Warm
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ff9833"
+  - type: PoweredLight
+    hasLampOnSpawn: WarmLightBulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightSodium
+  suffix: Sodium
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FFAF38"
+  - type: PoweredLight
+    hasLampOnSpawn: SodiumLightBulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightExterior
+  suffix: Exterior
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#B4FCF0"
+  - type: PoweredLight
+    hasLampOnSpawn: ExteriorLightBulb
+#engregion
+
+#region Crystal-Colored
+- type: entity
+  id: LSAlwaysPoweredStrobeLightCyan
+  suffix: Cyan
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#47f8ff"
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalCyan
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightBlue
+  suffix: Blue
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#39a1ff"
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalBlue
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightYellow
+  suffix: Yellow
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ffde46"
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalYellow
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightPink
+  suffix: Pink
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ff66cc"
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalPink
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightOrange
+  suffix: Orange
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ff8227"
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalOrange
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightBlack
+  suffix: Black
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#363636"
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalBlack
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightRed
+  suffix: Red
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#fb4747"
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalRed
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightGreen
+  suffix: Green
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#52ff39"
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalGreen
+#endregion
+
+#region Noble-Temperature
+- type: entity
+  id: LSAlwaysPoweredStrobeLightXenon
+  suffix: Xenon
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#ADD8E6"
+  - type: PoweredLight
+    hasLampOnSpawn: XenonLightBulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightKrypton
+  suffix: Krypton
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#CCCCCC"
+  - type: PoweredLight
+    hasLampOnSpawn: KryptonLightBulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightArgon
+  suffix: Argon
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#9999FF"
+  - type: PoweredLight
+    hasLampOnSpawn: ArgonLightBulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightNeon
+  suffix: Neon
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FF4000"
+  - type: PoweredLight
+    hasLampOnSpawn: NeonLightBulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightHelium
+  suffix: Helium
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FFB8C2"
+  - type: PoweredLight
+    hasLampOnSpawn: HeliumLightBulb
+#endregion
+
+#region Other
+- type: entity
+  id: LSAlwaysPoweredStrobeLightExteriorGreen
+  suffix: Exterior Green
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#00FF00"
+  - type: PoweredLight
+    hasLampOnSpawn: ExteriorLightBulbGreen
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightExteriorMagenta
+  suffix: Exterior Magenta
+  parent: LSAlwaysPoweredStrobeLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#FF00FF"
+  - type: PoweredLight
+    hasLampOnSpawn: ExteriorLightBulbMagenta
+#endregion

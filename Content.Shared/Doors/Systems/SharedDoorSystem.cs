@@ -408,7 +408,7 @@ public abstract partial class SharedDoorSystem : EntitySystem
 
         SetCollidable(uid, false, door);
         door.Partial = true;
-        door.NextStateChange = GameTiming.CurTime + door.CloseTimeTwo;
+        door.NextStateChange = GameTiming.CurTime + door.OpenTimeTwo; // LoneStar, animation fix
         _activeDoors.Add((uid, door));
         Dirty(uid, door);
 
@@ -500,7 +500,7 @@ public abstract partial class SharedDoorSystem : EntitySystem
         // Make sure no entity walked into the airlock when it started closing.
         if (!CanClose(uid, door, partial: true))
         {
-            door.NextStateChange = GameTiming.CurTime + door.OpenTimeTwo;
+            door.NextStateChange = GameTiming.CurTime + door.OpenTimeTwo + door.CloseTimeOne; // LoneStar, animation fix
             door.State = DoorState.Open;
             AppearanceSystem.SetData(uid, DoorVisuals.State, DoorState.Open);
             Dirty(uid, door);

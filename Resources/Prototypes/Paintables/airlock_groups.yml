@@ -19,8 +19,12 @@
     security: AirlockSecurity
     virology: AirlockVirology
     mercenary: AirlockMercenary # Frontier
-    nfsd: AirlockNfsd # Frontier: surely nothing bad will happen
-    syndicate: AirlockSyndicate # Coyote: surely nothing bad will happen, too
+    # LoneStar start
+    # nfsd: AirlockNfsd # Frontier: surely nothing bad will happen
+    lsrd: LSAirlockLsrd
+    freelancer: LSAirlockFreelancer
+    syndicate: AirlockSyndicate
+    # LoneStar end
 
 - type: paintableGroup
   id: AirlockGlass
@@ -42,5 +46,9 @@
     security: AirlockSecurityGlass
     virology: AirlockVirologyGlass
     mercenary: AirlockMercenaryGlass # Frontier
-    nfsd: AirlockNfsdGlass # Frontier: surely nothing bad will happen
+    # LoneStar start
+    # nfsd: AirlockNfsdGlass # Frontier: surely nothing bad will happen
+    lsrd: LSAirlockLsrdGlass
+    freelancer: LSAirlockFreelancerGlass
     syndicate: AirlockSyndicateGlass # Coyote: surely nothing bad will happen, too
+    # LoneStar end
