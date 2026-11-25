@@ -2,35 +2,31 @@
 # GitHub: Mace70903
 # Discord: mace_70903
 
-# Maintainer Info
-# GitHub: Mace70903
-# Discord: mace_70903
-
-# Shuttle Notes:
 - type: vessel
   id: LSTurncoat
   parent: BaseVesselAntag
   name: FLG Turncoat
-  description: A mercenaries pride and joy, repurposed at illicit shipyards for nefarious ends. Suited to a crew of 4.
-  price: 85000
+  description: A scally-wags pride and joy, ideal for planet side excursions aswell as for hauling all your 'special' booty.
+  price: 135000
   category: Medium
   group: BlackMarket
   access: BlackMarket
-  shuttlePath: /Maps/_NF/Shuttles/BlackMarket/turncoat.yml
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/turncoat.yml
   guidebookPage: Null
   class:
-  - Pirate
+  - Expedition
+  - Cargo
   engine:
-  - Uranium
+  - AME
 
 - type: gameMap
   id: LSTurncoat
   mapName: 'FLG-Turncoat'
-  mapPath: /Maps/_NF/Shuttles/BlackMarket/turncoat.yml
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/turncoat.yml
   minPlayers: 0
   stations:
-    Turncoat:
-      stationProto: StandardFrontierAntagVessel
+    LSTurncoat:
+      stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'FLG-Turncoat {1}'
