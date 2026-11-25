@@ -3,7 +3,7 @@
   parent: BaseVesselAntag
   name: FLG Raven
   description: Modified Dove designed to steal or smuggle cargo crates, fits between 3-4 crew, Exped Capable.
-  price: 346500 # Coyote pricing GridAppraisal 47150.36 + LL3 x3.0 + TileCost 124800(416x300) + Exped (50k) + Donk Co (30k) = 346251.08
+  price: 195000
   category: Medium
   group: BlackMarket
   access: BlackMarket
