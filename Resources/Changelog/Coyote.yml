@@ -4919,3 +4919,12 @@ Entries:
   id: 531
   time: '2026-11-25T04:14:15.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/324
+- author: archee1
+  changes:
+    - type: Remove
+      message: >-
+        Reverts the previous door changes due to more issues being discovered
+        prior to the fix
+  id: 532
+  time: '2026-11-25T20:42:20.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/337
