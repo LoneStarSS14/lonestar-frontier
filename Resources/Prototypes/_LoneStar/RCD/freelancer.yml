@@ -2,7 +2,7 @@
 - type: rcd
   id: LSAirlockFreelancerLockedFreelancer
   category: Airlocks
-  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Standard/basic-Freelancer.rsi, state: closed }
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Standard/basic-freelancer.rsi, state: closed }
   mode: ConstructObject
   prototype: LSAirlockFreelancerLockedFreelancer
   cost: 4
@@ -14,7 +14,7 @@
 - type: rcd
   id: LSAirlockFreelancerLockedGlassFreelancer
   category: Airlocks
-  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Glass/basic-Freelancer.rsi, state: closed }
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Glass/basic-freelancer.rsi, state: closed }
   mode: ConstructObject
   prototype: LSAirlockFreelancerLockedGlassFreelancer
   cost: 4
@@ -27,7 +27,7 @@
 - type: rcd
   id: LSExternalAirlockFreelancerLocked
   category: Airlocks
-  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Standard/external-Freelancer.rsi, state: closed }
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Standard/external-freelancer.rsi, state: closed }
   mode: ConstructObject
   prototype: LSExternalAirlockFreelancerLocked
   cost: 4
@@ -39,7 +39,7 @@
 - type: rcd
   id: LSExternalAirlockFreelancerLockedGlass
   category: Airlocks
-  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Glass/external-Freelancer.rsi, state: closed }
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Glass/external-freelancer.rsi, state: closed }
   mode: ConstructObject
   prototype: LSExternalAirlockFreelancerLockedGlass
   cost: 4
