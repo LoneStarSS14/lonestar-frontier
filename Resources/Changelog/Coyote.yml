@@ -4900,3 +4900,22 @@ Entries:
   id: 530
   time: '2026-11-25T04:11:46.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/336
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        New Hardened light fixtures can be used in mapping, which are solar
+        flare immune, these are not craftable by players, use shielded lights.
+    - type: Add
+      message: Shielded Strobe lights can now be built.
+    - type: Tweak
+      message: Always powered lights can now have their lightbulbs swapped out.
+    - type: Tweak
+      message: >-
+        Every variant of light fixture prefilled with a bulb can be found in the
+        entity spawn menu.
+    - type: Tweak
+      message: Always powered lights are now named self-powered to differentiate them.
+  id: 531
+  time: '2026-11-25T04:14:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/324
