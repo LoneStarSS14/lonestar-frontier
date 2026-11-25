@@ -3538,8 +3538,6 @@ entities:
       pos: -0.5,11.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3634,8 +3632,6 @@ entities:
       pos: 0.5,11.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeLayers
