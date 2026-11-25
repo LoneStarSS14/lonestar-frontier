@@ -92,6 +92,7 @@ Lighting
 - Post-lights must be put behind railings or on navigable external lattice
 - It is recommended to put a strobe light near any blast doors that lead to space, linked to on/off/toggles of the relevant blast doors.
 - Mapped Strobe lights must be linked to a button for toggling.
+- Shuttles must contain some degree of emergency lights.
 
 Thrusters
 - Use Mules only, some shuttles may have dragons or other strange configurations, however these are exceptions and planned to be phased out for alternatives in the future.
@@ -107,6 +108,8 @@ Loot and providings
 - BioDjinns may only be mapped on shuttles that are solely presenting as resturant or botany shuttles.
 - Techfabs such as engi/merc/salv/med/cargo/service are only to be mapped if the ships intentions are to be used for those domains, salv fab on a mining ship, med fab on a medical ship.
 - Consider replacing techfabs with autolathes if no domains are present, or providing a cargo techfab.
+- Ships should start with atleast 1 EVA relevant to a domain it exists under, e.g. FSB medical eva for parmedical ships.
+- Only mercenary domain ships may start with 'mercenary' or equivelant hardsuits.
 
 Decals
 - Always use pre-assinged palette colors when mapping.
@@ -117,10 +120,12 @@ Decals
 
 Walls and type rules
 - Standard shuttles should be mapped with either the wall/reinforced wall set, or shuttle wall set.
-- Combat focused factional shuttles may be mapped with either the shuttle wall set or, plastitanium wall set.
+- Combat focused factional shuttles should be mapped with either the shuttle wall set or, plastitanium wall set.
 - Only freelancer ships may be mapped with the mining wall set.
+- Only freelancer/lsrd ships may be mapped with the plastitanium wall set.
+- freelancer ships may not be mapped with the shuttle wall set
 - Airlocks and general access on factional combat ships must be properly set with locked door variants. (pirate for Freelancers, security for LSRD)
-- Shutters must be used on non factional ships for windows
+- Shutters (opposed to blast doors) should be used on non factional ships for windows
 
 Other Standard requirements
 - Station Records computer
