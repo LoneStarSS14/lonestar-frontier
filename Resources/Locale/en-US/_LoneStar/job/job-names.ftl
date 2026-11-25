@@ -1,6 +1,9 @@
 ## Command
 job-name-guild-leader = Guild Leader
 
+## Factional
+job-name-ls-interview = Faction Residents
+
 ## Freelancers
 job-name-ls-master-at-arms = Master at Arms
 job-name-ls-freelancer-pirate = Freelancer Pirate
