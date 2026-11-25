@@ -16,7 +16,7 @@
   price: 60000 # 52879 0.05 55522.95
   category: Medium
   group: Security
-  access: Detective
+  access: LsrdShipyard # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/broadhead.yml
   guidebookPage: Null
   class:
@@ -39,4 +39,5 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          availableJobs: {}
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

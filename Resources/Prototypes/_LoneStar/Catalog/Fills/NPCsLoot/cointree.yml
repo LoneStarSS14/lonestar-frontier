@@ -1,0 +1,26 @@
+- type: entityTable
+  id: LSTableTreeCoin
+  table: !type:GroupSelector # Average payout = 1885 spesos
+    rolls: !type:RangeNumberSelector
+      range: 2, 3
+    children:
+    - id: TreasureCoinIron
+      weight: 1
+    - id: TreasureCoinIron3
+      weight: 4
+    - id: TreasureCoinSilver
+      weight: 2
+    - id: TreasureCoinSilver3
+      weight: 8
+    - id: TreasureCoinGold
+      weight: 3
+    - id: TreasureCoinGold3
+      weight: 12
+    - id: TreasureCoinAdamantine
+      weight: 4
+    - id: TreasureCoinAdamantine3
+      weight: 16
+    - id: TreasureCoinDiamond
+      weight: 5
+    - id: TreasureCoinDiamond3
+      weight: 20

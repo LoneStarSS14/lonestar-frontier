@@ -1,0 +1,36 @@
+#These are a parent for airlocks/windoors to inheret access for locked variants.
+- type: entity
+  id: LSBaseFilledDoorElectronicsSectorCommand
+  abstract: true
+  suffix: Sector Command Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSectorCommand ]
+
+- type: entity
+  id: LSBaseFilledDoorElectronicsFreelancer
+  abstract: true
+  suffix: Freelancer Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPirate ]
+
+- type: entity
+  id: LSBaseFilledDoorElectronicsLsrd
+  abstract: true
+  suffix: Lsrd Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  id: LSBaseFilledDoorElectronicsNash
+  abstract: true
+  suffix: Nash(Staff) Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNash ]

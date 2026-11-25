@@ -64,15 +64,15 @@
       - !type:NestedSelector # Epic
         weight: 1
         tableId: LSTableGeneralWeaponRangedT4
-    - !type:GroupSelector
-      weight: 19
-      children:
-      - !type:NestedSelector # Rare
-        weight: 1
-        tableId: LSTableGeneralWeaponRangedT3
-      - !type:NestedSelector # Uncommon
-        weight: 7
-        tableId: LSTableGeneralWeaponRangedT2
+      - !type:GroupSelector
+        weight: 19
+        children:
+        - !type:NestedSelector # Rare
+          weight: 1
+          tableId: LSTableGeneralWeaponRangedT3
+        - !type:NestedSelector # Uncommon
+          weight: 7
+          tableId: LSTableGeneralWeaponRangedT2
 #endregion
 
 #region Loot Tiers

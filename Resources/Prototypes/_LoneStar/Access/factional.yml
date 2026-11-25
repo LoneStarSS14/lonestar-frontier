@@ -1,0 +1,61 @@
+## Notes for the future faction updates
+# TODO: phase out unused access levels entirely, bailiff sergeant armory brig
+# TODO: Consider refactoring the ID of 'security' access out of LSRD's use, NOT refactoring the ID into Lsrd, thats an upstreaming nightmare.
+
+#region Freelancer
+- type: accessLevel
+  id: BlackMarket # TODO: Refactor the ID for this to FreelancerShipyard
+  name: id-card-access-level-blackmarket
+
+
+- type: accessGroup
+  id: FreelancerGeneralAccess
+  tags:
+  - Maintenance
+  - External
+  - Pirate
+
+- type: accessGroup
+  id: FreelancerCombatantAccess
+  tags:
+  - BlackMarket
+
+- type: accessGroup
+  id: FreelancerCommandAccess
+  tags:
+    [] # TODO: later when freelancers have a factional bank this will be used.
+#endregion
+
+#region LSRD
+- type: accessLevel
+  id: LsrdShipyard
+  name: id-card-access-level-lsrd-shipyard
+
+
+- type: accessGroup
+  id: LsrdGeneralAccess
+  tags:
+  - Maintenance
+  - External
+  - Security
+  - Brig
+
+- type: accessGroup
+  id: LsrdCombatantAccess
+  tags:
+  - LsrdShipyard
+
+- type: accessGroup
+  id: LsrdCommandAccess
+  tags:
+  - HeadOfSecurity
+  - Bailiff
+  - Sergeant
+  - Armory
+  - Detective
+  - Brigmedic
+  - Security
+  - Brig
+#endregion
+
+

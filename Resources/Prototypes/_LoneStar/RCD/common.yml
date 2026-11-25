@@ -1,0 +1,227 @@
+## Note: diagonal walls use collisionBounds, the values are weird, idk how it works, but everything else uses it.
+## Things defined here are for what is missing from frontier/wizden, and not a complete set of what can be provided.
+## RCDs are for construction, not primarily decoration, if you are making a new RCD for decals, see the HRCD from _Everdream
+
+#region Reinforced
+- type: rcd
+  id: WallReinforced
+  category: Walls
+  sprite: /Textures/Interface/Radial/RCD/reinforced_wall.png
+  mode: ConstructObject
+  prototype: WallReinforced
+  cost: 6
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+#endregion
+
+#region Shuttle
+- type: rcd
+  id: WallShuttle
+  category: Walls
+  sprite: /Textures/Interface/Radial/RCD/shuttle_wall.png
+  mode: ConstructObject
+  prototype: WallShuttle
+  cost: 6
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+#endregion
+
+#region Plastitanium
+- type: rcd
+  id: WallPlastitanium
+  category: Walls # Lonestar
+  sprite: { sprite: Structures/Walls/plastitanium.rsi, state: full }
+  mode: ConstructObject
+  prototype: WallPlastitanium
+  cost: 8
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: WallPlastitaniumDiagonal
+  category: Walls # Lonestar
+  sprite: { sprite: Structures/Walls/plastitanium_diagonal.rsi, state: state0 }
+  mode: ConstructObject
+  prototype: WallPlastitaniumDiagonal
+  cost: 8
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: PlastitaniumWindow
+  category: WindowsAndGrilles
+  sprite: { sprite: Structures/Windows/plastitanium_window.rsi, state: full }
+  mode: ConstructObject
+  prototype: PlastitaniumWindow
+  cost: 6
+  delay: 2
+  collisionMask: Impassable
+  rules:
+  - IsWindow
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: PlastitaniumWindowDiagonal
+  category: WindowsAndGrilles
+  sprite: { sprite: Structures/Windows/plastitanium_window_diagonal.rsi, state: state0 }
+  mode: ConstructObject
+  prototype: PlastitaniumWindowDiagonal
+  cost: 6
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+  - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+#endregion
+
+#region Mining
+- type: rcd
+  id: MiningWindow
+  category: WindowsAndGrilles
+  sprite: { sprite: Structures/Windows/mining.rsi, state: full }
+  mode: ConstructObject
+  prototype: MiningWindow
+  cost: 4
+  delay: 2
+  collisionMask: Impassable
+  rules:
+  - IsWindow
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: MiningWindowDiagonal
+  category: WindowsAndGrilles
+  sprite: { sprite: Structures/Windows/mining_diagonal.rsi, state: state0 }
+  mode: ConstructObject
+  prototype: MiningWindowDiagonal
+  cost: 4
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+  - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: WallMining
+  category: Walls # Lonestar
+  sprite: { sprite: Structures/Walls/mining.rsi, state: full }
+  mode: ConstructObject
+  prototype: WallMining
+  cost: 6
+  delay: 2
+  collisionMask: Impassable
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: WallMiningDiagonal
+  category: Walls # Lonestar
+  sprite: { sprite: Structures/Walls/mining_diagonal.rsi, state: state0 }
+  mode: ConstructObject
+  prototype: WallMiningDiagonal
+  cost: 6
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct2
+#endregion
+
+#region Windows
+- type: rcd
+  id: WindowDiagonal
+  category: WindowsAndGrilles
+  sprite: { sprite: Structures/Windows/window_diagonal.rsi, state: state0}
+  mode: ConstructObject
+  prototype: WindowDiagonal
+  cost: 3
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: ReinforcedWindowDiagonal
+  category: WindowsAndGrilles
+  sprite: { sprite: Structures/Windows/reinforced_window_diagonal.rsi, state: state0}
+  mode: ConstructObject
+  prototype: ReinforcedWindowDiagonal
+  cost: 3
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+#endregion
+
+#region Unlocked Airlocks
+# External
+- type: rcd
+  id: AirlockExternal
+  category: Airlocks
+  sprite: { sprite: Structures/Doors/Airlocks/Standard/external.rsi, state: closed }
+  mode: ConstructObject
+  prototype: AirlockExternal
+  cost: 4
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: Camera
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: AirlockExternalGlass
+  category: Airlocks
+  sprite: { sprite: Structures/Doors/Airlocks/Glass/external.rsi, state: closed }
+  mode: ConstructObject
+  prototype: AirlockExternalGlass
+  cost: 4
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: Camera
+  fx: EffectRCDConstruct4
+
+# Shuttle
+- type: rcd
+  id: AirlockShuttle
+  category: Airlocks
+  sprite: { sprite: Structures/Doors/Airlocks/Standard/shuttle.rsi, state: closed }
+  mode: ConstructObject
+  prototype: AirlockShuttle
+  cost: 6
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: User
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: AirlockGlassShuttle
+  category: Airlocks
+  sprite: { sprite: Structures/Doors/Airlocks/Glass/shuttle.rsi, state: closed }
+  mode: ConstructObject
+  prototype: AirlockGlassShuttle
+  cost: 6
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: User
+  fx: EffectRCDConstruct4
+#endregion
