@@ -28,12 +28,14 @@
     bumpOpen: false
     clickOpen: true
     canCrush: false
+    # LoneStar start
     closeTimeOne: 0.2
-    closeTimeTwo: 0.6
+    closeTimeTwo: 1.4
     openTimeOne: 0.6
-    openTimeTwo: 0.2
-    openingAnimationTime: 1.2
-    closingAnimationTime: 1.2
+    openTimeTwo: 1
+    openingAnimationTime: 1.6
+    closingAnimationTime: 1.6
+    # LoneStar end
     openSound:
       path: /Audio/Effects/stonedoor_openclose.ogg
     closeSound:
@@ -95,9 +97,9 @@
     bumpOpen: false
     clickOpen: true
     closeTimeOne: 0.2
-    closeTimeTwo: 0.6
+    closeTimeTwo: 1.0
     openTimeOne: 0.6
-    openTimeTwo: 0.2
+    openTimeTwo: 0.6
     openSound:
       path: /Audio/Effects/door_open.ogg
     closeSound:
@@ -216,6 +218,12 @@
     graph: DoorGraph
     node: bananiumDoor
   - type: Door
+    openTimeOne: 0.3
+    openTimeTwo: 0
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.1
+    openingAnimationTime: 0.3
+    closingAnimationTime: 0.3
     openSound:
       path: /Audio/Items/bikehorn.ogg
     closeSound:
