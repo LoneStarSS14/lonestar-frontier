@@ -1,0 +1,202 @@
+﻿#region Always Powered
+- type: entity
+  abstract: true
+  id: LSBaseAlwaysPoweredLight
+  parent: AlwaysPoweredWallLight
+  name: self-powered light
+  description: A protected light fixture that requires no power, its design is solar-flare proof.
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/Lighting/light_tube.rsi
+    state: empty
+  - type: PointLight
+    enabled: false
+  - type: ContainerContainer
+    containers:
+      light_bulb: !type:ContainerSlot
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: SmartLight
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - On
+      - Off
+      - Toggle
+  - type: Appearance
+  - type: PoweredLightVisuals
+    blinkingSound:
+      path: "/Audio/Machines/light_tube_on.ogg"
+    spriteStateMap:
+      empty: empty
+      off: base
+      on: base
+      broken: broken
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 2
+    popupText: powered-light-component-burn-hand
+  - type: AmbientSound
+    volume: -15
+    range: 2
+    sound:
+      path: /Audio/Ambience/Objects/light_hum.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors: #excess damage, don't spawn entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:EmptyAllContainersBehaviour
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+
+- type: entity
+  id: LSAlwaysPoweredLightEmpty
+  parent: LSBaseAlwaysPoweredLight
+  name: self-powered light
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/Lighting/light_tube.rsi
+  - type: PoweredLight
+    bulb: Tube
+
+- type: entity
+  id: LSAlwaysPoweredSmallLightEmpty
+  parent: LSBaseAlwaysPoweredLight
+  name: self-powered small light
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/Lighting/light_small.rsi
+  - type: PoweredLight
+    bulb: Bulb
+
+- type: entity
+  id: LSAlwaysPoweredStrobeLightEmpty
+  parent: LSBaseAlwaysPoweredLight
+  name: self-powered strobe light
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/Lighting/strobe_light.rsi
+  - type: PoweredLight
+    bulb: Bulb
+  - type: RotatingLight
+  - type: PointLight
+    mask: /Textures/Effects/LightMasks/double_cone.png
+    color: "#FFE4CE"
+    energy: 5
+    radius: 10
+    softness: 1
+    offset: "0, 0.35"
+  - type: AmbientSound
+    enabled: false
+#endregion
+
+#region Regular lights
+- type: entity
+  id: LSLightEmpty
+  parent: PoweredlightEmpty
+
+- type: entity
+  id: LSSmallLightEmpty
+  parent: PoweredSmallLightEmpty
+
+- type: entity
+  id: LSStrobeLightEmpty
+  parent: PoweredStrobeLightEmpty
+
+#MARK: other
+- type: entity
+  id: LSEmergencyLight
+  parent: EmergencyLight
+#endregion
+
+#region Shielded lights
+- type: entity
+  id: LSShieldedLightEmpty
+  parent: NFPoweredlightShieldedEmpty
+
+- type: entity
+  id: LSShieldedSmallLightEmpty
+  parent: NFPoweredSmallLightShieldedEmpty
+
+- type: entity
+  id: LSShieldedStrobeLightEmpty
+  parent: PoweredStrobeLightEmpty
+  name: shielded strobe
+  description: A light fixture. Draws power and produces light when equipped with a light tube. Reinforced with plasteel to shield it from solar flares.
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Wallmounts/Lighting/strobe_light_shielded.rsi
+  - type: Construction
+    node: strobeLightShielded
+  - type: PoweredLight
+    solarFlareShieldingCoefficient: 0.01
+#endregion
+
+#region Hardened lights
+- type: entity
+  id: LSHardenedLightEmpty
+  parent: PoweredlightEmpty # Note wizden's is 'light' uncapitalized, frontier also copied this, we have not.
+  name: hardened light
+  description: A light fixture. Draws power and produces light when equipped with a light tube. Ensures solar flares will never break its bulb.
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Wallmounts/Lighting/light_tube_hardened.rsi
+  - type: Construction
+    node: tubeLightHardened
+  - type: PoweredLight
+    solarFlareShieldingCoefficient: 0
+
+- type: entity
+  id: LSHardenedSmallLightEmpty
+  parent: PoweredSmallLightEmpty
+  name: hardened small light
+  description: A light fixture. Draws power and produces light when equipped with a light tube. Ensures solar flares will never break its bulb.
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Wallmounts/Lighting/light_small_hardened.rsi
+  - type: Construction
+    node: bulbLightHardened
+  - type: PoweredLight
+    solarFlareShieldingCoefficient: 0
+
+- type: entity
+  id: LSHardenedStrobeLightEmpty
+  parent: PoweredStrobeLightEmpty
+  name: hardened strobe
+  description: A strobe light. Draws power and produces light when equipped with a light bulb. Ensures solar flares will never break its bulb.
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Wallmounts/Lighting/strobe_light_hardened.rsi
+  - type: Construction
+    node: strobeLightHardened
+  - type: PoweredLight
+    solarFlareShieldingCoefficient: 0
+#endregion

@@ -36,3 +36,9 @@
  - /Prototypes/Shuttles/shuttle_incoming_event.yml
  - /Prototypes/game_presets.yml
 # End Frontier: ignored files
+# LoneStar: ignored files
+ - /Prototypes/Entities/Structures/Lighting/base_lighting.yml
+ - /Prototypes/Entities/Structures/Lighting/strobe_lighting.yml
+ - /Prototypes/_NF/Entities/Structures/Lighting/base_lighting.yml
+ - /Prototypes/_NF/Entities/Structures/Lighting/strobe_lighting.yml
+# End LoneStar: ignored files
