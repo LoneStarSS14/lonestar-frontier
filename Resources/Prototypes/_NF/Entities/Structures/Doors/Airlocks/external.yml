@@ -4,4 +4,4 @@
   suffix: LSRD, Glass # Lonestar changes NFSD -> LSRD
   components:
   - type: Sprite
-    sprite: _NF/Structures/Doors/Airlocks/Glass/externalnfsd.rsi
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/external-lsrd.rsi # LoneStar, TODO: Undo when migrated.

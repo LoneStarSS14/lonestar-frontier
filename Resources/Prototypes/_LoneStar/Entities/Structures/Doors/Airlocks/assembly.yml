@@ -1,0 +1,35 @@
+- type: entity
+  parent: AirlockAssembly
+  id: LSAirlockFreelancerAssembly
+  suffix: Freelancer
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Standard/basic-freelancer.rsi
+    state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: LSAirlockLsrdAssembly
+  suffix: Lsrd
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Standard/basic-lsrd.rsi
+    state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: LSAirlockFreelancerAssemblyGlass
+  suffix: Freelancer
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/basic-freelancer.rsi
+    state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: LSAirlockLsrdAssemblyGlass
+  suffix: Lsrd
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Structures/Doors/Airlocks/Glass/basic-lsrd.rsi
+    state: "assembly"

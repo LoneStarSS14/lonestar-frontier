@@ -1,0 +1,23 @@
+#region SectorCommand
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsSectorCommand, HighSecDoor ]
+  id: LSHighSecDoorSectorCommandLocked
+#endregion
+
+#region Nash(Staff)
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsNash, HighSecDoor ]
+  id: LSHighSecDoorNashLockedAtmospherics
+#endregion
+
+#region Freelancer
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsFreelancer, HighSecDoor ]
+  id: LSHighSecDoorFreelancerLocked
+#endregion
+
+#region Lsrd
+- type: entity
+  parent: [ LSBaseFilledDoorElectronicsLsrd, HighSecDoor ]
+  id: LSHighSecDoorLsrdLocked
+#endregion

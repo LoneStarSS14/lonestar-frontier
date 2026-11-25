@@ -61,7 +61,7 @@
 
 - type: rcd
   id: Catwalk
-  category: Floors # Lonestar/HL
+  category: Electrical # LoneStar
   sprite: /Textures/Interface/Radial/RCD/catwalk.png
   mode: ConstructObject
   prototype: Catwalk

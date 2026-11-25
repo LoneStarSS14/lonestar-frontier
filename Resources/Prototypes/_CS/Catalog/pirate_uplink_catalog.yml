@@ -37,11 +37,11 @@
     - LSSmuggler
 
 - type: listing
-  id: UplinkPirateRCD
-  name: uplink-pirate-rcd-name
-  description: uplink-pirate-rcd-desc
-  productEntity: PirateRCD
-  icon: { sprite: _NF/Objects/Tools/rcd.rsi, state: icon }
+  id: UplinkRCDFreelancer
+  name: uplink-rcd-freelancer-name
+  description: uplink-rcd-freelancer-desc
+  productEntity: RCDFreelancer
+  icon: { sprite: _LoneStar/Objects/Tools/rcd-freelancer.rsi, state: icon }
   cost:
     Doubloon: 10
   categories:
@@ -1327,7 +1327,7 @@
   name: uplink-pirate-shotgunammo-fire-name
   description: uplink-pirate-shotgunammo-fire-desc
   productEntity: NFAmmunitionBoxShellShotgunIncendiary
-  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Ammunition/Boxes/icon_boxes.rsi, state: box-shell-incendiary } #LoneStar 
+  icon: { sprite: _LoneStar/Objects/Weapons/Guns/Ammunition/Boxes/icon_boxes.rsi, state: box-shell-incendiary } #LoneStar
   cost:
     Doubloon: 4
   categories:

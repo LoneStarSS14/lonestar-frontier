@@ -1,0 +1,133 @@
+- type: entity
+  name: freelancer RCD
+  parent: RCD
+  id: RCDFreelancer
+  description: A rapid construction device which can place/remove walls, floors, and airlocks quickly. It has a slot to swipe ID cards.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Tools/rcd-freelancer.rsi
+    state: icon
+  - type: Clothing
+    sprite: _LoneStar/Objects/Tools/rcd-freelancer.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: GridAccess
+  - type: RCD
+    isShipyardRCD: true
+    availablePrototypes:
+    # Walls
+    - WallMining
+    - WallMiningDiagonal
+    - WallPlastitanium
+    - WallPlastitaniumDiagonal
+    # Windows / Solid
+    - MiningWindow
+    - MiningWindowDiagonal
+    - PlastitaniumWindow
+    - PlastitaniumWindowDiagonal
+    # Windows / Other
+    - Grille
+    # Airlocks / Doors
+    - LSAirlockFreelancerLockedFreelancer
+    - LSAirlockFreelancerLockedGlassFreelancer
+    - LSExternalAirlockFreelancerLocked
+    - LSExternalAirlockFreelancerLockedGlass
+    - LSShuttleAirlockFreelancerLocked
+    - LSShuttleAirlockFreelancerLockedGlass
+    # Airlocks / Firelock
+    - Firelock
+    # Electrical
+    - LVCable
+    - MVCable
+    - HVCable
+    - CableTerminal
+    # Lights
+    - TubeLight
+    - BulbLight
+    # Decals
+    - Catwalk
+    # Tiles
+    - Plating
+    - PlatingNE
+    - PlatingNW
+    - PlatingSE
+    - PlatingSW
+    - PlatingHalfV
+    - PlatingHalfH
+    - Lattice
+    - LatticeCornerNE
+    - LatticeCornerNW
+    - LatticeCornerSE
+    - LatticeCornerSW
+    - LatticeHalfV
+    - LatticeHalfH
+    # Other
+    - Deconstruct
+
+- type: entity
+  name: LSRD RCD
+  parent: RCD
+  id: RCDLsrd
+  description: A rapid construction device which can place/remove walls, floors, and airlocks quickly. It has a slot to swipe ID cards.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Tools/rcd-lsrd.rsi
+    state: icon
+  - type: Clothing
+    sprite: _LoneStar/Objects/Tools/rcd-lsrd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: GridAccess
+  - type: RCD
+    isShipyardRCD: true
+    availablePrototypes:
+    # Walls
+    - WallPlastitanium
+    - WallPlastitaniumDiagonal
+    - WallShuttle
+    - WallShuttleDiagonal
+    # Windows / Solid
+    - WindowShuttle
+    - WindowDirectionalShuttle # HL classic, this is diagonal.
+    - PlastitaniumWindow
+    - PlastitaniumWindowDiagonal
+    # Windows / Other
+    - Grille
+    # Airlocks / Doors
+    - LSAirlockLsrdLockedLsrd
+    - LSAirlockLsrdLockedGlassLsrd
+    - LSExternalAirlockLsrdLocked
+    - LSExternalAirlockLsrdLockedGlass
+    - LSShuttleAirlockLsrdLocked
+    - LSShuttleAirlockLsrdLockedGlass
+    # Airlocks / Firelock
+    - Firelock
+    # Electrical
+    - LVCable
+    - MVCable
+    - HVCable
+    - CableTerminal
+    # Lights
+    - TubeLight
+    - BulbLight
+    # Decals
+    - Catwalk
+    # Tiles
+    - Plating
+    - PlatingNE
+    - PlatingNW
+    - PlatingSE
+    - PlatingSW
+    - PlatingHalfV
+    - PlatingHalfH
+    - Lattice
+    - LatticeCornerNE
+    - LatticeCornerNW
+    - LatticeCornerSE
+    - LatticeCornerSW
+    - LatticeHalfV
+    - LatticeHalfH
+    # Other
+    - Deconstruct

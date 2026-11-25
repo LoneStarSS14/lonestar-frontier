@@ -1,7 +1,7 @@
 - type: rcd
   id: Lattice
   name: rcd-component-lattice
-  category: Floors # Hardlight
+  category: LatticeTiles
   sprite: /Textures/Interface/Radial/RCD/lattice.png
   mode: ConstructTile
   prototype: Lattice
