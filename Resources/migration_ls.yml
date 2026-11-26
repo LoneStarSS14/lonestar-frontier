@@ -76,3 +76,6 @@ NFSpawnPointDetective: SpawnPointLSDetective
 SpawnPointBrigmedic: SpawnPointLSCorpsman
 SpawnPointPublicAffairsLiaison: SpawnPointLSClerk
 ShriffIDCard: LSLSRDChiefRangerIDCard
+
+## BangWiz migration
+LSPunkSmartFridge: BangWiz

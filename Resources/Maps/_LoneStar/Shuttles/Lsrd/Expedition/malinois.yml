@@ -2496,7 +2496,7 @@ entities:
     - type: Transform
       pos: -1.5,-2.5
       parent: 1
-- proto: LSPunkSmartFridge
+- proto: BangWiz
   entities:
   - uid: 193
     components:
