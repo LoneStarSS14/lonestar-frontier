@@ -4,11 +4,13 @@
   description: job-description-ls-retrieval-officer
   supervisors: job-supervisors-ls-master-at-arms
   playTimeTracker: JobLSRetrievalOfficer
-  whitelisted: true
+  whitelisted: false
   requirements:
   # - !type:DepartmentTimeRequirement # To be enabled 2 weeks after implementation
   #   department: LSFreelancers
   #   time: 57600 # 16 hours
+  - !type:OverallPlaytimeRequirement # Remove with above's addition
+    time: 43200 # 6 hours
   weight: 50
   displayWeight: 50
   startingGear: LSRetrievalOfficerGear
