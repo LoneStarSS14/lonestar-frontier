@@ -4971,3 +4971,12 @@ Entries:
   id: 533
   time: '2026-11-26T01:24:31.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/338
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Corrects LSRD jobs to not be whitelists and take their temporary
+        requirement of 16h server playtime.
+  id: 534
+  time: '2026-11-26T03:49:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/339
