@@ -13,7 +13,7 @@
   displayWeight: 50
   startingGear: LSEnforcerGear
   icon: "JobIconLSEnforcer"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - LsrdGeneralAccess

@@ -11,7 +11,7 @@
   displayWeight: 10
   startingGear: LSEscortGear
   icon: "JobIconLSEscort"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - FreelancerGeneralAccess

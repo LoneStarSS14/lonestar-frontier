@@ -23,7 +23,7 @@
   startingGear: LSMasterAtArmsGear
   icon: "JobIconLSMasterAtArms"
   alwaysUseSpawner: true
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - FreelancerGeneralAccess

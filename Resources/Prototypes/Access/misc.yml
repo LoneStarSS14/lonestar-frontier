@@ -41,6 +41,10 @@
   - Atmospherics
   - GenpopEnter
   - GenpopLeave
+  # LoneStar
+  - BlackMarket
+  - Pirate
+  - LsrdShipyard
 
 - type: accessGroup
   id: General

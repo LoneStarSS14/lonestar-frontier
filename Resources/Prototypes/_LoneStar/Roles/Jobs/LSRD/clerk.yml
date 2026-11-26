@@ -11,7 +11,7 @@
   displayWeight: 10
   startingGear: LSClerkGear
   icon: "JobIconLSClerk"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - LsrdGeneralAccess
