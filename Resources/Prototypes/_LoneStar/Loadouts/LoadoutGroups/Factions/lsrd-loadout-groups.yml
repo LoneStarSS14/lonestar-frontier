@@ -30,6 +30,7 @@
   loadouts:
   - BailiffOuterClothing
   - BrigmedicOuterClothing
+  - LoadoutLSRDBomber
   subgroups:
   - MercenaryOuterClothing # TODO: remove when demilitarized
   - ContractorOuterClothing
@@ -39,7 +40,7 @@
   name: loadout-group-shoes
   minLimit: 0
   loadouts:
-    []
+  - NfsdClothingShoesBootsBrown
   subgroups:
   # TODO add merc
   - ContractorShoes
@@ -52,6 +53,7 @@
   minLimit: 0
   loadouts:
   - PalClothingHandsGlovesHop
+  - NfsdClothingHandsGlovesCombatNfsdBrown
   subgroups:
   # TODO add merc
   - ContractorGloves
@@ -210,7 +212,7 @@
   name: loadout-group-shoes
   minLimit: 0
   loadouts:
-  - NfsdClothingShoesBootsBrown
+    []
   subgroups:
   - LSLSRDFactionShoes
   fallbacks:
@@ -221,7 +223,7 @@
   name: loadout-group-gloves
   minLimit: 0
   loadouts:
-  - NfsdClothingHandsGlovesCombatNfsdBrown
+    []
   subgroups:
   - LSLSRDFactionGloves
 
@@ -359,7 +361,6 @@
   - SheriffOuterClothing
   - SeniorOfficerOuterClothing
   - BailiffOuterClothing
-  - LoadoutLSRDBomber
   subgroups:
   - LSLSRDFactionCombatantOuterClothing
 
