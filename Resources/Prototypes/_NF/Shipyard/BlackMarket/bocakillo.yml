@@ -9,6 +9,7 @@
 # Shuttle Notes:
 #
 - type: vessel
+  abstract: true # LoneStar
   id: Bocakillo
   parent: BaseVesselAntag
   name: Bocakillo
@@ -25,6 +26,7 @@
   - Plasma
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Bocakillo
   mapName: 'Bocakillo'
   mapPath: /Maps/_NF/Shuttles/BlackMarket/bocakillo.yml

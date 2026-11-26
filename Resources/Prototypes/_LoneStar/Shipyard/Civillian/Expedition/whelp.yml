@@ -1,0 +1,38 @@
+# Original Author
+# dustylens (github)
+
+- type: vessel
+  id: Whelp
+  parent: BaseVessel
+  name: LL1 Whelp
+  description: The Whelp is the explorer of choice for adventures on a budget, mass produced and reliable.
+  price: 82500 # Appraised @ 20,600 + 50k(exped) * 1.1(Mercfab)
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Expedition/whelp.yml
+  guidebookPage: ShipyardDragoon # TODO
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Whelp
+  mapName: 'Whelp'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Expedition/whelp.yml
+  minPlayers: 0
+  stations:
+    Whelp:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Whelp {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

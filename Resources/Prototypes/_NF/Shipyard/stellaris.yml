@@ -30,6 +30,5 @@
         - type: StationJobs
           availableJobs:
             ContractorInterview: [ 0, 0 ]
-            CompanionInterview: [ 0, 0 ]
             PilotInterview: [ 0, 0 ]
             MercenaryInterview: [ 0, 0 ]

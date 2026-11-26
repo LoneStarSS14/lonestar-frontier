@@ -4919,3 +4919,55 @@ Entries:
   id: 531
   time: '2026-11-25T04:14:15.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/324
+- author: archee1
+  changes:
+    - type: Remove
+      message: >-
+        Reverts the previous door changes due to more issues being discovered
+        prior to the fix
+  id: 532
+  time: '2026-11-25T20:42:20.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/337
+- author: archee1
+  changes:
+    - type: Add
+      message: New shuttle; LSR-Dragoon, medium expedition shuttle.
+    - type: Add
+      message: New shuttle; FLG-Drake, medium expedition shuttle.
+    - type: Tweak
+      message: Renamed Dragoon -> Whelp.
+    - type: Add
+      message: New shuttle; FLG-Nickel, micro pursuit shuttle.
+    - type: Add
+      message: New shuttle; FLG-Pathos, small medical shuttle.
+    - type: Remove
+      message: FLG-Bonesaw.
+    - type: Remove
+      message: >-
+        Removed the following shuttles from shipyards: LSR-Wasp, LSR-Empress,
+        LSR-Prowler, Khonsu, Araneo, Solifuge, Xiphos, Hephaestus, Longshoreman.
+    - type: Tweak
+      message: the Dove and Raven are now priced at 225k and 195k.
+    - type: Tweak
+      message: FLG-Turncoat, Exped capability, now domains into cargo.
+    - type: Tweak
+      message: LSR-Malinois, Exped capability.
+    - type: Add
+      message: New shuttle; LSR-Garrison, medium expedition shuttle.
+    - type: Tweak
+      message: >-
+        For shuttles, LL4 and up mean that it requires command access to
+        purchase
+    - type: Tweak
+      message: Anchor/Yegerov/Gourd/Ambition are now LL4
+    - type: Tweak
+      message: Crescent is now LL5, and costs 2.25mil down from 8mil
+    - type: Tweak
+      message: All LSRD shuttles are now purchasable by any member of the LSRD
+    - type: Add
+      message: There is now a regular medical shipyard console at the den.
+    - type: Add
+      message: Freelancer's ships are no longer defaulted to 'disguise' names
+  id: 533
+  time: '2026-11-26T01:24:31.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/338

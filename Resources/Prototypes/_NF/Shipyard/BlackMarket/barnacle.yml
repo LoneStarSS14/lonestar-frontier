@@ -4,6 +4,7 @@
 # Shuttle Notes:
 # a wooden pirate version of the classic Prospector
 - type: vessel
+  abstract: true # LoneStar
   id: Barnacle
   parent: BaseVesselAntag
   name: Barnacle
@@ -20,6 +21,7 @@
   - Plasma
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Barnacle
   mapName: 'Barnacle'
   mapPath: /Maps/_NF/Shuttles/BlackMarket/barnacle.yml

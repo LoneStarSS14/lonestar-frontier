@@ -1,0 +1,37 @@
+## TODO: Remove with removal of LSRD responsibilitie.
+
+# Original Author
+# magnuscrowe (github)
+
+- type: vessel
+  id: LSHypnos
+  parent: BaseVessel
+  name: LSR Hypnos
+  description: A light medium ship with a recommended crew of 2 to 3 officers, the Hypnos is a dedicated interdiction vessel outfitted with a powerful EMP device for tackling escaping vessels.
+  price: 34500
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml
+  class:
+  - Pursuit
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: LSHypnos
+  mapName: 'LSR-Hypnos'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml
+  minPlayers: 0
+  stations:
+    LSHypnos:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Hypnos {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

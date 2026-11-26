@@ -1,0 +1,36 @@
+# Shuttle Notes:
+# is noted in the DNM whitelist because of its duster cannon
+
+- type: vessel
+  id: Malinois
+  parent: BaseVessel
+  name: LSR Malinois
+  description: An ex-assault vessel designed to facilitate prisoner rehabilitation, however now repurposed for the LSRD's planetary instigations.
+  price: 39500
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_LoneStar/Shuttles/Lsrd/Expedition/malinois.yml
+  class:
+  - Expedition
+  - Salvage
+  engine:
+  - AME
+
+- type: gameMap
+  id: Malinois
+  mapName: 'LSR-Malinois'
+  mapPath: /Maps/_LoneStar/Shuttles/Lsrd/Expedition/malinois.yml
+  minPlayers: 0
+  stations:
+    Malinois:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Malinois {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

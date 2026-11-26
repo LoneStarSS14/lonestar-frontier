@@ -1,0 +1,33 @@
+- type: vessel
+  id: Nickel
+  parent: BaseVesselAntag
+  name: FLG Nickel
+  description: A Bulker retrofitted into a proper tank. Ready to dish out some real damage
+  price: 12500 # TODO: check this beats resale
+  category: Medium
+  group: BlackMarket
+  access: Pirate
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Mercenary/nickel.yml
+  guidebookPage: Null # TODO
+  class:
+  - Pursuit
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Nickel
+  mapName: 'FLG-Nickel'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Mercenary/nickel.yml
+  minPlayers: 0
+  stations:
+    Nickel:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Nickel {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

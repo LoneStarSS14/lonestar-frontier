@@ -8,6 +8,7 @@
 
 # Shuttle Notes:
 - type: vessel
+  abstract: true # LoneStar
   id: Turncoat
   parent: BaseVesselAntag
   name: Turncoat
@@ -23,6 +24,7 @@
   - Uranium
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Turncoat
   mapName: 'Turncoat'
   mapPath: /Maps/_NF/Shuttles/BlackMarket/turncoat.yml

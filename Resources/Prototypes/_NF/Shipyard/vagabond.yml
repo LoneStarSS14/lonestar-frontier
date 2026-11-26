@@ -7,7 +7,7 @@
 # Discord: 159375107855351808
 
 # Shuttle Notes:
-# 
+#
 
 - type: vessel
   id: Vagabond
@@ -41,6 +41,5 @@
         - type: StationJobs
           availableJobs:
             ContractorInterview: [ 0, 0 ]
-            CompanionInterview: [ 0, 0 ]
             PilotInterview: [ 0, 0 ]
             MercenaryInterview: [ 0, 0 ]

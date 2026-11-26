@@ -1,0 +1,35 @@
+## TODO: Convert ship to not use dragons
+
+- type: vessel
+  id: Glizzy
+  parent: BaseVesselAntag
+  name: FLG Glizzy
+  description: "Rebuilt on the basis off of one hot dog. The glizzy flies just as far into the mouthes of danger, ready to snag any and all contraband."
+  price: 14750
+  category: Small
+  group: BlackMarket
+  access: Pirate
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/glizzy.yml
+  guidebookPage: ShipyardGlizzy
+  class:
+  - Cargo
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Glizzy
+  mapName: 'FLG-Glizzy'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/glizzy.yml
+  minPlayers: 0
+  stations:
+    Glizzy:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Glizzy {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

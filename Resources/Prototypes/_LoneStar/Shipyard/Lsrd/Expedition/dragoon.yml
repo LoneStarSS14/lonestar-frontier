@@ -1,0 +1,36 @@
+# Original Author
+# dustylens (github)
+
+- type: vessel
+  id: LSDragoon
+  parent: BaseVessel
+  name: LSR Dragoon
+  description: The Dragoon is the explorer of choice for adventures on a budget, mass produced and reliable.
+  price: 77600
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_LoneStar/Shuttles/Lsrd/Expedition/dragoon.yml
+  guidebookPage: ShipyardDragoon # TODO
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: LSDragoon
+  mapName: 'LSR-Dragoon'
+  mapPath: /Maps/_LoneStar/Shuttles/Lsrd/Expedition/dragoon.yml
+  minPlayers: 0
+  stations:
+    LSDragoon:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Dragoon {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

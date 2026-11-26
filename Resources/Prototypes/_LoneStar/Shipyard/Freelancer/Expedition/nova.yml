@@ -1,0 +1,37 @@
+## TODO: Modernize according to mapping standards.
+
+- type: vessel
+  id: Nova
+  parent: BaseVesselAntag
+  name: FLG Nova
+  description: A Pulsar retrofitted for illegal salvage operations
+  price: 146500 #41647$ +50$k(exped) LL2 x1.6 = 146,635$
+  category: Medium
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/nova.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  - Expedition
+  - Salvage
+  engine:
+  - AME
+
+- type: gameMap
+  id: Nova
+  mapName: 'FLG-Nova'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/nova.yml
+  minPlayers: 0
+  stations:
+    Nova:
+      stationProto: StandardFrontierAntagExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Nova {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

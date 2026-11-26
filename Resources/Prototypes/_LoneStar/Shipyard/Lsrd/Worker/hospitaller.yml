@@ -1,0 +1,35 @@
+## TODO: Modernize according to mapping standards OR 'create suitable replacement and remove'.
+
+- type: vessel
+  id: LSHospitaller
+  parent: BaseVessel
+  name: LSR Hospitaller
+  description: A small security medical craft designed for emergency response and search and rescue operations.
+  price: 28220
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_NF/Shuttles/Nfsd/hospitaller.yml
+  guidebookPage: Null
+  class:
+  - Medical
+  engine:
+  - APU
+
+- type: gameMap
+  id: LSHospitaller
+  mapName: 'LSR-Hospitaller'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/hospitaller.yml
+  minPlayers: 0
+  stations:
+    LSHospitaller:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Hospitaller {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

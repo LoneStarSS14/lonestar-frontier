@@ -8,6 +8,7 @@
 
 # Shuttle Notes:
 - type: vessel
+  abstract: true # LoneStar
   id: Schooner
   parent: BaseVesselAntag
   name: Schooner
@@ -24,6 +25,7 @@
   - Uranium
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Schooner
   mapName: 'Schooner'
   mapPath: /Maps/_NF/Shuttles/BlackMarket/schooner.yml

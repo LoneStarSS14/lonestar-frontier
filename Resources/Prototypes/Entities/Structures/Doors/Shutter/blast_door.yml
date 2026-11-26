@@ -14,14 +14,12 @@
     - state: welded
       map: ["enum.WeldableLayers.BaseWelded"]
   - type: Door
-    # LoneStar start
     closeTimeOne: 0.4
-    closeTimeTwo: 0.8
+    closeTimeTwo: 0.4
     openTimeOne: 0.4
-    openTimeTwo: 0.8
-    openingAnimationTime: 1.2
-    closingAnimationTime: 1.2
-    # LoneStar end
+    openTimeTwo: 0.4
+    openingAnimationTime: 1.0
+    closingAnimationTime: 1.0
     canPry: false
     crushDamage:
       types:

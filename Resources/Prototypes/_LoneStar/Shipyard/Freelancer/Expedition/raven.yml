@@ -1,0 +1,39 @@
+## TODO: Modernize with new mapping standards
+##       Suggested to start from scratch or start off of the upstream modernized dove.
+
+- type: vessel
+  id: Raven
+  parent: BaseVesselAntag
+  name: FLG Raven
+  description: Modified Dove designed to steal or smuggle cargo crates, fits between 3-4 crew, Exped Capable.
+  price: 195000
+  category: Medium
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/raven.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  - Expedition
+  - Medical
+  - Cargo
+  engine:
+  - AME
+
+- type: gameMap
+  id: Raven
+  mapName: 'FLG-Raven'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/raven.yml
+  minPlayers: 0
+  stations:
+    Raven:
+      stationProto: StandardFrontierAntagExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Raven {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

@@ -1,0 +1,35 @@
+## TODO: Modernize according to mapping standards as an 'expedition shuttle' OR 'medical shuttle'.
+
+- type: vessel
+  id: Cardiac
+  parent: BaseVessel
+  name: LSR Cardiac
+  description: An LSRD medical shuttle on the larger end, while it has an EMP generator its primary purpose is to function as more public facing trauma vessel. # Lonestar change NFSD -> LSRD
+  price: 73250
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_LoneStar/Shuttles/Lsrd/Mercenary/cardiac.yml
+  class:
+  - Pursuit
+  - Medical
+  engine:
+  - Bananium
+
+- type: gameMap
+  id: Cardiac
+  mapName: 'LSR-Cardiac'
+  mapPath: /Maps/_LoneStar/Shuttles/Lsrd/Mercenary/cardiac.yml
+  minPlayers: 0
+  stations:
+    Cardiac:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Cardiac {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

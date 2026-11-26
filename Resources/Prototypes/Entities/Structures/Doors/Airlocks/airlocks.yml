@@ -137,15 +137,6 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/mining.rsi
-  # LoneStar start
-  - type: Door
-    openTimeOne: 0.4
-    openTimeTwo: 0.6
-    closeTimeOne: 0.4
-    closeTimeTwo: 0.6
-    openingAnimationTime: 1
-    closingAnimationTime: 1
-  # LoneStar end
   - type: Wires
     layoutId: AirlockCargo
   - type: Paintable
@@ -166,15 +157,6 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/hatch.rsi
-  # LoneStar start
-  - type: Door
-    openTimeOne: 0.4
-    openTimeTwo: 0.6
-    closeTimeOne: 0.4
-    closeTimeTwo: 0.6
-    openingAnimationTime: 1
-    closingAnimationTime: 1
-  # LoneStar end
   - type: Paintable
     group: null
 
@@ -185,15 +167,6 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/hatch_maint.rsi
-  # LoneStar start
-  - type: Door
-    openTimeOne: 0.4
-    openTimeTwo: 0.6
-    closeTimeOne: 0.4
-    closeTimeTwo: 0.6
-    openingAnimationTime: 1
-    closingAnimationTime: 1
-  # LoneStar end
   - type: Paintable
     group: null
 
@@ -327,15 +300,6 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/mining.rsi
-  # LoneStar start
-  - type: Door
-    openTimeOne: 0.4
-    openTimeTwo: 0.6
-    closeTimeOne: 0.4
-    closeTimeTwo: 0.6
-    openingAnimationTime: 1
-    closingAnimationTime: 1
-  # LoneStar end
   - type: Paintable
     group: null
 
@@ -372,14 +336,5 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/xeno.rsi
-  # LoneStar start
-  - type: Door
-    openTimeOne: 0.4
-    openTimeTwo: 0.6
-    closeTimeOne: 0.4
-    closeTimeTwo: 0.6
-    openingAnimationTime: 1
-    closingAnimationTime: 1
-  # LoneStar end
   - type: Paintable
     group: null

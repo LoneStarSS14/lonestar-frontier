@@ -1,0 +1,38 @@
+## TODO: Modernize according to standards as an expedition shuttle.
+
+# Original Author
+# Leander_0 (github)
+
+- type: vessel
+  id: LSFalcon
+  parent: BaseVesselAntag
+  name: FLG Falcon
+  description: Rebuilt mining vessel made into a pirate ship with hangar bay to store vehicles, fits between 3-4 crew.
+  price: 70000 #29313 1.25 65954.25
+  category: Medium
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_NF/Shuttles/BlackMarket/falcon.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: LSFalcon
+  mapName: 'FLG-Falcon'
+  mapPath: /Maps/_NF/Shuttles/BlackMarket/falcon.yml
+  minPlayers: 0
+  stations:
+    LSFalcon:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Falcon {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]
