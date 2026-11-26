@@ -57,14 +57,6 @@
     containers:
       board: !type:Container
   - type: Door
-    # LoneStar start
-    openTimeOne: 0.4
-    openTimeTwo: 0.6
-    closeTimeOne: 0.4
-    closeTimeTwo: 0.6
-    openingAnimationTime: 1
-    closingAnimationTime: 1
-    # LoneStar end
     crushDamage:
       types:
         Blunt: 50

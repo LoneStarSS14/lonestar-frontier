@@ -34,14 +34,8 @@
   - type: Wires
     layoutId: Docking
   - type: Door
-    # LoneStar start
-    openTimeOne: 0.4
-    openTimeTwo: 1.6
-    closeTimeOne: 0.4
-    closeTimeTwo: 1.6
-    openingAnimationTime: 2
-    closingAnimationTime: 2
-    # LoneStar end
+    closeTimeTwo: 0.4
+    openTimeTwo: 0.4
     crushDamage:
       types:
         Blunt: 15
