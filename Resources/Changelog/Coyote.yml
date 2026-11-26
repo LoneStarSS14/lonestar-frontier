@@ -4989,3 +4989,30 @@ Entries:
   id: 535
   time: '2026-11-26T21:49:43.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/340
+- author: archee1
+  changes:
+    - type: Fix
+      message: Factional Residents cant set pseudonyms from their loadouts.
+    - type: Fix
+      message: LSRD's RO no longer get DB from RPI
+    - type: Fix
+      message: Migrates whitelists from old freelancer job IDs to the new IDs.
+    - type: Tweak
+      message: >-
+        LSRD and Freelancer roles now have their accesses visible at the ID
+        computer.
+    - type: Fix
+      message: SR now has Pirate and BlackMarket access.
+    - type: Fix
+      message: Loadouts for LSRD and Freelancers are now all correctly available.
+    - type: Tweak
+      message: >-
+        You can now swap the active ID Card in ID computers without ejected the
+        current one.
+    - type: Fix
+      message: >-
+        CR and MAA now spawn with seal-editing pens (cybersun/centcomm) for
+        document related matters.
+  id: 536
+  time: '2026-11-26T22:19:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/341
