@@ -4980,3 +4980,12 @@ Entries:
   id: 534
   time: '2026-11-26T03:49:35.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/339
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        LSRD/Freelancer roles should now have the correct options from their
+        loadouts.
+  id: 535
+  time: '2026-11-26T21:49:43.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/340
