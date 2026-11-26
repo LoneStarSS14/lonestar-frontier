@@ -3,7 +3,6 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-
     startAnnouncement: station-event-bluespace-cache-start-announcement
     startAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_cache_arrival.ogg
@@ -55,7 +54,6 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_vault_leave.ogg
     warningAnnouncement: station-event-bluespace-vault-warning-announcement
-
     earliestStart: 100
     weight: 5
     duration: 1020
@@ -154,7 +152,7 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
     earliestStart: 80
-    #minimumPlayers: 15 # LoneStar: Maybe until more average players
+    # minimumPlayers: 15 # LoneStar
     weight: 1
     duration: 1800
     maxDuration: 2400
@@ -164,10 +162,10 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2 # Lonestar: make it 
-        maxCount: 2 # Lonestar: three instances
-        minimumDistance: 2500 # Coyote: add: 1500 -> 2500m
-        maximumDistance: 3500 # Coyote: add: 2500 -> 3500m
+        minCount: 2 # Lonestar
+        maxCount: 2 # Lonestar
+        minimumDistance: 2500 # Coyote
+        maximumDistance: 3500 # Coyote
         addComponents:
         - type: Gravity
           enabled: true
@@ -196,7 +194,7 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
     earliestStart: 100
-    #minimumPlayers: 15 # LoneStar: Maybe until more average players
+    # minimumPlayers: 15 # LoneStar
     weight: 1
     duration: 900
     maxDuration: 1200
@@ -206,10 +204,10 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2 # Lonestar: make it 
-        maxCount: 2 # Lonestar: three instances
-        minimumDistance: 2500 # Coyote: 1500<2500
-        maximumDistance: 3500 # Coyote: 2500<3500
+        minCount: 2 # Lonestar
+        maxCount: 2 # Lonestar
+        minimumDistance: 2500 # Coyote
+        maximumDistance: 3500 # Coyote
         addComponents:
         - type: Gravity
           enabled: true
@@ -238,7 +236,7 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
     earliestStart: 80
-    #minimumPlayers: 15 # LoneStar: Maybe until more average players
+    # minimumPlayers: 15 # LoneStar
     weight: 1
     duration: 1800
     maxDuration: 2400
@@ -248,10 +246,10 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2 # Lonestar: make it 
-        maxCount: 2 # Lonestar: three instances
-        minimumDistance: 2500 # Coyote: 1500<2500
-        maximumDistance: 3500 # Coyote: 2500<3500
+        minCount: 2 # Lonestar
+        maxCount: 2 # Lonestar
+        minimumDistance: 2500 # Coyote
+        maximumDistance: 3500 # Coyote
         addComponents:
         - type: Gravity
           enabled: true
@@ -283,17 +281,17 @@
     weight: 1
     duration: 1800
     maxDuration: 2400
-#    maxOccurrences: 1 # Coyote: remove: let the people eat dinos more than once a shift
-    reoccurrenceDelay: 240 # Coyote: let the people eat dinos like once every 4 hours
+    # maxOccurrences: 1 # LoneStar
+    reoccurrenceDelay: 360 # LoneStar
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-Cave
-        minCount: 2 # Lonestar: make it 
-        maxCount: 2 # Lonestar: three instances
-        minimumDistance: 2500 # Coyote: 1500<2500
-        maximumDistance: 3500 # Coyote: 2500<3500
+        minCount: 2 # Lonestar
+        maxCount: 2 # Lonestar
+        minimumDistance: 2500 # LoneStar
+        maximumDistance: 3500 # LoneStar
         addComponents:
         - type: Gravity
           enabled: true
