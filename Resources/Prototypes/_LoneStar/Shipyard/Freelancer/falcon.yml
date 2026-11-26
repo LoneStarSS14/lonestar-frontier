@@ -1,8 +1,8 @@
-# Author Info
-# GitHub: Leander_0
+## TODO: Modernize according to standards as an expedition shuttle.
 
-# Shuttle Notes:
-# Kestrel looking ship with hangar bay meant to be used along with hoverbikes.
+# Original Author
+# Leander_0 (github)
+
 - type: vessel
   id: LSFalcon
   parent: BaseVesselAntag

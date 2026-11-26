@@ -1,3 +1,6 @@
+## TODO: This ship is on the chopping block and needs remodelling
+##       otherwise the next freelancer medium service shuttle will replace it.
+
 - type: vessel
   id: Speakeasy
   parent: BaseVesselAntag

@@ -1,13 +1,8 @@
-# Author Info
-# GitHub: erhardsteinhauer
-# Discord: erhardsteinhauer
+## TODO: Modernize according to mapping standards as a pursuit combat shuttle.
 
-# Maintainer Info
-# GitHub: erhardsteinhauer
-# Discord: erhardsteinhauer
+# Original Author
+# erhardsteinhauer (github)
 
-# Shuttle Notes:
-#
 - type: vessel
   id: LSMenace
   parent: BaseVesselAntag

@@ -1,3 +1,5 @@
+## TODO: Modernize according to mapping standards.
+
 - type: vessel
   id: Findsman
   parent: BaseVesselAntag

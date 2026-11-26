@@ -1,3 +1,5 @@
+## TODO: Modernize after removal of LSRD responsibilities.
+
 - type: vessel
   id: LSTemplar
   parent: BaseVessel

@@ -1,3 +1,6 @@
+## TODO: Modernize with new mapping standards
+##       Suggested to start from scratch or start off of the upstream modernized dove.
+
 - type: vessel
   id: Raven
   parent: BaseVesselAntag

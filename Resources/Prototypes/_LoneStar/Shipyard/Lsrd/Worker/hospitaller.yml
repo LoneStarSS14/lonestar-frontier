@@ -1,3 +1,5 @@
+## TODO: Modernize according to mapping standards OR 'create suitable replacement and remove'.
+
 - type: vessel
   id: LSHospitaller
   parent: BaseVessel

@@ -1,3 +1,5 @@
+## TODO: Convert ship to not use dragons
+
 - type: vessel
   id: Glizzy
   parent: BaseVesselAntag
