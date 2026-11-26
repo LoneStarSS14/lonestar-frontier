@@ -349,7 +349,7 @@ public struct RpiJudgementDetails(
 public sealed partial class FlarpiDatacore
 {
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public ProtoId<FlarpiSettingsPrototype> DatacoreType = "FlarpiSettings_Default";
+    public ProtoId<FlarpiSettingsPrototype> DatacoreType = "FlarpiSettings_Freelancer";
 
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public decimal CurrentProgress = 0m;

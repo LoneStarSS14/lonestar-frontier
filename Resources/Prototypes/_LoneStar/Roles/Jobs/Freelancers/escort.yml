@@ -24,6 +24,7 @@
   - !type:AddComponentSpecial
     components:
     - type: IsFreelancer
+      worth: 0
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   #RPI

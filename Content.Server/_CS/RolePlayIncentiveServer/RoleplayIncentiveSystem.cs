@@ -42,22 +42,22 @@ namespace Content.Server._CS;
 /// </summary>
 public sealed class RoleplayIncentiveSystem : EntitySystem
 {
-    [Dependency] private readonly IGameTiming          _timing = null!;
-    [Dependency] private readonly BankSystem           _bank = null!;
-    [Dependency] private readonly PopupSystem          _popupSystem = null!;
-    [Dependency] private readonly ChatSystem           _chatsys = null!;
-    [Dependency] private readonly IChatManager         _chatManager = null!;
-    [Dependency] private readonly IPlayerManager       _playerManager = null!;
-    [Dependency] private readonly SSDIndicatorSystem   _ssdThing = null!;
-    [Dependency] private readonly IPrototypeManager    _prototype = default!;
-    [Dependency] private readonly TagSystem            _tagSystem = default!;
-    [Dependency] private readonly MobStateSystem       _mobStateSystem = default!;
-    [Dependency] private readonly ExamineSystemShared  _examineSystem = default!;
-    [Dependency] private readonly TransformSystem      _tf = default!;
-    [Dependency] private readonly PaperSystem          _paperSystem = default!;
-    [Dependency] private readonly IEntityManager       _entityManager = default!;
-    [Dependency] private readonly HandsSystem          _heandsSystem = default!;
-    [Dependency] private readonly StackSystem          _stack = default!;
+    [Dependency] private readonly IGameTiming _timing = null!;
+    [Dependency] private readonly BankSystem _bank = null!;
+    [Dependency] private readonly PopupSystem _popupSystem = null!;
+    [Dependency] private readonly ChatSystem _chatsys = null!;
+    [Dependency] private readonly IChatManager _chatManager = null!;
+    [Dependency] private readonly IPlayerManager _playerManager = null!;
+    [Dependency] private readonly SSDIndicatorSystem _ssdThing = null!;
+    [Dependency] private readonly IPrototypeManager _prototype = default!;
+    [Dependency] private readonly TagSystem _tagSystem = default!;
+    [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
+    [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
+    [Dependency] private readonly TransformSystem _tf = default!;
+    [Dependency] private readonly PaperSystem _paperSystem = default!;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
+    [Dependency] private readonly HandsSystem _heandsSystem = default!;
+    [Dependency] private readonly StackSystem _stack = default!;
 
     private List<ProtoId<RpiTaxBracketPrototype>> RpiDatumPrototypes = new()
     {
@@ -139,10 +139,10 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
     private void OnComponentInit(EntityUid uid, RoleplayIncentiveComponent component, ComponentInit args)
     {
         // set the next payward time
-        component.NextPayward                    = _timing.CurTime + component.PaywardInterval;
-        component.NextProxyCheck                 = _timing.CurTime + component.ProxyCheckInterval;
-        component.NextProxySync                  = _timing.CurTime + component.ProxySyncInterval;
-        component.NextAuraCheck                  = _timing.CurTime + component.AuraCheckInterval;
+        component.NextPayward = _timing.CurTime + component.PaywardInterval;
+        component.NextProxyCheck = _timing.CurTime + component.ProxyCheckInterval;
+        component.NextProxySync = _timing.CurTime + component.ProxySyncInterval;
+        component.NextAuraCheck = _timing.CurTime + component.AuraCheckInterval;
         component.FlarpiDatacore.LastFlarpiCheck = _timing.CurTime + component.FlarpiDatacore.FlarpiCheckInterval;
     }
 
@@ -664,28 +664,28 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
                         ("spreeCount", paydata.SpreeCount));
                     break;
                 default:
-                {
-                    if (paydata.TimeBroken > rpic.LightFixTimeBrokenBonusThreshold)
                     {
-                        outtext = Loc.GetString(
-                            "coyote-rpi-light-fix-pay-message-janitor-timebroken",
-                            ("amount", paydata.FinalPay),
-                            ("baseAmount", paydata.BasePay),
-                            ("janitorBonus", paydata.JanitorBonus),
-                            ("timeBrokenBonus", paydata.TimeBrokenBonus),
-                            ("timeBrokenMinutes", (int)paydata.TimeBroken.TotalMinutes));
-                    }
-                    else
-                    {
-                        outtext = Loc.GetString(
-                            "coyote-rpi-light-fix-pay-message-janitor",
-                            ("amount", paydata.FinalPay),
-                            ("baseAmount", paydata.BasePay),
-                            ("janitorBonus", paydata.JanitorBonus));
-                    }
+                        if (paydata.TimeBroken > rpic.LightFixTimeBrokenBonusThreshold)
+                        {
+                            outtext = Loc.GetString(
+                                "coyote-rpi-light-fix-pay-message-janitor-timebroken",
+                                ("amount", paydata.FinalPay),
+                                ("baseAmount", paydata.BasePay),
+                                ("janitorBonus", paydata.JanitorBonus),
+                                ("timeBrokenBonus", paydata.TimeBrokenBonus),
+                                ("timeBrokenMinutes", (int)paydata.TimeBroken.TotalMinutes));
+                        }
+                        else
+                        {
+                            outtext = Loc.GetString(
+                                "coyote-rpi-light-fix-pay-message-janitor",
+                                ("amount", paydata.FinalPay),
+                                ("baseAmount", paydata.BasePay),
+                                ("janitorBonus", paydata.JanitorBonus));
+                        }
 
-                    break;
-                }
+                        break;
+                    }
             }
         }
 
@@ -855,10 +855,10 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
     private void TickEverythingAnyway(RoleplayIncentiveComponent rpic)
     {
         TimeSpan now = _timing.CurTime;
-        rpic.LastCheck                      = now;
-        rpic.NextPayward                    = now + rpic.PaywardInterval;
-        rpic.NextProxyCheck                 = now + rpic.ProxyCheckInterval;
-        rpic.NextAuraCheck                  = now + rpic.AuraCheckInterval;
+        rpic.LastCheck = now;
+        rpic.NextPayward = now + rpic.PaywardInterval;
+        rpic.NextProxyCheck = now + rpic.ProxyCheckInterval;
+        rpic.NextAuraCheck = now + rpic.AuraCheckInterval;
         rpic.FlarpiDatacore.LastFlarpiCheck = now;
     }
 
@@ -1629,9 +1629,9 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
         if (TryComp<IsLsrdComponent>(uid, out var nfsdComp) && flarpiPerHour < nfsdComp.Worth)
             flarpiPerHour = nfsdComp.Worth; // nfsd get at least their worth in flarpies
 
-        decimal flarpiPointsPerHour  = flarpiPerHour * flarpiProto.PointsPerFlarpi;
+        decimal flarpiPointsPerHour = flarpiPerHour * flarpiProto.PointsPerFlarpi;
         decimal flarpiPerMillisecond = flarpiPointsPerHour / 3600000m;
-        decimal flarpiGained         = flarpiPerMillisecond * (decimal)timeSinceLastCheck.TotalMilliseconds;
+        decimal flarpiGained = flarpiPerMillisecond * (decimal)timeSinceLastCheck.TotalMilliseconds;
         myFlarpy.CurrentProgress += flarpiGained;
         details.LoadFlarpiData(myFlarpy);
     }
@@ -1710,7 +1710,7 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
                 default,
                 false,
                 session.Channel);
-        } // why am i calling them flarpies, they're actually den bullions
+        }
     }
 
     /// <summary>
@@ -1740,8 +1740,8 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
         int toGive = myFlarpy.BankedFlarpis;
 
         myFlarpy.BankedFlarpis = 0;
-        MapCoordinates coords  = _tf.GetMapCoordinates(Transform(uid));
-        List<EntityUid> ents   = _stack.SpawnMultiple(
+        MapCoordinates coords = _tf.GetMapCoordinates(Transform(uid));
+        List<EntityUid> ents = _stack.SpawnMultiple(
             flarpiProto.FlarpiCurrencyPrototype,
             toGive,
             _tf.ToCoordinates(coords));
@@ -1767,34 +1767,39 @@ public sealed class RoleplayIncentiveSystem : EntitySystem
         RoleplayIncentiveComponent rpic
         )
     {
-        if (HasComp<IsFreelancerComponent>(uid))
-            return true; // only pirates care about flarpies
-        if (HasComp<IsLsrdComponent>(uid))
-            return true; // nfsd too
-        return false;
+        TryComp<IsFreelancerComponent>(uid, out var freelancer);
+        TryComp<IsLsrdComponent>(uid, out var nfsd);
+
+        return (freelancer, nfsd) switch
+        {
+            ({ Worth: > 0 }, null) => true,
+            (null, { Worth: > 0 }) => true,
+            _ => false,
+        };
     }
 
+    /// <summary>
+    /// Remade by lonestar, sets the FlarpiSettings based on component.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="rpic"></param>
     public void ConditionFlarpi(
         EntityUid uid,
         RoleplayIncentiveComponent rpic
         )
     {
-        // set the right prototype if needed
-        FlarpiDatacore myFlarpy = rpic.FlarpiDatacore;
-        if (HasComp<IsFreelancerComponent>(uid)
-            && !HasComp<IsLsrdComponent>(uid))
+        TryComp<IsFreelancerComponent>(uid, out var freelancer);
+        TryComp<IsLsrdComponent>(uid, out var nfsd);
+
+        var datacoreType = (freelancer, nfsd) switch
         {
-            myFlarpy.DatacoreType = "FlarpiSettings_Default";
-        }
-        else if (HasComp<IsLsrdComponent>(uid)
-            && !HasComp<IsFreelancerComponent>(uid))
-        {
-            myFlarpy.DatacoreType = "FlarpiSettings_NFSD";
-        }
-        else
-        {
-            myFlarpy.DatacoreType = "FlarpiSettings_Default";
-        }
+            ({ Worth: > 0 }, null) => "FlarpiSettings_Freelancer",
+            (null, { Worth: > 0 }) => "FlarpiSettings_NFSD",
+            _ => null,
+        };
+
+        if (datacoreType != null)
+            rpic.FlarpiDatacore.DatacoreType = datacoreType;
     }
 
     #endregion
