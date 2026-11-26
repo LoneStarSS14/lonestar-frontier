@@ -1,5 +1,5 @@
 - type: flarpiSettings
-  id: FlarpiSettings_Default
+  id: FlarpiSettings_Freelancer
   pointsPerFlarpi: 1000
   flarpiCurrencyPrototype: Doubloon
   flarpiName: freelancer

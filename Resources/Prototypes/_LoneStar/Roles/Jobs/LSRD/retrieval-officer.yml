@@ -15,7 +15,7 @@
   displayWeight: 50
   startingGear: LSRetrievalOfficerGear
   icon: "JobIconLSRetrievalOfficer"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - LsrdGeneralAccess
@@ -28,7 +28,7 @@
   #freelancer specific
   - !type:AddComponentSpecial
     components:
-    - type: IsFreelancer
+    - type: IsLsrd
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
   #RPI
@@ -85,7 +85,6 @@
   - LSLSRDFactionCombatantImplanter
   # Common v
   - ContractorBoxSurvival
-  - ContractorWallet
   - PirateBackpackItems
   - ContractorHandItems
   - ContractorInstruments

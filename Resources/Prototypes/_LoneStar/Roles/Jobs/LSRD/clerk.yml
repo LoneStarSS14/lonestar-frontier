@@ -11,7 +11,7 @@
   displayWeight: 10
   startingGear: LSClerkGear
   icon: "JobIconLSClerk"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - LsrdGeneralAccess
@@ -24,6 +24,7 @@
   - !type:AddComponentSpecial
     components:
     - type: IsLsrd
+      worth: 0
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   #RPI
@@ -56,7 +57,6 @@
 
 - type: roleLoadout
   id: JobLSClerk
-  canCustomizeName: true
   groups:
   # Unique v
   - LSLSRDClerkPDA

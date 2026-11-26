@@ -15,7 +15,7 @@
   displayWeight: 30
   startingGear: LSDetectiveGear
   icon: "JobIconLSDetective"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   access:
   - Detective

@@ -23,7 +23,7 @@
   startingGear: LSMasterAtArmsGear
   icon: "JobIconLSMasterAtArms"
   alwaysUseSpawner: true
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - FreelancerGeneralAccess
@@ -62,6 +62,9 @@
   equipment:
     pocket1: BasePirateUplinkRadioPirateCaptain
     pocket2: ContrabandAppraisalToolPirate
+  storage:
+    back:
+    - CyberPen
 
 - type: roleLoadout
   id: JobLSMasterAtArms

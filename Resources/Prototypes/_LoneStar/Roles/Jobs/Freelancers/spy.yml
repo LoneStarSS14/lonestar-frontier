@@ -13,7 +13,7 @@
   displayWeight: 30
   startingGear: LSSpyGear
   icon: "JobIconLSSpy"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - FreelancerGeneralAccess

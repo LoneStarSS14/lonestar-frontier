@@ -12,10 +12,7 @@
   - NFPirateClothingUniformJumpsuitPirateLuffy
   - FreelancerClothingBunnysuitPirate
   subgroups:
-  - MercenaryJumpsuit
-  - PilotJumpsuit
   - ContractorJumpsuit
-  - CoyoteJumpsuit
   fallbacks:
   - NFPirateJumpsuit
   - NFPirateJumpskirt
@@ -27,8 +24,6 @@
   loadouts:
   - FreelancerClothingBunnyJacketPirate
   subgroups:
-  - MercenaryOuterClothing
-  - PilotOuterClothing
   - ContractorOuterClothing
 
 - type: loadoutGroup
@@ -64,8 +59,6 @@
   - NFPirateClothingHeadHatPirateLuffy
   - FreelancerClothingBunnyEarsPirate
   subgroups:
-  - MercenaryHead
-  - PilotHead
   - ContractorHead
 
 - type: loadoutGroup
@@ -174,9 +167,6 @@
   subgroups:
   - LSFreelancersFactionJumpsuit
   - MercenaryJumpsuit
-  - PilotJumpsuit
-  - ContractorJumpsuit
-  - CoyoteJumpsuit
   fallbacks:
   - NFPirateJumpsuit
   - NFPirateJumpskirt
@@ -190,8 +180,6 @@
   subgroups:
   - LSFreelancersFactionOuterClothing
   - MercenaryOuterClothing
-  - PilotOuterClothing
-  - ContractorOuterClothing
 
 - type: loadoutGroup
   id: LSFreelancersFactionCombatantShoes
@@ -213,7 +201,6 @@
     []
   subgroups:
   - LSFreelancersFactionGloves
-  - ContractorGloves
 
 - type: loadoutGroup
   id: LSFreelancersFactionCombatantHead
@@ -224,8 +211,6 @@
   subgroups:
   - LSFreelancersFactionHead
   - MercenaryHead
-  - PilotHead
-  - ContractorHead
 
 - type: loadoutGroup
   id: LSFreelancersFactionCombatantMask
@@ -235,7 +220,6 @@
     []
   subgroups:
   - LSFreelancersFactionMask
-  - ContractorFace
 
 - type: loadoutGroup
   id: LSFreelancersFactionCombatantEyes
@@ -245,7 +229,6 @@
     []
   subgroups:
   - LSFreelancersFactionEyes
-  - ContractorGlasses
 
 - type: loadoutGroup
   id: LSFreelancersFactionCombatantNeck
@@ -255,7 +238,6 @@
     []
   subgroups:
   - LSFreelancersFactionNeck
-  - ContractorNeck
 
 # Storages
 - type: loadoutGroup
@@ -266,7 +248,6 @@
     []
   subgroups:
   - LSFreelancersFactionBackpack
-  - ContractorBackpack
   fallbacks:
   - ContractorClothingBackpack
 
@@ -278,7 +259,6 @@
     []
   subgroups:
   - LSFreelancersFactionBelt
-  - ContractorBelt
 
 - type: loadoutGroup
   id: LSFreelancersFactionCombatantWallet
@@ -287,7 +267,6 @@
     []
   subgroups:
   - LSFreelancersFactionWallet
-  - ContractorWallet
   fallbacks:
   - PirateCaptainClothingWalletLeatherPirate
 
@@ -301,7 +280,6 @@
     []
   subgroups:
   - LSFreelancersFactionEars
-  - ContractorEars
   fallbacks:
   - ContractorClothingHeadsetGreyCommon
 
@@ -314,7 +292,6 @@
     []
   subgroups:
   - LSFreelancersFactionEncryptionKey
-  - ContractorEncryptionKey
   fallbacks:
   - EncryptionKeyFreelance
 
@@ -327,7 +304,6 @@
     []
   subgroups:
   - LSFreelancersFactionImplanter
-  - ContractorImplanter
   fallbacks:
   - ContractorMedicalTrackingImplanter
 #endregion
@@ -340,12 +316,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionJumpsuit
   - LSFreelancersFactionCombatantJumpsuit
-  - MercenaryJumpsuit
-  - PilotJumpsuit
-  - ContractorJumpsuit
-  - CoyoteJumpsuit
   fallbacks:
   - NFPirateJumpsuit
   - NFPirateJumpskirt
@@ -357,11 +328,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionOuterClothing
   - LSFreelancersFactionCombatantOuterClothing
-  - MercenaryOuterClothing
-  - PilotOuterClothing
-  - ContractorOuterClothing
 
 - type: loadoutGroup
   id: LSFreelancersFactionLeaderShoes
@@ -370,9 +337,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionShoes
   - LSFreelancersFactionCombatantShoes
-  - ContractorShoes
   fallbacks:
   - ContractorClothingShoesColorBlack
 
@@ -383,9 +348,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionGloves
   - LSFreelancersFactionCombatantGloves
-  - ContractorGloves
 
 - type: loadoutGroup
   id: LSFreelancersFactionLeaderHead
@@ -394,11 +357,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionHead
   - LSFreelancersFactionCombatantHead
-  - MercenaryHead
-  - PilotHead
-  - ContractorHead
 
 - type: loadoutGroup
   id: LSFreelancersFactionLeaderMask
@@ -407,9 +366,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionMask
   - LSFreelancersFactionCombatantMask
-  - ContractorFace
 
 - type: loadoutGroup
   id: LSFreelancersFactionLeaderEyes
@@ -418,9 +375,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionEyes
   - LSFreelancersFactionCombatantEyes
-  - ContractorGlasses
 
 - type: loadoutGroup
   id: LSFreelancersFactionLeaderNeck
@@ -429,9 +384,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionNeck
   - LSFreelancersFactionCombatantNeck
-  - ContractorNeck
 
 # Storages
 - type: loadoutGroup
@@ -441,9 +394,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionBackpack
   - LSFreelancersFactionCombatantBackpack
-  - ContractorBackpack
   fallbacks:
   - ContractorClothingBackpack
 
@@ -454,9 +405,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionBelt
   - LSFreelancersFactionCombatantBelt
-  - ContractorBelt
 
 - type: loadoutGroup
   id: LSFreelancersFactionLeaderWallet
@@ -464,9 +413,7 @@
   loadouts:
     []
   subgroups:
-  - LSFreelancersFactionWallet
   - LSFreelancersFactionCombatantWallet
-  - ContractorWallet
   fallbacks:
   - PirateCaptainClothingWalletLeatherPirate
 

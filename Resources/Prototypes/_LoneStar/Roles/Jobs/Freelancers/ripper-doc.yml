@@ -15,7 +15,7 @@
   displayWeight: 20
   startingGear: LSRipperDocGear
   icon: "JobIconLSRipperDoc"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - FreelancerGeneralAccess

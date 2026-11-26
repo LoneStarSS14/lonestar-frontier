@@ -7,7 +7,14 @@ namespace Content.Shared._CS;
 /// Marks an entity as a freelancer.
 /// </summary>
 [RegisterComponent]
-public sealed partial class IsFreelancerComponent : Component;
+public sealed partial class IsFreelancerComponent : Component
+{
+    /// <summary>
+    /// How worth are they
+    /// </summary>
+    [DataField("worth")]
+    public int Worth = 1;
+}
 
 /// <summary>
 /// Marks an entity as LSRD personnel.

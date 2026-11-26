@@ -18,10 +18,7 @@
   - NFDetectiveClothingUniformJumpsuitDetectiveGrey
   - NFDetectiveClothingUniformJumpskirtDetectiveGrey
   subgroups:
-  - MercenaryJumpsuit
-  - PilotJumpsuit
   - ContractorJumpsuit
-  - CoyoteJumpsuit
   fallbacks:
   - PalClothingUniformJumpsuitPublicAffairsLiaison
   - PalClothingUniformJumpskirtPublicAffairsLiaison
@@ -33,9 +30,9 @@
   loadouts:
   - BailiffOuterClothing
   - BrigmedicOuterClothing
+  - LoadoutLSRDBomber
   subgroups:
-  - MercenaryOuterClothing
-  - PilotOuterClothing
+  - MercenaryOuterClothing # TODO: remove when demilitarized
   - ContractorOuterClothing
 
 - type: loadoutGroup
@@ -43,8 +40,9 @@
   name: loadout-group-shoes
   minLimit: 0
   loadouts:
-    []
+  - NfsdClothingShoesBootsBrown
   subgroups:
+  # TODO add merc
   - ContractorShoes
   fallbacks:
   - ContractorClothingShoesColorBlack
@@ -55,7 +53,9 @@
   minLimit: 0
   loadouts:
   - PalClothingHandsGlovesHop
+  - NfsdClothingHandsGlovesCombatNfsdBrown
   subgroups:
+  # TODO add merc
   - ContractorGloves
 
 - type: loadoutGroup
@@ -70,8 +70,7 @@
   - NFDetectiveClothingHeadHatFedoraBrown
   - NFDetectiveClothingHeadHatFedoraGrey
   subgroups:
-  - MercenaryHead
-  - PilotHead
+  - MercenaryHead # TODO: remove when demilitarized
   - ContractorHead
 
 - type: loadoutGroup
@@ -190,9 +189,6 @@
   subgroups:
   - LSLSRDFactionJumpsuit
   - MercenaryJumpsuit
-  - PilotJumpsuit
-  - ContractorJumpsuit
-  - CoyoteJumpsuit
   fallbacks:
   - DeputyClothingUniformJumpsuitDeputy
   - DeputyClothingUniformJumpskirtDeputy
@@ -210,18 +206,15 @@
   subgroups:
   - LSLSRDFactionOuterClothing
   - MercenaryOuterClothing
-  - PilotOuterClothing
-  - ContractorOuterClothing
 
 - type: loadoutGroup
   id: LSLSRDFactionCombatantShoes
   name: loadout-group-shoes
   minLimit: 0
   loadouts:
-  - NfsdClothingShoesBootsBrown
+    []
   subgroups:
   - LSLSRDFactionShoes
-  - ContractorShoes
   fallbacks:
   - ContractorClothingShoesColorBlack
 
@@ -230,10 +223,9 @@
   name: loadout-group-gloves
   minLimit: 0
   loadouts:
-  - NfsdClothingHandsGlovesCombatNfsdBrown
+    []
   subgroups:
   - LSLSRDFactionGloves
-  - ContractorGloves
 
 - type: loadoutGroup
   id: LSLSRDFactionCombatantHead
@@ -244,8 +236,6 @@
   subgroups:
   - LSLSRDFactionHead
   - MercenaryHead
-  - PilotHead
-  - ContractorHead
 
 - type: loadoutGroup
   id: LSLSRDFactionCombatantMask
@@ -255,7 +245,6 @@
     []
   subgroups:
   - LSLSRDFactionMask
-  - ContractorFace
 
 - type: loadoutGroup
   id: LSLSRDFactionCombatantEyes
@@ -265,7 +254,6 @@
     []
   subgroups:
   - LSLSRDFactionEyes
-  - ContractorGlasses
 
 - type: loadoutGroup
   id: LSLSRDFactionCombatantNeck
@@ -275,7 +263,6 @@
   - BailiffClothingNeckBadgeBailiff
   subgroups:
   - LSLSRDFactionNeck
-  - ContractorNeck
 
 # Storages
 - type: loadoutGroup
@@ -286,7 +273,6 @@
     []
   subgroups:
   - LSLSRDFactionBackpack
-  - ContractorBackpack
   fallbacks:
   - ContractorClothingBackpack
 
@@ -299,7 +285,6 @@
   - NfsdBelt
   subgroups:
   - LSLSRDFactionBelt
-  - ContractorBelt
 
 - type: loadoutGroup
   id: LSLSRDFactionCombatantWallet
@@ -308,7 +293,6 @@
     []
   subgroups:
   - LSLSRDFactionWallet
-  - ContractorWallet
   fallbacks:
   - ContractorClothingWalletLeatherBrown
 
@@ -327,7 +311,6 @@
   - NfsdClothingHeadsetAltNfsdGreen
   subgroups:
   - LSLSRDFactionEars
-  - ContractorEars
   fallbacks:
   - ContractorClothingHeadsetGreyCommon
 
@@ -340,7 +323,6 @@
     []
   subgroups:
   - LSLSRDFactionEncryptionKey
-  - ContractorEncryptionKey
   fallbacks:
   - EncryptionKeyLSRD
 
@@ -353,7 +335,6 @@
     []
   subgroups:
   - LSLSRDFactionImplanter
-  - ContractorImplanter
   fallbacks:
   - ContractorMedicalTrackingImplanter
 #endregion
@@ -367,12 +348,7 @@
   - SheriffClothingUniformJumpsuitSheriff
   - SheriffClothingUniformJumpskirtSheriff
   subgroups:
-  - LSLSRDFactionJumpsuit
   - LSLSRDFactionCombatantJumpsuit
-  - MercenaryJumpsuit
-  - PilotJumpsuit
-  - ContractorJumpsuit
-  - CoyoteJumpsuit
   fallbacks:
   - SheriffClothingUniformJumpsuitSheriff
   - SheriffClothingUniformJumpskirtSheriff
@@ -385,13 +361,8 @@
   - SheriffOuterClothing
   - SeniorOfficerOuterClothing
   - BailiffOuterClothing
-  - LoadoutLSRDBomber
   subgroups:
-  - LSLSRDFactionOuterClothing
   - LSLSRDFactionCombatantOuterClothing
-  - MercenaryOuterClothing
-  - PilotOuterClothing
-  - ContractorOuterClothing
 
 - type: loadoutGroup
   id: LSLSRDFactionLeaderShoes
@@ -400,9 +371,7 @@
   loadouts:
     []
   subgroups:
-  - LSLSRDFactionShoes
   - LSLSRDFactionCombatantShoes
-  - ContractorShoes
   fallbacks:
   - ContractorClothingShoesColorBlack
 
@@ -413,9 +382,7 @@
   loadouts:
     []
   subgroups:
-  - LSLSRDFactionGloves
   - LSLSRDFactionCombatantGloves
-  - ContractorGloves
 
 - type: loadoutGroup
   id: LSLSRDFactionLeaderHead
@@ -424,11 +391,7 @@
   loadouts:
   - SheriffClothingHeadHatSheriff
   subgroups:
-  - LSLSRDFactionHead
   - LSLSRDFactionCombatantHead
-  - MercenaryHead
-  - PilotHead
-  - ContractorHead
 
 - type: loadoutGroup
   id: LSLSRDFactionLeaderMask
@@ -437,9 +400,7 @@
   loadouts:
   - SheriffClothingMaskSheriff
   subgroups:
-  - LSLSRDFactionMask
   - LSLSRDFactionCombatantMask
-  - ContractorFace
   fallbacks:
   - SheriffClothingMaskSheriff
 
@@ -450,9 +411,7 @@
   loadouts:
     []
   subgroups:
-  - LSLSRDFactionEyes
   - LSLSRDFactionCombatantEyes
-  - ContractorGlasses
 
 - type: loadoutGroup
   id: LSLSRDFactionLeaderNeck
@@ -463,9 +422,7 @@
   - SheriffClothingNeckCloakSheriff
   - SheriffClothingNeckNfsdBadgeSheriff
   subgroups:
-  - LSLSRDFactionNeck
   - LSLSRDFactionCombatantNeck
-  - ContractorNeck
 
 # Storages
 - type: loadoutGroup
@@ -475,9 +432,7 @@
   loadouts:
     []
   subgroups:
-  - LSLSRDFactionBackpack
   - LSLSRDFactionCombatantBackpack
-  - ContractorBackpack
   fallbacks:
   - ContractorClothingBackpack
 
@@ -488,9 +443,7 @@
   loadouts:
     []
   subgroups:
-  - LSLSRDFactionBelt
   - LSLSRDFactionCombatantBelt
-  - ContractorBelt
 
 - type: loadoutGroup
   id: LSLSRDFactionLeaderWallet
@@ -498,9 +451,7 @@
   loadouts:
     []
   subgroups:
-  - LSLSRDFactionWallet
   - LSLSRDFactionCombatantWallet
-  - ContractorWallet
   fallbacks:
   - ContractorClothingWalletLeatherBrown
 
@@ -530,9 +481,7 @@
   loadouts:
     []
   subgroups:
-  - LSLSRDFactionImplanter
   - LSLSRDFactionCombatantImplanter
-  - ContractorImplanter
   fallbacks:
   - ContractorMedicalTrackingImplanter
 #endregion

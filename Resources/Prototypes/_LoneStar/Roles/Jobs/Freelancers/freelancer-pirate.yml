@@ -13,7 +13,7 @@
   displayWeight: 50
   startingGear: LSFreelancerPirateGear
   icon: "JobIconLSFreelancerPirate"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - FreelancerGeneralAccess
@@ -76,7 +76,6 @@
   - LSFreelancersFactionCombatantImplanter
   # Common v
   - ContractorBoxSurvival
-  - ContractorWallet
   - PirateBackpackItems
   - ContractorHandItems
   - ContractorInstruments
