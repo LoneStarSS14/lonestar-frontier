@@ -1,0 +1,75 @@
+#region Airlocks
+- type: rcd
+  id: LSAirlockFreelancerLockedFreelancer
+  category: Airlocks
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Standard/basic-freelancer.rsi, state: closed }
+  mode: ConstructObject
+  prototype: LSAirlockFreelancerLockedFreelancer
+  cost: 4
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: Camera
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: LSAirlockFreelancerLockedGlassFreelancer
+  category: Airlocks
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Glass/basic-freelancer.rsi, state: closed }
+  mode: ConstructObject
+  prototype: LSAirlockFreelancerLockedGlassFreelancer
+  cost: 4
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: Camera
+  fx: EffectRCDConstruct4
+
+#MARK: External
+- type: rcd
+  id: LSExternalAirlockFreelancerLocked
+  category: Airlocks
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Standard/external-freelancer.rsi, state: closed }
+  mode: ConstructObject
+  prototype: LSExternalAirlockFreelancerLocked
+  cost: 4
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: Camera
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: LSExternalAirlockFreelancerLockedGlass
+  category: Airlocks
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Glass/external-freelancer.rsi, state: closed }
+  mode: ConstructObject
+  prototype: LSExternalAirlockFreelancerLockedGlass
+  cost: 4
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: Camera
+  fx: EffectRCDConstruct4
+
+#MARK: Shuttle
+- type: rcd
+  id: LSShuttleAirlockFreelancerLocked
+  category: Airlocks
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Standard/shuttle-freelancer.rsi, state: closed }
+  mode: ConstructObject
+  prototype: LSShuttleAirlockFreelancerLocked
+  cost: 6
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: User
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: LSShuttleAirlockFreelancerLockedGlass
+  category: Airlocks
+  sprite: { sprite: _LoneStar/Structures/Doors/Airlocks/Glass/shuttle-freelancer.rsi, state: closed }
+  mode: ConstructObject
+  prototype: LSShuttleAirlockFreelancerLockedGlass
+  cost: 6
+  delay: 4
+  collisionMask: FullTileMask
+  rotation: User
+  fx: EffectRCDConstruct4
+#endregion

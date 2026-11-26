@@ -6,9 +6,13 @@
   components:
   - type: RCD
     isShipyardRCD: true
+  # LoneStar start
   - type: Sprite
-    sprite: _CS/Objects/Tools/rcd_shipyard.rsi # Coyote
-    state: icon # Coyote
+    sprite: _LoneStar/Objects/Tools/rcd-shipyard.rsi
+    state: icon
+  - type: Clothing
+    sprite: _LoneStar/Objects/Tools/rcd-shipyard.rsi
+  # LoneStar end
   - type: GridAccess
 
 - type: entity
@@ -27,12 +31,14 @@
   components:
   - type: RCDAmmo
     isShipyardRCDAmmo: true
+  # LoneStar start
   - type: Sprite
-    sprite: _CS/Objects/Tools/rcd_shipyard.rsi # Coyote
-    state: ammo # Coyote
+    sprite: _LoneStar/Objects/Tools/rcd-shipyard.rsi
+    state: ammo
   - type: Item
-    sprite: _CS/Objects/Tools/rcd_shipyard.rsi # Coyote
-    heldPrefix: ammo # Coyote
+    sprite: _LoneStar/Objects/Tools/rcd-shipyard.rsi
+    heldPrefix: ammo
+  # LoneStar end
 
 - type: entity
   name: maintenance jack

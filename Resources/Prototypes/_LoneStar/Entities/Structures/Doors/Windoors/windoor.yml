@@ -1,0 +1,104 @@
+
+#region Frontier Command
+- type: entity
+  parent: [ BaseWindoor, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorSectorCommandLocked
+
+- type: entity
+  parent: [ BaseSecureWindoor, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorSecureSectorCommandLocked
+
+- type: entity
+  parent: [ WindoorPlasma, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorPlasmaSectorCommandLocked
+
+- type: entity
+  parent: [ WindoorSecurePlasma, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorSecurePlasmaSectorCommandLocked
+
+- type: entity
+  parent: [ WindoorUranium, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorUraniumSectorCommandLocked
+
+- type: entity
+  parent: [ WindoorSecureUranium, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorSecureUraniumSectorCommandLocked
+#endregion
+
+#region Nash(Staff)
+- type: entity
+  parent: [ BaseWindoor, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorNashLocked
+
+- type: entity
+  parent: [ BaseSecureWindoor, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorSecureNashLocked
+
+- type: entity
+  parent: [ WindoorPlasma, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorPlasmaNashLocked
+
+- type: entity
+  parent: [ WindoorSecurePlasma, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorSecurePlasmaNashLocked
+
+- type: entity
+  parent: [ WindoorUranium, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorUraniumNashLocked
+
+- type: entity
+  parent: [ WindoorSecureUranium, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorSecureUraniumNashLocked
+#endregion
+
+#region Freelancer
+- type: entity
+  parent: [ BaseWindoor, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorFreelancerLocked
+
+- type: entity
+  parent: [ BaseSecureWindoor, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorSecureFreelancerLocked
+
+- type: entity
+  parent: [ WindoorPlasma, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorPlasmaFreelancerLocked
+
+- type: entity
+  parent: [ WindoorSecurePlasma, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorSecurePlasmaFreelancerLocked
+
+- type: entity
+  parent: [ WindoorUranium, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorUraniumFreelancerLocked
+
+- type: entity
+  parent: [ WindoorSecureUranium, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorSecureUraniumFreelancerLocked
+#endregion
+
+#region Lsrd
+- type: entity
+  parent: [ BaseWindoor, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorLsrdLocked
+
+- type: entity
+  parent: [ BaseSecureWindoor, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorSecureLsrdLocked
+
+- type: entity
+  parent: [ WindoorPlasma, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorPlasmaLsrdLocked
+
+- type: entity
+  parent: [ WindoorSecurePlasma, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorSecurePlasmaLsrdLocked
+
+- type: entity
+  parent: [ WindoorUranium, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorUraniumLsrdLocked
+
+- type: entity
+  parent: [ WindoorSecureUranium, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorSecureUraniumLsrdLocked
+#endregion

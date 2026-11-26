@@ -1,0 +1,33 @@
+- type: entity
+  parent: BaseStructureDynamic
+  id: PottedPlantCoinTreeWilted
+  name: wilted coin tree
+  description: Its magic has faded. He's dead Jim.
+  components:
+  - type: Sprite
+    offset: "0.0,0.3"
+    sprite: _LoneStar/Objects/Specific/Wizard/wilted_coin_tree.rsi
+    state: icon
+    noRot: true
+  - type: Pullable
+  - type: Anchorable
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 350
+        layer:
+        - TableLayer
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Voice/Diona/diona_salute.ogg
+      params:
+        volume: 10

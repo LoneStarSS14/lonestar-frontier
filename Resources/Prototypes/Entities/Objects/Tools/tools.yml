@@ -299,37 +299,50 @@
   components:
   - type: RCD
     availablePrototypes:
+    # LoneStar start
+    # Walls
     - WallSolid
-    - FloorSteel
-    - Plating
-    - Catwalk
-    - Grille
+    - WallSolidDiagonal
+    - WallReinforced
+    - WallReinforcedDiagonal
+    - WallShuttle
+    - WallShuttleDiagonal
+    # Windows / Solid
     - Window
-    - WindowDirectional
-    - WindowReinforcedDirectional
+    - WindowDiagonal
     - ReinforcedWindow
+    - ReinforcedWindowDiagonal
+    - WindowShuttle
+    - WindowDirectionalShuttle # HL classic, this is diagonal.
+    # Windows / Other
+    - Grille
+    # Airlocks / Doors
     - Airlock
     - AirlockGlass
+    - AirlockExternal
+    - AirlockExternalGlass
+    - AirlockShuttle
+    - AirlockGlassShuttle
+    # Airlocks / Firelock
     - Firelock
-    - TubeLight
-    - BulbLight
+    # Electrical
     - LVCable
     - MVCable
     - HVCable
     - CableTerminal
-    - Deconstruct
-    # Hardlight/Mono start
+    # Lights
+    - TubeLight
+    - BulbLight
+    # Decals
+    - Catwalk
+    # Tiles
+    - Plating
     - PlatingNE
     - PlatingNW
     - PlatingSE
     - PlatingSW
     - PlatingHalfV
     - PlatingHalfH
-    - WindowDirectionalShuttle
-    - WindowShuttle
-    - WallSolidDiagonal
-    - WallShuttleDiagonal
-    - WallReinforcedDiagonal
     - Lattice
     - LatticeCornerNE
     - LatticeCornerNW
@@ -337,18 +350,18 @@
     - LatticeCornerSW
     - LatticeHalfV
     - LatticeHalfH
-    - WallReinforced
-    - WallShuttle
-    # Hardlight/Mono end
+    # Other
+    - Deconstruct
+    # LoneStar end
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite
-    sprite: Objects/Tools/rcd.rsi
+    sprite: _LoneStar/Objects/Tools/rcd.rsi # LoneStar
     state: icon
   - type: Item
     size: Normal
   - type: Clothing
-    sprite: Objects/Tools/rcd.rsi
+    sprite: _LoneStar/Objects/Tools/rcd.rsi # LoneStar
     quickEquip: false
     slots:
     - Belt

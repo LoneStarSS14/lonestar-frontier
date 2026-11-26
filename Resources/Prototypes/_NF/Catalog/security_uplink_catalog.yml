@@ -48,7 +48,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition # LoneStar, frontier forgot this.
       whitelist:
-        - Brigmedic
+        - LSCorpsman # LoneStar
 
 - type: listing
   id: UplinkSecurityHardsuitWarden
@@ -67,9 +67,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - LSChiefRanger # LoneStar
 
 - type: listing
   id: UplinkSecurityCombatHardsuit
@@ -104,9 +102,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - LSChiefRanger # LoneStar
 
 - type: listing
   id: UplinkSecurityHardsuitSheriff
@@ -125,7 +121,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
+        - LSChiefRanger # LoneStar
 
 - type: listing
   abstract: true # LoneStar, yeah no jugsuits, bro what..
@@ -521,7 +517,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
+        - LSChiefRanger # LoneStar
 
 - type: listing
   id: UplinkSecurityEmpRocket
@@ -717,8 +713,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Brigmedic
-        - Sheriff
+        - LSCorpsman # LoneStar
+        - LSChiefRanger # LoneStar
 
 - type: listing
   abstract: true # LoneStar
@@ -738,8 +734,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Brigmedic
-        - Sheriff
+        - LSCorpsman # LoneStar
+        - LSChiefRanger # LoneStar
 
 - type: listing
   id: UplinkSecurityMedkit
@@ -756,10 +752,9 @@
       whitelist:
         tags:
           - SecurityUplink
-    # - !type:BuyerJobCondition # Coyote
-    #   whitelist:
-    #     - Brigmedic
-    #     - Sheriff
+    - !type:BuyerJobCondition
+      whitelist:
+        - LSCorpsman # LoneStar
 
 - type: listing
   id: UplinkSecurityInspector
@@ -1153,9 +1148,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - LSChiefRanger # LoneStar
 
 - type: listing
   id: UplinkSecurityTrackingBundle
@@ -1190,9 +1183,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - LSChiefRanger # LoneStar
 
 - type: listing
   id: UplinkSecurityEmpGrenadeAmmo
@@ -1275,3 +1266,19 @@
     - !type:BuyerJobCondition
       whitelist:
         - Sheriff
+
+- type: listing # LoneStar TODO: Move out of here.
+  id: UplinkSecurityHristov
+  name:  uplink-security-hristov-name
+  description: uplink-security-hristov-desc
+  productEntity: NFWeaponRifleSniperHristovNFSD
+  icon: { sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi, state: base }
+  cost:
+    FrontierUplinkCoin: 8
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink

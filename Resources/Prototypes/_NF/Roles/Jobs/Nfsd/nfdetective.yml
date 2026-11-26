@@ -1,4 +1,5 @@
 - type: job
+  abstract: true # LoneStar
   id: NFDetective
   name: job-name-nf-detective
   description: job-description-nf-detective
@@ -34,9 +35,10 @@
     prototype: FrontierBirthdayGift
   - !type:AddComponentSpecial # Coyote: v
     components:
-    - type: IsNfsd
+    - type: IsLsrd # LoneStar
 
 - type: startingGear
+  abstract: true # LoneStar
   id: NFDetectiveGear
   equipment:
     pocket1: NFWeaponRevolverInspector
@@ -56,6 +58,7 @@
   - LogProbeCartridge
 
 - type: chameleonOutfit
+  abstract: true # LoneStar
   id: NFDetectiveChameleonOutfit
   job: NFDetective
   hasMindShield: true

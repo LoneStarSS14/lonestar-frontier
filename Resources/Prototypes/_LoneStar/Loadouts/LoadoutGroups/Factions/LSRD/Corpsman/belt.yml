@@ -1,0 +1,9 @@
+- type: loadoutGroup # TODO: This is temporary until corpsmen are 'combatified'
+  id: LSLSRDFactionCorpsmanBelt
+  name: loadout-group-belt
+  minLimit: 0
+  loadouts:
+  - BrigmedicClothingBeltBrigmedicWebbing
+  subgroups:
+  - ContractorBelt
+  - LSLSRDFactionCombatantBelt

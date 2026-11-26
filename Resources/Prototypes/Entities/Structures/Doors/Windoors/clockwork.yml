@@ -35,3 +35,12 @@
     - board
   # - type: StaticPrice # Frontier - TODO: material value rework
   #   price: 240 # Frontier
+  # LoneStar start
+  - type: Door
+    openTimeOne: 0.4
+    openTimeTwo: 0.6
+    closeTimeOne: 0.4
+    closeTimeTwo: 0.6
+    openingAnimationTime: 1.0
+    closingAnimationTime: 1.0
+  # LoneStar end

@@ -211,3 +211,17 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+#region Lights
+- type: construction
+  id: LSShieldedStrobeLightFixture
+  graph: LightFixture
+  startNode: start
+  targetNode: strobeLightShielded
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

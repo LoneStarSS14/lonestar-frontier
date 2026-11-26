@@ -6,7 +6,7 @@
   price: 42000 #Appraises on purchase at ~35000. 20% markup applied due to the presence of the radar.
   category: Medium
   group: Security
-  access: Security
+  access: LsrdShipyard # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/prowler.yml
   guidebookPage: Null
   class:
@@ -29,4 +29,5 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          availableJobs: {}
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ] # LoneStar

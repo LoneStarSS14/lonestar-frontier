@@ -27,8 +27,10 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
-      - EncryptionKeyNfsd
-      - EncryptionKeyCommand
+      # LoneStar start
+      # - EncryptionKeyNfsd
+      # - EncryptionKeyCommand
+      # LoneStar end
   - type: Sprite
     sprite: _NF/Clothing/Ears/Headsets/nfsd_h_brown.rsi
   - type: Clothing

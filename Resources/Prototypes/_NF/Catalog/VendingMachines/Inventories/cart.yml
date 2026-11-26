@@ -39,18 +39,18 @@
 - type: vendingMachineInventory
   id: NFPTechNfsdInventory
   startingInventory:
-    CadetPDA: 10
-    DeputyPDA: 10
-    BrigmedicNFPDA: 10
-    NFDetectivePDA: 10
-    SergeantPDA: 10
-    BailiffPDA: 10
-    ClothingHeadsetNfsdBrownCommon: 4294967295
-    ClothingHeadsetNfsdCreamCommon: 4294967295
-    ClothingHeadsetNfsdGreenCommon: 4294967295
-    NFPrisonerPDA: 4294967295
-    NFPrisonerIDCard: 4294967295
-    ClothingHeadsetPrison: 4294967295
+    # CadetPDA: 10 # LoneStar start
+    # DeputyPDA: 10
+    # BrigmedicNFPDA: 10
+    # NFDetectivePDA: 10
+    # SergeantPDA: 10
+    # BailiffPDA: 10 # LoneStar end
+    ClothingHeadsetNfsdBrownCommon: 4294967295 #infinite
+    ClothingHeadsetNfsdCreamCommon: 4294967295 #infinite
+    ClothingHeadsetNfsdGreenCommon: 4294967295 #infinite
+    NFPrisonerPDA: 4294967295 #infinite
+    NFPrisonerIDCard: 4294967295 #infinite
+    ClothingHeadsetPrison: 4294967295 #infinite
     RubberStampPal: 3
     RubberStampSheriff: 1
     RubberStampApproved: 4294967295

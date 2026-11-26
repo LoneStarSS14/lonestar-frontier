@@ -1,0 +1,15 @@
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSectorCommand
+  suffix: Sector Command, Locked
+  components:
+  - type: AccessReader
+    access: [["HeadOfSecurity"], ["HeadOfPersonnel"], ["StationTrafficController"]] # TODO: Simplify later when chief ranger isnt HOS access.
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsNash
+  suffix: Nash(Staff), Locked
+  components:
+  - type: AccessReader
+    access: [["Service"]] # TODO: I think its just service, need to check later.
