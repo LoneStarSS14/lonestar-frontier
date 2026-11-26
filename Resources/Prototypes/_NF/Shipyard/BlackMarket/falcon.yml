@@ -4,6 +4,7 @@
 # Shuttle Notes:
 # Kestrel looking ship with hangar bay meant to be used along with hoverbikes.
 - type: vessel
+  abstract: true # LoneStar
   id: Falcon
   parent: BaseVesselAntag
   name: Falcon
@@ -20,6 +21,7 @@
   - Plasma
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Falcon
   mapName: 'Falcon'
   mapPath: /Maps/_NF/Shuttles/BlackMarket/falcon.yml

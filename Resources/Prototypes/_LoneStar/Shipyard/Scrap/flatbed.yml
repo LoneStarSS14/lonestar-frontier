@@ -1,0 +1,36 @@
+- type: vessel
+  id: Flatbed
+  parent: BaseVessel
+  name: LL0 Flatbed
+  description: A canister that's been retrofitted with a roughly placed working area and some salvage equipment.
+  price: 11000
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/_LoneStar/Shuttles/Scrap/flatbed.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Salvage
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Flatbed
+  mapName: 'Flatbed'
+  mapPath: /Maps/_LoneStar/Shuttles/Scrap/flatbed.yml
+  minPlayers: 0
+  stations:
+    Flatbed:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Flatbed {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

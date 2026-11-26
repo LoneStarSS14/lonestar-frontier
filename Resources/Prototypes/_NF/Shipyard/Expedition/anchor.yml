@@ -13,11 +13,12 @@
 - type: vessel
   id: Anchor
   parent: BaseVessel
-  name: LL3 Anchor
+  name: LL4 Anchor # LoneStar
   description: A large luxury cruiser capable of long ranged travel across the sector, expedition capable.
-  price: 384600 #117250, +50k(exped) LL3 x2.3 = 384675
+  price: 350000 # LoneStar
   category: Large
   group: Expedition
+  access: Command # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/Expedition/anchor.yml
   guidebookPage: Null
   class:
@@ -42,7 +43,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

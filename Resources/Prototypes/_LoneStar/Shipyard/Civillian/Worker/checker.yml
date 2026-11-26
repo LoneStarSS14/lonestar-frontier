@@ -1,0 +1,35 @@
+- type: vessel
+  id: Checker
+  parent: BaseVessel
+  name: LL1 Checker
+  description: The pinnacle of entertainment, sporting the universe's oldest game with class. Who needs guns and money when you've got board games?
+  price: 67500
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Worker/checker.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Checker
+  mapName: 'Checker'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Worker/checker.yml
+  minPlayers: 0
+  stations:
+    Checker:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Checker {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

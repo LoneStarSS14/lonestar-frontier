@@ -11,11 +11,12 @@
 - type: vessel
   id: Crescent
   parent: BaseVessel
-  name: LL5 Crescent # Coyote: changed name to include license level
+  name: LL5 Crescent # LoneStar
   description: The Crescent, named for its exterior shape, is a vessel focused on providing service, medical aide, and scientific breakthroughs for smaller vessels.
-  price: 8000000 # 260,000 + 15% # Coyote: 261704 * (3.5) ^= 1,000,000 (915,964)
+  price: 2250000 # LoneStar
   category: Large
   group: Shipyard
+  access: Command # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/crescent.yml
   guidebookPage: Null
   class:
@@ -41,8 +42,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
-#            StationAi: [ 0, 1 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

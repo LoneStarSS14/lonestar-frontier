@@ -1,0 +1,35 @@
+- type: vessel
+  id: Pickup
+  parent: BaseVessel
+  name: LL0 Pickup
+  description: A simple pickup truck. Nothing in it is cutting edge or next generation. It is simple and idiot proof, fully future proofed.
+  price: 15000
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Worker/pickup.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Pickup
+  mapName: 'Pickup'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Worker/pickup.yml
+  minPlayers: 0
+  stations:
+    Pickup:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Pickup {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]

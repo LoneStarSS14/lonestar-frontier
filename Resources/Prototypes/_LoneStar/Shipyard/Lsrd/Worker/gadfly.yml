@@ -1,0 +1,35 @@
+## TODO: Modernize according to mapping standards.
+
+- type: vessel
+  id: Gadfly
+  parent: BaseVessel
+  name: LSR Gadfly
+  description: An LSRD medical ship meant for triage and limited patrol work. It comes with a full chemistry lab with a small botany setup, and a special cell for treating/storing injured prisoners. Not suitable for long-term prisoner holding. # Lonestar change NFSD -> LSRD
+  price: 39000
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_LoneStar/Shuttles/Lsrd/Worker/gadfly.yml
+  guidebookPage: Null
+  class:
+  - Medical
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Gadfly
+  mapName: 'LSR-Gadfly'
+  mapPath: /Maps/_LoneStar/Shuttles/Lsrd/Worker/gadfly.yml
+  minPlayers: 0
+  stations:
+    Gadfly:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Gadfly {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

@@ -1,0 +1,35 @@
+## TODO: Convert ship for expeditions
+
+- type: vessel
+  id: Brute
+  parent: BaseVesselAntag
+  name: FLG Brute
+  description: A Bulker retrofitted into a proper tank. Ready to dish out some real damage
+  price: 42500
+  category: Medium
+  group: BlackMarket
+  access: Pirate
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/brute.yml
+  guidebookPage: Null
+  class:
+  - Salvage
+  engine:
+  - AME
+
+- type: gameMap
+  id: Brute
+  mapName: 'FLG-Brute'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/brute.yml
+  minPlayers: 0
+  stations:
+    Brute:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Brute {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

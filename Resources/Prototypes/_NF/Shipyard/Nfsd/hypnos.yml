@@ -9,6 +9,7 @@
 # Shuttle Notes:
 #
 - type: vessel
+  abstract: true # LoneStar
   id: Hypnos
   parent: BaseVessel
   name: NSF Hypnos
@@ -24,6 +25,7 @@
   - Uranium
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Hypnos
   mapName: 'NSF Hypnos'
   mapPath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml

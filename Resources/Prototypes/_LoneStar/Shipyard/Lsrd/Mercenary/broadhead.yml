@@ -1,0 +1,38 @@
+## TODO: Modernize according to mapping standards as an expedition shuttle.
+
+# Original Author
+# Tych0theSynth (github)
+
+- type: vessel
+  id: LSBroadhead
+  parent: BaseVessel
+  name: LSR Broadhead
+  description: A medium size detective ship with facilities for autopsies, interrogations and detailed investigations.
+  price: 60000
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_NF/Shuttles/Nfsd/broadhead.yml
+  guidebookPage: Null
+  class:
+  - Detective
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: LSBroadhead
+  mapName: 'LSR-Broadhead'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/broadhead.yml
+  minPlayers: 0
+  stations:
+    LSBroadhead:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Broadhead {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

@@ -20,10 +20,10 @@
 - type: vessel
   id: DecadeDove
   parent: BaseVessel
-  name: LL3 Dove
+  name: LL3 Dove # LoneStar
   description: Versatile expedition-capable multi-purpose light freighter.
-  price: 329000 # Coyote: pricing GridAppraisal 61604.86 + LL3 x2.5 + TileCost 124800(416x300) + Exped (50k) = 328812.15
-  category: Medium
+  price: 225000 # LoneStar
+  category: Large # LoneStar
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/decadedove.yml
   guidebookPage: Null
@@ -50,7 +50,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

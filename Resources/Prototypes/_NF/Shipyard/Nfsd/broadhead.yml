@@ -9,6 +9,7 @@
 # Shuttle Notes:
 #
 - type: vessel
+  abstract: true # LoneStar
   id: Broadhead
   parent: BaseVessel
   name: NSF Broadhead
@@ -25,6 +26,7 @@
   - Uranium
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Broadhead
   mapName: 'NSF Broadhead'
   mapPath: /Maps/_NF/Shuttles/Nfsd/broadhead.yml

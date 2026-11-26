@@ -1,0 +1,38 @@
+- type: vessel
+  id: gourd
+  parent: BaseVessel
+  name: LL4 Gourd
+  description: The flagship of the Salami Lid Exploration and Science Initiative. Featuring it's state of the art blast chamber, large research and salvage bays, bar and lounge, and fully expedition ready!
+  price: 790000
+  category: Large
+  group: Expedition
+  access: Command
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Expedition/gourd.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  - Salvage
+  - Science
+  engine:
+  - AME
+
+- type: gameMap
+  id: gourd
+  mapName: 'gourd'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Expedition/gourd.yml
+  minPlayers: 0
+  stations:
+    gourd:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'SLI Gourd {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

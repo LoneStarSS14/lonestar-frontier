@@ -1,0 +1,36 @@
+- type: vessel
+  id: Schloorp
+  parent: BaseVessel
+  name: LL0 Schloorp
+  description: A slow solar sailboat for cruising the stars.
+  price: 8250
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/_LoneStar/Shuttles/Scrap/schloorp.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  engine:
+  - Solar
+  - Welding
+
+- type: gameMap
+  id: Schloorp
+  mapName: 'Schloorp'
+  mapPath: /Maps/_LoneStar/Shuttles/Scrap/schloorp.yml
+  minPlayers: 0
+  stations:
+    Schloorp:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Schloorp {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

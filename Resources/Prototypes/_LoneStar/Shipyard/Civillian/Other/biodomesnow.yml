@@ -1,0 +1,35 @@
+- type: vessel
+  id: Biodomesnow
+  parent: BaseVessel
+  name: LL0 Biodome - Winter
+  description: A fragile glass dome housing a snowy cabin.
+  price: 105000
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Other/biodomesnow.yml
+  guidebookPage: Null
+  class:
+  - Botany
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Biodomesnow
+  mapName: 'Biodomesnow'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Other/biodomesnow.yml
+  minPlayers: 0
+  stations:
+    Biodomesnow:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Biodome {1}' # Drop the type name here, just Biodome
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

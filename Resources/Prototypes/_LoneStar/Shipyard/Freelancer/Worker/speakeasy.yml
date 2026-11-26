@@ -1,0 +1,36 @@
+## TODO: This ship is on the chopping block and needs remodelling
+##       otherwise the next freelancer medium service shuttle will replace it.
+
+- type: vessel
+  id: Speakeasy
+  parent: BaseVesselAntag
+  name: FLG Speakeasy
+  description: "A Modified Kildernkin for all your illicit meetings and dealings"
+  price: 62500
+  category: Medium
+  group: BlackMarket
+  access: Pirate
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/speakeasy.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Speakeasy
+  mapName: 'FLG-Speakeasy'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/speakeasy.yml
+  minPlayers: 0
+  stations:
+    Speakeasy:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Speakeasy  {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

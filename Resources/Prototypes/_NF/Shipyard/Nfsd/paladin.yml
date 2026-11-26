@@ -1,4 +1,5 @@
 - type: vessel
+  abstract: true # LoneStar
   id: Paladin
   parent: BaseVessel
   name: NSF Paladin
@@ -16,6 +17,7 @@
   - APU
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Paladin
   mapName: 'NSF Paladin'
   mapPath: /Maps/_NF/Shuttles/Nfsd/paladin.yml

@@ -1,0 +1,36 @@
+- type: vessel
+  id: Hotdog
+  parent: BaseVessel
+  name: LL0 Hotdog
+  description: A tiny and remarkably miserable to use cargo skiff.  Small loads, small profits.
+  price: 20500
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/_LoneStar/Shuttles/Scrap/hotdog.yml
+  class:
+  - Scrapyard
+  - Civilian
+  - Cargo
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Hotdog
+  mapName: 'Hotdog'
+  mapPath: /Maps/_LoneStar/Shuttles/Scrap/hotdog.yml
+  minPlayers: 0
+  stations:
+    Hotdog:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Hotdog {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

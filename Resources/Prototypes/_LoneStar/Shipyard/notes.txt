@@ -1,0 +1,214 @@
+- Folder Notations
+Civillian:
+Any ship purchased through Nash or other neutral shipyards.
+
+Freelancer:
+Any ships access locked to Freelancers
+
+Lsrd:
+Any ships access locked to the LSRD
+
+Scrap:
+Any ship sold at the scrap shipyard console
+
+Expedition:
+Any ship capable of expeditions, this is a priority folder.
+If a ship pertains to another group but can exped, it goes in Expedition.
+
+Mercenary:
+Any ship designed for combat, or expected to be damaged in possible ship-to-ship combat.
+These should be cheap, and come ready to fly out.
+Should not be outfitted with loose equipment such as weapons, armor, or medical supply.
+
+Worker:
+Any ship purposed for job-related work, mining/service/cargo etc.
+Should have a starting supply to get to work on the job it sets out to let you do and nothing more.
+
+Other:
+Ships that are on the chopping block, or are looking to be deprecated.
+
+- Pricing and mapping notes
+Ships should be priced at round values such as 16,250 or 85,000 675,000.
+
+Use best judgement on what size a ship falls under, the following are examples and not rules.
+Micro: Salto / Construct
+Small: Jabber / Prospector / Camper
+Medium: Whelp / Pathfinder / Brigand
+Large: Fortress / Charon / Petrel
+Titan: Yegerov / Ambition / Anchor
+
+Piping and atmos
+- Aim to keep all distro pipes on the central 'primary' pipe layer.
+- Aim to keep all waste pipes on the top-right 'secondary' pipe layer.
+- Aim to give all rooms one scrubber and air vent, though small non-bedroom 'closets' and such, are not required to have vents.
+- Outside of atmos/gas-mining ships, do not add weird or avantgarde piping setups. the average shuttle is never modified, and when it is, these only serve to complicate peoples plans.
+- All relevant atmos pipes must use the default 'distro' and 'waste' spray painter colours
+- Use O2 + N2 distro inputs if space provides, lee-way is given to small and micro ships to use air-mix or respiron canisters.
+
+Electrical Grids
+- Keep all wires from going under walls, if a thruster cant be powered without doing so, explore moving the thruster first.
+- Ships should have atleast some reserve fuel, ideally in a wall-closet
+- All expedition ships must be powered by an AME.
+- Radioactive generators (bananium) must include a radiation suit closet and shutters linked to buttons.
+- Radioactive generators may not come premapped with hard-shielding, such as uranium window panes placed overtop the generator.
+- Radioactive generators must also not be mapped so that radiation leaks its confinement, especially into the exterior of the ship.
+- A ship must be able to power itself with its default configuration.
+- Any SMESs should not feed power back into themselves and should be on a HV wire isolated from the generation source.
+- Any SMESs should feed their power into substation.
+- If a shuttle has 2 SMES and still uses a wallmount substation, replace 1 for a regular substation instead.
+- Do not mess with default SMES/Substation settings.
+- LV Grids should be neat and concise, and not plastering the entire floor space.
+- LV Grids should aim to ensure all interior tiles of the ship are covered with power.
+- Ships should not use a single APC to power their entirety outside of the sensibilities of a micro ship.
+
+Blastdoors & Shutters
+- Blast doors leading to externals should be shut by default
+- Blast doors under windows should be open by default.
+- Other interior-interior doors may be in either starting states as you see relevant.
+- All blastdoors on windows should have atleast 1 nearby framed button (see below) in the room they are attached to.
+
+Button frame standards
+- Red for 'lockdown' or 'panic' functions
+- Yellow for thruster toggles or engineering related systems
+- Purple for reclaimer/disposals systems
+- Colorless for window shutters/interior doors
+- EXIT for any blast doors leading to exteriors
+
+Air alarms & Firelocks
+- Shuttles must have atleast 1 air alarm somewhere
+- Air alarms must be placed on interiors of the ship with exceptions to atmos/gas-miner shuttles.
+- Not every room needs an air alarm, however all devices should be linked to an air alarm.
+- Firelocks must be beneath all interior airlocks and never under external-facing airlocks.
+- Use the craftable 'Directional fans' and not 'Tiny fans' to keep pressure on ship edges.
+- When using decorative 'stairs', ensure firelocks are not placed at the 'lower' end of the stairs, this also applies to airlocks.
+
+Lighting
+- AlwaysPowered lights may only be used for debug purposes.
+- Hardened lights may only be used on POIs in command areas, or for POIs with very little visiting purpose such as the court house.
+- Shielded lights should only be mapped on shuttle exteriors.
+- Regular light fixtures should be used in all situations outside of the prior mentioned cases.
+- Use red powered lights on the left-lower-exterior of the ship, and green on the right-lower-exterior of the ship.
+- Use atleast a single exterior light on the north or south end of the ship, any extra exterior lights must be exterior.
+- Post-lights must be put behind railings or on navigable external lattice
+- It is recommended to put a strobe light near any blast doors that lead to space, linked to on/off/toggles of the relevant blast doors.
+- Mapped Strobe lights must be linked to a button for toggling.
+- Shuttles must contain some degree of emergency lights.
+
+Thrusters
+- Use Mules only, some shuttles may have dragons or other strange configurations, however these are exceptions and planned to be phased out for alternatives in the future.
+- Ensure no thrusters are toggled off by accident while mapping, you can inspect on thrusters to check it says "on"
+- Due to bugs with mapping initialization, all thrusters must be on even if a bi-modal state is supported via buttons.
+- Thrusters should always point into empty void space which are connected to exterior bounds of the Shuttles.
+- Thrusters should ideally be placed on lattice with catwalks under.
+
+Loot and providings
+- Ships may start with a basic materials crate (30 steel/plastic/glass), this should be the entirety of the ships provided material.
+- Avoid giving extrenuous supplies to shuttles that would not otherwise need it, such as topicals to a salvage ship, 'because they get hurt often' is not a reason.
+- Outside of 'resturants' or 'intermediate area' shuttles such as the crossroads, avoid giving shuttles any form of vending machines.
+- BioDjinns may only be mapped on shuttles that are solely presenting as resturant or botany shuttles.
+- Techfabs such as engi/merc/salv/med/cargo/service are only to be mapped if the ships intentions are to be used for those domains, salv fab on a mining ship, med fab on a medical ship.
+- Consider replacing techfabs with autolathes if no domains are present, or providing a cargo techfab.
+- Ships should start with atleast 1 EVA relevant to a domain it exists under, e.g. FSB medical eva for parmedical ships.
+- Only mercenary domain ships may start with 'mercenary' or equivelant hardsuits.
+
+Decals
+- Always use pre-assinged palette colors when mapping.
+- Priorize using frontier/departmental or other color palettes that feature translucent palette colors as this will give softer results.
+- Do not deviate from palette colors solely because "i want it bright and garish", thats not a style choice, it will sore whoever is buying the ship fast.
+- With 'brick' markings using color, ensure they are placed on existing brick markings without color.
+- Decals are art, and can be hard to do right. ask about and share your progress if you are unsure or need help.
+
+Walls and type rules
+- Standard shuttles should be mapped with either the wall/reinforced wall set, or shuttle wall set.
+- Combat focused factional shuttles should be mapped with either the shuttle wall set or, plastitanium wall set.
+- Only freelancer ships may be mapped with the mining wall set.
+- Only freelancer/lsrd ships may be mapped with the plastitanium wall set.
+- freelancer ships may not be mapped with the shuttle wall set
+- Airlocks and general access on factional combat ships must be properly set with locked door variants. (pirate for Freelancers, security for LSRD)
+- Shutters (opposed to blast doors) should be used on non factional ships for windows
+
+Other Standard requirements
+- Station Records computer
+- Latejoin spawning marker (this is for interview applicants)
+- Ghost warp point
+
+Ship shapes and shaped lattices
+- Avoid the use of diagonal walls on interiors (due to hitboxes they are incredibly awkward to interact around)
+- Crimp exterior lattices into diagonal platings on exteriors of the ship.
+- Avoid the use of unessecary lattices on the exterior of the ship for decorative reasons.
+- Avoid making ships that are entirely left/right symmetrical in floorplan.
+- IFF shapes of ships may be symmetrical, however avoid doing so solely for the sake of symmetry.
+- Cockpits and shuttle consoles must always be placed facing the correct direction.
+- Ships must always be build with default north/up being forward.
+- There must always be atleast 1 docking airlock.
+
+What defines a ship
+- Medical;
+  - Typically comes with a triage/ward
+  - Anything outside of a ship entirely aimed at paramedical should feature a cryotube.
+  - Chem area though not required to be stocked
+  - Ideally has atleast a couple botany trays.
+- Engineering;
+  - Gas miners or typically an extension onto salavge style mining ships
+  - Use reservation when considering a ship under 'engineering' if it is not doing gas mining.
+- Mercenary;
+  - Typically exped capable, otherwise likely a combat focused ship. (will use pirate/NFSD fabs in future, but for now use mercenary)
+  - Low amounts of livery, typically comes with room space to install machines.
+  - BangWiz and silos, they typically get messy, which we need to prevent via mapping the things they need.
+- Salvage;
+  - Ideally Non exped, salvage ships should focus more on mining and vroids.
+  - Mining supplies, salvage catch-bays
+  - Refiner set-ups and belts premade.
+- Service;
+  - Any ship that is primarily cooking food
+  - May be offering cleaning
+  - Or doing non medical focused botany.
+- Cargo;
+  - Cargo crate racks, ensure it also comes with an EMU.
+- Science;
+  - Has atleast one artifact research chamber.
+  - May have an anomaly generator (only for medium and up. Size of ship = easier to handle and less abusable.).
+  - Protolathe Autolathe & Lithograph as a baseline.
+- Combat Ships;
+  - Should feature some basic level 'panic' button to lock down its primary doors.
+  - All secure areas should feature blastdoors for windows.
+  - Suggested to feature a holding cell if size permits, however not required.
+- Factional Exped ships;
+  - Must have a BangWiz, along with 1 gunrack.
+  - Should ideally have some form of combat viability. this does not mean cannons, this means secondary exits and personnel-safety.
+- Exped Ships;
+  - Must have a reclaimer and silo, and be powered by AME.
+- All Ships
+  - All ships may have livery areas and area recommended to have atleast 1 bedroom (even if there is a communal barracks).
+  - 'Captain bedrooms' should feature a captain-locked airlock, and ideally a captain-locked safe.
+  - As ship size increases its recommened to add lounge space or a barracks for players to AFK/Log.
+  - May have a bar, but not areas to cook food such as grills or ranges.
+  - Should utilize its wall space as best it can for closets/posters/safety-devices
+  - Must feature a defibrillator 'somewhere' even if not in a cabinet, and it must be accessible without vaulting tables.
+
+Editor related tips & tricks:
+
+the `colornetwork` command can be used to quickly color your pipe network.
+use `colornetwork [uid] Pipe #ffffff` to do so, waste red is #990000 and distro blue is #0055cc
+
+shuttles must be saved as grids, you can run `savegrid [grid ID] /[name].yml`.
+to get the grid ID, press f3 and look for the grid ID field in the blue block of debug information while you're on the grid you've created
+you can find grids you have saved in `/bin/Content.Server/data/`, which you can then copy and paste into /Resources/Maps/_LoneStar/Shuttles/
+
+you can run `appraisegrid [grid ID]` to get the current appraised value of the ship for pricing ideas.
+note that this doesnt count things that will spawn in later, as while mapping, 'filled' closets and other items are empty.
+
+when searching in the f5 menu for entities, you can search by either the raw name of the entity, or the prototype ID
+prototype ID can sometimes be more useful for similar items, you can see the prototype ID of an entity by right clicking it and seeing it in bracks `small light(SmallLight)`
+
+Useful hotkeys
+f5 - Entity spawn menu
+f6 - Tile menu
+f8 - Decal menu (not identical to spray painters, it lacks the pipette feature, but has more decal options)
+
+if its your first time mapping after you have set up a local environment heres a quick guide on how to start;
+run `mapping 55555 /Maps/_LoneStar/Shuttles/Civillian/Worker/jabber.yml false`
+this should load up the jabber ship into a new map.
+55555 can be any 5 or 6 digit number, this is just to ensure that the map you start editing on isnt in use, i usually spam some random number every time.
+
+not comfortable being able to use github? ask in #dev-general or #mapping after you've made a .yml file and someone will likely be able to upload it on your behalf.

@@ -1,0 +1,35 @@
+## TODO: Modernize after removal of LSRD responsibilities.
+
+- type: vessel
+  id: LSTemplar
+  parent: BaseVessel
+  name: LSR Templar
+  description: A small security assault craft designed for combat interdiction operations.
+  price: 24220
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_NF/Shuttles/Nfsd/templar.yml
+  guidebookPage: Null
+  class:
+  - Pursuit
+  engine:
+  - APU
+
+- type: gameMap
+  id: LSTemplar
+  mapName: 'LSR-Templar'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/templar.yml
+  minPlayers: 0
+  stations:
+    LSTemplar:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Templar {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]

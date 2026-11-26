@@ -1,0 +1,38 @@
+## TODO: Modernize according to mapping standards as a pursuit combat shuttle.
+
+# Original Author
+# cheackraze (github)
+
+- type: vessel
+  id: LSBarnacle
+  parent: BaseVesselAntag
+  name: FLG Barnacle
+  description: 'Nobody expects the lowly barnacle'
+  price: 20000
+  category: Small
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_NF/Shuttles/BlackMarket/barnacle.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: LSBarnacle
+  mapName: 'FLG-Barnacle'
+  mapPath: /Maps/_NF/Shuttles/BlackMarket/barnacle.yml
+  minPlayers: 0
+  stations:
+    LSBarnacle:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Barnacle {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

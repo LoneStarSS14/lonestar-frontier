@@ -1,0 +1,37 @@
+# Original Author
+# Mace70903 (github)
+
+- type: vessel
+  id: LSTurncoat
+  parent: BaseVesselAntag
+  name: FLG Turncoat
+  description: A scally-wags pride and joy, ideal for planet side excursions aswell as for hauling all your 'special' booty.
+  price: 135000
+  category: Medium
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/turncoat.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  - Cargo
+  engine:
+  - AME
+
+- type: gameMap
+  id: LSTurncoat
+  mapName: 'FLG-Turncoat'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/turncoat.yml
+  minPlayers: 0
+  stations:
+    LSTurncoat:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Turncoat {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

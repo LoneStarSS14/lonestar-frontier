@@ -1,0 +1,36 @@
+# Original Author
+# dustylens (github)
+
+- type: vessel
+  id: Garrison
+  parent: BaseVessel
+  name: LSR Garrison
+  description: The Garrison, expedition capable, heavy in safety features, light on livery.
+  price: 130000
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_LoneStar/Shuttles/Lsrd/Expedition/garrison.yml
+  guidebookPage: Null # TODO
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Garrison
+  mapName: 'LSR-Garrison'
+  mapPath: /Maps/_LoneStar/Shuttles/Lsrd/Expedition/garrison.yml
+  minPlayers: 0
+  stations:
+    Garrison:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LSR-Garrison {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ]
