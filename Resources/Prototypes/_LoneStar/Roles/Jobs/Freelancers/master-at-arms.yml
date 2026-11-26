@@ -62,6 +62,9 @@
   equipment:
     pocket1: BasePirateUplinkRadioPirateCaptain
     pocket2: ContrabandAppraisalToolPirate
+  storage:
+    back:
+    - CyberPen
 
 - type: roleLoadout
   id: JobLSMasterAtArms

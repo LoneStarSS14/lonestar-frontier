@@ -71,6 +71,7 @@
     - BaseSecurityUplinkRadioSheriff
     - RubberStampSheriff
     - ShipVoucherNfsdBailiff
+    - PenCentcom
 
 - type: roleLoadout
   id: JobLSChiefRanger
