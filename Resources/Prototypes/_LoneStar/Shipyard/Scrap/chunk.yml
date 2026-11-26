@@ -1,0 +1,36 @@
+- type: vessel
+  id: Chunk
+  parent: BaseVessel
+  name: LL0 Chunk
+  description: Created to solve the issue regarding station licensing in the sector, thus this... wonderful vessel is a temporary solution. Handle with care.
+  price: 3000
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/_LoneStar/Shuttles/Scrap/chunk.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Civilian
+  engine:
+  - Welding
+
+- type: gameMap
+  id: Chunk
+  mapName: 'Chunk'
+  mapPath: /Maps/_LoneStar/Shuttles/Scrap/chunk.yml
+  minPlayers: 0
+  stations:
+    Chunk:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Chunk {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

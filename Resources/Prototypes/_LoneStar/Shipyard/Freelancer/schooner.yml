@@ -1,0 +1,33 @@
+- type: vessel
+  id: LSSchooner
+  parent: BaseVesselAntag
+  name: FLG Schooner
+  description: A small wooden ship with 2 central cargo bays.
+  price: 40000
+  category: Medium
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_NF/Shuttles/BlackMarket/schooner.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: LSSchooner
+  mapName: 'FLG-Schooner'
+  mapPath: /Maps/_NF/Shuttles/BlackMarket/schooner.yml
+  minPlayers: 0
+  stations:
+    LSSchooner:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Schooner {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

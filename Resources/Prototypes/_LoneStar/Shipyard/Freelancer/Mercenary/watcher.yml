@@ -1,0 +1,35 @@
+## TODO: Remove cannons and modernize with new standards.
+
+- type: vessel
+  id: Watcher
+  parent: BaseVesselAntag
+  name: FLG Watcher
+  description: Once a simple mining Surveyor, now a light little raiding ship with some teeth
+  price: 34500 #29313 1.25 65954.25
+  category: Small
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Mercenary/watcher.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Watcher
+  mapName: 'FLG-Watcher'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Mercenary/watcher.yml
+  minPlayers: 0
+  stations:
+    Watcher:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Watcher {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

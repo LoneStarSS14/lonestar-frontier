@@ -1,0 +1,38 @@
+## TODO: Modernize according to mapping standards as a pursuit combat shuttle.
+
+# Original Author
+# erhardsteinhauer (github)
+
+- type: vessel
+  id: LSMenace
+  parent: BaseVesselAntag
+  name: FLG Menace
+  description: 'Mail is no longer an option: you either receive it or you die.'
+  price: 21000 #16476 1.25 37071
+  category: Small
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_NF/Shuttles/BlackMarket/menace.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: LSMenace
+  mapName: 'FLG-Menace'
+  mapPath: /Maps/_NF/Shuttles/BlackMarket/menace.yml
+  minPlayers: 0
+  stations:
+    LSMenace:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Menace {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/12/2026 19:32:43
+  time: 11/25/2026 16:11:14
   entityCount: 3640
 maps: []
 grids:
@@ -9681,6 +9681,13 @@ entities:
     - type: Transform
       pos: -49.5,3.5
       parent: 1
+- proto: ComputerShipyardMedical
+  entities:
+  - uid: 2370
+    components:
+    - type: Transform
+      pos: -52.5,16.5
+      parent: 1
 - proto: ComputerShipyardScrap
   entities:
   - uid: 437
@@ -11306,11 +11313,6 @@ entities:
     - type: Transform
       pos: -46.5,0.5
       parent: 1
-    - type: Door
-      secondsUntilStateChange: -945.0485
-      state: Closing
-    - type: Firelock
-      emergencyCloseCooldown: 2510.5641581
     - type: DeviceNetwork
       deviceLists:
       - 1549
@@ -17829,7 +17831,7 @@ entities:
       parent: 1
 - proto: GhostWarpPoint
   entities:
-  - uid: 2370
+  - uid: 1605
     components:
     - type: Transform
       pos: -45.5,3.5
@@ -18449,9 +18451,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -48.5,20.5
       parent: 1
-    - type: Door
-      secondsUntilStateChange: -4395.511
-      state: Closing
   - uid: 559
     components:
     - type: Transform
@@ -24559,13 +24558,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -46.5,15.5
-      parent: 1
-- proto: WarpPoint
-  entities:
-  - uid: 1605
-    components:
-    - type: Transform
-      pos: -45.5,3.5
       parent: 1
 - proto: WaterCooler
   entities:

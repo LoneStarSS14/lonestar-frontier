@@ -1,0 +1,36 @@
+# Original Author
+# dustylens (github)
+
+- type: vessel
+  id: Drake
+  parent: BaseVessel
+  name: FLG Drake
+  description: The Drake is the explorer of choice for adventures on a budget, mass produced and reliable.
+  price: 65000 # Appraised @ 20,600 + 50k(exped) * 1.1(Mercfab)
+  category: Medium
+  group: BlackMarket
+  access: Pirate
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/drake.yml
+  guidebookPage: ShipyardDragoon # TODO
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Drake
+  mapName: 'FLG-Drake'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/drake.yml
+  minPlayers: 0
+  stations:
+    Drake:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Drake {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

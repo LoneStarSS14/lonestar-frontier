@@ -1,0 +1,35 @@
+- type: vessel
+  id: Biodomebasic
+  parent: BaseVessel
+  name: LL0 Biodome - Meadow
+  description: A fragile glass dome housing a pleasant grassy field.
+  price: 105000
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Other/biodomebasic.yml
+  guidebookPage: Null
+  class:
+  - Botany
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Biodomebasic
+  mapName: 'Biodomebasic'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Other/biodomebasic.yml
+  minPlayers: 0
+  stations:
+    Biodomebasic:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Biodome {1}' # Drop the type name here, just Biodome
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

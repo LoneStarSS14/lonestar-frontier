@@ -1,0 +1,38 @@
+## TODO: Modernize according to mapping standards as a 'pursuit combat shuttle' OR 'service freelancer shuttle'
+
+# Original Author
+# magnuscrowe (github)
+
+- type: vessel
+  id: LSBocakillo
+  parent: BaseVesselAntag
+  name: FLG Bocakillo
+  description: A tiny plastitanium vessel suited to a crew of 2 to 3 pirates. Has two broadside cannons and a rear-facing disposals launcher. Runs on plasma.
+  price: 35000
+  category: Small
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_NF/Shuttles/BlackMarket/bocakillo.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: LSBocakillo
+  mapName: 'Bocakillo'
+  mapPath: /Maps/_NF/Shuttles/BlackMarket/bocakillo.yml
+  minPlayers: 0
+  stations:
+    LSBocakillo:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Bocakillo {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

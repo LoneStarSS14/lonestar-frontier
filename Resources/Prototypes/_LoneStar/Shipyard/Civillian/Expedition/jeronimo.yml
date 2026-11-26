@@ -1,0 +1,35 @@
+- type: vessel
+  id: Jeronimo
+  parent: BaseVessel
+  name: LL1 Jeronimo
+  description: You're taking a leap of faith, The perfect ship for small to medium crews looking for nothing more than to fight planet side.
+  price: 72500
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Expedition/jeronimo.yml
+  guidebookPage: null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Jeronimo
+  mapName: 'Jeronimo'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Expedition/jeronimo.yml
+  minPlayers: 0
+  stations:
+    Jeronimo:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Jeronimo {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

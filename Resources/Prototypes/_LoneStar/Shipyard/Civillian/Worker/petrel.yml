@@ -1,0 +1,36 @@
+- type: vessel
+  id: Petrel
+  parent: BaseVessel
+  name: LL1 Petrel
+  description: A medium sized space forklift from the USSP-based Kesha Aerospace Plant, with a massive vacuum-exposed cargo rack ready to shove station-constructing loads of material wherever you need it to go!
+  price: 64000
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Worker/petrel.yml
+  guidebookPage: ShipyardPetrel
+  class:
+  - Cargo
+  - Salvage
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Petrel
+  mapName: 'Petrel'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Worker/petrel.yml
+  minPlayers: 0
+  stations:
+    Petrel:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Petrel {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

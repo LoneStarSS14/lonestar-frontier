@@ -1,0 +1,35 @@
+- type: vessel
+  id: Biodomeplush
+  parent: BaseVessel
+  name: LL0 Biodome - Sleepover
+  description: A fragile glass dome housing comfy bedspreads and carpets.
+  price: 115000
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Other/biodomeplush.yml
+  guidebookPage: Null
+  class:
+  - Botany
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Biodomeplush
+  mapName: 'Biodomeplush'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Other/biodomeplush.yml
+  minPlayers: 0
+  stations:
+    Biodomeplush:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Biodome {1}' # Drop the type name here, just Biodome
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

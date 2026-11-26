@@ -9,6 +9,7 @@
 # Shuttle Notes:
 # Keeping watch for Ragnarök. As soon as someone adds ship horns they better make a Gjallarhorn for this thing.
 - type: vessel
+  abstract: true # LoneStar
   id: Heimdall
   name: NSF Heimdall
   parent: BaseVessel
@@ -25,6 +26,7 @@
   - Plasma
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Heimdall
   mapName: 'NSF Heimdall'
   mapPath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml

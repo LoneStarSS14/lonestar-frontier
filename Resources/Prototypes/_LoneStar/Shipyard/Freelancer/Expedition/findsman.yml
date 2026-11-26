@@ -1,0 +1,36 @@
+## TODO: Modernize according to mapping standards.
+
+- type: vessel
+  id: Findsman
+  parent: BaseVesselAntag
+  name: FLG Findsman
+  description: A Pathfinder modified to hunt down and capture people for ransom, Exped Capable
+  price: 105500 #34413, +50$k(exped) LL2 x1.3 = 109,736
+  category: Small
+  group: BlackMarket
+  access: BlackMarket
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/findsman.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Findsman
+  mapName: 'FLG-Findsman'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Expedition/findsman.yml
+  minPlayers: 0
+  stations:
+    Findsman:
+      stationProto: StandardFrontierAntagExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Findsman {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

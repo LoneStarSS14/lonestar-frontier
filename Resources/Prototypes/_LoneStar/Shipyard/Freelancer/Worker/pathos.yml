@@ -1,0 +1,33 @@
+- type: vessel
+  id: Pathos
+  parent: BaseVesselAntag
+  name: FLG Pathos
+  description: A cozy paramedic's shuttle built for one, furnished by interdyne.
+  price: 38500
+  category: Small
+  group: BlackMarket
+  access: Pirate
+  shuttlePath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/pathos.yml
+  guidebookPage: Null
+  class:
+  - Medical
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Pathos
+  mapName: 'FLG-Pathos'
+  mapPath: /Maps/_LoneStar/Shuttles/Freelancer/Worker/pathos.yml
+  minPlayers: 0
+  stations:
+    Pathos:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FLG-Pathos {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

@@ -1,0 +1,35 @@
+- type: vessel
+  id: Biodomearcticsheleg
+  parent: BaseVessel
+  name: LL0 Biodome - Ice Cave (Sheleg)
+  description: A fragile glass dome housing a frozen mountainside. This version has been modified with frigid atmospherics to make Shelegs at home.
+  price: 105000
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_LoneStar/Shuttles/Civillian/Other/biodomearcticsheleg.yml
+  guidebookPage: Null
+  class:
+  - Botany
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Biodomearcticsheleg
+  mapName: 'Biodomearcticsheleg'
+  mapPath: /Maps/_LoneStar/Shuttles/Civillian/Other/biodomearcticsheleg.yml
+  minPlayers: 0
+  stations:
+    Biodomearcticsheleg:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Biodome {1}' # Drop the type name here, just Biodome
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            CompanionInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

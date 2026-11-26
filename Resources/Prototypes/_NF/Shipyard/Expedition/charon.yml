@@ -13,10 +13,10 @@
 - type: vessel
   id: Charon
   parent: BaseVessel
-  name: LL3 Charon
+  name: LL3 Charon # LoneStar
   description: Originally built as a roll-on, roll-off transport for heavy terraforming equipment. Since its obsolescence and appearance on the secondary market, the Charon has become a favorite of upfitters for the broad possibilities afforded by its open equipment bay. A product of Endurance Industrial Shipyards.
-  price: 267300 #71511, +50k(exped) LL3 x2.2 = 267324
-  category: Medium
+  price: 275000 # LoneStar
+  category: Large # LoneStar
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/charon.yml
   guidebookPage: ShipyardCharon
@@ -41,7 +41,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

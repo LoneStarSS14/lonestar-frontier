@@ -11,10 +11,10 @@
 - type: vessel
   id: Aegis
   parent: BaseVessel
-  name: FSA Aegis
+  name: LL2 Aegis # LoneStar
   description: The Aegis is an expedition shuttle designed for long duration exploration missions with the comfort and care of the crew as a mainstay priority.
-  price: 193750 #46587, +50k(exped) LL2 x2 = 193174
-  category: Medium
+  price: 215000 # LoneStar
+  category: Large # LoneStar
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/aegis.yml
   guidebookPage: ShipyardAegis
@@ -40,7 +40,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            ContractorInterview: [ 2, 2 ]
-            CompanionInterview: [ 2, 2 ]
-            PilotInterview: [ 2, 2 ]
-            MercenaryInterview: [ 2, 2 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]
