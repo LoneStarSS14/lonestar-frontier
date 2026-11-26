@@ -13,7 +13,7 @@
 - type: vessel
   id: Dragonfly
   parent: BaseVessel
-  name: LL1 Dragonfly
+  name: LL1 Dragonfly # LoneStar
   description: Highly modular salvaging vessel welded together from smaller re-purposed hulls.
   price: 146750 #72423, +50k(exped) LL1 x1.2 = 146907
   category: Medium

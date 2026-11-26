@@ -4,7 +4,7 @@
 - type: vessel
   id: Whelp
   parent: BaseVessel
-  name: LSR Whelp
+  name: LL1 Whelp
   description: The Whelp is the explorer of choice for adventures on a budget, mass produced and reliable.
   price: 82500 # Appraised @ 20,600 + 50k(exped) * 1.1(Mercfab)
   category: Medium
