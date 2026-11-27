@@ -1,11 +1,11 @@
 
 #region Frontier Command
 - type: entity
-  parent: [ BaseWindoor, LSBaseFilledDoorElectronicsSectorCommand ]
+  parent: [ Windoor, LSBaseFilledDoorElectronicsSectorCommand ]
   id: LSWindoorSectorCommandLocked
 
 - type: entity
-  parent: [ BaseSecureWindoor, LSBaseFilledDoorElectronicsSectorCommand ]
+  parent: [ SecureWindoor, LSBaseFilledDoorElectronicsSectorCommand ]
   id: LSWindoorSecureSectorCommandLocked
 
 - type: entity
@@ -27,11 +27,11 @@
 
 #region Nash(Staff)
 - type: entity
-  parent: [ BaseWindoor, LSBaseFilledDoorElectronicsNash ]
+  parent: [ Windoor, LSBaseFilledDoorElectronicsNash ]
   id: LSWindoorNashLocked
 
 - type: entity
-  parent: [ BaseSecureWindoor, LSBaseFilledDoorElectronicsNash ]
+  parent: [ SecureWindoor, LSBaseFilledDoorElectronicsNash ]
   id: LSWindoorSecureNashLocked
 
 - type: entity
@@ -53,11 +53,11 @@
 
 #region Freelancer
 - type: entity
-  parent: [ BaseWindoor, LSBaseFilledDoorElectronicsFreelancer ]
+  parent: [ Windoor, LSBaseFilledDoorElectronicsFreelancer ]
   id: LSWindoorFreelancerLocked
 
 - type: entity
-  parent: [ BaseSecureWindoor, LSBaseFilledDoorElectronicsFreelancer ]
+  parent: [ SecureWindoor, LSBaseFilledDoorElectronicsFreelancer ]
   id: LSWindoorSecureFreelancerLocked
 
 - type: entity
@@ -79,11 +79,11 @@
 
 #region Lsrd
 - type: entity
-  parent: [ BaseWindoor, LSBaseFilledDoorElectronicsLsrd ]
+  parent: [ Windoor, LSBaseFilledDoorElectronicsLsrd ]
   id: LSWindoorLsrdLocked
 
 - type: entity
-  parent: [ BaseSecureWindoor, LSBaseFilledDoorElectronicsLsrd ]
+  parent: [ SecureWindoor, LSBaseFilledDoorElectronicsLsrd ]
   id: LSWindoorSecureLsrdLocked
 
 - type: entity
