@@ -2,18 +2,34 @@
 - type: entity
   parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockShuttle ]
   id: LSShuttleAirlockSectorCommandLocked
+  components:
+  - type: Tag
+    tags:
+    - PreventFTL
 - type: entity
   parent: [ LSBaseFilledDoorElectronicsSectorCommand, AirlockGlassShuttle ]
   id: LSShuttleAirlockSectorCommandLockedGlass
+  components:
+  - type: Tag
+    tags:
+    - PreventFTL
 #endregion
 
 #region Nash(Staff)
 - type: entity
   parent: [ LSBaseFilledDoorElectronicsNash, AirlockShuttle ]
   id: LSShuttleAirlockNashLocked
+  components:
+  - type: Tag
+    tags:
+    - PreventFTL
 - type: entity
   parent: [ LSBaseFilledDoorElectronicsNash, AirlockGlassShuttle ]
   id: LSShuttleAirlockNashLockedGlass
+  components:
+  - type: Tag
+    tags:
+    - PreventFTL
 #endregion
 
 #region Freelancer
@@ -23,12 +39,18 @@
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Airlocks/Standard/shuttle-freelancer.rsi
+  - type: Tag
+    tags:
+    - PreventFTL
 - type: entity
   parent: [ LSBaseFilledDoorElectronicsFreelancer, AirlockGlassShuttle ]
   id: LSShuttleAirlockFreelancerLockedGlass
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Airlocks/Glass/shuttle-freelancer.rsi
+  - type: Tag
+    tags:
+    - PreventFTL
 #endregion
 
 #region Lsrd
@@ -38,10 +60,16 @@
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Airlocks/Standard/shuttle-lsrd.rsi
+  - type: Tag
+    tags:
+    - PreventFTL
 - type: entity
   parent: [ LSBaseFilledDoorElectronicsLsrd, AirlockGlassShuttle ]
   id: LSShuttleAirlockLsrdLockedGlass
   components:
   - type: Sprite
     sprite: _LoneStar/Structures/Doors/Airlocks/Glass/shuttle-lsrd.rsi
+  - type: Tag
+    tags:
+    - PreventFTL
 #endregion

@@ -10,8 +10,9 @@ namespace Content.Server.Shuttles.Components;
 public sealed partial class PriorityDockComponent : Component
 {
     /// <summary>
-    /// Tag to match on the docking request, if this dock is to be prioritised.
+    /// Tag to match on the docking request, if this dock is to be prioritized.
     /// </summary>
+    // LoneStar > Keep route priority tags attached to the target docking port.
     [ViewVariables(VVAccess.ReadWrite),
      DataField("tag", customTypeSerializer: typeof(PrototypeIdSerializer<TagPrototype>))]
     public string? Tag;
