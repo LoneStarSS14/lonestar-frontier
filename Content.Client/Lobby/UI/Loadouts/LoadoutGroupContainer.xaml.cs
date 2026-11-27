@@ -160,22 +160,18 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
         }
 
         // Frontier: loadoutGroup subgroups
-        foreach (var subgroupProto in _groupProto.Subgroups)
+        // LoneStar: subgroup recursivity
+        foreach (var loadoutProto in _groupProto.GetSubgroupLoadouts(protoMan))
         {
-            if (!protoMan.TryIndex(subgroupProto, out var loadoutGroupProto))
+            if (!protoMan.TryIndex(loadoutProto, out var loadProto))
                 continue;
 
-            foreach (var loadoutProto in loadoutGroupProto.Loadouts)
-            {
-                if (!protoMan.TryIndex(loadoutProto, out var loadProto))
-                    continue;
+            if (loadout.IsHidden(profile, session, loadoutProto, collection))
+                continue;
 
-                if (loadout.IsHidden(profile, session, loadoutProto, collection))
-                    continue;
-
-                LoadoutsContainer.AddChild(CreateLoadoutUI(loadProto, profile, loadout, session, collection, loadoutSystem));
-            }
+            LoadoutsContainer.AddChild(CreateLoadoutUI(loadProto, profile, loadout, session, collection, loadoutSystem));
         }
+        // End LoneStar
         // End Frontier
     }
 

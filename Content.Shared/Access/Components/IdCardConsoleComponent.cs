@@ -53,16 +53,20 @@ public sealed partial class IdCardConsoleComponent : Component
         //"Chapel",
         //"Chemistry",
         //"ChiefMedicalOfficer",
+        "HeadOfSecurity", // LoneStar "Chief Ranger"
         "Command",
         //"Cryogenics",
         "Detective", // Frontier: moved into alphabetical order
         "Engineering",
         "External",
+        "Pirate", // LoneStar "Freelancer"
+        "BlackMarket", // LoneStar "FLG-Shipyard"
         "Frontier", // Frontier
         //"Hydroponics",
         "Janitor",
         //"Kitchen",
         //"Lawyer",
+        "Security", // LoneStar "LSRD"
         "Mail", // Frontier
         "Maintenance",
         "Medical",
@@ -72,10 +76,8 @@ public sealed partial class IdCardConsoleComponent : Component
         //"Research",
         //"ResearchDirector",
         //"Salvage",
-        "Security",
         "Sergeant", // Frontier
         "Service",
-        "HeadOfSecurity", // Frontier: moved down, alphabetic w.r.t. "Sheriff"
         "HeadOfPersonnel", // Frontier: moved down, alphabetic w.r.t. "Station Representative"
         "StationTrafficController", // Frontier
         //"Theatre",

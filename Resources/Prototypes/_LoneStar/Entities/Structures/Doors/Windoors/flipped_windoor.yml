@@ -696,3 +696,133 @@
     containers:
       board: [ DoorElectronicsPirate ]
 #endregion
+
+#region LoneStar
+#region Sector Command
+- type: entity
+  parent: [ WindoorF, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorSectorCommandLockedF
+  suffix: Sector Command, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecureF, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorSecureSectorCommandLockedF
+  suffix: Sector Command, Secure, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorPlasmaF, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorPlasmaSectorCommandLockedF
+  suffix: Sector Command, Plasma, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecurePlasmaF, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorSecurePlasmaSectorCommandLockedF
+  suffix: Sector Command, Secure Plasma, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorUraniumF, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorUraniumSectorCommandLockedF
+  suffix: Sector Command, Uranium, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecureUraniumF, LSBaseFilledDoorElectronicsSectorCommand ]
+  id: LSWindoorSecureUraniumSectorCommandLockedF
+  suffix: Sector Command, Secure Uranium, Locked, Flipped
+#endregion
+
+#region Nash
+- type: entity
+  parent: [ WindoorF, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorNashLockedF
+  suffix: Nash, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecureF, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorSecureNashLockedF
+  suffix: Nash, Secure, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorPlasmaF, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorPlasmaNashLockedF
+  suffix: Nash, Plasma, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecurePlasmaF, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorSecurePlasmaNashLockedF
+  suffix: Nash, Secure Plasma, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorUraniumF, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorUraniumNashLockedF
+  suffix: Nash, Uranium, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecureUraniumF, LSBaseFilledDoorElectronicsNash ]
+  id: LSWindoorSecureUraniumNashLockedF
+  suffix: Nash, Secure Uranium, Locked, Flipped
+#endregion
+
+#region Freelancer
+- type: entity
+  parent: [ WindoorF, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorFreelancerLockedF
+  suffix: Freelancer, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecureF, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorSecureFreelancerLockedF
+  suffix: Freelancer, Secure, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorPlasmaF, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorPlasmaFreelancerLockedF
+  suffix: Freelancer, Plasma, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecurePlasmaF, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorSecurePlasmaFreelancerLockedF
+  suffix: Freelancer, Secure Plasma, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorUraniumF, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorUraniumFreelancerLockedF
+  suffix: Freelancer, Uranium, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecureUraniumF, LSBaseFilledDoorElectronicsFreelancer ]
+  id: LSWindoorSecureUraniumFreelancerLockedF
+  suffix: Freelancer, Secure Uranium, Locked, Flipped
+#endregion
+
+#region LSRD
+- type: entity
+  parent: [ WindoorF, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorLsrdLockedF
+  suffix: LSRD, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecureF, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorSecureLsrdLockedF
+  suffix: LSRD, Secure, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorPlasmaF, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorPlasmaLsrdLockedF
+  suffix: LSRD, Plasma, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecurePlasmaF, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorSecurePlasmaLsrdLockedF
+  suffix: LSRD, Secure Plasma, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorUraniumF, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorUraniumLsrdLockedF
+  suffix: LSRD, Uranium, Locked, Flipped
+
+- type: entity
+  parent: [ WindoorSecureUraniumF, LSBaseFilledDoorElectronicsLsrd ]
+  id: LSWindoorSecureUraniumLsrdLockedF
+  suffix: LSRD, Secure Uranium, Locked, Flipped
+#endregion
+#endregion

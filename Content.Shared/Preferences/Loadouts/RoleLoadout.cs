@@ -124,6 +124,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
             }
 
             var loadouts = groupLoadouts[..Math.Min(groupLoadouts.Count, groupProto.MaxLimit)];
+            var availableLoadouts = groupProto.GetAllLoadouts(protoManager); // LoneStar, subgroup recursivity
 
             // Validate first
             for (var i = loadouts.Count - 1; i >= 0; i--)
@@ -138,28 +139,13 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                 }
 
                 // Malicious client maybe, check the group even has it.
-                if (!groupProto.Loadouts.Contains(loadout.Prototype))
+                // LoneStar start, subgroup recursivity
+                if (!availableLoadouts.Contains(loadout.Prototype))
                 {
-                    // Frontier: check subgroups
-                    bool subGroupEntryFound = false;
-                    foreach (var subgroup in groupProto.Subgroups)
-                    {
-                        if (protoManager.TryIndex(subgroup, out var subgroupProto) &&
-                            subgroupProto.Loadouts.Contains(loadout.Prototype))
-                        {
-                            subGroupEntryFound = true;
-                            break;
-                        }
-                    }
-                    if (!subGroupEntryFound)
-                    {
-                        loadouts.RemoveAt(i);
-                        continue;
-                    }
-                    // End Frontier: check subgroups
-                    // loadouts.RemoveAt(i); // Frontier: commented out old implementation
-                    // continue; // Frontier: commented out old implementation
+                    loadouts.RemoveAt(i);
+                    continue;
                 }
+                // LoneStar end
 
                 // Validate the loadout can be applied (e.g. points).
                 if (!IsValid(profile, session, loadout.Prototype, collection, out _))
@@ -203,7 +189,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                 }
                 // End Frontier
 
-                foreach (var protoId in groupProto.Loadouts)
+                foreach (var protoId in availableLoadouts) // LoneStar, subgroup recursivity
                 {
                     if (loadouts.Count >= groupProto.MinLimit)
                         break;

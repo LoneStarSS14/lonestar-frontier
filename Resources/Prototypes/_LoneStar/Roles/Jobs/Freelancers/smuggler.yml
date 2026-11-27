@@ -13,7 +13,7 @@
   displayWeight: 50
   startingGear: LSSmugglerGear
   icon: "JobIconLSSmuggler"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - FreelancerGeneralAccess
@@ -79,7 +79,6 @@
   - LSFreelancersFactionCombatantImplanter
   # Common v
   - ContractorBoxSurvival
-  - ContractorWallet
   - PirateBackpackItems
   - ContractorHandItems
   - ContractorInstruments

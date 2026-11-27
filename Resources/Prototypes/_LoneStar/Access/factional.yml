@@ -7,7 +7,7 @@
   id: BlackMarket # TODO: Refactor the ID for this to FreelancerShipyard
   name: id-card-access-level-blackmarket
 
-
+# Groups
 - type: accessGroup
   id: FreelancerGeneralAccess
   tags:
@@ -31,7 +31,7 @@
   id: LsrdShipyard
   name: id-card-access-level-lsrd-shipyard
 
-
+# Groups
 - type: accessGroup
   id: LsrdGeneralAccess
   tags:

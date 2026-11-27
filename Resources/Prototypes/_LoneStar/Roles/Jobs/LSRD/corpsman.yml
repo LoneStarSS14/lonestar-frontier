@@ -15,7 +15,7 @@
   displayWeight: 20
   startingGear: LSCorpsmanGear
   icon: "JobIconLSCorpsman"
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   access:
   - Brigmedic # TODO: Make this into a 'medic' access shared by both factions medical players

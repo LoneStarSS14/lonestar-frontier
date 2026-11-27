@@ -1,10 +1,10 @@
 - type: accessLevel
   id: HeadOfSecurity
-  name: id-card-access-level-head-of-security
+  name: id-card-access-level-chief-ranger # LoneStar
 
 - type: accessLevel
   id: Security
-  name: id-card-access-level-security
+  name: id-card-access-level-lsrd # LoneStar
 
 - type: accessLevel
   id: Armory

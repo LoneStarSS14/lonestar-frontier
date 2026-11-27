@@ -23,7 +23,7 @@
   startingGear: LSChiefRanger
   icon: "JobIconLSChiefRanger"
   alwaysUseSpawner: true
-  hideConsoleVisibility: true
+  hideConsoleVisibility: false
   newPlayerMessage: false
   accessGroups:
   - LsrdGeneralAccess
@@ -71,6 +71,7 @@
     - BaseSecurityUplinkRadioSheriff
     - RubberStampSheriff
     - ShipVoucherNfsdBailiff
+    - PenCentcom
 
 - type: roleLoadout
   id: JobLSChiefRanger

@@ -4971,3 +4971,66 @@ Entries:
   id: 533
   time: '2026-11-26T01:24:31.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/338
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Corrects LSRD jobs to not be whitelists and take their temporary
+        requirement of 16h server playtime.
+  id: 534
+  time: '2026-11-26T03:49:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/339
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        LSRD/Freelancer roles should now have the correct options from their
+        loadouts.
+  id: 535
+  time: '2026-11-26T21:49:43.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/340
+- author: archee1
+  changes:
+    - type: Fix
+      message: Factional Residents cant set pseudonyms from their loadouts.
+    - type: Fix
+      message: LSRD's RO no longer get DB from RPI
+    - type: Fix
+      message: Migrates whitelists from old freelancer job IDs to the new IDs.
+    - type: Tweak
+      message: >-
+        LSRD and Freelancer roles now have their accesses visible at the ID
+        computer.
+    - type: Fix
+      message: SR now has Pirate and BlackMarket access.
+    - type: Fix
+      message: Loadouts for LSRD and Freelancers are now all correctly available.
+    - type: Tweak
+      message: >-
+        You can now swap the active ID Card in ID computers without ejected the
+        current one.
+    - type: Fix
+      message: >-
+        CR and MAA now spawn with seal-editing pens (cybersun/centcomm) for
+        document related matters.
+  id: 536
+  time: '2026-11-26T22:19:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/341
+- author: archee1
+  changes:
+    - type: Add
+      message: 10 new colorable dresses.
+    - type: Tweak
+      message: >-
+        3 pre-existing dress items made colorable, Elegant, Turtleneck, Striped
+        dresses.
+  id: 537
+  time: '2026-11-27T05:26:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/343
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Fixes some small mistakes on the malinois/drake/dragoon/pathos
+  id: 538
+  time: '2026-11-27T06:01:23.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/342
