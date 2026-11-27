@@ -434,3 +434,244 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/present.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/present.rsi
+
+# region Working Dresses
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtAsymmetricDress
+  name: asymmetric dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/asymmetric_dress.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/asymmetric_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtEveningGown
+  name: evening gown
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/evening_gown.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/evening_gown.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtKimono
+  name: kimono
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/kimono_color.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/kimono_color.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtLacyGown
+  name: lacy gown
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/lacy_gown.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/lacy_gown.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtLongDress
+  name: long dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/long_dress.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/long_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtLongFlaredDress
+  name: long flared dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/long_flared_dress.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/long_flared_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtLongsleeveDress
+  name: longsleeve dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/longsleeve_dress.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/longsleeve_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtMidiDress
+  name: midi dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/midi_dress.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/midi_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtOpenShoulderDress
+  name: open-shoulder dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/openshoulder_dress.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/openshoulder_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtShortDress
+  name: short dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/short_dress.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/short_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtSleevelessDress
+  name: sleeveless dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/sleeveless_dress.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/sleeveless_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtTeaDress
+  name: tea dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/tea_dress.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/tea_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtElegantDressColorable
+  name: elegant dress
+  description: An elegant dress with a beautiful bow.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/elegantdress.rsi
+    layers:
+    - state: icon
+    - state: icon-color
+      map: [ "uniform-icon" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/elegantdress.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: color-equipped-INNERCLOTHING
+        map: [ "uniform-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    mappedColors:
+      Base: NTInteriorDesign
+    available:
+      - uniform-icon:
+          icon-color: Base
+        uniform-equipped:
+          color-equipped-INNERCLOTHING: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtStripedDressColorable
+  name: striped dress
+  description: A cute striped dress.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/stripeddress.rsi
+    layers:
+    - state: icon
+    - state: icon-color
+      map: [ "uniform-icon" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/stripeddress.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: color-equipped-INNERCLOTHING
+        map: [ "uniform-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    mappedColors:
+      Base: NTInteriorDesign
+    available:
+      - uniform-icon:
+          icon-color: Base
+        uniform-equipped:
+          color-equipped-INNERCLOTHING: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtTurtleneckDressColorable
+  name: turtleneck dress
+  description: A turtleneck dress with a unique design.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/turtledress.rsi
+    layers:
+    - state: icon
+    - state: icon-color
+      map: [ "uniform-icon" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Working/Jumpskirt/turtledress.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: color-equipped-INNERCLOTHING
+        map: [ "uniform-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        map: [ "hl-color" ]
+      right:
+      - state: inhand-right
+        map: [ "hr-color" ]
+  - type: ColorableClothing
+    mappedColors:
+      Base: NTInteriorDesign
+    available:
+      - uniform-icon:
+          icon-color: Base
+        uniform-equipped:
+          color-equipped-INNERCLOTHING: Base
+        hl-color:
+          inhand-left: Base
+        hr-color:
+          inhand-right: Base
