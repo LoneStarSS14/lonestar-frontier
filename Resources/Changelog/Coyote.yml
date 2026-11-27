@@ -5027,3 +5027,10 @@ Entries:
   id: 537
   time: '2026-11-27T05:26:47.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/343
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Fixes some small mistakes on the malinois/drake/dragoon/pathos
+  id: 538
+  time: '2026-11-27T06:01:23.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/342
