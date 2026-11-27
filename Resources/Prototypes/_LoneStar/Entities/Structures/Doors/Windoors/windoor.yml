@@ -5,7 +5,7 @@
   id: LSWindoorSectorCommandLocked
 
 - type: entity
-  parent: [ SecureWindoor, LSBaseFilledDoorElectronicsSectorCommand ]
+  parent: [ WindoorSecure, LSBaseFilledDoorElectronicsSectorCommand ]
   id: LSWindoorSecureSectorCommandLocked
 
 - type: entity
@@ -31,7 +31,7 @@
   id: LSWindoorNashLocked
 
 - type: entity
-  parent: [ SecureWindoor, LSBaseFilledDoorElectronicsNash ]
+  parent: [ WindoorSecure, LSBaseFilledDoorElectronicsNash ]
   id: LSWindoorSecureNashLocked
 
 - type: entity
@@ -57,7 +57,7 @@
   id: LSWindoorFreelancerLocked
 
 - type: entity
-  parent: [ SecureWindoor, LSBaseFilledDoorElectronicsFreelancer ]
+  parent: [ WindoorSecure, LSBaseFilledDoorElectronicsFreelancer ]
   id: LSWindoorSecureFreelancerLocked
 
 - type: entity
@@ -83,7 +83,7 @@
   id: LSWindoorLsrdLocked
 
 - type: entity
-  parent: [ SecureWindoor, LSBaseFilledDoorElectronicsLsrd ]
+  parent: [ WindoorSecure, LSBaseFilledDoorElectronicsLsrd ]
   id: LSWindoorSecureLsrdLocked
 
 - type: entity
