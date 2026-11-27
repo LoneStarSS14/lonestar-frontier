@@ -208,13 +208,23 @@ public sealed partial class DockingSystem
     {
         var gridDocks = GetDocks(targetGrid);
         var shuttleDocks = GetDocks(shuttleUid);
+        // LoneStar: an assigned shuttle tag must also constrain exact-coordinate docking.
+        priorityTag ??= GetShuttlePriorityTag(shuttleDocks, dockType);
 
         // First search for the exact requested docking configuration.
+        // LoneStar: skip unassigned target docks before generating exact-position combinations.
+        var exactGridDocks = priorityTag is null
+            ? gridDocks
+            : gridDocks.Where(dock => IsPriorityDock(dock.Owner, priorityTag)).ToList();
+        var hasPriorityGridDocks = exactGridDocks.Count > 0;
+        if (priorityTag is not null && !hasPriorityGridDocks)
+            exactGridDocks = gridDocks;
+
         var configs = GetDockingConfigs(
             shuttleUid,
             targetGrid,
             shuttleDocks,
-            gridDocks,
+            exactGridDocks,
             dockType,
             coordinates,
             angle,
@@ -222,10 +232,19 @@ public sealed partial class DockingSystem
 
         if (configs.Count > 0)
         {
-            if (priorityTag is not null &&
-                configs.FirstOrDefault(config => IsConfigPriority(config, priorityTag)) is { } priorityConfig)
+            if (priorityTag is not null)
             {
-                return priorityConfig;
+                var priorityConfig = configs.FirstOrDefault(config => IsConfigPriority(config, priorityTag));
+                if (priorityConfig is not null)
+                    return priorityConfig;
+
+                if (!hasPriorityGridDocks)
+                    return configs.First();
+
+                // LoneStar: never substitute an unassigned dock for the requested assignment.
+                return fallback
+                    ? GetDockingConfigPrivate(shuttleUid, targetGrid, shuttleDocks, gridDocks, priorityTag, dockType)
+                    : null;
             }
 
             return configs.First();
@@ -234,16 +253,7 @@ public sealed partial class DockingSystem
         if (!fallback)
             return null;
 
-        if (priorityTag is not null)
-            return GetDockingConfigPrivate(shuttleUid, targetGrid, shuttleDocks, gridDocks, priorityTag, dockType);
-
-        configs = GetDockingConfigs(shuttleUid, targetGrid, shuttleDocks, gridDocks, dockType); // Frontier: add dockType
-        if (configs.Count > 0)
-        {
-            return configs.First();
-        }
-
-        return null;
+        return GetDockingConfigPrivate(shuttleUid, targetGrid, shuttleDocks, gridDocks, priorityTag, dockType);
     }
 
     /// <summary>
@@ -409,18 +419,7 @@ public sealed partial class DockingSystem
         string? priorityTag = null,
         DockType dockType = DockType.Airlock) // Frontier
     {
-        if (priorityTag is null)
-        {
-            foreach (var dock in shuttleDocks)
-            {
-                if (TryComp<PriorityDockComponent>(dock.Owner, out var priority) &&
-                    priority.Tag is not null)
-                {
-                    priorityTag = priority.Tag;
-                    break;
-                }
-            }
-        }
+        priorityTag ??= GetShuttlePriorityTag(shuttleDocks, dockType);
 
         List<DockingConfig> validDockConfigs;
 
@@ -428,27 +427,30 @@ public sealed partial class DockingSystem
         // spawn-validation and docking-combination work when a priority dock is available.
         if (priorityTag is not null)
         {
+            // LoneStar: only matching target docks may satisfy an assigned priority tag.
             var priorityGridDocks = gridDocks
                 .Where(dock => IsPriorityDock(dock.Owner, priorityTag))
                 .ToList();
 
-            validDockConfigs = priorityGridDocks.Count > 0
-                ? GetDockingConfigs(
-                    shuttleUid,
-                    targetGrid,
-                    shuttleDocks,
-                    priorityGridDocks,
-                    dockType)
-                : [];
-
-            // Fall back to every available port if the priority ports cannot be used.
-            if (validDockConfigs.Count == 0)
+            if (priorityGridDocks.Count == 0)
+            {
+                // LoneStar: use ordinary docks only when no dock has the assigned tag.
                 validDockConfigs = GetDockingConfigs(
                     shuttleUid,
                     targetGrid,
                     shuttleDocks,
                     gridDocks,
                     dockType);
+            }
+            else
+            {
+                validDockConfigs = GetDockingConfigs(
+                    shuttleUid,
+                    targetGrid,
+                    shuttleDocks,
+                    priorityGridDocks,
+                    dockType);
+            }
         }
         else
         {
@@ -496,6 +498,24 @@ public sealed partial class DockingSystem
         // TODO: Ideally do a hyperspace warpin, just have it run on like a 10 second timer.
 
         return location;
+    }
+
+    // LoneStar: resolve a shuttle's assigned target dock tag when the caller omits one.
+    private string? GetShuttlePriorityTag(List<Entity<DockingComponent>> shuttleDocks, DockType dockType)
+    {
+        foreach (var dock in shuttleDocks)
+        {
+            if (_tag.HasTag(dock.Owner, PreventFtlTag) ||
+                (dock.Comp.DockType & dockType) == DockType.None)
+            {
+                continue;
+            }
+
+            if (TryComp<PriorityDockComponent>(dock.Owner, out var priority) && priority.Tag is not null)
+                return priority.Tag;
+        }
+
+        return null;
     }
 
     public List<Entity<DockingComponent>> GetDocks(EntityUid uid)
