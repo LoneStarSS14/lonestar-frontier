@@ -5016,3 +5016,14 @@ Entries:
   id: 536
   time: '2026-11-26T22:19:58.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/341
+- author: archee1
+  changes:
+    - type: Add
+      message: 10 new colorable dresses.
+    - type: Tweak
+      message: >-
+        3 pre-existing dress items made colorable, Elegant, Turtleneck, Striped
+        dresses.
+  id: 537
+  time: '2026-11-27T05:26:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/343
