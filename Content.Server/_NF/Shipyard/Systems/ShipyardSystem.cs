@@ -47,6 +47,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     private ISawmill _sawmill = default!;
     private bool _enabled;
     private float _baseSaleRate;
+    private readonly HashSet<EntityUid> _dockTestShuttles = new();
 
     // Coyote Start
     private enum PostPurchaseAtmosFix
@@ -164,7 +165,14 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         _sawmill.Info($"Shuttle {shuttlePath} was purchased at {ToPrettyString(stationUid)} for {price:f2}");
         //can do TryFTLDock later instead if we need to keep the shipyard map paused
-        _shuttle.TryFTLDock(shuttleGrid.Value, shuttleComponent, targetGrid.Value, maxShuttleDocks: 9); // Coyote: Add maxShuttleDocks, aka, how many airlocks should we check against, tops?
+        // LoneStar > A failed docking is a failed purchase; remove the spawned shuttle.
+        if (!_shuttle.TryFTLDock(shuttleGrid.Value, shuttleComponent, targetGrid.Value))
+        {
+            QueueDel(shuttleGrid.Value);
+            shuttleEntityUid = null;
+            return false;
+        }
+
         shuttleEntityUid = shuttleGrid;
         return true;
     }
@@ -467,5 +475,100 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     {
         string?[] parts = { comp.ShuttleName, comp.ShuttleNameSuffix };
         return string.Join(' ', parts.Where(it => it != null));
+    }
+
+    // LoneStar > Load, queue docking, and finalize the shipyard purchase from the callback.
+    public bool TryPurchaseShuttleQueued(
+        EntityUid stationUid,
+        ResPath shuttlePath,
+        Action<bool, EntityUid?> onCompleted)
+    {
+        return TryPurchaseShuttleQueued(stationUid, shuttlePath, onCompleted, out _);
+    }
+
+    public bool TryPurchaseShuttleQueued(
+        EntityUid stationUid,
+        ResPath shuttlePath,
+        Action<bool, EntityUid?> onCompleted,
+        out string? failureReason)
+    {
+        failureReason = null;
+        if (!TryComp<StationDataComponent>(stationUid, out var stationData))
+        {
+            failureReason = $"Entity {stationUid} is not a station.";
+            return false;
+        }
+
+        if (!TryAddShuttle(shuttlePath, out var shuttleGrid))
+        {
+            failureReason = $"Could not load grid file '{shuttlePath}'.";
+            return false;
+        }
+
+        if (!TryComp<ShuttleComponent>(shuttleGrid, out _))
+        {
+            QueueDel(shuttleGrid.Value);
+            failureReason = $"Loaded grid file '{shuttlePath}' has no Shuttle component.";
+            return false;
+        }
+
+        var targetGrid = _station.GetLargestGrid(stationData);
+        if (targetGrid == null)
+        {
+            QueueDel(shuttleGrid.Value);
+            failureReason = $"Station {stationUid} has no target grid.";
+            return false;
+        }
+
+        _sawmill.Info($"Shuttle {shuttlePath} was purchased at {ToPrettyString(stationUid)} (queued dock)");
+
+        var queued = _docking.QueueDockingConfigSearch(
+            shuttleGrid.Value,
+            targetGrid.Value,
+            config =>
+            {
+                if (config == null || Deleted(shuttleGrid.Value))
+                {
+                    if (!Deleted(shuttleGrid.Value))
+                        QueueDel(shuttleGrid.Value);
+
+                    onCompleted(false, null);
+                    return;
+                }
+
+                _shuttle.FTLDock((shuttleGrid.Value, Transform(shuttleGrid.Value)), config);
+                onCompleted(true, shuttleGrid.Value);
+            });
+
+        if (!queued)
+        {
+            QueueDel(shuttleGrid.Value);
+            failureReason = $"Docking search could not be queued for station {stationUid}.";
+            return false;
+        }
+
+        return true;
+    }
+
+    public void TrackDockTestShuttle(EntityUid shuttleUid)
+    {
+        _dockTestShuttles.Add(shuttleUid);
+    }
+
+    public int CleanupDockTestShuttles()
+    {
+        var deleted = 0;
+        foreach (var shuttleUid in _dockTestShuttles)
+        {
+            if (TerminatingOrDeleted(shuttleUid))
+                continue;
+
+            _docking.UndockDocks(shuttleUid);
+            QueueDel(shuttleUid);
+            deleted++;
+        }
+
+        _dockTestShuttles.Clear();
+        return deleted;
     }
 }

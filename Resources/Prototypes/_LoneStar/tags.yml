@@ -1,3 +1,5 @@
+### Please add a comment after tag explaining what the tag is for.
+
 - type: Tag
   id: Vial
 
@@ -27,3 +29,6 @@
 
 - type: Tag
   id: Scroll
+
+- type: Tag   # marks docks that must not be used for FTL docking.
+  id: PreventFTL
