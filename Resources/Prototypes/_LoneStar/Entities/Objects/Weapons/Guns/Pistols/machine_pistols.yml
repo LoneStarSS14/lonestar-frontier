@@ -1,0 +1,112 @@
+- type: entity
+  id: NFWeaponPistolPollockCC
+  parent: [NFBaseWeaponSubMachineGunChamber35, NFBaseWeaponFrameSubMachineGunGorlex ]
+  name: chassis converted pollock
+  description: A heavily modified Pollock automatic handgun fitted with an improvised chassis conversion. The crude frame transforms the pistol into a compact, makeshift submachine gun fitting both pistol and SMG magazines.
+  components:
+  - type: Gun
+    minAngle: 4.6 #from 4.3
+    maxAngle: 21.5
+    angleIncrease: 1.4
+    angleDecay: 4.8
+    fireRate: 3.4
+    examineCaliber: gun-examine-caliber-35
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/pistol_cock.ogg
+    components:
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Guns/Pistols/pollock-cc.rsi
+  - type: Clothing
+    sprite: _Lonestar/Objects/Weapons/Guns/Pistols/pollock-cc.rsi
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,1
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-custom-made
+    class: weapon-details-class-submachine-gun
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: NFMagazineSubMachineGun35
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - NFMagazinePistol35
+            - NFMagazineSubMachineGunPistol35
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgePistol35
+        priority: 1
+        whitelist:
+          tags:
+            - NFCartridgePistol35
+
+- type: entity # Coyote: Converted to .40 caliber
+  id: NFWeaponPistolViperr
+  parent: [ CSBaseWeaponHeavySubMachineGunChamber40, CSBaseWeaponFrameHeavySubMachineGunCybersun ]
+  name: viper-r
+  description: |-
+    A rare variant of the iconic Viper that never entered mass production. Designed for personal protection it supports all caliber fitting magazines, uses the automatic magazine ejection system and can unleash a hyperburst of ten rounds in a rapid pace sacrificing much of it's accuracy. 
+  components:
+  - type: Gun
+    minAngle: 4 # 2,6
+    maxAngle: 28
+    angleIncrease: 5.6 # 2.8
+    angleDecay: 6.6
+    fireRate: 4 # 4
+    burstFireRate: 10 #7
+    shotsPerBurst: 10
+    burstCooldown: 1 # 0.8
+    selectedMode: Burst
+    availableModes:
+    - Burst
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-gorlex-steel-works
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/pistol_cock.ogg
+  - type: Sprite
+    sprite: _LoneStar/Objects/Weapons/Guns/Pistols/viper-r.rsi
+  - type: Clothing
+    sprite: _LoneStar/Objects/Weapons/Guns/Pistols/viper-r.rsi
+  - type: Item
+    shape:
+    - 0,0,2,0
+    - 0,1,0,1
+  # - type: Clothing
+  #   quickEquip: false
+  #   slots:
+  #   - Back
+  #   - suitStorage
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CSMagazineSubMachineGun40
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CSMagazinePistol40
+            - CSMagazineSubMachineGunPistol40
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CSCartridgePistol40
+        priority: 1
+        whitelist:
+          tags:
+            - CSCartridgePistol40
+  
