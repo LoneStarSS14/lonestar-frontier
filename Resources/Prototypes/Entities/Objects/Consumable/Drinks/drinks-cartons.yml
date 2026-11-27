@@ -43,9 +43,10 @@
   - type: TrashOnSolutionEmpty
     solution: drink
   - type: DnaSubstanceTrace
-  - type: Tag # LoneStar
-    tags: # LoneStar
-    - DrinkBottle # LoneStar
+  # LoneStar below
+  - type: Tag
+    tags:
+    - DrinkBottle
 
 - type: entity
   parent: DrinkCartonBaseFull
