@@ -466,26 +466,31 @@ public sealed class PublicTransitSystem : EntitySystem
             if (!TryGetNextStop(route, comp.CurrentGrid, out var nextGrid))
                 continue; // NOTE: this bus is dead, should we despawn it?
 
-            // FTL to next station if it exists.  Do this before the print.
+            // LoneStar > Update route state and send departure messages only after queued FTL starts.
             var hyperspaceTime = MathF.Max(0.0f, (float)route.Prototype.TravelTime.TotalSeconds - _shuttles.DefaultStartupTime);
-            _shuttles.FTLToDock(uid, shuttle, nextGrid.Value, startupTime: _shuttles.DefaultStartupTime, hyperspaceTime: hyperspaceTime, priorityTag: comp.DockTag); // TODO: Unhard code the priorityTag as it should be added from the system.
-            comp.CurrentGrid = nextGrid.Value;
+            _shuttles.QueueFTLToDock(uid, nextGrid.Value, startupTime: _shuttles.DefaultStartupTime, hyperspaceTime: hyperspaceTime, priorityTag: comp.DockTag,
+                onCompleted: started =>
+                {
+                    if (started && TryComp<TransitShuttleComponent>(uid, out var transit))
+                    {
+                        transit.CurrentGrid = nextGrid.Value;
+                        transit.NextTransfer = _timing.CurTime + route.Prototype.TravelTime + route.Prototype.WaitTime;
+                    }
+                    if (!started || !TryComp(nextGrid, out MetaDataComponent? metadata))
+                        return;
 
-            if (!TryComp(nextGrid, out MetaDataComponent? metadata))
-                continue;
+                    var consoleQuery = EntityQueryEnumerator<ShuttleConsoleComponent, TransformComponent>();
+                    while (consoleQuery.MoveNext(out var consoleUid, out _, out var xform))
+                    {
+                        if (xform.GridUid != uid)
+                            continue;
 
-            var consoleQuery = EntityQueryEnumerator<ShuttleConsoleComponent, TransformComponent>();
-
-            while (consoleQuery.MoveNext(out var consoleUid, out _, out var xform))
-            {
-                if (xform.GridUid != uid)
-                    continue;
-
-                _chat.TrySendInGameICMessage(consoleUid, Loc.GetString("public-transit-departure",
-                        ("destination", metadata.EntityName), ("flytime", route.Prototype.TravelTime)),
-                    InGameICChatType.Speak, ChatTransmitRange.HideChat, hideLog: true, checkRadioPrefix: false,
-                    ignoreActionBlocker: true);
-            }
+                        _chat.TrySendInGameICMessage(consoleUid, Loc.GetString("public-transit-departure",
+                                ("destination", metadata.EntityName), ("flytime", route.Prototype.TravelTime)),
+                            InGameICChatType.Speak, ChatTransmitRange.HideChat, hideLog: true, checkRadioPrefix: false,
+                            ignoreActionBlocker: true);
+                    }
+                });
         }
     }
 
@@ -635,9 +640,17 @@ public sealed class PublicTransitSystem : EntitySystem
                 var extraTime = (relativeIndex - relativePosition) * routeHopTime;
 
                 // We set up a default in case the second time we call it fails for some reason
+                // LoneStar > Defer current-grid updates until the asynchronous dock request succeeds.
                 var nextGrid = route.GridStops.GetValueAtIndex((int)relativeIndex);
-                _shuttles.FTLToDock(shuttleEnt, shuttleComp, nextGrid, hyperspaceTime: (float)initialHyperspaceTime.TotalSeconds, priorityTag: transitComp.DockTag);
-                transitComp.CurrentGrid = nextGrid;
+                _shuttles.QueueFTLToDock(shuttleEnt, nextGrid, hyperspaceTime: (float)initialHyperspaceTime.TotalSeconds, priorityTag: transitComp.DockTag,
+                    onCompleted: started =>
+                    {
+                        if (started && TryComp<TransitShuttleComponent>(shuttleEnt, out var transit))
+                        {
+                            transit.CurrentGrid = nextGrid;
+                            transit.NextTransfer = _timing.CurTime + route.Prototype.WaitTime + extraTime + initialHyperspaceTime;
+                        }
+                    });
                 transitComp.NextTransfer = _timing.CurTime + route.Prototype.WaitTime + extraTime + initialHyperspaceTime;
 
                 // Set up the screen text on the bus

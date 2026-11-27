@@ -4,6 +4,7 @@ using Content.Server.Radio.EntitySystems;
 using Content.Server._NF.Bank;
 using Content.Server._NF.Shipyard.Components;
 using Content.Server._NF.ShuttleRecords;
+using Content.Server._LoneStar.Shipyard.Components;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared._NF.Shipyard;
 using Content.Shared._NF.Shipyard.Events;
@@ -75,14 +76,29 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
     }
 
+    // LoneStar > Reserve the purchaser and payment source until asynchronous docking finalizes.
     private void OnPurchaseMessage(EntityUid shipyardConsoleUid, ShipyardConsoleComponent component, ShipyardConsolePurchaseMessage args)
     {
         if (args.Actor is not { Valid: true } player)
             return;
 
+        if (HasComp<PendingShipyardPurchaseComponent>(player))
+        {
+            ConsolePopup(player, Loc.GetString("shipyard-console-purchase-pending"));
+            PlayDenySound(player, shipyardConsoleUid, component);
+            return;
+        }
+
         if (component.TargetIdSlot.ContainerSlot?.ContainedEntity is not { Valid: true } targetId)
         {
             ConsolePopup(player, Loc.GetString("shipyard-console-no-idcard"));
+            PlayDenySound(player, shipyardConsoleUid, component);
+            return;
+        }
+
+        if (HasComp<PendingShipyardPurchaseComponent>(targetId))
+        {
+            ConsolePopup(player, Loc.GetString("shipyard-console-purchase-pending"));
             PlayDenySound(player, shipyardConsoleUid, component);
             return;
         }
@@ -124,7 +140,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return;
         }
 
-        var name = vessel.Name;
         if (vessel.Price <= 0)
             return;
 
@@ -176,142 +191,169 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             }
         }
 
-        if (!TryPurchaseShuttle(station, vessel.ShuttlePath, out var shuttleUidOut))
+        void RefundAndDeny()
         {
-            PlayDenySound(player, shipyardConsoleUid, component);
-            return;
+            if (HasComp<PendingShipyardPurchaseComponent>(player))
+                RemComp<PendingShipyardPurchaseComponent>(player);
+            if (HasComp<PendingShipyardPurchaseComponent>(targetId))
+                RemComp<PendingShipyardPurchaseComponent>(targetId);
+
+            if (voucherUsed && TryComp<ShipyardVoucherComponent>(targetId, out var refundVoucher))
+                refundVoucher.RedemptionsLeft++;
+            else if (!voucherUsed && !Terminating(player))
+                _bank.TryBankDeposit(player, vessel.Price);
+
+            if (!Terminating(player) && !Terminating(shipyardConsoleUid))
+                PlayDenySound(player, shipyardConsoleUid, component);
         }
 
-        var shuttleUid = shuttleUidOut.Value;
-        if (!TryComp<ShuttleComponent>(shuttleUid, out var shuttle))
+        void CompletePurchase(EntityUid shuttleUid)
         {
-            PlayDenySound(player, shipyardConsoleUid, component);
-            return;
-        }
-        shuttle.PlayerShuttle = true; // Frontier: They're on a shuttle =3
-        EntityUid? shuttleStation = null;
-        // setting up any stations if we have a matching game map prototype to allow late joins directly onto the vessel
-        if (_prototypeManager.TryIndex<GameMapPrototype>(vessel.ID, out var stationProto))
-        {
-            List<EntityUid> gridUids = new()
+            if (Terminating(player) || Terminating(targetId) || Terminating(station) || Terminating(shipyardConsoleUid) ||
+                HasComp<ShuttleDeedComponent>(targetId) || !TryComp<ShuttleComponent>(shuttleUid, out var shuttle))
             {
-                shuttleUid
-            };
-            shuttleStation = _station.InitializeNewStation(stationProto.Stations[vessel.ID], gridUids);
-            name = Name(shuttleStation.Value);
-
-            var vesselInfo = EnsureComp<ExtraShuttleInformationComponent>(shuttleStation.Value);
-            vesselInfo.Vessel = vessel.ID;
-        }
-
-        if (TryComp<AccessComponent>(targetId, out var newCap))
-        {
-            var newAccess = newCap.Tags.ToList();
-            newAccess.AddRange(component.NewAccessLevels);
-            _accessSystem.TrySetTags(targetId, newAccess, newCap);
-        }
-
-        var deedID = EnsureComp<ShuttleDeedComponent>(targetId);
-
-        var shuttleOwner = Name(player).Trim();
-        AssignShuttleDeedProperties((targetId, deedID), shuttleUid, name, shuttleOwner, voucherUsed);
-
-        var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttleUid);
-        AssignShuttleDeedProperties((shuttleUid, deedShuttle), shuttleUid, name, shuttleOwner, voucherUsed);
-
-        // LoneStar start; dont update job titles on buying ships
-        // if (!voucherUsed && component.NewJobTitle != null && !HasComp<PreventShipyardTitleOverwriteComponent>(args.Actor))
-        // {
-        //     _idSystem.TryChangeJobTitle(targetId, Loc.GetString(component.NewJobTitle), idCard, player);
-        // }
-        // LoneStar end
-
-        EnsureComp<DeletionCensusExemptComponent>(shuttleUid); // Ensure ship doesn't get deleted, though chunks should be.
-
-        // The following block of code is entirely to do with trying to sanely handle moving records from station to station.
-        // it is ass.
-        // This probably shouldnt be messed with further until station records themselves become more robust
-        // and not entirely dependent upon linking ID card entity to station records key lookups
-        // its just bad
-
-        var stationList = EntityQueryEnumerator<StationRecordsComponent>();
-
-        if (TryComp<StationRecordKeyStorageComponent>(targetId, out var keyStorage)
-            && shuttleStation != null
-            && keyStorage.Key != null)
-        {
-            bool recSuccess = false;
-            while (stationList.MoveNext(out var stationUid, out var stationRecComp))
-            {
-                if (!_records.TryGetRecord<GeneralStationRecord>(keyStorage.Key.Value, out var record))
-                    continue;
-
-                //_records.RemoveRecord(keyStorage.Key.Value);
-                _records.AddRecordEntry(shuttleStation.Value, record);
-                recSuccess = true;
-                break;
+                QueueDel(shuttleUid);
+                RefundAndDeny();
+                return;
             }
 
-            if (!recSuccess
-                && _mind.TryGetMind(player, out var mindUid, out var mindComp)
-                && mindComp.UserId != null
-                && _prefManager.GetPreferences(mindComp.UserId.Value).SelectedCharacter is HumanoidCharacterProfile profile)
+            if (HasComp<PendingShipyardPurchaseComponent>(player))
+                RemComp<PendingShipyardPurchaseComponent>(player);
+            if (HasComp<PendingShipyardPurchaseComponent>(targetId))
+                RemComp<PendingShipyardPurchaseComponent>(targetId);
+
+            shuttle.PlayerShuttle = true; // Frontier: They're on a shuttle =3
+            var name = vessel.Name;
+            EntityUid? shuttleStation = null;
+            if (_prototypeManager.TryIndex<GameMapPrototype>(vessel.ID, out var stationProto))
             {
-                TryComp<FingerprintComponent>(player, out var fingerprintComponent);
-                TryComp<DnaComponent>(player, out var dnaComponent);
-                TryComp<StationRecordsComponent>(shuttleStation, out var stationRec);
-                _records.CreateGeneralRecord(shuttleStation.Value, targetId, profile.Name, profile.Age, profile.Species, profile.Gender, $"Captain", fingerprintComponent!.Fingerprint, dnaComponent!.DNA, profile, stationRec!);
+                List<EntityUid> gridUids = new()
+                {
+                    shuttleUid
+                };
+                shuttleStation = _station.InitializeNewStation(stationProto.Stations[vessel.ID], gridUids);
+                name = Name(shuttleStation.Value);
+
+                var vesselInfo = EnsureComp<ExtraShuttleInformationComponent>(shuttleStation.Value);
+                vesselInfo.Vessel = vessel.ID;
             }
+
+            if (TryComp<AccessComponent>(targetId, out var newCap))
+            {
+                var newAccess = newCap.Tags.ToList();
+                newAccess.AddRange(component.NewAccessLevels);
+                _accessSystem.TrySetTags(targetId, newAccess, newCap);
+            }
+
+            var deedID = EnsureComp<ShuttleDeedComponent>(targetId);
+
+            var shuttleOwner = Name(player).Trim();
+            AssignShuttleDeedProperties((targetId, deedID), shuttleUid, name, shuttleOwner, voucherUsed);
+
+            var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttleUid);
+            AssignShuttleDeedProperties((shuttleUid, deedShuttle), shuttleUid, name, shuttleOwner, voucherUsed);
+
+            EnsureComp<DeletionCensusExemptComponent>(shuttleUid);
+
+            var stationList = EntityQueryEnumerator<StationRecordsComponent>();
+
+            if (TryComp<StationRecordKeyStorageComponent>(targetId, out var keyStorage)
+                && shuttleStation != null
+                && keyStorage.Key != null)
+            {
+                bool recSuccess = false;
+                while (stationList.MoveNext(out var stationUid, out var stationRecComp))
+                {
+                    if (!_records.TryGetRecord<GeneralStationRecord>(keyStorage.Key.Value, out var record))
+                        continue;
+
+                    _records.AddRecordEntry(shuttleStation.Value, record);
+                    recSuccess = true;
+                    break;
+                }
+
+                if (!recSuccess
+                    && _mind.TryGetMind(player, out var mindUid, out var mindComp)
+                    && mindComp.UserId != null
+                    && _prefManager.GetPreferences(mindComp.UserId.Value).SelectedCharacter is HumanoidCharacterProfile profile)
+                {
+                    TryComp<FingerprintComponent>(player, out var fingerprintComponent);
+                    TryComp<DnaComponent>(player, out var dnaComponent);
+                    TryComp<StationRecordsComponent>(shuttleStation, out var stationRec);
+                    _records.CreateGeneralRecord(shuttleStation.Value, targetId, profile.Name, profile.Age, profile.Species, profile.Gender, $"Captain", fingerprintComponent!.Fingerprint, dnaComponent!.DNA, profile, stationRec!);
+                }
+            }
+
+            if (shuttleStation != null)
+                _records.Synchronize(shuttleStation.Value);
+            _records.Synchronize(station);
+
+            EntityManager.AddComponents(shuttleUid, vessel.AddComponents);
+            EnsureComp<LinkedLifecycleGridParentComponent>(shuttleUid);
+
+            var sellValue = 0;
+            if (!voucherUsed)
+            {
+                if (TryComp<ShuttleDeedComponent>(targetId, out var deed))
+                    sellValue = (int)_pricing.AppraiseGrid((EntityUid)(deed?.ShuttleUid!), LacksPreserveOnSaleComp);
+
+                sellValue = CalculateShipResaleValue((shipyardConsoleUid, component), sellValue);
+            }
+
+            SendPurchaseMessage(shipyardConsoleUid, player, name, component.ShipyardChannel, secret: false);
+            if (component.SecretShipyardChannel is { } secretChannel)
+                SendPurchaseMessage(shipyardConsoleUid, player, name, secretChannel, secret: true);
+
+            Get<ShipyardDirectionSystem>().SendShipDirectionMessage(player, shuttleUid);
+
+            PlayConfirmSound(player, shipyardConsoleUid, component);
+            if (voucherUsed)
+                _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low, $"{ToPrettyString(player):actor} used {ToPrettyString(targetId)} to purchase shuttle {ToPrettyString(shuttleUid)} with a voucher via {ToPrettyString(shipyardConsoleUid)}");
+            else
+                _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low, $"{ToPrettyString(player):actor} used {ToPrettyString(targetId)} to purchase shuttle {ToPrettyString(shuttleUid)} for {vessel.Price} credits via {ToPrettyString(shipyardConsoleUid)}");
+
+            if (component.CanTransferDeed)
+            {
+                _shuttleRecordsSystem.AddRecord(
+                    new ShuttleRecord(
+                        name: deedShuttle.ShuttleName ?? "",
+                        suffix: deedShuttle.ShuttleNameSuffix ?? "",
+                        ownerName: shuttleOwner,
+                        entityUid: EntityManager.GetNetEntity(shuttleUid),
+                        purchasedWithVoucher: voucherUsed,
+                        purchasePrice: (uint)vessel.Price,
+                        vesselPrototypeId: vessel.ID
+                    )
+                );
+            }
+
+            if (TryComp<BankAccountComponent>(player, out var refreshedBank))
+                RefreshState(shipyardConsoleUid, refreshedBank.Balance, true, name, sellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, voucherUsed);
         }
-        _records.Synchronize(shuttleStation!.Value);
-        _records.Synchronize(station);
 
-        EntityManager.AddComponents(shuttleUid, vessel.AddComponents);
+        var pendingPurchase = EnsureComp<PendingShipyardPurchaseComponent>(player);
+        pendingPurchase.StationUid = station;
+        pendingPurchase.Purchaser = player;
+        pendingPurchase.PaymentEntity = targetId;
+        pendingPurchase.ConsoleUid = shipyardConsoleUid;
+        pendingPurchase.Price = vessel.Price;
+        pendingPurchase.VoucherUsed = voucherUsed;
+        EnsureComp<PendingShipyardPurchaseComponent>(targetId);
 
-        // Ensure cleanup on ship sale
-        EnsureComp<LinkedLifecycleGridParentComponent>(shuttleUid);
+        if (!TryPurchaseShuttleQueued(station, vessel.ShuttlePath, (success, shuttleUidOut) =>
+            {
+                if (!success || shuttleUidOut is not { Valid: true } shuttleUid)
+                {
+                    RefundAndDeny();
+                    return;
+                }
 
-        var sellValue = 0;
-        if (!voucherUsed)
+                CompletePurchase(shuttleUid);
+            }))
         {
-            // Get the price of the ship
-            if (TryComp<ShuttleDeedComponent>(targetId, out var deed))
-                sellValue = (int)_pricing.AppraiseGrid((EntityUid)(deed?.ShuttleUid!), LacksPreserveOnSaleComp);
-
-            // Adjust for taxes
-            sellValue = CalculateShipResaleValue((shipyardConsoleUid, component), sellValue);
+            RefundAndDeny();
         }
-
-        SendPurchaseMessage(shipyardConsoleUid, player, name, component.ShipyardChannel, secret: false);
-        if (component.SecretShipyardChannel is { } secretChannel)
-            SendPurchaseMessage(shipyardConsoleUid, player, name, secretChannel, secret: true);
-
-        Get<ShipyardDirectionSystem>().SendShipDirectionMessage(player, shuttleUid);
-
-        PlayConfirmSound(player, shipyardConsoleUid, component);
-        if (voucherUsed)
-            _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low, $"{ToPrettyString(player):actor} used {ToPrettyString(targetId)} to purchase shuttle {ToPrettyString(shuttleUid)} with a voucher via {ToPrettyString(shipyardConsoleUid)}");
-        else
-            _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low, $"{ToPrettyString(player):actor} used {ToPrettyString(targetId)} to purchase shuttle {ToPrettyString(shuttleUid)} for {vessel.Price} credits via {ToPrettyString(shipyardConsoleUid)}");
-
-        // Adding the record to the shuttle records system makes them eligible to be copied.
-        // Can be set on the component of the shipyard.
-        if (component.CanTransferDeed)
-        {
-            _shuttleRecordsSystem.AddRecord(
-                new ShuttleRecord(
-                    name: deedShuttle.ShuttleName ?? "",
-                    suffix: deedShuttle.ShuttleNameSuffix ?? "",
-                    ownerName: shuttleOwner,
-                    entityUid: EntityManager.GetNetEntity(shuttleUid),
-                    purchasedWithVoucher: voucherUsed,
-                    purchasePrice: (uint)vessel.Price,
-                    vesselPrototypeId: vessel.ID
-                )
-            );
-        }
-
-        RefreshState(shipyardConsoleUid, bank.Balance, true, name, sellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, voucherUsed);
+        return;
     }
 
     private void TryParseShuttleName(ShuttleDeedComponent deed, string name)

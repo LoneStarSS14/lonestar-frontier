@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using Content.Server.Shuttles.Systems;
+using Content.Server._LoneStar.Shuttles.Systems; // LoneStar > DockingSystem was moved with its partial files.
 using Content.Tests;
 using Robust.Server.GameObjects;
 using Robust.Shared.EntitySerialization.Systems;

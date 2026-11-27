@@ -3,12 +3,14 @@ using Content.Server.Doors.Systems;
 using Content.Server.NPC.Pathfinding;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
+using Content.Server.Shuttles.Systems;
 using Content.Shared.Doors;
 using Content.Shared.Doors.Components;
 using Content.Shared.Popups;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Events;
 using Content.Shared.Shuttles.Systems;
+using Content.Shared.Tag;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
@@ -16,9 +18,10 @@ using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Dynamics.Joints;
 using Robust.Shared.Physics.Systems;
+using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
-namespace Content.Server.Shuttles.Systems
+namespace Content.Server._LoneStar.Shuttles.Systems
 {
     public sealed partial class DockingSystem : SharedDockingSystem
     {
@@ -31,6 +34,8 @@ namespace Content.Server.Shuttles.Systems
         [Dependency] private readonly SharedJointSystem _jointSystem = default!;
         [Dependency] private readonly SharedPopupSystem _popup = default!;
         [Dependency] private readonly SharedTransformSystem _transform = default!;
+        [Dependency] private readonly TagSystem _tag = default!; 
+        [Dependency] private readonly IRobustRandom _random = default!;
 
         private const string DockingJoint = "docking";
 
@@ -95,7 +100,7 @@ namespace Content.Server.Shuttles.Systems
         private void OnShutdown(EntityUid uid, DockingComponent component, ComponentShutdown args)
         {
             if (component.DockedWith == null ||
-                Comp<MetaDataComponent>(uid).EntityLifeStage > EntityLifeStage.MapInitialized)
+                EntityManager.GetComponent<MetaDataComponent>(uid).EntityLifeStage > EntityLifeStage.MapInitialized)
             {
                 return;
             }
@@ -138,8 +143,8 @@ namespace Content.Server.Shuttles.Systems
             dockA.DockJointId = null;
 
             // If these grids are ever null then need to look at fixing ordering for unanchored events elsewhere.
-            var gridAUid = Comp<TransformComponent>(dockAUid).GridUid;
-            var gridBUid = Comp<TransformComponent>(dockBUid.Value).GridUid;
+            var gridAUid = EntityManager.GetComponent<TransformComponent>(dockAUid).GridUid;
+            var gridBUid = EntityManager.GetComponent<TransformComponent>(dockBUid.Value).GridUid;
 
             var msg = new UndockEvent
             {
@@ -160,7 +165,7 @@ namespace Content.Server.Shuttles.Systems
             var component = entity.Comp;
 
             // Use startup so transform already initialized
-            if (!Comp<TransformComponent>(uid).Anchored)
+            if (!EntityManager.GetComponent<TransformComponent>(uid).Anchored)
                 return;
 
             // This little gem is for docking deserialization
@@ -170,7 +175,7 @@ namespace Content.Server.Shuttles.Systems
                 if (MetaData(component.DockedWith.Value).EntityLifeStage < EntityLifeStage.Initialized)
                     return;
 
-                var otherDock = Comp<DockingComponent>(component.DockedWith.Value);
+                var otherDock = EntityManager.GetComponent<DockingComponent>(component.DockedWith.Value);
                 DebugTools.Assert(otherDock.DockedWith != null);
 
                 Dock((uid, component), (component.DockedWith.Value, otherDock));
@@ -221,8 +226,8 @@ namespace Content.Server.Shuttles.Systems
             // https://gamedev.stackexchange.com/questions/98772/b2distancejoint-with-frequency-equal-to-0-vs-b2weldjoint
 
             // We could also potentially use a prismatic joint? Depending if we want clamps that can extend or whatever
-            var dockAXform = Comp<TransformComponent>(dockAUid);
-            var dockBXform = Comp<TransformComponent>(dockBUid);
+            var dockAXform = EntityManager.GetComponent<TransformComponent>(dockAUid);
+            var dockBXform = EntityManager.GetComponent<TransformComponent>(dockBUid);
 
             DebugTools.Assert(dockAXform.GridUid != null);
             DebugTools.Assert(dockBXform.GridUid != null);
@@ -236,8 +241,8 @@ namespace Content.Server.Shuttles.Systems
                 SharedJointSystem.LinearStiffness(
                     2f,
                     0.7f,
-                    Comp<PhysicsComponent>(gridA).Mass,
-                    Comp<PhysicsComponent>(gridB).Mass,
+                    EntityManager.GetComponent<PhysicsComponent>(gridA).Mass,
+                    EntityManager.GetComponent<PhysicsComponent>(gridB).Mass,
                     out var stiffness,
                     out var damping);
 
@@ -256,8 +261,8 @@ namespace Content.Server.Shuttles.Systems
                     joint = _jointSystem.GetOrCreateWeldJoint(gridA, gridB, DockingJoint + dockAUid);
                 }
 
-                var gridAXform = Comp<TransformComponent>(gridA);
-                var gridBXform = Comp<TransformComponent>(gridB);
+                var gridAXform = EntityManager.GetComponent<TransformComponent>(gridA);
+                var gridBXform = EntityManager.GetComponent<TransformComponent>(gridB);
 
                 var anchorA = dockAXform.LocalPosition + dockAXform.LocalRotation.ToWorldVec() / 2f;
                 var anchorB = dockBXform.LocalPosition + dockBXform.LocalRotation.ToWorldVec() / 2f;
@@ -475,9 +480,9 @@ namespace Content.Server.Shuttles.Systems
         {
             if (args.DockEntities.Count == 0)
                 return;
-            
+
             var undockedAny = false;
-            
+
             foreach (var dockEntity in args.DockEntities)
             {
                 if (!TryGetEntity(dockEntity, out var dockEnt) ||
@@ -496,11 +501,17 @@ namespace Content.Server.Shuttles.Systems
                 Undock(dock);
                 undockedAny = true;
             }
-            
+
             if (!undockedAny)
             {
                 _popup.PopupCursor(Loc.GetString("shuttle-console-undock-fail"));
             }
+        }
+
+        public override void Update(float frameTime)
+        {
+            base.Update(frameTime);
+            ProcessQueuedDockingSearches();
         }
     }
 }
