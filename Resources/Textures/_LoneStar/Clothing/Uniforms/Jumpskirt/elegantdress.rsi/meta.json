@@ -8,35 +8,33 @@
   },
   "states": [
     {
-      "name": "icon"
+      "name": "icon-primary"
     },
     {
-      "name": "WEB-icon"
+      "name": "icon-secondary"
     },
     {
-      "name": "WEB-crafting-icon"
-    },
-    {
-      "name": "icon-color"
-    },
-    {
-      "name": "equipped-INNERCLOTHING",
+      "name": "equipped-INNERCLOTHING-primary",
       "directions": 4
     },
     {
-      "name": "equipped-WEB-INNERCLOTHING",
+      "name": "equipped-INNERCLOTHING-secondary",
       "directions": 4
     },
     {
-      "name": "color-equipped-INNERCLOTHING",
+      "name": "inhand-left-primary",
       "directions": 4
     },
     {
-      "name": "inhand-left",
+      "name": "inhand-left-secondary",
       "directions": 4
     },
     {
-      "name": "inhand-right",
+      "name": "inhand-right-primary",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right-secondary",
       "directions": 4
     }
   ]
