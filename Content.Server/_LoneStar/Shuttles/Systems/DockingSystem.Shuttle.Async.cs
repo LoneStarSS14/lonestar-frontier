@@ -26,8 +26,6 @@ public sealed partial class DockingSystem
         public List<Entity<DockingComponent>> AllGridDocks = new();
         public List<Entity<DockingComponent>> ActiveGridDocks = new();
         public int MatchingPriorityDockCount;
-        public bool HasPriorityOnlyPass;
-        public bool InFallbackPass;
         public int PrimaryPairsChecked;
         public int PairEligibilityRejects;
         public int PairGeometryRejects;
@@ -115,6 +113,7 @@ public sealed partial class DockingSystem
             ? []
             : gridDocks.Where(dock => IsPriorityDock(dock.Owner, resolvedPriorityTag)).ToList();
 
+        // LoneStar: prefer assigned docks, falling back only when none carry the assigned tag.
         var activeGridDocks = priorityGridDocks.Count > 0 ? priorityGridDocks : gridDocks;
 
         _pendingDockingSearches.Add(new PendingDockingSearch
@@ -127,7 +126,6 @@ public sealed partial class DockingSystem
             AllGridDocks = gridDocks,
             ActiveGridDocks = activeGridDocks,
             MatchingPriorityDockCount = priorityGridDocks.Count,
-            HasPriorityOnlyPass = priorityGridDocks.Count > 0 && priorityGridDocks.Count < gridDocks.Count,
             TargetGridEntity = (targetGrid, targetGridComp),
             TargetGridXform = targetGridXform,
             TargetGridAngle = _transform.GetWorldRotation(targetGridXform).Reduced(),
@@ -164,9 +162,6 @@ public sealed partial class DockingSystem
                 if (request.ValidationIndex == request.Best!.Docks.Count)
                 {
                     var selectedDocksAvailable = AreSelectedDocksStillAvailable(request);
-                    if (!selectedDocksAvailable && TryStartFallbackPass(request))
-                        continue;
-
                     if (!selectedDocksAvailable)
                         request.FailureReason = "selected docks were no longer available";
 
@@ -187,11 +182,8 @@ public sealed partial class DockingSystem
                         out _))
                 {
                     request.FinalValidationFailures++;
-                    if (!TryStartFallbackPass(request))
-                    {
-                        request.FailureReason = "selected dock pair failed final validation";
-                        CompleteSearch(request, null);
-                    }
+                    request.FailureReason = "selected dock pair failed final validation";
+                    CompleteSearch(request, null);
                 }
 
                 continue;
@@ -199,11 +191,6 @@ public sealed partial class DockingSystem
 
             if (request.ShuttleIndex >= request.ShuttleDocks.Count)
             {
-                if (request.Best == null && TryStartFallbackPass(request))
-                {
-                    continue;
-                }
-
                 if (request.Best != null)
                 {
                     request.ValidationIndex = 0;
@@ -291,23 +278,6 @@ public sealed partial class DockingSystem
         return true;
     }
 
-    private bool TryStartFallbackPass(PendingDockingSearch request)
-    {
-        if (request.InFallbackPass || !request.HasPriorityOnlyPass)
-            return false;
-
-        request.InFallbackPass = true;
-        request.ActiveGridDocks = request.AllGridDocks;
-        request.ShuttleIndex = 0;
-        request.GridIndex = 0;
-        request.Candidates.Clear();
-        request.ValidationIndex = -1;
-        request.Best = null;
-        request.BestPriority = false;
-        request.BestAngle = 0f;
-        return true;
-    }
-
     private bool AreSelectedDocksStillAvailable(PendingDockingSearch request)
     {
         foreach (var (dockAUid, dockBUid, dockA, dockB) in request.Best!.Docks)
@@ -329,7 +299,7 @@ public sealed partial class DockingSystem
         _pendingDockingSearches.Remove(request);
         if (result == null && HasComp<TransitShuttleComponent>(request.ShuttleUid))
         {
-            Log.Debug($"Transit docking search failed for {ToPrettyString(request.ShuttleUid)} -> {ToPrettyString(request.TargetGrid)} (priority tag: {request.PriorityTag ?? "none"}; shuttle docks: {request.ShuttleDocks.Count}; target docks: {request.AllGridDocks.Count}; matching priority docks: {request.MatchingPriorityDockCount}; fallback pass: {request.InFallbackPass}; primary pairs checked: {request.PrimaryPairsChecked}; eligibility rejects: {request.PairEligibilityRejects}; geometry rejects: {request.PairGeometryRejects}; valid primary pairs: {request.ValidPrimaryPairs}; final validation failures: {request.FinalValidationFailures}; reason: {request.FailureReason ?? "unspecified"}).");
+            Log.Debug($"Transit docking search failed for {ToPrettyString(request.ShuttleUid)} -> {ToPrettyString(request.TargetGrid)} (priority tag: {request.PriorityTag ?? "none"}; shuttle docks: {request.ShuttleDocks.Count}; target docks: {request.AllGridDocks.Count}; matching priority docks: {request.MatchingPriorityDockCount}; primary pairs checked: {request.PrimaryPairsChecked}; eligibility rejects: {request.PairEligibilityRejects}; geometry rejects: {request.PairGeometryRejects}; valid primary pairs: {request.ValidPrimaryPairs}; final validation failures: {request.FinalValidationFailures}; reason: {request.FailureReason ?? "unspecified"}).");
         }
 
         request.OnCompleted?.Invoke(result);
