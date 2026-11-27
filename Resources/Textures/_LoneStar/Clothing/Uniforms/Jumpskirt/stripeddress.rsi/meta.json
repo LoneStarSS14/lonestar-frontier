@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Add new dress by DreamlyJack",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon-primary"
+        },
+        {
+            "name": "icon-secondary"
+        },
+        {
+            "name": "equipped-INNERCLOTHING-primary",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-secondary",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left-primary",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left-secondary",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right-primary",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right-secondary",
+            "directions": 4
+        }
+    ]
+}
