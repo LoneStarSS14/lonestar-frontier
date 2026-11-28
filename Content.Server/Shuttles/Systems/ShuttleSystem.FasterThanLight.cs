@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
+using Content.Server._NF.PublicTransit.Components;
 using Content.Server._NF.Shuttles.Components; // Frontier: FTL knockdown immunity
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
@@ -318,15 +319,84 @@ public sealed partial class ShuttleSystem
         float? hyperspaceTime = null,
         string? priorityTag = null)
     {
-        if (!TrySetupFTL(shuttleUid, component, out var hyperspace))
-            return;
-
         startupTime ??= DefaultStartupTime;
         hyperspaceTime ??= DefaultTravelTime;
 
         var config = _dockSystem.GetDockingConfig(shuttleUid, target, priorityTag);
-        hyperspace.StartupTime = startupTime.Value;
-        hyperspace.TravelTime = hyperspaceTime.Value;
+        StartFTLToDock(shuttleUid, component, target, startupTime.Value, hyperspaceTime.Value, priorityTag, config);
+    }
+
+    // LoneStar > Prevent duplicate queued transit requests while the docking search runs.
+    private readonly HashSet<EntityUid> _pendingDockingFtl = new();
+
+    public bool QueueFTLToDock(
+        EntityUid shuttleUid,
+        EntityUid target,
+        float? startupTime = null,
+        float? hyperspaceTime = null,
+        string? priorityTag = null,
+        DockType dockType = DockType.Airlock,
+        Action<bool>? onCompleted = null)
+    {
+        if (HasComp<FTLComponent>(shuttleUid) || !_pendingDockingFtl.Add(shuttleUid))
+            return false;
+
+        startupTime ??= DefaultStartupTime;
+        hyperspaceTime ??= DefaultTravelTime;
+
+        var queued = _dockSystem.QueueDockingConfigSearch(
+            shuttleUid,
+            target,
+            config =>
+            {
+                _pendingDockingFtl.Remove(shuttleUid);
+                if (config == null && HasComp<TransitShuttleComponent>(shuttleUid))
+                {
+                    config = _dockSystem.GetDockingConfig(shuttleUid, target, priorityTag, dockType);
+                    if (config != null)
+                    {
+                        var dockPairs = string.Join(", ", config.Docks.Select(pair =>
+                            $"{ToPrettyString(pair.DockAUid)} <-> {ToPrettyString(pair.DockBUid)}"));
+                        var isPriority = _dockSystem.IsConfigPriority(config, priorityTag);
+                        Log.Info($"Transit shuttle {ToPrettyString(shuttleUid)} recovered a docking configuration using the synchronous search for {ToPrettyString(target)} (priority tag: {priorityTag ?? "none"}; priority match: {isPriority}; docks: {dockPairs}).");
+                    }
+                }
+
+                if (config == null && HasComp<TransitShuttleComponent>(shuttleUid))
+                {
+                    Log.Warning($"Transit shuttle {ToPrettyString(shuttleUid)} found no docking configuration for {ToPrettyString(target)} (priority tag: {priorityTag ?? "none"}).");
+                }
+
+                var started = !Terminating(shuttleUid) && !Terminating(target) &&
+                              TryComp<ShuttleComponent>(shuttleUid, out var shuttle) &&
+                              StartFTLToDock(shuttleUid, shuttle, target, startupTime.Value, hyperspaceTime.Value, priorityTag, config);
+                onCompleted?.Invoke(started);
+            },
+            priorityTag,
+            dockType);
+        if (!queued)
+            _pendingDockingFtl.Remove(shuttleUid);
+        else
+            // LoneStar > Undock before queued validation rejects already-connected ports.
+            _dockSystem.UndockDocks(shuttleUid);
+
+        return queued;
+    }
+
+    private bool StartFTLToDock(
+        EntityUid shuttleUid,
+        ShuttleComponent component,
+        EntityUid target,
+        float startupTime,
+        float hyperspaceTime,
+        string? priorityTag,
+        DockingConfig? config)
+    {
+        if (!TrySetupFTL(shuttleUid, component, out var hyperspace))
+            return false;
+
+        hyperspace.StartupTime = startupTime;
+        hyperspace.TravelTime = hyperspaceTime;
         hyperspace.StateTime = StartEndTime.FromStartDuration(
             _gameTiming.CurTime,
             TimeSpan.FromSeconds(hyperspace.StartupTime));
@@ -334,7 +404,6 @@ public sealed partial class ShuttleSystem
 
         _console.RefreshShuttleConsoles(shuttleUid);
 
-        // Valid dock for now time so just use that as the target.
         if (config != null)
         {
             hyperspace.TargetCoordinates = config.Coordinates;
@@ -351,6 +420,7 @@ public sealed partial class ShuttleSystem
             hyperspace.TargetCoordinates = Transform(shuttleUid).Coordinates;
             Log.Error($"Unable to FTL grid {ToPrettyString(shuttleUid)} to target properly?");
         }
+        return true;
     }
 
     private bool TrySetupFTL(EntityUid uid, ShuttleComponent shuttle, [NotNullWhen(true)] out FTLComponent? component)
@@ -511,12 +581,23 @@ public sealed partial class ShuttleSystem
         else if (HasComp<MapGridComponent>(target.EntityId) &&
                  !HasComp<MapComponent>(target.EntityId))
         {
-            var config = _dockSystem.GetDockingConfigAt(uid, target.EntityId, target, entity.Comp1.TargetAngle);
+            // LoneStar > Keep the route's priority tag during arrival-time dock validation.
+            var config = _dockSystem.GetDockingConfigAt(
+                uid,
+                target.EntityId,
+                target,
+                entity.Comp1.TargetAngle,
+                priorityTag: entity.Comp1.PriorityTag?.Id);
             var mapCoordinates = _transform.ToMapCoordinates(target);
 
             // Couldn't dock somehow so just fallback to regular position FTL.
             if (config == null)
             {
+                if (HasComp<TransitShuttleComponent>(uid))
+                {
+                    Log.Warning($"Transit shuttle {ToPrettyString(uid)} could not revalidate its docking configuration at {ToPrettyString(target.EntityId)} (priority tag: {entity.Comp1.PriorityTag?.Id ?? "none"}); falling back to proximity.");
+                }
+
                 TryFTLProximity(uid, target.EntityId);
             }
             else
@@ -733,15 +814,15 @@ public sealed partial class ShuttleSystem
     /// Tries to dock with the target grid, otherwise falls back to proximity.
     /// This bypasses FTL travel time.
     /// </summary>
+    // LoneStar > Evaluate every compatible port; there is no dock-count cap.
     public bool TryFTLDock(
         EntityUid shuttleUid,
         ShuttleComponent component,
         EntityUid targetUid,
         string? priorityTag = null,
-        DockType dockType = DockType.Airlock, // Frontier
-        int? maxShuttleDocks = null) // Coyote
+        DockType dockType = DockType.Airlock) // Frontier
     {
-        return TryFTLDock(shuttleUid, component, targetUid, out _, priorityTag, dockType, maxShuttleDocks); // Frontier: add dockType // Coyote: add maxShuttleDocks
+        return TryFTLDock(shuttleUid, component, targetUid, out _, priorityTag, dockType); // Frontier: add dockType
     }
 
     /// <summary>
@@ -754,8 +835,7 @@ public sealed partial class ShuttleSystem
         EntityUid targetUid,
         [NotNullWhen(true)] out DockingConfig? config,
         string? priorityTag = null,
-        DockType dockType = DockType.Airlock, // Frontier
-        int? maxShuttleDocks = null) // Coyote
+        DockType dockType = DockType.Airlock) // Frontier
     {
         config = null;
 
@@ -767,7 +847,7 @@ public sealed partial class ShuttleSystem
             return false;
         }
 
-        config = _dockSystem.GetDockingConfig(shuttleUid, targetUid, priorityTag, dockType, maxShuttleDocks); // Frontier: add dockType // Coyote: add maxShuttleDocks
+        config = _dockSystem.GetDockingConfig(shuttleUid, targetUid, priorityTag, dockType); // Frontier: add dockType
 
         if (config != null)
         {

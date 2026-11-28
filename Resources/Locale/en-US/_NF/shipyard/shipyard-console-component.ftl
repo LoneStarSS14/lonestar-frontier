@@ -13,6 +13,8 @@ shipyard-console-leaving-secret = Unregistered vessel detected leaving your sect
 shipyard-commands-purchase-desc = Spawns and FTL docks a specified shuttle from a grid file.
 shipyard-console-no-idcard = No ID card present.
 shipyard-console-already-deeded = ID card already has a Deed.
+# LoneStar > Shown when the purchaser or payment item is already reserved.
+shipyard-console-purchase-pending = A ship purchase is already in progress.
 shipyard-console-invalid-station = Not a valid station.
 shipyard-console-no-bank = No bank account found.
 shipyard-console-no-deed = No ship deed found.

@@ -3,12 +3,14 @@ using Content.Server.Doors.Systems;
 using Content.Server.NPC.Pathfinding;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
+using Content.Server.Shuttles.Systems;
 using Content.Shared.Doors;
 using Content.Shared.Doors.Components;
 using Content.Shared.Popups;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Events;
 using Content.Shared.Shuttles.Systems;
+using Content.Shared.Tag;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
@@ -16,9 +18,10 @@ using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Dynamics.Joints;
 using Robust.Shared.Physics.Systems;
+using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
-namespace Content.Server.Shuttles.Systems
+namespace Content.Server._LoneStar.Shuttles.Systems
 {
     public sealed partial class DockingSystem : SharedDockingSystem
     {
@@ -31,6 +34,8 @@ namespace Content.Server.Shuttles.Systems
         [Dependency] private readonly SharedJointSystem _jointSystem = default!;
         [Dependency] private readonly SharedPopupSystem _popup = default!;
         [Dependency] private readonly SharedTransformSystem _transform = default!;
+        [Dependency] private readonly TagSystem _tag = default!; 
+        [Dependency] private readonly IRobustRandom _random = default!;
 
         private const string DockingJoint = "docking";
 
@@ -475,9 +480,9 @@ namespace Content.Server.Shuttles.Systems
         {
             if (args.DockEntities.Count == 0)
                 return;
-            
+
             var undockedAny = false;
-            
+
             foreach (var dockEntity in args.DockEntities)
             {
                 if (!TryGetEntity(dockEntity, out var dockEnt) ||
@@ -496,11 +501,17 @@ namespace Content.Server.Shuttles.Systems
                 Undock(dock);
                 undockedAny = true;
             }
-            
+
             if (!undockedAny)
             {
                 _popup.PopupCursor(Loc.GetString("shuttle-console-undock-fail"));
             }
+        }
+
+        public override void Update(float frameTime)
+        {
+            base.Update(frameTime);
+            ProcessQueuedDockingSearches();
         }
     }
 }
